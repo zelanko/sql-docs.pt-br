@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, rowset creation
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eee3452c109bcd519cb24ba96b621ec25c0110df
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046496"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704591"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Criação do conjunto de linhas do parâmetro com valor de tabela
   Embora os consumidores possam fornecer qualquer objeto do conjunto de linhas a parâmetros com valor de tabela, objetos do conjunto de linhas típicos são implementados com relação a armazenamentos de dados de back-end e, portanto, fornecem desempenho limitado. Por isso, o provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite que os consumidores criem um objeto de conjunto de linhas especializado sobre os dados da memória. Esse objeto de conjunto de linhas em memória especial é um novo objeto COM chamado conjunto de linhas de parâmetro COM valor de tabela. Ele fornece funcionalidade semelhante para conjuntos de parâmetro.  
@@ -39,7 +39,7 @@ ms.locfileid: "63046496"
   
  Para recuperar informações sobre o status nulo, exclusivo, computado e de atualização de cada coluna, o consumidor usa IColumnsRowset:: GetColumnsRowset ou IColumnsInfo:: GetColumnInfo. Esses métodos fornecem informações detalhadas sobre cada coluna do conjunto de linhas do parâmetro com valor de tabela.  
   
- O consumidor especifica o tipo de cada coluna do parâmetro com valor de tabela. Esse procedimento é semelhante à forma de especificação de colunas quando uma tabela é criada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O consumidor obtém um objeto de conjunto de linhas de parâmetro com valor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tabela do provedor de OLE DB de cliente nativo por meio do parâmetro de saída *ppRowset* .  
+ O consumidor especifica o tipo de cada coluna do parâmetro com valor de tabela. Esse procedimento é semelhante à forma de especificação de colunas quando uma tabela é criada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O consumidor obtém um objeto de conjunto de linhas de parâmetro com valor de tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo por meio do parâmetro de saída *ppRowset* .  
   
 ## <a name="dynamic-scenario"></a>Cenário dinâmico  
  Quando o consumidor não tem informações de tipo, ele deve usar IOpenRowset:: OpenRowset para instanciar objetos de conjunto de linhas de parâmetro com valor de tabela. O consumidor deve fornecer ao provedor somente o nome do tipo.  

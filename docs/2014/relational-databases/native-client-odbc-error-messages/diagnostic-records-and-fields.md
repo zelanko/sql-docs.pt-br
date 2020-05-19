@@ -17,15 +17,15 @@ helpviewer_keywords:
 - fields [ODBC]
 - status information [ODBC]
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 173d0287ba1b63e8811e2d340448d03c3bbf961d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d7d839fb55aff82c9d4f2ca12a316fa7401a502
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63213903"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705405"
 ---
 # <a name="diagnostic-records-and-fields"></a>Registros e campos de diagnóstico
   Os registros de diagnóstico são associados com ambiente, conexão, instrução ou identificadores de descritor ODBC. Quando uma função ODBC gera um código de retorno diferente de SQL_SUCCESS ou SQL_INVALID_HANDLE, o identificador chamado pela função possui registros de diagnóstico associados que contêm mensagens de erro ou mensagens informativas. Esses registros são retidos até que outra função seja chamada com aquele identificador. Depois disso, são descartados. Não há limite para o número de registros de diagnóstico que podem ser associados a um identificador de uma só vez.  
@@ -44,7 +44,7 @@ ms.locfileid: "63213903"
   
  O **SQLGetDiagField** é processado pelo Gerenciador de driver ODBC usando informações de erro que ele armazena em cache do driver subjacente. O Gerenciador de Driver ODBC não armazena em cache os campos de diagnóstico específicos de driver até que seja estabelecida uma conexão bem-sucedida. **SQLGetDiagField** retornará SQL_ERROR se for chamado para obter campos de diagnóstico específicos do driver antes da conclusão de uma conexão bem-sucedida. Se uma função de conexão ODBC retornar SQL_SUCCESS_WITH_INFO, os campos de diagnóstico específicos de driver para a função de conexão ainda não estarão disponíveis. Você pode iniciar a chamada de **SQLGetDiagField** para campos de diagnóstico específicos do driver somente depois de ter feito outra chamada de função ODBC após a função de conexão.  
   
- A maioria dos erros relatados pelo driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pode ser efetivamente diagnosticada usando apenas as informações retornadas pelo **SQLGetDiagRec**. Em alguns casos, porém, as informações retornadas pelos campos de diagnóstico específicos de driver são importantes no diagnóstico de um erro. Ao codificar um manipulador de erro ODBC para aplicativos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam o driver ODBC do Native Client, também é uma boa ideia usar o **SQLGetDiagField** para recuperar pelo menos os SQL_DIAG_SS_MSGSTATE e SQL_DIAG_SS_SEVERITY campos específicos do driver. Se um erro em particular for gerado em vários locais no código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indicará a um engenheiro de suporte da Microsoft onde especificamente o erro foi gerado, o que muitas vezes ajuda no diagnóstico de um problema.  
+ A maioria dos erros relatados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client pode ser efetivamente diagnosticada usando apenas as informações retornadas pelo **SQLGetDiagRec**. Em alguns casos, porém, as informações retornadas pelos campos de diagnóstico específicos de driver são importantes no diagnóstico de um erro. Ao codificar um manipulador de erro ODBC para aplicativos que usam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client, também é uma boa ideia usar o **SQLGetDiagField** para recuperar pelo menos os SQL_DIAG_SS_MSGSTATE e SQL_DIAG_SS_SEVERITY campos específicos do driver. Se um erro em particular for gerado em vários locais no código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indicará a um engenheiro de suporte da Microsoft onde especificamente o erro foi gerado, o que muitas vezes ajuda no diagnóstico de um problema.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tratando de erros e mensagens](handling-errors-and-messages.md)  

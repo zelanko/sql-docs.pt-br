@@ -14,18 +14,18 @@ helpviewer_keywords:
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037176b5e1833b3cbfcbc93131560fcafcc8e404
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242916"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704670"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Atualizando dados em cursores do SQL Server
-  Ao buscar e atualizar dados por meio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de cursores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um aplicativo de consumidor de provedor de OLE DB de cliente nativo é associado pelas mesmas considerações e restrições que se aplicam a qualquer outro aplicativo cliente.  
+  Ao buscar e atualizar dados por meio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo de consumidor de provedor de OLE DB de cliente nativo é associado pelas mesmas considerações e restrições que se aplicam a qualquer outro aplicativo cliente.  
   
  Apenas as linhas em cursores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participam do controle de acesso a dados simultâneo. Quando o consumidor solicita um conjunto de linhas modificável, o controle de simultaneidade é controlado por DBPROP_LOCKMODE. Para modificar o nível do controle de acesso simultâneo, o consumidor define a propriedade DBPROP_LOCKMODE antes de abrir o conjunto de linhas.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63242916"
   
  Em qualquer modo, uma viagem de ida e volta representará uma transação distinta quando nenhum objeto de transação estiver aberto para o conjunto de linhas.  
   
- Quando você estiver usando **IRowsetUpdate:: Update**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo tentará processar cada linha indicada. Um erro ocorrido devido a dados inválidos, comprimento ou valores de status para qualquer linha não interrompe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o processamento do provedor de OLE DB nativo do cliente. É possível modificar todas ou nenhuma das outras linhas que participam da atualização. O consumidor deve examinar a matriz *prgRowstatus* retornada para determinar a falha de qualquer linha específica quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo retornar DB_S_ERRORSOCCURRED.  
+ Quando você estiver usando **IRowsetUpdate:: Update**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo tentará processar cada linha indicada. Um erro ocorrido devido a dados inválidos, comprimento ou valores de status para qualquer linha não interrompe o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processamento do provedor de OLE DB nativo do cliente. É possível modificar todas ou nenhuma das outras linhas que participam da atualização. O consumidor deve examinar a matriz *prgRowstatus* retornada para determinar a falha de qualquer linha específica quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retornar DB_S_ERRORSOCCURRED.  
   
  Um consumidor não deve presumir que as linhas são processadas em qualquer ordem específica. Se um consumidor solicitar o processamento ordenado da modificação de dados em mais de uma única linha, ele deverá estabelecer essa ordem na lógica do aplicativo e abrir uma transação para conter o processo.  
   

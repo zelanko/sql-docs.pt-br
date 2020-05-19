@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f154e32b5a7782a083db73de1deef327f44e3ee2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c759cddb5f66f0dbee401e0e58bd6ad8590af8ff
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175403"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704438"
 ---
 # <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>Connecting to an Azure SQL Database Using SQL Server Native Client (Conectando a um Banco de Dados SQL do Azure usando o SQL Server Native Client)
-  Para obter um exemplo que mostra como se conectar a [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando um cliente nativo, consulte [desenvolvimento: tópicos de instruções (banco de dados SQL do Azure)](https://msdn.microsoft.com/library/ee621787.aspx).  
+  Para obter um exemplo que mostra como se conectar a um [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] usando um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente nativo, consulte [desenvolvimento: tópicos de instruções (banco de dados SQL do Azure)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Problemas conhecidos ao conectar a um banco de dados SQL  
  Estes são problemas conhecidos ao conectar a um [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  

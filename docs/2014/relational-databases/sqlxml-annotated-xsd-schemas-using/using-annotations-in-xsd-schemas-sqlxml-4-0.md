@@ -14,15 +14,15 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - mapping schema [SQLXML], scenarios for using
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c62357496d0b143fcd8736bc61117d43c6a0fac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56a8d0daaa7eb64600c7e3a06f4121c45ce25a23
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013599"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703497"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Usando anotações em esquemas XSD (SQLXML 4.0)
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, a linguagem de esquema XSD dá suporte a anotações de forma semelhante às anotações introduzidas na linguagem de esquema XDR (XML-Data Reduced). Há anotações adicionais introduzidas no XSD para as quais não há suporte no XDR.  

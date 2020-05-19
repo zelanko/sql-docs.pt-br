@@ -12,15 +12,15 @@ helpviewer_keywords:
 - rowsets [OLE DB], bookmarks
 - OLE DB rowsets, bookmarks
 ms.assetid: 7d9076f2-bf9c-452e-b816-70371a0c1644
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4588780932ab408b5e35a2099767c30bcecc1375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 436cbd68ae60446df94b63283cd3291c9fc63fee
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183649"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704690"
 ---
 # <a name="bookmarks"></a>Indicadores
   Os indicadores permitem que os consumidores voltem rapidamente para uma linha. Com os indicadores, os consumidores podem acessar linhas aleatoriamente com base no valor do indicador. A coluna do indicador é a coluna 0 no conjunto de linhas. O consumidor define o valor de campo dwFrag da estrutura associada como DBCOLUMNSINFO_ISBOOKMARK para indicar que a coluna é usada como um indicador. O consumidor também define a propriedade DBPROP_BOOKMARKS do conjunto de linhas como VARIANT_TRUE. Isso permite que a coluna 0 esteja presente no conjunto de linhas. Em seguida, o método **IRowsetLocate::GetRowsAt** é usado para buscar linhas, começando com a linha especificada como um deslocamento de um indicador.  

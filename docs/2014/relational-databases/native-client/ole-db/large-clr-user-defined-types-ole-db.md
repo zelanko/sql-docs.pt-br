@@ -9,20 +9,20 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199256"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704265"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos pelo usuário CLR grandes (OLE DB)
   Este tópico aborda as alterações feitas ao OLE DB no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para dar suporte aos UDTs (tipos definidos pelo usuário) CLR (Common Language Runtime) grandes.  
   
- Para obter mais informações sobre o suporte a UDTs CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grandes no Native Client, consulte [grandes tipos CLR definidos pelo usuário](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Para obter um exemplo, confira [Usar UDTs CLR grandes &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Para obter mais informações sobre o suporte a UDTs CLR grandes no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [grandes tipos CLR definidos pelo usuário](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Para obter um exemplo, confira [Usar UDTs CLR grandes &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato de Dados  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client usa ~ 0 para representar o comprimento de valores de tamanho ilimitado para tipos de objeto grandes (LOB). ~ 0 também representa o tamanho de UDTs CLR maiores que 8.000 bytes.  
@@ -42,7 +42,7 @@ ms.locfileid: "63199256"
  O conjunto de propriedades DBPROPSET_SQLSERVERCOLUMN dá suporte à criação de tabelas através do OLE DB. Para obter mais informações, confira [Usando tipos definidos pelo usuário](../features/using-user-defined-types.md).  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Mapeamento de tipo de dados em ITableDefinition::CreateTable  
- As informações a seguir são usadas `DBCOLUMNDESC` em estruturas usadas por ITableDefinition:: CreateTable quando as colunas UDT são necessárias:  
+ As informações a seguir são usadas em `DBCOLUMNDESC` estruturas usadas por ITableDefinition:: CreateTable quando as colunas UDT são necessárias:  
   
 |Tipo de dados OLE DB (*wType*)|*pwszTypeName*|Tipo de dados do SQL Server|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  

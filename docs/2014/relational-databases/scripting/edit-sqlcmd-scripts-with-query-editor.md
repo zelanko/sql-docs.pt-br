@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], SQLCMD scripts
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 365a20848416e73e96731722abecfd6d94ebbfc5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245177"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703955"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Editar scripts SQLCMD com o Editor de Consultas
   Com o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , você pode gravar e editar consultas como scripts SQLCMD. Você usa scripts SQLCMD quando precisa processar comandos de Sistema do Windows e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no mesmo script.  

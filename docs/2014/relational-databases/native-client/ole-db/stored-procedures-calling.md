@@ -15,15 +15,15 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33fedf2957203b1a750aba8fd086087c03ffc934
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206585"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704190"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Chamando um procedimento armazenado (OLE DB)
   Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo, os parâmetros para um procedimento armazenado podem ser passados por:  
@@ -76,7 +76,7 @@ ms.locfileid: "68206585"
 5.  Execute o comando usando **ICommand::Execute**.  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos de chamar um procedimento armazenado  
- Ao executar um procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte ao:  
+ Ao executar um procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte ao:  
   
 -   Sequência de escape CALL do ODBC.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68206585"
  Para um aplicativo de exemplo que demonstra uma sequência de escape RPC, confira [Executar um procedimento armazenado &#40;usando a sintaxe RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrução Transact-SQL EXECUTE  
- A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo usa o mecanismo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC do para otimizar o processamento de comandos. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
+ A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo usa o mecanismo RPC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para otimizar o processamento de comandos. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
   
  Este é um exemplo da instrução  **EXECUTE** do [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   

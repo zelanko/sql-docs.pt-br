@@ -16,20 +16,20 @@ helpviewer_keywords:
 - annotated XSD schemas, CDATA sections
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f1442011ddbdb010e5f498dbf3b42fa9ba333ea
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014007"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703655"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Criando seções CDATA usando sql:use-cdata (SQLXML 4.0)
   Em XML, as seções CDATA são usadas para sair de blocos de texto que contenham caracteres que seriam reconhecidos como caracteres de marcação.  
   
- Um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Microsoft às vezes pode conter caracteres que são tratados como caracteres de marcação pelo analisador XML; por exemplo, colchetes angulares\< (e >), o símbolo de menor que ou-igual a (<=) e o e comercial (&) são tratados como caracteres de marcação. No entanto, é possível quebrar esse tipo de caracteres especiais em uma seção CDATA para impedi-los de serem tratados como caracteres de marcação. O texto na seção CDATA é tratado pelo analisador XML como texto sem-formatação.  
+ Um banco de dados no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] às vezes pode conter caracteres que são tratados como caracteres de marcação pelo analisador XML; por exemplo, colchetes angulares ( \< e >), o símbolo menor que ou-igual a (<=) e o e comercial (&) são tratados como caracteres de marcação. No entanto, é possível quebrar esse tipo de caracteres especiais em uma seção CDATA para impedi-los de serem tratados como caracteres de marcação. O texto na seção CDATA é tratado pelo analisador XML como texto sem-formatação.  
   
  A anotação `sql:use-cdata` é usada para especificar se os dados retornados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser colocados em uma seção CDATA (ou seja, ela indica se o valor de uma coluna especificada por `sql:field` deve estar em uma seção CDATA). A anotação `sql:use-cdata` só pode ser especificada em elementos que mapeiam para uma coluna de banco de dados.  
   
@@ -40,8 +40,8 @@ ms.locfileid: "66014007"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. Especificando sql:use-cdata em um elemento  
- No esquema a seguir, `sql:use-cdata` é definido como 1 (true) para o ** \<>AddressLine1** dentro do ** \<elemento address>** . Como resultado, os dados são retornados em uma seção CDATA.  
+### <a name="a-specifying-sqluse-cdata-on-an-element"></a>a. Especificando sql:use-cdata em um elemento  
+ No esquema a seguir, `sql:use-cdata` é definido como 1 (true) para o ** \<>AddressLine1** dentro do elemento ** \< Address>** . Como resultado, os dados são retornados em uma seção CDATA.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - GetParameterProperties method
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebc423dd019b5a161fd767d7b9ca8eaac8d8e335
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638078"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704809"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
   Retorna uma matriz de estruturas de conjuntos de propriedades SSPARAMPROPS, um conjunto de propriedades SSPARAMPROPS para cada parâmetro XML ou UDT.  

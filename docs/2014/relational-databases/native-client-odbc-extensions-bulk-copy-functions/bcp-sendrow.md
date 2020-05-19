@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_sendrow function
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3e8ef7aa7a4354f5a3fbc334504512b2ee8d131b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9278a388fa6beb52dc747d310bea4a2ce32c600e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688837"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705308"
 ---
 # <a name="bcp_sendrow"></a>bcp_sendrow
   Envia uma linha de dados de variáveis de programa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,7 +55,7 @@ hdbc
   
  Quando **bcp_sendrow** for usado para copiar linhas em massa de variáveis do programa para tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , as linhas são confirmadas somente quando o usuário chamar [bcp_batch](bcp-batch.md) ou [bcp_done](bcp-done.md). O usuário pode escolher chamar **bcp_batch** uma vez a cada *n* linhas ou quando houver uma pausa entre períodos de dados de entrada. Se **bcp_batch** nunca for chamado, as linhas serão confirmadas quando **bcp_done** for chamado.  
   
- Para obter informações sobre uma alteração significativa na cópia em massa a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]partir do, consulte [executando operações de cópia em massa &#40;&#41;ODBC ](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Para obter informações sobre uma alteração significativa na cópia em massa a partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [executando operações de cópia em massa &#40;&#41;ODBC ](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  

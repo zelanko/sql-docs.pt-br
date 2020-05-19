@@ -14,18 +14,18 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b0fda8000105573a11c1ca6a460e47a100bc885
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013482"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703435"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  O carregamento em massa de `sql:mapped` XML processa a anotação no esquema XSD como esperado – ou seja, se o esquema `sql:mapped="false"` de mapeamento especificar para qualquer elemento ou atributo, o carregamento em massa de XML não tentará armazenar os dados associados na coluna correspondente.  
+  O carregamento em massa de XML processa a `sql:mapped` anotação no esquema XSD como esperado – ou seja, se o esquema de mapeamento especificar `sql:mapped="false"` para qualquer elemento ou atributo, o carregamento em massa de XML não tentará armazenar os dados associados na coluna correspondente.  
   
  O XML Bulk Load ignora elementos e atributos que não estão mapeados (porque eles não estão descritos no esquema ou porque eles são anotados no esquema XSD com `sql:mapped="false"`). Todo os dados não mapeados entram na coluna de estouro, se essa coluna for especificada usando `sql:overflow-field`.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66013482"
 </xsd:schema>  
 ```  
   
- Como o atributo **HomePhone** especifica `sql:mapped="false"`, o carregamento em massa de XML não mapeia esse atributo para a coluna correspondente. O esquema XSD identifica uma coluna de estouro (**OverflowColumn**) na qual o carregamento em massa de XML armazena esses dados não consumidos.  
+ Como o atributo **HomePhone** especifica `sql:mapped="false"` , o carregamento em massa de XML não mapeia esse atributo para a coluna correspondente. O esquema XSD identifica uma coluna de estouro (**OverflowColumn**) na qual o carregamento em massa de XML armazena esses dados não consumidos.  
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   

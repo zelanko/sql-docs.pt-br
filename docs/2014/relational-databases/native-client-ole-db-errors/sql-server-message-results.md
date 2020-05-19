@@ -11,18 +11,18 @@ helpviewer_keywords:
 - errors [OLE DB], SQL Server message results
 - OLE DB error handling, SQL Server message results
 ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff604f4c5d66a5742868e25ba05ca6b4528ddb1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19c0c3b044943e51c6d791e962fa830f0b6d0144
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206713"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704932"
 ---
 # <a name="sql-server-message-results"></a>Resultados da mensagem do SQL Server
-  As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir não geram [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas do provedor de OLE DB do cliente nativo ou uma contagem de linha afetada quando executadas:  
+  As instruções a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] não geram [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas do provedor de OLE DB do cliente nativo ou uma contagem de linha afetada quando executadas:  
   
 -   PRINT  
   
@@ -34,13 +34,13 @@ ms.locfileid: "68206713"
   
 -   SET STATISTICS  
   
- Estas instruções retornam uma ou mais mensagens informativas ou fazem o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornar mensagens informativas em vez de resultados de contagens ou conjuntos de linhas. Após a execução bem-sucedida, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo retorna S_OK e as mensagens estão disponíveis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o consumidor do provedor de OLE DB do cliente nativo.  
+ Estas instruções retornam uma ou mais mensagens informativas ou fazem o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornar mensagens informativas em vez de resultados de contagens ou conjuntos de linhas. Após a execução bem-sucedida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retorna S_OK e as mensagens estão disponíveis para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor do provedor de OLE DB do cliente nativo.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retorna S_OK e tem uma ou mais mensagens informativas disponíveis após a [!INCLUDE[tsql](../../includes/tsql-md.md)] execução de muitas instruções ou a execução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do consumidor de uma função de membro do provedor de OLE DB de cliente nativo.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retorna S_OK e tem uma ou mais mensagens informativas disponíveis após a execução de muitas [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções ou a execução do consumidor de uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] função de membro do provedor de OLE DB de cliente nativo.  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor do provedor de OLE DB de cliente nativo que permite a especificação dinâmica do texto da consulta deve verificar as interfaces de erro depois de cada execução de função de membro, independentemente do valor do código de retorno, da presença ou da ausência de uma referência de interface **IRowset** ou **IMultipleResults** retornada ou de uma contagem de linhas afetadas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Errors](errors.md)  
+ [Erros](errors.md)  
   
   

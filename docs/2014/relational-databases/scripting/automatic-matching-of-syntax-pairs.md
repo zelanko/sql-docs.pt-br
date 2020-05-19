@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4359a546c350c666190331ab6a8484ca9a99a83
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244796"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704089"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Correspondência automática de pares de sintaxe
   A correspondência automática de pares de sintaxe informa imediatamente se os elementos de sintaxe que devem ser codificados em pares estão formando pares corretos. Isso é conhecido como correspondência de delimitadores no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , correspondência de colchetes no Editor de Consultas XMLA do Analysis Services e correspondência de parênteses nos editores MDX e DMX.  

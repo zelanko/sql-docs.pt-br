@@ -14,15 +14,15 @@ helpviewer_keywords:
 - catalog functions [ODBC]
 - functions [ODBC]
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9308f9208d75287f3c93112f7f810c8ece3bc18b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62667374"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704273"
 ---
 # <a name="using-catalog-functions"></a>Usando funções de catálogo
   Todos os bancos de dados têm uma estrutura que contém os dados armazenados no banco de dados. Uma definição dessa estrutura, juntamente com outras informações, como permissões, é armazenada em um catálogo (implementado como um conjunto de tabelas do sistema), também conhecido como um dicionário de dados.  
@@ -43,7 +43,7 @@ ms.locfileid: "62667374"
   
      Retorna uma lista dos catálogos contidos em um servidor vinculado.  
   
- Depois que você tiver um nome de servidor vinculado e um nome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] catálogo, o driver ODBC do Native Client dará suporte à obtenção de informações do catálogo usando um nome de duas partes de _linked_server_name_**.** _Catálogo_ para *CatalogName* nas seguintes funções de catálogo ODBC:  
+ Depois que você tiver um nome de servidor vinculado e um nome de catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client dará suporte à obtenção de informações do catálogo usando um nome de duas partes de _linked_server_name_**.** _Catálogo_ para *CatalogName* nas seguintes funções de catálogo ODBC:  
   
 -   **SQLColumnPrivileges**  
   

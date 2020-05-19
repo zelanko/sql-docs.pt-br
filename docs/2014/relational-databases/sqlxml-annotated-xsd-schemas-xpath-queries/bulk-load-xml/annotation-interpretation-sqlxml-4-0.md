@@ -13,15 +13,15 @@ helpviewer_keywords:
 - bulk load [SQLXML], annotation interpretations
 - annotated XDR schemas, XML Bulk Load
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2db54a2bec501c3422cf19b1efab7cdb581420e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80b472ee00aba60e2bc01883b79b570dbed07b4f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013436"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703389"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>Interpretação de anotação (SQLXML 4.0)
   Os tópicos desta seção descrevem como o Carregamento em Massa de XML interpreta as anotações no esquema XSD. O comportamento descrito aqui também se aplica às anotações no esquema XDR.  

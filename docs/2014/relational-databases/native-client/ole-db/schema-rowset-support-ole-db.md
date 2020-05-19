@@ -13,23 +13,23 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, schema rowsets
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9624749eff8b455c7071d395ec91c96aeae9d32a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625951"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704239"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Suporte a conjunto de linhas de esquema (OLE DB)
-  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo também dá suporte ao retorno de informações de esquema [!INCLUDE[tsql](../../../includes/tsql-md.md)] de um servidor vinculado ao processar consultas distribuídas.  
+  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo também dá suporte ao retorno de informações de esquema de um servidor vinculado ao processar [!INCLUDE[tsql](../../../includes/tsql-md.md)] consultas distribuídas.  
   
 > [!NOTE]  
 >  Apesar de o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suportar sinônimos, metadados para sinônimos não são retornados pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- As tabelas a seguir listam conjuntos de linhas de esquema e as colunas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de restrição com suporte do provedor de OLE DB de cliente nativo.  
+ As tabelas a seguir listam conjuntos de linhas de esquema e as colunas de restrição com suporte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo.  
   
 |Conjunto de linhas de esquema|Colunas de restrição|  
 |-------------------|-------------------------|  

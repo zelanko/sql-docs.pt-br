@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB extensions for XML
 - SQL Server Native Client OLE DB provider, command execution
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47307455468a20351c3a3cda2a619e6296fb29ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638451"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704729"
 ---
 # <a name="executing-a-command"></a>Executando um comando
   Depois de estabelecida a conexão com uma fonte de dados, o consumidor chama o método **IDBCreateSession::CreateSession** para criar uma sessão. A sessão atua como um comando, conjunto de linhas ou fábrica de transação.  

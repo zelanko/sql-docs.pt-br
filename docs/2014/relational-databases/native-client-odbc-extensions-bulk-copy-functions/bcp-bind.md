@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07a7bb9026984ed830d0b146438d958739463109
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140566"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705334"
 ---
 # <a name="bcp_bind"></a>bcp_bind
   Associa dados de uma variável de programa a uma coluna de tabela para cópia em massa no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -125,7 +125,7 @@ bcp_bind(hdbc, szName, 0,
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- Se a coluna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associada for um caractere largo, nenhuma conversão será executada em [bcp_sendrow](bcp-sendrow.md). Se a coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for do tipo caractere do MBCS, a conversão de caracteres largo em caracteres multibyte será executada conforme os dados são enviados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coluna associada for um caractere largo, nenhuma conversão será executada em [bcp_sendrow](bcp-sendrow.md). Se a coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for do tipo caractere do MBCS, a conversão de caracteres largo em caracteres multibyte será executada conforme os dados são enviados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *cbTerm*  
  É a contagem de bytes presentes no terminador da variável de programa, se houver. Se não houver um terminador para a variável, defina *cbTerm* como 0.  
@@ -133,9 +133,9 @@ bcp_bind(hdbc, szName, 0,
  *eDataType*  
  É o tipo de dados C da variável de programa. Os dados na variável de programa são convertidos para o tipo da coluna do banco de dados. Se esse parâmetro for 0, nenhuma conversão será executada.  
   
- O parâmetro *eDataType* é enumerado pelos tokens de tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados em sqlncli. h, não os enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar um inteiro de dois bytes, ODBC tipo SQL_C_SHORT, usando o tipo SQLINT2 específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ O parâmetro *eDataType* é enumerado pelos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tokens de tipo de dados em sqlncli. h, não os enumeradores de tipo de dados ODBC C. Por exemplo, você pode especificar um inteiro de dois bytes, ODBC tipo SQL_C_SHORT, usando o tipo SQLINT2 específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu o *`eDataType`* suporte para os tokens de tipo de dados SQLXML e SQLUDT no parâmetro.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu o suporte para os tokens de tipo de dados SQLXML e SQLUDT no parâmetro *`eDataType`* .  
   
  *idxServerCol*  
  É a posição ordinal da coluna na tabela do banco de dados na qual os dados são copiados. A primeira coluna em uma tabela é a coluna 1. A posição ordinal de uma coluna é relatada por [SQLColumns](../native-client-odbc-api/sqlcolumns.md).  
@@ -144,23 +144,23 @@ bcp_bind(hdbc, szName, 0,
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
- Use **bcp_bind** para uma maneira rápida e eficiente de copiar dados de uma variável de programa para uma tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no.  
+ Use **bcp_bind** para uma maneira rápida e eficiente de copiar dados de uma variável de programa para uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Chame [bcp_init](bcp-init.md) antes de chamar esta ou qualquer outra função de cópia em massa. Chamar **bcp_init** define a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela de destino para cópia em massa. Ao chamar **bcp_init** para uso com **bcp_bind** e [bcp_sendrow](bcp-sendrow.md), o parâmetro **bcp_init** _szDataFile_ , que indica o arquivo de dados, é definido como nulo; o parâmetro **bcp_init**_eDirection_ é definido como DB_IN.  
   
- Faça uma chamada de **bcp_bind** separada para cada coluna na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela na qual você deseja copiar. Depois que as chamadas de **bcp_bind** necessárias tiverem sido feitas, chame **bcp_sendrow** para enviar uma linha de dados de suas variáveis de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programa para o. Reassociar uma coluna não tem suporte.  
+ Faça uma chamada de **bcp_bind** separada para cada coluna na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela na qual você deseja copiar. Depois que as chamadas de **bcp_bind** necessárias tiverem sido feitas, chame **bcp_sendrow** para enviar uma linha de dados de suas variáveis de programa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Reassociar uma coluna não tem suporte.  
   
- Sempre que você [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quiser confirmar as linhas já recebidas, chame [bcp_batch](bcp-batch.md). Por exemplo, chame **bcp_batch** uma vez para cada 1000 linhas inseridas ou em qualquer outro intervalo.  
+ Sempre que você quiser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] confirmar as linhas já recebidas, chame [bcp_batch](bcp-batch.md). Por exemplo, chame **bcp_batch** uma vez para cada 1000 linhas inseridas ou em qualquer outro intervalo.  
   
  Quando não houver mais linhas a serem inseridas, chame [bcp_done](bcp-done.md). Caso isso não seja feito, será gerado um erro.  
   
  As configurações de parâmetro de controle, especificadas com [bcp_control](bcp-control.md), não têm efeito sobre transferências de linha **bcp_bind** .  
   
- Se *pData* para uma coluna for definido como NULL porque seu valor será fornecido por chamadas para [bcp_moretext](bcp-moretext.md), qualquer coluna subsequente com *eDataType* definida como SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR ou SQLIMAGE também deverá ser associada a *pData* definido como NULL e seus valores também deverão ser fornecidos por chamadas para `bcp_moretext`.  
+ Se *pData* para uma coluna for definido como NULL porque seu valor será fornecido por chamadas para [bcp_moretext](bcp-moretext.md), qualquer coluna subsequente com *eDataType* definida como SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR ou SQLIMAGE também deverá ser associada a *pData* definido como NULL e seus valores também deverão ser fornecidos por chamadas para `bcp_moretext` .  
   
- Para novos tipos de valor `varchar(max)`grande, `varbinary(max)`como, ou `nvarchar(max)`, você pode usar sqldigit, SQLVARCHAR, SQLVARBINARY, SqlBinary e SQLNCHAR como indicadores de tipo no parâmetro *eDataType* .  
+ Para novos tipos de valor grande, como `varchar(max)` , `varbinary(max)` ou `nvarchar(max)` , você pode usar sqldigit, SQLVARCHAR, SQLVARBINARY, SqlBinary e SQLNCHAR como indicadores de tipo no parâmetro *eDataType* .  
   
- Se *cbTerm* não for 0, qualquer valor (1, 2, 4 ou 8) será válido para o prefixo (*cbIndicator*). Nessa situação, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Native Client pesquisará o terminador, calculará o comprimento dos dados em relação ao terminador (*i*) e definirá *cbData* como o valor menor de i e o valor do prefixo.  
+ Se *cbTerm* não for 0, qualquer valor (1, 2, 4 ou 8) será válido para o prefixo (*cbIndicator*). Nessa situação, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pesquisará o terminador, calculará o comprimento dos dados em relação ao terminador (*i*) e definirá *cbData* como o valor menor de i e o valor do prefixo.  
   
  Se *cbTerm* for 0 e *cbIndicator* (o prefixo) não for 0, *cbIndicator* deverá ser 8. O prefixo de 8 bytes pode ter os seguintes valores:  
   
@@ -168,7 +168,7 @@ bcp_bind(hdbc, szName, 0,
   
 -   0xFFFFFFFFFFFFFFFE é tratado como um valor de prefixo especial usado para enviar dados em partes para o servidor de forma eficiente. O formato dos dados com este prefixo especial é:  
   
--   <SPECIAL_PREFIX> \<0 ou mais partes de dados> <ZERO_CHUNK> em que:  
+-   <SPECIAL_PREFIX> \< 0 ou mais partes de dados> <ZERO_CHUNK> em que:  
   
 -   SPECIAL_PREFIX é 0xFFFFFFFFFFFFFFFE  
   

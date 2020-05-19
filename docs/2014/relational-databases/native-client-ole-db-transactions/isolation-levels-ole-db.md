@@ -12,18 +12,18 @@ helpviewer_keywords:
 - transactions [OLE DB]
 - SQL Server Native Client OLE DB provider, transactions
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a18986af71f652a833f413ee1fa62ca2fd44ba06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4026154204cf6de95711a3014b069c34a29d9922
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63215990"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704507"
 ---
 # <a name="isolation-levels-ole-db"></a>Níveis de isolamento (OLE DB)
-  Clientes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem controlar os níveis de isolamento de transação para uma conexão. Para controlar o nível de isolamento de transação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o consumidor do provedor de OLE DB de cliente nativo usa:  
+  Clientes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem controlar os níveis de isolamento de transação para uma conexão. Para controlar o nível de isolamento de transação, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor do provedor de OLE DB de cliente nativo usa:  
   
 -   DBPROPSET_SESSION propriedade DBPROP_SESS_AUTOCOMMITISOLEVELS para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modo de confirmação automática padrão do provedor de OLE DB do cliente nativo.  
   

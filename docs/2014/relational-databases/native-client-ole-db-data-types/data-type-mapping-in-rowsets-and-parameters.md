@@ -18,18 +18,18 @@ helpviewer_keywords:
 - GetParameterInfo function
 - OLE DB, data types
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65858c2d8f43a7fb675f17ff8c719b1041d6ea79
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062183"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705125"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros
-  Em conjuntos de linhas e como valores de parâmetro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de cliente nativo representa dados usando os seguintes OLE DB tipos de dados definidos, relatados nas funções **IColumnsInfo:: GetColumnInfo** e **ICommandWithParameters:: GetParameterInfo**.  
+  Em conjuntos de linhas e como valores de parâmetro, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo representa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados usando os seguintes OLE DB tipos de dados definidos, relatados nas funções **IColumnsInfo:: GetColumnInfo** e **ICommandWithParameters:: GetParameterInfo**.  
   
 |Tipo de dados do SQL Server|Tipo de dados OLE DB|  
 |--------------------------|----------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "63062183"
  Quando dados **sql_variant** são buscados como DBTYPE_VARIANT, eles são colocados em uma estrutura VARIANT no buffer. Mas os subtipos na estrutura VARIANT podem não ser mapeados para os subtipos definidos no tipo de dados **sql_variant**. Os dados **sql_variant** precisam ser buscados como DBTYPE_SQLVARIANT para que todos os subtipos obtenham uma correspondência.  
   
 ## <a name="dbtype_sqlvariant-data-type"></a>Tipo de dados DBTYPE_SQLVARIANT  
- Para dar suporte **sql_variant** ao tipo de dados sql_variant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o provedor de OLE DB de cliente nativo expõe um tipo de dados específico do provedor chamado DBTYPE_SQLVARIANT. Quando dados **sql_variant** são buscados como DBTYPE_SQLVARIANT, eles são armazenados em uma estrutura SSVARIANT específica do provedor. A estrutura SSVARIANT contém todos os subtipos que correspondem aos subtipos do tipo de dados **sql_variant**.  
+ Para dar suporte ao tipo de dados **sql_variant** , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe um tipo de dados específico do provedor chamado DBTYPE_SQLVARIANT. Quando dados **sql_variant** são buscados como DBTYPE_SQLVARIANT, eles são armazenados em uma estrutura SSVARIANT específica do provedor. A estrutura SSVARIANT contém todos os subtipos que correspondem aos subtipos do tipo de dados **sql_variant**.  
   
  A propriedade de sessão SSPROP_ALLOWNATIVEVARIANT também deve ser definida como TRUE.  
   

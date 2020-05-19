@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b7f9562f8594e29c33832c595b9296eaf4f2019b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c2bd460346f94d7b0779774ebd426ac138f6cb9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162438"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704351"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Alteração de comportamento do driver ODBC ao lidar com conversões de caracteres
-  O [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] driver ODBC do Native Client (SQLNCLI11. dll) alterou a maneira como ele faz das conversões SQL_WCHAR * (nchar/NVARCHAR/nvarchar\* (max)) e SQL_CHAR (char/varchar/NARCHAR (max)). As funções ODBC, como SQLGetData, SQLBindCol, SQLBindParameter, retornam (-4) SQL_NO_TOTAL como o parâmetro de comprimento/indicador ao usar o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. As versões anteriores do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retornaram um valor de comprimento, que pode estar incorreto.  
+  O [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] driver ODBC do Native Client (SQLNCLI11. dll) alterou a maneira como ele faz das conversões SQL_WCHAR * (nchar/nvarchar/nvarchar (max)) e SQL_CHAR \* (char/varchar/NARCHAR (max)). As funções ODBC, como SQLGetData, SQLBindCol, SQLBindParameter, retornam (-4) SQL_NO_TOTAL como o parâmetro de comprimento/indicador ao usar o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. As versões anteriores do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retornaram um valor de comprimento, que pode estar incorreto.  
   
 ## <a name="sqlgetdata-behavior"></a>Comportamento de SQLGetData  
  Muitas funções do Windows permitem especificar um tamanho do buffer de 0 e o comprimento retornado é o tamanho dos dados retornados. O seguinte padrão é comum para programadores do Windows:  
@@ -55,7 +55,7 @@ SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
 |Versão do driver ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Comprimento ou resultado do indicador|Descrição|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client ou anterior|6|O driver presumiu incorretamente que a conversão de CHAR para WCHAR poderia ser realizada como o comprimento * 2.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versão 11.0.2100.60) ou posterior|-4 (SQL_NO_TOTAL)|O driver não assume mais que a conversão de CHAR para WCHAR ou WCHAR em CHAR é uma ação ( \*multiplicar) 2 ou (dividir)/2.<br /><br /> Chamar **SQLGetData** não retorna mais o comprimento da conversão esperada. O driver detecta a conversão para ou de CHAR e WCHAR e retorna (- 4) SQL_NO_TOTAL em vez do comportamento de *2 ou /2 que poderia estar incorreto.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versão 11.0.2100.60) ou posterior|-4 (SQL_NO_TOTAL)|O driver não assume mais que a conversão de CHAR para WCHAR ou WCHAR em CHAR é uma ação (multiplicar) \* 2 ou (dividir)/2.<br /><br /> Chamar **SQLGetData** não retorna mais o comprimento da conversão esperada. O driver detecta a conversão para ou de CHAR e WCHAR e retorna (- 4) SQL_NO_TOTAL em vez do comportamento de *2 ou /2 que poderia estar incorreto.|  
   
  Use **SQLGetData** para recuperar as partes dos dados. (Pseudocódigo mostrado:)  
   

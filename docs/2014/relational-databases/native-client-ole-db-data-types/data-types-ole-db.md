@@ -12,18 +12,18 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b29121aa91dc6d237c0d5809d04e557fb766084
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062134"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705112"
 ---
 # <a name="data-types-ole-db"></a>Tipos de dados (OLE DB)
-  Para [!INCLUDE[tsql](../../includes/tsql-md.md)] executar instruções e processar os resultados usando o provedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB de cliente nativo, você deve saber como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo mapeia tipos de dados para OLE DB tipos de dados ao associar parâmetros ou colunas em um conjunto de linhas e quando ele usa a interface **ITableDefinition** para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Para executar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções e processar os resultados usando o provedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB de cliente nativo, você deve saber como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo mapeia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados para OLE DB tipos de dados ao associar parâmetros ou colunas em um conjunto de linhas e quando ele usa a interface **ITableDefinition** para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

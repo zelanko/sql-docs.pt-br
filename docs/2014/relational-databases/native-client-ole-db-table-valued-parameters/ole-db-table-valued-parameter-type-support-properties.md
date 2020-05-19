@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5cdd19895a1cf91e1c5c8608013cb52482f946c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abe342538fd191d2992e852e3cdcb09926725e49
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046531"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704619"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Suporte ao tipo de parâmetro com valor de tabela de OLE DB (propriedades)
   Este tópico fornece informações sobre propriedades e conjuntos de propriedades de OLE DB associados a objetos de conjunto de linhas de parâmetro com valor de tabela.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df59c3a49715791e2f525e4bc5a69ff8991cac44
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144298"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704280"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos de dados CLR grandes definidos pelo usuário (ODBC)
   Este tópico aborda as alterações feitas ao ODBC no SQL Server Native Client para dar suporte aos UDTs (tipos definidos pelo usuário) de CLR (Common Language Runtime) grande.  
@@ -42,7 +42,7 @@ ms.locfileid: "63144298"
   
 |Tipo de dados SQL|Layout de memória|Tipos de dados do C|Valor (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (caractere \*não assinado)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (caractere não assinado \* )|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Campos do descritor dos parâmetros  
  As informações são retornadas nos campos IPD são as seguintes:  
@@ -130,7 +130,7 @@ ms.locfileid: "63144298"
 |Conversão para e de:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Porta|  
-|SQL_C_BINARY|Suportado|  
+|SQL_C_BINARY|Com suporte|  
 |SQL_C_CHAR|Porta|  
   
  \*Os dados binários são convertidos em uma cadeia de caracteres hexadecimal.  
@@ -140,7 +140,7 @@ ms.locfileid: "63144298"
 |Conversão para e de:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Porta|  
-|SQL_C_BINARY|Suportado|  
+|SQL_C_BINARY|Com suporte|  
 |SQL_C_CHAR|Porta|  
   
  \*A conversão de cadeia de caracteres hexadecimal para dados binárias ocorre.  

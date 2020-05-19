@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB error handling, about error handling
 - OLE DB error handling
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 434b4251c51809c97744e7aaf954ac1f11c06cfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3979390a58235dbb8ec7c76e7b16478e7d9deb9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050666"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704997"
 ---
 # <a name="errors"></a>Errors
   Os objetos OLE/COM informam erros através do código de retorno de HRESULT das funções de membro de objeto. Um HRESULT de OLE/COM é uma estrutura de bits compactados. A OLE fornece macros que eliminam a referência de membros de estrutura.  
@@ -30,7 +30,7 @@ ms.locfileid: "63050666"
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode retornar vários erros. Um aplicativo pode recuperar erros do servidor um de cada vez chamando [IMultipleResults::GetResult](https://go.microsoft.com/fwlink/?LinkId=129630) combinado com ISQLErrorInfo e IErrorRecords.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe as interfaces OLE DB de objeto de erro `ISQLErrorInfo` [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) de registro **IErrorInfo**, personalizadas e específicas do provedor.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe as interfaces OLE DB de objeto de erro ISQLServerErrorInfo de registro **IErrorInfo**, personalizadas `ISQLErrorInfo` e específicas do provedor. [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
  Para obter informações sobre como rastrear erros, confira [Rastreamento do acesso a dados](https://go.microsoft.com/fwlink/?LinkId=125805). Para obter informações sobre aprimoramentos no rastreamento de erros adicionados em [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], confira [Acessar informações de diagnóstico nos logs de eventos estendidos](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   

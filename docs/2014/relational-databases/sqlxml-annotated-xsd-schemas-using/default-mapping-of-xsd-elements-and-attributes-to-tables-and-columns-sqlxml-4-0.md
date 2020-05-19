@@ -23,15 +23,15 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef143c3a23458e017067ebf0a2ad489bed149f75
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013878"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703599"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapeamento padrão de atributos e elementos XSD para tabelas e colunas (SQLXML 4.0)
   Por padrão, um elemento de tipo complexo em um esquema XSD anotado é mapeado para a tabela (exibição) com o mesmo nome no banco de dados especificado, e um elemento ou atributo de tipo simples é mapeado para a coluna com o mesmo nome na tabela.  
@@ -39,8 +39,8 @@ ms.locfileid: "66013878"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-default-mapping"></a>A. Especificando o mapeamento padrão  
- Neste exemplo, nenhuma anotação é especificada no esquema XSD. O ** \<elemento Person. Contact>** é do tipo complexo e, portanto, é mapeado por padrão para a tabela Person. Contact no banco de dados AdventureWorks. Todos os atributos (ContactID, FirstName, LastName) da ** \<pessoa. Contact>** elemento são de tipo simples e são mapeados por padrão para colunas com os mesmos nomes na tabela Person. Contact.  
+### <a name="a-specifying-default-mapping"></a>a. Especificando o mapeamento padrão  
+ Neste exemplo, nenhuma anotação é especificada no esquema XSD. O elemento ** \< Person. Contact>** é do tipo complexo e, portanto, é mapeado por padrão para a tabela Person. Contact no banco de dados AdventureWorks. Todos os atributos (ContactID, FirstName, LastName) da ** \< pessoa. Contact>** elemento são de tipo simples e são mapeados por padrão para colunas com os mesmos nomes na tabela Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -91,7 +91,7 @@ ms.locfileid: "66013878"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mapeando um elemento XML para uma coluna de banco de dados  
- Neste exemplo, o mapeamento padrão acontece também porque nenhuma anotação é usada. O ** \<elemento Person. Contact>** é do tipo complexo e é mapeado para a tabela com o mesmo nome no banco de dados. Os elementos ** \<FirstName>** e ** \<LastName>** e o atributo **EmployeeID** são de tipo simples e, portanto, são mapeados para as colunas com os mesmos nomes. A única diferença entre isto e o exemplo anterior é que os elementos são usados para mapear os campos FirstName e LastName.  
+ Neste exemplo, o mapeamento padrão acontece também porque nenhuma anotação é usada. O elemento ** \< Person. Contact>** é do tipo complexo e é mapeado para a tabela com o mesmo nome no banco de dados. Os elementos ** \< FirstName>** e ** \< LastName>** e o atributo **EmployeeID** são de tipo simples e, portanto, são mapeados para as colunas com os mesmos nomes. A única diferença entre isto e o exemplo anterior é que os elementos são usados para mapear os campos FirstName e LastName.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -145,7 +145,7 @@ ms.locfileid: "66013878"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Mapeando um elemento XML para uma coluna de tipo de dados XML  
- Neste exemplo, o mapeamento padrão acontece também porque nenhuma anotação é usada. O elemento de ** \<>Production. ProductModel** é do tipo complexo e é mapeado para a tabela com o mesmo nome no banco de dados. O atributo **ProductModelID** é do tipo simples e, portanto, é mapeado para as colunas com os mesmos nomes. A única diferença entre isso e os exemplos anteriores é que as ** \<instruções>** elemento está mapeando para uma coluna que usa `xml` o tipo de dados usando `xsd:anyType` o tipo.  
+ Neste exemplo, o mapeamento padrão acontece também porque nenhuma anotação é usada. O elemento de ** \<>Production. ProductModel** é do tipo complexo e é mapeado para a tabela com o mesmo nome no banco de dados. O atributo **ProductModelID** é do tipo simples e, portanto, é mapeado para as colunas com os mesmos nomes. A única diferença entre isso e os exemplos anteriores é que as ** \< instruções>** elemento está mapeando para uma coluna que usa o `xml` tipo de dados usando o `xsd:anyType` tipo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

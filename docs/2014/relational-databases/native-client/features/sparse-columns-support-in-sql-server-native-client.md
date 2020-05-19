@@ -11,20 +11,20 @@ helpviewer_keywords:
 - sparse columns, SQL Server Native Client
 - sparse columns, OLE DB
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21b79a06acd838278073dee58026269f63b0da04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8d0377bab3abddebe6d2869744dd51def5b5008
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231706"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704331"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Suporte a colunas esparsas no SQL Server Native Client
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client suporta colunas esparsas. Para obter mais informações sobre colunas esparsas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], confira [Usar colunas esparsas](../../tables/use-sparse-columns.md) e [Usar conjuntos de colunas](../../tables/use-column-sets.md).  
   
- Para obter mais informações sobre o suporte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colunas esparsas no Native Client, consulte [suporte a colunas esparsas &#40;&#41;ODBC](../odbc/sparse-columns-support-odbc.md) e [colunas esparsas dão suporte a &#40;OLE DB&#41;](../ole-db/sparse-columns-support-ole-db.md).  
+ Para obter mais informações sobre o suporte a colunas esparsas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [suporte a colunas esparsas &#40;&#41;ODBC](../odbc/sparse-columns-support-odbc.md) e [colunas esparsas dão suporte a &#40;OLE DB&#41;](../ole-db/sparse-columns-support-ole-db.md).  
   
  Para obter informações sobre aplicativos de exemplo que demonstram esse recurso, confira [Amostras de programação do SQL Server Data](https://msftdpprodsamples.codeplex.com/).  
   
@@ -42,22 +42,22 @@ ms.locfileid: "75231706"
 |Determinar se uma coluna está esparsa.|Consulte a coluna SS_IS_SPARSE do conjunto de resultados SQLColumns (ODBC).<br /><br /> Consulte a coluna SS_IS_SPARSE do conjunto de linhas de esquema de DBSCHEMA_COLUMNS (OLE DB).<br /><br /> Esse cenário não é possível com um aplicativo que usa o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client de uma versão anterior ao [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Entretanto, esse aplicativo poderia consultar exibições de sistema.|  
 |Determinar se uma coluna é um `column_set`.|Consulte a coluna SS_IS_COLUMN_SET do conjunto de resultados SQLColumns. Ou então, consulte o atributo de coluna específico do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], SQL_CA_SS_IS_COLUMN_SET (ODBC).<br /><br /> Consulte a coluna SS_IS_COLUMN_SET do conjunto de linhas de esquema de DBSCHEMA_COLUMNS. Ou então, confira *dwFlags* retornado por IColumnsinfo::GetColumnInfo ou DBCOLUMNFLAGS no conjunto de linhas retornado por IColumnsRowset::GetColumnsRowset. Para colunas `column_set`, DBCOLUMNFLAGS_SS_ISCOLUMNSET será definido (OLE DB).<br /><br /> Esse cenário não é possível com um aplicativo que usa o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client de uma versão anterior ao [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Entretanto, esse aplicativo poderia consultar exibições de sistema.|  
 |Importar e exportar colunas esparsas por BCP para uma tabela sem `column_set`.|Nenhuma alteração em comportamento de versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
-|Importar e exportar colunas esparsas por BCP para uma tabela com `column_set`.|O `column_set` é importado e exportado da mesma maneira que o XML; ou seja, como `varbinary(max)` se fosse associado como um tipo binário, ou `nvarchar(max)` como se fosse associado `char` como um tipo ou **WCHAR** .<br /><br /> Colunas que são membros do `column_set` esparso não são exportadas como colunas distintas; elas só são exportadas no valor do `column_set`.|  
+|Importar e exportar colunas esparsas por BCP para uma tabela com `column_set`.|O `column_set` é importado e exportado da mesma maneira que o XML; ou seja, como `varbinary(max)` se fosse associado como um tipo binário, ou como `nvarchar(max)` se fosse associado como um `char` tipo ou **WCHAR** .<br /><br /> Colunas que são membros do `column_set` esparso não são exportadas como colunas distintas; elas só são exportadas no valor do `column_set`.|  
 |Comportamento de `queryout` para BCP.|Nenhuma alteração na manipulação de colunas nomeadas explicitamente de versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.<br /><br /> Cenários que envolvem importação e exportação entre tabelas com esquemas diferentes podem exigir manipulação especial.<br /><br /> Para obter mais informações sobre BCP, consulte Suporte de BCP (cópia em massa) a colunas esparsas, mais adiante neste tópico.|  
   
 ## <a name="down-level-client-behavior"></a>Comportamento do cliente de versão anterior  
- Os clientes de nível inferior retornarão metadados somente para colunas que não sejam membros do esparso `column_set` para SQLColumns e DBSCHMA_COLUMNS. Os conjuntos de linhas de esquema OLE DB adicionais [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] introduzidos no Native Client não estarão disponíveis, nem as modificações em SQLColumns no ODBC via SQL_SOPT_SS_NAME_SCOPE.  
+ Os clientes de nível inferior retornarão metadados somente para colunas que não sejam membros do esparso `column_set` para SQLColumns e DBSCHMA_COLUMNS. Os conjuntos de linhas de esquema OLE DB adicionais introduzidos no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client não estarão disponíveis, nem as modificações em SQLColumns no ODBC via SQL_SOPT_SS_NAME_SCOPE.  
   
  Os clientes de nível inferior podem acessar as colunas que são membros do `column_set` esparso por nome, e a coluna `column_set` poderá ser acessada como uma coluna XML por clientes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>Suporte de BCP (cópia em massa) a colunas esparsas  
  Não há nenhuma alteração à API de BCP em ODBC ou OLE DB para as colunas esparsas ou os recursos de `column_set`.  
   
- Se uma tabela tiver um `column_set`, as colunas esparsas não serão tratadas como colunas distintas. Os valores de todas as colunas esparsas são incluídos no valor de `column_set`, que é exportado da mesma maneira que uma coluna XML; ou seja, como `varbinary(max)` se fosse associado como um tipo binário, ou `nvarchar(max)` como se fosse associado `char` como um tipo ou **WCHAR** ). Na importação, o valor de `column_set` deve estar de acordo com o esquema do `column_set`.  
+ Se uma tabela tiver um `column_set`, as colunas esparsas não serão tratadas como colunas distintas. Os valores de todas as colunas esparsas são incluídos no valor de `column_set` , que é exportado da mesma maneira que uma coluna XML; ou seja, como `varbinary(max)` se estiver associado como um tipo binário, ou como `nvarchar(max)` se estiver associado como um `char` ou um tipo **WCHAR** ). Na importação, o valor de `column_set` deve estar de acordo com o esquema do `column_set`.  
   
  Para operações de `queryout`, não há alterações na maneira como são tratadas as colunas referenciadas explicitamente. As colunas de `column_set` têm o mesmo comportamento das colunas XML e a dispersão não tem efeito sobre o tratamento de colunas esparsas nomeadas.  
   
- Entretanto, se `queryout` for usado para exportação e você referenciar colunas esparsas que são membros do conjunto de colunas esparsas por nome, não será possível executar uma importação direta para uma tabela de estrutura semelhante. Isso ocorre porque o bcp usa metadados consistentes com uma operação **Select \* ** para a importação e não pode `column_set` corresponder colunas de membros a esses metadados. Para importar as colunas de membro de `column_set` individualmente, você precisa definir uma exibição na tabela que referencia as colunas de `column_set` desejadas, além de executar a operação de importação usando a exibição.  
+ Entretanto, se `queryout` for usado para exportação e você referenciar colunas esparsas que são membros do conjunto de colunas esparsas por nome, não será possível executar uma importação direta para uma tabela de estrutura semelhante. Isso ocorre porque o BCP usa metadados consistentes com uma operação **Select \* ** para a importação e não pode corresponder `column_set` colunas de membros a esses metadados. Para importar as colunas de membro de `column_set` individualmente, você precisa definir uma exibição na tabela que referencia as colunas de `column_set` desejadas, além de executar a operação de importação usando a exibição.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Programação do SQL Server Native Client](../sql-server-native-client-programming.md)  

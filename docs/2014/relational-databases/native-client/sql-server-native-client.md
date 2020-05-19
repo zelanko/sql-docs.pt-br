@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 003abb67cd66d02294210ddb3f55061abcc804f4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638847"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704141"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>O que&#39;s New no SQL Server Native Client
   O [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instala o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. Não há nenhum [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client.  
@@ -42,13 +42,13 @@ ms.locfileid: "62638847"
   
 -   Extensibilidade do tipo de dados C. Para obter mais informações, consulte [Tipos de dados C em ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
   
-     Para dar suporte a esse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso no Native Client, SQLGetDescField `SQL_C_SS_TIME2` pode retornar `time` (para tipos `SQL_C_SS_TIMESTAMPOFFSET` ) ou `datetimeoffset`(for) `SQL_C_BINARY`em vez de, se seu aplicativo usar o ODBC 3,8. Para obter mais informações, consulte [suporte de tipo de dados para aprimoramentos de data e hora ODBC](features/date-and-time-improvements.md).  
+     Para dar suporte a esse recurso no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField pode retornar `SQL_C_SS_TIME2` (para `time` tipos) ou `SQL_C_SS_TIMESTAMPOFFSET` (for `datetimeoffset` ) em vez de `SQL_C_BINARY` , se seu aplicativo usar o ODBC 3,8. Para obter mais informações, consulte [suporte de tipo de dados para aprimoramentos de data e hora ODBC](features/date-and-time-improvements.md).  
   
 -   Chamando `SQLGetData` várias vezes com um buffer pequeno para recuperar um valor de parâmetro grande. Para obter mais informações, consulte [Recuperando parâmetros de saída usando SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
   
  Os tópicos a seguir descrevem as alterações de comportamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
--   Ao chamar `ICommandWithParameters::SetParameterInfo`, o valor passado para o parâmetro *pwszName* deve ser um identificador válido. Para obter mais informações, consulte [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
+-   Ao chamar `ICommandWithParameters::SetParameterInfo` , o valor passado para o parâmetro *pwszName* deve ser um identificador válido. Para obter mais informações, consulte [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
   
 -   `SQLDescribeParam` agora irá retornar de maneira consistente um valor que esteja de acordo com a especificação de ODBC. Para obter mais informações, consulte [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
   

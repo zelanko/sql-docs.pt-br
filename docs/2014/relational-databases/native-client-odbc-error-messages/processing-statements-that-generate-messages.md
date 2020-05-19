@@ -21,15 +21,15 @@ helpviewer_keywords:
 - ODBC error handling, statements generating messages
 - SQLExecDirect function
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 11235979a886e82fa09ca1d1a79fa21550965d0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6b848163d01d49d4151fa628ab81e867cb69c18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205697"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705396"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Processando instruções que geram mensagens
   As opções STATISTICS TIME e STATISTICS IO da instrução SET do [!INCLUDE[tsql](../../includes/tsql-md.md)] são usadas para obter informações que auxiliem a diagnosticar consultas de longa execução. As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também dão suporte à opção SHOWPLAN para analisar planos de consulta. Um aplicativo ODBC pode definir essas opções executando as seguintes instruções:  

@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 406c19cb8cc5609e15206c81fc0297e14c6dd8ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245134"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703888"
 ---
 # <a name="find-results-windows"></a>Janelas Localizar Resultados
   As duas janelas Localizar Resultados exibem correspondências encontradas usando a guia **Localizar em Arquivos** ou **Substituir em Arquivos** de caixa de diálogo **Localizar e Substituir** . O comando **Opções de Resultados** para **Localizar em Arquivos** e **Substituir em Arquivos** permite que você escolha a janela Localizar Resultados onde serão listadas as correspondências encontradas.  

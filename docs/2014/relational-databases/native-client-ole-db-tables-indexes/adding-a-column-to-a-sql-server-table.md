@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, columns
 - adding columns
 ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 32e78feae791788e0aad87079546ea8c7d49e734
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a145f97a8eb848f604833d1afe8e0afd27a50776
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046491"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704568"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Adicionando uma coluna a uma tabela do SQL Server
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe a função **ITableDefinition:: AddColumn** . Isso permite que os consumidores adicionem uma coluna a uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 957ef8b180646427d60a42339434139857bdd3fb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655622"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705021"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Parâmetro e metadados de conjunto de linhas
   Este tópico fornece informações sobre o tipo e os membros de tipo a seguir, relacionados aos aprimoramentos de data e hora de OLE DB.  
@@ -37,7 +37,7 @@ ms.locfileid: "62655622"
   
 |Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Liberada|  
+|data|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Definir|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
@@ -54,7 +54,7 @@ ms.locfileid: "62655622"
 |*pwszDataSourceType*<br /><br /> (específico do provedor)|*pwszDataSourceType*<br /><br /> (OLE DB genérico)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Ignored|  
-|date|DBTYPE_DBDATE|6|Ignored|  
+|data|DBTYPE_DBDATE|6|Ignored|  
 ||DBTYPE_DBTIME|10|Ignored|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Ignored|  
@@ -64,14 +64,14 @@ ms.locfileid: "62655622"
   
  O parâmetro *bPrecision* é ignorado.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE" é ignorado ao enviar dados ao servidor. Os aplicativos podem forçar o uso de tipos TDS (tabular-data stream) herdados usando nomes de tipo específicos do provedor "`datetime`" e "`smalldatetime`". Quando conectado a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior) servidores, o`datetime2`formato "" será usado e uma conversão de servidor implícita ocorrerá, se necessário, quando o nome do tipo`datetime2`for "" ou "DBTYPE_DBTIMESTAMP". *bScale* será ignorado se os nomes de tipo específicos do`datetime`provedor ""`smalldatetime`ou "" forem usados. Caso contrário, aplicativos deverá garantir que *bScale* esteja definido corretamente. Os aplicativos atualizados do MDAC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Native [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Client a partir desse uso "DBTYPE_DBTIMESTAMP" falharão se não definirem *bScale* corretamente. Quando estiver conectado a instâncias do servidor anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], um valor *bScale* diferente de 0 ou 3 com "DBTYPE_DBTIMESTAMP" será considerado um erro e E_FAIL será retornado.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE" é ignorado ao enviar dados ao servidor. Os aplicativos podem forçar o uso de tipos TDS (tabular-data stream) herdados usando nomes de tipo específicos do provedor "`datetime`" e "`smalldatetime`". Quando conectado a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior) servidores, `datetime2` o formato "" será usado e uma conversão de servidor implícita ocorrerá, se necessário, quando o nome do tipo for " `datetime2` " ou "DBTYPE_DBTIMESTAMP". *bScale* será ignorado se os nomes de tipo específicos do provedor " `datetime` " ou " `smalldatetime` " forem usados. Caso contrário, aplicativos deverá garantir que *bScale* esteja definido corretamente. Os aplicativos atualizados do MDAC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Native Client [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a partir desse uso "DBTYPE_DBTIMESTAMP" falharão se não definirem *bScale* corretamente. Quando estiver conectado a instâncias do servidor anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], um valor *bScale* diferente de 0 ou 3 com "DBTYPE_DBTIMESTAMP" será considerado um erro e E_FAIL será retornado.  
   
  Quando ICommandWithParameters:: SetParameterInfo não é chamado, o provedor imples o tipo de servidor do tipo de associação, conforme especificado em IAccessor:: createaccesser da seguinte maneira:  
   
 |Tipo de associação|*pwszDataSourceType*<br /><br /> (específico do provedor)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|date|  
+|DBTYPE_DBDATE|data|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|Datetime2 (7)|  
@@ -82,7 +82,7 @@ ms.locfileid: "62655622"
   
 |Tipo de coluna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Liberada|  
+|data|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Definir|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
@@ -116,7 +116,7 @@ ms.locfileid: "62655622"
   
 |Tipo de parâmetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Liberada|  
+|data|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Definir|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  

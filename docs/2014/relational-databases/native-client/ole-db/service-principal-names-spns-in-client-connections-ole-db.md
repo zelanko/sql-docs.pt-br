@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1ae38f4258c965a3b4aedf18ed6261134bd00ac6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5a85d5ddf0478551838fb963a57ad26dd746656
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626849"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704203"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>SPNs (Nomes da Entidade de Serviço) em conexões de cliente (OLE DB)
   Este tópico descreve as propriedades OLE DB e as funções de membro que dão suporte a SPNs (nomes da entidade de serviço) em aplicativos clientes. Para obter mais informações sobre SPNs em aplicativos cliente, confira [Nome da entidade de serviço &#40;SPN&#41; Suporte em conexões de cliente](../features/service-principal-name-spn-support-in-client-connections.md). Para ver um exemplo, confira [Autenticação Kerberos integrada &#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
@@ -49,9 +49,9 @@ ms.locfileid: "62626849"
   
 |Função de membro|Descrição|  
 |---------------------|-----------------|  
-|IDataInitialize::GetDataSource|*pwszInitializationString* pode conter as novas palavras-chave `ServerSPN` e `FailoverPartnerSPN`.|  
-|IDataInitialize::GetInitializationString|Se SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN tiverem valores não padrão, eles serão incluídos na cadeia de inicialização por meio de *ppwszInitString* como valores de palavra `ServerSPN` - `FailoverPartnerSPN`chave para e. Caso contrário, essas palavras-chave não serão incluídas na cadeia de inicialização.|  
-|IDBInitialize::Initialize|Se o aviso for habilitado pela definição de DBPROP_INIT_PROMPT nas propriedades de inicialização da fonte de dados, a caixa de diálogo Logon no OLE DB será exibida. Isto permite que os SPNs sejam inseridos no servidor principal e no seu parceiro de failover.<br /><br /> A cadeia de caracteres do provedor em DPPROP_INIT_PROVIDERSTRING, se definido, reconhecerá as `ServerSPN` novas `FailoverPartnerSPN` palavras-chave e usará seus valores, se estiverem presentes, para inicializar SSPROP_INIT_SERVER_SPN e SSPROP_INIT_FAILOVER_PARTNER_SPN.<br /><br /> IDBProperties::SetProperties pode ser chamada para definir as propriedades SSPROP_INIT_SERVER_SPN e SSPROP_INIT_FAILOVER_PARTNER_SPN antes de IDBInitialize::Initialize ser chamado. Essa é uma alternativa ao uso de uma cadeia de caracteres de provedor.<br /><br /> Se uma propriedade for definida em mais de um local, um valor definido programaticamente terá precedência sobre um conjunto de valor na cadeia de caracteres de provedor. Um valor definido na cadeia de inicialização tem precedência sobre um valor definido em uma caixa de diálogo de login.<br /><br /> Se a mesma palavra-chave aparecer mais de uma vez na cadeia de caracteres de provedor, o valor da primeira ocorrência terá precedência.|  
+|IDataInitialize::GetDataSource|*pwszInitializationString* pode conter as novas palavras-chave `ServerSPN` e `FailoverPartnerSPN` .|  
+|IDataInitialize::GetInitializationString|Se SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN tiverem valores não padrão, eles serão incluídos na cadeia de inicialização por meio de *ppwszInitString* como valores de palavra-chave para `ServerSPN` e `FailoverPartnerSPN` . Caso contrário, essas palavras-chave não serão incluídas na cadeia de inicialização.|  
+|IDBInitialize::Initialize|Se o aviso for habilitado pela definição de DBPROP_INIT_PROMPT nas propriedades de inicialização da fonte de dados, a caixa de diálogo Logon no OLE DB será exibida. Isto permite que os SPNs sejam inseridos no servidor principal e no seu parceiro de failover.<br /><br /> A cadeia de caracteres do provedor em DPPROP_INIT_PROVIDERSTRING, se definido, reconhecerá as novas palavras-chave `ServerSPN` e `FailoverPartnerSPN` usará seus valores, se estiverem presentes, para inicializar SSPROP_INIT_SERVER_SPN e SSPROP_INIT_FAILOVER_PARTNER_SPN.<br /><br /> IDBProperties::SetProperties pode ser chamada para definir as propriedades SSPROP_INIT_SERVER_SPN e SSPROP_INIT_FAILOVER_PARTNER_SPN antes de IDBInitialize::Initialize ser chamado. Essa é uma alternativa ao uso de uma cadeia de caracteres de provedor.<br /><br /> Se uma propriedade for definida em mais de um local, um valor definido programaticamente terá precedência sobre um conjunto de valor na cadeia de caracteres de provedor. Um valor definido na cadeia de inicialização tem precedência sobre um valor definido em uma caixa de diálogo de login.<br /><br /> Se a mesma palavra-chave aparecer mais de uma vez na cadeia de caracteres de provedor, o valor da primeira ocorrência terá precedência.|  
 |IDBProperties::GetProperties|IDBProperties::GetProperties pode ser chamado para obter os valores das novas propriedades de inicialização da fonte de dados SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN, e das novas propriedades da fonte de dados SSPROP_AUTHENTICATIONMETHOD e SSPROP_MUTUALLYAUTHENTICATED.|  
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo incluirá as novas propriedades de inicialização da fonte de dados SSPROP_INIT_SERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN, ou as novas propriedades da fonte de dados SSPROP_AUTHENTICATION_METHOD e SSPROP_MUTUALLYAUTHENTICATED.|  
 |IDBProperties::SetProperties|IDBProperties::SetProperties pode ser chamado para definir os valores das novas propriedades de inicialização da fonte de dados SSPROP_INITSERVERSPN e SSPROP_INIT_FAILOVERPARTNERSPN.<br /><br /> Essas propriedades podem ser definidas a qualquer momento, mas se a fonte de dados já estiver aberta, o erro a seguir será retornado:DB_E_ERRORSOCCURRED, "Operação de várias etapas do OLE DB gerou erros. Verifique todos os valores de status do OLE DB, se disponíveis. Não foram executados trabalhos."|  

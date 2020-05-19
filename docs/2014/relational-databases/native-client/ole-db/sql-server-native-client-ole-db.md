@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4328c284d23313cf737c5cf8b39751359e568b4f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033549"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704178"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é uma API COM de baixo nível usada para acessar dados. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é recomendado para desenvolver ferramentas, utilitários ou componentes de baixo nível que precisem de alto desempenho. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é um provedor nativo de alto desempenho que acessa o protocolo TDS do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diretamente.  
@@ -62,7 +62,7 @@ ms.locfileid: "63033549"
   
 -   [Transações](../../native-client-ole-db-transactions/transactions.md)  
   
--   [Errors](../../native-client-ole-db-errors/errors.md)  
+-   [Erros](../../native-client-ole-db-errors/errors.md)  
   
 -   [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63033549"
   
 -   [SQL Server Native Client &#40;OLE DB referência de&#41;](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [Tópicos de instruções sobre OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Tópicos de instruções do OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Programação do SQL Server Native Client](../sql-server-native-client-programming.md)  

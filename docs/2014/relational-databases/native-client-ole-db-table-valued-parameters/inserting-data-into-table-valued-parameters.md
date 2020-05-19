@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, inserting data into
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c195d2bba2bacfe5ee05ed423dcc2bea1b7581e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f89e074e8431d9d421b9168e43522412c152e55f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231789"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704627"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Inserindo dados em parâmetros com valor de tabela
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte a dois modelos para o consumidor especificar dados para linhas de parâmetro com valor de tabela: um modelo de push e um modelo de pull. Uma amostra que apresenta o modelo de pull está disponível; confira [Amostras de programação do SQL Server Data](https://msftdpprodsamples.codeplex.com/).  
@@ -34,7 +34,7 @@ ms.locfileid: "75231789"
   
  Se IColumnsRowset::GetColumnsRowset for usado, haverá chamadas subsequentes para os métodos IRowset::GetNextRows, IRowset::GetData e IRowset::ReleaseRows no objeto de conjunto de linhas da coluna resultante.  
   
- Depois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo começar a executar o comando, os valores de parâmetro com valor de tabela serão obtidos desse objeto de conjunto de linhas de parâmetro com valor de tabela e enviados ao servidor.  
+ Depois que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo começar a executar o comando, os valores de parâmetro com valor de tabela serão obtidos desse objeto de conjunto de linhas de parâmetro com valor de tabela e enviados ao servidor.  
   
  O modelo de push requer um esforço mínimo do consumidor, mas usa mais memória do que o modelo de pull, pois todos os dados de parâmetro com valor de tabela precisam estar na memória em tempo de execução.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75231789"
   
  O provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client lerá uma ou mais linhas no momento a partir do qual o objeto do conjunto de linhas do consumidor dará suporte ao comportamento de streaming nos parâmetros com valor de tabela. Por exemplo, o usuário pode ter os dados do conjunto de linhas de parâmetro com valor de tabela no disco (não na memória) e pode implementar a funcionalidade para ler dados do disco em caso de exigência do provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- O consumidor comunicará seu formato de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao provedor de OLE DB de cliente nativo usando IAccessor:: createaccesser no objeto conjunto de linhas de parâmetro com valor de tabela. Ao ler dados do buffer do consumidor, o provedor verifica se todas as colunas graváveis e não padrão estão disponíveis através de pelo menos um identificador do acessador e usa os identificadores correspondentes para ler dados das colunas. Para evitar ambiguidade, deve haver uma correspondência um-para-um entre uma coluna do conjunto de linhas de parâmetro com valor de tabela e uma associação. Associações duplicadas para a mesma coluna resultarão em um erro. Além disso, espera-se que cada acessador tenha o membro *iOrdinal* de DBBindings em sequência. Haverá mais chamadas a IRowset::GetData que o número de acessadores por linha, e a ordem das chamadas será baseada na ordem do valor de *iOrdinal*, dos valores mais baixos até os mais altos.  
+ O consumidor comunicará seu formato de dados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo usando IAccessor:: Createaccesser no objeto conjunto de linhas de parâmetro com valor de tabela. Ao ler dados do buffer do consumidor, o provedor verifica se todas as colunas graváveis e não padrão estão disponíveis através de pelo menos um identificador do acessador e usa os identificadores correspondentes para ler dados das colunas. Para evitar ambiguidade, deve haver uma correspondência um-para-um entre uma coluna do conjunto de linhas de parâmetro com valor de tabela e uma associação. Associações duplicadas para a mesma coluna resultarão em um erro. Além disso, espera-se que cada acessador tenha o membro *iOrdinal* de DBBindings em sequência. Haverá mais chamadas a IRowset::GetData que o número de acessadores por linha, e a ordem das chamadas será baseada na ordem do valor de *iOrdinal*, dos valores mais baixos até os mais altos.  
   
  É esperado que o provedor implemente a maioria das interfaces exposta pelo objeto do conjunto de linhas de parâmetro com valor de tabela. O consumidor implementará um objeto de conjunto de linhas com interfaces mínimas (IRowset). Por causa de agregação cega, as interfaces obrigatórias restantes do objeto de conjunto de linhas serão implementadas pelo objeto do conjunto de linhas de parâmetro com valor de tabela.  
   

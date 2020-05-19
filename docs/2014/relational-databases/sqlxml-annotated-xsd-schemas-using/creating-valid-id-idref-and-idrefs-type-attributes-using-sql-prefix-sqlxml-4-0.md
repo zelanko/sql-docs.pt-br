@@ -19,15 +19,15 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fb96a845f7d5bf97b14fe10f1e19849f0344984
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013917"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703625"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Criando atributos de tipo ID, IDREF e IDREFS válidos usando sql:prefix (SQLXML 4.0)
   Um atributo pode ser especificado como um atributo de tipo ID. Atributos especificados como IDREF ou IDREFS poderão, então, ser usados para fazer referência aos atributos de tipo ID, permitindo vínculos entre documentos.  
@@ -51,10 +51,10 @@ ms.locfileid: "66013917"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificando os tipos ID e IDREFS  
- No esquema a seguir, o ** \<elemento>do cliente** consiste no ** \<elemento filho Order>** . O ** \<elemento Order>** também tem um elemento filho, o ** \<OrderDetail>** elemento.  
+### <a name="a-specifying-id-and-idrefs-types"></a>a. Especificando os tipos ID e IDREFS  
+ No esquema a seguir, o elemento ** \<>do cliente** consiste no elemento filho ** \< Order>** . O elemento ** \< Order>** também tem um elemento filho, o ** \< OrderDetail>** elemento.  
   
- O atributo **OrderIDList** de ** \<>do cliente** é um atributo de tipo IDREFS que se refere ao atributo **OrderID** do elemento ** \<Order>** .  
+ O atributo **OrderIDList** de ** \<>do cliente** é um atributo de tipo IDREFS que se refere ao atributo **OrderID** do elemento ** \< Order>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

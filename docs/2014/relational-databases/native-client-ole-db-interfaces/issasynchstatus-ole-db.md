@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - ISSAsynchStatus interface
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aeb6c6c789bfe1ca2af5616fb0a1ef9785700224
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4ea32cc0b36f1151c68b06af8f5445d4d46267b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127763"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704836"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
   **ISSAsynchStatus** expõe o suporte a operações assíncronas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta é uma interface opcional herdada da interface OLE DB central **IDBAsynchStatus**. Além dos métodos **Abort** e **GetStatus** herdados de **IDBAsynchStatus**, **ISSAsynchStatus** fornece um novo método usado para aguardar até que uma operação assíncrona tenha sido concluída ou um tempo limite tenha sido atingido.  

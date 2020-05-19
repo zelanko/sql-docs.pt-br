@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0cbde879e2b7f215c5044936dfbdacab9196f02d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dcca38ab5b7b67ca92cf35b49852bcd88437328
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63215959"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705418"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>Suporte a Sql_variant para tipos de data e hora
   Este tópico descreve como o tipo de dados `sql_variant` oferece suporte à funcionalidade aprimorada de data e hora.  
@@ -48,12 +48,12 @@ ms.locfileid: "63215959"
 |SQL_C_BIT|bit|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
 |SQL_C_UTINYINT|TINYINT|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE não é definido.|  
-|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale é definido como SQL_DESC_PRECISION (o parâmetro *DecimalDigits* de `SQLBindParameter`).|  
-|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale é definido como SQL_DESC_PRECISION (o parâmetro *DecimalDigits* de `SQLBindParameter`).|  
-|SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
+|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale é definido como SQL_DESC_PRECISION (o parâmetro *DecimalDigits* de `SQLBindParameter` ).|  
+|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale é definido como SQL_DESC_PRECISION (o parâmetro *DecimalDigits* de `SQLBindParameter` ).|  
+|SQL_C_TYPE_DATE|data|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado.|  
-|SQL_C_TYPE_TIMESTAMP|datetime2|Scale é definido como SQL_DESC_PRECISION (o parâmetro *DecimalDigits* de `SQLBindParameter`).|  
-|SQL_C_NUMERIC|decimal|A precisão é definida como SQL_DESC_PRECISION (o parâmetro *colunasize* de `SQLBindParameter`).<br /><br /> Conjunto de dimensionamento para SQL_DESC_SCALE (o parâmetro *DecimalDigits* de SQLBindParameter).|  
+|SQL_C_TYPE_TIMESTAMP|datetime2|Scale é definido como SQL_DESC_PRECISION (o parâmetro *DecimalDigits* de `SQLBindParameter` ).|  
+|SQL_C_NUMERIC|decimal|A precisão é definida como SQL_DESC_PRECISION (o parâmetro *colunasize* de `SQLBindParameter` ).<br /><br /> Conjunto de dimensionamento para SQL_DESC_SCALE (o parâmetro *DecimalDigits* de SQLBindParameter).|  
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE é ignorado|  
   

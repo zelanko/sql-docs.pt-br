@@ -39,15 +39,15 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b378eb5e4a68f07aee179e52552017578b0b33d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242105"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703930"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
   Você pode usar **Assistente para Gerar e Publicar Scripts** para criar scripts para transferir um banco de dados entre instâncias do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. É possível gerar scripts para um banco de dados em uma instância do Mecanismo de Banco de Dados em sua rede local ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Os scripts gerados podem ser executados em outra instância do Mecanismo de Banco de Dados ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. É possível usar o assistente para publicar o conteúdo de um banco de dados diretamente em um serviço Web criado usando os Serviços de Publicação de Banco de dados. É possível criar scripts para um banco de dados inteiro ou limitá-lo a objetos específicos.  
@@ -188,9 +188,9 @@ ms.locfileid: "75242105"
   
 -   **Gerar script de permissões em nível de objeto** – Inclui scripts para definir a permissão nos objetos no banco de dados. O padrão é **False**.  
   
--   **Estatísticas de script** – quando definido como **Estatísticas de script**, essa opção `CREATE STATISTICS` inclui a instrução para recriar estatísticas no objeto. A opção **Gerar script de estatísticas e histogramas** também cria informações de histograma. O padrão é **Não gerar script de estatísticas**. Para obter mais informações, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+-   **Estatísticas de script** – quando definido como **Estatísticas de script**, essa opção inclui a `CREATE STATISTICS` instrução para recriar estatísticas no objeto. A opção **Gerar script de estatísticas e histogramas** também cria informações de histograma. O padrão é **Não gerar script de estatísticas**. Para obter mais informações, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
--   **Script use Database** -adiciona a `USE DATABASE` instrução ao script. Para ter certeza de que os objetos de banco de dados serão criados no banco de dados correto, inclua a instrução `USE DATABASE`. Quando espera-se que o script seja usado em um banco de dados **False** diferente, selecione false `USE DATABASE` para omitir a instrução. O padrão é **True**. Para obter mais informações, veja [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
+-   **Script use Database** -adiciona a `USE DATABASE` instrução ao script. Para ter certeza de que os objetos de banco de dados serão criados no banco de dados correto, inclua a instrução `USE DATABASE`. Quando espera-se que o script seja usado em um banco de dados diferente, selecione **false** para omitir a `USE DATABASE` instrução. O padrão é **True**. Para obter mais informações, veja [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 -   **Tipos de dados para o script** – Seleciona o que deve ser inserido no script: **Somente dados**, **Somente esquema** ou ambos. O padrão é **Esquema somente**.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "75242105"
   
 -   **Controle de alterações de script** – Controle de alterações de scripts se for habilitado no banco de dados de origem ou nas tabelas no banco de dados de origem. O padrão é **False**. Para obter mais informações, veja [Sobre o controle de alterações &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Restrições de verificação** de script `CHECK` – adiciona restrições ao script. O padrão é **True**. Restrições `CHECK` exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Restrições de verificação de script** – adiciona `CHECK` restrições ao script. O padrão é **True**. Restrições `CHECK` exigem que os dados inseridos em uma tabela atendam algumas condições especificadas. Para obter mais informações, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Opções de compactação de dados de script** – Gera scripts de opções de compactação de dados quando elas são configuradas no banco de dados de origem ou em tabelas no banco de dados de origem. Para saber mais, veja [Data Compression](../data-compression/data-compression.md). O padrão é **False**.  
   

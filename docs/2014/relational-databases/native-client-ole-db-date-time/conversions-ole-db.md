@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d920fef68adaa63059970a49c9473d75eeabfd30
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638203"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705052"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Associações e conversões (OLE DB)
   Esta seção aborda como converter entre valores `datetime` e `datetimeoffset`. As conversões descritas nesta seção já são fornecidas pelo OLE DB ou são uma extensão consistente do OLE DB.  
@@ -28,7 +28,7 @@ ms.locfileid: "62638203"
   
 -   O formato das cadeias de caracteres `datetime` e `datetimeoffset` é:  
   
-     *aaaa*-*mm*mm-*DD*[ *hh*:*mm*:*SS*[.* 9999999*] [?? *hh*:*mm*]]  
+     *aaaa* - *mm* - *DD*[ *hh*:*mm*:*SS*[.* 9999999*] [?? *hh*:*mm*]]  
   
 -   O formato das cadeias de caracteres `time` é:  
   

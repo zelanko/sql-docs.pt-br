@@ -11,15 +11,15 @@ helpviewer_keywords:
 - OLE DB, stored procedures
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91d6da9e7d9fd17d35d9868834c6b0d688519ff7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638760"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704176"
 ---
 # <a name="running-stored-procedures-ole-db"></a>Executando procedimentos armazenados (OLE DB)
   Ao executar instruções, a chamada a um procedimento armazenado na fonte de dados (em vez de executar ou preparar uma instrução diretamente no aplicativo cliente) pode fornecer:  
@@ -34,7 +34,7 @@ ms.locfileid: "62638760"
   
 -   Maior funcionalidade.  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte a três [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dos mecanismos que os procedimentos armazenados usam para retornar dados:  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte a três dos mecanismos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] os procedimentos armazenados usam para retornar dados:  
   
 -   Toda instrução SELECT no procedimento gera um conjunto de resultados.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62638760"
   
  O aplicativo precisa ser capaz de tratar todas essas saídas provenientes dos procedimentos armazenados.  
   
- Provedores do OLE DB diferentes retornam parâmetros de saída e valores de retorno em horários diferentes durante o processamento de resultados. No caso do provedor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de OLE DB de cliente nativo, os parâmetros de saída e os códigos de retorno não são fornecidos até que o consumidor tenha recuperado ou cancelado os conjuntos de resultados retornados pelo procedimento armazenado. Os códigos de retorno e parâmetros de saída são retornados no último pacote TDS proveniente do servidor.  
+ Provedores do OLE DB diferentes retornam parâmetros de saída e valores de retorno em horários diferentes durante o processamento de resultados. No caso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo, os parâmetros de saída e os códigos de retorno não são fornecidos até que o consumidor tenha recuperado ou cancelado os conjuntos de resultados retornados pelo procedimento armazenado. Os códigos de retorno e parâmetros de saída são retornados no último pacote TDS proveniente do servidor.  
   
  Os provedores usam a propriedade DBPROP_OUTPUTPARAMETERAVAILABILITY para informar o momento em que são retornados os parâmetros de saída e valores de retorno. Essa propriedade faz parte do conjunto de propriedades DBPROPSET_DATASOURCEINFO.  
   

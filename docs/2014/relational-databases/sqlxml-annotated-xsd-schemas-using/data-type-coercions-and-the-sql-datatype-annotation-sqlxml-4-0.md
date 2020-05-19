@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa2b5830ab0579fe0429357fea3275d4e14d1c47
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013949"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703629"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coerções de tipo de dados e a anotação de sql:datatype (SQLXML 4.0)
   Em um esquema XSD, o atributo `xsd:type` especifica o tipo de dados XSD de um elemento ou atributo. Quando um esquema XSD é usado para extrair dados do banco de dados, o tipo de dados especificado é usado para formatar os dados.  
@@ -34,7 +34,7 @@ ms.locfileid: "66013949"
  Além de especificar um tipo XSD em um esquema, você pode especificar também um tipo de dados do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a anotação `sql:datatype`. Os atributos `xsd:type` e `sql:datatype` controlam o mapeamento entre os tipos de dados XSD e os tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="xsdtype-attribute"></a>Atributo xsd:type  
- Você pode usar o atributo `xsd:type` para especificar o tipo de dados de XML de um atributo ou elemento que mapeia para uma coluna. O `xsd:type` afeta o documento que é retornado do servidor e também a consulta XPath que é executada. Quando uma consulta XPath é executada sobre um esquema de mapeamento que contenha `xsd:type`, XPath usa o tipo de dados especificado ao processar a consulta. Para obter mais informações sobre como o `xsd:type`XPath usa, consulte [mapeando tipos de dados XSD para tipos de dados XPath &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+ Você pode usar o atributo `xsd:type` para especificar o tipo de dados de XML de um atributo ou elemento que mapeia para uma coluna. O `xsd:type` afeta o documento que é retornado do servidor e também a consulta XPath que é executada. Quando uma consulta XPath é executada sobre um esquema de mapeamento que contenha `xsd:type`, XPath usa o tipo de dados especificado ao processar a consulta. Para obter mais informações sobre como o XPath usa `xsd:type` , consulte [mapeando tipos de dados XSD para tipos de dados XPath &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
  Em um documento retornado, todos os tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são convertidos em representações de cadeia de caracteres. Alguns tipos de dados exigem conversões adicionais. A tabela a seguir lista as conversões que são usadas para obter vários valores `xsd:type`.  
   
@@ -86,9 +86,9 @@ ms.locfileid: "66013949"
 ## <a name="sqldatatype-annotation"></a>Anotação sql:datatype  
  A anotação `sql:datatype` é usada para especificar o tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; essa anotação deve ser especificada quando:  
   
--   Você está carregando em massa em `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uma coluna de um `dateTime`XSD `date`, ou `time` tipo. Neste caso, você deve identificar o tipo de dados de coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando `sql:datatype="dateTime"`. Esta regra também se aplica a diagramas de atualização.  
+-   Você está carregando em massa em uma `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coluna de um XSD `dateTime` , `date` ou `time` tipo. Neste caso, você deve identificar o tipo de dados de coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando `sql:datatype="dateTime"`. Esta regra também se aplica a diagramas de atualização.  
   
--   Você está carregando em massa em uma coluna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `uniqueidentifier` do tipo e o valor XSD é um GUID que inclui chaves ({e}). Quando você especificar `sql:datatype="uniqueidentifier"`, as chaves são removidas do valor antes que ele seja inserido na coluna. Se `sql:datatype` não for especificado, o valor será enviado com as chaves e a inserção ou atualização falhará.  
+-   Você está carregando em massa em uma coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `uniqueidentifier` tipo e o valor XSD é um GUID que inclui chaves ({e}). Quando você especificar `sql:datatype="uniqueidentifier"`, as chaves são removidas do valor antes que ele seja inserido na coluna. Se `sql:datatype` não for especificado, o valor será enviado com as chaves e a inserção ou atualização falhará.  
   
 -   O tipo de dados XML `base64Binary` é mapeado para vários tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`binary`, `image` ou `varbinary`). Para mapear o tipo de dados XML `base64Binary` para um tipo de dados específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use a anotação `sql:datatype`. Essa anotação especifica o tipo de dados explícito do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da coluna para a qual o atributo é mapeado. Isto é útil quando os dados estão sendo armazenados nos bancos de dados. Especificando a anotação `sql:datatype`, você pode identificar o tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explícito.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66013949"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-xsdtype"></a>A. Especificando xsd:type  
+### <a name="a-specifying-xsdtype"></a>a. Especificando xsd:type  
  Este exemplo mostra como um tipo XSD `date` que é especificado usando o atributo `xsd:type` no esquema afeta o documento de XML resultante. O esquema fornece uma exibição XML da tabela Sales.SalesOrderHeader no banco de dados AdventureWorks.  
   
 ```  

@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_colptr function
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 38e4b2590bebd09da764e6249e59d32b0c28d356
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689146"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705297"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
   Define o endereço de dados variáveis do programa da cópia atual no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

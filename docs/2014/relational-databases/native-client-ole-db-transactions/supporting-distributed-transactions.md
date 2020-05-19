@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ITransactionJoin interface
 - MS DTC, about distributed transaction support
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f6248636338d810127d7006ca87fd91ab359069
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63213503"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704495"
 ---
 # <a name="supporting-distributed-transactions"></a>Dando suporte a transações distribuídas
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Os consumidores do provedor de OLE DB de cliente nativo podem usar o método **ITransactionJoin:: JoinTransaction** para participar de uma transação distribuída coordenada pelo Microsoft coordenador de transações distribuídas (MS DTC).  
@@ -32,14 +32,14 @@ ms.locfileid: "63213503"
   
  O MS DTC dá suporte à confirmação e à anulação assíncronas de transações distribuídas. Para obter a notificação do status da transação assíncrona, o consumidor implementa a interface **ITransactionOutcomeEvents** e a conecta a um objeto de transação do MS DTC.  
   
- Para transações distribuídas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo implementa os parâmetros **ITransactionJoin:: JoinTransaction** da seguinte maneira.  
+ Para transações distribuídas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo implementa os parâmetros **ITransactionJoin:: JoinTransaction** da seguinte maneira.  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Um ponteiro para um objeto de transação do MS DTC.|  
-|*IsoLevel*|Ignorado pelo provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB de cliente nativo. O nível de isolamento para transações coordenadas pelo MS DTC é determinado quando o consumidor faz a aquisição de um objeto de transação do MS DTC.|  
+|*IsoLevel*|Ignorado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo. O nível de isolamento para transações coordenadas pelo MS DTC é determinado quando o consumidor faz a aquisição de um objeto de transação do MS DTC.|  
 |*IsoFlags*|Deve ser 0. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retorna XACT_E_NOISORETAIN se qualquer outro valor for especificado pelo consumidor.|  
-|*POtherOptions*|Se não for NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo solicitará o objeto de opções da interface. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retorna XACT_E_NOTIMEOUT se o membro *ulTimeout* do objeto de opções não for zero. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo ignora o valor do membro *szDescription* .|  
+|*POtherOptions*|Se não for NULL, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo solicitará o objeto de opções da interface. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retorna XACT_E_NOTIMEOUT se o membro *ulTimeout* do objeto de opções não for zero. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo ignora o valor do membro *szDescription* .|  
   
  Este exemplo coordena a transação usando o MS DTC.  
   

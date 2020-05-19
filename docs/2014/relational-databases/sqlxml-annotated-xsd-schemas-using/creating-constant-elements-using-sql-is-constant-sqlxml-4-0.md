@@ -15,34 +15,34 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37270dbed7a457a9e0adf5816ce02c502c8601f8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013941"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703637"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Criando elementos constantes usando sql:is-constant (SQLXML 4.0)
-  Para especificar um elemento Constant, ou seja, um elemento no esquema XSD que não é mapeado para nenhuma tabela ou coluna de banco de dados, você pode `sql:is-constant` usar a anotação. Essa anotação usa um valor Booliano (0 = false, 1 = true). Os valores aceitáveis são 0, 1, true e false. A anotação `sql:is-constant` pode ser especificada em um elemento que não tem nenhum atributo. Se ela for especificada em um elemento com o valor true (ou 1), esse elemento não será mapeado para o banco de dados, mas ainda aparecerá no documento XML.  
+  Para especificar um elemento Constant, ou seja, um elemento no esquema XSD que não é mapeado para nenhuma tabela ou coluna de banco de dados, você pode usar a `sql:is-constant` anotação. Essa anotação usa um valor Booliano (0 = false, 1 = true). Os valores aceitáveis são 0, 1, true e false. A anotação `sql:is-constant` pode ser especificada em um elemento que não tem nenhum atributo. Se ela for especificada em um elemento com o valor true (ou 1), esse elemento não será mapeado para o banco de dados, mas ainda aparecerá no documento XML.  
   
  A anotação `sql:is-constant` pode ser usada para:  
   
 -   Adicionar um elemento de nível superior ao documento XML. XML requer um único elemento de nível superior (elemento root) para o documento.  
   
--   Criar elementos de contêiner, como um ** \<elemento Orders>** que encapsula todos os pedidos.  
+-   Criar elementos de contêiner, como um elemento ** \< orders>** que encapsula todos os pedidos.  
   
- A `sql:is-constant` anotação pode ser adicionada a um ** \<elemento>complexo** .  
+ A `sql:is-constant` anotação pode ser adicionada a um elemento ** \<>complexo** .  
   
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Especificando sql:is-constant para adicionar um elemento do contêiner  
- Neste esquema XSD anotado, ** \<CustomerOrders>** é definido como um elemento constante, especificando o `sql:is-constant` atributo com um valor de 1. Portanto, ** \<o CustomerOrders>** não está mapeado para nenhuma tabela ou coluna de banco de dados. Esse elemento Constant consiste na ** \<ordem>** elementos filho.  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>a. Especificando sql:is-constant para adicionar um elemento do contêiner  
+ Neste esquema XSD anotado, ** \< CustomerOrders>** é definido como um elemento constante, especificando o `sql:is-constant` atributo com um valor de 1. Portanto, o ** \< CustomerOrders>** não está mapeado para nenhuma tabela ou coluna de banco de dados. Esse elemento Constant consiste na ** \< ordem>** elementos filho.  
   
- Embora ** \<CustomerOrders>** não seja mapeado para nenhuma tabela ou coluna de banco de dados, ele ainda aparece no XML resultante como um elemento de contêiner que contém a ** \<ordem>** elementos filho.  
+ Embora ** \< CustomerOrders>** não seja mapeado para nenhuma tabela ou coluna de banco de dados, ele ainda aparece no XML resultante como um elemento de contêiner que contém a ** \< ordem>** elementos filho.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7cce55becbe02982fcf3f7ffaf6f18954735499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200258"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705202"
 ---
 # <a name="allocating-a-statement-handle"></a>Alocando um identificador de instrução
   Para que um aplicativo possa executar uma instrução, deve alocar um identificador de instrução. Ele faz isso chamando **SQLAllocHandle** com o parâmetro *HandleType* definido como SQL_HANDLE_STMT e *InputHandle* apontando para um identificador de conexão.  
@@ -36,7 +36,7 @@ ms.locfileid: "63200258"
   
  Chamar **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_QUERY_TIMEOUT define um intervalo de tempo limite de consulta para ajudar a proteger o servidor e o usuário de consultas de longa execução.  
   
- Chamar **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_MAX_LENGTH limita a quantidade de dados de **texto** e **imagem** que uma instrução individual pode recuperar. Chamar **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_MAX_ROWS também limita um conjunto de linhas às primeiras *n* linhas se isso for todo o aplicativo exigir. Observe que a configuração SQL_ATTR_MAX_ROWS faz com que o driver emita uma instrução SET ROWCOUNT ao servidor. Isso afeta todas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as instruções, incluindo gatilhos e atualizações.  
+ Chamar **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_MAX_LENGTH limita a quantidade de dados de **texto** e **imagem** que uma instrução individual pode recuperar. Chamar **SQLSetStmtAttr** com *fOption* definido como SQL_ATTR_MAX_ROWS também limita um conjunto de linhas às primeiras *n* linhas se isso for todo o aplicativo exigir. Observe que a configuração SQL_ATTR_MAX_ROWS faz com que o driver emita uma instrução SET ROWCOUNT ao servidor. Isso afeta todas as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções, incluindo gatilhos e atualizações.  
   
  Tome cuidado quando você for definir estas opções. Será melhor se todos os identificações de instrução em um identificador de conexão tiverem as mesmas configurações para SQL_ATTR_MAX_LENGTH e SQL_ATTR_MAX_ROWS. Se o driver alternar de um identificador de instrução para outro com valores diferentes para essas opções, o driver deverá gerar as instruções SET TEXTSIZE e SET ROWCOUNT adequadas para alterar as configurações. O driver não pode colocar essas instruções no mesmo lote que a instrução SQL do usuário, pois a instrução SQL pode conter uma instrução que deve ser a primeira instrução em um lote. O driver deve enviar as instruções SET TEXTSIZE e SET ROWCOUNT em um lote separado que automaticamente gera uma viagem de ida-e-volta adicional ao servidor.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ISequentialStream interface, samples
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86d2627354fcf3ec6ed80675abeb552f3ff888da
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62467579"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704884"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Buscar colunas usando IRow::GetColumns (ou IRow::Open) e ISequentialStream
   Dados grandes podem ser associados ou recuperados por meio da interface `ISequentialStream`. Para colunas associadas, o sinalizador de status DBSTATUS_S_TRUNCATED indica que os dados estão truncados.  
@@ -670,6 +670,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tópicos de instruções sobre OLE DB](ole-db-how-to-topics.md)  
+ [Tópicos de instruções do OLE DB](ole-db-how-to-topics.md)  
   
   

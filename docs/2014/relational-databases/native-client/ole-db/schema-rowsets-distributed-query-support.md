@@ -14,20 +14,20 @@ helpviewer_keywords:
 - OLE DB rowsets, schema
 - rowsets [OLE DB], schema
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a47dd9575132210bbd5d664fbb3c73b57289693f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62667592"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704236"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Suporte à consulta distribuída no conjunto de linhas do esquema
-  Para dar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporte a consultas distribuídas, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] interface **IDBSchemaRowset** do provedor de OLE DB de cliente nativo retorna metadados em servidores vinculados.  
+  Para dar suporte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a consultas distribuídas, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] interface **IDBSchemaRowset** do provedor de OLE DB de cliente nativo retorna metadados em servidores vinculados.  
   
- Caso a propriedade SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION seja VARIANT_TRUE, um identificador citado pode ser especificado para o nome do catálogo (por exemplo "my.catalog"). Ao restringir a saída do conjunto de linhas de esquema por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] catálogo, o provedor de OLE DB de cliente nativo reconhece um nome de duas partes que contém o servidor vinculado e o nome do catálogo. Para os conjuntos de linhas de esquema na tabela a seguir, especificando um nome de catálogo de duas partes como _linked_server_**.** o _Catálogo_ restringe a saída para o catálogo aplicável do servidor vinculado nomeado.  
+ Caso a propriedade SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION seja VARIANT_TRUE, um identificador citado pode ser especificado para o nome do catálogo (por exemplo "my.catalog"). Ao restringir a saída do conjunto de linhas de esquema por catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo reconhece um nome de duas partes que contém o servidor vinculado e o nome do catálogo. Para os conjuntos de linhas de esquema na tabela a seguir, especificando um nome de catálogo de duas partes como _linked_server_**.** o _Catálogo_ restringe a saída para o catálogo aplicável do servidor vinculado nomeado.  
   
 |Conjunto de linhas de esquema|Restrição de catálogo|  
 |-------------------|-------------------------|  

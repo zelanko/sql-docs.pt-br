@@ -10,15 +10,15 @@ helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 38918636fa569b5f9b43e1f93698879863429fb0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205577"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705222"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Processar códigos de retorno e parâmetros de saída (ODBC)
   Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e os parâmetros de saída são enviados no último pacote do servidor, não estão disponíveis para o aplicativo até que [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) retorne SQL_NO_DATA. Se um erro for retornado de um procedimento armazenado, chame SQLMoreResults para avançar para o próximo resultado até que SQL_NO_DATA seja retornado.  

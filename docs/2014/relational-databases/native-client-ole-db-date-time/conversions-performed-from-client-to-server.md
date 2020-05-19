@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85d152274847abb46ee14a9a878be8bdef5b80b3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63237961"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705056"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversões executadas do cliente para o servidor
   Este tópico descreve conversões de data/hora executadas entre um aplicativo cliente escrito com o OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior).  
@@ -25,12 +25,12 @@ ms.locfileid: "63237961"
 ## <a name="conversions"></a>Conversões  
  Este tópico descreve as conversões feitas no cliente. Se o cliente especificar a precisão de frações de segundo para um parâmetro diferente do definido no servidor, a conversão do cliente pode gerar uma falha, nos casos em que o servidor permitiria o êxito da operação. Em particular, o cliente trata qualquer truncamento de segundos fracionários como um erro, enquanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arredonda os valores temporais para o segundo inteiro mais próximo.  
   
- Se ICommandWithParameters:: SetParameterInfo não for chamado, as associações de DBTYPE_DBTIMESTAMP serão convertidas como `datetime2`se estivessem.  
+ Se ICommandWithParameters:: SetParameterInfo não for chamado, as associações de DBTYPE_DBTIMESTAMP serão convertidas como se estivessem `datetime2` .  
   
 |Para -><br /><br /> De|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> date|  
+|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> data|  
 |DBTIME|-|1|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1<br /><br /> Time(0)|  
 |DBTIME2|-|1,3|1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1<br /><br /> Time(7)|  
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> Datetime2 (7)|  

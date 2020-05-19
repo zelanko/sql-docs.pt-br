@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44f1c1673e761425969558ecb911f8df92601274
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206798"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705248"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Usar parâmetros de dados em execução (ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "68206798"
   
 1.  Ao chamar [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) para associar um buffer de programa ao parâmetro de instrução:  
   
-    -   Para o último parâmetro, use SQL_LEN_DATA_AT_EXEC (*Length*), em que *Length* é o comprimento total `text`dos `ntext`dados do `image` parâmetro, ou em bytes.  
+    -   Para o último parâmetro, use SQL_LEN_DATA_AT_EXEC (*Length*), em que *Length* é o comprimento total `text` dos `ntext` dados do parâmetro, ou `image` em bytes.  
   
     -   Use um `rgbValue` (oitavo parâmetro) de um identificador de parâmetro definido por programa.  
   

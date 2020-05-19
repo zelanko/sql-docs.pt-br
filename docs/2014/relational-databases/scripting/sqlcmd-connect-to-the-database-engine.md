@@ -15,15 +15,15 @@ helpviewer_keywords:
 - VIA
 - client protocols [SQL Server]
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 94025942a6e06f4dfb7b0eeab43487e4a6308e4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62681520703aa687d4acfc0dc1251cdf6279b8ee
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243258"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703709"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>Conectar-se ao Mecanismo de Banco de Dados com sqlcmd
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à comunicação de cliente com o protocolo de rede TCP/IP (padrão) e o protocolo de pipes nomeados. O protocolo de memória compartilhada também estará disponível se o cliente estiver se conectando a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mesmo computador. Há três métodos comuns de selecionar o protocolo. O protocolo usado pelo utilitário **sqlcmd** é determinado na seguinte ordem:  

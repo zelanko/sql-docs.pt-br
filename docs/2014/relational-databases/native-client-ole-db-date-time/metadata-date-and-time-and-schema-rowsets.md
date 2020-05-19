@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9238898efd324fae1e4990405c90e31fb7876ca4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238013"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705027"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Conjuntos de linhas de data e hora e esquema
   Este tópico fornece informações sobre os conjuntos de linhas de COLUMNS e de PROCEDURE_PARAMETERS. Essas informações referem-se aos aprimoramentos de data e hora do OLE DB introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "63238013"
   
 |Tipo de coluna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Liberada|0|  
+|data|DBTYPE_DBDATE|Liberada|0|  
 |time|DBTYPE_DBTIME2|Definir|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Liberada|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|Liberada|3|  

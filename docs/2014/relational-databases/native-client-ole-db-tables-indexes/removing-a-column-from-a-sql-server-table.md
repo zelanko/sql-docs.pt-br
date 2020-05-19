@@ -12,15 +12,15 @@ helpviewer_keywords:
 - DropColumn function
 - SQL Server Native Client OLE DB provider, columns
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 919bd28a82171068349e4019bb1bd5c190d08cd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cde1faf93713a72f9fa69f056250b4e5357c538
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63213917"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704535"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Removendo uma coluna de uma tabela do SQL Server
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe a função **ITableDefinition::D ropcolumn** . Isso permite que os consumidores removam uma coluna de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

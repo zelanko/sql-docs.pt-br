@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC error handling, message types
 - errors [ODBC], types
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b38734544ac3accb3ddfdbcae8ae92f67b252e54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbf73940b92ef158e4e93b10c2142c9053703f5f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805850"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705412"
 ---
 # <a name="error-messages"></a>Mensagens de erro
   O texto das mensagens retornadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client é colocado no parâmetro *MessageText* de **SQLGetDiagRec**. A origem de um erro é indicada pelo cabeçalho da mensagem:  
@@ -32,13 +32,13 @@ ms.locfileid: "62805850"
  São erros gerados pela biblioteca de cursores ODBC.  
   
  [Microsoft][SQL Server Native Client]  
- Esses erros são gerados pelo driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC do Native Client. Se não houver outros nós com o nome de uma Net-Library nem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é sinal de que o erro foi encontrado no driver.  
+ Esses erros são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client. Se não houver outros nós com o nome de uma Net-Library nem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é sinal de que o erro foi encontrado no driver.  
   
  O [SQL Server Native Client] [*Net-Transportname*]  
- Esses erros são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NET-Library, em que *net-Transportname* é o nome de exibição de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um transporte de rede do cliente (por exemplo, pipes nomeados, memória compartilhada, soquetes TCP/IP ou via). O restante da mensagem de erro contém a função Net-Library chamada e a função chamada na API de rede subjacente pela função TDS. O código de erro *pfNative* retornado com esses erros é o código de erro da pilha de protocolo de rede subjacente.  
+ Esses erros são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net-library, em que *net-Transportname* é o nome de exibição de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transporte de rede do cliente (por exemplo, pipes nomeados, memória compartilhada, soquetes TCP/IP ou via). O restante da mensagem de erro contém a função Net-Library chamada e a função chamada na API de rede subjacente pela função TDS. O código de erro *pfNative* retornado com esses erros é o código de erro da pilha de protocolo de rede subjacente.  
   
  [Microsoft][SQL Server Native Client][[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
- São erros gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O restante da mensagem de erro é o texto da mensagem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O código *pfNative* retornado com esses erros é o número do erro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Para obter mais informações sobre uma lista de mensagens de erro (e seus números) que podem ser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]retornados pelo, consulte as colunas descrição e erro da tabela do sistema **sysmessages** no banco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dados **mestre** no.  
+ São erros gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O restante da mensagem de erro é o texto da mensagem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O código *pfNative* retornado com esses erros é o número do erro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre uma lista de mensagens de erro (e seus números) que podem ser retornados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte as colunas descrição e erro da tabela do sistema **sysmessages** no banco de dados **mestre** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tratando de erros e mensagens](handling-errors-and-messages.md)  

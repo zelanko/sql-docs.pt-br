@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226239"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705290"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   A função **bcp_setcolfmt** substitui [bcp_colfmt](bcp-colfmt.md). Ao especificar a ordenação de coluna, a função **bcp_setcolfmt** precisa ser usada. É possível usar[bcp_setbulkmode](bcp-setbulkmode.md) para especificar mais de um formato de coluna.  

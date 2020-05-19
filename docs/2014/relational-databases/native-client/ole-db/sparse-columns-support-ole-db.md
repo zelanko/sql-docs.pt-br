@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b286ba7bde145a9a3676f38f329a8efbd932a4cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60d7224a764cd0ab506d03cb154cb06456a8c408
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62667634"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704209"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Suporte de colunas esparsas (OLE DB)
   Este tópico fornece informações o suporte OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para colunas esparsas. Para obter mais informações sobre colunas esparsas, consulte [suporte a colunas esparsas em SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md). Para ver um exemplo, confira [Exibir metadados de colunas e de catálogos para colunas esparsas &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
@@ -49,11 +49,11 @@ ms.locfileid: "62667634"
   
 |Tipo ou função de membro|Descrição|  
 |-----------------------------|-----------------|  
-|IColumnsInfo::GetColumnsInfo|Um novo valor de sinalizador DBCOLUMNFLAGS DBCOLUMNFLAGS_SS_ISCOLUMNSET é definido `column_set` para colunas no *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE é definido para colunas `column_set`.|  
+|IColumnsInfo::GetColumnsInfo|Um novo valor de sinalizador DBCOLUMNFLAGS DBCOLUMNFLAGS_SS_ISCOLUMNSET é definido para `column_set` colunas no *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE é definido para colunas `column_set`.|  
 |IColumsRowset::GetColumnsRowset|Um novo valor de sinalizador DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, é definido para colunas `column_set` em DBCOLUMN_FLAGS.<br /><br /> DBCOLUMN_COMPUTEMODE é definido como DBCOMPUTEMODE_DYNAMIC para colunas `column_set`.|  
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS retorna duas colunas novas: SS_IS_COLUMN_SET e SS_IS_SPARSE.<br /><br /> DBSCHEMA_COLUMNS só retorna colunas que não são membros de um `column_set`.<br /><br /> Foram adicionados dois novos conjuntos de linhas de esquema: DBSCHEMA_COLUMNS_EXTENDED retornará todas as colunas, independentemente da dispersão de associação `column_set`. DBSCHEMA_SPARSE_COLUMN_SET só retorna colunas que são os membros de um `column_set`. Estes conjuntos de linhas novos têm as mesmas colunas e restrições que DBSCHEMA_COLUMNS.|  
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas inclui os GUIDs para os novos conjuntos de linhas DBSCHEMA_COLUMNS_EXTENDED e DBSCHEMA_SPARSE_COLUMN_SET na lista de conjuntos de linhas de esquema disponíveis.|  
-|ICommand::Execute|Se **a \* seleção da** *tabela* for usada, ela retornará todas as colunas que não são membros da `column_set`esparsa, além de uma coluna XML que contém valores de todas as colunas não nulas que são membros do `column_set`esparso, se estiverem presentes.|  
+|ICommand::Execute|Se a **seleção \* da** *tabela* for usada, ela retornará todas as colunas que não são membros da esparsa `column_set` , além de uma coluna XML que contém valores de todas as colunas não nulas que são membros do esparso `column_set` , se estiverem presentes.|  
 |IOpenRowset::OpenRowset|IOpenRowset::OpenRowset retorna um conjunto de linhas com as mesmas colunas que ICommand:: Execute, com um **selecione \*** consulta na mesma tabela.|  
 |ITableDefinition|Não há nenhuma alteração nesta interface para colunas esparsas ou para colunas `column_set`. Aplicativos que precisam fazer modificações de esquema devem executar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] apropriado diretamente.|  
   

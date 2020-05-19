@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec7c5f8db1d8d1f3c675b267adb8345d086d0b80
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689414"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705284"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
   Cria um arquivo de formato que contém uma descrição do formato do arquivo de dados de cópia em massa atual.  

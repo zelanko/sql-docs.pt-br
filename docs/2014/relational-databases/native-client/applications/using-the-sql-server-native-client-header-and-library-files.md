@@ -19,18 +19,18 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 800b3e43129bba36db0836f9a58a3ad1e47b40c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a772188438d0dcd29b97e5233eac1152a2998e21
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046277"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704370"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Usando os arquivos de biblioteca e de cabeçalho do SQL Server Native Client
-  Os arquivos de biblioteca e de cabeçalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client são instalados com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando você for desenvolver um aplicativo, é importante copiar e instalar todos os arquivos necessários para o desenvolvimento no seu ambiente de desenvolvimento. Para obter mais informações sobre como instalar e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] redistribuir o cliente nativo, consulte [instalando o SQL Server Native Client](installing-sql-server-native-client.md).  
+  Os arquivos de biblioteca e de cabeçalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client são instalados com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando você for desenvolver um aplicativo, é importante copiar e instalar todos os arquivos necessários para o desenvolvimento no seu ambiente de desenvolvimento. Para obter mais informações sobre como instalar e redistribuir o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente nativo, consulte [instalando o SQL Server Native Client](installing-sql-server-native-client.md).  
   
  Os arquivos de biblioteca e de cabeçalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client são instalados no seguinte local:  
   

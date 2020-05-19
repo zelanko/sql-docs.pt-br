@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 40e1fea04c0f864d871c01e9087ca9d346475c18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 258934209cf17fd43ea41b6aa07063a2e42b056a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242076"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703872"
 ---
 # <a name="insert-transact-sql-snippets"></a>Inserir snippets Transact-SQL
   Um snippet de código [!INCLUDE[tsql](../../includes/tsql-md.md)] é um modelo que você pode usar como um ponto de partida ao escrever novas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

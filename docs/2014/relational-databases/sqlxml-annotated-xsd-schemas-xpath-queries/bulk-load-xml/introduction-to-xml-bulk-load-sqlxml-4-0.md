@@ -13,18 +13,18 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 782b352402e9469fbdb0ce06153d2d80eb9dc84e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013387"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703369"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Introdução ao XML Bulk Load (SQLXML 4.0)
-  O carregamento em massa de XML é um objeto COM autônomo que permite carregar dados XML semiestruturados em tabelas da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft.  
+  O carregamento em massa de XML é um objeto COM autônomo que permite carregar dados XML semiestruturados em tabelas da Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Você pode inserir dados XML em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando um comando INSERT e a função OPENXML; no entanto, o utilitário Bulk Load garante um melhor desempenho quando você precisa inserir grandes quantidades de dados XML.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66013387"
 ## <a name="streaming-of-xml-data"></a>Fluindo de dados XML   
  Como o documento XML de origem pode ser grande, ele não é lido na memória para o processamento do carregamento em massa. Em vez disso, o XML Bulk Load interpreta os dados XML como um fluxo e faz a leitura deles. À medida que o utilitário lê os dados, ele identifica a(s) tabela(s) de banco de dados, gera o(s) registro(s) apropriado(s) a partir da fonte de dados XML e envia o(s) registro(s) para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para inserção.  
   
- Por exemplo, o documento XML de origem a seguir consiste em elementos de ** \<>do cliente** e ** \<ordenar>** elementos filho:  
+ Por exemplo, o documento XML de origem a seguir consiste em elementos de ** \<>do cliente** e ** \< ordenar>** elementos filho:  
   
 ```  
 <Customer ...>  
@@ -56,7 +56,7 @@ ms.locfileid: "66013387"
 ...  
 ```  
   
- Como o carregamento em massa de XML lê o elemento de ** \<>do cliente** , ele gera um registro para o CustomerTable. Quando ele lê a marca de fim ** \</Customer>** , o carregamento em massa de XML insere esse registro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]na tabela no. Da mesma forma, quando ele lê o elemento ** \<Order>** , o carregamento em massa de XML gera um registro para ordertable e, em seguida, insere esse [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registro na tabela ao ler a marca de ** \<fim/Order>** .  
+ Como o carregamento em massa de XML lê o elemento de ** \<>do cliente** , ele gera um registro para o CustomerTable. Quando ele lê a marca de fim ** \< /Customer>** , o carregamento em massa de XML insere esse registro na tabela no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Da mesma forma, quando ele lê o elemento ** \< Order>** , o carregamento em massa de XML gera um registro para ordertable e, em seguida, insere esse registro na [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabela ao ler a marca de fim ** \< /Order>** .  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Operações de carregamento em massa de XML transacionadas e não transacionadas  
  O XML Bulk Load pode operar no modo transacionado ou não transacionado. O desempenho geralmente é ideal se você estiver carregando em massa em um modo não-Transacted: ou seja, a propriedade Transaction está definida como FALSE) e qualquer uma das condições a seguir é verdadeira:  

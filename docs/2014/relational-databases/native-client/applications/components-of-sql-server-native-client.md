@@ -12,15 +12,15 @@ helpviewer_keywords:
 - components [SQL Server Native Client]
 - SQLNCLI, about SQL Server Native Client
 ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 329ffa78471ead02b1431a41d898cfc43ca65684
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16654d2a313d99bfd7ebd249c9895a268e03e5e7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63213518"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704449"
 ---
 # <a name="components-of-sql-server-native-client"></a>Componentes do SQL Server Native Client
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client contém os seguintes componentes:  
@@ -31,7 +31,7 @@ ms.locfileid: "63213518"
 |sqlnclir11.rll|O arquivo de recursos que acompanha a biblioteca do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
 |s10ch_sqlncli.chm|O arquivo de Ajuda do Assistente de Fonte de Dados que documenta como criar uma fonte de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ou o provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
 |sqlncli.h|O arquivo do cabeçalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que contém todas as novas definições necessárias para usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Esse arquivo de cabeçalho substitui os arquivos de cabeçalho odbcss.h e sqloledb.h. **Observação:**  Não é possível referenciar sqlncli. h e odbcss. h no mesmo programa, mas você pode fazer referência a sqlncli. h e SQLOLEDB. h no mesmo programa, contanto que SQLOLEDB. h seja definido primeiro.|  
-|sqlncli11.lib|O arquivo de biblioteca necessário para chamar diretamente as funções do utilitário **bcp** que fazem parte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do driver ODBC do Native Client. **Observação:**  Se você fizer referência ao arquivo sqlncli11. lib no código de programação, precisará certificar-se de que o arquivo sqlncli11. dll esteja no caminho do sistema e no caminho do sistema dos usuários que usam seu aplicativo.|  
+|sqlncli11.lib|O arquivo de biblioteca necessário para chamar diretamente as funções do utilitário **bcp** que fazem parte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client. **Observação:**  Se você fizer referência ao arquivo sqlncli11. lib no código de programação, precisará certificar-se de que o arquivo sqlncli11. dll esteja no caminho do sistema e no caminho do sistema dos usuários que usam seu aplicativo.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos com o SQL Server Native Client](building-applications-with-sql-server-native-client.md)  

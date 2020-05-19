@@ -10,15 +10,15 @@ helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cba1d6b4c9fb116d90bc68925c8f27d446c73c54
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62667331"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704225"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Conjunto de linhas LINKEDSERVERS (OLE DB)
   O conjunto de linhas **LINKEDSERVERS** enumera fontes de dados da organização que podem participar de consultas distribuídas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - SQL Server Native Client, building applications
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b33680ea08c130a01a944878609f57d8aba9e3e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175418"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704457"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Criando aplicativos com o SQL Server Native Client
   Durante o desenvolvimento de um aplicativo que usa a biblioteca do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, surgem vários problemas. Os tópicos desta seção abordam muitos desses problemas, inclusive a atualização do MDAC para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, o uso dos arquivos de cabeçalho e biblioteca do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, além de uma visão geral das várias cadeias de caracteres de conexão que podem ser usadas com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
@@ -56,6 +56,6 @@ ms.locfileid: "70175418"
 ## <a name="see-also"></a>Consulte Também  
  [Programação de SQL Server Native Client](../sql-server-native-client-programming.md)   
  [Tópicos de instruções sobre ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Tópicos de instruções sobre OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Tópicos de instruções do OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

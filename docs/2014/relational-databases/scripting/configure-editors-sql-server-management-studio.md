@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9f285d4f066cdff5c514504131aba825ba5dca2f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ef80f6974263032ad9c73f32459be879fb9cef
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244907"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703997"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurar editores (SQL Server Management Studio)
   Você pode personalizar a operação dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configurando as opções para cada editor.  

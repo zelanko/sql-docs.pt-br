@@ -11,20 +11,20 @@ helpviewer_keywords:
 - key ordering rules [SQLXML]
 - relationship annotation
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5b5359f1ff90fe70605d89f011ffc16cc7b58cd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013506"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703398"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship e a Regra de Ordenação de Chaves (SQLXML 4.0)
   Como o XML Bulk Load gera registro à medida que seus nós entram no escopo e envia esses registros para o Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à medida que seus nós saem do escopo, os dados do registro devem estar presentes no escopo do nó.  
   
- Considere o seguinte esquema XSD, no qual a relação de um para muitos entre `<sql:relationship>` ** \<o cliente>** e ** \<** os elementos de>de ordem (um cliente pode inserir muitos pedidos) é especificada usando o elemento:  
+ Considere o seguinte esquema XSD, no qual a relação de um para muitos entre o ** \< cliente>** e os elementos de ** \<>de ordem** (um cliente pode inserir muitos pedidos) é especificada usando o `<sql:relationship>` elemento:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -58,7 +58,7 @@ ms.locfileid: "66013506"
 </xsd:schema>  
 ```  
   
- Como o nó de elemento do ** \<cliente>** entra no escopo, o carregamento em massa de XML gera um registro de cliente. Esse registro permanece até que o carregamento em massa de XML leia ** \</Customer>**. Ao processar o ** \<** nó do elemento>de ordem, o XML `<sql:relationship>` Bulk Load usa para obter o valor da coluna de chave estrangeira CustomerID da tabela CustOrder do elemento pai ** \<Customer>** , pois o ** \<elemento Order>** não especifica o atributo **CustomerID** . Isso significa que, ao definir o elemento de ** \<>do cliente** , você deve especificar o atributo **CustomerID** no esquema antes `<sql:relationship>`de especificar. Caso contrário, quando um elemento ** \<>de ordem** entrar no escopo, o carregamento em massa de XML gerará um registro para a tabela CustOrder e, quando o carregamento em massa de XML atingir a marca de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fim de ** \</Order>** , ele enviará o registro para sem o valor da coluna de chave estrangeira CustomerID.  
+ Como o nó de elemento do ** \< cliente>** entra no escopo, o carregamento em massa de XML gera um registro de cliente. Esse registro permanece até que o carregamento em massa de XML leia ** \< /Customer>**. Ao processar o nó do elemento ** \<>de ordem** , o XML Bulk Load usa `<sql:relationship>` para obter o valor da coluna de chave estrangeira CustomerID da tabela CustOrder do elemento pai ** \< Customer>** , pois o elemento ** \< Order>** não especifica o atributo **CustomerID** . Isso significa que, ao definir o elemento de ** \<>do cliente** , você deve especificar o atributo **CustomerID** no esquema antes de especificar `<sql:relationship>` . Caso contrário, quando um elemento ** \<>de ordem** entrar no escopo, o carregamento em massa de XML gerará um registro para a tabela CustOrder e, quando o carregamento em massa de XML atingir a marca de fim de ** \< /Order>** , ele enviará o registro para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sem o valor da coluna de chave estrangeira CustomerID.  
   
  Salve o esquema fornecido neste exemplo como SampleSchema.xml.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66013506"
     set objBL=Nothing  
     ```  
   
-     O resultado é que o XML Bulk Load insere um valor NULL na coluna de chave estrangeira CustomerID da tabela CustOrder. Se você revisar os dados de exemplo XML para que o ** \<CustomerID>** elemento filho apareça antes da ** \<ordem>** elemento filho, obterá o resultado esperado: o carregamento em massa de XML insere o valor de chave estrangeira especificado na coluna.  
+     O resultado é que o XML Bulk Load insere um valor NULL na coluna de chave estrangeira CustomerID da tabela CustOrder. Se você revisar os dados de exemplo XML para que o ** \< CustomerID>** elemento filho apareça antes da ** \< ordem>** elemento filho, obterá o resultado esperado: o carregamento em massa de XML insere o valor de chave estrangeira especificado na coluna.  
   
  Este é o esquema XDR equivalente:  
   
