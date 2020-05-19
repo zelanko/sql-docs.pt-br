@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98254c2f26db08b7c5308248c596b7f70264f10c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963260"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750575"
 ---
 # <a name="synchronize-method-rds"></a>Método Synchronize (RDS)
 Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão para uso no ADO 2,5 e posterior.  

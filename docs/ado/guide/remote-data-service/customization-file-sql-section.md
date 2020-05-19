@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922795"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749875"
 ---
 # <a name="customization-file-sql-section"></a>Seção SQL do arquivo de personalização
 A seção **SQL** pode conter uma nova cadeia de caracteres SQL que substitui a cadeia de caracteres de comando do cliente. Se não houver nenhuma cadeia de caracteres SQL na seção, a seção será ignorada.  
@@ -28,7 +28,7 @@ A seção **SQL** pode conter uma nova cadeia de caracteres SQL que substitui a 
   
  A nova cadeia de caracteres SQL pode ser *parametrizada*. Ou seja, os parâmetros na cadeia de caracteres SQL da seção **SQL** (designado pelo caractere '? ') podem ser substituídos por argumentos correspondentes em um *identificador* na cadeia de caracteres de comando do cliente (designado por uma lista delimitada por vírgula entre parênteses). O identificador e a lista de argumentos se comportam como uma chamada de função.  
   
- Por exemplo, suponha que a cadeia de caracteres `"CustomerByID(4)"`de comando do cliente seja, `[SQL CustomerByID]`o cabeçalho da seção SQL seja, e `"SELECT * FROM Customers WHERE CustomerID = ?".` a nova cadeia de `"SELECT * FROM Customers WHERE CustomerID = 4"` caracteres da seção SQL seja o manipulador irá gerar e usar essa cadeia de caracteres para consultar a fonte de dados.  
+ Por exemplo, suponha que a cadeia de caracteres de comando do cliente seja `"CustomerByID(4)"` , o cabeçalho da seção SQL seja `[SQL CustomerByID]` , e a nova cadeia de caracteres da seção SQL seja `"SELECT * FROM Customers WHERE CustomerID = ?".` o manipulador irá gerar `"SELECT * FROM Customers WHERE CustomerID = 4"` e usar essa cadeia de caracteres para consultar a fonte de dados.  
   
  Se a nova instrução SQL for a cadeia de caracteres nula (""), a seção será ignorada.  
   

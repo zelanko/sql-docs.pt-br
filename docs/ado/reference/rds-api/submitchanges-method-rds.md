@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SubmitChanges method [ADO]
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3a11adb93f3de8f0887eefe964f1c85836ccc43e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963285"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750581"
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
 Envia alterações pendentes do [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) armazenado em cache e atualizável localmente para a fonte de dados especificada na propriedade [Connect](../../../ado/reference/rds-api/connect-property-rds.md) ou a propriedade [URL](../../../ado/reference/rds-api/url-property-rds.md) .  

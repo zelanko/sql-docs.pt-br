@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Source property [ADO], VBScript example
 - Recordset property [ADO], VBScript example
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 30b5a463c2180a4cc39ac1a0d2333b8b75d02bab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 64f83c8e7d8a281ff8bd9124d693d365cafd9181
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963584"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751103"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Exemplo de propriedades Recordeset e SourceRecordset (VBScript)
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "67963584"
   
  O exemplo a seguir mostra como definir os parâmetros necessários do objeto comercial padrão [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) em tempo de execução.  
   
- Para testar este exemplo, recorte e cole esse código entre \<o corpo> \<e/Body> marcas em um documento HTML normal e nomeie-o **RecordsetVBS. asp**. O script ASP identificará seu servidor.  
+ Para testar este exemplo, recorte e cole esse código entre o \< corpo> e \< /Body> marcas em um documento HTML normal e nomeie-o **RecordsetVBS. asp**. O script ASP identificará seu servidor.  
   
 ```  
 <!-- BeginRecordSetVBS -->  

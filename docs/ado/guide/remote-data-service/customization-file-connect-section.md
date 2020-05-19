@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922803"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749976"
 ---
 # <a name="customization-file-connect-section"></a>Seção Conexão do arquivo de personalização
 O comportamento padrão do manipulador é negar todas as conexões. A seção **conectar** especifica exceções para esse comportamento. Por exemplo, se todas as seções de **conexão** estiverem ausentes ou vazias, por padrão, nenhuma conexão poderá ser feita.  
@@ -60,7 +60,7 @@ connectionString
 |**Acesso**|Uma cadeia de caracteres literal que indica que se trata de uma entrada de acesso.|  
 |**_accessRight_**|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** -o usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** -o usuário pode ler a fonte de dados.<br />-   **ReadWrite** -o usuário pode ler ou gravar na fonte de dados.|  
   
- Se você quiser permitir qualquer conexão (na verdade, desabilitando o comportamento do manipulador padrão), defina a entrada de acesso na seção **conectar padrão** como `Access=ReadWrite`e exclua ou comente qualquer outra seção do _identificador_ de **conexão** .  
+ Se você quiser permitir qualquer conexão (na verdade, desabilitando o comportamento do manipulador padrão), defina a entrada de acesso na seção **conectar padrão** como `Access=ReadWrite` e exclua ou comente qualquer outra seção do _identificador_ de **conexão** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Seção de logs de arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
