@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 550638de710f709616e03cb79afd69f1e533ce9e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919079"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755321"
 ---
 # <a name="deleterecord-method-ado"></a>Método DeleteRecord (ADO)
 Exclui uma entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md).  

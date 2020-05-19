@@ -15,20 +15,20 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26691e405defc7b9d73a9ae02a287d81efda8af2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931478"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754005"
 ---
 # <a name="recordcount-property-ado"></a>Propriedade RecordCount (ADO)
 
 Indica o número de registros em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .
   
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Retorna um valor **longo** que indica o número de registros no **conjunto**de registros.
   

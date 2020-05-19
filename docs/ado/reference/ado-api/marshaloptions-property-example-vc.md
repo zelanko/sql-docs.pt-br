@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - MarshalOptions property [ADO], VC++ example
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26ce0f7bce4af9a57963a7efa29f6bcbc4280c29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 92d6939f067563c00890ad2481c86c39bc9bfa49
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932263"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754389"
 ---
 # <a name="marshaloptions-property-example-vc"></a>Exemplo da propriedade MarshalOptions (VC++)
 Este exemplo usa a propriedade [marshaloptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) para especificar quais linhas são enviadas de volta para o servidor-todas as linhas ou apenas as linhas modificadas.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1232d228d597188364cb20a7f60dfaa11c8af21a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949690"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753965"
 ---
 # <a name="hierarchy-object-ado-md"></a>Objeto Hierarchy (ADO MD)
 Representa uma maneira na qual os membros de uma [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) podem ser agregados ou "acumulados". Uma dimensão pode ser agregada ao longo de uma ou mais hierarquias.  
@@ -38,13 +38,13 @@ Representa uma maneira na qual os membros de uma [dimensão](../../../ado/refere
   
  A coleção **Properties** contém propriedades fornecidas pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades real pode diferir dependendo da implementação do provedor. Consulte a documentação do seu provedor para obter uma lista mais completa das propriedades disponíveis.  
   
-|Nome|Descrição|  
+|Name|Descrição|  
 |----------|-----------------|  
 |AllMember|O membro no nível mais alto de ROLLUP na hierarquia.|  
 |CatalogName|O nome do catálogo ao qual este cubo pertence.|  
 |CubeName|O nome do cubo.|  
 |DefaultMember|O nome exclusivo do membro padrão para esta hierarquia.|  
-|Descrição|Uma descrição significativa da hierarquia.|  
+|Description|Uma descrição significativa da hierarquia.|  
 |DimensionType|O tipo de dimensão ao qual essa hierarquia pertence.|  
 |DimensionUniqueName|O nome não ambíguo da dimensão.|  
 |HierarchyCaption|Um rótulo ou legenda associada à hierarquia.|  

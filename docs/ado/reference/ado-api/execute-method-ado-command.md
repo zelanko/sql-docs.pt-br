@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f595938fba37e2529f95b763d18dd91731c0b39
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918857"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755104"
 ---
 # <a name="execute-method-ado-command"></a>Método Execute (comando ADO)
 Executa a consulta, a instrução SQL ou o procedimento armazenado especificado na propriedade [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) do [objeto Command](../../../ado/reference/ado-api/command-object-ado.md).  

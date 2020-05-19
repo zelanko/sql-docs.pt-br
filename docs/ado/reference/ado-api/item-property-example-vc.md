@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Item property [ADO], VC++ example
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f157532dd1029e2966f0259701c59ffb50928c4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4ef98ecdaf1346aa06a46de88f20ab27e376ab7d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932290"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754884"
 ---
 # <a name="item-property-example-vc"></a>Exemplo da propriedade Item (VC++)
 Este exemplo demonstra como a propriedade [Item](../../../ado/reference/ado-api/item-property-ado.md) acessa os membros de uma coleção. O exemplo abre a tabela ***autores*** do banco de dados ***pubs*** com um comando com parâmetros.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - LineSeparatorsEnum enumeration [ADO]
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c966e2ac972fbc613c3938e95e458786c399bc08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7431242fb331fd4a8f2a24e1dd9bf0d4d201595
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932323"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754694"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 Especifica o caractere usado como separador de linha em objetos de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) de texto.  

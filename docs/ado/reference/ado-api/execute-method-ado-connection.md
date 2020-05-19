@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c2b07bb18aab0cde13a82540226fa477c306f268
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932899"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755100"
 ---
 # <a name="execute-method-ado-connection"></a>Método Execute (conexão ADO)
 Executa a consulta especificada, a instrução SQL, o procedimento armazenado ou o texto específico do provedor.  
@@ -39,7 +39,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### <a name="parameters"></a>Parâmetros  
  *CommandText*  
- Um valor de **cadeia de caracteres** que contém a instrução SQL, o procedimento armazenado, uma URL ou um texto específico do provedor a ser executado. **Opcionalmente**, os nomes de tabela podem ser usados, mas somente se o provedor tiver reconhecimento de SQL. Por exemplo, se o nome de uma tabela de "Customers" for usado, o ADO precederá automaticamente a sintaxe padrão do SQL SELECT para formar e passará [!INCLUDE[tsql](../../../includes/tsql-md.md)] "SELECT * FROM Customers" como uma instrução para o provedor.  
+ Um valor de **cadeia de caracteres** que contém a instrução SQL, o procedimento armazenado, uma URL ou um texto específico do provedor a ser executado. **Opcionalmente**, os nomes de tabela podem ser usados, mas somente se o provedor tiver reconhecimento de SQL. Por exemplo, se o nome de uma tabela de "Customers" for usado, o ADO precederá automaticamente a sintaxe padrão do SQL SELECT para formar e passará "SELECT * FROM Customers" como uma [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução para o provedor.  
   
  *RecordsAffected*  
  Opcional. Uma variável **longa** para a qual o provedor retorna o número de registros afetados pela operação.  

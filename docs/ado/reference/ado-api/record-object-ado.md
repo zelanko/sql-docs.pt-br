@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917367"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754043"
 ---
 # <a name="record-object-ado"></a>Objeto Record (ADO)
 Representa uma linha de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) ou do provedor de dados, ou um objeto retornado por um provedor de dados semiestruturado, como um arquivo ou diretório.  
@@ -59,7 +59,7 @@ Representa uma linha de um [conjunto de registros](../../../ado/reference/ado-ap
   
 -   Indique o status atual do **registro** com a propriedade [State](../../../ado/reference/ado-api/state-property-ado.md) .  
   
--   Indique o tipo de **registro** - *simples*, *coleção*ou *documento estruturado* -com a propriedade [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md).  
+-   Indique o tipo de **registro**  -  *simples*, *coleção*ou *documento estruturado* -com a propriedade [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md).  
   
 -   Interrompa a execução de uma operação assíncrona com o método [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) .  
   
