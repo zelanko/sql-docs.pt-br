@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032331"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705439"
 ---
 # <a name="parameter-and-result-metadata"></a>Parâmetro e metadados de resultado
   Este tópico descreve o que é retornado nos campos IPD (descritor de parâmetro de implementação) e IRD (descritor de linha de implementação) dos tipos de dados de data e hora.  
@@ -66,7 +66,7 @@ ms.locfileid: "63032331"
   
  Quando SQL_CA_SS_SERVER_TYPE é definido por uma chamada para SQLSetDescField, seu valor deve ser SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME ou SQL_SS_TYPE_DATETIME. Caso não seja esse o caso, SQL_ERROR é retornado, e um registro de diagnóstico é feito com SQLState HY092 e a mensagem "Identificador de atributo/opção inválido".  
   
- O atributo SQL_CA_SS_SERVER_TYPE pode ser usado por aplicativos que dependem da funcionalidade para a qual `datetime` e `smalldatetime` oferecem suporte, mas não `datetime2`. Por exemplo, `datetime2` requer o uso das funções `dateadd` e **datediif** , enquanto `datetime` e `smalldatetime` também permite operadores aritméticos. A maioria dos aplicativos não precisará usar esse atributo, e seu uso deve ser evitado.  
+ O atributo SQL_CA_SS_SERVER_TYPE pode ser usado por aplicativos que dependem da funcionalidade para a qual `datetime` e `smalldatetime` oferecem suporte, mas não `datetime2`. Por exemplo, `datetime2` requer o uso das `dateadd` funções e **datediif** , enquanto `datetime` e `smalldatetime` também permite operadores aritméticos. A maioria dos aplicativos não precisará usar esse atributo, e seu uso deve ser evitado.  
   
 ## <a name="information-returned-in-ird-fields"></a>Informações retornadas nos campos IRD  
  As seguintes informações são retornadas nos campos IRD:  

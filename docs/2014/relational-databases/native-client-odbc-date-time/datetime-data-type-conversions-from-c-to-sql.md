@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43d16368d1f550ccf534a1a6e9804c7ce18b096c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207018"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705492"
 ---
 # <a name="conversions-from-c-to-sql"></a>Conversões do C para o SQL
-  Este tópico lista os problemas a serem considerados quando você converte de tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] C em tipos de data/hora.  
+  Este tópico lista os problemas a serem considerados quando você converte de tipos C em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de data/hora.  
   
  As conversões descritas na tabela a seguir se aplicam a conversões feitas no cliente. Nos casos em que o cliente especifica uma precisão de frações de segundo para um parâmetro diferente daquela definida no servidor, a conversão do cliente pode ser bem-sucedida, mas o servidor irá retornar um erro quando `SQLExecute` ou `SQLExecuteDirect` for chamado. Em particular, o cliente trata qualquer truncamento de frações de segundo como um erro, enquanto o comportamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é arredondar; por exemplo, o arredondamento ocorre quando você vai do `datetime2(6)` para o `datetime2(2)`. Os valores da coluna datetime são arredondados para 1/300º de um segundo e as colunas smalldatetime têm os segundos definidos como zero pelo servidor.  
   

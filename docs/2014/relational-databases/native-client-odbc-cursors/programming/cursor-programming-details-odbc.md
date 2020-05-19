@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC cursors, programming
 - cursors [ODBC], programming
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: baf606baa029024369a00e44293873ecc7b33d1b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207261"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705629"
 ---
 # <a name="cursor-programming-details-odbc"></a>Detalhes da programação de cursor (ODBC)
   A escolha do tipo de cursor correto pode melhorar o desempenho do aplicativo. Em determinadas condições, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode converter um tipo de cursor implicitamente quando você executa uma instrução SQL para a qual o tipo de cursos solicitado não dá suporte.  

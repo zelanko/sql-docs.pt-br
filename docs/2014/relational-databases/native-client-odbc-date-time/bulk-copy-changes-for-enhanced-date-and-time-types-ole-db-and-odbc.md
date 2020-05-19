@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207109"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705530"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Alterações de cópia em massa para tipos de data e hora aprimorados (OLE DB e ODBC)
   Este tópico descreve os aprimoramentos de data/hora para oferecer suporte à funcionalidade de cópia em massa. As informações deste tópico são válidas para OLE DB e ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -63,7 +63,7 @@ ms.locfileid: "63207109"
 ## <a name="character-data-files"></a>Arquivos de dados de caracteres  
  Em arquivos de dados de caractere, os valores de data e hora são representados conforme descrito na seção "formatos de dados: cadeias de caracteres e literais" do [suporte de tipo de dados para melhorias de data e hora ODBC](data-type-support-for-odbc-date-and-time-improvements.md) para ODBC ou de [tipo de dados suporte para OLE DB melhorias de data e hora](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) para OLE DB.  
   
- No Fles de dados nativos, os valores de data e hora para os quatro novos tipos são representados como suas representações de TDS com uma escala de 7 (porque esse é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o máximo com suporte do e os arquivos de dados BCP não armazenam a escala dessas colunas). Não há nenhuma alteração no armazenamento das representações existentes `datetime` e `smalldatetime` de tipo ou de TDS (Data Stream) de tabela.  
+ No Fles de dados nativos, os valores de data e hora para os quatro novos tipos são representados como suas representações de TDS com uma escala de 7 (porque esse é o máximo com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os arquivos de dados BCP não armazenam a escala dessas colunas). Não há nenhuma alteração no armazenamento das `datetime` representações existentes e de `smalldatetime` tipo ou de TDS (Data Stream) de tabela.  
   
  Os tamanhos de armazenamento para os diferentes tipos de armazenamento do OLE DB são estes:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63207109"
 |-----------------------|---------------------------|  
 |DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
+|data|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
