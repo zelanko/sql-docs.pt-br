@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.tablesviews.f1
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779187"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000946"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Propriedades do catálogo de texto completo (página Tabelas e Exibições)
   Usa essa página de caixa de diálogo para exibir ou modificar as tabelas e exibições atribuídas ao catálogo de texto completo.  
@@ -52,7 +52,7 @@ ms.locfileid: "62779187"
   
 |||  
 |-|-|  
-|**Automático**|O índice de texto completo será atualizado automaticamente quando os dados da tabela subjacente forem alterados, adicionados ou excluídos.|  
+|**Automática**|O índice de texto completo será atualizado automaticamente quando os dados da tabela subjacente forem alterados, adicionados ou excluídos.|  
 |**Manual**|Se os dados forem modificados, adicionados ou excluídos dos dados indexados, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] controlará as alterações. Se o controle de alteração **Manual** estiver em vigor, o índice não será atualizado automaticamente com essas alterações. Em vez disso, um administrador pode aplicar as alterações manualmente usando um [ALTER FULLTEXT index... Instrução START UPDATE Population](/sql/t-sql/statements/alter-fulltext-index-transact-sql) .|  
 |**Não controlar alterações**|Com essa opção em vigor, as alterações feitas nos dados indexados do catálogo não são registradas. O administrador deve criar o índice usando ALTER FULLTEXT INDEX com FULL POPULATION ou INCREMENTAL POPULATION.|  
   

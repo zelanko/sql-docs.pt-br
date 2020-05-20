@@ -11,15 +11,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552e7cd3212d8fb65100c6bd8efbaca91af43c4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089165"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000672"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Opções (página Editor de texto – Transact-SQL – geral)
   Use a caixa de diálogo de opções **Geral** para alterar o comportamento de edição geral do Editor de Consultas do [!INCLUDE[ssDE](../includes/ssde-md.md)] , que é usado para editar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] . Para exibir essas configurações, clique em **Opções** no menu **Ferramentas**, expanda a subpasta **Transact-SQL** e clique em **Geral**.  
@@ -56,7 +56,7 @@ ms.locfileid: "66089165"
   
  Essa configuração não tem nenhum efeito em **Copiar** ou **Recortar** quando uma linha não está em branco. Se nada for selecionado, a linha inteira será copiada ou recortada. Se você clicar em **Colar**, o texto da linha inteira e seu caractere de término serão colados.  
   
-## <a name="display"></a>Exibição  
+## <a name="display"></a>Monitor  
  **Números de linha**  
  Quando esta caixa de seleção estiver marcada, será exibido um número de linha ao lado de cada linha de código.  
   

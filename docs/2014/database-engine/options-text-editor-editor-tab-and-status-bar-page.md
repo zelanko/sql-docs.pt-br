@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089237"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000712"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opções (página Editor de Texto: Guia Editor e Barra de Status)
   A **página Guia Editor e Barra de Status** permite que você personalize as informações exibidas pelos Editores de Consultas do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Você pode especificar o nível de informações exibido na guia e na barra de status da janela Editor de Consulta e se a barra de status será exibida na parte superior ou parte inferior da janela do editor.  
@@ -70,7 +70,7 @@ ms.locfileid: "66089237"
  **Início**  
  A barra de status aparece na parte superior do Editor de Consultas.  
   
- **Resultado**  
+ **Menor**  
  A barra de status aparece na parte inferior da janela do Editor de Consultas.  
   
 ## <a name="tab-text"></a>Texto da Guia  

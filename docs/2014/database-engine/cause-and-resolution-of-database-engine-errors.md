@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: cbfbea15-9277-498f-b772-75b4cb06f408
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c52de15f5f5d06590b74182819804750a957e17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e24edbf9c988081e7d36539f325e903626ae791
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065185"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000993"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>Causa e resolução de erros do Mecanismo de Banco de Dados
   Este tópico contém informações sobre causas e resoluções para diversos erros relacionados ao [!INCLUDE[ssDE](../includes/ssde-md.md)].  

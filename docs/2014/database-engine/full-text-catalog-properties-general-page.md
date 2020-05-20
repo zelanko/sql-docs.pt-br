@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779659"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000956"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriedades do Catálogo de Texto Completo (página Geral)
   Esta seção mostra as opções e funções disponíveis na página **Geral** da caixa de diálogo **Propriedades do Catálogo de Texto Completo** .  
@@ -34,7 +34,7 @@ ms.locfileid: "62779659"
  **Status de População**  
  Indica o status do catálogo. Os valores possíveis são:  
   
--   **Idle**  
+-   **Ocioso**  
   
 -   **Rastreamento em andamento**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62779659"
  Nome do catálogo de texto completo.  
   
  **Diferenciar Acentos**  
- Exiba ou modifique se o catálogo é sensível a sinais diacríticos, como til (**~**), acento agudo (**́**) ou trema (**̈**). Os valores válidos são:  
+ Exiba ou modifique se o catálogo é sensível a sinais diacríticos, como til ( **~** ), acento agudo (**́**) ou trema (**̈**). Os valores válidos são:  
   
 -   **Não**  
   

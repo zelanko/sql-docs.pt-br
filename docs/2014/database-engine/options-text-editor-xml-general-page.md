@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089196"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001038"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   Use essa caixa de diálogo para alterar o comportamento de edição geral do Editor de XML, que é usado para editar documentos XML. Para exibir essas configurações, clique em **Opções** , no menu **Ferramentas** , expanda a subpasta **XML** e clique em **Geral**.  
@@ -55,7 +55,7 @@ ms.locfileid: "66089196"
   
  Essa configuração não tem nenhum efeito em **Copiar** ou **Recortar** quando uma linha não está em branco. Se nada for selecionado, a linha inteira será copiada ou recortada. Se você clicar em **Colar**, o texto da linha inteira e seu caractere de término serão colados.  
   
-## <a name="display"></a>Exibição  
+## <a name="display"></a>Monitor  
  **Números de linha**  
  Quando esta caixa de seleção estiver marcada, será exibido um número de linha ao lado de cada linha de código.  
   

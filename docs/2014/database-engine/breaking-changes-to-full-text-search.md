@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breaking changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787754"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001016"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Alterações recentes na pesquisa de texto completo
   Este tópico descreve as alterações recentes feitas na pesquisa de texto completo. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "62787754"
 |Recurso|Cenário|SQL Server 2005|SQL Server 2008 e versões posteriores|  
 |-------------|--------------|---------------------|----------------------------------------|  
 |[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) com tipos definidos pelo usuário (UDTs)|A chave de texto completo é um tipo definido pelo usuário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por exemplo, `MyType = char(1)`.|A chave retornada é do tipo atribuído ao tipo definido pelo usuário.<br /><br /> No exemplo, isso seria **Char (1)**.|A chave retornada é do tipo definido pelo usuário. No exemplo, isso seria **com MyType**.|  
-|parâmetro *top_n_by_rank* (das[!INCLUDE[tsql](../includes/tsql-md.md)] instruções CONTAINSTABLE e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) )|*top_n_by_rank* consultas usando 0 como o parâmetro.|Falha com uma mensagem de erro, indicando que você deve usar um valor maior que zero.|Tem êxito, não retornando nenhuma linha.|  
+|parâmetro *top_n_by_rank* (das instruções CONTAINSTABLE e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] )|*top_n_by_rank* consultas usando 0 como o parâmetro.|Falha com uma mensagem de erro, indicando que você deve usar um valor maior que zero.|Tem êxito, não retornando nenhuma linha.|  
 |CONTAINSTABLE e **ItemCount**|Excluir linhas da tabela base antes do envio por push de alterações para MSSearch.|CONTAINSTABLE retorna registro fantasma. **ItemCount** não é alterado.|CONTAINSTABLE não retorna nenhum registro fantasma.|  
 |**ItemCount**|A tabela contém colunas de tipo ou documentos nulos.|Além dos documentos indexados, os documentos que são nulos ou que têm tipos nulos são contados no valor **ItemCount** .|Somente documentos indexados são contados no valor **ItemCount** .|  
 |Catálogo de **ItemCount**|Coluna blob com uma extensão NULL.|Ele é contado em **ItemCount** do catálogo|Ele não é contado em **ItemCount** do catálogo.|  
@@ -50,7 +50,7 @@ ms.locfileid: "62787754"
 |[sp_fulltext_database](/sql/relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql)|Habilitar ou desabilitar pesquisa de texto completo usando sp_fulltext_database.|Nenhum resultado é retornado para consultas de texto completo. Se o texto completo estiver desabilitado para o banco de dados, não serão permitidas operações de texto completo.|Retorna resultados para consultas de texto completo e operações de texto completo permitidas, mesmo se o texto completo estiver desabilitado para o banco de dados.|  
 |Palavras irrelevantes (stop words) específicas da localidade|Consulta variantes específicas de um idioma pai, como o belga francês e o Canadá francês.|Consultas as variantes específicas de inlocalização são processadas pelos componentes (separadores de palavras, lematizadores e palavras irrelevantes) de seu idioma pai. Por exemplo, os componentes de francês (França) são usados para analisar francês (Bélgica).|Você deve adicionar palavras irrelevantes explicitamente para cada identificador de localidade (LCID). Por exemplo, você precisaria especificar um LCID para Bélgica, Canadá e França.|  
 |Processo de lematização do dicionário de sinônimos|Usando o dicionário de sinônimos e formas flexivas (lematização).|Uma palavra do dicionário de sinônimos é lematizada automaticamente depois de sua expansão.|Se você deseja a forma lematizada na expansão, precisará adicionar explicitamente a forma lematizada.|  
-|Caminho de catálogo de texto completo e grupo de arquivos|Trabalhando com catálogos de texto completo.|Cada catálogo de texto completo tem um caminho físico e pertence a um grupo de arquivos. Ele é tratado como um arquivo de banco de dados.|Um catálogo de texto completo é um objeto virtual; ele não pertence a nenhum grupo de arquivos. Um catálogo de texto completo é um conceito lógico que faz referência a um grupo de índices de texto completo.<br /><br /> Observação: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] as instruções DDL que especificam catálogos de texto completo funcionam corretamente.|  
+|Caminho de catálogo de texto completo e grupo de arquivos|Trabalhando com catálogos de texto completo.|Cada catálogo de texto completo tem um caminho físico e pertence a um grupo de arquivos. Ele é tratado como um arquivo de banco de dados.|Um catálogo de texto completo é um objeto virtual; ele não pertence a nenhum grupo de arquivos. Um catálogo de texto completo é um conceito lógico que faz referência a um grupo de índices de texto completo.<br /><br /> Observação: as [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] instruções DDL que especificam catálogos de texto completo funcionam corretamente.|  
 |[sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)|Usando o caminho, data_space_id e file_id dessa exibição de catálogo.|Essas colunas retornam um valor específico.|Essas colunas retornam NULL porque o catálogo de texto completo não está mais localizado no sistema de arquivos.|  
 |[sys.sysfulltextcatalogs](/sql/relational-databases/system-compatibility-views/sys-sysfulltextcatalogs-transact-sql)|Usando a coluna de caminho dessa tabela de sistema preterida.|Retorna o caminho do sistema de arquivos do catálogo de texto completo.|Retorna NULL porque o catálogo de texto completo não está mais localizado no sistema de arquivos.|  
 |[sp_help_fulltext_catalogs](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql)<br /><br /> [sp_help_fulltext_catalogs_cursor](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql)|Usando a coluna PATH desses procedimentos armazenados preteridos.|Retorna o caminho do sistema de arquivos do catálogo de texto completo.|Retorna NULL porque o catálogo de texto completo não está mais localizado no sistema de arquivos.|  

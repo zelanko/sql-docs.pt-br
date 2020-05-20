@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778937"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000926"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriedades do Índice de Texto Completo (página Geral)
   **Para exibir ou alterar as propriedades modificáveis de um índice de texto completo**  
@@ -65,7 +65,7 @@ ms.locfileid: "62778937"
  O grupo de arquivos ao qual o índice de texto completo pertence.  
   
  **Lista de palavras irrelevantes de índice de texto completo**  
- A lista de palavras irrelevantes associada ao índice de texto completo no momento. Uma lista de palavras irrelevantes contém [palavras irrelevantes](../relational-databases/search/full-text-search.md). A lista de palavras irrelevantes associada a um índice de texto completo, se houver, é aplicada a consultas de texto completo nesse índice. Você pode remover a lista de palavras irrelevantes do índice selecionando ** \<desativado>** na listagem ou pode selecionar uma diferente lista de palavras irrelevantes; O sistema>indica a System STOPLIST. ** \<**  
+ A lista de palavras irrelevantes associada ao índice de texto completo no momento. Uma lista de palavras irrelevantes contém [palavras irrelevantes](../relational-databases/search/full-text-search.md). A lista de palavras irrelevantes associada a um índice de texto completo, se houver, é aplicada a consultas de texto completo nesse índice. Você pode remover a lista de palavras irrelevantes do índice selecionando ** \< desativado>** na listagem ou pode selecionar uma diferente lista de palavras irrelevantes; O ** \< sistema>** indica a System STOPLIST.  
   
  **Par criar uma lista de palavras irrelevantes (stoplist)**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62778937"
  **Lista de propriedades de pesquisa**  
  A lista de propriedades de pesquisa associada atualmente o índice de texto completo, se houver algum. Uma lista de propriedades de pesquisa especifica um conjunto de propriedades de documento que são incluídos no índice de texto completo quando ele é preenchido. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- Off>indica que atualmente não há nenhuma lista de propriedades de pesquisa associada ao índice. ** \<** Você pode remover a lista de propriedades de pesquisa atual do índice selecionando ** \<desativado>** na lista ou pode selecionar uma lista de propriedades de pesquisa diferente na lista. Somente as listas de propriedades de pesquisa do banco de dados atual são relacionadas aqui.  
+ ** \< Off>** indica que atualmente não há nenhuma lista de propriedades de pesquisa associada ao índice. Você pode remover a lista de propriedades de pesquisa atual do índice selecionando ** \< desativado>** na lista ou pode selecionar uma lista de propriedades de pesquisa diferente na lista. Somente as listas de propriedades de pesquisa do banco de dados atual são relacionadas aqui.  
   
 > [!NOTE]  
 >  Você pode associar uma determinada lista de propriedades de pesquisa a mais de um índice de texto completo no mesmo banco de dados.  
@@ -119,7 +119,7 @@ ms.locfileid: "62778937"
   
 |||  
 |-|-|  
-|**True**|Habilitada|  
+|**True**|habilitado|  
 |**For**|Desabilitado|  
   
  **Controle de alterações**  
@@ -129,16 +129,16 @@ ms.locfileid: "62778937"
   
 |||  
 |-|-|  
-|**Off**|O índice de texto completo não é atualizado com alterações nos dados subjacentes.|  
+|**Desativado**|O índice de texto completo não é atualizado com alterações nos dados subjacentes.|  
 |**Manual**|O índice de texto completo não é atualizado automaticamente conforme as alterações ocorrem nos dados subjacentes. Porém, as alterações aos dados subjacentes são mantidas e você pode propagá-los para o índice de texto completo ou em uma agenda que usa o SQL Server Agent ou manualmente.|  
-|**Automático**|O índice de texto completo é atualizado automaticamente conforme as alterações ocorrem nos dados subjacentes na tabela base.|  
+|**Automática**|O índice de texto completo é atualizado automaticamente conforme as alterações ocorrem nos dados subjacentes na tabela base.|  
   
  **Repopular o índice**  
  Clique para iniciar uma população no índice de texto completo ao sair da caixa de diálogo. Selecione um dos seguintes tipos de população:  
   
 |||  
 |-|-|  
-|**Completo**|Durante uma população completa de uma tabela, as entradas de índice são criadas para todas as linhas.|  
+|**Full**|Durante uma população completa de uma tabela, as entradas de índice são criadas para todas as linhas.|  
 |**Lucrativ**|A população incremental atualiza o índice de texto completo para linhas adicionadas, excluídas ou modificadas após a última população ou enquanto a última população estava em andamento. A execução de uma população incremental requer que a tabela base contenha uma coluna do tipo de dados `timestamp`.|  
 |**Atualização**|O índice de texto completo é atualizado sempre que os dados da tabela base são modificados.|  
   

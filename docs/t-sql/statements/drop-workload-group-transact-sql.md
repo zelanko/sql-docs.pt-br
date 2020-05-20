@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: d2bbbee44b7b50e5d25bda3b4d10c6123db6497b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 149c0e80cc64c1511c074a60595b26b668cfae8e
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001149"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83605698"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
@@ -67,7 +67,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 &nbsp;
 
-## <a name="azure-synapse-analytics-preview"></a>Azure Synapse Analytics (versão prévia)
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics 
 
 Remove um grupo de carga de trabalho.  Quando a instrução for concluída, as configurações estarão em vigor.
 
@@ -107,6 +107,10 @@ Requer a permissão CONTROL DATABASE
 
 ## <a name="see-also"></a>Confira também
 
-[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
+- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
+- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)
+- [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
+- [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
+- [Início Rápido: Configurar isolamento da carga de trabalho com o T-SQL](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
 
 ::: moniker-end

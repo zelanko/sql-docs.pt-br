@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6553d743fe3cb0ba4e4ab6229baa65cc9d94eec8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035315"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001070"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Sobre os termos de licença do SQL Server (SSCM)
-  Os Termos da Licença de Software do [!INCLUDE[msCoName](../../includes/msconame-md.md)]são copiados para o computador local quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado. Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos de licença será aplicável a todas as instâncias dessa edição e idioma. Os arquivos são gravados em:%ProgramFiles%\Microsoft SQL Server\110\License terms \ ou% ProgramFiles (x86)% \ Microsoft\\SQL Server\110\License terms.  
+  Os Termos da Licença de Software do [!INCLUDE[msCoName](../../includes/msconame-md.md)]são copiados para o computador local quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado. Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos de licença será aplicável a todas as instâncias dessa edição e idioma. Os arquivos são gravados em:%ProgramFiles%\Microsoft SQL Server\110\License terms \ ou% ProgramFiles (x86)% \ Microsoft SQL Server\110\License terms \\ .  
   
  Quando várias instâncias da mesma edição e do mesmo idioma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas no mesmo computador, uma única cópia dos termos da licença é aplicável a todas as instâncias dessa edição e idioma.  
   

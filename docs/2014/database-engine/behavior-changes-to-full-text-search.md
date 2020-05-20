@@ -11,15 +11,15 @@ helpviewer_keywords:
 - behavior changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00dc0fbda03bb7f729123a84e7e91fb2361aee9f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813189"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001056"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Alterações de comportamento na pesquisa de texto completo
   Este tópico descreve alterações de comportamento em pesquisa de texto completo. Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -79,14 +79,14 @@ ms.locfileid: "62813189"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>Alterações de comportamento na pesquisa de texto completo no SQL Server 2008  
  No [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e em versões posteriores, o mecanismo de texto completo é integrado como um serviço de banco de dados no banco de dados relacional como parte da infraestrutura do mecanismo de armazenamento e consulta do servidor. A nova arquitetura de pesquisa de texto completo atinge as seguintes metas:  
   
--   Armazenamento integrado e gerenciamento – a pesquisa de texto completo agora está integrada diretamente com os recursos inerentes de armazenamento [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e gerenciamento do, e o serviço MSFTESQL não existe mais.  
+-   Armazenamento integrado e gerenciamento – a pesquisa de texto completo agora está integrada diretamente com os recursos inerentes de armazenamento e gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , e o serviço MSFTESQL não existe mais.  
   
     -   Os índices de texto completo são armazenados nos grupos de arquivos de banco de dados, e não no sistema de arquivos. As operações administrativas executadas em um banco de dados, como a criação de um backup, afetam automaticamente seus índices de texto completo.  
   
     -   Agora um catálogo de texto completo é um objeto virtual que não pertence a nenhum grupo de arquivos; trata-se de um conceito lógico que faz referência a um grupo de índices de texto completo. Por esse motivo, muitos recursos de gerenciamento de catálogo ficaram obsoletos e isso gerou alterações recentes em alguns recursos. Para obter mais informações, consulte [recursos de mecanismo de banco de dados preteridos no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md) e [alterações recentes na pesquisa de texto completo](breaking-changes-to-full-text-search.md).  
   
         > [!NOTE]  
-        >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)] Instruções DDL que especificam catálogos de texto completo funcionam corretamente.  
+        >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)]Instruções DDL que especificam catálogos de texto completo funcionam corretamente.  
   
 -   Processamento de consulta integrado – o novo processador de consulta de pesquisa de texto completo faz parte do Mecanismo de Banco de Dados e é totalmente integrado com o processador de consulta SQL Server. Isso significa que o otimizador de consulta reconhece predicados de consulta de texto completo e os executa automaticamente com o máximo de eficácia possível.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62813189"
   
 -   As palavras irrelevantes e as listas de palavras irrelevantes (stoplists) substituíram as palavras de ruído o os arquivos de palavras de ruído. Uma lista de palavras irrelevantes é um objeto de banco de dados que facilita as tarefas de capacidade de gerenciamento relacionadas a palavras irrelevantes e melhora a integridade entre diferentes ambientes e instâncias de servidor. Para obter mais informações, veja [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   O [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e versões posteriores inclui novos separadores de palavras para muitos dos idiomas existentes no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Somente os separadores de palavras para inglês, coreano, tailandês e chinês (todas as formas) permanecem os mesmos. Para outros idiomas, se um catálogo de texto completo foi importado [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] quando um banco de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] dados foi atualizado para o ou uma versão posterior, um ou mais idiomas usados pelos índices de texto completo no catálogo de texto completo agora podem estar associados a novos separadores de palavras que podem se comportar de forma ligeiramente diferente dos separadores de palavras importados. Para obter mais informações sobre como garantir a consistência entre consultas e o conteúdo do índice de texto completo, consulte [Atualizar pesquisa de texto completo](../relational-databases/search/upgrade-full-text-search.md).  
+-   O [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e versões posteriores inclui novos separadores de palavras para muitos dos idiomas existentes no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Somente os separadores de palavras para inglês, coreano, tailandês e chinês (todas as formas) permanecem os mesmos. Para outros idiomas, se um catálogo de texto completo foi importado quando um [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] banco de dados foi atualizado para [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] o ou uma versão posterior, um ou mais idiomas usados pelos índices de texto completo no catálogo de texto completo agora podem estar associados a novos separadores de palavras que podem se comportar de forma ligeiramente diferente dos separadores de palavras importados. Para obter mais informações sobre como garantir a consistência entre consultas e o conteúdo do índice de texto completo, consulte [Atualizar pesquisa de texto completo](../relational-databases/search/upgrade-full-text-search.md).  
   
 -   Um novo serviço Iniciador FDHOST (MSSQLFDLauncher) foi adicionado. Para obter mais informações, consulte [introdução à pesquisa de texto completo](../relational-databases/search/get-started-with-full-text-search.md).  
   

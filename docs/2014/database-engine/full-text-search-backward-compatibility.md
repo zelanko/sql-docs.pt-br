@@ -11,15 +11,15 @@ helpviewer_keywords:
 - backward compatibility [SQL Server], Database Engine
 - full-text search [SQL Server], backward compatibility
 ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 322c0e835403d3cebb9ca42b77d803a6573a220c
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779256"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000886"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Compatibilidade com versões anteriores da pesquisa de texto completo
   Os tópicos da seção de compatibilidade com versões anteriores descrevem alterações no comportamento de pesquisa de texto completo entre versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

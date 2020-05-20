@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], discontinued features
 - discontinued features [full-text search]
 ms.assetid: 70587b3c-cc77-4681-924d-a1df7cdf1517
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47ef01538368dcbfdd235d649fdb3b2c805a59dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 751a47bd117c4616c5cf361c941148f73e71efc6
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780284"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000966"
 ---
 # <a name="discontinued-full-text-search-features-in-sql-server-2014"></a>Recursos de pesquisa de texto completo descontinuados no SQL Server 2014
   Nenhum recurso de pesquisa de texto completo foi descontinuado no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], embora alguns tenham sido substituídos. Para obter mais informações, consulte [recursos de pesquisa de texto completo preteridos no SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md).  

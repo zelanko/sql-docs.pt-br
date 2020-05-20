@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4253bf2395fc33ecf315a1f092e0203513de90e5
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089275"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000685"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
   Use essa caixa de diálogo para alterar o comportamento de edição geral do Editor de Texto, que é usado para editar um documento não associado a um idioma de desenvolvimento específico. Para exibir essas configurações, clique em **Opções** , no menu **Ferramentas** , expanda **Editor de Texto**, expanda **Texto Sem-Formatação** e clique em **Geral**.  
@@ -55,7 +55,7 @@ ms.locfileid: "66089275"
   
  Essa configuração não tem nenhum efeito em **Copiar** ou **Recortar** quando uma linha não está em branco. Se nada for selecionado, a linha inteira será copiada ou recortada. Se você clicar em **Colar**, o texto da linha inteira e seu caractere de término serão colados.  
   
-## <a name="display"></a>Exibição  
+## <a name="display"></a>Monitor  
  **Números de linha**  
  Exiba um número de linha próximo a cada linha de texto.  
   

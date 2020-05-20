@@ -13,18 +13,18 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065544"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001024"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Criando uma cadeia de conexão válida usando pipes nomeados
-  A menos que seja alterado pelo usuário, quando a instância [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] padrão do escuta no protocolo de pipes nomeados `\\.\pipe\sql\query` , ela é usada como o nome do pipe. O ponto indica que o computador é local, `pipe` indica que a conexão é um pipe nomeado e `sql\query` é o nome do pipe. Para conectar ao pipe padrão, o alias deve ter `\\<computer_name>\pipe\sql\query` como nome do pipe. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiver sido configurado para escutar em um pipe diferente, o nome do pipe deverá usar esse pipe. Por exemplo, se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver usando `\\.\pipe\unit\app` como o pipe, o alias deverá usar `\\<computer_name>\pipe\unit\app` como o nome do pipe.  
+  A menos que seja alterado pelo usuário, quando a instância padrão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta no protocolo de pipes nomeados, ela é usada `\\.\pipe\sql\query` como o nome do pipe. O ponto indica que o computador é local, `pipe` indica que a conexão é um pipe nomeado e `sql\query` é o nome do pipe. Para conectar ao pipe padrão, o alias deve ter `\\<computer_name>\pipe\sql\query` como nome do pipe. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiver sido configurado para escutar em um pipe diferente, o nome do pipe deverá usar esse pipe. Por exemplo, se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver usando `\\.\pipe\unit\app` como o pipe, o alias deverá usar `\\<computer_name>\pipe\unit\app` como o nome do pipe.  
   
  Para criar um nome de pipe válido, deve você:  
   
@@ -32,11 +32,11 @@ ms.locfileid: "63065544"
   
 -   Selecione **pipes nomeados** como o **protocolo**.  
   
--   Insira o **nome do pipe**. Como alternativa, você pode deixar o **nome** do pipe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em branco e Configuration Manager concluirá o nome do pipe apropriado depois de especificar o **protocolo** e o **servidor**  
+-   Insira o **nome do pipe**. Como alternativa, você pode deixar o **nome do pipe** em branco e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager concluirá o nome do pipe apropriado depois de especificar o **protocolo** e o **servidor**  
   
 -   Especifique um **servidor**. Para uma instância nomeada, você pode fornecer um nome de servidor e um nome de instância.  
   
- No momento da conexão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente cliente nativo lê os valores de servidor, protocolo e nome de pipe do registro para o nome de alias especificado e cria um nome de pipe no formato `np:\\<computer_name>\pipe\<pipename>` ou. `np:\\<IPAddress>\pipe\<pipename>` Para uma instância nomeada, o nome do pipe padrão `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`é.  
+ No momento da conexão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente cliente nativo lê os valores de servidor, protocolo e nome de pipe do registro para o nome de alias especificado e cria um nome de pipe no formato `np:\\<computer_name>\pipe\<pipename>` ou `np:\\<IPAddress>\pipe\<pipename>` . Para uma instância nomeada, o nome do pipe padrão é `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query` .  
   
 > [!NOTE]  
 >  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Firewall do Windows fecha a porta 445 por padrão. Como o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comunica pela porta 445, você deverá reabri-la se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurado para escutar conexões de entrada usando pipes nomeados. Para obter informações sobre como configurar um firewall, consulte "Como configurar um firewall para acessar o SQL Server" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou verifique a documentação do firewall.  
