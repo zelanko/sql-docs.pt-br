@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f6b2c736087b2f860bf8419264904e8669ba8951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c63f54756d3bde1ab3c79a0beee9cc06b709d05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771555"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808430"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 `[ @password = ] 'password'`É a senha de administrador do sistema a ser usada ao criar novos objetos do sistema no banco de dados de distribuição. a *senha* é **sysname**, com um padrão de **' '** (cadeia de caracteres vazia). Esse parâmetro não será necessário se *security_mode* for definido como **1**, que é a autenticação do Windows.  
   
 > [!NOTE]  
->  Esse parâmetro é ignorado quando você está atualizando para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o SQL e versões posteriores.  
+>  Esse parâmetro é ignorado quando você está atualizando para o SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
   
 `[ @ver_old = ] 'old_version'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -57,7 +57,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 `[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @security_mode = ] 'security_mode'`É o modo de segurança de logon a ser usado ao criar novos objetos do sistema no banco de dados de distribuição. *security_mode* é **bit** com um valor padrão de **0**. Se **0**for 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a autenticação será usada. Se **1**, a autenticação do Windows será usada.  
+`[ @security_mode = ] 'security_mode'`É o modo de segurança de logon a ser usado ao criar novos objetos do sistema no banco de dados de distribuição. *security_mode* é **bit** com um valor padrão de **0**. Se for **0**, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação será usada. Se **1**, a autenticação do Windows será usada.  
   
 > [!NOTE]  
 >  Esse parâmetro é ignorado quando você está atualizando para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  

@@ -128,7 +128,7 @@ Você pode modificar o recurso RDL Sandboxing para gerenciar os recursos que sã
   
  Para acrescentar funções de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à lista de permissões, acrescente os tipos correspondentes do namespace Microsoft.VisualBasic à lista de permissões.  
   
- Para acrescentar palavras-chave de tipo do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à lista de permissões, acrescente o tipo CLR correspondente à lista de permissões. Por exemplo, para usar a palavra-chave [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]Integer**do** .NET Framework, adicione o seguinte fragmento de XML ao elemento **\<RDLSandboxing>** :  
+ Para acrescentar palavras-chave de tipo do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework à lista de permissões, acrescente o tipo CLR correspondente à lista de permissões. Por exemplo, para usar a palavra-chave **Integer** do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, adicione o seguinte fragmento de XML ao elemento **\<RDLSandboxing>**:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  

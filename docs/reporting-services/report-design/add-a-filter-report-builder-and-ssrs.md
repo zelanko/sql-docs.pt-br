@@ -31,7 +31,7 @@ ms.locfileid: "77080747"
   
 1.  Abra um relatório no modo de exibição de **Design** .  
   
-2.  Selecione a região de dados na superfície de design e, em seguida, clique com o botão direito do mouse em _\<data region>_ **Propriedades**. Para um medidor, selecione **Propriedades do Painel de Medidores**. A caixa de diálogo _Propriedades\< da_ **data region>** será aberta.  
+2.  Selecione a região de dados na superfície de design e, em seguida, clique com o botão direito do mouse em _\<data region>_ **Propriedades**. Para um medidor, selecione **Propriedades do Painel de Medidores**. A caixa de diálogo **Propriedades** da _\<data region>_ será aberta.  
   
     > [!NOTE]  
     >  Em uma região de dados do Tablix, clique com o botão direito do mouse na alça de canto da célula, linha ou coluna e clique em **Propriedades do Tablix**.  

@@ -49,7 +49,7 @@ Tipo de retorno do CLR: **SqlGeography**
 Esse método retorna um **point**. Quando usado com `EnvelopeAngle()`, `EnvelopeCenter()` retorna um círculo delimitador de uma instância **geography**.  
   
 > [!NOTE]  
->  `EnvelopeCenter()` retorna um círculo delimitador para uma instância de **geography**, mas os resultados não têm a garantia de produzir o círculo delimitador mínimo. Em contrapartida, o método **de tipo de dados**geometry`STEnvelope()` retorna certamente uma caixa delimitadora mínima quando aplicado a uma instância de **geometry**.  
+>  `EnvelopeCenter()` retorna um círculo delimitador para uma instância de **geography**, mas os resultados não têm a garantia de produzir o círculo delimitador mínimo. Em contrapartida, o método `STEnvelope()` de tipo de dados **geometry** retorna certamente uma caixa delimitadora mínima quando aplicado a uma instância de **geometry**.  
   
 No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versões posteriores, ele retorna o centro do círculo que representa o envelope dessa instância como um **point**. Para todos os objetos grandes conforme definidos por `EnvelopeAngle()` = 180, `EnvelopeCenter()` retornará (90,0).  
   

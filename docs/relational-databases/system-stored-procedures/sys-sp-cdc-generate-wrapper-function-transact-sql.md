@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1f29541162381923faa6baa4ca6ce8d362a0f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083749"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808165"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @capture_instance= ] '*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  É a instância de captura para a qual os scripts serão gerados. *capture_instance* é **sysname** e tem um valor padrão de NULL. Se um valor for omitido ou explicitamente definido como NULL, serão gerados scripts de wrapper para todas as instâncias de captura.  
   
- [ @closed_high_end_point= ] *high_end_pt_flag*  
+ [ @closed_high_end_point =] *high_end_pt_flag*  
  É o bit de sinalizador que indica se as alterações que têm um horário de confirmação igual ao ponto de extremidade alto serão incluídas dentro do intervalo de extração pelo procedimento gerado. *high_end_pt_flag* é **bit** e tem um valor padrão de 1, que indica que o ponto de extremidade deve ser incluído. Um valor de 0 indica que todas as horas de confirmação serão estritamente anteriores ao ponto de extremidade alto.  
   
- [ @column_list= ] '*column_list*'  
+ [ @column_list =] '*column_list*'  
  É uma lista de colunas capturadas a serem incluídas no conjunto de resultados, que é retornado pela função de wrapper. *column_list* é **nvarchar (max)** e tem um valor padrão de NULL. Quando NULL for especificado, todas as colunas capturadas serão incluídas.  
   
- [ @update_flag_list= ] '*update_flag_list*'  
+ [ @update_flag_list =] '*update_flag_list*'  
  É a lista de colunas incluídas para as quais um sinalizador de atualização é incluído no conjunto de resultados retornado pela função wrapper. *update_flag_list* é **nvarchar (max)** e tem um valor padrão de NULL. Quando NULL for especificado, nenhum sinalizador de atualização será incluído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -67,7 +67,7 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de coluna|Descrição|  
+|Nome da coluna|Tipo de coluna|Description|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar (145)**|Nome da função gerada.|  
 |**create_script**|**nvarchar(max)**|É o script que cria a função de wrapper da instância de captura.|  

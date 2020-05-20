@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validatemergepublication
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6a0ca36329c8ddb68c9727fe1b9d2cf17674c93a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72006096"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808754"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**\@publicação =**] **'***publicação***'**  
+ [** \@ publicação =**] **'***publicação***'**  
  É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
 `[ @level = ] level`É o tipo de validação a ser executada. o *nível* é **tinyint**, sem padrão. O nível pode ser um destes valores:  
@@ -46,7 +46,7 @@ sp_validatemergepublication [@publication=] 'publication'
 |Valor de nível|Descrição|  
 |-----------------|-----------------|  
 |**1**|Validação só de número de linhas.|  
-|**2**|Validação de número de linhas e soma de verificação. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]assinantes, isso é definido automaticamente como **3**.|  
+|**2**|Validação de número de linhas e soma de verificação. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] assinantes, isso é definido automaticamente como **3**.|  
 |**3**|Esse é o valor recomendado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

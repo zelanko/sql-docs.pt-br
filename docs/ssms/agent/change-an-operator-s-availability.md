@@ -58,7 +58,7 @@ Somente membros da função de servidor fixa **sysadmin** podem editar operadore
   
 4.  Clique com o botão direito do mouse no operador que deseja habilitar ou desabilitar e selecione **Propriedades**e clique na guia **Geral** .  
   
-5.  Na caixa de diálogo _Propriedades\_ do_ operator**name**, marque ou desmarque a caixa de seleção **Habilitado**.  
+5.  Na caixa de diálogo **Propriedades** do _operator\_name_, marque ou desmarque a caixa de seleção **Habilitado**.  
   
 6.  Clique em **OK**.  
   

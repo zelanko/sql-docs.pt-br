@@ -35,7 +35,7 @@ ms.locfileid: "71298564"
  Use a conexão padrão a um servidor que está executando uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ou crie uma nova conexão clicando em **Editar**.  
   
  **Editar**  
- Use a caixa de diálogo **Gerenciador de Conexões** para criar uma conexão a um servidor que está executando uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e para editar propriedades de conexão.  
+ Use a caixa de diálogo **Gerenciador de Conexões[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma conexão a um servidor que está executando uma instância do ** e para editar propriedades de conexão.  
   
  **Criar uma conexão com um projeto do Analysis Services nesta solução**  
  Especifique que a conexão usará um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na solução aberta.  

@@ -34,7 +34,7 @@ A versão 18.3 adiciona suporte para os seguintes métodos de autenticação:
 - Autenticação do MSI do Azure Active Directory
 
 > [!NOTE]
-> O uso dos seguintes modos de autenticação `DataTypeCompatibility`não`80` é compatível com o uso de **(ou sua propriedade correspondente) definida como**:
+> O uso dos seguintes modos de autenticação **não** é compatível com o uso de `DataTypeCompatibility` (ou sua propriedade correspondente) definida como `80`:
 > - Autenticação do Azure Active Directory usando ID de logon e senha
 > - Autenticação do Azure Active Directory usando token de acesso
 > - Autenticação integrada do Azure Active Directory

@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 40a6b569dc469f216d54e615fadd506e968db981
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289944"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807476"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Há duas filas no Database Mail: a fila de email e a fila de status. A fila de email armazena itens de email que estão esperando para serem enviados. A fila de status armazena o status de itens que já foram enviados. Este procedimento armazenado permite exibir o estado das filas de email ou de status. Se o parâmetro ** \@queue_type** não for especificado, o procedimento armazenado retornará uma linha para cada uma das filas.  
+  Há duas filas no Database Mail: a fila de email e a fila de status. A fila de email armazena itens de email que estão esperando para serem enviados. A fila de status armazena o status de itens que já foram enviados. Este procedimento armazenado permite exibir o estado das filas de email ou de status. Se o parâmetro ** \@ queue_type** não for especificado, o procedimento armazenado retornará uma linha para cada uma das filas.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
