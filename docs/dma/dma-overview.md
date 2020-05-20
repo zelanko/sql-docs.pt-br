@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632859"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885793"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Visão geral do Assistente de Migração de Dados
 
@@ -42,7 +42,7 @@ Para instalar o DMA, baixe a versão mais recente da ferramenta no [centro de do
 
 - Descubra problemas que podem afetar uma atualização para um SQL Server local.Eles são descritos como problemas de compatibilidade e são organizados nas seguintes categorias:
 
-  - Alterações de quebra
+  - Alterações da falha
   - Alterações de comportamento
   - Recursos preteridos
 

@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056537"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885993"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Definir configurações para Assistente de Migração de Dados
 
@@ -29,11 +29,11 @@ Você pode encontrar o arquivo DMA. exe. config para o aplicativo de área de tr
 
 - Aplicativo de desktop
 
-  % ProgramFiles\\%\\assistente de migração de dados da Microsoft DMA. exe. config
+  % ProgramFiles% \\ Assistente de migração de dados da Microsoft \\ DMA. exe. config
 
 - Utilitário de linha de comando
 
-  % ProgramFiles\\%\\assistente de migração de dados da Microsoft dmacmd. exe. config 
+  % ProgramFiles% \\ Assistente de migração de dados da Microsoft \\ dmacmd. exe. config 
 
 Lembre-se de salvar uma cópia do arquivo de configuração original antes de fazer qualquer modificação. Depois de fazer alterações, reinicie Assistente de Migração de Dados para que os novos valores de configuração entrem em vigor.
 
@@ -82,7 +82,7 @@ A partir do Assistente de Migração de Dados v 2.0, se você tiver esse problem
 Durante a avaliação, Assistente de Migração de Dados extrai o dacpac (aplicativo da camada de dados) para entender o esquema de banco de dado. Essa operação pode falhar com tempos limite para bancos de dados muito grandes ou se o servidor estiver sob carga. A partir da migração de dados v 1.0, você pode modificar os seguintes valores de configuração para evitar erros. 
 
 > [!NOTE]
-> A entrada &lt;dacfx&gt; inteira é comentada por padrão. Remova os comentários e, em seguida, modifique o valor conforme necessário.
+> A &lt; entrada dacfx inteira &gt; é comentada por padrão. Remova os comentários e, em seguida, modifique o valor conforme necessário.
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ Durante a avaliação, Assistente de Migração de Dados extrai o dacpac (aplica
 
 - databaseLockTimeout
 
-   Esse parâmetro é equivalente a [definir o\_tempo limite\_de tempo](../t-sql/statements/set-lock-timeout-transact-sql.md) limite de bloqueio em *milissegundos*.(Padrão = 5000)
+   Esse parâmetro é equivalente a [definir o \_ tempo limite \_ de tempo](../t-sql/statements/set-lock-timeout-transact-sql.md) limite de bloqueio em *milissegundos*.(Padrão = 5000)
 
 - maxDataReaderDegreeOfParallelism
 

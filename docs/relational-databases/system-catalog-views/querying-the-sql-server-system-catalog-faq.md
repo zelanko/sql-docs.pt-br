@@ -16,14 +16,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 30b325dcd012defe3755f769c74ec2fc5d57522e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018359"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834489"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Consultando as perguntas frequentes do catálogo do sistema do SQL Server
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -616,7 +616,7 @@ GO
  [INÍCIO](#_TOP)  
   
 ###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a>Como fazer determinar se uma coluna é usada em uma expressão de coluna computada?  
- Antes de executar a consulta a seguir, `<database_name>`substitua `<schema_name.table_name>`, e `<column_name`> por nomes válidos.  
+ Antes de executar a consulta a seguir, substitua `<database_name>` , `<schema_name.table_name>` e `<column_name`> por nomes válidos.  
   
 ```  
 USE <database_name>;  
@@ -660,7 +660,7 @@ GO
  [INÍCIO](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ22"></a>Como fazer localizar as colunas que dependem de um tipo definido pelo usuário CLR ou tipo de alias especificado?  
- Antes de executar a consulta a seguir, `<database_name>` substitua por um nome válido `<schema_name.data_type_name>` e por um tipo de nome de alias CLR qualificado por esquema válido ou definido pelo esquema. A consulta a seguir requer associação na função **db_owner** ou permissões para ver todos os metadados de coluna e coluna computados dependentes no banco de dados.  
+ Antes de executar a consulta a seguir, substitua `<database_name>` por um nome válido e `<schema_name.data_type_name>` por um tipo de nome de alias CLR qualificado por esquema válido ou definido pelo esquema. A consulta a seguir requer associação na função **db_owner** ou permissões para ver todos os metadados de coluna e coluna computados dependentes no banco de dados.  
   
 ```  
 USE <database_name>;  
@@ -757,7 +757,7 @@ GO
  [INÍCIO](#_TOP)  
   
 ###  <a name="how-do-i-find-the-check-constraints-that-depend-on-a-specified-clr-user-defined-type"></a><a name="_FAQ25"></a>Como fazer localizar as restrições de verificação que dependem de um tipo CLR definido pelo usuário especificado?  
- Antes de executar a consulta a seguir, `<database_name>` substitua por um nome válido `<schema_name.data_type_name>` e por um nome de tipo definido pelo usuário CLR qualificado por esquema válido.  
+ Antes de executar a consulta a seguir, substitua `<database_name>` por um nome válido e `<schema_name.data_type_name>` por um nome de tipo definido pelo usuário CLR qualificado por esquema válido.  
   
 ```  
 USE <database_name>;  

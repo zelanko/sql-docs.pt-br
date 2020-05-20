@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002645"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834436"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +43,15 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão **%** de. A publicação já deve existir e estar em conformidade com as regras para identificadores. Se for NULL **%** ou, serão retornadas informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** . A publicação já deve existir e estar em conformidade com as regras para identificadores. Se for NULL ou **%** , serão retornadas informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, com um **%** padrão de. Se for NULL ou %, informações sobre todas as assinaturas da publicação determinada serão retornadas.  
+`[ @subscriber = ] 'subscriber'`É o nome do Assinante. o *assinante* é **sysname**, com um padrão de **%** . Se for NULL ou %, informações sobre todas as assinaturas da publicação determinada serão retornadas.  
   
-`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db*é **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados de assinatura.  
+`[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os bancos de dados de assinatura.  
   
-`[ @publisher = ] 'publisher'`É o nome do Publicador. O Publicador deve ser um servidor válido. o *Publicador*é **sysname**, com um **%** padrão de, que retorna informações sobre todos os Publicadores.  
+`[ @publisher = ] 'publisher'`É o nome do Publicador. O Publicador deve ser um servidor válido. o *Publicador*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os Publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db*é **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados do Publicador.  
+`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db*é **sysname**, com um padrão de **%** , que retorna informações sobre todos os bancos de dados do Publicador.  
   
 `[ @subscription_type = ] 'subscription_type'`É o tipo de assinatura. *subscription_type*é **nvarchar (15)** e pode ser um desses valores.  
   
@@ -85,9 +85,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_server**|**sysname**|Nome do servidor para onde o agente está executando.|  
 |**use_interactive_resolver**|**int**|Retorna se o resolvedor interativo é usado ou não durante a reconciliação. Se for **0**, o resolvedor interativo não será usado.|  
 |**hostname**|**sysname**|Valor fornecido quando uma assinatura é filtrada pelo valor da função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
-|**subscriber_security_mode**|**smallint**|É o modo de segurança no Assinante, em que **1** significa autenticação do Windows e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0** significa autenticação.|  
+|**subscriber_security_mode**|**smallint**|É o modo de segurança no Assinante, em que **1** significa autenticação do Windows e **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.|  
 |**subscriber_login**|**sysname**|É o nome de logon no Assinante.|  
-|**subscriber_password**|**sysname**|A senha do Assinante atual nunca é retornada. O resultado é mascarado por uma cadeia**\*\*\*\*\*** de caracteres "".|  
+|**subscriber_password**|**sysname**|A senha do Assinante atual nunca é retornada. O resultado é mascarado por uma **\*\*\*\*\*\*** cadeia de caracteres "".|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

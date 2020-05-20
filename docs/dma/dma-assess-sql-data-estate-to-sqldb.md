@@ -12,16 +12,16 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253507"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886183"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Avaliar a prontidão de um SQL Server banco de dados migrando para o Azure SQL usando o Assistente de Migração de Dados
 
@@ -62,7 +62,7 @@ Um projeto de migrações para Azure é usado para armazenar metadados de descob
     | ------------- | ------------- |
     | Ásia | Sudeste Asiático ou Leste da Ásia |
     | Europa | Sul da Europa ou Europa Ocidental |
-    | United Kingdom | Sul do Reino Unido ou Oeste do Reino Unido |
+    | Reino Unido | Sul do Reino Unido ou Oeste do Reino Unido |
     | Estados Unidos | EUA Central ou oeste dos EUA 2 |
 
     A localização geográfica especificada para o projeto só é usada para armazenar os metadados coletados das VMs locais. Você pode selecionar qualquer região de destino para a migração real.

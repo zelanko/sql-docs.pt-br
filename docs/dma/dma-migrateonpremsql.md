@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 00d27decc533d33056a7cc0cb19c2584fea564fb
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056529"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885864"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Atualizar SQL Server usando o Assistente de Migração de Dados
 

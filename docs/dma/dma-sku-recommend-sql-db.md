@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72586734"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885823"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificar o SKU do banco de dados SQL/Instância Gerenciada do Azure correto para seu banco de dados local
 
@@ -41,7 +41,7 @@ Veja a seguir as instruções para ajudá-lo a determinar as recomendações de 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Baixe e instale a versão mais recente do [DMA](https://aka.ms/get-dma). Se você já tiver uma versão anterior da ferramenta, abra-a e será solicitado a atualizar o DMA.
-- Verifique se o computador tem o [PowerShell versão 5,1](https://www.microsoft.com/download/details.aspx?id=54616) ou posterior, que é necessário para executar todos os scripts. Para obter informações sobre como findoug a versão do PowerShell que está instalada em seu computador, consulte o artigo [baixar e instalar o Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+- Verifique se o computador tem o [PowerShell versão 5,1](https://www.microsoft.com/download/details.aspx?id=54616) ou posterior, que é necessário para executar todos os scripts. Para obter informações sobre como descobrir qual versão do PowerShell está instalada em seu computador, consulte o artigo [baixar e instalar o Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Verifique se o seu computador tem o módulo do Azure PowerShell instalado. Para obter mais informações, consulte o artigo [instalar o Azure PowerShell Module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Verifique se o arquivo do PowerShell **SkuRecommendationDataCollectionScript. ps1**, que é necessário para coletar os contadores de desempenho, está instalado na pasta DMA.
 - Verifique se o computador no qual você executará esse processo tem permissões de administrador para o computador que está hospedando seus bancos de dados.

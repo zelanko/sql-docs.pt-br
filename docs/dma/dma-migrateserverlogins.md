@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f721800de13d11eefa1cabdd2f23fda838db9396
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056480"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885783"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrar logons SQL Server com Assistente de Migração de Dados
 
@@ -34,7 +34,7 @@ Este artigo fornece uma visão geral da migração de logons SQL Server usando o
 
 - Atualmente, Assistente de Migração de Dados não dá suporte aos logons associados a um certificado de segurança autônomo (logons mapeados para o certificado), uma chave assimétrica autônoma (logons mapeados para a chave assimétrica) e logons mapeados para credenciais.
 
-- Assistente de migração de dados não move o logon **SA** e os princípios de servidor com nomes entre marcas de hash\#\#duplos (), que são apenas para uso interno.
+- Assistente de Migração de Dados não move o logon **SA** e os princípios de servidor com nomes entre marcas de hash duplos ( \# \# ), que são apenas para uso interno.
 
 - Por padrão, Assistente de Migração de Dados seleciona todos os logons qualificados para migrar. Opcionalmente, você pode selecionar logons específicos para migrar. Quando Assistente de Migração de Dados migra todos os logons qualificados, o mapeamento de usuário de logon permanece intacto nos bancos de dados que são migrados.
 

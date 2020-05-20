@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e31f785d1b1fa205a9498889f814a0a0bc32e9a8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771243"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834321"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**Status**|**int**|Status de execução do agente:<br /><br /> **1** = iniciar<br /><br /> **2** = com sucesso<br /><br /> **3** = em andamento<br /><br /> **4** = ocioso<br /><br /> **5** = repetir<br /><br /> **6** = falha|  
 |**StartTime**|**datetime**|Iniciada sessão de trabalho do agente de tempo.|  
 |**Final**|**datetime**|A sessão de trabalho do agente de tempo foi concluída.|  
-|**Permanência**|**int**|Duração acumulada, em segundos, dessa sessão de trabalho.|  
+|**Duration**|**int**|Duração acumulada, em segundos, dessa sessão de trabalho.|  
 |**UploadedCommands**|**int**|Número de comandos carrgeado durante a sessão do agente.|  
 |**DownloadedCommands**|**int**|Número de comandos baixados durante a sessão do agente.|  
 |**ErrorMessages**|**int**|Número de mensagens de erro geradas durante a sessão do agente.|  

@@ -1,5 +1,6 @@
 ---
 title: Monitorar SQL Server Backup gerenciado no Azure | Microsoft Docs
+description: Este artigo descreve as ferramentas que você pode usar para determinar a integridade geral dos backups usando SQL Server Backup gerenciado para o Azure e identificar erros.
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798042"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849604"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Monitorar o backup gerenciado do SQL Server para Azure
   O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tem medidas internas para identificar problemas e erros durante processos de backup e adotar uma ação corretiva quando possível.  No entanto, há determinadas situações onde a intervenção do usuário é necessária. Este tópico descreve as ferramentas que você pode usar para determinar o estado de integridade geral dos backups e identifica todos os erros que precisam ser resolvidos.  
@@ -108,13 +109,13 @@ GO
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>Contagens de erros agregadas/Status de integridade  
- A função **smart_admin. fn_get_health_status** retorna uma tabela de contagens de erros agregados para cada categoria que pode ser usada para monitorar o status de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]integridade de. Essa mesma função também é usada pelo mecanismo de notificação por email configurado pelo sistema descrito mais adiante neste tópico.   
+ A função **smart_admin. fn_get_health_status** retorna uma tabela de contagens de erros agregados para cada categoria que pode ser usada para monitorar o status de integridade de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . Essa mesma função também é usada pelo mecanismo de notificação por email configurado pelo sistema descrito mais adiante neste tópico.   
 Essas contagens agregadas podem ser usadas para monitorar a integridade do sistema. Por exemplo, se a coluna number_ of_retention_loops for 0 em 30 minutos, pode ser que o gerenciamento de retenção esteja demorando ou talvez nem esteja funcionando corretamente. As colunas diferentes de zero do erro podem indicar problemas e os logs de Eventos Estendidos devem ser verificados para descobrir o problema. Como alternativa, chame **smart_admin. sp_get_backup_diagnostics** procedimento armazenado para encontrar os detalhes do erro.  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>Usando a notificação do agente para avaliar o status e a integridade do backup  
  O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] inclui um mecanismo de notificação baseado nas políticas de gerenciamento baseado em políticas do SQL Server.  
   
- **Pré-requisitos**  
+ **Pré-requisitos:**  
   
 -   O Database Mail é necessário para usar essa funcionalidade. Para obter mais informações, sobre como habilitar o BD mail para a instância do SQL Server, consulte [configurar Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -203,7 +204,7 @@ $policyResults = Get-SqlSmartAdmin | Test-SqlSmartAdmin -AllowUserPolicies
 $policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Result, Exception | fl
 ```  
   
- O script a seguir retorna um relatório detalhado dos erros e avisos para a instância padrão (`\SQL\COMPUTER\DEFAULT`):  
+ O script a seguir retorna um relatório detalhado dos erros e avisos para a instância padrão ( `\SQL\COMPUTER\DEFAULT` ):  
   
 ```powershell
 (Get-SqlSmartAdmin ).EnumHealthStatus()  
@@ -252,4 +253,4 @@ smart_backup_files;
   
 -   **Excluído-D:** O arquivo correspondente não pode ser encontrado no armazenamento do Azure. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup se o arquivo excluído resultar em uma interrupção na cadeia de backup.  
   
--   **Desconhecido-U:** Esse status indicou [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] que ainda não foi capaz de verificar a existência do arquivo e suas propriedades no armazenamento do Azure. Na próxima vez que o processo for executado, que é aproximadamente a cada 15 minutos, esse status será atualizado.  
+-   **Desconhecido-U:** Esse status indicou que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ainda não foi capaz de verificar a existência do arquivo e suas propriedades no armazenamento do Azure. Na próxima vez que o processo for executado, que é aproximadamente a cada 15 minutos, esse status será atualizado.  

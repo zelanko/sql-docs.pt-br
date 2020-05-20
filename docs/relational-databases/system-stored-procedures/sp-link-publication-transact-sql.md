@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139904"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834371"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68139904"
 >  Quando um Publicador é configurado com um Distribuidor remoto, os valores fornecidos para todos os parâmetros, inclusive *job_login* e *job_password*, são enviados ao Distribuidor como texto sem-formatação. Você deve criptografar a conexão entre o Publicador e seu Distribuidor remoto antes de executar esse procedimento armazenado. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 > [!IMPORTANT]
->  Em determinadas condições, esse procedimento armazenado poderá falhar se o Assinante estiver [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] executando o Service Pack 1 ou posterior e o Publicador estiver executando uma versão anterior. Se o procedimento armazenado falhar neste cenário, atualize o Publicador para a versão do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou posterior.  
+>  Em determinadas condições, esse procedimento armazenado poderá falhar se o Assinante estiver executando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou posterior e o Publicador estiver executando uma versão anterior. Se o procedimento armazenado falhar neste cenário, atualize o Publicador para a versão do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou posterior.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**0**|Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação com o logon especificado neste procedimento armazenado como *logon* e *senha*.<br /><br /> Observação: em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa opção foi usada para especificar uma RPC (chamada de procedimento remoto) dinâmica.|  
+|**0**|Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação com o logon especificado neste procedimento armazenado como *logon* e *senha*.<br /><br /> Observação: em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , essa opção foi usada para especificar uma RPC (chamada de procedimento remoto) dinâmica.|  
 |**1**|Usa o contexto de segurança (Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Autenticação do Windows) do usuário que faz a alteração no Assinante.<br /><br /> Observação: essa conta também deve existir no Publicador com privilégios suficientes. Ao usar Autenticação do Windows, deve haver suporte para delegação de conta de segurança.|  
 |**2**|Usa um logon de servidor vinculado existente definido pelo usuário criado usando **sp_link_publication**.|  
   
@@ -79,7 +79,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
  Para assinaturas push, a entrada pode ser limpa por [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Para assinaturas pull, a entrada pode ser limpa por [sp_droppullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) ou [sp_subscription_cleanup &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)&#41;. Você também pode chamar **sp_link_publication** com uma senha nula para limpar a entrada no MSsubscription_properties &#40;tabela do sistema [&#41;do Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) para questões de segurança.  
   
- O modo padrão usado por um Assinante de atualização imediata quando ele se conecta ao Publicador não permite uma conexão usando Autenticação do Windows. Para se conectar ao modo de Autenticação do Windows, um servidor vinculado precisa ser definido como Publicador e o Assinante de atualização imediata deve usar essa conexão ao atualizar o Assinante. Isso requer que o **sp_link_publication** seja executado com *security_mode* = **2**. Ao usar Autenticação do Windows, deve haver suporte para delegação de conta de segurança.  
+ O modo padrão usado por um Assinante de atualização imediata quando ele se conecta ao Publicador não permite uma conexão usando Autenticação do Windows. Para se conectar ao modo de Autenticação do Windows, um servidor vinculado precisa ser definido como Publicador e o Assinante de atualização imediata deve usar essa conexão ao atualizar o Assinante. Isso requer que o **sp_link_publication** seja executado com *security_mode*  =  **2**. Ao usar Autenticação do Windows, deve haver suporte para delegação de conta de segurança.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  

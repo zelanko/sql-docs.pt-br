@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75321613"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834280"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**ArticleName**|**sysname**|É o nome do artigo que está sendo sincronizado. O **artigoname** também contém informações resumidas para linhas no conjunto de resultados que não representam os detalhes do artigo.|  
 |**PercentComplete**|**decimal**|Indica a porcentagem do total de alterações aplicada a uma linha de detalhe de um determinado artigo em sessões atualmente em execução ou com falha.|  
 |**RelativeCost**|**decimal**|Indica o tempo gasto para sincronizar o artigo como uma porcentagem do tempo de sincronização total para a sessão.|  
-|**Permanência**|**int**|Duração da sessão do agente.|  
+|**Duration**|**int**|Duração da sessão do agente.|  
 |**Insere**|**int**|Número de inserções em uma sessão.|  
 |**Atualizações**|**int**|Número de atualizações em uma sessão.|  
 |**Deletes**|**int**|Número de exclusões em uma sessão.|  

@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: f2bfbb79a8a4803bb56e3dce85f575e8cf257b4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fbfc995b3271c9618cd773d42d3e8154958d6af5
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388158"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886043"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Práticas recomendadas para executar o Assistente de Migração de Dados
 Este artigo fornece algumas informações de práticas recomendadas para instalação, avaliação e migração.

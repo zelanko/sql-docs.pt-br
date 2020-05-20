@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d57f3098a69e499392af502d2d3a6d94840bde21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075754"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834334"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**inserido**|Procedimento armazenado personalizado registrado é executado quando uma instrução INSERT é replicada.|  
-|**cumulativo**|Procedimento armazenado personalizado registrado é executado quando uma instrução UPDATE é replicada.|  
+|**atualizar**|Procedimento armazenado personalizado registrado é executado quando uma instrução UPDATE é replicada.|  
 |**delete**|Procedimento armazenado personalizado registrado é executado quando uma instrução DELETE é replicada.|  
 |**custom_script**|O script é executado ao término do gatilho DDL (Data Definition Language).|  
   
@@ -54,7 +54,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 > [!NOTE]  
 >  A especificação de NULL para o parâmetro *Value*cancelará o registro de um script previamente registrado, que é o mesmo que executar [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
- Quando o valor do *tipo* é **custom_script**, o nome e o caminho completo de [!INCLUDE[tsql](../../includes/tsql-md.md)] um arquivo de script são esperados. Caso contrário, o *valor* deve ser o nome de um procedimento armazenado registrado.  
+ Quando o valor do *tipo* é **custom_script**, o nome e o caminho completo de um [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivo de script são esperados. Caso contrário, o *valor* deve ser o nome de um procedimento armazenado registrado.  
   
 `[ @publication = ] 'publication'`Nome da publicação para a qual o procedimento armazenado personalizado ou o script está sendo registrado. a *publicação* é **sysname**, com um padrão de **NULL**.  
   

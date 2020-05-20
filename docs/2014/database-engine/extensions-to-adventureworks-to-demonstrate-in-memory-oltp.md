@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228472"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921729"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensões do AdventureWorks para demonstrar OLTP na memória
     
@@ -45,14 +45,14 @@ ms.locfileid: "75228472"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-avaliação, Developer ou Enterprise Edition  
   
--   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter diretrizes gerais sobre hardware [!INCLUDE[hek_2](../includes/hek-2-md.md)]para o, consulte a seguinte postagem no blog:[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Para testes de desempenho, um servidor com as especificações semelhantes ao ambiente de produção. Para este exemplo específico, você deve ter pelo menos 16 GB de memória disponível para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter diretrizes gerais sobre hardware para [!INCLUDE[hek_2](../includes/hek-2-md.md)] o, consulte a seguinte postagem no blog:[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
-##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Instalando [!INCLUDE[hek_2](../includes/hek-2-md.md)] o exemplo com base no AdventureWorks  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Instalando o [!INCLUDE[hek_2](../includes/hek-2-md.md)] exemplo com base no AdventureWorks  
  Siga estas etapas para instalar o exemplo:  
   
 1.  Baixe o arquivo morto do backup completo do banco de dados AdventureWorks2014:  
   
-    1.  Abra o seguinte: [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661).  
+    1.  Abra o seguinte: [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) .  
   
     2.  Quando for solicitado salvar o arquivo em uma pasta local.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "75228472"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Baixe o script de exemplo[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ' [!INCLUDE[hek_2](../includes/hek-2-md.md)] RTM Sample. sql ' de [SQL Server 2014 RTM de exemplo de OLTP na memória](https://go.microsoft.com/fwlink/?LinkID=396372) para uma pasta local.  
+5.  Baixe o script de exemplo ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ' de [SQL Server 2014 RTM de exemplo de OLTP na memória](https://go.microsoft.com/fwlink/?LinkID=396372) para uma pasta local.  
   
-6.  Atualize o valor da variável ' checkpoint_files_location ' no script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ' para apontar para o local de destino dos arquivos de [!INCLUDE[hek_2](../includes/hek-2-md.md)] ponto de verificação. Os arquivos de ponto de verificação devem ser colocados em uma unidade com bom desempenho sequencial de E/S.  
+6.  Atualize o valor da variável ' checkpoint_files_location ' no script ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ' para apontar para o local de destino dos [!INCLUDE[hek_2](../includes/hek-2-md.md)] arquivos de ponto de verificação. Os arquivos de ponto de verificação devem ser colocados em uma unidade com bom desempenho sequencial de E/S.  
   
      Atualize o nome da variável 'database_name' para apontar para o banco de dados do AdventureWorks2014.  
   
-    1.  Certifique-se de incluir a barra invertida '\' como parte do nome do caminho  
+    1.  Certifique-se de incluir a barra invertida ' \' como parte do nome do caminho  
   
     2.  Exemplo:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75228472"
   
     2.  Usando o Management Studio:  
   
-        1.  Abra o script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ' em uma janela de consulta  
+        1.  Abra o script ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ' em uma janela de consulta  
   
         2.  Conecte-se ao servidor de destino que contém o banco de dados AdventureWorks2014  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75228472"
   
 -   *UDTs de alias* – a tabela original usa tipo de dados definidos pelo usuário dbo.Flag, que equivalem ao tipo de dados bit do sistema. A tabela migrada usa o tipo de dados bit.  
   
--   *Agrupamento BIN2* – as colunas Name e ProductNumber são incluídas em chaves de índice e, portanto, devem ter agrupamentos [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]BIN2 no. Aqui, a suposição é a de que o aplicativo não se baseia em especificações de ordenação, como a não diferenciação de maiúsculas e minúsculas.  
+-   *Agrupamento BIN2* – as colunas Name e ProductNumber são incluídas em chaves de índice e, portanto, devem ter agrupamentos BIN2 no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . Aqui, a suposição é a de que o aplicativo não se baseia em especificações de ordenação, como a não diferenciação de maiúsculas e minúsculas.  
   
 -   *Rowguid* - a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
   
@@ -462,7 +462,7 @@ END
  Usaremos a ferramenta ostress para executar os scripts através de várias conexões simultâneas. Usaremos o parâmetro "-n" para controlar o número de conexões e o parâmetro "r" para controlar quantas vezes o script é executado em cada conexão.  
   
 #### <a name="functional-validation-of-the-workload"></a>Validação funcional da carga de trabalho  
- Para verificar se tudo funciona, começaremos com um teste de exemplo, usando 10 conexões simultâneas e cinco iterações, inserindo um total de 10 * \* 5 20 = 1000 de ordem de venda.  
+ Para verificar se tudo funciona, começaremos com um teste de exemplo, usando 10 conexões simultâneas e cinco iterações, inserindo um total de 10 * 5 \* 20 = 1000 de ordem de venda.  
   
  Com o comando a seguir, supomos que a instância padrão é usada no computador local. Se você estiver usando uma instância nomeada ou um servidor remoto, altere o nome do servidor em conformidade, usando o parâmetro -S.  
   
@@ -519,7 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  Em um servidor de teste com um número total de 8 núcleos físicos (16 lógicos), isso levou 41 minutos e 25 segundos. Em um segundo servidor de teste com 24 núcleos físicos (48 lógicos), isso levou 52 minutos e 16 segundos.  
   
- O fator principal na diferença de desempenho entre tabelas com otimização de memória e tabelas baseadas em disco nesse teste é o fato de que, ao usar tabelas baseadas em disco, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode fazer uso total da CPU. A razão é a contenção de trava: as transações simultâneas estão tentando gravar na mesma página de dados; as travas são usadas para garantir que somente uma transação de cada vez possa gravar em uma página. O mecanismo [!INCLUDE[hek_2](../includes/hek-2-md.md)] é livre de travas, e as linhas de dados não são organizadas em páginas. Assim, as transações simultâneas não bloqueiam as inserções umas das outras [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , permitindo, portanto, utilizar totalmente a CPU.  
+ O fator principal na diferença de desempenho entre tabelas com otimização de memória e tabelas baseadas em disco nesse teste é o fato de que, ao usar tabelas baseadas em disco, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode fazer uso total da CPU. A razão é a contenção de trava: as transações simultâneas estão tentando gravar na mesma página de dados; as travas são usadas para garantir que somente uma transação de cada vez possa gravar em uma página. O mecanismo [!INCLUDE[hek_2](../includes/hek-2-md.md)] é livre de travas, e as linhas de dados não são organizadas em páginas. Assim, as transações simultâneas não bloqueiam as inserções umas das outras, permitindo, portanto, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizar totalmente a CPU.  
   
  Você pode observar a utilização da CPU enquanto a carga de trabalho está em execução. Use, por exemplo, o gerenciador de tarefas. Note que, em tabelas baseadas em disco, a utilização da CPU é bem inferior a 100%. Em uma configuração de teste com 16 processadores lógicos, a utilização fica em torno de 24%.  
   
@@ -568,7 +568,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**name**|**pages_MB**|  
+|**tipo**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|Padrão|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|Padrão|0|  
@@ -617,7 +617,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**name**|**pages_MB**|  
+|**tipo**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|Padrão|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|Padrão|0|  
@@ -663,7 +663,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**name**|**pages_MB**|  
+|**tipo**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|Padrão|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|Padrão|0|  
@@ -682,7 +682,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**name**|**pages_MB**|  
+|**tipo**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|Padrão|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|Padrão|0|  

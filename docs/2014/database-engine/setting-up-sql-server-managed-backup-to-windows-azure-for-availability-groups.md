@@ -1,5 +1,6 @@
 ---
 title: Configurando SQL Server Backup gerenciado para o Azure para grupos de disponibilidade | Microsoft Docs
+description: Este tutorial mostra como configurar SQL Server Backup gerenciado para Microsoft Azure para bancos de dados que participam de grupos de disponibilidade Always On.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75ab1892641fa3bf805d52c649a8526e256d14b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228201"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849524"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configurar o backup gerenciado do SQL Server para Azure para grupos de disponibilidade
   Este tópico é um tutorial sobre como configurar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para bancos de dados que fazem parte dos Grupos de Disponibilidade AlwaysOn.  
@@ -36,7 +37,7 @@ ms.locfileid: "75228201"
   
 -   Requer `EXECUTE` permissões no procedimento armazenado **smart_admin. sp_get_backup_diagnostics** . Além disso, requer permissões `VIEW SERVER STATE`, pois chama internamente outros objetos do sistema que exigem essa permissão.  
   
--   Requer `EXECUTE` permissões nos procedimentos `smart_admin.sp_set_instance_backup` armazenados `smart_admin.sp_backup_master_switch` e.  
+-   Requer `EXECUTE` permissões nos `smart_admin.sp_set_instance_backup` `smart_admin.sp_backup_master_switch` procedimentos armazenados e.  
   
  Estas são as etapas básicas para configurar um Grupo de disponibilidade AlwaysOn com o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Um tutorial passo a passo detalhado será descrito mais adiante neste tópico.  
   
@@ -46,9 +47,9 @@ ms.locfileid: "75228201"
   
 3.  Especifique a réplica de Backup. A configuração de réplica de backup preferencial é usada pelo [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para determinar o banco de dados a ser usado para agendar backups.  Para determinar se a réplica atual é a réplica de backup preferida, use a função de [&#41;sys. fn_hadr_backup_is_preferred_replica &#40;Transact-SQL](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) .  
   
-4.  Em cada configuração de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] execução de réplica para o banco de dados usando o procedimento armazenado do **administrador inteligente. sp_set_db_backup** .  
+4.  Em cada [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configuração de execução de réplica para o banco de dados usando o procedimento armazenado do **administrador inteligente. sp_set_db_backup** .  
   
-     **comportamento após um failover: continuará a funcionar e manterá cópias de backup e capacidade de recuperação após um evento de failover. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Nenhuma ação específica é necessária depois de um failover.  
+     ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] comportamento após um failover:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] continuará a funcionar e manterá cópias de backup e capacidade de recuperação após um evento de failover. Nenhuma ação específica é necessária depois de um failover.  
   
 #### <a name="considerations-and-requirements"></a>Considerações e requisitos:  
  Configurar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para os bancos de dados que participam do Grupo de Disponibilidade AlwaysOn exige considerações e requisitos específicos. Esta é uma lista de considerações e requisitos:  
@@ -72,13 +73,13 @@ ms.locfileid: "75228201"
   
 2.  **Criar uma credencial SQL:** Crie uma Credencial do SQL usando o nome da conta de armazenamento como a Identidade e a chave de acesso de armazenamento como a senha.  
   
-3.  **Verificar se o serviço SQL Server Agent foi iniciado e está em execução:** inicie o SQL Server Agent se ele não estiver em execução. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] requer que o SQL Server Agent esteja em execução na instância para executar operações de backup.  Talvez seja necessário definir o SQL Agent para ser executado automaticamente para garantir que as operações de backup ocorram regularmente.  
+3.  **Garantir que o serviço SQL Server Agent foi iniciado e está em execução:** Inicie o SQL Server Agent se ele não estiver em execução. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] requer que o SQL Server Agent esteja em execução na instância para executar operações de backup.  Talvez seja necessário definir o SQL Agent para ser executado automaticamente para garantir que as operações de backup ocorram regularmente.  
   
 4.  **Determinar o período de retenção:** Determine o período de retenção desejado para os arquivos de backup. O período de retenção é especificado em dias e pode variar de 1 a 30. O período de retenção determina o tempo de recuperação do banco de dados.  
   
 5.  **Crie um certificado ou uma chave assimétrica a ser usada para criptografia durante o backup:** Crie o certificado no primeiro nó Node1 e, em seguida, exporte-o para um arquivo usando o [certificado de BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql).. No Nó 2, crie um certificado usando o arquivo exportado do Nó 1. Para obter mais informações sobre como criar um certificado a partir de um arquivo, consulte o exemplo em [criar certificado &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-certificate-transact-sql).  
   
-6.  **Habilitar e configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] o para AGTestDB no Node1:** Inicie SQL Server Management Studio e conecte-se à instância no Node1 em que o banco de dados de disponibilidade está instalado. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a URL de armazenamento, a Credencial SQL e o período de retenção de acordo com seus requisitos:  
+6.  **Habilitar e configurar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB em Node1:** inicie SQL Server Management Studio e conecte-se à instância no Node1 em que o banco de dados de disponibilidade está instalado. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a URL de armazenamento, a Credencial SQL e o período de retenção de acordo com seus requisitos:  
   
     ```  
     Use msdb;  
@@ -97,7 +98,7 @@ ms.locfileid: "75228201"
   
      Para obter mais informações sobre como criar um certificado para criptografia, consulte a etapa **criar um certificado de backup** em [criar um backup criptografado](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-7.  **Habilitar e configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] o para AGTestDB no NODE2:** Inicie SQL Server Management Studio e conecte-se à instância no NODE2 em que o banco de dados de disponibilidade está instalado. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a URL de armazenamento, a Credencial SQL e o período de retenção de acordo com seus requisitos:  
+7.  **Habilitar e configurar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para AGTestDB em NODE2:** inicie SQL Server Management Studio e conecte-se à instância no NODE2 em que o banco de dados de disponibilidade está instalado. Na janela de consulta, execute a seguinte instrução após modificar os valores do nome do banco de dados, a URL de armazenamento, a Credencial SQL e o período de retenção de acordo com seus requisitos:  
   
     ```  
     Use msdb;  
@@ -130,7 +131,7 @@ ms.locfileid: "75228201"
   
     2.  Configure o SQL Server Agent Notification para usar o Database Mail. Para obter mais informações, consulte [Configurar o SQL Server Agent Mail para usar o Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Habilitar notificações por email para receber erros e avisos de backup:** na janela da consulta, execute as seguintes instruções Transact-SQL:  
+    3.  **Habilitar notificações por email para receber avisos e erros de backup:** Na janela de consulta, execute as seguintes instruções Transact-SQL:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -143,7 +144,7 @@ ms.locfileid: "75228201"
   
 10. **Exibir arquivos de backup na conta de armazenamento do Azure:** Conecte-se à conta de armazenamento de SQL Server Management Studio ou Portal de Gerenciamento do Azure. Você verá um contêiner para a instância do SQL Server que hospeda o banco de dados que configurou para usar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Você também poderá consultar um banco de dados e um backup de log 15 minutos depois de habilitar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para o banco de dados.  
   
-11. **Monitorar o status de integridade:**  é possível monitorar por meio das notificações por email que você configurou antes ou monitorar ativamente os eventos registrados. Estes são alguns exemplos de instruções Transact-SQL usados para exibir os eventos:  
+11. **Monitorar o Status de Integridade:**  Realize o monitoramento por meio das notificações por email configuradas anteriormente ou monitore de forma ativa os eventos registrados em log. Estes são alguns exemplos de instruções Transact-SQL usados para exibir os eventos:  
   
     ```  
     --  view all admin events  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 26480fa1adb8493a1c29e5b67a163e9cbff54920
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137648"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834459"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,21 +43,21 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ @publication **=** ] **'**_publicação_**'**  
- O nome da publicação. a *publicação*é **sysname**, com um padrão **%** de, que retorna informações sobre todas as publicações de mesclagem no banco de dados atual.  
+ O nome da publicação. a *publicação*é **sysname**, com um padrão de **%** , que retorna informações sobre todas as publicações de mesclagem no banco de dados atual.  
   
  [ @found **=** ] **'***encontrou***'** saída  
  Um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão de NULL. **1** indica que a publicação foi encontrada. **0** indica que a publicação não foi encontrada.  
   
- [ @publication_id **=**] saída de **"***publication_id***"**  
+ [ @publication_id **=** ] saída de **"***publication_id***"**  
  O número de identificação da publicação. *publication_id* é **uniqueidentifier** e um parâmetro de saída, com um padrão de NULL.  
   
- [ @reserved **=**] **'***reservado***'**  
+ [ @reserved **=** ] **'***reservado***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*reservado* é **nvarchar (20)**, com um padrão de NULL.  
   
  [ @publisher **=** ] **'***Publicador***'**  
  O nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [ @publisher_db **=** ] **'***publisher_db***'**  
  O nome do banco de dados de publicação. *publisher_db* é **sysname**, com um padrão de NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -65,7 +65,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Ordem sequencial da publicação na lista de conjunto de resultados.|  
-|name|**sysname**|Nome da publicação.|  
+|Nome|**sysname**|Nome da publicação.|  
 |descrição|**nvarchar (255)**|Descrição da publicação.|  
 |status|**tinyint**|Indica quando os dados da publicação estão disponíveis.|  
 |retenção|**int**|O tempo para salvar metadados sobre alterações para artigos na publicação. As unidades desse período de tempo podem ser dias, semanas, meses ou anos. Para obter informações sobre unidades, consulte a coluna retention_period_unit.|  
@@ -86,7 +86,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |alt_snapshot_folder|**nvarchar (255)**|Especifica o local da pasta alternativa para o instantâneo.|  
 |pre_snapshot_script|**nvarchar (255)**|Especifica um ponteiro para um arquivo **. SQL** que o agente de mesclagem é executado antes de qualquer um dos scripts de objeto replicado ao aplicar o instantâneo em um assinante.|  
 |post_snapshot_script|**nvarchar (255)**|Especifica um ponteiro para um arquivo **. SQL** que o agente de mesclagem é executado depois que todos os outros scripts e dados de objeto replicados tiverem sido aplicados durante uma sincronização inicial.|  
-|compress_snapshot|**bit**|Especifica que o instantâneo gravado no local de **alt_snapshot_folder** é compactado no formato [!INCLUDE[msCoName](../../includes/msconame-md.md)] cab.|  
+|compress_snapshot|**bit**|Especifica que o instantâneo gravado no local de **alt_snapshot_folder** é compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB.|  
 |ftp_address|**sysname**|É o endereço de rede do serviço FTP para o Distribuidor. Especifica onde os arquivos de instantâneo de publicação estão localizados para o Agente de Mesclagem a serem coletados.|  
 |ftp_port|**int**|É o número da porta do serviço FTP para o Distribuidor. **ftp_port** tem um padrão de **21**. Especifica onde os arquivos de instantâneo de publicação estão localizados para serem retirados pelo Agente de Mesclagem.|  
 |ftp_subdirectory|**nvarchar (255)**|Especifica onde os arquivos de instantâneo de publicação estão disponíveis para serem retirados pelo Agente de Mesclagem quando o instantâneo é entregue por meio do FTP.|  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|Especifica se a capacidade para copiar os bancos de dados de assinatura que assinam esta publicação foi habilitada. Um valor de **0** significa que A cópia não é permitida.|  
 |allow_synctoalternate|**int**|Especifica se um parceiro de sincronização alternativo tem permissão para sincronizar com esse Publicador. Um valor de **0** significa que um parceiro de sincronização não é permitido.|  
 |validate_subscriber_info|**nvarchar (500)**|Lista as funções que estão sendo usadas para recuperar informações do Assinante e validar os critérios de filtragem de linha com parâmetros no Assinante. Ajuda a verificar se as informações estão consistentemente particionadas com cada mesclagem.|  
-|backward_comp_level|**int**|O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Especifica se as informações de publicação são publicadas para o Active Directory. Um valor de **0** significa que as informações de publicação não estão disponíveis na Active Directory.<br /><br /> Esse parâmetro foi preterido e tem suporte somente para a compatibilidade com versões anteriores de scripts. Você não pode mais adicionar informações de publicação no Active Directory.|  
 |max_concurrent_merge|**int**|O número de processos de mesclagem simultâneos. Se for **0**, não haverá nenhum limite para o número de processos de mesclagem simultâneos em execução em um determinado momento.|  
 |max_concurrent_dynamic_snapshots|**int**|O número máximo de sessões de instantâneo de dados filtrados simultâneas que pode ser executado na publicação de mesclagem. Se for **0**, não há nenhum limite para o número máximo de sessões de instantâneos de dados filtradas simultâneas que podem ser executadas simultaneamente na publicação em um determinado momento.|  

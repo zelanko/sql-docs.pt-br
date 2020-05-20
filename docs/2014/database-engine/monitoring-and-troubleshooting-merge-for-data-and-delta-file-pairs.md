@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3498032da616658785d2ff33262ed57fa5736f1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228180"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921830"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Monitorando e solucionando problemas de mesclagem de pares de arquivos delta e de dados
   O OLTP na memória usa uma política de mesclagem para mesclar automaticamente pares adjacentes de arquivos delta e de dados. Você não pode desabilitar a atividade de mesclagem.  
@@ -47,7 +47,7 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  Suponha que os três pares de arquivos delta e de dados tinham 15.836 linhas e 5.279 linhas excluídas cada um. Após a mesclagem, o novo arquivo de dados tem 31.872 linhas e 0 linhas excluídas. O tamanho do novo arquivo de dados pode ser muito maior que o tamanho inicialmente alocado de 128 MB. Isso acontece porque a mesclagem manual substitui a política de mesclagem e força a mesclagem dos arquivos solicitados.  
   
- A [transição de estado do blog de arquivos de ponto de verificação em bancos de dados com tabelas com otimização de memória](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) descreve a transição de estado de pares de arquivos Delta e de entrada para a coleta de lixo.  
+ A [transição de estado do blog de arquivos de ponto de verificação em bancos de dados com tabelas com otimização de memória](https://cloudblogs.microsoft.com/sqlserver/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables/) descreve a transição de estado de pares de arquivos Delta e de entrada para a coleta de lixo.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando e gerenciando armazenamento para objetos com otimização de memória](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

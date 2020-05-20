@@ -13,19 +13,19 @@ ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0beb45070e9f6c0294dc18d966f3100263f7d852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ac1acb47c6345bb2b746b2e3a3e1817b63a3e75
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176025"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886373"
 ---
 # <a name="master-data-services-overview"></a>Visão geral do Master Data Services
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], o modelo é o contêiner de nível mais alto na estrutura de dados mestres. Você cria um modelo para gerenciar grupos de dados semelhantes, por exemplo, para gerenciar dados de produtos online. Um modelo contém uma ou mais entidades, que por sua vez contêm membros que são os registros de dados.
 
 |||
 |-|-|
-|![Máquina Virtual do Azure](../../2014/master-data-services/media/azure-virtual-machine.png "Máquina Virtual do Azure")|Você deseja experimentar o SQL Server 2016 ? Inscreva-se para Microsoft Azure e, em seguida, acesse **[aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para criar uma máquina virtual com o SQL Server 2016 já instalado. Você pode excluir a máquina virtual quando tiver terminado.|
+|![Máquina Virtual do Azure](../../2014/master-data-services/media/azure-virtual-machine.png "Máquina Virtual do Azure")|Você deseja experimentar o SQL Server 2016 ? Inscreva-se para Microsoft Azure e, em seguida, acesse **[aqui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** para criar uma máquina virtual com o SQL Server 2016 já instalado. Você pode excluir a máquina virtual quando tiver terminado.|
 
  Por exemplo, o seu modelo de produto online pode conter entidades como produto, cor e estilo. A entidade de cor pode conter membros para as cores vermelho, prata e preto.
 
