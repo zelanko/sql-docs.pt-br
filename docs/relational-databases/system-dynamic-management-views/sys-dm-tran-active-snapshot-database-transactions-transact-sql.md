@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42ed4cebfda43801cdbc3ab42225783c674612e0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262697"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810950"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68262697"
  Esta exibição de gerenciamento dinâmico não inclui transações de sistema.  
   
 > [!NOTE]  
->  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,11 +69,11 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|Comprimento máximo da cadeia de versão que é atravessada para localizar a versão consistente transacional.|  
 |**average_version_chain_traversed**|**real**|Número médio de versões de linha nas cadeias de versão que são atravessadas.|  
 |**elapsed_time_seconds**|**bigint**|Tempo decorrido desde que a transação obteve seu número de sequência de transação.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões
 
-Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
 Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ## <a name="remarks"></a>Comentários  
@@ -145,7 +145,7 @@ elapsed_time_seconds
   
  As informações a seguir avaliam os resultados de **Sys. dm_tran_active_snapshot_database_transactions**:  
   
--   XSN-57: como essa transação não está sendo executada sob isolamento de instantâneo `is_snapshot` , o `first_snapshot_sequence_num` valor `0`e é. O `transaction_sequence_num` mostra que um número de sequência de transação foi atribuído a esta transação, pois uma ou ambas as opções de banco de dados ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT são ON.  
+-   XSN-57: como essa transação não está sendo executada sob isolamento de instantâneo, o `is_snapshot` valor e `first_snapshot_sequence_num` é `0` . O `transaction_sequence_num` mostra que um número de sequência de transação foi atribuído a esta transação, pois uma ou ambas as opções de banco de dados ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT são ON.  
   
 -   XSN-58: Esta transação não está sendo executada em isolamento de instantâneo, aplicando-se as mesma informações do XSN-57.  
   

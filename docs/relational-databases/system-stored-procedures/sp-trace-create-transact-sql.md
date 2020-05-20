@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bc81a19350c3ba95b99c821d972c02dd112c18e7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096028"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809610"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  A tabela a seguir lista as opções, as descrições e seus valores.  
   
-|Nome da opção|Valor de opção|Descrição|  
+|Nome da opção|Valor de opção|Description|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|Especifica que quando o *max_file_size* é atingido, o arquivo de rastreamento atual é fechado e um novo arquivo é criado. Todos os novos registros serão gravados no novo arquivo. O novo arquivo terá o mesmo nome do anterior, mas um número inteiro será adicionado para indicar a sequência. Por exemplo, se o arquivo de rastreamento original for filename.trc, o próximo arquivo de rastreamento será filename_1.trc, o seguinte será filename_2.trc, e assim por diante.<br /><br /> Quanto mais arquivos de rastreamento de substituição forem criados, o valor do inteiro adicionado ao nome de arquivo aumentará consecutivamente.<br /><br /> SQL Server usa o valor padrão de *max_file_size* (5 MB) se essa opção for especificada sem especificar um valor para *max_file_size*.|  
 |SHUTDOWN_ON_ERROR|**4**|Especifica que, se o rastreamento não puder ser gravado no arquivo por qualquer motivo, o SQL Server será encerrado. Esta opção é útil ao executar rastreamentos de auditoria de segurança.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Especifica que um registro dos últimos 5 MB de informações de rastreamento produzidas pelo servidor será salvo pelo servidor. TRACE_PRODUCE_BLACKBOX é incompatível com todas as outras opções.|  
   
-`[ @tracefile = ] 'trace_file'`Especifica o local e o nome do arquivo para o qual o rastreamento será gravado. *trace_file* é **nvarchar (245)** sem padrão. o *trace_file* pode ser um diretório local (como N ' C:\MSSQL\Trace\trace.trc ') ou um UNC para um compartilhamento ou caminho (n '\\\\*nomedoservidor*\\*ShareName*\\*Directory*\trace.trc ').  
+`[ @tracefile = ] 'trace_file'`Especifica o local e o nome do arquivo para o qual o rastreamento será gravado. *trace_file* é **nvarchar (245)** sem padrão. o *trace_file* pode ser um diretório local (como N ' C:\MSSQL\Trace\trace.trc ') ou um UNC para um compartilhamento ou caminho (n ' \\ \\ *nomedoservidor* \\ *ShareName* \\ *Directory*\trace.trc ').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]acrescentará uma extensão **. trc** a todos os nomes de arquivo de rastreamento. Se a opção TRACE_FILE_ROLLOVER e uma *max_file_size* forem especificadas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o criará um novo arquivo de rastreamento quando o arquivo de rastreamento original aumentar para seu tamanho máximo. O novo arquivo tem o mesmo nome que o arquivo original, mas _*n* é acrescentado para indicar sua sequência, começando com **1**. Por exemplo, se o primeiro arquivo de rastreamento for denominado **filename. trc**, o segundo arquivo de rastreamento será chamado de **filename_1. trc**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]acrescentará uma extensão **. trc** a todos os nomes de arquivo de rastreamento. Se a opção TRACE_FILE_ROLLOVER e uma *max_file_size* forem especificadas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criará um novo arquivo de rastreamento quando o arquivo de rastreamento original aumentar para seu tamanho máximo. O novo arquivo tem o mesmo nome que o arquivo original, mas _*n* é acrescentado para indicar sua sequência, começando com **1**. Por exemplo, se o primeiro arquivo de rastreamento for denominado **filename. trc**, o segundo arquivo de rastreamento será chamado de **filename_1. trc**.  
   
  Se você usa a opção TRACE_FILE_ROLLOVER, é recomendável que não use caracteres de sublinhado no nome de arquivo de rastreamento original. Se você usar sublinhados, ocorrerá o seguinte comportamento:  
   
@@ -70,7 +70,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 -   A função fn_trace_gettable não carrega arquivos de substituição (quando especificado usando o argumento *number_files* ) em que o nome do arquivo original termina com um sublinhado e um valor numérico. (Isso não se aplica ao sublinhado e ao número que são acrescentados automaticamente quando um arquivo é substituído.)  
   
 > [!NOTE]  
->  Como alternativa para ambos os comportamentos, você pode renomear os arquivos de rastreamento para remover os sublinhados no nome de arquivo original. Por exemplo, se o arquivo original for denominado **my_trace. trc**e o arquivo de substituição for nomeado **my_trace_1. trc**, você poderá renomear os arquivos para **mytrace. trc** e **mytrace_1. trc** antes de abrir os [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]arquivos no.  
+>  Como alternativa para ambos os comportamentos, você pode renomear os arquivos de rastreamento para remover os sublinhados no nome de arquivo original. Por exemplo, se o arquivo original for denominado **my_trace. trc**e o arquivo de substituição for nomeado **my_trace_1. trc**, você poderá renomear os arquivos para **mytrace. trc** e **mytrace_1. trc** antes de abrir os arquivos no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
  Não é possível especificar *trace_file* quando a opção TRACE_PRODUCE_BLACKBOX é usada.  
   
@@ -102,7 +102,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |15|Parâmetros inválidos. Retornado quando o usuário forneceu parâmetros incompatíveis.|  
   
 ## <a name="remarks"></a>Comentários  
- **sp_trace_create** é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento armazenado que executa muitas das ações executadas anteriormente por **xp_trace_\* ** procedimentos armazenados estendidos disponíveis em versões anteriores do SQL Server. Use **sp_trace_create** em vez de:  
+ **sp_trace_create** é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento armazenado que executa muitas das ações executadas anteriormente por ** \* xp_trace_** procedimentos armazenados estendidos disponíveis em versões anteriores do SQL Server. Use **sp_trace_create** em vez de:  
   
 -   **xp_trace_addnewqueue**  
   

@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090672"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811240"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna uma linha para cada entidade definida pelo usuário que é referenciada pelo nome na definição da entidade de referência especificada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma dependência entre duas entidades é criada quando uma entidade definida pelo usuário, chamada de *entidade referenciada*, é exibida pelo nome em uma expressão SQL persistente de outra entidade definida pelo usuário, chamada *entidade de referência*. Por exemplo, se um procedimento armazenado for a entidade de referência especificada, essa função retornará todas as entidades definidas pelo usuário que são referenciadas no procedimento armazenado como tabelas, exibições, UDTs (Tipos Definidos pelo Usuário) ou outros procedimentos armazenados.  
+Retorna uma linha para cada entidade definida pelo usuário que é referenciada pelo nome na definição da entidade de referência especificada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Uma dependência entre duas entidades é criada quando uma entidade definida pelo usuário, chamada de *entidade referenciada*, é exibida pelo nome em uma expressão SQL persistente de outra entidade definida pelo usuário, chamada *entidade de referência*. Por exemplo, se um procedimento armazenado for a entidade de referência especificada, essa função retornará todas as entidades definidas pelo usuário que são referenciadas no procedimento armazenado como tabelas, exibições, UDTs (Tipos Definidos pelo Usuário) ou outros procedimentos armazenados.  
   
  Você pode usar essa função de gerenciamento dinâmico para informar os seguintes tipos de entidades referenciadas pela entidade de referência especificada:  
   
@@ -121,16 +121,16 @@ sys.dm_sql_referenced_entities (
   
 |Tipo de entidade|Entidade de referência|Entidade referenciada|  
 |-----------------|------------------------|-----------------------|  
-|Tabela|Sim*|Sim|  
-|Visualizar|Sim|Sim|  
-|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
+|Tabela|Sim*|Yes|  
+|Visualizar|Yes|Yes|  
+|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
 |procedimento armazenado CLR|Não|Sim|  
-|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
+|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Yes|Yes|  
 |Função CLR definida pelo usuário|Não|Sim|  
-|Gatilho CLR (DML e DDL)|Não|Não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
+|Gatilho CLR (DML e DDL)|No|Não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
+|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
+|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
 |Procedimentos armazenados estendidos|Não|Sim|  
 |Fila|Não|Sim|  
 |Sinônimo|Não|Sim|  
@@ -139,7 +139,7 @@ sys.dm_sql_referenced_entities (
 |Função de partição|Não|Sim|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*Uma tabela é rastreada como uma entidade de referência somente quando faz [!INCLUDE[tsql](../../includes/tsql-md.md)] referência a um módulo, tipo definido pelo usuário ou coleção de esquema XML na definição de uma coluna computada, restrição de verificação ou restrição padrão.  
+ \*Uma tabela é rastreada como uma entidade de referência somente quando faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquema XML na definição de uma coluna computada, restrição de verificação ou restrição padrão.  
   
  ** Os procedimentos armazenados numerados com um valor inteiro maior que 1 não são controlados como entidade que faz referência nem como entidade referenciada.  
   
@@ -268,8 +268,8 @@ The dependencies reported for entity "dbo.Proc1" might not include
 
 Este exemplo E pressupõe que o exemplo D foi executado. O exemplo E mostra que as dependências são mantidas dinamicamente. O exemplo faz o seguinte:
 
-1. Cria `Table1`novamente, que foi descartado no exemplo D.
-2. Em seguida `sys.dm_sql_referenced_entities` , execute novamente com o procedimento armazenado especificado como a entidade de referência.
+1. Cria novamente `Table1` , que foi descartado no exemplo D.
+2. Em seguida, execute `sys.dm_sql_referenced_entities` novamente com o procedimento armazenado especificado como a entidade de referência.
 
 O conjunto de resultados mostra que ambas as tabelas e suas respectivas colunas definidas no procedimento armazenado são retornadas. Além disso, a coluna `is_all_columns_found` retorna um 1 para todos os objetos e colunas.
 
@@ -304,7 +304,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Retornando o uso de objeto ou de coluna  
- O exemplo a seguir retorna os objetos e as dependências de coluna do procedimento armazenado `HumanResources.uspUpdateEmployeePersonalInfo`. Este procedimento atualiza as colunas `NationalIDNumber`, `BirthDate,``MaritalStatus`e `Gender` da `Employee` tabela com base em um valor especificado `BusinessEntityID` . Outro procedimento armazenado, `upsLogError` é definido em uma tentativa... CATCH Block para capturar erros de execução. As colunas `is_selected`, `is_updated`e `is_select_all` retornam informações sobre como são usados esses objetos e colunas dentro do objeto de referência. A tabela e colunas que são modificadas são indicadas por um 1 na coluna is_updated. A coluna `BusinessEntityID` só é selecionada e o procedimento armazenado `uspLogError` não é selecionado, nem modificado.  
+ O exemplo a seguir retorna os objetos e as dependências de coluna do procedimento armazenado `HumanResources.uspUpdateEmployeePersonalInfo`. Este procedimento atualiza as colunas `NationalIDNumber` , `BirthDate,``MaritalStatus` e `Gender` da `Employee` tabela com base em um valor especificado `BusinessEntityID` . Outro procedimento armazenado, `upsLogError` é definido em uma tentativa... CATCH Block para capturar erros de execução. As colunas `is_selected`, `is_updated`e `is_select_all` retornam informações sobre como são usados esses objetos e colunas dentro do objeto de referência. A tabela e colunas que são modificadas são indicadas por um 1 na coluna is_updated. A coluna `BusinessEntityID` só é selecionada e o procedimento armazenado `uspLogError` não é selecionado, nem modificado.  
 
 ```sql  
 USE AdventureWorks2012;

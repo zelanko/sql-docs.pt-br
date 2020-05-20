@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982112"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810434"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **eventos**: coleta dados e superfícies por meio do procedimento armazenado sobre erros e eventos de interesse registrados pelo servidor, incluindo detalhes sobre exceções de buffer de anel, eventos de buffer de anel sobre o agente de memória, memória insuficiente, monitor do Agendador, pool de buffers, spinlocks, segurança e conectividade. Eventos sempre mostrarão 0 como o estado.  
   
--   **nome do grupo de disponibilidade>: coleta dados para o grupo de disponibilidade especificado (se component_type = "Always on: availabilitygroup"). \< **  
+-   ** \< nome do grupo de disponibilidade>**: coleta dados para o grupo de disponibilidade especificado (se component_type = "Always on: availabilitygroup").  
   
 ## <a name="remarks"></a>Comentários  
 De uma perspectiva de falha, os componentes system, resource e query_processing serão aproveitados para detecção de falha, enquanto os componentes io_subsystem e eventos serão aproveitados apenas para fins de diagnóstico.  

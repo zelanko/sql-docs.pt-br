@@ -16,24 +16,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ed3638e3c8811235778ab2362700c9e08bf08ca5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095380"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811368"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna informações sobre o SQL Server, o serviço de SQL Server Launchpad de texto completo (SQL Server 2017 +) e os serviços SQL Server Agent na instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use essa exibição de gerenciamento dinâmico para relatar informações de status sobre esses serviços.  
+  Retorna informações sobre o SQL Server, o serviço de SQL Server Launchpad de texto completo (SQL Server 2017 +) e os serviços SQL Server Agent na instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use essa exibição de gerenciamento dinâmico para relatar informações de status sobre esses serviços.  
   
  
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|servicename|**nvarchar(256)**|Nome do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], de texto completo ou de SQL Server Agent. Não pode ser nulo.|  
+|servicename|**nvarchar(256)**|Nome do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serviço, de texto completo ou de SQL Server Agent. Não pode ser nulo.|  
 |startup_type|**int**|Indica o modo inicial do serviço. A seguir estão os possíveis valores e suas descrições correspondentes.<br /><br /> 0: outro<br />1: outro<br />2: automático<br />3: manual<br />4: desabilitado<br /><br /> Permite valor nulo.|  
 |startup_type_desc|**nvarchar(256)**|Descreve o modo inicial do serviço. A seguir estão os possíveis valores e suas descrições correspondentes.<br /><br /> Outro: outro (inicialização inicial)<br />Outro: outro (início do sistema)<br />Automático: início automático<br />Manual: início da demanda<br />Desabilitado: desabilitado<br /><br /> Não pode ser nulo.|  
 |status|**int**|Indica o status atual do serviço. A seguir estão os possíveis valores e suas descrições correspondentes.<br /><br /> 1: parado<br />2: outro (início pendente)<br />3: outro (parar pendente)<br />4: executando<br />5: outro (continuar pendente)<br />6: outro (pausa pendente)<br />7: em pausa<br /><br /> Permite valor nulo.|  
@@ -44,7 +44,7 @@ ms.locfileid: "74095380"
 |nome do arquivo|**nvarchar(256)**|O caminho e o nome do arquivo do serviço executável. Não pode ser nulo.|  
 |is_clustered|**nvarchar (1)**|Indica se o serviço é instalado como um recurso de um servidor clusterizado. Não pode ser nulo.|  
 |cluster_nodename|**nvarchar(256)**|O nome do nó de cluster no qual o serviço está instalado. Permite valor nulo.|
-|instant_file_initialization_enabled|**nvarchar (1)**|Especifica se a inicialização instantânea de arquivo está habilitada para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serviço.<br /><br />Y = a inicialização instantânea de arquivo está habilitada para o serviço.<br /><br />N = a inicialização instantânea de arquivo está desabilitada para o serviço.<br /><br /> Permite valor nulo.<br /><br /> **Observação:** Não se aplica a outros serviços, como o SQL Server Agent.<br /><br /> **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql11](../../includes/sssql11-md.md)] começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP4 e o SP1 e posterior).|  
+|instant_file_initialization_enabled|**nvarchar (1)**|Especifica se a inicialização instantânea de arquivo está habilitada para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serviço.<br /><br />Y = a inicialização instantânea de arquivo está habilitada para o serviço.<br /><br />N = a inicialização instantânea de arquivo está desabilitada para o serviço.<br /><br /> Permite valor nulo.<br /><br /> **Observação:** Não se aplica a outros serviços, como o SQL Server Agent.<br /><br /> **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e posterior).|  
 
 ## <a name="security"></a>Segurança  
   

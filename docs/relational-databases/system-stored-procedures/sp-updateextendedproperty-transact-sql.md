@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updateextendedproperty
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7793291a565d50554180de10ab9df39a491f423a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67898415"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809154"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,31 +52,31 @@ sp_updateextendedproperty
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @name= ] {'*property_name*'}  
+ [ @name =] {'*property_name*'}  
  É o nome da propriedade a ser atualizada. *property_name* é **sysname**e não pode ser nulo.  
   
- [ @value= ] {'*Value*'}  
+ [ @value =] {'*valor*'}  
  É o valor associado à propriedade. o *valor* é **sql_variant**, com um padrão de NULL. O tamanho do *valor* não pode ser maior que 7.500 bytes.  
   
- [ @level0type= ] {'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  É o usuário ou tipo definido pelo usuário. *level0_object_type* é **varchar (128)**, com um padrão de NULL. As entradas válidas são ASSEMBLY, contrato, notificação de eventos, grupo de arquivos, tipo de mensagem, função de partição, esquema de partição, guia de plano, associação de serviço remoto, rota, esquema, serviço, usuário, gatilho, tipo e nulo.  
   
 > [!IMPORTANT]  
 >  USER e TYPE como tipos de nível 0 serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente. Use SCHEMA como o tipo de nível 0 em vez de USER. Para TYPE, use SCHEMA como o tipo de nível 0 e TYPE como o tipo de nível 1.  
   
- [ @level0name= ] {'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  É o nome do tipo de objeto de nível 1 especificado. *level0_object_name* é **sysname** com um padrão de NULL.  
   
- [ @level1type= ] {'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  É o tipo de objeto de nível 1. *level1_object_type* é **varchar (128)** com um padrão de NULL. As entradas válidas são AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
   
- [ @level1name= ] {'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* é **sysname** com um padrão de NULL.  
   
- [ @level2type= ] {'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  É o tipo de objeto de nível 2. *level2_object_type* é **varchar (128)** com um padrão de NULL. As entradas válidas são COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
   
- [ @level2name= ] {'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  É o nome do tipo de objeto de nível 2 especificado. *level2_object_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

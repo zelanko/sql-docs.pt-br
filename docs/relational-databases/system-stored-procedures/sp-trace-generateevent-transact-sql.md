@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5c5807225c2bda185b61050433cc3378b25b6fe1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096019"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809584"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**13**|Memória insuficiente. Retornado quando não há memória suficiente para executar a ação especificada.|  
   
 ## <a name="remarks"></a>Comentários  
- **sp_trace_generateevent** executa muitas das ações executadas anteriormente pelo **xp_trace_\* ** procedimentos armazenados estendidos. Use **sp_trace_generateevent** em vez de **xp_trace_generate_event**.  
+ **sp_trace_generateevent** executa muitas das ações executadas anteriormente pelo **xp_trace_ \* ** procedimentos armazenados estendidos. Use **sp_trace_generateevent** em vez de **xp_trace_generate_event**.  
   
  Somente os números de ID de eventos definidos pelo usuário podem ser usados com **sp_trace_generateevent**. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] irá gerar um erro se outros números de ID do evento forem usados.  
   
@@ -94,7 +94,7 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Veja também  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d597436277255441ad893215a3581580264d99a3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032670"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810030"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,26 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int**.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  É o GUID que identifica o tipo de coletor a ser usado para este item *collector_type_uid* é **uniqueidentifier** sem valor padrão.. Para obter uma lista dos tipos de coletores, consulte a exibição de sistema syscollector_collector_types.  
   
- [ @name = ] '*Name*'  
+ [ @name =] '*nome*'  
  É o nome do item de coleta. o *nome* é **sysname** e não pode ser uma cadeia de caracteres vazia ou nula.  
   
  o *nome* deve ser exclusivo. Para obter uma lista dos nomes dos itens de coleta atuais, consulte a exibição de sistema syscollector_collection_items.  
   
- [ @frequency = ] *frequência* do  
+ [ @frequency =] *frequência*  
  É usado para especificar a frequência (em segundos) em que os dados são coletados por esse item de coleta. *Frequency* é **int**, com um padrão de 5. O valor mínimo que pode ser especificado é de 5 segundos.  
   
  Se o conjunto de coleta estiver definido para o modo não armazenado em cache, a frequência será ignorada, pois esse modo faz com que a coleta e o carregamento dos dados ocorram conforme a agenda especificada para o conjunto de coleta. Para exibir o modo de coleta do conjunto de coleta, consulte a exibição do sistema [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
- [ @parameters = ] '*parâmetros*'  
+ [ @parameters =] '*parâmetros*'  
  Os parâmetros de entrada do tipo de coletor. os *parâmetros* são **XML** com um padrão de NULL. O esquema de *parâmetros* deve corresponder ao esquema de parâmetros do tipo de coletor.  
   
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  É o identificador exclusivo que identifica o item do conjunto de coleta. *collection_item_id* é **int** e tem saída.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
