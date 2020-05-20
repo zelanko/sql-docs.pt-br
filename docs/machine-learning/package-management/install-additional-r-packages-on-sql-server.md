@@ -1,6 +1,6 @@
 ---
 title: Instalar os novos pacotes R
-description: Saiba como usar o sqlmlutils para instalar novos pacotes do R em uma instância de Serviços de Machine Learning do SQL Server ou SQL Server R Services.
+description: Saiba como usar o sqlmlutils para instalar novos pacotes de R em uma instância de Serviços de Machine Learning do SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/11/2020
@@ -10,18 +10,18 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b2c561791b88340fd0a77977843f582fa60c648
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: efea0d4306c71607de93652e08f347586a17450e
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269425"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606864"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalar novos pacotes de R com sqlmlutils
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este artigo descreve como usar funções no pacote [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) para instalar novos pacotes do R em uma instância dos Serviços de Machine Learning do SQL Server ou o SQL Server R Services. Os pacotes que você instalar poderão ser usados em scripts R em execução no banco de dados usando a instrução T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+Este artigo descreve como usar funções no pacote [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) para instalar novos pacotes de R em uma instância dos Serviços de Machine Learning do SQL Server. Os pacotes que você instalar poderão ser usados em scripts R em execução no banco de dados usando a instrução T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 
 > [!NOTE]
 > O pacote **sqlmlutils** descrito neste artigo é usado para adicionar pacotes do R ao SQL Server 2019 ou posterior. Para o SQL Server 2017 e anterior, confira [Instalar pacotes com ferramentas do R](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
@@ -30,7 +30,7 @@ Este artigo descreve como usar funções no pacote [**sqlmlutils**](https://gith
 
 - Instale o [R](https://www.r-project.org) e o [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) no computador cliente que você usa para conectar-se ao SQL Server. Você pode usar qualquer IDE do R para executar scripts, mas este artigo pressupõe o RStudio.
 
-- Instale o [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) ou o [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) no computador cliente que você usa para se conectar ao SQL Server. Você pode usar outras ferramentas de consulta ou gerenciamento de banco de dados, mas este artigo pressupõe o Azure Data Studio ou o SSMS.
+- Instale o [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) no computador cliente que você usa para se conectar ao SQL Server. Você pode usar outras ferramentas de consulta ou gerenciamento de banco de dados, mas este artigo pressupõe o uso do Azure Data Studio.
 
 ### <a name="other-considerations"></a>Outras considerações
 
@@ -194,7 +194,6 @@ Em um computador com acesso à Internet:
    ```
    ::: moniker-end
 
-
    Para o valor `Rversion`, use a versão do R instalada no SQL Server. Para verificar a versão instalada, use o comando T-SQL a seguir.
 
    ```sql
@@ -227,7 +226,7 @@ No computador cliente:
 
 Depois da instalação do pacote **glue**, você pode usá-lo em um script R no SQL Server com o comando **sp_execute_external_script** do T-SQL.
 
-1. Abra o Azure Data Studio ou o SSMS e conecte a seu banco de dados do SQL Server.
+1. Abra o Azure Data Studio e conecte-se ao seu banco de dados do SQL Server.
 
 1. Execute o comando a seguir:
 
