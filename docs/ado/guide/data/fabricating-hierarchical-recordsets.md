@@ -13,14 +13,14 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 105dee3121252e94b53d1d8211b94af5e6004c31
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925320"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758302"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabricar conjuntos de registros hierárquicos
 O exemplo a seguir mostra como malhar um conjunto de registros hierárquico sem uma fonte de dados subjacente usando a gramática de formatação de dados para definir colunas para conjuntos de **registros**pai, filho e neto.  

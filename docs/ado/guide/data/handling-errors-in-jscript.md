@@ -13,14 +13,14 @@ helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 81ed99344a610e367b185f1acb1ae8cbae3da284
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925178"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758862"
 ---
 # <a name="handling-errors-in-jscript"></a>Tratamento de erro em JScript
 O código do Microsoft® JScript® deve verificar a propriedade **Count** da coleção de **erros** do objeto de **conexão** . Se o valor for maior que 0, itere pela coleção e imprima os valores como faria em qualquer uma das outras linguagens.  

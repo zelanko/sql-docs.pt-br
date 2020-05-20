@@ -19,14 +19,14 @@ helpviewer_keywords:
 - HelpContext property [ADO]
 - HelpFile property [ADO]
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13fb3f0b5bf55ac9acb525183eba6d8645f4de62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918473"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758712"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Propriedades HelpContext, HelpFile
 Indica o arquivo de ajuda e o tópico associado a um objeto de [erro](../../../ado/reference/ado-api/error-object.md) .  

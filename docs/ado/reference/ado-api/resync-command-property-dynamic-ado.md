@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917141"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756474"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Ressincronizar propriedade dinâmica do comando (ADO)
 Especifica uma cadeia de caracteres de comando fornecida pelo usuário que o método de [ressincronização](../../../ado/reference/ado-api/resync-method.md) emite para atualizar os dados na tabela nomeada na propriedade dinâmica da [tabela exclusiva](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
@@ -33,7 +33,7 @@ Especifica uma cadeia de caracteres de comando fornecida pelo usuário que o mé
   
  Aqui estão dois exemplos com base no SQL:  
   
- 1\) o **conjunto de registros** é definido por um comando:  
+ 1 \) o **conjunto de registros** é definido por um comando:  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -54,7 +54,7 @@ WHERE Orders.OrderID = ?"
   
  A **tabela exclusiva** é *pedidos* e sua chave primária, *OrderID*, é parametrizada. A Subseleção fornece uma maneira simples de garantir programaticamente que o mesmo número e a ordem das colunas sejam retornados como pelo comando original.  
   
- 2\) o **conjunto de registros** é definido por um procedimento armazenado:  
+ 2 \) o **conjunto de registros** é definido por um procedimento armazenado:  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   

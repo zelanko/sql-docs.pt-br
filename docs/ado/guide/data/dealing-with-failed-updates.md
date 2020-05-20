@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - updates [ADO], dealing with failed updates
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d442a9c397ad184658f9101343e139697c9b3756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dbd8346c481fc4fdfddb7aa6260bd5b8422b941a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925631"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758283"
 ---
 # <a name="dealing-with-failed-updates"></a>Lidar com atualizações de falha
 Quando uma atualização é concluída com erros, a maneira como você resolve os erros depende da natureza e da severidade dos erros e da lógica do seu aplicativo. No entanto, se o banco de dados for compartilhado com outros usuários, um erro típico é que outra pessoa modifica o campo antes de fazer isso. Esse tipo de erro é chamado de conflito. O ADO detecta essa situação e relata um erro.  

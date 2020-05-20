@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ea1fc2d8347df28e983b412976c545327456ad8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918663"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756815"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Especifica o [status](../../../ado/reference/ado-api/status-property-ado-field.md) de um [objeto de campo](../../../ado/reference/ado-api/field-object.md).  
   
- Os valores de **adFieldPending\* ** indicam a operação que fez com que o status fosse definido e pode ser combinado com outros valores de status.  
+ Os valores de **adFieldPending \* ** indicam a operação que fez com que o status fosse definido e pode ser combinado com outros valores de status.  
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  

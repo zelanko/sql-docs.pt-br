@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933220"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757622"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Especifica o tipo de dados de um [campo](../../../ado/reference/ado-api/field-object.md), [parâmetro](../../../ado/reference/ado-api/parameter-object.md)ou [Propriedade](../../../ado/reference/ado-api/property-object-ado.md). O indicador de tipo de OLE DB correspondente é mostrado entre parênteses na coluna Descrição da tabela a seguir.  

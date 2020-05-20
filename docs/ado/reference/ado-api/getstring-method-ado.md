@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetString method [ADO]
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 166bfad93d994a4b85bdb944a5d5505987182044
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932465"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758742"
 ---
 # <a name="getstring-method-ado"></a>Método GetString (ADO)
 Retorna o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) como uma cadeia de caracteres.  

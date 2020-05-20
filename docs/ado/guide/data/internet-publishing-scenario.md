@@ -12,14 +12,14 @@ helpviewer_keywords:
 - publishing to Internet [ADO]
 - Internet publishing [ADO]
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00f470bef5026a6f91c43478b3d745446130d081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4f157fd1058e3807d83b9e4d6612b2f88039f11a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924963"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757852"
 ---
 # <a name="internet-publishing-scenario"></a>Cenário de publicação na Internet
 Este exemplo de código demonstra como usar o ADO com o provedor de OLE DB da Microsoft para publicação na Internet. Nesse cenário, você criará um aplicativo Visual Basic que usa objetos **Recordset**, **Record**e **Stream** para exibir o conteúdo dos recursos publicados com o provedor de publicação na Internet.  

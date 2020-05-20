@@ -3,7 +3,6 @@ title: Criar uma chave mestra do banco de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql-server-2014
-ms.reviewer: carlrab
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +11,17 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.reviewer: carlrab
+ms.openlocfilehash: cc0b3e0dccd1ecf674d583e4d1b7adc1a85341d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957240"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758882"
 ---
 # <a name="create-a-database-master-key"></a>Criar uma chave mestra de banco de dados
 
-Este tópico descreve como criar uma chave mestra de banco de dados `master` no usando [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].
+Este tópico descreve como criar uma chave mestra de banco de dados no usando o `master` [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
 **Neste tópico**
 

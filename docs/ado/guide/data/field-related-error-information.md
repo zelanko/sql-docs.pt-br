@@ -11,14 +11,14 @@ helpviewer_keywords:
 - field-related errors [ADO]
 - errors [ADO], field-related
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e61850ca788f6cff11d2a665000f68b89cd3ed45
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925319"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758282"
 ---
 # <a name="field-related-error-information"></a>Informações de erro relacionadas ao campo
 Se um erro estiver diretamente relacionado a um campo, por exemplo, se os dados estiverem ausentes ou se forem do tipo incorreto para o campo – você poderá recuperar mais informações sobre a causa do problema examinando a propriedade **status** do objeto **Field** . Esta propriedade foi aprimorada para fornecer informações específicas sobre o problema. Portanto, por exemplo, quando uma chamada para **UpdateBatch** falha, a causa do problema pode ser determinada examinando a propriedade **status** dos **campos** em cada um dos registros afetados. A propriedade conterá um dos valores na constante **FieldStatusEnum** . A tabela a seguir inclui os valores que são de interesse particular quando ocorre um erro.  

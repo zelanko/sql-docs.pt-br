@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Resync method [ADO], Visual Basic example
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f8ad898c7a02a46b12c546ae11b2387f8da0479e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0ead85b2e2b4dfc23c60dc247f1d9c2bc04979a6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917152"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756392"
 ---
 # <a name="resync-method-example-vb"></a>Exemplo do método Resync (VB)
 Este exemplo demonstra como usar o método [Ressync](../../../ado/reference/ado-api/resync-method.md) para atualizar dados em um conjunto de registros estático.  

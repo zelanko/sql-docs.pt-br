@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADO]
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 08a7842a2fbfb2bd34f02ad2e45871132111a68f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933219"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757392"
 ---
 # <a name="definedsize-property"></a>Propriedade DefinedSize
 Indica a capacidade de dados de um objeto de [campo](../../../ado/reference/ado-api/field-object.md) .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Retorna um valor **longo** que reflete o tamanho definido de um campo, que depende do tipo de dados do objeto Field; consulte [tipo](../../../ado/reference/ado-api/type-property-ado.md) para obter mais informações. Para um campo que usa um tipo de dados de comprimento fixo, o valor de retorno é o tamanho do tipo de dados em bytes. Para um campo que usa um tipo de dados de comprimento variável, este é um dos seguintes:  
   
 1.  O comprimento máximo do campo em caracteres (para **adVarChar** e **adVarWChar**) ou em bytes (para **adVarBinary**e **adVarNumeric**) se o campo tiver um comprimento definido. Por exemplo, o campo **adVarChar (5)** tem um comprimento máximo de 5.  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 079bbefce30b5836c16394a7b8efb215725c5ce6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926759"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758452"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Visão geral do provedor do Microsoft OLE DB para publicação na Internet
 O provedor de OLE DB da Microsoft para publicação na Internet permite que o ADO acesse recursos servidos pelo Microsoft FrontPage ou pelo Microsoft Internet Information Server. Os recursos incluem arquivos de origem da Web, como arquivos HTML, ou pastas da Web do Windows 2000.
@@ -40,7 +40,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- -ou-
+ – ou –
 
 ```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - HelpFile property [ADO], VC++ example
 - Description property [ADO], VC++ example
 ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ac5a73f49650d1f292cee9e0a17b447011845141
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f85085070d7b7abab22508094a4d50d9deec443
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919035"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757262"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>Exemplo das propriedades Description, HelpContext, ArquivoDeAjuda, NativeError, Number, Source e SQLState (VC + +)
 Este exemplo dispara um erro, intercepta-o e exibe as propriedades [Description](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [ArquivoDeAjuda](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [Number](../../../ado/reference/ado-api/number-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-error.md)e [SQLSTATE](../../../ado/reference/ado-api/sqlstate-property.md) do objeto de [erro](../../../ado/reference/ado-api/error-object.md) resultante.  
