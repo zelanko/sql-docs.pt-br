@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165497"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811977"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -72,12 +72,12 @@ Os contadores retornados são por operador por thread. Os resultados são dinâm
 |segment_read_count|**int**|Número de read-aheads de segmento até o momento.|  
 |segment_skip_count|**int**|Número de segmentos ignorados até o momento.| 
 |actual_read_row_count|**bigint**|Número de linhas lidas por um operador antes da aplicação do predicado residuais.| 
-|estimated_read_row_count|**bigint**|**Aplica-se a:** A [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] partir do SP1. <br/>Número estimado de linhas a serem lidas por um operador antes da aplicação do predicado residuais.|  
+|estimated_read_row_count|**bigint**|**Aplica-se a:** A partir do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número estimado de linhas a serem lidas por um operador antes da aplicação do predicado residuais.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Se o nó do plano de consulta não tiver nenhuma e/s, todos os contadores relacionados à e/s serão definidos como NULL.  
   
- Os contadores relacionados à e/s relatados por essa DMV são mais granulares do que `SET STATISTICS IO` aqueles relatados pelo das duas maneiras a seguir:  
+ Os contadores relacionados à e/s relatados por essa DMV são mais granulares do que aqueles relatados pelo `SET STATISTICS IO` das duas maneiras a seguir:  
   
 -   `SET STATISTICS IO`agrupa os contadores de todas as e/s para uma determinada tabela juntas. Com essa DMV, você obterá contadores separados para cada nó no plano de consulta que executa a e/s na tabela.  
   
@@ -86,14 +86,14 @@ Os contadores retornados são por operador por thread. Os resultados são dinâm
 A partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do SP1, a *infraestrutura de criação de perfil de estatísticas de execução de consulta padrão* existe lado a lado com uma infraestrutura de criação de perfil de estatísticas de execução de *consulta leve*. `SET STATISTICS XML ON`e `SET STATISTICS PROFILE ON` sempre use a *infraestrutura de criação de perfil de estatísticas de execução de consulta padrão*. Para `sys.dm_exec_query_profiles` que o seja populado, uma das infraestruturas de criação de perfil de consulta deve ser habilitada. Para obter mais informações, consulte [consultar a infraestrutura de criação de perfil](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
-> A consulta em investigação precisa ser iniciada **depois** que a infraestrutura de criação de perfil de consulta tiver sido habilitada, habilitá-la após `sys.dm_exec_query_profiles`a consulta iniciada não produzirá resultados no. Para saber mais sobre como habilitar as infraestruturas de criação de perfil de consulta, confira [infraestrutura de criação de perfil de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
+> A consulta em investigação precisa ser iniciada **depois** que a infraestrutura de criação de perfil de consulta tiver sido habilitada, habilitá-la após a consulta iniciada não produzirá resultados no `sys.dm_exec_query_profiles` . Para saber mais sobre como habilitar as infraestruturas de criação de perfil de consulta, confira [infraestrutura de criação de perfil de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Permissões  
-No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] na instância gerenciada `VIEW DATABASE STATE` , o requer permissão e `db_owner` associação da função de banco de dados.   
+No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e na [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] instância gerenciada, o requer `VIEW DATABASE STATE` permissão e associação da `db_owner` função de banco de dados.   
 Nas [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
    
 ## <a name="examples"></a>Exemplos  
- Etapa 1: faça logon em uma sessão na qual você planeja executar a consulta com `sys.dm_exec_query_profiles`a qual irá analisar. Para configurar a consulta para uso `SET STATISTICS PROFILE ON`de criação de perfil. Execute a consulta nessa mesma sessão.  
+ Etapa 1: faça logon em uma sessão na qual você planeja executar a consulta com a qual irá analisar `sys.dm_exec_query_profiles` . Para configurar a consulta para uso de criação de perfil `SET STATISTICS PROFILE ON` . Execute a consulta nessa mesma sessão.  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  

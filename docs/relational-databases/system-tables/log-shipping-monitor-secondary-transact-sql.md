@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_secondary system table
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 838c810c28c03ae11237f449483789ed8dbbf740
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dd35759cfc37f504adc7adcccdbc863525bfa175
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989951"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813218"
 ---
 # <a name="log_shipping_monitor_secondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

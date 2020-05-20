@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9f8bb7ab3cd8eb03bd0b8d3a41b5afa17c1c77a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74190345"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811753"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74190345"
 Retorna informações sobre todas as esperas encontradas por threads executados. É possível usar essa exibição agregada para diagnosticar problemas de desempenho com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também com consultas e lotes específicos. o [Sys. dm_exec_session_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fornece informações semelhantes por sessão.  
   
 > [!NOTE] 
-> Para chamá-lo ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou **, use o nome **Sys. dm_pdw_nodes_os_wait_stats**.  
+> Para chamá-lo de ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **, use o nome **Sys. dm_pdw_nodes_os_wait_stats**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -42,11 +42,11 @@ Retorna informações sobre todas as esperas encontradas por threads executados.
 |wait_time_ms|**bigint**|Tempo de espera total para esse tipo de espera em milissegundos. Essa hora é inclusiva de signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo de espera máximo neste tipo de espera.|  
 |signal_wait_time_ms|**bigint**|Diferença entre a hora em que o thread de espera foi sinalizado e quando ele começou a ser executado.|  
-|pdw_node_id|**int**|O identificador do nó em que essa distribuição está. <br/> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|O identificador do nó em que essa distribuição está. <br/> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Permissões
 
-Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
 Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Tipos de esperas  
@@ -70,7 +70,7 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
   
  Embora o thread já não esteja mais aguardando, ele não precisa iniciar a execução imediatamente. Isso ocorre porque esse thread é colocado primeiro na fila de trabalhadores executáveis e deve aguardar a execução de um quantum no agendador.  
   
- Nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contadores de tempo de espera são valores **bigint** e, portanto, não são tão propensos à substituição de contador como os contadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]equivalentes em versões anteriores do.  
+ Nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contadores de tempo de espera são valores **bigint** e, portanto, não são tão propensos à substituição de contador como os contadores equivalentes em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Tipos específicos de horas de espera durante execução de consulta podem indicar gargalos ou pontos de pausa dentro da consulta. Da mesma forma, os tempos de espera altos ou as contagens de espera em todo o servidor podem indicar gargalos nas interações de consulta de interação na instância do servidor. Por exemplo, as esperas de bloqueio indicam a contenção de dados por consultas; as esperas de trava de ES de página indicam tempos de resposta de ES lentos; as esperas de atualização de trava de página indicam layout de arquivo incorreto.  
   
@@ -88,7 +88,7 @@ Esse comando redefine todos os contadores como 0.
   
  A tabela a seguir lista os tipos de espera encontrados por tarefas.  
 
-|type |Descrição| 
+|tipo |Description| 
 |-------------------------- |--------------------------| 
 |ABR |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| | 
 |AM_INDBUILD_ALLOCATION |Somente para uso interno. <br />**Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
@@ -167,8 +167,8 @@ Esse comando redefine todos os contadores como 0.
 |CONNECTION_ENDPOINT_LOCK |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |COUNTRECOVERYMGR |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |CREATE_DATINISERVICE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Essa é uma parte normal da execução de consulta paralela. <br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] o SP2, Cu3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca do processador de consultas e ao produzir e consumir linhas. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Observação:** Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] , o Cu3 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]e o esperas cxpacket se refere apenas à sincronização do iterador de troca do processador de consultas e à produção de linhas para threads de consumidor. Os threads de consumidor são rastreados separadamente no tipo de espera CXCONSUMER.| 
+|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Essa é uma parte normal da execução de consulta paralela. <br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca do processador de consultas e ao produzir e consumir linhas. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Observação:** Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o SP2, o [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3 e o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] esperas cxpacket se refere apenas à sincronização do iterador de troca do processador de consultas e à produção de linhas para threads de consumidor. Os threads de consumidor são rastreados separadamente no tipo de espera CXCONSUMER.| 
 |CXROWSET_SYNC |Ocorre durante um exame de intervalo paralelo.| 
 |DAC_INIT |Ocorre enquanto a conexão de administrador dedicada estiver inicializando.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
@@ -372,7 +372,7 @@ Esse comando redefine todos os contadores como 0.
 |INSTANCE_LOG_RATE_GOVERNOR |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |INTERNAL_TESTING |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |IO_AUDIT_MUTEX |Ocorre durante a sincronização de buffers de evento de rastreamento.| 
-|IO_COMPLETION |Ocorre enquanto se espera as operações de E/S serem concluídas. Esse tipo de espera geralmente representa E/Ss de página sem-dados. As esperas de conclusão de e/s de página\_ \* de dados aparecem como esperas de PAGEIOLATCH.| 
+|IO_COMPLETION |Ocorre enquanto se espera as operações de E/S serem concluídas. Esse tipo de espera geralmente representa E/Ss de página sem-dados. As esperas de conclusão de e/s de página de dados aparecem como \_ \* esperas de PAGEIOLATCH.| 
 |IO_QUEUE_LIMIT |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |IO_RETRY |Ocorre quando uma operação de E/S, como uma leitura ou uma gravação no disco, falha devido a recursos insuficientes, e é tentada novamente.| 
 |IOAFF_RANGE_QUEUE |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
@@ -380,12 +380,12 @@ Esse comando redefine todos os contadores como 0.
 |KTM_ENLISTMENT |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |KTM_RECOVERY_MANAGER |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
 |KTM_RECOVERY_RESOLUTION |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
-|LATCH_DT |Ocorre ao esperar uma trava de DT (destruir). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de esperas de trava\_ \* está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
-|LATCH_EX |Ocorre ao esperar uma trava de EX (exclusivo). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de esperas de trava\_ \* está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
-|LATCH_KP |Ocorre ao esperar uma trava de KP (manutenção). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de esperas de trava\_ \* está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_DT |Ocorre ao esperar uma trava de DT (destruir). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_EX |Ocorre ao esperar uma trava de EX (exclusivo). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_KP |Ocorre ao esperar uma trava de KP (manutenção). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
 |LATCH_NL |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| 
-|LATCH_SH |Ocorre ao esperar uma trava de SH (compartilhamento). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de esperas de trava\_ \* está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
-|LATCH_UP |Ocorre ao esperar uma trava de UP (atualização). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de esperas de trava\_ \* está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_SH |Ocorre ao esperar uma trava de SH (compartilhamento). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
+|LATCH_UP |Ocorre ao esperar uma trava de UP (atualização). Isso não inclui travas de buffer ou de marcação de transação. Uma lista de \_ \* esperas de trava está disponível em sys. dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.| 
 |LAZYWRITER_SLEEP |Ocorre quando as tarefas de gravador lentas são suspensas. É uma medição do tempo gasto por tarefas em segundo plano em espera. Não considere esse estado quando você estiver procurando pausas de usuário.| 
 |LCK_M_BU |Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização em Massa (BU).| 
 |LCK_M_BU_ABORT_BLOCKERS |Ocorre quando uma tarefa está esperando para adquirir um bloqueio BU (Atualização em Massa) com Bloqueadores de Anulação. (Relacionado à opção de espera de baixa prioridade de ALTER TABLE e ALTER INDEX.) <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
@@ -1025,7 +1025,7 @@ Esse comando redefine todos os contadores como 0.
   
  Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Veja também  
     
  [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

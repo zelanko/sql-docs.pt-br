@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_sentitems database mail view
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c935a83c3c3fdd9fa577a3232e46caed7865c1c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e869cd092dd242caff859298b97502693abe2116
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745363"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812027"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70745363"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador do item de email na fila de email.|  
 |**profile_id**|**int**|O identificador do perfil usado para enviar a mensagem.|  
-|**recipients**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
+|**tiver**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
 |**copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem.|  
 |**blind_copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem, mas cujos nomes não aparecem no cabeçalho.|  
 |**Assunto**|**nvarchar (510)**|A linha de assunto da mensagem.|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135184"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812050"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Os *plan_handle* podem ser obtidos nos seguintes objetos de gerenciamento dinâm
  Quando uma consulta ad hoc usa parametrização simples ou forçada, a coluna **query_plan** conterá somente o texto de instrução e não o plano de consulta real. Para retornar ao plano de consulta, chame ** sys.dm_exec_query_plan** para o identificador do plano da consulta parametrizada preparada. Você pode determinar se a consulta foi parametrizada referenciando a coluna **sql** da exibição [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) ou a coluna de texto da exibição de gerenciamento dinâmico [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
 > [!NOTE] 
-> Devido a uma limitação no número de níveis aninhados permitido no tipo de dados **XML** , **Sys. dm_exec_query_plan** não pode retornar planos de consulta que atendam ou ultrapassem 128 níveis de elementos aninhados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condição evitava que o plano de consulta retornasse e gerasse um erro 6335. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versões posteriores, a coluna **query_plan** retorna NULL.   
+> Devido a uma limitação no número de níveis aninhados permitido no tipo de dados **XML** , **Sys. dm_exec_query_plan** não pode retornar planos de consulta que atendam ou ultrapassem 128 níveis de elementos aninhados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condição evitava que o plano de consulta retornasse e gerasse um erro 6335. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versões posteriores, a coluna **QUERY_PLAN** retorna NULL.   
 > Você pode usar a função de gerenciamento dinâmico de [&#41;de dm_exec_text_query_plan &#40;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) para retornar a saída do plano de consulta no formato de texto.  
   
 ## <a name="permissions"></a>Permissões  
@@ -87,9 +87,9 @@ Os *plan_handle* podem ser obtidos nos seguintes objetos de gerenciamento dinâm
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como usar a exibição de gerenciamento dinâmico **sys.dm_exec_query_plan**.  
   
- Para visualizar os Showplans XML, execute as consultas a seguir no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e clique em **ShowPlanXML** na coluna **query_plan** da tabela retornada por **sys.dm_exec_query_plan**. O plano de execução XML é exibido no painel de resumo do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para salvar o Showplan XML em um arquivo, clique com o botão direito do mouse em **ShowplanXml** na coluna **query_plan** , clique em **salvar resultados como**, nomeie \<o arquivo no formato *file_name*>. sqlplan; por exemplo, MyXMLShowplan. sqlplan.  
+ Para visualizar os Showplans XML, execute as consultas a seguir no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e clique em **ShowPlanXML** na coluna **query_plan** da tabela retornada por **sys.dm_exec_query_plan**. O plano de execução XML é exibido no painel de resumo do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para salvar o Showplan XML em um arquivo, clique com o botão direito do mouse em **ShowplanXml** na coluna **query_plan** , clique em **salvar resultados como**, nomeie o arquivo no formato \< *file_name*>. sqlplan; por exemplo, MyXMLShowplan. sqlplan.  
   
-### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Recuperar o plano de consulta em cache para uma consulta ou lote Transact-SQL de execução lenta  
+### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>a. Recuperar o plano de consulta em cache para uma consulta ou lote Transact-SQL de execução lenta  
  Planos de Consulta para vários tipos de lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], como lotes ad hoc, procedimentos armazenados e funções definidas pelo usuário, são colocados em cache em uma área da memória denominada cache de plano. Cada plano de consulta em cache é identificado por um identificador exclusivo chamado de identificador de plano. Você pode especificar esse identificador de plano com a exibição de gerenciamento dinâmico **sys.dm_exec_query_plan** para recuperar o plano de execução para uma consulta ou lote [!INCLUDE[tsql](../../includes/tsql-md.md)] em particular.  
   
  Se uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ou lote for executado por muito tempo em uma determinada conexão com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], recupere o plano de execução para essa consulta ou lote para descobrir o que está causando o retardo. O exemplo a seguir mostra como recuperar o plano de execução XML para uma consulta ou lote de execução lenta.  
@@ -116,7 +116,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- A tabela retornada por **Sys. dm_exec_requests** indica que o identificador de plano para a consulta em execução lenta ou o lote é `0x06000100A27E7C1FA821B10600`, que você pode especificar como o argumento de *plan_handle* com `sys.dm_exec_query_plan` para recuperar o plano de execução em formato XML da seguinte maneira. O plano de execução em formato XML para a consulta ou lote em execução lenta é contido na coluna **query_plan** da tabela retornada por `sys.dm_exec_query_plan`.  
+ A tabela retornada por **Sys. dm_exec_requests** indica que o identificador de plano para a consulta em execução lenta ou o lote é `0x06000100A27E7C1FA821B10600` , que você pode especificar como o argumento de *plan_handle* com `sys.dm_exec_query_plan` para recuperar o plano de execução em formato XML da seguinte maneira. O plano de execução em formato XML para a consulta ou lote em execução lenta é contido na coluna **query_plan** da tabela retornada por `sys.dm_exec_query_plan`.  
   
 ```sql  
 USE master;  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_conflictdetectionconfigureresponse
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6ed3a127d2527b35c301ab7f3d05305c4f8d2ced
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 511728cf8203407d964988486ea012d06dfbcc56
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322114"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812565"
 ---
 # <a name="mspeer_conflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "75322114"
 |originator_id|**varbinary(16)**|Identifica cada nó na topologia com a finalidade de detecção de conflito. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |peer_conflict_retention|**int**|Período de tempo, em dias, que os metadados são armazenados em tabelas de conflitos.|  
 |peer_subscriptions|**XML**|Informações sobre o nó que respondeu à solicitação.|  
-|progress_phase|**nvarchar(32)**|Identifica a fase atual de processamento, usando um dos seguintes valores:<br /><br /> Started (iniciado)<br /><br /> Versão de nível coletada<br /><br /> Status coletado|  
+|progress_phase|**nvarchar(32)**|Identifica a fase atual de processamento, usando um dos seguintes valores:<br /><br /> Iniciado<br /><br /> Versão de nível coletada<br /><br /> Status coletado|  
 |modified_date|**datetime**|Data e hora em que uma fase foi concluída.|  
   
 ## <a name="see-also"></a>Consulte Também  

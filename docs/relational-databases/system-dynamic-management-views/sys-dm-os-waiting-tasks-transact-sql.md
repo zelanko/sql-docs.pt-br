@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0efa4a5b5c8144807c27014a96b3fa90ed77971
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72260384"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811723"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "72260384"
   Retorna informações sobre a fila de espera de tarefas que estão esperando algum recurso. Para obter mais informações sobre tarefas, consulte o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md).
    
 > [!NOTE]  
->  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_waiting_tasks**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_os_waiting_tasks**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -47,18 +47,18 @@ ms.locfileid: "72260384"
 |**blocking_session_id**|**smallint**|ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas).<br /><br /> -2 = O recurso de bloqueio pertence a uma transação distribuída órfã.<br /><br /> -3 = O recurso de bloqueio pertence a uma transação de recuperação adiada.<br /><br /> -4 = A ID da sessão do proprietário da trava de bloqueio não pôde ser determinada devido a transições internas de estado da trava.|  
 |**blocking_exec_context_id**|**int**|ID do contexto de execução da tarefa de bloqueio.|  
 |**resource_description**|**nvarchar (3072)**|Descrição do recurso que está sendo consumido. Para obter mais informações, consulte a lista a seguir.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="resource_description-column"></a>Coluna resource_description  
  A coluna resource_description tem os valores possíveis a seguir.  
   
  **Proprietário do recurso de pool de threads:**  
   
--   ID do ThreadPool =>\<de endereço hexadecimal do Agendador  
+-   ID do ThreadPool = \<> de endereço hexadecimal do Agendador  
   
  **Proprietário do recurso de consulta paralela:**  
   
--   ID de exchangeEvent = {porta | Pipe}\<endereço hex> waittype =\<troca de espera do Exchange> NodeId =\<Exchange-node-id>  
+-   ID de exchangeEvent = {porta | Pipe} \< endereço hex> waittype = \< troca de espera do Exchange> NodeId = \< Exchange-node-id>  
   
  **Exchange-wait-type:**  
   
@@ -78,31 +78,31 @@ ms.locfileid: "72260384"
   
  **Proprietário do recurso de bloqueio:**  
   
--   \<tipo-específico-Descrição> ID = Lock\<Lock-hex-address> mode =\<Mode> associatedObjectId =\<associado-obj-ID>  
+-   \<tipo-específico-Descrição> ID = Lock \< Lock-hex-address> mode = \< Mode> associatedObjectId = \< associado-obj-ID>  
   
      **\<a descrição de tipo específico> pode ser:**  
   
-    -   Para o banco de dados: databaselock\<subresource = databaselock-subresource\<> DBID = DB-ID>  
+    -   Para o banco de dados: databaselock subresource = \< databaselock-subresource> DBID = \< DB-ID>  
   
-    -   Para o arquivo: filelock FileID\<= ID-do-arquivo>\<o subrecurso = filelock-subresource> DBID =\<DB-ID>  
+    -   Para o arquivo: filelock FileID = \< ID-do-arquivo> o subrecurso = \< filelock-subresource> DBID = \< db-ID>  
   
-    -   Para OBJECT: objectlock lockPartition =\<Lock-Partition-ID> objID =\<obj-ID> subresource =\<objectlock-subresource> DBID =\<DB-ID>  
+    -   Para OBJECT: objectlock lockPartition = \< Lock-Partition-id> objID = \< obj-ID> subresource = \< objectlock-subresource> DBID = \< DB-ID>  
   
-    -   Para a página: PageLock FileID\<= ID de arquivo> PageId\<= ID de página> DBID\<= DB-ID> subresource\<= PageLock-subresource>  
+    -   Para a página: PageLock FileID = \< ID de arquivo> PageId = \< ID de página> DBID = \< db-ID> subresource = \< pagelock-subresource>  
   
-    -   Para a chave: Keylock hobtid\<= HoBT-ID> DBID\<= DB-ID>  
+    -   Para a chave: Keylock hobtid = \< HoBT-id> DBID = \< DB-ID>  
   
-    -   Para extensão: extentlock FileID =\<File-ID> PageId =\<Page-ID> DBID =\<DB-ID>  
+    -   Para extensão: extentlock FileID = \< File-id> PageId = \< Page-ID> DBID = \< db-ID>  
   
-    -   Para RID: ridlock FileID =\<ID de arquivo> PageId =\<ID de página> DBID =\<DB-ID>  
+    -   Para RID: ridlock FileID = \< ID de arquivo> PageId = \< ID de página> DBID = \< db-ID>  
   
-    -   Para o aplicativo: applicationlock hash\<= hash> databasePrincipalId\<= ID de função> DBID\<= DB-ID>  
+    -   Para o aplicativo: applicationlock hash = \< hash> databasePrincipalId = \< ID de função> DBID = \< db-ID>  
   
-    -   Para metadados: metadatalock subresource =\<metadados-subresource> ClassID =\<metadatalock-Description> DBID =\<DB-ID>  
+    -   Para metadados: metadatalock subresource = \< metadados-subresource> ClassID = \< metadatalock-Description> DBID = \< db-ID>  
   
-    -   Para HOBT: hobtlock hobtid =\<HoBT-ID> subresource =\<HOBT-subresource> DBID =\<DB-ID>  
+    -   Para HOBT: hobtlock hobtid = \< HoBT-id> subresource = \< HoBT-subresource> DBID = \< db-ID>  
   
-    -   Para ALLOCATION_UNIT: allocunitlock hobtid =\<HoBT-ID> subresource =\<Alloc-UNIT-subresource> DBID =\<DB-ID>  
+    -   Para ALLOCATION_UNIT: allocunitlock hobtid = \< HoBT-id> subresource = \< Alloc-Unit-subresource> DBID = \< db-ID>  
   
      **\<o modo> pode ser:**  
   
@@ -110,11 +110,11 @@ ms.locfileid: "72260384"
   
  **Proprietário do recurso externo:**  
   
--   ExternalResource externa =\<tipo de espera>  
+-   ExternalResource externa = \< tipo de espera>  
   
  **Proprietário do recurso genérico:**  
   
--   TransactionMutex TransactionInfo Workspace =\<Workspace-ID>  
+-   TransactionMutex TransactionInfo Workspace = \< Workspace-id>  
   
 -   Mutex  
   
@@ -128,19 +128,19 @@ ms.locfileid: "72260384"
   
  **Proprietário do recurso de trava:**  
   
--   \<DB-ID>:\<ID de arquivo>:\<página-in-file>  
+-   \<DB-ID>: \< ID de arquivo>: \< página-in-file>  
   
 -   \<GUID>  
   
--   \<> de classe de trava\<(> de trava-endereço)  
+-   \<> de classe de trava ( \<> de trava-endereço)  
   
 ## <a name="permissions"></a>Permissões
 
-Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
 Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
  
 ## <a name="example"></a>Exemplo
-Este exemplo identificará as sessões bloqueadas. Execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Este exemplo identificará as sessões bloqueadas. Execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
