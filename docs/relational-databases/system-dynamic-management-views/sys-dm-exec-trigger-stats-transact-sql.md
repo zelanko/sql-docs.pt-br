@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_trigger_stats dynamic management function
 ms.assetid: 863498b4-849c-434d-b748-837411458738
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65072bd42e1e1f85189afe8bb832a2b0811417e2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262210"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824544"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68262210"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados no qual o gatilho reside.|  
 |**object_id**|**int**|Número de identificação de objeto do gatilho.|  
-|**type**|**char(2)**|Tipo do objeto:<br /><br /> TA = Gatilho (CLR) de assembly<br /><br /> TR = Gatilho SQL|  
+|**tipo**|**char(2)**|Tipo do objeto:<br /><br /> TA = Gatilho (CLR) de assembly<br /><br /> TR = Gatilho SQL|  
 |**Type_desc**|**nvarchar(60)**|Descrição do tipo de objeto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**sql_handle**|**varbinary(64)**|Isso pode ser usado para correlacionar com consultas em **Sys. dm_exec_query_stats** que foram executadas de dentro deste gatilho.|  
 |**plan_handle**|**varbinary(64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Esse valor pode ser usado com a exibição de gerenciamento dinâmico **Sys. dm_exec_cached_plans** .|  
@@ -63,10 +63,10 @@ ms.locfileid: "68262210"
 |**last_elapsed_time**|**bigint**|Tempo decorrido, em microssegundos, da execução concluída mais recente deste gatilho.|  
 |**min_elapsed_time**|**bigint**|O tempo mínimo decorrido, em microssegundos, para qualquer execução concluída desse gatilho.|  
 |**max_elapsed_time**|**bigint**|O tempo máximo decorrido, em microssegundos, para qualquer execução concluída desse gatilho.| 
-|**total_spills**|**bigint**|O número total de páginas despejadas pela execução deste gatilho desde sua compilação.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a partir de Cu3|  
-|**last_spills**|**bigint**|O número de páginas despejadas na última vez em que o gatilho foi executado.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a partir de Cu3|  
-|**min_spills**|**bigint**|O número mínimo de páginas que esse gatilho já excedeu durante uma única execução.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a partir de Cu3|  
-|**max_spills**|**bigint**|O número máximo de páginas que esse gatilho já excedeu durante uma única execução.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] a partir de Cu3|  
+|**total_spills**|**bigint**|O número total de páginas despejadas pela execução deste gatilho desde sua compilação.<br /><br /> **Aplica-se a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
+|**last_spills**|**bigint**|O número de páginas despejadas na última vez em que o gatilho foi executado.<br /><br /> **Aplica-se a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
+|**min_spills**|**bigint**|O número mínimo de páginas que esse gatilho já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
+|**max_spills**|**bigint**|O número máximo de páginas que esse gatilho já excedeu durante uma única execução.<br /><br /> **Aplica-se a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3|  
 |**total_page_server_reads**|**bigint**|O número total de leituras de servidor de página executadas por execuções deste gatilho desde sua compilação.<br /><br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure|  
 |**last_page_server_reads**|**bigint**|O número de leituras do servidor de página realizadas na última vez em que o gatilho foi executado.<br /><br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure|  
 |**min_page_server_reads**|**bigint**|O número mínimo de leituras de servidor de página que esse gatilho já realizou durante uma única execução.<br /><br /> **Aplica-se a**: hiperescala do banco de dados SQL do Azure|  
@@ -80,7 +80,7 @@ As estatísticas na exibição são atualizadas quando uma consulta é concluíd
   
 ## <a name="permissions"></a>Permissões  
 
-Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
 Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
   
 ## <a name="examples"></a>Exemplos  

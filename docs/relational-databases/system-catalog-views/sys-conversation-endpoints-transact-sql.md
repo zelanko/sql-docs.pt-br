@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 16d29272e4229ac93b3dd5b1eaf5502a07fb0a2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 11beb90fe3bf0be71d31f5e330c3588d6e1e0aaa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109538"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821953"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68109538"
 |service_id|**int**|Identificador do serviço para este lado da conversa. Não é NULLABLE.|  
 |lifetime|**datetime**|Data/hora de validade desta conversa. Não é NULLABLE.|  
 |state|**char(2)**|O estado atual da conversa. Não é NULLABLE. Um destes:<br /><br /> Portanto, iniciou a saída. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processou BEGIN CONVERSATION para esta conversa, mas nenhuma mensagem foi enviada ainda.<br /><br /> SI   Entrada iniciada. Outra instância iniciou uma nova conversa com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda não recebeu completamente a primeira mensagem. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá criar a conversa neste estado se a primeira mensagem estiver fragmentada ou se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] receber mensagens fora de ordem. No entanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode criar a conversa no estado CO (em conversação) se a primeira transmissão recebida para a conversa contiver a primeira mensagem completa.<br /><br /> CO   Em conversa. A conversa está estabelecida, e ambos os lados da conversa podem enviar mensagens. A maior parte da comunicação para um serviço típico acontece quando a conversa está neste estado.<br /><br /> DI   Entrada desconectada. O lado remoto da conversa emitiu uma instrução END CONVERSATION. A conversa permanecerá nesse estado até o lado local emitir uma instrução END CONVERSATION. Um aplicativo ainda pode receber mensagens para a conversa. Como o lado remoto da conversa encerrou a conversa, um aplicativo não pode enviar mensagens nesta conversa. Quando um aplicativo emite uma instrução END CONVERSATION, a conversa passa para o estado CD (Fechado).<br /><br /> DO   Saída desconectada. O lado local da conversa emitiu uma instrução END CONVERSATION. A conversa permanecerá neste estado até o lado remoto da conversa reconhecer a instrução END CONVERSATION. Um aplicativo não pode enviar ou receber mensagens para a conversa. Quando o lado remoto da conversa reconhece a instrução END CONVERSATION, a conversa passa para o estado CD (Fechada).<br /><br /> Erro de ER. Ocorreu um erro neste ponto de extremidade. A mensagem de erro é colocada na fila de aplicativos. Se a fila de aplicativos estiver vazia, isso indicará que o aplicativo já consumiu a mensagem de erro.<br /><br /> CD   Fechado. O ponto de extremidade da conversa não está mais em uso.|  
-|state_desc|**nvarchar(60)**|Descrição do estado da conversa do ponto de extremidade. Esta coluna é NULLABLE. Um destes:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSAM**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **CLOSED**<br /><br /> **AO**|  
+|state_desc|**nvarchar(60)**|Descrição do estado da conversa do ponto de extremidade. Esta coluna é NULLABLE. Um destes:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSAM**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **Legenda**<br /><br /> **AO**|  
 |far_service|**nvarchar(256)**|Nome do serviço no lado remoto da conversa. Não é NULLABLE.|  
 |far_broker_instance|**nvarchar(128)**|A instância do agente do lado remoto da conversa. É NULLABLE.|  
 |principal_id|**int**|Identificador da entidade cujo certificado é usado pelo lado local do diálogo. Não é NULLABLE.|  

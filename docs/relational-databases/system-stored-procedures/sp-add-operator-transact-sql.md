@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 080933e13c2f72deef536885b9d3b5c1c4c7593b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "74095508"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821062"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`O nome de um operador (destinatário da notificação). Esse nome deve ser exclusivo e não pode conter o caractere**%** de porcentagem (). o *nome* é **sysname**, sem padrão.  
+`[ @name = ] 'name'`O nome de um operador (destinatário da notificação). Esse nome deve ser exclusivo e não pode conter o caractere de porcentagem ( **%** ). o *nome* é **sysname**, sem padrão.  
   
 `[ @enabled = ] enabled`Indica o status atual do operador. *habilitado* é **tinyint**, com um padrão de **1** (habilitado). Se for **0**, o operador não será habilitado e não receberá notificações.  
   
@@ -60,14 +60,14 @@ sp_add_operator [ @name = ] 'name'
   
  Você pode especificar um endereço de email físico ou um alias para *email_address*. Por exemplo:  
   
- '**jdoe**' ou '**jdoe\@XYZ.com**'  
+ '**jdoe**' ou '**jdoe \@ XYZ.com**'  
   
 > [!NOTE]  
 >  Você deve usar o endereço de email para Database Mail.  
   
 `[ @pager_address = ] 'pager_address'`O endereço do pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_address* é **nvarchar (100)**, com um padrão de NULL.  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time`O tempo após o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qual o Agent envia a notificação por pager para o operador especificado nos dias da semana, de segunda a sexta-feira. *weekday_pager_start_time*é **int**, com um padrão de **090000**, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time`O tempo após o qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envia a notificação por pager para o operador especificado nos dias da semana, de segunda a sexta-feira. *weekday_pager_start_time*é **int**, com um padrão de **090000**, que indica 9:00 A.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
 `[ @weekday_pager_end_time = ] weekday_pager_end_time`O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado nos dias da semana, de segunda a sexta-feira. *weekday_pager_end_time*é **int**, com um padrão de 180000, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
@@ -79,7 +79,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @sunday_pager_end_time = ] sunday_pager_end_time`O tempo após o qual o serviço **SQLSERVERAGENT** não envia a notificação por pager para o operador especificado nos domingos. *sunday_pager_end_time*é **int**, com um padrão de **180000**, que indica 6:00 P.M. em um relógio de 24 horas e deve ser inserido com o formato HHMMSS.  
   
-`[ @pager_days = ] pager_days`É um número que indica os dias em que o operador está disponível para páginas (sujeito às horas de início/término especificadas). *pager_days*é **tinyint**, com um padrão de **0** , indicando que o operador nunca está disponível para receber uma página. Os valores válidos são de **0** a **127**. *pager_days*é calculado adicionando os valores individuais para os dias necessários. Por exemplo, de segunda a sexta-feira é **2**+**4**+**8**+**16**+**32** = **62**. A tabela a seguir lista o valor de cada dia da semana.  
+`[ @pager_days = ] pager_days`É um número que indica os dias em que o operador está disponível para páginas (sujeito às horas de início/término especificadas). *pager_days*é **tinyint**, com um padrão de **0** , indicando que o operador nunca está disponível para receber uma página. Os valores válidos são de **0** a **127**. *pager_days*é calculado adicionando os valores individuais para os dias necessários. Por exemplo, de segunda a sexta-feira é **2** + **4** + **8** + **16** + **32**  =  **62**. A tabela a seguir lista o valor de cada dia da semana.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

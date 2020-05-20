@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199337"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827980"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Essa função de gerenciamento dinâmico usa @object_id um como parâmetro e descreve os metadados do primeiro resultado para o módulo com essa ID. O @object_id especificado pode ser a ID de um [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado ou um [!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho. Se for a ID de qualquer objeto (como exibição, tabela, função ou procedimento CLR), um erro será especificado nas colunas de erro do resultado.  
+  Essa função de gerenciamento dinâmico usa um @object_id como parâmetro e descreve os metadados do primeiro resultado para o módulo com essa ID. O @object_id especificado pode ser a ID de um [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado ou um [!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho. Se for a ID de qualquer objeto (como exibição, tabela, função ou procedimento CLR), um erro será especificado nas colunas de erro do resultado.  
   
  **Sys. dm_exec_describe_first_result_set_for_object** tem a mesma definição de conjunto de resultados que [sys. Dm_exec_describe_first_result_set &#40;o transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) e é semelhante a SP_DESCRIBE_FIRST_RESULT_SET &#40;[Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)&#41;.  
   
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. Combinando a função sys.dm_exec_describe_first_result_set_for_object e uma tabela ou exibição  
- O exemplo a seguir usa a exibição de catálogo do sistema sys. procedures e a função **Sys. dm_exec_describe_first_result_set_for_object** para exibir metadados para os conjuntos de resultados de todos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] os procedimentos armazenados no banco de dados.  
+ O exemplo a seguir usa a exibição de catálogo do sistema sys. procedures e a função **Sys. dm_exec_describe_first_result_set_for_object** para exibir metadados para os conjuntos de resultados de todos os procedimentos armazenados no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados.  
   
 ```  
 USE AdventureWorks2012;  

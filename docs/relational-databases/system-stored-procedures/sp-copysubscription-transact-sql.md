@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3a2a2405b4ca22f780576135c66ee32d058ed10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304826"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826258"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="arguments"></a>Argumentos  
 `[ @filename = ] 'file_name'`É a cadeia de caracteres que especifica o caminho completo, incluindo o nome do arquivo, para o qual uma cópia do arquivo de dados (. MDF) é salva. o *nome do arquivo* é **nvarchar (260)**, sem padrão.  
   
-`[ @temp_dir = ] 'temp_dir'`É o nome do diretório que contém os arquivos temporários. *temp_dir* é **nvarchar (260)**, com um padrão de NULL. Se for NULL, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o diretório de dados padrão será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
+`[ @temp_dir = ] 'temp_dir'`É o nome do diretório que contém os arquivos temporários. *temp_dir* é **nvarchar (260)**, com um padrão de NULL. Se for NULL, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório de dados padrão será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`É um sinalizador booliano opcional que especifica se deve ou não substituir um arquivo existente com o mesmo nome especificado em ** \@filename**. *overwrite_existing_file*é **bit**, com um padrão de **0**. Se for **1**, ele substituirá o arquivo especificado por ** \@filename**, se existir. Se **0**, o procedimento armazenado falhará se o arquivo existir e o arquivo não for substituído.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`É um sinalizador booliano opcional que especifica se deve ou não substituir um arquivo existente com o mesmo nome especificado em ** \@ filename**. *overwrite_existing_file*é **bit**, com um padrão de **0**. Se for **1**, ele substituirá o arquivo especificado por ** \@ filename**, se existir. Se **0**, o procedimento armazenado falhará se o arquivo existir e o arquivo não for substituído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

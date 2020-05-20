@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d040fa0ccfe9b962f8847db0a841b95a534326fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c046d562164e47ed72580801196756714547755e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531029"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820703"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ @lang = ] 'language'`É o idioma desta mensagem. o *idioma* é **sysname** com um padrão de NULL. Como vários idiomas podem ser instalados no mesmo servidor, *Language* especifica o idioma em que cada mensagem é gravada. Quando o *idioma* é omitido, o idioma é o padrão para a sessão.  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`É se a mensagem deve ser gravada no log de aplicativos do Windows quando ele ocorre. with_log é **varchar (5)** com um padrão de false. ** \@** Se for TRUE, o erro sempre será gravado no log do aplicativo do Windows. Se for FALSE, o erro nem sempre será gravado no log do aplicativo do Windows, mas poderá ser gravado dependendo de como foi gerado. Somente os membros da função de servidor **sysadmin** podem usar essa opção.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }`É se a mensagem deve ser gravada no log de aplicativos do Windows quando ele ocorre. ** \@ WITH_LOG** é **varchar (5)** com um padrão de false. Se for TRUE, o erro sempre será gravado no log do aplicativo do Windows. Se for FALSE, o erro nem sempre será gravado no log do aplicativo do Windows, mas poderá ser gravado dependendo de como foi gerado. Somente os membros da função de servidor **sysadmin** podem usar essa opção.  
   
 > [!NOTE]  
 >  Se uma mensagem for gravada no log do aplicativo do Windows, ela também será gravada no arquivo de log de erros do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

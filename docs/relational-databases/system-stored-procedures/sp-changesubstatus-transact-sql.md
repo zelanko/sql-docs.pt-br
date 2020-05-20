@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771335"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824051"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,23 +64,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão **%** de. Se a *publicação* não for especificada, todas as publicações serão afetadas.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** . Se a *publicação* não for especificada, todas as publicações serão afetadas.  
   
-`[ @article = ] 'article'`É o nome do artigo. Deve ser exclusivo para a publicação. o *artigo* é **sysname**, com um padrão **%** de. Se o *artigo* não for especificado, todos os artigos serão afetados.  
+`[ @article = ] 'article'`É o nome do artigo. Deve ser exclusivo para a publicação. o *artigo* é **sysname**, com um padrão de **%** . Se o *artigo* não for especificado, todos os artigos serão afetados.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do assinante do qual alterar o status. o *assinante* é **sysname**, com um **%** padrão de. Se o *assinante* não for especificado, o status será alterado para todos os assinantes para o artigo especificado.  
+`[ @subscriber = ] 'subscriber'`É o nome do assinante do qual alterar o status. o *assinante* é **sysname**, com um padrão de **%** . Se o *assinante* não for especificado, o status será alterado para todos os assinantes para o artigo especificado.  
   
 `[ @status = ] 'status'`É o status da assinatura na tabela **syssubscriptions** . *status* é **sysname**, sem padrão, e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**activo**|O Assinante está sincronizado e recebendo dados.|  
+|**active**|O Assinante está sincronizado e recebendo dados.|  
 |**inativo**|Entrada de assinante existe sem uma assinatura.|  
 |**assinado**|O Assinante está solicitando dados, mas ainda não está sincronizado.|  
   
 `[ @previous_status = ] 'previous_status'`É o status anterior da assinatura. *previous_status* é **sysname**, com um padrão de NULL. Esse parâmetro permite que você altere todas as assinaturas que atualmente têm esse status, permitindo que funções de grupo em um conjunto específico de assinaturas (por exemplo, definindo todas as assinaturas ativas de volta para **assinadas**).  
   
-`[ @destination_db = ] 'destination_db'`É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de **%**.  
+`[ @destination_db = ] 'destination_db'`É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de **%** .  
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual agendar a tarefa de distribuição. *frequency_type* é **int**, com um padrão de NULL.  
   
@@ -135,7 +135,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  A ativação do agente remoto foi preterida e não tem mais suporte. Esse parâmetro tem suporte somente para manter a compatibilidade com versões anteriores de scripts. A definição de *remote_agent_server_name* para qualquer valor não nulo gera um erro.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Especifica o nome do pacote DTS (Data Transformation Services). *dts_package_name* é um **sysname**, com um padrão de NULL. Por exemplo, para um pacote chamado **DTSPub_Package** você especificaria `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'`Especifica o nome do pacote DTS (Data Transformation Services). *dts_package_name* é um **sysname**, com um padrão de NULL. Por exemplo, para um pacote chamado **DTSPub_Package** você especificaria `@dts_package_name = N'DTSPub_Package'` .  
   
 `[ @dts_package_password = ] 'dts_package_password'`Especifica a senha no pacote. *dts_package_password* é **sysname** com um padrão de NULL, que especifica que a propriedade password deve ser deixada inalterada.  
   
@@ -151,7 +151,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser usado ao alterar as propriedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do artigo em um Publicador.  
+>  o *Publicador* não deve ser usado ao alterar as propriedades do artigo em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

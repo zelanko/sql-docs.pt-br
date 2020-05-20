@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769130"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820693"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,8 +93,8 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
-|**4**|Diário|  
-|**8**|Semanal|  
+|**4**|Diariamente|  
+|**8**|Semanalmente|  
 |**10**|Mensal|  
 |**20,00**|Mensalmente, relativo ao intervalo de frequência|  
 |**40**|Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent inicia|  
@@ -153,7 +153,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @description = ] 'description'`É uma breve descrição dessa assinatura de mesclagem. a *Descrição*é **nvarchar (255)**, com um padrão de NULL. Esse valor é exibido pelo Replication Monitor na coluna **nome amigável** , que pode ser usado para classificar as assinaturas de uma publicação monitorada.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica se a assinatura pode ser sincronizada [!INCLUDE[msCoName](../../includes/msconame-md.md)] por meio do Gerenciador de sincronização do Windows. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ser sincronizada sem iniciar.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica se a assinatura pode ser sincronizada por meio do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gerenciador de sincronização do Windows. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá ser sincronizada sem iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @offloadagent = ] remote_agent_activation`Especifica que o agente pode ser ativado remotamente. *remote_agent_activation* é **bit** com um padrão de **0**.  
   
@@ -164,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`Permite que conflitos sejam resolvidos interativamente para todos os artigos que permitem a resolução interativa. *use_interactive_resolver* é **nvarchar (5)**, com um padrão de false.  
   
-`[ @merge_job_name = ] 'merge_job_name'`O * \@parâmetro merge_job_name* foi preterido e não pode ser definido. *merge_job_name* é **sysname**, com um padrão de NULL.  
+`[ @merge_job_name = ] 'merge_job_name'`O parâmetro * \@ merge_job_name* foi preterido e não pode ser definido. *merge_job_name* é **sysname**, com um padrão de NULL.  
   
 `[ @hostname = ] 'hostname'`Substitui o valor retornado por [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) quando essa função é usada na cláusula WHERE de um filtro com parâmetros. O *nome do host* é **sysname**, com um padrão de NULL.  
   
@@ -177,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Comentários  
  **sp_addmergesubscription** é usado na replicação de mesclagem.  
   
- Quando **sp_addmergesubscription** é executado por um membro da função de servidor fixa **sysadmin** para criar uma assinatura push, o trabalho de agente de mesclagem é criado implicitamente e é executado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na conta de serviço do Agent. Recomendamos que você execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e especifique as credenciais de uma conta diferente do Windows específica do agente para ** \@job_login** e ** \@job_password**. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Quando **sp_addmergesubscription** é executado por um membro da função de servidor fixa **sysadmin** para criar uma assinatura push, o trabalho de agente de mesclagem é criado implicitamente e é executado na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço do Agent. Recomendamos que você execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e especifique as credenciais de uma conta diferente do Windows específica do agente para ** \@ job_login** e ** \@ job_password**. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

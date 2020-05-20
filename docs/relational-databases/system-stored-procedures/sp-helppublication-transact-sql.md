@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 59f47194e94e256ddb6e2ded61dc61198dea26b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72689048"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824496"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,22 +39,22 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação a ser exibida. a *publicação* é sysname, com um padrão **%** de, que retorna informações sobre todas as publicações.  
+`[ @publication = ] 'publication'`É o nome da publicação a ser exibida. a *publicação* é sysname, com um padrão de **%** , que retorna informações sobre todas as publicações.  
   
 `[ @found = ] 'found' OUTPUT`É um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão de **23456**. **1** indica que a publicação foi encontrada. **0** indica que a publicação não foi encontrada.  
   
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é sysname, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser especificado ao solicitar informações de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicação de um Publicador.  
+>  o *Publicador* não deve ser especificado ao solicitar informações de publicação de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|ID da publicação.|  
-|name|**sysname**|Nome da publicação.|  
-|restrito|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|Nome|**sysname**|Nome da publicação.|  
+|restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|O status atual da publicação.<br /><br /> **0** = inativo.<br /><br /> **1** = ativo.|  
 |task||Usado para compatibilidade com versões anteriores.|  
 |frequência de replicação|**tinyint**|Tipo de frequência de replicação:<br /><br /> **0** = transacional<br /><br /> **1** = instantâneo|  
@@ -77,7 +77,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |alt_snapshot_folder|**nvarchar (255)**|Especifica o local da pasta alternativa para o instantâneo.|  
 |pre_snapshot_script|**nvarchar (255)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Agente de Distribuição executará o script pré-instantâneo antes de executar qualquer script de objeto replicado, ao aplicar um instantâneo no Assinante.|  
 |post_snapshot_script|**nvarchar (255)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Agente de Distribuição executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tentam sido aplicados durante uma sincronização inicial.|  
-|compress_snapshot|**bit**|Especifica que o instantâneo gravado no local de *alt_snapshot_folder* deve ser compactado no formato [!INCLUDE[msCoName](../../includes/msconame-md.md)] cab. **0** especifica que o instantâneo não será compactado.|  
+|compress_snapshot|**bit**|Especifica que o instantâneo gravado no local de *alt_snapshot_folder* deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. **0** especifica que o instantâneo não será compactado.|  
 |ftp_address|**sysname**|O endereço de rede do serviço FTP para o Distribuidor. Especifica onde os arquivos de instantâneo de publicação ficam localizados para serem captados pelo Agente de Distribuição ou por um Assinante.|  
 |ftp_port|**int**|O número da porta do serviço FTP do Distribuidor.|  
 |ftp_subdirectory|**nvarchar (255)**|Especifica onde os arquivos de instantâneo estarão disponíveis para serem retirados pelo Agente de Distribuição ou Agente de Mesclagem do Assinante se a publicação oferecer suporte à propagação de instantâneo usando o FTP.  |  
@@ -87,17 +87,17 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|Especifica se registros de conflito são ou não armazenados no Publicador:<br /><br /> **0** = registros de conflitos são armazenados no Publicador e no Assinante que causou o conflito.<br /><br /> **1** = registros de conflitos são armazenados no Publicador.|  
 |conflict_retention|**int**|Especifica o período de retenção de conflito, em dias.|  
 |conflict_policy|**int**|Especifica a política de resolução de conflito seguida quando a opção de assinante de atualização enfileirado é usada. Pode ser um destes valores:<br /><br /> **1** = o Publicador vence o conflito.<br /><br /> **2** = Assinante vence o conflito.<br /><br /> **3** = a assinatura é reinicializada.|  
-|queue_type||Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **MSMQ** = usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] o enfileiramento de mensagens para armazenar transações.<br /><br /> **SQL** = use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Observação: o suporte para enfileiramento de mensagens foi descontinuado.|  
-|backward_comp_level||O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|queue_type||Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **MSMQ** = usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens para armazenar transações.<br /><br /> **SQL** = use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Observação: o suporte para enfileiramento de mensagens foi descontinuado.|  
+|backward_comp_level||O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **90**  =  90 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100**  =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Especifica se a publicação é publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Um valor de **1** indica que ele é publicado e um valor de **0** indica que ele não está publicado.|  
 |allow_initialize_from_backup|**bit**|Indica se os Assinantes podem iniciar uma assinatura para essa publicação de um backup em vez de um instantâneo inicial. **1** significa que as assinaturas podem ser inicializadas a partir de um backup e **0** significa que elas não podem. Para obter mais informações, consulte [inicializar uma assinatura transacional sem um](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) assinante transacional de um instantâneo sem um instantâneo.|  
 |replicate_ddl|**int**|Indica se a replicação do esquema tem suporte para a publicação. **1** indica que as instruções DDL (linguagem de definição de dados) executadas no Publicador são replicadas e **0** indica que as instruções DDL não são replicadas. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).|  
 |enabled_for_p2p|**int**|Se a publicação pode ser usada em uma topologia de replicação ponto a ponto. **1** indica que a publicação dá suporte à replicação ponto a ponto. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |publish_local_changes_only|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|enabled_for_het_sub|**int**|Especifica se a publicação oferece suporte a Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um valor de **1** significa que não há[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporte para assinantes. Um valor de **0** significa que somente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os assinantes têm suporte. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).|  
+|enabled_for_het_sub|**int**|Especifica se a publicação oferece suporte a Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um valor de **1** significa que não há [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporte para assinantes. Um valor de **0** significa que somente os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes têm suporte. Para obter mais informações, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).|  
 |enabled_for_p2p_conflictdetection|**int**|Especifica se o Agente de Distribuição detecta conflitos para uma publicação que está habilitada para replicação ponto a ponto. Um valor de **1** significa que os conflitos são detectados. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |originator_id|**int**|Especifica uma ID para um nó em uma topologia ponto a ponto. Essa ID será usada para detecção de conflitos se **enabled_for_p2p_conflictdetection** for definido como **1**. Para uma lista de IDs que já foram usadas, consulte a tabela do sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .|  
-|p2p_continue_onconflict|**int**|Especifica se o Agente de Distribuição deve continuar processando alterações quando um conflito é detectado. Um valor de **1** significa que o agente continua a processar as alterações.<br /><br /> ** \* Cuidado \* \* ** Recomendamos que você use o valor padrão de **0**. Quando essa opção é definida como **1**, a agente de distribuição tenta convergir dados na topologia aplicando a linha conflitante do nó que tem a ID de originador mais alta. Esse método não garante convergência. Verifique se a topologia está consistente depois que um conflito é detectado. Para obter mais informações, consulte “Controlando conflitos” em [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|p2p_continue_onconflict|**int**|Especifica se o Agente de Distribuição deve continuar processando alterações quando um conflito é detectado. Um valor de **1** significa que o agente continua a processar as alterações.<br /><br /> ** \* \* Cuidado \* é \* ** recomendável que você use o valor padrão de **0**. Quando essa opção é definida como **1**, a agente de distribuição tenta convergir dados na topologia aplicando a linha conflitante do nó que tem a ID de originador mais alta. Esse método não garante convergência. Verifique se a topologia está consistente depois que um conflito é detectado. Para obter mais informações, consulte “Controlando conflitos” em [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |allow_partition_switch|**int**|Especifica se ALTER TABLE... As instruções SWITCH podem ser executadas no banco de dados publicado. Para obter mais informações, consulte [Replicar tabelas e índices particionados](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
 |replicate_partition_switch|**int**|Especifica se ALTER TABLE... As instruções SWITCH executadas no banco de dados publicado devem ser replicadas para os assinantes. Essa opção só será válida se *allow_partition_switch* estiver definida como **1**.|  
   

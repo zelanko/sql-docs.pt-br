@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_filestream_options catalog view
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 95d9c980927d565b907d666af1317e883126087e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4c9ec7c14bf192891e547c68ca85b5b055eb6815
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915032"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823481"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67915032"
 |------------|----------|-----------------|  
 |**database_id**|**int**|A ID do banco de dados. Esse valor é exclusivo na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**directory_name**|**nvarchar (255)**|O diretório no nível de banco de dados para todos os namespaces de FileTable.|  
-|**non_transacted_access**|**tinyint**|O nível do acesso não transacional a dados de FILESTREAM que estão habilitados. O nível de acesso é definido pela opção NON_TRANSACTED_ACCESS da instrução **CREATE DATABASE** ou **ALTER DATABASE** .<br /><br /> Essa configuração tem um dos seguintes valores:<br /><br /> 0-não habilitado. Este é o valor padrão. Esse nível é definido fornecendo o valor **desativado** para a opção **NON_TRANSACTED_ACCESS** .<br /><br /> 1-acesso somente leitura. Esse nível é definido fornecendo o valor **READ_ONLY** para a opção **NON_TRANSACTED_ACCESS** .<br /><br /> 3-acesso completo. Esse nível é definido fornecendo o valor **Full** para a opção **NON_TRANSACTED_ACCESS** .<br /><br /> 5 - Em transição para READONLY<br /><br /> 6-em transição para desativado|  
+|**non_transacted_access**|**tinyint**|O nível do acesso não transacional a dados de FILESTREAM que estão habilitados. O nível de acesso é definido pela opção NON_TRANSACTED_ACCESS da instrução **CREATE DATABASE** ou **ALTER DATABASE** .<br /><br /> Essa configuração tem um dos seguintes valores:<br /><br /> 0-não habilitado. Esse é o valor padrão. Esse nível é definido fornecendo o valor **desativado** para a opção **NON_TRANSACTED_ACCESS** .<br /><br /> 1-acesso somente leitura. Esse nível é definido fornecendo o valor **READ_ONLY** para a opção **NON_TRANSACTED_ACCESS** .<br /><br /> 3-acesso completo. Esse nível é definido fornecendo o valor **Full** para a opção **NON_TRANSACTED_ACCESS** .<br /><br /> 5 - Em transição para READONLY<br /><br /> 6-em transição para desativado|  
 |**non_transacted_access_desc**|**nvarchar(60)**|A descrição do nível de acesso não transacional identificado em non_transacted_access.<br /><br /> Essa configuração tem um dos seguintes valores:<br /><br /> NENHUM-esse é o valor padrão.<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
   
 ## <a name="see-also"></a>Consulte Também  

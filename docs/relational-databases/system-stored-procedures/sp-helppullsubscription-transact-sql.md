@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ce6fe81cc037e8e704758155aa302c61418ce65b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771440"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824481"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do servidor remoto. o *Publicador* é **sysname**, com um **%** padrão de, que retorna informações para todos os Publicadores.  
+`[ @publisher = ] 'publisher'`É o nome do servidor remoto. o *Publicador* é **sysname**, com um padrão de **%** , que retorna informações para todos os Publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de **%**, que retorna todos os bancos de dados do Publicador.  
+`[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de **%** , que retorna todos os bancos de dados do Publicador.  
   
-`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão **%** de, que retorna todas as publicações. Se esse parâmetro for igual a ALL, somente as assinaturas pull com independent_agent = **0** serão retornadas.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, com um padrão de **%** , que retorna todas as publicações. Se esse parâmetro for igual a ALL, somente as assinaturas pull com independent_agent = **0** serão retornadas.  
   
 `[ @show_push = ] 'show_push'`É se todas as assinaturas push devem ser retornadas. *show_push*é **nvarchar (5)**, com um padrão de false, que não retorna assinaturas push.  
   
@@ -65,16 +65,16 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**update mode**|**tinyint**|O tipo de atualizações permitido.|  
 |**distribution agent job_id**|**int**|A ID de trabalho do Distribution Agent.|  
 |**enabled_for_synmgr**|**int**|Se a assinatura pode ou não ser sincronizada pelo Gerenciador de Sincronização da [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
-|**subscription guid**|**binary(16)**|Identificador global para a versão da assinatura na publicação.|  
+|**GUID da assinatura**|**binary(16)**|Identificador global para a versão da assinatura na publicação.|  
 |**subid**|**binary(16)**|Identificador global para uma assinatura anônima.|  
 |**immediate_sync**|**bit**|Se os arquivos de sincronização serão criados ou recriados em cada execução do Agente de Instantâneo.|  
 |**logon do Publicador**|**sysname**|ID do logon usado no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**senha do Publicador**|**nvarchar (524)**|A senha (criptografada) usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**security_mode de publicador**|**int**|O modo de segurança implementado no Publicador.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows<br /><br /> **2** = os gatilhos de sincronização usam uma entrada **sysservers** estática para fazer RPC (chamada de procedimento remoto) e o *Publicador* deve ser definido na tabela **sysservers** como um servidor remoto ou servidor vinculado.|  
+|**security_mode de publicador**|**int**|O modo de segurança implementado no Publicador.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows<br /><br /> **2** = os gatilhos de sincronização usam uma entrada **sysservers** estática para fazer RPC (chamada de procedimento remoto) e o *Publicador* deve ser definido na tabela **sysservers** como um servidor remoto ou servidor vinculado.|  
 |**distribuidor**|**sysname**|Nome do Distribuidor.|  
 |**distributor_login**|**sysname**|A ID de logon usado no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**|**nvarchar (524)**|A senha (criptografada) usada no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**distributor_security_mode**|**int**|Modo de segurança implementado no distribuidor:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
+|**distributor_security_mode**|**int**|Modo de segurança implementado no distribuidor:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
 |**ftp_address**|**sysname**|Somente para compatibilidade com versões anteriores.|  
 |**ftp_port**|**int**|Somente para compatibilidade com versões anteriores.|  
 |**ftp_login**|**sysname**|Somente para compatibilidade com versões anteriores.|  
@@ -90,8 +90,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_status**|**int**|O status da assinatura:<br /><br /> **0** = todos os trabalhos estão aguardando para iniciar<br /><br /> **1** = um ou mais trabalhos estão sendo iniciados<br /><br /> **2** = todos os trabalhos foram executados com êxito<br /><br /> **3** = pelo menos um trabalho está em execução<br /><br /> **4** = todos os trabalhos estão agendados e ociosos<br /><br /> **5** = pelo menos um trabalho está tentando ser executado após uma falha anterior<br /><br /> **6** = pelo menos um trabalho falhou ao ser executado com êxito|  
 |**last_sync_summary**|**sysname**|Descrição dos últimos resultados da sincronização.|  
 |**last_sync_time**|**datetime**|Hora em que as informações de assinatura foram atualizadas. Esta é uma cadeia de caracteres UNICODE de data ISO (114) + hora de ODBC (121). O formato é yyyymmdd hh:mi:sss.mmm onde 'yyyy' é ano, 'mm' é mês, 'dd' é dia, 'hh' é hora, 'mi' é minuto, 'sss' é segundo e 'mmm' é milissegundo.|  
-|**job_login**|**nvarchar(512)**|É a conta do Windows na qual o Distribution Agent é executado, que é retornado no formato *domínio*\\*nome de usuário*.|  
-|**job_password**|**sysname**|Por motivos de segurança, um valor de**\*\*\*\*\*\*\*\*\***"" é sempre retornado.|  
+|**job_login**|**nvarchar(512)**|É a conta do Windows na qual o Distribution Agent é executado, que é retornado no formato *domínio* \\ *nome de usuário*.|  
+|**job_password**|**sysname**|Por motivos de segurança, um valor de " **\*\*\*\*\*\*\*\*\*\*** " é sempre retornado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
