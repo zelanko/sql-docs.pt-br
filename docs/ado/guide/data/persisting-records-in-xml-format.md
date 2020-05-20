@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924592"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763607"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistência de registros em formato XML
 Como o formato ADTG, a persistência do **conjunto de registros** em formato XML é implementada com o provedor de persistência do Microsoft OLE DB. Esse provedor gera um conjunto de linhas somente de encaminhamento, somente leitura, de um arquivo XML salvo ou fluxo que contém as informações de esquema geradas pelo ADO. Da mesma forma, ele pode pegar um **conjunto de registros**ADO, gerar XML e salvá-lo em um arquivo ou em qualquer objeto que implemente a interface com **IStream** . (Na verdade, um arquivo é apenas outro exemplo de um objeto que dá suporte a **IStream**.) Para as versões 2,5 e posteriores, o ADO depende do Microsoft XML Parser (MSXML) para carregar o XML no **conjunto de registros**; Portanto, MSXML. dll é necessário.  
@@ -59,7 +59,7 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- O ADO sempre persiste todo o objeto **Recordset** . Se você quiser manter um subconjunto de linhas do objeto **Recordset** , use o método **Filter** para restringir as linhas ou alterar sua cláusula de seleção. No entanto, você deve abrir um objeto **Recordset** com um cursor do lado do cliente (**CursorLocation** = **adUseClient**) para usar o método de **filtro** para salvar um subconjunto de linhas. Por exemplo, para recuperar títulos que começam com a letra "b", você pode aplicar um filtro a um objeto Open **Recordset** :  
+ O ADO sempre persiste todo o objeto **Recordset** . Se você quiser manter um subconjunto de linhas do objeto **Recordset** , use o método **Filter** para restringir as linhas ou alterar sua cláusula de seleção. No entanto, você deve abrir um objeto **Recordset** com um cursor do lado do cliente (**CursorLocation**  =  **adUseClient**) para usar o método de **filtro** para salvar um subconjunto de linhas. Por exemplo, para recuperar títulos que começam com a letra "b", você pode aplicar um filtro a um objeto Open **Recordset** :  
   
 ```  
 rs.Filter "title_id like 'B*'"  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - editing data [ADO], adding multiple fields
 - editing data [ADO], AddNew method
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 07a1a3723b4169872c1b8aa872457e67a60d1f71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cd5999d62056582d5739f50f415680b9b0dc8a3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926272"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761412"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Adicionando vários campos e valores
 Ocasionalmente, pode ser mais eficiente passar uma matriz de campos e seus valores correspondentes para o método **AddNew** , em vez de definir **Value** várias vezes para cada novo campo. Se *FieldList* for uma matriz, *os valores* também deverão ser uma matriz com o mesmo número de membros; caso contrário, ocorrerá um erro. A ordem dos nomes de campo deve corresponder à ordem dos valores de campo em cada matriz. O código a seguir passa uma matriz de campos e uma matriz de valores para o método **AddNew** .

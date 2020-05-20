@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CancelUpdate method [ADO]
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa9e680e1626311f2cc10aa7c79fb583841fbc38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d62837bd06798fd8ce7b51b0345cf5e5a6463e4b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920110"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763157"
 ---
 # <a name="cancelupdate-method-ado"></a>Método CancelUpdate (ADO)
 Cancela as alterações feitas na linha atual ou nova de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou na coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) , antes de chamar o método [Update](../../../ado/reference/ado-api/update-method.md) .  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1607c9434e6c30ffd317277aadab27af96868fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: df46dd1ba112dfc592dee34bc37e50c5b727fed7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923449"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762987"
 ---
 # <a name="what-is-a-lock"></a>O que é um bloqueio?
 O bloqueio é o processo pelo qual um DBMS restringe o acesso a uma linha em um ambiente de vários usuários. Quando uma linha ou coluna é bloqueada exclusivamente, outros usuários não têm permissão para acessar os dados bloqueados até que o bloqueio seja liberado. Isso garante que dois usuários não possam atualizar simultaneamente a mesma coluna em uma linha.  

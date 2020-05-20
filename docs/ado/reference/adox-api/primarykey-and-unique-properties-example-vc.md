@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Unique property [ADOX], VC++ example
 - PrimaryKey property [ADOX], VC++ example
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce3541843bc0eb82aa035864cd5c2490c4399ff5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13fbb034f1b8d41c0455482663b625dcb0475d62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76918403"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763707"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>Exemplos das propriedades PrimaryKey e Unique (VC++)
 Este exemplo demonstra a [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) e as propriedades [exclusivas](../../../ado/reference/adox-api/unique-property-adox.md) de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria uma nova tabela com duas colunas. As propriedades **PrimaryKey** e **Unique** são usadas para tornar uma coluna a chave primária para a qual valores duplicados não são permitidos.  

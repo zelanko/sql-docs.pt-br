@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, VBScript
 - VBScript [ADO]
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f242a3596735a4bc43256d05b87100e71295a3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2029b6d661e520a4ed18631c611ed9e283e4aa7c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926434"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761534"
 ---
 # <a name="vbscript-ado-programming"></a>Programação ADO VBScript
 ## <a name="creating-an-ado-project"></a>Criando um projeto ADO  
@@ -81,6 +81,6 @@ Response.Write("Success!")
   
 -   O VBScript dá suporte apenas ao tipo de dados Variant, que pode conter diferentes tipos de dados. Você pode armazenar os dados necessários em um tipo de dados Variant e os dados funcionarão adequadamente devido à conversão realizada pelo VBScript. Ele reconhece o tipo exigido pelo ADO e converte o valor em Variant de acordo.  
   
--   Não é possível usar o **rótulo \<on Error GoTo>** no VBScript.  
+-   Não é possível usar o **rótulo On Error goto \<>** no VBScript.  
   
 -   O VBScript dá suporte a algumas das funções Visual Basic internas, como **MsgBox**, **Date**e **ISNUMERIC**. No entanto, como o VBScript é um subconjunto de Visual Basic, nem todas as funções internas têm suporte. Por exemplo, o VBScript não oferece suporte à função **Format** e às funções de e/s de arquivo.

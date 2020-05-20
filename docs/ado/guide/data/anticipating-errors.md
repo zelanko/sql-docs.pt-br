@@ -12,14 +12,14 @@ helpviewer_keywords:
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d92d96e3b8cdfea5cacea35d852e8859de65dbd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f28a6dc9d79ba59229609cbde94642e31274b9eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925982"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761252"
 ---
 # <a name="anticipating-errors"></a>Antecipar erros
 A prevenção de erros é pelo menos tão importante quanto o tratamento de erros. Esta seção final contém uma pequena lista de precauções que seu aplicativo pode tomar para ajudar a tornar os erros menos prováveis.  

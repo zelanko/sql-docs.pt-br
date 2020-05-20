@@ -11,14 +11,14 @@ helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2e3a67e9ad0f1f26f804ecb38e960041863fad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8014fc2b3a1d1614bc9b704b8838f0918f46c946
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923574"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763037"
 ---
 # <a name="using-cachesize"></a>Usar CacheSize
 Use a propriedade **CacheSize** para controlar quantos registros recuperar ao mesmo tempo na memória local do provedor. Por exemplo, se o **CacheSize** for 10, depois de abrir primeiro o objeto **Recordset** , o provedor recuperará os 10 primeiros registros na memória local. À medida que você percorre o objeto **Recordset** , o provedor retorna os dados do buffer de memória local. Assim que você passa o último registro no cache, o provedor recupera os 10 registros seguintes da fonte de dados para o cache.  

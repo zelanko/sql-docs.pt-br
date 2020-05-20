@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918031"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762417"
 ---
 # <a name="name-property-ado"></a>Propriedade Name (ADO)
 Indica o nome de um objeto.  
@@ -38,7 +38,7 @@ Indica o nome de um objeto.
   
  Para objetos de **parâmetro** ainda não acrescentados à coleção de [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) , a propriedade **Name** é de leitura/gravação. Para objetos de **parâmetro** acrescentados e todos os outros objetos, a propriedade **Name** é somente leitura. Os nomes não precisam ser exclusivos em uma coleção.  
   
- Você pode recuperar a propriedade **Name** de um objeto por uma referência ordinal, após o qual você pode fazer referência ao objeto diretamente por nome. Por exemplo, se `rstMain.Properties(20).Name` o produz `Updatability`, você pode posteriormente fazer referência a essa propriedade `rstMain.Properties("Updatability")`como.  
+ Você pode recuperar a propriedade **Name** de um objeto por uma referência ordinal, após o qual você pode fazer referência ao objeto diretamente por nome. Por exemplo, se `rstMain.Properties(20).Name` o produz `Updatability` , você pode posteriormente fazer referência a essa propriedade como `rstMain.Properties("Updatability")` .  
   
 ## <a name="applies-to"></a>Aplica-se A  
   

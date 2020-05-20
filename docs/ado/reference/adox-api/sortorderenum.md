@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - SortOrderEnum enumeration [ADOX]
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 012e8d1dde25021aa0eb8c0bac740e9213596485
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9fafb92dffa01e94a31a2301ac27bb055e98ef45
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965188"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762757"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 Especifica a sequência de classificação para uma coluna indexada.  

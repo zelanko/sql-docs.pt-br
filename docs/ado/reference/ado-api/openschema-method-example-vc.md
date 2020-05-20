@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - OpenSchema method [ADO], VC++ example
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4c511e9328bb64928a027df5f9ff72bf93da17a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 50228f2cf6f8564be500f671de797dfbff0aa7c1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931883"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762117"
 ---
 # <a name="openschema-method-example-vc"></a>Exemplo do método OpenSchema (VC++)
 Este exemplo usa o método [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) para exibir o nome e o tipo de cada tabela no banco de dados ***pubs*** .  

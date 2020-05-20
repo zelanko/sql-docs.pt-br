@@ -14,14 +14,14 @@ helpviewer_keywords:
 - RollbackTrans method [ADO], VC++ example
 - CommitTrans method [ADO], VC++ example
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d91809adccee64e6f9ed4b9c2501718e82c31a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 11268c9ea6e2e57997a6d4b569475cded60f1101
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76940447"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762867"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>Exemplo dos métodos BeginTrans, CommitTrans e RollbackTrans (VC + +)
 Este exemplo altera o tipo de livro de todos os livros de psicologia na tabela ***títulos*** do banco de dados. Depois que o método [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) inicia uma transação que isola todas as alterações feitas na tabela de ***títulos*** , o método [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) salva as alterações. Você pode usar o método [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) para desfazer alterações que você salvou usando o método [Update](../../../ado/reference/ado-api/update-method.md) .  

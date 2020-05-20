@@ -11,14 +11,14 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cfae068fdac58f7e6e6d1320b301aa9c52701dd4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927023"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761664"
 ---
 # <a name="ado-programming-task-table"></a>Tabela de tarefas de programação ADO
 A tabela a seguir lista as tarefas de programação contidas no *Guia do programador do ADO* e fornece referências para cada tarefa. Essas referências podem ser descrições textuais ou exemplos de código nos quais você pode encontrar informações sobre o recurso ADO que executa a tarefa.

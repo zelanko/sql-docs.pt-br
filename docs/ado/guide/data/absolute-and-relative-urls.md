@@ -12,14 +12,14 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926361"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761474"
 ---
 # <a name="absolute-and-relative-urls"></a>URLs absolutas e relativas
 Uma URL especifica o local de um destino armazenado em um computador local ou em rede. O destino pode ser um arquivo, diretório, página HTML, imagem, programa e assim por diante.  
@@ -41,7 +41,7 @@ Uma URL especifica o local de um destino armazenado em um computador local ou em
  *path*  
  Especifica a sequência de diretórios que levam ao destino. Se o *recurso* for omitido, o destino será o último diretório no *caminho*.  
   
- *Kit*  
+ *recurso*  
  Se incluído, *recurso* é o destino e normalmente é o nome de um arquivo. Pode ser um *arquivo simples,* contendo um único fluxo binário de bytes ou um *documento estruturado,* contendo um ou mais armazenamentos e fluxos binários de bytes.  
   
 ## <a name="url-scheme-registration"></a>Registro de esquema de URL  
@@ -70,13 +70,13 @@ Uma URL especifica o local de um destino armazenado em um computador local ou em
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
- A URL absoluta na cadeia de conexão especifica o servidor (`YourServer`) e o caminho (`Winnt`). Essa URL também define o contexto.  
+ A URL absoluta na cadeia de conexão especifica o servidor ( `YourServer` ) e o caminho ( `Winnt` ). Essa URL também define o contexto.  
   
- A URL relativa no texto do comando usa a URL absoluta como um ponto de partida e especifica o restante do caminho (`system32`) e o arquivo a ser aberto`Readme25.txt`().  
+ A URL relativa no texto do comando usa a URL absoluta como um ponto de partida e especifica o restante do caminho ( `system32` ) e o arquivo a ser aberto ( `Readme25.txt` ).  
   
- O campo de opções`adCmdTableDirect`() indica que o tipo de comando é uma URL relativa.  
+ O campo de opções ( `adCmdTableDirect` ) indica que o tipo de comando é uma URL relativa.  
   
- Como outro exemplo, o código a seguir abrirá um **conjunto de registros** no conteúdo `Winnt` do diretório:  
+ Como outro exemplo, o código a seguir abrirá um **conjunto de registros** no conteúdo do `Winnt` diretório:  
   
 ```  
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

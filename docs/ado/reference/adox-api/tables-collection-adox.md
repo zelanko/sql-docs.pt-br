@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Tables collection [ADOX]
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f788376d76692f3dc86011cc1d35b293116250a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965138"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763277"
 ---
 # <a name="tables-collection-adox"></a>Coleção Tables (ADOX)
 Contém todos os objetos de [tabela](../../../ado/reference/adox-api/table-object-adox.md) de um catálogo.  

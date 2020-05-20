@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Cell object [ADO MD]
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d309ba98c1e50d8eb6fbe47fb9452f8ea7df35ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947743"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761794"
 ---
 # <a name="cell-object-ado-md"></a>Objeto Cell (ADO MD)
 Representa os dados na interseção de coordenadas de eixo contidas em um células.  
@@ -42,7 +42,7 @@ Representa os dados na interseção de coordenadas de eixo contidas em um célul
   
  A coleção **Properties** contém propriedades fornecidas pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades real pode diferir dependendo da implementação do provedor. Consulte a documentação do seu provedor para obter uma lista mais completa das propriedades disponíveis.  
   
-|Nome|Descrição|  
+|Name|Descrição|  
 |----------|-----------------|  
 |BackColor|Cor da tela de fundo usada ao exibir a célula.|  
 |FontFlags|Bitmask detalhando efeitos na fonte.|  

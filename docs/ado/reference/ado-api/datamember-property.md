@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DataMember property
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 87d525907edde2e3dc99b78eb827c571c604d8b7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919226"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763477"
 ---
 # <a name="datamember-property"></a>Propriedade DataMember
 Indica o nome do membro de dados que será recuperado do conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md) referenciado pela propriedade [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) .  

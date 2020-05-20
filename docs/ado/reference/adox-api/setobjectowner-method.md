@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - SetObjectOwner method [ADOX]
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50a02898c1694fa43b8bf522a1a1bca65300efda
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 615e62ad8a22c50851ea50a2a8511e0859b54652
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965234"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763307"
 ---
 # <a name="setobjectowner-method"></a>Método SetObjectOwner
 Especifica o proprietário de um objeto em um [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md).  

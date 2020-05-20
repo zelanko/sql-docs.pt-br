@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c5b4e7a3bc960882830fa447f58f74e6728a559
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926383"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761494"
 ---
 # <a name="visual-c-extensions-header"></a>Cabeçalho de extensões do Visual C++
 O cabeçalho a seguir, **icrsint. h**, detalha a interface que permite que os clientes recuperem campos de um **conjunto de registros** em variáveis definidas em uma classe derivada de **CADORecordBinding**. Você deve especificar uma macro de vinculação ADO para cada campo que pretende acessar.  

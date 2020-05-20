@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b89d125cd100d380f7d20c64ed23a2087cf4e949
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917329"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761854"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Recordset
 ## <a name="propertiescollections"></a>Propriedades/coleções  

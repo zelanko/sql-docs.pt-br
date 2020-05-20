@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3819ba4951307a6f1ada11030fdc2808e568df0d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925918"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761222"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites de um conjunto de registros
 O **conjunto de registros** dá suporte às propriedades **BOF** e **EOF** para delinear o início e o fim, respectivamente, do conjunto de linhas. Você pode considerar **BOF** e **EOF** como registros "fantasma" posicionados no início e no final do **conjunto de registros**. Contando **BOF** e **EOF**, nosso **conjunto de registros** de exemplo terá a seguinte aparência:  

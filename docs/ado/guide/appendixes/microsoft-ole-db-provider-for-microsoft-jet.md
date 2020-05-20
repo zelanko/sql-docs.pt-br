@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926643"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763207"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Visão geral do provedor do Microsoft OLE DB para Microsoft Jet
 O provedor de OLE DB para Microsoft Jet permite que o ADO acesse bancos de dados Microsoft Jet.
@@ -45,8 +45,8 @@ Microsoft.Jet.OLEDB.4.0
 |Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor de OLE DB para o Microsoft Jet.|
-|**Fonte de Dados**|Especifica o caminho do banco de dados e o nome do `c:\Northwind.mdb`arquivo (por exemplo,).|
-|**ID de usuário**|Especifica um nome de usuário. Se essa palavra-chave não for especificada, a cadeia`admin`de caracteres, "", será usada por padrão.|
+|**Fonte de Dados**|Especifica o caminho do banco de dados e o nome do arquivo (por exemplo, `c:\Northwind.mdb` ).|
+|**ID de usuário**|Especifica um nome de usuário. Se essa palavra-chave não for especificada, a cadeia de caracteres, " `admin` ", será usada por padrão.|
 |**Senha**|Especifica a senha do usuário. Se essa palavra-chave não for especificada, a cadeia de caracteres vazia ("") será usada por padrão.|
 
 > [!NOTE]
@@ -146,7 +146,7 @@ Microsoft.Jet.OLEDB.4.0
 |Tamanho máximo da linha|DBPROP_MAXROWSIZE|
 |O tamanho máximo da linha inclui o BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Máximo de tabelas em SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Modo|DBPROP_INIT_MODE|
 |Vários conjuntos de parâmetros|DBPROP_MULTIPLEPARAMSETS|
 |Vários resultados|DBPROP_MULTIPLERESULTS|
 |Vários objetos de armazenamento|DBPROP_MULTIPLESTORAGEOBJECTS|

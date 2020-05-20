@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Prepared property [ADO], Visual Basic example
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 51bce52c7ec8355faa50b1c3be234c597f420a40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7d5cb8a583e5434e81922f556ae62e3d0f4f312f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931591"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761944"
 ---
 # <a name="prepared-property-example-vb"></a>Exemplo da propriedade Prepared (VB)
 Este exemplo demonstra a propriedade [preparada](../../../ado/reference/ado-api/prepared-property-ado.md) abrindo dois objetos [Command](../../../ado/reference/ado-api/command-object-ado.md) -um preparado e um não preparado.  

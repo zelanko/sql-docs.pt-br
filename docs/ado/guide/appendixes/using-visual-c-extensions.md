@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a051329efa32a155cc368d3d01c38b40593b8898
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926458"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761544"
 ---
 # <a name="visual-c-extensions"></a>Extensões de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>A interface IADORecordBinding
@@ -120,7 +120,7 @@ Update(CADORecordBinding *binding)
 |*Status*|Nome de uma variável que indicará se o conteúdo do *buffer* é válido e se a conversão do campo em *DataType* foi bem-sucedida.<br /><br /> Os dois valores mais importantes para essa variável são **adFldOK**, o que significa que a conversão foi bem-sucedida; e **adFldNull**, o que significa que o valor do campo seria uma variante do tipo VT_NULL e não apenas vazio.<br /><br /> Os valores possíveis para *status* são listados na tabela a seguir, "valores de status".|
 |*Modificar*|Sinalizador booliano; Se for TRUE, indicará que o ADO tem permissão para atualizar o campo **Recordset** correspondente com o valor contido no *buffer*.<br /><br /> Defina o parâmetro de *modificação* booliana como true para habilitar o ADO para atualizar o campo associado e false se você quiser examinar o campo, mas não alterá-lo.|
 |*Precisão*|Número de dígitos que podem ser representados em uma variável numérica.|
-|*Escala*|Número de casas decimais em uma variável numérica.|
+|*Dimensionar*|Número de casas decimais em uma variável numérica.|
 |*Comprimento*|Nome de uma variável de quatro bytes que conterá o comprimento real dos dados no *buffer*.|
 
 ## <a name="status-values"></a>Valores de status

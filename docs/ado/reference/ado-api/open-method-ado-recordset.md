@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931901"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762174"
 ---
 # <a name="open-method-ado-recordset"></a>Método Open (Conjunto de registros ADO)
 Abre um cursor em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -60,7 +60,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  O uso do método **Open** em um objeto **Recordset** abre um cursor que representa os registros de uma tabela base, os resultados de uma consulta ou um **conjunto de registros**salvo anteriormente.  
   
- Use o argumento de *origem* opcional para especificar uma fonte de dados usando uma das seguintes opções: uma variável de objeto de **comando** , uma instrução SQL, um procedimento armazenado, um nome de tabela, uma URL ou um nome de caminho de arquivo completo. Se *Source* for um nome de caminho de arquivo, ele pode ser um caminho completo ("c:\dir\file.RST"), um caminho relativo (".. \File.RST ") ou uma URL ("<https://files/file.rst>").  
+ Use o argumento de *origem* opcional para especificar uma fonte de dados usando uma das seguintes opções: uma variável de objeto de **comando** , uma instrução SQL, um procedimento armazenado, um nome de tabela, uma URL ou um nome de caminho de arquivo completo. Se *Source* for um nome de caminho de arquivo, ele pode ser um caminho completo ("c:\dir\file.RST"), um caminho relativo (".. \File.RST ") ou uma URL (" <https://files/file.rst> ").  
   
  Não é uma boa ideia usar o argumento de *origem* do método **Open** para executar uma consulta de ação que não retorna registros porque não há uma maneira fácil de determinar se a chamada foi bem-sucedida. O **conjunto de registros** retornado por tal consulta será fechado. Para executar uma consulta que não retorna registros, como uma instrução SQL INSERT, chame o método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) de um objeto **Command** ou o método [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) de um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) em vez disso.  
   

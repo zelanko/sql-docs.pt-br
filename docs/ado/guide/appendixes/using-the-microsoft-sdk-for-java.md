@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926464"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761554"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Usar o Microsoft SDK para Java
 
@@ -29,7 +29,7 @@ O Microsoft SDK para Java é o kit para desenvolvedores do ambiente do Microsoft
   
  O utilitário Jactivex. exe gera classes de uma biblioteca de tipos, mas só pode ser invocado na linha de comando. Esse recurso não está integrado ao ambiente de desenvolvimento do Visual J++. Ao contrário das classes geradas pelo assistente de biblioteca de tipos Java, você pode entrar nos wrappers de classe criados pelo SDK. Isso é útil para depurar como seu código usa as classes de wrapper do ADO.  
   
- Esse mecanismo lê a biblioteca de tipos do ADO e gera classes que você pode instanciar dentro de seu aplicativo. Ele gera essas classes no seguinte local: \\<diretório do\>Windows \Java\trustlib\msado15.  
+ Esse mecanismo lê a biblioteca de tipos do ADO e gera classes que você pode instanciar dentro de seu aplicativo. Ele gera essas classes no seguinte local: \\<diretório do Windows \> \Java\trustlib\msado15.  
   
  A criação de um aplicativo ADO em Java usando o SDK da Microsoft para Java é fundamentalmente idêntica, da perspectiva do código-fonte, ao uso do assistente da biblioteca de tipos Java. Para obter o código de exemplo, consulte [wrappers de classe Java do ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md). A única diferença real é como você gera as classes de wrapper em primeiro lugar, conforme demonstrado nas etapas a seguir.  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - RecordOpenOptionsEnum enumeration [ADO]
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d97a8cdf2f77f323f0897d7977a2c6945b46b87
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931421"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761894"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Especifica as opções para abrir um [registro](../../../ado/reference/ado-api/record-object-ado.md). Esses valores podem ser combinados usando o ou o.  

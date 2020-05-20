@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964545"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762667"
 ---
 # <a name="createobject-method-rds"></a>Método CreateObject (RDS)
 Cria o proxy para o objeto comercial de destino e retorna um ponteiro para ele. Os pacotes de proxy e os dados de marshaling para o stub do lado do servidor para comunicações com o objeto comercial para enviar solicitações e dados pela Internet. Para objetos de componente em processo, nenhum proxy é usado, apenas um ponteiro para o objeto é fornecido.  
@@ -31,8 +31,8 @@ Cria o proxy para o objeto comercial de destino e retorna um ponteiro para ele. 
   
 |Protocolo|Sintaxe|  
 |--------------|------------|  
-|HTTP|Set Object = DataSpace. CreateObject ("ProgId", "https\://awebsrvr")|  
-|HTTPS|Set Object = DataSpace. CreateObject ("ProgId", "https\://awebsrvr")|  
+|HTTP|Set Object = DataSpace. CreateObject ("ProgId", "https \: //awebsrvr")|  
+|HTTPS|Set Object = DataSpace. CreateObject ("ProgId", "https \: //awebsrvr")|  
 |DCOM|Set Object = DataSpace. CreateObject ("ProgId", "computername")|  
 |Em processo|Set Object = DataSpace. CreateObject ("ProgId", "")|  
   

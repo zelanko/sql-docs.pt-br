@@ -13,14 +13,14 @@ helpviewer_keywords:
 - VBScript code examples [ADO], about VBScript code examples
 - VBScript code examples [ADO]
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd4bef039b082d281f2426cc9c7695d8115fad05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3289f97d4dd7d397d7eb4378e63ff0e6928d5524
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921175"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762957"
 ---
 # <a name="ado-code-examples-vbscript"></a>Exemplos do código ADO VBScript
 Use os exemplos de código a seguir para saber mais sobre como usar os métodos do ADO ao escrever no Microsoft® Visual Basic® Scripting Edition (VBScript).  

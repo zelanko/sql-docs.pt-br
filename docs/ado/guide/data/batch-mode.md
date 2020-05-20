@@ -12,14 +12,14 @@ helpviewer_keywords:
 - batch mode [ADO]
 - updating data [ADO], batch mode
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7e4ce2e8928ac7b4225ae58b25c6610c64832f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925950"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761242"
 ---
 # <a name="batch-mode"></a>Modo de lote
 O modo de lote está em vigor quando a propriedade **LockType** está definida como **adLockBatchOptimistic** e a atualização do lote é suportada pelo provedor. Determinadas configurações de tipo de bloqueio não estão disponíveis dependendo do local do cursor. Por exemplo, um tipo de bloqueio pessimista não está disponível quando **CursorLocation** é definido como **adUseClient**. Por outro lado, um provedor não pode dar suporte a um bloqueio otimista em lote quando o local do cursor está no servidor. Você deve usar a atualização em lotes somente com um conjunto de chaves ou cursor estático.  

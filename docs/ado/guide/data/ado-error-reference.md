@@ -12,14 +12,14 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926241"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761382"
 ---
 # <a name="ado-errors"></a>Erros ADO
 A constante **ErrorValueEnum** descreve os valores de erro do ADO. Para obter uma lista completa dessas constantes enumeradas, incluindo valores, consulte o [Apêndice B: erros do ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). Esta seção examinará alguns dos erros mais interessantes e explicará algumas situações específicas que podem gerar essas informações ou soluções para corrigir o problema. A constante **ErrorValueEnum** e o número decimal positivo curto são listados.

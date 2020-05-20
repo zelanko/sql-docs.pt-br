@@ -14,14 +14,14 @@ helpviewer_keywords:
 - AbsolutePage property [ADO]
 - PageCount property [ADO]
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d697fa5b411d9000c03a700f6b4fe0e4b39aa5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6542cb23deef9f10979e3bdb90c0820d84c0f150
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923517"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763027"
 ---
 # <a name="using-pages"></a>Usar páginas
 Use a propriedade **PageCount** para determinar quantas páginas de dados estão no objeto **Recordset** . *Páginas* são grupos de registros cujo tamanho é igual à configuração da propriedade **PageSize** . Mesmo que a última página esteja incompleta porque há menos registros do que o valor **PageSize** , ele conta como uma página adicional no valor **PageCount** . Se o objeto **Recordset** não oferecer suporte a essa propriedade, **PageCount** será-1 para indicar que o **PageCount** é interminável.  

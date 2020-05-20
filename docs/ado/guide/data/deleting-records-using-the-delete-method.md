@@ -13,14 +13,14 @@ helpviewer_keywords:
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a862a244f06c64767f41529b4fff36881895a0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a8da01b9c92aeec9c01527370e19c8edfb751da9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925553"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763617"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Excluir registros usando o método Delete
 O uso do método **delete** marca o registro atual ou um grupo de registros em um objeto **Recordset** para exclusão. Se o objeto **Recordset** não permitir a exclusão de registros, ocorrerá um erro. Se você estiver no modo de atualização imediata, as exclusões ocorrerão imediatamente no banco de dados. Se um registro não puder ser excluído com êxito (devido a violações de integridade do banco de dados, por exemplo), o registro permanecerá no modo de edição após a chamada para **Atualizar.** Isso significa que você deve cancelar a atualização usando [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de sair do registro atual (por exemplo, usando [fechar](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md)ou [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

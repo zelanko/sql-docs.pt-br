@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ab332d7d4144d62dd3a0cee1d3585820bf77e77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b0fafe895daecc4cfd7345299904c46ff7a1d5c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920434"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762843"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>Exemplo das propriedades BOF, EOF e Bookmark (VB)
 Este exemplo usa as propriedades [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) para exibir uma mensagem se um usuário tentar mover o primeiro ou o último registro de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa a propriedade [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) para permitir que o usuário sinalize um registro em um **conjunto de registros** e retorne a ele mais tarde.  

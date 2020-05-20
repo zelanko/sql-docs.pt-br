@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CursorTypeEnum enumeration [ADO]
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6333934997c9de38b8df1dd08849886ff3dd7f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0af12cbad09990add1e5f42c05a68a0d249377fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933277"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763487"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 Especifica o tipo de cursor usado em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  

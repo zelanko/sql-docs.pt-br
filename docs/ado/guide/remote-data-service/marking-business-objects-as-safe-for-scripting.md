@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6655b1bba274a9dc5079c7c996b58da6ba8ae0f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922604"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763597"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Marcar objetos de negócios como seguros para script
 > [!IMPORTANT]
@@ -43,6 +43,6 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  Na última etapa, o assistente de instalação do aplicativo cria um arquivo. htm e um. cab. Em seguida, você pode copiar esses dois arquivos para o computador de destino e clicar duas vezes no arquivo. htm para carregar a página e registrar corretamente o servidor.  
   
- Como o>\\objeto comercial será instalado no diretório Windows\System32\Occache por padrão, mova-o para o diretório Windows\System32 e altere a chave do registro **HKEY_CLASSES_ROOT \CLSID\\**\<*MyActiveXGUID***InprocServer32** para corresponder ao caminho correto.
+ Como o objeto comercial será instalado no diretório Windows\System32\Occache por padrão, mova-o para o diretório Windows\System32 e altere a chave do registro **HKEY_CLASSES_ROOT \CLSID \\ ** \< *MyActiveXGUID* > \\ **InprocServer32** para corresponder ao caminho correto.
 
 

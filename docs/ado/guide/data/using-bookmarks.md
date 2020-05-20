@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ebf38cb9afaabef6d1af4e941cf02df1947c7b73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923602"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763047"
 ---
 # <a name="using-bookmarks"></a>Usar indicadores
 Geralmente, é útil retornar diretamente a um registro específico depois de movido no **conjunto de registros** sem a necessidade de percorrer cada registro e comparar valores. Por exemplo, se você tentar Pesquisar um registro usando o método **Find** , mas a pesquisa não retornar registros, você será colocado automaticamente em qualquer uma das extremidades do **conjunto de registros**. Se seu provedor oferecer suporte a eles, os indicadores poderão ser usados para marcar seu local antes de usar o método **Find** para que você possa retornar ao seu local. Um indicador é um valor de tipo **Variant** que identifica exclusivamente um registro em um objeto **Recordset** .  

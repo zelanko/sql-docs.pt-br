@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Parameters collection [ADO]
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e062c67f0dedf55d63a076725b46d4405918741
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e087c769fe84e79ca9a41c33912f150249ab2cd9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917703"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763387"
 ---
 # <a name="parameters-collection-ado"></a>Coleção Parameters (ADO)
 Contém todos os objetos de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) de um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) .  

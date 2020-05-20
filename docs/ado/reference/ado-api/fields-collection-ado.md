@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fields collection [ADO]
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ecf6d672bd82b6ac532306cd1ca6fc2400b215e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918713"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762557"
 ---
 # <a name="fields-collection-ado"></a>Coleção Fields (ADO)
 Contém todos os objetos de [campo](../../../ado/reference/ado-api/field-object.md) de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) ou objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) .  

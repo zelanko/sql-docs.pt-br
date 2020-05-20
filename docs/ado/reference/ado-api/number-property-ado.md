@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - number property [ADO]
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce027747c843e02998f4845db7075e70cf8733b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 02663507e19bf57f46b45ab7a99a717aec844dc4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917992"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762357"
 ---
 # <a name="number-property-ado"></a>Propriedade Number (ADO)
 Indica o número que identifica exclusivamente um objeto de [erro](../../../ado/reference/ado-api/error-object.md) .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Retorna um valor **longo** que pode corresponder a uma das constantes [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) .  
   
 ## <a name="remarks"></a>Comentários  

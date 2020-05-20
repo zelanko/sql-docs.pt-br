@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f6eaf12308db09c81b426b33f0002cd4664f62b8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932032"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762387"
 ---
 # <a name="nextrecordset-method-ado"></a>Método NextRecordset (ADO)
 Limpa o objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) atual e retorna o próximo **conjunto de registros** avançando por meio de uma série de comandos.  
@@ -45,7 +45,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 >  Esse parâmetro retorna apenas o número de registros afetados por uma operação; Ele não retorna uma contagem de registros de uma instrução SELECT usada para gerar o **conjunto de registros**.  
   
 ## <a name="remarks"></a>Comentários  
- Use o método **NextRecordset** para retornar os resultados do próximo comando em uma instrução de comando composta ou de um procedimento armazenado que retorna vários resultados. Se você abrir um objeto **Recordset** com base em uma instrução de comando composta (por exemplo, \* "select from Table1; SELECT \* from Table2 ") usando o método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) em um [comando](../../../ado/reference/ado-api/command-object-ado.md) ou o método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) em um **conjunto de registros**, o ADO executa apenas o primeiro comando e retorna os resultados para o conjunto de *registros*. Para acessar os resultados dos comandos subsequentes na instrução, chame o método **NextRecordset** .  
+ Use o método **NextRecordset** para retornar os resultados do próximo comando em uma instrução de comando composta ou de um procedimento armazenado que retorna vários resultados. Se você abrir um objeto **Recordset** com base em uma instrução de comando composta (por exemplo, "Select \* from Table1; SELECT \* from Table2 ") usando o método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) em um [comando](../../../ado/reference/ado-api/command-object-ado.md) ou o método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) em um **conjunto de registros**, o ADO executa apenas o primeiro comando e retorna os resultados para o conjunto de *registros*. Para acessar os resultados dos comandos subsequentes na instrução, chame o método **NextRecordset** .  
   
  Desde que haja resultados adicionais e o conjunto de **registros** que contém as instruções compostas não seja desconectado ou empacotado entre limites de processo, o método **NextRecordset** continuará a retornar objetos **Recordset** . Se um comando de retorno de linha for executado com êxito, mas não retornar registros, o objeto **Recordset** retornado será aberto, mas vazio. Teste para esse caso verificando se as propriedades [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) são ambas **verdadeiras**. Se um comando sem retorno de linha for executado com êxito, o objeto **Recordset** retornado será fechado, que você poderá verificar testando a propriedade [State](../../../ado/reference/ado-api/state-property-ado.md) no **conjunto de registros**. Quando não houver mais resultados, o *conjunto de registros* será definido como *Nothing*.  
   

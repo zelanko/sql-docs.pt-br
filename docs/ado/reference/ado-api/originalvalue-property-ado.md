@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - OriginalValue property [ADO]
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 512569ce2baa8acabdf8bcbf8f637ebf20e4f613
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b46b9e76a397d81b339aef231634b3b16f717ce4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917841"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762019"
 ---
 # <a name="originalvalue-property-ado"></a>Propriedade OriginalValue (ADO)
 Indica o valor de um [campo](../../../ado/reference/ado-api/field-object.md) que existia no registro antes de qualquer alteração ser feita.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Retorna um valor **Variant** que representa o valor de um campo antes de qualquer alteração.  
   
 ## <a name="remarks"></a>Comentários  

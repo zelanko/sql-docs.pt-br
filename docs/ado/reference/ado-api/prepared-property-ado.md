@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Prepared property [ADO]
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee7a94a06aa574c84c01cb8b9d05ebfcdf327d44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 58cce35e57116618137f4ee776901dba2a44eff4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917597"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761954"
 ---
 # <a name="prepared-property-ado"></a>Propriedade Prepared (ADO)
 Indica se deve salvar uma versão compilada de um [comando](../../../ado/reference/ado-api/command-object-ado.md) antes da execução.  

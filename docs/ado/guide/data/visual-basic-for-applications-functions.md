@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923467"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763007"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Funções do Visual Basic for Applications
 As seguintes funções de Visual Basic for Applications podem ser usadas em expressões de cálculo de data Shaping:  
@@ -35,14 +35,14 @@ As seguintes funções de Visual Basic for Applications podem ser usadas em expr
 |Erro|Error$|Exp|Fix|Formatar|Format$|  
 |FV|Hex|Hex$|Hora|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|LCase|LCase$|Left (à esquerda)|  
+|IsNull|IsNumeric|IsObject|LCase|LCase$|Esquerda|  
 |ESQUERDAB|Left$|ESQUERDAB $|Len|Log|LTrim|  
 |LTrim$|Mid|Mid$|Minuto|MIRR|Month|  
 |Agora|NPer|NPV|Oct|Oct$|Pmt|  
-|PPmt|PV|QBColor|Tarifa|RGB|Right|  
+|PPmt|PV|QBColor|Tarifa|RGB|Direita|  
 |RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
 |Segundo|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|String|  
+|Sqr|Str|Str$|StrComp|StrConv|Cadeia de caracteres|  
 |String$|SYD|Tan|Hora|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Weekday|Ano||  

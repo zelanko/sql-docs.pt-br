@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Parameters collection [ADOX], VC++ example
 - Command property [ADOX], VC++ example
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4707899d44ca74e868c82ddc6a6962022fd75759
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa623c7141c7c9fe0a9cacc00ed35cf686108511
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76911060"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763767"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Exemplos da propriedade Command, coleção Parameters (VC++)
 O código a seguir demonstra como usar a propriedade [Command](../../../ado/reference/adox-api/command-property-adox.md) com o objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) para recuperar informações de parâmetro para o procedimento.  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ObjectProxy collection [ADO]
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ff9cd79b4ac787987ef44ea3f73cbd9fb102ae43
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917952"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762315"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO – Sintaxe WFC)
 Um objeto **objectproxy** representa um servidor e é retornado pelo método **CreateObject** do objeto [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) . A classe objectproxy tem um método, **Call**, que pode invocar um método no servidor e retornar um objeto resultante dessa invocação.  

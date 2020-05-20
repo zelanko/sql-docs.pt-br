@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - NumericScale property [ADO]
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 38d283e8fedb90ed5a99143090bc6a077efa8512
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3970ab8d8f446c4269e4b79c306d2dd9d2cf0426
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932105"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762325"
 ---
 # <a name="numericscale-property-ado"></a>Propriedade NumericScale (ADO)
 Indica a escala de valores numéricos em um objeto de [campo](../../../ado/reference/ado-api/field-object.md) ou [parâmetro](../../../ado/reference/ado-api/parameter-object.md) .  

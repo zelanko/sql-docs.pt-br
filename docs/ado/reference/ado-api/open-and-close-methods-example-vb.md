@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Close method [ADO], Visual Basic example
 - Open method [ADO], Visual Basic example
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a37568f6bf4435d762d62c0475abb7d0fb8065a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b9d46d7ec04d5b19331ecda3b887e59862cdcf48
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917978"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762284"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Exemplo dos métodos Open e Close (VB)
 Este exemplo usa os métodos **Open** e [Close](../../../ado/reference/ado-api/close-method-ado.md) nos objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e [Connection](../../../ado/reference/ado-api/connection-object-ado.md) que foram abertos.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926633"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761624"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Visão geral do provedor de OLE DB da Microsoft para ODBC
 Para um programador de ADO ou RDS, um mundo ideal seria aquele em que cada fonte de dados expõe uma interface OLE DB, para que o ADO pudesse chamar diretamente para a fonte de dados. Embora cada vez mais fornecedores de banco de dados estejam implementando interfaces OLE DB, algumas fontes de dados ainda não são expostas dessa maneira. No entanto, a maioria dos sistemas DBMS usados atualmente pode ser acessada por meio do ODBC.
@@ -200,26 +200,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |Método|ForwardOnly|Dinâmico|Keyset|Estático|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sim|Sim|Sim|Sim|
-|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sim|Sim|Sim|Sim|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sim|Sim|Sim|Sim|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sim|Sim|Sim|Sim|
-|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Não|Não|Sim|Sim|
-|[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|Sim|Sim|Sim|
-|[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|Sim|Sim|Sim|
-|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sim|Sim|Sim|Sim|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|Sim|Sim|Sim|
-|[Velas](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Não|Sim|Sim|Sim|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|Sim|Sim|Sim|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Não|Sim|Sim|Sim|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sim|Sim|Sim|Sim|
-|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
-|[Repita](../../../ado/reference/ado-api/requery-method.md)|Sim|Sim|Sim|Sim|
-|[Sincronizar novamente](../../../ado/reference/ado-api/resync-method.md)|Não|Não|Sim|Sim|
-|[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|Sim|Sim|Sim|
-|[Atualização](../../../ado/reference/ado-api/update-method.md)|Sim|Sim|Sim|Sim|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sim|Sim|Sim|Sim|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sim|Sim|Sim|Yes|
+|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sim|Sim|Sim|Yes|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sim|Sim|Sim|Yes|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sim|Sim|Sim|Yes|
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|No|Não|Sim|Yes|
+|[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|Sim|Sim|Yes|
+|[Excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sim|Sim|Sim|Yes|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|Sim|Sim|Yes|
+|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sim|Sim|Sim|Yes|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|Sim|Sim|Yes|
+|[Velas](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Não|Sim|Sim|Yes|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sim|Sim|Sim|Yes|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Não|Sim|Sim|Yes|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sim|Sim|Sim|Yes|
+|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|Sim|Sim|Yes|
+|[Repita](../../../ado/reference/ado-api/requery-method.md)|Sim|Sim|Sim|Yes|
+|[Sincronizar novamente](../../../ado/reference/ado-api/resync-method.md)|No|Não|Sim|Yes|
+|[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|Sim|Sim|Yes|
+|[Atualização](../../../ado/reference/ado-api/update-method.md)|Sim|Sim|Sim|Yes|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sim|Sim|Sim|Yes|
 
  * Não há suporte para bancos de dados do Microsoft Access.
 
@@ -260,7 +260,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Tamanho máximo da linha|DBPROP_MAXROWSIZE|
 |O tamanho máximo da linha inclui o BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Máximo de tabelas em SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Modo|DBPROP_INIT_MODE|
 |Vários conjuntos de parâmetros|DBPROP_MULTIPLEPARAMSETS|
 |Vários resultados|DBPROP_MULTIPLERESULTS|
 |Vários objetos de armazenamento|DBPROP_MULTIPLESTORAGEOBJECTS|

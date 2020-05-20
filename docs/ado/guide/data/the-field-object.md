@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923980"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763087"
 ---
 # <a name="the-field-object"></a>O objeto Field
 Cada objeto de **campo** geralmente corresponde a uma coluna em uma tabela de banco de dados. No entanto, um **campo** também pode representar um ponteiro para outro **conjunto de registros**, chamado de capítulo. Exceções, como colunas de capítulo, serão abordadas posteriormente neste guia.  
@@ -70,7 +70,7 @@ Cada objeto de **campo** geralmente corresponde a uma coluna em uma tabela de ba
   
  As propriedades internas são aquelas implementadas no ADO e imediatamente disponibilizadas para qualquer novo objeto, usando a `MyObject.Property` sintaxe. Eles não aparecem como objetos de **Propriedade** na coleção de **Propriedades** de um objeto.  
   
- As propriedades dinâmicas são definidas pelo provedor de dados subjacente e aparecem na coleção de **Propriedades** do objeto ADO apropriado. Por exemplo, uma propriedade específica para o provedor pode indicar se um objeto **Recordset** dá suporte a transações ou atualizações. Essas propriedades adicionais serão exibidas como objetos de **Propriedade** na coleção de **Propriedades** do objeto **Recordset** . As propriedades dinâmicas podem ser referenciadas somente por meio da coleção `MyObject.Properties(0)` , `MyObject.Properties("Name")`usando a sintaxe ou.  
+ As propriedades dinâmicas são definidas pelo provedor de dados subjacente e aparecem na coleção de **Propriedades** do objeto ADO apropriado. Por exemplo, uma propriedade específica para o provedor pode indicar se um objeto **Recordset** dá suporte a transações ou atualizações. Essas propriedades adicionais serão exibidas como objetos de **Propriedade** na coleção de **Propriedades** do objeto **Recordset** . As propriedades dinâmicas podem ser referenciadas somente por meio da coleção, usando a sintaxe `MyObject.Properties(0)` ou `MyObject.Properties("Name")` .  
   
  Não é possível excluir qualquer tipo de propriedade.  
   
