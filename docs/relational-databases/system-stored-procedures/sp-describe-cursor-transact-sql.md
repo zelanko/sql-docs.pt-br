@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 417f2c7d63b129fda187068325702b9ff9768895
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053067"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831190"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,25 +47,25 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @cursor_return= ] *output_cursor_variable* DER  
+ [ @cursor_return =] *output_cursor_variable* saída  
  É o nome de uma variável de cursor declarada para recebimento da saída do cursor. *output_cursor_variable* é **cursor**, sem padrão, e não deve ser associado a nenhum cursores no momento sp_describe_cursor é chamado. O cursor retornado é um cursor rolável, dinâmico, somente leitura.  
   
- [ @cursor_source= ] {N'local ' | N'global ' | N'variable' }  
+ [ @cursor_source =] {N'local ' | N'global ' | N'variable' }  
  Especifica se o cursor que está sendo relatado foi especificado usando o nome de um cursor local, de um cursor global ou de uma variável de cursor. O parâmetro é **nvarchar (30)**.  
   
- [ @cursor_identity= ] N '*local_cursor_name*']  
+ [ @cursor_identity =] N '*local_cursor_name*']  
  É o nome de um cursor criado por uma instrução DECLARE CURSOR, que tem a palavra-chave LOCAL ou que adotou o padrão LOCAL. *local_cursor_name* é **nvarchar (128)**.  
   
- [ @cursor_identity= ] N '*global_cursor_name*']  
+ [ @cursor_identity =] N '*global_cursor_name*']  
  É o nome de um cursor criado por uma instrução DECLARE CURSOR, que tem a palavra-chave GLOBAL ou que adotou o padrão GLOBAL. *global_cursor_name* é **nvarchar (128)**.  
   
  *global_cursor_name* também pode ser o nome de um cursor do servidor de API que é aberto por um aplicativo ODBC que, em seguida, nomeado chamando SQLSetCursorName.  
   
- [ @cursor_identity= ] N '*input_cursor_variable*']  
+ [ @cursor_identity =] N '*input_cursor_variable*']  
  É o nome de uma variável de cursor associada a um cursor aberto. *input_cursor_variable* é **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ Não  
   
 ## <a name="cursors-returned"></a>Cursores retornados  
  sp_describe_cursor encapsula seu conjunto de resultados em um [!INCLUDE[tsql](../../includes/tsql-md.md)] parâmetro de saída de **cursor** . Isso permite que lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimentos armazenados e gatilhos trabalhem com a saída uma linha de cada vez. Isto também significa que o procedimento não pode ser chamado diretamente de funções da API de banco de dados. O parâmetro de saída do **cursor** deve ser associado a uma variável de programa, mas as APIs de banco de dados não dão suporte a parâmetros ou variáveis de **cursor** de associação.  
@@ -75,7 +75,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|Nome usado para se referir ao cursor. Se a referência ao cursor for feita através do nome especificado em uma instrução DECLARE CURSOR, o nome de referência será igual ao nome de cursor. Se a referência ao cursor for feita por uma variável, o nome de referência será o nome da variável.|  
-|cursor_name|**sysname**|Nome do cursor de uma instrução DECLARE CURSOR. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o cursor tiver sido criado pela definição de uma variável de cursor para um cursor, cursor_name retornará o nome da variável de cursor. Em versões mais recentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna de saída retorna um nome gerado pelo sistema.|  
+|cursor_name|**sysname**|Nome do cursor de uma instrução DECLARE CURSOR. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se o cursor tiver sido criado pela definição de uma variável de cursor para um cursor, cursor_name retornará o nome da variável de cursor. Em versões mais recentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna de saída retorna um nome gerado pelo sistema.|  
 |cursor_scope|**tinyint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**int**|Mesmos valores como relatado pela função do sistema CURSOR_STATUS:<br /><br /> 1 = O cursor referenciado pelo nome do cursor ou pela variável de cursor está aberto. Se o cursor for insensível, estático ou controlado por um conjunto de chaves terá ao menos uma linha. Se o cursor for dinâmico, o conjunto de resultados terá zero ou mais linhas.<br /><br /> 0 = O cursor referenciado pelo nome ou pela variável do cursor está aberto, mas não contém linhas. Cursores dinâmicos nunca retornam esse valor.<br /><br /> -1 = O cursor referenciado pelo nome ou pela variável do cursor está fechado.<br /><br /> -2 = Aplicável somente a variáveis de cursor. Não há nenhum cursor atribuído à variável. Possivelmente, um parâmetro OUTPUT atribuiu um cursor à variável, mas o procedimento armazenado fechou o cursor antes de retornar.<br /><br /> -3 = Um cursor ou uma variável de cursor com o nome especificado não existe, ou nenhum cursor foi alocado à variável de cursor.|  
 |modelo|**tinyint**|1 = Insensível (ou estático)<br /><br /> 2 = conjunto de chaves<br /><br /> 3 = dinâmico<br /><br /> 4 = De avanço rápido|  

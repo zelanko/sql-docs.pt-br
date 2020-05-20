@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032888"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830940"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nome do banco de dados que fez essa entrada.|  
 |**db_nickname**|**binary(6)**|Apelido do banco de dados que fez essa entrada.|  
 |**version**|**int**|Versão da entrada.|  
-|**current_state**|**nvarchar (9)**|Retorna informações sobre o estado atual da linha.<br /><br /> os dados de linha **y** representam o estado atual da linha.<br /><br /> os dados de **n** linhas não representam o estado atual da linha.<br /><br /> >n/a-não aplicável. ** \<**<br /><br /> >desconhecido-o estado atual não pode ser determinado. ** \<**|  
+|**current_state**|**nvarchar (9)**|Retorna informações sobre o estado atual da linha.<br /><br /> os dados de linha **y** representam o estado atual da linha.<br /><br /> os dados de **n** linhas não representam o estado atual da linha.<br /><br /> ** \<>n/a** -não aplicável.<br /><br /> ** \<>desconhecido** -o estado atual não pode ser determinado.|  
 |**rowversion_table**|**nchar (17)**|Indica se as versões de linha são armazenadas na tabela de [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) ou na tabela [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**mente**|**nvarchar (255)**|Informações adicionais sobre essa entrada de versão de linha. Geralmente, esse campo fica vazio.|  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2df4786147a5301e4e9167cbe121b9151e72190f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 43f5c110aaf9b492d70eb7220b6eccc249222609
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099158"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830892"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68099158"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Identificador da conexão. É NULLABLE.|  
-|**transport_stream_id**|**uniqueidentifier**|Identificador da conexão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de SNI (interface de rede) usada por esta conexão para comunicações TCP/IP. É NULLABLE.|  
+|**transport_stream_id**|**uniqueidentifier**|Identificador da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexão de SNI (interface de rede) usada por esta conexão para comunicações TCP/IP. É NULLABLE.|  
 |**state**|**smallint**|O estado atual da conexão. É NULLABLE. Valores possíveis:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = FECHADO|  
 |**state_desc**|**nvarchar(60)**|O estado atual da conexão. É NULLABLE. Valores possíveis:<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|A data e hora em que a conexão foi aberta. É NULLABLE.|  

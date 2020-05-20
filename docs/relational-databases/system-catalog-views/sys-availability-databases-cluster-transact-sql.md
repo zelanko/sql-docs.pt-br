@@ -20,19 +20,19 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 206c9b1c250cb95a6ad49ccf20f8badf11f870ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c36c1574ae1ad289c9980e1df9bfbe3b241e164
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046543"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829139"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Contém uma linha para cada banco de dados de disponibilidade na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância do que está hospedando uma réplica de disponibilidade para qualquer Always on grupo de disponibilidade no Cluster WSFC (Windows Server failover clustering), independentemente de o banco de dados de cópia local ter sido ingressado no grupo de disponibilidade ainda.  
+  Contém uma linha para cada banco de dados de disponibilidade na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está hospedando uma réplica de disponibilidade para qualquer Always on grupo de disponibilidade no Cluster WSFC (Windows Server failover clustering), independentemente de o banco de dados de cópia local ter sido ingressado no grupo de disponibilidade ainda.  
   
 > [!NOTE]  
 >  Quando um banco de dados é adicionado a um grupo de disponibilidade, o banco de dados primário é unido automaticamente ao grupo. Os bancos de dados secundários deve estar preparados em cada réplica secundária para poderem ser unidos ao grupo de disponibilidade.   

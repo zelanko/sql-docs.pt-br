@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107910"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828847"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Erro e HRESULT|Causa comum|  
 |-----------------------|------------------|  
-|**Tipo de variável incorreto (0x80020008)**|O tipo de dados [!INCLUDE[tsql](../../includes/tsql-md.md)] de um valor passado como um parâmetro de método não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] correspondeu ao tipo de dados do parâmetro Method ou um valor nulo foi passado como um parâmetro de método.|  
+|**Tipo de variável incorreto (0x80020008)**|O tipo de dados de um [!INCLUDE[tsql](../../includes/tsql-md.md)] valor passado como um parâmetro de método não correspondeu ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] tipo de dados do parâmetro Method ou um valor nulo foi passado como um parâmetro de método.|  
 |**Nome desconhecido (0x8002006)**|A propriedade ou o nome de método especificado não foi localizado para o objeto especificado.|  
 |**Cadeia de caracteres de classe inválida (0x800401f3)**|ProgID ou CLSID especificado não foi registrado como um objeto OLE em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os servidores de automação OLE personalizados devem ser registrados antes de poderem ser instanciados usando **sp_OACreate**. Isso pode ser feito usando o utilitário regsvr32. exe para servidores em processo (. dll) ou a opção de linha de comando **/RegServer** para servidores locais (. exe).|  
 |**Execução do servidor falhou (0x80080005)**|O objeto OLE especificado foi registrado como um servidor OLE local (arquivo .exe), mas o arquivo .exe não pôde ser localizado ou iniciado.|  

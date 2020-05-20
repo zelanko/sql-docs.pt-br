@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278185"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830220"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Especifica que o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será removido durante a operação de desanexação do banco de dados. *Keepfulltextindexfile* é um valor **nvarchar (10)** com um padrão de **true**. Se *keepfulltextindexfile* for **false**, todos os arquivos de índice de texto completo associados ao banco de dados e os metadados do índice de texto completo serão descartados, a menos que o banco de dados seja somente leitura. Se for NULL ou **true**, os metadados relacionados a texto completo serão mantidos.  
   
 > [!IMPORTANT]
->  O ** \@parâmetro keepfulltextindexfile** será removido em uma versão futura do. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
+>  O parâmetro ** \@ keepfulltextindexfile** será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Antes de definir o banco de dados como SINGLE_USER, verifique se a opção AUTO_UPDATE_STATISTICS_ASYNC está definida como OFF. Quando esta opção está definida como ON, o thread em segundo plano usado para a atualização de estatísticas estabelece uma conexão com o banco de dados e não será possível acessar o banco de dados em modo de usuário único. Para obter mais informações, consulte [definir um banco de dados para o modo de usuário único](../databases/set-a-database-to-single-user-mode.md).
 
- Por exemplo, a instrução `ALTER DATABASE` a seguir obtém acesso exclusivo ao [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados depois que todos os usuários atuais se desconectam do banco de dados.  
+ Por exemplo, a instrução a seguir `ALTER DATABASE` obtém acesso exclusivo ao [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados depois que todos os usuários atuais se desconectam do banco de dados.  
   
 ```  
 USE master;  
@@ -136,7 +136,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [SQL Server desanexar e anexar &#40;de banco de dados&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Desanexar um banco de dados](../../relational-databases/databases/detach-a-database.md)  
   

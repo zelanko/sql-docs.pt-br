@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 20967420eeb22a1c6418d06a9be3fc728106c141
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078166"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830987"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`É o nome do artigo na publicação. o *artigo* é **sysname**, sem padrão.  
   
-`[ @column = ] 'column'`Identifica as colunas nas quais criar a partição vertical. a *coluna* é **sysname**, com um padrão de NULL. Se NULL e `@operation = N'add'`, todas as colunas da tabela de origem serão adicionadas ao artigo por padrão. a *coluna* não pode ser nula quando a *operação* está definida como **drop**. Para excluir colunas de um artigo, execute **sp_mergearticlecolumn** e especifique *column* a coluna `@operation = N'drop'` e para cada coluna a ser removida do *artigo*especificado.  
+`[ @column = ] 'column'`Identifica as colunas nas quais criar a partição vertical. a *coluna* é **sysname**, com um padrão de NULL. Se NULL e `@operation = N'add'`, todas as colunas da tabela de origem serão adicionadas ao artigo por padrão. a *coluna* não pode ser nula quando a *operação* está definida como **drop**. Para excluir colunas de um artigo, execute **sp_mergearticlecolumn** e especifique a *coluna* e `@operation = N'drop'` para cada coluna a ser removida do *artigo*especificado.  
   
 `[ @operation = ] 'operation'`É o status de replicação. a *operação* é **nvarchar (4)**, com um padrão de adicionar. **Adicionar** marca a coluna para replicação. **drop** limpa a coluna.  
   

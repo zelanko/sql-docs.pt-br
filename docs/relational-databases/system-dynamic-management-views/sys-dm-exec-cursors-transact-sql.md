@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097838"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830634"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ dm_exec_cursors (session_id | 0 )
 |**is_open**|**bit**|Especifica se o cursor está aberto.|  
 |**is_async_population**|**bit**|Especifica se o thread em segundo plano ainda está populando assincronamente um cursor KEYSET ou STATIC.|  
 |**is_close_on_commit**|**bit**|Especifica se o cursor foi declarado por meio de CURSOR_CLOSE_ON_COMMIT.<br /><br /> 1 = O cursor será fechado quando a transação terminar.|  
-|**fetch_status**|**int**|Retorna o último status de busca do cursor. Este é o último valor de@FETCH_STATUS @ retornado.|  
+|**fetch_status**|**int**|Retorna o último status de busca do cursor. Este é o último valor de @ retornado @FETCH_STATUS .|  
 |**fetch_buffer_size**|**int**|Retorna informações sobre o tamanho do buffer de busca.<br /><br /> 1 = Cursores Transact-SQL. Pode ser definido como um valor mais alto para cursores de API.|  
 |**fetch_buffer_start**|**int**|No caso dos cursores FAST_FORWARD e DYNAMIC, retornará 0 se o cursor não estiver aberto ou se for posicionado antes da primeira linha. Caso contrário, ele retornará -1.<br /><br /> No caso dos cursores STATIC e KEYSET, retornará 0, se o cursor não estiver aberto, e -1, se o cursor for posicionado antes da primeira linha.<br /><br /> Caso contrário, retorna o número da linha onde está posicionado.|  
 |**ansi_position**|**int**|Posição de cursor dentro do buffer de busca.|  
@@ -81,7 +81,7 @@ dm_exec_cursors (session_id | 0 )
   
  A tabela a seguir fornece informações sobre o tipo de cursor e inclui os valores possíveis para a coluna de propriedades.  
   
-|Type|Descrição|  
+|Tipo|Description|  
 |----------|-----------------|  
 |Keyset|O cursor foi declarado como Keyset (conjunto de chaves).|  
 |Dinâmico|O cursor foi declarado como Dynamic (dinâmico).|  

@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900153"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830503"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Essa exibição é semelhante a [Sys. dm_os_windows_info](../../relational-datab
 A `SELECT` permissão on `sys.dm_os_host_info` é concedida à `public` função por padrão. Se revogado, requer `VIEW SERVER STATE` permissão no servidor.   
  
 > [!CAUTION]
->  A partir da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] versão CTP 1,3 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] , a versão `SELECT` 17 requer `sys.dm_os_host_info` permissão on para se conectar [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ao. Se `SELECT` a permissão for revogada `public`de, somente os logons com `VIEW SERVER STATE` permissão poderão se conectar com a versão mais recente do SSMS. (Outras ferramentas, como o `sqlcmd.exe` podem se conectar `SELECT` sem permissão `sys.dm_os_host_info`em.)
+>  A partir [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] da versão CTP 1,3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] a versão 17 requer `SELECT` permissão on para `sys.dm_os_host_info` se conectar ao [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Se `SELECT` a permissão for revogada de `public` , somente os logons com `VIEW SERVER STATE` permissão poderão se conectar com a versão mais recente do SSMS. (Outras ferramentas, como o `sqlcmd.exe` podem se conectar sem `SELECT` permissão em `sys.dm_os_host_info` .)
 
   
 ## <a name="examples"></a>Exemplos  

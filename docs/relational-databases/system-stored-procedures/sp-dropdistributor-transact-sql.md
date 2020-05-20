@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a82a3bedf78eb69dfc4a1736e212164341077601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55ebb2b9c42c0690bcffe409cbc6a5bf5bf68fc0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304980"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830144"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>Comentários  
  **sp_dropdistributor** é usado em todos os tipos de replicação.  
   
- Se houver outro Publicador ou objetos de distribuição no servidor, **sp_dropdistributor** falhará, a menos que ** \@no_checks** esteja definido como **1**.  
+ Se houver outro Publicador ou objetos de distribuição no servidor, **sp_dropdistributor** falhará, a menos que ** \@ no_checks** esteja definido como **1**.  
   
  Esse procedimento armazenado deve ser executado depois de descartar o banco de dados de distribuição executando **sp_dropdistributiondb**.  
   

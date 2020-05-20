@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_clerks dynamic management view
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97805251e309132892fb94db63a308b10657daff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feb07dbf92a68ec12a1c4c6ae8f509acc3320867
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983098"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829349"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "73983098"
   Retorna o conjunto de todos os administradores de memória que estão ativos no momento na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_memory_clerks**.  
+>  Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_os_memory_clerks**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary (8)**|Especifica o endereço de memória exclusivo do administrador de memória. Esta é a coluna de chave primária. Não permite valor nulo.|  
-|**type**|**nvarchar(60)**|Especifica o tipo do administrador de memória. Todo administrador de memória tem um tipo específico, como os Administradores MEMORYCLERK_SQLCLR do CLR. Não permite valor nulo.|  
+|**tipo**|**nvarchar(60)**|Especifica o tipo do administrador de memória. Todo administrador de memória tem um tipo específico, como os Administradores MEMORYCLERK_SQLCLR do CLR. Não permite valor nulo.|  
 |**name**|**nvarchar(256)**|Especifica o nome atribuído internamente deste administrador de memória. Um componente pode ter vários administradores de memória de um tipo específico. Um componente pode optar por usar nomes específicos para identificar administradores de memória do mesmo tipo. Não permite valor nulo.|  
 |**memory_node_id**|**smallint**|Especifica a ID do nó de memória. Não permite valor nulo.|  
 |**single_pages_kb**|**bigint**|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
@@ -51,12 +51,12 @@ ms.locfileid: "73983098"
 |**shared_memory_committed_kb**|**bigint**|Especifica a quantidade de memória compartilhada confirmada pelo administrador de memória. Não permite valor nulo.|  
 |**page_size_in_bytes**|**bigint**|Especifica a granularidade da alocação de páginas para este administrador de memória. Não permite valor nulo.|  
 |**page_allocator_address**|**varbinary (8)**|Especifica o endereço do alocador de páginas. Esse endereço é exclusivo para um administrador de memória e pode ser usado em **Sys. dm_os_memory_objects** para localizar objetos de memória associados a esse assistente. Não permite valor nulo.|  
-|**host_address**|**varbinary (8)**|Especifica o endereço de memória do host desse administrador de memória. Para obter mais informações, consulte [Sys. dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Os componentes do, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , acessam os recursos de memória por meio da interface do host.<br /><br /> 0x00000000 = O administrador de memória pertence ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Não permite valor nulo.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**host_address**|**varbinary (8)**|Especifica o endereço de memória do host desse administrador de memória. Para obter mais informações, consulte [Sys. dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Os componentes do, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Native Client, acessam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os recursos de memória por meio da interface do host.<br /><br /> 0x00000000 = O administrador de memória pertence ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Não permite valor nulo.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões 
 
-Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
 Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
   
 ## <a name="remarks"></a>Comentários  

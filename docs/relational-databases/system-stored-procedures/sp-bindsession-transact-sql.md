@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindsession
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046018"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828468"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Associa ou desassocia uma sessão a outras sessões na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. As sessões associadas permitem que duas ou mais sessões participem da mesma transação e bloqueios de compartilhamento até que uma ROLLBACK TRANSACTION ou COMMIT TRANSACTION seja emitida.  
+  Associa ou desassocia uma sessão a outras sessões na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] . As sessões associadas permitem que duas ou mais sessões participem da mesma transação e bloqueios de compartilhamento até que uma ROLLBACK TRANSACTION ou COMMIT TRANSACTION seja emitida.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use MARS (vários conjuntos de resultados ativos) ou, então, transações distribuídas. Para obter mais informações, consulte [usando vários conjuntos de resultados ativos &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
@@ -53,7 +53,7 @@ sp_bindsession { 'bind_token' | NULL }
   
  **sp_bindsession** usa um token de associação para associar duas ou mais sessões de cliente existentes. Essas sessões de cliente devem estar na mesma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] do qual o token de associação foi obtido. Uma sessão é um cliente executando um comando. As sessões associadas de banco de dados compartilham uma transação e um espaço de bloqueio.  
   
- Um token de associação obtido de uma instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] não pode ser usado para uma sessão de cliente conectada a outra instância, mesmo para transações DTC. Um token de associação só é válido localmente dentro de cada instância e não pode ser compartilhado por diversas instâncias. Para associar sessões de cliente em outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], você deve obter um token de associação diferente executando **sp_getbindtoken**.  
+ Um token de associação obtido de uma instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] não pode ser usado para uma sessão de cliente conectada a outra instância, mesmo para transações DTC. Um token de associação só é válido localmente dentro de cada instância e não pode ser compartilhado por diversas instâncias. Para associar sessões de cliente em outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , você deve obter um token de associação diferente executando **sp_getbindtoken**.  
   
  **sp_bindsession** falhará com um erro se ele usar um token que não esteja ativo.  
   

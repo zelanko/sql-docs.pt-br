@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a332257b640124c04ed339ff11473b89a7c3b83b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68215939"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828430"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,41 +44,41 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication=] '*publicação*'  
+ [ @publication =] '*publicação*'  
  É o nome da publicação para a qual configurar detecção de conflitos. a *publicação* é **sysname**, sem padrão.  
   
- [ @action= ] '*ação*'  
+ [ @action =] '*ação*'  
  Especifica se deve habilitar ou desabilitar a detecção de conflito para uma publicação. *Action* é **nvarchar (5)** e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**desabilitar**|Habilita a detecção de conflitos para uma publicação.|  
-|**desativar**|Desabilita a detecção de conflitos para uma publicação.|  
+|**enable**|Habilita a detecção de conflitos para uma publicação.|  
+|**disable**|Desabilita a detecção de conflitos para uma publicação.|  
 |NULL (padrão)||  
   
- [ @originator_id= ] *originator_id*  
+ [ @originator_id =] *originator_id*  
  Especifica uma ID para um nó em uma topologia ponto a ponto. *originator_id* é **int**, com um padrão de NULL. Essa ID será usada para detecção de conflitos se a *ação* estiver definida como **habilitar**. Especifique uma ID positiva, diferente de zero, que nunca foi usada na topologia. Para uma lista de IDs que já foram usadas, consulte a tabela do sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
   
- [ @conflict_retention= ] *conflict_retention*  
+ [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict= ] '*continue_onconflict*']  
+ [ @continue_onconflict =] '*continue_onconflict*']  
  Determina se o Agente de Distribuição deve continuar processando alterações depois da detecção de um conflito. *continue_onconflict* é **nvarchar (5)** com um valor padrão de false.  
   
 > [!CAUTION]  
 >  Recomendamos que você use o valor padrão de FALSE. Quando essa opção é definida como TRUE, o Distribution Agent tenta convergir os dados na topologia aplicando a linha conflitante do nó que tem a ID de origem mais alta. Esse método não garante convergência. Verifique se a topologia está consistente depois que um conflito é detectado. Para obter mais informações, consulte “Controlando conflitos” em [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- [ @local= ] '*local*'  
+ [ @local =] '*local*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @timeout= ] *tempo limite*  
+ [ @timeout =] *tempo limite*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- sp_configure_peerconflictdetection é usado na replicação transacional ponto a ponto. Para usar a detecção de conflitos, todos os nós [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] devem estar executando o ou versões posteriores; e a detecção devem ser habilitadas para todos os nós.  
+ sp_configure_peerconflictdetection é usado na replicação transacional ponto a ponto. Para usar a detecção de conflitos, todos os nós devem estar executando o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou versões posteriores; e a detecção deve ser habilitada para todos os nós.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de servidor fixa sysadmin ou na função de banco de dados fixa db_owner.  

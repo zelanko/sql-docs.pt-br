@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3d107b78c9b982285c19b678bebbc027facebe1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942040"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830379"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Retorna Eventos Estendidos registrados pelo Smart Admin.  
   
- Use este procedimento armazenado para monitorar eventos estendidos registrados pelo administrador inteligente. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] os eventos são registrados nesse sistema e podem ser examinados e monitorados usando esse procedimento armazenado.  
+ Use este procedimento armazenado para monitorar eventos estendidos registrados pelo administrador inteligente. os [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] eventos são registrados nesse sistema e podem ser examinados e monitorados usando esse procedimento armazenado.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  @xevent_channel  
- O tipo do Evento Estendido. O valor padrão é definido para retornar todos os eventos registrados para os 30 minutos anteriores. Os eventos registrados dependem do tipo de Eventos Estendidos habilitados. Você pode usar esse parâmetro para filtrar o procedimento armazenado para mostrar apenas eventos de um determinado tipo. Você pode especificar o nome do evento completo ou especificar uma subcadeia de caracteres, como: **' admin**, **' analítica '**, **' operacional '** e **' depurar '**. O @event_channel é **varchar (255)**.  
+ O tipo do Evento Estendido. O valor padrão é definido para retornar todos os eventos registrados para os 30 minutos anteriores. Os eventos registrados dependem do tipo de Eventos Estendidos habilitados. Você pode usar esse parâmetro para filtrar o procedimento armazenado para mostrar apenas eventos de um determinado tipo. Você pode especificar o nome do evento completo ou especificar uma subcadeia de caracteres, como: **' admin**, **' analítica '**, **' operacional '** e **' depurar '**. O @event_channel é **VARCHAR (255)**.  
   
  Para obter uma lista de tipos de eventos atualmente habilitados, use a função **managed_backup. fn_get_current_xevent_settings** .  
   

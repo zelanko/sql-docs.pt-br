@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergeschemaarticles system table
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d22d7f3b21e4bc02846df2b5f764a2fd5bca9dd0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029814"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829801"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68029814"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome do artigo somente esquema em uma publicação de mesclagem.|  
-|**type**|**tinyint**|Indica o tipo de artigo somente esquema que pode ser um dos seguintes:<br /><br /> **0x20** = artigo de somente esquema de procedimento armazenado.<br /><br /> **0x40** = exibir somente esquema ou artigo somente esquema de exibição indexada.|  
+|**tipo**|**tinyint**|Indica o tipo de artigo somente esquema que pode ser um dos seguintes:<br /><br /> **0x20** = artigo de somente esquema de procedimento armazenado.<br /><br /> **0x40** = exibir somente esquema ou artigo somente esquema de exibição indexada.|  
 |**objid**|**int**|O identificador de objeto do objeto base do artigo. Pode ser o identificador de objeto de um procedimento, exibição indexada, exibição ou função definida pelo usuário.|  
 |**artid**|**uniqueidentifier**|A ID do artigo.|  
 |**ndescrição**|**nvarchar (255)**|A descrição do artigo.|  

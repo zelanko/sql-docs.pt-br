@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistpublisher
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a15162774d3814e574735d8e1d5fd5e6b769327f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 060b3b793adf53ab988cbba8b82ae683dac1e40a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278119"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830180"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
  Se **0**, a replicação verifica se o Publicador remoto desinstalou o servidor local como o distribuidor. Se o Publicador for local, a replicação verificará se não há objetos de publicação ou distribuição restantes no servidor local.  
   
- Se **1**, todos os objetos de replicação associados ao Publicador de distribuição serão removidos mesmo que um Publicador remoto não possa ser acessado. Depois de fazer isso, o Publicador remoto deve desinstalar a replicação usando [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) com ** \@ignore_distributor** = **1**.  
+ Se **1**, todos os objetos de replicação associados ao Publicador de distribuição serão removidos mesmo que um Publicador remoto não possa ser acessado. Depois de fazer isso, o Publicador remoto deve desinstalar a replicação usando [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) com ** \@ ignore_distributor**  =  **1**.  
   
 `[ @ignore_distributor = ] ignore_distributor`Especifica se os objetos de distribuição são deixados no distribuidor quando o Publicador é removido. *ignore_distributor* é **bit** e pode ser um destes valores:  
   

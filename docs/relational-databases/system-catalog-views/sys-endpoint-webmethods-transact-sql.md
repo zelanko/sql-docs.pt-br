@@ -19,14 +19,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.endpoint_webmethods catalog view
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 14e3534671cc36d8c2cac46f627d158056f985e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1d3d9c528b7fd74055e5a98348b9766af320b7d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079250"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829697"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "68079250"
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|O ID do ponto de extremidade para o qual webmethod está definido.|  
 |namespace|**nvarchar (384)**|Namespace do webmethod.|  
-|method_alias|**nvarchar (64)**|Alias para o método.<br /><br /> Observação: [!INCLUDE[tsql](../../includes/tsql-md.md)] os identificadores permitem caracteres que não são válidos em nomes de métodos WSDL.<br /><br /> O alias é usado para mapear o nome exposto na descrição de WSDL do ponto de extremidade ao objeto executável [!INCLUDE[tsql](../../includes/tsql-md.md)] subjacente real chamado quando o webmethod é invocado.|  
-|object_name|**nvarchar (776)**|O nome de objeto para o qual o webmethod é redirecionado, conforme especificado na opção NAME =. Partes de nome são separadas por um ponto (.) e delimitadas usando colchetes `[``]`,.<br /><br /> O nome do objeto deve ser um nome de três partes, conforme especificado na opção de WSDL.|  
+|method_alias|**nvarchar (64)**|Alias para o método.<br /><br /> Observação: os [!INCLUDE[tsql](../../includes/tsql-md.md)] identificadores permitem caracteres que não são válidos em nomes de métodos WSDL.<br /><br /> O alias é usado para mapear o nome exposto na descrição de WSDL do ponto de extremidade ao objeto executável [!INCLUDE[tsql](../../includes/tsql-md.md)] subjacente real chamado quando o webmethod é invocado.|  
+|object_name|**nvarchar (776)**|O nome de objeto para o qual o webmethod é redirecionado, conforme especificado na opção NAME =. Partes de nome são separadas por um ponto (.) e delimitadas usando colchetes, `[``]` .<br /><br /> O nome do objeto deve ser um nome de três partes, conforme especificado na opção de WSDL.|  
 |result_schema|**tinyint**|A opção que determina que, se houver, o XSD seja enviado de volta com uma resposta.<br /><br /> 0 = Nenhum<br /><br /> 1 = Padrão<br /><br /> 2 = Padrão|  
 |result_schema_desc|**nvarchar(60)**|A descrição da opção que determina que, se houver, o XSD seja enviado de volta com uma resposta.<br /><br /> Nenhuma<br /><br /> STANDARD<br /><br /> DEFAULT|  
 |result_format|**tinyint**|Opção que determina como os resultados são formatados na resposta.<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = NONE|  

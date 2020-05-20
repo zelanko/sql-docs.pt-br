@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73536213"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828417"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -80,7 +80,7 @@ RECONFIGURE
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|O nome da opção de configuração.|  
 |**máximo**|**int**|Valor mínimo da opção de configuração.|  
-|**máximo**|**int**|Valor máximo da opção de configuração.|  
+|**maior**|**int**|Valor máximo da opção de configuração.|  
 |**config_value**|**int**|Valor para o qual a opção de configuração foi definida usando **sp_configure** (valor em **Sys. Configurations. Value**). Para obter mais informações sobre essas opções, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) e [Sys. configurations &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Valor em execução no momento da opção de configuração (valor em **Sys. Configurations. value_in_use**).<br /><br /> Para obter mais informações, consulte [Sys. configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
@@ -99,14 +99,14 @@ RECONFIGURE
 > [!CAUTION]  
 > Um valor de opção inadequado pode afetar negativamente a configuração da instância do servidor. Use RECONFIGURE WITH OVERRIDE com cuidado.  
   
- A instrução RECONFIGURE atualiza algumas opções dinamicamente, outras opções requerem a parada do servidor e reinicialização. Por exemplo, as opções de memória **mínima** do servidor e memória **máxima** do servidor são atualizadas dinamicamente [!INCLUDE[ssDE](../../includes/ssde-md.md)]no; Portanto, você pode alterá-los sem reiniciar o servidor. Por outro lado, a reconfiguração do valor de execução da opção de **fator de preenchimento** requer [!INCLUDE[ssDE](../../includes/ssde-md.md)]a reinicialização do.  
+ A instrução RECONFIGURE atualiza algumas opções dinamicamente, outras opções requerem a parada do servidor e reinicialização. Por exemplo, as opções **mín** . memória do servidor e memória máxima do servidor **memória** do servidor são atualizadas dinamicamente no [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; portanto, você pode alterá-las sem reiniciar o servidor. Por outro lado, a reconfiguração do valor de execução da opção de **fator de preenchimento** requer a reinicialização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  Depois de executar RECONFIGURE em uma opção de configuração, você pode ver se a opção foi atualizada dinamicamente executando **sp_configure '***option_name***'**. Os valores nas colunas **run_value** e **config_value** devem corresponder a uma opção atualizada dinamicamente. Você também pode verificar para ver quais opções são dinâmicas examinando a coluna **is_dynamic** da exibição do catálogo **Sys. Configurations** .  
  
  A alteração também é gravada no log de erros do SQL Server.
   
 > [!NOTE]  
->  Se um *valor* especificado for muito alto para uma opção, a coluna **run_value** refletirá o fato de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que o tem como padrão a memória dinâmica, em vez de usar uma configuração que não é válida.  
+>  Se um *valor* especificado for muito alto para uma opção, a coluna **run_value** refletirá o fato de que o tem como [!INCLUDE[ssDE](../../includes/ssde-md.md)] padrão a memória dinâmica, em vez de usar uma configuração que não é válida.  
   
  Para obter mais informações, consulte [reconfigure &#40;&#41;Transact-SQL ](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   

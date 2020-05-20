@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_usage_stats dynamic management view
 ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 491ec37d96cf6bdb2b074efb42a54406beb1fd20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bdacbebf64e372e757de6f2ba268404773f9c96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264400"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830865"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68264400"
 >  **Sys. dm_db_index_usage_stats** não retorna informações sobre índices com otimização de memória. Para obter informações sobre o uso de índice com otimização de memória, consulte [Sys. dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Para chamar essa exibição de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use **Sys. dm_pdw_nodes_db_index_usage_stats**.  
+>  Para chamar essa exibição de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use **Sys. dm_pdw_nodes_db_index_usage_stats**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "68264400"
 |**last_system_scan**|**datetime**|Hora do último exame do sistema.|  
 |**last_system_lookup**|**datetime**|Hora da última pesquisa do sistema.|  
 |**last_system_update**|**datetime**|Hora da última atualização do sistema.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="remarks"></a>Comentários  
  Cada busca, exame, pesquisa ou atualização individual no índice especificado pela execução de uma consulta é contado como um uso desse índice e incrementa o contador correspondente nessa exibição. As informações são relatadas para operações causadas por consultas enviadas pelo usuário e operações causadas por consultas geradas internamente, como exames de coleta de estatísticas.  
@@ -72,10 +72,10 @@ ms.locfileid: "68264400"
   
  Quando um índice é usado, uma linha é adicionada a **sys.dm_db_index_usage_stats** se já não existir uma para ele. Quando a linha é adicionada, seus contadores são definidos como zero inicialmente.  
   
- Durante a atualização [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)],, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]ou, as entradas em sys. dm_db_index_usage_stats são removidas. A [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]partir do, as entradas são retidas como estavam [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]antes do.  
+ Durante a atualização para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , as entradas em sys. dm_db_index_usage_stats são removidas. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , as entradas são retidas como estavam antes do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
 ## <a name="permissions"></a>Permissões  
-Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
 Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .  
   
 ## <a name="see-also"></a>Consulte Também  

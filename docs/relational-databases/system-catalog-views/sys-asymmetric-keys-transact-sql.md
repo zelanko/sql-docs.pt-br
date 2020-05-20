@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c05aa2d1543cfc3ebd1cbab6c199cd2992febfe2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5266b758c965574e7b810804fbbbfd3bb4958ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070470"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829138"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68070470"
 |**asymmetric_key_id**|**int**|ID da chave. É exclusiva no banco de dados.|  
 |**pvt_key_encryption_type**|**char(2)**|Como a chave é criptografada.<br /><br /> NA = Não criptografada<br /><br /> MK = A chave é criptografada pela chave mestra<br /><br /> PW = A chave é criptografada por uma senha definida pelo usuário<br /><br /> SK = A chave é criptografada pela chave mestra de serviço.|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Descrição de como a chave privada é criptografada.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**thumbprint**|**varbinary(32)**|Hash SHA-1 da chave. O hash é globalmente exclusivo.|  
+|**digitais**|**varbinary(32)**|Hash SHA-1 da chave. O hash é globalmente exclusivo.|  
 |**algoritmo**|**char(2)**|Algoritmo usado com a chave.<br /><br /> 1R = RSA de 512 bits<br /><br /> 2R = RSA de 1024 bits<br /><br /> 3R = RSA de 2048 bits|  
 |**algorithm_desc**|**nvarchar(60)**|Descrição do algoritmo usado com a chave.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|Comprimento de bit da chave.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb3ab70170f1b96bcfd62a9d7108792871ccd5d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903015"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828950"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**proprietário**|**sysname**|Proprietário do banco de dados, como **SA**.|  
 |**DBID**|**smallint**|ID do banco de dados.|  
 |**created**|**nvarchar(11)**|A data em que o banco de dados foi criado.|  
-|**status**|**nvarchar (600)**|Lista de valores separados por vírgula de opções de banco de dados que estão atualmente definidas no banco de dados.<br /><br /> As opções avaliadas como boolianas serão listadas apenas se estiverem habilitadas. As opções não booleanas são listadas com seus valores correspondentes na forma de *option_name*=*valor*.<br /><br /> Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**status**|**nvarchar (600)**|Lista de valores separados por vírgula de opções de banco de dados que estão atualmente definidas no banco de dados.<br /><br /> As opções avaliadas como boolianas serão listadas apenas se estiverem habilitadas. As opções não booleanas são listadas com seus valores correspondentes na forma de *option_name* = *valor*.<br /><br /> Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Nível de compatibilidade do banco de dados: 60, 65, 70, 80 ou 90.|  
   
  Se *Name* for especificado, haverá um conjunto de resultados adicional que mostra a alocação de arquivo para o banco de dados especificado.  
@@ -63,7 +63,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**nchar(128)**|Nome do arquivo lógico.|  
 |**FileID**|**smallint**|ID do arquivo.|  
 |**nome do arquivo**|**nchar (260)**|Nome do arquivo do -sistema operacional (nome do arquivo físico).|  
-|**arquivos**|**nvarchar(128)**|Grupo de arquivos ao qual o arquivo pertence.<br /><br /> NULL = ele é um arquivo de log. Ele nunca faz parte de um grupo de arquivos.|  
+|**grupo de arquivos**|**nvarchar(128)**|Grupo de arquivos ao qual o arquivo pertence.<br /><br /> NULL = ele é um arquivo de log. Ele nunca faz parte de um grupo de arquivos.|  
 |**size**|**nvarchar (18)**|Tamanho do arquivo em megabytes.|  
 |**MaxSize**|**nvarchar (18)**|Tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
 |**growth**|**nvarchar (18)**|Incremento de crescimento do arquivo. Indica a quantidade de espaço adicionada ao arquivo sempre que um novo espaço for necessário.|  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2e3cfbea2f7ff9bb7cd976142db28acec3105fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097704"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829410"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68097704"
  No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, todas as linhas que contêm dados que não pertencem ao locatário conectado serão filtradas. Além disso, os valores nas colunas **scheduler_id**, **wait_order**, **pool_id** **group_id** são filtrados; o valor da coluna é definido como nulo.  
   
 > [!NOTE]  
-> Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_exec_query_memory_grants**.  
+> Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use o nome **Sys. dm_pdw_nodes_exec_query_memory_grants**.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "68097704"
 |**max_used_memory_kb**|**bigint**|Máximo de memória física usada até este momento em quilobytes.|  
 |**query_cost**|**float**|Custo de consulta estimado.|  
 |**timeout_sec**|**int**|Tempo limite em segundos antes de esta consulta desistir da solicitação de concessão de memória.|  
-|**resource_semaphore_id**|**smallint**|ID não exclusivo do semáforo do recurso no qual esta consulta está aguardando.<br /><br /> **Observação:** Essa ID é exclusiva em versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Essa alteração pode afetar a execução de consulta de solução de problemas. Para obter mais informações, consulte "Comentários", posteriormente neste tópico.|  
+|**resource_semaphore_id**|**smallint**|ID não exclusivo do semáforo do recurso no qual esta consulta está aguardando.<br /><br /> **Observação:** Essa ID é exclusiva em versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . Essa alteração pode afetar a execução de consulta de solução de problemas. Para obter mais informações, consulte "Comentários", posteriormente neste tópico.|  
 |**queue_id**|**smallint**|ID da fila de espera em que esta consulta aguarda concessões de memória. NULL se a memória já tiver sido concedida.|  
 |**wait_order**|**int**|Ordem sequencial de consultas de espera dentro da **queue_id** especificada. Esse valor pode ser alterado para uma determinada consulta se outras consultas obtiverem concessões de memória ou atingirem o tempo limite. NULL se a memória já tiver sido concedida.|  
 |**is_next_candidate**|**bit**|Candidato para a próxima concessão de memória.<br /><br /> 1 = Sim<br /><br /> 0 = Não<br /><br /> NULL = Se a memória já tiver sido concedida.|  
@@ -63,11 +63,11 @@ ms.locfileid: "68097704"
 |**pool_id**|**int**|ID do pool de recursos a que este grupo de carga de trabalho pertence.|  
 |**is_small**|**tinyint**|Quando definido como 1, indica que esta concessão usa o sinal do recurso pequeno. Quando definido como 0, indica que um sinal normal é usado.|  
 |**ideal_memory_kb**|**bigint**|Tamanho, em quilobytes (KB), da concessão de memória para ajustar tudo na memória física. Ele tem como base a estimativa de cardinalidade.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões  
 
-Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
 Em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requer a permissão `VIEW DATABASE STATE` no banco de dados.   
    
 ## <a name="remarks"></a>Comentários  
@@ -110,9 +110,9 @@ Em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requer a permissão `V
   
 -   Se houver suspeita de uma consulta sem controle, examine o Plano de execução de [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) e o texto em lote de [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
- As consultas que usam exibições de gerenciamento `ORDER BY` dinâmico que incluem ou agregações podem aumentar o consumo de memória e, portanto, contribuir para o problema que estão Solucionando problemas.  
+ As consultas que usam exibições de gerenciamento dinâmico que incluem `ORDER BY` ou agregações podem aumentar o consumo de memória e, portanto, contribuir para o problema que estão Solucionando problemas.  
   
- O recurso Administrador de Recursos permite que um administrador de banco de dados distribua recursos de servidor entre pools de recursos, até um máximo de 64 pools. A [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]partir do, cada pool se comporta como uma instância de servidor independente pequena e requer 2 semáforos. O número de linhas retornadas de **Sys. dm_exec_query_resource_semaphores** pode ser até 20 vezes mais do que as linhas retornadas em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ O recurso Administrador de Recursos permite que um administrador de banco de dados distribua recursos de servidor entre pools de recursos, até um máximo de 64 pools. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] do, cada pool se comporta como uma instância de servidor independente pequena e requer 2 semáforos. O número de linhas retornadas de **Sys. dm_exec_query_resource_semaphores** pode ser até 20 vezes mais do que as linhas retornadas em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     

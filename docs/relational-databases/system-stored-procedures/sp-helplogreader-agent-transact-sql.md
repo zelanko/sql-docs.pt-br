@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helplogreader_agent
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4c1afca8eed465c191fccb4d24e79a7bd95af9aa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122444"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828896"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID do agente.|  
 |**name**|**nvarchar (100)**|O nome do agente.|  
-|**publisher_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Publicador que pode ser um dos seguintes:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows.|  
+|**publisher_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Publicador que pode ser um dos seguintes:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows.|  
 |**publisher_login**|**sysname**|Logon usado na conexão com o Publicador.|  
-|**publisher_password**|**nvarchar (524)**|Por motivos de segurança, um valor ** \* \* \* \* \* \* \* \* de \* ** é sempre retornado.|  
+|**publisher_password**|**nvarchar (524)**|Por motivos de segurança, um valor de **\*\*\*\*\*\*\*\*\*\*** é sempre retornado.|  
 |**job_id**|**uniqueidentifier**|ID exclusiva do trabalho de agente.|  
-|**job_login**|**nvarchar(512)**|É a conta do Windows na qual o agente de leitor de log é executado, que é retornado no formato *domínio*\\*nome de usuário*.|  
-|**job_password**|**sysname**|Por motivos de segurança, um valor ** \* \* \* \* \* \* \* \* de \* ** é sempre retornado.|  
+|**job_login**|**nvarchar(512)**|É a conta do Windows na qual o agente de leitor de log é executado, que é retornado no formato *domínio* \\ *nome de usuário*.|  
+|**job_password**|**sysname**|Por motivos de segurança, um valor de **\*\*\*\*\*\*\*\*\*\*** é sempre retornado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9e291a0ff8b2fc14e7bc249ceea8320facedf9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68794719"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830973"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Prepara e executa uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução parametrizada. sp_prepexec combina as funções de sp_prepare e sp_execute. Essa ação é invocada pela ID = 13 em um pacote TDS (tabela de dados tabulares).  
+  Prepara e executa uma instrução parametrizada [!INCLUDE[tsql](../../includes/tsql-md.md)] . sp_prepexec combina as funções de sp_prepare e sp_execute. Essa ação é invocada pela ID = 13 em um pacote TDS (tabela de dados tabulares).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>Argumentos  
  *processamento*  
- É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *identificador de identificador gerado.* o *identificador* é um parâmetro necessário com um valor de retorno **int** .  
+ É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador de *identificador* gerado. o *identificador* é um parâmetro necessário com um valor de retorno **int** .  
   
  *params*  
  Identifica instruções parametrizadas. A definição *params* das variáveis é substituída por marcadores de parâmetro na instrução. *params* é um parâmetro necessário que chama um valor de entrada **ntext**, **nchar**ou **nvarchar** . Insira um valor NULL se a instrução não for parametrizada.  

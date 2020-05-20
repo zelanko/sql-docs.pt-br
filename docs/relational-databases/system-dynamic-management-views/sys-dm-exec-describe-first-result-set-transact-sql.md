@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097810"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830606"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Essa função de gerenciamento dinâmico usa [!INCLUDE[tsql](../../includes/tsql-md.md)] uma instrução como um parâmetro e descreve os metadados do primeiro conjunto de resultados para a instrução.  
+  Essa função de gerenciamento dinâmico usa uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução como um parâmetro e descreve os metadados do primeiro conjunto de resultados para a instrução.  
   
  **Sys. dm_exec_describe_first_result_set** tem a mesma definição de conjunto de resultados que [sys. Dm_exec_describe_first_result_set_for_object &#40;o transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) e é semelhante a SP_DESCRIBE_FIRST_RESULT_SET &#40;[Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)&#41;.  
   
@@ -47,9 +47,9 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. O *Transact-SQL_batch* pode ser **nvarchar (***n***)** ou **nvarchar (max)**.  
   
  *\@params*  
- \@params fornece uma cadeia de caracteres de declaração para [!INCLUDE[tsql](../../includes/tsql-md.md)] parâmetros para o lote, semelhante a sp_executesql. Os parâmetros podem ser **nvarchar (n)** ou **nvarchar (max)**.  
+ \@params fornece uma cadeia de caracteres de declaração para parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, semelhante a sp_executesql. Os parâmetros podem ser **nvarchar (n)** ou **nvarchar (max)**.  
   
- É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetros adicionais. Todos os parâmetros especificados em stmt devem ser definidos \@em params. Se a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote na instrução não contiver parâmetros, \@params não será necessário. O valor padrão para este parâmetro é NULL.  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetros adicionais. Todos os parâmetros especificados em stmt devem ser definidos em \@ params. Se a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote na instrução não contiver parâmetros, \@ params não será necessário. O valor padrão para este parâmetro é NULL.  
   
  *\@include_browse_information*  
  Se definido como 1, cada consulta será analisada como se tivesse uma opção FOR BROWSE na consulta. Colunas de chave adicionais e informações de tabela de origem são retornadas.  
@@ -119,16 +119,16 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|O resultado não pôde ser determinado porque o lote contém uma instrução recursiva.|  
 |10|TEMPORARY_TABLE|O resultado não pôde ser determinado porque o lote contém uma tabela temporária e não tem suporte de **sp_describe_first_result_set**.|  
 |11|UNSUPPORTED_STATEMENT|O resultado não pôde ser determinado porque o lote contém uma instrução sem suporte de **sp_describe_first_result_set** (por exemplo, FETCH, REVERT, etc.).|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|O \@object_id passado para a função não tem suporte (ou seja, não é um procedimento armazenado)|  
-|13|OBJECT_DOES_NOT_EXIST|O \@object_id passado para a função não foi encontrado no catálogo do sistema.|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|O \@ object_id passado para a função não tem suporte (ou seja, não é um procedimento armazenado)|  
+|13|OBJECT_DOES_NOT_EXIST|O \@ object_id passado para a função não foi encontrado no catálogo do sistema.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão para executar o \@argumento TSQL.  
+ Requer permissão para executar o \@ argumento TSQL.  
   
 ## <a name="examples"></a>Exemplos  
  Exemplos adicionais no tópico [sp_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) podem ser adaptados para usar **Sys. dm_exec_describe_first_result_set**.  
   
-### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. Retornando informações sobre uma única instrução Transact-SQL  
+### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>a. Retornando informações sobre uma única instrução Transact-SQL  
  O código a seguir retorna informações sobre os resultados de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  

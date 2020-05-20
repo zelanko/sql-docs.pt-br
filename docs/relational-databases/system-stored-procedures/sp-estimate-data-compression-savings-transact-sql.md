@@ -16,14 +16,14 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37c6a32b7970d8bfb0a44eaf407914c5de27f593
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71682135"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831084"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "71682135"
   Retorna o tamanho atual do objeto solicitado e faz a estimativa do tamanho do objeto para o estado de compactação solicitado. A compactação pode ser avaliada para tabelas inteiras ou partes de tabelas. Isso inclui heaps, índices clusterizados, índices não clusterizados, índices columnstore, exibições indexadas e partições de tabela e índice. Os objetos podem ser compactados usando a compactação de linha, página, columnstore ou arquivo morto columnstore. Se a tabela, o índice ou a partição já estiver compactada, será possível usar esse procedimento para estimar o tamanho da tabela, do índice ou da partição, caso ela seja descompactada.  
   
 > [!NOTE]
-> A compactação e a **sp_estimate_data_compression_savings** não estão disponíveis em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]todas as edições do. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> A compactação e a **sp_estimate_data_compression_savings** não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Para estimar o tamanho do objeto se ele usar a configuração de compactação solicitada, esse procedimento armazenado faz a amostragem do objeto de origem e carrega esses dados em uma tabela e índice equivalentes criados no tempdb. Em seguida, a tabela ou o índice criado no tempdb é compactado para a configuração solicitada e o aumento estimado da compactação é computado.  
   
@@ -55,21 +55,21 @@ sp_estimate_data_compression_savings
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @schema_name= ] '*schema_name*'  
+ [ @schema_name =] '*schema_name*'  
  É o nome do esquema de banco de dados que contém a tabela ou a exibição indexada. *schema_name* é **sysname**. Se *schema_name* for NULL, o esquema padrão do usuário atual será usado.  
   
- [ @object_name= ] '*object_name*'  
+ [ @object_name =] '*object_name*'  
  É o nome da tabela ou exibição indexada em que o índice está. *object_name* é **sysname**.  
   
- [ @index_id= ] *index_id*  
+ [ @index_id =] *index_id*  
  É a ID do índice. *index_id* é **int**e pode ser um dos seguintes valores: o número de ID de um índice, NULL ou 0 se *object_id* for um heap. Para retornar informações de todos os índices de uma tabela base ou exibição, especifique NULL. Se você especificar NULL, também deverá especificar NULL para *partition_number*.  
   
- [ @partition_number= ] *partition_number*  
+ [ @partition_number =] *partition_number*  
  É o número da partição no objeto. *partition_number* é **int**e pode ser um dos seguintes valores: o número da partição de um índice ou heap, nulo ou 1 para um índice não particionado ou heap.  
   
  Para especificar a partição, você também pode especificar a função [$Partition](../../t-sql/functions/partition-transact-sql.md) . Para retornar informações de todas as partições do objeto proprietário, especifique NULL.  
   
- [ @data_compression= ] '*DATA_COMPRESSION*'  
+ [ @data_compression =] '*DATA_COMPRESSION*'  
  É o tipo de compactação a ser avaliado. *DATA_COMPRESSION* pode ser um dos seguintes valores: nenhum, linha, página, COLUMNSTORE ou COLUMNSTORE_ARCHIVE.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -109,10 +109,10 @@ sp_estimate_data_compression_savings
  Antes do SQL Server 2019, esse procedimento não se aplica a índices columnstore e, portanto, não aceitou os parâmetros de compactação de dados COLUMNSTORE e COLUMNSTORE_ARCHIVE.  A partir do SQL Server 2019, os índices columnstore podem ser usados como um objeto de origem para estimativa e como um tipo de compactação solicitado.
 
  > [!IMPORTANT]
- > Quando os [metadados de tempdb com otimização de memória](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) estão habilitados no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], não há suporte para a criação de índices columnstore em tabelas temporárias. Devido a essa limitação, não há suporte para sp_estimate_data_compression_savings com os parâmetros COLUMNSTORE e COLUMNSTORE_ARCHIVE de compactação de dados quando os metadados de TempDB com otimização de memória estão habilitados.
+ > Quando os [metadados de tempdb com otimização de memória](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) estão habilitados no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , não há suporte para a criação de índices columnstore em tabelas temporárias. Devido a essa limitação, não há suporte para sp_estimate_data_compression_savings com os parâmetros COLUMNSTORE e COLUMNSTORE_ARCHIVE de compactação de dados quando os metadados de TempDB com otimização de memória estão habilitados.
 
 ## <a name="considerations-for-columnstore-indexes"></a>Considerações para Índices Columnstore
- A [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]partir do `sp_estimate_compression_savings` , o dá suporte à estimativa de compactação de arquivo columnstore e columnstore. Ao contrário da compactação de página e linha, a aplicação da compactação columnstore a um objeto requer a criação de um novo índice columnstore. Por esse motivo, ao usar as opções COLUMNSTORE e COLUMNSTORE_ARCHIVE deste procedimento, o tipo do objeto de origem fornecido ao procedimento determina o tipo de índice COLUMNSTORE usado para a estimativa de tamanho compactado. A tabela a seguir ilustra os objetos de referência usados para estimar a economia de compactação para @data_compression cada tipo de objeto de origem quando o parâmetro é definido como COLUMNSTORE ou COLUMNSTORE_ARCHIVE.
+ A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , `sp_estimate_compression_savings` o dá suporte à estimativa de compactação de arquivo columnstore e columnstore. Ao contrário da compactação de página e linha, a aplicação da compactação columnstore a um objeto requer a criação de um novo índice columnstore. Por esse motivo, ao usar as opções COLUMNSTORE e COLUMNSTORE_ARCHIVE deste procedimento, o tipo do objeto de origem fornecido ao procedimento determina o tipo de índice COLUMNSTORE usado para a estimativa de tamanho compactado. A tabela a seguir ilustra os objetos de referência usados para estimar a economia de compactação para cada tipo de objeto de origem quando o @data_compression parâmetro é definido como COLUMNSTORE ou COLUMNSTORE_ARCHIVE.
 
  |Objeto de origem|Objeto de referência|
  |-----------------|---------------|
@@ -125,7 +125,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > Ao estimar a compactação de columnstore de um objeto de origem do repositório de linhas (índice clusterizado, índice não clusterizado ou heap), se houver alguma coluna no objeto de origem que tenha um tipo de dados sem suporte em um índice columnstore, sp_estimate_compression_savings falhará com um erro.
 
- Da mesma forma, `@data_compression` quando o parâmetro é `NONE`definido `ROW`como, `PAGE` , ou e o objeto de origem é um índice columnstore, a tabela a seguir descreve os objetos de referência usados.
+ Da mesma forma, quando o `@data_compression` parâmetro é definido como `NONE` , `ROW` , ou `PAGE` e o objeto de origem é um índice columnstore, a tabela a seguir descreve os objetos de referência usados.
 
  |Objeto de origem|Objeto de referência|
  |-----------------|---------------|

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771396"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829684"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,17 +103,17 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|Replica índices em colunas **XML** .|  
 ||**0x8000000**|Cria qualquer esquema ainda não presente no assinante.|  
 ||**0x10000000**|Converte colunas **XML** em **ntext** no Assinante.|  
-||**0x20000000**|Converte tipos de dados de objeto grande (**nvarchar (max)**, **varchar (max)** e **varbinary (max)**) que foram introduzidos nos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tipos de dados com suporte [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]no.|  
+||**0x20000000**|Converte tipos de dados de objeto grande (**nvarchar (max)**, **varchar (max)** e **varbinary (max)**) que foram introduzidos nos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tipos de dados com suporte no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] .|  
 ||**0x40000000**|Replicar permissões.|  
 ||**0x80000000**|Tente descartar as dependências de todos os objetos que não fazem parte da publicação.|  
-||**0x100000000**|Use esta opção para replicar o atributo FILESTREAM se ele for especificado em colunas **varbinary (max)** . Não especifique essa opção se você estiver replicando tabelas para Assinantes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Não há suporte para a replicação de tabelas [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] que têm colunas FILESTREAM para assinantes, independentemente de como essa opção de esquema está definida.<br /><br /> Consulte a opção relacionada **0x800000000**.|  
-||**0x200000000**|Converte os tipos de dados de data e hora (**Date**, **time**, **DateTimeOffset**e **datetime2**) que foram [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduzidos nos tipos de dados com suporte em versões [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anteriores do.|  
+||**0x100000000**|Use esta opção para replicar o atributo FILESTREAM se ele for especificado em colunas **varbinary (max)** . Não especifique essa opção se você estiver replicando tabelas para Assinantes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Não há suporte para a replicação de tabelas que têm colunas FILESTREAM para [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] assinantes, independentemente de como essa opção de esquema está definida.<br /><br /> Consulte a opção relacionada **0x800000000**.|  
+||**0x200000000**|Converte os tipos de dados de data e hora (**Date**, **time**, **DateTimeOffset**e **datetime2**) que foram introduzidos nos [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tipos de dados com suporte em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 ||**0x400000000**|Replica a opção de compactação para dados e índices. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Defina essa opção para armazenar dados FILESTREAM em seu próprio grupo de arquivos no Assinante. Se essa opção não for definida, os dados FILESTREAM serão armazenados no grupo de arquivos padrão. A replicação não cria grupos de arquivos; portanto, se você definir essa opção, deverá criar o grupo de arquivos antes de aplicar o instantâneo no Assinante. Para obter mais informações sobre como criar objetos antes de aplicar o instantâneo, consulte [executar scripts antes e depois que o instantâneo for aplicado](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Consulte a opção relacionada **0x100000000**.|  
-||**0x1000000000**|Converte os UDTs (tipos definidos pelo usuário) Common Language Runtime (CLR) com mais de 8000 bytes em **varbinary (max)** para que as colunas do tipo UDT possam ser replicadas para os [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]assinantes que estão em execução.|  
-||**0x2000000000**|Converte o tipo de dados **hierarchyid** em **varbinary (max)** para que as colunas do tipo **hierarchyid** possam ser replicadas para os assinantes que estão em execução [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações sobre como usar colunas **hierarchyid** em tabelas replicadas, consulte [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x1000000000**|Converte os UDTs (tipos definidos pelo usuário) Common Language Runtime (CLR) com mais de 8000 bytes em **varbinary (max)** para que as colunas do tipo UDT possam ser replicadas para os assinantes que estão em execução [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
+||**0x2000000000**|Converte o tipo de dados **hierarchyid** em **varbinary (max)** para que as colunas do tipo **hierarchyid** possam ser replicadas para os assinantes que estão em execução [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Para obter mais informações sobre como usar colunas **hierarchyid** em tabelas replicadas, consulte [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Replica qualquer índice filtrado na tabela. Para obter mais informações sobre índices filtrados, consulte [criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md).|  
-||**0x8000000000**|Converte os tipos de dados **geography** e **Geometry** em **varbinary (max)** para que as colunas desses tipos possam ser replicadas para os [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]assinantes que estão em execução.|  
+||**0x8000000000**|Converte os tipos de dados **geography** e **Geometry** em **varbinary (max)** para que as colunas desses tipos possam ser replicadas para os assinantes que estão em execução [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
 ||**0x10000000000**|Replica índices em colunas do tipo **geography** e **Geometry**.|  
 ||**0x20000000000**|Replica o atributo SPARSE para colunas. Para obter mais informações sobre esse atributo, consulte [usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).|  
 ||**0x40000000000**|Habilite o script pelo agente de instantâneo para criar a tabela com otimização de memória no Assinante.|  
@@ -129,7 +129,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||Nome da tabela ou exibição usado para produzir um arquivo de saída de sincronização. O padrão é NULO. Sem suporte para Publicadores Oracle.|  
 |**espaços**||Identifica o espaço de tabela usado pela tabela de log para um artigo publicado de um banco de dados de Oracle. Para obter mais informações, consulte [Gerenciar espaços de tabela Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
 |**os**||Valor percentual para controle quando o Distribution Agent atribuir um novo intervalo de identidade. Sem suporte para replicação ponto a ponto.|  
-|**type**||Sem suporte para Publicadores Oracle.|  
+|**tipo**||Sem suporte para Publicadores Oracle.|  
 ||**logbased**|Artigo com base em log.|  
 ||**logbased manualboth**|Artigo com base em log com filtro manual e exibição manual. Essa opção requer que as propriedades *sync_object* e *Filter* também sejam definidas. Sem suporte para Publicadores Oracle.|  
 ||**logbased manualfilter**|Artigo com base em log com filtro manual. Essa opção requer que as propriedades *sync_object* e *Filter* também sejam definidas. Sem suporte para Publicadores Oracle.|  
@@ -160,7 +160,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser usado ao alterar as propriedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do artigo em um Publicador.  
+>  o *Publicador* não deve ser usado ao alterar as propriedades do artigo em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -228,7 +228,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**e **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**e **0x80000000**|  
   
 > [!NOTE]
->  Para publicações de atualização em fila, o valor *schema_option* de **0x80** deve ser habilitado. Os valores *de schema_option* com suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicações não são **: 0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** e **0x4000**.  
+>  Para publicações de atualização em fila, o valor *schema_option* de **0x80** deve ser habilitado. Os valores de *schema_option* com suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicações não são **: 0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** e **0x4000**.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

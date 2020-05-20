@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44664805dc9b728ecbd48acbf38c4565601c631a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8b7148904df1a9c59bb6b12fd521945b70e2f4d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71326143"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830648"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "71326143"
 |Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ID numérica exclusiva associada ao nó. Chave para esta exibição.|Exclusivo entre o cluster de escala horizontal, independentemente do tipo.|  
-|type|**nvarchar(32)**|Tipo do nó.|"COMPUTE", "HEAD"|  
-|name|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de comprimento apropriado.|  
+|tipo|**nvarchar(32)**|Tipo do nó.|"COMPUTE", "HEAD"|  
+|Nome|**nvarchar(32)**|Nome lógico do nó.|Qualquer cadeia de caracteres de comprimento apropriado.|  
 |address|**nvarchar(32)**|Endereço IP deste nó.|Intervalo de Endereços IP|  
   
 ## <a name="see-also"></a>Consulte Também  

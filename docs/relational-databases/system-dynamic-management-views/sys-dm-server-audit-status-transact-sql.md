@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c30cbd012bb1ccc7d379eadcfd29fee87a96dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: acb5726d9309a93e389e22a57d4be54cf03dbe24
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313684"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830412"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72313684"
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID da auditoria. Mapeia para o campo **audit_id** na exibição do catálogo **Sys. Auditions** .|  
 |**name**|**sysname**|Nome da auditoria. O mesmo que o campo **nome** na exibição de catálogo **Sys. server_audits** .|  
-|**status**|**smallint**|Status numérico da auditoria de servidor:<br /><br /> 0 = não iniciado<br /><br /> 1 =<br />        Started (iniciado)<br /><br /> 2 =<br />      Falha no tempo de execução<br /><br /> 3 = falha ao criar destino<br /><br /> 4 = desligando|  
+|**status**|**smallint**|Status numérico da auditoria de servidor:<br /><br /> 0 = não iniciado<br /><br /> 1 =<br />        Iniciado<br /><br /> 2 =<br />      Falha no tempo de execução<br /><br /> 3 = falha ao criar destino<br /><br /> 4 = desligando|  
 |**status_desc**|**nvarchar(256)**|Cadeia de caracteres que mostra o status da auditoria de servidor:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Carimbo de data e hora em UTC da última alteração de status da auditoria.|  
 |**event_session_address**|**varbinary (8)**|Endereço da sessão de Eventos Estendidos associada à auditoria. Relacionado à exibição do catálogo **Sys. dm_xe_sessions. Address** .|  

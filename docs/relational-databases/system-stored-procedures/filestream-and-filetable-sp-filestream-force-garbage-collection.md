@@ -16,14 +16,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942280"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830385"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_filestream_force_garbage_collection
 
 Devido a operações de duas fases, o procedimento armazenado deve ser executado duas vezes para realmente excluir arquivos FILESTREAM subjacentes.  
 
-A coleta de lixo (GC) depende do truncamento de log. Portanto, se os arquivos foram excluídos recentemente em um banco de dados usando o modelo de recuperação completa, eles são GC-Ed somente depois que um backup de log dessas partes de log de transações é obtido e a parte de log é marcada como inativa. Em um banco de dados que usa um modelo de recuperação simples, um truncamento de log ocorre depois que um `CHECKPOINT` é emitido no banco de dados.  
+A coleta de lixo (GC) depende do truncamento de log. Portanto, se os arquivos foram excluídos recentemente em um banco de dados usando o modelo de recuperação completa, eles são GC-Ed somente depois que um backup de log dessas partes de log de transações é obtido e a parte de log é marcada como inativa. Em um banco de dados que usa um modelo de recuperação simples, um truncamento de log ocorre depois `CHECKPOINT` que um é emitido no banco de dados.  
 
 
 ## <a name="permissions"></a>Permissões  
@@ -88,7 +88,7 @@ A coleta de lixo (GC) depende do truncamento de log. Portanto, se os arquivos fo
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir executam o coletor de lixo para contêineres FILESTREAM no banco de dados `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>A. Não especificando nenhum contêiner  
+### <a name="a-specifying-no-container"></a>a. Não especificando nenhum contêiner  
   
 ```sql  
 USE FSDB;  

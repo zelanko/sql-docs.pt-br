@@ -10,14 +10,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b6558e944df0107eb13abb4658ebefe048af33da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 96ee4f06c35a229fdebd6469e2c23b0343f4d29f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018249"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829740"
 ---
 # <a name="spatial-data-catalog-views"></a>Exibições de catálogo de dados espaciais
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

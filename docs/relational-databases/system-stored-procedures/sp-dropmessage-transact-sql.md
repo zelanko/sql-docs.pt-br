@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fa242b7adf46269402b28d459eace429fd247bc1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933863"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829998"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-dropping-a-user-defined-message"></a>a. Descartando uma mensagem definida pelo usuário  
- O exemplo a seguir remove uma mensagem definida pelo usuário, `50001`um número, de **Sys. messages**.  
+ O exemplo a seguir remove uma mensagem definida pelo usuário, um número `50001` , de **Sys. messages**.  
   
 ```  
 USE master;  

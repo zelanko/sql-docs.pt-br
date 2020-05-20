@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e5b128a38fc32b16cca9d0a8e59f09aef88676c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762425"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829560"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,13 +88,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Arquivos de sincronização só serão criados se houver novas assinaturas. Assinantes não podem receber arquivos de sincronização após a assinatura até que o Snapshot Agent seja iniciado e concluído.|  
 |**independent_agent**|**true**|A publicação tem seu próprio Distribution Agent dedicado.|  
 ||**false**|A publicação usa um Distribution Agent compartilhado e cada par de banco de dados de publicação/assinatura tem um agente compartilhado.|  
-|**p2p_continue_onconflict**|**true**|O Distribution Agent continua processando alterações quando um conflito é detectado.<br /> **Cuidado:** Recomendamos que você use o valor padrão de `FALSE`. Quando essa opção é definida como `TRUE`, a agente de distribuição tenta convergir dados na topologia aplicando a linha conflitante do nó que tem a ID de originador mais alta. Esse método não garante convergência. Verifique se a topologia está consistente depois que um conflito é detectado. Para obter mais informações, consulte “Controlando conflitos” em [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**p2p_continue_onconflict**|**true**|O Distribution Agent continua processando alterações quando um conflito é detectado.<br /> **Cuidado:** Recomendamos que você use o valor padrão de `FALSE` . Quando essa opção é definida como `TRUE` , a agente de distribuição tenta convergir dados na topologia aplicando a linha conflitante do nó que tem a ID de originador mais alta. Esse método não garante convergência. Verifique se a topologia está consistente depois que um conflito é detectado. Para obter mais informações, consulte “Controlando conflitos” em [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 ||**false**|O Distribution Agent deixa de processar alterações quando um conflito é detectado.|  
 |**post_snapshot_script**||Especifica o local de um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] que o Distribution Agent executa depois que todos os outros scripts de objetos e dados replicados foram aplicados durante uma sincronização inicial.|  
 |**pre_snapshot_script**||Especifica o local de um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] que o Distribution Agent executa antes que todos os outros scripts de objetos e dados replicados sejam aplicados durante uma sincronização inicial.|  
 |**publish_to_ActiveDirectory**|**true**|Esse parâmetro foi preterido e tem suporte somente para a compatibilidade com versões anteriores de scripts. Você não pode mais adicionar informações de publicação ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Remove as informações de publicação do Active Directory.|  
-|**queue_type**|**sql**|Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações. Essa propriedade só poderá ser alterada se não houver assinaturas ativas.<br /><br /> Observação: o suporte para [!INCLUDE[msCoName](../../includes/msconame-md.md)] o uso do enfileiramento de mensagens foi descontinuado. A especificação de um valor de **MSMQ** para o *valor* resulta em um erro.|  
+|**queue_type**|**SQL**|Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações. Essa propriedade só poderá ser alterada se não houver assinaturas ativas.<br /><br /> Observação: o suporte para o uso do [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens foi descontinuado. A especificação de um valor de **MSMQ** para o *valor* resulta em um erro.|  
 |**repl_freq**|**visa**|Publica saída de todas as transações com base em log.|  
 ||**instantânea**|Publica somente eventos de sincronização agendados.|  
 |**replicate_ddl**|**1**|Instruções DDL (linguagem de definição de dados) executadas no Publicador são replicadas. Essa propriedade não pode ser alterada em publicações que não sejam do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -104,15 +104,15 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**políticas**||**int** que representa o período de retenção, em horas, para a atividade de assinatura. Se uma assinatura não estiver ativa dentro do período de retenção, será removida.|  
 |**snapshot_in_defaultfolder**|**true**|Arquivos de instantâneo são armazenados na pasta de instantâneos padrão. Se *alt_snapshot_folder*também for especificado, os arquivos de instantâneo serão armazenados nos locais padrão e alternativos.|  
 ||**false**|Os arquivos de instantâneo são armazenados no local alternativo especificado pelo *alt_snapshot_folder*.|  
-|**status**|**activo**|Dados de Publicação estão imediatamente disponíveis para os Assinantes quando a publicação é criada. Sem suporte para Publicadores Oracle.|  
+|**status**|**active**|Dados de Publicação estão imediatamente disponíveis para os Assinantes quando a publicação é criada. Sem suporte para Publicadores Oracle.|  
 ||**inativo**|Dados de Publicação não estão disponíveis para os Assinantes quando a publicação é criada. Sem suporte para Publicadores Oracle.|  
 |**sync_method**|**native**|Usa saída de cópia em massa do modo nativo de todas as tabelas ao sincronizar assinaturas.|  
 ||**espaço**|Usa saída de cópia em massa do modo de caractere de todas as tabelas ao sincronizar assinaturas.|  
 ||**simultâneas**|Usa saída de programa de cópia em massa do modo nativo de todas as tabelas, mas não bloqueia as tabelas durante o processo de geração de instantâneo. Não válido para replicação de instantâneo.|  
 ||**concurrent_c**|Usa saída de programa de cópia em massa do modo de caractere de todas as tabelas, mas não bloqueia as tabelas durante o processo de geração de instantâneo. Não válido para replicação de instantâneo.|  
 |**TaskId**||Essa propriedade foi preterida e não tem mais suporte.|  
-|**allow_drop**|**true**|Habilita `DROP TABLE` o suporte a dll para artigos que fazem parte da replicação transacional. Versão mínima com suporte [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : Service Pack 2 ou superior [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e Service Pack 1 ou superior. Referência adicional: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
-||**false**|Desabilita o suporte `DROP TABLE` à dll para artigos que fazem parte da replicação transacional. Esse é o valor **padrão** para essa propriedade.|
+|**allow_drop**|**true**|Habilita o `DROP TABLE` suporte a dll para artigos que fazem parte da replicação transacional. Versão mínima com suporte: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 ou superior e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 ou superior. Referência adicional: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+||**false**|Desabilita o `DROP TABLE` suporte à dll para artigos que fazem parte da replicação transacional. Esse é o valor **padrão** para essa propriedade.|
 |**NULL** (padrão)||Retorna a lista de valores com suporte para a *Propriedade*.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`O reconhece que a ação executada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
@@ -120,7 +120,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1** especifica que as alterações no artigo podem fazer com que o instantâneo seja inválido. Se houver assinaturas existentes que exigem um novo instantâneo, esse valor dará permissão para que o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.   
 Consulte a seção Comentários das propriedades que, quando alteradas, requerem a geração de um novo instantâneo.  
   
-[**@force_reinit_subscription =** ] *force_reinit_subscription*  
+[** @force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   - **0** especifica que as alterações no artigo não fazem com que a assinatura seja reinicializada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   - **1** especifica que as alterações no artigo fazem com que a assinatura existente seja reinicializada e dá permissão para que a reinicialização da assinatura ocorra.  
@@ -128,7 +128,7 @@ Consulte a seção Comentários das propriedades que, quando alteradas, requerem
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
   > [!NOTE]  
-  >  o *Publicador* não deve ser usado ao alterar as propriedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do artigo em um Publicador.  
+  >  o *Publicador* não deve ser usado ao alterar as propriedades do artigo em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -150,7 +150,7 @@ Consulte a seção Comentários das propriedades que, quando alteradas, requerem
 -   **snapshot_in_defaultfolder**  
 -   **sync_mode**  
   
-Para listar objetos de publicação no Active Directory usando o parâmetro **publish_to_active_directory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o objeto já deve ser criado no Active Directory.  
+Para listar objetos de publicação no Active Directory usando o parâmetro **publish_to_active_directory** , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto já deve ser criado no Active Directory.  
   
 ## <a name="impact-of-immediate-sync"></a>Impacto da sincronização imediata  
  Quando a sincronização imediata estiver ativada, todas as alterações no log serão controladas imediatamente depois que o instantâneo inicial for gerado, mesmo que não haja nenhuma assinatura. As alterações registradas são usadas quando um cliente está usando o backup para adicionar um novo nó par. Depois que o backup é restaurado, o par é sincronizado com outras alterações que ocorrem após o backup ter sido feito. Como os comandos são controlados no banco de dados de distribuição, a lógica de sincronização pode examinar o último LSN de backup e usá-lo como ponto de partida, sabendo que o comando estará disponível se o backup tiver sido feito dentro do período de retenção máximo. (O valor padrão para o período de retenção mínimo é 0 h e o período de retenção máximo é de 24 horas.)  

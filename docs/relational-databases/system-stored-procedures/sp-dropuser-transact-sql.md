@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropuser
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42628ab49e30a4c6dada2eafb505435b8b389de6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d4f4b08f21d29fead3f2cebf477be69cfaf766ad
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124718"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831127"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Remove um usuário de banco de dados do banco de dados atual. **sp_dropuser** fornece compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Remove um usuário de banco de dados do banco de dados atual. **sp_dropuser** fornece compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [drop User](../../t-sql/statements/drop-user-transact-sql.md) .  
@@ -54,7 +54,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  Quando um usuário de banco de dados é removido, qualquer alias para esse usuário também é removido. Se o usuário possuir um esquema vazio com o mesmo nome do usuário, o esquema será descartado. Se o usuário possuir qualquer outro item protegível no banco de dados, o usuário não será descartado. A propriedade dos objetos deve ser transferida primeiro a outro principal. Para obter mais informações, confira [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). A remoção do usuário de banco de dados remove automaticamente as permissões associadas ao usuário e remove o usuário de todas as funções de banco de dados das quais seja membro.  
   
- **sp_dropuser** não pode ser usado para remover o proprietário do banco de dados (**dbo**) **INFORMATION_SCHEMA** usuários ou o usuário **convidado** dos bancos de dados **mestre** ou **tempdb** . Em bancos de dados que não sejam `EXEC sp_dropuser 'guest'` do sistema, o revogará a permissão Connect do **convidado**do usuário. Mas o próprio usuário não será descartado.  
+ **sp_dropuser** não pode ser usado para remover o proprietário do banco de dados (**dbo**) **INFORMATION_SCHEMA** usuários ou o usuário **convidado** dos bancos de dados **mestre** ou **tempdb** . Em bancos de dados que não sejam do sistema, o `EXEC sp_dropuser 'guest'` revogará a permissão Connect do **convidado**do usuário. Mas o próprio usuário não será descartado.  
   
  **sp_dropuser** não pode ser executado em uma transação definida pelo usuário.  
   

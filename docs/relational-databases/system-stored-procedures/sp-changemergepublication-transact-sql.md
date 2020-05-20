@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097679"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829581"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Os arquivos de instantâneo são armazenados no local alternativo especificado por *alt_snapshot_folder*. Essa combinação especifica que os arquivos de instantâneo são armazenados nos locais padrão e alternativo.|  
 |**snapshot_ready**|**true**|Instantâneo disponível para a publicação.|  
 ||**false**|Instantâneo não disponível para a publicação.|  
-|**status**|**activo**|Publicação com status ativo.|  
+|**status**|**active**|Publicação com status ativo.|  
 ||**inativo**|Publicação com status inativo.|  
 |**sync_mode**|**nativo** ou<br /><br /> **bcp nativo**|Saída de programa de cópia em massa em modo nativo de todas as tabelas é usada para o instantâneo inicial.|  
 ||**espaço**<br /><br /> ou **caractere bcp**|Saída de programa de cópia em massa em modo de caractere de todas as tabelas é usada para o instantâneo inicial, que é exigido de todos os Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -178,7 +178,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- Para listar objetos de publicação para Active Directory usando o *publish_to_active_directory*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o objeto já deve ter sido criado no Active Directory.  
+ Para listar objetos de publicação para Active Directory usando o *publish_to_active_directory*, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto já deve ter sido criado no Active Directory.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771014"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829966"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  Os clientes que tentarem executar **sp_replcmds** no mesmo banco de dados receberão o erro 18752 até que o primeiro cliente se desconecte. Depois que o primeiro cliente se desconecta, outro cliente pode executar **sp_replcmds**e se torna o novo leitor de log.  
   
- Um número de mensagem de aviso 18759 será adicionado ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log de erros e [!INCLUDE[msCoName](../../includes/msconame-md.md)] ao log de aplicativos do Windows se **sp_replcmds** não puder replicar um comando de texto porque o ponteiro de texto não foi recuperado na mesma transação.  
+ Um número de mensagem de aviso 18759 será adicionado ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log de erros e ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativos do Windows se **sp_replcmds** não puder replicar um comando de texto porque o ponteiro de texto não foi recuperado na mesma transação.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_replcmds**.  

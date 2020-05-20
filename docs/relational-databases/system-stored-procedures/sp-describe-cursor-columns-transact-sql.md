@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_columns
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 963fa56dfba33c13eb2ce4d317f69a22b5cdd259
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053116"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830234"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,28 +47,28 @@ sp_describe_cursor_columns
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @cursor_return= ] *output_cursor_variable* DER  
+ [ @cursor_return =] *output_cursor_variable* saída  
  É o nome de uma variável de cursor declarada para recebimento da saída do cursor. *output_cursor_variable* é **cursor**, sem padrão, e não deve ser associado a nenhum cursores no momento sp_describe_cursor_columns é chamado. O cursor retornado é um cursor rolável, dinâmico, somente leitura.  
   
- [ @cursor_source= ] {N'local ' | N'global ' | N'variable' }  
+ [ @cursor_source =] {N'local ' | N'global ' | N'variable' }  
  Especifica se o cursor que está sendo relatado foi especificado usando o nome de um cursor local, de um cursor global ou de uma variável de cursor. O parâmetro é **nvarchar (30)**.  
   
- [ @cursor_identity= ] N '*local_cursor_name*'  
+ [ @cursor_identity =] N '*local_cursor_name*'  
  É o nome de um cursor criado por uma instrução DECLARE CURSOR, que tem a palavra-chave LOCAL ou que adotou o padrão LOCAL. *local_cursor_name* é **nvarchar (128)**.  
   
- [ @cursor_identity= ] N '*global_cursor_name*'  
+ [ @cursor_identity =] N '*global_cursor_name*'  
  É o nome de um cursor criado por uma instrução DECLARE CURSOR, que tem a palavra-chave GLOBAL ou que adotou o padrão GLOBAL. *global_cursor_name* é **nvarchar (128)**.  
   
  *global_cursor_name* também pode ser o nome de um cursor do servidor de API que é aberto por um aplicativo ODBC e, em seguida, nomeado chamando SQLSetCursorName.  
   
- [ @cursor_identity= ] N '*input_cursor_variable*'  
+ [ @cursor_identity =] N '*input_cursor_variable*'  
  É o nome de uma variável de cursor associada a um cursor aberto. *input_cursor_variable* é **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ Não  
   
 ## <a name="cursors-returned"></a>Cursores retornados  
- sp_describe_cursor_columns encapsula seu relatório como um parâmetro [!INCLUDE[tsql](../../includes/tsql-md.md)] de saída de **cursor** . Isso permite que lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimentos armazenados e gatilhos trabalhem com a saída uma linha de cada vez. Isto também significa que o procedimento não pode ser chamado diretamente de funções da API de banco de dados. O parâmetro de saída do **cursor** deve ser associado a uma variável de programa, mas as APIs de banco de dados não dão suporte a parâmetros ou variáveis de **cursor** de associação.  
+ sp_describe_cursor_columns encapsula seu relatório como um parâmetro de saída de [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor** . Isso permite que lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimentos armazenados e gatilhos trabalhem com a saída uma linha de cada vez. Isto também significa que o procedimento não pode ser chamado diretamente de funções da API de banco de dados. O parâmetro de saída do **cursor** deve ser associado a uma variável de programa, mas as APIs de banco de dados não dão suporte a parâmetros ou variáveis de **cursor** de associação.  
   
  A tabela a seguir mostra o formato do cursor retornado quando se usa sp_describe_cursor_columns.  
   

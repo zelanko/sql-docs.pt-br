@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053108"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830224"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,22 +63,22 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_depends** exibe dois conjuntos de resultados.  
   
- O conjunto de resultados a seguir mostra os objetos dos quais * \<o objeto>* depende.  
+ O conjunto de resultados a seguir mostra os objetos dos quais o * \< objeto>* depende.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
-|**type**|**nvarchar (16)**|Tipo do item.|  
-|**atualizações**|**nvarchar (7)**|Caso o item seja atualizado.|  
-|**selecionado**|**nvarchar(8)**|Se o item é usado em uma instrução SELECT.|  
-|**pilha**|**sysname**|Coluna ou parâmetro em que a dependência existe.|  
+|**tipo**|**nvarchar (16)**|Tipo do item.|  
+|**atualizado**|**nvarchar (7)**|Caso o item seja atualizado.|  
+|**Selecione**|**nvarchar(8)**|Se o item é usado em uma instrução SELECT.|  
+|**column**|**sysname**|Coluna ou parâmetro em que a dependência existe.|  
   
- O conjunto de resultados a seguir mostra os objetos que dependem do * \<objeto>*.  
+ O conjunto de resultados a seguir mostra os objetos que dependem do * \< objeto>*.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
-|**type**|**nvarchar (16)**|Tipo do item.|  
+|**tipo**|**nvarchar (16)**|Tipo do item.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  

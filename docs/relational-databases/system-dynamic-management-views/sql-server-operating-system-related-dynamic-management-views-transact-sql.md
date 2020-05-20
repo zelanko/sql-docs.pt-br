@@ -14,23 +14,23 @@ helpviewer_keywords:
 - SQL OS dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], SQL OS
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 862f54351eb67d2170d8e9806347eb8608178c23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ea0bbe308e3b0e49f6250dd02d2c6c1f636751c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71342043"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830899"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>Exibições de gerenciamento dinâmico relacionadas ao sistema operacional do SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Esta seção documenta as exibições de gerenciamento dinâmico (DMV) que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão associadas ao sistema operacional (SQLOS). SQLOS é responsável por gerenciar recursos do sistema operacional que são específicos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do.
+Esta seção documenta as exibições de gerenciamento dinâmico (DMV) que estão associadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sistema operacional (SQLOS). SQLOS é responsável por gerenciar recursos do sistema operacional que são específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
-As DMVs SQLOS são listadas no sumário. A maioria deles e são nomeados `sys.dm_os_<description>`.
+As DMVs SQLOS são listadas no sumário. A maioria deles e são nomeados `sys.dm_os_<description>` .
 
- As exibições de gerenciamento dinâmico relacionadas ao sistema operacional a seguir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].  
+ As [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibições de gerenciamento dinâmico relacionadas ao sistema operacional a seguir são [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] .  
   
 |||  
 |-|-|  

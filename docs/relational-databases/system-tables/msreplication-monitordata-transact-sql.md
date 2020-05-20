@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_monitordata system table
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 118602eadf5dc1f23aa811d9a295fae351f54f36
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079137"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829854"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68079137"
 |**job_id**|**uniqueidentifier**|O GUID do trabalho do agente de replicação.|  
 |**status**|**int**|Status do agente de replicação, que pode ter um destes valores:<br /><br /> **1** = iniciado<br /><br /> **2** = com êxito<br /><br /> **3** = em andamento<br /><br /> **4** = ocioso<br /><br /> **5** = repetindo<br /><br /> **6** = com falha|  
 |**isagentrunningnow**|**bit**|Um sinalizador que indica se o trabalho do agente está em execução no momento, em que um valor de **1** significa que o trabalho está em execução.|  
-|**warning**|**int**|Aviso de limite gerado por uma assinatura, que pode ser o resultado OR lógico de um ou mais destes valores.<br /><br /> **1** = expiração-uma assinatura para uma publicação transacional excedeu o período de retenção por mais do que o limite permitido, como uma porcentagem do período de retenção.<br /><br /> **2** = latência-o tempo necessário para replicar dados de um Publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration-uma assinatura para uma publicação de mesclagem excedeu o período de retenção por mais do que o limite permitido, como uma porcentagem do período de retenção. 8 = mergefastrunduration – o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão veloz de rede.<br /><br /> **16** = mergeslowrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
+|**alerta**|**int**|Aviso de limite gerado por uma assinatura, que pode ser o resultado OR lógico de um ou mais destes valores.<br /><br /> **1** = expiração-uma assinatura para uma publicação transacional excedeu o período de retenção por mais do que o limite permitido, como uma porcentagem do período de retenção.<br /><br /> **2** = latência-o tempo necessário para replicar dados de um Publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration-uma assinatura para uma publicação de mesclagem excedeu o período de retenção por mais do que o limite permitido, como uma porcentagem do período de retenção. 8 = mergefastrunduration – o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão veloz de rede.<br /><br /> **16** = mergeslowrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
 |**last_distsync**|**datetime**|A última data e hora de execução do Distribution Agent.|  
 |**agentstoptime**|**datetime**|A data e a hora em que o agente foi interrompido.|  
 |**distdb**|**sysname**|Nome do banco de dados de distribuição para a assinatura.|  

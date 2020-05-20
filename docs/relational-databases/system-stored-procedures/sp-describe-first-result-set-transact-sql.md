@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053054"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831174"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,9 +44,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="arguments"></a>Argumentos  
 `[ \@tsql = ] 'Transact-SQL_batch'`Uma ou mais [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. O *Transact-SQL_batch* pode ser **nvarchar (***n***)** ou **nvarchar (max)**.  
   
-`[ \@params = ] N'parameters'`\@params fornece uma cadeia de caracteres de declaração para [!INCLUDE[tsql](../../includes/tsql-md.md)] parâmetros para o lote, que é semelhante a sp_executesql. Os parâmetros podem ser **nvarchar (n)** ou **nvarchar (max)**.  
+`[ \@params = ] N'parameters'`\@params fornece uma cadeia de caracteres de declaração para parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que é semelhante a sp_executesql. Os parâmetros podem ser **nvarchar (n)** ou **nvarchar (max)**.  
   
- É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetros adicionais. Todos os parâmetros especificados na instrução devem ser definidos em \@params. Se a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote na instrução não contiver parâmetros, \@params não será necessário. O valor padrão para este parâmetro é NULL.  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetros adicionais. Todos os parâmetros especificados na instrução devem ser definidos em \@ params. Se a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote na instrução não contiver parâmetros, \@ params não será necessário. O valor padrão para este parâmetro é NULL.  
   
 `[ \@browse_information_mode = ] tinyint`Especifica se colunas de chave e informações de tabela de origem adicionais são retornadas. Se definido como 1, cada consulta será analisada como se incluísse uma opção FOR BROWSE na consulta. Colunas de chave adicionais e informações de tabela de origem são retornadas.  
   
@@ -113,17 +113,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** retorna um erro em qualquer um dos casos a seguir.  
   
--   Se o TSQL \@de entrada não for um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote válido. A validade é determinada pela análise e análise do [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. Todos os erros causados pelo lote durante a otimização da consulta ou durante a execução não são [!INCLUDE[tsql](../../includes/tsql-md.md)] considerados ao determinar se o lote é válido.  
+-   Se o TSQL de entrada \@ não for um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote válido. A validade é determinada pela análise e análise do [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. Todos os erros causados pelo lote durante a otimização da consulta ou durante a execução não são considerados ao determinar se o [!INCLUDE[tsql](../../includes/tsql-md.md)] lote é válido.  
   
--   Se \@params não for NULL e contiver uma cadeia de caracteres que não seja uma cadeia de caracteres de declaração sintaticamente válida para parâmetros, ou se ele contiver uma cadeia de caracteres que declare qualquer parâmetro mais de uma vez.  
+-   Se \@ params não for NULL e contiver uma cadeia de caracteres que não seja uma cadeia de caracteres de declaração sintaticamente válida para parâmetros, ou se ele contiver uma cadeia de caracteres que declare qualquer parâmetro mais de uma vez.  
   
--   Se o lote [!INCLUDE[tsql](../../includes/tsql-md.md)] de entrada declarar uma variável local do mesmo nome que um parâmetro declarado em \@params.  
+-   Se o lote de entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] declarar uma variável local do mesmo nome que um parâmetro declarado em \@ params.  
   
 -   Se a instrução usar uma tabela temporária.  
   
 -   A consulta inclui a criação de uma tabela permanente que é então consultada.  
   
- Se todas as outras verificações forem bem-sucedidas, serão considerados todos os caminhos de fluxo de controle possíveis dentro do lote de entrada. Isso leva em consideração todas as instruções de fluxo de controle (GOTO, blocos IF/ELSE [!INCLUDE[tsql](../../includes/tsql-md.md)] , while e try/catch), bem como quaisquer procedimentos [!INCLUDE[tsql](../../includes/tsql-md.md)] , lotes dinâmicos ou gatilhos invocados do lote de entrada por uma instrução EXEC, uma instrução DDL que faz com que os gatilhos DDL sejam acionados ou uma instrução DML que faz com que os gatilhos sejam acionados em uma tabela de destino ou em uma tabela que é modificada devido à ação em cascata No caso de muitos possíveis caminhos de controle, em algum ponto, um algoritmo para.  
+ Se todas as outras verificações forem bem-sucedidas, serão considerados todos os caminhos de fluxo de controle possíveis dentro do lote de entrada. Isso leva em consideração todas as instruções de fluxo de controle (GOTO, blocos IF/ELSE, WHILE e [!INCLUDE[tsql](../../includes/tsql-md.md)] try/catch), bem como quaisquer procedimentos, lotes dinâmicos [!INCLUDE[tsql](../../includes/tsql-md.md)] ou gatilhos invocados do lote de entrada por uma instrução EXEC, uma instrução DDL que faz com que os gatilhos DDL sejam acionados ou uma instrução DML que faz com que os gatilhos sejam acionados em uma tabela de destino ou em uma tabela que é modificada devido à ação em cascata No caso de muitos possíveis caminhos de controle, em algum ponto, um algoritmo para.  
   
  Para cada caminho de fluxo de controle, a primeira instrução (se houver) que retorna um conjunto de resultados é determinada pelo **sp_describe_first_result_set**.  
   
@@ -152,13 +152,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set** não dá suporte à recursão indireta.  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão para executar o \@argumento TSQL.  
+ Requer permissão para executar o \@ argumento TSQL.  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="typical-examples"></a>Exemplos típicos  
   
-#### <a name="a-simple-example"></a>A. Exemplo simples  
+#### <a name="a-simple-example"></a>a. Exemplo simples  
  O exemplo a seguir descreve o conjunto de resultados retornado de uma única consulta.  
   
 ```  
@@ -190,7 +190,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|Nome|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULO|NULO|NULO|NULO|  
   
@@ -203,7 +203,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|Nome|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -216,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|Nome|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULO|NULO|NULO|0|  
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Resultado: \<nome de coluna desconhecido> **varchar (20) nulo**  
+ Resultado: \< nome de coluna desconhecido> **varchar (20) nulo**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Nome de coluna forçado a ser idêntico via alias  
  Igual ao anterior, mas as colunas têm o mesmo nome via alias de coluna.  

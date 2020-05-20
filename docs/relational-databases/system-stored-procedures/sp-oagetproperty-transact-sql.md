@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc92c675902309179865593b03f51a385f61621e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107886"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828814"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Quando todos os valores de dados em uma coluna compartilharem o mesmo tipo de dados, esse tipo de dados será usado para a coluna inteira. Quando os valores de dados em uma coluna forem de tipos de dados diferentes, o tipo de dados da coluna inteira será escolhido com base no quadro a seguir.  
   
-||INT|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||int|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -100,7 +100,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-a-local-variable"></a>a. Usando uma variável local  
- O exemplo a seguir obtém `HostName` a propriedade (do objeto **SqlServer** criado anteriormente) e a armazena em uma variável local.  
+ O exemplo a seguir obtém a `HostName` Propriedade (do objeto **SqlServer** criado anteriormente) e a armazena em uma variável local.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -114,7 +114,7 @@ PRINT @property;
 ```  
   
 ### <a name="b-using-a-result-set"></a>B. Usando um conjunto de resultados  
- O exemplo a seguir obtém `HostName` a propriedade (do objeto **SqlServer** criado anteriormente) e a retorna ao cliente como um conjunto de resultados.  
+ O exemplo a seguir obtém a `HostName` Propriedade (do objeto **SqlServer** criado anteriormente) e a retorna ao cliente como um conjunto de resultados.  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c93cc5f34d86e15645b4d53c02244e2705bbeda5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026859"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830818"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]é substancialmente diferente das versões mais recentes e é discutido no tópico em [SQL Server 2014](#bkmk_2014).**
   
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]e posterior  
- A tabela a seguir descreve as colunas `sys.dm_db_xtp_checkpoint_stats`no, começando **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** com.  
+ A tabela a seguir descreve as colunas no `sys.dm_db_xtp_checkpoint_stats` , começando com **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Nome da coluna|Type|Descrição|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Último LSN visto pelo controlador.|  
 |end_of_log_lsn|**numeric (38)**|O LSN do final do log.|  
-|bytes_to_end_of_log|**bigint**|Bytes de log não processados pelo controlador, correspondentes aos bytes entre `last_lsn_processed` e. `end_of_log_lsn`|  
+|bytes_to_end_of_log|**bigint**|Bytes de log não processados pelo controlador, correspondentes aos bytes entre `last_lsn_processed` e `end_of_log_lsn` .|  
 |log_consumption_rate|**bigint**|Taxa de consumo de log de transações pelo controlador (em KB/s).|  
 |active_scan_time_in_ms|**bigint**|Tempo gasto pelo controlador no exame ativo do log de transações.|  
 |total_wait_time_in_ms|**bigint**|Tempo de espera cumulativo para o controlador ao não verificar o log.|  
@@ -84,9 +84,9 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |bytes_of_large_data_serialized|**bigint**|A quantidade de dados serializados. |  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- A tabela a seguir descreve as colunas `sys.dm_db_xtp_checkpoint_stats`no, **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** para.  
+ A tabela a seguir descreve as colunas no `sys.dm_db_xtp_checkpoint_stats` , para **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Nome da coluna|Type|Descrição|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|O número de bytes de log entre o LSN (número de sequência de log) atual do thread e o fim do log.|  
 |total_log_blocks_processed|**bigint**|Número total de blocos de log processados desde a inicialização do servidor.|  

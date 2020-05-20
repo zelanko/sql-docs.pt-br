@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3040f585e10816d4f8664566be8af1523048db88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097661"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830117"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rmtsrvname = ] 'rmtsrvname'`É o nome de um servidor vinculado ao qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o mapeamento de logon se aplica. *rmtsrvname* é **sysname**, sem padrão. *rmtsrvname* já deve existir.  
+`[ @rmtsrvname = ] 'rmtsrvname'`É o nome de um servidor vinculado ao qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeamento de logon se aplica. *rmtsrvname* é **sysname**, sem padrão. *rmtsrvname* já deve existir.  
   
 `[ @locallogin = ] 'locallogin'`É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon no servidor local que tem um mapeamento para o servidor vinculado *rmtsrvname*. *locallogin* é **sysname**, sem padrão. Um mapeamento para *locallogin* para *rmtsrvname* já deve existir. Se NULL, o mapeamento padrão criado por **sp_addlinkedserver**, que mapeia todos os logons no servidor local para logons no servidor vinculado, é excluído.  
   

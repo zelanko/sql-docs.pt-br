@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.availability_group_listeners catalog view
 - Availability Groups [SQL Server], listeners
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e4ae93cfcb4df935b3b006413ab8d8c884090ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041064"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829104"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "68041064"
 |**group_id**|**uniqueidentifier**|ID do grupo de disponibilidade (**group_id**) de [Sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
 |**listener_id**|**nvarchar (36)**|GUID da ID do recurso do cluster.|  
 |**dns_name**|**nvarchar (63)**|Nome de rede configurado (nome do host) do ouvinte do grupo de disponibilidade.|  
-|**porta**|**int**|O número da porta TCP configurada para o ouvinte do grupo de disponibilidade.<br /><br /> NULL = O ouvinte foi configurado fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e seu número de porta não foi adicionado ao grupo de disponibilidade. Para adicionar a porta, pleaseuse a opção modificar ouvinte da instrução [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
-|**is_conformant**|**bit**|Se esta configuração de IP é compatível, pode ser:<br /><br /> 1 = O ouvinte é compatível. Somente as relações "ou" existem entre seus endereços IP (Internet Protocol). *Compatível* abrange todas as configurações de IP que foram criadas pela instrução [Criar grupo](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] de disponibilidade. Além disso, se uma configuração de IP que foi criada fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por exemplo, usando o Gerenciador de Cluster de Failover do WSFC, mas puder ser modificada pela instrução tsql ALTER AVAILABILITY GROUP, a configuração de IP será qualificada como compatível.<br /><br /> 0 = O ouvinte não é compatível. Normalmente, indica um endereço IP que não pôde ser configurado usando comandos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em vez disso, foi definido diretamente no cluster do WSFC.|  
+|**Porto**|**int**|O número da porta TCP configurada para o ouvinte do grupo de disponibilidade.<br /><br /> NULL = O ouvinte foi configurado fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e seu número de porta não foi adicionado ao grupo de disponibilidade. Para adicionar a porta, pleaseuse a opção modificar OUVInte da instrução [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
+|**is_conformant**|**bit**|Se esta configuração de IP é compatível, pode ser:<br /><br /> 1 = O ouvinte é compatível. Somente as relações "ou" existem entre seus endereços IP (Internet Protocol). *Compatível* abrange todas as configurações de IP que foram criadas pela instrução [Criar grupo de disponibilidade](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] . Além disso, se uma configuração de IP que foi criada fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por exemplo, usando o Gerenciador de Cluster de Failover do WSFC, mas puder ser modificada pela instrução tsql ALTER AVAILABILITY GROUP, a configuração de IP será qualificada como compatível.<br /><br /> 0 = O ouvinte não é compatível. Normalmente, indica um endereço IP que não pôde ser configurado usando comandos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em vez disso, foi definido diretamente no cluster do WSFC.|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|Cadeias de caracteres da configuração de IP do cluster, se houver, para esse ouvinte. NULL = O ouvinte não tem nenhum endereço IP virtual. Por exemplo:<br /><br /> Endereço IPv4: `65.55.39.10`.<br /><br /> Endereço IPv6: `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
 ## <a name="security"></a>Segurança  
