@@ -62,7 +62,7 @@ AS
 GO  
 ```  
   
- A função @@CONNECTIONS retorna o número de conexões ou tentativas de conexão desde o início de uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse valor é passado ao procedimento armazenado **sp_user_counter1** como parâmetro.  
+ A função @[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna o número de conexões ou tentativas de conexão desde o início de uma instância de @CONNECTIONS. Esse valor é passado ao procedimento armazenado **sp_user_counter1** como parâmetro.  
   
 > [!IMPORTANT]  
 >  Torne as consultas definidas nos procedimentos armazenados de contador do usuário o mais simples possível. Consultas que consomem muita memória e realizam operações substanciais de classificação ou hash ou grandes quantidades de E/S são de execução dispendiosa e podem influir no desempenho.  

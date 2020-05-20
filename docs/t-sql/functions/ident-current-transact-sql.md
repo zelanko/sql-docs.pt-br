@@ -53,7 +53,7 @@ Retornará NULL em caso de erro ou se um chamador não tiver permissão para exi
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário só pode exibir os metadados de itens protegíveis de sua propriedade ou para os quais ele tenha permissão concedida. Isso significa que as funções internas emissoras de metadados, como IDENT_CURRENT, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="remarks"></a>Comentários  
-IDENT_CURRENT é semelhante às funções de identidade SCOPE_IDENTITY e @[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] do @IDENTITY. As três funções retornam valores de identidade gerados por último. Entretanto, o escopo e a sessão nas quais o *último* está definido em cada uma dessas funções difere:  
+IDENT_CURRENT é semelhante às funções de identidade SCOPE_IDENTITY e @@IDENTITY do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. As três funções retornam valores de identidade gerados por último. Entretanto, o escopo e a sessão nas quais o *último* está definido em cada uma dessas funções difere:  
 
 -   IDENT_CURRENT retorna o último valor de identidade gerado para uma tabela específica em qualquer sessão e escopo.  
 -   @@IDENTITY retorna o último valor de identidade gerado para qualquer tabela na sessão atual, em todos os escopos.  
