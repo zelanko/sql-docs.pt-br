@@ -1,5 +1,6 @@
 ---
 title: Certificação de compatibilidade | Microsoft Docs
+description: A certificação de compatibilidade elimina os riscos de compatibilidade de aplicativos, o que permite que você atualize um banco de dados do SQL Server local e na nuvem.
 ms.custom: ''
 ms.date: 08/26/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b993647898865d0b67c25c1ab6040b9b7eedaf1
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73632930"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606466"
 ---
 # <a name="compatibility-certification"></a>Certificação de compatibilidade
 

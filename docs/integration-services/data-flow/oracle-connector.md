@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75755843"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606863"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector para Oracle
 
@@ -26,7 +26,7 @@ O Microsoft Connector para Oracle permite explorar dados e carregar dados da ori
 
 Os seguintes produtos do Microsoft SQL Server são suportados pelo Microsoft Connector para Oracle:
 
-- A partir do SQL Server 2019
+- Desde o SQL Server 2019 CU1
 - SSDT (SQL Server Data Tools) desde a versão 15.9.3
 
 As seguintes versões do Oracle Database de fontes de dados têm suporte:

@@ -1,6 +1,7 @@
 ---
 title: Iniciar automaticamente um rastreamento após a conexão com um servidor
 titleSuffix: SQL Server Profiler
+description: Saiba como iniciar automaticamente o rastreamento de dados de evento no SQL Server Profiler depois de se conectar a uma instância do SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 0e1999897413531366d207b7b5df587030c02647
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff07dedccd12bbbe67040ebcccb8f716af85c753
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307809"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151679"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Iniciar um rastreamento automaticamente após a conexão com um servidor (SQL Server Profiler)
 

@@ -1,5 +1,6 @@
 ---
 title: Exemplo de arquivo de entrada XML com configuração especificada pelo usuário
+description: Este artigo contém um arquivo de entrada XML de exemplo com configurações especificadas pelo usuário a ser usado para ajustar as cargas de trabalho a empregar com o Orientador de Otimização do Mecanismo de Banco de Dados.
 titleSuffix: DTA
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: ac32f47bc81e2abb2865a01b17070a9f72f7b4dc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 187d1b8492719a35f470d718cd9d5727628f76e1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257081"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151761"
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>Exemplo de arquivo de entrada XML com configuração especificada pelo usuário (DTA)
 

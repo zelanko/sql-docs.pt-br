@@ -1,5 +1,6 @@
 ---
 title: Utilitários de prompt de comando SQL (Mecanismo de Banco de Dados)
+description: Os utilitários de prompt de comando permitem executar scripts de operações do SQL Server. Este artigo lista vários utilitários de prompt de comando fornecidos com o SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -17,12 +18,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a25fcbb39b2b4edacd3d9e6ddab64a88d5888fe9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c201c13c0d2a77f4005ad2fe788c783431c88094
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992742"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151426"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>Utilitários de prompt de comando SQL (Mecanismo de Banco de Dados)
 

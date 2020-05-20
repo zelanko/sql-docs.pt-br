@@ -1,6 +1,7 @@
 ---
 title: SQL Server Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: O recurso SQL Server Distributed Replay ajuda a avaliar o impacto de atualizações futuras no SQL Server, no hardware e no sistema operacional e a ajustar o SQL Server.
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d19e8906ba6e1d5d517d1d176f6edb2b3e4fb50e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 856a1440c816555c0d03526bbbfcde9363c6a73f
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746352"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152177"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 

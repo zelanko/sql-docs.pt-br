@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados'
+title: 'Tutorial: Database Engine Tuning Advisor'
+description: O Orientador de Otimização do Mecanismo de Banco de Dados examina como as consultas são processadas e recomenda como melhorar o desempenho do processamento de consultas ao modificar as estruturas do banco de dados.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -14,14 +15,14 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a6fea0bbb9c9471885f76f3f6f44a86b50718d3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ad92ad29414afcf849ef0dd8a1ade0463748af35
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304704"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151484"
 ---
-# <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados
+# <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Database Engine Tuning Advisor
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -35,10 +36,10 @@ Este tutorial vai ensiná-lo a navegar na GUI do Orientador de Otimização do M
 [Lição 1: navegação básica no Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
 Nessa lição, você se acostumará com a nova interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados e aprenderá a definir opções de display e layout.  
   
-[Lição 2: usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lição 2: Usando o Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 Nessa lição, você aprenderá a executar tarefas básicas de ajuste com a GUI do Orientador de Otimização do Mecanismo de Banco de Dados.  
   
-[Lição 3: usar o utilitário de prompt de comando DTA](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Lição 3: como usar o Utilitário de Prompt de Comando dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
 Nesta lição, você aprenderá a iniciar o utilitário de prompt de comando **dta** e executar alguns comandos de ajuste simples.  
   
 ## <a name="requirements"></a>Requisitos  

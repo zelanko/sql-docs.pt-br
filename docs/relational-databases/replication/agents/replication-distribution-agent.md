@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af057cffd0382364488076086f77af03376d64fd
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: c323fc0e0535b941b1349c3ceae2331aa55d7bb7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528750"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151886"
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,7 @@ distrib [-?]
 [-MaxBcpThreads]  
 [-MaxDeliveredTransactions number_of_transactions]  
 [-MessageInterval message_interval]  
+[-MultiSubnetFailover [0|1]]
 [-OledbStreamThreshold oledb_stream_threshold]  
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2]]  
@@ -205,6 +206,8 @@ distrib [-?]
 -   O valor de **MessageInterval** é atingido depois que o último evento de histórico é registrado.  
   
  Se não houver nenhuma transação replicada disponível na origem, o agente informará uma mensagem de não transação ao Distributor. Essa opção especifica quanto tempo o agente espera antes de informar outro mensagem de não transação. O agente sempre informa uma mensagem de não transação quando detecta que não há transações disponíveis na origem após transações replicadas de processamento anterior. O padrão é 60 segundos.  
+
+**-MultiSubnetFailover** Especifica se a propriedade MultiSubnetFailover está habilitada ou não. Se o seu aplicativo estiver se conectando a um AG (grupo de disponibilidade) AlwaysOn em diferentes sub-redes, definir MultiSubnetFailover como true fornece uma detecção e uma conexão mais rápida ao servidor (atualmente) ativo.
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  Especifica o tamanho mínimo, em bytes, para dados de objeto binário grande acima do qual os dados serão associados como um fluxo. Você deve especificar **-UseOledbStreaming** para usar esse parâmetro. Os valores podem variar de 400 a 1048576 bytes, com um padrão de 16384 bytes.  
@@ -299,6 +302,7 @@ distrib [-?]
 |Conteúdo atualizado|  
 |---------------------|  
 |Adicionado o parâmetro **-ExtendedEventConfigFile** .|  
+|Adicionado o parâmetro **-MultiSubnetFailover**.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)  

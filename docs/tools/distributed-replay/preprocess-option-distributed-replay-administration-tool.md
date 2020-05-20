@@ -1,6 +1,7 @@
 ---
 title: Opção de pré-processamento
 titleSuffix: SQL Server Distributed Replay
+description: A ferramenta do Microsoft SQL Server Distributed Replay, DReplay.exe, é uma ferramenta de linha de comando que você pode usar para se comunicar com o controlador de reprodução distribuída.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 1b003bf2441e3cffc2e21557497695f92df50135
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7baf79900fb89903c9d398dfb1e7b72c3600f1e0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307028"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152200"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opção de pré-processamento (ferramenta de administração Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +35,8 @@ dreplay preprocess [-m controller] -i input_trace_file
     -d controller_working_dir [-c config_file] [-f status_interval]  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- **-m** _controller_  
+#### <a name="parameters"></a>Parâmetros  
+ **-m** _controlador_  
  Especifica o nome do computador do controlador. Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.  
   
  Se o parâmetro **-m** não for especificado, será usado o computador local.  

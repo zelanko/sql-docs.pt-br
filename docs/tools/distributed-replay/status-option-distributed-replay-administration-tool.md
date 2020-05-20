@@ -1,6 +1,7 @@
 ---
 title: Opção de status na ferramenta de administração
 titleSuffix: SQL Server Distributed Replay
+description: Este artigo descreve a opção de linha de comando de status e a sintaxe da ferramenta de administração do SQL Server Distributed Replay, que exibe o status atual.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: tools-other
@@ -10,18 +11,18 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 35851ce2f16ba5cb0e96ba24e9e67c887efd4aaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 658b32d8c66d07505cfc8a95e143decfa26f8013
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992191"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152076"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opção de status (ferramenta de administração do Distributed Replay)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-A ferramenta de administração do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, **DReplay.exe**, é uma ferramenta de linha de comando que você pode usar para se comunicar com o controlador de reprodução distribuída. Este tópico descreve a opção de linha de comando **status** e a sintaxe correspondente.  
+A ferramenta de administração [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, **DReplay.exe**, é uma ferramenta de linha de comando que você pode usar para se comunicar com o controlador de reprodução distribuída. Este tópico descreve a opção de linha de comando **status** e a sintaxe correspondente.  
   
  A opção **status** consulta o controlador e exibe o status atual.  
   
@@ -34,13 +35,13 @@ A ferramenta de administração do [!INCLUDE[msCoName](../../includes/msconame-m
 dreplay status [-m controller] [-f status_interval]  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- **-m** _controller_  
+#### <a name="parameters"></a>Parâmetros  
+ **-m** _controlador_  
  Especifica o nome do computador do controlador. Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.  
   
  Se o parâmetro **-m** não for especificado, será usado o computador local.  
   
- **-f** _status_interval_  
+ **-f** _intervalo_de_status_  
  Especifica a frequência (em segundos) na qual exibir o status.  
   
  Se o parâmetro **-f** não for especificado, o intervalo padrão será de 30 segundos.  

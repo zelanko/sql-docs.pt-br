@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d6547436a3338805d9dd81c88ae786a187f9576
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486522"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151997"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guia de arquitetura e design de índices do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -659,6 +659,8 @@ Em discussões sobre índices columnstore, usamos os termos *rowstore* e *column
   Um índice columnstore também armazena fisicamente algumas linhas em um formato de rowstore, chamado deltastore. O deltastore, também chamado de rowgroups delta, é um espaço reservado para linhas que são muito poucas para se qualificarem para compactação no columnstore. Cada rowgroup delta é implementado como um índice de árvore B clusterizado. 
 
 - O **deltastore** é um local de espera para linhas que são muito poucas para serem compactadas no columnstore. O deltastore armazena as linhas no formato rowstore. 
+
+Confira mais informações sobre os termos e conceitos de columnstore em [Índices Columnstore: visão geral](../relational-databases/indexes/columnstore-indexes-overview.md).
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Operações são executadas em rowgroups e em segmentos de colunas
 
@@ -667,17 +669,27 @@ O índice columnstore agrupa linhas em unidades gerenciáveis. Cada uma dessas u
 Por exemplo, o índice columnstore executa estas operações em rowgroups:
 
 * Compacta rowgroups no columnstore. A compactação é executada em cada segmento de coluna dentro de um rowgroup.
-* Mescla rowgroups durante uma operação `ALTER INDEX ... REORGANIZE`.
+* Mescla rowgroups durante uma operação de `ALTER INDEX ... REORGANIZE`, incluindo a remoção de dados excluídos.
 * Cria novos rowgroups durante uma operação `ALTER INDEX ... REBUILD`.
 * Relata a integridade e a fragmentação do rowgroup nas DMVs (exibições de gerenciamento dinâmico).
 
-O deltastore é composto de um ou mais rowgroups chamados **rowgroups delta**. Cada rowgroup delta é um índice de árvore B clusterizado que armazena pequenas cargas e inserções em massa até que o rowgroup contenha 1.048.576 linhas ou até que o índice seja recompilado.  Quando um rowgroup delta contém 1.048.576 linhas, ele é marcado como fechado e espera por um processo chamado motor de tupla para compactá-lo no columnstore. 
+O deltastore é composto de um ou mais rowgroups chamados **rowgroups delta**. Cada rowgroup delta é um índice de árvore B clusterizado que armazena pequenas cargas e inserções em massa até que o rowgroup contenha 1.048.576 linhas; nesse momento, um processo chamado **motor de tupla** compacta automaticamente o rowgroup fechado em um columnstore. 
+
+Confira mais informações sobre os status de rowgroup em [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+> [!TIP]
+> Ter muitos grupos pequenos de rowgroups diminui a qualidade do índice columnstore. A operação de reorganização mesclará rowgroups menores, seguindo uma política de limite interno que determina como remover linhas excluídas e combinar os rowgroups compactados. Após uma mesclagem, a qualidade do índice deve melhorar. 
+
+> [!NOTE]
+> A partir do [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], o motor de tupla recebe a ajuda de uma tarefa de mesclagem em segundo plano que compacta automaticamente os rowGroups OPEN delta menores que existiram por algum tempo, conforme determinado por um limite interno, ou mescla os rowGroups COMPACTADOS dos quais foi excluído um grande número de linhas.      
 
 Cada coluna tem alguns de seus valores em cada rowgroup. Esses valores são chamados de **segmentos de coluna**. Cada rowgroup contém um segmento de coluna para cada coluna na tabela. Cada coluna tem um segmento de coluna em cada rowgroup.
 
 ![Segmento de coluna](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "segmento de coluna") 
  
-Quando o índice columnstore compacta um rowgroup, ele compacta cada segmento de coluna separadamente. Para descompactar uma coluna inteira, o índice columnstore só precisa descompactar um segmento de coluna de cada rowgroup.   
+Quando o índice columnstore compacta um rowgroup, ele compacta cada segmento de coluna separadamente. Para descompactar uma coluna inteira, o índice columnstore só precisa descompactar um segmento de coluna de cada rowgroup. 
+
+Confira mais informações sobre os termos e conceitos de columnstore em [Índices Columnstore: visão geral](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
 #### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>Cargas e inserções pequenas vão para o deltastore
 Um índice columnstore melhora a compactação e o desempenho do columnstore por compactar pelo menos 102.400 linhas por vez no índice columnstore. Para compactar linhas em massa, o índice columnstore acumula pequenas cargas e insere no deltastore. As operações de deltastore são tratadas em segundo plano. Para retornar os resultados corretos da consulta, o índice columnstore clusterizado combina os resultados da consulta de columnstore e deltastore. 
@@ -689,11 +701,19 @@ As linhas vão para o deltastore quando:
 
 O deltastore também armazena uma lista de IDs de linhas excluídas que foram marcadas como excluídas, mas ainda não foram excluídas fisicamente do columnstore. 
 
+Confira mais informações sobre os termos e conceitos de columnstore em [Índices Columnstore: visão geral](../relational-databases/indexes/columnstore-indexes-overview.md). 
+
 #### <a name="when-delta-rowgroups-are-full-they-get-compressed-into-the-columnstore"></a>Quando os rowgroups delta estão cheios, eles são compactados para o columnstore
 
-Os índices columnstore clusterizados coletam até 1.048.576 linhas em cada rowgroup delta antes de compactar o rowgroup no columnstore. Isso melhora a compactação do índice columnstore. Quando um rowgroup delta contém 1.048.576 linhas, o índice columnstore marca o rowgroup como fechado. Um processo em segundo plano, chamado *motor de tupla*, localiza cada rowgroup fechado e compacta-o no columnstore. 
+Os índices columnstore clusterizados coletam até 1.048.576 linhas em cada rowgroup delta antes de compactar o rowgroup no columnstore. Isso melhora a compactação do índice columnstore. Quando um rowgroup delta alcança o número máximo de linhas, ele faz a transição do estado ABERTO para FECHADO. Um processo em segundo plano chamado de motor de tupla verifica os rowgroups fechados. Se o processo encontrar um rowgroup fechado, ele o compactará e o armazenará no columnstore.  
 
-Você pode forçar rowgroups delta para o columnstore usando [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) para reccompilar ou reorganizar o índice.  Observe que, se houver pressão de memória durante a compactação, o índice columnstore poderá reduzir o número de linhas no rowgroup compactado.
+Quando um rowgroup delta é compactado, o grupo de rowgroup delta existente faz a transição para o estado de marca para exclusão para ser removido posteriormente pelo motor de tupla quando não há nenhuma referência a ele, e o novo rowgroup compactado é marcado como COMPACTADO. 
+
+Confira mais informações sobre os status de rowgroup em [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+Você pode forçar rowgroups delta para o columnstore usando [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) para reccompilar ou reorganizar o índice. Observe que, se houver pressão de memória durante a compactação, o índice columnstore poderá reduzir o número de linhas no rowgroup compactado.   
+
+Confira mais informações sobre os termos e conceitos de columnstore em [Índices Columnstore: visão geral](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
 #### <a name="each-table-partition-has-its-own-rowgroups-and-delta-rowgroups"></a>Cada partição de tabela tem seus próprios rowgroups e rowgroups delta
 
@@ -701,8 +721,11 @@ O conceito de particionamento é o mesmo em um índice clusterizado, um heap e u
 
 Os rowgroups sempre são definidos dentro de uma partição de tabela. Quando um índice columnstore é particionado, cada partição tem seus próprios rowgroups compactados e rowgroups delta.
 
+> [!TIP]
+> Considere o uso do particionamento de tabela se houver a necessidade de remover dados do columnstore. A alternância e o truncamento de partições que não sejam mais necessárias é uma estratégia eficiente para excluir dados sem gerar a fragmentação introduzida por ter rowgroups menores.
+
 ##### <a name="each-partition-can-have-multiple-delta-rowgroups"></a>Cada partição pode ter vários rowgroups delta
-Cada partição pode ter mais de um rowgroup delta. Quando o índice columnstore precisar adicionar dados a um rowgroup delta e o rowgroup delta estiver bloqueado, o índice columnstore tentará obter um bloqueio em um rowgroup delta diferente. Se não houver nenhum rowgroup delta disponível, o índice columnstore criará um novo rowgroup delta.  Por exemplo, uma tabela com 10 partições poderia facilmente ter 20 ou mais rowgroups delta. 
+Cada partição pode ter mais de um rowgroup delta. Quando o índice columnstore precisar adicionar dados a um rowgroup delta e o rowgroup delta estiver bloqueado, o índice columnstore tentará obter um bloqueio em um rowgroup delta diferente. Se não houver nenhum rowgroup delta disponível, o índice columnstore criará um novo rowgroup delta. Por exemplo, uma tabela com 10 partições poderia facilmente ter 20 ou mais rowgroups delta. 
 
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>Você pode combinar índices columnstore e rowstore na mesma tabela
 Um índice não clusterizado contém uma cópia de parte ou de todas as linhas e colunas na tabela subjacente. O índice é definido como uma ou mais colunas da tabela e tem uma condição opcional que filtra as linhas. 

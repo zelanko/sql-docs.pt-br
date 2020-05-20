@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d34b2a8bfeaf11a58f0cf9e07962fb44fa8973fd
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816711"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151561"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Índices columnstore – desempenho de consultas
 
@@ -33,9 +33,16 @@ ms.locfileid: "71816711"
     
 -   **Aproveite a ordem de inserção.** Geralmente, no data warehouse tradicional, os dados são realmente inseridos na ordem de tempo e a análise é feita na dimensão temporal. Por exemplo, ao analisar vendas por trimestre. Para essa variante de carga de trabalho, a eliminação de rowgroup ocorre automaticamente. No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode descobrir que rowgroups de número foram ignorados como parte do processamento de consulta.    
     
--   **Aproveite o índice rowstore clusterizado.** Se o predicado de consulta comum estiver em uma coluna (por exemplo, C1) que não está relacionada à ordem de inserção da linha, você poderá criar um índice clusterizado rowstore em colunas C1 e, em seguida, criar o índice columstore clusterizado com a remoção do índice rowstore clusterizado. Se você criar o índice columnstore clusterizado explicitamente usando `MAXDOP = 1`, o índice columnstore clusterizado resultante estará ordenado perfeitamente na coluna C1. Se você especificar `MAXDOP = 8`, verá a sobreposição de valores em oito rowgroups. Um caso comum dessa estratégia é quando você cria inicialmente o índice columnstore com um grande conjunto de dados. Observe que, para o NCCI (índice columnstore não clusterizado), se a tabela rowstore base tiver um índice clusterizado, as linhas já estarão ordenadas. Nesse caso, o índice columnstore não clusterizado resultante será ordenado automaticamente. Um ponto importante a observar é que o índice columnstore não mantém a ordem das linhas inerentemente. Conforme novas linhas são inseridas ou linhas mais antigas são atualizadas, talvez seja necessário repetir o processo, já que o desempenho de consultas de análise pode se deteriorar    
+-   **Aproveite o índice rowstore clusterizado.** Se o predicado de consulta comum estiver em uma coluna (por exemplo, C1) que não esteja relacionada à ordem de inserção da linha, você poderá criar um índice clusterizado rowstore em colunas C1 e, em seguida, criar o índice columstore clusterizado com a remoção do índice rowstore clusterizado. Se você criar o índice columnstore clusterizado explicitamente usando `MAXDOP = 1`, o índice columnstore clusterizado resultante estará ordenado perfeitamente na coluna C1. Se você especificar `MAXDOP = 8`, verá a sobreposição de valores em oito rowgroups. Um caso comum dessa estratégia é quando você cria inicialmente o índice columnstore com um grande conjunto de dados. Observe que, para o NCCI (índice columnstore não clusterizado), se a tabela rowstore base tiver um índice clusterizado, as linhas já estarão ordenadas. Nesse caso, o índice columnstore não clusterizado resultante será ordenado automaticamente. Um ponto importante a observar é que o índice columnstore não mantém a ordem das linhas inerentemente. Conforme novas linhas são inseridas ou linhas mais antigas são atualizadas, talvez seja necessário repetir o processo, já que o desempenho de consultas de análise pode se deteriorar    
     
--   **Aproveite o particionamento de tabela.** Você pode particionar o índice columnstore e, em seguida, usar a eliminação de partição para reduzir o número de rowgroups a serem examinados. Por exemplo, uma tabela de fatos armazena as compras feitas por clientes e um padrão de consulta comum é encontrar as compras trimestrais feitas por um cliente específico; você pode combinar a ordem de inserção com o particionamento na coluna de clientes. Cada partição conterá linhas na ordem de tempo para o cliente específico.    
+-   **Aproveite o particionamento de tabela.** Você pode particionar o índice columnstore e, em seguida, usar a eliminação de partição para reduzir o número de rowgroups a serem examinados. Por exemplo, uma tabela de fatos armazena as compras feitas por clientes e um padrão de consulta comum é encontrar as compras trimestrais feitas por um cliente específico; você pode combinar a ordem de inserção com o particionamento na coluna de clientes. Cada partição conterá linhas na ordem de tempo para o cliente específico. Considere também o uso do particionamento de tabela se houver a necessidade de remover dados do columnstore. A alternância e o truncamento de partições que não sejam mais necessárias é uma estratégia eficiente para excluir dados sem gerar a fragmentação introduzida por ter rowgroups menores.    
+
+-   **Evite excluir grandes quantidades de dados**. A remoção de linhas compactadas de um rowgroup não é uma operação síncrona. Seria caro descompactar um rowgroup, excluir a linha e depois compactá-la novamente. Portanto, se você excluir dados de rowgroups compactados, eles ainda serão verificados mesmo que retornem menos linhas. Se o número de linhas excluídas de vários rowgroups for grande o suficiente para que eles sejam mesclados em menos rowgroups, a reorganização do columnstore aumentará a qualidade do índice e o desempenho da consulta melhorará. Se o processo de exclusão de dados geralmente esvaziar todos os rowgroups, considere usar o particionamento de tabela, extraindo as partições que não forem mais necessárias e truncando em vez de excluir linhas. 
+
+    > [!NOTE]
+    > A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], o motor de tupla recebe a ajuda de uma tarefa de mesclagem em segundo plano que compacta automaticamente os rowGroups OPEN delta menores que existiram por algum tempo, conforme determinado por um limite interno, ou mescla os rowGroups COMPACTADOS dos quais foi excluído um grande número de linhas. Isso melhora a qualidade do índice columnstore ao longo do tempo.   
+    > Se for necessária a exclusão de grandes quantidades de dados do índice columnstore, considere dividir essa operação em lotes de exclusão menores ao longo do tempo, permitindo que a tarefa de mesclagem em segundo plano manipule as tarefas de mesclar grupos de rowgroup menores e melhorar a qualidade do índice, eliminando a necessidade de programar janelas de manutenção de reorganização de índice após a exclusão dos dados.    
+    > Confira mais informações sobre os termos e conceitos de columnstore em [Índices Columnstore: visão geral](../../relational-databases/indexes/columnstore-indexes-overview.md).
     
 ### <a name="2-plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>2. Planejar memória suficiente para criar índices columnstore em paralelo    
  Criar um índice columnstore é, por padrão, uma operação paralela, a menos que a memória seja restrita. Criar o índice em paralelo exige mais memória do que criar o índice em série. Quando há bastante memória, a criação de um índice columnstore assume a ordem de 1,5 vezes mais longa do que a criação de uma árvore B nas mesmas colunas.    
@@ -47,7 +54,7 @@ ms.locfileid: "71816711"
  A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a consulta operará sempre no modo de lote. Em versões anteriores, a execução em lotes só é usada quando o DOP é maior do que um.    
     
 ## <a name="columnstore-performance-explained"></a>Desempenho ColumnStore explicado    
- Índices columnstore atingem alto desempenho de consultas combinando o processamento no modo de lotes in-memory em alta velocidade com técnicas que reduzem consideravelmente os requisitos de E/S.  Já que consultas de análise examinam grandes números de linhas, elas são normalmente associadas a E/S e, portanto, a redução da E/S durante a execução da consulta é crítica para o design de índices columnstore.  Depois que os dados são lidos na memória, é essencial reduzir o número de operações in-memory.    
+ Índices columnstore atingem alto desempenho de consultas combinando o processamento no modo de lotes in-memory em alta velocidade com técnicas que reduzem consideravelmente os requisitos de E/S. Já que consultas de análise examinam grandes números de linhas, elas são normalmente associadas a E/S e, portanto, a redução da E/S durante a execução da consulta é crítica para o design de índices columnstore. Depois que os dados forem lidos na memória, é essencial reduzir o número de operações na memória.    
     
  Índices columnstore reduzem a E/S e otimizam as operações in-memory por meio de alta compactação de dados, eliminação de columnstores, eliminação de rowgroups e processamento em lotes.    
     
@@ -56,7 +63,7 @@ ms.locfileid: "71816711"
     
 -   Índices columnstore leem dados compactados do disco, o que significa que menos bytes de dados precisam ser lidos da memória.    
     
--   Índices columnstore armazenam dados em formato compactado na memória, o que reduz a E/S com a redução do número de vezes que os mesmos dados são lidos na memória. Por exemplo, com uma compactação de 10 vezes, os índices columnstore podem manter 10 vezes mais dados na memória do que é possível armazenando os dados em formato descompactado. Com mais dados na memória, é mais provável que o índice columnstore localize os dados de que precisa na memória sem gerar leituras de disco adicionais.    
+-   Índices columnstore armazenam dados em formato compactado na memória, o que reduz a E/S ao diminuir o número de vezes que os mesmos dados são lidos na memória. Por exemplo, com uma compactação de 10 vezes, os índices columnstore podem manter 10 vezes mais dados na memória do que é possível armazenando os dados em formato descompactado. Com mais dados na memória, é mais provável que o índice columnstore localize os dados de que precisa na memória sem gerar leituras de disco adicionais.    
     
 -   Os índices columnstore compactam dados por colunas em vez de compactá-los por linhas, o que alcança altas taxas de compactação e reduz o tamanho dos dados armazenados no disco. Cada coluna é compactada e armazenada de modo independente.  Dados em uma coluna sempre têm o mesmo tipo de dados e tendem a ter valores semelhantes. Técnicas de compactação de dados são muito boas para alcançar taxas mais altas de compactação quando os valores são semelhantes.    
     
@@ -65,7 +72,7 @@ ms.locfileid: "71816711"
 ### <a name="column-elimination"></a>Eliminação de colunas    
  Índices columnstore ignoram a leitura em colunas que não são necessárias para o resultado da consulta. Essa capacidade, chamada de eliminação de colunas, reduz ainda mais a E/S para a execução de consultas e, portanto, melhora o desempenho delas.    
     
--   A eliminação de colunas é possível porque os dados são organizados e compactados coluna por coluna. Por outro lado, quando os dados são armazenados linha por linha, os valores de coluna em cada linha são fisicamente armazenados juntos e não podem ser facilmente separados. O processador de consultas precisa ler em uma linha inteira para recuperar valores de coluna específicos, o que aumenta a E/S porque dados extras são lidos desnecessariamente na memória.    
+-   A eliminação de colunas é possível porque os dados são organizados e compactados coluna por coluna. Por outro lado, quando os dados são armazenados linha por linha, os valores de coluna em cada linha são fisicamente armazenados juntos e não podem ser facilmente separados. O Processador de Consultas precisa ler em uma linha inteira para recuperar valores de coluna específicos, o que aumenta a E/S porque dados extras são lidos desnecessariamente na memória.    
     
 -   Por exemplo, se uma tabela tiver 50 colunas e a consulta utilizar apenas 5 dessas colunas, o índice columnstore buscará apenas 5 colunas do disco. Ela ignora a leitura nas outras 45 colunas. Isso reduz a E/S em outros 90%, supondo que todas as colunas sejam de tamanho similar. Se os mesmos dados forem armazenados em um rowstore, o processador de consulta precisará ler as 45 colunas adicionais.    
     
@@ -74,7 +81,7 @@ ms.locfileid: "71816711"
     
  **Quando um índice columnstore precisa executar uma verificação de tabela completa?**    
     
- A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], é possível criar um ou mais índices de árvore B regulares não clusterizados em um índice columnstore clusterizado, assim como é possível fazer no heap de um rowstore. Os índices de árvore B não clusterizados podem acelerar uma consulta que contém um predicado de igualdade ou um predicado com um intervalo de valores pequeno.  Para predicados mais complicados, o otimizador de consulta pode escolher uma verificação de tabela completa. Sem a capacidade de ignorar rowgroups, uma verificação de tabela completa seria muito demorada, especialmente para tabelas grandes.    
+ A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], é possível criar um ou mais índices de árvore B regulares não clusterizados em um índice columnstore clusterizado, assim como é possível fazer no heap de um rowstore. Os índices de árvore B não clusterizados podem acelerar uma consulta que contém um predicado de igualdade ou um predicado com um intervalo de valores pequeno. Para predicados mais complicados, o otimizador de consulta pode escolher uma verificação de tabela completa. Sem a capacidade de ignorar rowgroups, uma verificação de tabela completa seria muito demorada, especialmente para tabelas grandes.    
     
  **Quando uma consulta de análise se beneficia de eliminação de rowgroups para uma verificação de tabela completa?**    
     
@@ -84,7 +91,7 @@ ms.locfileid: "71816711"
     
  Para determinar quais grupos de linhas eliminar, o índice columnstore usa metadados para armazenar os valores mínimo e máximo de cada segmento de coluna para cada rowgroup. Quando nenhum dos intervalos de segmento de coluna atendem aos critérios de predicado de consulta, o rowgroup inteiro é ignorado sem fazer nenhuma E/S real. Isso funciona porque os dados geralmente são carregados em uma ordem classificada e, embora não exista garantia de que as linhas são classificadas, valores de dados semelhantes geralmente estão localizados no mesmo rowgroup ou em outro adjacente.    
     
- Para obter mais detalhes sobre rowgroups, consulte Guia de índices Columnstore    
+ Confira mais detalhes sobre rowgroups nas [Diretrizes de design de índice columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### <a name="batch-mode-execution"></a>Execução em modo de lote    
  A execução em modo de lote refere-se ao processamento de um conjunto de linhas, normalmente até 900, agrupadas para eficiência de execução. Por exemplo, a consulta `SELECT SUM (Sales) FROM SalesData` agrega as vendas totais da tabela SalesData. Na execução em modo de lote, o mecanismo de execução de consulta calcula a agregação de 900 valores em grupo. Isso estende aos metadados os custos de acesso e outros tipos de sobrecarga em todas as linhas em um lote, em vez de pagar o custo para cada linha; assim, o caminho do código é reduzido significativamente. Processamento de modo de lote opera nos dados compactados quando possível e elimina alguns dos operadores de troca usados pelo processamento de modo de linha. Isso acelera a execução de consultas de análise em ordens de magnitude.    
@@ -134,10 +141,10 @@ Por exemplo, a aplicação de agregação é feita em ambas as consultas abaixo:
 ```sql     
 SELECT  productkey, SUM(TotalProductCost)    
 FROM FactResellerSalesXL_CCI    
-GROUP BY productkey    
+GROUP BY productkey;    
     
 SELECT  SUM(TotalProductCost)    
-FROM FactResellerSalesXL_CCI    
+FROM FactResellerSalesXL_CCI;    
 ```    
     
 ### <a name="string-predicate-pushdown"></a>Aplicação de predicado de cadeia de caracteres    
@@ -160,8 +167,7 @@ Com a aplicação de predicado de cadeia de caracteres, a execução da consulta
     -   Não há suporte para expressões avaliadas como NULLs.    
     
 ## <a name="see-also"></a>Consulte Também    
- [Diretrizes de design dos Índices columnstore](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
- [Diretrizes de Carregamento de Dados de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
+ [Diretrizes de design de índice columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) [Diretrizes de carregamento de dados de índices Columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [Índices columnstore para Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    

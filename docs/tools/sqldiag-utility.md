@@ -1,5 +1,6 @@
 ---
 title: SQLdiag Utility
+description: Use o utilitário SQLdiag para coletar logs e arquivos de dados do SQL Server e de outros tipos de servidores e para monitorar os servidores ao longo do tempo ou solucionar problemas específicos.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a94daa3fc9756c690a5cd6188e59a9bfd97ca27d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdeeb1b5d16612415b1661df257f0530d8749df5
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306668"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151642"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

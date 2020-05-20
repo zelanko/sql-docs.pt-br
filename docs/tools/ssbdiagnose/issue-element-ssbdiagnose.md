@@ -1,5 +1,6 @@
 ---
 title: Elemento Issue
+description: No SQL Server, o elemento Issue relata um problema encontrado pelo utilitário ssbdiagnose. O arquivo de saída XML tem um elemento Issue por problema reportado.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 3a91cf0575cb84a744925b7b60be0146a4d9ec5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0f0d339322dea349f7769ae32d7380f70c922539
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254186"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150573"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
 
@@ -44,7 +45,7 @@ Reporta um problema que foi encontrado pelo utilitário **ssbdiagnose** . O arqu
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |**tipo**|Identifica qual categoria de problema o elemento Issue está reportando:<br /><br /> **"Diagnóstico"** reporta um problema de configuração encontrado durante a análise da configuração de um [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **"Problema"** reporta um problema que impediu o **ssbdiagnose** de concluir sua análise. Corrija o problema e execute o **ssbdiagnose**novamente.<br /><br /> **"Evento"** reporta um evento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encontrado quando você executa uma verificação de **-RUNTIME** . Os eventos só serão reportados se **-SHOWEVENTS** for especificado.|  
 |**code**|Identifica o número de erro da mensagem.|  
@@ -54,7 +55,7 @@ Reporta um problema que foi encontrado pelo utilitário **ssbdiagnose** . O arqu
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, tamanho é ilimitado.|  
 |**Valor**|Retorna o texto da mensagem de erro.|  

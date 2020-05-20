@@ -1,5 +1,5 @@
 ---
-title: Instalar versões anteriores da documentação do SQL Server offline
+title: Instalar a documentação do SQL Server para visualização offline
 description: Saiba como instalar a documentação offline do SQL Server 2019, 2017, 2016, 2014 e 2012. Use o SSMS (SQL Server Management Studio) para exibir o conteúdo offline.
 ms.prod: sql
 ms.technology: install
@@ -8,15 +8,15 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/05/2020
-ms.openlocfilehash: d505a8435dc222e1ef9c76539e5a7b37e891778e
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.date: 05/08/2020
+ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849625"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151546"
 ---
-# <a name="install-previous-versions-of-sql-server-documentation-to-view-offline-in-ssms"></a>Instalar versões anteriores da documentação do SQL Server para exibi-la offline no SSMS
+# <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>Instalar a documentação do SQL Server para visualização offline em SSMS
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -97,6 +97,9 @@ As etapas a seguir explicam como carregar conteúdo offline para o SQL Server 20
 
    ![Manuais do SQL Server 2014 atualizados automaticamente](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
+> [!Tip]
+> O conteúdo Transact-SQL do SQL 2014 só está disponível offline.
+
 ## <a name="sql-server-2012-offline-content"></a>Conteúdo offline do SQL Server 2012
 
 As etapas a seguir explicam como carregar conteúdo offline para o SQL Server 2012
@@ -167,7 +170,7 @@ Confira o Ciclo de Vida do Produto da Microsoft para obter informações de comp
 
 Para saber mais sobre conteúdo arquivado e o Help Viewer, confira os links abaixo.
 
-- [Um link direto para versões anteriores da documentação do SQL Server](https://docs.microsoft.com/previous-versions/sql/)
-- [Microsoft Help Viewer – Visual Studio](https://docs.microsoft.com/visualstudio/help-viewer/overview)
-- [Documentação do SQL Server, início](../sql-server/index.yml?view=sql-server-2016)
+- [SQL Server, documentação](../sql-server/index.yml?view=sql-server-2016)
+- [Documentação do SQL Server 2014](../2014/database-engine/install-windows/installation-for-sql-server.md)
+- [Documentação de versões anteriores do SQL Server](https://docs.microsoft.com/previous-versions/sql/)
 - [Sistema de controle de versão para documentação do SQL](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

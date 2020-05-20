@@ -1,5 +1,5 @@
 ---
-title: Sistema de controle de versão de documentos do SQL | Microsoft Docs
+title: Documentação do sistema de controle de versão do SQL
 ms.date: 10/15/2019
 ms.prod: sql
 ms.technology: ''
@@ -9,12 +9,12 @@ ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73049907"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150603"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Sistema de controle de versão para documentação do SQL
 

@@ -1,5 +1,6 @@
 ---
 title: Fazer upgrade das Ferramentas de Gerenciamento do SQL Server | Microsoft Docs
+description: Este artigo descreve o suporte para atualização de componentes de gerenciamento e Ferramentas de Gerenciamento do SQL Server, como o SQL Server Agent.
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 332c513c7c7d76956fc5647d7e4cb96eeac633d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 267daba47822bee503f004f57cd1ccb769a765c9
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934709"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269465"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Atualizar Ferramentas de Gerenciamento do SQL Server
 

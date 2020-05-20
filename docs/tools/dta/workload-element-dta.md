@@ -1,5 +1,6 @@
 ---
 title: Elemento de carga de trabalho (DTA)
+description: No utilitário dta, o elemento Workload especifica a carga de trabalho a ser usada em uma sessão de ajuste. Este artigo descreve esse elemento.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 22331332715639b12f7a2cc82d8b71d723a1fecd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5ac7f5a55ce968eeb2ca274deff09ff8b7f2e4ae
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307892"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151464"
 ---
 # <a name="workload-element-dta"></a>Elemento de carga de trabalho (DTA)
 
@@ -40,7 +41,7 @@ Especifica a carga de trabalho a ser usada em uma sessão de ajuste.
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

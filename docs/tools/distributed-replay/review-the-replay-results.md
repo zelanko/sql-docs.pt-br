@@ -1,6 +1,7 @@
 ---
 title: Examinar os resultados da reprodução
 titleSuffix: SQL Server Distributed Replay
+description: Depois que o recurso SQL Server Distributed Replay concluir uma reprodução distribuída, a atividade de reprodução de cada cliente poderá ser capturada e salva em arquivos de rastreamento de resultado em cada cliente.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e36130f4901b0f5bcbdba7ab82b512c0075e25b1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306941"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152144"
 ---
 # <a name="review-the-replay-results"></a>Revisar os resultados da reprodução
 
@@ -60,7 +61,7 @@ Depois que o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLU
 ## <a name="column-descriptions-for-result-trace"></a>Descrições de coluna para rastreamento de resultado  
  A tabela a seguir descreve as colunas dos dados de rastreamento de resultado.  
   
-|Nome da coluna de dados|Tipo de Dados|DESCRIÇÃO|ID da coluna|  
+|Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|O nome da classe de evento.|1|  
 |EventSequence|**bigint**|Para erros de provedor, e erros e avisos internos, esta é a sequência de eventos de captura que corresponde ao erro ou aviso.<br /><br /> Para todas as outras classes de eventos, esta é a sequência do evento nos dados de rastreamento originais.|2|  
@@ -68,7 +69,7 @@ Depois que o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLU
 |TextData|**ntext**|O conteúdo de TextData depende da EventClass.<br /><br /> Para Audit Login e ExistingConnection, este é a opção definida para a conexão.<br /><br /> Para SQL:BatchStarting, este é o corpo da solicitação de lote.<br /><br /> Para RPC:Starting, este é o procedimento armazenado que foi chamado.<br /><br /> Para Replay Settings Event, esta coluna contém as configurações que são definidas no arquivo de configuração de reprodução.<br /><br /> Para Replay Statistics Event, ela contém as seguintes informações:<br /><br /> -O SQL Server de destino da reprodução<br /><br /> -Número total de eventos reproduzíveis<br /><br /> -O número de erros de provedor<br /><br /> -O número de erros internos<br /><br /> -Avisos internos<br /><br /> -Número total de erros<br /><br /> -Taxa de passagem global<br /><br /> -A hora da reprodução (HH:MM:SS:MMM)<br /><br /> Para Replay Result Set Event, mostra a lista de cabeçalhos da coluna de resultados de retorno.<br /><br /> Para Replay Result Row Event, mostra o valor de retorno de todas as colunas dessa linha.<br /><br /> Para Replay Internal Warning e Replay Provider Error, esta coluna contém os avisos ou erros de provedor.|4|  
 |Attention|**bigint**|A duração da atenção (em microssegundos) para o evento. Isso é calculado a partir do evento Attention do rastreamento de captura. Se não havia nenhum tempo limite de consulta especificado para o evento, esta coluna não será populada (null).|5|  
 |SubmitTime|**datetime**|A hora em que o evento foi enviado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|6|  
-|IsSuccessful|**int**|Um sinalizador booliano que indica se um evento específico foi executado com êxito, e se conjuntos de resultados foram retornados ao cliente.<br /><br /> Um evento que gera um aviso (como quando um evento é cancelado devido a Attention ou um tempo limite especificado pelo usuário) é considerado bem-sucedido.<br /><br /> IsSuccessful pode ter um dos seguintes valores:<br /><br /> 1 = êxito<br /><br /> 0 = falha|7|  
+|IsSuccessful|**int**|Um sinalizador booliano que indica se um evento específico foi executado com êxito, e se conjuntos de resultados foram retornados ao cliente.<br /><br /> Um evento que gera um aviso (como quando um evento é cancelado devido a Attention ou ao tempo limite especificado pelo usuário) é considerado bem-sucedido.<br /><br /> IsSuccessful pode ter um dos seguintes valores:<br /><br /> 1 = êxito<br /><br /> 0 = falha|7|  
 |Duration [microsec]|**bigint**|A duração do tempo de resposta (em microssegundos) para o evento. A medição começa quando o evento logon/log off/RPC/Language é enviado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Se o evento obtiver êxito, a medição terminará quando o conjunto de resultados completo tiver sido consumido.<br /><br /> Se o evento não obtiver êxito, a medição terminará na hora da falha ou do cancelamento do evento.|8|  
 |RowCount|**bigint**|Populado de acordo com o valor de `<RecordRowCount>` no arquivo de configuração de reprodução:<br /><br /> Se `<RecordRowCount>` for igual a Yes, esta célula conterá o número de linhas do conjunto de resultados que são retornadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Se `<RecordRowCount>` for igual a No, esta célula não será populada (null).|9|  
 |CaptureSPID|**int**|A ID da sessão de captura do evento.|10|  

@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987200"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152164"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Ferramentas de DevOps do SSIS (SQL Server Integration Services) (versão prévia)
+# <a name="sql-server-integration-services-ssis-devops-tools"></a>Ferramentas de DevOps do SSIS (SQL Server Integration Services)
 
 A extensão [Ferramentas de DevOps do SSIS](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) está disponível no Marketplace do **Azure DevOps**.
 
@@ -344,6 +344,12 @@ O esquema JSON de configuração tem três camadas:
 |sensitive|Se o valor da variável de ambiente é confidencial.|As entradas válidas são: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Notas de versão
+
+### <a name="version-101"></a>Versão 1.0.1
+
+Data de lançamento: 9 de maio de 2020
+
+- Corrigido um problema em que a tarefa de compilação do SSIS sempre compilava toda a solução, mesmo se apenas um único arquivo dtproj estivesse especificado como o caminho do projeto.
 
 ### <a name="version-100"></a>Versão 1.0.0
 

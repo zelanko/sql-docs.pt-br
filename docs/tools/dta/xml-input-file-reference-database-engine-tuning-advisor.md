@@ -1,6 +1,7 @@
 ---
 title: Referência do arquivo de entrada XML
 titleSuffix: Database Engine Tuning Advisor
+description: Este artigo resume os elementos disponíveis para um arquivo de entrada XML que o Orientador de Otimização do Mecanismo de Banco de Dados usa para ajustar um banco de dados.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -12,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 12646cd7f2c737696f8c86d25c9c6bf2d6c2ada8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4ff0fbe1077e1ec0aa953c4ddf30a2f2635c610
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247505"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151784"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Referência do arquivo de entrada XML (Orientador de Otimização do Mecanismo de Banco de Dados)
 

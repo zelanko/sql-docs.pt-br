@@ -1,6 +1,7 @@
 ---
 title: Limpar uma janela de rastreamento
 titleSuffix: SQL Server Profiler
+description: Descubra como limpar a janela de rastreamento que captura dados de eventos em SQL Server Profiler sem limpar arquivos ou tabelas de rastreamento.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 1158a2409c078c58a8d48cb4d5780b6d08643aea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 451e678c2e8a7f0d238e46b99370b7002dd14abc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307351"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151935"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>Limpar uma janela de rastreamento (SQL Server Profiler)
 

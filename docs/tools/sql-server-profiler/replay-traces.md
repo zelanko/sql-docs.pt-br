@@ -1,6 +1,7 @@
 ---
 title: Repetir rastreamentos
 titleSuffix: SQL Server Profiler
+description: Confira como reproduzir os dados do SQL Server Profiler de um único computador e como usar pontos de interrupção e conexões de usuário simuladas na reprodução para solucionar problemas.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 50ef296f7ce7198dc0e233aca08e33c5f1cf7af0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 46d8a93d917917c0b0dec57e26633f564b9c1d01
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307468"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151718"
 ---
 # <a name="replay-traces"></a>Repetir rastreamentos
 
@@ -34,7 +35,7 @@ Reprodução é a capacidade para reproduzir a atividade que foi capturada em um
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Requisitos para reprodução](../../tools/sql-server-profiler/replay-requirements.md)|Descreve os eventos que devem ser incluídos na definição de um rastreamento para que ele possa ser reproduzido com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Opções de repetição &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-options-sql-server-profiler.md)|Descreve as opções que podem ser definidas na caixa de diálogo **Configuração de Reprodução** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
