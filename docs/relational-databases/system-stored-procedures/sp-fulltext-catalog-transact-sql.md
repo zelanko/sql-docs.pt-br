@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b51e4e38b7587074a39f850c2e56dbd8c09ed6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72005966"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820517"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,11 +59,11 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**start_incremental**|Inicia uma população incremental para *fulltext_catalog_name*. Um erro será exibido se o catálogo não existir. Se uma população de índice de texto completo já estiver ativa, um aviso será exibido, mas nenhuma ação de população ocorrerá. Com a população incremental, somente as linhas alteradas são recuperadas para indexação de texto completo, desde que haja uma coluna de **carimbo de data/hora** presente na tabela sendo indexada com texto completo.|  
 |**start_full**|Inicia uma população completa para *fulltext_catalog_name*. Todas as linhas de todas as tabelas associadas a esse catálogo de texto completo são recuperadas para a indexação de texto completo, mesmo que já tenham sido indexadas.|  
 |**Parar**|Interrompe uma população de índice para *fulltext_catalog_name*. Um erro será exibido se o catálogo não existir. Nenhum aviso será exibido se a população já estiver parada.|  
-|**Constitui**|Recria *fulltext_catalog_name*. Quando um catálogo é recriado, o catálogo existente é excluído e um novo catálogo é criado em seu lugar. Todas as tabelas que têm referências de indexação de texto completo são associadas ao novo catálogo. A recriação redefine os metadados de texto completo nas tabelas do sistema de banco de dados.<br /><br /> Se o controle de alterações estiver definido como OFF, a recriação não fará com que ocorra um novo preenchimento do catálogo de texto completo recém-criado. Nesse caso, para repopular, execute **sp_fulltext_catalog** com a ação **start_full** ou **start_incremental** .|  
+|**Recompilar**|Recria *fulltext_catalog_name*. Quando um catálogo é recriado, o catálogo existente é excluído e um novo catálogo é criado em seu lugar. Todas as tabelas que têm referências de indexação de texto completo são associadas ao novo catálogo. A recriação redefine os metadados de texto completo nas tabelas do sistema de banco de dados.<br /><br /> Se o controle de alterações estiver definido como OFF, a recriação não fará com que ocorra um novo preenchimento do catálogo de texto completo recém-criado. Nesse caso, para repopular, execute **sp_fulltext_catalog** com a ação **start_full** ou **start_incremental** .|  
   
 `[ @path = ] 'root_directory'`É o diretório raiz (não o caminho físico completo) para uma ação de **criação** . *root_directory* é **nvarchar (100)** e tem um valor padrão de NULL, que indica o uso do local padrão especificado na instalação. Esse é o subdiretório FTDATA no diretório MSSQL; por exemplo, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. O diretório raiz especificado deve residir em uma unidade no mesmo computador, deve consistir em mais informações além da letra da unidade e não pode ser um caminho relativo. Unidades de rede, unidades removíveis, discos flexíveis e caminhos UNC não têm suporte. Os catálogos de texto completo devem ser criados em um disco rígido local associado a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- o caminho é válido somente quando a *ação* é **criada**. ** \@** Para ações diferentes de **criar** (**parar**, **Recompilar**e assim por diante) ** \@** , o caminho deve ser nulo ou omitido.  
+ o ** \@ caminho** é válido somente quando a *ação* é **criada**. Para ações diferentes de **criar** (**parar**, **Recompilar**e assim por diante), o ** \@ caminho** deve ser nulo ou omitido.  
   
  Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for um servidor virtual em um cluster, o diretório de catálogo especificado precisará estar em uma unidade de disco compartilhada da qual o recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja dependente. Se @path não for especificado, o local do diretório de catálogo padrão estará na unidade de disco compartilhada, no diretório que foi especificado quando o servidor virtual foi instalado.  
   
@@ -76,7 +76,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>Comentários  
  A ação **start_full** é usada para criar um instantâneo completo dos dados de texto completo no *fulltext_catalog_name*. A ação **start_incremental** é usada para reindexar apenas as linhas alteradas no banco de dados. A população incremental só poderá ser aplicada se a tabela tiver uma coluna do tipo **timestamp**. Se uma tabela no catálogo de texto completo não contiver uma coluna do tipo **timestamp**, a tabela passará por uma população completa.  
   
- Os dados do catálogo de texto completo e do índice são armazenados em arquivos criados em um diretório de catálogo de texto completo. O diretório de catálogo de texto completo é criado como um subdiretório do diretório especificado em ** \@Path** ou no diretório de catálogo de texto completo padrão do servidor se ** \@o caminho** não for especificado. O nome do diretório de catálogo de texto completo é criado de uma forma que garante que ele será exclusivo no servidor. Portanto, todos os diretórios de catálogo de texto completo em um servidor podem compartilhar o mesmo caminho.  
+ Os dados do catálogo de texto completo e do índice são armazenados em arquivos criados em um diretório de catálogo de texto completo. O diretório de catálogo de texto completo é criado como um subdiretório do diretório especificado em ** \@ Path** ou no diretório de catálogo de texto completo padrão do servidor se o ** \@ caminho** não for especificado. O nome do diretório de catálogo de texto completo é criado de uma forma que garante que ele será exclusivo no servidor. Portanto, todos os diretórios de catálogo de texto completo em um servidor podem compartilhar o mesmo caminho.  
   
 ## <a name="permissions"></a>Permissões  
  O chamador deve ser membro da função de **db_owner** . Dependendo da ação solicitada, o chamador não deve ser negado às permissões ALTER ou CONTROL (que **db_owner** tem) no catálogo de texto completo de destino.  

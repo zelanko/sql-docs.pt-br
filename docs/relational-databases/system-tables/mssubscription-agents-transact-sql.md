@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_agents system table
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 42b29858ff276b65a30b9f465d38407b606cb792
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139793"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823361"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68139793"
 |**publisher_db**|**sysname**|O nome do banco de dados de publicação.|  
 |**documento**|**sysname**|O nome da publicação.|  
 |**subscription_type**|**int**|O tipo de assinatura:<br /><br /> 0 = Push.<br /><br /> 1 = Pull<br /><br /> 2 = Anônimo pull.|  
-|**queue_id**|**sysname**|A ID da fila [!INCLUDE[msCoName](../../includes/msconame-md.md)] de mensagens no Publicador. *queue_id* é definido como **SQL** para atualização em fila baseada em SQL.|  
+|**queue_id**|**sysname**|A ID da [!INCLUDE[msCoName](../../includes/msconame-md.md)] fila de mensagens no Publicador. *queue_id* é definido como **SQL** para atualização em fila baseada em SQL.|  
 |**update_mode**|**tinyint**|O tipo de atualização:<br /><br /> **0** = somente leitura.<br /><br /> **1** = atualização imediata.<br /><br /> **2** = atualização em fila usando o enfileiramento de mensagens.<br /><br /> **3** = atualização imediata com atualização em fila como failover usando o enfileiramento de mensagens.<br /><br /> **4** = atualização em fila usando a fila de SQL Server.<br /><br /> **5** = atualização imediata com failover de atualização em fila, usando SQL Server fila.|  
 |**failover_mode**|**bit**|Se um tipo de failover de atualização tiver sido selecionado, este será o tipo de failover escolhido:<br /><br /> **0** = atualização imediata está sendo usada. Failover não habilitado.<br /><br /> **1** = a atualização em fila está sendo usada. Failover habilitado. A fila que está sendo usada para failover é especificada no valor *update_mode* .|  
 |**SPID**|**int**|A ID de processo do sistema para a conexão usada pelo Distribution Agent em execução no momento ou executado anteriormente.|  

@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1f958e122277e28665b10ff27be4c0224574690d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004935"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820893"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Retorna propriedades de estatísticas incrementais para o objeto de banco de dados especificado (tabela) no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atual. O uso de `sys.dm_db_incremental_stats_properties` (que contém um número de partição) é semelhante ao `sys.dm_db_stats_properties` , que é usado para estatísticas não incrementais. 
   
-  Essa função foi introduzida [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] no Service Pack 2 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e no Service Pack 1.
+  Essa função foi introduzida no [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] Service Pack 2 e no [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Service Pack 1.
   
 ## <a name="syntax"></a>Sintaxe  
   

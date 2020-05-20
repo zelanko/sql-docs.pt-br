@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3ae6596579942a3292c3467f4d3489346eb4aa42
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769097"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820665"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,16 +97,16 @@ sp_addpublication [ @publication = ] 'publication'
 |**espaço**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. _Para um Publicador Oracle, o_ **caractere** _é válido somente para replicação de instantâneo_.|  
 |**simultâneas**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas, mas não bloqueia as tabelas durante o instantâneo. Com suporte somente para publicações transacionais. *Não há suporte para Publicadores Oracle*.|  
 |**concurrent_c**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas, mas não bloqueia as tabelas durante o instantâneo. Com suporte somente para publicações transacionais.|  
-|**instantâneo do banco de dados**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas de um instantâneo do banco de dados. Os instantâneos do banco de dados não estão disponíveis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em todas as edições do. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|**database snapshot character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas de um instantâneo de banco de dados. Os instantâneos do banco de dados não estão disponíveis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em todas as edições do. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|NULL (padrão)|O padrão é **nativo** para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Para não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, o padrão é **caractere** quando o valor de *repl_freq* é **instantâneo** e para **concurrent_c** para todos os outros casos.|  
+|**instantâneo do banco de dados**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas de um instantâneo do banco de dados. Os instantâneos do banco de dados não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|**database snapshot character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas de um instantâneo de banco de dados. Os instantâneos do banco de dados não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|NULL (padrão)|O padrão é **nativo** para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Para não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, o padrão é **caractere** quando o valor de *repl_freq* é **instantâneo** e para **concurrent_c** para todos os outros casos.|  
   
 `[ \@repl_freq = ] 'repl_freq'`É o tipo de frequência de replicação, *repl_freq* é **nvarchar (10)** e pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**contínuo** (padrão)|O Publicador fornece saída de todas as transações com base em log. Para não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, isso requer que *sync_method* seja definido como **concurrent_c**.|  
-|**instantânea**|O Publicador só produz eventos de sincronização agendados. Para não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, isso requer que *sync_method* seja definido como **caractere**.|  
+|**contínuo** (padrão)|O Publicador fornece saída de todas as transações com base em log. Para não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, isso requer que *sync_method* seja definido como **concurrent_c**.|  
+|**instantânea**|O Publicador só produz eventos de sincronização agendados. Para não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, isso requer que *sync_method* seja definido como **caractere**.|  
   
 `[ \@description = ] 'description'`É uma descrição opcional para a publicação. a *Descrição* é **nvarchar (255)**, com um padrão de NULL.  
   
@@ -114,7 +114,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**activo**|O dados da publicação estão imediatamente disponíveis para os Assinantes.|  
+|**active**|O dados da publicação estão imediatamente disponíveis para os Assinantes.|  
 |**inativo** (padrão)|Os dados da publicação não estão disponíveis aos Assinantes quando a publicação é criada pela primeira vez (eles podem assinar, mas as assinaturas não são processadas).|  
   
  *Não há suporte para Publicadores Oracle*.  
@@ -148,7 +148,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_queued_tran = ] 'allow_queued_updating'`Habilita ou desabilita o enfileiramento de alterações no Assinante até que elas possam ser aplicadas no Publicador. *allow_queued_updating* é **nvarchar (5)** com um padrão de false. Se **for false**, as alterações no Assinante não serão enfileiradas. **true** *não tem suporte para Publicadores Oracle*.  
   
-`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`Especifica se os arquivos de instantâneo são armazenados na pasta padrão. *snapshot_in_default_folder* é **nvarchar (5)** com um padrão de true. Se **for true**, os arquivos de instantâneo poderão ser encontrados na pasta padrão. Se **for false**, os arquivos de instantâneo foram armazenados no local alternativo especificado pelo *alternate_snapshot_folder*. Locais alternativos podem ficar em outro servidor, em uma unidade de rede, ou uma mídia removível (como um CD-ROM ou disco removível). Você também pode salvar os arquivos de instantâneo em um site de FTP para ser recuperado pelo Assinante posteriormente Observe que esse parâmetro pode ser verdadeiro e ainda ter um local no parâmetro ** \@alt_snapshot_folder** . Essa combinação especifica que os arquivos de instantâneo serão armazenados nos locais padrão e alternativos.  
+`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`Especifica se os arquivos de instantâneo são armazenados na pasta padrão. *snapshot_in_default_folder* é **nvarchar (5)** com um padrão de true. Se **for true**, os arquivos de instantâneo poderão ser encontrados na pasta padrão. Se **for false**, os arquivos de instantâneo foram armazenados no local alternativo especificado pelo *alternate_snapshot_folder*. Locais alternativos podem ficar em outro servidor, em uma unidade de rede, ou uma mídia removível (como um CD-ROM ou disco removível). Você também pode salvar os arquivos de instantâneo em um site de FTP para ser recuperado pelo Assinante posteriormente Observe que esse parâmetro pode ser verdadeiro e ainda ter um local no parâmetro ** \@ alt_snapshot_folder** . Essa combinação especifica que os arquivos de instantâneo serão armazenados nos locais padrão e alternativos.  
   
 `[ \@alt_snapshot_folder = ] 'alternate_snapshot_folder'`Especifica o local da pasta alternativa para o instantâneo. *alternate_snapshot_folder* é **nvarchar (255)** com um padrão de NULL.  
   
@@ -156,7 +156,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@post_snapshot_script = ] 'post_snapshot_script'`Especifica um ponteiro para um local de arquivo **. SQL** . *post_snapshot_script* é **nvarchar (255)**, com um padrão de NULL. O Agente de Distribuição executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tentam sido aplicados durante uma sincronização inicial. O script é executado no contexto de segurança usado pelo Distribution Agente na conexão com o banco de dados de assinatura.  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'`Especifica que o instantâneo gravado no local de ** \@alt_snapshot_folder** deve ser compactado no formato [!INCLUDE[msCoName](../../includes/msconame-md.md)] cab. *compress_snapshot* é **nvarchar (5)**, com um padrão de false. **false** especifica que o instantâneo não será compactado; **true** especifica que o instantâneo será compactado. Arquivos de instantâneo maiores de 2 gigabytes (GB) não podem ser compactados. Arquivos de instantâneo compactados são descompactados no local onde o Distribution Agent é executado; assinaturas pull são geralmente usadas com instantâneos compactados para que os arquivos sejam descompactados no Assinante. O instantâneo na pasta padrão não pode ser compactado.  
+`[ \@compress_snapshot = ] 'compress_snapshot'`Especifica que o instantâneo gravado no local de ** \@ alt_snapshot_folder** deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* é **nvarchar (5)**, com um padrão de false. **false** especifica que o instantâneo não será compactado; **true** especifica que o instantâneo será compactado. Arquivos de instantâneo maiores de 2 gigabytes (GB) não podem ser compactados. Arquivos de instantâneo compactados são descompactados no local onde o Distribution Agent é executado; assinaturas pull são geralmente usadas com instantâneos compactados para que os arquivos sejam descompactados no Assinante. O instantâneo na pasta padrão não pode ser compactado.  
   
 `[ \@ftp_address = ] 'ftp_address'`É o endereço de rede do serviço FTP para o distribuidor. *ftp_address* é **sysname**, com um padrão de NULL. Especifica onde os arquivos de instantâneo de publicação ficam localizados para serem captados pelo Agente de Distribuição ou por um Assinante. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter um *ftp_address*diferente. A publicação deve oferecer suporte à propagação de instantâneos por meio de FTP.  
   
@@ -210,7 +210,7 @@ sp_addpublication [ @publication = ] 'publication'
 `[ \@publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser usado ao adicionar uma publicação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a um Publicador.  
+>  o *Publicador* não deve ser usado ao adicionar uma publicação a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`Indica se os assinantes podem inicializar uma assinatura para esta publicação a partir de um backup em vez de um instantâneo inicial. *allow_initialize_from_backup* é **nvarchar (5)** e pode ser um destes valores:  
   
@@ -227,11 +227,11 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@replicate_ddl = ] replicate_ddl`Indica se a replicação do esquema tem suporte para a publicação. *replicate_ddl* é **int**, com um padrão de **1** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores e **0** para não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. **1** indica que as instruções DDL (linguagem de definição de dados) executadas no Publicador são replicadas e **0** indica que as instruções DDL não são replicadas. *Replicação de esquema não tem suporte para Publicadores Oracle.* Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
- O * \@parâmetro replicate_ddl* é respeitado quando uma instrução DDL adiciona uma coluna. O * \@parâmetro replicate_ddl* é ignorado quando uma instrução DDL altera ou descarta uma coluna pelos seguintes motivos.  
+ O parâmetro * \@ replicate_ddl* é respeitado quando uma instrução DDL adiciona uma coluna. O parâmetro * \@ replicate_ddl* é ignorado quando uma instrução DDL altera ou descarta uma coluna pelos seguintes motivos.  
   
--   Quando uma coluna é removida, sysarticlecolumns deve ser atualizado para impedir que novas instruções DML incluam a coluna removida que causaria falha no agente de distribuição. O * \@parâmetro replicate_ddl* é ignorado porque a replicação sempre deve replicar a alteração de esquema.  
+-   Quando uma coluna é removida, sysarticlecolumns deve ser atualizado para impedir que novas instruções DML incluam a coluna removida que causaria falha no agente de distribuição. O parâmetro * \@ replicate_ddl* é ignorado porque a replicação sempre deve replicar a alteração de esquema.  
   
--   Quando uma coluna é alterada, o tipo de dados de origem ou nulidade podem ter sido alterados, fazendo as instruções DML conterem um valor que pode não ser compatível com a tabela no assinante. Estas instruções DML podem causar falha no agente de distribuição. O * \@parâmetro replicate_ddl* é ignorado porque a replicação sempre deve replicar a alteração de esquema.  
+-   Quando uma coluna é alterada, o tipo de dados de origem ou nulidade podem ter sido alterados, fazendo as instruções DML conterem um valor que pode não ser compatível com a tabela no assinante. Estas instruções DML podem causar falha no agente de distribuição. O parâmetro * \@ replicate_ddl* é ignorado porque a replicação sempre deve replicar a alteração de esquema.  
   
 -   Quando uma instrução DDL adiciona uma nova coluna, sysarticlecolumns não inclui a nova coluna. Instruções DML não tentarão replicar dados para a nova coluna. O parâmetro é honrado porque replicar ou não replicar o DDL são aceitáveis.  
   
@@ -259,7 +259,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@publish_local_changes_only = ] 'publish_local_changes_only'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'`Permite que a publicação dê suporte a[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não. *enabled_for_het_sub* é **nvarchar (5)** com um valor padrão de false. Um valor de **true** significa que a publicação dá suporte a[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não. Quando *enabled_for_het_sub* é **true**, as seguintes restrições se aplicam:  
+`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'`Permite que a publicação dê suporte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não. *enabled_for_het_sub* é **nvarchar (5)** com um valor padrão de false. Um valor de **true** significa que a publicação dá suporte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não. Quando *enabled_for_het_sub* é **true**, as seguintes restrições se aplicam:  
   
 -   *allow_initialize_from_backup* deve ser **false**.  
   
@@ -321,7 +321,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  Se existirem várias publicações que publiquem o mesmo objeto de banco de dados, somente as publicações com um *replicate_ddl* valor de **1** REPLICARÃO as instruções ALTER TABLE, ALTER View, ALTER PROCEDURE, ALTER FUNCTION e ALTER TRIGGER DDL. No entanto, uma instrução ALTER TABLE DROP COLUMN DDL será replicada por todas as publicações que estão publicando a coluna cancelada.  
   
- Com a replicação DDL habilitada (*replicate_ddl* = **1**) para uma publicação, a fim de fazer alterações de DDL não replicadas na publicação, [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) deve primeiro ser executado para definir *replicate_ddl* como **0**. Depois que as instruções DDL de não replicação forem emitidas, [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) poderá ser executado novamente para ativar novamente a replicação DDL.  
+ Com a replicação DDL habilitada (*replicate_ddl*  =  **1**) para uma publicação, a fim de fazer alterações de DDL não replicadas na publicação, [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) deve primeiro ser executado para definir *replicate_ddl* como **0**. Depois que as instruções DDL de não replicação forem emitidas, [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) poderá ser executado novamente para ativar novamente a replicação DDL.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-transa_1.sql)]  

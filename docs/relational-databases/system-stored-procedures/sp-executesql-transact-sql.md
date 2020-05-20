@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d71778517a9c6711a157bfe6f79df34ad05d9ee7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68290350"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820499"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,19 +49,19 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ \@stmt =] *instrução*  
- É uma cadeia de caracteres Unicode que [!INCLUDE[tsql](../../includes/tsql-md.md)] contém uma instrução ou um lote. \@stmt deve ser uma constante Unicode ou uma variável Unicode. Mais expressões Unicode complexas, como concatenar duas cadeias de caracteres com o operador +, não são permitidas. Constantes de caracteres não são permitidas. Se uma constante Unicode for especificada, ela deverá ser prefixada com um **N**. Por exemplo, a constante Unicode **N ' sp_who '** é válida, mas a constante de caractere **' sp_who '** não é. O tamanho da cadeia de caracteres é limitado apenas pela memória disponível do servidor de banco de dados. Em servidores de 64 bits, o tamanho da cadeia de caracteres é limitado a 2 GB, o tamanho máximo de **nvarchar (max)**.  
+ \@ *instrução* [stmt =]  
+ É uma cadeia de caracteres Unicode que contém uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou um lote. \@stmt deve ser uma constante Unicode ou uma variável Unicode. Mais expressões Unicode complexas, como concatenar duas cadeias de caracteres com o operador +, não são permitidas. Constantes de caracteres não são permitidas. Se uma constante Unicode for especificada, ela deverá ser prefixada com um **N**. Por exemplo, a constante Unicode **N ' sp_who '** é válida, mas a constante de caractere **' sp_who '** não é. O tamanho da cadeia de caracteres é limitado apenas pela memória disponível do servidor de banco de dados. Em servidores de 64 bits, o tamanho da cadeia de caracteres é limitado a 2 GB, o tamanho máximo de **nvarchar (max)**.  
   
 > [!NOTE]  
 >  \@stmt pode conter parâmetros com a mesma forma que um nome de variável, por exemplo:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Cada parâmetro incluído em \@stmt deve ter uma entrada correspondente na lista de \@definições de parâmetro params e na lista de valores de parâmetro.  
+ Cada parâmetro incluído em \@ stmt deve ter uma entrada correspondente na lista de \@ definições de parâmetro params e na lista de valores de parâmetro.  
   
- [ \@params =] N '\@*parameter_name* *data_type* [,... *n* ] '  
- É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram \@inseridos em stmt. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetros adicionais. Todos os parâmetros especificados \@em stmt devem ser definidos \@em params. Se a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote \@em stmt não contiver parâmetros \@, params não será necessário. O valor padrão para este parâmetro é NULL.  
+ [ \@ params =] N ' \@ *parameter_name* *data_type* [,... *n* ] '  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos em \@ stmt. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetros adicionais. Todos os parâmetros especificados em \@ stmt devem ser definidos em \@ params. Se a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote em \@ stmt não contiver parâmetros, \@ params não será necessário. O valor padrão para este parâmetro é NULL.  
   
- [ \@param1 =] '*value1*'  
- É um valor para o primeiro parâmetro definido na cadeia de caracteres de parâmetro. O valor pode ser uma constante Unicode ou uma variável Unicode. Deve haver um valor de parâmetro fornecido para cada parâmetro incluído em \@stmt. Os valores não são necessários quando a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote \@em stmt não tem parâmetros.  
+ [ \@ param1 =] '*value1*'  
+ É um valor para o primeiro parâmetro definido na cadeia de caracteres de parâmetro. O valor pode ser uma constante Unicode ou uma variável Unicode. Deve haver um valor de parâmetro fornecido para cada parâmetro incluído em \@ stmt. Os valores não são necessários quando a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote em \@ stmt não tem parâmetros.  
   
  [ OUT | OUTPUT ]  
  Indica que o parâmetro é um parâmetro de saída. os parâmetros **Text**, **ntext**e **Image** podem ser usados como parâmetros de saída, a menos que o procedimento seja um procedimento Common Language Runtime (CLR). Um parâmetro de saída que usa a palavra-chave OUTPUT pode ser um espaço reservado de cursor, a menos que o procedimento seja CLR.  
@@ -78,7 +78,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="remarks"></a>Comentários  
  sp_executesql parâmetros devem ser inseridos na ordem específica, conforme descrito na seção "sintaxe" anteriormente neste tópico. Se os parâmetros forem inseridos na ordem incorreta, uma mensagem de erro será exibida.  
   
- sp_executesql tem o mesmo comportamento que EXECUTE em relação a lotes, ao escopo de nomes e ao contexto de banco de dados. A [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote no parâmetro \@sp_executesql stmt não é compilado até que a instrução sp_executesql seja executada. O conteúdo de \@stmt é então compilado e executado como um plano de execução separado do plano de execução do lote que chamou sp_executesql. O lote sp_executesql não pode referenciar variáveis declaradas no lote que chama sp_executesql. Cursores locais ou variáveis no lote de sp_executesql não são visíveis para o lote que chama sp_executesql. As alterações no contexto de banco de dados duram apenas até o fim da instrução sp_executesql.  
+ sp_executesql tem o mesmo comportamento que EXECUTE em relação a lotes, ao escopo de nomes e ao contexto de banco de dados. A [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote no \@ parâmetro sp_executesql stmt não é compilado até que a instrução sp_executesql seja executada. O conteúdo de \@ stmt é então compilado e executado como um plano de execução separado do plano de execução do lote que chamou sp_executesql. O lote sp_executesql não pode referenciar variáveis declaradas no lote que chama sp_executesql. Cursores locais ou variáveis no lote de sp_executesql não são visíveis para o lote que chama sp_executesql. As alterações no contexto de banco de dados duram apenas até o fim da instrução sp_executesql.  
   
  sp_executesql poderá ser usado no lugar de procedimentos armazenados para executar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] muitas vezes quando a alteração nos valores de parâmetro para a instrução for a única variação. Como a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em si permanece constante e somente os valores de parâmetro são alterados, é provável que o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reutilize o plano de execução gerado para a primeira execução.  
   
@@ -205,7 +205,7 @@ GO
  Usar sp_executesql neste procedimento é mais eficiente que usar EXECUTE para executar uma cadeia de caracteres. Quando sp_executesql é usado, há somente 12 versões da cadeia de caracteres INSERT que são geradas, uma para cada tabela mensal. Com EXECUTE, cada cadeia de caracteres INSERT é exclusiva porque os valores de parâmetro são diferentes. Embora os dois métodos gerem o mesmo número de lotes, a similaridade das cadeias de caracteres INSERT geradas por sp_executesql torna mais provável que o otimizador de consultas reutilize os planos de execução.  
   
 ### <a name="c-using-the-output-parameter"></a>C. Usando o parâmetro OUTPUT  
- O exemplo a seguir usa `OUTPUT` um parâmetro para armazenar o conjunto de resultados gerado `SELECT` pela instrução no `@SQLString` parâmetro. Duas `SELECT` instruções são executadas e usam o valor do `OUTPUT` parâmetro.  
+ O exemplo a seguir usa um `OUTPUT` parâmetro para armazenar o conjunto de resultados gerado pela `SELECT` instrução no `@SQLString` parâmetro. Duas `SELECT` instruções são executadas e usam o valor do `OUTPUT` parâmetro.  
   
 ```  
 USE AdventureWorks2012;  

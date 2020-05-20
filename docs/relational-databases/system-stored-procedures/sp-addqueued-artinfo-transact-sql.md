@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqueued_artinfo
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 25f91084afe2c2bdfc27bc0b2ad874bd87447b67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 33769260b25ef3f6127f6f12ac54af07c5951ad1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769014"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820661"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'`É o nome da tabela de destino. *dest_table* é **sysname**, sem padrão.  
   
- [**@owner =** ] **'**_proprietário_**'**  
+ [** @owner =** ] **'**_proprietário_**'**  
  É o proprietário da assinatura. *Owner* é **sysname**, sem padrão.  
   
 `[ @cft_table = ] 'cft_table'`Nome da tabela de conflitos de atualização enfileirada deste artigo. *cft_table*é **sysname**, sem padrão.  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschemaarticles system table
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bd511eb6eeff5cd412504373e7214703c845cd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 44b95598af67b4842595d9570bcd57135924d6ad
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811336"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819670"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68811336"
 |**pubid**|**int**|A ID da publicação.|  
 |**pre_creation_cmd**|**tinyint**|Especifica o que o sistema deve fazer se detectar um objeto existente com o mesmo nome no Assinante, ao aplicar o instantâneo para esse artigo:<br /><br /> **0** = nada.<br /><br /> **1** = excluir tabela de destino.<br /><br /> **2** = remover tabela de destino.<br /><br /> **3** = Truncar tabela de destino.|  
 |**status**|**int**|O bitmap usado para indicar o status do artigo.|  
-|**type**|**tinyint**|O valor que indica o tipo de artigo somente esquema:<br /><br /> **32** = procedimento armazenado.<br /><br /> **64** = exibição ou exibição indexada. <br /><br /> **96** = função de agregação.<br /><br /> **128** = função.|  
+|**tipo**|**tinyint**|O valor que indica o tipo de artigo somente esquema:<br /><br /> **32** = procedimento armazenado.<br /><br /> **64** = exibição ou exibição indexada. <br /><br /> **96** = função de agregação.<br /><br /> **128** = função.|  
 |**schema_option**|**binário (8)**|O bitmask da opção de geração de esquema para o artigo determinado. Especifica criação automática de procedimento armazenado no banco de dados de destino para todas as sintaxes CALL/MCALL/XCALL, e pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **0x00** = desabilita o script pelo agente de instantâneo e usa *creation_script*.<br /><br /> **0x01** = gera a criação do objeto (CREATE TABLE, criar procedimento e assim por diante). Esse valor é o padrão para artigos de procedimento armazenado.<br /><br /> **0x02** = gera procedimentos armazenados personalizados para o artigo, se definido.<br /><br /> **0x10** = gera um índice clusterizado correspondente.<br /><br /> **0x20** = converte tipos de dados definidos pelo usuário em tipos de dados base.<br /><br /> **0x40**= gera índice (s) não clusterizado correspondente.<br /><br /> **0x80**= inclui a integridade referencial declarada nas chaves primárias.<br /><br /> **0x73** = gera a instrução CREATE TABLE, cria índices clusterizados e não clusterizados, converte tipos de dados definidos pelo usuário em tipos de dados base e gera scripts de procedimento armazenado personalizados a serem aplicados no Assinante. Esse valor é o padrão para todos os artigos, exceto os de procedimento armazenado.<br /><br /> **0x100**= replica os gatilhos do usuário em um artigo de tabela, se definido.<br /><br /> **0x200**= Replica restrições Foreign Key. Se a tabela referenciada não fizer parte de uma publicação, todas as restrições de chave estrangeira em uma tabela publicada não serão replicadas.<br /><br /> **0x400**= Replica restrições check.<br /><br /> **0x800**= Replica padrões.<br /><br /> **0x1000**= Replica o agrupamento em nível de coluna.<br /><br /> **0x2000**= Replica propriedades estendidas associadas ao objeto de origem do artigo publicado.<br /><br /> **0x4000**= Replica chaves exclusivas, se definidas em um artigo de tabela.<br /><br /> **0x8000**= Replica chaves primárias e exclusivas em um artigo de tabela como restrições usando instruções ALTER TABLE.|  
 |**dest_owner**|**sysname**|O proprietário da tabela no banco de dados de destino.|  
   

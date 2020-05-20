@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108570"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820581"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68108570"
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SQL Server (por meio da [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Aplica-se a**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio da [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -125,7 +125,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="value-parameter"></a>Parâmetro value  
  Há duas alternativas às regras para usar o *valor* , conforme mencionado anteriormente na seção argumentos:  
   
-1.  Você pode usar um nome que seja '\@' pre-pendente para o nome da coluna na lista de seleção para qualquer parâmetro de *valor* nomeado. Uma vantagem dessa alternativa é que a conversão de dados pode não ser necessária.  
+1.  Você pode usar um nome que seja ' \@ ' pre-pendente para o nome da coluna na lista de seleção para qualquer parâmetro de *valor* nomeado. Uma vantagem dessa alternativa é que a conversão de dados pode não ser necessária.  
   
 2.  Use um parâmetro para enviar uma instrução UPDATE ou INSERT completa ou use vários parâmetros para enviar partes de uma instrução UPDATE ou INSERT que SQL Server, em seguida, será criada em uma instrução completa. Você encontrará exemplos disso na seção Exemplos, posteriormente neste tópico.  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  Se o \<nome da tabela de atualização> for especificado, qualquer valor especificado para o parâmetro de *tabela* será ignorado.  
+>  Se o \< nome da tabela de atualização> for especificado, qualquer valor especificado para o parâmetro de *tabela* será ignorado.  
   
  Quando são usados vários parâmetros, o primeiro deve ser uma cadeia de caracteres no seguinte formato:  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- Nesse caso, o nome \<da tabela> na instrução UPDATE construída é aquele especificado ou padronizado pelo parâmetro *Table* .  
+ Nesse caso, o \< nome da tabela> na instrução UPDATE construída é aquele especificado ou padronizado pelo parâmetro *Table* .  
   
  Para INSERT:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  Se o * \<nome de tabela* de inserção>for especificado, qualquer valor especificado para o parâmetro de *tabela* será ignorado.  
+>  Se o * \< nome de tabela* de inserção>for especificado, qualquer valor especificado para o parâmetro de *tabela* será ignorado.  
   
  Quando são usados vários parâmetros, o primeiro deve ser uma cadeia de caracteres no seguinte formato:  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- exceto onde VALUES foi especificado, quando deverá haver um ")" à direita após a última expressão. Nesse caso, o * \<nome da tabela>* na instrução UPDATE construída é aquele especificado ou padronizado pelo parâmetro *Table* .  
+ exceto onde VALUES foi especificado, quando deverá haver um ")" à direita após a última expressão. Nesse caso, o * \< nome da tabela>* na instrução UPDATE construída é aquele especificado ou padronizado pelo parâmetro *Table* .  
   
 > [!NOTE]  
 >  É possível enviar um parâmetro como um parâmetro nomeado, isto é, "`@VALUES`". Neste caso, nenhum outro parâmetro nomeado pode ser usado.  

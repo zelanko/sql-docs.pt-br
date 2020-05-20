@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095945"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820253"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |16|A função não é válida para este rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
- **sp_trace_setfilter** é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento armazenado que executa muitas das ações executadas anteriormente por procedimentos armazenados estendidos disponíveis em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use **sp_trace_setfilter** em vez do **xp_trace_set\*filtrar** procedimentos armazenados estendidos para criar, aplicar, remover ou manipular filtros em rastreamentos. Para obter mais informações, consulte [filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md).  
+ **sp_trace_setfilter** é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento armazenado que executa muitas das ações executadas anteriormente por procedimentos armazenados estendidos disponíveis em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use **sp_trace_setfilter** em vez do **xp_trace_set \* Filtrar** procedimentos armazenados estendidos para criar, aplicar, remover ou manipular filtros em rastreamentos. Para obter mais informações, consulte [filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Todos os filtros de uma determinada coluna devem ser habilitados juntos em uma execução de **sp_trace_setfilter**. Por exemplo, se um usuário pretende aplicar dois filtros na coluna de nome de aplicativo e um filtro na coluna de nome de usuário, o usuário deve especificar os filtros em nome de aplicativo em sequência. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna um erro se o usuário tentar especificar um filtro em nome de aplicativo em uma chamada de procedimento armazenado, em seguida, por um filtro em nome de usuário, e depois, outro filtro em nome de aplicativo.  
   

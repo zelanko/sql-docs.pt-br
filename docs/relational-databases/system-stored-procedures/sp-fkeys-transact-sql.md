@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cee63720a743de8e2aed496bf3f7f3e791780575
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124398"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820519"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,10 +44,10 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @pktable_name=] '*pktable_name*'  
+ [ @pktable_name =] '*pktable_name*'  
  É o nome da tabela, com a chave primária, usada para retornar informações de catálogo. *pktable_name* é **sysname**, com um padrão de NULL. Não há suporte para a correspondência de padrão curinga. Esse parâmetro ou o parâmetro *fktable_name* , ou ambos, devem ser fornecidos.  
   
- [ @pktable_owner=] '*pktable_owner*'  
+ [ @pktable_owner =] '*pktable_owner*'  
  É o nome do proprietário da tabela (com a chave primária) usada para retornar as informações do catálogo. *pktable_owner* é **sysname**, com um padrão de NULL. Não há suporte para a correspondência de padrão curinga. Se *pktable_owner* não for especificado, as regras de visibilidade de tabela padrão do DBMS subjacente se aplicarão.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *pktable_owner* não for especificado e o usuário atual não possuir uma tabela com o *pktable_name*especificado, o procedimento procurará uma tabela com a *pktable_name* especificada de Propriedade do proprietário do banco de dados. Se ela existir, as colunas dessa tabela serão retornadas.  
@@ -55,7 +55,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  [ @pktable_qualifier =] '*pktable_qualifier*'  
  É o nome do qualificador da tabela (com a chave primária). *pktable_qualifier* é sysname, com um padrão de NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*Qualifier.Owner.Name*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o qualificador representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
- [ @fktable_name=] '*fktable_name*'  
+ [ @fktable_name =] '*fktable_name*'  
  É o nome da tabela (com uma chave estrangeira) usada para retornar informações de catálogo. *fktable_name* é sysname, com um padrão de NULL. Não há suporte para a correspondência de padrão curinga. Esse parâmetro ou o parâmetro *pktable_name* , ou ambos, devem ser fornecidos.  
   
  [ @fktable_owner =] '*fktable_owner*'  
@@ -63,11 +63,11 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *fktable_owner* não for especificado e o usuário atual não possuir uma tabela com o *fktable_name*especificado, o procedimento procurará uma tabela com a *fktable_name* especificada de Propriedade do proprietário do banco de dados. Se ela existir, as colunas dessa tabela serão retornadas.  
   
- [ @fktable_qualifier= ] '*FKTABLE_QUALIFIER*'  
+ [ @fktable_qualifier =] '*FKTABLE_QUALIFIER*'  
  É o nome do qualificador da tabela (com uma chave estrangeira). *FKTABLE_QUALIFIER* é **sysname**, com um padrão de NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o qualificador representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ Não  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

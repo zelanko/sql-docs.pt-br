@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74097876"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821057"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-Retorna informações sobre as instruções enviadas a uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do.
+Retorna informações sobre as instruções enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,12 +59,12 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="permissions"></a>Permissões
 
-Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário tiver a permissão View Server State, o usuário verá todas as sessões em execução na instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do; caso contrário, o usuário verá apenas a sessão atual.
+Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se o usuário tiver a permissão View Server State, o usuário verá todas as sessões em execução na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; caso contrário, o usuário verá apenas a sessão atual.
 
 > [!IMPORTANT]
 > A execução dessa DMV fora de SQL Server Management Studio contra SQL Server sem exibir permissões de estado do servidor (como em um gatilho, procedimento armazenado ou função) gera um erro de permissão no banco de dados mestre.
 
-Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se o usuário for o proprietário do banco de dados, o usuário verá todas as sessões [!INCLUDE[ssSDS](../../includes/sssds-md.md)]em execução no; caso contrário, o usuário verá apenas a sessão atual.
+Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , se o usuário for o proprietário do banco de dados, o usuário verá todas as sessões em execução no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; caso contrário, o usuário verá apenas a sessão atual.
 
 > [!IMPORTANT]
 > A execução dessa DMV fora do SQL Server Management Studio no banco de dados SQL do Azure sem permissões de proprietário (como em um gatilho, procedimento armazenado ou função) gera um erro de permissão no banco de dados mestre.

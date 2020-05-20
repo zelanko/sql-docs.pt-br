@@ -12,19 +12,19 @@ helpviewer_keywords:
 - database dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], database
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c51f22a66344c0ae72daf7ca662285e1fdde5b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2bdc377c87ce84ec6e44bd06bc905426aeaba231
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090886"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819476"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>Exibições de gerenciamento dinâmico relacionadas a bancos de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Esta seção descreve os seguintes objetos de gerenciamento dinâmico [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] no e, às vezes, no banco de dados SQL.  
+  Esta seção descreve os seguintes objetos de gerenciamento dinâmico no [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e, às vezes, no banco de dados SQL.  
   
 |||  
 |-|-|  

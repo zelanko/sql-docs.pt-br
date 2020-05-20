@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124336"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820447"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,10 +58,10 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**add**|Adiciona *column_name* de *qualified_table_name* ao índice de texto completo inativo da tabela. Esta ação habilita a coluna para indexação de texto completo.|  
+|**adicionar**|Adiciona *column_name* de *qualified_table_name* ao índice de texto completo inativo da tabela. Esta ação habilita a coluna para indexação de texto completo.|  
 |**suspensa**|Remove *column_name* de *qualified_table_name* do índice de texto completo inativo da tabela.|  
   
-`[ @language = ] 'language_term'`É o idioma dos dados armazenados na coluna. Para obter uma lista de idiomas incluídos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no, consulte [sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'`É o idioma dos dados armazenados na coluna. Para obter uma lista de idiomas incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [sys. Fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Use 'Neutro' quando uma coluna tiver dados em vários idiomas ou em um idioma sem-suporte. O padrão é especificado pela opção de configuração 'default full-text language.'  

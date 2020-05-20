@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e214f2247009af8e43aefd9cb3274ea59332bcd5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108586"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820543"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @cursor_return= ] *cursor_variable_name* DER  
+ [ @cursor_return =] *cursor_variable_name*saída  
  É o nome de uma variável de cursor declarada. *cursor_variable_name* é **cursor**, sem padrão. O cursor é um cursor rolável, dinâmico, somente leitura.  
   
- [ @cursor_scope= ] *cursor_scope*  
+ [ @cursor_scope =] *cursor_scope*  
  Especifica o nível dos cursores a serem relatados. *cursor_scope* é **int**, sem padrão, e pode ser um desses valores.  
   
 |Valor|Descrição|  
@@ -54,7 +54,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |3|Informar cursores locais e globais.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ Não  
   
 ## <a name="cursors-returned"></a>Cursores retornados  
  sp_cursor_list retorna seu relatório como um parâmetro de saída de cursor [!INCLUDE[tsql](../../includes/tsql-md.md)], não como um conjunto de resultados. Isso permite que lotes, procedimentos armazenados e gatilhos [!INCLUDE[tsql](../../includes/tsql-md.md)] funcionem com a saída, uma linha de cada vez. Isso também significa que o procedimento não pode ser chamado diretamente de funções API do banco de dados. O parâmetro de saída de cursor deve ser associado a uma variável de programa, mas as APIs do banco de dados não oferecem suporte a associações de parâmetros ou variáveis de cursor.  
@@ -64,17 +64,17 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|O nome usado para se referir ao cursor. Se a referência ao cursor for feita através do nome dado em uma instrução DECLARE CURSOR, o nome de referência será igual ao nome do cursor. Se a referência ao cursor foi feita por uma variável, o nome da referência será o nome da variável do cursor.|  
-|cursor_name|**sysname**|O nome do cursor de uma instrução DECLARE CURSOR. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o cursor tiver sido criado pela definição de uma variável de cursor para um cursor, **cursor_name** retornará o nome da variável de cursor.  Em versões anteriores, essa coluna de saída retorna um nome gerado pelo sistema.|  
+|cursor_name|**sysname**|O nome do cursor de uma instrução DECLARE CURSOR. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se o cursor tiver sido criado pela definição de uma variável de cursor para um cursor, **cursor_name** retornará o nome da variável de cursor.  Em versões anteriores, essa coluna de saída retorna um nome gerado pelo sistema.|  
 |cursor_scope|**smallint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|Os mesmos valores conforme informado pela função do sistema CURSOR_STATUS:<br /><br /> 1 = O cursor referenciado pelo nome do cursor ou pela variável de cursor está aberto. Se o cursor for insensível, estático ou controlado por um conjunto de chaves terá ao menos uma linha. Se o cursor for dinâmico, o conjunto de resultados terá zero ou mais linhas.<br /><br /> 0 = O cursor referenciado pelo nome ou pela variável do cursor está aberto, mas não contém linhas. Cursores dinâmicos nunca retornam esse valor.<br /><br /> -1 = O cursor referenciado pelo nome ou pela variável do cursor está fechado.<br /><br /> -2 = Aplicável somente a variáveis de cursor. Não há nenhum cursor atribuído à variável. Possivelmente, um parâmetro OUTPUT atribuiu um cursor à variável, mas o procedimento armazenado fechou o cursor antes de retornar.<br /><br /> -3 = Um cursor ou uma variável de cursor com o nome especificado não existe, ou nenhum cursor foi alocado à variável de cursor.|  
 |modelo|**smallint**|1 = Insensível (ou estático)<br /><br /> 2 = conjunto de chaves<br /><br /> 3 = dinâmico<br /><br /> 4 = De avanço rápido|  
 |simultaneidade|**smallint**|1 = somente leitura<br /><br /> 2 = Bloqueios de rolagem<br /><br /> 3 = Otimista|  
 |rolável|**smallint**|0 = Somente avanço<br /><br /> 1 = Rolável|  
 |open_status|**smallint**|0 = Fechado<br /><br /> 1 = Abrir|  
-|cursor_rows|**int**|O número de linhas de qualificação no conjunto de resultados. Para obter mais informações, [consulte@CURSOR_ROWS@](../../t-sql/functions/cursor-rows-transact-sql.md).|  
-|fetch_status|**smallint**|O status da última busca nesse cursor. Para obter mais informações, [consulte@FETCH_STATUS@](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Busca bem-sucedida.<br /><br /> -1 = A busca falhou ou está além dos limites do cursor.<br /><br /> -2 = A linha solicitada está ausente.<br /><br /> -9 = Não houve busca no cursor.|  
+|cursor_rows|**int**|O número de linhas de qualificação no conjunto de resultados. Para obter mais informações, [consulte @CURSOR_ROWS @](../../t-sql/functions/cursor-rows-transact-sql.md).|  
+|fetch_status|**smallint**|O status da última busca nesse cursor. Para obter mais informações, [consulte @FETCH_STATUS @](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Busca bem-sucedida.<br /><br /> -1 = A busca falhou ou está além dos limites do cursor.<br /><br /> -2 = A linha solicitada está ausente.<br /><br /> -9 = Não houve busca no cursor.|  
 |column_count|**smallint**|O número de colunas no conjunto de resultados do cursor.|  
-|row_count|**smallint**|O número de linhas afetadas pela última operação no cursor. Para obter mais informações, [consulte@ROWCOUNT@](../../t-sql/functions/rowcount-transact-sql.md).|  
+|row_count|**smallint**|O número de linhas afetadas pela última operação no cursor. Para obter mais informações, [consulte @ROWCOUNT @](../../t-sql/functions/rowcount-transact-sql.md).|  
 |last_operation|**smallint**|A última operação executada no cursor:<br /><br /> 0 = Nenhuma operação foi executada no cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERIR<br /><br /> 4 = UPDATE<br /><br /> 5 = EXCLUIR<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Um valor exclusivo que identifica o cursor dentro do escopo do servidor.|  
   

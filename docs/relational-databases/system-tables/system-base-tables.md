@@ -14,14 +14,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ac374b9222f9bd592312f79173859691b495276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1e436807a5738a1ad844a07b3403eb99d1a5cf18
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531197"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819764"
 ---
 # <a name="system-base-tables"></a>Tabelas base do sistema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "80531197"
 ## <a name="system-base-tables"></a>Tabelas base do sistema  
  A tabela a seguir lista e descreve cada tabela base do sistema no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tabela base|Descrição|  
+|Tabela base|Description|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|Existe em todos os bancos de dados. Cada linha representa um objeto no banco de dados.|  
 |**sys.sysschobjs**|Existe em todos os bancos de dados. Contém uma linha para cada entidade do Service Broker no banco de dados. Entidades do Service Broker incluem o seguinte:<br /><br /> Tipo de mensagem<br /><br /> Contrato de serviço<br /><br /> Serviço<br /><br /> Os nomes e tipos usam ordenação primária que é fixa.|  

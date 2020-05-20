@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audits catalog view
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 67f25c6f4d39eb8cbd3b09d2e7710462f91ed397
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125002"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821554"
 ---
 # <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68125002"
 |**create_date**|**datetime**|Data em UTC quando a auditoria foi criada.|  
 |**modify_date**|**datetime**|Data em UTC da última alteração feita na especificação de auditoria.|  
 |**principal_id**|**int**|ID do proprietário da auditoria, conforme registrado no servidor.|  
-|**type**|**char(2)**|Tipo de auditoria:<br /><br /> SL-log de eventos de segurança NT<br /><br /> AL-log de eventos do aplicativo NT<br /><br /> FL-arquivo no sistema de arquivos|  
+|**tipo**|**char(2)**|Tipo de auditoria:<br /><br /> SL-log de eventos de segurança NT<br /><br /> AL-log de eventos do aplicativo NT<br /><br /> FL-arquivo no sistema de arquivos|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
 |**on_failure**|**tinyint**|Ao Falhar ao escrever uma entrada de ação:<br /><br /> 0-continuar<br /><br /> 1-instância do servidor de desligamento<br /><br /> 2-falha na operação|  
 |**on_failure_desc**|**nvarchar(60)**|Ao Falhar ao escrever uma entrada de ação:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
