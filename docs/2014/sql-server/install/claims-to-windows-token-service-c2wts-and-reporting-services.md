@@ -15,12 +15,12 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0ec82b7cca2062e1ed918e300eeb76dad16cbb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245618"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922155"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) e Reporting Services
   The SharePoint Claims to Windows Token Service (c2WTS) is required with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se você desejar usar a autenticação do Windows para Fontes de Dados que estão fora do farm do SharePoint. Isso ocorre mesmo quando o usuário acessa as fontes de dados com a Autenticação do Windows porque a comunicação entre o WFE (front-end da Web) e o serviço compartilhado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sempre será uma autenticação de Reivindicações.  
@@ -29,7 +29,7 @@ ms.locfileid: "75245618"
   
  Os tokens criados por c2WTS só funcionarão com a delegação restrita (restrições a serviços específicos) e a opção de configuração "usando qualquer protocolo de autenticação". Conforme observado anteriormente, se suas fontes de dados estiverem no mesmo computador que o serviço compartilhado, a delegação restrita não será necessária.  
   
- Se seu ambiente usar a delegação restrita de Kerberos, o serviço do SharePoint Server e as fontes de dados externas precisarão residir no mesmo domínio do Windows. Qualquer serviço que dependa do c2WTS (Declarações para Serviço de Token do Windows) deve usar a delegação **restrita** Kerberos para permitir que o c2WTS use a transição do protocolo Kerberos para traduzir declarações em credenciais do Windows. Estes requisitos são verdadeiros para todos os Serviços Compartilhados do SharePoint. Para obter mais informações, consulte [visão geral da autenticação Kerberos para produtos do Microsofthttps://technet.microsoft.com/library/gg502594.aspx)SharePoint 2010 (](https://technet.microsoft.com/library/gg502594.aspx).  
+ Se seu ambiente usar a delegação restrita de Kerberos, o serviço do SharePoint Server e as fontes de dados externas precisarão residir no mesmo domínio do Windows. Qualquer serviço que dependa do c2WTS (Declarações para Serviço de Token do Windows) deve usar a delegação **restrita** Kerberos para permitir que o c2WTS use a transição do protocolo Kerberos para traduzir declarações em credenciais do Windows. Estes requisitos são verdadeiros para todos os Serviços Compartilhados do SharePoint. Para obter mais informações, consulte [visão geral da autenticação Kerberos para produtos do Microsoft https://technet.microsoft.com/library/gg502594.aspx) SharePoint 2010 (](https://technet.microsoft.com/library/gg502594.aspx).  
   
  O procedimento é resumido neste tópico.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75245618"
   
         -   Selecione "usar qualquer protocolo de autenticação"  
   
-         Para obter mais informações, consulte a seção "configurar a delegação restrita de Kerberos para computadores e contas de serviço" do seguinte white paper, [Configurando a autenticação Kerberos para produtos SharePoint 2010 e SQL Server 2008 R2](https://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
+         Para obter mais informações, consulte a seção "configurar a delegação restrita de Kerberos para computadores e contas de serviço" do seguinte white paper, [Configurando a autenticação Kerberos para produtos SharePoint 2010 e SQL Server 2008 R2](https://docs.microsoft.com/archive/blogs/tothesharepoint/white-paper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products)  
   
 2.  Configurar o c2WTS ' AllowedCallers '  
   

@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 087ca52acea1cace7eb218cc33ce31cd21e10cc8
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82086875"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922245"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
   Este tutorial ensina como criar dois tipos de relatório: um relatório detalhado e um relatório principal. Os dados de vendas de exemplo usados nestes relatórios são recuperados de um cubo do Analysis Services. A ilustração a seguir mostra os relatórios que você criará.  
@@ -89,7 +89,7 @@ ms.locfileid: "82086875"
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
   
-1.  Clique **em Iniciar**, aponte para **programas**, aponte [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] para **Construtor de relatórios**e, em seguida, clique em **Construtor de relatórios**.  
+1.  Clique em **Iniciar**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Construtor de relatórios**e, em seguida, clique em **Construtor de relatórios**.  
   
      A caixa de diálogo **Guia de Introdução** é aberta. Se não aparecer, no botão **Construtor de relatórios** , clique em **novo**.  
   
@@ -340,7 +340,7 @@ ms.locfileid: "82086875"
   
 1.  No painel Dados do Relatório, expanda **Parâmetros**.  
   
-2.  Clique com o \@botão direito do mouse em ProductProductCategoryName e clique em **Propriedades do parâmetro**.  
+2.  Clique com o botão direito do mouse em \@ ProductProductCategoryName e clique em **Propriedades do parâmetro**.  
   
     > [!NOTE]  
     >  O caractere \@ próximo ao nome indica que este é um parâmetro.  
@@ -376,7 +376,7 @@ ms.locfileid: "82086875"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  Clique em **Salvar**.  
+4.  Clique em **Save** (Salvar).  
   
      **Sites e Servidores Recentes** lista as bibliotecas no site do SharePoint.  
   
@@ -387,14 +387,14 @@ ms.locfileid: "82086875"
     > [!NOTE]  
     >  Você salvará o relatório principal no mesmo local. Se desejar salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, você deverá atualizar o caminho da ação **Ir para o relatório** no relatório principal.  
   
-7.  Clique em **Salvar**.  
+7.  Clique em **Save** (Salvar).  
   
 ##  <a name="1-create-a-new-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. criar um novo relatório por meio do assistente de tabela ou matriz  
  Na caixa de diálogo **Introdução** , crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
   
-1.  Clique **em Iniciar**, aponte para **programas**, aponte [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] para **Construtor de relatórios**e, em seguida, clique em **Construtor de relatórios**.  
+1.  Clique em **Iniciar**, aponte para **programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Construtor de relatórios**e, em seguida, clique em **Construtor de relatórios**.  
   
 2.  Na caixa de diálogo **Introdução** , verifique se a opção **Novo Relatório** está selecionada e clique em **Assistente de Tabela ou Matriz**.  
   
@@ -413,7 +413,7 @@ ms.locfileid: "82086875"
   
 5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  Em **nome do servidor**, digite o nome de um servidor em que uma [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância do está instalada.  
+6.  Em **nome do servidor**, digite o nome de um servidor em que uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] está instalada.  
   
 7.  Em **Selecionar ou inserir um nome de banco de dados**, selecione o cubo Contoso.  
   
@@ -447,7 +447,7 @@ ms.locfileid: "82086875"
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
     > [!TIP]  
-    >  Se não desejar criar a consulta MDX manualmente, clique no ícone ![Alternar para modo de Design](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Alterna para o modo de design"), ative/desative o designer de consultas para o modo de Consulta, cole o MDX concluído no designer de consultas e vá para a etapa 5 em [Para criar o conjunto de dados](#MSkip).  
+    >  Se não desejar criar a consulta MDX manualmente, clique no ícone ![Alternar para modo de Design](media/rsqdicon-designmode.gif "Alterna para o modo de design"), ative/desative o designer de consultas para o modo de Consulta, cole o MDX concluído no designer de consultas e vá para a etapa 5 em [Para criar o conjunto de dados](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -716,7 +716,7 @@ ms.locfileid: "82086875"
     > [!IMPORTANT]  
     >  Salve o relatório principal no mesmo local onde você salvou o relatório detalhado. Para salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, confirme se a ação **Ir para o relatório** no relatório principal aponta para o local correto do relatório de detalhamento.  
   
-7.  Clique em **Salvar**.  
+7.  Clique em **Save** (Salvar).  
   
 ##  <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. executar os relatórios principal e de detalhamento  
  Execute o relatório principal e clique nos valores da coluna de categorias de produto para executar o relatório detalhado.  

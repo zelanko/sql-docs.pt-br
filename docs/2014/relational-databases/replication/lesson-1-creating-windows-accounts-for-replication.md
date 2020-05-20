@@ -10,23 +10,23 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721164"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000464"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lição 1: Criando contas do Windows para replicação
   Nesta lição, você criará contas de Windows para executar os agentes de replicação. Você criará uma conta de Windows separada no servidor local para os seguintes agentes:  
   
 |Agente|Local|Nome da conta|  
 |-----------|--------------|------------------|  
-|Snapshot Agent|Editor|\<*machine_name*>\repl_snapshot|  
-|Agente de Leitor de Log|Editor|\<*machine_name*>\repl_logreader|  
+|Snapshot Agent|Publisher|\<*machine_name*>\repl_snapshot|  
+|Agente de Leitor de Log|Publisher|\<*machine_name*>\repl_logreader|  
 |Agente de Distribuição|Publicador e assinante|\<*machine_name*>\repl_distribution|  
 |Merge Agent|Publicador e assinante|\<*machine_name*>\repl_merge|  
   

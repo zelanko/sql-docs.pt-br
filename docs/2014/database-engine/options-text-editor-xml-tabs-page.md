@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01721e60e2f70462d606586225ab98329dad7daa
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089127"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000601"
 ---
 # <a name="options-text-editorxmltabs-page"></a>Opções (página Editor de Texto/XML/Guias)
   Essa caixa de diálogo permite alterar o comportamento de tabulação do Editor de XML, que é usado para editar documentos XML. Para exibir essas configurações, clique em **Opções** no menu **Ferramentas** , expanda a pasta **Editor de Texto** , expanda a subpasta **XML** e, então, clique em **Tabulações**.  
@@ -29,7 +29,7 @@ ms.locfileid: "66089127"
  **Nenhum**  
  Quando essa opção estiver selecionada, a nova linha criada ao se pressionar ENTER não ficará recuada. O cursor é colocado na primeira coluna da nova linha.  
   
- **Impeça**  
+ **Bloquear**  
  Quando esta opção estiver selecionada, a nova linha criada ao se pressionar ENTER ficará recuada automaticamente com a mesma distância da linha anterior.  
   
  **Inteligente**  
@@ -43,7 +43,7 @@ ms.locfileid: "66089127"
  Define o tamanho em espaços de um recuo automático. O padrão é quatro espaços. Caracteres de tabulação, caracteres de espaço ou ambos são inseridos para preencher o tamanho especificado.  
   
  **Inserir espaços**  
- Quando essa opção é selecionada, as operações de recuo inserem apenas caracteres de espaço, não caracteres de tabulação. Se o **tamanho do recuo** for definido como 5, por exemplo, cinco caracteres de espaço serão inseridos sempre que você pressionar a tecla TAB ou clicar no botão **aumentar recuo** na barra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de ferramentas na janela principal.  
+ Quando essa opção é selecionada, as operações de recuo inserem apenas caracteres de espaço, não caracteres de tabulação. Se o **tamanho do recuo** for definido como 5, por exemplo, cinco caracteres de espaço serão inseridos sempre que você pressionar a tecla TAB ou clicar no botão **aumentar recuo** na barra de ferramentas na [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] janela principal.  
   
  **Manter tabulações**  
  Quando essa opção é selecionada, as operações de recuo inserem tantos caracteres de tabulação quantos forem possíveis. Cada caractere de tabulação preenche o número de espaços especificado em **Tamanho da tabulação**. Se o **Tamanho do recuo** não for um múltiplo par do **Tamanho da tabulação**, caracteres de espaço serão adicionados para preencher a diferença.  

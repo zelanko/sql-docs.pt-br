@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63df76a4e136a7d0a581d613829482b7eb430ea6
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721183"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000476"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lição 1: Publicando dados usando replicação de mesclagem
    Nesta lição, você aprenderá a criar uma publicação de mesclagem usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto das tabelas **Employee**, **SalesOrderHeader** e **SalesOrderDetail** no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Essas tabelas são filtradas com filtros de linha com parâmetros de modo que cada assinatura contenha uma partição exclusiva dos dados. Você também adicionará o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Agente de Mesclagem à PAL (lista de acesso à publicação). Este tutorial exige a conclusão do tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "62721183"
   
 21. Selecione **Criar um instantâneo imediatamente**, desmarque a opção **Agendar o agente de instantâneo para ser executado nos seguintes momentos**e clique em **Avançar**.  
   
-22. Na página segurança do agente, clique **em configurações de segurança**, digite \< _Machine_Name>_ **\ repl_snapshot** na caixa **conta de processo** , forneça a senha dessa conta e clique em **OK**. Clique em **Concluir**.  
+22. Na página segurança do agente, clique em **configurações de segurança**, digite \< _Machine_Name>_ **\ repl_snapshot** na caixa conta de **processo** , forneça a senha dessa conta e clique em **OK**. Clique em **Concluir**.  
   
 23. Na página Concluir o Assistente, insira **AdvWorksSalesOrdersMerge** na caixa **Nome da publicação** e clique em **Concluir**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62721183"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>Para exibir o status de geração do instantâneo  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e expanda a pasta **replicação** .  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o nó do servidor e expanda a pasta **replicação** .  
   
 2.  Na pasta Publicações Locais, clique com o botão direito do mouse em **AdvWorksSalesOrdersMerge**e clique em **Exibir Status do Agente de Instantâneo**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62721183"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>Para adicionar o logon do Merge Agent à PAL  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e expanda a pasta **replicação** .  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o nó do servidor e expanda a pasta **replicação** .  
   
 2.  Na pasta Publicações Locais, clique com o botão direito do mouse em **AdvWorksSalesOrdersMerge**e clique em **Propriedades**.  
   

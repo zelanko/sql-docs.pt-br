@@ -12,18 +12,23 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78896802"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924620"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novidades do Assistente de Migração de Dados
 
 Este artigo lista as adições em cada versão do Assistente de Migração de Dados.
+
+## <a name="data-migration-assistant-v-52"></a>Assistente de Migração de Dados v 5,2
+A versão v 5.2 do Assistente de Migração de Dados fornece suporte para:
+- Carregando Avaliações para migrações para Azure com suporte para Azure governamental e nuvens nacionais (oferta soberanas).  Esse recurso permite que o avalie a prontidão de SQL Server o estado de dados migrando para o SQL do Azure.
+- Suporte de linha de comando para carregar Avaliações para migrações do Azure com suporte para o Azure governamental e nuvens nacionais.  Agora, você pode automatizar completamente o carregamento das avaliações para o projeto de migrações para Azure para obter um relatório consolidado de prontidão do SQL do Azure. 
 
 ## <a name="data-migration-assistant-v-50"></a>Assistente de Migração de Dados v 5,0
 
@@ -176,7 +181,7 @@ A versão v 2.0 do Assistente de Migração de Dados inclui recomendações de r
 A versão v 1.0 do Assistente de Migração de Dados é a versão inicial e fornece para:
 
 - Descoberta de problemas que podem afetar uma atualização para uma versão local do SQL Server. Quaisquer descobertas são descritas como problemas de compatibilidade e elas são categorizadas nas seguintes áreas:
-  - Alterações de quebra
+  - Alterações da falha
   - Alterações de comportamento
   - Recursos preteridos
 - Descoberta de novos recursos na plataforma de SQL Server de destino para as quais o banco de dados pode se beneficiar após uma atualização. Quaisquer descobertas são descritas como recomendações de recurso e elas são categorizadas nas seguintes áreas:

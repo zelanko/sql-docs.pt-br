@@ -14,12 +14,12 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cd3384f94139698fd04f4d5dcefdeab763c872b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5041882c3eadb4e7f6f28a118e45c6e42f13cea6
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175429"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924883"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Solucionar problemas de configuração de grupos de disponibilidade AlwaysOn (SQL Server)
   Este tópico fornece informações para ajudar a solucionar problemas típicos ao configurar instâncias de servidor para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Os problemas de configuração típicos incluem: o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] está desabilitado, as contas estão configuradas incorretamente, o ponto de extremidade de espelhamento de banco de dados não existe, o ponto de extremidade está inacessível (Erro 1418 do SQL Server), o acesso à rede não existe e falha no comando de junção de banco de dados (Erro 35250 do SQL Server).
@@ -56,7 +56,7 @@ ms.locfileid: "78175429"
 
 2.  Se o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver sendo executado como uma conta interna, como Sistema Local, Serviço Local ou Serviço de Rede ou uma conta que não pertença ao domínio, você deverá usar certificados para autenticação de ponto de extremidade. Se suas contas de serviço estiverem usando contas de domínio no mesmo domínio, você poderá escolher conceder acesso de CONNECT a cada conta de serviço em todos os locais de réplica ou usar certificados. Para obter mais informações, veja [Usar certificados para um ponto de extremidade do espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).
 
-##  <a name="endpoints"></a><a name="Endpoints"></a>Extremidade
+##  <a name="endpoints"></a><a name="Endpoints"></a> Pontos de extremidade
  Os pontos de extremidade devem ser configurados corretamente.
 
 1.  Verifique se cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vai hospedar uma réplica de disponibilidade (cada *local de réplica*) tem um ponto de extremidade de espelhamento de banco de dados. Para determinar se existe um ponto de extremidade de espelhamento do banco de dados em determinada instância do servidor, use a exibição de catálogo [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql). Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) ou [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).
@@ -121,7 +121,7 @@ ms.locfileid: "78175429"
 ##  <a name="join-database-fails-sql-server-error-35250"></a><a name="JoinDbFails"></a> Falha ao unir bancos de dados (erro 35250 do SQL Server)
  Discute as possíveis causas e resolução de uma falha ao unir bancos de dados secundários a um grupo de disponibilidade porque a conexão com a réplica primária não está ativa.
 
- **Solução:**
+ **Resolução:**
 
 1.  Verifique a configuração do firewall para confirmar se ele permite comunicação da porta do ponto de extremidade entre as instâncias do servidor que hospedam a réplica primária e a réplica secundária (por padrão, a porta 5022).
 
@@ -136,7 +136,7 @@ ms.locfileid: "78175429"
 |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Réplica primária atual|Verifique se READ_ONLY_ROUTING_LIST contém somente instâncias de servidor que hospedem uma réplica secundária legível.|**Para identificar réplicas secundárias legíveis:** sys.availability_replicas (coluna**secondary_role_allow_connections_desc** )<br /><br /> **Para exibir uma lista de roteamento somente leitura:** sys.availability_read_only_routing_lists<br /><br /> **Para alterar uma lista de roteamento somente leitura:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|
 |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Cada réplica em read_only_routing_list|Verifique se o firewall do Windows não está bloqueando a porta READ_ONLY_ROUTING_URL.|-|[Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|
 |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Cada réplica em read_only_routing_list|No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager, verifique se:<br /><br /> A conectividade remota do SQL Server está habilitada.<br /><br /> TCP/IP está habilitado.<br /><br /> Os endereços IP estão configurados corretamente.|-|[Exibir ou alterar as propriedades de servidor &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|
-|![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Cada réplica em read_only_routing_list|Verifique se a READ_ONLY_ROUTING_URL (TCP<strong>://*`system-address`*:</strong>*Port*) contém o FQDN (nome de domínio totalmente qualificado) e o número da porta corretos.|-|[Calculando read_only_routing_url de AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|
+|![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Cada réplica em read_only_routing_list|Verifique se a READ_ONLY_ROUTING_URL (TCP<strong>:// *`system-address`* :</strong>*Port*) contém o FQDN (nome de domínio totalmente qualificado) e o número da porta corretos.|-|[Calculando read_only_routing_url de AlwaysOn](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|
 |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Sistema cliente|Verifique se o driver cliente dá suporte a roteamento somente leitura.|-|[Conectividade de Cliente AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)|
 
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas

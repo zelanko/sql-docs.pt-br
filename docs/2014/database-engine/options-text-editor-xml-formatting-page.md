@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0d36c5a92dba9f3f92943b65107e7eedb178554
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089853"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000628"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Opções (página Editor de texto – XML – Formatação)
 
@@ -26,7 +26,7 @@ Esta caixa de diálogo permite que você especifique as configurações de forma
   
 ## <a name="attributes"></a>Atributos  
  **Preservar formatação manual de atributos**  
- Não reformate os atributos. Esse é o padrão.  
+ Não reformate os atributos. Este é o padrão.  
   
 > [!NOTE]  
 >  Se os atributos estiverem em linhas múltiplas, o editor recua cada linha de atributos para corresponder ao recuo do elemento pai.  
@@ -50,7 +50,7 @@ Esta caixa de diálogo permite que você especifique as configurações de forma
   
 ## <a name="mixed-content"></a>Conteúdo Misto  
  **Formatar conteúdo misto por padrão.**  
- Tenta reformatar conteúdo misto, exceto quando o conteúdo encontra-se em um escopo `xml:space="preserve"`. Esse é o padrão.  
+ Tenta reformatar conteúdo misto, exceto quando o conteúdo encontra-se em um escopo `xml:space="preserve"`. Este é o padrão.  
   
  Se um elemento contiver uma mistura de texto e marcação, os conteúdos serão considerados de conteúdo misto. A seguir há um exemplo de um elemento com conteúdo misto.  
   

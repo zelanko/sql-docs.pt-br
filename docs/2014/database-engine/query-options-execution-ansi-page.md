@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b383c290bb507cdafaf824c16b3a1587b998bd3
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089075"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000612"
 ---
 # <a name="query-options-execution-ansi-page"></a>Execução de Opções de Consulta (página ANSI)
   Use esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o executará as consultas usando todas ou uma parte das configurações especificadas no padrão ISO (ANSI).  
@@ -27,10 +27,10 @@ ms.locfileid: "66089075"
  Selecione todas as configurações ISO padrão. Essa caixa fica indisponível por padrão, pois só algumas das configurações ISO são feitas.  
   
  **SET QUOTED_IDENTIFIER**  
- Coloque os identificadores de objeto entre aspas. Esta opção é selecionada por padrão.  
+ Coloque os identificadores de objeto entre aspas. Essa opção é habilitada por padrão.  
   
  **SET ANSI_NULL_DFLT_ON**  
- Permita valores nulos para todos os tipos de dados ou colunas definidos pelo usuário que não estejam explicitamente definidos como NOTNULL durante uma instrução CREATE TABLE ou ALTER TABLE (o estado padrão). Esta opção é selecionada por padrão.  
+ Permita valores nulos para todos os tipos de dados ou colunas definidos pelo usuário que não estejam explicitamente definidos como NOTNULL durante uma instrução CREATE TABLE ou ALTER TABLE (o estado padrão). Essa opção é habilitada por padrão.  
   
  **SET IMPLICIT_TRANSACTIONS**  
  Por padrão, esta opção não é selecionada.  
@@ -48,10 +48,10 @@ ms.locfileid: "66089075"
   
 -   Quando essa caixa de seleção é desmarcada, erros de estouro aritmético e de divisão por zero fazem a instrução ser retornada e uma mensagem de erro é gerada. Quando OFF, erros de estouro aritmético e de divisão por zero fazem com que valores nulos sejam retornados. O comportamento em que um erro de estouro aritmético e de divisão por zero faz como que valores nulos sejam retornados ocorre se houver uma tentativa de operação INSERT ou UPDATE em uma coluna de caracteres, Unicode ou binária que tenha novo valor com tamanho maior que o tamanho máximo da coluna. Se **SET ANSI_WARNINGS** for on, a operação INSERT ou Update será cancelada conforme especificado pelo padrão ISO. Espaços em branco à direita são ignorados em colunas de caracteres e valores nulos à direita são ignorados em colunas binárias. Quando OFF, os dados são truncados para o tamanho da coluna e a instrução obtém êxito.  
   
- Esta opção é selecionada por padrão.  
+ Essa opção é habilitada por padrão.  
   
  **SET ANSI_NULLS**  
- Especifica o comportamento compatível com ISO dos operadores de comparação Igual a (`=`) e Diferente de (`<>`) quando usados com valores nulos. Quando **SET ANSI_NULLS** é selecionado, todas as comparações com um valor nulo são avaliadas como UNKNOWN, o comportamento compatível com ISO. Quando **SET ANSI_NULLS** não é selecionado, as comparações de todos os dados com um valor nulo são avaliadas como TRUE se o valor dos dados for NULL. Esta opção é selecionada por padrão.  
+ Especifica o comportamento compatível com ISO dos operadores de comparação Igual a (`=`) e Diferente de (`<>`) quando usados com valores nulos. Quando **SET ANSI_NULLS** é selecionado, todas as comparações com um valor nulo são avaliadas como UNKNOWN, o comportamento compatível com ISO. Quando **SET ANSI_NULLS** não é selecionado, as comparações de todos os dados com um valor nulo são avaliadas como TRUE se o valor dos dados for NULL. Essa opção é habilitada por padrão.  
   
  **Restaurar Padrões**  
  Redefine todos os valores dessa página com os valores padrão originais.  

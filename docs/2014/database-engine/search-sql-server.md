@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab4fbf86cffea9af6aef03a176aef3d559472506
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843712"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000556"
 ---
 # <a name="search-sql-server"></a>Pesquisar (SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]fornece recursos de pesquisa para textos e documentos que vão além da funcionalidade da [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` palavra-chave.  

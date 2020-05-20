@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a39b3395a26fdbe3c235f429f312f4d6b3aff512
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721031"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000436"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lição 2: Criando uma assinatura na publicação de mesclagem
   Nesta lição, você criará uma assinatura usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Em seguida, definirá permissões no banco de dados da assinatura e gerará manualmente o instantâneo de dados filtrados para a nova assinatura. Esta lição exige que você tenha concluído a lição anterior, [Lição 1: Publicando dados usando a replicação de mesclagem](lesson-1-publishing-data-using-merge-replication.md).  
@@ -36,11 +36,11 @@ ms.locfileid: "62721031"
   
 5.  Na página Local do Agente de Mesclagem, clique em **Executar cada agente em seu Assinante**e em **Avançar**.  
   
-6.  Na página assinantes, selecione o nome da instância do servidor do assinante e, em **banco de dados de assinatura**, selecione ** \<novo banco de dados>** na lista.  
+6.  Na página assinantes, selecione o nome da instância do servidor do assinante e, em **banco de dados de assinatura**, selecione ** \< novo banco de dados>** na lista.  
   
 7.  Na caixa de diálogo **Novo Banco de Dados** , insira **SalesOrdersReplica** na caixa **Nome do banco de dados** , clique em **OK**e em **Avançar**.  
   
-8.  Na página segurança do agente de mesclagem, clique no botão de reticências (**...**) \<, digite _Machine_Name>_ **\ repl_merge** na caixa **conta de processo** , forneça a senha dessa conta, clique em **OK**, em **Avançar**e em **Avançar** novamente.  
+8.  Na página segurança do Agente de Mesclagem, clique no botão de reticências (**...**), digite \< _Machine_Name>_ **\ repl_merge** na caixa **conta de processo** , forneça a senha dessa conta, clique em **OK**, em **Avançar**e em **Avançar** novamente.  
   
 9. Na página Inicializar Assinaturas, selecione **Na primeira sincronização** na lista **Inicializar Quando** , clique em **Avançar**e em **Avançar** novamente.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62721031"
   
 ### <a name="to-create-the-filtered-data-snapshot-for-the-subscription"></a>Para criar o instantâneo de dados filtrados para a assinatura  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e expanda a pasta **replicação** .  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o nó do servidor e expanda a pasta **replicação** .  
   
 2.  Na pasta **Publicações Locais** , clique com o botão direito do mouse na publicação **AdvWorksSalesOrdersMerge** e clique em **Propriedades**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62721031"
   
 3.  Selecione a página **Partições de Dados** e clique em **Adicionar**.  
   
-4.  Na caixa de diálogo **Adicionar partição de dados** , `adventure-works\pamela0` digite a caixa **valor de HOST_NAME** e clique em **OK**.  
+4.  Na caixa de diálogo **Adicionar partição de dados** , digite `adventure-works\pamela0` a caixa **valor de HOST_NAME** e clique em **OK**.  
   
 5.  Selecione a partição recém-adicionada, clique em **Gerar os instantâneos selecionados agora**e em **OK**.  
   

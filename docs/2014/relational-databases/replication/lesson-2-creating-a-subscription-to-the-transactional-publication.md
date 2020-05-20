@@ -9,22 +9,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9dc9824efb3f962d97f786835fa2367be18b55f7
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721080"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000407"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lição 2: Criando uma assinatura na publicação transacional
   Nessa lição, você criará uma assinatura usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta lição exige que você tenha concluído a lição anterior, [Lição 1: Publicando dados usando a replicação transacional](lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Para criar a assinatura  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e expanda a pasta **replicação** .  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o nó do servidor e expanda a pasta **replicação** .  
   
 2.  Na pasta **Publicações Locais** , clique com o botão direito do mouse na publicação **AdvWorksProductTrans** e clique em **Novas Assinaturas**.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "62721080"
   
 5.  Na página Assinantes, se o nome da instância do Assinante não estiver exibido, clique em **Adicionar Assinante**, clique em **Adicionar Assinante de SQL Server**, digite o nome da instância do Assinante na caixa de diálogo **Conectar ao Servidor** e em seguida clique em **Conectar**.  
   
-6.  Na página assinantes, selecione o nome da instância do servidor do assinante e selecione ** \<novo banco de dados>** em **banco de dados de assinatura**.  
+6.  Na página assinantes, selecione o nome da instância do servidor do assinante e selecione ** \< novo banco de dados>** em **banco de dados de assinatura**.  
   
 7.  Na caixa de diálogo **Novo Banco de Dados** , digite **ProductReplica** na caixa **Nome do Banco de Dados** , clique em **OK**e clique em **Avançar**.  
   
-8.  Na caixa de diálogo **agente de distribuição segurança** , clique no botão de reticências (**...**) \<, digite _Machine_Name>_ **\ repl_distribution** na caixa **conta de processo** , digite a senha dessa conta, clique em **OK**e em **Avançar**.  
+8.  Na caixa de diálogo **agente de distribuição segurança** , clique no botão de reticências (**...**), digite \< _Machine_Name>_ **\ repl_distribution** na caixa **conta de processo** , digite a senha dessa conta, clique em **OK**e em **Avançar**.  
   
 9. Clique em **Concluir** para aceitar os valores padrão nas páginas remanescentes e concluir o assistente.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62721080"
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>Para exibir o status da sincronização da assinatura  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e expanda a pasta **replicação** .  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o nó do servidor e expanda a pasta **replicação** .  
   
 2.  Na pasta **Assinaturas Locais** , expanda a publicação **AdvWorksProductTrans** , clique com o botão direito do mouse na assinatura no banco de dados **ProductReplica** e clique em **Exibir Status da Sincronização**.  
   

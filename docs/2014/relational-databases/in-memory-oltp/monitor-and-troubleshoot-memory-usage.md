@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f770ea7ed5257cdca5def868b1bdfa8359af79a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175905"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925087"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorar e solucionar problemas de uso da memória
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consome memória em padrões diferentes comparado a tabelas baseadas em disco. Você pode monitorar a quantidade de memória alocada e usada pelas tabelas e índices com otimização de memória em seu banco de dados, usando as DMVs ou os contadores de desempenho fornecidos para a memória e o subsistema de coleta de lixo.  Isso oferece visibilidade em nível de sistema e banco de dados, e permite que você evite problemas devido ao esgotamento de memória.
@@ -112,8 +112,8 @@ ms.locfileid: "78175905"
 
 ##  <a name="monitoring-memory-usage"></a>Monitorando o uso da memória
 
-###  <a name="using-ssmanstudiofull"></a>Usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] é fornecido com relatórios internos padrão para monitorar a memória consumida por tabelas na memória. Você pode acessar esses relatórios usando o Pesquisador de Objetos, conforme descrito [aqui](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Você também pode usar o Pesquisador de Objetos para monitorar a memória consumida por tabelas individuais com otimização de memória.
+###  <a name="using-ssmanstudiofull"></a>Como usar [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] é fornecido com relatórios internos padrão para monitorar a memória consumida por tabelas na memória. Você pode acessar esses relatórios usando o Pesquisador de Objetos. Você também pode usar o Pesquisador de Objetos para monitorar a memória consumida por tabelas individuais com otimização de memória.
 
 #### <a name="consumption-at-the-database-level"></a>Consumo em nível de banco de dados
  Você pode monitorar o uso da memória em nível de banco de dados da forma a seguir.
@@ -122,7 +122,7 @@ ms.locfileid: "78175905"
 
 2.  No Pesquisador de Objetos, clique com o botão direito do mouse no banco de dados sobre o qual você deseja obter relatórios.
 
-3.  No menu de **contexto,** -> selecione relatórios**padrão** -> **uso de memória por objetos com otimização de memória**
+3.  No menu de **contexto, selecione relatórios**  ->  **padrão**  ->  **uso de memória por objetos com otimização de memória**
 
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")
 

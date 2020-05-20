@@ -13,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4bcd90b17228283859e2dd1a2897406e8ea95f
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809022"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924770"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurar o SQL Server para usar o NUMA de software (SQL Server)
 Processadores modernos têm vários núcleos múltiplos por soquete. Cada soquete é representado, em geral, como um único nó NUMA. O mecanismo de banco de dados do SQL Server particiona diversas estruturas internas e particiona threads de serviço para cada nó NUMA. Com processadores que contêm 10 ou mais núcleos por soquete, o uso de software NUMA (soft-NUMA) para dividir os nós NUMA de hardware geralmente aumenta a escalabilidade e o desempenho.   
@@ -40,7 +40,7 @@ A figura a seguir mostra o tipo de informações sobre o soft-NUMA que você ver
 
 ## <a name="manual-soft-numa"></a>Soft-NUMA manual
   
-Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para usar o soft-numa manualmente, você deve editar o registro para adicionar uma máscara de afinidade de configuração de nó. A máscara do NUMA de software pode ser declarada como uma entrada de registro binária, DWORD (hexadecimal ou decimal) ou QWORD (hexadecimal ou decimal). Para configurar mais que as primeiras 32 CPUs usam o valor do registro QWORD ou BINARY. (Valores QWORD não podem ser usados antes [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]de.) Você deve reiniciar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para configurar o soft-numa.  
+Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para usar o soft-numa manualmente, você deve editar o registro para adicionar uma máscara de afinidade de configuração de nó. A máscara do NUMA de software pode ser declarada como uma entrada de registro binária, DWORD (hexadecimal ou decimal) ou QWORD (hexadecimal ou decimal). Para configurar mais que as primeiras 32 CPUs usam o valor do registro QWORD ou BINARY. (Valores QWORD não podem ser usados antes de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .) Você deve reiniciar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para configurar o soft-numa.  
   
 > [!TIP]  
 >  As CPUs são numeradas a partir de 0.  
@@ -57,7 +57,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para
   
  A instância A, que tem E/S significativa, agora tem dois threads de E/S e um thread de gravador lento, enquanto a instância B, que executa operações de processamento intenso, tem apenas um thread de E/S e um thread de gravador lento. Diferentes quantidades de memória podem ser atribuídas às instâncias, mas, ao contrário do NUMA de hardware, ambas recebem memória do mesmo bloco de memória do sistema operacional, e não há afinidade entre memória e processador.  
   
- O thread de gravador lento está vinculado à exibição do sistema operacional SQL dos nós físicos de memória NUMA. Por isso, aquilo que o hardware apresentar como os nós físicos NUMA equivalerá ao número de threads de gravador lento criados. Para obter mais informações, consulte [Como funcionam NUMA de software, thread de término de E/S, trabalhadores de gravador lento e nós de memória](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ O thread de gravador lento está vinculado à exibição do sistema operacional SQL dos nós físicos de memória NUMA. Por isso, aquilo que o hardware apresentar como os nós físicos NUMA equivalerá ao número de threads de gravador lento criados. Para obter mais informações, consulte [Como funcionam NUMA de software, thread de término de E/S, trabalhadores de gravador lento e nós de memória](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-soft-numa-io-completion-thread-lazy-writer-workers-and-memory-nodes).  
   
 > [!NOTE]  
 >  As chaves do Registro **Soft-NUMA** não são copiadas quando você atualiza uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

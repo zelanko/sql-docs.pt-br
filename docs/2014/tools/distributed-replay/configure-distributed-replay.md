@@ -10,12 +10,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40cbece7c2ee5aad3b65a0b4066b409d9f0b6b6e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149517"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925050"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   Os detalhes de configuração do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay são especificados em arquivos XML no controlador do Distributed Replay, nos clientes e onde a ferramenta de administração está instalada. Esses arquivos incluem o seguinte:  
@@ -35,7 +35,7 @@ ms.locfileid: "63149517"
   
  O nível de log especificado pelo arquivo de configuração do controlador inclui o seguinte:  
   
-|Configuração|Elemento XML|DESCRIÇÃO|Valores Permitidos|Obrigatório|  
+|Configuração|Elemento XML|Descrição|Valores Permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Nível de log|`<LoggingLevel>`|Especifica o nível de log do serviço de controlador.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Não. Por padrão, o valor é `CRITICAL`.|  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63149517"
   
  As configurações especificadas pelo arquivo de configuração de cliente incluem o seguinte:  
   
-|Configuração|Elemento XML|DESCRIÇÃO|Valores Permitidos|Obrigatório|  
+|Configuração|Elemento XML|Descrição|Valores Permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controller|`<Controller>`|Especifica o nome do computador do controlador. O cliente tentará se registrar com o ambiente de Distributed Replay entrando em contato o controlador.|Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.|Não. Por padrão, o cliente tenta se registrar com a instância de controlador que está sendo executada localmente ("`.`"), se existir.|  
 |Diretório de trabalho do cliente|`<WorkingDirectory>`|É o caminho local no cliente onde os arquivos de expedição são salvos.<br /><br /> Os arquivos nesse diretório são substituídos na próxima reprodução.|Um nome de diretório completo, iniciando com a letra da unidade.|Não. Se nenhum valor for especificado, os arquivos de expedição serão salvos no mesmo local que o arquivo de configuração de cliente padrão. Se for especificado um valor e essa pasta não existir no cliente, o serviço do cliente não será iniciado.|  
@@ -87,7 +87,7 @@ ms.locfileid: "63149517"
   
  As definições de configuração de pré-processamento são especificadas em elementos XML que são filhos do elemento `<PreprocessModifiers>` no arquivo de configuração de pré-processamento. Essas configurações incluem o seguinte:  
   
-|Configuração|Elemento XML|DESCRIÇÃO|Valores Permitidos|Obrigatório|  
+|Configuração|Elemento XML|Descrição|Valores Permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Incluir atividades de sessão de sistema|`<IncSystemSession>`|Indica se as atividades de sessão de sistema durante a captura serão incluídas durante a reprodução.|`Yes` &#124; `No`|Não. Por padrão, o valor é `No`.|  
 |Tempo ocioso máximo|`<MaxIdleTime>`|Arredonda o tempo ocioso para um número absoluto (em segundos).|Um inteiro que é >=-1<br /><br /> `-1` indica que não houve alteração do valor original no arquivo de rastreamento original.<br /><br /> `0` indica que há alguma atividade ocorrendo em um determinado momento.|Não. Por padrão, o valor é `-1`.|  
@@ -119,7 +119,7 @@ ms.locfileid: "63149517"
 ### <a name="replayoptions-element"></a>Elemento \<ReplayOptions>  
  As configurações especificadas pelo arquivo de configuração de reprodução no elemento `<ReplayOptions>` incluem o seguinte:  
   
-|Configuração|Elemento XML|DESCRIÇÃO|Valores Permitidos|Obrigatório|  
+|Configuração|Elemento XML|Descrição|Valores Permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o servidor de teste)|`<Server>`|Especifica o nome do servidor e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conexão.|*server_name*[\\*instance_name*]<br /><br /> Você não pode usar "`localhost`" ou "`.`" para representar o host local.|Não, se o nome do servidor já tiver sido especificado usando o parâmetro **-s**_target server_ com a opção **replay** da ferramenta de administração.|  
 |Modo de sequenciamento|`<SequencingMode>`|Especifica o modo usado para o agendamento de eventos.|`synchronization` &#124; `stress`|Não. Por padrão, o valor é `stress`.|  
@@ -134,7 +134,7 @@ ms.locfileid: "63149517"
 ### <a name="outputoptions-element"></a>Elemento \<OutputOptions>  
  As configurações especificadas pelo arquivo de configuração de reprodução no elemento `<OutputOptions>` incluem o seguinte:  
   
-|Configuração|Elemento XML|DESCRIÇÃO|Valores Permitidos|Obrigatório|  
+|Configuração|Elemento XML|Descrição|Valores Permitidos|Obrigatório|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Gravar contagem de linhas|`<RecordRowCount>`|Indica se a contagem de linhas de cada conjunto de resultados deve ser gravada.|`Yes` &#124; `No`|Não. Por padrão, o valor é `Yes`.|  
 |Gravar conjunto de resultados|`<RecordResultSet>`|Indica se o conteúdo de todos os conjuntos de resultados deve ser gravado.|`Yes` &#124; `No`|Não. Por padrão, o valor é `No`.|  
@@ -164,10 +164,10 @@ ms.locfileid: "63149517"
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Opções de linha de comando da ferramenta de administração &#40;utilitário de Distributed Replay&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Fórum de Distributed Replay de SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Usando Distributed Replay para teste de carga de sua SQL Server-parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Usando o Distributed Replay para teste de carga do SQL Server – Parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Fórum do SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Uso do Distributed Replay para teste de carga do SQL Server – Parte 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)   
+ [Usando o Distributed Replay para teste de carga do SQL Server – Parte 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3ecf106315fa88fdfb68599cfce71a77be975dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f862f2067a1a85663754ab795822f2859b6c416a
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089039"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000596"
 ---
 # <a name="query-options-execution-general-page"></a>Execução de Opções de Consultas (página Geral)
   Use essa página a fim de especificar as opções para executar consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para acessar essa caixa de diálogo, clique com o botão direito do mouse no corpo de uma janela do Editor de Consultas e clique em **Opções de Consultas**.  

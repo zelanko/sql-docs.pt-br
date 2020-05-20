@@ -15,20 +15,20 @@ helpviewer_keywords:
 - replication [SQL Server], monitoring
 - administering replication, monitoring
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 615582b2d961f87a2d3df151175d7bd5d06e305f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62666857"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000379"
 ---
 # <a name="monitoring-replication"></a>Monitorando (Replicação)
   Monitorar uma topologia de replicação é um aspecto importante na implantação da replicação. Já que a atividade de replicação é distribuída, é essencial controlar sua atividade e o status em todos os computadores envolvidos na replicação. As seguintes ferramentas podem ser usadas para monitorar a replicação:  
   
--   [!INCLUDE[msCoName](../../includes/msCoName-md.md)][!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
+-   [!INCLUDE[msCoName](../../includes/msCoName-md.md)][!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]Replication Monitor  
   
      O Replication Monitor é a ferramenta mais importante para monitorar a replicação, apresentando uma exibição do Publicador dedicada a toda atividade de replicação. Para obter mais informações, consulte [monitorar o desempenho com o Replication Monitor](monitor/monitor-performance-with-replication-monitor.md).  
   

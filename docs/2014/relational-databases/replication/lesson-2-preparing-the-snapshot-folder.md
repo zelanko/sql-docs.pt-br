@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbe571002a1168ca3f60592b86fb58fd482ecd05
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721017"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000392"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lição 2: Preparando a pasta do instantâneo
   Nesta lição, você aprenderá a configurar a pasta do instantâneo, usada para criar e armazenar o instantâneo de publicação.  
@@ -36,7 +36,7 @@ ms.locfileid: "62721017"
   
 6.  Na guia **Segurança** , clique em **Editar**.  
   
-7.  Na caixa de diálogo **Permissões** , clique em **Adicionar**. Na caixa de texto **Selecionar usuário, computadores, conta de serviço ou grupos** , digite o nome da conta de agente de instantâneo criada na lição 1, como \< _Machine_Name>_ **\ repl_snapshot**, em \<que *Machine_Name>* é o nome do Publicador. Clique em **Verificar Nomes**e em **OK**.  
+7.  Na caixa de diálogo **Permissões** , clique em **Adicionar**. Na caixa de texto **Selecionar usuário, computadores, conta de serviço ou grupos** , digite o nome da conta de agente de instantâneo criada na lição 1, como \< _Machine_Name>_ **\ repl_snapshot**, em que \< *Machine_Name>* é o nome do Publicador. Clique em **Verificar Nomes**e em **OK**.  
   
 8.  Repita a etapa anterior para adicionar permissões para o Agente de Distribuição, como \<_Machine_Name>_**\repl_distribution** e para o Agente de Mesclagem, como \<_Machine_Name>_**\repl_merge**.  
   

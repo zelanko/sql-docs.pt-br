@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da87f0fbae21d11906f12a906aa5107e8812436e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242063"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000039"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Tutoriais para SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] incorpora várias tecnologias e recursos novos.  
@@ -29,7 +29,7 @@ ms.locfileid: "75242063"
 -   Para baixar uma pasta de trabalho [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e relatórios [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] para usar com tutoriais do [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vá para [Arquivos de Imagem para Modelo de Exemplo HelloWorldPicnic no PowerPivot e no Power View](https://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]é um recurso do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] a Enterprise Edition.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]é um recurso do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
 -   Para baixar versões do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] de bancos de dados do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , vá para [Bancos de Dados de Exemplo do Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550) no CodePlex.  
   

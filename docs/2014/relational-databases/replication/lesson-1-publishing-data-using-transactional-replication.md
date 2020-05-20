@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721086"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000452"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lição 1: publicando dados que usam replicação transacional
    Nesta lição, você aprenderá a criar uma publicação transacional usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto filtrado da tabela **Produto** no banco de dados de exemplo do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Você também adicionará o logon do SQL Server usado pelo Distribution Agent à PAL (lista de acesso à publicação). Antes de iniciar este tutorial, você deverá ter completado o tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "62721086"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>Para exibir o status de geração do instantâneo  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e expanda a pasta **replicação** .  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o nó do servidor e expanda a pasta **replicação** .  
   
 2.  Na pasta **Publicações Locais** , clique com o botão direito do mouse em **AdvWorksProductTrans**e clique em **Exibir Status do Agente de Instantâneo**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62721086"
   
 ### <a name="to-add-the-distribution-agent-login-to-the-pal"></a>Para adicionar o logon Distribution Agent à PAL  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó do servidor e expanda a pasta **replicação** .  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o nó do servidor e expanda a pasta **replicação** .  
   
 2.  Na pasta **Publicações Locais** , clique com o botão direito do mouse em **AdvWorksProductTrans**e clique em **Propriedades**.  
   
