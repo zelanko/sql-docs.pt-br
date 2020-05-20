@@ -16,14 +16,14 @@ helpviewer_keywords:
 - backup media [SQL Server], backupmediaset system table
 - backupmediaset system table
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b268bf205245f8c63ca9e8273e4b80607282a00
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119352"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807287"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68119352"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|Número exclusivo de identificação do conjunto de mídias. Identidade, chave primária.|  
-|**media_uuid**|**uniqueidentifier**|O UUID do conjunto de mídias. Todos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os conjuntos de mídia têm um UUID.<br /><br /> Para versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no entanto, se um conjunto de mídias contiver apenas uma família de mídia, a coluna **MEDIA_UUID** poderá ser nula (**media_family_count** é 1).|  
+|**media_uuid**|**uniqueidentifier**|O UUID do conjunto de mídias. Todos os [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de mídia têm um UUID.<br /><br /> Para versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no entanto, se um conjunto de mídias contiver apenas uma família de mídia, a coluna **media_uuid** poderá ser nula (**media_family_count** é 1).|  
 |**media_family_count**|**tinyint**|Número de famílias de mídias no conjunto de mídias. Pode ser NULL.|  
 |**name**|**nvarchar(128)**|Nome do conjunto de mídias. Pode ser NULL.<br /><br /> Para obter mais informações, consulte MEDIAname e MEDIADESCRIPTION no [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
 |**ndescrição**|**nvarchar (255)**|Descrição textual do conjunto de mídias. Pode ser NULL.<br /><br /> Para obter mais informações, consulte MEDIAname e MEDIADESCRIPTION no [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
@@ -54,9 +54,9 @@ ms.locfileid: "68119352"
 ## <a name="see-also"></a>Consulte Também  
  [Backup e restauração de tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [&#41;backupfilegroup &#40;Transact-SQL](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [&#41;backupmediafamily &#40;Transact-SQL](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [&#41;do conjunto de backup &#40;Transact-SQL](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [conjunto de backup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   
