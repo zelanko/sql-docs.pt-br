@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938848"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759492"
 ---
 # <a name="update-method"></a>Método Update
 Salva as alterações feitas na linha atual de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou a coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) .  

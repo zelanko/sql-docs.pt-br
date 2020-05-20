@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916823"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759702"
 ---
 # <a name="status-property-example-field-vb"></a>Exemplo da propriedade Status (Campo) (VB)
 O exemplo a seguir abre um documento de uma pasta de leitura/gravação usando o [provedor de publicação da Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). A propriedade [status](../../../ado/reference/ado-api/status-property-ado-field.md) de um [objeto Field](../../../ado/reference/ado-api/field-object.md) do [registro](../../../ado/reference/ado-api/record-object-ado.md) será definida primeiro como **adFieldPendingInsert**e, em seguida, será atualizada para **adFieldOk**.  

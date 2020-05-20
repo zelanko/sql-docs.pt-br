@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933293"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760212"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Cria um novo objeto de [parâmetro](../../../ado/reference/ado-api/parameter-object.md) com as propriedades especificadas.  

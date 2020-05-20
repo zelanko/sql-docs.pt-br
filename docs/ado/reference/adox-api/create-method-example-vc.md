@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Create method [ADOX], VC++ example
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8b694c8d8e7381a8237511f8bba3ffd444cd5d37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1e89a9fa34b4388fbfb283b223d637dde7fdf636
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910539"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759242"
 ---
 # <a name="create-method-example-vc"></a>Exemplo do método Create (VC++)
 O código a seguir mostra como criar um novo banco de dados do Microsoft Jet com o método [Create](../../../ado/reference/adox-api/create-method-adox.md) .  

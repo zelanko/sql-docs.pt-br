@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6be0edf100501762f6d4eada735ff90caa84df4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 73ba054b583fb9930cc62d18ff9e8e28a20720e9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932521"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760092"
 ---
 # <a name="find-method-example-vc"></a>Exemplo do método Find (VC++)
 Este exemplo usa o método [Find](../../../ado/reference/ado-api/find-method-ado.md) do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para localizar e contar o número de títulos comerciais no banco de dados **pubs** . O exemplo supõe que o provedor subjacente não oferece suporte à funcionalidade semelhante.  

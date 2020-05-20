@@ -11,14 +11,14 @@ helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a175d9e98fec5795c2756e79f96304b2ab2cc6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923790"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759012"
 ---
 # <a name="understanding-cursors-and-locks"></a>Noções básicas sobre cursores e bloqueios
 É importante entender como os cursores funcionam para que você possa selecionar o melhor e mais eficiente tipo de cursor para os requisitos de acesso a dados de um aplicativo. Uma configuração de cursor menos do que o ideal pode tornar as operações de acesso a dados um pouco lentas.  

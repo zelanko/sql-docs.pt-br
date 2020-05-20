@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Property object [ADO]
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d2f4a8b6cdeabcbab0802a0052ed697af70ef45a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917549"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759962"
 ---
 # <a name="property-object-ado"></a>Objeto Property (ADO)
 Representa uma característica dinâmica de um objeto ADO que é definido pelo provedor.  
@@ -30,7 +30,7 @@ Representa uma característica dinâmica de um objeto ADO que é definido pelo p
   
  As propriedades internas são aquelas implementadas no ADO e imediatamente disponibilizadas para qualquer novo objeto, usando a `MyObject.Property` sintaxe. Eles não aparecem como objetos de **Propriedade** na coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) de um objeto, portanto, embora você possa alterar seus valores, não é possível modificar suas características.  
   
- As propriedades dinâmicas são definidas pelo provedor de dados subjacente e aparecem na coleção de **Propriedades** do objeto ADO apropriado. Por exemplo, uma propriedade específica para o provedor pode indicar se um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dá suporte a transações ou atualizações. Essas propriedades adicionais serão exibidas como objetos de **Propriedade** na coleção de **Propriedades** do objeto **Recordset** . As propriedades dinâmicas podem ser referenciadas somente por meio da `MyObject.Properties(0)` coleção `MyObject.Properties("Name")` , usando a sintaxe ou.  
+ As propriedades dinâmicas são definidas pelo provedor de dados subjacente e aparecem na coleção de **Propriedades** do objeto ADO apropriado. Por exemplo, uma propriedade específica para o provedor pode indicar se um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dá suporte a transações ou atualizações. Essas propriedades adicionais serão exibidas como objetos de **Propriedade** na coleção de **Propriedades** do objeto **Recordset** . As propriedades dinâmicas podem ser referenciadas somente por meio da coleção, usando a `MyObject.Properties(0)` `MyObject.Properties("Name")` sintaxe ou.  
   
  Não é possível excluir qualquer tipo de propriedade.  
   

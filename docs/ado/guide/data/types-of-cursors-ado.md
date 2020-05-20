@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4953b0509cade52a8badd8d578c9fa13f0c2b42b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923852"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759042"
 ---
 # <a name="types-of-cursors-ado"></a>Tipos de cursor (ADO)
 Como regra geral, seu aplicativo deve usar o cursor mais simples que fornece o acesso de dados necessário. Cada maior característica do cursor além dos conceitos básicos (somente encaminhamento, somente leitura, estático, rolagem, sem buffer) tem um preço na memória do cliente, na carga de rede ou no desempenho. Em muitos casos, as opções de cursor padrão geram um cursor mais complexo do que o seu aplicativo realmente precisa.  

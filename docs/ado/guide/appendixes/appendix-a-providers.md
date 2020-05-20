@@ -14,14 +14,14 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39e1670d9d37b1404e65ecb50f09dc214abdaaff
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926978"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760542"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Apêndice A: provedores de dados e serviços
 Esta seção aborda três tipos de provedores: provedores de dados, provedores de serviços e componentes de serviço. Os provedores se enquadram em duas categorias: aquelas que fornecem dados e aqueles que fornecem serviços. Um *provedor de dados* possui seus próprios dados e os expõe em formato de tabela para seu aplicativo. Um *provedor de serviços* encapsula um serviço, produzindo e consumindo dados, aumentando os recursos em seus aplicativos ADO. Um provedor de serviços também pode ser definido como um *componente de serviço*, que deve funcionar em conjunto com outros provedores de serviços ou componentes.
@@ -70,7 +70,7 @@ Esta seção aborda três tipos de provedores: provedores de dados, provedores d
  Para obter mais informações sobre provedores de OLE DB, consulte [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx).
 
 ## <a name="provider-commands"></a>Comandos do provedor
- Para cada provedor listado aqui, se seus aplicativos permitirem que os usuários insiram instruções SQL como os comandos do provedor, você deverá sempre validar a entrada do usuário e estar atento a possíveis ataques de hacker usando instruções `DROP TABLE t1`SQL potencialmente perigosas, como, por exemplo, como parte da entrada do usuário.
+ Para cada provedor listado aqui, se seus aplicativos permitirem que os usuários insiram instruções SQL como os comandos do provedor, você deverá sempre validar a entrada do usuário e estar atento a possíveis ataques de hacker usando instruções SQL potencialmente perigosas, como, por exemplo `DROP TABLE t1` , como parte da entrada do usuário.
 
 ## <a name="see-also"></a>Consulte Também
  ADO ( [objeto de comando](../../../ado/reference/ado-api/command-object-ado.md) ) [objeto de conexão](../../../ado/reference/ado-api/connection-object-ado.md) do [Microsoft OLE DB Provider para a publicação na Internet provedor](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [microsoft OLE DB para Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [microsoft OLE DB Provider para microsoft Indexing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) provedor [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [provedor Microsoft OLE DB para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [provedor de OLE DB da](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) Microsoft para SQL Server Microsoft OLE DB Provider para [Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) Recordset (ADO) conjunto de [registros Object](../../../ado/reference/ado-api/recordset-object-ado.md) ( [RDS](../../../ado/reference/rds-api/refresh-method-rds.md) )

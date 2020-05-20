@@ -12,14 +12,14 @@ helpviewer_keywords:
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc80c8ad9985efc21e2f583d8ca72751e21c1a2b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925499"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761032"
 ---
 # <a name="editing-data"></a>Editar dados
 Explicamos como usar o ADO para se conectar a uma fonte de dados, executar um comando, obter os resultados em um objeto **Recordset** e navegar no **conjunto de registros**. Esta seção se concentra na próxima operação de ADO fundamental: editando dados.  

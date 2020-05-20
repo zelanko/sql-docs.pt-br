@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - namespaces in ADO
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f3261b7b68213205dbcc51e155832242aa42747
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924813"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759142"
 ---
 # <a name="namespaces"></a>Namespaces
 O formato de persistência XML no ADO usa os quatro namespaces a seguir.  

@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - UnderlyingValue property
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 582d0b87edd4729ce54cc2a7323b0a63443cab82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 67dd3f7a6892d4fa139ffd14b3dc33e4231a6cb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938854"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759522"
 ---
 # <a name="underlyingvalue-property"></a>Propriedade UnderlyingValue
 Indica o valor atual de um objeto de [campo](../../../ado/reference/ado-api/field-object.md) no banco de dados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Retorna um valor **Variant** que indica o valor do **campo**.  
   
 ## <a name="remarks"></a>Comentários  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925761"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761142"
 ---
 # <a name="creating-a-connection-string"></a>Criando uma cadeia de conexão
 Uma cadeia de conexão consiste em uma lista de pares de argumento/valor (ou seja, parâmetros), separados por ponto e vírgula. Por exemplo:  
@@ -48,7 +48,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- Nessa cadeia de conexão, o ADO reconhece apenas `"Provider=SQLOLEDB"` o parâmetro, que especifica o provedor de OLE DB da Microsoft para SQL Server como a fonte de dados ADO. O restante dos pares de argumento/valor, `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`, são passados literalmente para esse provedor. O tipo e a validade desses parâmetros são específicos do provedor. Para obter informações sobre parâmetros válidos que podem ser passados na cadeia de conexão, consulte a documentação do provedor individual.  
+ Nessa cadeia de conexão, o ADO reconhece apenas o `"Provider=SQLOLEDB"` parâmetro, que especifica o provedor de OLE DB da Microsoft para SQL Server como a fonte de dados ADO. O restante dos pares de argumento/valor, `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"` , são passados literalmente para esse provedor. O tipo e a validade desses parâmetros são específicos do provedor. Para obter informações sobre parâmetros válidos que podem ser passados na cadeia de conexão, consulte a documentação do provedor individual.  
   
  De acordo com o provedor de OLE DB para SQL Server documentação, você pode substituir "Server" para o parâmetro de *fonte de dados* e "Database" para o parâmetro de *catálogo inicial* . Assim, a cadeia de conexão a seguir produziria resultados idênticos ao mostrado acima:  
   

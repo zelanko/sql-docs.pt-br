@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CopyTo method [ADO]
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d8b34e47948cbc0742b0b7b0a4f413d56e4086cf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933377"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760242"
 ---
 # <a name="copyto-method-ado"></a>Método CopyTo (ADO)
 Copia o número especificado de caracteres ou bytes (dependendo do [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) no [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) para outro objeto de **fluxo** .  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924188"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760862"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND de forma
 A cláusula comando de forma APPEND acrescenta uma coluna ou colunas a um **conjunto de registros**. Frequentemente, essas colunas são colunas de capítulo, que se referem a um **conjunto de registros**filho.  
@@ -36,7 +36,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *parent-command*  
  Zero ou um dos seguintes (você pode omitir completamente o *comando pai* ):  
   
--   Um comando de provedor entre chaves ("{}") que retorna um objeto **Recordset** . O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
+-   Um comando de provedor entre chaves (" {} ") que retorna um objeto **Recordset** . O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
   
 -   Outro comando de forma inserido entre parênteses.  
   
@@ -66,7 +66,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>Comentários  
  *child-recordset*  
- -   Um comando de provedor entre chaves ("{}") que retorna um objeto **Recordset** . O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
+ -   Um comando de provedor entre chaves (" {} ") que retorna um objeto **Recordset** . O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
   
 -   Outro comando de forma inserido entre parênteses.  
   
@@ -102,13 +102,13 @@ SHAPE [parent-command [[AS] parent-alias]]
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- A forma executará dois comandos `select * from t1` : e`select * from t2 RELATE k1 TO k2)`(. Se o usuário fornecer um comando composto que consiste em vários comandos de provedor separados por ponto e vírgula, a forma não será capaz de distinguir a diferença. Portanto, no comando de forma a seguir,  
+ A forma executará dois comandos: `select * from t1` e ( `select * from t2 RELATE k1 TO k2)` . Se o usuário fornecer um comando composto que consiste em vários comandos de provedor separados por ponto e vírgula, a forma não será capaz de distinguir a diferença. Portanto, no comando de forma a seguir,  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- A forma é `select * from t1; drop table t1` executada e`select * from t2 RELATE k1 TO k2),` (não percebendo que `drop table t1` é um comando de provedor separado e, nesse caso, perigoso. Os aplicativos sempre devem validar a entrada do usuário para evitar que tais ataques de hacker potenciais ocorram.  
+ A forma `select * from t1; drop table t1` é executada e ( `select * from t2 RELATE k1 TO k2),` não percebendo que `drop table t1` é um comando de provedor separado e, nesse caso, perigoso. Os aplicativos sempre devem validar a entrada do usuário para evitar que tais ataques de hacker potenciais ocorram.  
   
  Esta seção contém os seguintes tópicos.  
   

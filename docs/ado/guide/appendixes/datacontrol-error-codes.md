@@ -11,14 +11,14 @@ helpviewer_keywords:
 - errors [ADO], DataControl
 - DataControl errors [ADO]
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b59f0f98122d37447e2e702304a31c44073bacfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 90501e24a9d4ec3dd5a68f641bf25c3adade1a62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926841"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760512"
 ---
 # <a name="datacontrol-object-error-codes"></a>Códigos de erro do objeto DataControl
 A tabela a seguir lista o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Códigos de erro do objeto DataControl. A tradução decimal positiva dos dois bytes baixos, a conversão decimal negativa do código de erro completo e os valores hexadecimais são mostrados.

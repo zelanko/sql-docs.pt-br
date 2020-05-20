@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetChildren method [ADO]
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84f1a2f7a80e17571f1b8ad3e63db640fb58dc19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 605fb2e2afbd73a8a5509102ae98f348aad90bcb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932506"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760062"
 ---
 # <a name="getchildren-method-ado"></a>Método GetChildren (ADO)
 Retorna um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) cujas linhas representam os filhos de um [registro](../../../ado/reference/ado-api/record-object-ado.md)de coleção.  

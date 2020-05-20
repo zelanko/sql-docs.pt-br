@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - SetEOS method [ADO]
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 357778765f0c7ac59d924518340ca34226853fc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9dbe2846674d760163fa9eb3ab78e07e68b80d0e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916927"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759892"
 ---
 # <a name="seteos-method"></a>Método SetEOS
 Define a posição que é o final do fluxo.  

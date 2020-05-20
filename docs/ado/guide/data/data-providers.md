@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6dfb672b57b95224cf6ff056c3298c7c8a437d2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925652"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761102"
 ---
 # <a name="data-providers"></a>Provedores de Dados
 Os provedores de dados representam diversas fontes de dados, como bancos de dado SQL, arquivos seqüenciais indexados, planilhas, repositórios de documentos e arquivos de email. Os provedores expõem dados de forma uniforme usando uma abstração comum chamada conjunto de linhas.  

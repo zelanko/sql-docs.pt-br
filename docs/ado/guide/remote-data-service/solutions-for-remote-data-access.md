@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS [ADO]
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40485562c8385e05ced033062563d5c5165218de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc2addcc74551e754218f200ae977e6641c214b9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922173"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758942"
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluções para Acesso a dados remotos
 ## <a name="the-issue"></a>O problema  

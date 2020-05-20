@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DefaultDatabase property [ADO], Visual Basic example
 - provider property [ADO], Visual Basic example
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 46486167ab5e8bd1b063928d4ba3f6f73c893784
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d1c72fd2e84bfe8c39570181a7f975c70140d91c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931515"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759922"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Exemplo das propriedades Provider e DefaultDatabase (VB)
 Este exemplo demonstra a propriedade do [provedor](../../../ado/reference/ado-api/provider-property-ado.md) abrindo três objetos de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) usando provedores diferentes. Ele também usa a propriedade [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) para definir o banco de dados padrão para o provedor ODBC da Microsoft.  

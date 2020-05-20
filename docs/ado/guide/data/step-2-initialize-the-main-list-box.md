@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924079"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760812"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Etapa 2: Inicializar a caixa de listagem principal
 Para declarar os objetos de registro global e conjunto de registros, insira o seguinte código no (geral) (declarações) para Form1:  
@@ -45,9 +45,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Esse código instancia os objetos de registro global e conjunto de registros. O objeto Record, `grec`, é aberto com uma URL especificada como a ActiveConnection. Se a URL existir, ela será aberta; Se ele ainda não existir, ele será criado. Observe que você deve substituir "<https://servername/foldername/>" por uma URL válida do seu ambiente.  
+ Esse código instancia os objetos de registro global e conjunto de registros. O objeto Record, `grec` , é aberto com uma URL especificada como a ActiveConnection. Se a URL existir, ela será aberta; Se ele ainda não existir, ele será criado. Observe que você deve substituir " <https://servername/foldername/> " por uma URL válida do seu ambiente.  
   
- O objeto recordset, `grs`, é aberto nos filhos do registro, `grec`. Em `lstMain` seguida, é populado com os nomes de arquivo dos recursos publicados na URL.  
+ O objeto recordset, `grs` , é aberto nos filhos do registro, `grec` . Em seguida, `lstMain` é populado com os nomes de arquivo dos recursos publicados na URL.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md)   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e663ac5cdcf85fc1d050e0f066b597d29141ebfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f5e960aa4ccc71079b8c06690665af74cffd0ab
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923899"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759062"
 ---
 # <a name="the-significance-of-cursor-location"></a>A importância da posição do cursor
 Cada cursor usa recursos temporários para manter seus dados. Esses recursos podem ser memória, um arquivo de paginação de disco, arquivos de disco temporário ou até mesmo armazenamento temporário no banco de dados. O cursor é chamado de cursor *do lado do cliente* quando esses recursos estão localizados no computador cliente. O cursor é chamado de cursor *do lado do servidor* quando esses recursos estão localizados no servidor.  

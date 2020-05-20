@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3dc6f7799e28fff65a1b6e60329ba9fb94d84824
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930941"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759832"
 ---
 # <a name="sort-property"></a>Propriedade Sort
 Indica um ou mais nomes de campo nos quais o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) é classificado e se cada campo é classificado em ordem crescente ou decrescente.  
@@ -45,7 +45,7 @@ Indica um ou mais nomes de campo nos quais o [conjunto de registros](../../../ad
   
  Definir a propriedade **Sort** como uma cadeia de caracteres vazia redefinirá as linhas para sua ordem original e excluirá índices temporários. Os índices existentes não serão excluídos.  
   
- Suponha que um **conjunto de registros** contenha três campos nomeados *FirstName*, *inicialdomeio*e *LastName*. Defina a propriedade de **classificação** como a cadeia de`lastName DESC, firstName ASC`caracteres "", que ordenará o **conjunto de registros** por sobrenome em ordem decrescente, em seguida, pelo nome em ordem crescente. A inicial do meio é ignorada.  
+ Suponha que um **conjunto de registros** contenha três campos nomeados *FirstName*, *inicialdomeio*e *LastName*. Defina a propriedade de **classificação** como a cadeia de caracteres " `lastName DESC, firstName ASC` ", que ordenará o **conjunto de registros** por sobrenome em ordem decrescente, em seguida, pelo nome em ordem crescente. A inicial do meio é ignorada.  
   
  Nenhum campo pode ser nomeado "ASC" ou "DESC" porque esses nomes entram em conflito com as palavras-chave **ASC** e **desc**. Você pode criar um alias para um campo com um nome conflitante usando **a palavra-chave as na** consulta que retorna o **conjunto de registros**.  
   

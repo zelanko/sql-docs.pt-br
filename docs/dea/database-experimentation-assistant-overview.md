@@ -1,10 +1,8 @@
 ---
 title: Visão geral do Assistente para Experimentos de Banco de Dados
 description: Visão geral do Assistente para Experimentos de Banco de Dados
-ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
-ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
@@ -12,12 +10,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247118"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759152"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Visão geral do Assistente para Experimentos de Banco de Dados
 
@@ -94,7 +93,7 @@ Para obter mais informações, consulte perguntas frequentes [sobre relatórios 
 
 ## <a name="set-up-telemetry"></a>Configurar telemetria
 
-O DEA tem um recurso habilitado para Internet que pode enviar informações de telemetria à Microsoft para uso no aprimoramento da experiência do produto. As informações coletadas também são salvas no computador para auditoria local, para que você sempre possa ver o que é coletado. Todos os arquivos de log do DEA são salvos na pasta\\% Temp% DEA.
+O DEA tem um recurso habilitado para Internet que pode enviar informações de telemetria à Microsoft para uso no aprimoramento da experiência do produto. As informações coletadas também são salvas no computador para auditoria local, para que você sempre possa ver o que é coletado. Todos os arquivos de log do DEA são salvos na pasta% temp% \\ DEA.
 
 Os dados de telemetria podem ser coletados em quatro tipos de eventos:
 
@@ -105,7 +104,7 @@ Os dados de telemetria podem ser coletados em quatro tipos de eventos:
 
 A coleta e o envio de dados de telemetria são opcionais. Para especificar quais eventos são coletados e se os eventos coletados são enviados à Microsoft, use as seguintes etapas:
 
-1. Vá para o local em que o DEA está instalado (por exemplo, C\\: Arquivos de programas (\\x86)\\Microsoft Corporation assistente para experimentos de banco de dados).
+1. Vá para o local em que o DEA está instalado (por exemplo, C: \\ arquivos de programas (x86) \\ Microsoft Corporation \\ Assistente para experimentos de banco de dados).
 2. Abra e modifique os arquivos. config **DEA. exe. config** (para o aplicativo) e **DEACmd. exe. config** (para a CLI) para tratar do seu cenário, conforme apropriado:
     - Para interromper a coleta de um tipo de evento, defina o valor de *Event* (por exemplo, **TraceEvent**) como **false**. Para começar a coletar o evento novamente, defina o valor como **true**.
     - Para interromper o salvamento de cópias locais de eventos, defina o valor de **TraceLoggerEnabled** como **false**. Para começar a salvar cópias locais novamente, defina o valor como **true**.
@@ -113,6 +112,6 @@ A coleta e o envio de dados de telemetria são opcionais. Para especificar quais
 
 O DEA é regido pela [política de privacidade da Microsoft](https://aka.ms/dea-privacy).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - O artigo [visão geral do processo de comparação de carga de trabalho](database-experimentation-assistant-get-started.md), que explica o processo envolvido na comparação de cargas de trabalho em dois ambientes.

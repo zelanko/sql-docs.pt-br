@@ -12,14 +12,14 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924141"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760842"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Uma cláusula de computação de forma gera um **conjunto de registros**pai, cujas colunas consistem em uma referência ao conjunto de **registros**filho; colunas opcionais cujo conteúdo são colunas de capítulo, novo ou calculadas ou o resultado da execução de funções de agregação no **conjunto de registros** filho ou em um **conjunto de registros**com formato anterior; e quaisquer colunas do conjunto de **registros** filho listadas na cláusula opcional by.  
@@ -38,7 +38,7 @@ SHAPE child-command [AS] child-alias
  *child-command*  
  Consiste em um dos seguintes:  
   
--   Um comando de consulta entre chaves ("{}") que retorna um objeto de **conjunto de registros** filho. O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
+-   Um comando de consulta entre chaves (" {} ") que retorna um objeto de **conjunto de registros** filho. O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
   
 -   O nome de um conjunto de **registros**moldado existente.  
   
@@ -94,7 +94,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Esse comando abre um **conjunto de registros** moldado com dois níveis. O nível pai é um **conjunto de registros** gerado com uma coluna`SUM(rs.population)`de agregação (), uma coluna que`rs`faz referência ao conjunto de **registros** filho () e uma`state`coluna para agrupar o conjunto de **registros** filho (). O nível filho é o **conjunto de registros** retornado pelo comando de`select * from demographics`consulta ().  
+ Esse comando abre um **conjunto de registros** moldado com dois níveis. O nível pai é um **conjunto de registros** gerado com uma coluna de agregação ( `SUM(rs.population)` ), uma coluna que faz referência ao **conjunto de registros** filho ( `rs` ) e uma coluna para agrupar o **conjunto de registros** filho ( `state` ). O nível filho é o **conjunto de registros** retornado pelo comando de consulta ( `select * from demographics` ).  
   
  As linhas de detalhes do **conjunto de registros** filho serão agrupadas por Estado, mas, caso contrário, em nenhuma ordem específica. Ou seja, os grupos não estarão em ordem alfabética ou numérica. Se desejar que o **conjunto de registros** pai seja ordenado, você poderá usar o método de classificação de **conjunto de registros** para ordenar o conjunto de **registros**pai.  
   

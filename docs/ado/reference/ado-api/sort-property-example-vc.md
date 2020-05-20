@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Sort property [ADO], VC++ example
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4c01370efddbd4163459d694772f3e581ddeadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930965"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759842"
 ---
 # <a name="sort-property-example-vc"></a>Exemplo da propriedade Sort (VC++)
 Este exemplo usa a propriedade [Sort](../../../ado/reference/ado-api/sort-property.md) do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para reordenar as linhas de um **conjunto de registros** derivado da tabela ***autores*** do banco de dados **pubs** . Uma rotina de utilitário secundário imprime cada linha.  

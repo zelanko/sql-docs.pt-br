@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e249d22657718899c7838aa55a23a543389dc5a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923935"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760772"
 ---
 # <a name="the-fields-collection"></a>A coleção Field
 A coleção **Fields** é uma das coleções intrínsecas do ADO. Uma coleção é um conjunto ordenado de itens que podem ser referidos como uma unidade. Para obter mais informações sobre coleções ADO, consulte [o modelo de objeto ADO](../../../ado/guide/data/ado-objects-and-collections.md).  
@@ -66,7 +66,7 @@ objField = objRecordset.Fields.Item(0)
 objField = objRecordset.Fields(0)  
 ```  
   
- Se esses métodos são equivalentes, o que é melhor? Isso depende. Usar um índice para recuperar um **campo** da coleção é mais rápido porque acessa o **campo** diretamente sem precisar executar uma pesquisa de cadeia de caracteres. Por outro lado, a ordem dos **campos** na coleção deve ser conhecida e, se a ordem for alterada, a referência ao índice **do campo** terá que ser alterada onde quer que ocorra. Embora um pouco mais lento, o uso do nome do **campo** é mais flexível porque não depende da ordem dos **campos** na coleção.  
+ Se esses métodos são equivalentes, o que é melhor? Depende. Usar um índice para recuperar um **campo** da coleção é mais rápido porque acessa o **campo** diretamente sem precisar executar uma pesquisa de cadeia de caracteres. Por outro lado, a ordem dos **campos** na coleção deve ser conhecida e, se a ordem for alterada, a referência ao índice **do campo** terá que ser alterada onde quer que ocorra. Embora um pouco mais lento, o uso do nome do **campo** é mais flexível porque não depende da ordem dos **campos** na coleção.  
   
 ## <a name="using-the-refresh-method"></a>Usando o método Refresh  
  Ao contrário de algumas outras coleções do ADO, o uso do método **Refresh** na coleção **Fields** não tem efeito visível. Para recuperar as alterações da estrutura de banco de dados subjacente, você deve usar o método **Requery** ou se o objeto **Recordset** não oferecer suporte a indicadores, o método **MoveFirst** , que fará com que o comando seja executado no provedor novamente.  

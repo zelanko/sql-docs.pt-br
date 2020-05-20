@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Clear method [ADO], VC++ example
 - Execute method [ADO], VC++ example
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 533ffd2404d445e89dd50695fb6317eb72db1435
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 451aed8a69562578cfaa68f18c692613995a6e0e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932858"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760142"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Exemplo dos métodos Execute, Requery e Clear (VC + +)
 Este exemplo demonstra o método **Execute** quando executado a partir de um objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) e um objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Ele também usa o método [Requery](../../../ado/reference/ado-api/requery-method.md) para recuperar dados atuais em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e o método [Clear](../../../ado/reference/ado-api/clear-method-ado.md) para limpar o conteúdo da coleção de [erros](../../../ado/reference/ado-api/errors-collection-ado.md) . As funções ExecuteCommand e MyOutput são necessárias para que este exemplo seja executado.  

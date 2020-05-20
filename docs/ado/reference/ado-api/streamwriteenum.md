@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - StreamWriteEnum enumeration [ADO]
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cc9de1481cc683bddafe2f92959977319600f6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 479bc032cf779752f11dccca73ee56fc05a8ebdd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928637"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759562"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 Especifica se um separador de linha é acrescentado à cadeia de caracteres gravada em um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  

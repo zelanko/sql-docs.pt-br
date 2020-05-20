@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6295640a0d9ec0815ebac9086efc3835915e0e0c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916876"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759772"
 ---
 # <a name="stat-method"></a>Método Stat
 Recupera informações sobre um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  

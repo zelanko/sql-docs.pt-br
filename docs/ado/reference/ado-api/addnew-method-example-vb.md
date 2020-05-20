@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - AddNew method [ADO], Visual Basic example
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 043855dc4f2af915b7e1f61bffe99ae89956c3be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 573679e173f97840ccffee9ad93d73cf0075b4b0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921301"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760622"
 ---
 # <a name="addnew-method-example-vb"></a>Exemplo do método AddNew (VB)
 Este exemplo usa o método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) para criar um novo registro com o nome especificado.  

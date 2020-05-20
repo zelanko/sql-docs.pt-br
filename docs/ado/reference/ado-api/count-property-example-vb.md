@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8adf469970b6bfb75d4abe75694c99424768353b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933369"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760222"
 ---
 # <a name="count-property-example-vb"></a>Exemplo da propriedade Count (VB)
 Este exemplo demonstra a propriedade [Count](../../../ado/reference/ado-api/count-property-ado.md) com duas coleções no banco de dados ***Employee*** . A propriedade Obtém o número de objetos em cada coleção e define o limite superior para loops que enumeram essas coleções. Outra maneira de enumerar essas coleções sem usar a propriedade **Count** seria usar `For Each...Next` instruções.  

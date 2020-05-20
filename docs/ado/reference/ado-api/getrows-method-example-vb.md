@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Getrows method [ADO], Visual Basic example
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fedde638e343281c5d3810cc80c9ba8db820e839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 72c6a4755b05399605828e73f69bca7b8da632eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918459"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760012"
 ---
 # <a name="getrows-method-example-vb"></a>Exemplo do método GetRows (VB)
 Este exemplo usa o método [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) para recuperar um número especificado de linhas de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e preencher uma matriz com os dados resultantes. O método **GetRows** retornará menos do que o número desejado de linhas em dois casos: se [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) tiver sido atingido ou se **GetRows** tentar recuperar um registro que foi excluído por outro usuário. A função retornará **false** somente se ocorrer o segundo caso. A função GetRowsOK é necessária para que este procedimento seja executado.  

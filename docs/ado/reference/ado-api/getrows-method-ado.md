@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e468e24506425d995320a8729272f87ac64943b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918455"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760032"
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
 Recupera vários registros de um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) em uma matriz.  

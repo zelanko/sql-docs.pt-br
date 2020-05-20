@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - CreateRecordset method [RDS], Visual Basic example
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bb1bda7808b8875da5982b70e749f45ec15e5958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7d520e58866e7092f6e11807bca8c9407c6b16ca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919344"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760192"
 ---
 # <a name="createrecordset-method-example-vb"></a>Exemplo do método CreateRecordset (VB)
 Você pode criar um objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e especificar as informações da coluna. Em seguida, você pode inserir dados no objeto **Recordset** ; o conjunto de linhas subjacente armazena em buffer as inserções.  

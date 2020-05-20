@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Count property [ADO], VC++ example
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d8d6f40ebbb7ba4c90ba6d00291f40dc38118a13
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919331"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760202"
 ---
 # <a name="count-property-example-vc"></a>Exemplo da propriedade Count (VC++)
 Este exemplo demonstra a propriedade [Count](../../../ado/reference/ado-api/count-property-ado.md) com duas coleções no banco de dados ***Employee*** . A propriedade Obtém o número de objetos em cada coleção e define o limite superior para loops que enumeram essas coleções.  

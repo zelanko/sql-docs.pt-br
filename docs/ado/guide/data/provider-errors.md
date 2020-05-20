@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924542"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760992"
 ---
 # <a name="provider-errors"></a>Erros do provedor
 Quando ocorre um erro de provedor, um erro de tempo de execução de-2147467259 é retornado. Ao receber esse erro, verifique a coleção de **erros** do objeto de **conexão** ativa, que conterá um ou mais erros que descrevem o que ocorreu.  

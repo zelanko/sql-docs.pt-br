@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - DateModified property [ADOX]
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc41c630b8201651e933f5d6538e6887e7933c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ccd916a8b9e9c500d3b718371b01831cc0ef292f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966506"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759202"
 ---
 # <a name="datemodified-property-adox"></a>Propriedade DateModified (ADOX)
 Indica a data em que o objeto foi modificado pela última vez.  

@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b55ebbe5a167b7d70cf606fc4e37e7ede36b486
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 95b000db970bc3da925319bbe6e273557a8787ca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916901"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759822"
 ---
 # <a name="source-property-ado-error"></a>Propriedade Source (Erro ADO)
 Indica o nome do objeto ou aplicativo que originalmente gerou um erro.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Retorna um valor de **cadeia de caracteres** que indica o nome de um objeto ou aplicativo.  
   
 ## <a name="remarks"></a>Comentários  

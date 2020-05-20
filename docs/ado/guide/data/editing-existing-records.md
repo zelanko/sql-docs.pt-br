@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editing data [ADO], existing records
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce8679c0c7b20dfaa641918f0447a2f77bfd474a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71d8b825766ca94984ca2dc0b51577488178920f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925431"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761022"
 ---
 # <a name="editing-existing-records"></a>Editar registros existentes
 Para editar os registros existentes, mova para a linha que você deseja editar e altere a propriedade **valor** dos campos que você deseja alterar. Para obter mais informações sobre a propriedade **Value** do objeto **Field** , consulte [examinando dados](../../../ado/guide/data/examining-data.md). Dependendo do tipo de cursor, você usará **Update** ou **UpdateBatch** para enviar as alterações de volta para a fonte de dados. Para obter mais informações, consulte [atualizando e persistindo dados](../../../ado/guide/data/updating-and-persisting-data.md).  

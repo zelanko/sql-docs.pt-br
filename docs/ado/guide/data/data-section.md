@@ -10,26 +10,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925648"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761092"
 ---
 # <a name="data-section"></a>Seção de dados
 A seção de dados define os dados do conjunto de linhas junto com quaisquer atualizações, inserções ou exclusões pendentes. A seção de dados pode conter zero ou mais linhas. Ele só pode conter dados de um conjunto de linhas em que a linha é definida pelo esquema. Além disso, conforme observado anteriormente, as colunas sem dados podem ser omitidas. Se um atributo ou subelemento for usado na seção de dados e essa construção não tiver sido definida na seção de esquema, ela será silenciosamente ignorada.  
   
-## <a name="string"></a>String  
+## <a name="string"></a>Cadeia de caracteres  
  Caracteres XML reservados em dados de texto devem ser substituídos por entidades de caracteres apropriadas. Por exemplo, no nome da empresa "João ' s garagem", a aspa simples deve ser substituída por uma entidade. A linha real seria semelhante ao seguinte:  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Os seguintes caracteres são reservados em XML e devem ser substituídos por entidades de caracteres: {', ",\<&,, >}.  
+ Os seguintes caracteres são reservados em XML e devem ser substituídos por entidades de caracteres: {', ", &, \< , >}.  
   
 ## <a name="binary"></a>Binário  
  Os dados binários são de bin. Hex codificados (ou seja, um byte é mapeado para dois caracteres, um caractere por Nibble).  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Name property [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 898efdf4fe33ec3ce08028bd00b5654947048255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d25582b8059f59e20ffd3c96a86049bd692a4303
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966867"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759352"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Exemplo da propriedade Name, Métodos Columns and Tables (VB)
 O código a seguir demonstra como criar uma nova tabela.  

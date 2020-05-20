@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO]
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c45b9331ddd538cdf23a57eaf39b6efb71bccc4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68a0e6fe0c595a79447cbf79155914606415df89
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930858"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759752"
 ---
 # <a name="state-property-ado"></a>Propriedade State (ADO)
 Indica para todos os objetos aplicáveis se o estado do objeto está aberto ou fechado. Se o objeto estiver executando um método assíncrono, indicará se o estado atual do objeto está se conectando, executando ou recuperando.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Retorna um valor **longo** que pode ser um valor [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) . O valor padrão é **adStateClosed**.  
   
 ## <a name="remarks"></a>Comentários  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - adOpenDynamic [ADO]
 - cursors [ADO], characteristics
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c4d6f86539e1abc7ee74087b130e0186322346e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 02f4be413ddcfc9215cdbf12142b883ade644f41
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925672"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761112"
 ---
 # <a name="cursor-and-lock-characteristics"></a>Características de cursor e de bloqueio
 Embora as características de um cursor dependam dos recursos do provedor, as vantagens e desvantagens a seguir geralmente se aplicam aos vários tipos de cursores e bloqueios.  

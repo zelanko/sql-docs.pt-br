@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63323fd8ed18f57a68633dce0525d1d37e4978ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60b3a9e036bb199b72373055b299f262862a5d16
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924703"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759112"
 ---
 # <a name="persisting-data"></a>Persistência de dados
 A computação portátil (por exemplo, usando laptops) gerou a necessidade de aplicativos que podem ser executados em um estado conectado e desconectado. O ADO adicionou suporte para isso fornecendo ao desenvolvedor a capacidade de salvar um **conjunto de registros** de cursor do cliente em disco e recarregá-lo mais tarde.  

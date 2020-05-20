@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924063"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760782"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Etapa 4: Preencher a caixa de texto de detalhes
 Para preencher a caixa de texto detalhes, crie uma nova sub-rotina chamada **recFields** e insira o código a seguir:  
@@ -44,7 +44,7 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Esse código é preenchido `lstDetails` com os campos e valores do registro simples passado para `recFields`. Se o recurso for um arquivo de texto, um fluxo de texto será aberto do registro de recurso. O código determina se o conjunto de caracteres é ASCII e copia o conteúdo do `txtDetails`fluxo para.  
+ Esse código é preenchido `lstDetails` com os campos e valores do registro simples passado para `recFields` . Se o recurso for um arquivo de texto, um fluxo de texto será aberto do registro de recurso. O código determina se o conjunto de caracteres é ASCII e copia o conteúdo do fluxo para `txtDetails` .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md)   

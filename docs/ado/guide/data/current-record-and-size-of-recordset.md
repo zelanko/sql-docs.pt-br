@@ -11,14 +11,14 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a01e17ea9c786a724e5869a28bf4d8927b58ac81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 30b669a566270a0eff5d6cf93abb5b0acb7ff3c2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925691"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761122"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Registro atual e o tamanho do conjunto de registros
 Esta seção descreve como localizar a posição atual do cursor no **conjunto de registros** de exemplo no [exemplo de código JScript para retornar um conjunto de registros](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  

@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924252"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760882"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Enviar as atualizações: método UpdateBatch
 O código a seguir abre um conjunto de registros no modo de lote, definindo a propriedade LockType como adLockBatchOptimistic e CursorLocation como adUseClient. Ele adiciona dois novos registros e altera o valor de um campo em um registro existente, salvando os valores originais e, em seguida, chama UpdateBatch para enviar as alterações de volta para a fonte de dados.  

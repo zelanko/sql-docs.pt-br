@@ -11,14 +11,14 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925561"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761082"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectando e solucionando conflitos
 Se você estiver lidando com o conjunto de registros no modo imediato, haverá muito menos chances de ocorrer problemas de simultaneidade. Por outro lado, se seu aplicativo usar a atualização do modo de lote, poderá haver uma boa chance de que um usuário altere um registro antes que as alterações feitas por outro usuário editando o mesmo registro sejam salvas. Nesse caso, você desejará que seu aplicativo manipule normalmente o conflito. Pode ser que você queira que a última pessoa envie uma atualização para o servidor "WINS". Ou talvez você queira permitir que o usuário mais recente decida qual atualização deve ter precedência fornecendo-lhe uma opção entre os dois valores conflitantes.  
