@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304810"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827730"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @class = ] 'class'`A classe sobre a qual as informações são solicitadas. a *classe* é **varchar (8)**, com um valor padrão de **trabalho**. a *classe* pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**TRABALHO**|Fornece informações sobre uma categoria de trabalho.|  
 |**ALERTA**|Fornece informações sobre uma categoria de alerta.|  
@@ -52,7 +52,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`O tipo de categoria para o qual as informações são solicitadas. o *tipo* é **varchar (12)**, com um padrão de NULL e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria de trabalho local.|  
 |**MULTI -SERVER**|Categoria de trabalho multisservidor.|  
@@ -66,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Quando ** \@o sufixo** é **0**, **sp_help_category** retorna o seguinte conjunto de resultados:  
+ Quando o ** \@ sufixo** é **0**, **sp_help_category** retorna o seguinte conjunto de resultados:  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Tipo de categoria:<br /><br /> **1** = local<br /><br /> **2** = multisservidor<br /><br /> **3** = nenhum|  
 |**name**|**sysname**|Nome da categoria|  
   
- Quando ** \@o sufixo** é **1**, **sp_help_category** retorna o seguinte conjunto de resultados:  
+ Quando o ** \@ sufixo** é **1**, **sp_help_category** retorna o seguinte conjunto de resultados:  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  

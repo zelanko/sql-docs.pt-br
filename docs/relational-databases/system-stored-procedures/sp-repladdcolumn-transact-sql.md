@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 75c66d1077b111837197957cc845b690b794ea24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771046"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826545"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68771046"
   Adiciona uma coluna a um artigo de tabela existente que foi publicado. Permite que a nova coluna seja adicionada a todos os Publicadores que publicam essa tabela, ou simplesmente adiciona a coluna a uma publicação específica que publica a tabela. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
 > [!IMPORTANT]
->  Esse procedimento armazenado foi preterido e tem suporte para compatibilidade com versões anteriores. Ele só deve ser usado com [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Publicadores [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e assinantes de republicação. Esse procedimento não deve ser usado em colunas com tipos de dados que foram apresentadas no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou superior.  
+>  Esse procedimento armazenado foi preterido e tem suporte para compatibilidade com versões anteriores. Ele só deve ser usado com [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Publicadores e [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] assinantes de republicação. Esse procedimento não deve ser usado em colunas com tipos de dados que foram apresentadas no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou superior.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @publication_to_add =] '*publication_to_add*'  
  É o nome da publicação à qual a nova coluna é adicionada. *publication_to_add* é **nvarchar (4000)**, com um padrão de **todos**. Se **tudo**, todas as publicações que contêm essa tabela serão afetadas. Se *publication_to_add* for especificado, somente essa publicação terá a nova coluna adicionada.  
   
- [ @from_agent = ] *from_agent*  
+ [ @from_agent =] *from_agent*  
  Se o procedimento armazenado estiver sendo executado por um agente de replicação. *from_agent* é **int**, com um padrão de **0**, em que um valor de **1** é usado quando esse procedimento armazenado está sendo executado por um agente de replicação e, em todos os casos, o valor padrão de **0**deve ser usado.  
   
  [ @schema_change_script =] '*schema_change_script*'  
@@ -68,14 +68,14 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
   
 -   Se procedimentos armazenados personalizados não forem regenerados automaticamente, *schema_change_script*poderá ser usado para regenerar esses procedimentos armazenados ou para criar procedimentos armazenados personalizados definidos pelo usuário.  
   
- [ @force_invalidate_snapshot = ] *force_invalidate_snapshot*  
+ [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  Habilita ou desabilita a capacidade de ter um instantâneo invalidado. *force_invalidate_snapshot* é um **bit**, com um padrão de **1**.  
   
  **1** especifica que as alterações no artigo podem fazer com que o instantâneo seja inválido e, se esse for o caso, um valor de **1** dá permissão para que o novo instantâneo ocorra.  
   
  **0** especifica que as alterações no artigo não fazem com que o instantâneo seja inválido.  
   
- [ @force_reinit_subscription = ] *force_reinit_subscription*  
+ [ @force_reinit_subscription =] *force_reinit_subscription*  
  Habilita ou desabilita a capacidade de fazer com que a assinatura seja reinicializada. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
  **0** especifica que as alterações no artigo não fazem com que a assinatura seja reinicializada.  

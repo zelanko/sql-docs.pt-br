@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 83b3c369add51a853078dd64a8861d633ac330ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982273"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827944"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada banco de dados que está participando de um grupo de disponibilidade Always On para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qual a instância local do está hospedando uma réplica de disponibilidade. Essa exibição de gerenciamento dinâmico expõe informações de estado nas réplicas primárias e secundárias. Em uma réplica secundária, essa exibição retorna uma linha para cada banco de dados secundário na instância do servidor. Na réplica primária, essa exibição retorna uma linha para cada banco de dados primário e uma linha adicional para o banco de dados secundário correspondente.  
+  Retorna uma linha para cada banco de dados que está participando de um grupo de disponibilidade Always On para o qual a instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está hospedando uma réplica de disponibilidade. Essa exibição de gerenciamento dinâmico expõe informações de estado nas réplicas primárias e secundárias. Em uma réplica secundária, essa exibição retorna uma linha para cada banco de dados secundário na instância do servidor. Na réplica primária, essa exibição retorna uma linha para cada banco de dados primário e uma linha adicional para o banco de dados secundário correspondente.  
   
 > [!IMPORTANT]
 > Dependendo da ação dos estados de nível mais alto, as informações de estado do banco de dados podem estar indisponíveis ou desatualizadas. Além disso, os valores têm relevância local apenas. Por exemplo, na réplica primária, o valor da coluna **last_hardened_lsn** reflete as informações sobre um determinado banco de dados secundário que está disponível atualmente para a réplica primária, não o valor LSN real protegido que a réplica secundária pode ter atualmente.  

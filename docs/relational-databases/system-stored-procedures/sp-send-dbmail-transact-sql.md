@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_send_dbmail
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42c763b37f5c721a259fbe87eca804e22f5c27b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 42dbd7a5bf6e1bc7b705bcf017987da959faa114
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71974372"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827518"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -63,13 +63,13 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_name = ] 'profile_name'`É o nome do perfil do qual enviar a mensagem. O *profile_name* é do tipo **sysname**, com um padrão de NULL. O *profile_name* deve ser o nome de um perfil de Database Mail existente. Quando nenhum *profile_name* for especificado, **sp_send_dbmail** usará o perfil privado padrão para o usuário atual. Se o usuário não tiver um perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se o usuário não tiver um perfil privado padrão e não houver um perfil público padrão para o banco de dados, ** \@profile_name** deverá ser especificado.  
+`[ @profile_name = ] 'profile_name'`É o nome do perfil do qual enviar a mensagem. O *profile_name* é do tipo **sysname**, com um padrão de NULL. O *profile_name* deve ser o nome de um perfil de Database Mail existente. Quando nenhum *profile_name* for especificado, **sp_send_dbmail** usará o perfil privado padrão para o usuário atual. Se o usuário não tiver um perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se o usuário não tiver um perfil privado padrão e não houver um perfil público padrão para o banco de dados, ** \@ profile_name** deverá ser especificado.  
   
-`[ @recipients = ] 'recipients'`É uma lista delimitada por ponto-e-vírgula de endereços de email para os quais enviar a mensagem. A lista de destinatários é do tipo **varchar (max)**. Embora esse parâmetro seja opcional, pelo menos um dos ** \@destinatários**, ** \@copy_recipients**ou ** \@blind_copy_recipients** deve ser especificado ou **sp_send_dbmail** retorna um erro.  
+`[ @recipients = ] 'recipients'`É uma lista delimitada por ponto-e-vírgula de endereços de email para os quais enviar a mensagem. A lista de destinatários é do tipo **varchar (max)**. Embora esse parâmetro seja opcional, pelo menos um dos ** \@ destinatários**, ** \@ copy_recipients**ou ** \@ blind_copy_recipients** deve ser especificado ou **sp_send_dbmail** retorna um erro.  
   
-`[ @copy_recipients = ] 'copy_recipients'`É uma lista delimitada por ponto-e-vírgula de endereços de email para copiar a mensagem para. A lista de cópias de destinatários é do tipo **varchar (max)**. Embora esse parâmetro seja opcional, pelo menos um dos ** \@destinatários**, ** \@copy_recipients**ou ** \@blind_copy_recipients** deve ser especificado ou **sp_send_dbmail** retorna um erro.  
+`[ @copy_recipients = ] 'copy_recipients'`É uma lista delimitada por ponto-e-vírgula de endereços de email para copiar a mensagem para. A lista de cópias de destinatários é do tipo **varchar (max)**. Embora esse parâmetro seja opcional, pelo menos um dos ** \@ destinatários**, ** \@ copy_recipients**ou ** \@ blind_copy_recipients** deve ser especificado ou **sp_send_dbmail** retorna um erro.  
   
-`[ @blind_copy_recipients = ] 'blind_copy_recipients'`É uma lista delimitada por ponto-e-vírgula de endereços de email a serem ocultados na cópia da mensagem. A lista de destinatários de cópia oculta é do tipo **varchar (max)**. Embora esse parâmetro seja opcional, pelo menos um dos ** \@destinatários**, ** \@copy_recipients**ou ** \@blind_copy_recipients** deve ser especificado ou **sp_send_dbmail** retorna um erro.  
+`[ @blind_copy_recipients = ] 'blind_copy_recipients'`É uma lista delimitada por ponto-e-vírgula de endereços de email a serem ocultados na cópia da mensagem. A lista de destinatários de cópia oculta é do tipo **varchar (max)**. Embora esse parâmetro seja opcional, pelo menos um dos ** \@ destinatários**, ** \@ copy_recipients**ou ** \@ blind_copy_recipients** deve ser especificado ou **sp_send_dbmail** retorna um erro.  
   
 `[ @from_address = ] 'from_address'`É o valor do ' endereço remetente ' da mensagem de email. Esse é um parâmetro opcional usado para substituir as configurações no perfil de email. Esse parâmetro é do tipo **varchar (max)**. As configurações de segurança de SMTP determinarão se essas substituições serão aceitas. Se nenhum parâmetro for especificado, o padrão será NULL.  
   
@@ -89,7 +89,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @importance = ] 'importance'`É a importância da mensagem. O parâmetro é do tipo **varchar (6)**. O parâmetro pode conter um dos seguintes valores:  
   
--   Baixa  
+-   Baixo  
   
 -   Normal  
   
@@ -101,7 +101,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   Normal  
   
--   Personal  
+-   Pessoal  
   
 -   Particular  
   
@@ -116,47 +116,47 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @query = ] 'query'`É uma consulta a ser executada. Os resultados da consulta podem ser anexados a um arquivo ou incluídos no corpo da mensagem de email. A consulta é do tipo **nvarchar (max)** e pode conter quaisquer instruções válidas [!INCLUDE[tsql](../../includes/tsql-md.md)] . Observe que a consulta é executada em uma sessão separada, portanto, as variáveis locais no script que chamam **sp_send_dbmail** não estão disponíveis para a consulta.  
   
-`[ @execute_query_database = ] 'execute_query_database'`É o contexto de banco de dados no qual o procedimento armazenado executa a consulta. O parâmetro é do tipo **sysname**, com um padrão do banco de dados atual. Esse parâmetro só será aplicável se ** \@a consulta** for especificada.  
+`[ @execute_query_database = ] 'execute_query_database'`É o contexto de banco de dados no qual o procedimento armazenado executa a consulta. O parâmetro é do tipo **sysname**, com um padrão do banco de dados atual. Esse parâmetro só será aplicável se a ** \@ consulta** for especificada.  
   
 `[ @attach_query_result_as_file = ] attach_query_result_as_file`Especifica se o conjunto de resultados da consulta é retornado como um arquivo anexado. *attach_query_result_as_file* é do tipo **bit**, com um padrão de 0.  
   
- Quando o valor for 0, os resultados da consulta serão incluídos no corpo da mensagem de email, após o conteúdo do parâmetro ** \@Body** . Quando o valor é 1, os resultados são retornados como um anexo. Esse parâmetro só será aplicável se ** \@a consulta** for especificada.  
+ Quando o valor for 0, os resultados da consulta serão incluídos no corpo da mensagem de email, após o conteúdo do parâmetro ** \@ Body** . Quando o valor é 1, os resultados são retornados como um anexo. Esse parâmetro só será aplicável se a ** \@ consulta** for especificada.  
   
 `[ @query_attachment_filename = ] query_attachment_filename`Especifica o nome do arquivo a ser usado para o conjunto de resultados do anexo da consulta. *query_attachment_filename* é do tipo **nvarchar (255)**, com um padrão de NULL. Esse parâmetro é ignorado quando *attach_query_result* é 0. Quando *attach_query_result* é 1 e esse parâmetro é nulo, Database Mail cria um nome de arquivo arbitrário.  
   
-`[ @query_result_header = ] query_result_header`Especifica se os resultados da consulta incluem cabeçalhos de coluna. O valor de query_result_header é do tipo **bit**. Quando o valor é 1, os resultados da consulta contêm cabeçalhos de coluna. Quando o valor é 0, resultados da consulta não incluem cabeçalhos de coluna. O padrão desse parâmetro é **1**. Esse parâmetro só será aplicável se ** \@a consulta** for especificada.  
+`[ @query_result_header = ] query_result_header`Especifica se os resultados da consulta incluem cabeçalhos de coluna. O valor de query_result_header é do tipo **bit**. Quando o valor é 1, os resultados da consulta contêm cabeçalhos de coluna. Quando o valor é 0, resultados da consulta não incluem cabeçalhos de coluna. O padrão desse parâmetro é **1**. Esse parâmetro só será aplicável se a ** \@ consulta** for especificada.  
  
    >[!NOTE]
-   > O erro a seguir pode ocorrer ao \@definir query_result_header como 0 e \@definir query_no_truncate como 1:
+   > O erro a seguir pode ocorrer ao definir \@ query_result_header como 0 e definir \@ query_no_truncate como 1:
    > <br> MSG 22050, nível 16, estado 1, linha 12: falha ao inicializar a biblioteca sqlcmd com o número de erro-2147024809.
   
-`[ @query_result_width = ] query_result_width`É a largura da linha, em caracteres, a ser usada para formatar os resultados da consulta. O *query_result_width* é do tipo **int**, com um padrão de 256. O valor fornecido deve estar entre 10 e 32767. Esse parâmetro só será aplicável se ** \@a consulta** for especificada.  
+`[ @query_result_width = ] query_result_width`É a largura da linha, em caracteres, a ser usada para formatar os resultados da consulta. O *query_result_width* é do tipo **int**, com um padrão de 256. O valor fornecido deve estar entre 10 e 32767. Esse parâmetro só será aplicável se a ** \@ consulta** for especificada.  
   
 `[ @query_result_separator = ] 'query_result_separator'`É o caractere usado para separar colunas na saída da consulta. O separador é do tipo **Char (1)**. Usa como padrão ' ' (espaço).  
   
 `[ @exclude_query_output = ] exclude_query_output`Especifica se a saída da execução da consulta deve ser retornada na mensagem de email. **exclude_query_output** é bit, com um padrão de 0. Quando esse parâmetro é 0, a execução do procedimento armazenado **sp_send_dbmail** imprime a mensagem retornada como resultado da execução da consulta no console. Quando esse parâmetro é 1, a execução do procedimento armazenado **sp_send_dbmail** não imprime nenhuma das mensagens de execução de consulta no console.  
   
-`[ @append_query_error = ] append_query_error`Especifica se o email deve ser enviado quando um erro retorna da consulta especificada no argumento de ** \@consulta** . **append_query_error** é **bit**, com um padrão de 0. Quando esse parâmetro é 1, o Database Mail envia a mensagem de email e inclui a mensagem de erro de consulta no corpo da mensagem de email. Quando esse parâmetro for 0, Database Mail não enviará a mensagem de email e **sp_send_dbmail** terminará com o código de retorno 1, indicando falha.  
+`[ @append_query_error = ] append_query_error`Especifica se o email deve ser enviado quando um erro retorna da consulta especificada no argumento de ** \@ consulta** . **append_query_error** é **bit**, com um padrão de 0. Quando esse parâmetro é 1, o Database Mail envia a mensagem de email e inclui a mensagem de erro de consulta no corpo da mensagem de email. Quando esse parâmetro for 0, Database Mail não enviará a mensagem de email e **sp_send_dbmail** terminará com o código de retorno 1, indicando falha.  
   
 `[ @query_no_truncate = ] query_no_truncate`Especifica se a consulta deve ser executada com a opção que evita o truncamento de tipos de dados de comprimento variável grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **Text**, **ntext**, **Image**e tipos de dados definidos pelo usuário). Quando definido, os resultados da consulta não incluem cabeçalhos de coluna. O valor de *query_no_truncate* é do tipo **bit**. Quando o valor é 0 ou não especificado, as colunas na consulta são truncadas com 256 caracteres. Quando o valor é 1, as colunas da consulta não são truncadas. Esse parâmetro assume 0 como padrão.  
   
 > [!NOTE]  
->  Quando usado com grandes quantidades de dados, a \@opção **query_no_truncate** consome recursos adicionais e pode reduzir o desempenho do servidor.  
+>  Quando usado com grandes quantidades de dados, a \@ opção **query_no_truncate** consome recursos adicionais e pode reduzir o desempenho do servidor.  
   
-`[ @query_result_no_padding ] @query_result_no_padding`O tipo é bit. O padrão é 0. Quando você define como 1, os resultados da consulta não são preenchidos, possivelmente reduzindo o tamanho do arquivo. Se você definir \@query_result_no_padding como 1 e definir o \@parâmetro query_result_width, o \@parâmetro query_result_no_padding substituirá o \@parâmetro query_result_width.  
+`[ @query_result_no_padding ] @query_result_no_padding`O tipo é bit. O padrão é 0. Quando você define como 1, os resultados da consulta não são preenchidos, possivelmente reduzindo o tamanho do arquivo. Se você definir \@ query_result_no_padding como 1 e definir o \@ parâmetro query_result_width, o \@ parâmetro query_result_no_padding substituirá o \@ parâmetro query_result_width.  
   
  Nesse caso, não ocorre nenhum erro.  
  
   >[!NOTE]
-  > O erro a seguir pode ocorrer ao \@definir query_result_no_padding como 1 e fornecer um parâmetro \@para query_no_truncate:
-  > <br> MSG 22050, nível 16, estado 1, linha 0: falha ao executar a consulta porque as \@opções query_result_no_append \@e query_no_truncate são mutuamente exclusivas. 
+  > O erro a seguir pode ocorrer ao definir \@ query_result_no_padding como 1 e fornecer um parâmetro para \@ query_no_truncate:
+  > <br> MSG 22050, nível 16, estado 1, linha 0: falha ao executar a consulta porque as \@ opções query_result_no_append e \@ query_no_truncate são mutuamente exclusivas. 
   
- Se você definir o \@query_result_no_padding como 1 e definir o \@parâmetro query_no_truncate, um erro será gerado.  
+ Se você definir o \@ query_result_no_padding como 1 e definir o \@ parâmetro query_no_truncate, um erro será gerado.  
   
 `[ @mailitem_id = ] mailitem_id [ OUTPUT ]`O parâmetro output opcional retorna o *mailitem_id* da mensagem. O *mailitem_id* é do tipo **int**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Um código de retorno de 0 significa êxito. Qualquer outro valor significa falha. O código de erro para a instrução que falhou é armazenado na \@ \@variável de erro.  
+ Um código de retorno de 0 significa êxito. Qualquer outro valor significa falha. O código de erro para a instrução que falhou é armazenado na \@ \@ variável de erro.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Com êxito, retorna a mensagem que "Email enfileirado".  
@@ -166,17 +166,17 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  **sysmail_stop_sp** para Database Mail interrompendo os objetos de Service Broker que o programa externo usa. **sp_send_dbmail** ainda aceitará email quando Database Mail for interrompido usando **sysmail_stop_sp**. Para iniciar Database Mail, use **sysmail_start_sp**.  
   
- Quando ** \@o perfil** não é especificado, **sp_send_dbmail** usa um perfil padrão. Se o usuário que envia a mensagem de email tiver um perfil particular padrão, o Database Mail irá utilizá-lo. Se o usuário não tiver um perfil particular padrão, **sp_send_dbmail** usará o perfil público padrão. Se não houver nenhum perfil particular padrão para o usuário e nenhum perfil público padrão, **sp_send_dbmail** retornará um erro.  
+ Quando o ** \@ perfil** não é especificado, **sp_send_dbmail** usa um perfil padrão. Se o usuário que envia a mensagem de email tiver um perfil particular padrão, o Database Mail irá utilizá-lo. Se o usuário não tiver um perfil particular padrão, **sp_send_dbmail** usará o perfil público padrão. Se não houver nenhum perfil particular padrão para o usuário e nenhum perfil público padrão, **sp_send_dbmail** retornará um erro.  
   
- **sp_send_dbmail** não dá suporte a mensagens de email sem conteúdo. Para enviar uma mensagem de ** \@** email, você deve especificar pelo menos um corpo, ** \@consulta**, ** \@file_attachments**ou ** \@assunto**. Caso contrário, **sp_send_dbmail** retornará um erro.  
+ **sp_send_dbmail** não dá suporte a mensagens de email sem conteúdo. Para enviar uma mensagem de email, você deve especificar pelo menos um ** \@ corpo**, ** \@ consulta**, ** \@ file_attachments**ou ** \@ assunto**. Caso contrário, **sp_send_dbmail** retornará um erro.  
   
- O Database Mail usa o contexto de segurança do usuário atual do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para controlar o acesso a arquivos. Portanto, os usuários autenticados com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação não podem anexar arquivos usando ** \@file_attachments**. O Windows não permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forneça credenciais de um computador remoto para outro. Portanto, o Database Mail pode não conseguir anexar arquivos de um compartilhamento de rede caso o comando seja executado de um computador diferente daquele em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado.  
+ O Database Mail usa o contexto de segurança do usuário atual do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para controlar o acesso a arquivos. Portanto, os usuários autenticados com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação não podem anexar arquivos usando ** \@ file_attachments**. O Windows não permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forneça credenciais de um computador remoto para outro. Portanto, o Database Mail pode não conseguir anexar arquivos de um compartilhamento de rede caso o comando seja executado de um computador diferente daquele em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado.  
   
- Se ** \@Query** e ** \@file_attachments** forem especificados e o arquivo não puder ser encontrado, a consulta ainda será executada, mas o email não será enviado.  
+ Se ** \@ query** e ** \@ file_attachments** forem especificados e o arquivo não puder ser encontrado, a consulta ainda será executada, mas o email não será enviado.  
   
  Quando uma consulta é especificada, o conjunto de resultados é formatado como texto em linha. Dados binários no resultado são enviados em formato hexadecimal.  
   
- Os ** \@destinatários**de parâmetros, ** \@copy_recipients**e ** \@blind_copy_recipients** são listas de endereços de email delimitadas por ponto e vírgula. Pelo menos um desses parâmetros deve ser fornecido ou **sp_send_dbmail** retorna um erro.  
+ Os ** \@ destinatários**de parâmetros, ** \@ copy_recipients**e ** \@ blind_copy_recipients** são listas de endereços de email delimitadas por ponto e vírgula. Pelo menos um desses parâmetros deve ser fornecido ou **sp_send_dbmail** retorna um erro.  
   
  Ao executar **sp_send_dbmail** sem um contexto de transação, Database Mail inicia e confirma uma transação implícita. Ao executar **sp_send_dbmail** de dentro de uma transação existente, Database Mail se baseia no usuário para confirmar ou reverter quaisquer alterações. Ele não inicia uma transação interna.  
   
@@ -186,7 +186,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-sending-an-e-mail-message"></a>a. Enviando uma mensagem de email  
- Este exemplo envia uma mensagem de email para seu amigo usando o endereço `myfriend@Adventure-Works.com`de email. O assunto da mensagem é `Automated Success Message`. O corpo da mensagem contém a sentença `'The stored procedure finished successfully'`.  
+ Este exemplo envia uma mensagem de email para seu amigo usando o endereço de email `myfriend@Adventure-Works.com` . O assunto da mensagem é `Automated Success Message`. O corpo da mensagem contém a sentença `'The stored procedure finished successfully'`.  
   
 ```  
 EXEC msdb.dbo.sp_send_dbmail  
@@ -197,7 +197,7 @@ EXEC msdb.dbo.sp_send_dbmail
 ```  
   
 ### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>B. Enviando uma mensagem de email com os resultados de uma consulta  
- Este exemplo envia uma mensagem de email para seu amigo usando o endereço `yourfriend@Adventure-Works.com`de email. O assunto da mensagem é `Work Order Count` e executa uma consulta que mostra o número de ordens de trabalho com uma `DueDate` menor que dois dias, após 30 de abril de 2004. O Database Mail anexa o resultado como um arquivo de texto.  
+ Este exemplo envia uma mensagem de email para seu amigo usando o endereço de email `yourfriend@Adventure-Works.com` . O assunto da mensagem é `Work Order Count` e executa uma consulta que mostra o número de ordens de trabalho com uma `DueDate` menor que dois dias, após 30 de abril de 2004. O Database Mail anexa o resultado como um arquivo de texto.  
   
 ```  
 EXEC msdb.dbo.sp_send_dbmail  
@@ -211,7 +211,7 @@ EXEC msdb.dbo.sp_send_dbmail
 ```  
   
 ### <a name="c-sending-an-html-e-mail-message"></a>C. Enviando uma mensagem de email HTML  
- Este exemplo envia uma mensagem de email para seu amigo usando o endereço `yourfriend@Adventure-Works.com`de email. O assunto da mensagem é `Work Order List` e contém um documento HTML que mostra o número de ordens de trabalho com uma `DueDate` menor que dois dias, após 30 de abril de 2004. O Database Mail envia a mensagem no formato HTML.  
+ Este exemplo envia uma mensagem de email para seu amigo usando o endereço de email `yourfriend@Adventure-Works.com` . O assunto da mensagem é `Work Order List` e contém um documento HTML que mostra o número de ordens de trabalho com uma `DueDate` menor que dois dias, após 30 de abril de 2004. O Database Mail envia a mensagem no formato HTML.  
   
 ```  
 DECLARE @tableHTML  NVARCHAR(MAX) ;  

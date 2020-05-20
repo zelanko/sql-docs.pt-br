@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e258fbd2e0d7a9d15e3c8aa9c2ec3e7bcc7ddc0c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060380"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824931"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68060380"
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|É o identificador local do conjunto de coleções. Não permite valor nulo.|  
 |collection_set_uid|**uniqueidentifier**|O identificador global exclusivo do conjunto de coleta. Não permite valor nulo.|  
-|name|**nvarchar(4000)**|Nome do conjunto de coleta. Permite valor nulo.|  
+|Nome|**nvarchar(4000)**|Nome do conjunto de coleta. Permite valor nulo.|  
 |destino|**nvarchar(max)**|Identifica o destino do conjunto de coleta. Permite valor nulo.|  
 |is_system|**bit**|Ativado (1) ou desativado (0) para indicar se o conjunto de coleta foi incluído no coletor de dados ou se foi adicionado depois pelo dc_admin. Pode ser um conjunto de coleta personalizado desenvolvido internamente ou por um terceiro. Não permite valor nulo.|  
 |is_running|**bit**|Indica se o conjunto de coleta está sendo executado ou não. Não permite valor nulo.|  
@@ -46,7 +46,7 @@ ms.locfileid: "68060380"
 |logging_level|**smallint**|Especifica o nível de log (0, 1 ou 2). Não permite valor nulo.|  
 |days_until_expiration|**smallint**|O número de dias durante os quais os dados coletados são salvos no data warehouse de gerenciamento. Não permite valor nulo.|  
 |descrição|**nvarchar(4000)**|Descreve o conjunto de coleta. Permite valor nulo.|  
-|dump_on_any_error|**bit**|Ativado (1) ou desativado (0) para indicar se um [!INCLUDE[ssIS](../../includes/ssis-md.md)] arquivo de despejo deve ser criado em qualquer erro. Não permite valor nulo.|  
+|dump_on_any_error|**bit**|Ativado (1) ou desativado (0) para indicar se um arquivo de despejo deve ser criado [!INCLUDE[ssIS](../../includes/ssis-md.md)] em qualquer erro. Não permite valor nulo.|  
 |dump_on_codes|**nvarchar(max)**|Contém a lista de [!INCLUDE[ssIS](../../includes/ssis-md.md)] códigos de erro usados para disparar o arquivo de despejo. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  

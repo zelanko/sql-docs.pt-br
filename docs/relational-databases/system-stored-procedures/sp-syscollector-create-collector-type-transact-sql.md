@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032628"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824278"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cria um tipo de coletor para o coletor de dados. Um tipo de coletor é um wrapper lógico em [!INCLUDE[ssIS](../../includes/ssis-md.md)] volta dos pacotes que fornecem o mecanismo real para coletar dados e carregá-los no data warehouse de gerenciamento.  
+  Cria um tipo de coletor para o coletor de dados. Um tipo de coletor é um wrapper lógico em volta dos [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacotes que fornecem o mecanismo real para coletar dados e carregá-los no data warehouse de gerenciamento.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +46,22 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  É o GUID do tipo de coletor. *collector_type_uid* é **uniqueidentifier** e, se for NULL, ele será criado automaticamente e retornado como saída.  
   
- [ @name = ] '*Name*'  
+ [ @name =] '*nome*'  
  É o nome do tipo de coletor. o *nome* é **sysname** e deve ser especificado.  
   
- [ @parameter_schema = ] '*parameter_schema*'  
+ [ @parameter_schema =] '*parameter_schema*'  
  É o esquema XML deste tipo de coletor. *parameter_schema* é **XML** com um padrão de NULL.  
   
- [ @parameter_formatter = ] '*parameter_formatter*'  
+ [ @parameter_formatter =] '*parameter_formatter*'  
  É o modelo a ser usado para transformar o XML para uso na página de propriedades do conjunto de coleta. *parameter_formatter* é **XML** com um padrão de NULL.  
   
- [@collection_package_id = ] *collection_package_id*  
+ [ @collection_package_id =] *collection_package_id*  
  É um identificador exclusivo local que aponta para o pacote de coleta do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *collection_package_id* é **uniqueidentifier** e é necessário.  
   
- [@upload_package_id = ] *upload_package_id*  
+ [ @upload_package_id =] *upload_package_id*  
  É um identificador exclusivo local que aponta para o pacote de carregamento do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *upload_package_id* é **uniqueidentifier** e é obrigatório.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

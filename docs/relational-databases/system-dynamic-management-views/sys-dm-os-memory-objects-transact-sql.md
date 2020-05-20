@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_objects dynamic management view
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3d0691a82607a207a64f4a6c7ed8c937f052abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eece83b3c1fcde0d33a515c85eeb2cdac0a72cf4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983084"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827871"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73983084"
 |**pages_in_bytes**|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Quantidade de memória em bytes alocada por essa instância do objeto de memória. Não permite valor nulo.|  
 |**creation_options**|**int**|Somente para uso interno. Permite valor nulo.|  
 |**bytes_used**|**bigint**|Somente para uso interno. Permite valor nulo.|  
-|**type**|**nvarchar(60)**|Tipo de objeto de memória.<br /><br /> Isso indica algum componente ao qual este objeto de memória pertence ou a função do objeto de memória. Permite valor nulo.|  
+|**tipo**|**nvarchar(60)**|Tipo de objeto de memória.<br /><br /> Isso indica algum componente ao qual este objeto de memória pertence ou a função do objeto de memória. Permite valor nulo.|  
 |**name**|**varchar(128)**|Somente para uso interno. Anulável.|  
 |**memory_node_id**|**smallint**|ID de um nó de memória que está sendo usado por esse objeto de memória. Não permite valor nulo.|  
 |**creation_time**|**datetime**|Somente para uso interno. Permite valor nulo.|  
@@ -54,13 +54,13 @@ ms.locfileid: "73983084"
 |**contention_factor**|**real**|Um valor que especifica a contenção nesse objeto de memória, com 0 significando que não há contenção. O valor é atualizado sempre que um número especificado de alocações de memória foi feito refletindo a contenção durante esse período. Aplica-se somente a objetos de memória thread-safe.|  
 |**waiting_tasks_count**|**bigint**|Número de esperas neste objeto de memória. Esse contador é incrementado sempre que a memória é alocada a partir deste objeto de memória. O incremento é o número de tarefas que estão aguardando acesso a esse objeto de memória no momento. Aplica-se somente a objetos de memória thread-safe. Esse é um valor de melhor esforço sem uma garantia de exatidão.|  
 |**exclusive_access_count**|**bigint**|Especifica com que frequência este objeto de memória foi acessado exclusivamente. Aplica-se somente a objetos de memória thread-safe.  Esse é um valor de melhor esforço sem uma garantia de exatidão.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
- **partition_type**, **contention_factor**, **waiting_tasks_count**e **exclusive_access_count** ainda não foram implementadas no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **partition_type**, **contention_factor**, **waiting_tasks_count**e **exclusive_access_count** ainda não foram implementadas no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .  
   
 ## <a name="permissions"></a>Permissões
 
-Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
 Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 ## <a name="remarks"></a>Comentários  

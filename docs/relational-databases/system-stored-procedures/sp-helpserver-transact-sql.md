@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997437"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826090"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 `[ @optname = ] 'option'`É a opção que descreve o servidor. a *opção* é **varchar (** 35 **)**, com um padrão de NULL e deve ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**compatível com agrupamento**|Afeta a execução da consulta distribuída nos servidores vinculados. Se esta opção for definida como verdadeira,|  
 |**acesso a dados**|Habilita e desabilita um servidor vinculado para o acesso às consultas distribuídas.|  
@@ -53,7 +53,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**dpub**|Editor remoto para este Distribuidor.|  
 |**validação de esquema lenta**|Ignora a verificação de esquema de tabelas remotas no início da consulta.|  
 |**pub**|Editor.|  
-|**rpc**|Habilita o RPC a partir do servidor especificado.|  
+|**RPC**|Habilita o RPC a partir do servidor especificado.|  
 |**saída de RPC**|Habilita o RPC para o servidor especificado.|  
 |**projeto**|Farão.|  
 |**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

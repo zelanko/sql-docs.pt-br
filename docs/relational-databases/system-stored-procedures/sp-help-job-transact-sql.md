@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75546558"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827634"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`O atributo de trabalho a ser exibido. *job_aspect* é **varchar (9)**, com um padrão de NULL, e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**ALL**|Informações de aspecto do trabalho|  
 |**TRABALHO**|Informações do trabalho|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspenso.|  
 |**7**|Executando ações de conclusão.|  
   
-`[ @date_comparator = ] 'date_comparison'`O operador de comparação a ser usado em comparações de *Date_Created* e *date_modified*. *date_comparison* é **Char (1)** e pode ser =, \<ou >.  
+`[ @date_comparator = ] 'date_comparison'`O operador de comparação a ser usado em comparações de *Date_Created* e *date_modified*. *date_comparison* é **Char (1)** e pode ser =, \< ou >.  
   
 `[ @date_created = ] date_created`A data em que o trabalho foi criado. *Date_Created*é **DateTime**, com um padrão de NULL.  
   
@@ -138,7 +138,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|Número de etapas que o trabalho possui.|  
 |**has_schedule**|**int**|Número de agendamentos que o trabalho possui.|  
 |**has_target**|**int**|Número de servidores de destino que o trabalho possui.|  
-|**type**|**int**|Tipo do trabalho.<br /><br /> 1 = Trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
+|**tipo**|**int**|Tipo do trabalho.<br /><br /> 1 = Trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
   
  Se *job_id* ou *job_name* for especificado, **sp_help_job** retornará esses conjuntos de resultados adicionais para etapas de trabalho, agendas de trabalho e servidores de destino de trabalho.  
   
@@ -162,7 +162,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_attempts**|**int**|Número máximo de vezes que o comando deve ser repetido (se for malsucedido) antes que a etapa seja considerada com falha.|  
 |**retry_interval**|**int**|Intervalo (em minutos) entre quaisquer tentativas de repetição.|  
 |**os_run_priority**|**varchar (4000)**|Reservado.|  
-|**output_file_name**|**varchar (200)**|Arquivo no qual a saída de comando deve ser[!INCLUDE[tsql](../../includes/tsql-md.md)] gravada (e somente etapas de **CmdExec** ).|  
+|**output_file_name**|**varchar (200)**|Arquivo no qual a saída de comando deve ser gravada ( [!INCLUDE[tsql](../../includes/tsql-md.md)] e somente etapas de **CmdExec** ).|  
 |**last_run_outcome**|**int**|Resultado da etapa na última vez em que foi executada:<br /><br /> **0** = falha<br /><br /> **1** = com êxito<br /><br /> **3** = cancelado<br /><br /> **5** = desconhecido|  
 |**last_run_duration**|**int**|Duração (em segundos) da etapa na última vez em que foi executada.|  
 |**last_run_retries**|**int**|Número de vezes que o comando foi repetido da última vez em que a etapa foi executada.|  

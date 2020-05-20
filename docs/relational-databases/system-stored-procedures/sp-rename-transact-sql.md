@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983067"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826546"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Altera o nome de um objeto criado pelo usuário no banco de dados atual. Esse objeto pode ser uma tabela, um índice, uma coluna, um tipo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dados de alias ou um tipo de Common Language Runtime (CLR) definido pelo usuário.  
+  Altera o nome de um objeto criado pelo usuário no banco de dados atual. Esse objeto pode ser uma tabela, um índice, uma coluna, um tipo de dados de alias ou um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tipo de Common Language Runtime (CLR) definido pelo usuário.  
   
 > [!CAUTION]  
 >  A alteração de qualquer parte de um nome de objeto pode quebrar scripts e procedimentos armazenados. É recomendável não usar essa instrução para renomear procedimentos armazenados, gatilhos, funções definidas pelo usuário ou exibições; em vez disso, descarte o objeto e recrie-o com o novo nome.  
@@ -47,18 +47,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @objname = ] '*object_name*'  
+ [ @objname =] '*object_name*'  
  É o nome atual qualificado ou não qualificado do objeto do usuário ou do tipo de dados. Se o objeto a ser renomeado for uma coluna em uma tabela, *object_name* deverá estar no formato *tabela. coluna* ou *esquema. tabela. coluna*. Se o objeto a ser renomeado for um índice, *object_name* deverá estar no formato *Table. index* ou *Schema. Table. index*. Se o objeto a ser renomeado for uma restrição, *object_name* deverá estar no formato *Schema. Constraint*.  
   
  As aspas serão necessárias apenas se um objeto qualificado estiver especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *object_name* é **nvarchar (776)**, sem padrão.  
   
- [ @newname = ] '*new_name*'  
+ [ @newname =] '*new_name*'  
  É o novo nome do objeto especificado. *new_name* deve ser um nome de uma parte e deve seguir as regras para identificadores. *NewName* é **sysname**, sem padrão.  
   
 > [!NOTE]  
 >  Os nomes de gatilhos não podem começar com # ou ##.  
   
- [ @objtype = ] '*object_type*'  
+ [ @objtype =] '*object_type*'  
  É o tipo do objeto que está sendo renomeado. *object_type* é **varchar (13)**, com um padrão de NULL, e pode ser um desses valores.  
   
 |Valor|Descrição|  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. Renomeando uma coluna  
- O exemplo a seguir renomeia `TerritoryID` a coluna na `SalesTerritory` tabela como `TerrID`.  
+ O exemplo a seguir renomeia a `TerritoryID` coluna na `SalesTerritory` tabela como `TerrID` .  
   
 ```  
 USE AdventureWorks2012;  

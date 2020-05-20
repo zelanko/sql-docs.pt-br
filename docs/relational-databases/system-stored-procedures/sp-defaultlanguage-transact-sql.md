@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultlanguage
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: af2402ce4f1e49ee572a9d271497c2798d679070
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7c06f03af5ab9cc8d06b8d7d0f87208895c1fc33
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120087"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826140"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="remarks"></a>Comentários  
  **sp_defaultlanguage** chama ALTER login, que dá suporte a opções adicionais. Para obter informações sobre como alterar outros padrões de logon, consulte [ALTER login &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
- Use a instrução SET LANGUAGE para alterar o idioma da sessão atual. Use a função@LANGUAGE @ para mostrar a configuração de idioma atual.  
+ Use a instrução SET LANGUAGE para alterar o idioma da sessão atual. Use a @LANGUAGE função @ para mostrar a configuração de idioma atual.  
   
  Se o idioma padrão de um logon for removido do servidor, o logon adquirirá o idioma padrão do servidor. **sp_defaultlanguage** não pode ser executado em uma transação definida pelo usuário.  
   

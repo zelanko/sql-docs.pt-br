@@ -18,21 +18,21 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a5878b5f1e52241a8d733bd6414d73db4e7e7cb8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044544"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825290"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada objeto que é uma tabela interna. As tabelas internas são geradas automaticamente por meio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para oferecer suporte a vários recursos. Por exemplo, quando você cria um índice XML primário, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria automaticamente uma tabela interna para manter os dados fragmentados do documento XML. As tabelas internas aparecem no esquema **Sys** de cada banco de dados e têm nomes exclusivos, gerados pelo sistema, que indicam sua função, por exemplo, **xml_index_nodes_2021582240_32001** ou **queue_messages_1977058079**  
   
- As tabelas internas não contêm dados acessíveis ao usuário, e seus esquemas são fixos e inalteráveis. Você não pode fazer referências a nomes de tabelas internas em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por exemplo, você não pode executar uma instrução como Select \* de * \<sys. internal_table_name>*. Entretanto, você pode consultar as exibições do catálogo para ver os metadados das tabelas internas.   
+ As tabelas internas não contêm dados acessíveis ao usuário, e seus esquemas são fixos e inalteráveis. Você não pode fazer referências a nomes de tabelas internas em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por exemplo, você não pode executar uma instrução como SELECT \* de * \< sys. internal_table_name>*. Entretanto, você pode consultar as exibições do catálogo para ver os metadados das tabelas internas.   
   
   
 |Nome da coluna|Tipo de dados|Descrição|  
@@ -40,8 +40,8 @@ ms.locfileid: "68044544"
 |**\<Colunas herdadas de sys. Objects>**||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**internal_type**|**tinyint**|Tipo da tabela interna:<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (como um índice espacial)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **CHANGE_TRACKING**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
 |**internal_type_desc**|**nvarchar(60)**|Descrição do tipo de tabela interna:<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
-|**parent_id**|**int**|ID do pai, independentemente de ser um escopo de esquema ou não. Caso contrário, 0 se não houver nenhum pai.<br /><br /> **queue_messages** = **object_id** da fila<br /><br /> **xml_index_nodes** = **object_id** do índice XML<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id** do catálogo de texto completo<br /><br /> **fulltext_index_map** = **object_id** do índice de texto completo<br /><br /> **query_notification**ou **service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id** de um índice estendido, como um índice espacial<br /><br /> **object_id** da tabela para a qual o rastreamento de tabela está habilitado = **CHANGE_TRACKING**|  
-|**parent_minor_id**|**int**|ID secundária do pai.<br /><br /> **xml_index_nodes** = **index_id** do índice XML<br /><br /> **extended_indexes** = **index_id** de um índice estendido, como um índice espacial<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**ou **CHANGE_TRACKING**|  
+|**parent_id**|**int**|ID do pai, independentemente de ser um escopo de esquema ou não. Caso contrário, 0 se não houver nenhum pai.<br /><br /> **queue_messages**  =  **object_id** da fila<br /><br /> **xml_index_nodes**  =  **object_id** do índice XML<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** do catálogo de texto completo<br /><br /> **fulltext_index_map**  =  **object_id** do índice de texto completo<br /><br /> **query_notification**ou **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** de um índice estendido, como um índice espacial<br /><br /> **object_id** da tabela para a qual o rastreamento de tabela está habilitado = **CHANGE_TRACKING**|  
+|**parent_minor_id**|**int**|ID secundária do pai.<br /><br /> **xml_index_nodes**  =  **index_id** do índice XML<br /><br /> **extended_indexes**  =  **index_id** de um índice estendido, como um índice espacial<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**ou **CHANGE_TRACKING**|  
 |**lob_data_space_id**|**int**|O valor diferente de zero é a ID do espaço de dados (esquema de partição ou grupo de arquivos) que armazena os dados de objeto grandes (LOB) dessa tabela.|  
 |**filestream_data_space_id**|**int**|Reservado para uso futuro.|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68044544"
 ## <a name="examples"></a>Exemplos  
  Os exemplos seguintes demonstram como consultar metadados de tabela interna usando as exibições do catálogo.  
   
-### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>A. Mostrar tabelas internas que herdam colunas da exibição do catálogo sys.objects  
+### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>a. Mostrar tabelas internas que herdam colunas da exibição do catálogo sys.objects  
   
 ```  
 SELECT * FROM sys.objects WHERE type = 'IT';  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e91971d13b26d6a156307b2a0288de236456c880
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051564"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828081"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68051564"
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como usar a exibição de gerenciamento dinâmico **sys.dm_db_missing_index_group_stats**.  
   
-### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Localizar os 10 índices ausentes com o aperfeiçoamento antecipado mais alto para consultas de usuário  
+### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>a. Localizar os 10 índices ausentes com o aperfeiçoamento antecipado mais alto para consultas de usuário  
  A consulta seguinte determina quais os 10 índices ausentes que produziriam o aperfeiçoamento cumulativo antecipado mais alto, em ordem decrescente, para consultas de usuário.  
   
 ```  
@@ -86,7 +86,7 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- Esta consulta fornece o nome do banco de dados, do esquema e da tabela em que um índice está ausente. Fornece também os nomes das colunas que deveriam ser usadas para a chave de índice. Ao gravar a instrução CREATE INDEX DDL para implementar índices ausentes, liste as colunas de igualdade primeiro e desigualdade na cláusula \<on *table_name*> da instrução CREATE index. As colunas incluídas devem ser listadas na cláusula INCLUDE da instrução CREATE INDEX. Para determinar uma ordem efetiva para as colunas iguais, ordene-as com base em sua seletividade, listando as colunas mais seletivas primeiro (a mais à esquerda na lista de colunas).  
+ Esta consulta fornece o nome do banco de dados, do esquema e da tabela em que um índice está ausente. Fornece também os nomes das colunas que deveriam ser usadas para a chave de índice. Ao gravar a instrução CREATE INDEX DDL para implementar índices ausentes, liste as colunas de igualdade primeiro e desigualdade na cláusula ON \< *table_name*> da instrução CREATE index. As colunas incluídas devem ser listadas na cláusula INCLUDE da instrução CREATE INDEX. Para determinar uma ordem efetiva para as colunas iguais, ordene-as com base em sua seletividade, listando as colunas mais seletivas primeiro (a mais à esquerda na lista de colunas).  
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

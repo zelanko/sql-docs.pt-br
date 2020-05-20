@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c78536fbf8e9bb00133d7724f218c60c3d005fb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381908"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826322"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72381908"
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > No momento [instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria, mas nem todos os recursos do SQL Server Agent têm suporte. Consulte [instância gerenciada do banco de dados SQL do Azure diferenças de T-SQL do SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obter detalhes.
+ > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
  
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'`O nome do trabalho. O nome deve ser exclusivo e não pode conter o caractere**%** de porcentagem (). *job_name*é **nvarchar (128)**, sem padrão.  
+`[ @job_name = ] 'job_name'`O nome do trabalho. O nome deve ser exclusivo e não pode conter o caractere de porcentagem ( **%** ). *job_name*é **nvarchar (128)**, sem padrão.  
   
 `[ @enabled = ] enabled`Indica o status do trabalho adicionado. *habilitado*é **tinyint**, com um padrão de 1 (habilitado). Se **0**, o trabalho não está habilitado e não é executado de acordo com seu agendamento; no entanto, ele pode ser executado manualmente.  
   
@@ -69,13 +69,13 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id`Um mecanismo independente de linguagem para especificar uma categoria de trabalho. *category_id*é **int**, com um padrão de NULL.  
   
-`[ @owner_login_name = ] 'login'`O nome do logon que possui o trabalho. *logon*é **sysname**, com um padrão de NULL, que é interpretado como o nome de logon atual. Somente os membros da função de servidor fixa **sysadmin** podem definir ou alterar o valor de ** \@owner_login_name**. Se os usuários que não são membros da função **sysadmin** definida ou alterarem o valor de ** \@owner_login_name**, a execução desse procedimento armazenado falhará e um erro será retornado.  
+`[ @owner_login_name = ] 'login'`O nome do logon que possui o trabalho. *logon*é **sysname**, com um padrão de NULL, que é interpretado como o nome de logon atual. Somente os membros da função de servidor fixa **sysadmin** podem definir ou alterar o valor de ** \@ owner_login_name**. Se os usuários que não são membros da função **sysadmin** definida ou alterarem o valor de ** \@ owner_login_name**, a execução desse procedimento armazenado falhará e um erro será retornado.  
   
 `[ @notify_level_eventlog = ] eventlog_level`Um valor que indica quando inserir uma entrada no log de aplicativos do Microsoft Windows para esse trabalho. *eventlog_level*é **int**e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**0**|Never|  
+|**0**|Nunca|  
 |**1**|Caso haja êxito|  
 |**2** (padrão)|Caso haja falha|  
 |**3**|Sempre|  
@@ -106,7 +106,7 @@ sp_add_job [ @job_name = ] 'job_name'
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- originating_server existe em **sp_add_job,** mas não está listado em argumentos. ** \@** originating_server é reservado para uso interno. ** \@**  
+ ** \@ originating_server** existe em **sp_add_job,** mas não está listado em argumentos. ** \@ originating_server** é reservado para uso interno.  
   
  Depois que **sp_add_job** tiver sido executado para adicionar um trabalho, **sp_add_jobstep** poderá ser usado para adicionar etapas que executam as atividades do trabalho. **sp_add_jobschedule** pode ser usado para criar o agendamento que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço do Agent usa para executar o trabalho. Use **sp_add_jobserver** para definir a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância em que o trabalho é executado e **sp_delete_jobserver** remover o trabalho da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.  
   
@@ -125,7 +125,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Para obter informações sobre as permissões específicas associadas a cada uma dessas funções de banco de dados fixas, consulte [SQL Server Agent funções de banco de dados fixas](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente os membros da função de servidor fixa **sysadmin** podem definir ou alterar o valor de ** \@owner_login_name**. Se os usuários que não são membros da função **sysadmin** definida ou alterarem o valor de ** \@owner_login_name**, a execução desse procedimento armazenado falhará e um erro será retornado.  
+ Somente os membros da função de servidor fixa **sysadmin** podem definir ou alterar o valor de ** \@ owner_login_name**. Se os usuários que não são membros da função **sysadmin** definida ou alterarem o valor de ** \@ owner_login_name**, a execução desse procedimento armazenado falhará e um erro será retornado.  
   
 ## <a name="examples"></a>Exemplos  
   

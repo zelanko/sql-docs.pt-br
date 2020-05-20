@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_db_increased_partitions
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 83a40c9070db1c997f30db71a6cff226cd0430d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8efcbb99bfbb7d1b4492c7945304de65192804e6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108262"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826192"
 ---
 # <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @dbname= ] '*database_name*'  
+ [ @dbname =] '*database_name*'  
  É o nome do banco de dados. *dbname* é **sysname** com um valor padrão de NULL. Se *dbname* não for especificado, o banco de dados atual será usado.  
   
- [ @increased_partitions= ] '*increased_partitions*'  
+ [ @increased_partitions =] '*increased_partitions*'  
  Habilita ou desabilita suporte para 15.000 partições no banco de dados especificado. *increased_partitions* é **varchar (6)** com um padrão de NULL. Os valores aceitos são 'ON' ou 'TRUE' para habilitar suporte e 'OFF' ou 'FALSE' para desabilitar o suporte. Se *increased_partitions* não for especificado, o procedimento retornará 1 para indicar que o suporte está habilitado para o banco de dados especificado ou 0 para indicar que o suporte está desabilitado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

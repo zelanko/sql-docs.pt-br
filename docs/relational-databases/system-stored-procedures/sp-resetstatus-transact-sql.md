@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_resetstatus
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1a9f4346116e94957cce16307d70c69a13942b5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 94c83711131fe1b08edee73db748a8152b9b56f0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129630"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824323"
 ---
 # <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ sp_resetstatus [ @dbname = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @dbname= ] '*banco de dados*'  
+ [ @dbname =] '*banco de dados*'  
  É o nome do banco de dados a ser redefinido. o *banco de dados* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- sp_resetstatus desativa o sinalizador suspeito em um banco de dados. Este procedimento atualiza as colunas de modo e status do banco de dados nomeado em sys.databases. O log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser consultado e todos os problemas devem ser resolvidos antes de executar este procedimento. Pare e reinicie a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do depois de executar sp_resetstatus.  
+ sp_resetstatus desativa o sinalizador suspeito em um banco de dados. Este procedimento atualiza as colunas de modo e status do banco de dados nomeado em sys.databases. O log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser consultado e todos os problemas devem ser resolvidos antes de executar este procedimento. Pare e reinicie a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depois de executar sp_resetstatus.  
   
  Um banco de dados pode se tornar suspeito por vários motivos. As causas possíveis incluem negação de acesso a um recurso de banco de dados pelo sistema operacional e a não disponibilidade ou corrupção de um ou mais arquivos de banco de dados.  
   

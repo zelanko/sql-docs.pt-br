@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9f0dfadc3b2b990d999df1d66069c4b68df9e6cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1acd5a12274c00bf2829b2219055d5a1ecf9eff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104412"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824301"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Marca um mapeamento de tipo de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente entre o e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um sistema de gerenciamento que não seja de banco de dados (DBMS) como o padrão. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
+  Marca um mapeamento de tipo de dados existente entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o e um sistema de gerenciamento que não seja [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de banco de dados (DBMS) como o padrão. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -110,7 +110,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_setdefaultdatatypemapping** é usado em todos os tipos de replicação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre o e um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não DBMS.  
+ **sp_setdefaultdatatypemapping** é usado em todos os tipos de replicação entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o e um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
  Os mapeamentos de tipo de dados padrão se aplicam a todas as topologias de replicação que incluem o DBMS especificado.  
   

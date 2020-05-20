@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005086"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824616"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -59,6 +59,6 @@ Para retornar informações sobre links de replicação geográfica, use as exib
  Essa exibição só está disponível no banco de dados **mestre** para o logon da entidade de segurança no nível do servidor.  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar a exibição **Sys. dm_database_copies** no banco de dados **mestre** do servidor de origem [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou de destino. Quando a cópia do banco de dados for concluída com êxito e o novo banco de dados ficar ONLINE, a linha na exibição **Sys. dm_database_copies** será removida automaticamente.  
+ Você pode usar a exibição **Sys. dm_database_copies** no banco de dados **mestre** do servidor de origem ou de destino [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Quando a cópia do banco de dados for concluída com êxito e o novo banco de dados ficar ONLINE, a linha na exibição **Sys. dm_database_copies** será removida automaticamente.  
   
   

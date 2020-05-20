@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5684d80bc63fe543e54aa4c38d9f0a516b6334ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c88e0f545a19c1f486c5c6927c11fd2707112963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770674"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824072"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,16 +64,16 @@ sp_changesubscription [ @publication = ] 'publication'
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Logon para a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado.|  
 |**distrib_job_password**||Senha para a conta do Windows na qual o agente é executado.|  
-|**subscriber_catalog**||Catálogo a ser usado ao fazer uma conexão com o provedor OLE DB. Esta propriedade só é válida para[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.|  
-|**subscriber_datasource**||Nome da fonte de dados conforme entendido pelo provedor OLE DB. *Esta propriedade só é válida para* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes não.*|  
-|**subscriber_location**||Local do banco de dados conforme entendido pelo provedor OLE DB. *Esta propriedade só é válida para* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes não.*|  
+|**subscriber_catalog**||Catálogo a ser usado ao fazer uma conexão com o provedor OLE DB. Esta propriedade só é válida para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.|  
+|**subscriber_datasource**||Nome da fonte de dados conforme entendido pelo provedor OLE DB. *Esta propriedade só é válida para não-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Assinantes.*|  
+|**subscriber_location**||Local do banco de dados conforme entendido pelo provedor OLE DB. *Esta propriedade só é válida para não-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Assinantes.*|  
 |**subscriber_login**||Nome de logon no Assinante.|  
 |**subscriber_password**||Senha forte para o logon fornecido.|  
 |**subscriber_security_mode**|**1**|Use a Autenticação do Windows ao se conectar ao Assinante.|  
 ||**0**|Use Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Assinante.|  
-|**subscriber_provider**||PROGID (identificador programático) exclusivo com o qual o provedor OLE DB para fonte de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é registrado. *Esta propriedade só é válida para* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes não.*|  
-|**subscriber_providerstring**||Cadeia de conexão específica de provedor OLE DB que identifica a fonte de dados. *Esta propriedade só é válida para* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes não.*|  
-|**SubscriptionStreams**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Há suporte para um intervalo de valores de **1** a **64** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Essa propriedade deve ser **0** para[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não, Publicadores Oracle ou assinaturas ponto a ponto.|  
+|**subscriber_provider**||PROGID (identificador programático) exclusivo com o qual o provedor OLE DB para fonte de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é registrado. *Esta propriedade só é válida para não-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Assinantes.*|  
+|**subscriber_providerstring**||Cadeia de conexão específica de provedor OLE DB que identifica a fonte de dados. *Esta propriedade só é válida para não-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Assinantes.*|  
+|**SubscriptionStreams**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Há suporte para um intervalo de valores de **1** a **64** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Essa propriedade deve ser **0** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não, Publicadores Oracle ou assinaturas ponto a ponto.|  
 |**subscriber_type**|**1**|Servidor de fontes de dados ODBC|  
 ||**3**|Provedor OLE DB|  
 |**memory_optimized**|**bit**|Indica que a assinatura dá suporte a tabelas com otimização de memória. *memory_optimized* é **bit**, em que 1 é igual a true (a assinatura dá suporte a tabelas com otimização de memória).|  
@@ -81,7 +81,7 @@ sp_changesubscription [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser especificado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um Publicador.  
+>  o *Publicador* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

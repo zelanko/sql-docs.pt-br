@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80170f22636b9542524f8ce97b6fe8a5e595953c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090269"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827830"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68090269"
  |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|O nome do objeto. o nome é exclusivo dentro de um pacote para um tipo de objeto específico. Não permite valor nulo.|  
-|object_type|**nvarchar(60)**|O tipo do objeto. object_type é um dos seguintes:<br /><br /> event<br /><br /> ação<br /><br /> destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Não permite valor nulo.|  
+|object_type|**nvarchar(60)**|O tipo do objeto. object_type é um dos seguintes:<br /><br /> event<br /><br /> ação<br /><br /> destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> tipo<br /><br /> Não permite valor nulo.|  
 |package_guid|**uniqueidentifier**|A GUID para o pacote que expõe esta ação. Há uma relação muitos para uma com sys.dm_xe_packages.package_id. Não permite valor nulo.|  
 |descrição|**nvarchar(256)**|Uma descrição da ação. a descrição é definida pelo autor do pacote. Não permite valor nulo.|  
 |funcionalidades|**int**|Um bitmap que descreve as funcionalidades do objeto. Permite valor nulo.|  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_recompile
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241a0594f3487d47c49a96fb2539b660b294b8a4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002559"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827510"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_recompile [ @objname = ] 'object'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @objname= ] '*objeto*'  
+ [ @objname =] '*objeto*'  
  O nome qualificado ou não qualificado de um procedimento armazenado, gatilho, tabela, exibição ou função definida pelo usuário no banco de dados atual. *Object* é **nvarchar (776)**, sem padrão. Se *Object* for o nome de um procedimento armazenado, um gatilho ou uma função definida pelo usuário, o procedimento armazenado, o gatilho ou a função serão recompilados na próxima vez em que for executado. Se *Object* for o nome de uma tabela ou exibição, todos os procedimentos armazenados, gatilhos ou funções definidas pelo usuário que fazem referência à tabela ou exibição serão recompilados na próxima vez em que forem executados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

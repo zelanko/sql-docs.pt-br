@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010547"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828210"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  É o identificador exclusivo que identifica o item de coleta. *collection_item_id* é **int** com um valor padrão de NULL. *collection_item_id* deverá ter um valor se o *nome* for nulo.  
   
- [ @name = ] '*Name*'  
+ [ @name =] '*nome*'  
  É o nome do item de coleta. o *nome* é **sysname** com um valor padrão de NULL. o *nome* deve ter um valor se *collection_item_id* for nulo.  
   
- [ @new_name = ] '*new_name*'  
+ [ @new_name =] '*new_name*'  
  É o novo nome do item da coleta. *new_name* é **sysname**e, se usado, não pode ser uma cadeia de caracteres vazia.  
   
  *new_name* deve ser exclusivo. Para obter uma lista dos nomes dos itens de coleta atuais, consulte a exibição de sistema syscollector_collection_items.  
   
- [ @frequency = ] *frequência* do  
+ [ @frequency =] *frequência*  
  É a frequência (em segundos) com que os dados são coletados por esse item de coleta. *Frequency* é **int**, com um padrão de 5, o valor mínimo que pode ser especificado.  
   
- [ @parameters = ] '*parâmetros*'  
+ [ @parameters =] '*parâmetros*'  
  Os parâmetros de entrada para o item da coleta. os *parâmetros* são **XML** com um padrão de NULL. O esquema de *parâmetros* deve corresponder ao esquema de parâmetros do tipo de coletor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -91,7 +91,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir baseiam-se no item de coleta criado no exemplo definido em [sp_syscollector_create_collection_item &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
-### <a name="a-changing-the-collection-frequency"></a>A. Alterando a frequência de coleta  
+### <a name="a-changing-the-collection-frequency"></a>a. Alterando a frequência de coleta  
  O exemplo a seguir altera a frequência de coleta do item de coleta especificado.  
   
 ```  

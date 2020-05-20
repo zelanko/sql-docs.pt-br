@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771056"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824516"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Retorna informações sobre os mapeamentos de tipo de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidos entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o DBMS (sistemas de gerenciamento não-de bits). Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
+  Retorna informações sobre os mapeamentos de tipo de dados definidos entre o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o DBMS (sistemas de gerenciamento não-de bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>Argumentos  
 `[ @source_dbms = ] 'source_dbms'`É o nome do DBMS do qual os tipos de dados são mapeados. *source_dbms* é **sysname**e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|A origem é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|A origem é um banco de dados Oracle.|  
@@ -56,7 +56,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`É o nome do DBMS de destino. *destination_dbms* é **sysname**e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|O destino é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|O destino é um banco de dados Oracle.|  
@@ -84,7 +84,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_helpdatatypemap** define mapeamentos de tipo de dados de Publicadores não SQL Server e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Publicadores para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
+ **sp_helpdatatypemap** define mapeamentos de tipo de dados de Publicadores não SQL Server e de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.  
   
  Quando a combinação especificada de DBMS de origem e de destino não é suportada, **sp_helpdatatypemap** retorna um conjunto de resultados vazio.  
   

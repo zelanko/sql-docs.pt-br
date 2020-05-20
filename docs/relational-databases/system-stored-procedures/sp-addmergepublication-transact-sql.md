@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d5b7870faed5423d4b12861d18f9bdb85e40c68
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72278356"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826295"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -89,13 +89,13 @@ sp_addmergepublication [ @publication = ] 'publication'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**nativo** (padrão)|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas.|  
-|**espaço**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. Necessário para dar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] suporte a[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes e não.|  
+|**espaço**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. Necessário para dar suporte a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes e não.|  
   
 `[ @allow_push = ] 'allow_push'`Especifica se as assinaturas push podem ser criadas para a publicação fornecida. *allow_push* é **nvarchar (5)**, com um padrão true, que permite assinaturas push na publicação.  
   
 `[ @allow_pull = ] 'allow_pull'`Especifica se as assinaturas pull podem ser criadas para a publicação fornecida. *allow_pull* é **nvarchar (5)**, com um padrão true, que permite assinaturas pull na publicação. Você deve especificar true para os [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes de suporte.  
   
-`[ @allow_anonymous = ] 'allow_anonymous'`Especifica se assinaturas anônimas podem ser criadas para a publicação fornecida. *allow_anonymous* é **nvarchar (5)**, com um padrão de true, que permite assinaturas anônimas na publicação. Para dar [!INCLUDE[ssEW](../../includes/ssew-md.md)] suporte a assinantes, você deve especificar **true**.  
+`[ @allow_anonymous = ] 'allow_anonymous'`Especifica se assinaturas anônimas podem ser criadas para a publicação fornecida. *allow_anonymous* é **nvarchar (5)**, com um padrão de true, que permite assinaturas anônimas na publicação. Para dar suporte a [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, você deve especificar **true**.  
   
 `[ @enabled_for_internet = ] 'enabled_for_internet'`Especifica se a publicação está habilitada para a Internet e determina se o FTP (File Transfer Protocol) pode ser usado para transferir os arquivos de instantâneo para um assinante. *enabled_for_internet* é **nvarchar (5)**, com um padrão de false. Se **for true**, os arquivos de sincronização da publicação serão colocados no diretório C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp O usuário deve criar o diretório Ftp. Se for **false**, a publicação não estará habilitada para acesso à Internet.  
   
@@ -110,11 +110,11 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'`Especifica o local da pasta alternativa para o instantâneo. *alternate_snapshot_folder* é **nvarchar (255)**, com um padrão de NULL.  
   
-`[ @pre_snapshot_script = ] 'pre_snapshot_script'`Especifica um ponteiro para um local de arquivo **. SQL** . *pre_snapshot_script* é **nvarchar (255)**, com um padrão de NULL. O Agente de Mesclagem executará o script pré-instantâneo antes de qualquer script de objeto replicado ao aplicar o instantâneo no Assinante. O script é executado no contexto de segurança usado pelo Agente de Mesclagem ao se conectar ao banco de dados de assinatura. Os scripts de pré-instantâneo não são [!INCLUDE[ssEW](../../includes/ssew-md.md)] executados em assinantes.  
+`[ @pre_snapshot_script = ] 'pre_snapshot_script'`Especifica um ponteiro para um local de arquivo **. SQL** . *pre_snapshot_script* é **nvarchar (255)**, com um padrão de NULL. O Agente de Mesclagem executará o script pré-instantâneo antes de qualquer script de objeto replicado ao aplicar o instantâneo no Assinante. O script é executado no contexto de segurança usado pelo Agente de Mesclagem ao se conectar ao banco de dados de assinatura. Os scripts de pré-instantâneo não são executados em [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.  
   
 `[ @post_snapshot_script = ] 'post_snapshot_script'`Especifica um ponteiro para um local de arquivo **. SQL** . *post_snapshot_script* é **nvarchar (255)**, com um padrão de NULL. O Agente de Mesclagem executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tenham sido aplicados durante uma sincronização inicial. O script é executado no contexto de segurança usado pelo Agente de Mesclagem ao se conectar ao banco de dados de assinatura. Os scripts de pós-instantâneo não são executados em [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.  
   
-`[ @compress_snapshot = ] 'compress_snapshot'`Especifica que o instantâneo gravado no local de ** \@alt_snapshot_folder** deve ser compactado no formato [!INCLUDE[msCoName](../../includes/msconame-md.md)] cab. *compress_snapshot* é **nvarchar (5)**, com um padrão de false. **false** especifica que o instantâneo não será compactado; **true** especifica que o instantâneo deve ser compactado. Arquivos de instantâneo maiores que 2 GB não podem ser compactados. Arquivos de instantâneo compactados são descompactados no local onde o Agente de Mesclagem é executado; as assinaturas pull são geralmente usadas com instantâneos compactados para que os arquivos sejam descompactados no Assinante. O instantâneo na pasta padrão não pode ser compactado. Para dar [!INCLUDE[ssEW](../../includes/ssew-md.md)] suporte a assinantes, você deve especificar **false**.  
+`[ @compress_snapshot = ] 'compress_snapshot'`Especifica que o instantâneo gravado no local de ** \@ alt_snapshot_folder** deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* é **nvarchar (5)**, com um padrão de false. **false** especifica que o instantâneo não será compactado; **true** especifica que o instantâneo deve ser compactado. Arquivos de instantâneo maiores que 2 GB não podem ser compactados. Arquivos de instantâneo compactados são descompactados no local onde o Agente de Mesclagem é executado; as assinaturas pull são geralmente usadas com instantâneos compactados para que os arquivos sejam descompactados no Assinante. O instantâneo na pasta padrão não pode ser compactado. Para dar suporte a [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, você deve especificar **false**.  
   
 `[ @ftp_address = ] 'ftp_address'`É o endereço de rede do serviço FTP para o distribuidor. *ftp_address* é **sysname**, com um padrão de NULL. Especifica onde os arquivos de instantâneo de publicação estão localizados para o Agente de Mesclagem de um assinante a ser coletado. Como essa propriedade é armazenada para cada publicação, cada publicação pode ter um *ftp_address*diferente. A publicação deve oferecer suporte à propagação de instantâneos por meio de FTP.  
   
@@ -124,7 +124,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Na pré-geração de instantâneos para publicação com filtros com parâmetros, o instantâneo de dados de cada partição de Assinante precisa estar em sua própria pasta. A estrutura de diretório para instantâneos pré-gerados por meio de FTP deve seguir a estrutura a seguir:  
   
- *alternate_snapshot_folder*\ftp\\*publisher_publicationDB_publication*\\*PartitionID*.  
+ *alternate_snapshot_folder*\ftp \\ *publisher_publicationDB_publication* \\ *PartitionID*.  
   
 > [!NOTE]  
 >  Os valores acima em itálico dependerão das especificações da publicação e da partição de Assinante.  
@@ -143,13 +143,13 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  Se você especificar um valor de **true** para *keep_partition_changes*, especifique um valor de **1** para o parâmetro agente de instantâneo **-MaxNetworkOptimization**. Para obter mais informações sobre esse parâmetro, consulte [replicação agente de instantâneo](../../relational-databases/replication/agents/replication-snapshot-agent.md). Para obter informações sobre como especificar parâmetros de agente, consulte [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
- Com [!INCLUDE[ssEW](../../includes/ssew-md.md)] os assinantes, *keep_partition_changes* deve ser definido como true para garantir que as exclusões sejam propagadas corretamente. Quando definido como falso, o assinante pode ter mais linhas do que o esperado.  
+ Com os [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, *keep_partition_changes* deve ser definido como true para garantir que as exclusões sejam propagadas corretamente. Quando definido como falso, o assinante pode ter mais linhas do que o esperado.  
   
 `[ @allow_subscription_copy = ] 'allow_subscription_copy'`Habilita ou desabilita a capacidade de copiar os bancos de dados de assinatura que assinam essa publicação. *allow_subscription_copy* é **nvarchar (5)**, com um padrão de false. O tamanho do banco de dados de assinatura copiado deve ser menor de 2 gigabytes (GB).  
   
 `[ @allow_synctoalternate = ] 'allow_synctoalternate'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @validate_subscriber_info = ] 'validate_subscriber_info'`Lista as funções que são usadas para definir uma partição de assinante dos dados publicados quando são usados filtros de linha com parâmetros. *validate_subscriber_info* é **nvarchar (500)**, com um padrão de NULL. Essa informação é usada pelo Agente de Mesclagem para validar a partição do Assinante. Por exemplo, se [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) for usado no filtro de linha com parâmetros, o parâmetro deverá ser `@validate_subscriber_info=N'SUSER_SNAME()'`.  
+`[ @validate_subscriber_info = ] 'validate_subscriber_info'`Lista as funções que são usadas para definir uma partição de assinante dos dados publicados quando são usados filtros de linha com parâmetros. *validate_subscriber_info* é **nvarchar (500)**, com um padrão de NULL. Essa informação é usada pelo Agente de Mesclagem para validar a partição do Assinante. Por exemplo, se [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) for usado no filtro de linha com parâmetros, o parâmetro deverá ser `@validate_subscriber_info=N'SUSER_SNAME()'` .  
   
 > [!NOTE]  
 >  Você não deve especificar esse parâmetro, mas sim permitir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determine automaticamente os critérios de filtragem.  
@@ -179,17 +179,17 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @replicate_ddl = ] replicate_ddl`Indica se a replicação do esquema tem suporte para a publicação. *replicate_ddl* é **int**, com um padrão de 1. **1** indica que as instruções DDL (linguagem de definição de dados) executadas no Publicador são replicadas e **0** indica que as instruções DDL não são replicadas. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
- O * \@parâmetro replicate_ddl* é respeitado quando uma instrução DDL adiciona uma coluna. O * \@parâmetro replicate_ddl* é ignorado quando uma instrução DDL altera ou descarta uma coluna pelos seguintes motivos.  
+ O parâmetro * \@ replicate_ddl* é respeitado quando uma instrução DDL adiciona uma coluna. O parâmetro * \@ replicate_ddl* é ignorado quando uma instrução DDL altera ou descarta uma coluna pelos seguintes motivos.  
   
--   Quando uma coluna é removida, sysarticlecolumns deve ser atualizado para impedir que novas instruções DML incluam a coluna removida que causaria falha no agente de distribuição. O * \@parâmetro replicate_ddl* é ignorado porque a replicação sempre deve replicar a alteração de esquema.  
+-   Quando uma coluna é removida, sysarticlecolumns deve ser atualizado para impedir que novas instruções DML incluam a coluna removida que causaria falha no agente de distribuição. O parâmetro * \@ replicate_ddl* é ignorado porque a replicação sempre deve replicar a alteração de esquema.  
   
--   Quando uma coluna é alterada, o tipo de dados de origem ou nulidade podem ter sido alterados, fazendo as instruções DML conterem um valor que pode não ser compatível com a tabela no assinante. Estas instruções DML podem causar falha no agente de distribuição. O * \@parâmetro replicate_ddl* é ignorado porque a replicação sempre deve replicar a alteração de esquema.  
+-   Quando uma coluna é alterada, o tipo de dados de origem ou nulidade podem ter sido alterados, fazendo as instruções DML conterem um valor que pode não ser compatível com a tabela no assinante. Estas instruções DML podem causar falha no agente de distribuição. O parâmetro * \@ replicate_ddl* é ignorado porque a replicação sempre deve replicar a alteração de esquema.  
   
 -   Quando uma instrução DDL adiciona uma nova coluna, sysarticlecolumns não inclui a nova coluna. Instruções DML não tentarão replicar dados para a nova coluna. O parâmetro é honrado porque replicar ou não replicar o DDL são aceitáveis.  
   
 `[ @allow_subscriber_initiated_snapshot = ] 'allow_subscriber_initiated_snapshot'`Indica se os assinantes dessa publicação podem iniciar o processo de instantâneo para gerar o instantâneo filtrado para sua partição de dados. *allow_subscriber_initiated_snapshot* é **nvarchar (5)**, com um padrão de false. **verdadeiro** indica que os assinantes podem iniciar o processo de instantâneo.  
   
-`[ @allow_web_synchronization = ] 'allow_web_synchronization'`Especifica se a publicação está habilitada para sincronização da Web. *allow_web_synchronization* é **nvarchar (5)**, com um padrão de false. **verdadeiro** especifica que as assinaturas para esta publicação podem ser sincronizadas por HTTPS. Para obter mais informações, consulte [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md). Para dar [!INCLUDE[ssEW](../../includes/ssew-md.md)] suporte a assinantes, você deve especificar **true**.  
+`[ @allow_web_synchronization = ] 'allow_web_synchronization'`Especifica se a publicação está habilitada para sincronização da Web. *allow_web_synchronization* é **nvarchar (5)**, com um padrão de false. **verdadeiro** especifica que as assinaturas para esta publicação podem ser sincronizadas por HTTPS. Para obter mais informações, consulte [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md). Para dar suporte a [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes, você deve especificar **true**.  
   
 `[ @web_synchronization_url = ] 'web_synchronization_url'`Especifica o valor padrão da URL da Internet usada para sincronização da Web. *web_synchronization_url i*s **nvarchar (500)**, com um padrão de NULL. Define a URL da Internet padrão se uma não for definida explicitamente quando [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) for executada.  
   
@@ -209,7 +209,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @generation_leveling_threshold = ] generation_leveling_threshold`Especifica o número de alterações que estão contidas em uma geração. Uma geração é uma coleção de alterações que é entregue a um Publicador ou Assinante. *generation_leveling_threshold* é **int**, com um valor padrão de 1000.  
   
-`[ @automatic_reinitialization_policy = ] automatic_reinitialization_policy`Especifica se as alterações são carregadas do assinante antes de uma reinicialização automática exigida por uma alteração na publicação, em que um valor de **1** foi especificado para ** \@force_reinit_subscription**. *automatic_reinitialization_policy* é bit, com um valor padrão de 0. **1** significa que as alterações são carregadas do assinante antes que ocorra uma reinicialização automática.  
+`[ @automatic_reinitialization_policy = ] automatic_reinitialization_policy`Especifica se as alterações são carregadas do assinante antes de uma reinicialização automática exigida por uma alteração na publicação, em que um valor de **1** foi especificado para ** \@ force_reinit_subscription**. *automatic_reinitialization_policy* é bit, com um valor padrão de 0. **1** significa que as alterações são carregadas do assinante antes que ocorra uma reinicialização automática.  
   
 > [!IMPORTANT]  
 >  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
@@ -229,7 +229,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="remarks"></a>Comentários  
  **sp_addmergepublication** é usado na replicação de mesclagem.  
   
- Para listar objetos de publicação para o Active Directory ** \@** usando o parâmetro add_to_active_directory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o objeto já deve ser criado no Active Directory.  
+ Para listar objetos de publicação para o Active Directory usando o parâmetro ** \@ add_to_active_directory** , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto já deve ser criado no Active Directory.  
   
  Se existirem várias publicações que publiquem o mesmo objeto de banco de dados, somente as publicações com um *replicate_ddl* valor de **1** REPLICARÃO as instruções ALTER TABLE, ALTER View, ALTER PROCEDURE, ALTER FUNCTION e ALTER TRIGGER DDL. No entanto, uma instrução ALTER TABLE DROP COLUMN DDL será replicada por todas as publicações que estão publicando a coluna cancelada.  
   

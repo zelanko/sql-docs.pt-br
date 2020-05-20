@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950522"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827470"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Especifica as declarações de namespace usadas em expressões XPATH de linha e coluna em OPENXML. *xpath_namespaces* é um parâmetro de texto **: char**, **nchar**, **varchar**, **nvarchar**, **Text**, **ntext** ou **XML**.  
   
- O valor padrão é ** \<root xmlns: MP = "urn: schemas-microsoft-com: xml-metaprop" >**. *xpath_namespaces* fornece os URIs de namespace para os prefixos usados nas expressões XPath no OPENXML por meio de um documento XML bem formado. *xpath_namespaces* declara o prefixo que deve ser usado para fazer referência ao namespace **urn: schemas-microsoft-com: xml-metaprop**; Isso fornece metadados sobre os elementos XML analisados. Embora você possa redefinir o prefixo de namespace para o namespace metaproperty usando essa técnica, esse namespace não será perdido. O **MP** de prefixo ainda é válido para **urn: schemas-microsoft-com: xml-metaprop** , mesmo que *xpath_namespaces* não contenha tal declaração.  
+ O valor padrão é ** \< root xmlns: MP = "urn: schemas-microsoft-com: xml-metaprop" >**. *xpath_namespaces* fornece os URIs de namespace para os prefixos usados nas expressões XPath no OPENXML por meio de um documento XML bem formado. *xpath_namespaces* declara o prefixo que deve ser usado para fazer referência ao namespace **urn: schemas-microsoft-com: xml-metaprop**; Isso fornece metadados sobre os elementos XML analisados. Embora você possa redefinir o prefixo de namespace para o namespace metaproperty usando essa técnica, esse namespace não será perdido. O **MP** de prefixo ainda é válido para **urn: schemas-microsoft-com: xml-metaprop** , mesmo que *xpath_namespaces* não contenha tal declaração.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou >0 (falha)  
@@ -127,7 +127,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>C. Especificando um URI de namespace  
- O exemplo a seguir retorna um identificador para a representação interna criada recentemente do documento XML que é fornecido como entrada. A chamada para `sp_xml_preparedocument` preserva o `mp` prefixo para o mapeamento de namespace de metapropriedade e adiciona o `xyz` prefixo de mapeamento ao namespace `urn:MyNamespace`.  
+ O exemplo a seguir retorna um identificador para a representação interna criada recentemente do documento XML que é fornecido como entrada. A chamada para `sp_xml_preparedocument` preserva o `mp` prefixo para o mapeamento de namespace de metapropriedade e adiciona o `xyz` prefixo de mapeamento ao namespace `urn:MyNamespace` .  
   
 ```  
 DECLARE @hdoc int;  

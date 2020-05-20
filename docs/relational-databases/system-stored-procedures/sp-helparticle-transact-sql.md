@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771098"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828344"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'`É o nome de um artigo na publicação. o *artigo* é **sysname**, com um padrão **%** de. Se o *artigo* não for fornecido, serão retornadas informações sobre todos os artigos da publicação especificada.  
+`[ @article = ] 'article'`É o nome de um artigo na publicação. o *artigo* é **sysname**, com um padrão de **%** . Se o *artigo* não for fornecido, serão retornadas informações sobre todos os artigos da publicação especificada.  
   
 `[ @returnfilter = ] returnfilter`Especifica se a cláusula de filtro deve ser retornada. *returnfilter* é **bit**, com um padrão de **1**, que retorna a cláusula de filtro.  
   
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser especificado ao solicitar informações sobre um artigo publicado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por um Publicador.  
+>  o *Publicador* não deve ser especificado ao solicitar informações sobre um artigo publicado por um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 `[ @found = ] found OUTPUT`Somente para uso interno.  
   
@@ -63,7 +63,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**objeto base**|**nvarchar (257)**|Nome da tabela subjacente representado pelo artigo ou procedimento armazenado.|  
 |**objeto de destino**|**sysname**|Nome da tabela de destino (assinatura).|  
 |**synchronization object**|**nvarchar (257)**|Nome da exibição que define o artigo publicado.|  
-|**type**|**smallint**|O tipo de artigo:<br /><br /> **1** = baseado em log.<br /><br /> **3** = baseado em log com o filtro manual.<br /><br /> **5** = baseado em log com exibição manual.<br /><br /> **7** = baseado em log com filtro manual e exibição manual.<br /><br /> **8** = execução de procedimento armazenado.<br /><br /> **24** = execução de procedimento armazenado serializável.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição (somente esquema).<br /><br /> **96** = função de agregação (somente esquema).<br /><br /> **128** = função (somente esquema).<br /><br /> **257** = exibição indexada baseada em log.<br /><br /> **259** = exibição indexada baseada em log com filtro manual.<br /><br /> **261** = exibição indexada baseada em log com exibição manual.<br /><br /> **263** = exibição indexada baseada em log com filtro manual e exibição manual.<br /><br /> **320** = exibição indexada (somente esquema).<br /><br />|  
+|**tipo**|**smallint**|O tipo de artigo:<br /><br /> **1** = baseado em log.<br /><br /> **3** = baseado em log com o filtro manual.<br /><br /> **5** = baseado em log com exibição manual.<br /><br /> **7** = baseado em log com filtro manual e exibição manual.<br /><br /> **8** = execução de procedimento armazenado.<br /><br /> **24** = execução de procedimento armazenado serializável.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição (somente esquema).<br /><br /> **96** = função de agregação (somente esquema).<br /><br /> **128** = função (somente esquema).<br /><br /> **257** = exibição indexada baseada em log.<br /><br /> **259** = exibição indexada baseada em log com filtro manual.<br /><br /> **261** = exibição indexada baseada em log com exibição manual.<br /><br /> **263** = exibição indexada baseada em log com filtro manual e exibição manual.<br /><br /> **320** = exibição indexada (somente esquema).<br /><br />|  
 |**status**|**tinyint**|Pode ser o resultado de [& (e bit e)](../../t-sql/language-elements/bitwise-and-transact-sql.md) de uma ou mais ou essas propriedades de artigo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = o artigo está ativo.<br /><br /> **0x08** = incluir o nome da coluna em instruções INSERT.<br /><br /> **0x16** = usar instruções parametrizadas.<br /><br /> **0x32** = use instruções parametrizadas e inclua o nome da coluna em instruções INSERT.|  
 |**sem**|**nvarchar (257)**|Procedimento armazenado usado para filtrar a tabela horizontalmente. Esse procedimento armazenado deve ter sido criado usando a cláusula FOR REPLICATION.|  
 |**ndescrição**|**nvarchar (255)**|Entrada descritiva para o artigo.|  

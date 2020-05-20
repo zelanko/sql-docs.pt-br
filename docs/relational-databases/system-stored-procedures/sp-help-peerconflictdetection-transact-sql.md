@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d5c593127a16a5a1045b8b44f943079cd3335f3a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085289"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828361"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication= ] '*publicação*'  
+ [ @publication =] '*publicação*'  
  É o nome da publicação para a qual retornar informações. a *publicação* é **sysname**, sem padrão.  
   
- [ @timeout= ] *tempo limite*  
+ [ @timeout =] *tempo limite*  
  Especifica o tempo, em segundos, depois do qual o procedimento irá acusar tempo limite enquanto aguarda uma resposta de cada nó na topologia. Se houver um Assinante somente leitura na topologia, a especificação de um valor de tempo limite não será válida. Assinantes somente leitura nunca responderão a uma chamada desse procedimento. *Timeout* é **int**, com um padrão de 60.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

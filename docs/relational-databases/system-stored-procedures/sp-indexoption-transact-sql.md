@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17189e3acebd81e977b02b1b1b235f8e300e5e9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030915"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826020"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>a. Definindo uma opção em um índice específico  
- O exemplo a seguir não permite bloqueios de página `IX_Customer_TerritoryID` no índice na `Customer` tabela.  
+ O exemplo a seguir não permite bloqueios de página no `IX_Customer_TerritoryID` índice na `Customer` tabela.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. Definindo uma opção em uma tabela sem índice clusterizado  
- O exemplo a seguir não permite bloqueios de página em uma tabela sem índice clusterizado (um heap). A `sys.indexes` exibição do catálogo é consultada antes e depois `sp_indexoption` que o procedimento é executado para mostrar os resultados da instrução.  
+ O exemplo a seguir não permite bloqueios de página em uma tabela sem índice clusterizado (um heap). A `sys.indexes` exibição do catálogo é consultada antes e depois que o `sp_indexoption` procedimento é executado para mostrar os resultados da instrução.  
   
 ```sql  
 USE AdventureWorks2012;  

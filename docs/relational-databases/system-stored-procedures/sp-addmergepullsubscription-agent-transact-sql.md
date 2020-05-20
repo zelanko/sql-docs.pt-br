@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 07cc514d615c86a90dcf37fbd4748c3ab1776f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81528970"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826285"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -98,7 +98,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`É o modo de segurança a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_security_mode* é **int**, com um padrão de 1. Se **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação. Se **1**, especifica a autenticação do Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode`É o modo de segurança a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_security_mode* é **int**, com um padrão de 1. Se **0**, especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. Se **1**, especifica a autenticação do Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -116,7 +116,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @subscriber_db = ] 'subscriber_db'`É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, com um padrão de NULL.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`É o modo de segurança a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_security_mode* é **int**, com um padrão de 1. Se **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação. Se **1**, especifica a autenticação do Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`É o modo de segurança a ser usado ao se conectar a um assinante ao sincronizar. *subscriber_security_mode* é **int**, com um padrão de 1. Se **0**, especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. Se **1**, especifica a autenticação do Windows.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. O Agente de Mesclagem sempre conecta ao Assinante local usando a Autenticação do Windows. Se um valor for especificado para esse parâmetro, uma mensagem de aviso será retornada, mas o valor será ignorado.  
@@ -133,7 +133,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @distributor = ] 'distributor'`É o nome do distribuidor. o *distribuidor* é **sysname**, com um padrão de *Editor*; ou seja, o Publicador também é o distribuidor.  
   
-`[ @distributor_security_mode = ] distributor_security_mode`É o modo de segurança a ser usado ao se conectar a um distribuidor durante a sincronização. *distributor_security_mode* é **int**, com um padrão de 0. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação. **1** especifica a autenticação do Windows.  
+`[ @distributor_security_mode = ] distributor_security_mode`É o modo de segurança a ser usado ao se conectar a um distribuidor durante a sincronização. *distributor_security_mode* é **int**, com um padrão de 0. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. **1** especifica a autenticação do Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -153,8 +153,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob demanda|  
-|**4**|Diário|  
-|**8**|Semanal|  
+|**4**|Diariamente|  
+|**8**|Semanalmente|  
 |**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64**|Iniciar automaticamente|  
@@ -221,7 +221,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @merge_jobid = ] merge_jobid`É o parâmetro de saída para a ID do trabalho. *merge_jobid* é **binary (16)**, com um padrão de NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica se a assinatura pode ser sincronizada por meio do Gerenciador de sincronização do Windows. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ser sincronizada sem iniciar.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica se a assinatura pode ser sincronizada por meio do Gerenciador de sincronização do Windows. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá ser sincronizada sem iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @ftp_address = ] 'ftp_address'`Somente para compatibilidade com versões anteriores.  
   
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Indica que a sincronização da Web está habilitada. *use_web_sync* é **bit**, com um padrão de 0. **1** especifica que a assinatura pull pode ser sincronizada pela Internet usando http.  
   
-`[ @internet_url = ] 'internet_url'`É o local do ouvinte de replicação (REPLISAPI. DLL) para sincronização da Web. *internet_url* é **nvarchar (260)**, com um padrão de NULL. *internet_url* é uma URL totalmente qualificada, no formato `http://server.domain.com/directory/replisapi.dll`. Se o servidor for configurado para ouvir em uma porta diferente da porta 80, o número da porta também deverá ser fornecido no formato `http://server.domain.com:portnumber/directory/replisapi.dll`, onde `portnumber` representa a porta.  
+`[ @internet_url = ] 'internet_url'`É o local do ouvinte de replicação (REPLISAPI. DLL) para sincronização da Web. *internet_url* é **nvarchar (260)**, com um padrão de NULL. *internet_url* é uma URL totalmente qualificada, no formato `http://server.domain.com/directory/replisapi.dll` . Se o servidor for configurado para ouvir em uma porta diferente da porta 80, o número da porta também deverá ser fornecido no formato `http://server.domain.com:portnumber/directory/replisapi.dll`, onde `portnumber` representa a porta.  
   
 `[ @internet_login = ] 'internet_login'`É o logon que o Agente de Mesclagem usa ao se conectar ao servidor Web que está hospedando a sincronização da Web usando a autenticação básica HTTP. *internet_login* é **sysname**, com um padrão de NULL.  
   

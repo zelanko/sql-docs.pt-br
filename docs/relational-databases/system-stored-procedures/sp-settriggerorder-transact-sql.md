@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982229"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824291"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,19 +53,19 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Primeiro**|O disparador é acionado em primeiro lugar.|  
-|**Última**|O disparador é acionado em último lugar.|  
+|**Último**|O disparador é acionado em último lugar.|  
 |**Nenhum**|O disparador é acionado em ordem indefinida.|  
   
 `[ @stmttype = ] 'statement_type'`Especifica a instrução SQL que dispara o gatilho. *statement_type* é **varchar (50)** e pode ser inserir, atualizar, excluir, fazer logon ou qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrução listado em [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os grupos de eventos não podem ser especificados.  
   
  Um gatilho pode ser designado como o **primeiro** ou **último** gatilho para um tipo de instrução somente depois que esse gatilho tiver sido definido como um gatilho para esse tipo de instrução. Por exemplo, o disparador de **TR1** pode ser designado **primeiro** para INSERT na tabela **T1** se o **TR1** for definido como um gatilho de inserção. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retorna um erro se o **TR1**, que foi definido somente como um gatilho de inserção, é definido como um gatilho **First**ou **Last**, para uma instrução UPDATE. Para obter mais informações, consulte a seção Comentários.  
   
- namespace = { **' banco de dados '** | '**servidor** ' | ** \@** NULO  
- Quando *triggername* é um gatilho DDL, ** \@namespace** especifica se *triggername* foi criado com escopo de banco de dados ou escopo de servidor. Se *triggername* for um gatilho de logon, o servidor deverá ser especificado. Para obter mais informações sobre o escopo do gatilho DDL, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md). Se não for especificado, ou se NULL for especificado, *triggername* será um gatilho DML.  
+ ** \@ namespace =** { **' banco de dados '**'  |  **servidor** ' | NULO  
+ Quando *triggername* é um gatilho DDL, ** \@ namespace** especifica se *triggername* foi criado com escopo de banco de dados ou escopo de servidor. Se *triggername* for um gatilho de logon, o servidor deverá ser especificado. Para obter mais informações sobre o escopo do gatilho DDL, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md). Se não for especificado, ou se NULL for especificado, *triggername* será um gatilho DML.  
   
 ||  
 |-|  
-|O servidor aplica- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] se a: e posterior.|  
+|O servidor aplica-se a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) e 1 (falha)  

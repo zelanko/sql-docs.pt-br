@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9af1ee7057b7a64a62e0ead12ba7e386839587
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762527"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828234"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado para Publicadores.  
+>  o *Publicador* não deve ser usado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
   
 `[ @ignore_distributor_failure = ] ignore_distributor_failure`Permite a reinicialização, mesmo que o distribuidor não exista ou esteja offline. *ignore_distributor_failure* é **bit**, com um padrão de 0. Se **0**, a reinicialização falhará se o distribuidor não existir ou estiver offline.  
   

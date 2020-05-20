@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771567"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824421"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`É o nome da publicação associada. a *publicação* é **sysname**, com um padrão **%** de, que retorna todas as informações de assinatura para este servidor.  
+`[ @publication = ] 'publication'`É o nome da publicação associada. a *publicação* é **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para este servidor.  
   
-`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, com um padrão **%** de, que retorna todas as informações de assinatura para as publicações e assinantes selecionados. Se **tudo**, apenas uma entrada será retornada para a assinatura completa em uma publicação.  
+`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para as publicações e assinantes selecionados. Se **tudo**, apenas uma entrada será retornada para a assinatura completa em uma publicação.  
   
-`[ @subscriber = ] 'subscriber'`É o nome do Assinante no qual obter informações de assinatura. o *assinante* é **sysname**, com um **%** padrão de, que retorna todas as informações de assinatura para as publicações e os artigos selecionados.  
+`[ @subscriber = ] 'subscriber'`É o nome do Assinante no qual obter informações de assinatura. o *assinante* é **sysname**, com um padrão de **%** , que retorna todas as informações de assinatura para as publicações e os artigos selecionados.  
   
-`[ @destination_db = ] 'destination_db'`É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de **%**.  
+`[ @destination_db = ] 'destination_db'`É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de **%** .  
   
 `[ @found = ] 'found'OUTPUT`É um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão de 23456.  
   
@@ -81,7 +81,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**offload_server**|**sysname**|Nome do servidor habilitado para ativação de agente remota. Se for NULL, a offload_server atual listada na tabela [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) será usada.|  
 |**dts_package_name**|**sysname**|Especifica o nome do pacote DTS (Data Transformation Services).|  
 |**dts_package_location**|**int**|Local do pacote DTS, se um estiver atribuído à assinatura. Se houver um pacote, um valor de **0** especifica o local do pacote no **distribuidor**. Um valor de **1** especifica o **assinante**.|  
-|**subscriber_security_mode**|**smallint**|É o modo de segurança no Assinante, em que **1** significa autenticação do Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0** significa autenticação.|  
+|**subscriber_security_mode**|**smallint**|É o modo de segurança no Assinante, em que **1** significa autenticação do Windows e **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.|  
 |**subscriber_login**|**sysname**|É o nome de logon no Assinante.|  
 |**subscriber_password**||A senha do Assinante atual nunca é retornada. O resultado é mascarado por uma cadeia de caracteres "**&#42;&#42;&#42;&#42;&#42;&#42;**".|  
 |**job_login**|**sysname**|Nome da conta do Windows na qual o Distribution Agent é executado.|  

@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa3b52dbc2f08e9cb504263afeb672956e4972d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278118"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826359"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- head_node_address = N '*head_node_address*' * \@*  
- O nome do computador que hospeda o nó de cabeçalho de SQL Server do grupo de escala horizontal do polybase. head_node_address é nvarchar (255). * \@*  
+ * \@ head_node_address* = N '*head_node_address*'  
+ O nome do computador que hospeda o nó de cabeçalho de SQL Server do grupo de escala horizontal do polybase. * \@ head_node_address* é nvarchar (255).  
   
- * \@dms_control_channel_port* = dms_control_channel_port  
- A porta em que o canal de controle para o nó de cabeçalho Movimentação de Dados PolyBase serviço está em execução. dms_control_channel_port é uma __int16 não assinada. * \@* O padrão é **16450**.  
+ * \@ dms_control_channel_port* = dms_control_channel_port  
+ A porta em que o canal de controle para o nó de cabeçalho Movimentação de Dados PolyBase serviço está em execução. * \@ dms_control_channel_port* é uma __int16 não assinada. O padrão é **16450**.  
   
- * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- O nome do nó de cabeçalho SQL Server instância no grupo de escala horizontal do polybase. head_node_sql_server_instance_name é nvarchar (16). * \@*  
+ * \@ head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ O nome do nó de cabeçalho SQL Server instância no grupo de escala horizontal do polybase. * \@ head_node_sql_server_instance_name* é nvarchar (16).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
