@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e56f2c544f168dbcedc0424f26818aad2e3c2c79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305092"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833337"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +49,15 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 > **Observação:** *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @step_id = ] step_id`O número de identificação da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. Se não estiver incluído, todos os logs de etapa de trabalho no trabalho serão excluídos, a menos que ** \@older_than** ou ** \@larger_than** sejam especificados. *step_id* é **int**, com um padrão de NULL.  
+`[ @step_id = ] step_id`O número de identificação da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. Se não estiver incluído, todos os logs de etapa de trabalho no trabalho serão excluídos, a menos que ** \@ older_than** ou ** \@ larger_than** sejam especificados. *step_id* é **int**, com um padrão de NULL.  
   
 `[ @step_name = ] 'step_name'`O nome da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. *step_name* é **sysname**, com um padrão de NULL.  
   
 > **Observação:** *Step_id* ou *step_name* pode ser especificado, mas ambos não podem ser especificados.  
   
-`[ @older_than = ] 'date'`A data e a hora do log de etapa de trabalho mais antigo que você deseja manter. Todos os logs de etapa de trabalho mais antigos do que essa data e hora são removidos. *Date* é **DateTime**, com um padrão de NULL. Tanto ** \@older_than** quanto ** \@larger_than** podem ser especificados.  
+`[ @older_than = ] 'date'`A data e a hora do log de etapa de trabalho mais antigo que você deseja manter. Todos os logs de etapa de trabalho mais antigos do que essa data e hora são removidos. *Date* é **DateTime**, com um padrão de NULL. Tanto ** \@ older_than** quanto ** \@ larger_than** podem ser especificados.  
   
-`[ @larger_than = ] 'size_in_bytes'`O tamanho em bytes do maior log de etapa de trabalho que você deseja manter. Todos os logs de etapa de trabalho maiores que esse serão removidos. Tanto ** \@larger_than** quanto ** \@older_than** podem ser especificados.  
+`[ @larger_than = ] 'size_in_bytes'`O tamanho em bytes do maior log de etapa de trabalho que você deseja manter. Todos os logs de etapa de trabalho maiores que esse serão removidos. Tanto ** \@ larger_than** quanto ** \@ older_than** podem ser especificados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -68,7 +68,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Comentários  
  **sp_delete_jobsteplog** está no banco de dados **msdb** .  
   
- Se nenhum argumento, exceto ** \@job_id** ou ** \@job_name** forem especificados, todos os logs de etapa de trabalho do trabalho especificado serão excluídos.  
+ Se nenhum argumento, exceto ** \@ job_id** ou ** \@ job_name** forem especificados, todos os logs de etapa de trabalho do trabalho especificado serão excluídos.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  

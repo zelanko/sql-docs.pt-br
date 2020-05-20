@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.events catalog view
 ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15fac5b2449e90fe7d6500bca383a71bc73954f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17c8ab2013a1ad36d298039c5706bd518765dd3b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68025787"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831938"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68025787"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do gatilho ou da notificação de eventos. Esse valor, juntamente com o **tipo**, identifica exclusivamente a linha.|  
-|**type**|**int**|Evento que faz o gatilho ser disparado.|  
+|**tipo**|**int**|Evento que faz o gatilho ser disparado.|  
 |**type_desc**|**nvarchar(60)**|Descrição do evento que faz o gatilho ser disparado.|  
 |**is_trigger_event**|**bit**|1 = Evento de gatilho.<br /><br /> 0 = Evento de notificação.|  
 |**event_group_type**|**int**|Grupo de eventos no qual o gatilho ou a notificação de eventos são criados, ou NULL quando não é criado em um grupo de eventos.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69890841"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832538"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,11 +80,11 @@ sp_update_alert
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**0**|Nenhum|  
+|**0**|Não|  
 |**1**|Email|  
 |**2**|Pager|  
 |**4**|**net send**|  
-|**7**|Todos|  
+|**7**|Tudo|  
   
 `[ @database_name = ] 'database'`O nome do banco de dados no qual o erro deve ocorrer para que o alerta seja acionado. o *banco de dados* é **sysname.** Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
@@ -115,7 +115,7 @@ sp_update_alert
 |Elemento Format|Descrição|  
 |--------------------|-----------------|  
 |*Item*|Um objeto de desempenho, contador de desempenho ou instância nomeada do contador|  
-|*Comparador*|Um destes operadores: **>**,, **<****=**|  
+|*Comparador*|Um destes operadores: **>** , **<** ,**=**|  
 |*Valor*|Valor numérico do contador|  
   
 `[ @category_name = ] 'category'`O nome da categoria de alerta. a *categoria* é **sysname** com um padrão de NULL.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e3c380f5508897a25327be20e05b22984d3bd4e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022453"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833662"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_addscriptexec [ @publication = ] publication
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser usado ao publicar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de um Publicador.  
+>  o *Publicador* não deve ser usado ao publicar a partir de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -65,14 +65,14 @@ sp_addscriptexec [ @publication = ] publication
   
  Para usar **sp_addscriptexec**, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço deve ter permissões de leitura e gravação no local do instantâneo e permissões de leitura no local onde os scripts são armazenados.  
   
- O [utilitário sqlcmd](../../tools/sqlcmd-utility.md) é usado para executar o script no Assinante, e o script é executado no contexto de segurança usado pelo Agente de Distribuição ou agente de mesclagem ao se conectar ao banco de dados de assinatura. Quando o agente é executado em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [utilitário osql](../../tools/osql-utility.md) é usado em vez de [sqlcmd](../../tools/sqlcmd-utility.md).  
+ O [utilitário sqlcmd](../../tools/sqlcmd-utility.md) é usado para executar o script no Assinante, e o script é executado no contexto de segurança usado pelo Agente de Distribuição ou agente de mesclagem ao se conectar ao banco de dados de assinatura. Quando o agente é executado em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [utilitário osql](../../tools/osql-utility.md) é usado em vez de [sqlcmd](../../tools/sqlcmd-utility.md).  
   
  **sp_addscriptexec** é útil na aplicação de scripts aos assinantes e usa o [sqlcmd](../../tools/sqlcmd-utility.md) para aplicar o conteúdo do script ao Assinante. Porém, como as configurações de Assinante podem variar, scripts testados antes da postagem no Publicador ainda podem provocar erros em um Assinante. o *skiperror* fornece a capacidade de ter o Agente de Distribuição ou agente de mesclagem ignorar erros e continuar. Use o [sqlcmd](../../tools/sqlcmd-utility.md) para testar scripts antes de executar o **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Erros ignorados continuarão sendo registrados no histórico do Agente para referência.  
   
- O uso de **sp_addscriptexec** para postar um arquivo de script para publicações usando o FTP para entrega de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instantâneo só tem suporte para assinantes.  
+ O uso de **sp_addscriptexec** para postar um arquivo de script para publicações usando o FTP para entrega de instantâneo só tem suporte para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addscriptexec**.  

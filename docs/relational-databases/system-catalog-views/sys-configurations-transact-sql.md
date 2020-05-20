@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9eb9ced4e010001f42e106ce8b1903e029f2f1c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 885b736424dfa0b1a83f0d0c854fc11b80f67ade
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109565"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832761"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68109565"
 |**name**|**nvarchar(35)**|O nome da opção de configuração.|  
 |**value**|**sql_variant**|Valor configurado dessa opção.|  
 |**máximo**|**sql_variant**|Valor mínimo para a opção de configuração.|  
-|**máximo**|**sql_variant**|Valor máximo para a opção de configuração.|  
+|**maior**|**sql_variant**|Valor máximo para a opção de configuração.|  
 |**value_in_use**|**sql_variant**|Valor de execução atualmente em efeito dessa opção.|  
 |**ndescrição**|**nvarchar (255)**|Descrição da opção de configuração.|  
 |**is_dynamic**|**bit**|1 = A variável é implementada quando a instrução RECONFIGURE é executada.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084884"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833108"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,11 +99,11 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id`O número de identificação da etapa neste trabalho a ser executado se a etapa falhar e *fail_action* for **4**. *fail_step_id* é **int**, com um padrão de NULL.  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] o *servidor* é **nvarchar (128)**, com um padrão de NULL.  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]o *servidor* é **nvarchar (128)**, com um padrão de NULL.  
   
 `[ @database_name = ] 'database'`O nome do banco de dados no qual executar uma [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. o *banco de dados*é **sysname**. Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
-`[ @database_user_name = ] 'user'`O nome da conta de usuário a ser usada ao executar [!INCLUDE[tsql](../../includes/tsql-md.md)] uma etapa. o *usuário*é **sysname**, com um padrão de NULL.  
+`[ @database_user_name = ] 'user'`O nome da conta de usuário a ser usada ao executar uma [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. o *usuário*é **sysname**, com um padrão de NULL.  
   
 `[ @retry_attempts = ] retry_attempts`O número de tentativas de repetição a serem usadas se essa etapa falhar. *retry_attempts*é **int**, com um padrão de NULL.  
   
@@ -127,9 +127,9 @@ sp_update_jobstep
 |**8**|Grava o log na tabela (substitui o histórico existente)|  
 |**16**|Grava o log na tabela (anexa ao histórico existente)|  
   
-`[ @proxy_id = ] proxy_id`O número de ID do proxy que a etapa de trabalho executa como. *proxy_id* é do tipo **int**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço para o Agent.  
+`[ @proxy_id = ] proxy_id`O número de ID do proxy que a etapa de trabalho executa como. *proxy_id* é do tipo **int**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de serviço para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-`[ @proxy_name = ] 'proxy_name'`O nome do proxy que a etapa de trabalho executa como. *proxy_name* é o tipo **sysname**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço para o Agent.  
+`[ @proxy_name = ] 'proxy_name'`O nome do proxy que a etapa de trabalho executa como. *proxy_name* é o tipo **sysname**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de serviço para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -152,7 +152,7 @@ sp_update_jobstep
   
  Somente os membros do **sysadmin** podem atualizar uma etapa de trabalho de propriedade de outro usuário.  
   
- Se a etapa de trabalho requer acesso a um proxy, o criador da etapa de trabalho deve ter acesso ao proxy para a etapa de trabalho. Todos os subsistemas, menos o Transact-SQL, requerem uma conta proxy. Os membros de **sysadmin** têm acesso a todos os proxies e podem usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a conta de serviço do Agent para o proxy.  
+ Se a etapa de trabalho requer acesso a um proxy, o criador da etapa de trabalho deve ter acesso ao proxy para a etapa de trabalho. Todos os subsistemas, menos o Transact-SQL, requerem uma conta proxy. Os membros de **sysadmin** têm acesso a todos os proxies e podem usar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço do Agent para o proxy.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir altera o número de tentativas da primeira etapa do trabalho `Weekly Sales Data Backup`. Depois de executar este exemplo, o número de tentativas será `10`.  

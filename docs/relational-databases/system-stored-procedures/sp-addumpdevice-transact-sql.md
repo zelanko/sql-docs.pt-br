@@ -16,14 +16,14 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cd8e54f8de50ffe1912dd58abc6484198fac46c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117913"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833597"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**disco**|Arquivo de disco rígido como dispositivo de backup.|  
-|**fita**|Qualquer dispositivo de fita com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**fita**|Qualquer dispositivo de fita com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Observação: O suporte a dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
   
 `[ @logicalname = ] 'logical_name'`É o nome lógico do dispositivo de backup usado nas instruções de BACKUP e restauração. *logical_name* é **sysname**, sem padrão, e não pode ser nulo.  
   
@@ -60,7 +60,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  Ao criar um dispositivo de backup em um local de rede remota, certifique-se de que o nome com o qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciado tenha os recursos adequados de gravação no computador remoto.  
   
- Se você adicionar um dispositivo de fita, esse parâmetro deverá ser o nome físico atribuído ao dispositivo de fita local pelo Windows; por exemplo, ** \\ \\.\tape0** para o primeiro dispositivo de fita no computador. O dispositivo de fita deve ser anexado ao computador servidor; não pode ser usado remotamente. Inclua os nomes que contêm caracteres não alfanuméricos entre aspas.  
+ Se você adicionar um dispositivo de fita, esse parâmetro deverá ser o nome físico atribuído ao dispositivo de fita local pelo Windows; por exemplo, ** \\ \\ .\tape0** para o primeiro dispositivo de fita no computador. O dispositivo de fita deve ser anexado ao computador servidor; não pode ser usado remotamente. Inclua os nomes que contêm caracteres não alfanuméricos entre aspas.  
   
 > [!NOTE]  
 >  Esse procedimento insere no nome físico especificado no catálogo. O procedimento não tenta acessar nem criar o dispositivo.  
@@ -144,8 +144,8 @@ GO
  [Definir um dispositivo de backup lógico para um arquivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
  [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [sys. backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

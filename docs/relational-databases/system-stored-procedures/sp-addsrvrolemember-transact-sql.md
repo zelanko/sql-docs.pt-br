@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab49a6572bfe8b2879b832642eeb1cf692177bb6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022419"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833640"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>Argumentos  
  [ @loginame **=** ] **'**_logon_**'**  
- É o nome do logon que está sendo adicionado à função de servidor fixa. o *logon* é **sysname**, sem padrão. o *logon* pode ser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um logon do ou um logon do Windows. Se o logon do Windows já não tiver acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o acesso será concedido automaticamente.  
+ É o nome do logon que está sendo adicionado à função de servidor fixa. o *logon* é **sysname**, sem padrão. o *logon* pode ser um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um logon do Windows. Se o logon do Windows já não tiver acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o acesso será concedido automaticamente.  
   
  [ @rolename **=** ] **'**_função_**'**  
  É o nome da função de servidor fixa à qual o logon está sendo adicionado. *role* é **sysname**, com um padrão de NULL, e deve ser um dos seguintes valores:  

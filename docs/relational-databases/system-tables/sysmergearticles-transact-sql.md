@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticles system table
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251941"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831926"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72251941"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do artigo.|  
-|**type**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **10** = tabela.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição ou exibição indexada (somente esquema).<br /><br /> **128** = função definida pelo usuário (somente esquema).<br /><br /> **160** = sinônimo (somente esquema).|  
+|**tipo**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **10** = tabela.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição ou exibição indexada (somente esquema).<br /><br /> **128** = função definida pelo usuário (somente esquema).<br /><br /> **160** = sinônimo (somente esquema).|  
 |**objid**|**int**|O identificador de objeto.|  
 |**sync_objid**|**int**|A ID de objeto da exibição que representa o conjunto de dados sincronizado.|  
 |**view_type**|**tinyint**|O tipo da exibição.<br /><br /> **0** = não é uma exibição; Use todos os objetos base.<br /><br /> **1** = exibição permanente.<br /><br /> **2** = exibição temporária.|  
@@ -69,8 +69,8 @@ ms.locfileid: "72251941"
 |**gen_cur**|**int**|O número gerado de alterações locais para a tabela base de um artigo.|  
 |**vertical_partition**|**int**|Especifica se a filtragem de coluna está habilitada em um artigo de tabela. **0** indica que não há nenhuma filtragem vertical e publica todas as colunas.|  
 |**identity_support**|**int**|Especifica se o tratamento automático do intervalo de identidades está habilitado. **1** significa que o tratamento de intervalo de identidade está habilitado e **0** significa que não há suporte para o intervalo de identidade.|  
-|**before_image_objid**|**int**|A ID de objeto da tabela de controle. A tabela de rastreamento contém certos valores de coluna de chave quando uma publicação é criada com * \@keep_partition_changes* = **true**.|  
-|**before_view_objid**|**int**|A ID de objeto de uma tabela de exibição. A exibição está em uma tabela que controla se uma linha pertenceu a um Assinante específico antes de ser excluída ou atualizada. Aplica-se somente quando uma publicação é criada com * \@keep_partition_changes* = **true.**|  
+|**before_image_objid**|**int**|A ID de objeto da tabela de controle. A tabela de rastreamento contém certos valores de coluna de chave quando uma publicação é criada com * \@ keep_partition_changes*  =  **true**.|  
+|**before_view_objid**|**int**|A ID de objeto de uma tabela de exibição. A exibição está em uma tabela que controla se uma linha pertenceu a um Assinante específico antes de ser excluída ou atualizada. Aplica-se somente quando uma publicação é criada com * \@ keep_partition_changes*  =  **true.**|  
 |**verify_resolver_signature**|**int**|Especifica se uma assinatura digital é verificada antes de usar um resolvedor em replicação de mesclagem:<br /><br /> **0** = a assinatura não é verificada.<br /><br /> **1** = a assinatura é verificada para ver se ela é de uma fonte confiável.|  
 |**allow_interactive_resolver**|**bit**|Especifica se o uso do Resolvedor Interativo em um artigo está habilitado. **1** especifica que o resolvedor interativo é usado no artigo.|  
 |**fast_multicol_updateproc**|**bit**|Especifica se o Merge Agent foi habilitado para aplicar alterações em várias colunas na mesma linha em uma instrução UPDATE.<br /><br /> **0** = emite uma atualização separada para cada coluna alterada.<br /><br /> **1** = emite uma instrução UPDATE que faz com que as atualizações ocorram em várias colunas em uma instrução.|  

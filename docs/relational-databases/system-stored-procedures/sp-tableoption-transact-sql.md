@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982261"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834191"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @TableNamePattern =] '*tabela*'  
  É o nome qualificado ou não qualificado de uma tabela de banco de dados definida pelo usuário. Se um nome de tabela totalmente qualificado, incluindo um nome de banco de dados, for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual. Não se pode definir opções de tabela para várias tabelas ao mesmo tempo. *Table* é **nvarchar (776)**, sem padrão.  
   
- [ @OptionName = ] '*option_name*'  
+ [ @OptionName =] '*option_name*'  
  É um nome de opção de tabela. *option_name* é **varchar (35)**, sem nenhum padrão de NULL. *option_name* pode ser um dos valores a seguir.  
   
 |Valor|Descrição|  
@@ -57,7 +57,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 |table lock on bulk load|Quando desabilitado (o padrão), faz com que o processo de carregamento em massa em tabelas definidas pelo usuário obtenha bloqueio de linhas. Quando habilitado, faz com que os processos de carregamento em massa em tabelas definidas pelo usuário obtenham um bloqueio de atualização em massa.|  
 |insert row lock|Não tem mais suporte.<br /><br /> Essa opção não tem nenhum efeito no comportamento de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e só é incluída para a compatibilidade de scripts e procedimentos existentes.|  
 |text in row|Quando OFF ou 0 (desabilitado, o padrão), não altera o comportamento atual e não há nenhum BLOB na linha.<br /><br /> Quando especificado e @OptionValue está ativado (habilitado) ou um valor inteiro de 24 a 7000, novas cadeias de caracteres **Text**, **ntext**ou **Image** são armazenadas diretamente na linha de dados. Todo o BLOB existente (objeto binário grande: **texto**, **ntext**ou dados de **imagem** ) será alterado para texto no formato de linha quando o valor de blob for atualizado. Para obter mais informações, consulte Comentários.|  
-|large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** e grandes colunas de tipo definido pelo usuário (UDT) na tabela são armazenados fora da linha, com um ponteiro de 16 bytes para a raiz.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** e valores de UDT grandes são armazenados diretamente na linha de dados, até um limite de 8000 bytes e desde que o valor possa caber no registro. Se o valor não se ajustar ao registro, um ponteiro será armazenado na linha e o restante será armazenado fora da linha no espaço de armazenamento de LOB. O valor padrão é 0.<br /><br /> O UDT (tipo definido pelo usuário) grande aplica- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] se a: e posterior. <br /><br /> Use a opção TEXTIMAGE_ON de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) para especificar um local para armazenamento de tipos de dados grandes. |  
+|large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** e grandes colunas de tipo definido pelo usuário (UDT) na tabela são armazenados fora da linha, com um ponteiro de 16 bytes para a raiz.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** e valores de UDT grandes são armazenados diretamente na linha de dados, até um limite de 8000 bytes e desde que o valor possa caber no registro. Se o valor não se ajustar ao registro, um ponteiro será armazenado na linha e o restante será armazenado fora da linha no espaço de armazenamento de LOB. O valor padrão é 0.<br /><br /> O UDT (tipo definido pelo usuário) grande aplica-se a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior. <br /><br /> Use a opção TEXTIMAGE_ON de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) para especificar um local para armazenamento de tipos de dados grandes. |  
 |formato de armazenamento vardecimal|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br /><br /> Quando TRUE, ON ou 1, a tabela designada é habilitada para o formato de armazenamento vardecimal. Quando FALSE, OFF ou 0, a tabela designada não é habilitada para o formato de armazenamento vardecimal. O formato de armazenamento vardecimal só poderá ser habilitado quando o banco de dados tiver sido habilitado para o formato de armazenamento vardecimal usando [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, o formato de armazenamento **vardecimal** é preterido. Em vez disso, use compactação ROW. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md). O valor padrão é 0.|  
   
  [ @OptionValue =] '*valor*'  
@@ -73,7 +73,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
  A opção text in row em sp_tableoption só pode ser habilitada ou desabilitada em tabelas que contêm colunas de texto. Se a tabela não tiver uma coluna de texto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará um erro.  
   
- Quando a opção texto na linha está habilitada, @OptionValue o parâmetro permite que os usuários especifiquem o tamanho máximo a ser armazenado em uma linha para um blob. O padrão é 256 bytes, mas valores podem variar de 24 a 7000 bytes.  
+ Quando a opção texto na linha está habilitada, o @OptionValue parâmetro permite que os usuários especifiquem o tamanho máximo a ser armazenado em uma linha para um blob. O padrão é 256 bytes, mas valores podem variar de 24 a 7000 bytes.  
   
  as cadeias de caracteres **Text**, **ntext**ou **Image** são armazenadas na linha de dados se as seguintes condições se aplicarem:  
   

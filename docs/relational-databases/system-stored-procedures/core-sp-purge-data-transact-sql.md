@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942497"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833659"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,18 @@ core.sp_purge_data
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@retention_days =] *retention_days*  
+ [ @retention_days =] *retention_days*  
  O número de dias para reter dados nas tabelas do data warehouse de gerenciamento. Os dados com um carimbo de data/hora mais antigo que *retention_days* são removidos. *retention_days* é **smallint**, com um padrão de NULL. Se especificado, o valor deverá ser positivo. Quando NULL, o valor na coluna valid_through na exibição core. Snapshots determina as linhas qualificadas para remoção.  
   
- [@instance_name = ] '*instance_name*'  
+ [ @instance_name =] '*instance_name*'  
  O nome da instância do conjunto de coleta. *instance_name* é **sysname**, com um padrão de NULL.  
   
- *instance_name* deve ser o nome de instância totalmente qualificado, que consiste no nome do computador e no nome da instância no formato *ComputerName*\\*InstanceName*. Quando NULL, a instância padrão no servidor local será usada.  
+ *instance_name* deve ser o nome de instância totalmente qualificado, que consiste no nome do computador e no nome da instância no formato *ComputerName* \\ *InstanceName*. Quando NULL, a instância padrão no servidor local será usada.  
   
- [@collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  O GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier**, com um padrão de NULL. Quando NULL, as linhas de qualificação de todos os conjuntos de coleta serão removidas. Para obter esse valor, consulte a exibição do catálogo syscollector_collection_sets.  
   
- [@duration = ] *duração*  
+ [ @duration =] *duração*  
  O número máximo de minutos em que a operação de limpeza deve ser executada. a *duração* é **smallint**, com um padrão de NULL. Se especificado, o valor deve ser zero ou um inteiro positivo. Quando NULL, a operação será executada até que todas as linhas qualificadas sejam removidas ou que a operação seja interrompida manualmente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -66,7 +66,7 @@ core.sp_purge_data
 ## <a name="remarks"></a>Comentários  
  Este procedimento seleciona linhas na exibição core.snapshots que se qualificam para remoção com base em um período de retenção. Todas as linhas qualificadas para remoção são excluídas da tabela core.snapshots_internal. A exclusão das linhas precedentes dispara a ação de exclusão em cascata em todas as tabelas do data warehouse de gerenciamento. Isso é feito por meio da cláusula ON DELETE CASCADE definida para todas as tabelas que armazenam dados coletados.  
   
- Cada instantâneo e seus dados associados são excluídos dentro de uma transação explícita e confirmados. Portanto, se a operação de limpeza for interrompida manualmente ou se o valor @duration especificado para for excedido, somente os dados não confirmados permanecerão. Esses dados podem ser removidos na próxima execução do trabalho.  
+ Cada instantâneo e seus dados associados são excluídos dentro de uma transação explícita e confirmados. Portanto, se a operação de limpeza for interrompida manualmente ou se o valor especificado para @duration for excedido, somente os dados não confirmados permanecerão. Esses dados podem ser removidos na próxima execução do trabalho.  
   
  O procedimento deve ser executado no contexto do banco de dados do data warehouse de gerenciamento.  
   

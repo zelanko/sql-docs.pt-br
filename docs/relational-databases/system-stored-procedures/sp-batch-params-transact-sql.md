@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001814"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833442"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna um conjunto de linhas que contém informações sobre os parâmetros incluídos [!INCLUDE[tsql](../../includes/tsql-md.md)] em um lote. **sp_batch_params** analisa apenas o lote especificado e retorna informações sobre valores de parâmetros inseridos. Ele não executa o lote ou modifica o ambiente de execução.  
+  Retorna um conjunto de linhas que contém informações sobre os parâmetros incluídos em um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. **sp_batch_params** analisa apenas o lote especificado e retorna informações sobre valores de parâmetros inseridos. Ele não executa o lote ou modifica o ambiente de execução.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,10 +39,10 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tsqlbatch = ] 'tsqlbatch'`É uma cadeia de caracteres Unicode que [!INCLUDE[tsql](../../includes/tsql-md.md)] contém uma instrução ou um lote para o qual as informações de parâmetro são desejadas. *TSqlBatch* é **nvarchar (max)** ou implicitamente conversível em **nvarchar (max)**.  
+`[ @tsqlbatch = ] 'tsqlbatch'`É uma cadeia de caracteres Unicode que contém uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou um lote para o qual as informações de parâmetro são desejadas. *TSqlBatch* é **nvarchar (max)** ou implicitamente conversível em **nvarchar (max)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ Não  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

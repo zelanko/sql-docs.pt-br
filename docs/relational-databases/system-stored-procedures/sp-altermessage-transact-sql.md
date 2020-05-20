@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_altermessage
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4949307cdaf2cc712e56525e872381c2af8256fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 804e5723732f4879451c885a0aa719d6822925a1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304798"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833549"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +41,15 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@message_id =** ] *message_number*  
+ [** @message_id =** ] *message_number*  
  É o número do erro da mensagem a ser alterado de **Sys. messages**. *message_number* é **int** sem valor padrão.  
   
-`[ @parameter = ] 'write\_to\_log_'`É usado com ** \@parameter_value** para indicar que a mensagem deve ser gravada no log [!INCLUDE[msCoName](../../includes/msconame-md.md)] de aplicativos do Windows. *write_to_log* é **sysname** sem valor padrão. *write_to_log* deve ser definido como WITH_LOG ou nulo. Se *write_to_log* for definido como WITH_LOG ou NULL e o valor de ** \@parameter_value** for **true**, a mensagem será gravada no log de aplicativos do Windows. Se *write_to_log* for definido como WITH_LOG ou NULL e o valor de ** \@parameter_value** for **false**, a mensagem nem sempre será gravada no log de aplicativos do Windows, mas poderá ser gravada dependendo de como o erro foi gerado. Se *write_to_log* for especificado, o valor de ** \@parameter_value** também deverá ser especificado.  
+`[ @parameter = ] 'write\_to\_log_'`É usado com ** \@ parameter_value** para indicar que a mensagem deve ser gravada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativos do Windows. *write_to_log* é **sysname** sem valor padrão. *write_to_log* deve ser definido como WITH_LOG ou nulo. Se *write_to_log* for definido como WITH_LOG ou NULL e o valor de ** \@ parameter_value** for **true**, a mensagem será gravada no log de aplicativos do Windows. Se *write_to_log* for definido como WITH_LOG ou NULL e o valor de ** \@ parameter_value** for **false**, a mensagem nem sempre será gravada no log de aplicativos do Windows, mas poderá ser gravada dependendo de como o erro foi gerado. Se *write_to_log* for especificado, o valor de ** \@ parameter_value** também deverá ser especificado.  
   
 > [!NOTE]  
 >  Se uma mensagem for gravada no log do aplicativo do Windows, ela também será gravada no arquivo de log de erros do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @parameter_value = ]'value_'`É usado com ** \@o parâmetro** para indicar que o erro deve ser gravado no log [!INCLUDE[msCoName](../../includes/msconame-md.md)] de aplicativos do Windows. o *valor* é **varchar (5)**, sem valor padrão. Se **for true**, o erro será sempre gravado no log de aplicativos do Windows. Se **for false**, o erro nem sempre será gravado no log de aplicativos do Windows, mas poderá ser gravado dependendo de como o erro foi gerado. Se *Value* for especificado, *write_to_log* para ** \@o parâmetro** também deverá ser especificado.  
+`[ @parameter_value = ]'value_'`É usado com o ** \@ parâmetro** para indicar que o erro deve ser gravado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativos do Windows. o *valor* é **varchar (5)**, sem valor padrão. Se **for true**, o erro será sempre gravado no log de aplicativos do Windows. Se **for false**, o erro nem sempre será gravado no log de aplicativos do Windows, mas poderá ser gravado dependendo de como o erro foi gerado. Se *Value* for especificado, *write_to_log* para o ** \@ parâmetro** também deverá ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

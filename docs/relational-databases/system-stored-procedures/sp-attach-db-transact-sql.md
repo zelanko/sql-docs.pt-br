@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b800997c3f978b0bf06472f7e72dd24743956fa8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305267"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833480"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Argumentos  
 `[ @dbname = ] 'dbnam_ '`É o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *dbname* é **sysname**, com um padrão de NULL.  
   
-`[ @filename1 = ] 'filename_n'`É o nome físico, incluindo o caminho, de um arquivo de banco de dados. *filename_n* é **nvarchar (260)**, com um padrão de NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetro começam em ** \@arquivo1** e incrementam para ** \@filename16**. A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
+`[ @filename1 = ] 'filename_n'`É o nome físico, incluindo o caminho, de um arquivo de banco de dados. *filename_n* é **nvarchar (260)**, com um padrão de NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetro começam em ** \@ arquivo1** e incrementam para ** \@ filename16**. A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
   
 > [!NOTE]  
 >  Este argumento mapeia para o parâmetro FILENAME da instrução CREATE DATABASE. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -97,7 +97,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server desanexar e anexar &#40;de banco de dados&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [&#41;&#40;Transact-SQL de sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpfile](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   

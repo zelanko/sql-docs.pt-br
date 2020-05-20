@@ -19,12 +19,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c94f7f23697539b000c9c76dc1d0970a56a96d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74190367"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834083"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
 
@@ -41,11 +41,11 @@ ms.locfileid: "74190367"
 |**wait_category_desc**|**nvarchar(128)**|Para descrição textual do campo de categoria de espera, examine a tabela a seguir.|
 |**execution_type**|**tinyint**|Determina o tipo de execução da consulta:<br /><br /> 0-execução regular (concluída com êxito)<br /><br /> 3-execução abortada do cliente iniciada<br /><br /> 4-execução anulada de exceção|  
 |**execution_type_desc**|**nvarchar(128)**|Descrição textual do campo de tipo de execução:<br /><br /> 0-regular<br /><br /> 3-anulado<br /><br /> 4-exceção|  
-|**total_query_wait_time_ms**|**bigint**|Tempo `CPU wait` total do plano de consulta dentro do intervalo de agregação e da categoria de espera (relatado em milissegundos).|
+|**total_query_wait_time_ms**|**bigint**|`CPU wait`Tempo total do plano de consulta dentro do intervalo de agregação e da categoria de espera (relatado em milissegundos).|
 |**avg_query_wait_time_ms**|**float**|Duração média de espera do plano de consulta por execução dentro do intervalo de agregação e da categoria de espera (relatada em milissegundos).|
 |**last_query_wait_time_ms**|**bigint**|Duração da última espera do plano de consulta dentro do intervalo de agregação e da categoria de espera (relatada em milissegundos).|
-|**min_query_wait_time_ms**|**bigint**|Tempo `CPU wait` mínimo para o plano de consulta dentro do intervalo de agregação e a categoria de espera (relatados em milissegundos).|
-|**max_query_wait_time_ms**|**bigint**|Tempo `CPU wait` máximo para o plano de consulta dentro do intervalo de agregação e a categoria de espera (relatados em milissegundos).|
+|**min_query_wait_time_ms**|**bigint**|`CPU wait`Tempo mínimo para o plano de consulta dentro do intervalo de agregação e a categoria de espera (relatados em milissegundos).|
+|**max_query_wait_time_ms**|**bigint**|`CPU wait`Tempo máximo para o plano de consulta dentro do intervalo de agregação e a categoria de espera (relatados em milissegundos).|
 |**stdev_query_wait_time_ms**|**float**|`Query wait`desvio padrão da duração do plano de consulta dentro do intervalo de agregação e da categoria de espera (relatado em milissegundos).|
 
 ## <a name="wait-categories-mapping-table"></a>Tabela de mapeamento de categorias de espera
@@ -54,8 +54,8 @@ ms.locfileid: "74190367"
   
 |Valor inteiro|Categoria de espera|Os tipos de espera incluem na categoria|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
-|**1**|**CPUs**|SOS_SCHEDULER_YIELD|
+|**0**|**Conhecidos**|Unknown |  
+|**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Thread de trabalho**|THREADPOOL|
 |**3**|**Proprietário**|LCK_M_%|
 |**4**|**Trava**|LATCH_%|
@@ -65,7 +65,7 @@ ms.locfileid: "74190367"
 |**8**|**SQL CLR**|% DE CLR, SQLCLR%|
 |**9**|**Espelhamento**|DBMIRROR%|
 |**10**|**Aciona**|TRANSAÇÃO%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
+|**11**|**Ocioso**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**Preemptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(mas não BROKER_RECEIVE_WAITFOR)**|
 |**14**|**E/s de log Tran**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
@@ -74,7 +74,7 @@ ms.locfileid: "74190367"
 |**16**|**Memória**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMPARTITIONED, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**anos**|**Espera do usuário**|WAITFOR, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
 |**aprimora**|**Rastreamento**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
-|**20,00**|**Pesquisa de texto completo**|FT_RESTART_CRAWL, GATHERER DE TEXTO COMPLETO, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR, PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
+|**20,00**|**Pesquisa de Texto Completo**|FT_RESTART_CRAWL, GATHERER DE TEXTO COMPLETO, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR, PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
 |**Abril**|**Outra e/s de disco**|ASYNC_IO_COMPLETION, IO_COMPLETION, BACKUPIO, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
 |**22**|**Replicação**|SE_REPL_%, REPL_%, HADR_% **(mas não HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
 |**23**|**Administrador de taxa de log**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR INSTANCE_LOG_RATE_GOVERNOR|

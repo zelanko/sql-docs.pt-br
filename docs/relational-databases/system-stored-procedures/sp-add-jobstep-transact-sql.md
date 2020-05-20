@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d9f68c1e3b4f0bec4ba338af12fb1f24c5ff204
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412850"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833670"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74412850"
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > No [instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria, mas nem todos os tipos de trabalho SQL Server Agent têm suporte. Consulte [instância gerenciada do banco de dados SQL do Azure diferenças de T-SQL do SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obter detalhes.
+  > No [instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria, mas nem todos os tipos de trabalho SQL Server Agent têm suporte. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,11 +73,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'`O nome da etapa. *step_name* é **sysname**, sem padrão.  
   
-`[ @subsystem = ] 'subsystem'`O subsistema usado pelo serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para executar o *comando*. *subsistema* é **nvarchar (40)** e pode ser um desses valores.  
+`[ @subsystem = ] 'subsystem'`O subsistema usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço Agent para executar o *comando*. *subsistema* é **nvarchar (40)** e pode ser um desses valores.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Script ativo<br /><br /> ** \* Importante \* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|Script ativo<br /><br /> ** \* \* \* Importante \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|Comando do sistema operacional ou programa executável|  
 |'**Distribuição**'|Trabalho do Replication Distribution Agent|  
 |'**Instantâneo**'|Trabalho do Replication Snapshot Agent|  
@@ -104,7 +104,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >   
 >  Se tiver que usar esses tokens, garanta, primeiro, que apenas membros dos grupos de segurança confiáveis do Windows, como o grupo Administradores, tenham permissões de gravação no Log de Eventos do computador em que reside o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Depois, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades**e, na página **Sistema de Alerta** , selecione **Substituir tokens de todas as respostas de trabalho aos alertas** para habilitar esses tokens.  
   
-`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] os *parâmetros* são **ntext**, com um padrão de NULL.  
+`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]os *parâmetros* são **ntext**, com um padrão de NULL.  
   
 `[ @cmdexec_success_code = ] code`O valor retornado por um comando de subsistema **CmdExec** para indicar que o *comando* foi executado com êxito. o *código* é **int**, com um padrão de **0**.  
   
@@ -130,11 +130,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_step_id = ] fail_step_id`A ID da etapa neste trabalho a ser executada se a etapa falhar e *fail_action* for **4**. *fail_step_id* é **int**, com um padrão de **0**.  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] o *servidor* é **nvarchar (30)**, com um padrão de NULL.  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]o *servidor* é **nvarchar (30)**, com um padrão de NULL.  
   
 `[ @database_name = ] 'database'`O nome do banco de dados no qual executar uma [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. o *banco de dados* é **sysname**, com um padrão de NULL; nesse caso, o banco de dados **mestre** é usado. Os nomes entre colchetes ([ ]) não são permitidos. Para uma etapa de trabalho do ActiveX, o *banco de dados* é o nome da linguagem de script usada pela etapa.  
   
-`[ @database_user_name = ] 'user'`O nome da conta de usuário a ser usada ao executar [!INCLUDE[tsql](../../includes/tsql-md.md)] uma etapa. o *usuário* é **sysname**, com um padrão de NULL. Quando o *usuário* é nulo, a etapa é executada no contexto de usuário do proprietário do trabalho no *banco de dados*.  O SQL Server Agent só incluirá esse parâmetro se o proprietário do trabalho for um sysadmin de SQL Server. Assim, a determinada etapa de Transact-SQL será executada no contexto do determinado nome de usuário do SQL Server. Se o proprietário do trabalho não for um SQL Server sysadmin, a etapa Transact-SQL sempre será executada no contexto do logon que possui esse trabalho, e o @database_user_name parâmetro será ignorado.  
+`[ @database_user_name = ] 'user'`O nome da conta de usuário a ser usada ao executar uma [!INCLUDE[tsql](../../includes/tsql-md.md)] etapa. o *usuário* é **sysname**, com um padrão de NULL. Quando o *usuário* é nulo, a etapa é executada no contexto de usuário do proprietário do trabalho no *banco de dados*.  O SQL Server Agent só incluirá esse parâmetro se o proprietário do trabalho for um sysadmin de SQL Server. Assim, a determinada etapa de Transact-SQL será executada no contexto do determinado nome de usuário do SQL Server. Se o proprietário do trabalho não for um SQL Server sysadmin, a etapa Transact-SQL sempre será executada no contexto do logon que possui esse trabalho, e o @database_user_name parâmetro será ignorado.  
   
 `[ @retry_attempts = ] retry_attempts`O número de tentativas de repetição a serem usadas se essa etapa falhar. *retry_attempts* é **int**, com um padrão de **0**, que não indica nenhuma tentativa de repetição.  
   
@@ -142,7 +142,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority`Reservado.  
   
-`[ @output_file_name = ] 'file_name'`O nome do arquivo no qual a saída desta etapa é salva. *file_name* é **nvarchar (200)**, com um padrão de NULL. *file_name* pode incluir um ou mais dos tokens listados em *comando*. Esse parâmetro é válido somente com comandos em execução nos [!INCLUDE[tsql](../../includes/tsql-md.md)]subsistemas, **CmdExec**, **PowerShell** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+`[ @output_file_name = ] 'file_name'`O nome do arquivo no qual a saída desta etapa é salva. *file_name* é **nvarchar (200)**, com um padrão de NULL. *file_name* pode incluir um ou mais dos tokens listados em *comando*. Esse parâmetro é válido somente com comandos em execução nos [!INCLUDE[tsql](../../includes/tsql-md.md)] subsistemas, **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 `[ @flags = ] flags`É uma opção que controla o comportamento. *flags* é **int**e pode ser um desses valores.  
   
@@ -156,9 +156,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**32**|Grave todas as saídas no histórico do trabalho|  
 |**64**|Crie um evento do Windows para usar como um sinal para o jobstep de Cmd anular|  
   
-`[ @proxy_id = ] proxy_id`O número de ID do proxy que a etapa de trabalho executa como. *proxy_id* é do tipo **int**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço para o Agent.  
+`[ @proxy_id = ] proxy_id`O número de ID do proxy que a etapa de trabalho executa como. *proxy_id* é do tipo **int**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de serviço para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-`[ @proxy_name = ] 'proxy_name'`O nome do proxy que a etapa de trabalho executa como. *proxy_name* é o tipo **sysname**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço para o Agent.  
+`[ @proxy_name = ] 'proxy_name'`O nome do proxy que a etapa de trabalho executa como. *proxy_name* é o tipo **sysname**, com um padrão de NULL. Se nenhum *proxy_id* for especificado, nenhum *proxy_name* será especificado e nenhum *user_name* será especificado, a etapa de trabalho será executada como a conta de serviço para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -171,7 +171,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  O SQL Server Management Studio fornece um modo gráfico fácil de gerenciar trabalhos e é o modo recomendado de criar e gerenciar a infra-estrutura de trabalho.  
   
- Por padrão, uma etapa de trabalho será executada como a conta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço do Agent, a menos que outro proxy seja especificado. Um requisito dessa conta é ser membro da função de segurança fixa **sysadmin** .
+ Por padrão, uma etapa de trabalho será executada como a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, a menos que outro proxy seja especificado. Um requisito dessa conta é ser membro da função de segurança fixa **sysadmin** .
   
  Um proxy pode ser identificado por *proxy_name* ou *proxy_id*.  
   

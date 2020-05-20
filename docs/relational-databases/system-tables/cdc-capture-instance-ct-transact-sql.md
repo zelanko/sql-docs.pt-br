@@ -1,5 +1,5 @@
 ---
-title: CDC. &lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
+title: CDC. &lt; capture_instance &gt; _CT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72908401"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833082"
 ---
-# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt;_CT&gt;de CAPTURE_INSTANCE (Transact-SQL)
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT de capture_instance (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   É a tabela de alteração criada quando os dados de alteração capturados são habilitados uma tabela de origem. A tabela retorna uma linha para cada operação de inserção e exclusão executada contra a tabela de origem, e duas linhas para cada operação de atualização executada contra a tabela de origem. Quando o nome da tabela de alteração não for especificado no momento em que a tabela de origem for habilitada, o nome será derivado. O formato do nome é CDC. *capture_instance*_CT em que *capture_instance* é o nome do esquema da tabela de origem e o nome da tabela de origem no formato *schema_table*. Por exemplo, se a tabela **Person. Address** no banco de dados de exemplo **AdventureWorks** estiver habilitada para o Change Data Capture, o nome da tabela de alteração derivada será **CDC. Person_Address_CT**.  
@@ -45,7 +45,7 @@ ms.locfileid: "72908401"
   
 ## <a name="remarks"></a>Comentários  
 
-A `__$command_id` coluna foi introduzida em uma atualização cumulativa nas versões 2012 a 2016. Para obter informações sobre versão e download, consulte o artigo 3030352 do KB em [correção: a tabela de alteração é ordenada incorretamente para linhas atualizadas depois que você habilita a captura de dados de alteração para um banco de Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Para obter mais informações, consulte a [funcionalidade CDC pode ser interrompida após a atualização para o cu mais recente para SQL Server 2012, 2014 e 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+A coluna `__$command_id` foi introduzida em uma atualização cumulativa nas versões 2012 a 2016. Para obter informações sobre versão e download, consulte o artigo 3030352 do KB em [correção: a tabela de alteração é ordenada incorretamente para linhas atualizadas depois que você habilita a captura de dados de alteração para um banco de Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Para obter mais informações, consulte a [funcionalidade CDC pode ser interrompida após a atualização para o cu mais recente para SQL Server 2012, 2014 e 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
 ## <a name="captured-column-data-types"></a>Tipos de dados da coluna capturada  
  As colunas capturadas incluídas nesta tabela têm o mesmo tipo de dados e valor que suas colunas de origem correspondentes com as exceções a seguir:  
@@ -57,7 +57,7 @@ A `__$command_id` coluna foi introduzida em uma atualização cumulativa nas ver
  No entanto, os valores nessas colunas são iguais aos valores da coluna de origem.  
   
 ### <a name="large-object-data-types"></a>Tipos de dados de objeto grande  
- As colunas do tipo de dados **Image**, **Text**e **ntext** sempre recebem um valor **NULL** quando _ _ $ operation = 1 \_ \_ou $Operation = 3. Colunas do tipo de dados **varbinary (max)**, **varchar (max)** ou **nvarchar (max)** recebem um valor **nulo** quando \_ \_$Operation = 3, a menos que a coluna seja alterada durante a atualização. Quando \_ \_$Operation = 1, essas colunas recebem seu valor no momento da exclusão. Colunas computadas que são incluídas em uma instância de captura sempre têm um valor de **NULL**.  
+ As colunas do tipo de dados **Image**, **Text**e **ntext** sempre recebem um valor **NULL** quando _ _ $ operation = 1 ou \_ \_ $Operation = 3. Colunas do tipo de dados **varbinary (max)**, **varchar (max)** ou **nvarchar (max)** recebem um valor **nulo** quando \_ \_ $Operation = 3, a menos que a coluna seja alterada durante a atualização. Quando \_ \_ $Operation = 1, essas colunas recebem seu valor no momento da exclusão. Colunas computadas que são incluídas em uma instância de captura sempre têm um valor de **NULL**.  
   
  Por padrão, o tamanho máximo que pode ser adicionado a uma coluna capturada em uma única instrução INSERT, UPDATE, WRITETEXT ou UPDATETEXT é de 65.536 bytes ou 64 KB. Para aumentar esse tamanho para dar suporte a dados LOB maiores, use a [opção de configuração de servidor configurar o Max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) para especificar um tamanho máximo maior. Para obter mais informações, veja [Configurar a opção max text repl size de configuração de servidor](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   

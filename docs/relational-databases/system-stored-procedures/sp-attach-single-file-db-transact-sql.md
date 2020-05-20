@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_single_file_db
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b285b5032c1ccde03ef8bd3f287d6b7f60eb0ffc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1baea0e1b64310f832648b8944881c827c4b7be8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046174"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833459"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server desanexar e anexar &#40;de banco de dados&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [&#41;&#40;Transact-SQL de sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpfile](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

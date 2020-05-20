@@ -16,25 +16,25 @@ helpviewer_keywords:
 - sys.resource_governor_external_resource_pools
 - resource_governor_external_resource_pools
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4751cb9164d5ca11cfdaca4365fa7156c2c2425e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4d9b7a733acaf5f6136f6746b313c30c03f63683
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80663006"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834087"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys. resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]e [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Retorna a configuração do pool de recursos externos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]armazenado no. Cada linha da exibição determina a configuração de um pool.
+Retorna a configuração do pool de recursos externos armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada linha da exibição determina a configuração de um pool.
   
 |Nome da coluna|Tipo de dados|Descrição|
 |-----------------|---------------|-----------------|
 |external_pool_id|**int**|ID exclusivo do pool de recursos. Não permite valor nulo.|
-|name|**sysname**|Nome do pool de recursos. Não permite valor nulo.|
+|Nome|**sysname**|Nome do pool de recursos. Não permite valor nulo.|
 |max_cpu_percent|**int**|Largura de banda de CPU máxima permitida para todas as solicitações no pool de recursos quando houver contenção de CPU. Não permite valor nulo.|
 |max_memory_percent|**int**|Porcentagem de memória total de servidor que pode ser usada por solicitações nesse pool de recursos. Não permite valor nulo. O efetivo máximo depende dos mínimos de pools. Por exemplo, max_memory_percent pode ser definido como 100, mas o máximo efetivo é inferior.|
 |max_processes|**int**|Número máximo de processos externos simultâneos. O valor padrão, 0, não especifica nenhum limite. Não permite valor nulo.|

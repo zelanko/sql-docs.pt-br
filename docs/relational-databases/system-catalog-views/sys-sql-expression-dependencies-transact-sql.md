@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69561129"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833948"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contém uma linha para cada dependência por nome em uma entidade definida pelo usuário no banco de dados atual. Isso inclui dependências entre funções escalares definidas pelo usuário e compiladas nativamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e outros módulos. Uma dependência entre duas entidades é criada quando uma entidade, chamada de *entidade referenciada*, é exibida pelo nome em uma expressão SQL persistente de outra entidade, chamada de *entidade de referência*. Por exemplo, quando uma tabela for referenciada na definição de uma exibição, a exibição, como a entidade de referência, dependerá da tabela, a entidade referenciada. Se a tabela for descartada, a exibição será inutilizável.  
+  Contém uma linha para cada dependência por nome em uma entidade definida pelo usuário no banco de dados atual. Isso inclui dependências entre funções escalares definidas pelo usuário e compiladas nativamente, e outros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] módulos. Uma dependência entre duas entidades é criada quando uma entidade, chamada de *entidade referenciada*, é exibida pelo nome em uma expressão SQL persistente de outra entidade, chamada de *entidade de referência*. Por exemplo, quando uma tabela for referenciada na definição de uma exibição, a exibição, como a entidade de referência, dependerá da tabela, a entidade referenciada. Se a tabela for descartada, a exibição será inutilizável.  
   
  Para obter mais informações, consulte [Funções escalares definidas pelo usuário para OLTP in-memory](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -72,18 +72,18 @@ ms.locfileid: "69561129"
   
 |Tipo de entidade|Entidade de referência|Entidade referenciada|  
 |-----------------|------------------------|-----------------------|  
-|Tabela|Sim*|Sim|  
-|Visualizar|Sim|Sim|  
-|Índice filtrado|Sim**|Não|  
-|Estatísticas filtradas|Sim**|Não|  
-|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sim|Sim|  
+|Tabela|Sim*|Yes|  
+|Visualizar|Yes|Yes|  
+|Índice filtrado|Sim**|No|  
+|Estatísticas filtradas|Sim**|No|  
+|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Yes|Yes|  
 |procedimento armazenado CLR|Não|Sim|  
-|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
+|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Yes|Yes|  
 |Função CLR definida pelo usuário|Não|Sim|  
-|Gatilho CLR (DML e DDL)|Não|Não|  
-|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
-|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
+|Gatilho CLR (DML e DDL)|No|Não|  
+|Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
+|Gatilho DDL no nível do banco de dados [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
+|Gatilho DDL no nível do servidor [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|No|  
 |Procedimentos armazenados estendidos|Não|Sim|  
 |Fila|Não|Sim|  
 |Sinônimo|Não|Sim|  
@@ -91,7 +91,7 @@ ms.locfileid: "69561129"
 |Coleção de esquemas XML|Não|Sim|  
 |Função de partição|Não|Sim|  
   
- \*Uma tabela é rastreada como uma entidade de referência somente quando faz [!INCLUDE[tsql](../../includes/tsql-md.md)] referência a um módulo, tipo definido pelo usuário ou coleção de esquema XML na definição de uma coluna computada, restrição de verificação ou restrição padrão.  
+ \*Uma tabela é rastreada como uma entidade de referência somente quando faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquema XML na definição de uma coluna computada, restrição de verificação ou restrição padrão.  
   
  * * Cada coluna usada no predicado de filtro é controlada como uma entidade de referência.  
   

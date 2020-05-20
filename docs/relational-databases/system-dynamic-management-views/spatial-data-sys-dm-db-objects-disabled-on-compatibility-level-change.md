@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 300b988ce74a22dad3384920bb93fd45191128e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809907"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832610"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Dados espaciais-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**classe**|**int**|1 = restrições<br /><br /> 7 = índices e heaps|  
+|**classes**|**int**|1 = restrições<br /><br /> 7 = índices e heaps|  
 |**class_desc**|**nvarchar(60)**|OBJECT ou COLUMN para restrições<br /><br /> INDEX para índices e heaps|  
 |**major_id**|**int**|OBJECT ID de restrições<br /><br /> OBJECT ID da tabela que contém índices e heaps|  
 |**minor_id**|**int**|NULL para restrições<br /><br /> Index_id para índices e heaps|  
@@ -113,7 +113,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>Comportamento dos objetos desabilitados  
  **Índices**  
   
- Se o índice clusterizado estiver desabilitado ou se um índice não clusterizado for forçado, o seguinte erro será gerado: "o processador de consultas não pode produzir um plano porque o índice '%. \*ls "na tabela ou exibição"%. \*ls "está desabilitado". Para reabilitar esses objetos, recompile os índices após a atualização chamando **ALTER INDEX on... Recompilar**.  
+ Se o índice clusterizado estiver desabilitado ou se um índice não clusterizado for forçado, o seguinte erro será gerado: "o processador de consultas não pode produzir um plano porque o índice '%. \* ls "na tabela ou exibição"%. \* ls "está desabilitado". Para reabilitar esses objetos, recompile os índices após a atualização chamando **ALTER INDEX on... Recompilar**.  
   
  **Heaps**  
   

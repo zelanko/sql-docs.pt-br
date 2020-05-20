@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_attachsubscription
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3ac5075f3bedeb889536fe90ebe7f6c4049199a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768967"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833443"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!NOTE]  
 >  Esse parâmetro foi preterido e só é mantido para compatibilidade com versões anteriores de scripts. Se *subscriber_security_mode* não for **1** e *subscriber_password* for especificado, um erro será retornado.  
   
-`[ @distributor_security_mode = ] distributor_security_mode`É o modo de segurança a ser usado ao se conectar a um distribuidor durante a sincronização. *distributor_security_mode* é **int**, com um padrão de **0**. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação. **1** especifica a autenticação do Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode`É o modo de segurança a ser usado ao se conectar a um distribuidor durante a sincronização. *distributor_security_mode* é **int**, com um padrão de **0**. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. **1** especifica a autenticação do Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @distributor_login = ] 'distributor_login'`É o logon do distribuidor a ser usado ao se conectar a um distribuidor durante a sincronização. *distributor_login* será necessário se *distributor_security_mode* for definido como **0**. *distributor_login* é **sysname**, com um padrão de NULL.  
   
@@ -81,7 +81,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`É o modo de segurança a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_security_mode* é **int**, com um padrão de **1**. Se **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação. Se **1**, especifica a autenticação do Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`É o modo de segurança a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_security_mode* é **int**, com um padrão de **1**. Se **0**, especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. Se **1**, especifica a autenticação do Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'`É o logon a ser usado ao se conectar a um Publicador durante a sincronização. *publisher_login* é **sysname**, com um padrão de NULL.  
   

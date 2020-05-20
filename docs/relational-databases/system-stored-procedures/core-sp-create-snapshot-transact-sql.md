@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078226"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831840"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  O GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier** sem valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collection_sets no banco de dados msdb.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  O GUID de um tipo de coletor. *collector_type_uid* é **uniqueidentifier** sem valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collector_types no banco de dados msdb.  
   
- [ @machine_name= ] '*machine_name*'  
+ [ @machine_name =] '*machine_name*'  
  O nome do servidor no qual o conjunto de coleta reside. *machine_name* é **sysname**, sem valor padrão.  
   
- [ @named_instance= ] '*named_instance*'  
+ [ @named_instance =] '*named_instance*'  
  O nome da instância do conjunto de coleta. *named_instance* é **sysname**, sem valor padrão.  
   
- [ @log_id = ] *log_id*  
+ [ @log_id =] *log_id*  
  O identificador exclusivo que é mapeado para o log de eventos do conjunto de coleta que coletou os dados. *log_id* é **bigint** sem valor padrão. Para obter o valor de *log_id*, consulte a exibição dbo. syscollector_execution_log no banco de dados msdb.  
   
- [ @snapshot_id = ] *snapshot_id*  
+ [ @snapshot_id =] *snapshot_id*  
  O identificador exclusivo de uma linha que é inserida na exibição core. Snapshots. *snapshot_id* é **int** e é retornada como saída.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

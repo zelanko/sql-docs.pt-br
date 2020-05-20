@@ -17,29 +17,29 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e81cb385da40b5d8aff52368bb59d0c91322321d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133128"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832701"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contém informações estendidas sobre o tipo de auditoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo em uma auditoria em uma instância de servidor. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Contém informações estendidas sobre o tipo de auditoria de arquivo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditoria em uma instância de servidor. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|ID da auditoria.|  
-|name|**sysname**|Nome da auditoria.|  
+|Nome|**sysname**|Nome da auditoria.|  
 |audit_guid|**uniqueidentifier**|GUID da auditoria.|  
 |create_date|**datetime**|Data UTC quando a auditoria do arquivo foi criada.|  
 |modify_date|**datatime**|Data em UTC quando a auditoria do arquivo foi modificada pela última vez.|  
 |principal_id|**int**|ID do proprietário da auditoria conforme registrado no servidor.|  
-|type|**char(2)**|Tipo de auditoria:<br /><br /> 0 = log de eventos de Segurança do NT<br /><br /> 1 = log de eventos de Aplicativos do NT<br /><br /> 2= arquivo no sistema de arquivos|  
+|tipo|**char(2)**|Tipo de auditoria:<br /><br /> 0 = log de eventos de Segurança do NT<br /><br /> 1 = log de eventos de Aplicativos do NT<br /><br /> 2= arquivo no sistema de arquivos|  
 |type_desc|**nvarchar(60)**|Descrição do tipo da auditoria.|  
 |on_failure|**tinyint**|Condição Ao falhar:<br /><br /> 0 = Continuar<br /><br /> 1 = Encerrar a instância de servidor<br /><br /> 2 = Operação com falha|  
 |on_failure_desc|**nvarchar(60)**|Ao Falhar ao escrever uma entrada de ação:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  

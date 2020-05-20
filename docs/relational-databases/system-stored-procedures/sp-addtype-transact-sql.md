@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addtype
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab825ce5eb1310f3ff502965e409731b8741932e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c876b024b0e8dd218064999adde4a43a18404829
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305139"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833578"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="arguments"></a>Argumentos  
 `[ @typename = ] type`É o nome do tipo de dados do alias. Os nomes de tipo de dados de alias devem seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) e devem ser exclusivos em cada banco de dado. o *tipo* é **sysname**, sem padrão.  
   
-`[ @phystype = ] system_data_type`É o tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] físico, ou fornecido, no qual o tipo de dados do alias se baseia. *system_data_type* é **sysname**, sem padrão, e pode ser um destes valores:  
+`[ @phystype = ] system_data_type`É o tipo de dados físico, ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecido, no qual o tipo de dados do alias se baseia.* system_data_type* é **sysname**, sem padrão, e pode ser um destes valores:  
   
 ||||  
 |-|-|-|  
@@ -70,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *&*  
  É um inteiro não negativo indicando o número máximo de dígitos decimais que podem ser armazenados à direita do ponto decimal e deve ser menor que ou igual à precisão. Para obter mais informações, consulte [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'`Indica a maneira como o tipo de dados de alias manipula valores nulos. *null_type* é **varchar (** 8 **)**, com um padrão de NULL e deve ser colocado entre aspas simples (' NULL ', ' NOT NULL ' ou ' NONULL '). Se *null_type* não for definido explicitamente pelo **sp_addtype**, ele será definido como a nulidade padrão atual. Use a função de sistema GETANSINULL para determinar a nulabilidade padrão atual. Isso pode ser ajustado usando a instrução SET ou ALTER DATABASE. A nulabilidade deve ser definida explicitamente. Se ** \@phystype** for **bit**e ** \@nulltype** não for especificado, o padrão será NOT NULL.  
+`[ @nulltype = ] 'null_type'`Indica a maneira como o tipo de dados de alias manipula valores nulos. *null_type* é **varchar (** 8 **)**, com um padrão de NULL e deve ser colocado entre aspas simples (' NULL ', ' NOT NULL ' ou ' NONULL '). Se *null_type* não for definido explicitamente pelo **sp_addtype**, ele será definido como a nulidade padrão atual. Use a função de sistema GETANSINULL para determinar a nulabilidade padrão atual. Isso pode ser ajustado usando a instrução SET ou ALTER DATABASE. A nulabilidade deve ser definida explicitamente. Se ** \@ phystype** for **bit**e ** \@ nulltype** não for especificado, o padrão será NOT NULL.  
   
 > [!NOTE]  
 >  O parâmetro *null_type* define apenas a nulidade padrão para esse tipo de dados. Se a nulabilidade for explicitamente definida quando o tipo de dados de alias for usado durante a criação da tabela, ela terá precedência sobre a nulabilidade padrão. Para obter mais informações, consulte [ALTER TABLE &#40;Transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [CREATE TABLE &#40;transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -86,12 +86,12 @@ sp_addtype [ @typename = ] type,
   
  A execução de **sp_addtype** cria um tipo de dados de alias que aparece na exibição do catálogo **Sys. Types** para um banco de dado específico. Se o tipo de dados do alias precisar estar disponível em todos os novos bancos de dado definidos pelo usuário, adicione-o ao **modelo**. Depois da criação de um tipo de dados de alias, você pode usá-lo em CREATE TABEL ou ALTER TABLE, e também vincular padrões e regras a ele. Todos os tipos de dados de alias escalares criados usando **sp_addtype** estão contidos no esquema **dbo** .  
   
- Os tipos de dados de alias herdam a ordenação padrão do banco de dados. Os agrupamentos de colunas e variáveis de tipos de alias são definidos nas [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções CREATE TABLE, ALTER TABLE e DECLARE @*local_variable* . A alteração da ordenação padrão do banco de dados aplica-se apenas a novas colunas e variáveis do tipo; isso não altera a ordenação das existentes.  
+ Os tipos de dados de alias herdam a ordenação padrão do banco de dados. Os agrupamentos de colunas e variáveis de tipos de alias são definidos nas [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções CREATE TABLE, ALTER TABLE e declare @*local_variable* . A alteração da ordenação padrão do banco de dados aplica-se apenas a novas colunas e variáveis do tipo; isso não altera a ordenação das existentes.  
   
 > [!IMPORTANT]  
 >  Para fins de compatibilidade com versões anteriores, a função de banco de dados **pública** recebe automaticamente a permissão REFERENCES nos tipos de dado de alias que são criados usando **sp_addtype**. Observação Quando tipos de dados de alias são criados usando a instrução CREATE TYPE em vez de **sp_addtype**, nenhuma concessão automática ocorre.  
   
- Os tipos de dados de alias não podem ser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidos usando os tipos de dados **timestamp**, **Table**, **XML**, **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** .  
+ Os tipos de dados de alias não podem ser definidos usando os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados **timestamp**, **Table**, **XML**, **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** .  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação no **db_owner** ou **db_ddladmin** função de banco de dados fixa.  
@@ -99,7 +99,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>a. Criando um tipo de dados de alias que não permite valores nulos  
- O exemplo a seguir cria um tipo de dados `ssn` de alias chamado (número do seguro social) que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]é baseado no tipo de dados **varchar** fornecido. O tipo de dados `ssn` é usado para colunas que contém números de previdência social de 11 dígitos (999-99-9999). A coluna não pode ser NULL.  
+ O exemplo a seguir cria um tipo de dados de alias chamado `ssn` (número do seguro social) que é baseado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados **varchar** fornecido. O tipo de dados `ssn` é usado para colunas que contém números de previdência social de 11 dígitos (999-99-9999). A coluna não pode ser NULL.  
   
  Observe que `varchar(11)` está entre aspas simples porque contém pontuação (parênteses).  
   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.server_event_session_events catalog view
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ac3c2bd13b5f89ea8d87336e579e196e3754c5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b15a38ac2b0bc18d1c0bcf101d0636436ffce111
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133227"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834021"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68133227"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
 |event_id|**int**|A ID do evento. Essa ID é exclusiva dentro de um objeto de sessão de evento. Não permite valor nulo.|  
-|name|**sysname**|O nome do evento. Não permite valor nulo.|  
+|Nome|**sysname**|O nome do evento. Não permite valor nulo.|  
 |pacote|**sysname**|O nome do pacote de eventos que contém um evento. Não permite valor nulo.|  
 |module|**sysname**|O nome do módulo que contém o evento. Não permite valor nulo.|  
 |predicate|**nvarchar (3000)**|A expressão de predicado que é aplicada ao evento. Permite valor nulo.|  

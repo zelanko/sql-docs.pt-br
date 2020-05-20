@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124077"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833215"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_get_query_template
  É um parâmetro de saída do tipo **nvarchar (max)**, fornecido conforme indicado, para receber a forma parametrizada de *query_text* como um literal de cadeia de caracteres.  
   
  @parameters  
- É um parâmetro de saída do tipo **nvarchar (max)**, fornecido conforme indicado, para receber um literal de cadeia de caracteres dos nomes de parâmetro e tipos de dados que @templatetextforam parametrizados no.  
+ É um parâmetro de saída do tipo **nvarchar (max)**, fornecido conforme indicado, para receber um literal de cadeia de caracteres dos nomes de parâmetro e tipos de dados que foram parametrizados no @templatetext .  
   
 ## <a name="remarks"></a>Comentários  
  sp_get_query_template retorna um erro quando ocorre o seguinte:  
@@ -58,7 +58,7 @@ sp_get_query_template
   
 -   *query_text* é NULL, não é uma cadeia de caracteres Unicode, sintaticamente inválida ou não pode ser compilada.  
   
- Se sp_get_query_template retornar um erro, ele não modificará os valores dos parâmetros @templatetext de @parameters saída e.  
+ Se sp_get_query_template retornar um erro, ele não modificará os valores dos @templatetext parâmetros de @parameters saída e.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função pública do banco de dados.  

@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.stats catalog view
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d81d0447558f964839b8849fe141f127fe1e37c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c6d5a67293cd03bc7d20150bbff177b0391113c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982142"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833926"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contém uma linha para cada objeto de estatística que existe para as tabelas, índices e exibições indexadas no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada índice terá uma linha de estatísticas correspondente com o mesmo nome e ID (**index_id** = **stats_id**), mas nem todas as linhas de estatísticas têm um índice correspondente.  
+  Contém uma linha para cada objeto de estatística que existe para as tabelas, índices e exibições indexadas no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada índice terá uma linha de estatísticas correspondente com o mesmo nome e ID (**index_id**  =  **stats_id**), mas nem todas as linhas de estatísticas têm um índice correspondente.  
   
  A exibição de catálogo [Sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) fornece informações de estatísticas para cada coluna no banco de dados. Para obter mais informações sobre estatísticas, consulte [estatísticas](../../relational-databases/statistics/statistics.md).  
   

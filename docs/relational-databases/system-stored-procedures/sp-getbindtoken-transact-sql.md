@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dca4015832f8bebf5501c4b3a7e84339bf62957b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124000"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833185"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@out_token=] '*return_value*'  
+ [ @out_token =] '*return_value*'  
  É o token a ser usado para associar sessões. *return_value* é **varchar (255)** sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ Não  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhum  
@@ -65,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Quando sp_getbindtoken é usado para inscrever uma conexão de transação distribuída dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uma transação aberta, retorna o mesmo token. Por exemplo:  
+ Quando sp_getbindtoken é usado para inscrever uma conexão de transação distribuída dentro de uma transação aberta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna o mesmo token. Por exemplo:  
   
 ```  
 USE AdventureWorks2012;  
@@ -97,7 +97,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 (1 row(s_) affected)  
 ```  
   
- O token de associação pode ser usado com sp_bindsession para associar novas sessões à mesma transação. O token de associação só é válido localmente dentro de cada instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] do e não pode ser compartilhado entre várias instâncias.  
+ O token de associação pode ser usado com sp_bindsession para associar novas sessões à mesma transação. O token de associação só é válido localmente dentro de cada instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e não pode ser compartilhado entre várias instâncias.  
   
  Para obter e passar um token de associação, você deve executar sp_getbindtoken antes de sp_bindsession para compartilhar o mesmo espaço de bloqueio. Se você obtiver um token de associação, sp_bindsession será executado corretamente.  
   

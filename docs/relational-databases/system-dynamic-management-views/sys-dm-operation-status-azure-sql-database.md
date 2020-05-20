@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911206"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833748"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Banco de Dados SQL do Azure)
 
@@ -54,7 +54,7 @@ ms.locfileid: "70911206"
  Essa exibição só está disponível no banco de dados **mestre** para o logon da entidade de segurança no nível do servidor.  
   
 ## <a name="remarks"></a>Comentários  
- Para usar essa exibição, você deve estar conectado ao banco de dados **mestre** . Use a `sys.dm_operation_status` exibição no banco de dados **mestre** do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor para acompanhar o status das seguintes operações executadas em um [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
+ Para usar essa exibição, você deve estar conectado ao banco de dados **mestre** . Use a `sys.dm_operation_status` exibição no banco de dados **mestre** do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor para acompanhar o status das seguintes operações executadas em um [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Criar banco de dados  
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084760"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833096"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabelas de aplicativo da camada de dados – sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "68084760"
 |**sequence_id**|**int**|Identifica uma etapa dentro de uma ação.|  
 |**instance_id**|**uniqueidentifier**|Identificador da instância do DAC. Esta coluna pode ser unida na coluna **instance_id** em [dbo. sysdac_instances &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Identificador do tipo da ação:<br /><br /> **0** = implantar<br /><br /> **1** = criar<br /><br /> **2** = renomear<br /><br /> **3** = desanexar<br /><br /> **4** = excluir|  
-|**action_type_name**|**varchar (19)**|Nome do tipo de ação.<br /><br /> **instalação**<br /><br /> **criada**<br /><br /> **rename**<br /><br /> **remover**<br /><br /> **delete**|  
+|**action_type_name**|**varchar (19)**|Nome do tipo de ação.<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **remover**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Identificador do tipo de objeto afetado pela ação:<br /><br /> **0** = dacpac<br /><br /> **1** = logon<br /><br /> **2** = banco de dados|  
 |**dac_object_type_name**|**varchar (8)**|Nome do tipo de objeto afetado pela ação:<br /><br /> **dacpac** = instância DAC<br /><br /> **entrar**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Código que identifica o status atual da ação:<br /><br /> **0** = pendente<br /><br /> **1** = êxito<br /><br /> **2** = falha|  
-|**action_status_name**|**varchar (11)**|Status atual da ação:<br /><br /> **pendente**<br /><br /> **êxito**<br /><br /> **recuperação**|  
-|**Necessário**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
+|**action_status_name**|**varchar (11)**|Status atual da ação:<br /><br /> **pending**<br /><br /> **êxito**<br /><br /> **recuperação**|  
+|**Necessária**|**bit**|Usada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao reverter uma operação de DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nome do objeto antes que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**dac_object_name_posttran**|**sysname**|Nome do objeto depois que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] que implementa uma ação em um banco de dados ou logon.|  
@@ -74,7 +74,7 @@ WHERE instance_id NOT IN
  A exclusão das linhas dos DACs ativos não impacta as operações DAC; o único impacto é que você não conseguirá reportar o histórico completo do DAC.  
   
 > [!NOTE]  
->  No momento, não há nenhum mecanismo para excluir **sysdac_history_internal** linhas [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+>  No momento, não há nenhum mecanismo para excluir **sysdac_history_internal** linhas [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de servidor fixa sysadmin. O acesso somente leitura a essa exibição está disponível para todos os usuários com permissões para se conectar ao banco de dados mestre.  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e85eb432123c30338b15528edcb7c301e2dc458b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123985"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833173"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna informações sobre o mapeamento padrão para o tipo de dados especificado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre o e um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS (sistema de gerenciamento não de banco de dados). Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
+  Retorna informações sobre o mapeamento padrão para o tipo de dados especificado entre o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS (sistema de gerenciamento não de banco de dados). Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,7 +101,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_getdefaultdatatypemapping** é usado em todos os tipos de replicação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre o e um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não DBMS.  
+ **sp_getdefaultdatatypemapping** é usado em todos os tipos de replicação entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o e um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
  **sp_getdefaultdatatypemapping** retorna o tipo de dados de destino padrão que é a correspondência mais próxima ao tipo de dados de origem especificado.  
   

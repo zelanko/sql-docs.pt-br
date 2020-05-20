@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf49c44ca3de4325c8d5c6ecab22adc3ac0614cf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962410"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833621"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,12 +66,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**0** (padrão)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assinante|  
+|**0** (padrão)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assinante|  
 |**1**|Servidor de fontes de dados ODBC|  
 |**2**|Banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet |  
 |**3**|Provedor OLE DB|  
   
-`[ @login = ] 'login'`É a ID de logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para autenticação. *login* é **sysname**, com um padrão de NULL.  
+`[ @login = ] 'login'`É a ID de logon para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *login* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada por assinatura durante a execução de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
@@ -105,8 +105,8 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob demanda|  
-|**4**|Diário|  
-|**8**|Semanal|  
+|**4**|Diariamente|  
+|**8**|Semanalmente|  
 |**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64** (padrão)|Iniciar automaticamente|  
@@ -177,7 +177,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @description = ] 'description'`É uma descrição de texto do Assinante. a *Descrição* é **nvarchar (255)**, com um padrão de NULL.  
   
-`[ @security_mode = ] security_mode`É o modo de segurança implementado. *security_mode* é **int**, com um padrão de 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação. **1** especifica a autenticação do Windows.  
+`[ @security_mode = ] security_mode`É o modo de segurança implementado. *security_mode* é **int**, com um padrão de 1. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. **1** especifica a autenticação do Windows.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada por assinatura durante a execução de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
@@ -187,7 +187,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser usado ao publicar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de um Publicador.  
+>  o *Publicador* não deve ser usado ao publicar a partir de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084838"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832511"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,41 +53,41 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @name=] '*Name*'  
+ [ @name =] '*nome*'  
  O nome do operador a ser modificado. o *nome* é **sysname**, sem padrão.  
   
- [ @new_name=] '*new_name*'  
+ [ @new_name =] '*new_name*'  
  O novo nome do operador. Esse nome deve ser exclusivo. *new_name* é **sysname**, com um padrão de NULL.  
   
- [ @enabled=] *habilitado*  
+ [ @enabled =] *habilitado*  
  Um número que indica o status atual do operador (**1** se estiver habilitado no momento, **0** se não). *habilitado* é **tinyint**, com um padrão de NULL. Se não estiver habilitado, um operador não receberá notificações de alerta.  
   
- [ @email_address=] '*email_address*'  
+ [ @email_address =] '*email_address*'  
  O endereço de email do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *email_address* é **nvarchar (100)**, com um padrão de NULL.  
   
- [ @pager_address=] '*pager_number*'  
+ [ @pager_address =] '*pager_number*'  
  O endereço de pager do operador. Essa cadeia de caracteres é passada diretamente para o sistema de email. *pager_number* é **nvarchar (100)**, com um padrão de NULL.  
   
- [ @weekday_pager_start_time=] *weekday_pager_start_time*  
+ [ @weekday_pager_start_time =] *weekday_pager_start_time*  
  Especifica a hora depois da qual uma notificação de pager pode ser enviada a esse operador, de segunda-feira a sexta-feira. *weekday_pager_start_time*é **int**, com um padrão de NULL e deve ser inserido no formato HHMMSS para uso com um relógio de 24 horas.  
   
- [ @weekday_pager_end_time=] *weekday_pager_end_time*  
+ [ @weekday_pager_end_time =] *weekday_pager_end_time*  
  Especifica a hora depois da qual uma notificação de pager não pode ser enviada ao operador especificado, de segunda-feira a sexta-feira. *weekday_pager_end_time*é **int**, com um padrão de NULL e deve ser inserido no formato HHMMSS para uso com um relógio de 24 horas.  
   
- [ @saturday_pager_start_time=] *saturday_pager_start_time*  
+ [ @saturday_pager_start_time =] *saturday_pager_start_time*  
  Especifica a hora depois da qual uma notificação de pager pode ser enviada ao operador aos sábados. *saturday_pager_start_time*é **int**, com um padrão de NULL e deve ser inserido no formato HHMMSS para uso com um relógio de 24 horas.  
   
- [ @saturday_pager_end_time=] *saturday_pager_end_time*  
+ [ @saturday_pager_end_time =] *saturday_pager_end_time*  
  Especifica a hora depois da qual uma notificação de pager não pode ser enviada ao operador aos sábados. *saturday_pager_end_time*é **int**, com um padrão de NULL e deve ser inserido no formato HHMMSS para uso com um relógio de 24 horas.  
   
- [ @sunday_pager_start_time=] *sunday_pager_start_time*  
+ [ @sunday_pager_start_time =] *sunday_pager_start_time*  
  Especifica a hora depois da qual uma notificação de pager pode ser enviada ao operador aos domingos. *sunday_pager_start_time*é **int**, com um padrão de NULL e deve ser inserido no formato HHMMSS para uso com um relógio de 24 horas.  
   
- [ @sunday_pager_end_time=] *sunday_pager_end_time*  
+ [ @sunday_pager_end_time =] *sunday_pager_end_time*  
  Especifica a hora depois da qual uma notificação de pager não pode ser enviada ao operador aos domingos. *sunday_pager_end_time*é **int**, com um padrão de NULL e deve ser inserido no formato HHMMSS para uso com um relógio de 24 horas.  
   
- [ @pager_days=] *pager_days*  
- Especifica os dias em que o operador está disponível para receber páginas (sujeitos aos horários de início/término especificados). *pager_days*é **tinyint**, com um padrão de NULL, e deve ser um valor de **0** a **127**. *pager_days* é calculado adicionando os valores individuais para os dias necessários. Por exemplo, de segunda a sexta-feira é **2**+**4**+**8**+**16**+**32** = **64**.  
+ [ @pager_days =] *pager_days*  
+ Especifica os dias em que o operador está disponível para receber páginas (sujeitos aos horários de início/término especificados). *pager_days*é **tinyint**, com um padrão de NULL, e deve ser um valor de **0** a **127**. *pager_days* é calculado adicionando os valores individuais para os dias necessários. Por exemplo, de segunda a sexta-feira é **2** + **4** + **8** + **16** + **32**  =  **64**.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -99,10 +99,10 @@ sp_update_operator
 |**32**|Friday|  
 |**64**|Sábado|  
   
- [ @netsend_address=] '*netsend_address*'  
+ [ @netsend_address =] '*netsend_address*'  
  O endereço de rede do operador para o qual a mensagem de rede é enviada. *netsend_address*é **nvarchar (100)**, com um padrão de NULL.  
   
- [ @category_name=] '*Category*'  
+ [ @category_name =] '*categoria*'  
  O nome da categoria para este alerta. a *categoria* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

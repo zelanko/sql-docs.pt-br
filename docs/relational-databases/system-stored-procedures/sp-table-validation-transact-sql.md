@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173554"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834197"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @rowcount_only = ] type_of_check_requested`Especifica o tipo de soma de verificação ou o número de linhas a ser executado. *type_of_check_requested* é **smallint**, com um padrão de **1**.  
   
- Se **0**, execute um número de linhas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma soma de verificação compatível com 7,0.  
+ Se **0**, execute um número de linhas e uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soma de verificação compatível com 7,0.  
   
  Se **1**, execute apenas uma verificação de número de linhas.  
   
@@ -71,7 +71,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent`Se o Agente de Distribuição estiver executando **sp_table_validation**, especifica se o agente de distribuição deve desligar imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se for **0**, o agente de replicação não será desligado. Se **1**, o erro 20578 é gerado e o agente de replicação é sinalizado para desligar. Esse parâmetro é ignorado quando **sp_table_validation** é executado diretamente por um usuário.  
   
-`[ @table_name = ] table_name`É o nome da tabela do modo de exibição usado para mensagens de saída. *table_name* é **sysname**, com um padrão de ** \@Table**.  
+`[ @table_name = ] table_name`É o nome da tabela do modo de exibição usado para mensagens de saída. *table_name* é **sysname**, com um padrão de ** \@ Table**.  
   
 `[ @column_list = ] 'column_list'`É a lista de colunas que devem ser usadas na função de soma de verificação. *column_list* é **nvarchar (4000)**, com um padrão de NULL. Habilita validação de artigos de mesclagem para especificar uma lista de colunas que exclui colunas computadas e colunas de carimbo de data e hora.  
   
@@ -87,7 +87,7 @@ sp_table_validation [ @table = ] 'table'
   
  Ao efetuar uma soma de verificação, a estrutura da tabela deve ser idêntica entre os dois servidores; ou seja, as tabelas devem ter as mesmas colunas, na mesma ordem, o mesmo tipo de dados e comprimentos e as mesmas condições NULL/NOT NULL. Por exemplo, se o Publicador tiver executado um CREATE TABLE, depois um ALTER TABLE para adicionar colunas, mas o script aplicado ao Assinante for uma simples tabela CREATE, a estrutura não será a mesma. Se você não tiver certeza de que a estrutura das duas tabelas é idêntica, examine [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) e confirme se o deslocamento em cada tabela é o mesmo.  
   
- Os valores de ponto flutuante provavelmente gerarão diferenças de soma de verificação se o **bcp** de modo de caractere tiver sido usado, que é o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caso se a publicação tiver Assinantes não. Isso se deve a diferenças menores e inevitáveis na precisão ao efetuar conversão para e do modo de caractere.  
+ Os valores de ponto flutuante provavelmente gerarão diferenças de soma de verificação se o **bcp** de modo de caractere tiver sido usado, que é o caso se a publicação tiver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não. Isso se deve a diferenças menores e inevitáveis na precisão ao efetuar conversão para e do modo de caractere.  
   
 ## <a name="permissions"></a>Permissões  
  Para executar **sp_table_validation**, você deve ter permissões SELECT na tabela que está sendo validada.  

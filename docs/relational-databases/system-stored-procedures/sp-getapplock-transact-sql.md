@@ -16,15 +16,15 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72717256"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833213"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @Resource= ] '*resource_name*'  
+ [ @Resource =] '*resource_name*'  
  É uma cadeia de caracteres especificando um nome que identifica o recurso de bloqueio. O aplicativo deve garantir que o nome do recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* é **nvarchar (255)** sem padrão. Se uma cadeia de caracteres de recurso for maior que **nvarchar (255)**, ela será truncada para **nvarchar (255)**.  
   
  *resource_name* é uma comparação binária e, portanto, diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento do banco de dados atual.  
@@ -54,16 +54,16 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 > [!NOTE]  
 >  Depois que um bloqueio de aplicativo for adquirido, somente os primeiros 32 caracteres poderão ser recuperados em texto não criptografado, o restante será em modo hash.  
   
- [ @LockMode= ] '*lock_mode*'  
+ [ @LockMode =] '*lock_mode*'  
  É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **Shared**, **Update**, **IntentShared**, **IntentExclusive**ou **Exclusive**. Para obter mais informações, consulte [modos de bloqueio](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
- [ @LockOwner= ] '*lock_owner*'  
+ [ @LockOwner =] '*lock_owner*'  
  É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o valor de *lock_owner* é **transação**, por padrão ou especificado explicitamente, sp_getapplock deve ser executado de dentro de uma transação.  
   
- [ @LockTimeout= ] '*valor*'  
- É um valor de tempo limite de bloqueio em milissegundos. O valor padrão é o mesmo que o valor retornado por @@LOCK_TIMEOUT. Para indicar que uma solicitação de bloqueio deve retornar um código de retorno de-1 em vez de aguardar o bloqueio quando a solicitação não puder ser concedida imediatamente, especifique 0.  
+ [ @LockTimeout =] '*valor*'  
+ É um valor de tempo limite de bloqueio em milissegundos. O valor padrão é o mesmo que o valor retornado por @ @LOCK_TIMEOUT . Para indicar que uma solicitação de bloqueio deve retornar um código de retorno de-1 em vez de aguardar o bloqueio quando a solicitação não puder ser concedida imediatamente, especifique 0.  
   
- [ @DbPrincipal= ] '*database_principal*'  
+ [ @DbPrincipal =] '*database_principal*'  
  É o usuário, função ou função de aplicativo que tem permissões para um objeto em um banco de dados. O chamador da função deve ser um membro de *database_principal*, dbo ou a função de banco de dados fixa db_owner para chamar a função com êxito. O padrão é público.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

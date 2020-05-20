@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_pkeys
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ed0e041a6aa36027613059f16f3902bdb664aeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 999b630a90f6413a1442bd8719e7714071f3cf14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056417"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832579"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,19 +42,19 @@ sp_pkeys [ @table_name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @table_name= ] '*Name*'  
+ [ @table_name =] '*nome*'  
  É a tabela para a qual retornar informações. o *nome* é **sysname**, sem padrão. Não há suporte para a correspondência de padrão curinga.  
   
- [ @table_owner= ] '*proprietário*'  
+ [ @table_owner =] '*proprietário*'  
  Especifica o proprietário da tabela especificada. *Owner* é **sysname**, com um padrão de NULL. Não há suporte para a correspondência de padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de tabela padrão do DBMS subjacente se aplicarão.  
   
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o *proprietário* não for especificado e o usuário atual não possuir uma tabela com o *nome*especificado, esse procedimento procurará uma tabela com o *nome* especificado de Propriedade do proprietário do banco de dados. Caso exista, as colunas dessa tabela serão retornadas.  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o *proprietário* não for especificado e o usuário atual não possuir uma tabela com o *nome*especificado, esse procedimento procurará uma tabela com o *nome* especificado de Propriedade do proprietário do banco de dados. Caso exista, as colunas dessa tabela serão retornadas.  
   
- [ @table_qualifier= ] '*qualificador*'  
+ [ @table_qualifier =] '*qualificador*'  
  É o qualificador da tabela. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ Não  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -62,8 +62,8 @@ sp_pkeys [ @table_name = ] 'name'
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Nome do qualificador da tabela. Esse campo pode ser NULL.|  
 |TABLE_OWNER|**sysname**|Nome do proprietário da tabela. Esse campo sempre retorna um valor.|  
-|TABLE_NAME|**sysname**|Nome da tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome da tabela, conforme listado na tabela sysobjects. Esse campo sempre retorna um valor.|  
-|COLUMN_NAME|**sysname**|Nome da coluna, para cada coluna de TABLE_NAME retornado. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome da coluna, conforme listado na tabela sys. Columns. Esse campo sempre retorna um valor.|  
+|TABLE_NAME|**sysname**|Nome da tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , essa coluna representa o nome da tabela, conforme listado na tabela sysobjects. Esse campo sempre retorna um valor.|  
+|COLUMN_NAME|**sysname**|Nome da coluna, para cada coluna de TABLE_NAME retornado. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , essa coluna representa o nome da coluna, conforme listado na tabela sys. Columns. Esse campo sempre retorna um valor.|  
 |KEY_SEQ|**smallint**|Número de sequência da coluna em uma chave primária de várias colunas.|  
 |PK_NAME|**sysname**|Identificador da chave primária. Retorna NULL se não for aplicável à fonte de dados.|  
   

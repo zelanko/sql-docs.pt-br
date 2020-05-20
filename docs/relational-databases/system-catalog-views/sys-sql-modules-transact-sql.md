@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_modules catalog view
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11c4b17c786506f3cad456a766fa6b0394ef3e72
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108994"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833929"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna uma linha para cada objeto que é um módulo definido pela linguagem SQL no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo a função escalar definida pelo usuário e compilada nativamente. Objetos de tipo P, RF, V, TR, FN, IF, TF e R têm um módulo SQL associado. Padrões autônomos, objetos de tipo D, também têm uma definição de módulo SQL nessa exibição. Para obter uma descrição desses tipos, consulte a coluna **Type** na exibição do catálogo [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
+  Retorna uma linha para cada objeto que é um módulo definido pela linguagem SQL no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluindo a função escalar definida pelo usuário e compilada nativamente. Objetos de tipo P, RF, V, TR, FN, IF, TF e R têm um módulo SQL associado. Padrões autônomos, objetos de tipo D, também têm uma definição de módulo SQL nessa exibição. Para obter uma descrição desses tipos, consulte a coluna **Type** na exibição do catálogo [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
   
  Para obter mais informações, consulte [Funções escalares definidas pelo usuário para OLTP in-memory](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68108994"
 |**uses_database_collation**|**bit**|1 = A definição de módulo associada a esquema depende do agrupamento padrão do banco de dados para avaliação correta; caso contrário, 0. Essa dependência impede a alteração do agrupamento padrão do banco de dados.|  
 |**is_recompiled**|**bit**|O procedimento foi criado com a opção recompile.|  
 |**null_on_null_input**|**bit**|O módulo foi declarado para produzir uma saída NULL em qualquer entrada NULL.|  
-|**execute_as_principal_id**|**Int**|A identificação do principal de banco de dados EXECUTE AS.<br /><br /> NULL por padrão ou se EXECUTE AS CALLER.<br /><br /> ID da entidade de segurança especificada se executar como SELF ou EXECUTE \<as> principal.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**Int**|A identificação do principal de banco de dados EXECUTE AS.<br /><br /> NULL por padrão ou se EXECUTE AS CALLER.<br /><br /> ID da entidade de segurança especificada se executar como SELF ou EXECUTE AS \<> principal.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = não compilado originalmente<br /><br /> 1 = é compilado originalmente<br /><br /> O valor padrão é 0.|  
 |**is_inlineable**|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] e posterior.<br/><br />Indica se o módulo é inlineável ou não. A inlineização se baseia nas condições especificadas [aqui](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = não embutido<br /><br /> 1 = é inlineável. <br /><br /> Para UDFs escalares, o valor será 1 se o UDF for inlineável e 0 caso contrário. Ele sempre contém um valor de 1 para TVFs embutido e 0 para todos os outros tipos de módulo.<br />|  
 |**inline_type**|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] e posterior.<br /><br />Indica se a inalinhamento está ativada para o módulo no momento. <br /><br />0 = a inalinhamento está desativada<br /><br /> 1 = a inalinhamento está ativada.<br /><br /> Para UDFs escalares, o valor será 1 se o inlining estiver ativado (explicitamente ou implicitamente). O valor sempre será 1 para TVFs embutidos e 0 para outros tipos de módulo.<br />|  

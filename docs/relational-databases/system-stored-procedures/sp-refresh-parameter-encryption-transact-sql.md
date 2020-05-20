@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002467"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833126"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Argumentos
 
-`[ @name = ] 'module_name'`É o nome do procedimento armazenado, a função definida pelo usuário, a exibição, o gatilho DML, o gatilho DDL no nível do banco de dados ou o gatilho DDL no nível do servidor. *module_name* não pode ser um procedimento armazenado Common Language Runtime (CLR) ou uma função CLR. *module_name* não pode ser associado a esquema. *module_name* é `nvarchar`, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.
+`[ @name = ] 'module_name'`É o nome do procedimento armazenado, a função definida pelo usuário, a exibição, o gatilho DML, o gatilho DDL no nível do banco de dados ou o gatilho DDL no nível do servidor. *module_name* não pode ser um procedimento armazenado Common Language Runtime (CLR) ou uma função CLR. *module_name* não pode ser associado a esquema. *module_name* é `nvarchar` , sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.
 
-`[ @namespace = ] ' < class > '`É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, `<class>` é necessário. `<class>` é `nvarchar(20)`. As entradas `DATABASE_DDL_TRIGGER` válidas `SERVER_DDL_TRIGGER`são e.    
+`[ @namespace = ] ' < class > '`É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, `<class>` é necessário. `<class>` é `nvarchar(20)`. As entradas válidas são `DATABASE_DDL_TRIGGER` e `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Valores do código de retorno  
 
@@ -61,28 +61,28 @@ Os metadados de criptografia para parâmetros de um módulo podem ficar desatual
 * As propriedades de criptografia de uma coluna em uma tabela que o módulo referencia, foram atualizadas. Por exemplo, uma coluna foi descartada e uma nova coluna com o mesmo nome, mas um tipo de criptografia diferente, uma chave de criptografia ou um algoritmo de criptografia foi adicionado.  
 * O módulo faz referência a outro módulo com metadados de criptografia de parâmetro desatualizados.  
 
-Quando as propriedades de criptografia de uma tabela são `sp_refresh_parameter_encryption` modificadas, devem ser executadas para qualquer módulo que referencie diretamente ou indiretamente a tabela. Esse procedimento armazenado pode ser chamado nesses módulos em qualquer ordem, sem exigir que o usuário atualize primeiro o módulo interno antes de passar para seus chamadores.
+Quando as propriedades de criptografia de uma tabela são modificadas, `sp_refresh_parameter_encryption` devem ser executadas para qualquer módulo que referencie diretamente ou indiretamente a tabela. Esse procedimento armazenado pode ser chamado nesses módulos em qualquer ordem, sem exigir que o usuário atualize primeiro o módulo interno antes de passar para seus chamadores.
 
 `sp_refresh_parameter_encryption`não afeta nenhuma permissão, propriedades estendidas ou `SET` opções associadas ao objeto. 
 
 Para atualizar um gatilho DDL de nível de servidor, execute este procedimento armazenado a partir do contexto de qualquer banco de dados.
 
 > [!NOTE]
->  Todas as assinaturas associadas ao objeto são descartadas quando você executa `sp_refresh_parameter_encryption`o.
+>  Todas as assinaturas associadas ao objeto são descartadas quando você executa o `sp_refresh_parameter_encryption` .
 
 ## <a name="permissions"></a>Permissões
 
-Requer `ALTER` a permissão no módulo e `REFERENCES` a permissão em qualquer tipo CLR definido pelo usuário e em coleções de esquema XML que são referenciadas pelo objeto.   
+Requer `ALTER` a permissão no módulo e a `REFERENCES` permissão em qualquer tipo CLR definido pelo usuário e em coleções de esquema XML que são referenciadas pelo objeto.   
 
-Quando o módulo especificado é um gatilho DDL de nível de banco de `ALTER ANY DATABASE DDL TRIGGER` dados, o requer permissão no banco de dados atual.    
+Quando o módulo especificado é um gatilho DDL de nível de banco de dados, o requer `ALTER ANY DATABASE DDL TRIGGER` permissão no banco de dados atual.    
 
-Quando o módulo especificado é um gatilho DDL de nível de servidor, `CONTROL SERVER` o requer permissão.
+Quando o módulo especificado é um gatilho DDL de nível de servidor, o requer `CONTROL SERVER` permissão.
 
-Para módulos que são definidos com a `EXECUTE AS` cláusula, `IMPERSONATE` a permissão é necessária na entidade de segurança especificada. Geralmente, a atualização de um objeto não altera `EXECUTE AS` sua entidade de segurança, a menos que `EXECUTE AS USER` o módulo tenha sido definido com e o nome de usuário da entidade de segurança agora seja resolvido para um usuário diferente do que fazia no momento em que o módulo foi criado.
+Para módulos que são definidos com a `EXECUTE AS` cláusula, a `IMPERSONATE` permissão é necessária na entidade de segurança especificada. Geralmente, a atualização de um objeto não altera sua `EXECUTE AS` entidade de segurança, a menos que o módulo tenha sido definido com `EXECUTE AS USER` e o nome de usuário da entidade de segurança agora seja resolvido para um usuário diferente do que fazia no momento em que o módulo foi criado.
  
 ## <a name="examples"></a>Exemplos
 
-O exemplo a seguir cria uma tabela e um procedimento que referencia a tabela, configura Always Encrypted e, em seguida, demonstra a alteração da tabela e `sp_refresh_parameter_encryption` a execução do procedimento.  
+O exemplo a seguir cria uma tabela e um procedimento que referencia a tabela, configura Always Encrypted e, em seguida, demonstra a alteração da tabela e a execução do `sp_refresh_parameter_encryption` procedimento.  
 
 Primeiro, crie a tabela inicial e um procedimento armazenado referenciando a tabela.
 ```sql

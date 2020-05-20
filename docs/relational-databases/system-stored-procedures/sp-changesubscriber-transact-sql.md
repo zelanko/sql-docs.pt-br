@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762777"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833386"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="arguments"></a>Argumentos  
 `[ @subscriber = ] 'subscriber'`É o nome do Assinante no qual as opções serão alteradas. o *assinante* é **sysname**, sem padrão.  
   
-`[ @type = ] type`É o tipo de assinante. o *tipo* é **tinyint**, com um padrão de NULL. **0** indica um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante. **1** especifica um assinante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de servidor de fonte de dados ODBC não ou outro.  
+`[ @type = ] type`É o tipo de assinante. o *tipo* é **tinyint**, com um padrão de NULL. **0** indica um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante. **1** especifica um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante de servidor de fonte de dados ODBC não ou outro.  
   
 `[ @login = ] 'login'`É a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de logon de autenticação. *login* é **sysname**, com um padrão de NULL.  
   
-`[ @password = ] 'password'`É a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senha de autenticação. a *senha* é **sysname**, com um padrão **%** de. **%** indica que não há nenhuma alteração na propriedade password.  
+`[ @password = ] 'password'`É a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senha de autenticação. a *senha* é **sysname**, com um padrão de **%** . **%** indica que não há nenhuma alteração na propriedade password.  
   
 `[ @commit_batch_size = ] commit_batch_size`Com suporte apenas para compatibilidade com versões anteriores.  
   
@@ -76,8 +76,8 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob demanda|  
-|**4**|Diário|  
-|**8**|Semanal|  
+|**4**|Diariamente|  
+|**8**|Semanalmente|  
 |**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64**|Iniciar automaticamente|  
@@ -128,7 +128,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser usado ao alterar as propriedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do artigo em um Publicador.  
+>  o *Publicador* não deve ser usado ao alterar as propriedades do artigo em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

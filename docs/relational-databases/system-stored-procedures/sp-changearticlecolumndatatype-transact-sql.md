@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa069ffe0d4ce677542ac714b19475aa3930f290
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995520"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833437"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +53,11 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 `[ @column = ] 'column'`É o nome da coluna para a qual alterar o mapeamento de tipo de dados. a *coluna* é **sysname**, sem padrão.  
   
-`[ @type = ] 'type'`É o nome do tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados na coluna de destino. o *tipo* é **sysname**, com um padrão de NULL.  
+`[ @type = ] 'type'`É o nome do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. o *tipo* é **sysname**, com um padrão de NULL.  
   
-`[ @length = ] length`É o comprimento do tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados na coluna de destino. *Length* é **bigint**, com um padrão de NULL.  
+`[ @length = ] length`É o comprimento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. *Length* é **bigint**, com um padrão de NULL.  
   
-`[ @precision = ] precision`É a precisão do tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados na coluna de destino. a *precisão* é **bigint**, com um padrão de NULL.  
+`[ @precision = ] precision`É a precisão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. a *precisão* é **bigint**, com um padrão de NULL.  
   
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
@@ -65,7 +65,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **Sp_changearticlecolumndatatype** é usado para substituir os mapeamentos de tipo de dados padrão entre os tipos de Publicador com suporte (Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Para exibir esses mapeamentos de tipo de dados padrão, execute [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
+ **Sp_changearticlecolumndatatype** é usado para substituir os mapeamentos de tipo de dados padrão entre os tipos de Publicador com suporte (Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Para exibir esses mapeamentos de tipo de dados padrão, execute [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
  Só há suporte para **sp_changearticlecolumndatatype** para Publicadores Oracle. A execução desse procedimento armazenado em uma publicação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resulta em um erro.  
   

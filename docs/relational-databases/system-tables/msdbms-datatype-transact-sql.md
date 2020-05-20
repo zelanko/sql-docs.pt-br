@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdbms_datatype system table
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 301aa5af9aa34031f381235341f1e7d461675432
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 299272377d8bbc55781d671a94240d6c309877ec
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907508"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832320"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67907508"
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**int**|Identifica cada tipo de dados exclusivo.|  
 |**dbms_id**|**int**|Identifica o DBMS ao qual o tipo pertence.|  
-|**type**|**sysname**|Nome do tipo de dados (nativo).|  
+|**tipo**|**sysname**|Nome do tipo de dados (nativo).|  
 |**createparams**|**int**|Bitmap que descreve qual a combinação de comprimento, precisão e escala é aplicável a cada tipo de dados, incluindo:<br /><br /> **0x1** = precisão.<br /><br /> **0x2** = escala.<br /><br /> **0x4** = comprimento.|  
   
 ## <a name="remarks"></a>Comentários  

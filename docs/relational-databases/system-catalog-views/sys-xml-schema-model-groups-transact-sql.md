@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_model_groups catalog view
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 041b09d544d5301d42d929e29c7f42b3502e294b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 065d198d2de962918f74e92c9bbb038d7962d349
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060531"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833817"
 ---
 # <a name="sysxml_schema_model_groups-transact-sql"></a>sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68060531"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**\<colunas herdadas>**||Herda colunas de [Sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
-|**compositor**|**Char (1)**|Tipo de compositor do grupo:<br /><br /> A = XSD \<todos os> grupo<br /><br /> C = opção \<XSD> grupo<br /><br /> S = sequência \<XSD> grupo|  
+|**compositor**|**Char (1)**|Tipo de compositor do grupo:<br /><br /> A = XSD \< todos os> grupo<br /><br /> C = \< opção XSD> grupo<br /><br /> S = \< sequência XSD> grupo|  
 |**compositor_desc**|**nvarchar (60)**|Descrição de tipo de compositor do grupo:<br /><br /> XSD_ALL_GROUP<br /><br /> XSD_CHOICE_GROUP<br /><br /> XSD_SEQUENCE_GROUP|  
   
 ## <a name="permissions"></a>Permissões  
