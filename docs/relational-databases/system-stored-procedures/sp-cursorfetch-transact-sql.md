@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108508"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831757"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>Argumentos  
  *cursor*  
- É um valor de *identificador* gerado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por e retornado por sp_cursoropen. *cursor* é um parâmetro necessário que chama um valor de entrada **int** . Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.  
+ É um valor de *identificador* gerado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e retornado por sp_cursoropen. *cursor* é um parâmetro necessário que chama um valor de entrada **int** . Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.  
   
  *fetchtype*  
  Especifica o buffer de cursor a ser buscado. *fetchtype* é um parâmetro opcional que requer um dos seguintes valores de entrada de inteiro.  

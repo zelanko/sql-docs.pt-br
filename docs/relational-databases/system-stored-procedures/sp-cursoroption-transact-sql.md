@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108451"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831715"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ sp_cursoroption cursor, code, value
   
 ## <a name="arguments"></a>Argumentos  
  *cursor*  
- É um valor de *identificador* que é gerado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo e retornado pelo procedimento armazenado sp_cursoropen. o *cursor* requer um valor de entrada **int** para execução.  
+ É um valor de *identificador* que é gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e retornado pelo procedimento armazenado sp_cursoropen. o *cursor* requer um valor de entrada **int** para execução.  
   
  *code*  
  Usado para estipular vários fatores dos valores de retorno de cursor. o *código* requer um dos seguintes valores de entrada **int** :  
   
 |Valor|Nome|Descrição|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|Retorna o ponteiro de texto, e não os dados reais, para certos textos designados ou colunas de imagem.<br /><br /> TEXTPTR_ONLY permite que os ponteiros de texto sejam usados como *identificadores* para objetos de BLOB, que posteriormente podem ser [!INCLUDE[tsql](../../includes/tsql-md.md)] recuperados seletivamente ou atualizados [!INCLUDE[tsql](../../includes/tsql-md.md)] usando ou DBLIB instalações (por exemplo, READTEXT ou DBLIB dbwritetext).<br /><br /> Se um valor "0" for atribuído, todas as colunas de texto e imagem na lista selecionada retornarão ponteiros de texto, em vez de dados.|  
-|0x0002|CURSOR_NAME|Atribui o nome especificado em *valor* ao cursor. Isso, por sua vez, permite que o [!INCLUDE[tsql](../../includes/tsql-md.md)] ODBC use instruções UPDATE/DELETE posicionadas nos cursores abertos por meio de sp_cursoropen.<br /><br /> É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou Unicode.<br /><br /> Como [!INCLUDE[tsql](../../includes/tsql-md.md)] as instruções UPDATE/DELETE posicionadas operam, por padrão, na primeira linha em um cursor de fat, SP_CURSOR SETPOSITION deve ser usado para posicionar o cursor antes de emitir a instrução UPDATE/DELETE posicionada.|  
+|0x0001|TEXTPTR_ONLY|Retorna o ponteiro de texto, e não os dados reais, para certos textos designados ou colunas de imagem.<br /><br /> TEXTPTR_ONLY permite que os ponteiros de texto sejam usados como *identificadores* para objetos de BLOB, que posteriormente podem ser recuperados seletivamente ou atualizados usando [!INCLUDE[tsql](../../includes/tsql-md.md)] ou DBLIB instalações (por exemplo, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT ou DBLIB dbwritetext).<br /><br /> Se um valor "0" for atribuído, todas as colunas de texto e imagem na lista selecionada retornarão ponteiros de texto, em vez de dados.|  
+|0x0002|CURSOR_NAME|Atribui o nome especificado em *valor* ao cursor. Isso, por sua vez, permite que o ODBC use [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções UPDATE/DELETE posicionadas nos cursores abertos por meio de sp_cursoropen.<br /><br /> É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou Unicode.<br /><br /> Como as [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções UPDATE/DELETE posicionadas operam, por padrão, na primeira linha em um cursor de FAT, sp_cursor SETPOSITION deve ser usado para posicionar o cursor antes de emitir a instrução UPDATE/DELETE posicionada.|  
 |0x0003|TEXTDATA|Retorna os dados reais, não o ponteiro de texto, para certas colunas de texto ou imagem em buscas subsequentes (isto é, desfaz o efeito de TEXTPTR_ONLY).<br /><br /> Se TEXTDATA for habilitado para uma coluna específica, a linha será buscada novamente ou atualizada e poderá ser definida outra vez como TEXTPTR_ONLY. Assim como ocorre com TEXTPTR_ONLY, o parâmetro de valor é um inteiro que especifica o número da coluna e um valor de zero retorna todas as colunas de texto ou imagem.|  
 |0x0004|SCROLLOPT|Opção de rolagem. Consulte "Valores de códigos retornados" posteriormente neste tópico para obter informações adicionais.|  
 |0x0005|CCOPT|Opção de controle de simultaneidade. Consulte "Valores de códigos retornados" posteriormente neste tópico para obter informações adicionais.|  

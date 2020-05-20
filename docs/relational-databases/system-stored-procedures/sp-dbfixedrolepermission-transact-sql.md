@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbfixedrolepermission
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fe4c8864856ef9b324a5f44b4811cfff4e8de218
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180107"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831663"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Exibe as permissões de uma função de banco de dados fixa. **sp_dbfixedrolepermission** retorna informações corretas [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]no. A saída não reflete as alterações para a hierarquia de permissões que foram implementadas no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações, consulte [funções de nível de banco de dados](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), que mostram uma lista de funções de banco de dados fixas e suas permissões correspondentes.  
+  Exibe as permissões de uma função de banco de dados fixa. **sp_dbfixedrolepermission** retorna informações corretas no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . A saída não reflete as alterações para a hierarquia de permissões que foram implementadas no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obter mais informações, consulte [funções de nível de banco de dados](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), que mostram uma lista de funções de banco de dados fixas e suas permissões correspondentes.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -42,7 +42,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`É o nome de uma função [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de banco de dados fixa válida. *role* é **sysname**, com um padrão de NULL. Se a *função* não for especificada, as permissões para todas as funções de banco de dados fixas serão exibidas.  
+`[ @rolename = ] 'role'`É o nome de uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] função de banco de dados fixa válida. *role* é **sysname**, com um padrão de NULL. Se a *função* não for especificada, as permissões para todas as funções de banco de dados fixas serão exibidas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

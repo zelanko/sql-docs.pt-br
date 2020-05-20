@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b8ddf9753578f6d73cd6baf7511c73d90377e1a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108127"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831638"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  Se o período de atualização for definido muito baixo, o tempo de resposta poderá aumentar para clientes.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ Não  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhum  
@@ -55,7 +55,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>Comentários  
  Este procedimento requer aquele Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é permitido executar na instância de servidor e para executar, Agente deve estar executando para o trabalho de monitor de espelhamento de banco de dados.  
   
- Se o espelhamento de banco de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dados for iniciado no, o procedimento de **sp_dbmmonitoraddmonitoring** será executado automaticamente. Se você iniciar o espelhamento manualmente usando instruções ALTER DATABASE, para monitorar o banco de dados espelhado na instância do servidor, será necessário executar **sp_dbmmonitoraddmonitoring** manualmente.  
+ Se o espelhamento de banco de dados for iniciado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , o procedimento de **sp_dbmmonitoraddmonitoring** será executado automaticamente. Se você iniciar o espelhamento manualmente usando instruções ALTER DATABASE, para monitorar o banco de dados espelhado na instância do servidor, será necessário executar **sp_dbmmonitoraddmonitoring** manualmente.  
   
 > [!NOTE]  
 >  Se você executar **sp_dbmmonitoraddmonitoring** antes de configurar o espelhamento de banco de dados, o trabalho de monitoramento será executado, mas não atualizará a tabela de status na qual o histórico do monitor de espelhamento de banco de dados é armazenado.  

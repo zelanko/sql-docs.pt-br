@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2749e964b33179d5bf87ee6d464d251c14ee82d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c12e117682fe2e5286a6f4a1c650878ae0827010
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108146"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831620"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ sp_dbmmonitorchangealert database_name
 >  O período de retenção está sempre habilitado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ Não  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhum  
@@ -91,10 +91,10 @@ sp_dbmmonitorchangealert database_name
   
 |*alert_id*|Métrica de desempenho|Limite de aviso|O aviso está habilitado?|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
-|1|Transação não enviada mais antiga|30 minutos|Sim|  
-|2|Log não enviado|10.000 KB|Sim|  
-|3|Log não restaurado|10.000 KB|Sim|  
-|4|Sobrecarga espelhada confirmada|1.000 milissegundos|Não|  
+|1|Transação não enviada mais antiga|30 minutos|Yes|  
+|2|Log não enviado|10.000 KB|Yes|  
+|3|Log não restaurado|10.000 KB|Yes|  
+|4|Sobrecarga espelhada confirmada|1.000 milissegundos|No|  
 |5|Período de retenção|8 horas|Sim|  
   
 ```  

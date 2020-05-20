@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108480"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831752"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Assim como *scrollopt*com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollopt, o pode substituir os valores de *ccopt* solicitados.  
+ Assim como com o *scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o pode substituir os valores de *ccopt* solicitados.  
   
  *linhas*  
  O número de linhas do buffer de busca a serem usadas com AUTO_FETCH. O padrão é 20 linhas. o *número de linhas* se comporta de forma diferente quando atribuído como um valor de entrada versus um valor de retorno.  
@@ -154,7 +154,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  O conteúdo permitido do parâmetro *stmt* depende se o valor de retorno de ALLOW_DIRECT *ccopt* foi ou não vinculado por ou ao restante dos valores de *ccopt* , ou seja,:  
   
--   Se ALLOW_DIRECT não for especificado, será necessário [!INCLUDE[tsql](../../includes/tsql-md.md)] usar uma instrução SELECT ou execute chamando um procedimento armazenado que contenha uma única instrução SELECT. Além disso, a instrução SELECT deve estar qualificada como um cursor; ou seja, não pode conter as palavras-chave SELECT INTO ou FOR BROWSE.  
+-   Se ALLOW_DIRECT não for especificado, será [!INCLUDE[tsql](../../includes/tsql-md.md)] necessário usar uma instrução SELECT ou execute chamando um procedimento armazenado que contenha uma única instrução SELECT. Além disso, a instrução SELECT deve estar qualificada como um cursor; ou seja, não pode conter as palavras-chave SELECT INTO ou FOR BROWSE.  
   
 -   Se ALLOW_DIRECT for especificado, isso poderá resultar em uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], inclusive aquelas que, por sua vez, executam outros procedimentos armazenados com várias instruções. As instruções diferentes de SELECT ou qualquer instrução SELECT que contenha as palavras-chave SELECT INTO ou FOR BROWSE serão simplesmente executadas e não resultarão na criação de um cursor. O mesmo ocorre para qualquer instrução SELECT incluída em um lote de várias instruções. Nos casos em que uma instrução SELECT contém cláusulas que só pertencem a cursores, essas cláusulas são ignoradas. Por exemplo, quando o valor de *ccopt* é 0x2002, essa é uma solicitação para:  
   
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH e AUTO_CLOSE podem ser vinculados por OR a FAST_FORWARD.  
   
- Se CHECK_ACCEPTED_TYPES estiver ativado, pelo menos um dos últimos cinco valores de *scrollopt* (KEYSET_ACCEPTABLE`,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE ou FAST_FORWARD_ACCEPTABLE) também deverá estar ativado.  
+ Se CHECK_ACCEPTED_TYPES estiver ativado, pelo menos um dos últimos cinco valores de *scrollopt* (KEYSET_ACCEPTABLE `,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE ou FAST_FORWARD_ACCEPTABLE) também deverá estar ativado.  
   
  Os cursores STATIC são sempre abertos como READ_ONLY. Isso significa que a tabela subjacente não pode ser atualizada por meio desse cursor.  
   

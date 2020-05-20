@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_workload_groups catalog view
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 785062784aa465c438ab842a642d09cad03c799b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fac7eaf3916c773b86b59c6819d577fcc1b8a438
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982969"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831402"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "73982969"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ID exclusivo do grupo de carga de trabalho. Não permite valor nulo.|  
-|name|**sysname**|Nome do grupo de carga de trabalho. Não permite valor nulo.|  
+|Nome|**sysname**|Nome do grupo de carga de trabalho. Não permite valor nulo.|  
 |importance|**sysname**|**Observação:** A importância se aplica somente a grupos de carga de trabalho no mesmo pool de recursos.<br /><br /> É a importância relativa de uma solicitação no grupo de carga de trabalho. A importância é um dos seguintes, sendo que médio é o padrão: baixo, médio, alto.<br /><br /> Não permite valor nulo.|  
 |request_max_memory_grant_percent|**int**|Porcentagem máxima de concessão de memória para uma única solicitação. O valor padrão é 25. Não permite valor nulo.<br /><br /> **Observação:** Se essa configuração for maior que 50 por cento, as consultas grandes serão executadas uma de cada vez. Por isso, haverá maior risco de ser exibido o erro de falta de memória enquanto a consulta estiver sendo executada.|  
 |request_max_cpu_time_sec|**int**|Limite máximo de uso da CPU, em segundos, para uma única solicitação. O valor padrão, 0, não especifica nenhum limite. Não permite valor nulo.<br /><br /> **Observação:** Para obter mais informações, consulte [classe de evento limite de CPU excedido](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_events catalog view
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3613c3da1138a6ec17394a5b6615d78d0a941e56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9bf35753bbe72fef2211485ec723bfa42ba08eb7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133148"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831381"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68133148"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID da notificação de eventos no nível de servidor ou gatilho DDL no nível de servidor a serem acionados.|  
-|**type**|**int**|Tipo do evento que provoca o acionamento da notificação de eventos ou do gatilho DDL.|  
+|**tipo**|**int**|Tipo do evento que provoca o acionamento da notificação de eventos ou do gatilho DDL.|  
 |**type_desc**|**nvarchar(60)**|Descrição do evento que provoca o acionamento do gatilho DDL ou da notificação de eventos.|  
 |**event_group_type**|**int**|Grupo de eventos no qual o gatilho ou a notificação de eventos são criados, ou NULL quando não é criado em um grupo de eventos.|  
 |**event_group_type_desc**|**nvarchar(60)**|Descrição do grupo de eventos no qual o gatilho ou a notificação de eventos são criados, ou NULL quando não for criado em um grupo de eventos.|  

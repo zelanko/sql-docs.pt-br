@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165907"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831703"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -104,14 +104,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Assim como *scrollpt*com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollpt, o pode atribuir um valor diferente do solicitado.  
+ Assim como com o *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o pode atribuir um valor diferente do solicitado.  
   
 ## <a name="remarks"></a>Comentários  
  O parâmetro de status RPC é um dos seguintes:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0|Êxito|  
+|0|Sucesso|  
 |0x0001|Falha|  
 |1FF6|Não foi possível retornar metadados.<br /><br /> Observação: o motivo para isso é que a instrução não produz um conjunto de resultados; por exemplo, é uma instrução INSERT ou DDL.|  
   
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  Quando *stmt* é parametrizado e o valor de PARAMETERIZED_STMT *scrollopt* é on, o formato da cadeia de caracteres é o seguinte:  
   
- { * \<nome da variável local> *\<* tipo de dados>* } [ ,... *n* ]  
+ { * \< nome da variável local> * * \< tipo de dados>* } [,... *n* ]  
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_cursorexecute](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e4f5b003eccda5fdada81e49d2a1f5347591869
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769005"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831766"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_srvname**|**sysname**|Servidor onde a transação originou.|  
 |**originator_db**|**sysname**|Banco de dados onde a transação originou.|  
 |**article_id**|**int**|ID do artigo.|  
-|**type**|**int**|Tipo de comando.|  
+|**tipo**|**int**|Tipo de comando.|  
 |**partial_command**|**bit**|Indica se esse é um comando parcial ou não.|  
 |**hashkey**|**int**|Somente para uso interno.|  
 |**originator_publication_id**|**int**|ID da publicação de origem da transação.|  

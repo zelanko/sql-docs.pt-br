@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database compression [SQL Server]
 - table compression [SQL Server]
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108221"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831690"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @dbname= ] '*database_name*'  
+ [ @dbname =] '*database_name*'  
  É o nome do banco de dados para o qual o formato de armazenamento será alterado. *database_name* é **sysname**, sem padrão. Se o nome do banco de dados for omitido, os status do formato de armazenamento vardecimal de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão retornados.  
   
- [ @vardecimal_storage_format= ] {' ON ' | ' Desativado '}  
+ [ @vardecimal_storage_format =] {' On ' | ' Desativado '}  
  Especifica se o formato de armazenamento vardecimal está habilitado. @vardecimal_storage_format pode ser ON ou OFF. O parâmetro é **varchar (3)**, sem padrão. Se um nome de banco de dados for fornecido, mas o @vardecimal_storage_format for omitido, a configuração atual do banco de dados especificado será retornada. Esse argumento não tem nenhum efeito no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou em versões posteriores.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
