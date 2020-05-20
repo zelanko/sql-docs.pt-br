@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fe57e26392a2a01c7074d7d019baa20c4b9cb5f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770988"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815725"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @return_granted = ] 'return_granted'`É a ID de logon. *return_granted* é **bit**, com um padrão de 1. Se **0** for especificado e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação for usada, os logons disponíveis que aparecerem no Publicador, mas não no distribuidor serão retornados. Se **0** for especificado e a autenticação do Windows for usada, os logons não negados o acesso especificamente no Publicador ou distribuidor serão retornados.  
   
-`[ @login = ] 'login'`É a ID de logon de segurança padrão. o *logon* é **sysname**, com um padrão **%** de.  
+`[ @login = ] 'login'`É a ID de logon de segurança padrão. o *logon* é **sysname**, com um padrão de **%** .  
   
 `[ @initial_list = ] initial_list`Especifica se todos os membros com acesso à publicação devem ser retornados ou apenas aqueles que tinham acesso antes da adição de novos membros à lista. *initial_list* é bit, com um padrão de **0**.  
   

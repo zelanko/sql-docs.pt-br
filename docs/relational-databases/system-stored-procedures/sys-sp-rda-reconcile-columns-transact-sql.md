@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7ad2fd6c51f5b5463e4e4c10745b2ff245bd691d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8410cde58d5f6bcf6b2a48fcc7169210a41afe0a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083670"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814597"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \@objname = '*\@objname*'  
+ \@objname = '* \@ objname*'  
  O nome da tabela de SQL Server habilitada para Stretch.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d851461ae4cd07f3dd89e2cff4326d03e05a5d66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107927"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815232"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ProgID*  
+ *progid*  
  É o identificador programático (ProgID) do objeto OLE a ser criado. Essa cadeia de caracteres descreve a classe do objeto OLE e tem o formato: **'**_OLEComponent_**.** _Objeto_**'**  
   
  *OLEComponent* é o nome do componente do servidor de automação OLE e *Object* é o nome do objeto OLE. O objeto OLE especificado deve ser válido e deve dar suporte à interface **IDispatch** .  
@@ -65,7 +65,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Se não for especificado, o valor padrão será **5**. Esse valor é passado como o parâmetro *dwClsContext* da chamada para **CoCreateInstance**.  
   
- Se um servidor OLE em processo for permitido (usando um valor de contexto de **1** ou **5** ou não especificar um valor de contexto), ele terá acesso à memória e a outros recursos pertencentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ao. Um servidor OLE em processo pode danificar a memória ou os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e causar resultados imprevisíveis, como uma violação de acesso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se um servidor OLE em processo for permitido (usando um valor de contexto de **1** ou **5** ou não especificar um valor de contexto), ele terá acesso à memória e a outros recursos pertencentes ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um servidor OLE em processo pode danificar a memória ou os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e causar resultados imprevisíveis, como uma violação de acesso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Quando você especifica um valor de contexto de **4**, um servidor OLE local não tem acesso a nenhum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recurso e não pode danificar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memória ou recursos.  
   

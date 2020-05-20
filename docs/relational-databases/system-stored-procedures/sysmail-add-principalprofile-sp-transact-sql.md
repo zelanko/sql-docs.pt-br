@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305057"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814345"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- Para tornar um perfil público, especifique um ** \@principal_id** de **0** ou um ** \@principal_name** de **público**. Um perfil público está disponível para todos os usuários no banco de dados **msdb** , embora os usuários também devam ser membros de **DatabaseMailUserRole** para executar **sp_send_dbmail**.  
+ Para tornar um perfil público, especifique um ** \@ principal_id** de **0** ou um ** \@ principal_name** de **público**. Um perfil público está disponível para todos os usuários no banco de dados **msdb** , embora os usuários também devam ser membros de **DatabaseMailUserRole** para executar **sp_send_dbmail**.  
   
- Um usuário de banco de dados pode ter somente um perfil padrão. Quando ** \@is_default** for '**1**' e o usuário já estiver associado a um ou mais perfis, o perfil especificado se tornará o perfil padrão para o usuário. O perfil que anteriormente era o padrão permanecerá associado ao usuário, mas deixará de ser o perfil padrão.  
+ Um usuário de banco de dados pode ter somente um perfil padrão. Quando ** \@ is_default** for '**1**' e o usuário já estiver associado a um ou mais perfis, o perfil especificado se tornará o perfil padrão para o usuário. O perfil que anteriormente era o padrão permanecerá associado ao usuário, mas deixará de ser o perfil padrão.  
   
- Quando ** \@is_default** for '**0**' e nenhuma outra associação existir, o procedimento armazenado retornará um erro.  
+ Quando ** \@ is_default** for '**0**' e nenhuma outra associação existir, o procedimento armazenado retornará um erro.  
   
  O procedimento armazenado **sysmail_add_principalprofile_sp** está no banco de dados **msdb** e pertence ao esquema **dbo** . O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
@@ -69,7 +69,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="examples"></a>Exemplos  
  **A. Criando uma associação, definindo o perfil padrão**  
   
- O exemplo a seguir cria uma associação entre o perfil `AdventureWorks Administrator Profile` chamado e o usuário `ApplicationUser`do banco de dados **msdb** . O perfil é o perfil padrão para o usuário.  
+ O exemplo a seguir cria uma associação entre o perfil chamado `AdventureWorks Administrator Profile` e o usuário do banco de dados **msdb** `ApplicationUser` . O perfil é o perfil padrão para o usuário.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -80,7 +80,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  **B. Tornando um perfil o perfil público padrão**  
   
- O exemplo a seguir torna o `AdventureWorks Public Profile` perfil o perfil público padrão para usuários no banco de dados **msdb** .  
+ O exemplo a seguir torna o perfil `AdventureWorks Public Profile` o perfil público padrão para usuários no banco de dados **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  

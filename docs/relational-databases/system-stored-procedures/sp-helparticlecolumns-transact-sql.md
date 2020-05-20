@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c15a9051c6d706ddec55d031e93858a3d33c9d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771087"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815812"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  o *Publicador* não deve ser especificado quando o artigo solicitado é publicado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por um Publicador.  
+>  o *Publicador* não deve ser especificado quando o artigo solicitado é publicado por um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (colunas que não são publicadas) ou **1** (colunas que são publicadas)  
@@ -56,7 +56,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**ID da coluna**|**int**|Identificador para a coluna.|  
-|**pilha**|**sysname**|Nome da coluna.|  
+|**column**|**sysname**|Nome da coluna.|  
 |**published**|**bit**|Se a coluna for publicada:<br /><br /> **0** = não<br /><br /> **1** = Sim|  
 |**tipo de editor**|**sysname**|Tipo de dados da coluna no Publicador.|  
 |**tipo de assinante**|**sysname**|Tipo de dados da coluna no Assinante.|  
