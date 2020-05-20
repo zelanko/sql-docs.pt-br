@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADOX, collections
 - collections [ADOX]
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f5c2792f9a5ef413f09793df8ff320d3826773f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928600"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764147"
 ---
 # <a name="adox-collections"></a>Coleções ADOX
 
@@ -31,7 +31,7 @@ ms.locfileid: "67928600"
 |[Procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md)|Contém todos os objetos de **procedimento** de um catálogo.|  
 |[Tabelas](../../../ado/reference/adox-api/tables-collection-adox.md)|Contém todos os objetos de **tabela** de um catálogo.|  
 |[Usuários](../../../ado/reference/adox-api/users-collection-adox.md)|Contém todos os objetos de **usuário** armazenados de um catálogo ou grupo.|  
-|[Modos de exibição](../../../ado/reference/adox-api/views-collection-adox.md)|Contém todos os objetos de **exibição** de um catálogo.|  
+|[Exibições](../../../ado/reference/adox-api/views-collection-adox.md)|Contém todos os objetos de **exibição** de um catálogo.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência da API do ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   

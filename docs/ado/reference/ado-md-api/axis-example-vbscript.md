@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples, VBScript
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 345b87539452a974b054b3aec07c648a3c2b6fad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53e27109028204739a9de245d28909405cf939e4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947392"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765187"
 ---
 # <a name="axis-example-vbscript"></a>Exemplo Axis (VBScript)
 Essa Active Server página exibe dados OLAP de uma cadeia de caracteres de consulta MDX e grava o células resultante em uma estrutura de tabela HTML.  

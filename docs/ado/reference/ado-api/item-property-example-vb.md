@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Item property [ADO], Visual Basic example
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b9929c6c8547836131df61ae2d2576fae5aee38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918346"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765467"
 ---
 # <a name="item-property-example-vb"></a>Exemplo da propriedade Item (VB)
 Este exemplo demonstra como a propriedade [Item](../../../ado/reference/ado-api/item-property-ado.md) acessa os membros de uma coleção. O exemplo abre a tabela ***autores*** do banco de dados ***pubs*** com um comando com parâmetros.  

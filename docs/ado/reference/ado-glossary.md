@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925596"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765297"
 ---
 # <a name="ado-glossary"></a>Glossário ADO
 Este tópico define os termos relevantes para o ADO.  
@@ -49,7 +49,7 @@ Este tópico define os termos relevantes para o ADO.
  Um mapeamento entre um campo em uma tabela e uma variável. Nas extensões de Visual C++ do ADO, os campos do **conjunto de registros** são mapeados para as variáveis C/C++.  
   
  bitmask  
- Um valor numérico destinado a uma comparação de valor bit a bit com outros valores numéricos, normalmente para sinalizar opções no parâmetro ou valores de retorno. Normalmente, essa comparação é feita com operadores lógicos de bit a bit, como **e** e **&** **ou** em Visual Basic, e **&#124;** em C++.  
+ Um valor numérico destinado a uma comparação de valor bit a bit com outros valores numéricos, normalmente para sinalizar opções no parâmetro ou valores de retorno. Normalmente, essa comparação é feita com operadores lógicos de bit a bit, como **e** e **ou** em Visual Basic, **&** e **&#124;** em C++.  
   
  Por exemplo, os valores ADO **FieldAttributeEnum** podem ser usados como bitmasks para determinar os atributos de um campo. Suponha que você quisesse determinar se um campo era atualizável. Você poderia testar isso com a seguinte expressão no Visual Basic:`Field.Attributes AND adFldUpdatable`  
   
@@ -100,7 +100,7 @@ Este tópico define os termos relevantes para o ADO.
  Operador de comparação  
  Um operador que compara duas expressões e retorna um valor booliano.  
   
- Um parâmetro de critérios que pode ser expresso como ">" (maior que),\<"" (menor que), "=" (igual), ">=" (maior ou igual), "<=" (menor ou igual), "<>" (diferente de) ou "Like" (correspondência de padrões).  
+ Um parâmetro de critérios que pode ser expresso como ">" (maior que), " \< " (menor que), "=" (igual), ">=" (maior ou igual), "<=" (menor ou igual), "<>" (diferente de) ou "Like" (correspondência de padrões).  
   
  componente  
  Um objeto que encapsula dados e código e fornece um conjunto bem especificado de serviços publicamente disponíveis.  

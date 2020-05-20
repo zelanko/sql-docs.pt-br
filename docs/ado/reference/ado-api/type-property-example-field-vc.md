@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b3f957e4ed81eeb1853689162f61b1945d26730b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936652"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765327"
 ---
 # <a name="type-property-example-field-vc"></a>Exemplo da propriedade Type (Campo) (VC++)
 Este exemplo demonstra a propriedade [Type](../../../ado/reference/ado-api/type-property-ado.md) exibindo o nome da constante que corresponde ao valor da propriedade **Type** de todos os objetos [Field](../../../ado/reference/ado-api/field-object.md) na tabela ***Employees*** . A função FieldType é necessária para que este procedimento seja executado.  

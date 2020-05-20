@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921964"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764607"
 ---
 # <a name="understanding-the-customization-file"></a>Noções básicas sobre o arquivo de personalização
 Cada cabeçalho de seção no arquivo de personalização consiste em colchetes (**[]**) contendo um tipo e um parâmetro. Os quatro tipos de seção são indicados pelas cadeias de caracteres literais **Connect**, **SQL**, **UserList**ou **logs**. O parâmetro é a cadeia de caracteres literal, o padrão, um identificador especificado pelo usuário ou nada.  
@@ -44,11 +44,11 @@ identifier
 |Parte|Descrição|  
 |----------|-----------------|  
 |**connect**|Uma cadeia de caracteres literal que modifica uma cadeia de conexão.|  
-|**sql**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
+|**SQL**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
 |**UserList**|Uma cadeia de caracteres literal que modifica os direitos de acesso de um usuário específico.|  
 |**logs**|Uma cadeia de caracteres literal que especifica um arquivo de log que registra erros operacionais.|  
 |**os**|Uma cadeia de caracteres literal que será usada se nenhum identificador for especificado ou encontrado.|  
-|*ID*|Uma cadeia de caracteres que corresponde a uma cadeia de caracteres na cadeia de caracteres de **conexão** ou de **comando** .<br /><br /> -Use esta seção se o cabeçalho da seção contiver **Connect** e a cadeia de caracteres do identificador for encontrada na cadeia de conexão.<br />-Use esta seção se o cabeçalho da seção contiver **SQL** e a cadeia de caracteres do identificador for encontrada na cadeia de caracteres de comando.<br />-Use esta seção se o cabeçalho da seção contiver **UserList** e a cadeia de caracteres do identificador corresponder a um identificador de seção de **conexão** .|  
+|*identificador*|Uma cadeia de caracteres que corresponde a uma cadeia de caracteres na cadeia de caracteres de **conexão** ou de **comando** .<br /><br /> -Use esta seção se o cabeçalho da seção contiver **Connect** e a cadeia de caracteres do identificador for encontrada na cadeia de conexão.<br />-Use esta seção se o cabeçalho da seção contiver **SQL** e a cadeia de caracteres do identificador for encontrada na cadeia de caracteres de comando.<br />-Use esta seção se o cabeçalho da seção contiver **UserList** e a cadeia de caracteres do identificador corresponder a um identificador de seção de **conexão** .|  
   
  O **DataFactory** chama o manipulador, passando parâmetros do cliente. O manipulador procura cadeias de caracteres inteiras nos parâmetros do cliente que correspondem aos identificadores nos cabeçalhos de seção apropriados. Se uma correspondência for encontrada, o conteúdo dessa seção será aplicado ao parâmetro do cliente.  
   

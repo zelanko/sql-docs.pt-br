@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1aa5b628bec9399374b94a2cd78090207bf09b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04f896b4a799e527e2442ef17e69a33f576950dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922982"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764737"
 ---
 # <a name="address-book-command-buttons"></a>Botões de comando do catálogo de endereços
 O aplicativo de catálogo de endereços inclui os seguintes botões de comando:  
@@ -42,7 +42,7 @@ O aplicativo de catálogo de endereços inclui os seguintes botões de comando:
   
  Como o programa usa a palavra `like` na criação de instruções SQL, as consultas são subcadeias de pesquisa em vez de correspondências exatas.  
   
- Por exemplo, se a caixa **sobrenome** contivesse a entrada "Berge" e a caixa de **título** contivesse a entrada "gerente do programa", a `myQuery`instrução SQL (valor de) lerá:  
+ Por exemplo, se a caixa **sobrenome** contivesse a entrada "Berge" e a caixa de **título** contivesse a entrada "gerente do programa", a instrução SQL (valor de `myQuery` ) lerá:  
   
 ```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
@@ -51,7 +51,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  Se a consulta foi bem-sucedida, todas as pessoas com um sobrenome que contém o texto "Berge" (como Berge e Bergeron) e com um título contendo as palavras "gerente de programa" (por exemplo, gerente de programa, tecnologias avançadas) são exibidas na grade de dados HTML.  
   
 ## <a name="preparing-and-sending-the-query"></a>Preparando e enviando a consulta  
- A última parte do procedimento Find_OnClick sub consiste em duas instruções. A primeira instrução atribui a propriedade [SQL](../../../ado/reference/rds-api/sql-property.md) do [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) igual à consulta SQL criada dinamicamente. A segunda instrução faz com que o **RDS. Objeto DataControl** (`DC1`) para consultar o banco de dados e exibir os novos resultados da consulta na grade.  
+ A última parte do procedimento Find_OnClick sub consiste em duas instruções. A primeira instrução atribui a propriedade [SQL](../../../ado/reference/rds-api/sql-property.md) do [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) igual à consulta SQL criada dinamicamente. A segunda instrução faz com que o **RDS. Objeto DataControl** ( `DC1` ) para consultar o banco de dados e exibir os novos resultados da consulta na grade.  
   
 ```vb
 Sub Find_OnClick  
@@ -62,7 +62,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>Botão Atualizar perfil  
- Clicar no botão **Atualizar perfil** ativa o procedimento Sub Update_OnClick do VBScript, que executa o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Métodos [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) do`DC1`objeto DataControl.  
+ Clicar no botão **Atualizar perfil** ativa o procedimento Sub Update_OnClick do VBScript, que executa o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) `DC1` Métodos [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) do objeto DataControl.  
   
 ```vb
 Sub Update_OnClick  
@@ -74,7 +74,7 @@ End Sub
  Quando `DC1.SubmitChanges` o é executado, o serviço de dados remoto empacota todas as informações de atualização e as envia para o servidor via http. A atualização é tudo ou nada; se uma parte da atualização não for bem-sucedida, nenhuma das alterações será feita e uma mensagem de status será retornada. `DC1.Refresh`Não é necessário após **SubmitChanges** com o Remote Data Service, mas garante dados atualizados.  
   
 ## <a name="cancel-changes-button"></a>Botão cancelar alterações  
- Clicar em **cancelar alterações** ativa o procedimento Sub Cancel_OnClick do VBScript, que executa o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) (`DC1)` método [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) .  
+ Clicar em **cancelar alterações** ativa o procedimento Sub Cancel_OnClick do VBScript, que executa o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) (método `DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) .  
   
 ```vb
 Sub Cancel_OnClick  

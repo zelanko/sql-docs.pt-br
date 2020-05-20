@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc39677c9d3c847a87c5ef510fffbd776acf8e7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a9d82cda586f5694b9f7644ca01eff781ea3e79d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931121"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765417"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Exemplo do método Seek e da propriedade index (VB)
 Este exemplo usa o método [Seek](../../../ado/reference/ado-api/seek-method.md) do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e a propriedade [index](../../../ado/reference/ado-api/index-property.md) em conjunto com uma determinada ***ID de funcionário***, para localizar o nome do funcionário na tabela ***Employees*** do banco de dados Nwind. mdb.  

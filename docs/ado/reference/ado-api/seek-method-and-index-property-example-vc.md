@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Seek method [ADO], VC++ example
 - index property [ADO]
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e19a30e60bb953dd8f521699b23fd00406d2d95d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6176f607ea338f4686e0a5c23a824d916f501b14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931071"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765407"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Exemplo da propriedade Index e do método Seek (VC++)
 Este exemplo usa o método [Seek](../../../ado/reference/ado-api/seek-method.md) do objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e a propriedade [index](../../../ado/reference/ado-api/index-property.md) em conjunto com uma determinada ***ID de funcionário***, para localizar o nome do funcionário na tabela ***Employees*** do banco de dados Nwind. mdb.  

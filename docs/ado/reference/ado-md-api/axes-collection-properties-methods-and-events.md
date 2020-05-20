@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Axes collection [ADO MD], members
 ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3cb4546839d09954f7d08f71164ecba59595fbd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3667da715155f9c94689d10877524833fe8092a7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930518"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765197"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Axes
 ## <a name="properties"></a>Propriedades  

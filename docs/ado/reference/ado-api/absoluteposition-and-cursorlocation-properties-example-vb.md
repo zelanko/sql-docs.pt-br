@@ -13,14 +13,14 @@ helpviewer_keywords:
 - AbsolutePosition property [ADO], Visual Basic example
 - CursorLocation property [ADO], Visual Basic example
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 29307c3764a81f60ad02108ba498daab85bc0b3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 34ccef63f898063abd4e87332285bd81c1e4a845
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921710"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764577"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Exemplo das propriedades AbsolutePosition e CursorLocation (VB)
 Este exemplo demonstra como a propriedade [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) pode acompanhar o progresso de um loop que enumera todos os registros de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) para habilitar a propriedade **AbsolutePosition** definindo o cursor como um cursor do cliente.  

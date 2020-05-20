@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930570"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765247"
 ---
 # <a name="ado-md-objects"></a>Objetos do ADO MD
 
@@ -33,7 +33,7 @@ ms.locfileid: "67930570"
 |[Hierarquia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Representa uma maneira na qual os membros de uma dimensão podem ser agregados ou "acumulados". Uma dimensão pode ser agregada ao longo de uma ou mais hierarquias.|  
 |[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contém um conjunto de membros, cada um dos quais tem a mesma classificação em uma hierarquia.|  
 |[Membro](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Representa um membro de um nível em um cubo, os filhos de um membro de um nível ou um membro de uma posição ao longo de um eixo de um células.|  
-|[Propostas](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Representa um conjunto de um ou mais membros de dimensões diferentes que define um ponto ao longo de um eixo.|  
+|[Posição](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Representa um conjunto de um ou mais membros de dimensões diferentes que define um ponto ao longo de um eixo.|  
   
  Além disso, o objeto de **Catálogo** está conectado a um objeto de **conexão** ADO, que está incluído na biblioteca padrão do ADO:  
   

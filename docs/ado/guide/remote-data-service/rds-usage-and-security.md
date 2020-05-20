@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26d3a5d785db3ae138e26225ea5b37b182f6b076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 601dce83ad5dc71a015c2fa8a66c85f975521d96
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922401"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764697"
 ---
 # <a name="rds-usage-and-security"></a>Segurança e uso RDS
 Use as informações desta seção para configurar o servidor e usar o RDS rapidamente. Esta seção inclui etapas de configuração específicas que talvez você precise executar ao implementar o RDS, descreve algumas das principais relações entre o RDS e outras tecnologias e ajuda a identificar soluções para problemas que você pode encontrar ao configurar uma solução RDS.  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - ChildCount property [ADO MD]
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a8e6f6a7cb749ff2b22a1f7563b43ce07e060aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 858bed2c2fe04a1fbf0486b0e0bfc9a26447e4ef
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911554"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764397"
 ---
 # <a name="childcount-property-ado-md"></a>Propriedade ChildCount (ADO MD)
 Indica o número de membros para os quais o objeto de [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) atual é o pai em uma hierarquia.  

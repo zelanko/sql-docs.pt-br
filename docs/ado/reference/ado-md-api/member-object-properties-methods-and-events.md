@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Member object [ADO MD]
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb8efcb41ea0a82f11351e5a439ee8b9cf7a053e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7715566aec18b3ac9fdcc8a44c6dba12df9d27d7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949489"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765082"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Member
 ## <a name="propertiescollections"></a>Propriedades/coleções  

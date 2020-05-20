@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Catalog object, Visual Basic example
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9b0886302a48f7b9b3ee8e261014c0784d51fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88474aaf40fe715f6240d0519be5cec8fc06e12e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930412"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765147"
 ---
 # <a name="catalog-example-vb"></a>Exemplo de catálogo (VB)
 Este projeto de Visual Basic cria um novo cubo usando MDX. Em seguida, ele documenta a estrutura de um cubo em um documento do Microsoft Word.  

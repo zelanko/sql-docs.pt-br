@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924733"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764797"
 ---
 # <a name="operation-of-parameterized-commands"></a>Operação de comandos parametrizados
 Se você estiver trabalhando com um conjunto de **registros**filho grande, especialmente comparado ao tamanho do **conjunto de registros**pai, mas precisar acessar apenas alguns capítulos filhos, poderá achar mais eficiente usar um comando com parâmetros.  
@@ -86,7 +86,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
  Este exemplo explora a maior flexibilidade da cláusula WHERE do SQL para obter o resultado necessário.  
   
 > [!NOTE]
->  Ao usar cláusulas WHERE, os parâmetros não podem usar os tipos de dados do SQL para Text, ntext e Image, ou um erro resultará em conter `Invalid operator for data type`a seguinte descrição:.  
+>  Ao usar cláusulas WHERE, os parâmetros não podem usar os tipos de dados do SQL para Text, ntext e Image, ou um erro resultará em conter a seguinte descrição: `Invalid operator for data type` .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo de formatação de dados](../../../ado/guide/data/data-shaping-example.md)   

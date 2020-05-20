@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], VC++ example
 - GetObjectOwner method [ADOX], VC++ example
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c16536becfcea826d9cb6e6ea251517d40ad3ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04c8a84da02d31314146b4f54b93cc0edf7bb30e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934635"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764915"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Exemplo dos métodos GetObjectOwner e SetObjectOwner (VC++)
 Este exemplo demonstra os métodos [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) e [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) . Esse código pressupõe a existência da contabilidade do grupo (consulte o [exemplo de métodos groups and Users Append, ChangePassword Methods (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) para ver como adicionar esse grupo ao sistema). O proprietário da tabela Categorias é definido como contabilidade.  

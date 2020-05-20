@@ -11,14 +11,14 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: afa230584bd7ee93d56f814a998c886e433a9417
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924697"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764767"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passar parâmetros para um comando nomeado
 Assim como o resultado do comando é passado como uma variável *out* do comando nomeado, os parâmetros para um comando com parâmetros podem ser passados como *em* variáveis para o comando nomeado.  

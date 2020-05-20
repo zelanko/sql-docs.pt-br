@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Precision property [ADOX], VC++ example
 - NumericScale property [ADOX], VC++ example
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc6dac85217a3f815511fa94e19a9adccc1f2ba1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3acf3c8c8533d6ac1c803c5bb42acd530c0b0df2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76918406"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763797"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Exemplo das propriedades NumericScale e Precision do objeto Column (VC++)
 Este exemplo demonstra as propriedades [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [Precision](../../../ado/reference/adox-api/precision-property-adox.md) do objeto [Column](../../../ado/reference/adox-api/column-object-adox.md) . Esse código exibe seu valor para a tabela **detalhes do pedido** do banco de dados *Northwind* .  

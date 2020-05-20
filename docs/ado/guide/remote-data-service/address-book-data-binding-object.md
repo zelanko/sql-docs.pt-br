@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71b1897830c4a5382e6903f5e05aa29d1ce37d1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922971"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764727"
 ---
 # <a name="address-book-data-binding-object"></a>Objeto de associação de dados do catálogo de endereço
 O aplicativo de catálogo de endereços usa o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para associar dados do banco de dado SQL Server a um objeto visual (nesse caso, uma tabela DHTML) na página HTML do cliente do aplicativo. A lógica do programa VBScript orientada por eventos usa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para:  
@@ -60,7 +60,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[SERVIDOR](../../../ado/reference/rds-api/server-property-rds.md)|Se você estiver usando HTTP, o valor será o nome do computador do servidor precedido por `https://`.|  
+|[SERVIDOR](../../../ado/reference/rds-api/server-property-rds.md)|Se você estiver usando HTTP, o valor será o nome do computador do servidor precedido por `https://` .|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Fornece as informações de conexão necessárias para o **RDS. DataControl** para se conectar ao SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Define ou retorna a cadeia de caracteres de consulta usada para recuperar o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   

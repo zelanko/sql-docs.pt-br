@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Members collection [ADO MD], VBScript example
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8f3fc746660b1382d8c06f5ffc343fd52ecf024
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3064c920c8d18e702541138de9f2151f5d8fbb03
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949415"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765081"
 ---
 # <a name="members-example-vbscript"></a>Exemplo Members (VBScript)
 Este exemplo usa uma cadeia de caracteres de consulta MDX para recuperar dados OLAP e grava o células resultante em uma estrutura de tabela HTML usando recursos de abrangência de coluna para células de várias dimensões.  

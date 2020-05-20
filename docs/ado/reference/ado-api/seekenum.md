@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 886825b4d32354572a5162487add419b00ec35d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dca33c975b3d25347b0cb9bb804b852ec5f93d7d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931063"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765387"
 ---
 # <a name="seekenum"></a>SeekEnum
 Especifica o tipo de [busca](../../../ado/reference/ado-api/seek-method.md) a ser executada.  

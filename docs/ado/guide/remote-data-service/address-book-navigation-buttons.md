@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fcb9ef043f27cd36c57b35605c8bf8257613af5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922965"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764707"
 ---
 # <a name="address-book-navigation-buttons"></a>Botões de navegação do catálogo de endereços
 O aplicativo de catálogo de endereços exibe os botões de navegação na parte inferior da página da Web. Você pode usar os botões de navegação para navegar pelos dados na exibição da grade HTML selecionando a primeira ou a última linha de dados ou linhas adjacentes à seleção atual.  

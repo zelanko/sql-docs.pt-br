@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d2a9c5f4f07b22f11869a21fc4855f4ae21b25c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c4998ffe368a9f7773474514a7d53922d1b6cb36
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933068"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765537"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Exemplo das propriedades EOS e LineSeparator e do método Skipize (VB)
 Este exemplo demonstra como manipular fluxos de texto uma linha por vez. É mostrado o efeito de alterar o separador de linha do retorno de carro/avanço (**adCRLF**) padrão para o simples avanço (**adLF**) ou retorno de carro (**adCR**).  

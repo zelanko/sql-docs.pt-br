@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921519"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764567"
 ---
 # <a name="activeconnection-property-ado"></a>Propriedade ActiveConnection (ADO)
 Indica a qual objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) o [comando](../../../ado/reference/ado-api/command-object-ado.md), [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)ou objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) especificado atualmente pertence.  

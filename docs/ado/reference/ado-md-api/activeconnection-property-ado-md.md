@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a24320f7b49d8d2a0e1341bff2d9a4cca575dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911591"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765307"
 ---
 # <a name="activeconnection-property-ado-md"></a>Propriedade ActiveConnection (ADO MD)
 Indica a qual objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) ADO o células ou o catálogo atual pertence atualmente.  

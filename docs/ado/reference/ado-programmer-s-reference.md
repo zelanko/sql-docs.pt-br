@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, reference
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b8a888460d115ee5ee3e9b392292c50587709357
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: af7be261ee673bbc17a9118a414a54c92f70632c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67952181"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764937"
 ---
 # <a name="ado-programmer39s-reference"></a>Referência do programador do ADO&#39;s
 Esta seção contém os seguintes tópicos.  

@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 84a03af49152bc305f62aceb149d904ef0acf9a0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928552"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764137"
 ---
 # <a name="adox-enumerated-constants"></a>Constantes enumeradas ADOX
 Para auxiliar a depuração, as constantes enumeradas do ADOX listam um valor para cada constante. No entanto, esse valor é puramente consultivo e pode mudar de uma versão do ADOX para outra. Seu código só deve depender do nome, não do valor real, das constantes enumeradas.  
   
  As constantes enumeradas a seguir são definidas.  
   
-|Enumeração|Descrição|  
+|Enumeração|Description|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|Especifica o tipo de ação a ser executada quando **SetPermissions** é chamada.|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Especifica se os registros com valores nulos são indexados.|  

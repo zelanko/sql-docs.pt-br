@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - EndOfRecordset event [ADO]
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd7710ebc7a5af323c247860baedd4b30d91fe21
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918946"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765547"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset Event (ADO)
 O evento **EndOfRecordset** é chamado quando há uma tentativa de mover para uma linha após o final do conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
