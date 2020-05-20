@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122448"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818115"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome de logon.|  
 |**SID**|**varbinary (85)**|Identificador de segurança de Logon (SID).|  
-|**DefDBName**|**sysname**|Banco de dados padrão que o **LoginName** usa ao se conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a uma instância do.|  
+|**DefDBName**|**sysname**|Banco de dados padrão que o **LoginName** usa ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**DefLangName**|**sysname**|Idioma padrão usado por **LoginName**.|  
 |**Auser**|**Char (5)**|Sim = **LoginName** tem um nome de usuário associado em um banco de dados.<br /><br /> Não = **LoginName** não tem um nome de usuário associado.|  
 |**ARemote**|**Char (7)**|Sim = **LoginName** tem um logon remoto associado.<br /><br /> Não = **LoginName** não tem um logon associado.|  
@@ -61,7 +61,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome de logon.|  
-|**NomeDoBancoDeDados**|**sysname**|Banco de dados padrão que o **LoginName** usa ao se conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a uma instância do.|  
+|**NomeDoBancoDeDados**|**sysname**|Banco de dados padrão que o **LoginName** usa ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Usu**|**sysname**|A conta de usuário para a qual **LoginName** está mapeado em **dbname**e as funções das quais **LoginName** é membro em **dbname**.|  
 |**UserOrAlias**|**Char (8)**|MemberOf = **username** é uma função.<br /><br /> User = **username** é uma conta de usuário.|  
   

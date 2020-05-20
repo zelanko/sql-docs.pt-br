@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e75d1d43c37d0e758b02025df4f601c87f44f2e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104405"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816576"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Define os nomes de rede em **Sys. Servers** para seus nomes de computador de rede reais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para instâncias remotas do. Este procedimento pode ser usado para habilitar a execução de chamadas de procedimento armazenado remoto para computadores com nomes de rede contendo identificadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não são válidos.  
+  Define os nomes de rede em **Sys. Servers** para seus nomes de computador de rede reais para instâncias remotas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este procedimento pode ser usado para habilitar a execução de chamadas de procedimento armazenado remoto para computadores com nomes de rede contendo identificadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não são válidos.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,10 +41,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *server* ** @server = '** servidor **'**  
+ ** @server = '** *servidor* **'**  
  É o nome do servidor remoto conforme referenciado em sintaxe de chamada de procedimento armazenado remoto codificado pelo usuário. Exatamente uma linha em **Sys. Servers** já deve existir para usar esse *servidor*. *server* é **sysname**, sem padrão.  
   
- *network_name* ** @netname = '** network_name **'**  
+ ** @netname = '** *network_name* **'**  
  É o nome de rede do computador ao qual as chamadas de procedimento armazenado remoto são feitas. *network_name* é **sysname**, sem padrão.  
   
  Esse nome deve corresponder ao nome do computador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, e o nome pode incluir caracteres que não são permitidos em identificadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

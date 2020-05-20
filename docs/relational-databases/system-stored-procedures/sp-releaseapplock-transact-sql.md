@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_releaseapplock
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ad6ca284f99a777b8909d2f96ea68ff83c9f467
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075629"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817862"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @Resource= ] '*resource_name*'  
+ [ @Resource =] '*resource_name*'  
  É um nome de recurso de bloqueio especificado pelo aplicativo cliente. O aplicativo deve garantir que o recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* é **nvarchar (255)** sem padrão. *resource_name* é uma comparação binária, portanto diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento do banco de dados atual.  
   
- [ @LockOwner= ] '*lock_owner*'  
+ [ @LockOwner =] '*lock_owner*'  
  É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o valor de *lock_owner* é **transação**, por padrão ou especificado explicitamente, sp_getapplock deve ser executado de dentro de uma transação.  
   
- [ @DbPrincipal= ] '*database_principal*'  
+ [ @DbPrincipal =] '*database_principal*'  
  É o usuário, função ou função de aplicativo que tem permissões para um objeto em um banco de dados. O chamador da função deve ser um membro de *database_principal*, dbo ou a função de banco de dados fixa db_owner para chamar a função com êxito. O padrão é público.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

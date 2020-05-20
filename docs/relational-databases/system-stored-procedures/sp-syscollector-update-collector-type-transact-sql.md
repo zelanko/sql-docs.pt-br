@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 224ee81383c247d3b2ba8d02aaa99f5a649d0e74
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010545"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816346"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

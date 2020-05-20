@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa9033b52851b6b678671e94c6d10d71b5a488fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124713"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818646"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'`É o tipo de informação a ser retornado. Se *info_type* não for especificado ou se NULL for especificado, todos os tipos de informações serão retornados. *info_type* é **varchar (128)**, com um padrão de NULL, e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Especifica o nome de fornecedor da fonte de dados.|  
 |**DBMS_VERSION**|Especifica a versão da fonte de dados.|  
@@ -58,7 +58,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`É o tipo de fonte de dados. *dso_type* é **int**e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1** (padrão)|Fonte de dados ODBC|  
 |**3**|Fonte de dados OLE DB|  
