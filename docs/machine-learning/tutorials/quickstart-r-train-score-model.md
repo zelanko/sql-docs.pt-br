@@ -1,31 +1,40 @@
 ---
 title: 'Início Rápido: Treinar um modelo em R'
-description: Neste guia de início rápido, você criará e treinará um modelo de previsão usando o T. Você salvará o modelo em uma tabela em sua instância do SQL Server e, em seguida, usará o modelo para prever valores com base em novos dados usando os Serviços de Machine Learning do SQL Server.
+titleSuffix: SQL machine learning
+description: Neste início rápido, você criará e treinará um modelo preditivo usando o T. Você salvará o modelo em uma tabela, depois o usará para prever valores com base em novos dados com o aprendizado de máquina do SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b34bfbf4f539412835c0de1e3c75b55e15b1e471
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487265"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606039"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Início Rápido: Criar e pontuar um modelo de previsão no R com os Serviços de Machine Learning do SQL Server
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>Início Rápido: criar e pontuar um modelo de previsão no R com o aprendizado de máquina do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Neste início rápido, você criará e treinará um modelo preditivo usando o T. Você salvará o modelo em uma tabela em sua instância do SQL Server e, em seguida, usará o modelo para prever valores com base em novos dados usando os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) ou em [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Neste guia de início rápido, você criará e treinará um modelo de previsão usando o T. Você salvará o modelo em uma tabela em sua instância do SQL Server e, em seguida, usará o modelo para prever valores com base em novos dados usando os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Neste início rápido, você criará e treinará um modelo de previsão usando o T. Você salvará o modelo em uma tabela em sua instância do SQL Server e, em seguida, usará o modelo para prever valores com base em novos dados usando o [SQL Server R Services](../r/sql-server-r-services.md).
+::: moniker-end
 
 Você criará e executará dois procedimentos armazenados em execução no SQL. O primeiro usa o conjunto de dados **mtcars** incluído com o R e gera um GLM (modelo linear generalizado) simples que prevê a probabilidade de um veículo ter sido equipado com uma transmissão manual. O segundo procedimento é para pontuação – ele chama o modelo gerado no primeiro procedimento para gerar um conjunto de previsões com base em novos dados. Ao colocar o código R em um procedimento armazenado do SQL, as operações são contidas em SQL, são reutilizáveis e podem ser chamadas por outros procedimentos armazenados e aplicativos cliente.
 
 > [!TIP]
-> Se você precisar de uma atualização sobre modelos lineares, experimente este tutorial, que descreve o processo de ajuste de um modelo usando o rxLinMod:  [Ajustando modelos lineares](/machine-learning-server/r/how-to-revoscaler-linear-model)
+> Se você precisar de uma atualização sobre modelos lineares, experimente este tutorial, que descreve o processo de ajuste de um modelo usando o rxLinMod: [Ajustando modelos lineares](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
 Ao concluir este início rápido, você aprenderá:
 
@@ -36,19 +45,27 @@ Ao concluir este início rápido, você aprenderá:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem R instalada.
+Para executar este início rápido, você precisará dos pré-requisitos a seguir.
 
-  A instância do SQL Server pode ser local ou em uma máquina virtual do Azure. Esteja ciente de que o recurso de script externo está desabilitado por padrão, portanto, talvez seja necessário [habilitar o script externo](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) e verificar se o **serviço SQL Server Launchpad** está em execução antes de você começar.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Serviços de Machine Learning do SQL Server. Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md) ou o [Guia de instalação do Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Você também pode [habilitar Serviços de Machine Learning em Clusters de Big Data do SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Serviços de Machine Learning do SQL Server. Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Para saber como instalar o R Services, confira o [Guia de instalação do Windows](../install/sql-r-services-windows-install.md).
+::: moniker-end
 
-- Você também precisa de uma ferramenta para executar consultas SQL que contenham scripts R. Você pode executar esses scripts usando qualquer ferramenta de consulta ou de gerenciamento de banco de dados, desde que ele possa se conectar a uma instância do SQL Server e executar uma consulta T-SQL ou um procedimento armazenado. Esse início rápido usa o [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Uma ferramenta para executar consultas SQL que contenham scripts do R. Este início rápido usa o [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="create-the-model"></a>Criar o modelo
 
-Para criar o modelo, você criará dados de origem para treinamento, criará o modelo e o treinará usando esses dados e, em seguida, armazenará o modelo em um Banco de Dados SQL, no qual ele poderá ser usado para gerar previsões com novos dados.
+Para criar o modelo, você criará dados de origem para treinamento, criará o modelo e o treinará usando esses dados e, em seguida, armazenará o modelo em um banco de dados que poderá ser usado para gerar previsões com novos dados.
 
 ### <a name="create-the-source-data"></a>Criar os dados de origem
 
-1. Abra o SSMS, conecte-se à instância do SQL Server e abra uma nova janela de consulta.
+1. Abra o Azure Data Studio, conecte-se à instância e abra uma nova janela de consulta.
 
 1. Crie uma tabela para salvar os dados de treinamento.
 
@@ -108,9 +125,9 @@ GO
 - O primeiro argumento para o `glm` é o parâmetro *formula*, que define `am` como dependente de `hp + wt`.
 - Os dados de entrada são armazenados na variável `MTCarsData`, que é preenchida pela consulta SQL. Se você não atribuir um nome específico para seus dados de entrada, o nome da variável padrão será _InputDataSet_.
 
-### <a name="store-the-model-in-the-sql-database"></a>Armazenar o modelo no Banco de Dados SQL
+### <a name="store-the-model-in-the-database"></a>Armazenar o modelo no banco de dados
 
-Em seguida, armazene o modelo em um Banco de Dados SQL para que você possa usá-lo para previsão ou retreiná-lo. 
+Em seguida, armazene o modelo em um banco de dados para que você possa usá-lo para previsão ou retreiná-lo. 
 
 1. Criar uma tabela para armazenar o modelo.
 
@@ -220,6 +237,6 @@ Também é possível usar a instrução [PREDICT (Transact-SQL)](../../t-sql/que
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para obter mais informações sobre os Serviços de Machine Learning do SQL Server, confira:
+Para obter mais informações sobre tutoriais do R com o aprendizado de máquina do SQL, confira:
 
-- [O que são os Serviços de Machine Learning do SQL Server (Python e R)?](../sql-server-machine-learning-services.md)
+- [Tutoriais do R](r-tutorials.md)

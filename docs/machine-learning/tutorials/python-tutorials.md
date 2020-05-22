@@ -1,29 +1,30 @@
 ---
 title: Tutoriais do Python
-description: Este artigo descreve os tutoriais de Python para os Serviços de Machine Learning do SQL Server. Saiba como executar scripts e criar modelos de machine learning no SQL Server.
+titleSuffix: SQL machine learning
+description: Este artigo descreve os tutoriais de Python com o aprendizado de máquina do SQL. Saiba como executar scripts e criar modelos de machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/04/2019
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3733f12ed93d7c84a86259742b6996333c3900f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7127be209c9637eb0c1cc701d16f0d157f90be54
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487346"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83605788"
 ---
-# <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Tutoriais de Python para os Serviços de Machine Learning do SQL Server
+# <a name="python-tutorials-for-sql-machine-learning"></a>Tutoriais do Python para aprendizado de máquina do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este artigo descreve os tutoriais e guias de início rápido de Python para os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md).
-
-+ Saiba como executar scripts de Python.
-+ Crie, treine e implante modelos de Python para o SQL Server.
-+ Saiba mais sobre os contextos de computação local e remoto.
-+ Explore os pacotes de Python da Microsoft para ciência de dados e aprendizado de máquina.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Este artigo descreve os tutoriais e guias de início rápido do Python para os [Serviços de Machine Learning no SQL Server](../sql-server-machine-learning-services.md) e nos [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Este artigo descreve os tutoriais e guias de início rápido de Python para os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md).
+::: moniker-end
 
 <a name="bkmk_pythontutorials"></a>
 
@@ -38,15 +39,14 @@ Este artigo descreve os tutoriais e guias de início rápido de Python para os [
 
 ## <a name="python-quickstarts"></a>Guias de início rápido de Python
 
-Se você não estiver familiarizado com os Serviços de Machine Learning do SQL Server, também poderá experimentar os guias de início rápido de Python.
+Se você não estiver familiarizado com o aprendizado de máquina do SQL, também poderá experimentar os guias de início rápido do Python.
 
 | Guia de Início Rápido | Descrição |
 |-|-|
-| [Olá, Mundo em Python e no SQL Server](quickstart-python-create-script.md) | Aprenda as noções básicas de como chamar o Python no T-SQL usando [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
-| [Manipular tipos de dados e objetos usando Python no SQL Server](quickstart-python-data-structures.md) | Mostra como o SQL Server usa o pacote Pandas do Python para lidar com estruturas de dados. |
+| [Executar scripts simples do Python](quickstart-python-create-script.md) | Aprenda as noções básicas de como chamar o Python no T-SQL usando [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
+| [Objetos e estruturas de dados usando Python](quickstart-python-data-structures.md) | Mostra como o SQL usa o pacote Pandas do Python para lidar com estruturas de dados. |
 | [Criar e pontuar um modelo preditivo no Python](quickstart-python-train-score-model.md) | Explica como criar, treinar e usar um modelo de Python para fazer previsões usando novos dados. |
 
 ## <a name="next-steps"></a>Próximas etapas
 
-+ [O que são os Serviços de Machine Learning do SQL Server (Python e R)?](../sql-server-machine-learning-services.md)
 + [Extensão de Python para o SQL Server](../concepts/extension-python.md)

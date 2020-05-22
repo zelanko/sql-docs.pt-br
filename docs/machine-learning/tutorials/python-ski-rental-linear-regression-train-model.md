@@ -1,25 +1,31 @@
 ---
 title: 'Tutorial do Python: Treinar um modelo'
-description: Na parte três desta série de tutoriais de quatro partes, você treinará um modelo de regressão linear em Python para prever os aluguéis de esqui com os Serviços de Machine Learning do SQL Server.
+titleSuffix: SQL machine learning
+description: Na parte três desta série de tutoriais de quatro partes, você treinará um modelo de regressão linear em Python para prever os aluguéis de esqui com o aprendizado de máquina do SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/20/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c564ac26c5706e67d9a633a05f81cb48d00fb771
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2d2335c982a75d924bfc60293632650b2d887527
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116429"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606528"
 ---
-# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Tutorial do Python: Treinar um modelo de regressão linear nos Serviços de Machine Learning do SQL Server
+# <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Tutorial do Python: Treinar um modelo de regressão linear com o aprendizado de máquina do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Na parte três desta série de tutoriais de quatro partes, você treinará um modelo de regressão linear no Python. Na próxima parte desta série, você implantará esse modelo em um banco de dados do SQL Server com os Serviços de Machine Learning ou nos Clusters de Big Data.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Na parte três desta série de tutoriais de quatro partes, você treinará um modelo de regressão linear no Python. Na próxima parte desta série, você implantará esse modelo em um banco de dados do SQL Server com os Serviços de Machine Learning.
+::: moniker-end
 
 Neste artigo, você aprenderá a:
 
@@ -29,9 +35,9 @@ Neste artigo, você aprenderá a:
 
 Na [parte um](python-ski-rental-linear-regression.md), você aprendeu a restaurar o banco de dados de exemplo.
 
-Na [parte dois](python-ski-rental-linear-regression-prepare-data.md), você aprendeu a carregar os dados do SQL Server em uma estrutura de dados do Python e a preparar os dados no Python.
+Na [parte dois](python-ski-rental-linear-regression-prepare-data.md), você aprendeu a carregar os dados de um banco de dados em uma estrutura de dados do Python e a prepará-los no Python.
 
-Na [parte quatro](python-ski-rental-linear-regression-deploy-model.md), você aprenderá a armazenar o modelo no SQL Server e, em seguida, criará procedimentos armazenados com base nos scripts do Python desenvolvidos nas partes dois e três. Os procedimentos armazenados serão executados no SQL Server para fazer previsões com base em novos dados.
+Na [parte quatro](python-ski-rental-linear-regression-deploy-model.md), você aprenderá a armazenar o modelo em um banco de dados e, em seguida, criará procedimentos armazenados com base nos scripts do Python desenvolvidos nas partes dois e três. Os procedimentos armazenados serão executados no servidor para fazer previsões com base em novos dados.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

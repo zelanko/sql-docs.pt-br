@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial do Python: implantar um modelo de cluster'
-description: Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering em Python com os Serviços de Machine Learning do SQL Server.
+description: Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering no Python com o aprendizado de máquina do SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -11,28 +11,33 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116559"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606428"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutorial: Implantar um modelo em Python para categorizar clientes com os Serviços de Machine Learning do SQL Server
+# <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Tutorial do Python: Implantar um modelo para categorizar os clientes com o aprendizado de máquina do SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering, desenvolvido em Python, em um banco de dados SQL usando os Serviços de Machine Learning do SQL Server ou nos Clusters de Big Data.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Na parte quatro desta série de tutoriais de quatro partes, você implantará um modelo de clustering, desenvolvido em Python em um Banco de Dados SQL usando os Serviços de Machine Learning do SQL Server.
+::: moniker-end
 
-Para executar o clustering regularmente, à medida que novos clientes se registram, você precisa ser capaz de chamar o script Python de qualquer aplicativo. Para fazer isso, você pode implantar o script Python no SQL Server colocando-o dentro de um procedimento armazenado do SQL no banco de dados. Como seu modelo é executado no Banco de Dados SQL, ele pode ser facilmente treinado em relação aos dados armazenados no banco de dados.
+Para executar o clustering regularmente, à medida que novos clientes se registram, você precisa ser capaz de chamar o script Python de qualquer aplicativo. Para fazer isso, você pode implantar o script do Python em um banco de dados colocando-o dentro de um procedimento armazenado do SQL. Como seu modelo é executado no banco de dados, ele pode ser facilmente treinado em relação aos dados armazenados no banco de dados.
 
-Nesta seção, você moverá o código Python que acabou de escrever no SQL Server e implantará o clustering com a ajuda dos Serviços de Machine Learning do SQL Server.
+Nesta seção, você moverá o código Python que acabou de escrever no servidor e implantará o clustering.
 
 Neste artigo, você aprenderá a:
 
 > [!div class="checklist"]
 > * Criar o procedimento armazenado que gera o modelo
-> * Executar clustering no SQL Server
+> * Executar clustering no servidor
 > * Usar as informações de clustering
 
 Na [parte um](python-clustering-model.md), você instalou os pré-requisitos e restaurou o banco de dados de exemplo.
@@ -175,19 +180,18 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 ## <a name="clean-up-resources"></a>Limpar os recursos
 
-Após concluir este tutorial, você poderá excluir o banco de dados do tpcxbb_1gb do SQL Server.
+Após concluir este tutorial, você poderá excluir o banco de dados do tpcxbb_1gb.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Na parte quatro desta série de tutoriais, você concluiu estas etapas:
 
 * Criar o procedimento armazenado que gera o modelo
-* Executar clustering no SQL Server
+* Executar clustering no servidor
 * Usar as informações de clustering
 
-Para saber mais sobre como usar o Python nos Serviços de Machine Learning do SQL Server, confira:
+Para saber mais sobre como usar o Python no aprendizado de máquina do SQL, confira:
 
-* [Início Rápido: Criar e executar scripts Python simples com os Serviços de Machine Learning do SQL Server](quickstart-python-create-script.md)
-* [Outros tutoriais do Python para os Serviços de Machine Learning do SQL Server](sql-server-python-tutorials.md)
+* [Início Rápido: Criar e executar scripts simples do Python](quickstart-python-create-script.md)
+* [Outros tutoriais do Python para aprendizado de máquina do SQL](python-tutorials.md)
 * [Instalar pacotes Python com o sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
-

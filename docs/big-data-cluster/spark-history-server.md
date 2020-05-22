@@ -1,7 +1,7 @@
 ---
 title: Depurar e diagnosticar aplicativos Spark
 titleSuffix: SQL Server Big Data Clusters
-description: Use o Servidor de Histórico do Spark para depurar e diagnosticar aplicativos Spark em execução no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Use o Servidor de Histórico do Spark para depurar e diagnosticar aplicativos Spark em execução em clusters de big data do SQL Server 2019.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d81732079ddc549bb7a04abad938fc551eeed84a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243940"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606498"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Depurar e diagnosticar aplicativos Spark no [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no Servidor de Histórico do Spark
 

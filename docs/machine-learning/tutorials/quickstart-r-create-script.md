@@ -1,41 +1,57 @@
 ---
 title: 'Início Rápido: Executar scripts de R'
-description: Execute um conjunto de scripts R simples com os Serviços de Machine Learning do SQL Server. Saiba como usar o procedimento armazenado sp_execute_external_script para executar o script em uma instância do SQL Server.
+titleSuffix: SQL machine learning
+description: Execute um conjunto de scripts simples do R com o aprendizado de máquina do SQL. Saiba como usar o procedimento armazenado sp_execute_external_script para executar o script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 33baeba807711c1eb65b3a9c972066bb384e2542
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ed4f4899869dbc9609f29d935c80a7df88fa3d4c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487287"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606748"
 ---
-# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Início Rápido: executar scripts R simples com os Serviços de Machine Learning do SQL Server
+# <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>Início Rápido: executar scripts simples do R com o aprendizado de máquina do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Neste início rápido, você executará um conjunto de scripts simples do R usando os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) ou em [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md). Você aprenderá a usar o procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para executar o script em uma instância do SQL Server.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Neste início rápido, você executará um conjunto de scripts R simples usando os [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md). Você aprenderá a usar o procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para executar o script em uma instância do SQL Server.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Neste início rápido, você executará um conjunto de scripts simples do R usando o [SQL Server R Services](../r/sql-server-r-services.md). Você aprenderá a usar o procedimento armazenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para executar o script em uma instância do SQL Server.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem R instalada.
+Para executar este início rápido, você precisará dos pré-requisitos a seguir.
 
-  A instância do SQL Server pode ser local ou em uma máquina virtual do Azure. Esteja ciente de que o recurso de script externo está desabilitado por padrão, portanto, talvez seja necessário [habilitar o script externo](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) e verificar se o **serviço SQL Server Launchpad** está em execução antes de você começar.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Serviços de Machine Learning do SQL Server. Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md) ou o [Guia de instalação do Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Você também pode [habilitar Serviços de Machine Learning em Clusters de Big Data do SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Serviços de Machine Learning do SQL Server. Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Para saber como instalar o R Services, confira o [Guia de instalação do Windows](../install/sql-r-services-windows-install.md). 
+::: moniker-end
 
-- Você também precisa de uma ferramenta para executar consultas SQL que contenham scripts R. Você pode executar esses scripts usando qualquer ferramenta de consulta ou de gerenciamento de banco de dados, desde que ele possa se conectar a uma instância do SQL Server e executar uma consulta T-SQL ou um procedimento armazenado. Esse início rápido usa o [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Uma ferramenta para executar consultas SQL que contenham scripts do R. Este início rápido usa o [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="run-a-simple-script"></a>Executar um script simples
 
-Para executar um script R, você o passará como um argumento para o procedimento armazenado do sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-Esse procedimento armazenado do sistema inicia o runtime de R no contexto do SQL Server, transmite dados para R, gerencia as sessões de usuário de R com segurança e retorna todos os resultados para o cliente.
+Para executar um script R, você o passará como um argumento para o procedimento armazenado do sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Esse procedimento armazenado do sistema inicia o runtime de R, transmite dados para R, gerencia as sessões de usuário de R com segurança e retorna todos os resultados para o cliente.
 
-Nas etapas a seguir, você executará este script R de exemplo em sua instância do SQL Server:
+Nas etapas a seguir, você executará este exemplo de script do R:
 
 ```r
 a <- 1
@@ -45,7 +61,7 @@ d <- a*b
 print(c(c, d))
 ```
 
-1. Abra o **SQL Server Management Studio** e conecte-se à sua instância do SQL Server.
+1. Abra o **Azure Data Studio** e conecte-se ao servidor.
 
 1. Passe o script R completo para o procedimento armazenado `sp_execute_external_script`.
 
@@ -91,8 +107,8 @@ As entradas para o procedimento armazenado `sp_execute_external_script` incluem:
 |-|-|
 | @language | define a extensão da linguagem a ser chamada, neste caso, R |
 | @script | define os comandos passados para o runtime do R. O seu script R inteiro deve ser colocado neste argumento como texto Unicode. Você também pode adicionar texto a uma variável do tipo **nvarchar** e chamar a variável |
-| @input_data_1 | dados retornados pela consulta, passados para o runtime R, que retorna os dados ao SQL Server como uma estrutura de dados |
-|WITH RESULT SETS | cláusula que define o esquema da tabela de dados retornada para o SQL Server, adicionando "Olá, Mundo" com o nome da coluna, **int** para o tipo de dados |
+| @input_data_1 | dados retornados pela consulta, transmitidos ao runtime do R, que retorna os dados como uma estrutura de dados |
+|WITH RESULT SETS | cláusula que define o esquema da tabela de dados retornada, adicionando "Olá, Mundo" como o nome da coluna, **int** como o tipo de dados |
 
 O comando gera o seguinte texto:
 
@@ -182,7 +198,12 @@ Por enquanto, usaremos as variáveis de entrada e saída padrão de `sp_execute_
 
 ## <a name="check-r-version"></a>Verificar a versão do R
 
-Se você quiser ver qual versão do R está instalada em sua instância do SQL Server, execute o script a seguir.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Se você quiser ver qual versão do R está instalada com os Serviços de Machine Learning do SQL Server, execute o script a seguir.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Se você quiser ver qual versão do R está instalada com o SQL Server 2016 R Services, execute o script a seguir.
+::: moniker-end
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'
@@ -214,8 +235,12 @@ nickname       Someone to Lean On
 ```
 
 ## <a name="list-r-packages"></a>Listar pacotes do R
-
-A Microsoft fornece vários pacotes do R pré-instalados com os Serviços de Machine Learning do SQL Server.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+A Microsoft fornece vários pacotes do R pré-instalados com os Serviços de Machine Learning.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+A Microsoft fornece vários pacotes do R pré-instalados com o R Services.
+::: moniker-end
 
 Para ver uma lista de quais pacotes do R estão instalados, incluindo informações de versão, dependências, licença e caminho de biblioteca, execute o script a seguir.
 
@@ -240,13 +265,7 @@ A saída é de `installed.packages()` em R e é retornada como um conjunto de re
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber como usar estruturas de dados ao usar o R nos Serviços de Machine Learning do SQL Server, siga este guia de início rápido:
+Para saber como usar estruturas de dados ao usar o R com o aprendizado de máquina do SQL, siga este início rápido:
 
 > [!div class="nextstepaction"]
-> [Manipular tipos de dados e objetos usando o R nos Serviços de Machine Learning do SQL Server](quickstart-r-data-types-and-objects.md)
-
-Para obter mais informações sobre como usar o R nos Serviços de Machine Learning do SQL Server, confira os seguintes artigos:
-
-- [Escrever funções avançadas do R com os Serviços de Machine Learning do SQL Server](quickstart-r-functions.md)
-- [Criar e pontuar um modelo de previsão no R com os Serviços de Machine Learning do SQL Server](quickstart-r-train-score-model.md)
-- [O que são os Serviços de Machine Learning do SQL Server (Python e R)?](../sql-server-machine-learning-services.md)
+> [Manipular tipos de dados e objetos usando o R com o aprendizado de máquina do SQL](quickstart-r-data-types-and-objects.md)

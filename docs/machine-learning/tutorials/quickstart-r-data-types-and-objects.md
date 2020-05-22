@@ -1,26 +1,35 @@
 ---
 title: 'Início Rápido: Estruturas de dados, tipos de dados e objetos de R'
-description: Neste início rápido, você aprenderá a usar estruturas de dados, tipos de dados e objetos ao usar R nos Serviços de Machine Learning do SQL Server. Você aprenderá como mover dados entre o R e o SQL Server e os problemas comuns que podem ocorrer.
+titleSuffix: SQL machine learning
+description: Neste início rápido, você aprenderá a usar estruturas de dados, tipos de dados e objetos ao usar R no aprendizado de máquina do SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2019
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 07d167ddc39f281a3330ffd80460d9cc34ccfa65
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e5b5f4e90b680f5ae06944eedc997a43b8a40024
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487297"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606558"
 ---
-# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Início Rápido: Estruturas de dados, tipos de dados e objetos usando o R nos Serviços de Machine Learning do SQL Server
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>Início Rápido: Estruturas de dados, tipos de dados e objetos usando o R com o aprendizado de máquina do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Neste início rápido, você aprenderá a usar estruturas de dados e tipos de dados ao usar R nos Serviços de Machine Learning do SQL Server. Você aprenderá como mover dados entre o R e o SQL Server e os problemas comuns que podem ocorrer.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Neste início rápido, você aprenderá a usar estruturas de dados e tipos de dados ao usar R nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md) ou nos [Clusters de Big Data](../../big-data-cluster/machine-learning-services.md). Você aprenderá como mover dados entre o R e o SQL Server e os problemas comuns que podem ocorrer.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Neste início rápido, você aprenderá a usar estruturas de dados e tipos de dados ao usar R nos [Serviços de Machine Learning do SQL Server](../sql-server-machine-learning-services.md). Você aprenderá como mover dados entre o R e o SQL Server e os problemas comuns que podem ocorrer.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Neste início rápido, você aprenderá a usar estruturas de dados e tipos de dados ao usar R no [SQL Server R Services](../r/sql-server-r-services.md). Você aprenderá como mover dados entre o R e o SQL Server e os problemas comuns que podem ocorrer.
+::: moniker-end
 
 Os problemas comuns que se deve conhecer de antemão incluem:
 
@@ -31,11 +40,19 @@ Os problemas comuns que se deve conhecer de antemão incluem:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Este início rápido requer acesso a uma instância do SQL Server que tenha os [Serviços de Machine Learning do SQL Server](../install/sql-machine-learning-services-windows-install.md) com a linguagem R instalada.
+Para executar este início rápido, você precisará dos pré-requisitos a seguir.
 
-  A instância do SQL Server pode ser local ou em uma máquina virtual do Azure. Esteja ciente de que o recurso de script externo está desabilitado por padrão, portanto, talvez seja necessário [habilitar o script externo](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) e verificar se o **serviço SQL Server Launchpad** está em execução antes de você começar.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Serviços de Machine Learning do SQL Server. Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md) ou o [Guia de instalação do Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Você também pode [habilitar Serviços de Machine Learning em Clusters de Big Data do SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Serviços de Machine Learning do SQL Server. Para saber como instalar os Serviços de Machine Learning, confira o [Guia de instalação do Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. Para saber como instalar o R Services, confira o [Guia de instalação do Windows](../install/sql-r-services-windows-install.md). 
+::: moniker-end
 
-- Você também precisa de uma ferramenta para executar consultas SQL que contenham scripts R. Você pode executar esses scripts usando qualquer ferramenta de consulta ou de gerenciamento de banco de dados, desde que ele possa se conectar a uma instância do SQL Server e executar uma consulta T-SQL ou um procedimento armazenado. Esse início rápido usa o [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Uma ferramenta para executar consultas SQL que contenham scripts do R. Este início rápido usa o [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="always-return-a-data-frame"></a>Sempre retornar uma estrutura de dados
 
@@ -68,7 +85,7 @@ EXECUTE sp_execute_external_script
 
 Por que os resultados são tão diferentes?
 
-A resposta geralmente pode ser encontrada usando o comando `str()` de R. Adicione a função `str(object_name)` em qualquer ponto do script R para fazer com que o esquema de dados do objeto R especificado seja retornado como uma mensagem informativa. Para exibir mensagens, consulte o painel **Mensagens** do código do Visual Studio ou a guia **Mensagens** no SSMS.
+A resposta geralmente pode ser encontrada usando o comando `str()` de R. Adicione a função `str(object_name)` em qualquer ponto do script R para fazer com que o esquema de dados do objeto R especificado seja retornado como uma mensagem informativa.
 
 Para descobrir por que os exemplos 1 e 2 apresentam resultados tão diferentes, insira a linha `str(OutputDataSet)` no final da definição de variável `@script` em cada instrução, dessa forma:
 
@@ -225,7 +242,7 @@ Para preencher o quadro de dados, R repete os elementos recuperados do RTestData
 
 Lembre-se que um quadro de dados somente se parece com uma tabela e é, na verdade, uma lista de vetores.
 
-## <a name="cast-or-convert-sql-server-data"></a>Converter dados do SQL Server
+## <a name="cast-or-convert-data"></a>Converter dados
 
 O R e o SQL Server não usam os mesmos tipos de dados, por isso quando você executa uma consulta no SQL Server para obter dados e passa-os para o runtime de R, geralmente ocorre um certo tipo de conversão implícita. Outro conjunto de conversões ocorre quando você retorna dados de R para o SQL Server.
 
@@ -292,20 +309,13 @@ Com base até mesmo nesses pequenos exemplos, você pode ver a necessidade de ve
 - Teste os dados com antecedência e verifique as colunas ou valores em seu esquema que poderiam ser um problema ao ser passados para o código R.
 - Especifique as colunas na fonte de dados de entrada individualmente, em vez de usar `SELECT *` e saiba como cada coluna será tratada.
 - Execute conversões explícitas conforme necessário durante a preparação dos dados de entrada, a fim de evitar surpresas.
-- Evite passar colunas de dados (como GUIDs ou RowGuids) que causam erros e não são úteis para modelagem.
+- Evite passar colunas de dados (como GUIDs ou rowguids) que causam erros e não são úteis para modelagem.
 
 Para obter mais informações sobre os tipos de dados compatíveis e não compatíveis, confira [Tipos de dados e bibliotecas do R](../r/r-libraries-and-data-types.md).
 
-Para obter informações sobre o impacto de desempenho da conversão no tempo de execução de cadeias de caracteres em fatores numéricos, confira [Ajuste de desempenho do SQL Server R Services](../r/sql-server-r-services-performance-tuning.md).
-
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre como escrever funções avançadas do R no SQL Server, siga este início rápido:
+Para saber mais sobre como escrever funções avançadas do R com o aprendizado de máquina do SQL, siga este início rápido:
 
 > [!div class="nextstepaction"]
-> [Escrever funções avançadas do R com os Serviços de Machine Learning do SQL Server](quickstart-r-functions.md)
-
-Para obter mais informações sobre como usar o R nos Serviços de Machine Learning do SQL Server, confira os seguintes artigos:
-
-- [Criar e pontuar um modelo de previsão no R com os Serviços de Machine Learning do SQL Server](quickstart-r-train-score-model.md)
-- [O que são os Serviços de Machine Learning do SQL Server (Python e R)?](../sql-server-machine-learning-services.md)
+> [Escrever funções avançadas do R com o aprendizado de máquina do SQL](quickstart-r-functions.md)

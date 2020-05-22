@@ -1,7 +1,7 @@
 ---
 title: Configurar o Kubernetes com kubeadm
 titleSuffix: SQL Server Big Data Clusters
-description: Saiba como configurar o Kubernetes em vários computadores com Ubuntu 16.04 ou 18.04 (físicos ou virtuais) para implantações do [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Saiba como configurar o Kubernetes em vários computadores com Ubuntu 16.04 ou 18.04 (físicos ou virtuais) para implantações de cluster de Big Data do SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d5478df68f6f88d638aaafc88c92f2a5730b9f7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 83f66841c4894d3c61ff8196eb52f3ac84fe42f9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269455"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606541"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurar o Kubernetes em vários computadores para implantações de cluster de Big Data do SQL Server
 
@@ -26,7 +26,7 @@ Este artigo fornece um exemplo de como usar **kubeadm** para configurar o Kubern
 > Para scripts de exemplo que configuram o Kubernetes, consulte [Criar um cluster do Kubernetes usando Kubeadm no Ubuntu 16.04 LTS ou 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 Além disso, consulte [este](deployment-script-single-node-kubeadm.md) tópico para ver um script de exemplo que automatiza uma implantação de uma única implantação de kubeadm de nó único em uma VM e implanta uma configuração padrão de cluster de Big Data sobre ela.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Mínimo de três computadores físicos ou máquinas virtuais com Linux
 - Configuração recomendada por computador:

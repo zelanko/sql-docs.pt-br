@@ -1,7 +1,7 @@
 ---
 title: Restaurar um banco de dados
 titleSuffix: SQL Server big data clusters
-description: Este artigo mostra como restaurar um banco de dados na instância mestre de um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Este artigo mostra como restaurar um banco de dados na instância mestra de um cluster de Big Data do SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 925254bbdc7200b5e7ca2a3c413de87e8915b2b4
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 722c826f5b9a9dd7d1ebe7e1cf444b779f7d4e67
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002719"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606768"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restaurar um banco de dados na instância mestre de cluster de Big Data do SQL Server
 
