@@ -150,7 +150,7 @@ O uso de AS nessa instrução não implica a capacidade de representar outro usu
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>a. Negando a permissão CONNECT SQL a um logon do SQL Server e a entidades de segurança aos quais o logon a concedeu novamente  
- O exemplo a seguir nega a permissão `CONNECT SQL` para o logon de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no `Annika` e para os principais aos quais ela concedeu a permissão.  
+ O exemplo a seguir nega a permissão `CONNECT SQL` para o logon de `Annika` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e para os principais aos quais ela concedeu a permissão.  
   
 ```  
 USE master;  

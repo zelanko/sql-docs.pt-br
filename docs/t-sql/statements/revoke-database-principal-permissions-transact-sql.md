@@ -161,7 +161,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>a. Revogando a permissão CONTROL em um usuário a partir de outro usuário  
- O exemplo a seguir revoga a permissão `CONTROL` no usuário [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] do `Wanida` a partir do usuário `RolandX`.  
+ O exemplo a seguir revoga a permissão `CONTROL` no usuário `Wanida` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] a partir do usuário `RolandX`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Revogando a permissão PERSONATE em um usuário de uma função de aplicativo  
- O exemplo a seguir revoga a permissão `IMPERSONATE` no usuário `HamithaL` da função de aplicativo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] do `AccountsPayable17`.  
+ O exemplo a seguir revoga a permissão `IMPERSONATE` no usuário `HamithaL` da função de aplicativo `AccountsPayable17` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

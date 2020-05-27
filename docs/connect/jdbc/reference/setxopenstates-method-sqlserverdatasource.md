@@ -40,7 +40,7 @@ public void setXopenStates(boolean xopenStates)
  **true** se a conversão de estados de SQL em estados em conformidade com XOPEN estiver habilitada. Caso contrário, **false**.  
   
 ## <a name="remarks"></a>Comentários  
- Se a propriedade xopenStates for definida como **true**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] converterá estados de SQL em estados em conformidade com o XOPEN. O padrão é **false**, que faz o driver JDBC gerar os códigos de estado SQL 99. Se xopenStates não for definido, o método [getXopenStates](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md) retornará o valor padrão **false**.  
+ Se a propriedade xopenStates for definida como **true**, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] converterá estados de SQL em estados em conformidade com o XOPEN. O padrão é **false**, que faz o driver JDBC gerar os códigos de estado SQL 99. Se xopenStates não for definido, o método **getXopenStates** retornará o valor padrão [false](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
