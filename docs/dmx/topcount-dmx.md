@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893100"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669955"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Aplica-se A  
- Uma expressão que retorna uma tabela, como uma referência \<de coluna de tabela> ou uma função que retorna uma tabela.  
+ Uma expressão que retorna uma tabela, como uma \< referência de coluna de tabela> ou uma função que retorna uma tabela.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  \<> de expressão de tabela  
   
 ## <a name="remarks"></a>Comentários  
- O valor fornecido pela expressão de \<classificação> argumento determina a ordem decrescente de classificação para as linhas que são fornecidas na expressão de \<tabela> argumento e o número de linhas superiores que é especificado no argumento \<Count> é retornado.  
+ O valor fornecido pela \< expressão de classificação> argumento determina a ordem decrescente de classificação para as linhas que são fornecidas na \< expressão de tabela> argumento e o número de linhas superiores que é especificado no \< argumento Count> é retornado.  
   
  A função TopCount foi introduzida originalmente para habilitar previsões associativas e, em geral, produz os mesmos resultados de uma instrução que inclui cláusulas **selecionar Top** e **order by** . Você obterá um melhor desempenho para previsões associativas se usar a função **Predict (DMX)** , que dá suporte à especificação de um número de previsões a serem retornadas.  
   

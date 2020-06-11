@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca291a5181fdb3f7a88845431d61ffd7a1034eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076612"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536818"
 ---
 # <a name="configure-measure-properties"></a>Configurar propriedades de medida
   As medidas têm propriedades que lhe permitem definir como elas funcionam e controlar como elas aparecem para os usuários.  

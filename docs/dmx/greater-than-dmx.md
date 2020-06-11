@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9156525f463a3597c60421be7de0af64bd4f4ac7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae24b0195beab2b34804a14e5e105e6e277f3529
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074820"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669306"
 ---
 # <a name="gt-greater-than-dmx"></a>&gt;(Maior que) Symmetrix
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ DMX_Expression > DMX_Expression
  *DMX_Expression*  
  Expressão DMX válida.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Valor booliano que conterá TRUE se ambos os parâmetros forem não nulos e se o primeiro parâmetro tiver um valor maior do que o valor do segundo parâmetro. O valor booliano conterá FALSE se ambos os parâmetros forem não nulos e se o primeiro parâmetro tiver um valor igual a ou menor do que o valor do segundo parâmetro. O valor Booliano conterá um valor nulo se um ou ambos os parâmetros forem avaliados como um valor nulo.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -1,7 +1,7 @@
 ---
 title: Sessões de eventos estendidos do SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 05/26/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xevents
@@ -14,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83440163bdb1e03690fe4f5dcf93fdfc6779057f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63a94ef98eeb1b460672e50657b5ece6ef491764
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706604"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868336"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessões de eventos estendidos do SQL Server
   Uma sessão de eventos estendidos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é criada no processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando o mecanismo de eventos estendidos. Os seguintes aspectos de uma sessão de eventos estendidos fornecem um contexto para entender a infraestrutura de eventos estendidos e o processamento geral que ocorre:  
@@ -30,9 +30,9 @@ ms.locfileid: "82706604"
   
 ## <a name="session-states"></a>Estados da sessão  
  A ilustração a seguir mostra os vários estados de uma sessão de eventos estendidos.  
-  
- ![Estado de sessão de eventos estendidos](../../database-engine/media/xesessionstate.gif "Estado de sessão de eventos estendidos")  
-  
+
+![Estado de sessão de eventos estendidos](../../database-engine/media/xesessionstate.png "Estado de sessão de eventos estendidos")
+
  Mencionando a figura precedente, observe que o estado da sessão é alterado quando os comandos DDL diferentes são emitidos para uma sessão de evento. Essas alterações de estado são descritas na tabela a seguir.  
   
 |Rótulo de ilustração|instrução DDL|Description|  

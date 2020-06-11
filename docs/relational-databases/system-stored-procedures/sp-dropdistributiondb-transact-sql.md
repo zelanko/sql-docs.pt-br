@@ -1,5 +1,6 @@
 ---
 title: sp_dropdistributiondb (Transact-SQL) | Microsoft Docs
+description: Descarta um banco de dados de distribuição e os arquivos usados por ele se eles não forem usados por outro banco de dados. Esse procedimento armazenado é executado no distribuidor em qualquer banco de dados.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7171c1e80260f28f85e2b7490f7ac21bea217173
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ff09552fcc8a79abcae877191b4456c0958d1ea2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830166"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807756"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9cf2e37d9a6ae6d0fa93012f72673642d11a2a4c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811047"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547448"
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
   O Assistente de Geração de Esquema gera um esquema relacional não normalizado para o banco de dados da área de assunto com base nas dimensões e nos grupos de medidas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  
@@ -82,7 +81,7 @@ ms.locfileid: "68811047"
  O assistente gera uma tabela separada para manter os valores traduzidos para qualquer propriedade do grupo de medidas que precise de uma coluna de tradução. O assistente cria também uma coluna separada para cada um dos idiomas necessários.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversão do tipo de dados e comprimentos padrão  
- O assistente de geração de esquema ignora os tipos de dados em todos os casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` exceto as colunas que usam o tipo de dados. O tamanho de dados `wchar` converte-se diretamente no tipo de dados `nvarchar`. No entanto, se o comprimento especificado de uma coluna que usa o tamanho `wchar` for superior a 4000 bytes, o Assistente de Geração de Esquema produzirá um erro.  
+ O assistente de geração de esquema ignora os tipos de dados em todos os casos, exceto as colunas que usam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo de dados. O tamanho de dados `wchar` converte-se diretamente no tipo de dados `nvarchar`. No entanto, se o comprimento especificado de uma coluna que usa o tamanho `wchar` for superior a 4000 bytes, o Assistente de Geração de Esquema produzirá um erro.  
   
  Se um item de dados, como uma ligação para um atributo, não tiver um comprimento especificado, o comprimento padrão listado na tabela a seguir será usado na coluna.  
   

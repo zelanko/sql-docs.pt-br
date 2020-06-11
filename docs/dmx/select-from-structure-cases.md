@@ -1,28 +1,28 @@
 ---
-title: Selecione da &lt;estrutura&gt;. CASOS | Microsoft Docs
+title: Selecione da &lt; estrutura &gt; . CASOS | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928291"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670099"
 ---
-# <a name="select-from-ltstructuregtcases"></a>Selecione da &lt;estrutura&gt;. BOLSAS
+# <a name="select-from-ltstructuregtcases"></a>Selecione da &lt; estrutura &gt; . BOLSAS
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna os casos usados para criar a estrutura de mineração.  
   
  Se detalhamento não estiver habilitado na estrutura, a instrução falhará. Além disso, a instrução falhará se o usuário não tiver permissões de detalhamento na estrutura de mineração.  
   
- No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], o detalhamento em novas estruturas de mineração é habilitado por padrão. Para verificar se o detalhamento está habilitado para uma determinada estrutura, verifique se o valor da propriedade **CacheMode** está definido como **KeepTrainingCases**.  
+ No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , o detalhamento em novas estruturas de mineração é habilitado por padrão. Para verificar se o detalhamento está habilitado para uma determinada estrutura, verifique se o valor da propriedade **CacheMode** está definido como **KeepTrainingCases**.  
   
  Se o valor de **CacheMode** for alterado para **ClearAfterProcessing**, os casos de estrutura serão apagados do cache e você não poderá usar o detalhamento.  
   
@@ -65,7 +65,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Portanto, para proteger dados confidenciais ou informações pessoais, você deve construir sua exibição da fonte de dados para mascarar informações pessoais e conceder a permissão **AllowDrillThrough** em uma estrutura de mineração ou modelo de mineração somente quando necessário.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir são baseados na estrutura de mineração, mala direta, que se baseia no banco [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de dados e nos modelos de mineração associados. Para obter mais informações, consulte o [tutorial básico de mineração de dados](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Os exemplos a seguir são baseados na estrutura de mineração, mala direta, que se baseia no [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] banco de dados e nos modelos de mineração associados. Para obter mais informações, consulte o [tutorial básico de mineração de dados](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Exemplo 1: detalhamento para casos da estrutura  
  O seguinte exemplo retorna uma lista dos 500 clientes mais antigos na estrutura de mineração, Correspondência destinada. A consulta retorna todas as colunas no modelo de mineração, mas restringe as linhas para as que compraram uma bicicleta e as classifica por idade. Também é possível editar a lista de expressões para retornar apenas as colunas necesárias.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 360a8b93c20dd57d3dd3d382c843a2f65d5f3c27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071851"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547578"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurar e exibir arquivos de log do SharePoint e log de diagnóstico (PowerPivot para SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -119,10 +118,10 @@ ms.locfileid: "66071851"
 |Processo|Área|Categoria|Nível|Mensagem|Detalhes|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|Serviço PowerPivot|Uso|Detalhado|Não há nenhuma estatística de solicitação atual, nada para registrar em log.|A intervalos predefinidos, o serviço reporta estatísticas de resposta de consulta como um evento de uso para o sistema de coleta de dados de uso. Esta mensagem indica que não havia nenhuma estatística de consulta para reportar.|  
-|w3wp.exe|Serviço PowerPivot|Front-end da Web|Detalhado|Começando a localizar um servidor de aplicativos para a fonte\<de dados =*caminho*>|Quando ele receber uma solicitação de conexão, o serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifica um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponível para gerenciar a solicitação. Se houver somente um servidor no farm, o servidor local aceitará a solicitação em todos os casos.|  
+|w3wp.exe|Serviço PowerPivot|Front-end da Web|Detalhado|Começando a localizar um servidor de aplicativos para a fonte de dados =\<*path*>|Quando ele receber uma solicitação de conexão, o serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifica um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponível para gerenciar a solicitação. Se houver somente um servidor no farm, o servidor local aceitará a solicitação em todos os casos.|  
 |w3wp.exe|Serviço PowerPivot|Front-end da Web|Detalhado|Localizando o servidor de aplicativos bem-sucedido.|A solicitação foi alocada para um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|Serviço PowerPivot|Front-end da Web|Detalhado|Solicitação de redirecionamento para \<o> de *origem* do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]PowerPivotdata para o.|A solicitação foi encaminhada para o [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Serviço PowerPivot|Processamento de solicitação|Detalhado|Solicitação de redirecionamento para\<*usuário do SharePoint*> para o banco de dados|Uma conexão representada para a fonte de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] foi criada em nome do usuário do SharePoint.|  
+|w3wp.exe|Serviço PowerPivot|Front-end da Web|Detalhado|Redirecionando a solicitação do \<*PowerPivotdata source*> para o [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] .|A solicitação foi encaminhada para o [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|Serviço PowerPivot|Processamento de solicitação|Detalhado|Redirecionando a solicitação de nome de usuário \<*SharePoint user*> para o banco de dados|Uma conexão representada para a fonte de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] foi criada em nome do usuário do SharePoint.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Coleta de dados de uso do PowerPivot](power-pivot-usage-data-collection.md)   

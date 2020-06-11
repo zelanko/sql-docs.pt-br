@@ -21,12 +21,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c8aeffd66f812b682610ad16abc6c4336b77b9c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "77507516"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668396"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ fn_get_audit_file ( file_pattern,
     
     Esse argumento deve incluir um caminho (letra de unidade ou compartilhamento de rede) e um nome de arquivo, podendo conter um caractere curinga. Um único asterisco (*) pode ser usado para coletar vários arquivos de um conjunto de arquivos de auditoria. Por exemplo:  
   
-    -   **caminho>\\ -coletar todos os arquivos de auditoria no local \<** especificado.  
+    -   ** \< caminho \\>\* ** -coletar todos os arquivos de auditoria no local especificado.  
   
-    -   **caminho> \ LoginsAudit_ {GUID}-colete todos os arquivos de auditoria que têm o nome e o par GUID especificados. \<**  
+    -   ** \< caminho> \ LOGINSAUDIT_ {GUID}***-coletar todos os arquivos de auditoria que têm o nome e o par GUID especificados.  
   
-    -   **caminho> \ LoginsAudit_ {GUID} _00_29384. sqlaudit-Coleta um arquivo de auditoria específico. \<**  
+    -   ** \< caminho> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** -coleta um arquivo de auditoria específico.  
   
  - **Banco de dados SQL do Azure**:
  
     Esse argumento é usado para especificar uma URL de BLOB (incluindo o ponto de extremidade de armazenamento e o contêiner). Embora não ofereça suporte a um curinga de asterisco, você pode usar um prefixo de nome de arquivo parcial (BLOB) (em vez do nome de blob completo) para coletar vários arquivos (BLOBs) que começam com esse prefixo. Por exemplo:
  
-      - **/\<Storage_endpoint\>/contêiner\<ServerName\>DatabaseName\> -coleta todos os arquivos de auditoria (BLOBs) para o banco de dados específico.\>\< \</**    
+      - ** \< Storage_endpoint \> / \< contêiner \> / \< ServerName \> / \< DatabaseName \> - / ** coleta todos os arquivos de auditoria (BLOBs) para o banco de dados específico.    
       
-      - **/Storage_endpoint\>/container\>nomedoservidor\>DatabaseName\>AuditName\>CreationDate\>filename. xel-coleta um arquivo de auditoria específico (BLOB)./\<\>\</\<//\< \<\<\<**
+      - ** \< Storage_endpoint \> / \< container \> / \< nomedoservidor \> / \< DatabaseName \> / \< AuditName \> / \< CreationDate \> / \< filename \> . xel** -coleta um arquivo de auditoria específico (BLOB).
   
 > [!NOTE]  
 >  Indicar um caminho sem um padrão de nome de arquivo irá gerar um erro.  
@@ -83,10 +83,10 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Tabelas retornadas  
  A tabela a seguir descreve o conteúdo do arquivo de auditoria que pode ser retornado por essa função.  
   
-| Nome da coluna | Tipo | Descrição |  
+| Nome da coluna | Tipo | Description |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | A identificação da ação. Não permite valor nulo. |  
-| additional_information | **nvarchar(4000)** | Informações exclusivas que se aplicam somente a um evento são retornadas como XML. Um número pequeno de ações auditável contém esse tipo de informação.<br /><br /> Um nível de pilha TSQL será exibido em formato XML para ações que tenham pilha TSQL associada a elas. O formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> O nest_level do quadro indica o nível de aninhamento atual do quadro. O nome do Módulo é representado em formato de três partes (database_name, schema_name e object_name).  O nome do módulo será analisado para escapar caracteres XML inválidos `'>'`como `'/'` `'\<'`, `'_x'`,,. Eles serão ignorados como `_xHHHH\_`. O HHHH representa o código UCS-2 hexadecimal de quatro dígitos do caractere<br /><br /> Permite valor nulo. Retornará NULL quando o evento não reportar informações adicionais. |
+| additional_information | **nvarchar(4000)** | Informações exclusivas que se aplicam somente a um evento são retornadas como XML. Um número pequeno de ações auditável contém esse tipo de informação.<br /><br /> Um nível de pilha TSQL será exibido em formato XML para ações que tenham pilha TSQL associada a elas. O formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> O nest_level do quadro indica o nível de aninhamento atual do quadro. O nome do Módulo é representado em formato de três partes (database_name, schema_name e object_name).  O nome do módulo será analisado para escapar caracteres XML inválidos como `'\<'` , `'>'` , `'/'` , `'_x'` . Eles serão ignorados como `_xHHHH\_` . O HHHH representa o código UCS-2 hexadecimal de quatro dígitos do caractere<br /><br /> Permite valor nulo. Retornará NULL quando o evento não reportar informações adicionais. |
 | affected_rows | **bigint** | **Aplica-se a**: somente BD SQL do Azure<br /><br /> Número de linhas afetadas pela instrução executada. |  
 | application_name | **nvarchar(128)** | **Aplica-se a**: BD SQL do Azure + SQL Server (a partir de 2017)<br /><br /> Nome do aplicativo cliente que executou a instrução que causou o evento de auditoria |  
 | audit_file_offset | **bigint** | **Aplica-se a**: somente SQL Server<br /><br /> O deslocamento de buffer no arquivo que contém o registro de auditoria. Não permite valor nulo. |  
@@ -116,7 +116,7 @@ fn_get_audit_file ( file_pattern,
 | session_id | **smallint** | Identificação da sessão em que ocorreu o evento. Não permite valor nulo. |  
 | session_server_principal_name | **sysname** | Entidade de segurança do servidor para sessão. Permite valor nulo. |  
 | instrução | **nvarchar(4000)** | Instrução TSQL, se existir. Permite valor nulo. Retorna NULL se não aplicável. |  
-| succeeded | **bit** | Indica se a ação que disparou o evento foi bem-sucedida. Não permite valor nulo. Para todos os demais eventos que não são eventos de logon, reporta somente se a verificação de permissões foi bem-sucedida ou não, e não a operação.<br /> 1 = Êxito<br /> 0 = falha |
+| bem-sucedido | **bit** | Indica se a ação que disparou o evento foi bem-sucedida. Não permite valor nulo. Para todos os demais eventos que não são eventos de logon, reporta somente se a verificação de permissões foi bem-sucedida ou não, e não a operação.<br /> 1 = Êxito<br /> 0 = falha |
 | target_database_principal_id | **int** | O banco de dados principal no qual a operação GRANT/DENY/REVOKE é executada. Não permite valor nulo. Retorna 0 se não aplicável. |  
 | target_database_principal_name | **sysname** | Usuário de destino da ação. Permite valor nulo. Retorna NULL se não aplicável. |  
 | target_server_principal_id | **int** | Diretor de Servidor que o GRANT/operação do DENY/REVOKE é executada em. Não permite valor nulo. Retorna 0 se não aplicável. |  
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **Banco de Dados SQL do Azure**
 
-  Este exemplo lê de um arquivo chamado `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
+  Este exemplo lê de um arquivo chamado `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel` :  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
@@ -167,7 +167,7 @@ fn_get_audit_file ( file_pattern,
   GO
   ```  
 
-  Este exemplo lê todos os logs de auditoria de servidores que `Sh`começam com: 
+  Este exemplo lê todos os logs de auditoria de servidores que começam com `Sh` : 
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);

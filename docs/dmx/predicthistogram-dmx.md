@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893857"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666795"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Um histograma gera colunas de estatísticas. A estrutura de coluna do histograma retornado depende do tipo de referência de coluna usada com a função **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Colunas escalares  
- Para uma \<referência de coluna escalar>, o histograma que a função **PredictHistogram** retorna consiste nas seguintes colunas:  
+ Para uma \< referência de coluna escalar>, o histograma que a função **PredictHistogram** retorna consiste nas seguintes colunas:  
   
 -   Valor sendo previsto.  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      A coluna **$AdjustedProbability** é uma [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensão do [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para especificação de mineração de dados.  
   
 ## <a name="cluster-columns"></a>Colunas cluster  
- O histograma que a função **PredictHistogram** retorna para uma \<referência de coluna de cluster> consiste nas seguintes colunas:  
+ O histograma que a função **PredictHistogram** retorna para uma \< referência de coluna de cluster> consiste nas seguintes colunas:  
   
 -   **$Cluster** (representa o nome do cluster)  
   

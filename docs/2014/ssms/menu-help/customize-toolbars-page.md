@@ -12,17 +12,17 @@ ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32e57b44b759ba36ea92cd7d08a600738ff2b4dd
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470003"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859228"
 ---
 # <a name="customize-toolbars-page"></a>Personalizar (página Barras de Ferramentas)
   A guia **Barras de Ferramentas** permite que você crie, renomeie, remova e redefina as barras de ferramentas. Você pode acessar essa guia clicando em **Personalizar** , no menu **Ferramentas** , e clicando em **Barras de Ferramentas**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Barras de Ferramentas**  
  Exibe as barras de ferramentas internas e qualquer outra barra de ferramentas que você criar. Quando uma barra de ferramentas é exibida, um sinal de verificação aparece à sua esquerda nessa caixa de diálogo.  
   

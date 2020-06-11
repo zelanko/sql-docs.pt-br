@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237f4dfaa615718f7fa4301b8d64cab0c45600b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071045"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547758"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Iniciar ou parar um PowerPivot para SharePoint Server
   O Serviço de Sistema do PowerPivot e uma instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] funcionam em conjunto no mesmo servidor de aplicativo local para dar suporte à solicitação coordenada e ao processamento de dados em um farm do SharePoint.  
@@ -53,7 +52,7 @@ ms.locfileid: "66071045"
 ##  <a name="effects-of-stopping-a-powerpivot-server"></a><a name="effects"></a>Efeitos da interrupção de um servidor PowerPivot  
  A tabela a seguir descreve os efeitos de parar o Serviço de Sistema do PowerPivot e o serviço Analysis Services em um servidor do SharePoint.  
   
-|Efeito em|Descrição|  
+|Efeito em|Description|  
 |---------------|-----------------|  
 |Consultas existentes|As consultas que estão em andamento em um servidor do Analysis Services pararão imediatamente. O usuário receberá o erro de dados não localizados ou conexão da fonte de dados não localizada.|  
 |Trabalhos de atualização de dados existentes em processamento no momento|Os trabalhos que estão em andamento em um servidor do Analysis Services atual pararão imediatamente. A atualização de dados falhará e um erro será registrado no histórico da atualização de dados.<br /><br /> É possível exibir o status de trabalhos atuais antes de parar o serviço, usando-se a página Verificar status do trabalho na Administração Central do SharePoint.<br /><br /> Embora seja impossível saber quais trabalhos estão em processamento no momento, não há como exibir a própria fila para verificar se outros trabalhos estão prestes a começar.|  

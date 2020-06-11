@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ed6668b4e9b35cb6c311fbbbbc7b17be88d6296
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071806"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547548"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurar o uso do espaço em disco (PowerPivot para SharePoint)
   Uma implantação PowerPivot para SharePoint usa o espaço em disco do computador host para armazenar em cache bancos de dados PowerPivot para agilizar recargas. Todo banco de dados PowerPivot que é carregado em memória primeiro é armazenado em cache em disco para agilizar a recarga posterior para atender novas solicitações. Por padrão, o PowerPivot para SharePoint usa todo o espaço disponível em disco para armazenar em cache seus bancos de dados, mas pode modificar este comportamento definindo propriedades que limitam a quantidade de espaço em disco utilizada.  
@@ -42,7 +41,7 @@ ms.locfileid: "66071806"
   
  A pasta Backup oferece o armazenamento em cache comum para qualquer banco de dados PowerPivot carregado em memória no computador local. Se você tiver vários aplicativos de serviço PowerPivot definidos em seu farm, qualquer um deles poderá usar o servidor local para carregar e subsequentemente armazenar em cache dados PowerPivot. O carregamento e o armazenamento de dados em cache são operações de servidor do Analysis Services. Sendo assim, o uso total de espaço em disco é gerenciado em nível de instância do Analysis Services, na pasta Backup. Parâmetros de configuração que limitam o uso de espaço em disco são definidos na única instância do SQL Server Analysis Services que é executada em um servidor de aplicativos do SharePoint.  
   
- O cache contém apenas bancos de dados PowerPivot. Bancos de dados PowerPivot são armazenados em vários arquivos em uma única pasta pai (a pasta Backup). Como bancos de dados PowerPivot devem ser usados como dados internos em uma pasta de trabalho do Excel, nomes de bancos de dados se baseiam em GUID, e não são descritivos. Uma pasta GUID em ** \<>de aplicativo** é a pasta pai de um banco de dados PowerPivot. Como bancos de dados PowerPivot são carregados no servidor, pastas adicionais são criadas para cada um.  
+ O cache contém apenas bancos de dados PowerPivot. Bancos de dados PowerPivot são armazenados em vários arquivos em uma única pasta pai (a pasta Backup). Como bancos de dados PowerPivot devem ser usados como dados internos em uma pasta de trabalho do Excel, nomes de bancos de dados se baseiam em GUID, e não são descritivos. Uma pasta GUID em **\<serviceApplicationName>** é a pasta pai de um banco de dados PowerPivot. Como bancos de dados PowerPivot são carregados no servidor, pastas adicionais são criadas para cada um.  
   
  Como dados PowerPivot podem ser carregados em qualquer instância do Analysis Services em um farm, os mesmos dados também poderiam ser armazenados em cache em vários computadores no farm. Essa prática favorece o desempenho na utilização de espaço em disco, mas a compensação é que os usuários acessam dados mais rápido quando eles já estão disponíveis em disco.  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66071806"
   
  Em nível de sistema, você pode criar alertas de email que notifiquem quando o espaço em disco for baixo. O Microsoft System Center inclui um recurso de alerta de email. Você também pode usar o Gerenciador de Recursos do Servidor de Arquivo, o Agendador de Tarefas ou o script PowerShell para configurar alertas. Os links a seguir especificam informações úteis para configurar notificações sobre espaço em disco insuficiente:  
   
--   [O que há de novo no Gerenciador](https://technet.microsoft.com/library/hh831746.aspx) de recursoshttps://technet.microsoft.com/library/hh831746.aspx)de servidor de arquivos (.  
+-   [O que há de novo no Gerenciador de recursos de servidor de arquivos](https://technet.microsoft.com/library/hh831746.aspx) ( https://technet.microsoft.com/library/hh831746.aspx) .  
   
--   [Guia passo a passo do Gerenciador de recursos do servidor de arquivos para o Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guia passo a passo do Gerenciador de recursos do servidor de arquivos para o Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) ( https://go.microsoft.com/fwlink/?LinkID=204875) .  
   
--   [Configurando alertas de espaço em disco insuficientes no Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Configurando alertas de espaço em disco insuficientes no Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870) .  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Como limitar a quantidade de espaço em disco usada para armazenar arquivos em cache  
   

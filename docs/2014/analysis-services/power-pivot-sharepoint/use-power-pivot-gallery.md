@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8c14a123fcdb23efade07e78dec94d242df7fc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634f6c0a435c733af7f223de333cb52d95ce897
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175685"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547708"
 ---
 # <a name="use-powerpivot-gallery"></a>Usar a Galeria PowerPivot
   A Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma biblioteca de documentos do SharePoint, com finalidade especial, que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados PowerPivot.
@@ -39,7 +38,7 @@ ms.locfileid: "78175685"
 
 -   [Atualizar uma imagem em miniatura](#image)
 
--   [Problemas Conhecidos](#bkmk_known_issues)
+-   [Problemas conhecidos](#bkmk_known_issues)
 
  [Pré-requisitos](#prereq)
 
@@ -55,7 +54,7 @@ ms.locfileid: "78175685"
 ##  <a name="icons-in-powerpivot-gallery"></a><a name="icons"></a>Ícones na Galeria PowerPivot
  Os ícones fornecem um indicativo visual quanto à disponibilidade do conteúdo e ao status.
 
-|ícone|Descrição|
+|ícone|Description|
 |----------|-----------------|
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|O ícone de ampulheta é exibido quando uma imagem em miniatura de cada página no documento está sendo gerada. Atualize a página para exibir a atualização da imagem.|
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|O ícone de página é exibido quando uma pasta de trabalho ou um relatório tem mais páginas do que as que podem ser exibidas na Galeria PowerPivot. Para exibir todas as páginas, você deve usar um aplicativo cliente.|
@@ -148,14 +147,14 @@ ms.locfileid: "78175685"
 
 4.  Clique em **Salvar**. Salvar o documento forçará o serviço de instantâneo a gerar novamente a imagem de visualização.
 
-##  <a name="known-issues"></a><a name="bkmk_known_issues"></a>Problemas conhecidos
+##  <a name="known-issues"></a><a name="bkmk_known_issues"></a> Problemas conhecidos
 
 ### <a name="document-type-is-not-supported"></a>Não há suporte ao tipo de documento
  O tipo de conteúdo **Documento de Galeria PowerPivot** não tem suporte. Se você habilitar o tipo de conteúdo **Documento de Galeria PowerPivot** para uma biblioteca de documentos e tentar criar um novo documento desse tipo, verá uma mensagem de erro semelhante a uma destas:
 
 -   ' Novo documento ' requer um aplicativo compatível com o Microsoft SharePoint Foundation e um navegador da Web. Para adicionar um documento a esta biblioteca de documentos, clique no botão ' carregar documento '.
 
--   "O endereço de Internet ' http://[nome do servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/template. xlsx ' não é válido." " O Microsoft Excel não pode acessar o arquivo ' http://[nome do servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/template. xlsx '. Há várias razões possíveis:
+-   "O endereço de Internet ' http://[nome do servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/Template.xlsx ' não é válido." " O Microsoft Excel não pode acessar o arquivo ' http://[nome do servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/Template.xlsx '. Há várias razões possíveis:
 
  O tipo de conteúdo do **Documento de Galeria PowerPivot** não é adicionado automaticamente nas bibliotecas de documentos. Você não encontrará esse problema, a menos que habilite manualmente o tipo de conteúdo sem suporte.
 

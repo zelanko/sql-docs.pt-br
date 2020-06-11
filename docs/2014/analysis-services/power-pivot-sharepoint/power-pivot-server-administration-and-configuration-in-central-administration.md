@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: de72001ced1b7e2690f90b2de4c59bb35aca6ce4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bea6bb558e6ccafefbbb068fa3799eddff748a5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071108"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547802"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Administração e configuração de servidor do PowerPivot na Administração Central
   A administração de servidor e a configuração do PowerPivot são realizadas por administradores de aplicativo de serviço do SharePoint, usando a Administração Central do SharePoint.  
@@ -49,10 +48,10 @@ ms.locfileid: "66071108"
   
 |Link|Tipo|Descrição da tarefa|  
 |----------|----------|----------------------|  
-|[Implantar soluções PowerPivot para SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Necessária|Esta etapa instala os arquivos da solução que adicionam arquivos de programa e páginas de aplicativo ao farm e às coleções de sites.|  
-|[Criar e configurar um aplicativo de serviço PowerPivot na Administração Central](create-and-configure-power-pivot-service-application-in-ca.md)|Necessária|Essa etapa provisiona o Serviço de Sistema PowerPivot.|  
-|[Ativar a integração de recursos do PowerPivot para coleções de sites na Administração Central](activate-power-pivot-integration-for-site-collections-in-ca.md)|Necessária|Esta etapa ativa os recursos do PowerPivot no nível de coleção de sites.|  
-|[Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Necessária|Esta etapa adiciona o provedor OLE DB do Analysis Services como um provedor de confiança em Serviços do Excel.|  
+|[Implantar soluções PowerPivot para SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Obrigatório|Esta etapa instala os arquivos da solução que adicionam arquivos de programa e páginas de aplicativo ao farm e às coleções de sites.|  
+|[Criar e configurar um aplicativo de serviço PowerPivot na Administração Central](create-and-configure-power-pivot-service-application-in-ca.md)|Obrigatório|Essa etapa provisiona o Serviço de Sistema PowerPivot.|  
+|[Ativar a integração de recursos do PowerPivot para coleções de sites na Administração Central](activate-power-pivot-integration-for-site-collections-in-ca.md)|Obrigatório|Esta etapa ativa os recursos do PowerPivot no nível de coleção de sites.|  
+|[Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Obrigatório|Esta etapa adiciona o provedor OLE DB do Analysis Services como um provedor de confiança em Serviços do Excel.|  
 |[Atualização de dados PowerPivot com SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)|Recomendadas|A atualização de dados é opcional, porém recomendada. Ela permite programar atualizações autônomas ao dados PowerPivot em pastas de trabalho do Excel publicadas.|  
 |[Configurar a conta de atualização de dados autônoma do PowerPivot &#40;PowerPivot para SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|Recomendadas|Esta etapa provisiona uma conta com finalidade especial que pode ser usada para executar trabalhos de atualização de dados no servidor.|  
 |[Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Opcional|A coleta de dados de uso é configurada por padrão. Você pode usar essas etapas para modificar as configurações padrão.|  

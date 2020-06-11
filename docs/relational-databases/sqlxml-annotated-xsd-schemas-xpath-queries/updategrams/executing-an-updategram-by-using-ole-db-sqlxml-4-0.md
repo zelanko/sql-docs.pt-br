@@ -1,5 +1,6 @@
 ---
 title: Executando um updategram usando OLE DB (SQLXML)
+description: Saiba como usar OLE DB no SQLXML 4,0 para executar um updategram.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9267699ff8edbaf0d615dbdb45a915e24e842b11
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241280"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215259"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Executando um diagrama de atualização usando OLE DB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "75241280"
 </Schema>  
 ```  
   
- A consulta retorna todos os elementos do funcionário. Com o mapeamento padrão, o ** \<elemento Person. Contact>** é mapeado para a tabela Person. Contact no banco de dados AdventureWorks.  
+ A consulta retorna todos os elementos do funcionário. Com o mapeamento padrão, o **\<Person.Contact>** elemento é mapeado para a tabela Person. Contact no banco de dados AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Para definir XML como um comando e recuperar resultados como um documento XML  
   
@@ -515,7 +516,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- O modelo inclui uma consulta SQL. A consulta requer um valor para seu parâmetro (@Title). Se nenhum valor de parâmetro for passado, o valor padrão ("Mr.") será usado.  
+ O modelo inclui uma consulta SQL. A consulta requer um valor para seu parâmetro ( @Title ). Se nenhum valor de parâmetro for passado, o valor padrão ("Mr.") será usado.  
   
  Ao passar valores de parâmetros para um modelo, o nome e o valor do parâmetro devem ser especificados.  
   

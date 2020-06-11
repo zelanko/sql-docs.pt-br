@@ -1,6 +1,7 @@
 ---
 title: sp_addsubscription (Transact-SQL) | Microsoft Docs
-ms.date: 10/28/2015
+description: Adiciona uma assinatura a uma publicação e define o status do Assinante. Esse procedimento armazenado é executado no Publicador do banco de dados de publicação.
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627617"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +84,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber =] '*assinante*'  
  É o nome do Assinante. o *assinante* é **sysname**, com um padrão de NULL.  
+
+> [!NOTE]
+> O nome do servidor pode ser especificado como `<Hostname>,<PortNumber>` . Talvez seja necessário especificar o número da porta para a conexão quando SQL Server for implantada no Linux ou no Windows com uma porta personalizada, e o serviço navegador estiver desabilitado.
   
  [ @destination_db =] '*destination_db*'  
  É o nome do banco de dados de destino no qual os dados replicados são colocados. *destination_db* é **sysname**, com um padrão de NULL. Quando NULL, *destination_db* é definido como o nome do banco de dados de publicação. Para Publicadores Oracle, *destination_db* deve ser especificado. Para um assinante não SQL Server, especifique um valor de (destino padrão) para *destination_db*.  
@@ -255,7 +259,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password =] '*senha*'  
- Especifica uma senha para o backup se uma senha já tiver sido definida quando o backup foi criado. a *senha*é **sysname**, com um valor padrão de NULL.  
+ Especifica uma senha para o backup se uma senha já tiver sido definida quando o backup foi criado. a *senha* é **sysname**, com um valor padrão de NULL.  
   
  [ @fileidhint =] *fileidhint*  
  Identifica um valor ordinal do conjunto de backup a ser restaurado. *fileidhint* é **int**, com um valor padrão de NULL.  

@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a060efe0c4d6a3ed34d59d755398e0079402cc4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070165"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547408"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Verificar Uso de Agregação (Assistente de Otimização com Base no Uso)
   Use a página **Revisar Uso de Agregação** para efetuar configurações do uso de agregação.  
   
 ## <a name="options"></a>Opções  
- **Padrão**  
+ **Default**  
  Selecione para definir a configuração do uso de agregação do atributo como Padrão. Quando essa configuração é utilizada, o designer aplica uma regra padrão com base no tipo de atributo e dimensão.  
   
- **Completo**  
+ **Full**  
  Selecione para definir a configuração do uso de agregação do atributo como Completo. Quando essa configuração é utilizada, cada agregação para o cubo deve incluir esse atributo ou um atributo relacionado inferior na cadeia de atributos. A configuração do uso de agregação Completo deverá ser evitada quando um atributo contiver muitos membros. Se for especificada para vários atributos ou atributos que têm muitos membros, essa configuração poderá impedir a criação de agregações por causa do seu tamanho excessivo.  
   
  **Nenhum**  

@@ -19,12 +19,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e302d454ba0bf243f702b90b24cf7076ed97cb6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078520"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669458"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "68078520"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Nome específico do catálogo. Este nome é igual a ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nome específico do esquema.<br /><br /> ** \* Importante \* \* ** Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nome específico do esquema.<br /><br /> Importante não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. ** \* \* \* \* ** INFORMATION_SCHEMA exibições representam apenas um subconjunto dos metadados de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Nome específico do catálogo. Este nome é igual a ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Nome de catálogo da função.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nome do esquema que contém esta função.<br /><br /> ** \* Importante \* \* ** Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nome do esquema que contém esta função.<br /><br /> Importante não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. ** \* \* \* \* ** INFORMATION_SCHEMA exibições representam apenas um subconjunto dos metadados de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Nome da função.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Retorna PROCEDURE para procedimentos armazenados e FUNCTION para funções.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  

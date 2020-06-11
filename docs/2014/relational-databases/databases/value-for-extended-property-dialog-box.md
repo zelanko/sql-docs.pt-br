@@ -15,17 +15,17 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61351e04ef5100e203ff0be098eddecb0500663a
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916498"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859258"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Caixa de diálogo Valor da Propriedade Estendida
   Use a caixa de diálogo **Valor de** *\<nome da propriedade>* para inserir ou exibir um valor. Essa é uma caixa de diálogo comum que pode ser aberta em vários locais.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome da propriedade estendida**  
  Nome da propriedade estendida exibida ou definida.  
   

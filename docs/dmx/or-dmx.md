@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ce963b2322e19e4e3a98982a88f99d3546cabc2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008146"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668731"
 ---
 # <a name="or-dmx"></a>OR (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ Expression1 OR Expression2
  *Expression2*  
  Expressão DMX válida que retorna um valor numérico.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Valor booliano que retorna TRUE quando um argumento ou todos os argumentos avaliarem TRUE; do contrário, FALSE.  
   
 ## <a name="remarks"></a>Comentários  
@@ -44,10 +44,10 @@ Expression1 OR Expression2
   
 |Se a Expression1 for|Se a Expression2 for|O valor de retorno será|  
 |-----------------------|-----------------------|---------------------|  
-|TRUE|TRUE|TRUE|  
-|TRUE|FALSE|TRUE|  
-|FALSE|TRUE|TRUE|  
-|FALSE|FALSE|FALSE|  
+|VERDADEIRO|VERDADEIRO|VERDADEIRO|  
+|TRUE|FALSO|VERDADEIRO|  
+|FALSO|VERDADEIRO|TRUE|  
+|FALSO|FALSO|FALSO|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   

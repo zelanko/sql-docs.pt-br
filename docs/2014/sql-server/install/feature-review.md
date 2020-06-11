@@ -10,19 +10,19 @@ ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095326"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859572"
 ---
 # <a name="feature-review"></a>Revisão dos recursos
   A página Revisão de Recurso é uma lista somente leitura de recursos que foram preparados e serão configurados e concluídos no final da etapa de imagem completa. A lista de recursos é selecionada durante a etapa de preparação da imagem e não pode ser modificada durante a etapa de imagem completa. Além dos recursos exibidos, uma instância preparada inclui também o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Gravador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  Você pode adicionar outros recursos não incluídos na instância preparada da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depois de concluir a configuração da instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
   
 |Grupo de componentes|Componentes e recursos|  
 |---------------------|-----------------------------|  

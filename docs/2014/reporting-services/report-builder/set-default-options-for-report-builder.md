@@ -12,17 +12,17 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e119a0f4423b07a4c97339d843fbc60181886eb3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66107621"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858588"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Caixa de diálogo Opções do Construtor de Relatórios, Configurações (Construtor de Relatórios)
   Clique no botão **Construtor de relatórios** e, em seguida, clique em **Opções** para definir opções para mostrar os arquivos e as conexões recentes. Também é possível alterar o servidor de relatório padrão ou adicionar um se você não tiver um padrão.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Usar este servidor de relatório ou site do SharePoint por padrão**  
  Pode ser que o administrador tenha configurado essa opção. O valor pode ser uma URL bem formada que inicia com http:// ou https://. Essa configuração determina quais conexões da fonte de dados aparecem por padrão nos assistentes de Tabela/Matriz e de Gráfico. Além disso, seus relatórios serão processados neste servidor e você poderá referenciar recursos deste servidor.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f291020e77bf557a352c07451665172f9c4bb225
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071163"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547788"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Atualização de dados de agendamento e fontes de dados que não oferecem suporte à Autenticação do Windows (PowerPivot para SharePoint)
   Este tópico descreve um fluxo de trabalho de atualização de dados de agendamento do PowerPivot para SharePoint que pode usar fontes de dados que **NÃO** oferecem suporte à Autenticação do Windows. Por exemplo, fontes de dados Oracle ou IDM DB2. As ilustrações e as etapas neste tópico fazem referência a fontes de dados Oracle, mas o mesmo fluxo de trabalho aplica-se a outras fontes de dados.  
@@ -64,11 +63,11 @@ ms.locfileid: "66071163"
   
     -   **URL da Página de Aplicativo de Destino:** Nenhuma.  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Na página Credenciais, deixe os dois nomes de campo padrão e os tipos de campo de **Nome de Usuário do Windows** e **Senha do Windows**.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página **Configurações de Associação** , adicione pelo menos um **Administrador de Aplicativo de Destino** e adicione os membros que precisam acessar o aplicativo de destino.  
   
@@ -98,13 +97,13 @@ ms.locfileid: "66071163"
   
     -   **URL da Página de Aplicativo de Destino:** Nenhuma.  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
-6.  Na página **credenciais** , altere o nome do primeiro campo para `Oracle User ID` e altere o **tipo** de campo `User Name`para.  
+6.  Na página **credenciais** , altere o nome do primeiro campo para `Oracle User ID` e altere o **tipo de campo** para `User Name` .  
   
-     Altere o segundo nome de campo `Oracle Password` para e o **tipo** de `Password`campo para.  
+     Altere o segundo nome de campo para `Oracle Password` e o **tipo de campo** para `Password` .  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página **Configurações de Associação** , adicione pelo menos um **Administrador de Aplicativo de Destino** e adicione os membros que precisam acessar o aplicativo de destino.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66071163"
   
 11. Digite a ID do Usuário Oracle e a Senha Oracle, e clique em **OK**.  
   
- Para obter mais informações, consulte a seção "para criar um aplicativo de destino para SQL Server autenticação" em [usar repositório seguro com autenticação SQL Server (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx).  
+ Para obter mais informações, consulte a seção "para criar um aplicativo de destino para SQL Server autenticação" em [usar repositório seguro com autenticação SQL Server (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) ( https://technet.microsoft.com/library/gg298949.aspx) .  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Para configurar o aplicativo de serviço PowerPivot  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66071163"
   
 3.  Clique em **Definir configurações do aplicativo de serviço** na seção Ações.  
   
-4.  Na seção **atualização de dados** , defina a **conta de atualização de dados autônoma**do PowerPivot`PowerPivotDataRefresh` para e clique em **OK**.  
+4.  Na seção **atualização de dados** , defina a **conta de atualização de dados autônoma do PowerPivot**para `PowerPivotDataRefresh` e clique em **OK**.  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
@@ -148,7 +147,7 @@ ms.locfileid: "66071163"
   
 9. Selecione **Conecte-se usando as credenciais salvas no SSS (Serviço de Repositório Seguro) para fazer logon na fonte de dados. Insira a ID usada para pesquisar as credenciais na caixa ID do SSS**.  
   
-10. Na caixa **ID:** , digite `OracleAuthentication`.  
+10. Na caixa **ID:** , digite `OracleAuthentication` .  
   
 11. Clique em **OK**.  
   

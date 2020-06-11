@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 201ff28999efb006b80157125c85242d538d756a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076742"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537098"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Alterar propriedades em uma exibição da fonte de dados (Analysis Services)
   Após definir uma exibição da fonte de dados usando o Assistente de Exibição da Fonte de Dados e adicionar tabelas, exibições, cálculos nomeados e consultas nomeadas à exibição da fonte de dados, convém alterar as propriedades relacionadas a:  
@@ -46,8 +45,8 @@ ms.locfileid: "66076742"
 |Propriedade|Descrição|  
 |--------------|-----------------|  
 |fonte de dados|Especifica a fonte de dados da exibição da fonte de dados cujas propriedades você está exibindo.|  
-|Descrição|Especifica a descrição da exibição da fonte de dados.|  
-|Nome|Especifica o nome da exibição da fonte de dados que aparece no Gerenciador de Soluções ou no banco de dados do Analysis Services. Você pode alterar o nome da exibição da fonte de dados aqui ou no Gerenciador de Soluções.|  
+|Description|Especifica a descrição da exibição da fonte de dados.|  
+|Name|Especifica o nome da exibição da fonte de dados que aparece no Gerenciador de Soluções ou no banco de dados do Analysis Services. Você pode alterar o nome da exibição da fonte de dados aqui ou no Gerenciador de Soluções.|  
 |NameMatchingCriteria|Os critérios de correspondência de nomes da fonte de dados. O padrão será (nenhum) se o Assistente de Exibição da Fonte de Dados detectar relações entre chave primária e chave estrangeira. Mesmo que essa propriedade tenha sido definida pelo Assistente de Exibição da Fonte de Dados, você poderá especificar um valor aqui. Se houver relações do banco de dados e você especificar um critério de correspondência de nomes, ambos serão usados para inferir relações entre as tabelas existentes e a tabela recém-adicionada.|  
 |RetrieveRelationships|Especifica se as relações são recuperadas do banco de dados. O padrão é True.|  
 |SchemaRestriction|Especifica as restrições, se houver alguma, dos esquemas recuperados de uma fonte de dados. Por padrão, não existe restrição de esquema.|  
@@ -59,9 +58,9 @@ ms.locfileid: "66076742"
 |--------------|-----------------|  
 |AllowChangesDuringGeneration|Especifica se o Assistente de Geração de Esquema tem permissão para substituir uma tabela de exibição da fonte de dados durante a nova geração. Essa propriedade existirá apenas nas tabelas inicialmente geradas pelo Assistente de Geração de Esquema. Para obter mais informações, consulte [Noções básicas sobre geração incremental](understanding-incremental-generation.md).|  
 |DataSource|Especifica a fonte de dados para o objeto. Não é possível editar essa propriedade.|  
-|Descrição|Especifica a descrição da tabela, exibição ou consulta nomeada. Se a coluna ou exibição da fonte de dados do banco de dados subjacente tiver uma descrição armazenada como propriedade estendida, esse valor aparecerá. Você pode editar essa propriedade.|  
+|Description|Especifica a descrição da tabela, exibição ou consulta nomeada. Se a coluna ou exibição da fonte de dados do banco de dados subjacente tiver uma descrição armazenada como propriedade estendida, esse valor aparecerá. Você pode editar essa propriedade.|  
 |FriendlyName|Especifica um nome para a tabela ou exibição mais fácil para os usuários entenderem ou mais relevante para a área de assunto. Por padrão, a propriedade **FriendlyName** de uma tabela ou exibição é igual à propriedade **Name** da tabela ou exibição. A propriedade **FriendlyName** é usada por objetos OLAP e de mineração de dados ao definir os nomes dos objetos com base nas tabelas ou exibições. Você pode editar essa propriedade.|  
-|Nome|Especifica o nome da tabela ou exibição subjacente ou o nome da consulta nomeada. A propriedade **Name** é usada por objetos OLAP e de mineração de dados ao definir nomes de objetos com base em consultas nomeadas. Essa propriedade é editável apenas no caso de consultas nomeadas.|  
+|Name|Especifica o nome da tabela ou exibição subjacente ou o nome da consulta nomeada. A propriedade **Name** é usada por objetos OLAP e de mineração de dados ao definir nomes de objetos com base em consultas nomeadas. Essa propriedade é editável apenas no caso de consultas nomeadas.|  
 |QueryDefinition|Especifica a definição de consulta nomeada. Essa propriedade aplica-se somente a consultas nomeadas e não pode ser editada diretamente. Para editá-la, edite a própria consulta nomeada.|  
 |Esquema|Especifica o esquema de banco de dados válido para a tabela, exibição ou consulta nomeada. Essa propriedade não é editável.|  
 |TableType|Especifica o tipo de tabela para a tabela, exibição ou consulta nomeada. Essa propriedade não é editável.|  
@@ -74,10 +73,10 @@ ms.locfileid: "66076742"
 |AllowNull|Especifica a propriedade de nulidade da coluna com base na coluna da tabela, no valor ou na consulta nomeada subjacente. Essa propriedade não é editável.|  
 |Tipo de dados|Especifica o tipo de dados da coluna com base na coluna da tabela, no valor ou na consulta nomeada subjacente. Não é possível editar diretamente essa propriedade. No entanto, se for necessário alterar o tipo de dados de uma coluna de uma tabela ou exibição, substitua a tabela por uma consulta nomeada que converta a coluna para o tipo de dados desejado.|  
 |DateTimeMode|Especifica o formato de serialização de data para as colunas **DateTime** . O valor padrão é **UnspecifiedLocal**. Essa propriedade pode ser editada.|  
-|Descrição|Especifica a descrição da coluna. Se a coluna do banco de dados subjacente tiver uma descrição armazenada como propriedade estendida, esse valor aparecerá. Você pode editar essa propriedade.|  
+|Description|Especifica a descrição da coluna. Se a coluna do banco de dados subjacente tiver uma descrição armazenada como propriedade estendida, esse valor aparecerá. Você pode editar essa propriedade.|  
 |FriendlyName|Especifica o nome para a coluna de uma tabela ou exibição que seja mais fácil para os usuários entenderem ou mais relevante para a área de assunto. Por padrão, a propriedade **FriendlyName** da coluna de uma tabela ou exibição é igual à propriedade **Name** da coluna. A propriedade **FriendlyName** é usada por objetos OLAP e de mineração de dados ao definir atributos com base nas colunas de tabelas ou exibições. Você pode editar essa propriedade.|  
 |Comprimento|Especifica o comprimento máximo da coluna com base nos dados da coluna da tabela ou exibição subjacente.|  
-|Nome|Especifica o nome da coluna subjacente ou o nome do cálculo nomeado. A propriedade **Name** é usada por objetos OLAP e de mineração de dados ao definir atributos com base em cálculos nomeados. Essa propriedade é editável apenas no caso de cálculos nomeados.|  
+|Name|Especifica o nome da coluna subjacente ou o nome do cálculo nomeado. A propriedade **Name** é usada por objetos OLAP e de mineração de dados ao definir atributos com base em cálculos nomeados. Essa propriedade é editável apenas no caso de cálculos nomeados.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   

@@ -4,23 +4,23 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938113"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670004"
 ---
-# <a name="ltsource-data-querygt---shape"></a>&lt;consulta&gt; de dados de origem-forma
+# <a name="ltsource-data-querygt---shape"></a>&lt;consulta de dados &gt; de origem-forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Combina consultas de várias fontes de dados em uma tabela hierárquica única (ou seja, uma tabela com tabelas aninhadas), que se torna a tabela de caso do modelo de mineração.  
   
- A sintaxe completa do comando **forma** é documentada no SDK [!INCLUDE[msCoName](../includes/msconame-md.md)] (Software Development Kit) do MDAC (Data Access Components).  
+ A sintaxe completa do comando **forma** é documentada no [!INCLUDE[msCoName](../includes/msconame-md.md)] SDK (Software Development Kit) do MDAC (Data Access Components).  
   
 ## <a name="syntax"></a>Sintaxe  
   

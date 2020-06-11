@@ -16,17 +16,17 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eb7ac1830554180b1de1ee67b6bc6f11fd2463f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 0f21a845b6db79390a31c4b26197547a041e76de
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000776"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856581"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Opções (página resultados da consulta-SQL Server-geral)
   Use esta página para determinar o comportamento padrão do painel Resultados da consulta. Para exibir essas configurações, no menu **Ferramentas**, clique em **Opções**, expanda a pasta **Resultados da Consulta**, selecione **SQL Server** e clique em **Geral**. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para alterar as opções das consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou, em uma janela de consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], clique com o botão direito do mouse e selecione **Opções de Consulta**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Destino padrão dos resultados**  
  Define o destino padrão dos conjuntos de resultados para o texto ou uma grade no painel Resultados ou para um arquivo.  
   
