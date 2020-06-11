@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9c28c39ef94c5dd28821e23c6ddbe83efd7fd11
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088122"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527566"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Escolher Aprimoramento (Assistente de Business Intelligence)
   Use a página **Escolher Aprimoramento** para escolher o aprimoramento de business intelligence a ser adicionado ao cubo ou dimensão.  
@@ -26,7 +25,7 @@ ms.locfileid: "66088122"
  **Aprimoramentos disponíveis**  
  Selecione o aprimoramento de business intelligence a ser adicionado. A tabela a seguir lista os aprimoramentos disponíveis.  
   
-|Aprimoramento|Descrição|  
+|Aprimoramento|Description|  
 |-----------------|-----------------|  
 |**Definir inteligência de tempo**|Adicione exibições de tempo adicionais para uma hierarquia selecionada. Esses incluem exibições do período até esta data, exibições de média móvel e exibições de período a período.<br /><br /> Observação: essa opção está disponível apenas para cubos.|  
 |**Definir inteligência de conta**|Atribua classificações padrão de contabilidade, como receita e despesa, para membros de um atributo de conta.<br /><br /> Se a função de agregação da medida for configurada como *ByAccount*, a instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usará as classificações de contabilidade para agregar uma medida entre os membros de um atributo de conta ao longo do tempo.|  

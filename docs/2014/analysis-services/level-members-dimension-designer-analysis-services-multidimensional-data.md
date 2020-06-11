@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f858f2ba6fe542d84e3bd6e7617b2d1565c0ca2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078107"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542008"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Nível e Membros (guia Navegador, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use este painel para procurar os membros da hierarquia e linguagem atualmente selecionadas. Para selecionar uma hierarquia ou linguagem para navegar, use as opções **Hierarquia** e **Linguagem** no painel **Barra de Ferramentas** . Para obter mais informações sobre o painel Barra de Ferramentas, consulte [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  

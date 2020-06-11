@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a349ea881e463043aea5bb069d3ed34be74a78b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062256"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527982"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analisar os Influenciadores Principais (Ferramentas de Análise de Tabela para Excel)
   ![Botão Analisar os Influenciadores Principais na faixa de opções](media/tat-aki.gif "Botão Analisar os Influenciadores Principais na faixa de opções")  
@@ -46,7 +45,7 @@ ms.locfileid: "66062256"
   
 6.  Se nenhum padrão for detectado, o assistente criará uma nova planilha contendo uma descrição do problema.  
   
-7.  Se forem detectados padrões, o assistente criará um relatório em uma nova planilha mostrando esses padrões. O relatório é nomeado **como influenciadores- \<chave para>de coluna **. Você pode personalizar o relatório conforme descrito no procedimento a seguir.  
+7.  Se forem detectados padrões, o assistente criará um relatório em uma nova planilha mostrando esses padrões. O relatório é nomeado **como influenciadores- \<column> chave para **. Você pode personalizar o relatório conforme descrito no procedimento a seguir.  
   
 #### <a name="create-a-custom-report"></a>Criar um relatório personalizado  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66062256"
 -   Cria um relatório que descreve os influenciadores principais, ordenados por pontuações de confiança.  
   
 ### <a name="requirements"></a>Requisitos  
- Se a coluna de destino contiver valores numéricos contínuos, a ferramenta segmentará automaticamente os valores numéricos em grupos. Esses agrupamentos representam clusters de casos com características semelhantes. No entanto, talvez os valores numéricos não sejam divididos em grupos amigáveis com o usuário. Por exemplo, o relatório pode conter um agrupamento como "\<12,85701", enquanto os usuários de relatório normalmente gostam de ver agrupamentos que usam números inteiros, como 10-19, 20-29 e assim por diante.  
+ Se a coluna de destino contiver valores numéricos contínuos, a ferramenta segmentará automaticamente os valores numéricos em grupos. Esses agrupamentos representam clusters de casos com características semelhantes. No entanto, talvez os valores numéricos não sejam divididos em grupos amigáveis com o usuário. Por exemplo, o relatório pode conter um agrupamento como " \< 12,85701", enquanto os usuários de relatório normalmente gostam de ver agrupamentos que usam números inteiros, como 10-19, 20-29 e assim por diante.  
   
  Se você quiser agrupar dados numéricos de um modo diferente, será necessário segmentar os dados da maneira desejada antes de criar a análise. Por exemplo, você pode usar a ferramenta de [rerotulação](relabel-sql-server-data-mining-add-ins.md) no cliente de mineração de dados para Excel para criar um novo rótulo de agrupamento em uma coluna separada e, em seguida, usar apenas essa nova coluna na análise.  
   

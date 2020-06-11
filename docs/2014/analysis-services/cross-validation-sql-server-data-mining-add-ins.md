@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65a6c852200c72fb9040cf5e93efbac02bb065b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086646"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526327"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validação cruzada (Suplementos de Mineração de Dados do SQL Server)
   ![Botão Validação Cruzada, faixa de opções Mineração de Dados](media/dmc-xvalid.gif "Botão Validação Cruzada, faixa de opções Mineração de Dados")  
@@ -75,7 +74,7 @@ ms.locfileid: "66086646"
  Se você escolher uma estrutura com suporte para modelos de clustering e outros tipos de modelos, os modelos de clustering não serão testados.  
   
 ## <a name="understanding-cross-validation-results"></a>Entendendo os resultados de validação cruzada  
- Os resultados da validação cruzada são exibidos em uma nova planilha, intitulado **relatório de validação cruzada para \<o nome do atributo>**. A nova planilha contém várias seções: a primeira é um resumo que fornece metadados importantes sobre o modelo testado, para que você possa saber para qual modelo ou estrutura os resultados são.  
+ Os resultados da validação cruzada são exibidos em uma nova planilha, chamada **relatório de validação cruzada para \<attribute name> **o. A nova planilha contém várias seções: a primeira é um resumo que fornece metadados importantes sobre o modelo testado, para que você possa saber para qual modelo ou estrutura os resultados são.  
   
  A segunda seção no relatório fornece um resumo estatístico que indica o quão bom é o modelo original. Neste resumo, as diferenças entre os modelos criados para cada dobra são analisadas para três medidas principais: *erro de raiz quadrada média*, *erro absoluto médio*e *Pontuação de log*. Essas são medidas estatísticas padrão usadas não só na mineração de dados, como também na maioria dos tipos de análise estatística.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66086646"
 #### <a name="classification-true-or-false-positives-and-negatives"></a>Classificação: verdadeiro ou falsos positivos e negativos  
  Este teste é usado para todos os modelos de classificação que têm um destino especificado. A medida indica como cada caso é classificado em resposta a essas questões: o que o modelo prevê e qual foi o resultado real.  
   
-|Medida|Descrição|  
+|Medida|Description|  
 |-------------|-----------------|  
 |Verdadeiro positivo|Contagem de casos que atendem estas condições:<br /><br /> Casos que contém o valor de destino.<br /><br /> O modelo previu que o caso contém o valor de destino.|  
 |Falso positivo|Contagem de casos que atendem estas condições:<br /><br /> O valor atual é igual ao valor de destino.<br /><br /> O modelo previu que o caso contém o valor de destino.|  

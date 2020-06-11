@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 669fa1fcd9e4802a4d4102120a373dd615741017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6de68fe97c61d90372f77f0fa318221f8f6e3ba7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062742"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528226"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Modelagem avançada (Suplementos de Mineração de Dados para Excel)
   Você pode usar as opções de modelagem de dados **avançadas** para criar estruturas e modelos de Data Mining personalizados com parâmetros diferentes daqueles criados pelos assistentes. Os dois assistentes descritos nesta seção o ajudam a criar uma estrutura de mineração de dados completamente nova e um novo modelo de mineração para aplicar a uma estrutura de mineração de dados existente.  
@@ -48,7 +47,7 @@ ms.locfileid: "66062742"
   
 -   Análise de associação em conjuntos de dados aninhados  
   
- Para ver quais tipos de estruturas de mineração estão disponíveis, você pode procurar os modelos e estruturas armazenados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no clicando em **gerenciar modelos** ou **procurar**.  
+ Para ver quais tipos de estruturas de mineração estão disponíveis, você pode procurar os modelos e estruturas armazenados no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] clicando em **gerenciar modelos** ou **procurar**.  
   
  Você está limitado às estruturas de mineração de dados criados durante a sessão atual ou as estruturas de mineração que foram salvas em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   

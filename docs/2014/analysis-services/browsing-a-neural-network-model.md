@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e47f887425c2294785bd6e6624961727bf65eb17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174195"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527722"
 ---
 # <a name="browsing-a-neural-network-model"></a>Procurando um modelo de rede neural
   Quando você abre uma rede neural ou modelo de regressão logística usando **Procurar**, o modelo é exibido em um visualizador interativo, semelhante ao visualizador de modelo da rede neural no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O visualizador ajuda a explorar correlações e obter informações sobre os padrões no modelo e os dados subjacentes.
@@ -89,7 +88,7 @@ ms.locfileid: "78174195"
 
 1.  Suponha que você queira definir como destino um grupo específico e ver os fatores que mais influenciam a compra nesse grupo.
 
-     No painel de **entrada** , clique na ** \<célula todos os>** em **atributo**e selecione **idade**.
+     No painel **entrada** , clique na **\<All>** célula em **atributo**e selecione **idade**.
 
      Para **Valor**, selecione a categoria de idade mais nova.
 

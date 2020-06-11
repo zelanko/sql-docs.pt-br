@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acf5d2f16271cf525194c1df48ac02c4c4241467
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088487"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527696"
 ---
 # <a name="browsing-a-forecasting-model"></a>Procurando um modelo de previsão
-  Quando você abre um modelo de previsão usando **procurar**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de modelos de série temporal [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]no. O visualizador ajuda a explorar tendências, comparar séries, criar previsões e obter informações sobre o modelo e os dados subjacentes.  
+  Quando você abre um modelo de previsão usando **procurar**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de modelos de série temporal no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . O visualizador ajuda a explorar tendências, comparar séries, criar previsões e obter informações sobre o modelo e os dados subjacentes.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorar o modelo  
  O Visualizador de **navegação** para modelos de previsão fornece uma exibição de gráfico, que mostra as tendências ao longo do tempo e permite que você crie previsões e uma exibição de modelo, que representa a série temporal como uma árvore de decisão ou uma árvore de regressão.  
@@ -66,7 +65,7 @@ ms.locfileid: "66088487"
   
      As barras de erro permitem avaliar visualmente a variação das previsões. A qualidade das previsões varia dependendo dos seus dados de origem, mas, à medida que você aumenta o número de etapas de previsão, deverá ver os desvios aumentarem continuamente.  
   
- **Sobre**  
+ **Dicas**  
   
 -   Para alternar a exibição da **legenda de mineração**, clique com o botão direito do mouse em qualquer ponto no gráfico.  
   

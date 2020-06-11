@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54523b9c2302deafb0faa9c23708224470bd69b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085485"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523752"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Criar uma consulta de previsão singleton a partir de um modelo
   Uma consulta singleton é útil quando você tem um modelo que deseja usar para previsão, mas não deseja mapeá-la para um conjunto de dados de entrada externo ou fazer previsões em massa. Uma consulta singleton permite oferecer um valor ou valores ao modelo e ver instantaneamente o valor previsto.  
@@ -69,7 +68,7 @@ AS [t]
   
 5.  Na linha **modelo de mineração** , digite o nome do modelo de mineração da lista de modelos de mineração exibidos no **Explorador de Objetos**.  
   
-     Para o código de exemplo mostrado no início deste tópico, a linha do **modelo de mineração** foi definida como o nome `TM_Decision_Tree`,.  
+     Para o código de exemplo mostrado no início deste tópico, a linha do **modelo de mineração** foi definida como o nome, `TM_Decision_Tree` .  
   
 6.  Na linha **valor** , digite o novo valor de dados para os quais você deseja fazer uma previsão.  
   
@@ -77,12 +76,12 @@ AS [t]
   
 7.  Na linha **coluna** , digite o nome da coluna no modelo de mineração para o qual os novos dados devem ser mapeados.  
   
-     Para o código de exemplo mostrado no início deste tópico, a linha da **coluna** foi definida como `Number Children at Home`.  
+     Para o código de exemplo mostrado no início deste tópico, a linha da **coluna** foi definida como `Number Children at Home` .  
   
     > [!NOTE]  
     >  Quando você usa a caixa de diálogo **Especificar Valores para Parâmetros de Modelo** , você não tem que adicionar colchetes ao redor do nome da coluna. Os colchetes serão adicionados automaticamente para você.  
   
-8.  Deixe o **alias** de entrada `t`como.  
+8.  Deixe o **alias de entrada** como `t` .  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

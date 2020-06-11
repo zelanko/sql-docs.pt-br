@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a876a11f51731fdd7ff6de679f80cdb8d62fff94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062618"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528094"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Caixa de diálogo Propriedades do Analysis Server (Analysis Services)
   Use a caixa de diálogo **Propriedades do Analysis Server** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir configurações gerais, de linguagem/agrupamento e segurança para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Propriedades do Analysis Server** clicando com o botão direito do mouse em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no **Explorador de Objetos** e selecionando **Propriedades** no menu de contexto. A caixa de diálogo **Propriedades do Analysis Server** contém as propriedades a seguir.  
@@ -28,7 +27,7 @@ ms.locfileid: "66062618"
 ## <a name="information-properties"></a>Propriedades de informações  
  Use esta página para exibir o modo, a versão e o nível de compatibilidade do servidor. Cada instância é instalada no modo de servidor de Tabela ou Multidimensional, com a capacidade de carregar modelos de tabela ou multidimensionais. Se você precisar dar suporte aos dois modelos, instale duas instâncias.  
   
- O `DefaultCompatibilityLevel` **nível de compatibilidade com suporte** é equivalente à propriedade no amo. Ele é somente leitura, com base no modo de implantação de servidor especificado durante a instalação. O servidor verifica essa propriedade ao executar operações que variam por modo de servidor ou versão, como restaurar um backup de um banco de dados de tabela para uma instância de servidor de tabela. Não confunda isso com o modo de compatibilidade de banco de dados de modelos de tabela ou multidimensionais, que têm nomes e valores semelhantes. Os valores válidos para essa propriedade de servidor incluem:  
+ O **nível de compatibilidade com suporte** é equivalente à `DefaultCompatibilityLevel` propriedade no amo. Ele é somente leitura, com base no modo de implantação de servidor especificado durante a instalação. O servidor verifica essa propriedade ao executar operações que variam por modo de servidor ou versão, como restaurar um backup de um banco de dados de tabela para uma instância de servidor de tabela. Não confunda isso com o modo de compatibilidade de banco de dados de modelos de tabela ou multidimensionais, que têm nomes e valores semelhantes. Os valores válidos para essa propriedade de servidor incluem:  
   
 -   **1100** é o nível de compatibilidade padrão de um modo de implantação 0, para um modo multidimensional e de mineração de dados.  
   
@@ -45,23 +44,23 @@ ms.locfileid: "66062618"
   
 -   [Propriedades de mineração de dados](server-properties/data-mining-properties.md)  
   
--   [Propriedades de recurso](server-properties/feature-properties.md)  
+-   [Propriedades do recurso](server-properties/feature-properties.md)  
   
--   [Propriedades FileStore](server-properties/filestore-properties.md)  
+-   [Propriedades do repositório de filestore](server-properties/filestore-properties.md)  
   
--   [Propriedades do gerenciador de bloqueio](server-properties/lock-manager-properties.md)  
+-   [Propriedades do Gerenciador de bloqueio](server-properties/lock-manager-properties.md)  
   
 -   [Propriedades do log](server-properties/log-properties.md)  
   
 -   [Propriedades de memória](server-properties/memory-properties.md)  
   
--   [Propriedades de rede](server-properties/network-properties.md)  
+-   [Propriedades da rede](server-properties/network-properties.md)  
   
 -   [Propriedades OLAP](server-properties/olap-properties.md)  
   
 -   [Propriedades de segurança](server-properties/security-properties.md)  
   
--   [Propriedades de pool de threads](server-properties/thread-pool-properties.md)  
+-   [Propriedades do pool de threads](server-properties/thread-pool-properties.md)  
   
 ## <a name="language-collation-properties"></a>Propriedades de Idioma/Ordenação  
  Use essa página para definir opções de ordenação e idioma padrão para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A lista a seguir contém breves descrições de cada opção. Consulte [Idiomas e ordenações &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) para obter detalhes.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5884cd7315ce7d2ab88a38900f9bb8b5ae22508
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082375"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528962"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Fontes de dados de objetos existentes (Assistente para Fonte de Dados) (Analysis Services)
   Use a página **Fontes de dados de objetos existentes** para especificar uma fonte de dados ou projeto existente no qual basear a nova fonte de dados.  
@@ -30,7 +29,7 @@ ms.locfileid: "66082375"
  Selecione a fonte de dados na qual basear a nova fonte de dados na lista de fontes de dados que é agrupada por projeto.  
   
  **Criar uma fonte de dados com base em um projeto do Analysis Services**  
- Selecione para criar uma nova fonte de dados que faça [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] referência a outro projeto na solução atual. A nova fonte de dados adquire configurações das propriedades `TargetServer` e `TargetDatabase` do projeto selecionado. Quando um projeto que usa a nova fonte de dados é criado, atualizado ou implantado, a nova fonte de dados adquire as configurações da origem de dados especificada quando essa opção é selecionada.  
+ Selecione para criar uma nova fonte de dados que faça referência [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a outro projeto na solução atual. A nova fonte de dados adquire configurações das propriedades `TargetServer` e `TargetDatabase` do projeto selecionado. Quando um projeto que usa a nova fonte de dados é criado, atualizado ou implantado, a nova fonte de dados adquire as configurações da origem de dados especificada quando essa opção é selecionada.  
   
  **Project**  
  Selecione o projeto que você quer referenciar na nova fonte de dados.  

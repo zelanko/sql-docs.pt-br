@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c96ecfe-a170-41d0-bee3-74503f880197
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 04d12aab677e38d17d4e869e6885eb470854d824
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2bd86518027210ac3546633f39ca3e6588e955b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081919"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528712"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Recursos do Analysis Services preteridos no SQL Server 2014
   Este tópico descreve os recursos substituídos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que ainda estão disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  
@@ -33,7 +32,7 @@ ms.locfileid: "66081919"
 |Função MDX|Função CalculationPassValue|Nenhum. O mecanismo OLAP gerencia a fase de cálculo. Essa função não é mais necessária.|  
 |Função MDX|Função CalculationCurrentPass|Nenhum. O mecanismo OLAP gerencia a fase de cálculo. Essa função não é mais necessária.|  
 |Linguagem MDX|A dica do otimizador de consulta NON_EMPTY_BEHAVIOR foi ativada por padrão.|A dica do otimizador de consulta NON_EMPTY_BEHAVIOR será desativada por padrão em uma versão futura. É uma dica de otimização MDX que pode gerar resultados incorretos quando não usada corretamente.|  
-|Outros|Propriedade de célula intrínseca CELL_EVALUATION_LIST|Originalmente fornecia uma lista de fórmulas avaliadas que se aplicam a uma célula. Está em branco nesta versão do Analysis Services.  A ordem de resolução agora é especificada no script MDX. Para obter mais informações, consulte [noções básicas sobre ordem de passagem e ordem de resolução &#40;&#41;MDX](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|  
+|Outro|Propriedade de célula intrínseca CELL_EVALUATION_LIST|Originalmente fornecia uma lista de fórmulas avaliadas que se aplicam a uma célula. Está em branco nesta versão do Analysis Services.  A ordem de resolução agora é especificada no script MDX. Para obter mais informações, consulte [noções básicas sobre ordem de passagem e ordem de resolução &#40;&#41;MDX](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|  
 |Objetos|Assemblies COM|Os assemblies COM podem representar um risco à segurança. O suporte a assemblies COM será removido em uma versão futura.|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Recursos sem suporte em uma versão futura do SQL Server  

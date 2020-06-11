@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb68b07a4e14e16a8df5acde7bea986733564253
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081702"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528552"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensões (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Dimensões** para exibir e editar dimensões de cubo, incluindo hierarquias e atributos, na guia **Estrutura do Cubo** do Designer de Cubo.  
@@ -26,12 +25,12 @@ ms.locfileid: "66081702"
  **Hierarquias**  
  Clique para exibir as dimensões de cubo disponíveis e as hierarquias de cubo associadas a elas.  
   
- Expanda uma dimensão de cubo e selecione ** \<editar>de dimensão** para exibir o designer de dimensão e edite a dimensão do banco de dados na qual a dimensão do cubo se baseia. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Expanda uma dimensão de cubo e selecione **Editar \<dimension> ** para exibir o designer de dimensão e editar a dimensão do banco de dados na qual a dimensão do cubo se baseia. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Atributos**  
  Clique para exibir as dimensões de cubo disponíveis e os atributos de cubo associados.  
   
- Expanda uma dimensão de cubo e selecione ** \<editar>de dimensão** para exibir o designer de dimensão e edite a dimensão do banco de dados na qual a dimensão do cubo se baseia. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+ Expanda uma dimensão de cubo e selecione **Editar \<dimension> ** para exibir o designer de dimensão e editar a dimensão do banco de dados na qual a dimensão do cubo se baseia. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="context-menu"></a>Menu de contexto  
  As seguintes opções estão disponíveis no menu de contexto exibido ao clicar com o botão direito do mouse no painel **Dimensões** :  

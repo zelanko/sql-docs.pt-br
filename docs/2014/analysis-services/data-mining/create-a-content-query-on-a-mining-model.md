@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a963743dff12a239fb5d45a05c0af91af00620eb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085578"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524012"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Criar uma consulta de conteúdo em um modelo de mineração
   Você pode consultar o conteúdo do modelo de mineração via programação usando AMO ou XML/A, mas é mais fácil criar consultas usando DMX. Também é possível criar consultas nos conjuntos de linhas de esquema de mineração de dados estabelecendo uma conexão com a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e criando uma consulta usando os DMVs fornecidos pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -40,11 +39,11 @@ ms.locfileid: "66085578"
   
      O modelo **Consulta de Conteúdo** é aberto no editor de códigos apropriado. O painel de metadados lista os modelos que estão disponíveis no banco de dados atual. Para alterar o banco de dados, selecione outro banco de dados na lista **Bancos de Dados Disponíveis** .  
   
-5.  Insira o nome de um modelo de mineração na linha, `FROM` [*\<modelo de mineração, nome, MyModel>*].`.CONTENT` Se o nome do modelo de mineração contiver espaços, coloque o nome entre parênteses.  
+5.  Insira o nome de um modelo de mineração na linha `FROM` [ *\<mining model, name, MyModel>* ] `.CONTENT` . Se o nome do modelo de mineração contiver espaços, coloque o nome entre parênteses.  
   
      Se não quiser digitar o nome, você poderá selecionar um modelo de mineração no **Pesquisador de Objetos** e arrastá-lo para o modelo.  
   
-6.  Na linha, `SELECT` * \<selecione lista, lista de expr, \* *, digite os nomes das colunas no conjunto de linhas do esquema de conteúdo do modelo de mineração.  
+6.  Na linha, `SELECT` *\<select list, expr list, \*>* , digite os nomes das colunas no conjunto de linhas do esquema de conteúdo do modelo de mineração.  
   
      Para ver uma lista das colunas que podem ser retornadas em consultas ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   

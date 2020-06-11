@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee9019f821c5608527e0bdca5eddc8f1ead52f41
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084027"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522117"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Clustering
   Esta seção explica a implementação do algoritmo de clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)] , inclusive os parâmetros que podem ser usados para controlar o comportamento de modelos de clustering. Ela também fornece orientação sobre como melhorar o desempenho ao criar e processar modelos de clustering.  
@@ -159,7 +158,7 @@ ms.locfileid: "66084027"
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo dá suporte aos seguintes sinalizadores de modelagem. Você define sinalizadores de modelagem ao criar a estrutura de mineração ou o modelo de mineração. Os sinalizadores de modelagem especificam como os valores de cada coluna são controlados durante a análise.  
   
-|Sinalizador de modelagem|Descrição|  
+|Sinalizador de modelagem|Description|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|A coluna será tratada como tendo dois estados possíveis: Ausente e Existente. Nulo é um valor ausente.<br /><br /> Aplica-se à coluna de modelo de mineração.|  
 |NOT NULL|A coluna não pode conter um valor nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se à coluna de estrutura de mineração.|  

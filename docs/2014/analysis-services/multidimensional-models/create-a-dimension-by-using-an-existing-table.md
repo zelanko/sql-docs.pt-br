@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef89ce093e9cf97926ceae3cc75e17941594e7ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076416"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536628"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Criar uma dimensão usando uma tabela existente
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o assistente para dimensões [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no para criar uma dimensão a partir de uma tabela existente. Isso é feito selecionando a opção **Usar uma tabela existente** na página **Selecionar Método de Criação** do assistente. Se você selecionar essa opção, o assistente fornecerá a base da estrutura de dimensão nas tabelas de dimensão, suas colunas e qualquer relação entre essas colunas em uma exibição da fonte de dados existente. O assistente dá exemplos de dados na tabela de origem e nas tabelas relacionadas. Ele usa esses dados para definir as colunas de atributo baseadas nas colunas das tabelas de dimensão, e para definir hierarquias de atributos (chamadas hierarquias *definidas pelo usuário* ). Depois que você usar o Assistente para Dimensões para criar sua dimensão, é possível usar o Designer de Dimensão para adicionar, remover e configurar atributos e hierarquias na dimensão.  
+  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , você pode usar o assistente para dimensões no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão a partir de uma tabela existente. Isso é feito selecionando a opção **Usar uma tabela existente** na página **Selecionar Método de Criação** do assistente. Se você selecionar essa opção, o assistente fornecerá a base da estrutura de dimensão nas tabelas de dimensão, suas colunas e qualquer relação entre essas colunas em uma exibição da fonte de dados existente. O assistente dá exemplos de dados na tabela de origem e nas tabelas relacionadas. Ele usa esses dados para definir as colunas de atributo baseadas nas colunas das tabelas de dimensão, e para definir hierarquias de atributos (chamadas hierarquias *definidas pelo usuário* ). Depois que você usar o Assistente para Dimensões para criar sua dimensão, é possível usar o Designer de Dimensão para adicionar, remover e configurar atributos e hierarquias na dimensão.  
   
  Quando você estiver usando uma tabela existente para criar uma dimensão, o Assistente para Dimensões o orientará nas seguintes etapas:  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66076416"
 ## <a name="selecting-dimension-attributes"></a>Selecionando atributos de dimensão  
  Depois de selecionar as tabelas de dimensão, use a página **Selecionar Atributos de Dimensão** para selecionar os atributos que você quer incluir na dimensão por meio destas tabelas. Todas as colunas subjacentes de todas essas tabelas estão disponíveis como atributos potenciais de dimensão. O atributo de chave de dimensão deve ser selecionado e habilitado para procura.  
   
- Por padrão, o assistente define o tipo de um atributo como `Regular`. Entretanto, convém mapear atributos específicos para um tipo de atributo diferente que melhor represente os dados. Por exemplo, a tabela dbo.DimAccount do banco de dados de exemplo [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW contém uma coluna AccountCodeAlternateKey que fornece o número da conta. Em vez de definir o tipo `Regular` como para esse atributo, talvez você queira mapear esse atributo para `Account Number` o tipo.  
+ Por padrão, o assistente define o tipo de um atributo como `Regular`. Entretanto, convém mapear atributos específicos para um tipo de atributo diferente que melhor represente os dados. Por exemplo, a tabela dbo.DimAccount do banco de dados de exemplo [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW contém uma coluna AccountCodeAlternateKey que fornece o número da conta. Em vez de definir o tipo como `Regular` para esse atributo, talvez você queira mapear esse atributo para o `Account Number` tipo.  
   
 > [!NOTE]  
 >  Se o tipo de dimensão e os tipos de atributo padrão não forem definidos quando você criar a dimensão, use o Assistente de Business Intelligence para definir estes valores depois que criar a dimensão. Para obter mais informações, consulte [Adicionar inteligência de dimensão a uma dimensão](bi-wizard-add-dimension-intelligence-to-a-dimension.md) ou (para uma dimensão do tipo Contas) [Adicionar inteligência de conta a uma dimensão](bi-wizard-add-account-intelligence-to-a-dimension.md).  

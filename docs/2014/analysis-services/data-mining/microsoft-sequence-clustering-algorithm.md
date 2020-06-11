@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fddf96a5d6ae1089ca2acd67f08ab0989ce75173
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083827"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521623"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering Algorithm
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo clustering de sequência é um algoritmo de análise de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sequência fornecido pelo. Você pode usar esse algoritmo para explorar dados que contêm eventos que podem ser vinculados por meio de caminhos ou *sequências*a seguir. O algoritmo localiza as sequências mais comuns por agrupamento, ou clustering, das sequências que são idênticas. A seguir veja alguns exemplos de dados que contêm sequências que podem ser usadas para mineração de dados, para fornecer ideias sobre problemas comuns ou cenários comerciais:  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo clustering de sequência é um algoritmo de análise de sequência fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Você pode usar esse algoritmo para explorar dados que contêm eventos que podem ser vinculados por meio de caminhos ou *sequências*a seguir. O algoritmo localiza as sequências mais comuns por agrupamento, ou clustering, das sequências que são idênticas. A seguir veja alguns exemplos de dados que contêm sequências que podem ser usadas para mineração de dados, para fornecer ideias sobre problemas comuns ou cenários comerciais:  
   
 -   Clique nos caminhos que são criados quando os usuários navegam em um site.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b21230ddff5a3db043b533a4f921a30b02da739b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc203f0a4117a2f59e09a53308f0c26bbcbce85b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062301"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527963"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Propriedades do Assembly (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Propriedades do Assembly** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de uma referência de assembly em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Propriedades do Assembly** clicando com o botão direito do mouse em um assembly no **Explorador de Objetos** e selecionando **Propriedades**.  
@@ -31,9 +30,9 @@ ms.locfileid: "66062301"
 |**Descrição**|Digite para alterar a descrição da referência de assembly.|  
 |**Criar Carimbo de Data/Hora**|Exibe a data e a hora de criação da referência de assembly.|  
 |**Última Atualização de Esquema**|Exibe a data e a hora da última atualização dos metadados da referência de assembly.|  
-|**Tipo**|Exibe o tipo da referência de assembly. Os seguintes valores são exibidos:<br /><br /> **Assembly .net**: a referência de assembly refere- [!INCLUDE[msCoName](../includes/msconame-md.md)] se a um assembly .NET Framework.<br /><br /> **Dll com**: a referência de assembly refere-se a uma biblioteca com.|  
+|**Tipo**|Exibe o tipo da referência de assembly. Os seguintes valores são exibidos:<br /><br /> **Assembly .net**: a referência de assembly refere-se a um [!INCLUDE[msCoName](../includes/msconame-md.md)] assembly .NET Framework.<br /><br /> **Dll com**: a referência de assembly refere-se a uma biblioteca com.|  
 |**Fonte**|Exibe a origem da referência de assembly. Essa propriedade normalmente contém o caminho completo e o nome de arquivo do assembly referido pela referência de assembly.|  
-|**Conjunto de Permissões**|Selecione o conjunto de permissões usado para determinar acesso à referência de assembly. Para obter mais informações sobre os valores disponíveis para essa propriedade, <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>consulte.|  
+|**Conjunto de Permissões**|Selecione o conjunto de permissões usado para determinar acesso à referência de assembly. Para obter mais informações sobre os valores disponíveis para essa propriedade, consulte <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A> .|  
 |**Informações sobre Representação**|Selecione a informações de representação a serem usadas ao acessar a referência de assembly. Para obter mais informações sobre os valores disponíveis para essa propriedade, consulte [Elemento ImpersonationInfo &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)|  
   
 ## <a name="see-also"></a>Consulte Também  

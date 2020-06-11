@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 226b8c52fde4c9c4190c9c6c0c1e91c578643f53
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084886"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522720"
 ---
 # <a name="data-mining-solutions"></a>Soluções de mineração de dados
   Uma solução de mineração de dados é uma solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém um ou mais projetos de mineração de dados.  
   
- Os tópicos nesta seção fornecem informações sobre como projetar e implementar uma solução de Data Mining integrada usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o. Para obter uma visão geral do processo de design de mineração de dados e as ferramentas relacionadas, consulte [Data Mining Concepts](data-mining-concepts.md).  
+ Os tópicos nesta seção fornecem informações sobre como projetar e implementar uma solução de Data Mining integrada usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter uma visão geral do processo de design de mineração de dados e as ferramentas relacionadas, consulte [Data Mining Concepts](data-mining-concepts.md).  
   
  Para obter mais informações sobre os tipos de projetos que são úteis para mineração de dados, consulte [Projetos relacionados a soluções de mineração de dados](data-mining-solutions.md).  
   
@@ -65,7 +64,7 @@ ms.locfileid: "66084886"
 ## <a name="in-this-section"></a>Nesta seção  
  [Projetos de mineração de dados](data-mining-projects.md)  
   
- [Processando objetos de Mineração de dados](processing-data-mining-objects.md)  
+ [Processando objetos de mineração de dados](processing-data-mining-objects.md)  
   
  [Projetos relacionados a soluções de mineração de dados](data-mining-solutions.md)  
   
@@ -79,7 +78,7 @@ ms.locfileid: "66084886"
 |Tarefas|Tópicos|  
 |-----------|------------|  
 |Teste os modelos que você criou, valide a qualidade de seus dados de treinamento e crie gráficos que representam a precisão de modelos de mineração de dados.|[Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)|  
-|Treine o modelo populando a estrutura e os modelos relacionados com os dados. Atualize e estenda modelos com novos dados.|[Processando objetos de Mineração de dados](processing-data-mining-objects.md)|  
+|Treine o modelo populando a estrutura e os modelos relacionados com os dados. Atualize e estenda modelos com novos dados.|[Processando objetos de mineração de dados](processing-data-mining-objects.md)|  
 |Personalize um modelo de mineração aplicando filtros aos dados de treinamento, escolhendo um algoritmo diferente ou definindo parâmetros de algoritmo avançados.|[Personalizar os modelos de mineração e a estrutura](customize-mining-models-and-structure.md)|  
 |Personalize um modelo de mineração aplicando filtros aos dados usados no treinamento do modo.|[Adicionar Modelos de Mineração a uma estrutura &#40;Analysis Services – Data Mining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Atualize e gerencie as soluções de mineração de dados.|Link TBD|  

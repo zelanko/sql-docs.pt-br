@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 63df4ff9-0f38-42e6-9113-ec20cfe83380
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6491d0a73aa28d8dd396bf1befa321ed6f1cb9b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5c2be819318f4c0eb95076723f05a31842e3cca
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087736"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527392"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>Concluindo o Assistente (Assistente de Geração de Esquema) (Analysis Services – Dados Multidimensionais)
   Use a página **Concluindo o Assistente** para confirmar as opções feitas e criar o novo projeto e as exibições da fonte de dados.  

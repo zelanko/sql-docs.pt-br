@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1af06d7ffe12301f6b8b678f41665e5c3146a13
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084273"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522313"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitetura lógica (Analysis Services – Mineração de Dados)
   A mineração de dados é um processo que envolve a interação de vários componentes.  
@@ -41,7 +40,7 @@ ms.locfileid: "66084273"
 ##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a> Dados de origem da mineração de dados  
  Os dados usados na mineração de dados não são armazenados na solução de mineração de dados. Apenas as associações são armazenadas. Além disso, os dados podem residir em um banco de dados criado em uma versão anterior do SQL Server, sistema CRM ou mesmo em um arquivo simples. Quando você treina a estrutura ou modelo por processamento, um resumo estatístico dos dados é criado e armazenado em um cache que pode ser persistido para uso em operações subsequentes ou excluídas depois do processamento. Para obter mais informações, consulte [Estruturas de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-structures-analysis-services-data-mining.md).  
   
- Você combina dados discrepantes dentro do objeto de DSV (exibição da fonte de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que fornece uma camada de abstração sobre sua fonte de dados. Você pode especificar junções entre tabelas ou adicionar as tabelas que têm uma relação muitos para um para criar colunas de tabelas aninhadas. A definição destes objetos, a fonte de dados e a exibição da fonte de dados, é armazenada dentro da solução com as extensões de nome de arquivo *.ds e \*.dsv. Para obter mais informações sobre como criar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e usar fontes de dados e exibições da fonte de dados, consulte [fontes de dados com suporte &#40;SSAS multidimensional&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Você combina dados discrepantes dentro do objeto de DSV (exibição da fonte de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que fornece uma camada de abstração sobre sua fonte de dados. Você pode especificar junções entre tabelas ou adicionar as tabelas que têm uma relação muitos para um para criar colunas de tabelas aninhadas. A definição destes objetos, a fonte de dados e a exibição da fonte de dados, é armazenada dentro da solução com as extensões de nome de arquivo *.ds e \*.dsv. Para obter mais informações sobre como criar e usar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fontes de dados e exibições da fonte de dados, consulte [fontes de dados com suporte &#40;SSAS multidimensional&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
  Também é possível definir e alterar fontes de dados e exibições de fontes de dados usando AMO ou XMLA. Para obter mais informações sobre como trabalhar com esses objetos programaticamente, consulte [Visão geral da arquitetura lógica &#40;Analysis Services – Dados multidimensionais&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   

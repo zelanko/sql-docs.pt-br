@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a25dd6fe0a77aad5c5ec9ba15eaf12bd2ec3fc18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40ef9f63345572b5613942c1174ceeecadd146ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284286"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529735"
 ---
 # <a name="unicode-function-arguments"></a>Argumentos da função Unicode
 O Gerenciador de driver ODBC 3,5 (ou superior) dá suporte a versões ANSI e Unicode de todas as funções que aceitam ponteiros para cadeias de caracteres ou sqlpointr em seus argumentos. As funções Unicode são implementadas como funções (com um sufixo de *W*), não como macros. As funções ANSI (que podem ser chamadas com ou sem um sufixo de *a*) são idênticas às funções da API ODBC atual.  
   
 ## <a name="remarks"></a>Comentários  
- As funções Unicode que sempre retornam ou usam cadeias de caracteres ou argumentos de comprimento são passados como contagem de caractere. Para funções que retornam informações de comprimento para dados do servidor, o tamanho de exibição e a precisão são descritos em número de caracteres. Quando um comprimento (tamanho de transferência dos dados) puder se referir a dados de cadeia de caracteres ou não de cadeia, o comprimento será descrito em comprimentos de octeto. Por exemplo, **SQLGetInfoW** ainda terá o comprimento como contagem de bytes, mas o **SQLExecDirectW** usará a contagem de caracteres.  
+ Para funções Unicode que sempre retornam ou assumem cadeias de caracteres ou argumentos de comprimento, os argumentos são passados como contagem de caractere. Para funções que retornam informações de comprimento para dados do servidor, o tamanho de exibição e a precisão são descritos em número de caracteres. Quando um comprimento (tamanho de transferência dos dados) puder se referir a dados de cadeia de caracteres ou não de cadeia, o comprimento será descrito em comprimentos de octeto. Por exemplo, **SQLGetInfoW** ainda terá o comprimento como contagem de bytes, mas o **SQLExecDirectW** usará a contagem de caracteres.  
   
  A contagem de caracteres refere-se ao número de bytes (octetos) para funções ANSI e o número de WCHAR (palavras de 16 bits) para funções UNICODE. Em particular, uma seqüência de caracteres de byte duplo (DBCS) ou uma seqüência de caracteres multibyte (MBCS) pode ser composta por vários bytes. Uma sequência de caracteres Unicode UTF-16 pode ser composta por vários WCHARs.  
   

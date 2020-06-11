@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f7e4f7c9d97878be9f2cd2f3251ac463332faf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174676"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522292"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de comparação de precisão (Analysis Services - Mineração de Dados)
   Um **gráfico** de comparação de precisão representa graficamente a melhoria que um modelo de mineração fornece quando comparado com uma estimativa aleatória e mede a alteração em termos de uma pontuação de *elevação* . Comparando as pontuações de comparação de várias partes do conjunto de dados e de modelos diferentes, você pode determinar qual é o melhor modelo e qual percentual dos casos no conjunto de dados se beneficiaria com a aplicação das previsões do modelo.

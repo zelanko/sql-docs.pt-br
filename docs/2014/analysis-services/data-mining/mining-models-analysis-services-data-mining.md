@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57f62b125872e6b851235c1517925c6ee10058d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b23f250a5589d47ac6e26baf48a40b0979a1895
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174425"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521248"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modelos de mineração (Analysis Services – Mineração de Dados)
   Um *modelo de mineração* é criado aplicando-se um algoritmo a dados, mas é mais que um algoritmo ou um contêiner de metadados: é um conjunto de dados, estatísticas e padrões que podem ser aplicados a novos dados para gerar previsões e fazer inferências sobre relações.
@@ -83,14 +82,14 @@ ms.locfileid: "78174425"
 
  [Arquitetura do modelo de mineração](#bkmk_mdlArch)
 
-##  <a name="mining-model-properties"></a><a name="bkmk_mdlProps"></a> Propriedades do modelo de mineração
+##  <a name="mining-model-properties"></a><a name="bkmk_mdlProps"></a>Propriedades do modelo de mineração
  Cada modelo de mineração tem propriedades que definem o modelo e seus metadados. Eles incluem o nome, a descrição, a data do último processamento do modelo, as permissões no modelo e os filtros nos dados que são usados para treinamento.
 
  Cada modelo de mineração também tem propriedades derivadas da estrutura de mineração que descrevem as colunas de dados usadas pelo modelo. Se alguma coluna usada pelo modelo for uma tabela aninhada, ela também poderá ter um filtro separado aplicado.
 
  Além disso, cada modelo de mineração contém duas propriedades especiais: <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> e <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>.
 
--   **Propriedade Algorithm** Especifica o algoritmo usado para criar o modelo. Os algoritmos disponíveis dependem do provedor que você está usando. Para obter uma lista dos algoritmos incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md). A `Algorithm` Propriedade se aplica ao modelo de mineração e pode ser definida apenas uma vez para cada modelo. É possível alterar o algoritmo posteriormente, mas algumas colunas do modelo de mineração poderão se tornar inválidas, se não tiverem suporte do algoritmo escolhido. Você deve reprocessar sempre o modelo seguindo uma alteração a essa propriedade.
+-   **Propriedade Algorithm** Especifica o algoritmo usado para criar o modelo. Os algoritmos disponíveis dependem do provedor que você está usando. Para obter uma lista dos algoritmos incluídos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md). A `Algorithm` propriedade se aplica ao modelo de mineração e pode ser definida apenas uma vez para cada modelo. É possível alterar o algoritmo posteriormente, mas algumas colunas do modelo de mineração poderão se tornar inválidas, se não tiverem suporte do algoritmo escolhido. Você deve reprocessar sempre o modelo seguindo uma alteração a essa propriedade.
 
 -   **Propriedade Usage** Define como cada coluna é usada pelo modelo. É possível definir o uso da coluna como `Input`, `Predict`, `Predict Only` ou `Key`. A propriedade `Usage` é aplicada às colunas dos modelos de mineração individuais e deve ser definida individualmente para cada coluna que esteja incluída em um modelo. Se a estrutura contiver uma coluna que não é usada no modelo, o uso será definido como `Ignore`. Exemplos de dados que você poderia incluir na estrutura de mineração mas não usar em análise poderiam ser nomes de cliente ou endereços de email. Desta maneira, você pode consultá-los posteriormente sem ter que os incluí-los durante a fase de análise.
 
@@ -98,7 +97,7 @@ ms.locfileid: "78174425"
 
  [Arquitetura do modelo de mineração](#bkmk_mdlArch)
 
-##  <a name="mining-model-columns"></a><a name="bkmk_mdlCols"></a> Colunas do modelo de mineração
+##  <a name="mining-model-columns"></a><a name="bkmk_mdlCols"></a>Colunas do modelo de mineração
  O modelo de mineração contém colunas de dados que são obtidos de colunas definidas na estrutura de mineração. Você pode escolher quais colunas da estrutura de mineração quer usar no modelo e pode criar cópias das colunas da estrutura de mineração e renomeá-las ou alterar seu uso. Como parte do processo de criação de modelo, você também deve definir o uso da coluna pelo modelo. Isso inclui informações como se a coluna é uma chave, se é usada para previsão, ou se pode ser ignorada pelo algoritmo.
 
  Enquanto você estiver criando um modelo, em vez de adicionar automaticamente cada coluna de dados disponível, é recomendado revisar os dados cuidadosamente na estrutura e incluir no modelo somente as colunas que fazem sentido para a análise. Por exemplo, você deve evitar incluir várias colunas que repetem os mesmos dados e deve evitar usar colunas que têm a maioria de valores exclusivos. Se você achar que uma coluna não deve ser usada, não será necessário excluí-la da estrutura ou modelo de mineração; em vez disso, basta definir um sinalizador na coluna que especifica se ela deve ser ignorada durante a criação do modelo. Isto significa que a coluna permanecerá na estrutura de mineração, mas não será usada no modelo de mineração. Se você habilitou a análise do modelo para a estrutura de mineração, pode recuperar as informações da coluna posteriormente.

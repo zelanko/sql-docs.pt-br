@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71ca6e81a11b53d7a614fcffb498a1bf5fa2b32
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084607"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522506"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Detalhar dados do caso a partir do modelo de mineração
   Se um modelo de mineração foi configurado para permitir que você detalhe os casos de modelo, quando você procurar o modelo, poderá recuperar informações detalhadas sobre os casos usados para criar o modelo. Além do mais, se a estrutura de mineração subjacente tiver sido configurada para permitir o detalhamento para casos de estrutura e você tiver as permissões adequadas, poderá retornar as informações a partir da estrutura de mineração. Isso pode incluir colunas que não foram incluídas no modelo de mineração.  
@@ -31,7 +30,7 @@ ms.locfileid: "66084607"
   
 |Nome do visualizador|Painel ou nome da guia|Selecionar nó|  
 |-----------------|----------------------|-----------------|  
-|**Visualizador de árvores da Microsoft**|Guia **árvore de decisão**|Clique em um nó de árvore.<br /><br /> **Observação** Evite usar o `All` detalhamento no nó, pois pode levar muito tempo para retornar resultados.|  
+|**Visualizador de árvores da Microsoft**|Guia **árvore de decisão**|Clique em um nó de árvore.<br /><br /> **Observação** Evite usar o detalhamento no `All` nó, pois pode levar muito tempo para retornar resultados.|  
 |**Visualizador de cluster da Microsoft**|**Diagrama de Cluster**|Clique em um nó de cluster.|  
 |**Visualizador de cluster da Microsoft**|**Perfis de cluster**|Clique em qualquer parte da coluna de cluster.|  
 |**Visualizador de Associação da Microsoft**|Guia **regras**|Clique em uma linha que contém um conjunto de regras.|  

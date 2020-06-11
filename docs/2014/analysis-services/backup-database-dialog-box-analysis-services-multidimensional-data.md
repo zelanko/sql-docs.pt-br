@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96ddf88bd6f071c667a021678b6f5cd2613ae8db
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064376"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527822"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Banco de Dados de Backup (Analysis Services - Dados multidimensionais)
   Use a caixa de diálogo **Banco de Dados de Backup** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em um arquivo de backup usando o formato Analysis Services Backup File (.abf) do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a01640fec55fbf7c43030135d48707fb7f966280
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072511"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535536"
 ---
 # <a name="view-the-cube-schema"></a>Exibir o esquema do cubo
   O painel **Exibição da Fonte de Dados** da guia **Estrutura do Cubo** no **Designer do Cubo** exibe o esquema do cubo. O esquema é o conjunto de tabelas das quais são derivadas as medidas e as dimensões para um cubo. Todo esquema de cubo consiste em uma ou mais tabelas de fato e uma ou mais tabelas de dimensão nas quais são baseadas as medidas e as dimensões no cubo.  

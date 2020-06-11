@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a054e59a830895d43d861e6d6533ad5bb876c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3de498bcd5643bb8f83d00c9536f57560d30b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174507"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523204"
 ---
 # <a name="data-mining-concepts"></a>Conceitos de mineração de dados
   A mineração de dados é o processo de descoberta de informações acionáveis em grandes conjuntos de dados. A mineração de dados usa análise matemática para derivar padrões e tendências que existem nos dados. Normalmente, esses padrões não podem ser descobertos com a exploração de dados tradicional pelo fato de as relações serem muito complexas ou por haver muitos dados.
@@ -93,7 +92,7 @@ ms.locfileid: "78174507"
 
  Também é necessário considerar a forma como os resultados do modelo podem ser incorporados em KPIs (indicadores chave de desempenho) usados para avaliar o progresso dos negócios.
 
-##  <a name="preparing-data"></a><a name="PreparingData"></a> Preparando dados
+##  <a name="preparing-data"></a><a name="PreparingData"></a>Preparando dados
  A segunda etapa do processo de mineração de dados, como destacado no diagrama a seguir, é consolidar e limpar os dados identificados na etapa [Definindo o problema](#DefiningTheProblem) .
 
  ![Segunda etapa de mineração de dados: preparando dados](../media/dmprocess-preparing.gif "Segunda etapa de mineração de dados: preparando dados")

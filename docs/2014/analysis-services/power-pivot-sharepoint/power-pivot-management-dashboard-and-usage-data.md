@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6b4df30ec422df0dd79b2fc9d58766e6dbcf7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071117"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535038"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento PowerPivot e dados de uso
   O Painel de Gerenciamento PowerPivot é uma coleção de web parts e relatórios predefinidos na Administração Central do SharePoint que ajuda a administrar uma implantação do SQL Server PowerPivot para SharePoint. O Painel de Gerenciamento fornece informações sobre a integridade do servidor, a atividade da pasta de trabalho e a atualização de dados. O painel usa dados da coleta de dados de uso do SharePoint.  
@@ -38,7 +37,7 @@ ms.locfileid: "66071117"
 ##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a>Visão geral das seções do painel  
  O Painel de Gerenciamento PowerPivot contém as Web parts e relatórios inseridos que fazem busca detalhada em categorias de informações específicas. A lista a seguir descreve cada parte do painel:  
   
-|Painel|Descrição|  
+|Dashboard|Description|  
 |---------------|-----------------|  
 |Infraestrutura - Integridade do Serviço|Mostra as tendências de uso de CPU, o consumo de memória e os tempos de resposta de consulta ao longo do tempo, para que você possa avaliar se os recursos do sistema estão se aproximando da capacidade máxima ou estão subutilizados.|  
 |Ações|Contém links para outras páginas da Administração Central, incluindo o aplicativo de serviço atual, uma lista dos aplicativos de serviço e o log de uso.|  
@@ -126,7 +125,7 @@ ms.locfileid: "66071117"
   
     8.  Em especificar consulta MDX, clique em **design** para abrir o designer de consulta MDX para montar os dados com os quais você deseja trabalhar **se você vir a mensagem de erro** "o nome da Propriedade do modo de edição não está formatado corretamente.", verifique se você edita o. Arquivo ODC.  
   
-    9. Clique em **OK** e em **Concluir**.  
+    9. Clique em **OK** e em **concluir**.  
   
     10. Crie os relatórios de Tabela Dinâmica ou Gráfico Dinâmico para visualizar os dados no Excel.  
   

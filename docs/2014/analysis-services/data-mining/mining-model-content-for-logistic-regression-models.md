@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3232e4344b94e0b812df72ddebdc9a8d389d9f05
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083618"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521362"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão logística (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Regressão Logística da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -53,12 +52,12 @@ ms.locfileid: "66083618"
   
 |Nó|Conteúdo|  
 |----------|-------------|  
-|Raiz do modelo|Em branco|  
-|Estatísticas marginais|Em branco|  
-|Camada de entrada|Em branco|  
+|Raiz do modelo|Em Branco|  
+|Estatísticas marginais|Em Branco|  
+|Camada de entrada|Em Branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|hidden layer|Em branco|  
-|Camada de saída|Em branco|  
+|hidden layer|Em Branco|  
+|Camada de saída|Em Branco|  
 |Nó de saída|Nome do atributo de saída|  
   
  NODE_NAME  
@@ -109,12 +108,12 @@ ms.locfileid: "66083618"
   
 |Nó|Conteúdo|  
 |----------|-------------|  
-|Raiz do modelo|Em branco|  
-|Estatísticas marginais|Em branco|  
-|Camada de entrada|Em branco|  
+|Raiz do modelo|Em Branco|  
+|Estatísticas marginais|Em Branco|  
+|Camada de entrada|Em Branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|hidden layer|Em branco|  
-|Camada de saída|Em branco|  
+|hidden layer|Em Branco|  
+|Camada de saída|Em Branco|  
 |Nó de saída|Se o atributo de saída for contínuo, conterá o nome do atributo de saída.<br /><br /> Se o atributo de saída for discreto ou diferenciado, contém o nome do atributo e o valor.|  
   
  NODE_RULE  
@@ -122,12 +121,12 @@ ms.locfileid: "66083618"
   
 |Nó|Conteúdo|  
 |----------|-------------|  
-|Raiz do modelo|Em branco|  
-|Estatísticas marginais|Em branco|  
-|Camada de entrada|Em branco|  
+|Raiz do modelo|Em Branco|  
+|Estatísticas marginais|Em Branco|  
+|Camada de entrada|Em Branco|  
 |Nó de entrada|Um fragmento de XML contendo as mesmas informações que a coluna NODE_DESCRIPTION.|  
-|hidden layer|Em branco|  
-|Camada de saída|Em branco|  
+|hidden layer|Em Branco|  
+|Camada de saída|Em Branco|  
 |Nó de saída|Um fragmento de XML contendo as mesmas informações que a coluna NODE_DESCRIPTION.|  
   
  MARGINAL_RULE  
@@ -153,12 +152,12 @@ ms.locfileid: "66083618"
  MSOLAP_MODEL_COLUMN  
  |Nó|Conteúdo|  
 |----------|-------------|  
-|Raiz do modelo|Em branco|  
-|Estatísticas marginais|Em branco|  
-|Camada de entrada|Em branco|  
+|Raiz do modelo|Em Branco|  
+|Estatísticas marginais|Em Branco|  
+|Camada de entrada|Em Branco|  
 |Nó de entrada|Nome do atributo de entrada.|  
-|hidden layer|Em branco|  
-|Camada de saída|Em branco|  
+|hidden layer|Em Branco|  
+|Camada de saída|Em Branco|  
 |Nó de saída|Nome do atributo de entrada.|  
   
  MSOLAP_NODE_SCORE  

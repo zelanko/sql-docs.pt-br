@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e78754c93393f172e7282df19166536b29a2e640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088396"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527672"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Ajuda F1 do Assistente de Business Intelligence
   Use o Assistente de Business Intelligence para definir recursos de business intelligence e opções avançadas sobre cubos e dimensões. O assistente configura propriedades em objetos existentes, cria novos objetos e gera scripts MDX para fornecer recursos, como inteligência de dimensão e conversão de moeda.  

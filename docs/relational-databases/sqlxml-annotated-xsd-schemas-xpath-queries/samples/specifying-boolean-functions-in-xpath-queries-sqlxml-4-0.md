@@ -1,5 +1,6 @@
 ---
 title: Usar funções booleanas em consultas XPath (SQLXML)
+description: Saiba como as funções booleanas 4,0 do SQLXML true (), false () e not () são especificadas em consultas XPath.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1839d9bbf5776457828d39ab4a9242ae8d86631
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252584"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529868"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Especificando funções boolianas em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252584"
 ## <a name="examples"></a>Exemplos  
   
 ## <a name="a-specify-the-not-boolean-function"></a>a. Especificar a função booliana not()  
- Essa consulta retorna todos os ** \<** elementos filho do cliente>do nó de contexto que não têm ** \<a ordem>** elementos filho:  
+ Essa consulta retorna todos os **\<Customer>** elementos filho do nó de contexto que não têm **\<Order>** elementos filho:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -79,7 +80,7 @@ ms.locfileid: "75252584"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Especificar as funções boolianas true() e false()  
- Essa consulta retorna todos ** \<** os elementos de>do cliente filho do nó de contexto que não têm ** \<a ordem>** elementos filho. Em termos relacionais, esta consulta retorna todos os clientes que não fizeram nenhum pedido.  
+ Essa consulta retorna todos os elementos **\<Customer>** filho do nó de contexto que não têm **\<Order>** elementos filho. Em termos relacionais, esta consulta retorna todos os clientes que não fizeram nenhum pedido.  
   
 ```  
 /child::Customer[child::Order=false()]  

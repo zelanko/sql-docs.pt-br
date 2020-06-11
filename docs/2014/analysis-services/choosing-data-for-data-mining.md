@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088030"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527575"
 ---
 # <a name="choosing-data-for-data-mining"></a>Escolhendo os dados para a mineração de dados
   Ao iniciar Data Mining, você pode perguntar "a quantidade de dados de que preciso?" ou "há algum requisito especial que eu deva saber ao limpar ou Formatar meus dados?"  
@@ -205,7 +204,7 @@ ms.locfileid: "66088030"
   
  Tipicamente, a coluna de chave é um identificador numérico ou de texto que não deve ser usada para análise, somente para rastrear registros. As exceções são séries temporais e chaves sequenciais.  
   
- As**chaves de tabela aninhadas** são usadas somente quando você obtém dados de uma fonte de dados externa que tenha sido definida como uma exibição da fonte de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obter mais informações sobre tabelas aninhadas [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx), consulte:  
+ As**chaves de tabela aninhadas** são usadas somente quando você obtém dados de uma fonte de dados externa que tenha sido definida como uma exibição da fonte de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obter mais informações sobre tabelas aninhadas, consulte [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) :  
   
  Esse tipo de conteúdo pode ser usado com os seguintes tipos de dados: `Date`, `Double`, `Long` e `Text`.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cb5e932e2121efb9bd19375dfd2ff329c001812
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084602"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522487"
 ---
 # <a name="drillthrough-on-mining-models"></a>Detalhamento em modelos de mineração
   *Detalhar* significa ter a capacidade de consultar um modelo de mineração ou uma estrutura de mineração e obter dados detalhados não expostos no modelo.  
@@ -45,11 +44,11 @@ ms.locfileid: "66084602"
   
 |**Nome do algoritmo**|**Suporte para detalhamento**|  
 |------------------------|----------------------------------|  
-|Algoritmo Microsoft Naïve Bayes|Sem suporte.<br /><br /> Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
-|Algoritmo Rede Neural da Microsoft|Sem suporte.<br /><br /> Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
-|Algoritmo Regressão Logística da Microsoft|Sem suporte.<br /><br /> Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
-|Algoritmo Regressão Linear da Microsoft| Com suporte.<br /><br /> No entanto, como o modelo cria um único `All`nó,, o detalhamento retorna todos os casos de treinamento para o modelo. Se o conjunto de treinamento for grande, o carregamento dos resultados poderá demorar muito tempo.|  
-|Algoritmo Microsoft Time Series| Com suporte.<br /><br /> Porém, você não pode detalhar a estrutura nem os dados de casos utilizando o **Visualizador de Modelo de Mineração** no Designer de Mineração de Dados. Em vez disso, você deve criar uma consulta DMX.<br /><br /> Além disso, você não pode detalhar nós específicos nem gravar uma consulta DMX para recuperar casos em nós específicos do modelo Time Series. Você pode recuperar dados de casos a partir da redução do modelo ou da estrutura utilizando outros critérios, como valores data ou de atributo.<br /><br /> Se você quiser ver detalhes dos nós ARTXP e ARIMA criados pelo algoritmo MTS, poderá ser mais fácil utilizar o [Visualizador de árvore de conteúdo genérica da Microsoft &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).|  
+|Algoritmo Microsoft Naïve Bayes|Não há suporte.<br /><br /> Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
+|Algoritmo Rede Neural da Microsoft|Não há suporte.<br /><br /> Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
+|Algoritmo Regressão Logística da Microsoft|Não há suporte.<br /><br /> Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
+|Algoritmo Regressão Linear da Microsoft|Com suporte.<br /><br /> No entanto, como o modelo cria um único nó, `All` , o detalhamento retorna todos os casos de treinamento para o modelo. Se o conjunto de treinamento for grande, o carregamento dos resultados poderá demorar muito tempo.|  
+|Algoritmo Microsoft Time Series|Com suporte.<br /><br /> Porém, você não pode detalhar a estrutura nem os dados de casos utilizando o **Visualizador de Modelo de Mineração** no Designer de Mineração de Dados. Em vez disso, você deve criar uma consulta DMX.<br /><br /> Além disso, você não pode detalhar nós específicos nem gravar uma consulta DMX para recuperar casos em nós específicos do modelo Time Series. Você pode recuperar dados de casos a partir da redução do modelo ou da estrutura utilizando outros critérios, como valores data ou de atributo.<br /><br /> Se você quiser ver detalhes dos nós ARTXP e ARIMA criados pelo algoritmo MTS, poderá ser mais fácil utilizar o [Visualizador de árvore de conteúdo genérica da Microsoft &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Consulte os tópicos a seguir para obter mais informações sobre como usar o detalhamento com modelos de mineração.  

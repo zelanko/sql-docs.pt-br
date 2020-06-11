@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37ce07dd3ae9cbd46a6ddd1860c3178fe154513a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071658"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535168"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Create a BI Semantic Model Connection to a Tabular Model Database
   Use as informações neste tópico para configurar uma conexão de modelo semântico de BI que redireciona para um banco de dados modelo de tabela em execução em uma instância do Analysis Services fora do farm do SharePoint.  
@@ -36,7 +35,7 @@ ms.locfileid: "66071658"
   
  [Próximas etapas](#bkmk_next)  
   
-##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> Examinar pré-requisitos  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>Examinar pré-requisitos  
  É necessário ter permissões Colaborar ou superior para criar um arquivo de conexão de modelo semântico de BI.  
   
  Você deve ter uma biblioteca que dá suporte ao tipo de conteúdo da conexão de modelo semântico de BI. Para obter mais informações, consulte [Adicionar um tipo de conteúdo de conexão de modelo semântico de bi a uma biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  

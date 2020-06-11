@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82514e49b8e991c45bab4d1c32365765cefeeb65
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085411"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523882"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Criar um gráfico de comparação de precisão, gráfico de lucro ou matriz de classificação
   Você pode criar um gráfico de precisão de um modelo de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em cinco etapas básica:  

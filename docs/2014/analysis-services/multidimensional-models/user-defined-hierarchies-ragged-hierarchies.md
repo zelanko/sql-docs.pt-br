@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4f14a1f853a99ccb6b2dbbed72bd38b70f2ea7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889329"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535618"
 ---
 # <a name="ragged-hierarchies"></a>Hierarquias desbalanceadas
   Uma hierarquia desbalanceada é uma hierarquia definida pelo usuário que tem um número irregular de níveis. Exemplos comuns incluem o organograma, onde um gerente de alto nível tem os gerentes departamentais e funcionários não gerentes como subordinados diretos, ou hierarquias geográficas constituídas de País-Região-Cidades, onde algumas cidades não têm um estado ou província pai, como Washington D.C., a Cidade do Vaticano ou Nova Délhi.  
@@ -54,9 +53,9 @@ ms.locfileid: "68889329"
   
 2.  Clique com o botão direito do mouse em um membro na hierarquia e selecione **Propriedades**. Defina `HideMemberIf` com um dos valores descritos a seguir.  
   
-    |Configuração de HideMemberIf|Descrição|  
+    |Configuração de HideMemberIf|Description|  
     |--------------------------|-----------------|  
-    |`Never`|Os membros do nível nunca são ocultos. Este é o valor padrão.|  
+    |`Never`|Os membros do nível nunca são ocultos. Esse é o valor padrão.|  
     |**OnlyChildWithNoName**|Um membro do nível ficará oculto quando for o único filho de seu pai e seu nome for uma cadeia de caracteres nula ou vazia.|  
     |**OnlyChildWithParentName**|Um membro do nível ficará oculto quando for o único filho de seu pai e seu for nome idêntico ao nome do pai.|  
     |**NoName**|Um membro do nível ficará oculto quando seu nome estiver vazio.|  
@@ -65,7 +64,7 @@ ms.locfileid: "68889329"
 ##  <a name="set-mdx-compatibility-to-determine-how-placeholders-are-represented-in-client-applications"></a><a name="bkmk_Mdx"></a>Definir a compatibilidade MDX para determinar como os espaços reservados são representados em aplicativos cliente  
  Após definir `HideMemberIf` em um nível de hierarquia, defina também a propriedade `MDX Compatibility` na cadeia de conexão enviada do aplicativo cliente. A definição `MDX Compatibility` determina se o `HideMemberIf` é usado.  
   
-|Definição de MDX Compatibility|Descrição|Uso|  
+|Definição de MDX Compatibility|Description|Uso|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Mostrar um valor de espaço reservado.|Esse é o padrão usado pelo Excel, pelo SSDT e pelo SSMS. Ele orienta o servidor a retornar valores de espaço reservado ao detalhar níveis vazios em uma hierarquia desbalanceada. Se você clicar no valor de espaço reservado, poderá continuar até obter os nós filho (folha)<br /><br /> O Excel tem a cadeia de conexão usada para conectar-se ao Analysis Services, e ele sempre define `MDX Compatibility` como 1 em cada nova conexão. Esse comportamento preserva a compatibilidade com versões anteriores.|  
 |**2**|Oculte um valor de espaço reservado (um valor nulo ou uma duplicata do nível pai), mas mostre outros níveis e nós com valores relevantes.|`MDX Compatibility`=2 costuma ser visto como a configuração preferencial em termos de hierarquias desbalanceadas. Um relatório [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e alguns aplicativos cliente de terceiros talvez persistam nessa configuração.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6a5db00e6b25741cb9367d0b4a42101ca06650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084523"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522465"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>Editar a exibição da fonte de dados usada para a Estrutura de Mineração
   É possível abrir uma exibição da fonte de dados de dentro do Designer de Mineração de Dados de forma que você possa modificá-la.  

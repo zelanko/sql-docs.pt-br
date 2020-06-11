@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b3dad28227547f88956f1ac49e2878b2940f91
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084578"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522516"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Detalhamento em estruturas de mineração
   *Detalhar* significa ter a capacidade de consultar um modelo de mineração ou uma estrutura de mineração e obter dados detalhados não expostos no modelo.  
@@ -38,7 +37,7 @@ ms.locfileid: "66084578"
   
 -   O detalhamento funciona com a recuperação de informações sobre os casos de treinamento armazenados em cache quando você processou a estrutura de mineração. Portanto, se você limpar os dados armazenados em cache após processar a estrutura, alterando a propriedade <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> para `ClearAfterProcessing`, o detalhamento não funcionará. Para habilitar o detalhamento para colunas de estrutura, você deve alterar a propriedade <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> para `KeepTrainingCases` e depois processar a estrutura novamente.  
   
--   Verifique se a estrutura de mineração e o modelo de mineração têm a propriedade [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) definida `True`como. Além disso, você deve ser um membro da função que tem as permissões de detalhamento no modelo e na estrutura.  
+-   Verifique se a estrutura de mineração e o modelo de mineração têm a propriedade [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) definida como `True` . Além disso, você deve ser um membro da função que tem as permissões de detalhamento no modelo e na estrutura.  
   
 ## <a name="security-issues-for-drillthrough"></a>Problemas de segurança para detalhamento  
  As permissões de detalhamento são definidas separadamente na estrutura e no modelo. A permissão para o modelo lhe permite detalhar do modelo, mesmo que você não tenha permissões na estrutura. As permissões para detalhamento na estrutura fornecem a capacidade adicional de incluir colunas de estrutura em consultas de detalhamento do modelo, usando a função [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  

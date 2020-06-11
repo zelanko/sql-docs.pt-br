@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bb78df367f59889f4665d9940880bf0ce49c462
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071379"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535228"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Conexão de modelo semântico de BI (.bism) do PowerPivot
   Uma conexão de modelo semântico de BI (.bism) é uma conexão portátil que conecta o Excel ou [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reporta a um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados modelo de tabela ou uma instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo multidimensional. Se você estiver familiarizado com arquivos de conexão de dados (.odc) do Office, observará uma semelhança em como um arquivo de conexão .bism é definido e usado.  

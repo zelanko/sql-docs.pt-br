@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 867bd6d1abffb29ec3eb2a8a78e562e5cbcc5b29
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086616"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526338"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Guia da validação cruzada (Exibição do gráfico de precisão de mineração)
   A validação cruzada permite dividir uma estrutura de mineração em seções cruzadas e interativamente treinar e testar modelos com cada seção cruzada. Você especifica um número de partições para dividir e colocar os dados; cada partição, por sua vez, é usada como dados de teste, enquanto os dados restantes são usados para treinar o novo modelo. O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gera um conjunto de métricas de precisão padrão para cada modelo. Comparando as métricas dos modelos geradas para cada seção cruzada, é possível obter uma boa noção da confiabilidade do modelo em relação a todo conjunto de dados.  
@@ -41,7 +40,7 @@ ms.locfileid: "66086616"
   
 -   Clique em **Obter Resultados** para exibir os resultados de validação cruzada.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Contagem de dobras**  
  Especifique o número de dobras ou partições para criar. O valor mínimo é 2, significando que a metade do conjunto de dados é usada para testar e metade para treinar.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66086616"
   
  Se você usar **0**, todas os casos nos dados de origem serão usados para validação cruzada.  
   
- Não há nenhum valor padrão.  
+ Sem valor padrão.  
   
 > [!NOTE]  
 >  Ao aumentar o número de casos, o tempo de processamento também aumentara.  
@@ -96,7 +95,7 @@ ms.locfileid: "66086616"
   
  Por exemplo, suponha que três previsões são feitas para um determinado estado de destino, e as probabilidades de cada previsão são 0,05, 0,15 e 0,8. Se você definir o limite de 0,5, só uma previsão será contada como estando correta. Se você definir o **Limite** **do Destino** como 0,10, serão contadas duas previsões como estando corretas.  
   
- Quando o **limite** de **destino** é `null`definido como, que é o valor padrão, a previsão mais provável para cada caso é contada como correta. No exemplo a pouco citado, 0,05, 0,15 e 0,8 são as probabilidades para previsões em três casos diferentes. Embora as probabilidades sejam muito diferentes, cada previsão será contada como correta, porque cada caso gera somente uma previsão e essas são as melhores previsões para esses casos.  
+ Quando o **limite** de **destino** é definido como `null` , que é o valor padrão, a previsão mais provável para cada caso é contada como correta. No exemplo a pouco citado, 0,05, 0,15 e 0,8 são as probabilidades para previsões em três casos diferentes. Embora as probabilidades sejam muito diferentes, cada previsão será contada como correta, porque cada caso gera somente uma previsão e essas são as melhores previsões para esses casos.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)   

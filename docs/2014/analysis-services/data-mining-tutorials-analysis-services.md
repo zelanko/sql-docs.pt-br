@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f1e7d35ac11059c57889a0938914f339cc7d8d1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086328"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525828"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Tutoriais de Mineração de Dados (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]O  facilita a criação de soluções sofisticadas de mineração de dados. As ferramentas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ajudam a elaborar, criar e gerenciar modelos de mineração de dados que usam dados relacionais ou de cubos. Você pode gerenciar o acesso de cliente aos modelos de mineração de dados e criar consultas de previsão a partir de vários clientes.  

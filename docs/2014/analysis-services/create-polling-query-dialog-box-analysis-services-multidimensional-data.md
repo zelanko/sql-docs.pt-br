@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be4a5f265d83c9346756e82f04d25616551b1af3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086828"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526492"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Criar Consulta de Sondagem (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Criar Consulta Sondagem** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma consulta sondagem na guia **Notificações** da caixa de diálogo **Opções de Armazenamento** . Uma consulta de sondagem é normalmente uma consulta singleton que retorna um valor que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode usar para determinar se foram feitas alterações em uma tabela ou em outro objeto relacional. É possível exibir a caixa de diálogo **Criar Consulta Sondagem** clicando no botão de reticências (**...**) na coluna **Consulta Sondagem** da grade da opção **Sondagem agendada** na guia **Notificações** da caixa de diálogo **Opções de Armazenamento**. Para obter mais informações sobre a guia **Notificações** da caixa de diálogo **Opções de Armazenamento**, consulte [Notificações &#40;Caixa de diálogo Opções de Armazenamento&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "66086828"
  **Definição da consulta**  
  A definição da consulta fornece uma barra de ferramentas e painéis onde definir e testar a consulta, dependendo da exibição selecionada.  
   
- **Barra**  
+ **Barra de ferramentas**  
  Use a barra de ferramentas para gerenciar conjuntos de dados, selecionar painéis para exibição e controlar várias funções de consulta.  
   
 |Valor|Descrição|  
@@ -65,7 +64,7 @@ ms.locfileid: "66086828"
 |**Mostrar/Ocultar Painel Grade**|Mostra ou oculta o **painel de grade**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Painel Mostrar/Ocultar SQL**|Mostra ou oculta o painel **SQL**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Mostrar/Ocultar Painel Resultado**|Mostra ou oculta o painel **Resultado**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
-|**Funcionam**|Executa a consulta. Os resultados são exibidos no **painel de resultados**.|  
+|**Executar**|Executa a consulta. Os resultados são exibidos no **painel de resultados**.|  
 |**Verificar SQL**|Verifica a instrução SQL na consulta.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Classificação crescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem crescente.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Classificação decrescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem decrescente.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  

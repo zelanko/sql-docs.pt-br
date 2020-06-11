@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf196f1c026fe8878f572a6797ba2e738ba5b782
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083572"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521268"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de clustering de sequências (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo MSC (Microsoft Sequence Clustering). Para obter uma explicação sobre a terminologia geral e estatística relacionada ao conteúdo do modelo de mineração que se aplica a todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -53,7 +52,7 @@ ms.locfileid: "66083572"
  NODE_TYPE  
  Um modelo de clustering de sequência gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|Descrição|  
+|ID do tipo de nó|Description|  
 |------------------|-----------------|  
 |1 (Modelo)|Nó raiz do modelo.|  
 |5 (Cluster)|Contém a contagem de transições no cluster, uma lista dos atributos e estatísticas que descrevem os valores no cluster.|  
@@ -239,11 +238,11 @@ ORDER BY Count(*) DESC
 |Hydration Pack|0.9887324|0.002816901|0,00|  
 |LL Mountain Tire|51.414085|0.146478873|0.15|  
 |Jersey Logo de manga longa|2.9661972|0.008450704|0,01|  
-|Mountain Bottle Cage|87.997183|0.250704225|0,25|  
+|Mountain Bottle Cage|87.997183|0.250704225|0.25|  
 |Mountain Tire Tube|16.808451|0.047887324|0,05|  
 |Camisa esportiva clássica de manga curta|10.876056|0.030985915|0.03|  
 |Sport-100|20.76338|0.05915493|0.06|  
-|Water Bottle|18.785915|0.053521127|0,25|  
+|Water Bottle|18.785915|0.053521127|0.25|  
   
  Apesar de o caso que selecionamos inicialmente nos dados de treinamento conter o produto 'Mountain-500' seguido pelo produto 'LL Mountain Tire', você pode ver que há várias outras sequências possíveis. Para localizar informações detalhadas para qualquer cluster específico, você deve repetir o processo de detalhamento na lista das sequências no cluster para as transições reais de cada estado ou produto.  
   

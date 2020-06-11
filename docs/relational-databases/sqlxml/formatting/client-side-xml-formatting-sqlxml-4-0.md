@@ -1,5 +1,6 @@
 ---
 title: Formatação XML do lado do cliente (SQLXML)
+description: Saiba mais sobre a formatação XML do lado do cliente no SQLXML 4,0 usando a cláusula FOR XML.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 968af0ed24f14b4766e312a0cec0e9d3e7b5022b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b03c1cb91c17e330d73f192bbd364c95591c721
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247019"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529987"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Formatação XML do lado do cliente (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75247019"
 > [!NOTE]  
 >  Este tópico fornece informações adicionais sobre como usar a cláusula FOR XML no lado do cliente e supõe que você já esteja familiarizado com a cláusula FOR XML. Para obter mais informações sobre o FOR XML, consulte [construindo XML Using for XML](../../../relational-databases/xml/for-xml-sql-server.md).  
   
- **Importante** Para usar a funcionalidade para XML do lado do cliente com o novo tipo de dados **XML** , os clientes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre devem usar o provedor de dados do Native Client (SQLNCLI11) em vez do provedor SQLOLEDB. SQLNCLI11 é a última versão do provedor do SQL Server e compreende plenamente os tipos de dados introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. O comportamento do lado do cliente para XML com o provedor SQLOLEDB tratará tipos de dados **XML** como cadeias de caracteres.  
+ **Importante** Para usar a funcionalidade para XML do lado do cliente com o novo tipo de dados **XML** , os clientes sempre devem usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de dados do Native Client (SQLNCLI11) em vez do provedor SQLOLEDB. SQLNCLI11 é a última versão do provedor do SQL Server e compreende plenamente os tipos de dados introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. O comportamento do lado do cliente para XML com o provedor SQLOLEDB tratará tipos de dados **XML** como cadeias de caracteres.  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>Formatando documentos XML no lado do cliente  
  Quando um aplicativo cliente executa a seguinte consulta:  
@@ -119,7 +120,7 @@ AS
      Você pode especificar a formatação do lado do cliente definindo essa propriedade das classes gerenciadas SQLXML como true.  
   
 ## <a name="enhanced-xml-template-support"></a>Suporte a modelos XML aprimorados  
- A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]do, o modelo XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no foi aprimorado com a adição do atributo **XML do lado do cliente** . Se esse atributo for definido como true, XML será formatado no cliente. Observe que esse atributo de modelo é idêntico em funcionalidade para a propriedade ClientSideXML específica do provedor SQLXMLOLEDB.  
+ A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , o modelo XML no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] foi aprimorado com a adição do atributo **XML do lado do cliente** . Se esse atributo for definido como true, XML será formatado no cliente. Observe que esse atributo de modelo é idêntico em funcionalidade para a propriedade ClientSideXML específica do provedor SQLXMLOLEDB.  
   
 > [!NOTE]  
 >  Se você executar um modelo XML em um aplicativo ADO que está usando o provedor SQLXMLOLEDB e especificar tanto o atributo **XML do lado do cliente** no modelo quanto a propriedade ClientSideXML do provedor, o valor especificado no modelo terá precedência.  

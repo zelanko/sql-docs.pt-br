@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a507e0d77cd81165b0220e3d09ec10227d32d853
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175215"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528702"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>Detectar Categorias (Ferramentas de Análise de Tabela para Excel)
   ![Botão Detectar Categorias na faixa de opções](media/tat-detectcat.gif "Botão Detectar Categorias na faixa de opções")
@@ -78,13 +77,13 @@ ms.locfileid: "78175215"
 >  Quando você usa a ferramenta **detectar categorias** , ela cria uma nova coluna, categoria, na tabela de dados original. Se você deixar essa coluna na tabela de dados e, em seguida, executar operações subsequentes de mineração de dados, a presença dessa coluna poderá influenciar os resultados. Para assegurar que isso não afete outras operações, faça uma cópia da tabela de dados sem a coluna Categoria, antes de usar outras ferramentas de mineração de dados.
 
 ## <a name="related-tools"></a>Ferramentas relacionadas
- Quando a ferramenta **detectar categorias** analisa seus dados, ela cria uma estrutura de data mining e um modelo de Data Mining usando [!INCLUDE[msCoName](../includes/msconame-md.md)] o algoritmo de clustering.
+ Quando a ferramenta **detectar categorias** analisa seus dados, ela cria uma estrutura de data mining e um modelo de Data Mining usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de clustering.
 
  Depois de criar um modelo de Data Mining usando a ferramenta **analisar influenciadores principais** , você pode usar o cliente de mineração de dados para Excel para procurar o modelo e explorar relações com mais detalhes. O Cliente de Mineração de Dados para Excel é um suplemento separado que fornece funções de mineração de dados mais avançadas. Para obter informações, consulte [procurando modelos no Excel &#40;SQL Server suplementos de mineração de dados&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).
 
  Para obter mais informações sobre como usar os recursos de modelagem de dados no cliente de mineração de dados para Excel, consulte [criando um modelo de mineração de dados](creating-a-data-mining-model.md).
 
- Para obter mais informações sobre o algoritmo usado pela ferramenta **detectar categorias** , consulte o tópico "algoritmo de clustering da Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] " nos manuais online do.
+ Para obter mais informações sobre o algoritmo usado pela ferramenta **detectar categorias** , consulte o tópico "algoritmo de clustering da Microsoft" nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] manuais online do.
 
 ## <a name="see-also"></a>Consulte Também
  [Ferramentas de Análise de Tabela para Excel](table-analysis-tools-for-excel.md)

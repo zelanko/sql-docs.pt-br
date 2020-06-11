@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 6c7b5f3b-8808-433f-ad58-25e75b140604
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 392849d24d21775defe1ab9335a9f9c14fd74458
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077659"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537508"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Caixa de diálogo Propriedades da Estrutura de Mineração (Analysis Services – Mineração de Dados)
   Utilize a caixa de diálogo **Propriedades da Estrutura de Mineração** em **SQL Server Management Studio** para definir as propriedades de uma estrutura de mineração em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Você pode exibir a caixa de diálogo **Propriedades da Estrutura de Mineração** , clicando com o botão direito do mouse em uma estrutura de mineração no **Pesquisador de Objetos** e selecionando **Propriedades** no menu de contexto.  
   
  A caixa de diálogo **Propriedades da Estrutura de Mineração** contém as seguintes páginas:  
   
-## <a name="pages"></a>Pages (Páginas)  
+## <a name="pages"></a>Páginas  
   
 |Página|Descrição|  
 |----------|-----------------|  

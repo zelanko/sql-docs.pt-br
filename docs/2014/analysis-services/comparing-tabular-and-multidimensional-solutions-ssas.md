@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087768"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527422"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparando soluções tabulares e multidimensionais (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]fornece duas abordagens distintas para modelagem de dados: tabular e multidimensional. Embora haja sobreposição significativa entre eles, também há diferenças importantes que informarão a sua decisão sobre como seguir em frente. Neste tópico, podemos oferecer comparações de recurso e explicar como cada abordagem trata os requisitos comuns de projeto. Por exemplo, se o suporte de uma fonte de dados específica é uma consideração importante, a seção sobre fontes de dados pode ajudar a orientar sua decisão sobre qual abordagem de modelagem utilizar.  
@@ -99,21 +98,21 @@ ms.locfileid: "66087768"
 ||**Multidimensionais**|**Tabelas**|  
 |Ações|[Sim](multidimensional-models/actions-in-multidimensional-models.md)|Não|  
 |Objetos de agregação|[Sim](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|Não|  
-|Medidas calculadas|[Sim](multidimensional-models/create-calculated-members.md)|Sim|  
+|Medidas calculadas|[Sim](multidimensional-models/create-calculated-members.md)|Yes|  
 |Assemblies personalizados|[Sim](multidimensional-models/multidimensional-model-assemblies-management.md)|Não|  
-|Rollups personalizados|Sim|Não|  
+|Rollups personalizados|Sim|No|  
 |Contagem Distinta|[Sim](multidimensional-models/use-aggregate-functions.md)|Sim (via DAX) *|  
-|Detalhamento|[Sim](multidimensional-models/actions-in-multidimensional-models.md)|Sim|  
-|Hierarquias|[Sim](multidimensional-models/user-defined-hierarchies-create.md)|Sim|  
-|KPIs|[Sim](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Sim|  
+|Detalhamento|[Sim](multidimensional-models/actions-in-multidimensional-models.md)|Yes|  
+|Hierarquias|[Sim](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  
+|KPIs|[Sim](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Yes|  
 |Grupos de medidas vinculados|[Sim](multidimensional-models/linked-measure-groups.md)|Não|  
-|Relações muitos para muitos|[Sim](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|Não|  
+|Relacionamentos de muitos para muitos|[Sim](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|Não|  
 |Hierarquias pai-filho|[Sim](multidimensional-models/parent-child-dimension.md)|Sim (por DAX)|  
 |Partições|[Sim](tabular-models/partitions-ssas-tabular.md)|  
-|perspectivas|[Sim](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sim](tabular-models/partitions-ssas-tabular.md)|  
+|Perspectivas|[Sim](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sim](tabular-models/partitions-ssas-tabular.md)|  
 |Medidas semiaditivas|[Sim](multidimensional-models/define-semiadditive-behavior.md)|Sim (por DAX)|  
 |Translations|[Sim](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Não|  
-|Hierarquias definidas pelo usuário|[Sim](multidimensional-models/user-defined-hierarchies-create.md)|Sim|  
+|Hierarquias definidas pelo usuário|[Sim](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  
 |Write-back|[Sim](multidimensional-models/set-partition-writeback.md)|Não|  
   
  * Se sua solução precisar dar suporte a um número muito grande de contagens distintas (como muitas milhões de IDs de cliente), considere tabular primeiro. Ela costuma ser mais funcional nesse cenário. Consulte a seção sobre contagens distintas no white paper, [Estudo de caso do Analysis Services: Utilizar modelos de tabela em soluções comerciais de larga escala](https://msdn.microsoft.com/library/dn751533.aspx).  
@@ -172,7 +171,7 @@ ms.locfileid: "66087768"
 ##  <a name="server-deployment-modes-for-multidimensional-and-tabular-solutions"></a><a name="bkmk_deploymentmode"></a> Modos de implantação de servidor para soluções multidimensionais e tabulares  
  Uma instância do Analysis Services está instalada em um dos três modos que definem o contexto operacional do servidor. O modo de servidor que você instala determinará o tipo de soluções que podem ser implantados nesse servidor. Armazenamento e arquitetura de memória são as principais diferenças entre os modos, mas há outras diferenças. Os três modos de servidor são descritos brevemente na tabela a seguir. Para obter mais informações, consulte [Determinar o modo de servidor de uma instância do Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
-|Modo de implantação|Descrição|  
+|Modo de implantação|Description|  
 |---------------------|-----------------|  
 |0 - Multidimensional e de mineração de dados|Executa soluções multidimensionais e de mineração de dados que você implanta em uma instância padrão do Analysis Services. O modo de implantação 0 é o padrão para uma instalação do Analysis Services. Para obter mais informações, consulte [Install Analysis Services in Multidimensional and Data Mining Mode](../../2014/sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md).|  
 |1 - PowerPivot para SharePoint|Para acessar o modelo de dados do Excel, o Analysis Services é um componente interno do SharePoint. O Analysis Services está instalado no modo de implantação 1 e aceita solicitações somente de serviços do Excel em um ambiente do SharePoint. Para obter mais informações, consulte [PowerPivot for SharePoint 2010 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md).|  

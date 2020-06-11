@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b5ace027c052090e2f0ce5bca77e02df9516da4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174465"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527262"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurar ou reparar o PowerPivot para SharePoint 2010 (Ferramenta de Configuração do PowerPivot)
   Para configurar ou reparar uma instalação do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot para SharePoint 2010, use a Ferramenta de Configuração do PowerPivot. A ferramenta de configuração começa examinando o sistema e retorna uma lista de ações necessárias para concluir ou reparar uma instalação. O assistente de configuração do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instala a Ferramenta de Configuração do PowerPivot para SharePoint 2010, bem como a Ferramenta de Configuração do PowerPivot para SharePoint 2013. Este tópico descreve a Ferramenta de Configuração do PowerPivot para SharePoint 2010. Para obter mais informações sobre o SharePoint 2010, consulte [Configurar ou reparar 2013 PowerPivot para SharePoint &#40;ferramenta de configuração do PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).
@@ -181,7 +180,7 @@ ms.locfileid: "78174465"
  Com o tempo, se você determinar a necessidade de armazenamento de dados e recursos de processamento adicionais, poderá adicionar uma segunda instância do servidor PowerPivot para SharePoint ao farm. Para obter instruções, consulte [lista de verificação de implantação: expansão adicionando servidores PowerPivot a um farm do SharePoint 2010](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).
 
 ## <a name="additional-resources"></a>Recursos adicionais
- ![As configurações do SharePoint](media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") [enviam comentários e informações de contato por meio do Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).
+ ![As configurações do SharePoint](media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") [enviam comentários e informações de contato por meio do Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) ( https://connect.microsoft.com/SQLServer/Feedback) .
 
 ## <a name="see-also"></a>Consulte Também
  [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md) [Administração e configuração do PowerPivot ferramentas de configuração PowerPivot Server na administração central](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)

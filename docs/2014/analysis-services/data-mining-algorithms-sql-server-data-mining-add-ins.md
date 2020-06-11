@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a73ce5a538756a740afd2db72d585fa54f03cae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086506"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525925"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmos de mineração de dados (Suplementos de mineração de dados do SQL Server)
   Os Suplementos de Mineração de Dados para Office oferecem suporte à criação de modelos analíticos usando os algoritmos de mineração de dados a seguir. Todos os algoritmos são baseados nos métodos de aprendizado automatizado conhecido e foram implementados pelo Microsoft Research.  

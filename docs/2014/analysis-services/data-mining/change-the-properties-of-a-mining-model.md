@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44313ce14beee0390f12ed0e6566502327b17795
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085874"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525032"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Alterar as propriedades de um modelo de mineração
   Algumas propriedades de modelo de mineração se aplicam ao modelo como um todo, enquanto outras propriedades de modelo se aplicam a colunas individuais. Exemplos de propriedades que se aplicam ao modelo inteiro seriam a propriedade `Drillthrough`, que especifica se os dados de caso devem estar disponíveis para consulta, e a propriedade `Description`. Propriedades que se aplicam à coluna incluem `Usage` e `ModelingFlags`, que controlam como os dados na coluna são usados no modelo.  
@@ -46,7 +45,7 @@ ms.locfileid: "66085874"
 2.  Na janela **Propriedades** na lateral direita da tela, realce o valor que corresponde à propriedade que você deseja alterar e digite o novo valor.  
   
     > [!NOTE]  
-    >  Se o uso da coluna for definido `Ignore`como, a janela **Propriedades** da coluna ficará em branco.  
+    >  Se o uso da coluna for definido como `Ignore` , a janela **Propriedades** da coluna ficará em branco.  
   
      O novo valor entrará em vigor quando você selecionar um elemento diferente no designer.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f41ffd3091ccf38498f1484d9a1bf5a908e50e39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086425"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525922"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Cliente de Mineração de Dados para Excel (Suplementos de Mineração de Dados do SQL Server)
   O Cliente de Mineração de Dados para Excel é um conjunto de ferramentas que permite realizar tarefas comuns de mineração de dados, desde a limpeza de dados até a criação de modelos e de consultas de previsão. Você pode usar dados nas tabelas ou nos intervalos do Excel, ou acessar fontes de dados externas.  
@@ -140,15 +139,15 @@ ms.locfileid: "66086425"
  Se você tiver as permissões necessárias, poderá excluir, modificar, renomear ou processar as estruturas e os modelos de mineração existentes, sem sair do Excel.  
   
  [Rastrear &#40;cliente de mineração de dados para Excel&#41;](trace-data-mining-client-for-excel.md)  
- Clique em **rastrear** para exibir uma captura contínua da interação entre o cliente do Excel e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o servidor. Toda a atividade é armazenada como instruções DMX ou XMLA, para que você possa solucionar problemas da sessão de mineração de dados ou salvar as informações para uso posterior.  
+ Clique em **rastrear** para exibir uma captura contínua da interação entre o cliente do Excel e o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] servidor. Toda a atividade é armazenada como instruções DMX ou XMLA, para que você possa solucionar problemas da sessão de mineração de dados ou salvar as informações para uso posterior.  
   
  [Conectar a um servidor de mineração de dados](connect-to-a-data-mining-server.md)  
  Para usar o Excel como um cliente de mineração de dados, você deve estabelecer uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A conexão proporciona acesso ao mecanismo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Se você tiver permissões, a conexão também lhe permitirá armazenar padrões que você tenha descoberto e modificar objetos de mineração de dados existentes.  
   
- A barra de ferramentas **conexões** fornece assistentes para gerenciar conexões com uma [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]instância do. É necessário definir uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para usar as ferramentas e os algoritmos de mineração de dados. Você pode criar a conexão quando instala o suplemento ou pode adicionar uma conexão depois.  
+ A barra de ferramentas **conexões** fornece assistentes para gerenciar conexões com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É necessário definir uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para usar as ferramentas e os algoritmos de mineração de dados. Você pode criar a conexão quando instala o suplemento ou pode adicionar uma conexão depois.  
   
  **Introdução**  
- Clique no botão **introdução** para iniciar um assistente de configuração que orienta o processo de criação de uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]e a obtenção das permissões necessárias para fazer Data Mining.  
+ Clique no botão **introdução** para iniciar um assistente de configuração que orienta o processo de criação de uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e a obtenção das permissões necessárias para fazer Data Mining.  
   
  **Ajuda**  
  O menu suspenso **ajuda** fornece links para a ajuda online, sites e um assistente de configuração para ajudá-lo a concluir a instalação e iniciar o Data Mining.  

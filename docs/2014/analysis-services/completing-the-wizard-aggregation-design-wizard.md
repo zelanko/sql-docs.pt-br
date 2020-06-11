@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd8a149582c15cfb9b216bf478d23e7d4de16a0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3b6261697d101242cae1052b5da1c30fde65661
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087724"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527382"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>Concluindo o Assistente (Assistente de Design de Agregação)
   Use a página **Concluindo o Assistente** para salvar o design de agregação das partições selecionadas. Você também pode opcionalmente implantar e processar as partições selecionadas depois de o Assistente de Design de Agregação terminar de criar e salvar as agregações.  

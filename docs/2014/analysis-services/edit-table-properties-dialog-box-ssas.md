@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bb8afc256881c96f70a3dd53a31e75c8fa2b5ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081441"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528442"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Caixa de diálogo Editar Propriedades da Tabela (SSAS)
   A caixa de diálogo **Editar Propriedades da Tabela** o habilita a exibir e modificar as propriedades de tabelas que são importadas para o designer de modelo usando o Assistente de Importação de Tabela. Para acessar essa caixa de diálogo, no designer de modelo, selecione uma tabela de dados que foi importada, clique no menu **Tabela** e em **Propriedades da Tabela**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  As opções desta caixa de diálogo são diferentes, dependendo de como você importou os dados: originalmente selecionando tabelas em uma lista ou usando uma consulta SQL.  
   
 ## <a name="table-preview-mode"></a>Modo de visualização de tabela  
@@ -89,7 +88,7 @@ ms.locfileid: "66081441"
  **Instrução Sql**  
  Exibe a instrução SQL emitida em relação à fonte de dados atual para recuperar linhas. Por padrão, todas as linhas são recuperadas, mas é possível recuperar um subconjunto de linhas, criando um filtro ou editando manualmente a instrução SQL.  
   
- **Validar**  
+ **Verifica**  
  Clique para verificar se a instrução está sintaticamente correta para a fonte de dados selecionada e o provedor.  
   
  **Design**  

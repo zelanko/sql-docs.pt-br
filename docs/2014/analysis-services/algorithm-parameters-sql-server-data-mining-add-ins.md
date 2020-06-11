@@ -46,20 +46,19 @@ helpviewer_keywords:
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d89f8e1724875268e27a29c2df9053704f0883d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062595"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528122"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Parâmetros do Algoritmo (Suplementos de Mineração de Dados do SQL Server)
   Quando você executa mineração de dados usando as Ferramentas de Análise de Tabela para Excel, não precisa configurar o algoritmo ou os parâmetros de mineração de dados; cada ferramenta analisa os dados e seleciona automaticamente os parâmetros ideais. No entanto, se desejar modificar o modelo, ou criar um modelo de mineração do zero, o Cliente de Mineração de Dados para Excel oferece várias opções de personalização.  
   
 -   Crie um modelo de Data Mining manualmente, clicando em **avançado** e, em seguida, clicando em **Adicionar modelo à estrutura**.  
   
--   Use qualquer um dos assistentes de modelagem no cliente de mineração de dados e clique em **parâmetros** para controlar o comportamento [!INCLUDE[msCoName](../includes/msconame-md.md)] dos algoritmos de data mining.  
+-   Use qualquer um dos assistentes de modelagem no cliente de mineração de dados e clique em **parâmetros** para controlar o comportamento dos [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de data mining.  
   
 -   Clique em **consulta** para abrir o assistente de modelo de consulta e clique em **avançado** para abrir o **Editor de consulta avançada de mineração de dados**. Nesse editor, você pode criar modelos usando modelos DMX.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66062595"
   
  A tabela a seguir lista os parâmetros, descreve sua funcionalidade e fornece links para mais informações técnicas.  
   
-|Nome do parâmetro|Usado em|Descrição|  
+|Nome do parâmetro|Usado em|Description|  
 |--------------------|-------------|-----------------|  
 |AUTO_DETECT_PERIODICITY|Algoritmo MTS|Especifica um valor numérico entre 0 e 1 usado para detectar periodicidade. Definir esse valor mais próximo a 1 favorece a descoberta de vários padrões quase periódicos e a geração automática de dicas de periodicidade. Lidar com muitas dicas de periodicidade provavelmente resultará em tempo de treinamento de modelos significativamente maior, mas também em modelos mais precisos. Se o valor for mais próximo a 0, a periodicidade será detectada somente para dados fortemente periódicos.<br /><br /> O padrão é 0.6.|  
 |CLUSTER_COUNT|Algoritmo Microsoft Clustering<br /><br /> Microsoft Sequence Clustering Algorithm|Especifica o número aproximado de clusters a serem criados pelo algoritmo. Se o número aproximado de clusters não pode ser criado a partir dos dados, o algoritmo cria o máximo de clusters possível. Quando CLUSTER_COUNT é definido como 0, o algoritmo usa heurísticos para determinar melhor o número de clusters a serem criados.<br /><br /> O padrão é 10.|  

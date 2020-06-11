@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c90031f3c1191e99ff6274f6198d513225f0927
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087095"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527012"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Conectar a dados de origem (Cliente de Mineração de Dados para Excel)
   Este tópico descreve como criar e usar as conexões usadas para armazenar modelos de mineração de dados e para acessar os dados externos armazenados no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "66087095"
  Para se conectar a um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você deve ter permissões para acessar o servidor do banco de dados. Além disso, as sessões de mineração de dados devem ser habilitadas e você deve ter permissões de leitura ou leitura/gravação nos objetos de banco de dados armazenados no servidor.  
   
 ##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>Criando conexões do servidor de mineração de dados  
- O grupo de **conexões** no cliente de mineração de dados para Excel e as ferramentas de análise de tabela para Excel fornecem ferramentas para gerenciar conexões [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]com uma instância do.  
+ O grupo de **conexões** no cliente de mineração de dados para Excel e as ferramentas de análise de tabela para Excel fornecem ferramentas para gerenciar conexões com uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 -   Você pode criar a conexão quando instala o suplemento ou pode adicionar uma conexão depois.  
   
@@ -45,14 +44,14 @@ ms.locfileid: "66087095"
 -   Apenas uma conexão pode estar ativa em um determinado momento.  
   
 ### <a name="connections-in-the-excel-add-ins"></a>Conexões nos suplementos do Excel  
- O grupo de **conexões** no cliente de mineração de dados para Excel e as ferramentas de análise de tabela para Excel são onde você gerencia conexões [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]com uma instância do.  
+ O grupo de **conexões** no cliente de mineração de dados para Excel e as ferramentas de análise de tabela para Excel são onde você gerencia conexões com uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>Criar uma nova conexão de servidor nos suplementos do Excel  
   
 1.  Clique no botão **conexão** na faixa de medida **analisar** ou **mineração de dados** .  
   
     > [!NOTE]  
-    >  O texto do botão indica se uma conexão existe. Quando nenhuma conexão foi feita na planilha, o botão contém o texto "\<sem> de conexão". Caso uma conexão tenha sido estabelecida anteriormente na pasta de trabalho, o nome dessa conexão aparecerá no botão.  
+    >  O texto do botão indica se uma conexão existe. Quando nenhuma conexão foi feita na planilha, o botão contém o texto " \<No connection> ." Se uma conexão tiver sido feita anteriormente na pasta de trabalho, o nome dessa conexão aparecerá no botão.  
   
 2.  Na caixa de diálogo **Analysis Services conexões** , clique em **novo**.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "66087095"
   
 2.  Se você precisar modificar a cadeia de conexão para aumentar o tempo limite de consulta ou adicionar outros parâmetros específicos para a sua instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], uma opção é editar o arquivo .dmc, onde a cadeia de conexão está armazenada.  
   
-     \<unidade: > \Users\\<myusername\>\AppData\Local\Microsoft\Data Mining Add-in  
+     \<drive:>O \\ \> suplemento de mineração \AppData\Local\Microsoft\Data myusername<  
   
 ##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>Conectando-se a fontes de dados externas  
  Enquanto as ferramentas na faixa de medida de **análise** funcionam exclusivamente com dados no Excel, as ferramentas na faixa de informações de **mineração de dados** permitem que você se conecte diretamente a fontes de dados externas para usar como entradas para seu modelo ou para amostragem.  

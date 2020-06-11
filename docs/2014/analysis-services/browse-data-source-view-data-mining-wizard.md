@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59c8690a9b71f8a6fecf98e64007eecfbd339b82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08a9f9214f7a23a86ad631717d68e178bf49fce3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064487"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527792"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>Procurar na exibição da fonte de dados (Assistente de Mineração de Dados)
   Use a caixa de diálogo **Procurar na Exibição da Fonte de Dados** para abrir a exibição da fonte de dados selecionada na página **Selecionar Exibição da Fonte de Dados** do assistente.  

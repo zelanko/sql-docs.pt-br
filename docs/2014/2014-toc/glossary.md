@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f55c4388fdc75eb531e74ffb6ffc5f24804c163
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67412692"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528292"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -81,7 +80,7 @@ ms.technology:
 |matriz associativa|Uma matriz composta de uma coleção de chaves e uma coleção de valores, onde cada chave é associada a um valor. As chaves e os valores podem ser de qualquer tipo.|  
 |feed Atom|Uma estrutura XML que contém metadados sobre conteúdo, como a versão de idioma e a data da última modificação do conteúdo, e é enviada a assinantes através do Protocolo de Publicação de Átomo (AtomPub).|  
 |atômica|Pertencente a uma operação em que todas as modificações de dados de transação devem ser executadas; todas a modificações de dados da transação são executadas ou não há modificações.|  
-|atributo|Uma única característica ou informação adicional (financeira ou não financeira) que existe em um banco de dados.|  
+|Atributo|Uma única característica ou informação adicional (financeira ou não financeira) que existe em um banco de dados.|  
 |hierarquia de atributo|Uma hierarquia plana (em geral, com nível Todos e um nível de membro) que contém um único atributo. É criada de uma coluna em uma tabela de dimensão, caso tenha suporte do cubo.|  
 |relação de atributo|A hierarquia associada a um atributo que contém um único nível baseado na coluna correspondente em uma tabela de dimensão.|  
 |tipo de atributo|O tipo de informações contidas por um atributo, como trimestres ou meses em uma dimensão de hora, que pode habilitar um tratamento específico pelos aplicativos servidor e cliente.|  
@@ -111,7 +110,7 @@ ms.technology:
 |block|Uma instrução Transact-SQL incluída entre BEGIN e END.|  
 |cursor em bloco|Um cursor com um tamanho de conjunto de linhas maior que 1.|  
 |transação de bloqueio|Uma transação que faz outra transação falhar.|  
-|expressão booliana|Uma expressão que gera um valor booliano (true ou false). Essas expressões podem envolver comparações (valores de teste para igualdade ou, para valores não boolianos \< , a relação [menor que] ou > [maior que]) e a combinação lógica (usando operadores boolianos, como and, or e XOR) de expressões booleanas.|  
+|expressão booliana|Uma expressão que gera um valor booliano (true ou false). Essas expressões podem envolver comparações (valores de teste para igualdade ou, para valores não boolianos, a \< [less than] or > relação [maior que]) e a combinação lógica (usando operadores boolianos como and, or e XOR) de expressões booleanas.|  
 |operador booliano|Um operador criado para funcionar com valores boolianos. Os quatro operadores boolianos mais comuns no uso em programação são AND (conjunção lógica), OR (inclusão lógica), XOR (OR exclusivo) e NOT (negação lógica).|  
 |fluxo associado|Um fluxo de eventos que contém todas as informações necessárias para produzir eventos. As informações já são uma fonte de dados instanciada ou são suficientes para o servidor StreamInsight iniciar a fonte de dados.|  
 |caixa delimitadora|A área retangular menor ao redor de um caminho, forma ou grupo de objetos.|  
@@ -121,7 +120,7 @@ ms.technology:
 |pool de buffers|Um bloco de memória reservado para índice e páginas de dados de tabela.|  
 |tamanho do buffer|O tamanho da área de memória reservado para armazenamento temporário de dados.|  
 |funções internas|Um grupo de funções predefinidas fornecido como parte das linguagens Transact-SQL e MDX.|  
-|BUILTIN\Administrators|Conta de usuário (administradores locais)|  
+|BUILTIN\Administradores|Conta de usuário (administradores locais)|  
 |cópia em massa|Uma ação de copiar um conjunto grande de dados.|  
 |exportação em massa|Copiar um conjunto grande de linhas de dados de uma tabela do SQL Server em um arquivo de dados.|  
 |importação em massa|Carregar uma quantidade grande de dados, normalmente em lotes, de um arquivo ou repositório de dados em outro repositório de dados.|  
@@ -194,7 +193,7 @@ ms.technology:
 |codificação de caracteres|Um mapeamento um-para-um entre um conjunto de caracteres e um conjunto de números.|  
 |conjunto de caracteres|Um agrupamento de caracteres alfabéticos, numéricos e outros que têm alguma relação em comum. Por exemplo, o conjunto de caracteres ASCII padrão inclui letras, números, símbolos e códigos de controle que constituem o esquema de codificação ASCII.|  
 |região de dados do gráfico|Um item de relatório em um layout de relatório que exibe dados em um formato gráfico.|  
-|ponto de verificação|Um evento no qual o Mecanismo de Banco de Dados grava páginas de buffer sujas em disco. Cada ponto de verificação grava em disco todas as páginas que estavam sujas no último ponto de verificação e que ainda não tinham sido gravadas em disco.|  
+|checkpoint|Um evento no qual o Mecanismo de Banco de Dados grava páginas de buffer sujas em disco. Cada ponto de verificação grava em disco todas as páginas que estavam sujas no último ponto de verificação e que ainda não tinham sido gravadas em disco.|  
 |soma de verificação|Um valor calculado usado para testar a presença de erros que podem ocorrer nos dados quando eles são transmitidos ou gravados em disco. A soma de verificação é calculada para determinada parte de dados combinando todos os bytes de dados em sequência com uma série operações aritméticas ou lógicas. Depois que os dados são transmitidos ou armazenados, uma nova soma de verificação é calculada da mesma forma, usando os dados transmitidos ou armazenados (possivelmente com falhas). Se as duas somas de verificação não coincidirem, significa que um erro ocorreu e os dados devem ser transmitidos ou armazenados novamente. Somas de verificação não podem detectar todos os erros e não podem ser usadas para corrigir dados errôneos.|  
 |filho|Em uma estrutura de árvore, a relação de um nó com seu antecessor imediato.|  
 |crônica|Uma tabela que armazena informações de estado de um único aplicativo. Um exemplo é uma crônica de evento que pode armazenar dados de evento para uso com assinaturas agendadas.|  
@@ -296,7 +295,7 @@ ms.technology:
 |Conflito de simultaneidade|Um conflito que ocorre quando o mesmo item ou unidade de alteração é alterada em duas réplicas diferentes que são sincronizadas mais tarde.|  
 |modelo de simultaneidade|Um modo no qual um aplicativo pode ser criado para responder por operações simultâneas que usam os mesmos dados armazenados em cache. O Windows Server AppFabric oferece suporte a modelos de simultaneidade otimistas e pessimistas.|  
 |operação simultânea|Uma operação de computador na qual dois ou mais processos (programas) têm acesso à hora do microprocessador e são realizados quase simultaneamente. Como um microprocessador pode funcionar com muitas unidades de tempo menores do que as pessoas conseguem perceber, processos simultâneos parecem estar ocorrendo simultaneamente, mas, na realidade não estão.|  
-|expressão condicional|Uma expressão que gera um valor booliano (true ou false). Essas expressões podem envolver comparações (valores de teste para igualdade ou, para valores não boolianos \< , a relação [menor que] ou > [maior que]) e a combinação lógica (usando operadores boolianos, como and, or e XOR) de expressões booleanas.|  
+|expressão condicional|Uma expressão que gera um valor booliano (true ou false). Essas expressões podem envolver comparações (valores de teste para igualdade ou, para valores não boolianos, a \< [less than] or > relação [maior que]) e a combinação lógica (usando operadores boolianos como and, or e XOR) de expressões booleanas.|  
 |divisão condicional|Uma restauração de um backup completo de banco de dados, o backup de banco de dados diferencial mais recente (se houver) e os backups de logs (se houver) feitos desde o backup completo do banco de dados.|  
 |arquivo config|Um arquivo que contém especificações operacionais legíveis por máquina para um hardware ou software, ou que contém informações sobre outro arquivo ou sobre um usuário específico, como a ID de logon do usuário.|  
 |configuração|Em referência a um único microcomputador, a soma de componentes internos e externos de um sistema, incluindo memória, unidades de disco, teclado, vídeo e geralmente hardware complementar menos crítico, como mouse, modem ou impressora. Software (o sistema operacional e vários drivers de dispositivo), as opções do usuário definidas através de arquivos de configuração como os arquivos AUTOEXEC.BAT e CONFIG.SYS em PCs IBM e compatíveis e, às vezes, hardware (comutadores e saltadores) são necessários para 'configurar a configuração' para que funcione corretamente. Embora a configuração de sistema possa ser alterada, como através da adição de mais memória ou capacidade de disco, a estrutura básica do sistema (sua arquitetura) permanece inalterada.|  
@@ -585,7 +584,7 @@ ms.technology:
 |categoria de evento|No Rastreamento do SQL, um agrupamento de classes de evento semelhantes e logicamente relacionadas.|  
 |crônica de eventos|Uma tabela que armazena informações de estado do evento.|  
 |regra de crônica de eventos|Uma ou mais instruções Transact-SQL que gerenciam os dados na crônica de eventos.|  
-|classe de evento|No Rastreamento do SQL, uma coleção de propriedades que definem um evento.|  
+|Classe event|No Rastreamento do SQL, uma coleção de propriedades que definem um evento.|  
 |classificação de eventos|Um meio de diferenciar tipos de eventos que ocorrem no cliente de cache e no host de cache. Os coletores de logs do Windows Server AppFabric seguem a classificação estabelecida com a enumeração System.Diagnostics.TraceLevel.|  
 |procedimentos armazenados de coleção de eventos|Procedimentos armazenados gerados pelo sistema que um aplicativo pode chamar para enviar eventos para a tabela de eventos no banco de dados do aplicativo.|  
 |manipulador de eventos|Uma rotina de software que é executada em resposta a um evento.|  
@@ -746,7 +745,7 @@ ms.technology:
 |controle|Uma porcentagem de dados de treinamento que são reservados para uso na medição da exatidão da estrutura do modelo de mineração de dados.|  
 |dados de validação|Uma porcentagem de dados de treinamento que são reservados para uso na medição da exatidão da estrutura do modelo de mineração de dados.|  
 |repositório de controle|A estrutura de mineração de dados que é usada para armazenar em cache os dados de controle. Ele contém referências aos dados de controle.|  
-|Home|Pasta raiz no namespace de pasta de servidor de relatório.|  
+|Página Inicial|Pasta raiz no namespace de pasta de servidor de relatório.|  
 |home page|Um documento que serve como um ponto de partida em um sistema de hipertexto. Na World Wide Web, uma página de entrada para um conjunto de páginas da Web e outros arquivos em um site. A home page é exibida por padrão quando um visitante navega para o site usando um navegador da Web.|  
 |dados homogêneos|Dados que vêm de várias fontes de dados que são todos gerenciados pelo mesmo software.|  
 |salto|Em comunicações de dados, um segmento do caminho entre roteadores em uma rede geograficamente dispersa.|  
@@ -867,7 +866,7 @@ ms.technology:
 |conhecimento adquirido|O conhecimento atual de uma réplica de origem sobre um conjunto de alterações específico e os conflitos da réplica registrados em log.|  
 |menos usado recentemente|O tipo de despejo usado pelo cluster de cache, onde os objetos usados menos recentemente são despejados antes dos objetos usados mais recentemente.|  
 |junção externa esquerda|Um tipo de junção externa na qual todas as linhas da tabela mais à esquerda na cláusula JOIN são incluídas. Quando as linhas na tabela esquerda não correspondem às linhas na tabela direita, todas as colunas do conjunto de resultados que vêm da tabela direita são atribuídas um valor NULL.|  
-|level|O nome de um conjunto de membros em uma hierarquia de dimensão, de forma que todos os membros do conjunto estejam na mesma distância da raiz da hierarquia. Por exemplo, uma hierarquia de tempo pode conter os níveis de Ano, Mês e Dia.|  
+|nível|O nome de um conjunto de membros em uma hierarquia de dimensão, de forma que todos os membros do conjunto estejam na mesma distância da raiz da hierarquia. Por exemplo, uma hierarquia de tempo pode conter os níveis de Ano, Mês e Dia.|  
 |gráfico de comparação de precisão|No Analysis Services, um gráfico que compara a exatidão das previsões de cada modelo de mineração de dados no conjunto de comparações.|  
 |lightweight pooling|Uma opção que fornece um meio de reduzir a sobrecarga do sistema associada com a alternância excessiva de contexto, às vezes encontrada em ambientes SMP (multiprocessamento simétrico), executando a alternância de contexto embutido, ajudando, assim, a reduzir transições de usuário/anel kernel.|  
 |camada de linha|A camada em um relatório de mapa que exibe dados espaciais como linhas; por exemplo, linhas que indicam caminhos ou rotas.|  
@@ -882,9 +881,9 @@ ms.technology:
 |Distribuidor local|Um servidor configurado como um Publicador e um Distribuidor para Replicação do SQL Server.|  
 |exibição particionada local|Uma exibição que une dados particionados horizontalmente de um conjunto de tabelas membro através de um único servidor, fazendo com que os dados pareçam ser de uma tabela.|  
 |assinatura local|Uma assinatura em uma publicação de mesclagem que usa o valor de prioridade do Publicador para detecção e resolução de conflitos.|  
-|localidade|Uma coleção de regras e dados específicos de um idioma e de uma área geográfica. As localidades incluem informações sobre como classificar regras, a formação de data e hora, as convenções numérica e monetária e a classificação de caractere.|  
+|locale|Uma coleção de regras e dados específicos de um idioma e de uma área geográfica. As localidades incluem informações sobre como classificar regras, a formação de data e hora, as convenções numérica e monetária e a classificação de caractere.|  
 |localização|O processo de adaptar um produto e/ou conteúdo (inclusive elementos de texto e não texto) para atender às expectativas de idioma, culturais e políticas e/ou os requisitos de um mercado local específico (localidade).|  
-|lock|Uma restrição no acesso a um recurso em um ambiente multiusuário.|  
+|bloqueio|Uma restrição no acesso a um recurso em um ambiente multiusuário.|  
 |escalonamento de bloqueios|O processo de converter muitos bloqueios refinados em poucos bloqueios de alta granularidade, reduzindo, assim, a sobrecarga do sistema.|  
 |backup de log|Um backup de logs de transações que inclui todos os registros de log sem backup nos backups de log anteriores. Backups de logs são necessários nos modelos de recuperação completa ou bulk-logged e não estão disponíveis no modelo de recuperação simples.|  
 |cadeia de logs|Uma sequência contínua de logs de transação para um banco de dados. Uma nova cadeia de logs começa com o primeiro backup usado depois que o banco de dados é criado ou quando o banco de dados é alternado do modelo de recuperação simples para o completo ou bulk-logged. A bifurcação de uma cadeia de logs depois de uma restauração seguida de uma recuperação, criando uma nova ramificação de recuperação.|  
@@ -917,7 +916,7 @@ ms.technology:
 |failover manual|Em uma sessão de espelhamento de banco de dados, um failover iniciado pelo proprietário do banco de dados, enquanto o servidor principal ainda estiver em execução, que transfere o serviço do banco de dados principal para o banco de dados espelho, enquanto eles estão em um estado sincronizado.|  
 |dimensão muitos para muitos|Uma relação entre uma dimensão e um grupo de medidas na qual um único fato pode estar associado a muitos membros de dimensão e um único membro de dimensão pode estar associado a muitos fatos. Para definir esta relação entre a dimensão e a tabela de fatos, a dimensão é unida a uma tabela de fatos intermediária e a tabela de fatos intermediária, por sua vez, é unida a uma tabela de dimensão intermediária, que é unida a uma tabela de fatos.|  
 |relação muitos para um|Uma relação entre duas tabelas em que uma linha em uma tabela pode se relacionar com muitas linhas em outra tabela.|  
-|map|Associar dados a um local especificado na memória.|  
+|mapa|Associar dados a um local especificado na memória.|  
 |controle de mapa|Um controle JavaScript que contém os objetos, métodos e eventos necessários para exibir mapas ativados pelo Bing Maps™ no site.|  
 |galeria de mapas|Uma galeria que contém mapas de relatórios localizados na pasta da galeria de mapas do ambiente de criação de relatórios.|  
 |camada do mapa|Um elemento filho do mapa, cada camada do mapa, incluindo elementos dos membros e atributos de membros de mapa.|  
@@ -1117,7 +1116,7 @@ ms.technology:
 |instrução de passagem|Uma instrução SELECT que é passada diretamente para o banco de dados de origem sem modificação ou atraso.|  
 |política de senha|Uma coleção de configurações de política que definem os requisitos de senha para um Objeto de Política de Grupo (GPO).|  
 |provedor de senha|Componente de geração e validação de senha de uma só vez para a autenticação de usuário.|  
-|path|Um elemento do fluxo de dados que conecta a saída de um componente de fluxo de dados à entrada de outro componente de fluxo de dados.|  
+|caminho|Um elemento do fluxo de dados que conecta a saída de um componente de fluxo de dados à entrada de outro componente de fluxo de dados.|  
 |PBM|Um conjunto de funções internas que retornam informações de estado de servidor sobre valores, objetos e configurações no SQL Server. O Gerenciamento Baseado em Política permite que um administrador de banco de dados declare o estado desejado do sistema e verifique a conformidade do sistema com esse estado.|  
 |replicação ponto a ponto|Um tipo de replicação transacional. Em contraste com a replicação transacional somente leitura e a replicação transacional com atualização de assinaturas, as relações entre nós em uma topologia de replicação ponto a ponto são relações pares, em vez das hierárquicas, com cada nó contendo esquema e dados idênticos.|  
 |ferramentas de desempenho|Ferramentas que você pode usar para avaliar o desempenho de uma solução. Ferramentas de desempenho podem ter propósitos diferentes; algumas são criadas para avaliar o desempenho ponta a ponta e outras focam a avaliação do desempenho de um aspecto específico de uma solução.|  
@@ -1212,7 +1211,7 @@ ms.technology:
 |banco de dados de publicação|Um banco de dados no Publicador do qual dados e objetos de banco de dados são marcados para replicação e propagados a Assinantes.|  
 |período de retenção da publicação|Na replicação de mesclagem, o período de tempo que uma assinatura pode permanecer não sincronizada.|  
 |dados publicados|Dados no Publicador que foram replicados.|  
-|Editor|Um servidor que disponibiliza dados para replicação para outros servidores. Um Publicador também detecta dados alterados e mantém informações sobre todas as publicações no site.|  
+|Publisher|Um servidor que disponibiliza dados para replicação para outros servidores. Um Publicador também detecta dados alterados e mantém informações sobre todas as publicações no site.|  
 |publisher database|Um servidor que disponibiliza dados para replicação para outros servidores. Um Publicador também detecta dados alterados e mantém informações sobre todas as publicações no site.|  
 |servidor de publicação|Um servidor que executa uma instância do Analysis Services que armazena o cubo de origem para um ou mais cubos vinculados.|  
 |tabela de publicação|A tabela no Publicador na qual os dados foram marcados para replicação e fazem parte de uma publicação.|  
@@ -1340,7 +1339,7 @@ ms.technology:
 |esquema SQL do repositório|Um conjunto de tabelas padrão usado pelo motor do repositório para gerenciar todos os objetos, relações e coleções de objetos do repositório.|  
 |modelo RTIM|Um modelo básico de objeto que representa definições de tipos de repositório para Serviços de Metadados.|  
 |republicador|Um Assinante que publica dados que recebeu de um Publicador.|  
-|caractere reservado|Um caractere de teclado que tem um significado especial para um programa e, como resultado, normalmente não pode ser usado atribuindo nomes a arquivos, documentos e outras ferramentas geradas pelo usuário, como macros. Os caracteres geralmente reservados para usos especiais incluem o asterisco (*), a barra (/), a barra\\invertida (), o ponto de interrogação (?) e a barra vertical (&#124;).|  
+|caractere reservado|Um caractere de teclado que tem um significado especial para um programa e, como resultado, normalmente não pode ser usado atribuindo nomes a arquivos, documentos e outras ferramentas geradas pelo usuário, como macros. Os caracteres geralmente reservados para usos especiais incluem o asterisco (*), a barra (/), a barra invertida ( \\ ), o ponto de interrogação (?) e a barra vertical (&#124;).|  
 |estratégia de resolução|Um conjunto de critérios avaliados sequencialmente pelo motor do repositório ao selecionar um objeto onde há várias versões e as informações da versão não são especificadas no programa de chamada.|  
 |recurso|Uma variável especial que contém uma referência a uma conexão ou instrução de banco de dados.|  
 |recurso|Qualquer item em um banco de dados de servidor de relatório que não seja um relatório, uma pasta ou um item de fonte de dados compartilhado.|  
@@ -1397,8 +1396,8 @@ ms.technology:
 |conjunto de linhas de esquema|Um conjunto de linhas especialmente definido que retorna metadados sobre objetos ou funcionalidade em uma instância do SQL Server ou do Analysis Services.  Por exemplo, o conjunto de linhas de esquema OLE DB DBSCHEMA_COLUMNS descreve as colunas de uma tabela, enquanto o conjunto de linhas de esquema MDSCHEMA_MEASURES do Analysis Services descreve as medidas de um cubo.|  
 |instantâneo de esquema|Um instantâneo que inclui esquema para tabelas publicadas e objetos necessários para replicação (gatilhos, tabelas de metadados, etc), mas não dados de usuário.|  
 |sensível a esquema|Pertence a um método de processamento baseado em um esquema que define elementos, atributos e tipos que serão usados para validar documentos de entrada e saída.|  
-|escopo|Até que ponto um identificador, como um objeto ou propriedade, pode ser referenciado em um programa. O escopo pode ser global no aplicativo ou local para o documento ativo.|  
-|escopo|O conjunto de dados que está sendo sincronizado.|  
+|scope|Até que ponto um identificador, como um objeto ou propriedade, pode ser referenciado em um programa. O escopo pode ser global no aplicativo ou local para o documento ativo.|  
+|scope|O conjunto de dados que está sendo sincronizado.|  
 |memória de script|A memória local (RAM do cliente) que é usada por um script PHP.|  
 |painel de script|A parte do editor de texto do Designer de Tabela.|  
 |script|Pertence à automação de ações de usuário ou à configuração de um estado padrão em um computador por meio de scripts.|  
@@ -1468,7 +1467,7 @@ ms.technology:
 |SKU|Um identificador exclusivo, normalmente alfanumérico, para um produto. O SKU permite rastrear um produto para fins de inventário. Um SKU pode ser associado a qualquer item que pode ser comprado. Por exemplo, uma camisa número 3726, tamanho 8, pode ter um SKU de 3726-8.|  
 |sleep|Suspender a operação sem finalizar.|  
 |fatia|Um subconjunto dos dados em um cubo, especificado por meio da limitação de uma ou mais dimensões por membros da dimensão.|  
-|Segmentações de dados|Um recurso que fornece controles de filtragem com um clique, facilitando a restrição da parte de um conjunto de dados que está sendo examinada.|  
+|Segmentações|Um recurso que fornece controles de filtragem com um clique, facilitando a restrição da parte de um conjunto de dados que está sendo examinada.|  
 |janela deslizante|Uma janela de comprimento fixo L que se move ao longo de uma linha do tempo de acordo com os eventos do fluxo. Com cada evento na linha do tempo, uma nova janela é criada, começando na hora de início do evento.|  
 |instalação integrada|Integrar atualizações, patches ou pacotes de serviço nos arquivos de instalação de base do software original, de forma que os arquivos resultantes permitam uma instalação de uma única etapa do software atualizado.|  
 |instalação integrada|Um tipo de instalação que integra os arquivos de instalação de base de um sistema operacional ou programa aos seus pacotes de serviço, atualizações ou patches, e permite que eles sejam instalados em uma única etapa.|  
@@ -1593,7 +1592,7 @@ ms.technology:
 |Depurador do Fluxo de Eventos do StreamInsight|Uma ferramenta autônoma na plataforma Microsoft StreamInsight que fornece depuração e análise do fluxo de eventos.|  
 |Plataforma StreamInsight|A plataforma que consiste no servidor StreamInsight, ferramenta Depuração do Fluxo de Eventos, Visual Studio IDE e outros componentes para o desenvolvimento de aplicativos de processamento de eventos complexos.|  
 |Servidor StreamInsight|O mecanismo básico e os componentes da estrutura de adaptador do Microsoft StreamInsight. O servidor StreamInsight pode ser usado para processar e analisar os fluxos de eventos associados a um aplicativo de processamento de eventos complexos.|  
-|cadeia de caracteres|Grupo de caracteres ou bytes de caractere tratados como uma única entidade. Programas de computador usam cadeias de caracteres para armazenar e transmitir dados e comandos. A maioria das linguagens de programação considera cadeias de caracteres (como 2674:gstmn) como distintas de valores numéricos (como 470924).|  
+|string|Grupo de caracteres ou bytes de caractere tratados como uma única entidade. Programas de computador usam cadeias de caracteres para armazenar e transmitir dados e comandos. A maioria das linguagens de programação considera cadeias de caracteres (como 2674:gstmn) como distintas de valores numéricos (como 470924).|  
 |faixa|Intervalos horizontais ou verticais que definem o padrão de plano de fundo do gráfico em intervalos regulares ou personalizados. Você pode usar faixas para melhorar a legibilidade para buscar valores individuais no gráfico, realçar datas que ocorrem em intervalos normais ou realçar um intervalo de chave específico.|  
 |faixa|Intervalos horizontais ou verticais que definem o padrão de plano de fundo do gráfico em intervalos regulares ou personalizados. Você pode usar faixas para melhorar a legibilidade para buscar valores individuais no gráfico, realçar datas que ocorrem em intervalos normais ou realçar um intervalo de chave específico.|  
 |conjunto de mídias distribuído|Um conjunto de mídias que usa vários dispositivos, entre os quais cada backup é distribuído.|  

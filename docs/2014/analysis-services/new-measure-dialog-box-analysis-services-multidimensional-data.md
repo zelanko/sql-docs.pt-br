@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86dc9146-cc6d-4cef-b178-9a6b4cf616e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84dac0e9a4496196c4c2b160bfeb08b1554e1b27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072337"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541118"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Nova Medida (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Nova Medida** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para adicionar uma nova medida a um grupo de medidas no Designer de Cubo. Você pode exibir a caixa de diálogo **Nova Medida** das seguintes maneiras:  
@@ -29,7 +28,7 @@ ms.locfileid: "66072337"
 -   Clicando com o botão direito do mouse no grupo de medidas ou medida no painel **Medidas** na guia **Estrutura do Cubo** do Designer de Cubo e selecionando **Nova Medida** no menu de contexto.  
   
 ## <a name="options"></a>Opções  
- **Uso**  
+ **Usage**  
  Selecione a função de agregação a ser usada pela nova medida.  
   
  **Tabela de origem**  

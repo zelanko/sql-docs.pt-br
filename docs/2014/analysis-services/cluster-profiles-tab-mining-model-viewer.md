@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31620135818f77db11938c67059319932e98fc51
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087867"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527432"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Guia Perfis de Cluster (Visualizador do Modelo de Mineração)
   Use a guia **Perfis de Cluster** para obter uma exibição global dos clusters que o algoritmo descobriu dentro de um modelo de clustering. A guia exibe cada atributo, junto com a distribuição do atributo em cada cluster.  
@@ -43,7 +42,7 @@ ms.locfileid: "66087867"
  **Atributos**  
  Lista as colunas que estão no modelo de clustering. Os histogramas para cada atributo mostram como ele é distribuído entre os clusters identificados pelo algoritmo.  
   
- **Estados**  
+ **Européia**  
  Fornece uma chave que denota que cor representa cada estado na linha de clusters correspondente, ou um controle deslizante com losango que indica a distribuição de valores numéricos contínuos. Você pode mostrar ou ocultar esta coluna usando a caixa de seleção **Mostrar Legenda** .  
   
  **Perfis de cluster**  

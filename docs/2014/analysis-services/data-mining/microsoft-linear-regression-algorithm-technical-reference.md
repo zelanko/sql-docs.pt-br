@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20acb57a4c2ddb60d2daefc6733ac7ef52310f3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084058"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521992"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referência Técnica do Algoritmo de Regressão Linear da Microsoft
   O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma versão especial do algoritmo Árvores de decisão da Microsoft, otimizada para modelagem de pares de atributos contínuos. Este tópico explica a implementação do algoritmo, descreve como personalizar o comportamento do algoritmo e fornece links para informações adicionais sobre como consultar modelos.  
@@ -56,7 +55,7 @@ ms.locfileid: "66084058"
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte aos seguintes sinalizadores de modelagem. Ao criar um modelo ou uma estrutura de mineração, você define sinalizadores de modelagem para especificar como os valores em cada coluna são manipulados durante a análise. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).  
   
-|Sinalizador de modelagem|Descrição|  
+|Sinalizador de modelagem|Description|  
 |-------------------|-----------------|  
 |NOT NULL|Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se às colunas de estrutura de mineração.|  
 |REGRESSOR|Indica que a coluna contém valores numéricos contínuos que devem ser tratados como variáveis independentes potenciais durante a análise.<br /><br /> Observação: sinalizar uma coluna como um regressor não assegura que ela será usada como tal no modelo final.<br /><br /> Aplica-se às colunas de modelo de mineração.|  
@@ -64,7 +63,7 @@ ms.locfileid: "66084058"
 ### <a name="regressors-in-linear-regression-models"></a>Regressor em modelos de regressão lineares  
  Os modelos de regressão lineares baseiam-se no algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Entretanto, mesmo que você não use o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , todo modelo de árvore de decisão poderá conter uma árvore ou nós que representam uma regressão em um atributo contínuo.  
   
- Não é necessário especificar que uma coluna contínua representa um regressor. O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] particionará o conjunto de dados em regiões com padrões significativos mesmo que você não defina o sinalizador REGRESSOR na coluna. A diferença é que, quando você define o sinalizador de modelagem, o algoritmo tentará encontrar equações de regressão da forma a * C1 + b\*C2 +... para ajustar os padrões nos nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
+ Não é necessário especificar que uma coluna contínua representa um regressor. O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] particionará o conjunto de dados em regiões com padrões significativos mesmo que você não defina o sinalizador REGRESSOR na coluna. A diferença é que, quando você define o sinalizador de modelagem, o algoritmo tentará encontrar equações de regressão da forma a * C1 + b \* C2 +... para ajustar os padrões nos nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
   
  Por exemplo, se você estiver prevendo o comportamento de compra dos clientes usando **Renda** como um atributo e definir o sinalizador de modelagem REGRESSOR na coluna, o algoritmo primeiro tentará adequar-se aos valores de **Renda** usando uma fórmula de regressão padrão. Se o desvio for muito grande, a fórmula de regressão será abandonada e a árvore será dividida em algum outro atributo. O algoritmo árvore de decisão tentará ajustar um regressor para renda em cada uma das ramificações após a divisão.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55270f44c15fad735b4252ee9d6b5342f4c4a4b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069917"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538438"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Caixa de diálogo selecionar uma coluna (exibição de estrutura de mineração)
   Use a caixa de diálogo **Selecionar uma Coluna** para acrescentar colunas à estrutura de mineração. O diálogo contém diferentes opções dependendo se você esta trabalhando com um modelo de mineração OLAP ou um modelo de mineração relacional.  

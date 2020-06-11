@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 225f5d757ee6b1d1da5c57b457d599fe4bb42d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 185ea27c344ccb9e06f914507faca3fea9554dae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086772"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526424"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Criar Consulta de Processamento (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Criar Consulta de Processamento** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma consulta de processamento na guia **Notificações** da caixa de diálogo **Opções de Armazenamento** . Uma consulta de processamento é uma consulta que retorna um conjunto de linhas contendo as alterações feitas em uma tabela associada a um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] desde a última sondagem na tabela, para atualização incremental do cache MOLAP (OLAP multidimensional) do objeto. O Analysis Services usa outra consulta, referenciada como uma consulta sondagem, para sondar uma tabela associada a um objeto e determinar se a tabela foi alterada. Consultas de processamento não são necessárias ao atualizar o cache MOLAP do objeto completamente.  
@@ -56,7 +55,7 @@ ms.locfileid: "66086772"
  **Definição da consulta**  
  A definição da consulta fornece uma barra de ferramentas e painéis onde definir e testar a consulta, dependendo da exibição selecionada.  
   
- **Barra**  
+ **Barra de ferramentas**  
  Use a barra de ferramentas para gerenciar conjuntos de dados, selecionar painéis para exibição e controlar várias funções de consulta.  
   
 |Valor|Descrição|  
@@ -67,7 +66,7 @@ ms.locfileid: "66086772"
 |**Mostrar/Ocultar Painel Grade**|Mostra ou oculta o **painel de grade**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Painel Mostrar/Ocultar SQL**|Mostra ou oculta o painel **SQL**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Mostrar/Ocultar Painel Resultado**|Mostra ou oculta o painel **Resultado**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
-|**Funcionam**|Executa a consulta. Os resultados são exibidos no **painel de resultados**.|  
+|**Executar**|Executa a consulta. Os resultados são exibidos no **painel de resultados**.|  
 |**Verificar SQL**|Verifica a instrução SQL na consulta.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Classificação crescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem crescente.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Classificação decrescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem decrescente.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  

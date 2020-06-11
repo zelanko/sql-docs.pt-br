@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e2322553eef361f0131e3558cd591bc32525ef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637522"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522144"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referência técnica do algoritmo Árvores de Decisão da Microsoft
   O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um híbrido que incorpora métodos diferentes para a criação de uma árvore e dá suporte a várias tarefas analíticas, incluindo regressão, classificação e associação. O algoritmo Árvores de Decisão da Microsoft é dá suporte à modelagem de atributos discretos e contínuos.  
@@ -99,7 +98,7 @@ ms.locfileid: "73637522"
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] tem suporte para parâmetros que afetam o desempenho e a precisão do modelo de mineração resultante. Também é possível definir sinalizadores de modelagem nas colunas do modelo de mineração ou da estrutura de mineração para controlar a maneira como os dados são processados.  
   
 > [!NOTE]  
->  O algoritmo Árvores de Decisão da Microsoft está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, alguns parâmetros avançados para personalizar o comportamento do algoritmo Árvores de Decisão da Microsoft estão disponíveis para uso apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
+>  O algoritmo Árvores de Decisão da Microsoft está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no entanto, alguns parâmetros avançados para personalizar o comportamento do algoritmo Árvores de Decisão da Microsoft estão disponíveis para uso apenas em edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
  A tabela a seguir descreve os parâmetros que você pode usar com o algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -149,7 +148,7 @@ ms.locfileid: "73637522"
  *SCORE_METHOD*  
  Determina o método usado para calcular a pontuação da divisão. As seguintes opções estão disponíveis:  
   
-|ID|Nome|  
+|ID|Name|  
 |--------|----------|  
 |1|Entropia|  
 |3|Bayesian com K2 a priori|  
@@ -162,7 +161,7 @@ ms.locfileid: "73637522"
  *SPLIT_METHOD*  
  Determina o método usado para dividir o nó. As seguintes opções estão disponíveis:  
   
-|ID|Nome|  
+|ID|Name|  
 |--------|----------|  
 |1|**Binary:** Indica que, independentemente do número real de valores do atributo, a árvore deverá ser dividida em duas ramificações.|  
 |2|**Complete:** Indica que a árvore pode criar tantas divisões quanto há valores de atributo.|  
@@ -173,7 +172,7 @@ ms.locfileid: "73637522"
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte aos seguintes sinalizadores de modelagem. Ao criar um modelo ou uma estrutura de mineração, você define sinalizadores de modelagem para especificar como os valores em cada coluna são manipulados durante a análise. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).  
   
-|Sinalizador de modelagem|Descrição|  
+|Sinalizador de modelagem|Description|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|Significa que a coluna será tratada como se tivesse dois estados possíveis: `Missing` e `Existing`. Nulo é um valor ausente.<br /><br /> Aplica-se às colunas de modelo de mineração.|  
 |NOT NULL|Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se às colunas de estrutura de mineração.|  
@@ -183,7 +182,7 @@ ms.locfileid: "73637522"
   
  Não é necessário especificar que uma coluna de dados numéricos contínuos representa um regressor. O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] usará automaticamente a coluna como um regressor potencial e particionará o conjunto de dados em regiões com padrões significativos, mesmo que você não defina o sinalizador REGRESSOR na coluna.  
   
- No entanto, você pode usar o parâmetro FORCE_REGRESSOR para garantir que o algoritmo utilizará um determinado regressor. Esse parâmetro só pode ser usado com os algoritmos Árvores de decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Quando você define o sinalizador de modelagem, o algoritmo tentará encontrar equações de regressão da forma a * C1 + b\*C2 +... para ajustar os padrões nos nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
+ No entanto, você pode usar o parâmetro FORCE_REGRESSOR para garantir que o algoritmo utilizará um determinado regressor. Esse parâmetro só pode ser usado com os algoritmos Árvores de decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] e Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Quando você define o sinalizador de modelagem, o algoritmo tentará encontrar equações de regressão da forma a * C1 + b \* C2 +... para ajustar os padrões nos nós da árvore. A soma dos restos é calculada e, se o desvio for muito grande, será forçada uma divisão da árvore.  
   
  Por exemplo, se você estiver prevendo o comportamento de compra dos clientes usando a **Renda** como um atributo e definir o sinalizador de modelagem REGRESSOR na coluna, o algoritmo primeiro tentará adequar os valores de **Renda** usando uma fórmula de regressão padrão. Se o desvio for muito grande, a fórmula de regressão será abandonada e a árvore será dividida em outro atributo. O algoritmo de árvore de decisão tentará ajustar um regressor para renda em cada uma das ramificações após a divisão.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d840d581fe4dba1ce9d65dfef6878a1e5a697864
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083764"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521630"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series fornece algoritmos de regressão que são otimizados para a previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
@@ -47,11 +46,11 @@ ms.locfileid: "66083764"
  A empresa planeja, a cada trimestre, atualizar o modelo com dados recentes de vendas bem como as previsões relativas às tendências recentes do modelo. Para corrigir lojas que não efetuam atualizações de dados de vendas de modo preciso ou consistente, eles criarão um modelo de previsão geral e usarão isso para criar previsões para todas as regiões.  
   
 ## <a name="how-the-algorithm-works"></a>Como o algoritmo funciona  
- No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de série temporal usou um único algoritmo, ARTxp. O algoritmo ARTXP foi otimizado para previsões de curto prazo e, portanto, previsto o próximo valor provável em uma série. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]do, [!INCLUDE[msCoName](../../includes/msconame-md.md)] o algoritmo de série temporal usa o algoritmo ARTXP e um segundo algoritmo, ARIMA. O algoritmo ARIMA é otimizado para previsão de longo prazo. Para obter uma explicação detalhada sobre a implementação dos algoritmos ARTXP e ARIMA, consulte [Referência técnica do algoritmo MTS](microsoft-time-series-algorithm-technical-reference.md).  
+ No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de série temporal usou um único algoritmo, ARTxp. O algoritmo ARTXP foi otimizado para previsões de curto prazo e, portanto, previsto o próximo valor provável em uma série. A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de série temporal usa o algoritmo ARTXP e um segundo algoritmo, ARIMA. O algoritmo ARIMA é otimizado para previsão de longo prazo. Para obter uma explicação detalhada sobre a implementação dos algoritmos ARTXP e ARIMA, consulte [Referência técnica do algoritmo MTS](microsoft-time-series-algorithm-technical-reference.md).  
   
  Por padrão, o algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) usa uma combinação de algoritmos quando analisa padrões e realiza previsões. O algoritmo treina dois modelos separados nos mesmos dados: um modelo usa o algoritmo ARTXP e um modelo usa o algoritmo ARIMA. O algoritmo combina os resultados dos dois modelos para produzir a melhor previsão para um número variável de frações de tempo. Como o ARTXP é melhor para previsões de curto prazo, ele é mais ponderado no início de uma série de previsões. No entanto, como as frações de tempo que você está prevendo estão mais adiante no futuro, o ARIMA é mais ponderado.  
   
- Você também pode controlar a combinação de algoritmos para favorecer a previsão na série temporal a curto como a longo prazo. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] do padrão, você pode especificar que [!INCLUDE[msCoName](../../includes/msconame-md.md)] o algoritmo de série temporal use uma das seguintes configurações:  
+ Você também pode controlar a combinação de algoritmos para favorecer a previsão na série temporal a curto como a longo prazo. A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] padrão, você pode especificar que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de série temporal use uma das seguintes configurações:  
   
 -   Use o ARTXP somente para previsão a curto prazo.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66083764"
   
 -   Use a combinação padrão dos dois algoritmos.  
   
- A partir [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]do, você pode personalizar como [!INCLUDE[msCoName](../../includes/msconame-md.md)] o algoritmo Time Series combina os modelos de previsão. Quando você usa um modelo combinado, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series combina os dois algoritmos do seguinte modo:  
+ A partir do [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] , você pode personalizar como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Time Series combina os modelos de previsão. Quando você usa um modelo combinado, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series combina os dois algoritmos do seguinte modo:  
   
 -   Somente o ARTXP é usado sempre para efetuar as primeiras previsões.  
   
@@ -103,8 +102,8 @@ ms.locfileid: "66083764"
   
 |TimeID|Produto|Sales|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|Um|1000|600|  
-|2/2001|Um|1100|500|  
+|1/2001|A|1000|600|  
+|2/2001|A|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   

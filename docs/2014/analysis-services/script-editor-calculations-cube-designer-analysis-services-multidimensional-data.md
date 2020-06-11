@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e8a7fa59-bd94-4dab-8c7f-dca6669e97b3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2135a7a15acf999f506f91ef852935725bee5d0b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538611"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Scripts (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Scripts** na guia **Cálculos** do Designer de Cubo para modificar a expressão de um comando de script (na exibição de formulário) ou para modificar todo o script do cubo (na exibição de script).  

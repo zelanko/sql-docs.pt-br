@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9fb624116ca42f32ab20615d1c34fcb786d150a1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493785"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542238"
 ---
 # <a name="defining-and-browsing-translations"></a>Definindo e procurando traduções
   Uma tradução é uma representação dos nomes de objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em uma linguagem específica. Os objetos incluem grupos de medidas, medidas, dimensões, atributos, hierarquias, KPIs, ações e membros calculados. As traduções oferecem suporte de servidor a aplicativos cliente que podem oferecer suporte para vários idiomas. Como cliente, basta passar o identificador de localidade (LCID) para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que usa o LCID para determinar qual conjunto de traduções deverá ser usado quando ele fornecer metadados para os objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se um objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não tiver uma tradução para o idioma ou para um objeto específico, o idioma padrão será usado para retornar o metadados do objeto ao cliente. Por exemplo, se um usuário empresarial na França acessar um cubo a partir de uma estação de trabalho que tenha uma configuração local francesa, esse usuário poderá visualizar as legendas de membro e os valores de propriedade de membro na França, caso haja uma tradução francesa. Entretanto, se um usuário empresarial na Alemanha acessar o mesmo cubo a partir de uma estação de trabalho que tenha uma configuração local alemã, esse usuário poderá visualizar os nomes de membro e os valores de propriedade de membro em alemão. Para obter mais informações, consulte [traduções de dimensões](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), conversões de [cubo](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traduções &#40;Analysis Services&#41;](translations-analysis-services.md).  
@@ -102,13 +101,13 @@ ms.locfileid: "69493785"
   
 5.  Na barra de ferramentas, selecione **Espanhol (Espanha)** na lista **Idioma** .  
   
-     Observe que os itens no painel de metadados são preenchidos novamente. Após o preenchimento dos itens, observe que a medida Quantidade de Vendas pela Internet não aparece mais na pasta de exibição Vendas pela Internet. Em vez disso, ele aparece em espanhol em uma nova pasta `Ventas del lnternet`de exibição chamada, conforme mostrado na imagem a seguir.  
+     Observe que os itens no painel de metadados são preenchidos novamente. Após o preenchimento dos itens, observe que a medida Quantidade de Vendas pela Internet não aparece mais na pasta de exibição Vendas pela Internet. Em vez disso, ele aparece em espanhol em uma nova pasta de exibição chamada `Ventas del lnternet` , conforme mostrado na imagem a seguir.  
   
      ![Painel de metadados populado novamente](../../2014/tutorials/media/l9-translations-6.gif "Painel de metadados populado novamente")  
   
-6.  No painel metadados, clique com o botão `Cantidad de las Ventas del Internet` direito do mouse em e selecione **Adicionar à consulta**.  
+6.  No painel metadados, clique com o botão direito do mouse em `Cantidad de las Ventas del Internet` e selecione **Adicionar à consulta**.  
   
-7.  No painel metadados, expanda `Fecha`, expanda **fecha. calendário data**, clique com o botão direito do mouse em **fecha. Calendar data**e selecione **Adicionar ao filtro**.  
+7.  No painel metadados, expanda `Fecha` , expanda **fecha. calendário data**, clique com o botão direito do mouse em **fecha. Calendar data**e selecione **Adicionar ao filtro**.  
   
 8.  No painel **Filtro** , selecione **CY 2007** como a expressão de filtro.  
   

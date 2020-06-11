@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27e7fc46-689d-43a4-9647-1c27d182bdd6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4973ea427cea99d6e3c4527e8686e322a97efe48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90a64369c76e254e509f5f57b1da29ededeed08f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313605"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528192"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Editor de Consulta Avançada de Mineração de Dados
   A **Editor avançado de consulta de mineração de dados** é uma ferramenta para ajudá-lo a criar modelos e consultas personalizados.  
@@ -24,13 +23,13 @@ ms.locfileid: "72313605"
   
  Para acessar o **Editor avançado de consulta de mineração de dados**, clique em **consulta** e, em seguida, clique em **avançado**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Painel Consulta DMX**  
  Aqui você pode consultar a instrução DMX atual.  
   
  Clique com o botão direito do mouse no painel para copiar a instrução DMX atual.  
   
- Também é possível clicar em qualquer parte destacada da instrução para obter opções específicas dessa cláusula. Por exemplo, para excluir, adicionar ou editar uma saída, clique com o botão direito do mouse no link ** \<>de saída** .  
+ Também é possível clicar em qualquer parte destacada da instrução para obter opções específicas dessa cláusula. Por exemplo, para excluir, adicionar ou editar uma saída, clique com o botão direito do mouse no **\<Output>** link.  
   
  **Editar Consulta/Construtor de Consultas**  
  Use esse botão para alternar o editor entre um editor de texto, no qual você pode escrever instruções DMX diretamente; e o **Construtor de consultas**, que ajuda a criar uma instrução DMX.  
@@ -47,23 +46,23 @@ ms.locfileid: "72313605"
  Você também pode exibir uma lista de modelos disponíveis clicando no nome do modelo na instrução DMX no painel de **consulta DMX** . O nome do modelo normalmente é realçado em vermelho.  
   
  **Selecione a entrada**  
- Clique para escolher os dados a serem usados como entrada para o modelo de mineração. Se nenhuma fonte de dados tiver sido especificada, você também poderá clicar ** \<** no link>de entrada, que é realçado em vermelho no painel de **consulta DMX** .  
+ Clique para escolher os dados a serem usados como entrada para o modelo de mineração. Se nenhuma fonte de dados tiver sido especificada, você também poderá clicar no **\<Input>** link, que é realçado em vermelho no painel de **consulta DMX** .  
   
- Selecione ** \@InputRowset** na lista suspensa para abrir a caixa de diálogo **substituir InputRowset** e modificar uma entrada existente.  
+ Selecione ** \@ InputRowset** na lista suspensa para abrir a caixa de diálogo **substituir InputRowset** e modificar uma entrada existente.  
   
  Selecione **Adicionar entrada** para abrir a caixa de diálogo **Adicionar entrada** e especifique uma nova fonte de dados.  
   
- Você também pode modificar uma entrada existente clicando no ** \@link InputRowset** , que é realçado em vermelho no painel de consulta DMX.  
+ Você também pode modificar uma entrada existente clicando no link ** \@ InputRowset** , que é realçado em vermelho no painel de consulta DMX.  
   
  **Mapear Colunas**  
  Selecione colunas do modelo de mineração e mapeie-as para colunas na fonte de dados externa.  
   
- Você também pode clicar no link realçado ** \<>** no painel consulta DMX.  
+ Você também pode clicar no link realçado **\<Mapping>** no painel consulta DMX.  
   
  **Adicionar Saída**  
  Clique para escolher as colunas que devem ser incluídas na saída como parte de uma consulta de previsão.  
   
- Você também pode clicar no link ** \<adicionar saída>** realçado no painel consulta DMX.  
+ Você também pode clicar no link realçado **\<Add Output>** no painel consulta DMX.  
   
  **Colunas do Modelo**  
  Lista as colunas no modelo de mineração selecionado. Um losango ao lado do nome da coluna indica que ela é uma coluna previsível.  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bedd6ec66a188738ac9a522b4802b3b431e82f36
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731908"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528622"
 ---
 # <a name="discover_xevent_trace_definition-rowset"></a>Conjunto de linhas DISCOVER_XEVENT_TRACE_DEFINITION
   Oferece informações sobre os rastreamentos XEvent atualmente ativos no servidor.  
@@ -25,7 +24,7 @@ ms.locfileid: "62731908"
 ## <a name="rowset-columns"></a>Colunas do conjunto de linhas  
  O conjunto de linhas `DISCOVER_XEVENT_TRACE_DEFINITION` contém as colunas a seguir.  
   
-|Nome da coluna|Indicador de tipo|Comprimento|Descrição|  
+|Nome da coluna|Indicador de tipo|Comprimento|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`Data`|`DBTYPE_WSTR`||A definição XML do rastreamento XEvent.|  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68a4dd5d-94d9-4a02-be31-949a6da0ef51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7ab4ad7a819c18056ab5901f95caf1b74b23a25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02de9a6840bfc4994eeb55f74905cc3eaec66bc5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087533"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527332"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>Concluindo o Assistente (Assistente para Partições)
   Use a página **Concluindo o Assistente** para nomear a partição, definir o design de agregação da partição e, opcionalmente, implantar e processar a partição após concluir o Assistente para Partições.  

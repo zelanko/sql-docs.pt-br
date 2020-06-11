@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c06e40e452fa0db682e2f79b523ddcd90d0450c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7251f9e9422a79c214d27d913112a28ff43d56b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175785"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536199"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Criar e gerenciar uma partição local (Analysis Services)
   Você pode criar mais partições para um grupo de medidas para melhorar o desempenho do processamento. Ter várias partições permite a você alocar dados de fatos em diversos arquivos de dados físicos correspondentes em servidores locais e remotos. No Analysis Services, as partições podem ser processadas de forma independente e em paralelo, permitindo maior controle sobre o processamento de cargas de trabalho no servidor.
@@ -27,7 +26,7 @@ ms.locfileid: "78175785"
  As partições podem ser criadas no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] durante o design de modelo, ou após a implantação da solução usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o XMLA. É recomendável escolher apenas uma abordagem. Se você alternar entre ferramentas, talvez descubra que alterações feitas em um banco de dados implantado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] são substituídas quando você subsequentemente reimplanta a solução do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].
 
 ## <a name="before-you-start"></a>Antes de começar
- Verifique se você tem a edição business intelligence ou enterprise. A edição Standard não oferece suporte a várias partições. Para verificar a edição, clique com o botão direito do mouse [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no nó do servidor no e escolha **relatórios** | **geral**. Para obter mais informações sobre disponibilidade de recursos, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+ Verifique se você tem a edição business intelligence ou enterprise. A edição Standard não oferece suporte a várias partições. Para verificar a edição, clique com o botão direito do mouse no nó do servidor no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e escolha **relatórios**  |  **geral**. Para obter mais informações sobre disponibilidade de recursos, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
  Logo no início, é importante compreender que as partições devem compartilhar o mesmo design de agregação se você pretende mesclá-las posteriormente. As partições só poderão ser mescladas se tiverem designs de agregação e modos de armazenamento idênticos.
 

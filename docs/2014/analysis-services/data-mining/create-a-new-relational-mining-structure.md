@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 534b27d024feb521be133329c7fe0aef06d9814a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085384"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523872"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>Criar uma nova estrutura de mineração relacional
-  Use o assistente de mineração de dados para criar uma nova estrutura de mineração, usando dados de um banco de dado relacional ou outra fonte e, em seguida, salve a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] estrutura e todos os modelos relacionados em um banco de dados.  
+  Use o assistente de mineração de dados para criar uma nova estrutura de mineração, usando dados de um banco de dado relacional ou outra fonte e, em seguida, salve a estrutura e todos os modelos relacionados em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados.  
   
 ### <a name="to-create-a-relational-mining-structure"></a>Para criar uma estrutura de mineração relacional  
   
@@ -48,14 +47,14 @@ ms.locfileid: "66085384"
   
      Depois de selecionar a coluna previsível, você pode clicar no botão **Sugerir** para abrir a caixa de diálogo **Sugerir Colunas Relacionadas** . Você pode aceitar as colunas sugeridas clicando em **OK** nessa caixa de diálogo, para incluir as colunas selecionadas na estrutura de mineração ou pode alterar as seleções na coluna **Entrada** primeiro e, em seguida, clicar em **OK**. Para ignorar as sugestões, clique em **Cancelar**.  
   
-8.  Clique em **Avançar**.  
+8.  Clique em **Próximo**.  
   
 9. Na página **Especificar Conteúdo e Tipos de Dados das Colunas** , em **Estrutura de modelo de mineração**, você pode ajustar o tipo de conteúdo e o tipo de dados para cada coluna.  
   
     > [!NOTE]  
     >  Você pode clicar em **Detectar** para detectar automaticamente se uma coluna contém dados contínuos ou distintos. Depois de clicar nesse botão, o conteúdo e os tipos de dados da coluna serão atualizado nas colunas **Tipo de Conteúdo** e **Tipo de Dados** . Para obter mais informações sobre tipos de conteúdo e de dados, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](content-types-data-mining.md) e [Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md).  
   
-10. Clique em **Avançar**.  
+10. Clique em **Próximo**.  
   
 11. Na página **Concluindo o Assistente** , forneça um nome para a estrutura de mineração e o modelo de mineração inicial correspondente a ser criado e, em seguida, clique em **Concluir**.  
   
