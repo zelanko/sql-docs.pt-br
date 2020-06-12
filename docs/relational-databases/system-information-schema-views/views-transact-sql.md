@@ -19,12 +19,12 @@ ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e2a969450c2ec4593c7daec1b9c9b203b18410
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a24df8a9c4c85e94259f663b8319d1145a15b565
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078362"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670304"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68078362"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificador de exibição.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a exibição.<br /><br /> **&#42;&#42; importantes &#42;&#42;** Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a exibição.<br /><br /> **&#42;&#42; importante &#42;&#42;** apenas uma maneira confiável de localizar o esquema de um objeto é consultar a exibição do catálogo sys. Objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nome da exibição.|  
 |**VIEW_DEFINITION**|**nvarchar (** 4000 **)**|Se o comprimento da definição for maior que **nvarchar (** 4000 **)**, essa coluna será nula. Caso contrário, essa coluna será o texto de definição da exibição.|  
 |**CHECK_OPTION**|**varchar (** 7 **)**|Tipo de WITH CHECK OPTION. Será CASCADE se a exibição original tiver sido criada usando WITH CHECK OPTION. Caso contrário, será retornado NONE.|  

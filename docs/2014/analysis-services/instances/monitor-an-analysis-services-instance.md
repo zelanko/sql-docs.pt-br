@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b98037ea9f26c339cdf7aba22c37e2cfb3dfbb97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079752"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543808"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Monitorar uma instância do Analysis Services
   Você pode monitorar o desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou Monitor de Desempenho, um aplicativo às vezes chamado de **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite criar e gerenciar rastreamentos e analisar e repetir resultados de rastreamento. O Monitor de Desempenho reporta em um status de servidor, como indexado por certos contadores, que são discutidos na próxima seção.  

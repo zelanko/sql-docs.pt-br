@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93361fb14bc6544ffa7376439c2da0c8e06c3fb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725469"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545948"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>Arquitetura lógica (Analysis Services – Dados Multidimensionais)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o usa componentes de cliente e servidor para fornecer OLAP (processamento analítico online) e Data Mining funcionalidade para aplicativos [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Business Intelligence:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o usa componentes de cliente e servidor para fornecer OLAP (processamento analítico online) e Data Mining funcionalidade para aplicativos Business Intelligence:  
   
--   O componente de servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é implementado como um serviço do Microsoft Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dá suporte a várias instâncias no mesmo computador, com cada instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] do implementada como uma instância separada do serviço do Windows.  
+-   O componente de servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é implementado como um serviço do Microsoft Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]dá suporte a várias instâncias no mesmo computador, com cada instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] implementada como uma instância separada do serviço do Windows.  
   
 -   Os clientes comunicam-se com o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] usando o XMLA padrão público, um protocolo baseado em SOAP para emissão de comandos e recebimento de respostas, expostos como um serviço Web. Os modelos de objeto de cliente são também fornecidos por XMLA e podem ser acessados pelo uso de um provedor gerenciado, como ADOMD.NET ou um provedor OLE DB.  
   

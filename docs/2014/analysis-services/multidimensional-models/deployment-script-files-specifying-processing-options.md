@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da6b52d4b1d6b4179a88860b5fe1dc79b92657cf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075233"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546822"
 ---
 # <a name="specifying-processing-options"></a>Especificando opções de processamento
-  O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] assistente de implantação lê as opções de processamento \<do arquivo *nome do projeto*>. deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]cria esse arquivo quando você compila o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]usa as opções de processamento especificadas na página **implantação** do * \<nome do projeto>* caixa de diálogo **páginas de propriedades** para criar o nome do \< *projeto*> arquivo. deploymentoptions.  
+  O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação lê as opções de processamento do \<*project name*> arquivo. deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]cria esse arquivo quando você compila o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]usa as opções de processamento especificadas na página **implantação** da *\<project name>* caixa de diálogo **páginas de propriedades** para criar o \<*project name*> arquivo. deploymentoptions.  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Revisando as opções de processamento para implantação  
- As definições de configuração armazenadas no \<arquivo de *nome do projeto*>. deploymentoptions são as seguintes:  
+ As definições de configuração armazenadas no \<*project name*> arquivo. deploymentoptions são as seguintes:  
   
 -   **Método de Processamento** Essa configuração controla se os objetos implantados são processados após a implantação e o tipo de processamento executados. Há três opções de processamento:  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075233"
     -   Se essa opção for `False`, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implantará as alterações de metadados em uma única transação e cada comando de processamento será implantado em sua própria transação.  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>Modificando as opções de processamento para implantação  
- No entanto, talvez seja necessário implantar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o projeto usando opções de processamento diferentes das armazenadas no \<arquivo *nome do projeto*>. deploymentoptions. Por exemplo, você pode processar por completo todos os objetos, processar usando a opção padrão ou não processá-los. Se os cubos ou dimensões forem habilitados para gravação, é possível especificar se uma tabela de write-back nova ou existente será usada.  
+ No entanto, talvez seja necessário implantar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto usando opções de processamento diferentes das armazenadas no \<*project name*> arquivo. deploymentoptions. Por exemplo, você pode processar por completo todos os objetos, processar usando a opção padrão ou não processá-los. Se os cubos ou dimensões forem habilitados para gravação, é possível especificar se uma tabela de write-back nova ou existente será usada.  
   
  Para modificar as opções de processamento usadas durante a implantação, edite e recrie o projeto ou altere as opções de processamento do arquivo de entrada usando um dos métodos conforme descrito no procedimento a seguir.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66075233"
   
      -ou-  
   
--   Modifique o \<arquivo de *nome do projeto*>. deploymentoptions usando qualquer editor de texto.  
+-   Modifique o \<*project name*> arquivo. deploymentoptions usando qualquer editor de texto.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Especificando o destino de instalação](deployment-script-files-specifying-the-installation-target.md)   

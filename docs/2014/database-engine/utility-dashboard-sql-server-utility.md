@@ -10,19 +10,19 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ce0c700e7e53ef1b055fa476e1e259fefe6c0aa
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773808"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857748"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Painel do Utilitário (Utilitário do SQL Server)
   Para consultar dados no painel do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione o nó superior na árvore do Gerenciador do Utilitário, identificado como “Utility<UCP_Name>\\(ComputerName\UCP).” O painel inclui dados resumidos e dados detalhados de todas as instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e todos os aplicativos da camada de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. Para atualizar dados no painel, clique com o botão direito do mouse no nó superior da árvore do Gerenciador do Utilitário e selecione **Atualizar**.  
   
  Para obter mais informações sobre como criar um ponto de controle do utilitário, veja [Criar um ponto de controle do Utilitário do SQL Server &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). Para obter mais informações sobre como adicionar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ao Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , veja [Inscrever uma instância do SQL Server &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  Integridade de instância gerenciada  
  O status de integridade para instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é exibido no lado esquerdo do painel de conteúdo do Gerenciador do Utilitário.  
   

@@ -1,7 +1,7 @@
 ---
 title: sp_addpullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c983f72d3ba08f3ffc70991a13e312947ee77378
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6194e803367de5c66df6e270f196e6a8316ce203
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820648"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627116"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,6 +45,9 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
 `[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
+
+> [!NOTE]
+> O nome do servidor pode ser especificado como `<Hostname>,<PortNumber>` . Talvez seja necessário especificar o número da porta para a conexão quando SQL Server for implantada no Linux ou no Windows com uma porta personalizada, e o serviço navegador estiver desabilitado.
   
 `[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um padrão de NULL. *publisher_db* é ignorado pelos Publicadores Oracle.  
   

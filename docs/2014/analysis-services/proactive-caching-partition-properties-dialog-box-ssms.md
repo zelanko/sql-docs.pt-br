@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8fae25590d8da3f54ed94bc9d106b44a0aa4d85
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070709"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540188"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>Cache Pró-ativo (caixa de diálogo Propriedades da Partição) (SSMS)
   Use a página **Cache Pró-ativo** da caixa de diálogo **Propriedades da Partição** no SQL Server Management Studio para definir as propriedades de armazenamento e cache pró-ativo de uma partição em um grupo de medidas para um cubo em um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

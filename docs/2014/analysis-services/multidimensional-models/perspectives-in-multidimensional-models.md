@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9c408f79dcecd0a7850c7361716cc29b07f4cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1c645486a0d328a1074f1a25b730bfbac1b14af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073351"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545829"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Perspectivas em modelos multidimensionais
   Uma perspectiva é um subconjunto de um cubo criado para um determinado aplicativo ou grupo de usuários. O próprio cubo é a perspectiva padrão. Uma perspectiva é exposta a um cliente como um cubo. Quando um usuário exibe uma perspectiva, ela aparece como outro cubo. Toda alteração feita nos dados do cubo por meio de write-back da perspectiva é aplicada ao cubo original. Para obter mais informações sobre exibições no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Perspectivas](../multidimensional-models-olap-logical-cube-objects/perspectives.md).  
@@ -45,7 +44,7 @@ ms.locfileid: "66073351"
   
 -   Grupos de medidas  
   
--   medidas  
+-   Medidas  
   
 -   Dimensões  
   

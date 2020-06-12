@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5da033881d2a993ea4be6674dcf8b228cad80bf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 966403d15843d7b2b572581d930f1c37416ddbe5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073517"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546048"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bancos de dados de modelo multidimensional (SSAS)
   Um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma coleção de fontes de dados, exibições da fontes de dados, cubos, dimensões e funções. Opcionalmente, um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode incluir estruturas para mineração de dados e assemblies personalizados que fornecem um modo de você adicionar funções definidas pelo usuário ao banco de dados.  

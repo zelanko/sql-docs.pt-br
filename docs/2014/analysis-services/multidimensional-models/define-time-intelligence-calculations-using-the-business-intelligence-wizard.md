@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0ebb99e8368254e085cc9a4f4b0dc9a040b24c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075441"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546951"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definir cálculos de inteligência de tempo com o Assistente de Business Intelligence
   O aprimoramento de inteligência de tempo é um aprimoramento de cubo que adiciona cálculos de tempo (ou exibições de tempo) a uma hierarquia selecionada. Esse aprimoramento oferece suporte às seguintes categorias de cálculos:  
@@ -43,7 +42,7 @@ ms.locfileid: "66075441"
   
  Você aplica a inteligência de tempo a cubos que têm uma dimensão de tempo. (Uma dimensão de tempo é uma dimensão cuja propriedade `Type` está definida como `Time`.) Além disso, os atributos de tempo da dimensão também devem ter a configuração apropriada (como Anos ou Meses) para a propriedade `Type`. A propriedade `Type` de ambas as dimensões e seus atributos será configurada corretamente se você usar o Assistente para Dimensões para criar a dimensão de tempo.  
   
- Para adicionar inteligência de tempo a um cubo, use o Assistente de Business Intelligence e selecione a opção **Definir inteligência de tempo** na página **Escolher Aprimoramento** . Esse assistente orientará você durante as etapas para selecionar a hierarquia à qual você deseja adicionar a inteligência de tempo e especificar quais membros da hierarquia terão a inteligência de tempo aplicada a eles. Na última página do assistente, você pode ver as alterações que serão feitas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no banco de dados para adicionar a inteligência de tempo selecionada.  
+ Para adicionar inteligência de tempo a um cubo, use o Assistente de Business Intelligence e selecione a opção **Definir inteligência de tempo** na página **Escolher Aprimoramento** . Esse assistente orientará você durante as etapas para selecionar a hierarquia à qual você deseja adicionar a inteligência de tempo e especificar quais membros da hierarquia terão a inteligência de tempo aplicada a eles. Na última página do assistente, você pode ver as alterações que serão feitas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados para adicionar a inteligência de tempo selecionada.  
   
 ## <a name="selecting-a-time-hierarchy"></a>Selecionando uma hierarquia de tempo  
  Na página **Escolher Cálculos e Hierarquia de Destino** , selecione a hierarquia de tempo à qual será aplicado o aprimoramento de tempo. Você pode aplicar o aprimoramento de tempo somente a uma hierarquia sempre que executar o Assistente de Business Intelligence. Para aplicar o aprimoramento a mais de uma hierarquia de tempo, execute o assistente novamente.  
@@ -66,7 +65,7 @@ ms.locfileid: "66075441"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Exibindo o aprimoramento de inteligência de tempo  
  Na última página do Assistente de Business Intelligence, é possível exibir as alterações que serão feitas no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para um aprimoramento de inteligência de tempo, o assistente mudará a dimensão de tempo selecionada, a exibição da fonte de dados associada e o cubo associado conforme descrito na tabela a seguir.  
   
-|Objeto|Alterar|  
+|Objeto|Alteração|  
 |------------|------------|  
 |Dimensão de tempo|Adicionar um atributo para cada cálculo (ou exibição).|  
 |Exibição da fonte de dados|Adiciona uma coluna calculada à tabela de tempo para cada novo atributo da dimensão de tempo.|  

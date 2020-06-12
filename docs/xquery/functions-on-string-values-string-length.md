@@ -1,5 +1,6 @@
 ---
 title: Função de comprimento de cadeia de caracteres (XQuery) | Microsoft Docs
+description: Saiba como usar o comprimento da cadeia de caracteres da função XQuery ().
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004657"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689252"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funções em Valores da Cadeia de Caracteres – string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -99,9 +100,9 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. Usando a função string-length() XQuery para recuperar produtos cujas descrições de garantia sejam curtas  
- Para produtos cujas descrições de garantia tenham menos de 20 caracteres de comprimento, a consulta a seguir recupera XML que inclui a ID do produto, o comprimento, a `Warranty` descrição da garantia e o próprio elemento <>.  
+ Para produtos cujas descrições de garantia tenham menos de 20 caracteres de comprimento, a consulta a seguir recupera XML que inclui a ID do produto, o comprimento, a descrição da garantia e o `Warranty` próprio elemento <>.  
   
- A garantia é um dos recursos do produto. Um <`Warranty` opcional> elemento filho segue depois do elemento `Features` <>.  
+ A garantia é um dos recursos do produto. Um <opcional `Warranty`> elemento filho segue depois do `Features` elemento <>.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -129,7 +130,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
 -   o **PD** e o **WM** são os prefixos de namespace usados nesta consulta. Eles identificam os mesmos namespaces utilizados no documento que está sendo consultado.  
   
--   O XQuery especifica um loop FOR aninhado. O loop FOR externo é necessário, pois você deseja recuperar os atributos **ProductModelID** do elemento <`ProductDescription`>. O loop FOR interno é necessário, porque você deseja somente aqueles produtos que têm descrições de recursos de garantia com menos de 20 caracteres.  
+-   O XQuery especifica um loop FOR aninhado. O loop FOR externo é necessário, pois você deseja recuperar os atributos **ProductModelID** do `ProductDescription` elemento <>. O loop FOR interno é necessário, porque você deseja somente aqueles produtos que têm descrições de recursos de garantia com menos de 20 caracteres.  
   
  Este é o resultado parcial:  
   

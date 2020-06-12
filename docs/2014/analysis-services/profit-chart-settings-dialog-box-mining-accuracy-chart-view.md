@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf009e45e97586a50c01f6e949120c09e3625ebc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070693"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539868"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Caixa de diálogo Configurações do Gráfico de Ganho (Exibição do Gráfico de Precisão de Mineração)
   Utilize a caixa de diálogo **Configurações do Gráfico de Ganho** para configurar parâmetros para gerar um gráfico de ganho. Para obter mais informações sobre gráficos de ganho, consulte [Gráfico de comparação de precisão &#40;Analysis Services – Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  

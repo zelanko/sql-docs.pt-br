@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c7a09c9a1c411b639ac1b91027e42899dec158f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073525"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546068"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gerenciamento de assemblies de modelo multidimensional
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX (Multidimensional Expressions) e DMX (Data Mining Extensions), projetadas para realizar tudo, desde cálculos estatísticos padrão até a passagem de membros em uma [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] hierarquia. Mas, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX (Multidimensional Expressions) e DMX (Data Mining Extensions), projetadas para realizar tudo, desde cálculos estatísticos padrão até a passagem de membros em uma hierarquia. Mas, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  
   
  Portanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite adicionar assemblies a uma instância ou banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os assemblies permitem criar funções externas definidas pelo usuário usando qualquer CLR (Common Language Runtime), como o Microsoft Visual Basic .NET ou o Microsoft Visual C#. Você também pode usar linguagens de automação COM (Component Object Model), como o Microsoft Visual Basic ou o Microsoft Visual C++.  
   
@@ -88,7 +87,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  A política de nível host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma combinação de política fixa do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para assemblies de sistema e política específica de usuário para assemblies de usuário. A parte especificada pelo usuário da política host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] baseia-se no proprietário do assembly especificando um de três recipientes de permissão para cada assembly.  
   
-|Configuração de permissões|Descrição|  
+|Configuração de permissões|Description|  
 |------------------------|-----------------|  
 |`Safe`|Fornece a permissão de computação interna. Esse recipiente de permissão não atribui permissões para acessar qualquer um dos recursos protegidos em .NET Framework. Este será o recipiente de permissão padrão de um assembly se não houver outro especificado com a propriedade `PermissionSet`.|  
 |`ExternalAccess`|Fornece o mesmo acesso que a configuração `Safe`, com a habilidade adicional de acessar recursos externos do sistema. Esse recipiente de permissão não oferece garantias de segurança (embora seja possível para proteger esse cenário), mas oferece garantias de confiabilidade.|  
@@ -105,7 +104,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   Se houver um EXECUTE AS intermediário que altere o contexto do chamador original, a tentativa de acessar o recurso externo falhará.  
   
- A propriedade `ImpersonationMode` pode ser definida como `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. A configuração padrão, `ImpersonateCurrentUser`, executa um assembly na conta de login de rede do usuário atual. Se a `ImpersonateAnonymous` configuração for usada, o contexto de execução será correspondente à conta de*usuário de logon do Windows IUSER_* ServerName no servidor. Esta é a conta-convidado da Internet que limitou os privilégios no servidor. Um assembly executado nesse contexto só pode acessar recursos limitados no servidor local.  
+ A propriedade `ImpersonationMode` pode ser definida como `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. A configuração padrão, `ImpersonateCurrentUser`, executa um assembly na conta de login de rede do usuário atual. Se a `ImpersonateAnonymous` configuração for usada, o contexto de execução será correspondente à conta de usuário de logon do Windows IUSER_*ServerName* no servidor. Esta é a conta-convidado da Internet que limitou os privilégios no servidor. Um assembly executado nesse contexto só pode acessar recursos limitados no servidor local.  
   
 ### <a name="application-domains"></a>Domínios do aplicativo  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não expõe os domínios de aplicativo diretamente. Devido a um conjunto de assemblies executado no mesmo domínio de aplicativo, os domínios de aplicativo podem descobrir um ao outro no momento de execução usando o namespace `System.Reflection` no .NET Framework, ou de alguma outra maneira, e podem chamá-los no modo associado mais recente. Essa chamadas estarão sujeitas às verificações de permissão usadas pela segurança com base na autorização do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

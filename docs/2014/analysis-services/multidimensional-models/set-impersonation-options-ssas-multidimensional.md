@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 730ba13c22c8dcecf503398baae683f5d9c2b667
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072956"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545618"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Definir opções de representação (SSAS multidimensional)
   Ao criar um objeto `data source` em um modelo do Analysis Services, uma das configurações que você deve configurar é uma opção de representação. Esta opção determina se o Analysis Services assume a identidade de uma conta de usuário do Windows específica ao executar operações locais relacionadas à conexão, como carregar um provedor de dados OLE DB ou resolver informações de perfil de usuário em ambientes que dão suporte a perfis móveis.  
@@ -49,7 +48,7 @@ ms.locfileid: "66072956"
  Todas as opções estão disponíveis na caixa de diálogo, mas nem todas as opções são apropriadas para todos os cenários. Use as informações a seguir para determinar a melhor opção para seu cenário.  
   
  **Usar nome de usuário e senha específicos**  
- Selecione esta opção para fazer com [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que o objeto use as credenciais de segurança de uma conta de usuário do Windows especificada neste formato: * \<nome de domínio>***\\*** \<nome da conta de usuário>*.  
+ Selecione esta opção para fazer com que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto use as credenciais de segurança de uma conta de usuário do Windows especificada neste formato: *\<Domain name>***\\***\<User account name>* .  
   
  Escolha esta opção para usar uma identidade de usuário dedicada e com privilégios mínimos do Windows que você criou especificamente para finalidade de acesso a dados. Por exemplo, se você periodicamente criar uma conta de finalidade geral para recuperar dados usados em relatórios, poderá especificar essa conta aqui.  
   

@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3400d904bc857bc282bb1ad9220c1e01fe5a4d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085657"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524032"
 ---
 # <a name="content-types-data-mining"></a>Tipos de conteúdo (mineração de dados)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode definir o tipo de dados físico para uma coluna em uma estrutura de mineração e um tipo de conteúdo lógico para a coluna quando usado em um modelo,  
+  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , você pode definir o tipo de dados físico para uma coluna em uma estrutura de mineração e um tipo de conteúdo lógico para a coluna quando usado em um modelo,  
   
  O *tipo de dados* determina como os algoritmos processarão os dados nessas colunas quando você criar modelos de mineração. A definição do tipo de dados de uma coluna dá ao algoritmo informações sobre o tipo de dados nas colunas e como processar os dados. Cada tipo de dados no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a um ou mais tipos de conteúdo de mineração de dados.  
   

@@ -12,17 +12,17 @@ ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b14a78839ac49a76a8745d74f04f3b6c9a37b82
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067882"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858980"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Expressão de Restrição (Visual Database Tools)
   Ao anexar uma restrição de verificação a uma tabela ou coluna, é necessário incluir uma expressão SQL. Digite a expressão de restrição de verificação na caixa fornecida.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  Expression  
  Insira a expressão  
   

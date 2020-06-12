@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d55f61d9255d19f22fffb7380785a2ada1a2763
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eef8453ec15268638559964e669b70e1f55b3b85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087895"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527442"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>Guia Distinção de Cluster (Visualizador do Modelo de Mineração)
   Use a guia **Distinção de Cluster** para comparar dois clusters existentes em um modelo de clustering. Você pode ver como as diferentes combinações de atributos e valores são representadas dentro dos clusters.  
@@ -40,15 +39,15 @@ ms.locfileid: "66087895"
  **Cluster 2**  
  Selecione um segundo cluster da lista de clusters no modelo de mineração para comparar com o **Cluster 1**. Você também pode comparar um cluster com seu complemento, ou seja, todos os casos no modelo exceto os que estiverem no cluster selecionado.  
   
- **Pontuações de \<discriminação para cluster 1 \<> e cluster 2>**  
+ **Pontuações de discriminação para \<cluster 1> e\<cluster 2>**  
  As colunas no gráfico fornecem informações sobre como cada par atributo-valor está relacionado com os dois clusters selecionados.  
   
 |||  
 |-|-|  
 |**Variáveis**|Um atributo no modelo de mineração.|  
 |**Valores**|Um valor do atributo selecionado em **Variáveis**.|  
-|**Favorece \<o cluster 1>**|O gráfico de barra à esquerda representa a probabilidade de o par atributo-valor selecionado ser representativo do cluster selecionado em **Cluster 1**. Você pode passar o mouse sobre a barra para ver o valor, representado como uma porcentagem. Observe que, mesmo se o valor for zero, não significa que o atributo-Value está necessariamente ausente do cluster, apenas que a distribuição favorece fortemente um cluster sobre o outro.|  
-|**Favorece \<o cluster 2>**|O gráfico de barra à direita representa a probabilidade de o par atributo-valor selecionado ser representativo do cluster selecionado em **Cluster 2**.|  
+|**Enfatiza\<cluster 1>**|O gráfico de barra à esquerda representa a probabilidade de o par atributo-valor selecionado ser representativo do cluster selecionado em **Cluster 1**. Você pode passar o mouse sobre a barra para ver o valor, representado como uma porcentagem. Observe que, mesmo se o valor for zero, não significa que o atributo-Value está necessariamente ausente do cluster, apenas que a distribuição favorece fortemente um cluster sobre o outro.|  
+|**Enfatiza\<cluster 2>**|O gráfico de barra à direita representa a probabilidade de o par atributo-valor selecionado ser representativo do cluster selecionado em **Cluster 2**.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

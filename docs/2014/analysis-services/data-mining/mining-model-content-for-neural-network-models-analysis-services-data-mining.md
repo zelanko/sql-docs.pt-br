@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2de6fad32057abdbebab86b880c4edb23b1440e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083592"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521402"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Rede Neural da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -68,13 +67,13 @@ ms.locfileid: "66083592"
   
 |Nó|Conteúdo|  
 |----------|-------------|  
-|Raiz do modelo|Em branco|  
-|Estatísticas marginais|Em branco|  
-|Camada de entrada|Em branco|  
+|Raiz do modelo|Em Branco|  
+|Estatísticas marginais|Em Branco|  
+|Camada de entrada|Em Branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|hidden layer|Em branco|  
-|Nó oculto|Em branco|  
-|Camada de saída|Em branco|  
+|hidden layer|Em Branco|  
+|Nó oculto|Em Branco|  
+|Camada de saída|Em Branco|  
 |Nó de saída|Nome do atributo de saída|  
   
  NODE_NAME  
@@ -127,13 +126,13 @@ ms.locfileid: "66083592"
   
 |Nó|Conteúdo|  
 |----------|-------------|  
-|Raiz do modelo|Em branco|  
-|Estatísticas marginais|Em branco|  
-|Camada de entrada|Em branco|  
+|Raiz do modelo|Em Branco|  
+|Estatísticas marginais|Em Branco|  
+|Camada de entrada|Em Branco|  
 |Nó de entrada|Nome do atributo de entrada|  
-|hidden layer|Em branco|  
+|hidden layer|Em Branco|  
 |Nó oculto|Número inteiro que indica a sequência do nó oculto na lista de nós ocultos.|  
-|Camada de saída|Em branco|  
+|Camada de saída|Em Branco|  
 |Nó de saída|Se o atributo de saída for contínuo, conterá o nome do atributo de saída.<br /><br /> Se o atributo de saída for discreto ou diferenciado, contém o nome do atributo e o valor.|  
   
  NODE_RULE  
@@ -141,13 +140,13 @@ ms.locfileid: "66083592"
   
 |Nó|Conteúdo|  
 |----------|-------------|  
-|Raiz do modelo|Em branco|  
-|Estatísticas marginais|Em branco|  
-|Camada de entrada|Em branco|  
+|Raiz do modelo|Em Branco|  
+|Estatísticas marginais|Em Branco|  
+|Camada de entrada|Em Branco|  
 |Nó de entrada|Um fragmento de XML que contém as mesmas informações que a coluna NODE_DESCRIPTION.|  
-|hidden layer|Em branco|  
+|hidden layer|Em Branco|  
 |Nó oculto|Número inteiro que indica a sequência do nó oculto na lista de nós ocultos.|  
-|Camada de saída|Em branco|  
+|Camada de saída|Em Branco|  
 |Nó de saída|Um fragmento de XML que contém as mesmas informações que a coluna NODE_DESCRIPTION.|  
   
  MARGINAL_RULE  
@@ -173,13 +172,13 @@ ms.locfileid: "66083592"
  MSOLAP_MODEL_COLUMN  
  |Nó|Conteúdo|  
 |----------|-------------|  
-|Raiz do modelo|Em branco|  
-|Estatísticas marginais|Em branco|  
-|Camada de entrada|Em branco|  
+|Raiz do modelo|Em Branco|  
+|Estatísticas marginais|Em Branco|  
+|Camada de entrada|Em Branco|  
 |Nó de entrada|Nome do atributo de entrada.|  
-|hidden layer|Em branco|  
-|Nó oculto|Em branco|  
-|Camada de saída|Em branco|  
+|hidden layer|Em Branco|  
+|Nó oculto|Em Branco|  
+|Camada de saída|Em Branco|  
 |Nó de saída|Nome do atributo de entrada.|  
   
  MSOLAP_NODE_SCORE  

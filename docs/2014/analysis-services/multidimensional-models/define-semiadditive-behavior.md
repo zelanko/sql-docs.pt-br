@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd433f05f17a046ed49f49ea9fbdd9f36b90a3e2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075535"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546928"
 ---
 # <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
   Medidas semiaditivas, que não agregam uniformemente todas as dimensões, são muito comuns em muitos cenários empresariais. Todo cubo que se baseia em instantâneos de balanços, com o decorrer do tempo, apresenta esse problema. Você encontra esses instantâneos em aplicativos que cuidam de títulos, saldos de contas, orçamentos, recursos humanos, apólices de seguros e sinistros e em vários outros domínios empresariais.  
@@ -50,7 +49,7 @@ ms.locfileid: "66075535"
   
 -   Nenhum  
   
- Essa opção não altera as medidas com uma função de agregação `Sum`regular `Min`: `Max`, `Count`,, `Distinct``Count`ou.  
+ Essa opção não altera as medidas com uma função de agregação regular:,,, `Sum` `Min` `Max` `Count` ou `Distinct``Count` .  
   
  **O assistente detectou a dimensão de conta ' account ', que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
  Faz com que o sistema configure todas as medidas de um grupo de medidas de uma dimensão por uma dimensão do tipo Conta para a função de agregação Por Conta e o servidor agregará os membros da dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.  
@@ -66,7 +65,7 @@ ms.locfileid: "66075535"
   
  Para cada medida, você pode selecionar um dos tipos de funcionalidade semiaditiva descritos na tabela a seguir.  
   
-|Função semiaditiva|Descrição|  
+|Função semiaditiva|Description|  
 |---------------------------|-----------------|  
 |Average of Children|A agregação de um membro é a média de seus filhos.|  
 |ByAccount|O sistema lê o comportamento de semiaditivo especificado para o tipo de conta.|  

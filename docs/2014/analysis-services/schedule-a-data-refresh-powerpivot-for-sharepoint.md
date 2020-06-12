@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cfbd8496a700f03ae91e81f1fcf442c1a12bcfa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070007"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538918"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Agendar uma atualização de dados (PowerPivot para SharePoint)
   Você pode agendar a atualização de dados para obter atualizações automáticas para dados PowerPivot dentro de uma pasta de trabalho do Excel publicada em um site do SharePoint.  
@@ -98,7 +97,7 @@ ms.locfileid: "66070007"
   
 7.  Em Notificações de email, insira o endereço de email da pessoa que deve ser notificada no caso de um erro de processamento.  
   
-8.  Em Credenciais, especifique uma conta usada para executar o trabalho de atualização de dados. A conta deve ter permissões Contribuir na pasta de trabalho para poder abri-la para atualizar seus dados. Ela deve ser uma conta de usuário de domínio do Windows. Em muitos casos, essa conta também deve ter permissões de leitura nas fontes de dados externas usadas durante a atualização de dados. Especificamente, se você importou originalmente os dados que usam a opção Usar a Autenticação do Windows, a cadeia de conexão será compilada para usar as credenciais do Windows do usuário atual. Se o usuário atual for a conta de atualização de dados, essa conta deverá ter permissões de leitura na fonte de dados externa para que a atualização de dados tenha êxito. Escolha uma das seguintes opções:  
+8.  Em Credenciais, especifique uma conta usada para executar o trabalho de atualização de dados. A conta deve ter permissões Contribuir na pasta de trabalho para poder abri-la para atualizar seus dados. Ela deve ser uma conta de usuário de domínio do Windows. Em muitos casos, essa conta também deve ter permissões de leitura nas fontes de dados externas usadas durante a atualização de dados. Especificamente, se você importou originalmente os dados que usam a opção Usar a Autenticação do Windows, a cadeia de conexão será compilada para usar as credenciais do Windows do usuário atual. Se o usuário atual for a conta de atualização de dados, essa conta deverá ter permissões de leitura na fonte de dados externa para que a atualização de dados tenha êxito. Selecione uma das seguintes opções:  
   
     1.  Escolha **Usar a conta de atualização de dados configurada pelo administrador** para processar a operação de atualização de dados usando a conta de atualização autônoma de dados PowerPivot.  
   

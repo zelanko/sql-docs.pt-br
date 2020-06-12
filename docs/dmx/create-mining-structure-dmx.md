@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892820"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669453"
 ---
 # <a name="create-mining-structure-dmx"></a>CRIAR UMA ESTRUTURA DE MINERAÇÃO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Você pode definir vários valores de sinalizadores de modelagem para uma coluna. No entanto, é possível ter apenas um tipo de conteúdo e um tipo de dados para uma coluna.  
   
 ### <a name="column-relationships"></a>Relações de coluna  
- É possível adicionar uma cláusula a qualquer instrução de definição de coluna para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]dá suporte ao uso da seguinte \<cláusula de> de relação de coluna.  
+ É possível adicionar uma cláusula a qualquer instrução de definição de coluna para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]dá suporte ao uso da seguinte \< cláusula de> de relação de coluna.  
   
  **RELACIONADO A**  
  Indica uma hierarquia de valor. O destino de uma coluna RELATED TO pode ser a coluna de chave em uma tabela aninhada, uma coluna com um valor discreto na linha de caso ou outra coluna com uma cláusula RELATED TO, que indica uma hierarquia mais profunda.  
@@ -131,7 +131,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  A semente de validação controla o ponto de início do processo que atribui casos aleatoriamente aos conjuntos de dados de treinamento ou de teste. Ao definir uma semente de validação, é possível assegurar que a partição pode ser repetida. Se você não especificar uma semente de validação, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usará o nome da estrutura de mineração para criar uma semente. Se você renomear a estrutura, o valor de semente mudará. O parâmetro da semente de validação pode ser usado com ambos os outros parâmetros de avaliação.  
   
 > [!NOTE]  
->  Como as informações de partição são armazenadas em cache com os dados de treinamento, para usar o controle, você deve garantir que a propriedade **CacheMode** da estrutura de mineração esteja definida como **KeepTrainingData**. Esta é a configuração padrão no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para novas estruturas de mineração. Alterar a propriedade **CacheMode** para **ClearTrainingCases** em uma estrutura de mineração existente que contém uma partição de controle não afetará nenhum modelo de mineração que tenha sido processado. No entanto <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> , se não estiver definido como **KeepTrainingData**, os parâmetros de validação não terão nenhum efeito. Isto significa que todos os dados de origem serão usados para treinamento e nenhum conjunto de testes estará disponível. A definição da partição é armazenada em cache com a estrutura; se você limpar o cache dos casos de treinamento, também limpará o cache dos dados de teste e a definição do conjunto de validação.  
+>  Como as informações de partição são armazenadas em cache com os dados de treinamento, para usar o controle, você deve garantir que a propriedade **CacheMode** da estrutura de mineração esteja definida como **KeepTrainingData**. Esta é a configuração padrão no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para novas estruturas de mineração. Alterar a propriedade **CacheMode** para **ClearTrainingCases** em uma estrutura de mineração existente que contém uma partição de controle não afetará nenhum modelo de mineração que tenha sido processado. No entanto, se <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> não estiver definido como **KeepTrainingData**, os parâmetros de validação não terão nenhum efeito. Isto significa que todos os dados de origem serão usados para treinamento e nenhum conjunto de testes estará disponível. A definição da partição é armazenada em cache com a estrutura; se você limpar o cache dos casos de treinamento, também limpará o cache dos dados de teste e a definição do conjunto de validação.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos seguintes demonstram como criar uma estrutura de mineração com validação usando DMX.  

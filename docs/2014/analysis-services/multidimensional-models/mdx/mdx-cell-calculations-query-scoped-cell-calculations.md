@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a9c9d529bfeb26b959b2521e4ce3c3d7f10d082
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074419"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546440"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Criando cálculos de célula no escopo da consulta (MDX)
   Use a palavra-chave `WITH` em expressões multidimensionais (MDX) para descrever células calculadas no contexto de uma consulta. A sintaxe da palavra-chave `WITH` é:  
@@ -34,7 +33,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |Conjunto vazio|Uma expressão de conjunto MDX resolvida em um conjunto vazio. Nesse caso, o escopo da célula calculada é o cubo inteiro.|  
 |Conjunto de membro único|Uma expressão de conjunto MDX resolvida em um único membro.|  
 |Conjunto de membros do nível|Uma expressão de conjunto MDX resolvida nos membros de um mesmo nível. Um exemplo de tal expressão de conjunto é o *Level_Expression*.`Members` Função MDX. Para incluir membros calculados, use o *Level_Expression*.`AllMembers` Função MDX. Para obter mais informações, consulte [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Conjunto de descendentes|Uma expressão de conjunto MDX resolvida nos descendentes de um membro especificado. Um exemplo de tal expressão de conjunto é a `Descendants`função MDX (*Member_Expression*, *Level_Expresion*, *Desc_Flag*). Para obter mais informações, consulte [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Conjunto de descendentes|Uma expressão de conjunto MDX resolvida nos descendentes de um membro especificado. Um exemplo de tal expressão de conjunto é a `Descendants` função MDX (*Member_Expression*, *Level_Expresion*, *Desc_Flag*). Para obter mais informações, consulte [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
  Se o argumento `String_Expression` não descrever uma dimensão, a linguagem MDX assumirá que todos os membros foram incluídos para a construção do subcubo de cálculo. Portanto, se o argumento `String_Expression` for NULL, a definição de células calculada será válida para o cubo inteiro.  
   

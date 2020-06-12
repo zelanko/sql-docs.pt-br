@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 485a3e12b46700319c760b878ecbdcfb8c97545d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086815"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526672"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Criar estrutura de mineração (Suplementos de Mineração de Dados do SQL Server)
   ![Botão Criar Estrutura de Mineração, faixa de opções Mineração de Dados](media/dmc-createstruct.gif "Botão Criar Estrutura de Mineração, faixa de opções Mineração de Dados")  
@@ -37,7 +36,7 @@ ms.locfileid: "66086815"
   
 2.  Na caixa de diálogo **selecionar dados de origem** , especifique o intervalo do Excel, a tabela de dados do Excel ou a fonte de dados externa que contém os dados que você deseja usar para análise.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 3.  Na caixa de diálogo **selecionar colunas** , examine a lista de colunas disponíveis na fonte de dados selecionada.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66086815"
   
      Clique em **OK** para fechar a caixa de diálogo.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
      Dependendo do tipo de dados utilizado, você poderá concluir o assistente após essa etapa. Nesse caso, vá em frente para a página **concluir** para nomear sua estrutura de mineração.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66086815"
   
      Se desejar, digite o número máximo de linhas a serem usadas para teste.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 8.  Na caixa de diálogo **concluir** , digite um nome e uma descrição para a nova estrutura de mineração.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ac8113348a749837867a6dacba7fa23fb5e85f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074979"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546698"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Conceder acesso personalizado a dados de célula (Analysis Services)
   A segurança da célula é usada para permitir ou negar acesso a dados de medida de um cubo. A ilustração a seguir mostra uma combinação de medidas permitidas e negadas em uma Tabela Dinâmica quando conectada por um usuário cuja função permite acessar apenas algumas medidas. Neste exemplo, **Valor de Vendas do Revendedor** e **Custo Total do Produto do Revendedor** são as únicas medidas disponíveis por meio dessa função. Todas as outras medidas são negadas implicitamente (as etapas usadas para obter esse resultado são fornecidas abaixo, na seção Permitir acesso a medidas específicas).  
@@ -37,7 +36,7 @@ ms.locfileid: "66074979"
   
  Como administrador, você pode especificar se os membros da função têm permissões de leitura, contingente de leitura ou de leitura/gravação nas células de um cubo. Colocar permissões em uma célula é o nível mais baixo de segurança permitido, por isso, antes de aplicar permissões neste nível, é importante considerar alguns fatos:  
   
--   A segurança no nível da célula não pode expandir os direitos que foram restritos em um nível superior. Um exemplo: se uma função negar acesso aos dados de dimensão, a segurança no nível da célula não poderá substituir o conjunto negado. Outro exemplo: considere uma função com `Read` permissão em um cubo e permissão de **leitura/gravação** em uma célula ─ a permissão de dados de célula não será de **leitura/gravação**; será `Read`.  
+-   A segurança no nível da célula não pode expandir os direitos que foram restritos em um nível superior. Um exemplo: se uma função negar acesso aos dados de dimensão, a segurança no nível da célula não poderá substituir o conjunto negado. Outro exemplo: considere uma função com `Read` permissão em um cubo e permissão de **leitura/gravação** em uma célula: a permissão de dados de célula não será de **leitura/gravação**; ela será `Read` .  
   
 -   As permissões personalizadas muitas vezes precisam ser coordenadas entre os membros de dimensão e as células dentro da mesma função. Por exemplo, imagine que você queira negar o acesso a várias medidas relacionadas a desconto para diferentes combinações de revendedores. Considerando **Revendedores** como os dados da dimensão e **Valor de Desconto** como uma medida, você precisará combinar dentro das mesmas permissões de função na medida (usando as instruções deste tópico) e nos membros da dimensão. Consulte [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) para obter detalhes sobre como definir as permissões da dimensão.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66074979"
      Essa expressão identifica explicitamente quais medidas são visíveis aos usuários. Nenhuma outra medida estará disponível para usuários que se conectarem com essa função. Observe que [CurrentMember &#40;MDX&#41;](/sql/mdx/current-mdx) define o contexto e é seguido da medida permitida. O efeito dessa expressão, se o membro atual incluir o **Valor de Vendas do Revendedor** ou o **Custo Total do Produto do Revendedor**, será mostrar o valor. Caso contrário, negar o acesso. A expressão tem várias partes, com cada uma delas entre parênteses. O operador `OR` é usado para especificar várias medidas.  
   
 ## <a name="deny-access-to-specific-measures"></a>Negar acesso a medidas específicas  
- A expressão MDX a seguir, também especificada **em criar** | **dados** | **da célula de função, permite a leitura do conteúdo do cubo**, tem o efeito oposto, tornando determinadas medidas indisponíveis. Neste exemplo, o **valor do desconto** e a **porcentagem de desconto** ficam indisponíveis `NOT` usando `AND` os operadores e. Todas as outras medidas estarão disponíveis para usuários que se conectarem por meio dessa função.  
+ A expressão MDX a seguir, também especificada em **criar**  |  **dados da célula**de função,  |  **permite a leitura do conteúdo do cubo**, tem o efeito oposto, tornando determinadas medidas indisponíveis. Neste exemplo, o **valor do desconto** e a **porcentagem de desconto** ficam indisponíveis usando os `NOT` `AND` operadores e. Todas as outras medidas estarão disponíveis para usuários que se conectarem por meio dessa função.  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Discount Amount]) AND (NOT Measures.CurrentMember IS [Measures].[Discount Percentage])  
@@ -74,7 +73,7 @@ ms.locfileid: "66074979"
 ## <a name="set-read-permissions-on-calculated-measures"></a>Definir permissões de leitura em medidas calculadas  
  As permissões em uma medida calculada podem ser definidas de forma independente das suas partes constituintes. Vá para a próxima seção sobre Contingente de Leitura se quiser coordenar permissões entre uma medida calculada e suas medidas dependentes.  
   
- Para entender como as permissões de Leitura funcionam para uma medida calculada, considere **Lucro Bruto do Revendedor** no AdventureWorks. É derivado das medidas **Valor das Vendas do Revendedor** e **Custo Total do Produto do Revendedor** . Enquanto uma função tiver permissão de Leitura nas células **Lucro Bruto do Revendedor** , essa medida será visível, mesmo que as permissões sejam expressamente negadas nas outras medidas. Como uma demonstração, copie a seguinte expressão MDX em **criar** | **dados** | **de célula de função permitir leitura do conteúdo do cubo**.  
+ Para entender como as permissões de Leitura funcionam para uma medida calculada, considere **Lucro Bruto do Revendedor** no AdventureWorks. É derivado das medidas **Valor das Vendas do Revendedor** e **Custo Total do Produto do Revendedor** . Enquanto uma função tiver permissão de Leitura nas células **Lucro Bruto do Revendedor** , essa medida será visível, mesmo que as permissões sejam expressamente negadas nas outras medidas. Como uma demonstração, copie a seguinte expressão MDX em **criar**  |  **dados**  |  **de célula de função permitir leitura do conteúdo do cubo**.  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Reseller Sales Amount])  
@@ -86,7 +85,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  ![Tabela Excel com células disponíveis e indisponíveis](../media/ssas-permscalculatedcells.png "Tabela Excel com células disponíveis e indisponíveis")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>Definir permissões de Contingente de Leitura em medidas calculadas  
- A segurança da célula oferece uma alternativa, Contingente de Leitura, para definir permissões nas células relacionadas que formam um cálculo. Considere novamente o exemplo **Lucro Bruto do Revendedor** . Quando você insere a mesma expressão MDX fornecida na seção anterior, ela foi colocada na segunda área de texto da caixa de diálogo **criar** | **dados de célula** de função (na área de texto abaixo, **permitir leitura de conteúdo de célula contingente na segurança da célula**), o resultado é aparente quando exibido no Excel. Como **Lucro Bruto do Revendedor** é contingente em relação a **Valor das Vendas do Revendedor** e **Custo Total do Produto do Revendedor**, o lucro bruto passa a ficar inacessível porque suas partes constituintes não podem ser acessadas.  
+ A segurança da célula oferece uma alternativa, Contingente de Leitura, para definir permissões nas células relacionadas que formam um cálculo. Considere novamente o exemplo **Lucro Bruto do Revendedor** . Quando você insere a mesma expressão MDX fornecida na seção anterior, ela foi colocada na segunda área de texto da caixa de diálogo **criar**  |  **dados de célula** de função (na área de texto abaixo, **permitir leitura de conteúdo de célula contingente na segurança da célula**), o resultado é aparente quando exibido no Excel. Como **Lucro Bruto do Revendedor** é contingente em relação a **Valor das Vendas do Revendedor** e **Custo Total do Produto do Revendedor**, o lucro bruto passa a ficar inacessível porque suas partes constituintes não podem ser acessadas.  
   
 > [!NOTE]  
 >  O que acontece se você definir as permissões de Leitura e Contingente de Leitura em uma célula dentro da mesma função? A função fornecerá permissões de Leitura na célula, e não de Contingente de Leitura.  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28a7cf6b3a712144daead54d521fb3cc6936c99e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ad3c9733003a22b2d75b483e792e097ae229233
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075918"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547128"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>Criar uma Conta de Finanças de Dimensão de tipo pai-filho
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma dimensão de tipo de conta é uma dimensão cujos atributos representam um plano de contas para fins de relatório financeiro.  
+  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , uma dimensão de tipo de conta é uma dimensão cujos atributos representam um plano de contas para fins de relatório financeiro.  
   
  Uma dimensão de conta permite o gerenciamento seletivo do comportamento de agregação entre contas no decorrer do tempo. Uma dimensão de conta também possibilita o uso de mecanismos padrão para resolver a maioria das questões de agregação não padrão geralmente encontradas em soluções de business intelligence que lidam com dados financeiros. Sem esse tipo de mecanismo padrão, a resolução dessas questões de agregação não padrão requer fórmulas de acúmulo personalizado, membros calculados ou scripts de expressões multidimensionais (MDX).  
   

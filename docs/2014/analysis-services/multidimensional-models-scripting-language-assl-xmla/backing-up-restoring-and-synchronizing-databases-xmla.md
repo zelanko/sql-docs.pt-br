@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 500435a585ffed84a8f16e2b3bd1c4db14509103
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702273"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545078"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Fazendo backup, restaurando e sincronizando bancos de dados (XMLA)
   No XML for Analysis, existem três comandos que fazem backup de bancos de dados, que os restauram e que os sincronizam:  
   
--   O [comando backup](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) faz o backup [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de um banco [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de dados usando um arquivo de backup (. ABF), conforme descrito na seção [fazendo backup](#backing_up_databases)de banco de dados.  
+-   O comando [backup](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) faz o backup de um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados usando um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] arquivo de backup (. ABF), conforme descrito na seção [fazendo backup](#backing_up_databases)de banco de dados.  
   
 -   O comando [Restore](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla) restaura um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados a partir de um arquivo. ABF, conforme descrito na seção [restaurando bancos](#restoring_databases)de dados.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62702273"
     >  Se as propriedades `ApplyCompression` e `Password` não forem especificadas, o arquivo de backup armazenará nomes de usuário e senhas contidos nas cadeias de conexão em texto não criptografado. Os dados armazenados em texto não criptografados podem ser recuperados. Para aumentar a segurança, use as configurações `ApplyCompression` e `Password` para compactar e criptografar o arquivo de backup.  
   
 ### <a name="backing-up-security-settings"></a>Fazendo backup das configurações de segurança  
- A propriedade de [segurança](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) determina se `Backup` o comando faz backup das definições de segurança, como funções e permissões, definidas em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] um banco de dados. A propriedade `Security` também determina se o arquivo de backup incluirá as contas de usuário do Windows e os grupos definidos como membros das definições de segurança.  
+ A propriedade de [segurança](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) determina se o `Backup` comando faz backup das definições de segurança, como funções e permissões, definidas em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados. A propriedade `Security` também determina se o arquivo de backup incluirá as contas de usuário do Windows e os grupos definidos como membros das definições de segurança.  
   
  O valor da propriedade `Security` está limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62702273"
 |*IgnoreSecurity*|Exclua definições de segurança do arquivo de backup.|  
   
 ### <a name="backing-up-remote-partitions"></a>Fazendo backup de partições remotas  
- Para fazer backup de partições remotas [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no banco de dados, defina a propriedade [BackupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) do `Backup` comando como true. Essa configuração faz com que o comando `Backup` crie um arquivo de backup remoto para cada fonte de dados remota usada para o armazenamento de partições remotas para o banco de dados.  
+ Para fazer backup de partições remotas no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados, defina a propriedade [BackupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) do `Backup` comando como true. Essa configuração faz com que o comando `Backup` crie um arquivo de backup remoto para cada fonte de dados remota usada para o armazenamento de partições remotas para o banco de dados.  
   
  Para cada fonte de dados remota de backup, você pode especificar seu arquivo de backup correspondente, incluindo um elemento [Location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) na propriedade [Locations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) do `Backup` comando. O `Location` elemento deve ter sua `File` propriedade definida como o caminho UNC e o nome de arquivo do arquivo de backup remoto e sua propriedade [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) definida como o identificador da fonte de dados remota definida no banco de dado.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "62702273"
 ### <a name="relocating-rolap-objects"></a>Realocando objetos ROLAP  
  O comando `Restore` não pode restaurar agregações ou dados para objetos que usam o armazenamento ROLAP porque essas informações estão armazenadas em tabelas em uma fonte de dados relacional subjacente. No entanto, os metadados para objetos ROLAP podem ser restaurados. Para restaurar os metadados para objetos ROLAP, o comando `Restore` recria a estrutura de tabela em uma fonte de dados relacional.  
   
- Você pode usar o elemento `Location` em um comando `Restore` para realocar objetos ROLAP. Para cada `Location` elemento usado para realocar uma fonte de dados `DataSourceType` , a propriedade deve ser definida explicitamente como *local*. Você também precisa definir a propriedade `ConnectionString` do elemento `Location` para a cadeia de conexão do novo local. Durante a restauração, o comando `Restore` substituirá a cadeia de conexão para a fonte de dados identificada pela propriedade `DataSourceID` do elemento `Location` pelo valor da propriedade `ConnectionString` do elemento `Location`.  
+ Você pode usar o elemento `Location` em um comando `Restore` para realocar objetos ROLAP. Para cada `Location` elemento usado para realocar uma fonte de dados, a `DataSourceType` propriedade deve ser definida explicitamente como *local*. Você também precisa definir a propriedade `ConnectionString` do elemento `Location` para a cadeia de conexão do novo local. Durante a restauração, o comando `Restore` substituirá a cadeia de conexão para a fonte de dados identificada pela propriedade `DataSourceID` do elemento `Location` pelo valor da propriedade `ConnectionString` do elemento `Location`.  
   
 ##  <a name="synchronizing-databases"></a><a name="synchronizing_databases"></a>Sincronizando bancos de dados  
  O comando `Synchronize` sincroniza os dados e os metadados de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificado com outro banco de dados. O comando `Synchronize` possui diversas propriedades que permitem a você especificar o banco de dados de origem, como sincronizar as definições de segurança, as partições remotas a serem sincronizadas e a sincronização de objetos ROLAP.  
@@ -116,7 +115,7 @@ ms.locfileid: "62702273"
 >  O comando `Synchronize` pode ser executado apenas por administradores de servidor e por administradores de banco de dados. Os bancos de dados de origem e de destino devem ter o mesmo nível de compatibilidade do banco de dados.  
   
 ### <a name="specifying-the-source-database"></a>Especificando o banco de dados de origem  
- A propriedade [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) do `Synchronize` comando contém duas propriedades, `ConnectionString` e. `Object` A propriedade `ConnectionString` armazena a cadeia de conexão da instância que contém o banco de dados de origem, e a propriedade `Object` contém o identificador de objeto para o banco de dados de origem.  
+ A propriedade [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) do `Synchronize` comando contém duas propriedades, `ConnectionString` e `Object` . A propriedade `ConnectionString` armazena a cadeia de conexão da instância que contém o banco de dados de origem, e a propriedade `Object` contém o identificador de objeto para o banco de dados de origem.  
   
  O banco de dados de destino é o banco de dados atual para a sessão na qual o comando `Synchronize` é executado.  
   
@@ -136,14 +135,14 @@ ms.locfileid: "62702273"
 ### <a name="synchronizing-remote-partitions"></a>Sincronizando partições remotas  
  Para cada fonte de dados remota existente no banco de dados de origem, você poderá sincronizar cada partição remota associada ao incluir um elemento `Location` na propriedade `Locations` do comando `Synchronize`. Para cada `Location` elemento, a `DataSourceType` propriedade deve ser excluída ou explicitamente definida como *remota*.  
   
- Para definir uma fonte de dados remota e para conectar-se a ela no banco de dados de destino, o comando `Synchronize` usará a cadeia de conexão definida na propriedade `ConnectionString` do elemento `Location`. O comando `Synchronize` usa a propriedade `DataSourceID` do elemento `Location` para identificar quais partições remotas serão sincronizadas. O `Synchronize`comando sincroniza as partições remotas na fonte de dados remota especificada na `DataSourceID` Propriedade no banco de dados de origem com a fonte de dados remota especificada `DataSourceID` na propriedade no banco de dado de destino.  
+ Para definir uma fonte de dados remota e para conectar-se a ela no banco de dados de destino, o comando `Synchronize` usará a cadeia de conexão definida na propriedade `ConnectionString` do elemento `Location`. O comando `Synchronize` usa a propriedade `DataSourceID` do elemento `Location` para identificar quais partições remotas serão sincronizadas. O `Synchronize` comando sincroniza as partições remotas na fonte de dados remota especificada na `DataSourceID` propriedade no banco de dados de origem com a fonte de dados remota especificada na `DataSourceID` propriedade no banco de dado de destino.  
   
  Para cada pasta original usada para armazenar as partições remotas da fonte de dados remota do banco de dados de origem, também é possível especificar um elemento `Folder` no elemento `Location`. O elemento `Folder` indica a nova pasta para o banco de dados de destino no qual todas as partições remotas armazenadas na pasta original da fonte de dados remota serão sincronizadas. Se um elemento `Folder` não for especificado, o comando Synchronize usará as pastas originais especificadas para as partições remotas contidas no banco de dados de origem.  
   
 ### <a name="synchronizing-rolap-objects"></a>Sincronizando objetos ROLAP  
  O comando `Synchronize` não pode sincronizar agregações ou dados para objetos que usam o armazenamento ROLAP porque essas informações estão armazenadas em tabelas em uma fonte de dados relacional subjacente. No entanto, os metadados para objetos ROLAP podem ser sincronizados. Para sincronizar os metadados, o comando `Synchronize` recria a estrutura de tabela em uma fonte de dados relacional.  
   
- Você pode usar o elemento `Location` de um comando Synchronize para sincronizar objetos ROLAP. Para cada `Location` elemento usado para realocar uma fonte de dados `DataSourceType` , a propriedade deve ser definida explicitamente como *local*. . Você também precisa definir a propriedade `ConnectionString` do elemento `Location` para a cadeia de conexão do novo local. Durante a sincronização, o comando `Synchronize` substituirá a cadeia de conexão para a fonte de dados identificada pela propriedade `DataSourceID` do elemento `Location` pelo valor da propriedade `ConnectionString` do elemento `Location`.  
+ Você pode usar o elemento `Location` de um comando Synchronize para sincronizar objetos ROLAP. Para cada `Location` elemento usado para realocar uma fonte de dados, a `DataSourceType` propriedade deve ser definida explicitamente como *local*. . Você também precisa definir a propriedade `ConnectionString` do elemento `Location` para a cadeia de conexão do novo local. Durante a sincronização, o comando `Synchronize` substituirá a cadeia de conexão para a fonte de dados identificada pela propriedade `DataSourceID` do elemento `Location` pelo valor da propriedade `ConnectionString` do elemento `Location`.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Elemento de backup &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   

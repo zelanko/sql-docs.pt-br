@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4e3e06280ad91c59984b91e7383213f73f95343
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 838d96fc7db5ae4bf1930d159c7fee56d0a0408f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175325"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543368"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definindo propriedades de atributo pai em uma hierarquia pai-filho
   Uma hierarquia pai-filho é uma hierarquia em uma dimensão que se baseia em duas colunas de tabela. Juntas, essas colunas definem as relações hierárquicas entre os membros da dimensão. A primeira coluna, chamada *coluna de chave de membro*, identifica cada membro da dimensão. A outra coluna, chamada *coluna pai*, identifica o pai de cada membro da dimensão. A propriedade **NamingTemplate** de um atributo pai determina o nome de cada nível na hierarquia pai-filho e a propriedade **MembersWithData** determina se os dados dos membros pai deverão ser exibidos.
@@ -73,7 +72,7 @@ ms.locfileid: "78175325"
 
      Na caixa de diálogo **Modelo de Nomeação de Nível** , você define o modelo de nomeação de nível que determina os nomes de nível na hierarquia pai-filho exibidos aos usuários à medida que eles procuram os cubos.
 
-4.  Na segunda linha, a **\*** linha, digite nível ** \* de funcionário** na coluna **nome** e, em seguida, clique na terceira linha.
+4.  Na segunda linha, a **\*** linha, digite **nível \* de funcionário** na coluna **nome** e, em seguida, clique na terceira linha.
 
      Observe agora que, abaixo de **Resultado** , cada nível é exibido nomeado como “Nível do Funcionário” seguido de números crescentes e consecutivos.
 

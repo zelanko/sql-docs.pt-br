@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c34380e901590062b679129ad66838bbdfff897a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075934"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547138"
 ---
 # <a name="create-a-date-type-dimension"></a>Criar uma dimensão de tipo de data
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma dimensão de tempo é um tipo de dimensão cujos atributos representam períodos de tempo, como anos, semestres, trimestres, meses e dias. Os períodos em uma dimensão de tempo fornecem níveis de granularidade baseados em tempo para análises e geração de relatórios. Os atributos são organizados em hierarquias e a granularidade da dimensão de tempo é determinada em maior parte pelos requisitos de negócios e reporte de dados históricos. Por exemplo, a maioria dos dados financeiros e de vendas dos aplicativos de business intelligence usa uma granularidade mensal ou trimestral.  
+  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , uma dimensão de tempo é um tipo de dimensão cujos atributos representam períodos de tempo, como anos, semestres, trimestres, meses e dias. Os períodos em uma dimensão de tempo fornecem níveis de granularidade baseados em tempo para análises e geração de relatórios. Os atributos são organizados em hierarquias e a granularidade da dimensão de tempo é determinada em maior parte pelos requisitos de negócios e reporte de dados históricos. Por exemplo, a maioria dos dados financeiros e de vendas dos aplicativos de business intelligence usa uma granularidade mensal ou trimestral.  
   
  Normalmente, os cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incorporam uma dimensão de tempo de uma outra forma. Um cubo pode conter mais de uma dimensão de tempo ou várias hierarquias provenientes da mesma dimensão de tempo, dependendo da granularidade dos dados e dos requisitos de reporte. Contudo, nem todos os cubos requerem uma dimensão de tempo. Alguns aplicativos OLAP, como os de custos por atividade, não precisam de uma dimensão de tempo porque a geração de custos em uma dimensão baseada em atividades usa as atividades em vez do tempo.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66075934"
   
  Você pode construir manualmente esses calendários distintos no Designer de Dimensão. No entanto, o Assistente para Dimensões fornece vários modelos de hierarquia que podem ser usados para gerar automaticamente diversos tipos de calendários quando você criar uma dimensão de tempo ou uma dimensão de tempo de servidor. A tabela a seguir descreve os vários calendários que o Assistente para Dimensões pode gerar.  
   
-|Calendário|Descrição|  
+|Calendário|Description|  
 |--------------|-----------------|  
 |Calendário padrão|Um calendário gregoriano de doze meses, começando em 1º. de janeiro e terminando em 31 de dezembro.<br /><br /> Independentemente de você usar o Assistente para Dimensões para criar uma dimensão de tempo ou uma dimensão de tempo de servidor, o assistente gerará uma hierarquia para um calendário padrão depois que você definir os atributos que representam os períodos de tempo da dimensão. Se você usar o Assistente para Dimensões para criar uma dimensão de tempo de servidor, poderá ajustar a data inicial do calendário padrão para outro dia que não seja 1º. de janeiro.|  
 |Calendário fiscal|Um calendário fiscal de doze meses. Ao selecionar esse calendário, especifique o dia e o mês iniciais para o ano fiscal usado pela empresa.<br /><br /> Observação: esse calendário estará disponível somente se você usar o Assistente para Dimensões para criar uma dimensão de tempo de servidor.|  

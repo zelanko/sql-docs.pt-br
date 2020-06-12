@@ -12,19 +12,19 @@ ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1b842f8fe4e2a5c3adc489df35e20c58000a69d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5eac064dbcb727542969095906260ee962bb44af
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000912"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858656"
 ---
 # <a name="full-text-index-properties-columns-page"></a>Propriedades do Índice de Texto Completo (página Colunas)
   **Para exibir ou alterar as propriedades de um índice de texto completo**  
   
 -   [Gerenciar índices de texto completo](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Índice exclusivo**  
  Selecione um índice na lista suspensa. O índice deve ser um índice não nulo, exclusivo e de coluna de chave única.  
   

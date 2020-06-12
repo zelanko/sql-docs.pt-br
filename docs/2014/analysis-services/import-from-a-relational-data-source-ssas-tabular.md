@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 043201cc-fbef-4ed0-bde8-dc5e3a3e8bea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9504ae981e301c6f602a5930eecef47fc6667630
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080529"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544198"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>Importar de uma fonte de dados relacional (SSAS tabular)
   Você pode importar dados de uma variedade de bancos de dados relacionais usando o Assistente de Importação de Tabela. O assistente está disponível em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no menu **Modelo** . Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador. Para obter mais informações sobre os provedores e as fontes de dados com suporte, consulte [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbc9c9b7a09b0d7f06db624be9d94978ab996621
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082605"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529012"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Caixa de Diálogo Filtro de Conjunto de Dados ou Filtro de Modelo
   Esta caixa de diálogo o ajuda a construir os filtros que você pode aplicar a um conjunto de dados.  O conjunto de dados pode ser um conjunto externo usado para teste ou os dados do caso para um modelo de mineração. O nome da caixa de diálogo irá mudar dependendo se o filtro for para um conjunto de dados externo ou para um modelo de mineração.  
@@ -44,7 +43,7 @@ ms.locfileid: "66082605"
 |**Operador**|Selecione um operador da lista.|  
 |**Valor**|Para tabelas, o campo **Valor** exibe a combinação de todos os filtros aplicados à fonte de dados. Você também pode clicar no botão compilar **(...)** à direita da caixa de texto para abrir a caixa de diálogo **Filtrar** e criar uma condição.|  
   
- **Expressão**  
+ **Expression**  
  Exibe o conjunto de critérios que você criou usando a grade.  
   
  **Editar Consulta**  

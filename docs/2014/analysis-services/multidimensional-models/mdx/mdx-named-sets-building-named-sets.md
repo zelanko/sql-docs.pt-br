@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98d363ab09e75905b13503687fe425a981c790e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91296f8c5d47afb15c67f0b60435c7f961734573
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074153"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546298"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>Criando conjuntos nomeados em MDX (MDX)
   Uma expressão de conjunto pode ser uma declaração longa e complexa e, portanto, difícil de seguir ou entender. Ou ainda, a expressão de conjunto pode ser usada com tanta frequência que sua definição repetidamente passa a ser penosa. Para ajudar a facilitar o trabalho com expressões longas, complexas e geralmente usadas, as expressões MDX permitem que você trabalhe nelas como um *conjunto nomeado*.  

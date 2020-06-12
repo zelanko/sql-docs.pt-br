@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6ebfe029-dbba-4f0d-a556-328e79ef629f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cc3530c7bc316c0dbdc3271d456d4f7adf05038a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c291dbc9903fddfa714f9b1665d7ba9d4265a0f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087216"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527172"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Conectar a um banco de dados Microsoft SQL Server (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar as configurações de conexão a um banco de dados do Microsoft SQL Server. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087216"
 > [!NOTE]  
 >  As credenciais do usuário atual são usadas na seleção de um banco de dados nesta página. Porém, a importação não terá êxito se o usuário especificado na página Informações sobre Representação não tiver privilégios suficientes para ler do banco de dados selecionado.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome de conexão amigável**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66087216"
   
  Você pode usar um ponto (.), (local) ou localhost para indicar o servidor local.  
   
- **Usar autenticação do Windows**  
+ **Usar Autenticação do Windows**  
  Especifique se a Autenticação do Windows será usada para estabelecer conexão com uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  O modo de Autenticação do Windows habilita um usuário a se conectar por meio de uma conta de usuário do Windows. Sempre que for possível, use a Autenticação do Windows.  

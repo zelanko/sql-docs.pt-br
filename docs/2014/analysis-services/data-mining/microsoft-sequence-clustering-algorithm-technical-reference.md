@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e09018fad9c291ec1f47bbb776797d634950381
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083842"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521644"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo MSC
   O algoritmo MSC é um híbrido que usa a análise de cadeia Markov para identificar sequências ordenadas e combina os resultados dessa análise com técnicas de clustering para gerar clusters com base nas sequências e outros atributos no modelo. Este tópico descreve a implementação do algoritmo, como personalizá-lo e os requisitos especiais para modelos de clusterização de sequências.  
@@ -99,7 +98,7 @@ ms.locfileid: "66083842"
  O padrão é 64.  
   
  MAXIMUM_STATES  
- Especifica o número máximo de estados de um atributo não sequencial para os quais o algoritmo oferece suporte. Se o número de Estados de um atributo não sequencial for maior que o número máximo de Estados, o algoritmo usará os Estados mais populares do atributo e tratará os Estados `Missing`restantes como.  
+ Especifica o número máximo de estados de um atributo não sequencial para os quais o algoritmo oferece suporte. Se o número de Estados de um atributo não sequencial for maior que o número máximo de Estados, o algoritmo usará os Estados mais populares do atributo e tratará os Estados restantes como `Missing` .  
   
  O padrão é 100.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "66083842"
   
 ## <a name="remarks"></a>Comentários  
   
--   Use a função [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para a Previsão de Sequências. Para obter mais informações sobre as edições [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do que dão suporte à previsão de sequência, consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+-   Use a função [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para a Previsão de Sequências. Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte à previsão de sequência, consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 -   O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSC não dá suporte ao uso de PMML para criar modelos de mineração.  
   

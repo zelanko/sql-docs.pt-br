@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a748a81412f015f556f9224fb6e390eb0be1ef24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080406"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544133"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Caixa de diálogo Inserir Função (SSAS)
   A caixa de diálogo **Inserir Função** o habilita a escolher de uma lista de funções que podem ser usadas na criação de fórmulas. Para acessar essa caixa de diálogo no designer modelo, ou na barra de fórmula na parte superior de cada tabela, clique no botão de função (**fx**). Para obter mais informações sobre como escolher funções a serem usadas em fórmulas, consulte Apresentação de DAX e Criar uma Fórmula.  
@@ -32,19 +31,19 @@ ms.locfileid: "66080406"
 ## <a name="function-categories"></a>Categorias de função  
  A linguagem DAX fornece os tipos de categorias de função a seguir na caixa de diálogo **Inserir Funções** .  
   
- Todos  
+ Tudo  
   
  Data e Hora  
   
  Filtrar  
   
- Lógico  
+ Logical  
   
  Matemática e Trigonometria  
   
  Estatística  
   
- Texto  
+ Text  
   
 ## <a name="measures-and-formulas"></a>Medidas e fórmulas  
  A caixa de diálogo **Inserir Função** está disponível apenas quando você está criando uma fórmula. Você pode criar cálculos em uma coluna calculada, ou em uma Tabela Dinâmica ou um Gráfico Dinâmico. As fórmulas que você cria expressamente para uso em uma Tabela Dinâmica também são chamadas de *medidas*. Para obter mais informações, consulte [Criar uma coluna calculada &#40;SSAS Tabular&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) e [Criar e gerenciar medidas &#40;SSAS Tabular&#41;](tabular-models/measures-ssas-tabular.md).  

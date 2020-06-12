@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1810eb23a8d0d0541606cb69197b8030463748
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079281"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543628"
 ---
 # <a name="defining-a-data-source-view"></a>Definindo uma exibição da fonte de dados
   Depois de definir as fontes de dados que serão usadas em um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você normalmente define uma exibição da fonte de dados para o projeto. Uma exibição da fonte de dados é uma exibição unificada exclusiva dos metadados das tabelas e exibições especificadas que a fonte de dados define no projeto. Armazenar os metadados na exibição da fonte de dados permite que você trabalhe com os metadados durante o desenvolvimento sem ter uma conexão aberta com qualquer fonte de dados subjacente. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -26,9 +25,9 @@ ms.locfileid: "66079281"
   
 1.  No Gerenciador de Soluções (à direita da janela do Microsoft Visual Studio), clique com o botão direito do mouse em **Exibições da Fonte de Dados**e clique em **Nova Exibição da Fonte de Dados**.  
   
-2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados**, clique em **Próximo**. A página **Selecionar uma Fonte de Dados** é exibida.  
+2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados** , clique em **Próximo**. A página **Selecionar uma Fonte de Dados** é exibida.  
   
-3.  Em **Fontes de dados relacionais**, a fonte de dados **Adventure Works DW 2012** está selecionada. Clique em **Avançar**.  
+3.  Em **Fontes de dados relacionais**, a fonte de dados **Adventure Works DW 2012** está selecionada. Clique em **Próximo**.  
   
     > [!NOTE]  
     >  Para criar uma exibição de fonte de dados com base em várias fontes de dados, primeiro defina uma exibição da fonte de dados com base em uma única fonte de dados. Essa fonte de dados é, então, chamada a fonte de dados primária. Depois, você poderá adicionar tabelas e exibições de uma fonte de dados secundária. Ao projetar dimensões que contêm atributos baseados em tabelas relacionadas em várias fontes de dados, talvez seja necessário definir uma fonte de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como a fonte de dados primária para usar suas funcionalidades de mecanismo de consulta distribuída.  

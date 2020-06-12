@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e750e286d7a58bee8c6979515fe163119175d529
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072856"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547329"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Fontes de dados com suporte (SSAS multidimensional)
   Este tópico descreve os tipos de fonte de dados que você pode usar em um modelo multidimensional.  
@@ -46,9 +45,9 @@ ms.locfileid: "66072856"
   
  <sup>1</sup> fontes de dados ODBC não têm suporte para soluções multidimensionais. Embora o próprio Analysis Services trate a conexão, os designers no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] usado para criar soluções não podem se conectar a uma fonte de dados ODBC, mesmo ao usar driver do MSDASQL. Se seus requisitos comerciais incluírem uma fonte de dados ODBC, crie uma solução tabelar em vez disso.  
   
- <sup>2</sup> para obter mais informações, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]consulte, em [Azure.Microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> para obter mais informações, consulte [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , em [Azure.Microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> para obter mais informações [!INCLUDE[ssSDS](../../includes/sssds-md.md)] sobre o PDW, consulte [SQL Server Data Warehouse paralelos](https://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> para obter mais informações sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, consulte [SQL Server Data Warehouse paralelos](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> em alguns casos, usar o provedor de OLE DB MSDAORA pode resultar em erros de conexão, especialmente com versões mais recentes do Oracle. Se você encontrar algum erro, será recomendável usar um dos outros provedores listados para Oracle.  
   

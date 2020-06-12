@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 268203d044734bb4e6a1d2acf6311ee7ef828a53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074213"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546358"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propriedades intrínsecas do membro (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expõe propriedades intrínsecas em membros de dimensão que você pode incluir em uma consulta para retornar dados ou metadados adicionais para uso em um aplicativo personalizado ou para ajudar na investigação ou na construção do modelo. Se você estiver usando as ferramentas de cliente do SQL Server, poderá exibir propriedades intrínsecas no SQL Server Management Studio (SSMS).  
@@ -29,12 +28,12 @@ ms.locfileid: "66074213"
  Para obter uma introdução sobre como usar e exibir propriedades do membro de dimensão, consulte [Exibindo propriedades do membro do SSAS dentro de uma janela de consulta MDX no SSMS](https://go.microsoft.com/fwlink/?LinkId=317362).  
   
 > [!NOTE]  
->  Como um provedor compatível com a seção OLAP da especificação de OLE DB com data de março de 1999 (2,6) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , o dá suporte às propriedades intrínsecas do membro listadas neste tópico.  
+>  Como um provedor compatível com a seção OLAP da especificação de OLE DB com data de março de 1999 (2,6), [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o dá suporte às propriedades intrínsecas do membro listadas neste tópico.  
 >   
 >  Provedores diferentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] podem dar suporte a outras propriedades intrínsecas do membro. Para obter mais informações sobre as propriedades intrínsecas do membro que têm suporte por outros provedores, consulte a documentação fornecida com esses provedores.  
   
 ## <a name="types-of-member-properties"></a>Tipos de propriedades do membro  
- As propriedades intrínsecas do membro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] com suporte do são de dois tipos:  
+ As propriedades intrínsecas do membro com suporte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] do são de dois tipos:  
   
  Propriedades do membro sensíveis ao contexto  
  Essas propriedades do membro devem ser usadas no contexto de uma hierarquia ou nível específico, e fornecem valores para cada membro da dimensão ou nível especificado.  
@@ -54,7 +53,7 @@ ms.locfileid: "66074213"
   
 -   Você usa a palavra-chave `PROPERTIES` para consultar as propriedades.  
   
- As seções a seguir descrevem as várias propriedades de membros intrínsecos sensíveis ao contexto e não sensíveis ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]contexto disponíveis no, e como `PROPERTIES` usar a palavra-chave com cada tipo de propriedade.  
+ As seções a seguir descrevem as várias propriedades de membros intrínsecos sensíveis ao contexto e não sensíveis ao contexto disponíveis no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , e como usar a `PROPERTIES` palavra-chave com cada tipo de propriedade.  
   
 ## <a name="context-sensitive-member-properties"></a>Propriedades do membro sensíveis ao contexto  
  Todos os membros de dimensão e membros de nível têm suporte a uma lista de propriedades intrínsecas do membro são sensíveis ao contexto. A tabela a seguir lista essas propriedades sensíveis ao contexto.  
@@ -84,10 +83,10 @@ ms.locfileid: "66074213"
 ## <a name="non-context-sensitive-member-properties"></a>Propriedades do membro não sensíveis ao contexto  
  Todos os membros dão suporte a uma lista de propriedades intrínsecas do membro que são as mesmas, independentemente do contexto. Essas propriedades fornecem informações adicionais que podem ser usadas por aplicativos para aprimorar a experiência do usuário.  
   
- A tabela a seguir lista as propriedades intrínsecas não sensíveis ao contexto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]suportadas pelo.  
+ A tabela a seguir lista as propriedades intrínsecas não sensíveis ao contexto suportadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
->  Colunas no conjunto de linhas de esquema MEMBERS suportam as propriedades intrínsecas do membro listadas na seguinte tabela. Para obter mais informações sobre `MEMBERS` o conjunto de linhas de esquema, consulte [MDSCHEMA_MEMBERS conjunto de linhas](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
+>  Colunas no conjunto de linhas de esquema MEMBERS suportam as propriedades intrínsecas do membro listadas na seguinte tabela. Para obter mais informações sobre o `MEMBERS` conjunto de linhas de esquema, consulte [MDSCHEMA_MEMBERS conjunto de linhas](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Propriedade|Descrição|  
 |--------------|-----------------|  
@@ -101,7 +100,7 @@ ms.locfileid: "66074213"
 |`IS_DATAMEMBER`|Um booliano que indica se o membro é ou não um membro de dados.|  
 |`IS_PLACEHOLDERMEMBER`|Um booliano que indica se o membro é ou não um espaço reservado.|  
 |`KEYx`|A chave para o membro, onde x é o valor ordinal com base em zero da chave. KEY0 está disponível para chaves compostas e não compostas.<br /><br /> Se a chave for não composta, KEY0 será equivalente a `Key`.<br /><br /> Para chaves compostas, KEY0, KEY1, KEY2 e assim por diante, formam coletivamente a chave composta. Você pode fazer referência a cada uma independentemente em uma consulta para retornar essa parte da chave composta. Por exemplo, especificar KEY0 retorna a primeira parte da chave composta, especificar KEY1 retorna a parte seguinte da chave composta e assim por diante.<br /><br /> Observe que `KEYx` pode ser usado no contexto assim como sem contexto. Por esse motivo, ela é exibida em ambas as listas.<br /><br /> Para obter um exemplo de como usar essa propriedade de membro, consulte [Uma notícia simples do MDX: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
-|`LCID`*x*|A conversão da legenda do membro no valor hexadecimal da identificação de localidade, em que *x* é o valor decimal da identificação de localidade (por exemplo, LCID1009 como Inglês – Canadá). Isso somente estará disponível se a conversão tiver a coluna da legenda associada à fonte de dados.|  
+|`LCID` *x*|A conversão da legenda do membro no valor hexadecimal da identificação de localidade, em que *x* é o valor decimal da identificação de localidade (por exemplo, LCID1009 como Inglês – Canadá). Isso somente estará disponível se a conversão tiver a coluna da legenda associada à fonte de dados.|  
 |`LEVEL_NUMBER`|A distância do membro para a raiz da hierarquia. O nível raiz é zero.|  
 |`LEVEL_UNIQUE_NAME`|O nome exclusivo do nível ao qual o membro pertence. Para provedores que geram nomes exclusivos por qualificação, cada componente desse nome é delimitado.|  
 |`MEMBER_CAPTION`|Um rótulo ou legenda associado ao membro. A legenda serve basicamente para fins de exibição. Se uma legenda não existir, a consulta retorna `MEMBER_NAME`.|  
@@ -128,7 +127,7 @@ ms.locfileid: "66074213"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- Esta instrução retorna a descrição de cada membro na dimensão do eixo. Se você tentou qualificar a propriedade com uma dimensão ou nível, como em *dimensão* `.DESCRIPTION` ou *nível*`.DESCRIPTION`, a instrução não será validada.  
+ Esta instrução retorna a descrição de cada membro na dimensão do eixo. Se você tentou qualificar a propriedade com uma dimensão ou nível, como em *dimensão* `.DESCRIPTION` ou *nível* `.DESCRIPTION` , a instrução não será validada.  
   
 ### <a name="example"></a>Exemplo  
  Os exemplos a seguir mostram as consultas MDX que retornam propriedades intrínsecas.  

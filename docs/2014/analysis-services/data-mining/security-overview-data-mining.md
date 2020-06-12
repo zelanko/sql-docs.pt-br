@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35bc4a4fdb62373b7ae3fb42199c8717405ea14e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082902"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520502"
 ---
 # <a name="security-overview-data-mining"></a>Visão geral de segurança (mineração de dados)
   O processo de proteção [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ocorre em vários níveis. É necessário proteger cada instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e suas fontes de dados para garantir que somente os usuários autorizados tenham permissões de leitura ou de leitura/gravação nas dimensões, células, modelos de mineração e fontes de dados selecionadas. Você também tem que proteger as fontes de dados subjacentes para impedir que usuários não autorizados comprometam de modo mal-intencionado as informações de negócios confidenciais. O processo de proteção de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é descrito nos tópicos a seguir.  

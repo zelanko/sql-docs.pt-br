@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29d27d38a72954b1471db21c199c0372cac4036
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087455"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527252"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurar credenciais armazenadas para a atualização de dados PowerPivot (PowerPivot para SharePoint)
   Os trabalhos de atualização de dados PowerPivot podem ser executados em qualquer conta de usuário do Windows, desde que você crie um aplicativo de destino no Serviço de Repositório Seguro para armazenar as credenciais que deseja usar. Da mesma forma, se você desejar fornecer um logon de banco de dados que varie do um usado para importar os dados originalmente no PowerPivot para Excel, poderá mapear essas credenciais para um aplicativo de destino do Serviço de Repositório Seguro e, depois, especificar esse aplicativo de destino em uma agenda de atualização de dados.  
@@ -75,7 +74,7 @@ ms.locfileid: "66087455"
   
 8.  Ignore a URL da página do aplicativo de destino. A atualização de dados PowerPivot não usa essa URL.  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 10. Na página **especificar os campos de credenciais para seu aplicativo de destino de repositório seguro** , aceite os valores padrão. Os nomes e tipos de campo devem ser Nome de Usuário do Windows e Senha do Windows.  
   
@@ -162,7 +161,7 @@ ms.locfileid: "66087455"
   
 8.  Ignore a URL da página do aplicativo de destino. A atualização de dados PowerPivot não usa essa URL.  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 10. Na página **especificar os campos de credenciais para seu aplicativo de destino de repositório seguro** , aceite os valores padrão somente se a fonte de dados usar a autenticação do Windows. Caso contrário, escolha os tipos de campo que são válidos para a sua fonte de dados e edite os nomes de campo para corresponder ao tipo.  
   

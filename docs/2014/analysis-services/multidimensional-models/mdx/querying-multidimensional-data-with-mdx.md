@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e0a5dd60-35a3-4a4f-b36f-52ecea814886
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6b04669080a9dedd84d3e7c218f6360486076fdc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b7589a98636e56e8c592cef213785544e18f4ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546181"
 ---
 # <a name="querying-multidimensional-data-with-mdx"></a>Consultando dados multidimensionais com MDX
-  Expressões multidimensionais (MDX) é a linguagem de consulta que você usa para trabalhar com e recuperar dados multidimensionais [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]no. O MDX é baseado na especificação de XML for Analysis (XMLA), com extensões específicas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]para o. O MDX utiliza expressões compostas de identificadores, valores, instruções, funções e operadores que o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pode avaliar para recuperar um objeto (por exemplo, um conjunto ou um membro) ou um valor escalar (por exemplo, uma cadeia de caracteres ou um número).  
+  Expressões multidimensionais (MDX) é a linguagem de consulta que você usa para trabalhar com e recuperar dados multidimensionais no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . O MDX é baseado na especificação de XML for Analysis (XMLA), com extensões específicas para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . O MDX utiliza expressões compostas de identificadores, valores, instruções, funções e operadores que o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pode avaliar para recuperar um objeto (por exemplo, um conjunto ou um membro) ou um valor escalar (por exemplo, uma cadeia de caracteres ou um número).  
   
  Consultas e expressões MDX no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] são usadas para fazer o seguinte:  
   
@@ -41,9 +40,9 @@ ms.locfileid: "66073919"
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Principais conceitos em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)|Você pode usar MDX (Multidimensional Expressions) para consultar dados multidimensionais ou para criar expressões MDX para uso em um cubo, mas primeiro você deve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] entender os conceitos e a terminologia da dimensão.|  
+|[Principais conceitos em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)|Você pode usar MDX (Multidimensional Expressions) para consultar dados multidimensionais ou para criar expressões MDX para uso em um cubo, mas primeiro você deve entender os [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] conceitos e a terminologia da dimensão.|  
 |[Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)|A linguagem MDX permite que você consulte objetos multidimensionais, como cubos, e retorna conjuntos de células multidimensionais que contêm dados do cubo. Este tópico e respectivos subtópicos fornecem uma visão geral das consultas MDX.|  
-|[Conceitos básicos do script MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)|No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], um script MDX é composto de uma ou mais expressões MDX ou instruções que preenchem um cubo com cálculos.<br /><br /> Um script MDX define o processo de cálculo de um cubo. Um script MDX também é considerado parte do próprio cubo. Portanto, alterar um script MDX associado a um cubo altera imediatamente o processo de cálculo do cubo.<br /><br /> Para criar scripts MDX, você pode usar o Designer de Cubo no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].|  
+|[Conceitos básicos do script MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)|No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , um script MDX é composto de uma ou mais expressões MDX ou instruções que preenchem um cubo com cálculos.<br /><br /> Um script MDX define o processo de cálculo de um cubo. Um script MDX também é considerado parte do próprio cubo. Portanto, alterar um script MDX associado a um cubo altera imediatamente o processo de cálculo do cubo.<br /><br /> Para criar scripts MDX, você pode usar o Designer de Cubo no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Elementos de sintaxe MDX &#40;&#41;MDX](/sql/mdx/mdx-syntax-elements-mdx)   

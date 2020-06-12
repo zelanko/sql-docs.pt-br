@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251211"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539618"
 ---
 # <a name="relational-query-designer-ssas"></a>Designer de consulta relacional (SSAS)
-  O designer de consulta relacional ajuda a criar uma consulta que especifica os dados a serem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recuperados e os bancos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] dados [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]relacionais e. Use o designer de consultas gráficas para explorar os metadados, criar a consulta interativamente e exibir os dados da consulta.  Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
+  O designer de consulta relacional ajuda a criar uma consulta que especifica os dados a serem recuperados e os bancos de dados [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] relacionais e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . Use o designer de consultas gráficas para explorar os metadados, criar a consulta interativamente e exibir os dados da consulta.  Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
   
  Se você preferir, será possível escrever a consulta na linguagem SQL usando o editor baseado em texto. Para mudar para o designer de consulta baseado em texto, na barra de ferramentas, clique em **Editar como Texto**. Depois de editar uma consulta no designer de consulta baseado em texto, você não poderá mais usar o designer de consultas gráficas.  
   
@@ -80,13 +79,13 @@ ms.locfileid: "72251211"
   
  As agregações fornecem resumos de dados, e os dados são agrupados para oferecer suporte à agregação que entrega os dados resumidos. Quando você usa uma agregação na consulta, os outros campos retornados pela consulta são agrupados automaticamente e a consulta inclui a cláusula SQL GROUP BY. É possível resumir dados sem adicionar uma agregação usando somente a opção **Agrupado por** na lista **Grupo e Agregação** . Muitas das agregações incluem uma versão que usa a palavra-chave DISTINCT. A inclusão de DISTINCT elimina valores duplicados.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../includes/tsql-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] e [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos os dialetos da linguagem SQL dão suporte à cláusula, à palavra-chave e às agregações fornecidas pelo designer de consulta.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]usa [!INCLUDE[tsql](../includes/tsql-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)] . Ambos os dialetos da linguagem SQL dão suporte à cláusula, à palavra-chave e às agregações fornecidas pelo designer de consulta.  
   
  Para obter mais informações sobre o [!INCLUDE[tsql](../includes/tsql-md.md)], consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference)nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Manuais Online](https://go.microsoft.com/fwlink/?LinkId=141687) do  em msdn.microsoft.com.  
   
  A tabela a seguir lista as agregações e fornece descrições resumidas delas.  
   
-|Agregado|Descrição|  
+|Agregado|Description|  
 |---------------|-----------------|  
 |Avg|Retorna a média dos valores em um grupo. Implementa a agregação SQL AVG.|  
 |Contagem|Retorna o número de itens de um grupo. Implementa a agregação SQL COUNT.|  
@@ -175,7 +174,7 @@ ms.locfileid: "72251211"
 ### <a name="graphical-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas gráficas  
  A barra de ferramentas do designer de consultas gráficas fornece os botões a seguir para ajudá-lo a especificar ou exibir os resultados de uma consulta.  
   
-|Botão|Descrição|  
+|Botão|Description|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna para o designer de consulta baseado em texto para exibir a consulta gerada automaticamente ou para modificar a consulta.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte para os tipos de arquivo .sql e .rdl.|  
@@ -198,7 +197,7 @@ ms.locfileid: "72251211"
 ### <a name="text-based-query-designer-toolbar"></a>Barra de ferramentas do Designer de Consulta baseado em texto  
  O designer de consulta baseado em texto fornece uma única barra de ferramentas para todos os tipos de comando. A tabela a seguir lista cada botão da barra de ferramentas e suas respectivas funções.  
   
-|Botão|Descrição|  
+|Botão|Description|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Nem todos os tipos de fonte de dados dão suporte aos designers de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Apenas os tipos de arquivo .sql e .rdl têm suporte.|  
@@ -247,7 +246,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Clique no botão **Executar** (**!**). A tabela a seguir fornece um exemplo `uspGetWhereUsedProductID` de parâmetros para os quais você fornece valores na caixa de diálogo **definir parâmetro de consulta** .  
+ Clique no botão **Executar** (**!**). A tabela a seguir fornece um exemplo de `uspGetWhereUsedProductID` parâmetros para os quais você fornece valores na caixa de diálogo **definir parâmetro de consulta** .  
   
 |||  
 |-|-|  

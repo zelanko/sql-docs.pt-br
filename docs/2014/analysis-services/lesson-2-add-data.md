@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e18298e152089f361faa839228415909133663f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078968"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543448"
 ---
 # <a name="lesson-2-add-data"></a>Lição 2: Adicionar dados
   Nesta lição, você usará o Assistente de Importação de Tabela do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para se conectar ao banco de dados SQL AdventureWorksDW, selecionar, visualizar e filtrar os dados, e importá-los para o workspace do modelo.  
@@ -39,7 +38,7 @@ ms.locfileid: "66078968"
   
 2.  No **Assistente de Importação de Tabela**, em **Bancos de Dados Relacionais**, clique em **Microsoft SQL Server**e clique em **Avançar**.  
   
-3.  Na página **conectar a um banco de dados Microsoft SQL Server** , em **nome de conexão amigável**, digite `Adventure Works DB from SQL`.  
+3.  Na página **conectar a um banco de dados Microsoft SQL Server** , em **nome de conexão amigável**, digite `Adventure Works DB from SQL` .  
   
 4.  Na caixa **Nome do servidor**, digite o nome do servidor no qual você instalou o banco de dados AdventureWorksDW.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "66078968"
     > [!TIP]  
     >   Para consultar as relações que foram criadas automaticamente entre as tabelas importadas, na linha **Preparação de dados** , clique em **Detalhes**.  
   
-2.  Clique em **Fechar**.  
+2.  Clique em **fechar**  
   
      O assistente é fechado e o modelo de designer fica visível. Cada tabela foi adicionada como uma nova guia no designer de modelos.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e315d21eb6e7b8d5e590ca4cfb655ce232ddf945
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085077"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523184"
 ---
 # <a name="data-mining-architecture"></a>Arquitetura de mineração de dados
   Esta seção descreve a arquitetura de soluções de mineração de dados que são hospedadas em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os tópicos desta seção descrevem a arquitetura lógica e física de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que oferece suporte à mineração de dados, e também fornecem informações sobre os clientes, provedores e protocolos que podem ser usados na comunicação com servidores de mineração de dados e para trabalhar local ou remotamente com objetos de mineração de dados.  
@@ -37,9 +36,9 @@ ms.locfileid: "66085077"
   
  [Arquitetura física &#40;Analysis Services – Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)  
   
- [Serviços de Mineração de dados e fontes de dados](data-mining-services-and-data-sources.md)  
+ [Serviços de mineração de dados e fontes de dados](data-mining-services-and-data-sources.md)  
   
- [Gerenciamento de soluções de Mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
+ [Gerenciamento de soluções de mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
   
  [Visão geral de segurança &#40;Mineração de dados&#41;](security-overview-data-mining.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83b301239264351da33d0b22379f00c48b08c836
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076505"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536693"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Criar um Cubo de um modelo sem usar uma Exibição da Fonte de Dados
   Selecione **Criar o cubo sem usar uma fonte de dados** na primeira página do Assistente para Cubos para criar um cubo sem usar uma exibição da fonte de dados. Posteriormente, o Assistente de Geração de Esquema pode ser usado para gerar o esquema relacional para a exibição da fonte de dados com base na estrutura do cubo e possivelmente outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações sobre como gerar um esquema, consulte [Assistente de Geração de Esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "66076505"
 ## <a name="selecting-dimensions"></a>Selecionando dimensões  
  Use a página **Selecionar Dimensões** do assistente para adicionar dimensões ao cubo. Esta página será exibida somente se já houver dimensões compartilhadas sem uma fonte de dados no projeto ou banco de dados. Ela não lista dimensões que têm uma fonte de dados.  
   
- Para adicionar dimensões existentes, selecione uma ou mais dimensões na lista **Dimensões compartilhadas** e clique no botão de seta para a direita (**>**) para movê-las para a lista **Dimensões do cubo** . Clique no botão de seta dupla**>>**() para mover todas as dimensões na lista.  
+ Para adicionar dimensões existentes, selecione uma ou mais dimensões na lista **Dimensões compartilhadas** e clique no botão de seta para a direita (**>**) para movê-las para a lista **Dimensões do cubo** . Clique no botão de seta dupla ( **>>** ) para mover todas as dimensões na lista.  
   
 ## <a name="defining-new-measures"></a>Definindo novas medidas  
  Use a página **Definir Novas Medidas** do assistente para especificar as medidas e os grupos de medidas no novo cubo. Os grupos de medidas que você especifica aqui corresponderão a tabelas de fato no esquema gerado. As medidas que você especifica aqui corresponderão a colunas não chave numéricas nas tabelas.  
@@ -43,8 +42,8 @@ ms.locfileid: "66076505"
 |------------|-----------------|  
 |**Nome da Medida**|Um valor nessa coluna define o nome de uma medida no cubo. Clique em um valor nessa coluna para digitar um nome. Clique em **Adicionar nova medida** nesta coluna para criar uma nova medida. Essa coluna define a propriedade `Name` no objeto de medida.|  
 |**Grupo de medidas**|O nome do grupo de medidas que contém a medida. Clique nesse valor para escolher ou digitar um nome. Se você excluir todas as medidas que pertencem a um grupo de medidas específico, o grupo de medidas também será removido. Essa coluna define a propriedade `Name` para o objeto do grupo de medida.|  
-|**Tipo de dados**|O tipo de dados para a medida. Clique nesse valor para alterar o tipo de dados. O padrão quando você cria uma medida é `Single`. Essa coluna define a propriedade `DataType` no objeto de medida.|  
-|**Agregação**|A agregação padrão para a medida. Clique nesta célula para especificar uma das agregações padrão para a medida (ou **Nenhum**). O padrão quando você cria uma medida é `Sum`. Essa coluna define a propriedade `AggregationFunction` no objeto de medida.|  
+|**Tipo de Dados**|O tipo de dados para a medida. Clique nesse valor para alterar o tipo de dados. O padrão quando você cria uma medida é `Single`. Essa coluna define a propriedade `DataType` no objeto de medida.|  
+|**Aggregation**|A agregação padrão para a medida. Clique nesta célula para especificar uma das agregações padrão para a medida (ou **Nenhum**). O padrão quando você cria uma medida é `Sum`. Essa coluna define a propriedade `AggregationFunction` no objeto de medida.|  
   
 ## <a name="defining-new-dimensions"></a>Definindo novas dimensões  
  Use a página **Definir Novas Dimensões** do assistente para especificar as dimensões no novo cubo.  
@@ -79,7 +78,7 @@ ms.locfileid: "66076505"
 ## <a name="specifying-additional-calendars"></a>Especificando calendários adicionais  
  Na página **Especificar Calendários Adicionais** do assistente, selecione os calendários nos quais as hierarquias na dimensão se baseiam. Você pode escolher um dos seguintes calendários.  
   
-|Calendário|Descrição|  
+|Calendário|Description|  
 |--------------|-----------------|  
 |Calendário fiscal|Um calendário fiscal de doze meses. Se você selecionar esse calendário, especifique o dia e o mês iniciais para o ano fiscal usado pela empresa.|  
 |Calendário de relatório (ou marketing)|Um calendário de relatório de doze meses que inclui dois meses de quatro semanas e um mês de cinco semanas em um padrão recorrente de três meses (trimestral). Se você selecionar este calendário, especifique o dia e o mês iniciais e o padrão de três meses de 4-4-5, 4-5-4 ou 5-4-4 semanas, em que cada dígito representa o número de semanas em um mês.|  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caf111b2d78032b0a127f978562b2e0138df0109
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073358"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545789"
 ---
 # <a name="multidimensional-model-object-processing"></a>Processamento de objetos de modelo multidimensional
   O processamento é a etapa ou uma série de etapas nas quais o Analysis Services carrega dados de uma fonte de dados relacional para um modelo multidimensional. Para objetos que usam o armazenamento MOLAP, os dados são salvos em disco na pasta do arquivo de banco de dados. No armazenamento ROLAP, o processamento ocorre sob demanda, em resposta a uma consulta MDX sobre um objeto. Para objetos que usam armazenamento ROLAP, o processamento refere-se à atualização do cache antes de retornar os resultados da consulta.  

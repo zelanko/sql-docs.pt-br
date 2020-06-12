@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7f5fc866904397d4e6fc78a95030c79f6f9451a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081974"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528762"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Definir Períodos de Tempo (Assistente para Dimensões)
   Use a página **Definir Períodos de Tempo** para definir as informações do ano civil e as frequências de tempo a serem incluídas na dimensão de tempo ou na dimensão de tempo do servidor.  

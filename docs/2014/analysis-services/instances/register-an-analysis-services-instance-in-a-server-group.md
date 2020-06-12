@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6e1bf200eb537fd2853c96b268b630a5369b8ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0b2aa4798dc939ae6a23545dd2b1af4e0162738
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175205"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543758"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>Registrar uma instância do Analysis Services em um grupo de servidores
   Se houver um grande número de instâncias de servidor do Analysis Services, você poderá criar grupos de servidores no Management Studio para facilitar a administração de servidor. O propósito de um grupo de servidores é fornecer proximidade entre um grupo de servidores relacionados dentro do workspace administrativo. Por exemplo, vamos supor que você receba a tarefa de gerenciar dez instâncias separadas do Analysis Services. Agrupá-los por modo de servidor, critérios de tempo de atividade ou por departamento ou região permitiria a você exibir e se conectar a instâncias que compartilham as mesmas características com mais facilidade. Também é possível adicionar informações descritivas que ajudam você a se lembrar de como o servidor é usado.

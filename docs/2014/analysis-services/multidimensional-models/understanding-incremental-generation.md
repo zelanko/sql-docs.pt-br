@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f302a41612b19e9412fc52fbe6813c4e8ee2d26
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811063"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547288"
 ---
 # <a name="understanding-incremental-generation"></a>Entendendo a geração com incremento
   Após a geração de esquema inicial, você pode alterar as definições do cubo e das dimensões usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e, em seguida, executar novamente o Assistente de Geração de Esquema. O assistente atualiza o esquema do banco de dados da área de assunto e da exibição da fonte de dados associada para refletir as mudanças, mantendo, na medida do possível, os dados que já existem nas tabelas que serão geradas novamente. Se você alterou as tabelas depois da geração inicial, o Assistente de Geração de Esquema preservará essas alterações sempre que possível usando as seguintes regras:  

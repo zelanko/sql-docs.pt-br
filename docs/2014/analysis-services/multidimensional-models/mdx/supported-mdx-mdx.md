@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93baa6beffcb75e11c0ac389b7f0f5172c30d770
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17e8df6a2aa6da6b88a07a2abdef99d6ea03d8eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073866"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546154"
 ---
 # <a name="supported-mdx-mdx"></a>Suporte para MDX (MDX)
   As instruções e funções a seguir são suportadas em scripts MDX:  
@@ -53,7 +52,7 @@ ms.locfileid: "66073866"
  [Este &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  A linguagem MDX oferece suporte a atribuição das seguintes propriedades de célula: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` e `FONT_SIZE`. Para obter mais informações, consulte [Como usar propriedades da célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). O MDX também dá suporte à `NON_EMPTY_BEHAVIOR` atribuição à propriedade da instrução [Create member](/sql/mdx/mdx-data-definition-create-member) .  
+>  A linguagem MDX oferece suporte a atribuição das seguintes propriedades de célula: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` e `FONT_SIZE`. Para obter mais informações, consulte [Como usar propriedades da célula &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md). O MDX também dá suporte à atribuição à `NON_EMPTY_BEHAVIOR` propriedade da instrução [Create member](/sql/mdx/mdx-data-definition-create-member) .  
   
  [Instrução SCOPE &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   

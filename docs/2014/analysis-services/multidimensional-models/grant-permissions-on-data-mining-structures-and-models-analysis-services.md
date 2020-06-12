@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25eb8fe00c523d4a94b7f6f0325bfd2c1f55e7be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0db849551bdb38615f280b123c98f0e9d3053d6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074936"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546632"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Conceder permissões em estruturas e modelos de mineração de dados (Analysis Services)
   Por padrão, apenas um administrador do servidor do Analysis Services tem permissões para exibir estruturas ou modelos de mineração no banco de dados. Siga as instruções abaixo para conceder permissões a usuários não administradores.  
@@ -53,7 +52,7 @@ ms.locfileid: "66074936"
   
  Para conceder a um usuário permissões de leitura ou de leitura/gravação a uma função do banco de dados, o usuário deve ser membro da função de servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou membro de uma função de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com permissões de Controle total (Administrador).  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]do, expanda **funções** para o banco de dados apropriado no Pesquisador de objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , expanda **funções** para o banco de dados apropriado no Pesquisador de objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
   
 2.  Clique no painel **Estrutura de Mineração** , localize o modelo de mineração na lista **Modelo de Mineração** e selecione **Leitura**, **Leitura/Gravação**, **Detalhamento**ou **Procurar** para o modelo de mineração.  
   

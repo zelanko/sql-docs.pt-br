@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0758c814a7edce134be01ebf766a12832e942a61
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079471"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543698"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Colunas de Chave (Analysis Services - Dados multidimensionais)
   Use a caixa de diálogo **Colunas de Chave** para alterar a propriedade **KeyColumns** de um atributo. Para obter mais informações, consulte [Modificar a propriedade KeyColumn de um atributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
@@ -42,13 +41,13 @@ ms.locfileid: "66079471"
   
  Para remover uma coluna de chave da lista **Colunas de Chave** , selecione a coluna e clique no botão **\<** .  
   
- **Para cima**  
+ **Up**  
  Clique para mover a coluna selecionada em **Colunas de Chave** uma posição acima.  
   
 > [!NOTE]  
 >  Esta opção só será habilitada se a lista contiver mais de uma coluna e uma coluna estiver selecionada.  
   
- **Para baixo**  
+ **Down**  
  Clique para mover a coluna selecionada em **Colunas de Chave** uma posição abaixo.  
   
 > [!NOTE]  

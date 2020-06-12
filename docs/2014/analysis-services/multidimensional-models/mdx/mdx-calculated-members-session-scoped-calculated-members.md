@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fe7a9f137d8b74eaa5bad104dbfdb471dd14588
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074546"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546458"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Criando membros calculados no escopo da sessão (MDX)
   Para criar um membro calculado disponível por meio de uma sessão de expressões MDX, use a instrução [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) . Um membro calculado criado com a instrução CREATE MEMBER não será removido até que a sessão MDX seja encerrada.  

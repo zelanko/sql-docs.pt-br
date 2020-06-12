@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b97bee2099ea82508ba9e66414bb9527a3c3a8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727572"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545316"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Modos e processamento de armazenamento de partição
   O modo de armazenamento de uma partição afeta o desempenho de consulta e processamento, requisitos de armazenamento e locais de armazenamento da partição e seu grupo de medidas e cubo pai. A escolha do modo de armazenamento também afeta escolhas de processamento.  
@@ -39,7 +38,7 @@ ms.locfileid: "62727572"
   
 -   OLAP híbrido (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oferece suporte a todos os três modos de armazenamento [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] básico. Ele também oferece suporte o cache pró-ativo, que permite combinar as características do armazenamento ROLAP e MOLAP para desempenho de dados e de consulta imediato. Para obter mais informações, consulte [Cache pró-ativo &#40;Partições&#41;](partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte a todos os três modos de armazenamento básico. Ele também oferece suporte o cache pró-ativo, que permite combinar as características do armazenamento ROLAP e MOLAP para desempenho de dados e de consulta imediato. Para obter mais informações, consulte [Cache pró-ativo &#40;Partições&#41;](partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  O modo de armazenamento MOLAP faz com que as agregações da partição e uma cópia dos dados de origem sejam armazenados em uma estrutura multidimensional no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quando a partição for processada. Essa estrutura MOLAP é altamente otimizada para maximizar o desempenho de consulta. O local de armazenamento pode ser o computador onde a partição foi definida ou em outro computador executando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Como uma cópia dos dados fonte reside na estrutura multidimensional, as consultas podem ser resolvidas sem acessar os dados de origem da partição. Os tempos de resposta de consulta podem ser diminuídos substancialmente usando agregações. Os dados na estrutura MOLAP da partição são apenas atuais como o mais recente processamento da partição.  
@@ -72,7 +71,7 @@ ms.locfileid: "62727572"
   
     -   QUOTED_IDENTIFIER  
   
--   O tamanho total da chave de índice no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não pode exceder 900 bytes. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]o irá declarar essa condição com base nas colunas de chave de comprimento fixo quando a instrução CREATE INDEX for processada. No entanto, se houver colunas de comprimento variável na chave de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] índice, o também irá declarar essa condição para cada atualização das tabelas base. Como agregações diferentes possuem definições de exibição diferentes, o processamento ROLAP, usando exibições indexadas pode ser bem-sucedido ou falhar dependendo do projeto da agregação.  
+-   O tamanho total da chave de índice no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não pode exceder 900 bytes. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]o irá declarar essa condição com base nas colunas de chave de comprimento fixo quando a instrução CREATE INDEX for processada. No entanto, se houver colunas de comprimento variável na chave de índice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o também irá declarar essa condição para cada atualização das tabelas base. Como agregações diferentes possuem definições de exibição diferentes, o processamento ROLAP, usando exibições indexadas pode ser bem-sucedido ou falhar dependendo do projeto da agregação.  
   
 -   A sessão que cria a exibição indexada deve ter as seguintes opções definidas como ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING e ANSI_WARNING. Essa configuração pode ser feita no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

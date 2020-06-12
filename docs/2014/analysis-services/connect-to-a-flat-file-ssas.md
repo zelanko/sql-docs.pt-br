@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 970a55b709e164da573fbd224c13cc641a3ba06a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087357"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527192"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Conectar a um arquivo simples (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a se conectar a um arquivo simples (.txt), um arquivo separado por tabulações (.tab) ou um arquivo separado por vírgulas (.csv). Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087357"
 > [!NOTE]  
 >  As credenciais do usuário atual são usadas na seleção de um arquivo nesta página. Porém, a importação não terá êxito se o usuário especificado na página Informações sobre Representação não tiver privilégios suficientes para ler do arquivo selecionado.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome de conexão amigável**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66087357"
  **Separador de coluna**  
  Selecione de uma lista de separadores de colunas disponíveis. Escolha um separador com pouca probabilidade de ocorrer no texto.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Tabulação (t)|As colunas são separadas por uma tabulação (t).|  
 |Vírgula (,)|As colunas são separadas por uma vírgula (,).|  

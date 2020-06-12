@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75f02dd54992e9cc4f94d9845e0e25de5ed988f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889495"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545938"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubos locais (Analysis Services – Dados Multidimensionais)
   Para criar, atualizar ou excluir cubos locais, você deve escrever e executar um script ASSL ou um programa AMO.  
@@ -34,7 +33,7 @@ ms.locfileid: "68889495"
 >  Não há suporte para a utilização do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] nem do [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] para gerenciar cubos locais.  
   
 ## <a name="local-cubes"></a>Cubos locais  
- Um cubo local pode ser criado e preenchido a partir de um cubo existente em [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] uma instância do ou de uma fonte de dados relacional.  
+ Um cubo local pode ser criado e preenchido a partir de um cubo existente em uma [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância do ou de uma fonte de dados relacional.  
   
 |Fonte para obter dados para cubo local|Método de criação|  
 |------------------------------------|---------------------|  

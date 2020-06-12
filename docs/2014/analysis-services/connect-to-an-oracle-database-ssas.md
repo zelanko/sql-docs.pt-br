@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8bc5a08d96dbef0bae412b75c9592e4893e12a0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6d6344fd130a9d84b67c242af93f7a3f2ce204e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087016"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526982"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>Conectar a um banco de dados Oracle (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar as configurações de conexão para um banco de dados Oracle. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087016"
 > [!NOTE]  
 >  As credenciais do usuário atual são usadas na seleção de um banco de dados nesta página. Porém, a importação não terá êxito se o usuário especificado na página Informações sobre Representação não tiver privilégios suficientes para ler do banco de dados selecionado.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome de conexão amigável**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   

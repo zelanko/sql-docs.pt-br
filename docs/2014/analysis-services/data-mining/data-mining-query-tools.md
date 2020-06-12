@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1702ad82c65b5a7370a62c4bc31a08007f374c9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084977"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523153"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfaces de Consulta de Mineração de Dados
   Consultas de mineração de dados são baseadas na linguagem DMX. Você usa DMX para todas as tarefas de previsão e modelagem, inclusive classificação, análise de risco, geração de recomendações e regressão linear. Você também pode recuperar os padrões e as estatísticas que foram geradas quando processou o modelo.  
@@ -61,7 +60,7 @@ ms.locfileid: "66084977"
  Quando você utiliza o construtor de consultas, é possível usar ferramentas gráficas para selecionar um modelo de mineração, adicionar novo caso de dados e funções de predição. O Construtor de Consultas de previsão inclui um editor de texto que você pode usar para modificar a consulta manualmente e um painel de **resultados** simples para exibir os resultados da consulta.  
   
 ###  <a name="query-editor"></a><a name="bkmk_QueryEditor"></a> Editor de Consultas  
- O editor de consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no fornece ferramentas que você pode usar para compilar e executar consultas DMX. É possível conectar-se a uma instância do SQL Server Analysis Services e, em seguida, selecionar um banco de dados, colunas de estrutura de mineração e um modelo de mineração. O **Gerenciador de Metadados** contém uma lista de funções de previsão que você pode procurar.  
+ O editor de consultas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece ferramentas que você pode usar para compilar e executar consultas DMX. É possível conectar-se a uma instância do SQL Server Analysis Services e, em seguida, selecionar um banco de dados, colunas de estrutura de mineração e um modelo de mineração. O **Gerenciador de Metadados** contém uma lista de funções de previsão que você pode procurar.  
   
 ###  <a name="dmx-templates"></a><a name="bkmk_Templates"></a> Modelos DMX  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece modelos de consulta interativa DMX que você poderá usar para criar consultas DMX. Se você não vir a lista de modelos, clique em **Exibição** na barra de ferramentas e selecione **Explorador de Modelos**. Para ver todos os modelos do Analysis Services, incluindo modelos para DMX, MDX e XMLA, clique no ícone do cubo.  

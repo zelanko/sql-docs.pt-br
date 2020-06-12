@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f042a937b1ce2a51bc6d8dbb50b8fc39c4fb78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c879aaaa5bc63b4312f0461404e830dcbc2029
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175625"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547688"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Atualização de dados PowerPivot com SharePoint 2010
   A atualização de dados [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] é uma operação agendada no servidor que consulta fontes de dados externas para atualizar dados [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] inseridos em uma pasta de trabalho do Excel 2010 que é armazenada em uma biblioteca de conteúdo.
@@ -75,7 +74,7 @@ ms.locfileid: "78175625"
 
 5.  Em **Banco de Dados**, especifique a instância do SQL Server que hospedará o banco de dados para este aplicativo de serviço. O valor padrão é a instância de Mecanismo de Banco de Dados do SQL Server que hospeda os bancos de dados de configuração de farm.
 
-6.  Em **Nome do Banco de Dados**, insira o nome do banco de dados de aplicativo de serviço. O valor padrão é Secure_Store_Service_DB_\<GUID>. O nome padrão corresponde ao nome padrão do aplicativo de serviço. Se você inseriu um nome de aplicativo de serviço exclusivo, siga uma convenção de nomenclatura semelhante para seu nome de banco de dados de forma que você possa gerenciá-los em conjunto.
+6.  Em **Nome do Banco de Dados**, insira o nome do banco de dados de aplicativo de serviço. O valor padrão é Secure_Store_Service_DB_ \<guid> . O nome padrão corresponde ao nome padrão do aplicativo de serviço. Se você inseriu um nome de aplicativo de serviço exclusivo, siga uma convenção de nomenclatura semelhante para seu nome de banco de dados de forma que você possa gerenciá-los em conjunto.
 
 7.  Em **Autenticação de Banco de dados**, o padrão é Autenticação do Windows. Se você escolher Autenticação SQL, consulte o guia do administrador do SharePoint para saber como usar o tipo de autenticação no farm.
 
@@ -116,7 +115,7 @@ ms.locfileid: "78175625"
 
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")
 
- Esta opção de credencial está habilitada por padrão. Quando essa opção de credencial está habilitada, o Serviço do Sistema PowerPivot gera um aplicativo de destino no Serviço de Repositório Seguro para armazenar o nome de usuário e a senha especificados pelo proprietário da agenda. Um aplicativo de destino gerado é criado usando esta Convenção de nomenclatura\<: PowerPivotDataRefresh_ GUID>. Um aplicativo de destino é criado para cada conjunto de credenciais do Windows. Se já houver um aplicativo de destino pertencente ao Serviço do Sistema PowerPivot e ele armazenar o nome de usuário e a senha especificados pela pessoa que definiu a agenda, o Serviço do Sistema PowerPivot usará o aplicativo de destino em vez de criar um novo.
+ Esta opção de credencial está habilitada por padrão. Quando essa opção de credencial está habilitada, o Serviço do Sistema PowerPivot gera um aplicativo de destino no Serviço de Repositório Seguro para armazenar o nome de usuário e a senha especificados pelo proprietário da agenda. Um aplicativo de destino gerado é criado usando esta Convenção de nomenclatura: PowerPivotDataRefresh_ \<guid> . Um aplicativo de destino é criado para cada conjunto de credenciais do Windows. Se já houver um aplicativo de destino pertencente ao Serviço do Sistema PowerPivot e ele armazenar o nome de usuário e a senha especificados pela pessoa que definiu a agenda, o Serviço do Sistema PowerPivot usará o aplicativo de destino em vez de criar um novo.
 
  A principal vantagem de usar essa opção de credencial é a facilidade de uso e simplicidade. O trabalho antecipado é mínimo porque os aplicativos de destino são criados por você. Além disso, a execução da atualização de dados com as credenciais do proprietário da agenda (que muito provavelmente é a pessoa que criou a pasta de trabalho) simplifica o downstream dos requisitos de permissão. Muito provavelmente, esse usuário já tem permissões no banco de dados de destino. Quando a atualização de dados é executada sob a identidade de usuário do Windows dessa pessoa, todas as conexões de dados que especificam ' usuário atual ' funcionarão automaticamente.
 
@@ -204,7 +203,7 @@ ms.locfileid: "78175625"
 
  Se você vir **Integrated Security=SSPI** na cadeia de conexão, não poderá substituir as credenciais nessa cadeia de conexão. A conexão sempre usará o usuário atual. Qualquer credencial fornecida será ignorada.
 
- Se você vir **informações de persistência de segurança = falso,\*\*\*\*\*\*\*\*\*\*\*senha =,\<userid = userlogin>**, você terá uma cadeia de conexão que aceitará substituições de credenciais. As credenciais que aparecem na cadeia de conexão (como UserID e Password) não são credenciais do Windows, e sim logons de bancos de dados ou outras contas de acesso válidas para a fonte de dados de destino.
+ Se você vir **informações de persistência de segurança = falso, senha = \* \* \* \* \* \* \* \* \* \* \* , \<userlogin> userid =**, você terá uma cadeia de conexão que aceitará substituições de credencial. As credenciais que aparecem na cadeia de conexão (como UserID e Password) não são credenciais do Windows, e sim logons de bancos de dados ou outras contas de acesso válidas para a fonte de dados de destino.
 
  **Como substituir credenciais na cadeia de conexão**
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 950a498e10205050fb610b7afb369e61ea3fb799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075362"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546872"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implantar soluções modelo com o Utilitário de Implantação
   O utilitário **Microsoft.AnalysisServices.Deployment** permite iniciar o mecanismo de implantação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando. Como arquivo de entrada, o utilitário usa os arquivos de saída XML gerados pela construção de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Os arquivos de entrada são facilmente modificáveis para personalizar a implantação de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O script de implantação gerado pode ser executado imediatamente ou pode ser salvo para implantação posterior.  
@@ -68,7 +67,7 @@ ms.locfileid: "66075362"
 ##  <a name="modes"></a><a name="Modes"></a>Modelos  
  O utilitário pode ser executado nos modos listados na tabela a seguir.  
   
-|Mode|Descrição|  
+|Mode|Description|  
 |----------|-----------------|  
 |Modo sem confirmação|Nenhuma interface do usuário é exibida e todas as informações necessárias para a implantação são fornecidas pelos arquivos de entrada. Nenhum progresso é exibido pelo utilitário em modo sem confirmação. Em vez disso, um arquivo de log opcional pode ser usado para capturar o progresso e informações de erro para revisão posterior.|  
 |Modo de resposta|A interface do usuário do Assistente para Implantação é exibida e as respostas do usuário são salvas nos arquivos de entrada especificados para implantação posterior. A implantação não acontece em modo de resposta. O único propósito do modo de resposta é capturar respostas do usuário.|  

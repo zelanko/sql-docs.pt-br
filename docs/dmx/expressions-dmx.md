@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0e1bd5fa1ba4d4ff8b97436ac6e44b901f578187
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a5c057197e0603c800f2ca5538652ab06609db8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074846"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670287"
 ---
 # <a name="expressions-dmx"></a>Expressões [DMX]
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Em DMX (extensões de mineração de dados), uma expressão é uma combinação de identificadores, valores e operadores [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que podem ser avaliados para obter um resultado.  
+  Em DMX (extensões de mineração de dados), uma expressão é uma combinação de identificadores, valores e operadores que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podem ser avaliados para obter um resultado.  
   
  Uma expressão DMX pode ser simples ou complexa. A expressão simples pode ser uma das opções a seguir:  
   

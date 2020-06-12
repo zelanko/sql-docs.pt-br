@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12f298a9368425c063bec3e730eab7e95cc9c9a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083675"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521562"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de clustering (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Microsoft Clustering. Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -75,7 +74,7 @@ ms.locfileid: "66083675"
  NODE_TYPE  
  Um modelo de clustering gera os seguintes tipos de nó:  
   
-|ID e nome do nó|Descrição|  
+|ID e nome do nó|Description|  
 |----------------------|-----------------|  
 |1 (Modelo)|Nó raiz do modelo.|  
 |5 (Cluster)|Contém a contagem de casos do cluster, as características dos casos do cluster e estatísticas que descrevem os valores do cluster.|  

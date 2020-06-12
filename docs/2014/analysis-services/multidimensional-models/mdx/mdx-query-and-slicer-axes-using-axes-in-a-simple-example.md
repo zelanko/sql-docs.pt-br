@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 324f082fd6659592e56af65680bd4aa623c625d9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074024"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546228"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>Usando eixos de consulta e slicer em um exemplo simples (MDX)
   O exemplo simples apresentado neste tópico ilustra os fundamentos de como especificar e usar eixos de consulta e slicer.  

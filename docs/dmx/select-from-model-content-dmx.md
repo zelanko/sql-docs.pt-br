@@ -1,21 +1,21 @@
 ---
-title: Selecione do &lt;modelo&gt;. CONTENT (DMX) | Microsoft Docs
+title: Selecione do &lt; modelo &gt; . CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892836"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669594"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>Selecione do &lt;modelo&gt;. CONTEÚDO (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>Selecione do &lt; modelo &gt; . CONTEÚDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna o conjunto de linhas do esquema de modelo de mineração para o modelo de mineração de dados especificado.  
@@ -46,14 +46,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Opcional. Uma expressão que retorna um valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
- O>**selecionar do** _ \<modelo _ **. **A instrução de conteúdo retorna o conteúdo específico de cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **> de \<modelo de seleção. **A instrução de conteúdo para retornar valores na coluna NODE_RULE do modelo.  
+ O>**selecionar do** _ \< modelo _ **. **A instrução de conteúdo retorna o conteúdo específico de cada algoritmo. Por exemplo, talvez você queira usar as descrições de todas as regras de um modelo de regras associado em um aplicativo personalizado. Você pode usar um **> de \< modelo de seleção. **A instrução de conteúdo para retornar valores na coluna NODE_RULE do modelo.  
   
  A tabela a seguir lista as colunas que são incluídas no conteúdo do modelo de mineração.  
   
 > [!NOTE]  
 >  Os algoritmos podem interpretar as colunas de forma diferente para representar corretamente o conteúdo. Para obter uma descrição do conteúdo do modelo de mineração para cada algoritmo e dicas sobre como interpretar e consultar o conteúdo do modelo de mineração para cada tipo de modelo, consulte [conteúdo do modelo de mineração &#40;&#41;de mineração de dados Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
-|Coluna de conjunto de linhas DE CONTEÚDO|Descrição|  
+|Coluna de conjunto de linhas DE CONTEÚDO|Description|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Nome de um catálogo. NULL se o provedor não oferecer suporte a catálogos.|  
 |MODEL_SCHEMA|Nome de um esquema não qualificado. NULL se o provedor não oferecer suporte a esquemas.|  

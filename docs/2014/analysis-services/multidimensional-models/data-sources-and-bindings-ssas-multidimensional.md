@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e3631310e55089647559191dbefed67778d0241
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076077"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547188"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Fontes de dados e associações (SSAS multidimensional)
   Podem ser acoplados cubos, dimensões e outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a uma fonte de dados. Uma fonte de dados pode ser um dos seguintes objetos:  
@@ -56,14 +55,14 @@ ms.locfileid: "66076077"
 ## <a name="analysis-services-data-types"></a>Tipos de dados do Analysis Services  
  Os tipos de dados que são usado em associações devem corresponder aos tipos de dados suportados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os seguintes tipos de dados estão definidos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
-|Tipo de dados do Analysis Services|Descrição|  
+|Tipo de dados do Analysis Services|Description|  
 |---------------------------------|-----------------|  
 |BigInt|Um inteiro de 64 bytes com sinal. Esse tipo de dados é mapeado para o tipo de dados Int64 no Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I8 no OLE DB.|  
 |Bool|Um valor booliano. Esse tipo de dados é mapeado para o tipo de dados Boolean no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_BOOL no OLE DB.|  
-|Currency|Um valor de moeda que varia de -263 (ou -922.337.203.685.477,5808) a 263-1 (ou +922.337.203.685.477,5807) com uma precisão a dez milésimos de uma unidade de moeda. Esse tipo de dados é mapeado para o tipo de dados Decimal no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_CY no OLE DB.|  
+|Moeda|Um valor de moeda que varia de -263 (ou -922.337.203.685.477,5808) a 263-1 (ou +922.337.203.685.477,5807) com uma precisão a dez milésimos de uma unidade de moeda. Esse tipo de dados é mapeado para o tipo de dados Decimal no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_CY no OLE DB.|  
 |Data|Dados de data, armazenados como um número de ponto flutuante com precisão dupla. A parte inteira é o número de dias desde 30 de dezembro de 1899, enquanto a parte fracionária é uma fração de um dia. Esse tipo de dados é mapeado para o tipo de dados DateTime no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_DATE no OLE DB.|  
 |Double|Um número de ponto flutuante de precisão dupla dentro do intervalo de -1,79E +308 a 1,79E +308. Esse tipo de dados é mapeado para o tipo de dados Double no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_R8 no OLE DB.|  
-|Integer|Um inteiro de 32 bytes com sinal. Esse tipo de dados é mapeado para o tipo de dados Int32 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I4 no OLE DB.|  
+|Inteiro|Um inteiro de 32 bytes com sinal. Esse tipo de dados é mapeado para o tipo de dados Int32 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I4 no OLE DB.|  
 |Single|Um número de ponto flutuante de precisão única dentro do intervalo de -3,40E +38 a 3,40E +38. Esse tipo de dados é mapeado para o tipo de dados Single no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_R4 no OLE DB.|  
 |SmallInt|Um inteiro com sinal de 16 bits. Esse tipo de dados é mapeado para o tipo de dados Int16 no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I2 no OLE DB.|  
 |TinyInt|Um inteiro com sinal de 8 bits. Esse tipo de dados é mapeado para o tipo de dados SByte no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e o tipo de dados DBTYPE_I1 no OLE DB.<br /><br /> Observação: se uma fonte de dados contiver campos do tipo de dados tinyint e a propriedade AutoIncrement for definida como True, eles serão convertidos em inteiros na exibição da fonte de dados.|  
@@ -168,7 +167,7 @@ ms.locfileid: "66076077"
   
  As associações incorporadas são especificadas pela inclusão do objeto de coleção opcional `Bindings` com o comando de processamento. A coleção opcional `Bindings` contém os elementos a seguir.  
   
-|Propriedade|Cardinalidade|Tipo|Descrição|  
+|Propriedade|Cardinalidade|Tipo|Description|  
 |--------------|-----------------|----------|-----------------|  
 |`Binding`|0-n|`Binding`|Fornece uma coleção de novas associações.|  
 |`DataSource`|0-1|`DataSource`|Substitui `DataSource` do servidor que seria usado.|  
@@ -177,9 +176,9 @@ ms.locfileid: "66076077"
  Todos os elementos relacionados a associações incorporadas são opcionais. Para qualquer elemento não especificado, o ASSL usa a especificação contida no DDL do objeto persistido. A especificação de `DataSource` ou `DataSourceView` no comando `Process` é opcional. Se `DataSource` ou `DataSourceView` for especificado, eles não serão instanciados e não persistirão depois que o comando `Process` for concluído.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definição do tipo de associação fora de linha  
- Dentro da coleção fora de linha `Bindings`, o ASSL permite uma coleção de associações de vários objetos, cada um deles uma `Binding`. Cada `Binding` possui uma referência de objeto estendida, que é similar a uma referência de objeto, mas pode se referir aos objetos menores (por exemplo, atributos de dimensão e atributos de grupo de medidas). Esse objeto `Object` assume a forma simples típica do elemento em `Process` comandos, exceto que o \< *objeto*>\<*/Object*> marcações não estão presentes.  
+ Dentro da coleção fora de linha `Bindings`, o ASSL permite uma coleção de associações de vários objetos, cada um deles uma `Binding`. Cada `Binding` possui uma referência de objeto estendida, que é similar a uma referência de objeto, mas pode se referir aos objetos menores (por exemplo, atributos de dimensão e atributos de grupo de medidas). Esse objeto assume a forma simples típica do `Object` elemento em `Process` comandos, exceto que as \<*Object*> \<*/Object*> marcas não estão presentes.  
   
- Cada objeto para o qual a associação é especificada é identificado por um elemento XML da ID \<do *objeto* de formulário>(por `DimensionID`exemplo,). Depois de identificar o objeto o mais especificamente possível com o \< *objeto* de formulário>ID, você identifica o elemento para o qual a associação está sendo especificada, o que geralmente `Source`é. Um caso comum a observar é que `Source` é uma propriedade no `DataItem`, que são associações de colunas em um atributo. Nesse caso, você não especifica a marca `DataItem`; em vez disso, você simplesmente especifica a propriedade `Source` como se estivesse diretamente na coluna a ser vinculada.  
+ Cada objeto para o qual a associação é especificada é identificado por um elemento XML da ID do formulário \<*object*> (por exemplo, `DimensionID` ). Depois de identificar o objeto o mais especificamente possível com a ID do formulário \<*object*> , você identifica o elemento para o qual a associação está sendo especificada, o que geralmente é `Source` . Um caso comum a observar é que `Source` é uma propriedade no `DataItem`, que são associações de colunas em um atributo. Nesse caso, você não especifica a marca `DataItem`; em vez disso, você simplesmente especifica a propriedade `Source` como se estivesse diretamente na coluna a ser vinculada.  
   
  As `KeyColumns` são identificadas pela ordem na coleção `KeyColumns`. Não é possível especificar, por exemplo, apenas a primeira e a terceira colunas de um atributo, pois não há como indicar que a segunda coluna de chave deve ser ignorada. Todas as colunas de chave devem estar presentes na associação fora de linha de um atributo de dimensão.  
   

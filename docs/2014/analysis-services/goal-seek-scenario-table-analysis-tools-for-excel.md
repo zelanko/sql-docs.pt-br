@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f535aa831824b2ab283b2b596d0de49ef0e72515
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080735"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544336"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Cenário de Metas a Atingir (Ferramentas de Análise de Tabela para Excel)
   ![Botão Meta a Atingir em Ferramentas de Análise de Tabela](media/tat-goalseek.gif "Botão Meta a Atingir em Ferramentas de Análise de Tabela")  
@@ -99,7 +98,7 @@ ms.locfileid: "66080735"
 ## <a name="related-tools"></a>Ferramentas relacionadas  
  O Cliente de Mineração de Dados para Excel, um suplemento separado que fornece mais funções avançadas de mineração de dados, contém assistentes para criação de modelos de mineração de dados que preveem comportamento. Para obter mais informações, consulte [criando um modelo de mineração de dados](creating-a-data-mining-model.md).  
   
- Para obter mais informações sobre o algoritmo usado pela ferramenta de cenário de **busca de meta** , consulte o tópico "algoritmo de regressão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logística da Microsoft" nos manuais online do.  
+ Para obter mais informações sobre o algoritmo usado pela ferramenta de cenário de **busca de meta** , consulte o tópico "algoritmo de regressão logística da Microsoft" nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] manuais online do.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Ferramentas de Análise de Tabela para Excel](table-analysis-tools-for-excel.md)  

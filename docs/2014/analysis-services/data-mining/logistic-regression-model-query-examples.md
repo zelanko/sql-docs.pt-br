@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d432d38794e65e8b8bea69608479e330649ee395
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084226"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522222"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Exemplos de consulta de modelo de regressão logística
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões com os novos dados.  
@@ -145,7 +144,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>Para criar uma versão diferenciada da estrutura de mineração e modelos de Call Center  
   
-1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], em Gerenciador de soluções, expanda **estruturas de mineração**.  
+1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , em Gerenciador de soluções, expanda **estruturas de mineração**.  
   
 2.  Clique com o botão direito do mouse em Call Center.dmm e selecione **Copiar**.  
   

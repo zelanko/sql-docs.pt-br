@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73967427b97a00d88b3d6c372a0228aa28c2024c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b55e940f75319a965fb1441520a7e16ce7ab2f6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387906"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545298"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Células de cubo (Analysis Services - Dados Multidimensionais)
   Um cubo é composto de células, organizadas por grupos de medidas e dimensões. Uma célula representa a interseção lógica exclusiva em um cubo de um membro de toda dimensão no cubo. Por exemplo, o cubo descrito pelo seguinte diagrama contém um grupo de medidas que tem duas medidas, organizadas juntamente com três dimensões chamadas Origem, Rota e Temporal.  
@@ -76,7 +75,7 @@ ms.locfileid: "81387906"
   
  ![Diagrama de cubo que identifica células vazias](../../analysis-services/dev-guide/media/as-cubeintro7.gif "Diagrama de cubo que identifica células vazias")  
   
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma célula vazia é uma célula que tem qualidades especiais. Como as células vazias podem distorcer os resultados de interjunções, contagens etc., muitas funções MDX oferecem a habilidade de ignorar as células vazias para fins de cálculo. Para obter mais informações, consulte [expressões multidimensionais &#40;referência mdx&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)e os [principais conceitos em MDX &#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , uma célula vazia é uma célula que tem qualidades especiais. Como as células vazias podem distorcer os resultados de interjunções, contagens etc., muitas funções MDX oferecem a habilidade de ignorar as células vazias para fins de cálculo. Para obter mais informações, consulte [expressões multidimensionais &#40;referência mdx&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)e os [principais conceitos em MDX &#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
   
 ## <a name="security"></a>Segurança  
  O acesso a dados de célula é gerenciado no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no nível da função, e pode ser controlado minuciosamente pelo uso de expressões MDX. Para obter mais informações, consulte [conceder acesso personalizado a dados de dimensão &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)e [conceder acesso personalizado a dados de célula &#40;Analysis Services ](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)&#41;.  

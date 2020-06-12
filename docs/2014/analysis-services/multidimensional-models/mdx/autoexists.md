@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd35958a364456c12d58392afe3754f6adcf97b8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074726"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546588"
 ---
 # <a name="autoexists"></a>autoexists
   O conceito de *autoexists* limita o espaço de cubo a células que, de fato, existem no cubo em contraposição às que podem existir em decorrência da criação de todas as combinações possíveis de membros de hierarquia de atributos da mesma hierarquia. Isso porque os membros de uma hierarquia de atributo não podem existir com membros de outra hierarquia de atributo na mesma dimensão. Quando duas ou mais hierarquias de atributo da mesma dimensão são usadas em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para verificar se os membros desses atributos sejam corretamente confinados para atender aos critérios de todos os outros atributos.  
@@ -85,7 +84,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Os valores das células retornadas serão idênticos, apesar de os metadados no conjunto de resultados serem diferentes. Por exemplo, com a consulta anterior, a hierarquia País foi movida para o eixo do slicer (na cláusula WHERE) e, portanto, não aparece explicitamente no conjunto de resultados.  
   
- Cada uma dessas três consultas anteriores demonstra o efeito do comportamento de existência automática no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Cada uma dessas três consultas anteriores demonstra o efeito do comportamento de existência automática no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="deep-and-shallow-autoexists"></a>Autoexists Deep e Shallow  
  Autoexists pode ser aplicado às expressões como Deep ou Shallow. `Deep Autoexists` significa que todas as expressões serão avaliadas para atender o espaço mais profundo possível após a aplicação das expressões de segmentação de dados, das expressões de subseleção no eixo etc. `Shallow Autoexists` quer dizer que as expressões externas são avaliadas antes da expressão atual e esses resultados são transmitidos à expressão atual. A configuração padrão é deep autoexists.  
@@ -133,13 +132,13 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0, 4%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
+|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
 |**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
 |**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0, 5%**|  
-|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
+|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0, 1%**|  
 |**Road-150**|**$2,363,805.16**|**$0**|**0, 0%**|  
 |**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3,89%**|  
@@ -185,13 +184,13 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
-|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0, 4%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
+|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
 |**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
 |**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0, 5%**|  
-|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
+|**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0, 1%**|  
 |**Road-150**|**$2,363,805.16**|**$0**|**0, 0%**|  
 |**Touring-3000**|**$2,046,508.26**|**$79,582.15**|**3,89%**|  
@@ -217,16 +216,16 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0, 1%**|  
 |**Mountain-300**|**$1,907,249.38**|**$876.95**|**0, 5%**|  
 |**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1,62%**|  
 |**Mountain-400-W**|**$592,450.05**|**$303.49**|**0, 5%**|  
 |**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0, 5%**|  
-|**ML Mountain Frame-W**|**$482,953.16**|**$206.95**|**0, 4%**|  
+|**ML Mountain Frame-W**|**$482,953.16**|**$206.95**|**0,04%**|  
 |**ML Mountain Frame**|**$343,785.29**|**$161.82**|**0, 5%**|  
-|**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2.56%**|  
+|**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2,56%**|  
   
  No conjunto de resultados acima, havia sete itens novos na lista Top10SellingProducts, e Mountain-200, Mountain-100 e HL Mountain Frame foram movidos para o início da lista. No conjunto de resultados anterior, esses três valores foram intercalados.  
   
@@ -275,7 +274,7 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0, 1%**|  
   
@@ -304,7 +303,7 @@ WHERE (Measures.[Internet Sales Amount],
 |||||  
 |-|-|-|-|  
 ||**Reseller Sales Amount**|**Valor de desconto**|**Desconto PCT**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0, 1%**|  
   

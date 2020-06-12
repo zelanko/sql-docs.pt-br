@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03e142f00192e04d5b17bc2041563cea06199c8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073034"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545696"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Executando o Assistente para Implantação do Analysis Services
-  Ao usar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] assistente de implantação para implantar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto do, você pode executar o assistente das seguintes maneiras:  
+  Ao usar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação para implantar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto do, você pode executar o assistente das seguintes maneiras:  
   
 -   **Interativamente** Quando executado interativamente, o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gera um script de implantação XML baseado nos arquivos de entrada, como modificado interativamente pela entrada de usuário. O assistente aplica qualquer modificação de usuário somente ao script de implantação. O assistente não modifica os arquivos de entrada. Para saber mais sobre os arquivos de entrada, veja [Noções básicas sobre arquivos de entrada usados para criar o script de implantação](deployment-script-files-input-used-to-create-deployment-script.md).  
   
--   **No prompt de comando** Quando executado no prompt de comando, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] assistente de implantação gera um script de implantação XML for Analysis (XMLA) com base nos comutadores que você usa para executar o assistente. O assistente pode executar qualquer uma destas ações: alertá-lo para entrada de usuário e modificar arquivos de entrada com base naquela entrada; executar uma implantação autônoma silenciosa, que usa os arquivos de entrada como são; ou criar um script de implantação que você pode usar depois.  
+-   **No prompt de comando** Quando executado no prompt de comando, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação gera um script de implantação XML for Analysis (XMLA) com base nos comutadores que você usa para executar o assistente. O assistente pode executar qualquer uma destas ações: alertá-lo para entrada de usuário e modificar arquivos de entrada com base naquela entrada; executar uma implantação autônoma silenciosa, que usa os arquivos de entrada como são; ou criar um script de implantação que você pode usar depois.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Executando o Assistente para Implantação do Analysis Services interativamente  
  Quando executado interativamente, o Assistente de Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lê os valores dos arquivos de entrada e apresenta estas informações a você. Você pode modificar esses valores de entrada, como destino de implantação, definições de configuração, opções de implantação e senhas de cadeia de conexão, ou deixá-los como estão. Se você alterar quaisquer valores de entrada, o assistente usará essas mudanças ao gerar o script de implantação XMLA. Porém, o assistente não faz nenhuma alteração nos valores do arquivo de entrada.  
@@ -40,10 +39,10 @@ ms.locfileid: "66073034"
   
      -ou-  
   
--   Na pasta **projetos** do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto, clique duas vezes no arquivo * \<nome do projeto>*. asdatabase.  
+-   Na pasta **projetos** do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto, clique duas vezes no *\<project name>* arquivo. asdatabase.  
   
     > [!NOTE]  
-    >  Se você não encontrar o * \<nome do projeto>* arquivo. asdatabase, tente usar Pesquisar e especifique *. asdatabase.  
+    >  Se você não encontrar o *\<project name>* arquivo. asdatabase, tente usar Search e especifique *. asdatabase.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>Executando o Assistente para Implantação do Analysis Services no prompt de comando  
  O Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também pode ser executado no prompt de comando. Quando você executa o assistente no prompt de comando, você fornece o caminho completo para o arquivo .asdatabase e executa o assistente em um dos seguintes modos:  

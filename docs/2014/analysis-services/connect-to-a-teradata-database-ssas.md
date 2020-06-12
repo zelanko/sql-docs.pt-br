@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 875ad4a3-a2b3-4b68-8c1c-6507e9f25b4d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc6712598452b1957857509e6b3ff6f659a16c4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77f4c62ddb54062db39220785d8d2c20ddb99f21
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087184"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527032"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>Conectar a um banco de dados Teradata (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar as configurações de conexão a um banco de dados Teradata. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087184"
 > [!NOTE]  
 >  As credenciais do usuário atual são usadas na seleção de um banco de dados nesta página. Porém, a importação não terá êxito se o usuário especificado na página Informações sobre Representação não tiver privilégios suficientes para ler do banco de dados selecionado.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome de conexão amigável**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   

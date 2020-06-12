@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49ec8adeaf5d8726220ed03f29c1be3088f9ccb2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547698"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Usar feeds de dados (PowerPivot para SharePoint)
   Feeds de dados são um ou mais fluxos de dados gerados de uma fonte de dados online e transmitidos para um documento ou aplicativo de destino. Se você está usando o PowerPivot para Excel, os feeds de dados podem ajudá-lo a obter dados corporativos ou de negócios existentes de fontes de dados arbitrárias dentro da janela do PowerPivot na pasta de trabalho do Excel 2010. Depois de importar um feed de dados para uma pasta de trabalho, você poderá referenciá-lo posteriormente em qualquer operação de atualização de dados agendada em um servidor do SharePoint.  
   
  A maneira como você usa um feed de dados depende de você estar usando recursos de exportação internos em aplicativos que dão suporte a feeds de dados Atom ou estar criando e usando serviços de dados personalizados. Aplicativos que podem publicar e ler dados XML do Atom fornecem transferência de dados transparente que oculta as mecânicas dos feeds de dados e serviços de dados de usuários. Para um usuário, os dados são simplesmente movidos de um aplicativo para outro.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o Microsoft SharePoint 2010 fornecem feeds de dados que podem ser usados em pastas de trabalho PowerPivot. Você pode usar as informações deste tópico para aprender como acessar feeds de dados de relatórios e listas já existentes.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e o Microsoft SharePoint 2010 fornecem feeds de dados que podem ser usados em pastas de trabalho PowerPivot. Você pode usar as informações deste tópico para aprender como acessar feeds de dados de relatórios e listas já existentes.  
   
  Este tópico contém as seguintes seções:  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66070912"
 ##  <a name="prerequisites"></a><a name="prereq"></a> Pré-requisitos  
  Você deve ter o PowerPivot para Excel para importar um feed de dados para o Excel 2010.  
   
- Você deve ter um serviço Web ou um serviço de dados que forneça dados no formato Atom 1.0. Tanto [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o quanto o SharePoint 2010 podem fornecer dados nesse formato.  
+ Você deve ter um serviço Web ou um serviço de dados que forneça dados no formato Atom 1.0. Tanto o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] quanto o SharePoint 2010 podem fornecer dados nesse formato.  
   
  Antes de exportar uma lista do SharePoint como um feed de dados, você deve instalar os ADO.NET Data Services no servidor do SharePoint. Para obter mais informações, consulte [Instalar o ADO.NET Data Services para dar suporte a exportações do feed da dodos das listas do SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66070912"
   
     1.  A**URL base** é opcional. Você deve especificar isto se um documento de serviço de dados fornecer vários feeds. A URL base deve especificar a parte da URL que é comum a todos os feeds (por exemplo, o nome do servidor e o site). Se você estiver criando um documento de serviço de dados para um relatório do Reporting Services, a URL de base será a URL do servidor de relatório e o relatório.  
   
-    2.  A**URL do Serviço Web** é obrigatória. Sem a URL base, este valor deve incluir http:// ou https:// no endereço. Se você especificou uma URL base, a URL de serviço Web é a parte que segue a URL base. Por exemplo, se a URL completa for http://adventure-works/inventory/today.aspx, a URL base será http://adventure-works/inventory, e a URL do serviço Web seria/Today.aspx.  
+    2.  A**URL do Serviço Web** é obrigatória. Sem a URL base, este valor deve incluir http:// ou https:// no endereço. Se você especificou uma URL base, a URL de serviço Web é a parte que segue a URL base. Por exemplo, se a URL completa for http://adventure-works/inventory/today.aspx , a URL base será http://adventure-works/inventory , e a URL do serviço Web seria/Today.aspx.  
   
          A URL de serviço Web pode incluir parâmetros que filtram ou selecionam um subconjunto de dados. O aplicativo ou serviço que fornecem o feed devem oferecer suporte a parâmetros que você especifica na URL.  
   

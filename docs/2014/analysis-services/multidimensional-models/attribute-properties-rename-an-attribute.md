@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4094f0a7-2fde-407c-9b36-c8b30537c2da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dee8b07c942a76601da81ae227b5cd34d9ed32ec
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077219"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544718"
 ---
 # <a name="rename-an-attribute"></a>Renomear um atributo
   O nome de um atributo no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é definido pela sua propriedade **Name** . Para renomear um atributo, clique nele com o botão direito do mouse no painel **Atributos** da guia **Estrutura da Dimensão** do Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e clique em **Renomear**. Se o painel **Atributos** estiver em exibição de grade, clique no nome do atributo e o edite diretamente na grade. Você também pode selecionar um atributo e configurar a propriedade **Name** na janela **Propriedades** .  

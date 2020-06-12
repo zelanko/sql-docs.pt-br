@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 491a863031af677a719db97503ce8aac57686fb6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075032"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546708"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Conceder permissões de cubo ou modelo (Analysis Services)
   Um cubo ou modelo de tabela é o objeto de consulta principal em um modelo de dados do Analysis Services. Ao se conectarem a dados multidimensionais ou de tabela do Excel para exploração de dados ad hoc, normalmente os usuários começam ao selecionar um cubo ou modelo de tabela específico como a estrutura de dados por trás do objeto de relatório dinâmico. Este tópico explica como conceder as permissões necessárias para acesso de dados de cubo ou de tabela.  
@@ -58,7 +57,7 @@ ms.locfileid: "66075032"
   
 #### <a name="step-3-set-cube-permissions"></a>Etapa 3: Definir as permissões do cubo  
   
-1.  No painel **cubos** , selecione um cubo e, em seguida `Read` , clique em acesso de **leitura/gravação** .  
+1.  No painel **cubos** , selecione um cubo e, em seguida, clique em `Read` acesso de **leitura/gravação** .  
   
      `Read`o acesso é suficiente para a maioria das operações. **Leitura/Gravação** é usado apenas para cenários de write-back, e não de processamento. Consulte [Set Partition Writeback](set-partition-writeback.md) para obter mais informações sobre esse recurso.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66075032"
   
 2.  No SSMS, navegue até a pasta **Funções** e clique com o botão direito do mouse em uma função existente.  
   
-3.  Selecione **função de script como** | **criar no** | **arquivo**.  
+3.  Selecione **função de script como**  |  **criar no**  |  **arquivo**.  
   
 4.  Salve o arquivo com uma extensão .xmla. Para testar o script, exclua a função atual, abra o arquivo no SSMS e pressione F5 para executar o script.  
   

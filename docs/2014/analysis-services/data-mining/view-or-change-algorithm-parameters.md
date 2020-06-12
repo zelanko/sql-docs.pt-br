@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd144d3adba59fd179ab756f95223ea5e0e2968c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082686"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520223"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>Exibir ou alterar parâmetros do algoritmo
   Você pode alterar os parâmetros fornecidos com os algoritmos usados para criar modelos de mineração de dados para personalizar os resultados do modelo.  
   
- Os parâmetros de algoritmo fornecidos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na alteração é muito mais do que apenas propriedades no modelo: eles podem ser usados para alterar fundamentalmente a forma como os dados são processados, agrupados e exibidos. Por exemplo, você pode usar parâmetros de algoritmo para fazer o seguinte:  
+ Os parâmetros de algoritmo fornecidos na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alteração é muito mais do que apenas propriedades no modelo: eles podem ser usados para alterar fundamentalmente a forma como os dados são processados, agrupados e exibidos. Por exemplo, você pode usar parâmetros de algoritmo para fazer o seguinte:  
   
 -   Alterar o método de análise, como o método de clustering.  
   

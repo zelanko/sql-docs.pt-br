@@ -1,5 +1,6 @@
 ---
 title: Etapa especificando o eixo em uma expressão de caminho | Microsoft Docs
+description: Saiba como especificar uma etapa de eixo em uma expressão de caminho XQuery.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946488"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215754"
 ---
 # <a name="path-expressions---specifying-axis"></a>Expressões de Caminho – Especificar Eixo
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "67946488"
   
  A implementação XQuery no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oferece suporte às seguintes etapas de eixo:  
   
-|Axis|Descrição|  
+|Axis|Description|  
 |----------|-----------------|  
 |**child**|Retorna os filhos do nó de contexto.|  
 |**descendant**|Retorna todos os descendentes do nó de contexto.|  
@@ -52,15 +53,15 @@ ms.locfileid: "67946488"
 |**auto-restauração**|Retorna o próprio nó de contexto.|  
 |**descendant-or-self**|Retorna o nó de contexto e todos os descendentes do nó de contexto.|  
   
- Todos esses eixos, exceto o eixo **pai** , são eixos de encaminhamento. O eixo **pai** é um eixo reverso, pois ele pesquisa retroativamente na hierarquia do documento. Por exemplo, a expressão do caminho relativo `child::ProductDescription/child::Summary` tem duas etapas, e cada etapa especifica um eixo `child`. A primeira etapa recupera os \<filhos do elemento ProductDescription> do nó de contexto. Para cada \<nó de elemento de> de ProductDescription, a segunda \<etapa recupera o resumo> nó filho de elemento.  
+ Todos esses eixos, exceto o eixo **pai** , são eixos de encaminhamento. O eixo **pai** é um eixo reverso, pois ele pesquisa retroativamente na hierarquia do documento. Por exemplo, a expressão do caminho relativo `child::ProductDescription/child::Summary` tem duas etapas, e cada etapa especifica um eixo `child`. A primeira etapa recupera os \<ProductDescription> filhos do elemento do nó de contexto. Para cada \<ProductDescription> nó de elemento, a segunda etapa recupera os \<Summary> filhos do nó do elemento.  
   
- A expressão de caminho relativo, `child::root/child::Location/attribute::LocationID`, tem três etapas. As primeiras duas etapas especificam um eixo `child` e a terceira etapa especifica o eixo `attribute`. Quando executado em relação aos documentos XML de instruções de fabricação na tabela **Production. ProductModel** , a expressão `LocationID` retorna o atributo \<do local> nó filho do elemento \<de> raiz.  
+ A expressão de caminho relativo, `child::root/child::Location/attribute::LocationID`, tem três etapas. As primeiras duas etapas especificam um eixo `child` e a terceira etapa especifica o eixo `attribute`. Quando executado em relação aos documentos XML de instruções de fabricação na tabela **Production. ProductModel** , a expressão retorna o `LocationID` atributo do \<Location> filho do nó do elemento \<root> .  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos de consulta neste tópico são especificados em relação às colunas do tipo **XML** no banco de dados **AdventureWorks** .  
   
 ### <a name="a-specifying-a-child-axis"></a>A. Especificando um eixo filho  
- Para um modelo de produto específico, a consulta a seguir \<recupera os recursos> nó de elemento \<filho do nó do elemento ProductDescription> da descrição do catálogo de `Production.ProductModel` produtos armazenada na tabela.  
+ Para um modelo de produto específico, a consulta a seguir recupera o \<Features> nó de elemento filho do \<ProductDescription> nó do elemento da descrição do catálogo de produtos armazenada na `Production.ProductModel` tabela.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -108,11 +109,11 @@ select @y
   
  Nesta expressão, se você especificar um eixo descendente para a expressão de caminho,  
   
- `/child::a/child::b/descendant::*`, você está solicitando todos os descendentes do nó `b` de elemento <>.  
+ `/child::a/child::b/descendant::*`, você está solicitando todos os descendentes do `b` nó de elemento <>.  
   
  O asterisco (*) no teste de nó representa o nome do nó como um teste de nó. Dessa forma, o tipo de nó primário do eixo descendente, o nó do elemento, determina os tipos de nós retornados. Ou seja, a expressão retorna todos os nós do elemento. Não são retornados nós de texto. Para obter mais informações sobre o tipo de nó primário e sua relação com o teste de nó, consulte [especificando o teste de nó em um](../xquery/path-expressions-specifying-node-test.md) tópico de expressão de caminho.  
   
- Os nós de elemento `c` <> e `d` <> são retornados, conforme mostrado no seguinte resultado:  
+ Os nós de elemento <`c`> e <`d`> são retornados, conforme mostrado no seguinte resultado:  
   
 ```  
 <c>text2  
@@ -121,7 +122,7 @@ select @y
 <d>text3</d>  
 ```  
   
- Se você especificar um eixo descendente ou próprio em vez do eixo descendente, `/child::a/child::b/descendant-or-self::*` o retornará o nó de contexto, o elemento `b` <> e seu descendente.  
+ Se você especificar um eixo descendente ou próprio em vez do eixo descendente, `/child::a/child::b/descendant-or-self::*` o retornará o nó de contexto, o elemento <`b`> e seu descendente.  
   
  Este é o resultado:  
   
@@ -139,7 +140,7 @@ select @y
 <d>text3</d>   
 ```  
   
- O exemplo de consulta a seguir no banco de dados **AdventureWorks** recupera todos os nós de elemento `Features` descendentes do <elemento> `ProductDescription` filho do elemento <>:  
+ O exemplo de consulta a seguir no banco de dados **AdventureWorks** recupera todos os nós de elemento descendentes do <elemento `Features`> filho do `ProductDescription` elemento <>:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -151,9 +152,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. Especificando um eixo pai  
- A consulta a seguir retorna o `Summary` <> filho do elemento <`ProductDescription`> no documento XML do catálogo de produtos armazenado na `Production.ProductModel` tabela.  
+ A consulta a seguir retorna o <`Summary`> filho do elemento <`ProductDescription`> no documento XML do catálogo de produtos armazenado na `Production.ProductModel` tabela.  
   
- Este exemplo usa o eixo pai para retornar ao pai do elemento <`Feature`> e recuperar o <`Summary` elemento> filho do `ProductDescription` elemento <>.  
+ Este exemplo usa o eixo pai para retornar ao pai do `Feature` elemento <> e recuperar o <`Summary` elemento> filho do elemento <> `ProductDescription` .  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -174,7 +175,7 @@ WHERE  ProductModelID=19
   
  Um exemplo mais útil do eixo pai é fornecido no exemplo a seguir.  
   
- Cada descrição do catálogo de modelos de produto armazenada na coluna **CatalogDescription** da tabela **ProductModel** tem um `<ProductDescription>` elemento que `ProductModelID` tem o `<Features>` atributo e o elemento filho, conforme mostrado no fragmento a seguir:  
+ Cada descrição do catálogo de modelos de produto armazenada na coluna **CatalogDescription** da tabela **ProductModel** tem um `<ProductDescription>` elemento que tem o `ProductModelID` atributo e o `<Features>` elemento filho, conforme mostrado no fragmento a seguir:  
   
 ```  
 <ProductDescription ProductModelID="..." >  
@@ -193,7 +194,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- Para adicionar o `ProductModelID` elemento para `<Feature` cada>, o `parent` eixo é especificado:  
+ Para adicionar o `ProductModelID` elemento para cada `<Feature`>, o `parent` eixo é especificado:  
   
 ```  
 SELECT CatalogDescription.query('  

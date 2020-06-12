@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16ebdd2ac874784c071fea7aa962d005436aac60
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0500cca6b59ce1510d274dc0a8336ee2ac1db394
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820860"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859780"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Retorna as informações sobre todas as esperas de trava organizadas por classe.
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|Nome da classe da trava.|  
+|latch_class|**nvarchar(60)**|Nome da classe da trava.|  
 |waiting_requests_count|**bigint**|Número de esperas em travas nessa classe. O contador é incrementado no início de uma espera de trava.|  
 |wait_time_ms|**bigint**|Tempo de espera total, em milissegundos, nas travas dessa classe.<br /><br /> **Observação:** Essa coluna é atualizada a cada cinco minutos durante uma espera de trava e no final de uma espera de trava.|  
 |max_wait_time_ms|**bigint**|Tempo máximo durante qual um objeto de memória esperou essa trava. Se o valor for exageradamente alto, pode indicar um deadlock interno.|  
@@ -72,7 +72,7 @@ GO
   
  A tabela a seguir contém breves descrições das diversas classes de trava.  
   
-|Classe de trava|Descrição|  
+|Classe de trava|Description|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Usada internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para inicializar a sincronização da criação de um buffer de anel de alocação.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Usada para inicializar a sincronização de caches internos de espaço livre para heaps.|  

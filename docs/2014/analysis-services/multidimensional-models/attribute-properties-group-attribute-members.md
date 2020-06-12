@@ -21,20 +21,19 @@ helpviewer_keywords:
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e2c52ec93b46418b82b681fbacc1d31338a0d88
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077272"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544775"
 ---
 # <a name="group-attribute-members-discretization"></a>Agrupar membros de atributo (diferenciação)
-  Um grupo de membros é uma coleção gerada pelo sistema de membros da dimensão consecutivos. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os membros de um atributo podem ser agrupados em vários grupos de membros por meio de um processo chamado discretização. Um nível em uma hierarquia contém grupos de membro ou membros, mas não ambos. Quando os usuários da empresa procuram um nível que contém grupos de membros, eles veem nomes e valores de célula dos grupos de membros. Os membros gerados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte aos grupos de membros são chamados membros do agrupamento e são similares aos membros comuns.  
+  Um grupo de membros é uma coleção gerada pelo sistema de membros da dimensão consecutivos. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , os membros de um atributo podem ser agrupados em vários grupos de membros por meio de um processo chamado discretização. Um nível em uma hierarquia contém grupos de membro ou membros, mas não ambos. Quando os usuários da empresa procuram um nível que contém grupos de membros, eles veem nomes e valores de célula dos grupos de membros. Os membros gerados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte aos grupos de membros são chamados membros do agrupamento e são similares aos membros comuns.  
   
  A propriedade `DiscretizationMethod` de um atributo controla como os membros são agrupados.  
   
-|Configuração `DiscretizationMethod`|Descrição|  
+|Configuração `DiscretizationMethod`|Description|  
 |--------------------------------------|-----------------|  
 |`None`|Exibe os membros.|  
 |`Automatic`|Seleciona o método que melhor representa os dados: o método `EqualAreas` ou o método `Clusters`.|  

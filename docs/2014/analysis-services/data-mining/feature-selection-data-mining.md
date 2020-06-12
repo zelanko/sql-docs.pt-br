@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02eb89db44e08daf7de5d89a932a097df277b961
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084422"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522468"
 ---
 # <a name="feature-selection-data-mining"></a>Seleção de recursos (mineração de dados)
   A *seleção de recursos* é um termo normalmente usado em Data Mining para descrever as ferramentas e as técnicas disponíveis para reduzir as entradas para um tamanho gerenciável para processamento e análise. A seleção de recursos implica não apenas *redução de cardinalidade*, o que significa a imposição de um corte arbitrário ou predefinido no número de atributos que podem ser considerados ao criar um modelo, mas também à escolha de atributos, o que significa que o analista ou a ferramenta de modelagem seleciona ou descarta os atributos de forma ativa com base em sua utilidade para análise.  

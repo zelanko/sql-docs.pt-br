@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a31ed2e8e79e6f3ebf6cbecfeac14d24b56bf303
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081269"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528332"
 ---
 # <a name="exploring-and-cleaning-data"></a>Explorando e limpando dados
   A preparação dos dados é muito mais do que limpeza de dados. Lembre-se de que o modo como os dados são preparados também afeta como os resultados são interpretados no final. A preparação dos dados envolve as seguintes tarefas:  

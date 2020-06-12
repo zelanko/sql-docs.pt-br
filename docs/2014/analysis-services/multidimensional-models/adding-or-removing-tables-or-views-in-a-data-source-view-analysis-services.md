@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: da7169cc95b768324e18f1ab5fd7b0a33615f99a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da1bc2b1ac0af7576cfe3c3593b451f78d6a9fae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077460"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544848"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>Adicionando ou removendo tabelas ou exibições em uma exibição da fonte de dados (Analysis Services)
   Depois de criar uma DSV (exibição da fonte de dados) no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode modificá-lo no Designer da Exibição da Fonte de Dados adicionando ou removendo tabelas e colunas, inclusive tabelas e colunas de outra fonte de dados.  
@@ -39,7 +38,7 @@ ms.locfileid: "66077460"
   
  Quando você adiciona ou remove uma tabela da DSV, também adiciona ou remove essa tabela do diagrama selecionado na DSV. Para obter mais informações sobre diagramas, consulte [Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md).  
   
- Depois de mover uma tabela para a lista **Objetos incluídos** na caixa de diálogo **Adicionar/Remover Tabelas** , você pode adicionar todas as tabelas relacionadas. Essa operação adiciona as tabelas de acordo com as restrições de chave estrangeira da fonte de dados, se existir alguma. Se não existirem restrições de chave estrangeira, use a propriedade `NameMatchingCriteria` da exibição da fonte de dados para determinar as relações especificando um critério para a correspondência dos nomes de colunas das tabelas para gerar relações similares. Se a `NameMatchingCriteria`propriedade for especificada para a exibição da fonte de dados, clique em **adicionar tabelas relacionadas** para adicionar tabelas da fonte de dados que têm nomes de coluna correspondentes. Para obter mais informações sobre como `NameMatchingCriteria` definir a propriedade, consulte [exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md).  
+ Depois de mover uma tabela para a lista **Objetos incluídos** na caixa de diálogo **Adicionar/Remover Tabelas** , você pode adicionar todas as tabelas relacionadas. Essa operação adiciona as tabelas de acordo com as restrições de chave estrangeira da fonte de dados, se existir alguma. Se não existirem restrições de chave estrangeira, use a propriedade `NameMatchingCriteria` da exibição da fonte de dados para determinar as relações especificando um critério para a correspondência dos nomes de colunas das tabelas para gerar relações similares. Se a `NameMatchingCriteria` propriedade for especificada para a exibição da fonte de dados, clique em **adicionar tabelas relacionadas** para adicionar tabelas da fonte de dados que têm nomes de coluna correspondentes. Para obter mais informações sobre como definir a `NameMatchingCriteria` propriedade, consulte [exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md).  
   
 > [!NOTE]  
 >  Adicionar objetos a uma exibição da fonte de dados ou removê-los dela não afeta a fonte de dados subjacente.  

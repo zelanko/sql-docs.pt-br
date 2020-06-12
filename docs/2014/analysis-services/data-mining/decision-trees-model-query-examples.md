@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a6b158a42c9ca90bf2cfd2e9b981a1e2a735ccc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084763"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522705"
 ---
 # <a name="decision-trees-model-query-examples"></a>Exemplos de consulta de modelo de árvores de decisão
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de árvores de decisão pode fornecer estatísticas sobre o número de casos de cada nível da árvore ou as regras que diferenciam os casos. Como alternativa, uma consulta de previsão mapeia o modelo para novos dados para gerar recomendações, classificações e assim sucessivamente. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
@@ -79,7 +78,7 @@ WHERE NODE_TYPE = 2
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
-|TM_DecisionTree|000000001|Todos|12939|5|  
+|TM_DecisionTree|000000001|Tudo|12939|5|  
   
  O que esses resultados significam para você? Em um modelo de árvores de decisão, a cardinalidade de um nó específico indica quantos filhos imediatos aquele nó contém. A cardinalidade desse nó é 5, o que indica que o modelo dividiu a população alvo de consumidores de bicicleta em 5 subgrupos.  
   
@@ -107,7 +106,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Número de Carros = 3|Bike Buyer|0|678|  
 |00000000101|Número de Carros = 3|Bike Buyer|1|473|  
   
- A partir desses resultados, você pode dizer que os clientes que compraram uma bicicleta`[Bike Buyer]` (= 1), 1067 clientes tinham 0 carros e 473 clientes tinham 3 carros.  
+ A partir desses resultados, você pode dizer que os clientes que compraram uma bicicleta ( `[Bike Buyer]` = 1), 1067 clientes tinham 0 carros e 473 clientes tinham 3 carros.  
   
 ###  <a name="sample-query-3-retrieving-subtrees-from-the-model"></a><a name="bkmk_Query3"></a> Exemplo de consulta 3: recuperando subárvores do modelo  
  Suponha que você queira saber mais sobre os clientes que compraram uma bicicleta. É possível exibir detalhes adicionais para qualquer subárvore usando a função [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) na consulta, como mostra o exemplo a seguir. A consulta retorna o cálculo dos compradores de bicicletas recuperando os nós folha (NODE_TYPE = 4) da árvore que contém os clientes acima de 42 anos de idade. A consulta restringe linhas da tabela aninhada para aquelas onde Comprador de Bicicleta = 1.  

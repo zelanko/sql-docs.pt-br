@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c5e1d6b92dce1a1be42ae1bc30ae3a3d5e48d59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064396"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527842"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use este painel para gerenciar os atributos associados com a dimensão selecionada. Podem ser arrastados atributos deste painel para o painel **Hierarquias** para criar hierarquias e níveis. Para obter mais informações, consulte [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -52,7 +51,7 @@ ms.locfileid: "66064396"
  **Nome**  
  Exibe o nome do atributo.  
   
- **Uso**  
+ **Usage**  
  Define o uso do atributo selecionado. Clique na seta para baixo para selecionar entre as seguintes possibilidades:  
   
 |Valor|Descrição|  

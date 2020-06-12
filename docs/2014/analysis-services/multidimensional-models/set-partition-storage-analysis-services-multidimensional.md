@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f921fc106adb88bcf2f9b9e863165153981f904
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072985"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545638"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Definir armazenamento de partição (Analysis Services – Multidimensional)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece várias configurações de armazenamento padrão para modos de armazenamento e opções de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cache. São configurações usadas normalmente para notificação de atualizações, latência e recriação de dados.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece várias configurações de armazenamento padrão para modos de armazenamento e opções de cache. São configurações usadas normalmente para notificação de atualizações, latência e recriação de dados.  
   
  Você pode especificar o armazenamento da partição na guia Partições do cubo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou na página de propriedades da partição no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66072985"
   
 ## <a name="storage-settings-descriptions"></a>Descrição das configurações de armazenamento  
   
-|Configuração de armazenamento padrão|Descrição|  
+|Configuração de armazenamento padrão|Description|  
 |------------------------------|-----------------|  
 |ROLAP em tempo real|O OLAP é em tempo real. Os dados de detalhe e as agregações são armazenados em formato relacional. O servidor escuta as notificações quando os dados são alterados e todas as consultas refletem o estado atual dos dados (latência zero).<br /><br /> Essa configuração normalmente seria usada para uma fonte de dados com atualizações muito frequentes e contínuas, quando os dados mais recentes sempre são solicitados pelos usuários. Dependendo dos tipos de consulta gerados pelos aplicativos cliente, esse método fornece os tempos de resposta mais lentos.|  
 |HOLAP em tempo real|O OLAP é em tempo real. Os dados de detalhe são armazenados em um formato relacional, enquanto as agregações são armazenadas em um formato multidimensional. O servidor escuta as notificações quando os dados são alterados e atualiza as agregações OLAP multidimensionais (MOLAP) conforme necessário. Nenhum cache MOLAP é criado. Sempre que a fonte de dados é atualizada, o servidor passa para o OLAP relacional (ROLAP) em tempo real até que as agregações sejam atualizadas. Todas as consultas refletem o estado atual dos dados (latência zero).<br /><br /> Essa configuração normalmente seria usada para uma fonte de dados com atualizações frequentes e contínuas (mas não tão frequentes quanto o ROLAP em tempo real) e os usuários sempre solicitam os dados mais recentes. Esse método normalmente fornece um melhor desempenho geral do que o armazenamento ROLAP. Os usuários podem obter o desempenho MOLAP a partir dessa configuração se a fonte de dados permanecer silenciosa por um período longo o suficiente.|  

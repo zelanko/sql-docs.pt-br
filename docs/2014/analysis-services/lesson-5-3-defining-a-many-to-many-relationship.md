@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b0b1d50095584a86074ebe1fb7eac9b7de98256
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175285"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542848"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definindo uma relação muitos para muitos
   Ao definir uma dimensão, cada fato normalmente se une a somente um membro de dimensão, apesar de um único membro de dimensão poder ser associado a vários fatos diferentes. Por exemplo, cada cliente pode ter muitos pedidos, mas cada pedido pertence a somente um cliente. Na terminologia do banco de dados relacional, isso é chamado de *relação um-para-muitos*. Porém, algumas vezes, um único fato pode se unir a vários membros de dimensão. Na terminologia de banco de dados relacional, isso é chamado de *relação muitos-para-muitos*. Por exemplo, um cliente tem vários motivos para efetuar uma compra, e um motivo de compra pode ser associado a várias compras. Uma tabela de junção é usada para definir os motivos de vendas relacionados a cada compra. Uma dimensão Motivo de Vendas formada por tais relações pode ter, então, vários membros relacionados a uma única transação de vendas. As dimensões muitos para muitos expandem o modelo dimensional além do esquema em estrela clássico e oferecem suporte a análises complexas quando as dimensões não estão relacionadas diretamente a uma tabela de fatos.
@@ -47,7 +46,7 @@ ms.locfileid: "78175285"
 
 6.  No menu **Formatar** , aponte para **Layout Automático**e, em seguida, clique em **Diagrama**.
 
-7.  No janela Propriedades, altere a propriedade **FriendlyName** da tabela **DimSalesReason** para `SalesReason`e altere a propriedade **FriendlyName** da tabela **FactInternetSalesReason** para `InternetSalesReason`.
+7.  No janela Propriedades, altere a propriedade **FriendlyName** da tabela **DimSalesReason** para `SalesReason` e altere a propriedade **FriendlyName** da tabela **FactInternetSalesReason** para `InternetSalesReason` .
 
 8.  No painel **Tabelas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)**, clique em **SalesOrderNumber**e examine a propriedade **DataType** desta coluna de dados na janela Propriedades.
 
@@ -69,7 +68,7 @@ ms.locfileid: "78175285"
 
 2.  Clique com o botão direito do mouse em qualquer lugar do painel **Medidas** e clique em **Novo Grupo de Medidas**. Para obter mais informações, consulte [Criar medidas e grupos de medidas em modelos multidimensionais](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).
 
-3.  Na caixa de diálogo **novo grupo de medidas** , `InternetSalesReason` selecione na lista **selecionar uma tabela na exibição da fonte de dados** e clique em **OK**.
+3.  Na caixa de diálogo **novo grupo de medidas** , selecione `InternetSalesReason` na lista **selecionar uma tabela na exibição da fonte de dados** e clique em **OK**.
 
      Observe que o grupo de medidas **Motivo de Vendas pela Internet** agora é exibido no painel **Medidas** .
 
@@ -99,15 +98,15 @@ ms.locfileid: "78175285"
 
 4.  Na página **Especificar Informações sobre a Origem** , verifique se a exibição da fonte de dados do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 está selecionada.
 
-5.  Na lista **tabela principal** , selecione `SalesReason`.
+5.  Na lista **tabela principal** , selecione `SalesReason` .
 
 6.  Na lista **Colunas de chave** , verifique se **SalesReasonKey** está listado.
 
 7.  Na lista **Coluna de nome** , selecione **SalesReasonName**.
 
-8.  Clique em **Avançar**.
+8.  Clique em **Próximo**.
 
-9. Na página **Selecionar Atributos de Dimensão** , o atributo **Chave do Motivo de Vendas** é selecionado automaticamente, pois se trata de um atributo de chave. Marque a caixa de seleção ao lado do atributo **tipo de motivo de motivo** de vendas `Sales Reason Type`, altere seu nome para e clique em **Avançar**.
+9. Na página **Selecionar Atributos de Dimensão** , o atributo **Chave do Motivo de Vendas** é selecionado automaticamente, pois se trata de um atributo de chave. Marque a caixa de seleção ao lado do atributo **tipo de motivo de motivo de vendas** , altere seu nome para `Sales Reason Type` e clique em **Avançar**.
 
 10. Na página **Concluindo o Assistente** , clique em **Concluir** para criar a dimensão Motivo de Vendas.
 
@@ -115,7 +114,7 @@ ms.locfileid: "78175285"
 
 12. No painel **atributos** do designer de dimensão da dimensão **motivo de vendas** , selecione chave de **motivo de vendas**e altere a propriedade **nome** no janela Propriedades para`Sales Reason.`
 
-13. No painel **hierarquias** do designer de dimensão, crie uma hierarquia de usuário **motivos de vendas** que contém `Sales Reason Type` o nível e o nível de **motivo de vendas** , nessa ordem.
+13. No painel **hierarquias** do designer de dimensão, crie uma hierarquia de usuário **motivos de vendas** que contém o nível `Sales Reason Type` e o nível de **motivo de vendas** , nessa ordem.
 
 14. No janela Propriedades, defina `All Sales Reasons` como o valor para a propriedade de todos os **Membros** da hierarquia motivos de vendas.
 
@@ -161,7 +160,7 @@ ms.locfileid: "78175285"
 
 5.  No painel de metadados, expanda **Cliente**, **Local**, **Geografia do Cliente**, **Membros**, **Todos os Clientes**, **Austrália**, clique com o botão direito do mouse em **Queensland**e, por fim, clique em **Adicionar ao Filtro**.
 
-6.  Expanda cada membro do `Sales Reason Type` nível para revisar os valores de dólar associados a cada motivo pelo qual um cliente do Queensland deu sua compra [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] de um produto pela Internet.
+6.  Expanda cada membro do `Sales Reason Type` nível para revisar os valores de dólar associados a cada motivo pelo qual um cliente do Queensland deu sua compra de um [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] produto pela Internet.
 
      Observe que os totais associados a cada motivo de vendas são maiores do que as vendas totais. Isso acontece porque alguns clientes citaram vários motivos para suas compras.
 

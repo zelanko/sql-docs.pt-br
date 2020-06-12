@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62701995"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544938"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gerenciando conexões e sessões (XMLA)
   A *monitoração* é uma condição durante a qual o servidor preserva a identidade e o contexto de um cliente entre chamadas de método. *Sem estado* é uma condição durante a qual o servidor não se lembra da identidade e do contexto de um cliente após a conclusão de uma chamada de método.  
@@ -41,11 +40,11 @@ ms.locfileid: "62701995"
   
  A especificação do protocolo SOAP do W3C (World Wide Web Consortium) recomenda a utilização de cabeçalhos SOAP para a criação de novos protocolos sobre mensagens SOAP. A tabela a seguir lista os elementos e os atributos de cabeçalho SOAP definidos pelo XMLA para iniciar, manter e fechar uma sessão.  
   
-|Cabeçalho SOAP|Descrição|  
+|Cabeçalho SOAP|Description|  
 |-----------------|-----------------|  
 |BeginSession|Este cabeçalho solicita que o provedor crie uma sessão nova. O provedor deve responder criando uma sessão nova e retornando a ID de sessão como parte do cabeçalho Session na resposta SOAP.|  
 |SessionId|A área de valor contém a ID de sessão que deve ser usada em cada chamada de método para o resto da sessão. O provedor na resposta de SOAP envia esta marca e o cliente também deve enviar este atributo com cada elemento do cabeçalho Session.|  
-|Session|Para cada chamada de método ocorrida na sessão, este cabeçalho deverá ser usado e a ID de sessão deverá ser incluída na área de valor do cabeçalho.|  
+|Sessão|Para cada chamada de método ocorrida na sessão, este cabeçalho deverá ser usado e a ID de sessão deverá ser incluída na área de valor do cabeçalho.|  
 |EndSession|Para finalizar a sessão, use este cabeçalho. A ID de sessão deve ser incluída com a área de valor.|  
   
 > [!NOTE]  
@@ -72,7 +71,7 @@ ms.locfileid: "62701995"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  A mensagem de resposta SOAP do provedor inclui a ID de sessão na área de cabeçalho de retorno, usando a marca \<de cabeçalho XMLA> SessionID.  
+2.  A mensagem de resposta SOAP do provedor inclui a ID de sessão na área de cabeçalho de retorno, usando a marca de cabeçalho XMLA \<SessionId> .  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701995"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Quando a sessão for concluída, a \<marca de> de EndSession será usada, contendo o valor de ID de sessão relacionado.  
+4.  Quando a sessão for concluída, a \<EndSession> marca será usada, contendo o valor de ID de sessão relacionado.  
   
     ```  
     <SOAP-ENV:Header>  

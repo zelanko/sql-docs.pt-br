@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 620eb875dfb4b3e7594000777feb23993d9e129e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493855"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528302"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Especificando relações de atributo entre atributos em uma hierarquia definida pelo usuário
   Como você já aprendeu neste tutorial, é possível organizar as hierarquias de atributo em níveis dentro das hierarquias de usuário para fornecer caminhos de navegação aos usuários em um cubo. Uma hierarquia de usuário pode representar uma hierarquia natural, como cidade, estado e país, ou um caminho de navegação, como nome do funcionário, cargo e nome do departamento. Para o usuário que navega pela hierarquia, esses dois tipos de hierarquias de usuário são os mesmos.  
@@ -42,7 +41,7 @@ ms.locfileid: "69493855"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Um ícone de advertência aparece no diagrama porque a relação é redundante. A relação **nome** -> **completo geografia**-> **código postal** já existia e você acabou de criar o **nome** -> completo da relação**CEP.** O**código postal** de **geografia**-> de relação agora é redundante, portanto, vamos removê-lo.  
+     Um ícone de advertência aparece no diagrama porque a relação é redundante. A relação **nome completo**  ->  **geografia** ->  **código postal** já existia e você acabou de criar o **nome completo**da relação CEP  ->  **Postal Code**. O **Geography** ->  **código postal** de Geografia de relação agora é redundante, portanto, vamos removê-lo.  
   
 6.  No painel **Relações de Atributo** , clique com o botão direito do mouse em **Geografia**-> **CEP** e clique em **Excluir**.  
   
@@ -54,9 +53,9 @@ ms.locfileid: "69493855"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     A**cidade** de **geografia**-> da relação agora é redundante, portanto, vamos excluí-la.  
+     A cidade de **geografia**da relação ->  **City** agora é redundante, portanto, vamos excluí-la.  
   
-11. No painel relações de atributo, clique com o botão direito do mouse em**cidade** de **geografia**-> e clique em **excluir**.  
+11. No painel relações de atributo, clique com o botão direito do mouse em cidade de **geografia** ->  **City** e clique em **excluir**.  
   
 12. Quando a caixa de diálogo **Excluir Objetos** for exibida, clique em **OK**.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "69493855"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. No painel relações de atributo, clique com o botão direito do mouse em **geografia**-> **país-região** e clique em **excluir**.  
+21. No painel relações de atributo, clique com o botão direito do mouse em **geografia** ->  **país-região** e clique em **excluir**.  
   
 22. Quando a caixa de diálogo **Excluir Objetos** for exibida, clique em **OK**.  
   

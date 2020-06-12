@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41c7501b85776fbba61ab9fd8159ac5ce25a0fa7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074778"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546598"
 ---
 # <a name="linked-measure-groups"></a>Grupos de medidas vinculados
   Um grupo de medidas vinculado se baseia em outro grupo de medidas em um cubo diferente no mesmo banco de dados ou em um banco de dados diferente do Analysis Services. Você poderá usar um grupo de medidas vinculado se quiser reutilizar um conjunto de medidas, e os valores de dados correspondentes, em vários cubos.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1a2952c54974d924fdeca23d3173a690579d2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080648"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544238"
 ---
 # <a name="impersonation-information"></a>Informações sobre representação
   Use a página **Informações sobre Representação** para especificar as credenciais que o Analysis Services usará para se conectar à fonte de dados.  
@@ -27,7 +26,7 @@ ms.locfileid: "66080648"
  **Nome de usuário**  
  Digite o domínio e o nome da conta de usuário a serem usados pelo objeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] selecionado. Use o seguinte formato:  
   
- Nome de **\\** domínio>* \<nome da conta de usuário>* * \<*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  Essa opção estará habilitada apenas se a opção **Usar um nome e uma senha específicos** estiver selecionada.  
   

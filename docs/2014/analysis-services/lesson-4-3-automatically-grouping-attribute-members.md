@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 887e3b8c57d0aaf13cc88dea944cf8b74e78266a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175335"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543388"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupando membros de atributo automaticamente
   Ao navegar em um cubo, você normalmente dimensiona os membros de uma hierarquia de atributo pelos membros de outra hierarquia de atributo. Por exemplo, você pode agrupar as vendas de cliente por cidade, produto comprado ou sexo. No entanto, com determinados tipos de atributos, é útil [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] criar automaticamente agrupamentos de membros de atributo com base na distribuição dos membros em uma hierarquia de atributo. Por exemplo, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode criar grupos de valores de renda anual para clientes. Ao fazer isso, os usuários que navegarem pela hierarquia de atributo verão o nome e os valores dos grupos em vez dos próprios membros. Isso limita o número de níveis que são apresentados aos usuários, o que pode ser mais útil para a análise.
@@ -24,7 +23,7 @@ ms.locfileid: "78175335"
 
  **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria intervalos de grupo de forma que a população total de membros da dimensão seja distribuída igualmente pelos grupos.
 
- Os **clusters** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] criam grupos executando um clustering unidimensional nos valores de entrada usando o método de clustering K-means com distribuições gaussianas. Essa opção só é válida para colunas numéricas.
+ **Clusters** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria grupos executando clustering unidimensional nos valores de entrada usando o método de clustering K-means com distribuições gaussianas. Essa opção só é válida para colunas numéricas.
 
  Depois de especificar um método de agrupamento, você deve especificar o número de grupos usando a propriedade **DiscretizationBucketCount** . Para obter mais informações, consulte [Agrupar membros de atributo &#40;discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175335"
 
 4.  No painel **Atributos** , selecione **Renda Anual**.
 
-5.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **Automatic** e altere o valor para a propriedade **DiscretizationBucketCount** para `5`.
+5.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **Automatic** e altere o valor para a propriedade **DiscretizationBucketCount** para `5` .
 
      A imagem a seguir mostra as propriedades modificadas para **Renda Anual**.
 
@@ -60,11 +59,11 @@ ms.locfileid: "78175335"
 
 4.  No painel **Atributos** , selecione **Horas de Dispensa Médica**.
 
-5.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **clusters** e altere o valor para a propriedade **DiscretizationBucketCount** para `5`.
+5.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **clusters** e altere o valor para a propriedade **DiscretizationBucketCount** para `5` .
 
 6.  No painel **Atributos** , selecione **Horas de Férias**.
 
-7.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **áreas iguais** e altere o valor para a propriedade **DiscretizationBucketCount** para `5`.
+7.  No janela Propriedades, altere o valor da propriedade **DiscretizationMethod** para **áreas iguais** e altere o valor para a propriedade **DiscretizationBucketCount** para `5` .
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Navegando nas hierarquias de atributo modificadas
 

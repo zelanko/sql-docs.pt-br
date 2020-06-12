@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e7262beef3e9d64a488e255fe5fd9f1b79a8837
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086133"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525183"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizador de cluster de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sequência no exibe modelos de mineração criados com [!INCLUDE[msCoName](../../includes/msconame-md.md)] o algoritmo clustering de sequência. O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSC é um algoritmo de análise de sequência para uso na exploração de dados que contêm eventos que podem ser vinculados de acordo com caminhos ou *sequências*. Para obter mais informações sobre esse algoritmo, consulte [Algoritmo MSC](microsoft-sequence-clustering-algorithm.md).  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizador de cluster de sequência no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração criados com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo clustering de sequência. O algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSC é um algoritmo de análise de sequência para uso na exploração de dados que contêm eventos que podem ser vinculados de acordo com caminhos ou *sequências*. Para obter mais informações sobre esse algoritmo, consulte [Algoritmo MSC](microsoft-sequence-clustering-algorithm.md).  
   
 > [!NOTE]  
 >  Para exibir informações detalhadas sobre as equações usadas no modelo e os padrões identificados, use o Visualizador de Árvore de Conteúdo Genérica da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de Dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "66086133"
  [Voltar ao início](#BKMK_ViewerTabs)  
   
 ###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a> Perfis de Cluster  
- A guia **Perfil de Cluster** oferece uma exibição geral dos clusters criados pelo algoritmo em seu modelo. Cada coluna após a coluna **População** na grade representa um cluster descoberto pelo modelo. A \<linha do atributo>. Samples representa diferentes sequências de dados existentes no cluster e o \<atributo> linha descreve todos os itens que o cluster contém e sua distribuição geral.  
+ A guia **Perfil de Cluster** oferece uma exibição geral dos clusters criados pelo algoritmo em seu modelo. Cada coluna após a coluna **População** na grade representa um cluster descoberto pelo modelo. A \<attribute> linha. Samples representa diferentes sequências de dados existentes no cluster, e a \<attribute> linha descreve todos os itens que o cluster contém e sua distribuição geral.  
   
  A opção **Barras de histograma** controla o número de barras visíveis no histograma. Caso haja mais barras do que você optou por exibir, as barras mais altas serão retidas e as restantes, agrupadas em um recipiente cinza.  
   

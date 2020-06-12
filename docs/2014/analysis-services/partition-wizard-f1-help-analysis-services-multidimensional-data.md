@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 257f6decac024126228d0da2462bc1615be58d83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072129"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547636"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Ajuda F1 do Assistente para Partições (Analysis Services – Dados Multidimensionais)
   É possível usar o Assistente para Partições para definir partições para um grupo de medidas em um cubo. Por padrão, uma única partição é definida para cada grupo de medidas em um cubo. No entanto o desempenho do acesso e do processamento pode se degradado no caso de partições grandes. Criando várias partições, cada uma contendo uma parte dos dados de um grupo de medidas, é possível melhorar o desempenho do acesso e do processamento daquele grupo de medidas.  

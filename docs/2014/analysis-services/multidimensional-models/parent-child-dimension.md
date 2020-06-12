@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b08641e9ba17e6ad2e2f4112e01073d448aa8564
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073391"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545848"
 ---
 # <a name="parent-child-hierarchy"></a>Hierarquia pai-filho
   Uma hierarquia pai-filho é uma hierarquia em uma dimensão padrão que contém um atributo pai. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. A posição de um membro em uma hierarquia pai-filho é determinada pelas propriedades `KeyColumns` e `RootMemberIf` do atributo pai, enquanto a posição de um membro em um nível é determinada pela propriedade `OrderBy` do atributo pai. Para obter mais informações sobre as propriedades de atributo, consulte [Atributos e hierarquias de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

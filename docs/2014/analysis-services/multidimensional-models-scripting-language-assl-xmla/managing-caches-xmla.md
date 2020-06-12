@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72e36e7d8f0efc9880d0dd164a253030712ee120
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdc5bcd2e0500749edfa298a871b6fec7243ddfb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727582"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544968"
 ---
 # <a name="managing-caches-xmla"></a>Gerenciando caches (XMLA)
-  Você pode usar o comando [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) no XML for Analysis (XMLA) para limpar o cache de uma dimensão ou partição especificada. Limpar as forças [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de cache para recriar o cache para esse objeto.  
+  Você pode usar o comando [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) no XML for Analysis (XMLA) para limpar o cache de uma dimensão ou partição especificada. Limpar as forças de cache [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para recriar o cache para esse objeto.  
   
 ## <a name="specifying-objects"></a>Especificando objetos  
  A propriedade [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) do `ClearCache` comando pode conter uma referência de objeto somente para um dos objetos a seguir. Haverá um erro se uma referência de objeto for destinada a um objeto diferente de um dos seguintes objetos:  

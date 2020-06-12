@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c7dd1e5ebe5e7b860a3b1f6a375772f236839c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075397"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546938"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definindo uma exibição da fonte de dados (Analysis Services)
-  Uma exibição da fonte de dados contém o modelo lógico do esquema usado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] por objetos de banco de dados multidimensional, ou seja, cubos, dimensões e estruturas de mineração. Uma exibição de fonte de dados é a definição de metadados, armazenada no formato XML, dos elementos de esquema usados pelo modelo UDM (Unified Dimensional Model) e por estruturas de mineração de dados. Uma exibição da fonte de dados:  
+  Uma exibição da fonte de dados contém o modelo lógico do esquema usado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos de banco de dados multidimensional, ou seja, cubos, dimensões e estruturas de mineração. Uma exibição de fonte de dados é a definição de metadados, armazenada no formato XML, dos elementos de esquema usados pelo modelo UDM (Unified Dimensional Model) e por estruturas de mineração de dados. Uma exibição da fonte de dados:  
   
 -   Contém os metadados que representam os objetos selecionados, de uma ou mais fontes de dados subjacentes, ou os metadados que serão usados para gerar um armazenamento de dados relacional subjacente se você estiver seguindo a abordagem de cima para baixo para a geração de esquemas.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "66075397"
   
  O Assistente de Exibição da Fonte de Dados usa sua resposta para fazer a correspondência entre os nomes de colunas e criar relações entre as tabelas diferentes na DSV. Você pode especificar qualquer um dos critérios listados na tabela a seguir.  
   
-|Critérios de correspondência de nomes|Descrição|  
+|Critérios de correspondência de nomes|Description|  
 |----------------------------|-----------------|  
 |**Mesmo nome que a chave primária**|O nome da coluna de chave estrangeira da tabela de origem é igual ao nome da coluna de chave primária da tabela de destino. Por exemplo, a coluna de chave estrangeira `Order.CustomerID` é igual à coluna de chave primária `Customer.CustomerID`.|  
 |**Mesmo nome que a tabela de destino**|O nome da coluna de chave estrangeira da tabela de origem é igual ao nome da tabela de destino. Por exemplo, a coluna de chave estrangeira `Order.Customer` é igual à coluna de chave primária `Customer.CustomerID`.|  

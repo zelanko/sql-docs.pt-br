@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 489076bed7238f9367eeb8a353da358239673edb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072113"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540718"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partições (caixa de diálogo Restaurar Banco de Dados) (Analysis Services - Dados multidimensionais)
   Use a página **Partições** da caixa de diálogo **Restaurar Banco de Dados** em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar o local de restauração de partições locais e para especificar se deseja restaurar partições remotas e arquivos de backup remotos para uso ao restaurar partições remotas.  

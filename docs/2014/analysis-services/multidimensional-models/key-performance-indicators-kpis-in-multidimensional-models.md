@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6ae3a34da62ed24d1971540e825f9f8347f413f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074803"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546628"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>KPIs (indicadores chave de desempenho) em modelos multidimensionais
   Na terminologia empresarial, um KPI (indicador chave de desempenho) é uma medida quantificável para medir o sucesso empresarial.  
@@ -37,7 +36,7 @@ ms.locfileid: "66074803"
   
  Na terminologia empresarial, um KPI (indicador chave de desempenho) é uma medida quantificável para medir o sucesso empresarial. Um KPI é avaliado, frequentemente, ao longo do tempo. Por exemplo, o departamento de vendas de uma organização pode usar o lucro bruto mensal como um KPI, mas o departamento de recursos humanos da mesma organização pode usar a rotatividade de funcionários trimestral. Cada um é um exemplo de KPI. Os executivos frequentemente usam KPIs agrupados em um scorecard empresarial para obter um resumo histórico rápido e preciso do sucesso da empresa.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], um KPI é uma coleção de cálculos, que são associados a um grupo de medidas em um cubo, que são usados para avaliar o sucesso do negócio. Normalmente, esses cálculos são uma combinação de MDX e membros calculados. Os KPIs também contêm metadados adicionais que fornecem informações sobre como os aplicativos cliente devem exibir os resultados de um cálculo de KPIs.  
+ No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um KPI é uma coleção de cálculos, que são associados a um grupo de medidas em um cubo, que são usados para avaliar o sucesso do negócio. Normalmente, esses cálculos são uma combinação de MDX e membros calculados. Os KPIs também contêm metadados adicionais que fornecem informações sobre como os aplicativos cliente devem exibir os resultados de um cálculo de KPIs.  
   
  Uma vantagem importante dos KPIs no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é que eles são KPIs baseados em servidores consumíveis por diferentes aplicativos cliente. Um KPI com base em servidor apresenta uma única versão de autenticidade, comparado com as versões separadas de autenticidade dos aplicativos cliente separados. Além disso, executando algumas vezes os cálculos complexos no servidor, em vez de em cada computador cliente, poderá trazer benefícios de desempenho.  
   

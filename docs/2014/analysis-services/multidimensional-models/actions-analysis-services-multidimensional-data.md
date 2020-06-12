@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e84f857105cd2bb5695fbcc0d0337d028e3fa297
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077585"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544888"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Ações (Analysis Services – Dados Multidimensionais)
   As ações podem ser de tipos diferentes e devem ser criadas adequadamente. As ações podem ser:  
@@ -42,7 +41,7 @@ ms.locfileid: "66077585"
   
  O tipo é a forma de ação a ser executada. <xref:Microsoft.AnalysisServices.Action> é uma classe abstrata, portanto, a ser usada se precisar usar uma das classes derivadas. Dois tipos de ações são predefinidos: análise e relatório. Elas têm classes derivadas correspondentes: <xref:Microsoft.AnalysisServices.DrillThroughAction> e <xref:Microsoft.AnalysisServices.ReportAction>. Outras ações são abrangidas na classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], uma ação é uma instrução MDX armazenada que pode ser apresentada e empregada por aplicativos cliente. Em outras palavras, uma ação é um comando cliente definido e armazenado no servidor. Uma ação também contém informações que especificam quando e como uma instrução MDX deve ser exibida e tratada pelo aplicativo cliente. A operação especificada pela ação pode iniciar um aplicativo, usando as informações na ação como um parâmetro ou pode recuperar informações com base em critérios fornecidos pela ação.  
+ No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , uma ação é uma instrução MDX armazenada que pode ser apresentada e empregada por aplicativos cliente. Em outras palavras, uma ação é um comando cliente definido e armazenado no servidor. Uma ação também contém informações que especificam quando e como uma instrução MDX deve ser exibida e tratada pelo aplicativo cliente. A operação especificada pela ação pode iniciar um aplicativo, usando as informações na ação como um parâmetro ou pode recuperar informações com base em critérios fornecidos pela ação.  
   
  As ações permitem que usuários empresariais ajam nos resultados de suas análises. Salvando e reusando ações, os usuários finais podem ir além da análise tradicional, que geralmente termina com a apresentação de dados e inicia soluções para problemas e deficiências descobertas, estendendo assim os aplicativos de business intelligence além do cubo. As ações podem transformar o aplicativo cliente de uma ferramenta de renderização de dados sofisticada em parte integral do sistema operacional da empresa. Em vez de focalizar os dados de envio como entrada de aplicativos operacionais, os usuários finais "fecham o ciclo" do processo de tomada de decisões. Essa capacidade de transformar dados analíticos em decisões é crucial para o sucesso do aplicativo Business Intelligence.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66077585"
 ## <a name="types-of-actions"></a>Tipos de ações  
  A tabela a seguir lista os tipos de ações incluídos em [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
-|Tipo de ação|Descrição|  
+|Tipo de ação|Description|  
 |-----------------|-----------------|  
 |CommandLine|Executa um comando no prompt de comando.|  
 |Dataset|Retorna um conjunto de dados a um aplicativo cliente.|  

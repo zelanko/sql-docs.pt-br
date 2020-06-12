@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4e32a40946eb9e513ad22cd837773187843151
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72c79dcdccf6225b8e75144f8b090dcab7506c10
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084777"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522603"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>Excluir um modelo de mineração de uma estrutura de mineração
   Você pode excluir modelos de mineração usando o Designer de Mineração de Dados, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou instruções DMX.  

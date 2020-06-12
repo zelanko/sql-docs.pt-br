@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6279c738ada597984465ff0c1c3db6fa8fbaeb38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076897"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544589"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Adicionar inteligência de conta a uma dimensão
-  Adicione o aprimoramento da inteligência de conta a um cubo ou a uma dimensão para atribuir classificações de conta padrão, como receita e despesa, a membros de um atributo de conta. Esse aprimoramento também identifica os tipos de conta (como Ativo e Passivo) e atribui a agregação apropriada a cada tipo de conta. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar as classificações para agregar contas ao longo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tempo.  
+  Adicione o aprimoramento da inteligência de conta a um cubo ou a uma dimensão para atribuir classificações de conta padrão, como receita e despesa, a membros de um atributo de conta. Esse aprimoramento também identifica os tipos de conta (como Ativo e Passivo) e atribui a agregação apropriada a cada tipo de conta. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode usar as classificações para agregar contas ao longo do tempo.  
   
 > [!NOTE]  
 >  A inteligência de conta está disponível somente para dimensões baseadas nas fontes de dados existentes. Para dimensões que foram criadas sem usar uma fonte de dados, execute o Assistente de Geração de Esquema para criar uma exibição da fonte de dados antes de adicionar a inteligência de conta.  
@@ -44,7 +43,7 @@ ms.locfileid: "66076897"
   
 -   A coluna **Tipos de Conta de Servidor** identifica o tipo de conta correspondente que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reconhece. A tabela a seguir lista os tipos de conta que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reconhece e a agregação padrão para cada um deles. As seleções serão feitas automaticamente se a tabela de dimensões usar o mesmo nome de tipo de conta que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-    |Tipo de conta de servidor|Agregação|Descrição|  
+    |Tipo de conta de servidor|Agregação|Description|  
     |-------------------------|-----------------|-----------------|  
     |**Estatística**|`None`|Uma taxa calculada de algo ou a contagem de algo que não é agregada no decorrer do tempo. Esse tipo de conta não é convertido em outras moedas pelas regras de conversão.|  
     |**Dívida**|`LastNonEmpty`|O dinheiro ou valor de coisas devidos em um momento específico. Esse tipo de conta não é acumulado com o passar do tempo e, portanto, não é agregado naturalmente no decorrer do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados. Esse tipo de conta é convertido em outras moedas com a taxa Fim do Período.|  

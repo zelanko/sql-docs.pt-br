@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91ebeb4d4e357c8c56ad1c9b26e123a49d78875b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081491"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528472"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Caixa de diálogo Extrair Detalhes (Visualizador do modelo de mineração)
   Ao exibir um modelo de mineração usando a guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados, é possível detalhar os dados de caso, contanto que o modelo tenha o detalhamento habilitado. Além disso, se a estrutura de mineração subjacente tiver o detalhamento habilitado, também será possível ver colunas na estrutura de mineração, mesmo se essas colunas não tiverem sido incluídas no modelo de mineração. Na lista de colunas, as colunas da estrutura têm o rótulo “Structure.” como prefixo.  
@@ -36,7 +35,7 @@ ms.locfileid: "66081491"
   
  **Observação** As colunas da estrutura são exibidas somente se o detalhamento estiver habilitado na estrutura de mineração e se você tiver selecionado a opção **Colunas do Modelo e da Estrutura**. Além disso, você deve ter permissões de detalhamento no modelo de mineração e na estrutura de mineração para exibir as colunas.  
   
- As colunas de estrutura que não estão incluídas no modelo aparecem como **estrutura\< . nome da coluna>**.  
+ As colunas de estrutura que não estão incluídas no modelo aparecem como **estrutura \<column name> .**.  
   
 > [!NOTE]  
 >  É possível clicar com o botão direito do mouse em qualquer lugar da grade da coluna e selecionar **Copiar Tudo** para copiar os dados do detalhamento, no formato delimitado por tabulação, para a Área de transferência. Os dados copiados incluem apenas os dados de caso, não a definição de nó.  

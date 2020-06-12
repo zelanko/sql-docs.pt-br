@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20a10c066fc77e8d760bde456be54b366def8f59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085844"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524882"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Escolher e mapear dados de entrada para uma consulta de previsão
   Quando você cria previsões de um modelo de mineração, geralmente o faz alimentando novos dados no modelo. (A exceção são modelos de série temporal, que só podem fazer previsões com base em dados históricos.) Para oferecer novos dados ao modelo, verifique se os dados estão disponíveis como parte de uma exibição da fonte de dados. Se souber antecipadamente os dados que serão usados na previsão, você poderá incluí-los na exibição de fonte de dados usada para criar o modelo. Caso contrário, talvez precise criar uma nova exibição da fonte de dados. Para obter mais informações, consulte [Exibições de fontes de dados em modelos multidimensionais](../multidimensional-models/data-source-views-in-multidimensional-models.md).  

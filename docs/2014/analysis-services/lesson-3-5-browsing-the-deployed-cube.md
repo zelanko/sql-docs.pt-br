@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9035079fc94e0e39344fa89d9e7cf1b6e77fb8de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493982"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543398"
 ---
 # <a name="browsing-the-deployed-cube"></a>Navegando no cubo implantado
   Na tarefa a seguir, você navegará no cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Como nossa análise compara medidas em várias dimensões, você usará uma Tabela Dinâmica do Excel para procurar seus dados. Usar uma Tabela Dinâmica permite colocar informações de cliente, data e produto em eixos diferentes, de forma que você possa ver como as Vendas pela Internet são alteradas quando exibidas por períodos de tempo específicos, demografia de cliente e linhas de produto.  
   
 ### <a name="to-browse-the-deployed-cube"></a>Para navegar no cubo implantado  
   
-1.  Para alternar para o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ** designer de cubo no, clique duas vezes no cubo do tutorial na pasta **cubos** do Gerenciador de soluções.  
+1.  Para alternar para o designer de cubo no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , clique duas vezes no cubo do ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial** na pasta **cubos** do Gerenciador de soluções.  
   
 2.  Abra a guia **Navegador** e clique no botão **Reconectar** da barra de ferramentas do designer.  
   

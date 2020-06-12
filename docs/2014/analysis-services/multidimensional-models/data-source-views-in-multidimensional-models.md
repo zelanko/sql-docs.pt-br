@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e76f06cab4fba292e5295a4814816c36929c9f4a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076094"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547209"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Exibições de fontes de dados em modelos multidimensionais
   Uma DSV (exibição da fonte de dados) é uma abstração de uma fonte de dados relacional que se torna a base dos cubos e das dimensões que você cria em um projeto multidimensional. A finalidade de uma DSV é conceder o controle sobre as estruturas de dados usadas em seu projeto e funcionar independentemente das fontes de dados subjacentes (por exemplo, a capacidade de renomear ou concatenar colunas sem modificar diretamente a fonte de dados original).  

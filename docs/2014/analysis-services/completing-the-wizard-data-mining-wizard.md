@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fea2db082448fa96ad26733a2fad5f294575a74
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087709"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527362"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Concluindo o assistente (Assistente de Mineração de Dados)
   Use a página **Concluindo o Assistente** para revisar a estrutura de mineração que será criada quando o assistente for concluído. Você também pode definir o nome da estrutura de mineração.  
@@ -44,7 +43,7 @@ ms.locfileid: "66087709"
   
  Para obter mais informações sobre opções de detalhamento, consulte [Consultas de detalhamento  40Mineração de dados 41](data-mining/drillthrough-queries-data-mining.md).  
   
- **Visualizar**  
+ **Visualização**  
  Exibe a estrutura de mineração a ser criada.  
   
  **Criar dimensão do modelo de mineração**  

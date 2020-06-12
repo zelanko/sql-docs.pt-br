@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55812c7df95b49fecbdbf8ed1a17c7403c04fbcb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071641"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547478"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Criar uma conexão de modelo semântico de BI para uma pastas de trabalho PowerPivot
   Use as informações neste tópico para configurar uma conexão de modelo semântico do BI que redireciona para uma pastas de trabalho PowerPivot no mesmo farm.  
@@ -34,12 +33,12 @@ ms.locfileid: "66071641"
   
  [Próximas etapas](#bkmk_next)  
   
-##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> Examinar pré-requisitos  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>Examinar pré-requisitos  
  É necessário ter permissões Colaborar ou superior para criar um arquivo de conexão de modelo semântico de BI.  
   
  Você deve ter uma biblioteca que dá suporte ao tipo de conteúdo da conexão de modelo semântico de BI. Para obter mais informações, consulte [Adicionar um tipo de conteúdo de conexão de modelo semântico de bi a uma biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
- Você deve saber a URL da pasta de trabalho PowerPivot para a qual está configurando uma conexão de modelo semântico de BI http://adventure-works/shared (por exemplo, Documents/myworkbook. xlsx). A pasta de trabalho deve estar no mesmo farm.  
+ Você deve saber a URL da pasta de trabalho PowerPivot para a qual está configurando uma conexão de modelo semântico de BI (por exemplo, http://adventure-works/shared documentos/myworkbook.xlsx). A pasta de trabalho deve estar no mesmo farm.  
   
  Todos os computadores e usuários que participam da sequência de conexão devem estar no mesmo domínio ou domínio confiável (confiança bidirecional).  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66071641"
   
      ![Submenu Novo Documento em uma biblioteca do SharePoint](../media/ssas-bismconnection-new.gif "Submenu Novo Documento em uma biblioteca do SharePoint")  
   
-2.  Defina a propriedade **Server** como a URL do SharePoint da pasta de trabalho PowerPivot (por exemplo, ** http://mysharepoint/shared Documents/myworkbook. xlsx**. Em uma implantação do PowerPivot para SharePoint, dados podem ser carregados em qualquer servidor no farm. Por isso, as conexões da fonte de dados para dados PowerPivot especificam apenas o caminho para a pasta de trabalho. O Serviço de Sistema do PowerPivot determina qual servidor carrega os dados.  
+2.  Defina a propriedade **Server** como a URL do SharePoint da pasta de trabalho PowerPivot (por exemplo, ** http://mysharepoint/shared Documents/myWorkbook.xlsx**. Em uma implantação do PowerPivot para SharePoint, dados podem ser carregados em qualquer servidor no farm. Por isso, as conexões da fonte de dados para dados PowerPivot especificam apenas o caminho para a pasta de trabalho. O Serviço de Sistema do PowerPivot determina qual servidor carrega os dados.  
   
      Não usar a propriedade de **banco de dados** ; Ele não é usado ao especificar o local de uma pasta de trabalho PowerPivot.  
   
