@@ -1,7 +1,7 @@
 ---
 title: SQL dinâmico | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56419723540114f122be2582f0de7c7e7d0c54f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306684"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423250"
 ---
 # <a name="dynamic-sql"></a>SQL dinâmico
 Embora o SQL estático funcione bem em muitas situações, há uma classe de aplicativos em que o acesso a dados não pode ser determinado com antecedência. Por exemplo, suponha que uma planilha permita que um usuário insira uma consulta, que a planilha enviará ao DBMS para recuperar dados. O conteúdo dessa consulta obviamente não pode ser conhecido pelo programador quando o programa de planilha é escrito.  
@@ -39,4 +39,4 @@ Embora o SQL estático funcione bem em muitas situações, há uma classe de apl
   
 3.  O programa pode usar a instrução EXECUTE repetidamente, fornecendo valores de parâmetros diferentes cada vez que a instrução dinâmica é executada.  
   
- A execução preparada ainda não é a mesma que a SQL estática. No SQL estático, as quatro primeiras etapas do processamento de uma instrução SQL ocorrem no momento da compilação. Na execução preparada, essas etapas ainda ocorrem em tempo de execução, mas são executadas apenas uma vez; a execução do plano ocorre somente quando EXECUTE é chamado. Isso ajuda a eliminar algumas das desvantagens de desempenho inerentes à arquitetura do SQL dinâmico. A ilustração a seguir mostra as diferenças entre SQL estático, SQL dinâmico com execução imediata e SQL dinâmico com execução preparada.
+ A execução preparada ainda não é a mesma que a SQL estática. No SQL estático, as quatro primeiras etapas do processamento de uma instrução SQL ocorrem no momento da compilação. Na execução preparada, essas etapas ainda ocorrem em tempo de execução, mas são executadas apenas uma vez; a execução do plano ocorre somente quando EXECUTE é chamado. Isso ajuda a eliminar algumas das desvantagens de desempenho inerentes à arquitetura do SQL dinâmico.

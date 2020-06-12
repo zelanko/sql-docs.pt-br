@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7db22d59ffa9ce2fcb8b4875bd1dafcf7018e567
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ea224a6c0d435b0d4818a1d86fa2c084ac74b09
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086313"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525782"
 ---
 # <a name="data-mining-wizards"></a>Assistentes de mineração de dados
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]fornece assistentes para uso no e [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]no. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece assistentes para uso no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
  A tabela seguinte descreve os assistentes que você pode usar para criar fontes de mineração de dados, exibições e objetos.  
   

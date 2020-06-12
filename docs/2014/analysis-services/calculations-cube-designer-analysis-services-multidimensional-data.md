@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603d5ea6f1e71abd469738b9f116927ca0b69e7d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088284"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527592"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Cálculos (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Cálculos** no Designer de Cubo para exibir e editar cálculos, incluindo membros calculados, conjuntos nomeados e comandos de script MDX para o cubo selecionado.  
@@ -34,7 +33,7 @@ ms.locfileid: "66088284"
      Para usuários avançados, esta exibição exibe todo o script MDX associado ao cubo, bem como os metadados, funções e ferramentas disponíveis para o cubo.  
   
 ## <a name="panes"></a>Painéis  
- **Barra**  
+ **Barra de ferramentas**  
  Use a barra de ferramentas na exibição de formulário e no modo de exibição de script para executar operações comuns nessa guia. Para obter mais informações sobre esse painel, consulte a [barra de ferramentas &#40;guia cálculos, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Organizador de Script**  

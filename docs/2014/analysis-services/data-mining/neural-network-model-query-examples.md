@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7154ce0ad66346634225734fe829c36e7bf3ad58
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083290"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520884"
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de rede neural pode recuperar metadados de modelo, como o número de camadas ocultas. Alternativamente, uma consulta de previsão pode sugerir classificações com base em uma entrada e opcionalmente fornecer as probabilidades de cada classificação.  
@@ -181,7 +180,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="sample-query-5-creating-a-singleton-prediction"></a><a name="bkmk_Query5"></a>Exemplo de consulta 5: criando uma previsão singleton  
  A maneira mais fácil de criar uma consulta de previsão em um modelo de rede neural é usar o Construtor de Consultas de Previsão, disponível na guia **Previsão de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Procure o modelo no Visualizador de Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para filtrar atributos de interesse e exibir novas tendências e, em seguida, alterne para a guia **Previsão de Mineração** para criar uma consulta e prever novos valores para essas tendências.  
   
- Por exemplo, você pode procurar o modelo de call center para exibir as correlações entre os volumes de pedidos e outros atributos. Para fazer isso, abra o modelo no visualizador e, para **entrada**, selecione ** \<todos os>**.  Em seguida, para **Saída**, selecione **Número de Pedidos**. Para **Valor 1**, selecione o intervalo que representa a maioria dos pedidos e, para **Valor 2**, selecione o intervalo que representa menos pedidos. Você poderá ver rapidamente todos os atributos que o modelo correlaciona com o volume de pedidos.  
+ Por exemplo, você pode procurar o modelo de call center para exibir as correlações entre os volumes de pedidos e outros atributos. Para fazer isso, abra o modelo no visualizador e, para **entrada**, selecione **\<All>** .  Em seguida, para **Saída**, selecione **Número de Pedidos**. Para **Valor 1**, selecione o intervalo que representa a maioria dos pedidos e, para **Valor 2**, selecione o intervalo que representa menos pedidos. Você poderá ver rapidamente todos os atributos que o modelo correlaciona com o volume de pedidos.  
   
  Ao procurar os resultados no visualizador, você descobre que certos dias da semana tem baixos volumes de pedidos e que um aumento no número de operadores parece estar correlacionado às vendas mais altas. Você poderia usar uma consulta de previsão no modelo para testar uma hipótese "e se" e perguntar se o aumento do número de operadores de nível 2 em um dia de baixo volume aumentaria os pedidos. Para fazer isso, crie uma consulta como a seguinte:  
   

@@ -1,5 +1,6 @@
 ---
 title: Especificar predicados Boolianos em consultas XPath (SQLXML)
+description: Veja exemplos de como especificar predicados com valor booliano em consultas XPath (SQLXML 4,0).
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acf43b7fd863690259719a81ec60b136f9f4996d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8f2f4a80b6e4ab47245c55aa9fa2f2716ea39f7
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252573"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215393"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Especificando predicados com valor booliano em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,13 +92,13 @@ ms.locfileid: "75252573"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Especificar predicados sucessivos e aninhados  
- A consulta a seguir mostra o uso de predicados sucessivos. A consulta retorna todos os ** \<** elementos filho do cliente>do nó de contexto que têm um atributo **vendedorid** com um valor de 277 e um atributo de **territórioid** com um valor de 3:  
+ A consulta a seguir mostra o uso de predicados sucessivos. A consulta retorna todos os **\<Customer>** elementos filho do nó de contexto que têm um atributo **vendedorid** com um valor de 277 e um atributo de **territórioid** com um valor de 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- A consulta retorna os ** \<** elementos de>do cliente que atendem às duas condições especificadas nos predicados.  
+ A consulta retorna os **\<Customer>** elementos que atendem às duas condições especificadas nos predicados.  
   
  Um atalho para o eixo de **atributo** (@) pode ser especificado e, como o eixo **filho** é o padrão, ele pode ser omitido da consulta:  
   
@@ -105,7 +106,7 @@ ms.locfileid: "75252573"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- A consulta XPath a seguir ilustra o uso de predicados aninhados. A consulta retorna todos os ** \<** elementos filho do cliente>do nó de contexto que incluem ** \<** os elementos filho de Order>com pelo menos um ** \<elemento>Order** que tem um valor de atributo **vendedorid** 2.  
+ A consulta XPath a seguir ilustra o uso de predicados aninhados. A consulta retorna todos os **\<Customer>** elementos filho do nó de contexto que incluem **\<Order>** elementos filho com pelo menos um **\<Order>** elemento com um valor de atributo **vendedorid** de 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -168,7 +169,7 @@ ms.locfileid: "75252573"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Especificar um predicado de nível superior  
- A consulta a seguir retorna o ** \<cliente>** nós de elemento filho do nó de contexto que têm ** \<a ordem>** elementos filhos. A consulta testa o caminho de local como o predicado de nível superior:  
+ A consulta a seguir retorna os **\<Customer>** nós de elemento filho do nó de contexto que têm **\<Order>** elementos filhos. A consulta testa o caminho de local como o predicado de nível superior:  
   
 ```  
 /child::Customer[child::Order]  

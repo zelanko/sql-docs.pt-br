@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 093aa1043744381848db1c9ec8c46c992d32801b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077664"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537433"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Exibição da Estrutura de Mineração (Designer do Modelo de Mineração de Dados)
   Utilize as exibições da **Estrutura de Mineração** para modificar estruturas de mineração e para processar uma estrutura de mineração e todos os modelos de mineração relacionados.  

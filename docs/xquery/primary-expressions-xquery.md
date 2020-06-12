@@ -1,5 +1,6 @@
 ---
 title: Expressões primárias (XQuery) | Microsoft Docs
+description: Saiba mais sobre as expressões principais do XQuery que incluem literais, referências de variáveis, expressões de item de contexto, construtores e chamadas de função.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74200513"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529770"
 ---
 # <a name="primary-expressions-xquery"></a>Expressões primárias (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "74200513"
 |`&quot;`|"|  
 |`&apos;`|'|  
   
- Um literal da cadeia de caracteres também pode conter uma referência de caractere, uma referência de estilo XML para um caractere Unicode, que é identificado por seu ponto de código decimal ou hexadecimal. Por exemplo, o símbolo de euro pode ser representado pela referência de caractere "&\#8364;".  
+ Um literal da cadeia de caracteres também pode conter uma referência de caractere, uma referência de estilo XML para um caractere Unicode, que é identificado por seu ponto de código decimal ou hexadecimal. Por exemplo, o símbolo de euro pode ser representado pela referência de caractere "&\# 8364;".  
   
 > [!NOTE]  
 >  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a versão XML 1.0 como a base da análise.  
@@ -156,7 +157,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>Expressões de item de contexto  
  O item de contexto é o item sendo processado atualmente no contexto de uma expressão de caminho. Ele é inicializado em uma instância de tipo de dados XML não NULL com o nó de documento. Ele também pode ser alterado pelo método Nodes (), no contexto de expressões XPath ou nos predicados [].  
   
- O item de contexto é retornado por uma expressão que contém um ponto (.). Por exemplo, a consulta a seguir avalia cada elemento <`a`> para a presença do atributo `attr`. Se o atributo estiver presente, o elemento será retornado. Observe que a condição no predicado especifica que o nó de contexto é especificado por um único ponto.  
+ O item de contexto é retornado por uma expressão que contém um ponto (.). Por exemplo, a consulta a seguir avalia cada elemento <`a`> para a presença do atributo `attr` . Se o atributo estiver presente, o elemento será retornado. Observe que a condição no predicado especifica que o nó de contexto é especificado por um único ponto.  
   
 ```  
 DECLARE @var XML  

@@ -1,5 +1,6 @@
 ---
 title: Função maiúscula (XQuery) | Microsoft Docs
+description: Saiba como usar a função do XQuery em maiúsculas (), que converte caracteres para o equivalente em maiúsculas.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c757e46f861d6652b3c8c151c3e002dba13e84ef
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004610"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689490"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funções em Valores da Cadeia de Caracteres – upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>a. Alterando uma cadeia de caracteres para letras maiúsculas  
- O exemplo a seguir altera a cadeia de caracteres de entrada ' abcDEF! ' @4' em maiúsculas.  
+ O exemplo a seguir altera a cadeia de caracteres de entrada ' abcDEF! @4 ' para letras maiúsculas.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

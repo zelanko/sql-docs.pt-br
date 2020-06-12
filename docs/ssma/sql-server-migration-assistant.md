@@ -1,5 +1,6 @@
 ---
 title: Assistente de Migração do SQL Server | Microsoft Docs
+description: Saiba mais sobre o Assistente de Migração do SQL Server, uma ferramenta que automatiza a migração de banco de dados para SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.
 ms.custom: ''
 ms.date: 10/10/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f03fdab2cf2f2593d43c16cef572614b36731ef9
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252128"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294023"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
 
@@ -68,7 +69,7 @@ As versões de destino a seguir têm suporte para o SSMA.
   
   - [Comunidade do SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456) – grupos de notícias, fóruns e outros recursos da Comunidade que são úteis para SQL Server desenvolvedores  
   
-- **Suporte assistido** – vá [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) para e procure ' Assistente de migração do SQL Server '.  Selecione sua versão e, em seguida, selecione "Iniciar solicitação".  O suporte assistido está incluído na ferramenta de Assistente de Migração do SQL Server.  
+- **Suporte assistido** – vá para [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) e procure ' Assistente de migração do SQL Server '.  Selecione sua versão e, em seguida, selecione "Iniciar solicitação".  O suporte assistido está incluído na ferramenta de Assistente de Migração do SQL Server.  
   
 - **Suporte Premier** – se você tiver um contrato Premier, poderá obter o suporte Premier no [portal Premier Online](https://premier.microsoft.com/).  
   

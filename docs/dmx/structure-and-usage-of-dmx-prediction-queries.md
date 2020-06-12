@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938065"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669993"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Estrutura e uso de consultas de previsão DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você pode usar a consulta de previsão no DMX (extensões de Data Mining) para prever valores de coluna desconhecidos em um novo conjunto de dados, com base nos resultados de um modelo de mineração.  
+  No [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , você pode usar a consulta de previsão no DMX (extensões de Data Mining) para prever valores de coluna desconhecidos em um novo conjunto de dados, com base nos resultados de um modelo de mineração.  
   
  O tipo de consulta a ser usado depende de quais informações você quer obter de um modelo. Para criar predições simples em tempo real; por exemplo, e saber se o cliente potencial em um site se encaixa na persona de um comprador de bicicleta, uma consulta singleton seria usada. Para criar um lote de previsões de um conjunto de casos contidos em uma fonte de dados, uma consulta de previsão normal seria usada.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "67938065"
   
 -   **SELECIONAR [ACHATADO]**  
   
--   **INÍCIO**  
+-   **Início**  
   
--   **Do***\<modelo>* **junção de previsão**      
+-   **Do*** \< modelo>* **junção de previsão**      
   
--   **NO**  
+-   **ON**  
   
--   **WHERE**  
+-   **POSIÇÃO**  
   
 -   **ORDER BY**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938065"
   
 -   Funções que retornam uma coluna de dados.  
   
- O elemento **do** * \<modelo>* **junção de previsão** define os dados de origem a serem usados para criar a previsão. Para uma consulta singleton, essa é uma série de valores que são atribuídos a colunas. Para uma junção de previsão vazia, é deixado em branco.  
+ O elemento **do** * \< modelo>* **junção de previsão** define os dados de origem a serem usados para criar a previsão. Para uma consulta singleton, essa é uma série de valores que são atribuídos a colunas. Para uma junção de previsão vazia, é deixado em branco.  
   
  O elemento **on** mapeia as colunas que são definidas no modelo de mineração para colunas em um conjunto de um DataSet externo. Esse elemento não precisará ser incluído quando forem criadas uma consulta de junção de previsão vazia ou uma junção de previsão natural.  
   

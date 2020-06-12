@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a48211455a8ac3de9ef0f4b0c7e2fb3cba5f473
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071579"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540499"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Criar e configurar um aplicativo de serviço PowerPivot na Administração Central
   Um aplicativo de serviço do PowerPivot é uma instância de serviço compartilhado de um do Serviço do Sistema PowerPivot. Cada aplicativo de serviço tem sua própria identidade, definições de configuração, propriedades e armazenamento de dados interno.  
@@ -57,13 +56,13 @@ ms.locfileid: "66071579"
   
 3.  Selecione **SQL Server aplicativo de serviço PowerPivot**. Se não aparecer na lista, significa que o PowerPivot para SharePoint não está instalado ou configurado corretamente.  
   
-4.  Na página **criar novo aplicativo de serviço PowerPivot** , insira um nome para o aplicativo. O padrão é PowerPivotServiceApplication\<número>. Se você estiver criando vários aplicativos de serviço PowerPivot, um nome descritivo ajudará outros administradores a entender como o aplicativo é usado.  
+4.  Na página **criar novo aplicativo de serviço PowerPivot** , insira um nome para o aplicativo. O padrão é PowerPivotServiceApplication \<number> . Se você estiver criando vários aplicativos de serviço PowerPivot, um nome descritivo ajudará outros administradores a entender como o aplicativo é usado.  
   
 5.  Em Pool de Aplicativos, crie um novo pool de aplicativos para o aplicativo (recomendável). Selecione ou crie uma conta gerenciada para o pool de aplicativos. Não se esqueça de especificar uma conta de usuário do domínio. Uma conta de usuário de domínio habilita o uso do recurso de conta gerenciado do SharePoint que o deixa atualizar senhas e informações de conta em um único local. Contas de domínio também serão obrigatórias se você pretender diminuir a implantação para incluir instâncias de serviço adicionais a serem executadas sob a mesma identidade.  
   
 6.  Em **Servidor de Banco de Dados**, o valor padrão é a instância de Mecanismo de Banco de Dados do SQL Server que hospeda os bancos de dados de configuração de farm. Você pode usar este servidor ou pode escolher um SQL Server diferente.  
   
-7.  No **nome do banco de dados**, o valor\<padrão é PowerPivotServiceApplication1_ GUID>. Você deve criar um banco de dados único para cada aplicativo de serviço PowerPivot. O nome do banco de dados padrão corresponde ao nome padrão do aplicativo de serviço. Se você inseriu um nome de aplicativo de serviço exclusivo, siga uma convenção de nomenclatura semelhante para seu nome de banco de dados de forma que você possa gerenciá-los em conjunto.  
+7.  No **nome do banco de dados**, o valor padrão é PowerPivotServiceApplication1_ \<guid> . Você deve criar um banco de dados único para cada aplicativo de serviço PowerPivot. O nome do banco de dados padrão corresponde ao nome padrão do aplicativo de serviço. Se você inseriu um nome de aplicativo de serviço exclusivo, siga uma convenção de nomenclatura semelhante para seu nome de banco de dados de forma que você possa gerenciá-los em conjunto.  
   
 8.  Em **Autenticação de Banco de dados**, o padrão é Autenticação do Windows. Se você escolher **Autenticação SQL**, consulte o guia de práticas recomendadas do administrador do SharePoint para saber como usar esse tipo de autenticação em uma implantação do SharePoint.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66071579"
   
 4.  Em **tempo limite de carregamento do banco de dados**, aumente ou diminua o valor para alterar o tempo que o serviço PowerPivot espera por uma resposta da instância SQL Server Analysis Services (PowerPivot) para a qual ele encaminhou uma solicitação de dados de carregamento. Como conjuntos de dados muito grandes levam muito tempo para serem transferidos eletronicamente, você deve aguardar um tempo suficiente para que a instância de serviço PowerPivot recupere a pasta de trabalho do Excel e mova os dados PowerPivot para uma instância do Analysis Services para processamento da consulta. Como dados do PowerPivot podem ser extraordinariamente grandes, o valor padrão é 30 minutos.  
   
-5.  Em **Tempo Limite do Pool de Conexão**, aumente ou diminua o valor para alterar por quantos minutos uma conexão de dados permanecerá aberta. O valor padrão é de 30 minutos. Durante esse período, o serviço PowerPivot reutilizará uma conexão de dados ociosa para solicitações de somente leitura do mesmo usuário do SharePoint para os mesmos dados do PowerPivot. Se nenhuma solicitação adicional for recebida para obter esses dados durante o período especificado, a conexão será removida do pool. Os valores válidos são de 1 a 3.600 segundos. Para obter mais informações sobre pools de conexão, consulte referência de definição de configuração [&#40;PowerPivot para SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md).  
+5.  Em **Tempo Limite do Pool de Conexão**, aumente ou diminua o valor para alterar por quantos minutos uma conexão de dados permanecerá aberta. O valor padrão é 30 minutos. Durante esse período, o serviço PowerPivot reutilizará uma conexão de dados ociosa para solicitações de somente leitura do mesmo usuário do SharePoint para os mesmos dados do PowerPivot. Se nenhuma solicitação adicional for recebida para obter esses dados durante o período especificado, a conexão será removida do pool. Os valores válidos são de 1 a 3.600 segundos. Para obter mais informações sobre pools de conexão, consulte referência de definição de configuração [&#40;PowerPivot para SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md).  
   
 6.  Em **tamanho máximo do pool de conexão do usuário**, aumente ou diminua o valor para alterar o número máximo de conexões ociosas que o serviço PowerPivot criará em pools de conexão individuais para cada usuário do SharePoint, conjunto de objetos do PowerPivot e combinações de versão.  
   
@@ -123,7 +122,7 @@ ms.locfileid: "66071579"
      Alterações do tempo limite de carregamento ou do método de alocação somente são aplicadas a novas solicitações de entrada. Solicitações em andamento estão sujeitas aos valores que estavam em vigor quando a solicitação foi recebida.  
   
 ##  <a name="assign-a-powerpivot-service-application-to-a-web-application"></a><a name="AssignGSA"></a>Atribuir um aplicativo de serviço PowerPivot a um aplicativo Web  
- Depois de configurar um aplicativo de serviço PowerPivot, você pode atribuí-lo a um aplicativo Web acrescentando-o à lista de conexão de aplicativo de serviço para aquele aplicativo Web. Há duas maneiras de fazer isso:  
+ Depois de configurar um aplicativo de serviço PowerPivot, você pode atribuí-lo a um aplicativo Web acrescentando-o à lista de conexão de aplicativo de serviço para aquele aplicativo Web. Existem duas maneiras de fazer isso:  
   
 -   Acrescente-o ao grupo de conexão **Padrão** . O *grupo de conexão padrão* é uma coleção de conexões de aplicativo de serviço que estão disponíveis para qualquer aplicativo Web que faça referência a ele. Você deve adicionar um aplicativo do serviço PowerPivot a essa lista.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "66071579"
   
 4.  Em **Editar o seguinte grupo de associações**, selecione **padrão** ou **[personalizado]**.  
   
-5.  Para **[personalizado]**, marque a caixa de seleção ao lado de cada conexão de aplicativo de serviço que você deseja usar. Se você tiver vários aplicativos de serviço PowerPivot (indicado por tipo definido `PowerPivot Service Application Proxy`como), certifique-se de escolher apenas um.  
+5.  Para **[personalizado]**, marque a caixa de seleção ao lado de cada conexão de aplicativo de serviço que você deseja usar. Se você tiver vários aplicativos de serviço PowerPivot (indicado por tipo definido como `PowerPivot Service Application Proxy` ), certifique-se de escolher apenas um.  
   
 6.  Clique em **OK**.  
   

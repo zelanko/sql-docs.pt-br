@@ -1,5 +1,6 @@
 ---
 title: Instalando o Assistente de Migração do SQL Server para acesso (AccessToSQL) | Microsoft Docs
+description: Saiba mais sobre os pré-requisitos de instalação do Assistente de Migração do SQL Server (SSMA) para acesso e como instalar, licenciar, atualizar e desinstalar.
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -22,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ca42e406bb7483617afe6364027014650e838f2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79111901"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293746"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Instalando o Assistente de Migração do SQL Server para acesso (AccessToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O assistente de migração (SSMA) para acesso é instalado usando um assistente baseado em Windows Installer. Este tópico fornece informações sobre os pré-requisitos de instalação, um link para a versão mais recente do SSMA e instruções para instalar, licenciar, desinstalar e atualizar o SSMA.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O assistente de migração (SSMA) para acesso é instalado usando um assistente baseado em Windows Installer. Este tópico fornece informações sobre os pré-requisitos de instalação, um link para a versão mais recente do SSMA e instruções para instalar, licenciar, desinstalar e atualizar o SSMA.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
 Antes de instalar o SSMA, verifique se o seu sistema atende aos seguintes requisitos:  
@@ -39,9 +40,9 @@ Antes de instalar o SSMA, verifique se o seu sistema atende aos seguintes requis
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 ou uma versão posterior.  
   
--   A [!INCLUDE[msCoName](../../includes/msconame_md.md)] versão .NET Framework 4,0 ou posterior. A versão 4,0 do .NET Framework está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disco do produto e usando as informações no [Guia de Microsoft .net](https://docs.microsoft.com/dotnet/framework/).
+-   A versão [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 4,0 ou posterior. A versão 4,0 do .NET Framework está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disco do produto e usando as informações no [guia de Microsoft .net](https://docs.microsoft.com/dotnet/framework/).
   
--   Acesso a e permissões suficientes no computador que hospeda a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]BD/SQL do Azure para o qual você migrará objetos e dados de banco de dados.  
+-   Acesso a e permissões suficientes no computador que hospeda a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BD/SQL do Azure para o qual você migrará objetos e dados de banco de dados.  
   
 -   Provedor DAO (Microsoft Data Access Object) versão 12,0 ou 14,0. Você pode instalar o provedor DAO do produto Microsoft Office 2010/2007 ou baixá-lo do site da Microsoft.  
   
@@ -87,7 +88,7 @@ Se você quiser atualizar para uma versão posterior do SSMA para Access, primei
   
 Se você abrir um projeto criado em uma versão anterior do SSMA para acesso, o SSMA perguntará se você deseja converter o projeto para a versão mais recente. Clique em **Sim** para trabalhar com o projeto na versão mais recente do SSMA.  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Veja também  
 [Preparando bancos de dados do Access para migração](preparing-access-databases-for-migration-accesstosql.md)  
 [Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Vinculando aplicativos de acesso a SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  

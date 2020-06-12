@@ -12,17 +12,17 @@ ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b383c290bb507cdafaf824c16b3a1587b998bd3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b20ab1851d02e493035414dd4682fc5330296b19
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000612"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858618"
 ---
 # <a name="query-options-execution-ansi-page"></a>Execução de Opções de Consulta (página ANSI)
   Use esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o executará as consultas usando todas ou uma parte das configurações especificadas no padrão ISO (ANSI).  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **SET ANSI_DEFAULTS**  
  Selecione todas as configurações ISO padrão. Essa caixa fica indisponível por padrão, pois só algumas das configurações ISO são feitas.  
   

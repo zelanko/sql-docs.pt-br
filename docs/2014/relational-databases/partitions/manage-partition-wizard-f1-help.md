@@ -23,12 +23,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49625e9ef5311b261bc309a90cfa9d6b315953f6
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249676"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858858"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Ajuda de F1 do Assistente para Gerenciar Partição
   Use o **Assistente para Gerenciar Partição** para gerenciar e modificar as tabelas particionadas existentes por meio da troca de partição ou pela implementação de um cenário de janela deslizante. Esse assistente pode facilitar o gerenciamento das partições e simplificar a migração regular de dados de e para as tabelas.  
@@ -75,7 +75,7 @@ ms.locfileid: "63249676"
 ### <a name="sliding-window-scenario"></a>Cenário de janela deslizante  
  Para gerenciar as partições em um cenário da janela deslizante, selecione **Gerenciar dados particionados em um cenário de janela deslizante**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Criar uma tabela de preparo para alternar partições**  
  Cria uma tabela de preparação para os dados que você está ativando ou desativando na tabela particionada existente.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "63249676"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Página Selecione as Opções de Inserção de Partição  
  Use a página **Selecione as opções de Inserção de Partição** para selecionar a tabela de preparo que você está ativando na tabela particionada.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Mostrar Todas as Partições**  
  Selecione para mostrar todas as partições, inclusive as partições que estão na tabela particionada no momento.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "63249676"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Página Selecione as Opções de Extração de Partição  
  Use a página **Selecione as opções de Extração de Partição** para selecionar a partição e a tabela de preparo para reter os dados particionados que você está desativando na tabela particionada.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Grade de partição**  
  Exibe o nome da partição, o **Limite esquerdo**, o **Limite direito**, o **Grupo de arquivos**e a **Contagem de linhas** das partições selecionadas.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63249676"
   
  Também é possível criar os mesmos índices na tabela de preparação existente na partição de origem. A tabela de preparação contém automaticamente uma restrição que se baseia nos elementos da partição de origem. Normalmente, essa restrição é gerada a partir do valor de limite da partição de origem.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome da tabela de preparação**  
  Crie um nome para a tabela de preparação ou aceite o nome padrão exibido na caixa de edição.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "63249676"
 ##  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use a página **Resumo** para examinar as opções selecionadas nas páginas anteriores.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Examinar as seleções**  
  Exibe as seleções feitas em cada página do assistente. Clique em um nó para expandir e exibir as opções selecionadas anteriormente.  
   

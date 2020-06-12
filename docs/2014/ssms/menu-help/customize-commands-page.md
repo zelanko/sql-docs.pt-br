@@ -12,17 +12,17 @@ ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56df884317c13b860ba19d66d9680c79356c9080
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470013"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859238"
 ---
 # <a name="customize-commands-page"></a>Personalizar (página Comandos)
   Esta caixa de diálogo permite adicionar e remover comandos em barras de ferramentas e menus, além de alterar as imagens usadas nos botões das barras de ferramentas ou nos comandos de menu. Você pode acessar a página **Comandos** clicando em **Personalizar** no menu **Ferramentas** e, em seguida, em **Comandos**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Categorias**  
  Especifica o conjunto de comandos exibidos na caixa de listagem **Comandos** . As categorias de comandos se baseiam em títulos de menus fornecidos pelas ferramentas e designers que o ambiente suporta no momento. Essa lista de títulos é dinâmica para que a ordem das categorias e os títulos de menus mudem, de acordo coma as ferramentas e o designer, bem como as personalizações feitas. Dessa forma, é possível que dois menus de diferentes designers tenham o mesmo nome, para que o mesmo título possa aparecer duas vezes mas oferecer conjuntos de comandos diferentes.  
   

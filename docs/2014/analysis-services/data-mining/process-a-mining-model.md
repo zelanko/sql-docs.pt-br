@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa0d177d7fc3da967c4143a71e0852928a6e81c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083104"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520812"
 ---
 # <a name="process-a-mining-model"></a>Processar um modelo de mineração
   Na guia Modelos de Mineração do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode processar um modelo de mineração específico que está associado a uma estrutura de mineração ou processar todos os modelos que estão associados com a estrutura.  
@@ -38,13 +37,13 @@ ms.locfileid: "66083104"
   
      Caso faça uma alteração na estrutura de mineração, você receberá uma solicitação para implantar a estrutura novamente antes de processar o modelo. Clique em **Sim**.  
   
-3.  Na caixa de diálogo **processando \<modelo de mineração –>de modelo** , clique em **executar**.  
+3.  Na caixa de diálogo **processando \<model> modelo de mineração –** , clique em **executar**.  
   
      A caixa de diálogo **Andamento do Processo** é aberta e exibe os detalhes sobre o processamento do modelo.  
   
 4.  Clique em **Fechar** na caixa de diálogo **Andamento do Processo** , após o modelo completar seu processamento.  
   
-5.  Clique em **fechar** na caixa de diálogo **processando modelo de mineração->\<de modelo** .  
+5.  Clique em **fechar** na caixa de diálogo **processando \<model> modelo de mineração** .  
   
  Só foram processados a estrutura de mineração e o modelo de mineração selecionado.  
   
@@ -54,13 +53,13 @@ ms.locfileid: "66083104"
   
 2.  Caso faça alterações na estrutura de mineração, você receberá uma solicitação para implantar a estrutura novamente antes de processar os modelos. Clique em **Sim**.  
   
-3.  Na caixa de diálogo **processando \<estrutura de mineração – estrutura>** , clique em **executar**.  
+3.  Na caixa de diálogo **processando \<structure> estrutura de mineração –** , clique em **executar**.  
   
 4.  A caixa de diálogo **Andamento do Processo** é aberta e exibe os detalhes sobre o processamento do modelo.  
   
 5.  Clique em **Fechar** na caixa de diálogo **Andamento do Processo** , após os modelos completarem seu processamento.  
   
-6.  Clique em **fechar** na caixa de diálogo **>do modelo de processamento \<** .  
+6.  Clique em **fechar** na caixa de diálogo **processamento \<model> ** .  
   
  A estrutura de mineração e todos os modelos de mineração associados foram processados.  
   

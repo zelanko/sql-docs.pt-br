@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52fae59d05447ef28eac7b9be408279ffcefb96
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083373"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521069"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxe de filtro de modelo e exemplos (Analysis Services - Mineração de dados)
   Esta seção fornece informações detalhadas sobre a sintaxe de filtros de modelo, além de expressões de exemplo.  
@@ -238,9 +237,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a>Exemplo 7: combinações de filtros complexos  
- O cenário desse modelo se assemelha a do Exemplo 4, mas é muito mais complexo. A tabela aninhada **, ProductsOnSale**, tem a condição `(OnSale)` de filtro, o que significa que o valor `true` de **onsale** deve ser para o produto listado em **ProductName**. Aqui, **OnSale** é uma coluna de estrutura.  
+ O cenário desse modelo se assemelha a do Exemplo 4, mas é muito mais complexo. A tabela aninhada, **ProductsOnSale**, tem a condição de filtro, o `(OnSale)` que significa que o valor de **onsale** deve ser `true` para o produto listado em **ProductName**. Aqui, **OnSale** é uma coluna de estrutura.  
   
- A segunda parte do filtro, para **ProductsNotOnSale**, repete essa sintaxe, mas filtra em produtos para os quais o valor de **onsale** é `not true``(!OnSale)`.  
+ A segunda parte do filtro, para **ProductsNotOnSale**, repete essa sintaxe, mas filtra em produtos para os quais o valor de **onsale** é `not true``(!OnSale)` .  
   
  Por fim, as condições são combinadas e uma única restrição adicional é adicionada à tabela de casos. O resultado é prever compras de produtos na lista **ProductsNotOnSale** , com base nos casos incluídos na lista **ProductsOnSale** , para todos os clientes com mais de 25 anos.  
   

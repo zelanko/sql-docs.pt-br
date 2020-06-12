@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4931c3aff70758113b6a0250319d6dec722d8650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081998"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528752"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Definir Comportamento Semiaditivo (Assistente de Business Intelligence)
   Use a página **Definir Comportamento Semiaditivo** para habilitar ou desabilitar comportamento semiaditivo em medidas. O comportamento semiaditivo determina como medidas que são contidas por um cubo são agregadas sobre uma dimensão de tempo.  
@@ -29,7 +28,7 @@ ms.locfileid: "66081998"
  **Desativar comportamento semiaditivo**  
  Desabilita comportamento semiaditivo em todas as medidas contidas pelo cubo.  
   
- **O assistente detectou \<o nome da dimensão> dimensão de conta, que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
+ **O assistente detectou a \<dimension name> dimensão de conta, que contém membros semiaditivos. O servidor agregará membros dessa dimensão de acordo com o comportamento semiaditivo especificado para cada tipo de conta.**  
  Habilita comportamento semiaditivo para dimensões de conta que contêm membros semiaditivos. A seleção dessa opção configura a função de agregação de todas as medidas do grupo de medidas que faz referência à dimensão de conta para `ByAccount`.  
   
  Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
@@ -37,7 +36,7 @@ ms.locfileid: "66081998"
  **Definir comportamento semiaditivo para membros individuais**  
  Habilita comportamento semiaditivo e especifica a função de agregação semiaditiva para medidas específicas. A função de agregação aplica-se a todas as dimensões que são referenciadas pelo grupo de medidas que contém a medida.  
   
- **medidas**  
+ **Determina**  
  Exibe o nome de uma medida contida pelo cubo.  
   
  **Função Semiaditiva**  

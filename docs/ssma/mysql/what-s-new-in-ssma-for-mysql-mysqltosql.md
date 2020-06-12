@@ -1,24 +1,29 @@
 ---
 title: O que há de novo no SSMA para MySQL (MySQLToSql) | Microsoft Docs
+description: Saiba mais sobre as alterações feitas no Assistente de Migração do SQL Server (SSMA) para MySQL (MySQLToSQL) para cada versão.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 288056843e8868c5738f8f1e101015c0142bb6bd
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 46f7cd640c0ad3767594122cc34536b925be7bb8
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220191"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293883"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novidades no SSMA para MySQL (MySQLToSql)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para MySQL alterações em cada versão.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+A versão v 8.10 do SSMA para MySQL contém pequenas melhorias de desempenho e correções de bugs.
 
 ## <a name="ssma-v89"></a>8.9 do SSMA v
 

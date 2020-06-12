@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b4ebdc57-8b2a-4950-b489-88360e6c82c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0305b7d205b6de84ef72edd481df01e725df826b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 778cdfa11ac63aa1857816c8e5bcf42ef48a2e0d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087178"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527062"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>Conectar a um banco de dados Sybase (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar as configurações de conexão a um banco de dados Sybase. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087178"
 > [!NOTE]  
 >  As credenciais do usuário atual são usadas na seleção de um banco de dados nesta página. Porém, a importação não terá êxito se o usuário especificado na página Informações sobre Representação não tiver privilégios suficientes para ler do banco de dados selecionado.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome de conexão amigável**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66087178"
  **Salvar minha senha**  
  Especifique se a senha que você inseriu na caixa **Senha** deve ser armazenada.  
   
- **Nome do banco de dados**  
+ **Database Name**  
  Selecione um banco de dados da lista de bancos de dados.  
   
  **Avançado**  

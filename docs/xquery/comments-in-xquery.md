@@ -1,5 +1,6 @@
 ---
 title: Comentários em XQuery | Microsoft Docs
+description: Aprenda a sintaxe e os delimitadores para adicionar comentários a um XQuery.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05205d44c6d05729e1dc6ea7e17c867c0b7b28f0
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039024"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215772"
 ---
 # <a name="comments-in-xquery"></a>Comentários no XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

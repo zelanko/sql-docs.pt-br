@@ -1,24 +1,29 @@
 ---
 title: O que há de novo no SSMA para DB2 (DB2ToSQL) | Microsoft Docs
+description: Saiba mais sobre as alterações feitas no Assistente de Migração do SQL Server (SSMA) para DB2 (DB2ToSQL) para cada versão.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 3b3fca46fb5e30cfa446e0ca9de8dc0324d2f7f8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 73a0afb17e8c44aea6cdb25d590cedeecdc274cf
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220083"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293973"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>O que há de novo no SSMA para DB2 (DB2ToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para as alterações do DB2 em cada versão.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+A versão v 8.10 do SSMA para DB2 aborda uma regressão na descoberta de chaves estrangeiras e contém melhorias de desempenho secundárias.
 
 ## <a name="ssma-v89"></a>8.9 do SSMA v
 
@@ -52,7 +57,7 @@ Além disso, o SSMA para DB2 agora fornece:
 * Conversão aprimorada para a `COUNT` função em tabelas do MQ.
 * Conversão de `SAVEPOINT` instruções.
 * Conversão para emular o comportamento de DB2's para `NULL` os valores na `ORDER BY` cláusula.
-* Suporte de análise para a instrução do conjunto de resultados associado.
+* Suporte de análise para a `ASSOCIATE RESULT SET` instrução.
 
 > [!IMPORTANT]
 > Com o SSMA v 8.5 e posterior, o .NET 4.7.2 é um pré-requisito de instalação. Se precisar instalar essa versão, você poderá baixar o arquivo de tempo de execução [aqui](https://dotnet.microsoft.com/download/dotnet-framework/net472).

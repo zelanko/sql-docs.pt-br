@@ -1,5 +1,6 @@
 ---
 title: Tratamento de erro (XQuery) | Microsoft Docs
+description: Saiba mais sobre o tratamento de erros no XQuery e veja exemplos de tratamento de erros dinâmicos.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b80fda53a6ce0acfd326f6f897cb6cde1bf0e610
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038958"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305878"
 ---
 # <a name="error-handling-xquery"></a>Tratamento de erros (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68038958"
  Frequentemente, na situação em que o erro dinâmico aconteceria dentro de um predicado, não causar o erro não é alterar as semânticas, porque () é mapeado para False. No entanto, em alguns casos, retornando () em vez de um erro dinâmico pode causar resultados inesperados. Os exemplos a seguir ilustram isso.  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>Exemplo: usando a função avg () com uma cadeia de caracteres  
- No exemplo a seguir, a [função AVG](../xquery/aggregate-functions-avg.md) é chamada para calcular a média dos três valores. Um desses valores é uma cadeia de caracteres. Em razão da instância XML nesse caso não ser digitada, todos os dados nela são de um tipo atômico não digitado. A função **AVG ()** primeiro converte esses valores em **xs: Double** antes de calcular a média. No entanto, o `"Hello"`valor,, não pode ser convertido em **xs: Double** e cria um erro dinâmico. Nesse caso, em vez de retornar um erro dinâmico, a conversão de `"Hello"` para **xs: Double** causa uma sequência vazia. A função **AVG ()** ignora esse valor, calcula a média dos outros dois valores e retorna 150.  
+ No exemplo a seguir, a [função AVG](../xquery/aggregate-functions-avg.md) é chamada para calcular a média dos três valores. Um desses valores é uma cadeia de caracteres. Em razão da instância XML nesse caso não ser digitada, todos os dados nela são de um tipo atômico não digitado. A função **AVG ()** primeiro converte esses valores em **xs: Double** antes de calcular a média. No entanto, o valor, `"Hello"` , não pode ser convertido em **xs: Double** e cria um erro dinâmico. Nesse caso, em vez de retornar um erro dinâmico, a conversão de `"Hello"` para **xs: Double** causa uma sequência vazia. A função **AVG ()** ignora esse valor, calcula a média dos outros dois valores e retorna 150.  
   
 ```  
 DECLARE @x xml  
@@ -58,7 +59,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>Exemplo: usando a função not  
- Quando você usa a [função not](../xquery/functions-on-boolean-values-not-function.md) em um predicado, por `/SomeNode[not(Expression)]`exemplo,, e a expressão causa um erro dinâmico, uma sequência vazia será retornada em vez de um erro. A aplicação de **not ()** à sequência vazia retorna true, em vez de um erro.  
+ Quando você usa a [função not](../xquery/functions-on-boolean-values-not-function.md) em um predicado, por exemplo, `/SomeNode[not(Expression)]` , e a expressão causa um erro dinâmico, uma sequência vazia será retornada em vez de um erro. A aplicação de **not ()** à sequência vazia retorna true, em vez de um erro.  
   
 ### <a name="example-casting-a-string"></a>Exemplo: convertendo uma cadeia de caracteres  
  No exemplo a seguir, a cadeia de caracteres literal "NaN" é convertida em xs:string, depois em xs:double. O resultado é um conjunto de linhas vazio. Embora a cadeia de caracteres "NaN" não possa ser convertida em xs:double com sucesso, isso não pode ser determinado até que a cadeia de caracteres seja convertida primeiro em xs:string.  

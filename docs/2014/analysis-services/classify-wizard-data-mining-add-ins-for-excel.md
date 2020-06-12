@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18cbc54053ddabf79ac6bfa30c8d43d05720c840
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087927"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527502"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistente de Classificação (Suplementos de Mineração de Dados para Excel)
   ![Assistente para Classificação na faixa de opções Mineração de Dados](media/dmc-classify.gif "Assistente para Classificação na faixa de opções Mineração de Dados")  
@@ -79,7 +78,7 @@ ms.locfileid: "66087927"
  [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### <a name="requirements"></a>Requisitos  
- Para usar o assistente de **classificação** , você deve estar conectado a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] um banco de dados. Para obter informações sobre como criar uma conexão, consulte [conectar-se a dados de origem &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+ Para usar o assistente de **classificação** , você deve estar conectado a um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. Para obter informações sobre como criar uma conexão, consulte [conectar-se a dados de origem &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)  

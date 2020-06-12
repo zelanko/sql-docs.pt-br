@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15ba71b6beb46280f1fc3ad972c6252f95842eaa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062985"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528273"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Gráfico de Precisão (Suplementos de Mineração de Dados do SQL Server)
   ![Botão Gráfico de Precisão na faixa de opções Mineração de Dados](media/dmc-accchart.gif "Botão Gráfico de Precisão na faixa de opções Mineração de Dados")  
@@ -49,12 +48,12 @@ ms.locfileid: "66062985"
   
 2.  No grupo de **precisão e validação** , clique em **gráfico de precisão**.  
   
-3.  Na caixa de diálogo **selecionar estrutura ou modelo** , escolha o modelo que você deseja avaliar. Clique em **Avançar**.  
+3.  Na caixa de diálogo **selecionar estrutura ou modelo** , escolha o modelo que você deseja avaliar. Clique em **Próximo**.  
   
     > [!NOTE]  
     >  Escolha um modelo bem parecido com os dados que você pretende testar.  
   
-4.  Na caixa de diálogo **especificar coluna para prever e valor a prever** , escolha a coluna que você deseja prever e um valor de destino, se apropriado. Clique em **Avançar**.  
+4.  Na caixa de diálogo **especificar coluna para prever e valor a prever** , escolha a coluna que você deseja prever e um valor de destino, se apropriado. Clique em **Próximo**.  
   
      No exemplo acima, você pode escolher a coluna que modela a resposta do cliente e especificar o valor de destino como "Probabilidade de compra".  
   

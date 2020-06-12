@@ -1,24 +1,29 @@
 ---
 title: O que há de novo no SSMA for Access (AccessToSQL) | Microsoft Docs
+description: Saiba mais sobre as alterações feitas no Assistente de Migração do SQL Server (SSMA) for Access (AccessToSQL) para cada versão.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: jtoland;alexiva
-ms.openlocfilehash: e1bc77c0fac3698d7d36ebfb47dde547d475142e
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: da71576b58487fa5d2d1e069d56c9fa6db783fc2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220251"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292953"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>O que há de novo no SSMA for Access (AccessToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para acessar alterações em cada versão.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+A versão v 8.10 do SSMA para Access contém pequenas melhorias de desempenho e correções de bugs.
 
 ## <a name="ssma-v89"></a>8.9 do SSMA v
 

@@ -1,5 +1,6 @@
 ---
 title: Expressões condicionais (XQuery) | Microsoft Docs
+description: Saiba mais sobre as expressões condicionais com suporte no XQuery.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76570b6b7cbb1ecb55a881d58683e158736e85d0
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039012"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689710"
 ---
 # <a name="conditional-expressions-xquery"></a>Expressões condicionais (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ else
   
 -   A expressão **else** é necessária. Se você não precisar dela, poderá retornar " ( ) ", como ilustrado nos exemplos neste tópico.  
   
- Por exemplo, a consulta a seguir é especificada em relação à variável de tipo **XML** . A condição **If** testa o valor da variável SQL (@v) dentro da expressão XQuery usando a função de extensão de [função SQL: variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Se o valor da variável for "FirstName", ele retornará o `FirstName` elemento <>. Caso contrário, ele retornará o `LastName` elemento <>.  
+ Por exemplo, a consulta a seguir é especificada em relação à variável de tipo **XML** . A condição **If** testa o valor da variável SQL ( @v ) dentro da expressão XQuery usando a função de extensão de [função SQL: variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Se o valor da variável for "FirstName", ele retornará o `FirstName` elemento <>. Caso contrário, ele retornará o `LastName` elemento <>.  
   
 ```  
 declare @x xml  
@@ -122,7 +123,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- Na consulta a seguir, um elemento `Location` <> com um atributo LocationID será retornado se o local do centro de trabalho não especificar o horário de configuração.  
+ Na consulta a seguir, um `Location` elemento <> com um atributo LocationID será retornado se o local do centro de trabalho não especificar o horário de configuração.  
   
 ```  
 SELECT Instructions.query('  

@@ -1,7 +1,6 @@
 ---
 title: sp_delete_firewall_rule
 titleSuffix: Azure SQL Database
-ms.custom: seo-dt-2019
 ms.date: 07/27/2016
 ms.service: sql-database
 ms.reviewer: ''
@@ -18,13 +17,14 @@ helpviewer_keywords:
 ms.assetid: cf93eed1-ba97-4850-9fcc-b9c5a9317908
 author: VanMSFT
 ms.author: vanto
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: b012b118d16b2bf15194eb2fe515936abf6e6f80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f25cd3da648785ad25309c2c3943dbec7390c3d9
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844392"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627415"
 ---
 # <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="arguments"></a>Argumentos  
  O argumento do procedimento armazenado é:  
   
- [@name =] '*Name*'  
+ [ @name =] '*nome*'  
  O nome da configuração de firewall de nível de servidor que será removida. *nome* é **nvarchar (128)** sem padrão.  
   
 ## <a name="remarks"></a>Comentários  

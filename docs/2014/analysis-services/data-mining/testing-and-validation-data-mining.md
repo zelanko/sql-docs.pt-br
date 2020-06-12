@@ -27,18 +27,17 @@ helpviewer_keywords:
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b34fc9d18866572056126b1df408d91c3934e85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082797"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520414"
 ---
 # <a name="testing-and-validation-data-mining"></a>Teste e validação (mineração de dados)
   A validação é o processo de avaliar como seus modelos de mineração são executados nos dados reais. É importante validar seus modelos de mineração entendendo suas qualidades e características antes de implantá-los em um ambiente de produção.  
   
- Esta seção apresenta alguns conceitos básicos relacionados à qualidade do modelo e descreve as estratégias para a validação de modelo que são [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]fornecidas no. Para obter uma visão geral de como a validação de modelo funciona no processo de mineração de dados mais amplo, consulte [Soluções de mineração de dados](data-mining-solutions.md).  
+ Esta seção apresenta alguns conceitos básicos relacionados à qualidade do modelo e descreve as estratégias para a validação de modelo que são fornecidas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter uma visão geral de como a validação de modelo funciona no processo de mineração de dados mais amplo, consulte [Soluções de mineração de dados](data-mining-solutions.md).  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>Métodos para teste e validação de modelos de mineração de dados  
  Há muitas abordagens para avaliar a qualidade e as características de um modelo de mineração de dados.  

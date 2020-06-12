@@ -1,24 +1,24 @@
 ---
-title: '&lt;consulta&gt; de dados de origem | Microsoft Docs'
+title: '&lt;consulta de dados de origem &gt; | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892338"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670011"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de dados de origem&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Para treinar um modelo de data mining e criar previsões de um modelo de mineração, você precisa acessar os dados que são externos ao [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dado. Use a \<cláusula> de consulta de dados de origem em DMX (extensões de mineração de dados) para definir esses dados externos. O [&#41;de inserção no &#40;DMX ](../dmx/insert-into-dmx.md), [selecione do modelo de &#60;&#62; junção de previsão &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)e [Selecione em instruções de junção de previsão natural](../dmx/select-from-model-prediction-join-dmx.md) todos usam ** \<>de consulta de dados de origem **.  
+  Para treinar um modelo de data mining e criar previsões de um modelo de mineração, você precisa acessar os dados que são externos ao banco de dado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Use a \< cláusula> de consulta de dados de origem em DMX (extensões de mineração de dados) para definir esses dados externos. O [&#41;de inserção no &#40;DMX ](../dmx/insert-into-dmx.md), [selecione do modelo de &#60;&#62; junção de previsão &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)e [Selecione em instruções de junção de previsão natural](../dmx/select-from-model-prediction-join-dmx.md) todos usam ** \<>de consulta de dados de origem **.  
   
 ## <a name="query-types"></a>Tipos de consultas  
  As três modos mais comuns para especificar dados de origem são:  

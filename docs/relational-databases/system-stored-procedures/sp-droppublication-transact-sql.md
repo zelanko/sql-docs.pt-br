@@ -1,5 +1,6 @@
 ---
 title: sp_droppublication (Transact-SQL) | Microsoft Docs
+description: Descarta uma publicação e seu Snapshot Agent associado. Esse procedimento armazenado é executado no Publicador do banco de dados de publicação.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ef56f46696a2cb145804105d4d5f22fded6fe1f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 46faa94ed9a85433b9212856ea5d95f43fb01972
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829993"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807792"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

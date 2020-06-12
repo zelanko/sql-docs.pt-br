@@ -1,5 +1,6 @@
 ---
 title: Excluindo dados usando Updategrams XML (SQLXML)
+description: Saiba como excluir dados usando um updategram XML no SQLXML 4,0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad537d8b2ce247d45e8e7a94216006023373c13c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f32c1107d886b7bc84590abbd6bab5343d2a2b8b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252427"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529805"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Excluindo dados usando diagramas de atualização XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Um updategram indica uma operação de exclusão quando uma instância de registro é exibida no bloco ** \<before>** sem registros correspondentes no bloco ** \<After>** . Nesse caso, o updategram exclui o registro no bloco ** \<before>** do banco de dados.  
+  Um updategram indica uma operação de exclusão quando uma instância de registro é exibida no **\<before>** bloco sem registros correspondentes no **\<after>** bloco. Nesse caso, o updategram exclui o registro no **\<before>** bloco do banco de dados.  
   
  Este é o formato do diagrama de atualização em uma operação de exclusão:  
   
@@ -43,9 +44,9 @@ ms.locfileid: "75252427"
 </ROOT>  
 ```  
   
- Você pode omitir a marca de ** \<>após** se o updategram estiver executando apenas uma operação de exclusão. Se você não especificar o atributo de **esquema de mapeamento** opcional, o ** \<ElementName>** especificado no updategram será mapeado para uma tabela de banco de dados e os elementos filho ou atributos são mapeados para colunas na tabela.  
+ Você pode omitir a **\<after>** marca se o updategram estiver executando apenas uma operação de exclusão. Se você não especificar o atributo de **esquema de mapeamento** opcional, o **\<ElementName>** especificado no updategram será mapeado para uma tabela de banco de dados e os elementos filho ou atributos são mapeados para colunas na tabela.  
   
- Se um elemento especificado no updategram corresponder a mais de uma linha na tabela ou não corresponder a nenhuma linha, o updategram retornará um erro e cancelará todo ** \<** o bloco de>de sincronização. Só um registro de cada vez pode ser excluído por um elemento no diagrama.  
+ Se um elemento especificado no updategram corresponder a mais de uma linha na tabela ou não corresponder a nenhuma linha, o updategram retornará um erro e cancelará o **\<sync>** bloco inteiro. Só um registro de cada vez pode ser excluído por um elemento no diagrama.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos desta seção usam o mapeamento padrão (ou seja, nenhum esquema de mapeamento é especificado no diagrama de atualização). Para obter mais exemplos de Updategrams que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um Updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
@@ -57,7 +58,7 @@ ms.locfileid: "75252427"
   
  Nestes exemplos, o diagrama não especifica um esquema de mapeamento. Portanto, o diagrama usa o mapeamento padrão no qual o nome de elemento é mapeado para o nome de tabela e os atributos ou subelementos para as colunas.  
   
- Esse primeiro updategram é centrado em atributo e identifica dois turnos (dia-noite e noite-noturna) no bloco ** \<antes de>** . Como não há registro correspondente no bloco ** \<After>** , essa é uma operação de exclusão.  
+ Esse primeiro updategram é centrado em atributo e identifica dois turnos (dia-noite e noite-noturna) no **\<before>** bloco. Como não há nenhum registro correspondente no **\<after>** bloco, essa é uma operação de exclusão.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -84,7 +85,7 @@ ms.locfileid: "75252427"
   
 1.  Conclua o exemplo B ("inserindo vários registros usando um updategram") em [inserindo dados usando os UPDATEGRAMS XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
-2.  Copie o updategram acima para o bloco de notas e salve-o como Updategram-RemoveShifts. xml na mesma pasta usada para concluir ("inserindo vários registros usando um updategram") em [inserindo dados usando os UPDATEGRAMS xml &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+2.  Copie o updategram acima para o bloco de notas e salve-o como Updategram-RemoveShifts.xml na mesma pasta que foi usada para concluir ("inserindo vários registros usando um updategram") na [inserção de dados usando os UPDATEGRAMS XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 3.  Crie e use o Script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o diagrama de atualização.  
   

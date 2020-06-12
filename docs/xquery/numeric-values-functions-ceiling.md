@@ -1,5 +1,6 @@
 ---
 title: Função de teto (XQuery) | Microsoft Docs
+description: Saiba como usar a função teto () do XQuery para retornar o menor número sem uma parte fracionária que não seja menor que o valor do argumento da função.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946574"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689763"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funções de Valores Numéricos – ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,11 +76,11 @@ WHERE ProductModelID=7
   
 -   **Instruções** é uma coluna de tipo **XML** . Portanto, o [método Query () (tipo de dados XML)](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar XQuery. A instrução XQuery é especificada como o argumento para o método de consulta.  
   
--   **para... Return** é um constructo de loop. Na consulta, o loop **for** identifica uma lista de elementos \<de localização>. Para cada local do centro de trabalho, a instrução **Return** no loop **for** descreve o XML a ser gerado:  
+-   **para... Return** é um constructo de loop. Na consulta, o loop **for** identifica uma lista de \< elementos de localização>. Para cada local do centro de trabalho, a instrução **Return** no loop **for** descreve o XML a ser gerado:  
   
-    -   Um \<elemento de> local que tem os atributos LocationID e LaborHrs. A expressão correspondente dentro dos colchetes ({ }) recupera os valores exigidos do documento.  
+    -   Um \< elemento de> local que tem os atributos LocationID e LaborHrs. A expressão correspondente dentro dos colchetes ({ }) recupera os valores exigidos do documento.  
   
-    -   A expressão {i/@LotSize $} recupera o atributo de lotes do documento, se presente.  
+    -   A expressão {$ i/@LotSize } recupera o atributo de lotes do documento, se presente.  
   
     -   Este é o resultado:  
   

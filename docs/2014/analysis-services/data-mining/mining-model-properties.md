@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa158dba22938d347030ada0c9b2ea8e589cab5d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083507"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521228"
 ---
 # <a name="mining-model-properties"></a>Propriedades do modelo de mineração
   Os modelos de mineração têm os seguintes tipos de propriedades:  
@@ -56,7 +55,7 @@ ms.locfileid: "66083507"
 |**Nome**|Define o nome da coluna do modelo de mineração. Você pode digitar um novo nome, para fornecer um alias à coluna do modelo de mineração.|  
 |**ModelingFlags**|Define qualquer sinalizador específico de um algoritmo para a coluna.|  
 |**SourceColumnID**|Indica o nome da coluna de estrutura de mineração na qual a coluna de modelo é baseada.<br /><br /> Essa propriedade é somente leitura.|  
-|**Uso**|Define como a coluna será usada pelo modelo de mineração.|  
+|**Usage**|Define como a coluna será usada pelo modelo de mineração.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Colunas do modelo de mineração](mining-model-columns.md)   

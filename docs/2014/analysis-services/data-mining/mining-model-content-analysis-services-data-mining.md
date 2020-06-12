@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083783"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521613"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   Depois de projetar e processar um modelo de mineração usando dados da estrutura de mineração subjacente, o modelo de mineração é concluído e contém o *conteúdo do modelo de mineração*. Você pode usar este conteúdo para fazer previsões ou analisar seus dados.  
@@ -228,8 +227,8 @@ ms.locfileid: "66083783"
 |13|Ordem regressiva automática|Indica que o valor representa o número de séries regressivas automáticas.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
 |14|Ordem de média de movimentação|Representa um valor que representa o número de médias de movimentação em uma série.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
 |15|Ordem de diferença|Indica que o valor representa um valor que indica quantas vezes a série é diferenciada.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
-|16|Boolean|Representa um tipo Booleano.|  
-|17|Outros|Representa um valor personalizado definido pelo algoritmo.|  
+|16|Booliano|Representa um tipo Booleano.|  
+|17|Outro|Representa um valor personalizado definido pelo algoritmo.|  
 |18|Cadeia de caracteres pré-processada|Representa um valor personalizado que o algoritmo processa como uma cadeia de caracteres. Nenhuma formatação foi aplicada pelo modelo de objeto.|  
   
  Os tipos de valor são derivados da enumeração ADMOMD.NET. Para obter mais informações, consulte <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
@@ -277,10 +276,10 @@ ms.locfileid: "66083783"
 |Modelo de árvores de decisão|[Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)|  
 |Modelos de regressão linear|[Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)|  
 |Modelos de regressão logística|[Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)|[Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)|  
-|Modelos Naïve Bayes|[Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemplos de consulta do modelo Naive Bayes](naive-bayes-model-query-examples.md)|  
+|Modelos Naïve Bayes|[Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo Naive Bayes](naive-bayes-model-query-examples.md)|  
 |Modelos de rede neural|[Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](neural-network-model-query-examples.md)|  
 |Clustering de sequências|[Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)|  
-|Modelos de série temporal|[Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelos de série temporal](time-series-model-query-examples.md)|  
+|Modelos de série temporal|[Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemplos de consulta de um modelo de série temporal](time-series-model-query-examples.md)|  
   
 ##  <a name="tools-for-viewing-mining-model-content"></a><a name="bkmk_Viewing"></a>Ferramentas para exibir o conteúdo do modelo de mineração  
  Ao procurar ou explorar um modelo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você poderá exibir as informações no **Visualizador de Árvore de Conteúdo Genérica da Microsoft**, disponível no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

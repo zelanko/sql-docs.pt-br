@@ -12,19 +12,19 @@ ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000926"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858666"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriedades do Índice de Texto Completo (página Geral)
   **Para exibir ou alterar as propriedades modificáveis de um índice de texto completo**  
   
 -   [Gerenciar índices de texto completo](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Catálogo de texto completo**  
  Exibe o nome do catálogo de texto completo ao qual o índice de texto completo está associado.  
   

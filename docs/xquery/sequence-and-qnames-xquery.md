@@ -1,5 +1,6 @@
 ---
 title: Sequência e QNames (XQuery) | Microsoft Docs
+description: Saiba mais sobre os conceitos fundamentais de sequências e QNames no XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380777"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305712"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequência e QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  Na expressão (`/Root/a`), `Root` e `a` são QNames.  
   
- No exemplo a seguir, uma consulta é especificada em uma coluna **XML** com tipo. A consulta itera em todos os \<elementos da etapa> no primeiro local centro.  
+ No exemplo a seguir, uma consulta é especificada em uma coluna **XML** com tipo. A consulta itera em todos os \<step> elementos no primeiro local centro.  
   
 ```  
 SELECT Instructions.query('  
@@ -146,7 +147,7 @@ WHERE ProductModelID=7;
  Cada banco de dados que você cria tem a coleção de esquema **Sys** XML. Ele reserva esses esquemas para que eles possam ser acessados de qualquer coleção de esquemas XML criadas pelo usuário.  
   
 > [!NOTE]  
->  Essa implementação não oferece suporte ao `local` prefixo conforme descrito na especificação XQuery no http://www.w3.org/2004/07/xquery-local-functions.  
+>  Essa implementação não oferece suporte ao `local` prefixo conforme descrito na especificação XQuery no http://www.w3.org/2004/07/xquery-local-functions .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Fundamentos de XQuery](../xquery/xquery-basics.md)  
