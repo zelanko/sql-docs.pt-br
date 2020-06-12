@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42d48d088b72c28c6e44b6f96aab1e1493e47577
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175762"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536048"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Criar medidas e grupos de medidas em modelos multidimensionais
   Uma *medida* é uma agregação de valores de dados numéricos, como soma, contagem, mínima, máxima, média ou uma expressão MDX personalizada criada por você. Um *grupo de medidas* é um contêiner para uma ou mais medidas. Todas as medidas existem em um grupo de medidas, mesmo que haja somente uma medida. Um cubo deve ter pelo menos uma medida e um grupo de medidas.
@@ -49,8 +48,8 @@ ms.locfileid: "78175762"
 
 |||
 |-|-|
-|**original**|A maioria das medidas é proveniente de colunas numéricas em tabelas de fatos em um data warehouse externo, como a coluna Valor das Vendas nas tabelas Vendas pela Internet e Vendas do Revendedor no data warehouse do AdventureWorks, mas você também pode criar novas medidas inteiramente com base nos cálculos definidos por você.<br /><br /> As colunas de atributos de tabelas de dimensões podem ser usadas para definir medidas, mas tais medidas são geralmente semiaditivas ou não aditivas em termos de seu comportamento de agregação. Para obter mais informações sobre o comportamento semiaditivo, consulte [Definir comportamento semiaditivo](define-semiadditive-behavior.md).|
-|**Aggregation**|Por padrão, as medidas são somadas a cada dimensão. No entanto, a propriedade `AggregateFunction` permite a modificação desse comportamento. Consulte [Use Aggregate Functions](use-aggregate-functions.md) para obter uma lista.|
+|**source**|A maioria das medidas é proveniente de colunas numéricas em tabelas de fatos em um data warehouse externo, como a coluna Valor das Vendas nas tabelas Vendas pela Internet e Vendas do Revendedor no data warehouse do AdventureWorks, mas você também pode criar novas medidas inteiramente com base nos cálculos definidos por você.<br /><br /> As colunas de atributos de tabelas de dimensões podem ser usadas para definir medidas, mas tais medidas são geralmente semiaditivas ou não aditivas em termos de seu comportamento de agregação. Para obter mais informações sobre o comportamento semiaditivo, consulte [Definir comportamento semiaditivo](define-semiadditive-behavior.md).|
+|**agregação**|Por padrão, as medidas são somadas a cada dimensão. No entanto, a propriedade `AggregateFunction` permite a modificação desse comportamento. Consulte [Use Aggregate Functions](use-aggregate-functions.md) para obter uma lista.|
 |**Propriedades**|Consulte [Configure Measure Properties](configure-measure-properties.md) para obter descrições de propriedades adicionais.|
 
 ##  <a name="modeling-measures-and-measure-groups-on-facts-and-fact-tables"></a><a name="bkmk_modeling"></a>Medidas de modelagem e grupos de medidas em fatos e tabelas de fatos

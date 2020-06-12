@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b9088dc5dc222d8dd1c0c861746f225e6f5b469
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062513"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528064"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Designer de consulta MDX do Analysis Services (SSAS)
-  O designer de consulta MDX (multidimensional Expression) do Analysis Services fornece interfaces gráficas do usuário para ajudá-lo a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] criar consultas MDX para uma fonte de dados. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros dos cubos selecionados para criar uma consulta MDX que recupere os dados que você deseja usar.  
+  O designer de consulta MDX (multidimensional Expression) do Analysis Services fornece interfaces gráficas do usuário para ajudá-lo a criar consultas MDX para uma [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fonte de dados. O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros dos cubos selecionados para criar uma consulta MDX que recupere os dados que você deseja usar.  
   
 > [!IMPORTANT]  
 >  Os usuários acessam fontes de dados quando criam e executam consultas. Você deve conceder permissões mínimas nas fontes de dados, como permissões somente leitura.  
@@ -64,7 +63,7 @@ ms.locfileid: "66062513"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Barra de ferramentas do Designer de Consultas Gráficas MDX no modo Design  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. A tabela a seguir lista os botões e as suas funções.  
   
-|Botão|Descrição|  
+|Botão|Description|  
 |------------|-----------------|  
 |**Editar como Texto**|Não habilitado para esse tipo de fonte de dados.|  
 |**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos.|  

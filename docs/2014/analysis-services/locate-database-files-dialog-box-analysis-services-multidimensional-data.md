@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d98cba034ecb77f88b63f9adb46bea2ae76eb68d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078025"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541868"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Localizar Arquivos de Banco de Dados (Analysis Services - Dados Multidimensionais)
   A caixa de diálogo **Localizar Arquivos de Banco de Dados** exibe uma lista de arquivos disponíveis em pastas de dados e de log definidas para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Você pode selecionar um arquivo listado ou especificar uma pasta e arquivo diferentes se necessário. A caixa de diálogo **Localizar Arquivos de Banco de Dados** é exibida das seguintes maneiras:  

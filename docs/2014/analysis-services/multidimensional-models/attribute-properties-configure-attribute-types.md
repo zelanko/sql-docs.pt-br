@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c73600d934bb87540487e0d82874650d708e034f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077406"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544788"
 ---
 # <a name="configure-attribute-types"></a>Configurar tipos de atributo
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os tipos de atributo ajudam a classificar um atributo em termos de funcionalidade de negócios. Existem muitos tipos de atributo, sendo que a maioria é usada por aplicativos cliente para exibir ou oferecer suporte a um atributo. No entanto, alguns tipos de atributo também têm significado específico para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por exemplo, alguns tipos de atributo identificam atributos que representam períodos de tempo em vários calendários de dimensões de tempo.  
+  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , os tipos de atributo ajudam a classificar um atributo em termos de funcionalidade de negócios. Existem muitos tipos de atributo, sendo que a maioria é usada por aplicativos cliente para exibir ou oferecer suporte a um atributo. No entanto, alguns tipos de atributo também têm significado específico para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por exemplo, alguns tipos de atributo identificam atributos que representam períodos de tempo em vários calendários de dimensões de tempo.  
   
 ##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a>Definindo tipos de atributo  
  O valor da propriedade `Type` de um atributo determina seu tipo. Vários assistentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuram os tipos de atributo ao definir dimensões ou atributos. Esses assistentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também configuram os tipos de atributo quando os assistentes adicionam funcionalidades às dimensões. Por exemplo, o Assistente de Business Intelligence aplica diversos tipos de atributo aos atributos de uma dimensão quando o assistente adiciona inteligência de contas para identificar nas dimensão os atributos que contêm nomes, códigos, números e estrutura de conta. O Assistente de Business Intelligence também utiliza tipos de atributo, como para conversão de moeda. Para obter mais informações, consulte [Criar uma dimensão de tipo Moeda](database-dimensions-create-a-currency-type-dimension.md).  
@@ -42,7 +41,7 @@ ms.locfileid: "66077406"
   
 ###  <a name="general-attribute-types"></a><a name="general_attribute_types"></a>Tipos de atributo gerais  
   
-|Valor do tipo de atributo|Descrição|  
+|Valor do tipo de atributo|Description|  
 |--------------------------|-----------------|  
 |`Address`|Representa um endereço.|  
 |`AddressBuilding`|Representa o identificador da construção do endereço.|  
@@ -154,7 +153,7 @@ ms.locfileid: "66077406"
   
 ###  <a name="account-dimension-attribute-types"></a><a name="account_dimension_attribute_types"></a>Tipos de atributo de dimensão de conta  
   
-|Valor do tipo de atributo|Descrição|  
+|Valor do tipo de atributo|Description|  
 |--------------------------|-----------------|  
 |`Account`|Representa o pai de uma conta. Normalmente, esse tipo de atributo é aplicado ao atributo pai de uma dimensão de contas.|  
 |`AccountName`|Representa o nome de uma conta. Normalmente, esse tipo de atributo é aplicado aos atributos de chave de uma dimensão de contas.|  
@@ -163,7 +162,7 @@ ms.locfileid: "66077406"
   
 ###  <a name="currency-dimension-attribute-types"></a><a name="currency_dimension_attribute_types"></a>Tipos de atributo de dimensão de moeda  
   
-|Valor do tipo de atributo|Descrição|  
+|Valor do tipo de atributo|Description|  
 |--------------------------|-----------------|  
 |`CurrencyDestination`|Representa a moeda de destino de um câmbio monetário. Normalmente, esse tipo de atributo é aplicado ao atributo de chave de uma dimensão de relatório, para uso em conversão de moeda. Para obter mais informações sobre como a conversões de moeda, consulte [Conversões de moeda &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
 |`CurrencyIsoCode`|Representa o código da moeda da Organização de Padronização Internacional (ISO). Para obter mais informações sobre como a conversões de moeda, consulte [Conversões de moeda &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
@@ -172,7 +171,7 @@ ms.locfileid: "66077406"
   
 ###  <a name="slowly-changing-dimension-attribute-types"></a><a name="slowly_changing_dimension_attribute_types"></a>Tipos de atributo de dimensão de alteração lenta  
   
-|Valor do tipo de atributo|Descrição|  
+|Valor do tipo de atributo|Description|  
 |--------------------------|-----------------|  
 |**ScdEndDate**|Representa a data de término efetiva para um membro de uma dimensão de alteração lenta.|  
 |**ScdOriginalID**|Representa o identificador original de um membro em uma dimensão de alteração lenta.|  
@@ -181,7 +180,7 @@ ms.locfileid: "66077406"
   
 ###  <a name="time-dimension-attribute-types"></a><a name="time_dimension_attribute_types"></a>Tipos de atributo de dimensão de tempo  
   
-|Valor do tipo de atributo|Descrição|  
+|Valor do tipo de atributo|Description|  
 |--------------------------|-----------------|  
 |`Date`|Representa uma data. Normalmente, esse tipo de atributo é aplicado ao atributo de chave de uma dimensão de tempo ou dimensão de tempo de servidor.|  
 |`DayOfHalfYear`|Representa o ordinal de dia de um semestre.|  

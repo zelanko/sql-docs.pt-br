@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8311b2c3a2cfec2e3bac00a9082ca83d2d927b25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081654"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528572"
 ---
 # <a name="dimension-wizard-f1-help"></a>Ajuda F1 do Assistente para Dimensões
-  Use o assistente para dimensões [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] no para criar uma dimensão de banco [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de dados em um projeto do. Depois que você criar uma dimensão de banco de dados, você pode usar o Designer de Dimensão para modificar suas propriedades. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+  Use o assistente para dimensões no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma dimensão de banco de dados em um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto do. Depois que você criar uma dimensão de banco de dados, você pode usar o Designer de Dimensão para modificar suas propriedades. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Para abrir o Assistente para Dimensões**  
   

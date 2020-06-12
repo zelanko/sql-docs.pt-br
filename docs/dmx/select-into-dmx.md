@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2e9fb0dfd3607adc1773d4a43561f32ba650ee5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf2e0f2d57ce8bf1834813d4e39d06afc9724fd7
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887682"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670093"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ FROM <existing model>
  A cláusula **WITH DRILLTHROUGH** habilita o detalhamento no novo modelo de mineração. O detalhamento pode ser habilitado somente durante a criação do modelo.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>Exemplo 1: Alterando os parâmetros do modelo  
- O exemplo a seguir cria um novo modelo de mineração com base em um modelo `TM_Clustering`de mineração existente,, que você cria no [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). No novo modelo, o parâmetro CLUSTER_COUNT é modificado para que no máximo cinco clusters existam no modelo. Em contraste, o modelo existente usa o valor padrão que é 10.  
+ O exemplo a seguir cria um novo modelo de mineração com base em um modelo de mineração existente, `TM_Clustering` , que você cria no [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). No novo modelo, o parâmetro CLUSTER_COUNT é modificado para que no máximo cinco clusters existam no modelo. Em contraste, o modelo existente usa o valor padrão que é 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  

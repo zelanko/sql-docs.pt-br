@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb8c0f9424c9e817ee482f426b3045e878a9c9c9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070035"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539048"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Dados de Amostra (Suplementos de Mineração de Dados do SQL Server)
   ![Assistente para Particionar Dados na faixa de opções Mineração de Dados](media/dmc-partition.gif "Assistente para Particionar Dados na faixa de opções Mineração de Dados")  

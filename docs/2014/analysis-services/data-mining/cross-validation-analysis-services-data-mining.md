@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea26856075d37d815d819fa0eada61d677f77819
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809849"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523622"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validação cruzada (Analysis Services - Mineração de dados)
   A *validação cruzada* é uma ferramenta padrão no Analytics e é um recurso importante para ajudá-lo a desenvolver e ajustar os modelos de data mining. Você utiliza a validação cruzada depois de criar uma estrutura de mineração e os modelos de mineração relacionados para assegurar a validade do modelo.  A validação cruzada tem os aplicativos seguintes:  
@@ -82,7 +81,7 @@ ms.locfileid: "68809849"
 ### <a name="choosing-models-and-columns-to-validate"></a>Escolher os modelos e colunas para validar  
  Ao usar a guia **Validação Cruzada** no Designer de Mineração de Dados, você deve primeiro selecionar a coluna previsível de uma lista. Normalmente, uma estrutura de mineração pode aceitar muitos modelos de mineração, porém nem todos os modelos usam a mesma coluna previsível. Ao executar a validação cruzada, só podem ser incluídos no relatório os modelos que usam a mesma coluna previsível.  
   
- Para escolher um atributo previsível, clique em **Atributo de Destino** e selecione a coluna da lista. Se o atributo de destino for uma coluna aninhada ou uma coluna em uma tabela aninhada, você deverá digitar o nome da coluna aninhada usando \<o formato nome da tabela aninhada> (chave). \<> de coluna aninhada. Se a única coluna usada da tabela aninhada for a coluna de chave, você poderá \<usar o nome de tabela aninhada> (chave).  
+ Para escolher um atributo previsível, clique em **Atributo de Destino** e selecione a coluna da lista. Se o atributo de destino for uma coluna aninhada ou uma coluna em uma tabela aninhada, você deverá digitar o nome da coluna aninhada usando o formato \<Nested Table Name> (chave). \<Nested Column> Se a única coluna usada da tabela aninhada for a coluna de chave, você poderá usar \<Nested Table Name> (chave).  
   
  Depois que você seleciona o atributo previsível, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automaticamente testa todos os modelos que usam o mesmo atributo previsível. Se o atributo de destino contém valores discretos, após você ter selecionado a coluna previsível é possível informar opcionalmente um estado de destino, isto se existir um valor específico que você deseja prever.  
   

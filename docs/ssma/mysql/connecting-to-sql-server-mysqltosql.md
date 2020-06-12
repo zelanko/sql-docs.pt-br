@@ -1,5 +1,6 @@
 ---
 title: Conectando-se ao SQL Server (MySQLToSQL) | Microsoft Docs
+description: Saiba como se conectar a uma instância de destino do SQL Server para migrar bancos de dados MySQL. O SSMA obtém metadados sobre bancos de dados no SQL Server.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103135"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293953"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Conectar-se ao SQL Server (MySQLToSQL)
 Para migrar bancos de dados MySQL para SQL Server, você deve se conectar à instância de destino do SQL Server. Quando você se conecta, o SSMA obtém metadados sobre todos os bancos de dados na instância do SQL Server e exibe os metadados do banco de dados no SQL Server Gerenciador de metadados. O SSMA armazena informações da instância do SQL Server ao qual você está conectado, mas não armazena senhas.  
@@ -67,13 +68,13 @@ Ao definir as propriedades de conexão, você também especifica o banco de dado
   
 É permitido conectar/reconectar-se a versões mais recentes do SQL Server.  
   
-1.  Você [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá se conectar a 2008 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 quando o projeto criado for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
+1.  Você poderá se conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 quando o projeto criado for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-2.  Você [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá se conectar a 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 quando o projeto criado for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, mas não tiver permissão para se conectar a versões inferiores, ou seja [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 2005.  
+2.  Você poderá se conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 quando o projeto criado for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, mas não tiver permissão para se conectar a versões inferiores, ou seja, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-3.  Você poderá [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectar a 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 quando o projeto criado for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
+3.  Você poderá se conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 quando o projeto criado for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
   
-4.  Você poderá se conectar somente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 quando o projeto criado for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
+4.  Você poderá se conectar somente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 quando o projeto criado for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
 5.  A compatibilidade de versão superior não é válida para "SQL Azure".  
   
@@ -84,11 +85,11 @@ Ao definir as propriedades de conexão, você também especifica o banco de dado
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Sim|Sim|Sim|Sim||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Sim|Sim|Sim||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Sim|Sim||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Sim||  
-|SQL Azure||||||Sim|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Yes||  
+|SQL Azure||||||Yes|  
   
 > [!IMPORTANT]  
-> A conversão dos objetos de banco de dados é executada de acordo com o tipo de projeto, mas não de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acordo com a versão do conectado ao. No caso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] projeto 2005, a conversão é realizada de acordo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com 2005, embora você esteja conectado a uma versão mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recente do (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
+> A conversão dos objetos de banco de dados é executada de acordo com o tipo de projeto, mas não de acordo com a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectado ao. No caso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] projeto 2005, a conversão é realizada de acordo com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, embora você esteja conectado a uma versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
   
 ## <a name="synchronizing-sql-server-metadata"></a>Sincronizando metadados de SQL Server  
 Metadados sobre bancos de dados SQL Server não são atualizados automaticamente. Os metadados no SQL Server Gerenciador de metadados é um instantâneo dos metadados quando você se conecta pela primeira vez ao SQL Server, ou a última vez que você atualizou os metadados manualmente. Você pode atualizar os metadados manualmente para todos os bancos de dados ou para qualquer banco de dados ou objeto de banco de dados individual.  

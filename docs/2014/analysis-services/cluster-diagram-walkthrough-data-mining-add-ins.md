@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 578b5b8e55fd3ae660db985eed2e608667dc768b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087908"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527482"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Passo a passo do diagrama de Cluster (Suplementos de Mineração de Dados)
   Depois de criar um modelo de clustering, você pode importá-lo para o Visio usando a forma de **cluster** e, em seguida, continuar a personalizar e aprimorar o layout. As **formas de mineração de dados para o Visio** incluem os seguintes controles personalizados para trabalhar com diagramas de Data Mining:  
@@ -43,7 +42,7 @@ ms.locfileid: "66087908"
   
 1.  Se você não vir **as formas de mineração de dados da Microsoft** na lista **formas** , clique em **mais formas**, selecione **Abrir Estêncil**e abra o modelo no local de instalação padrão.  
   
-     \<unidade>: \Program files\Microsoft SQL Server 2012 DM Add-ins  
+     \<drive>: \Program files\Microsoft SQL Server 2012 DM Add-ins  
   
 2.  Arraste a forma de **cluster** para a página.  
   

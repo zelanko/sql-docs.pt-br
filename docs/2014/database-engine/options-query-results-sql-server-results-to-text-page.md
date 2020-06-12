@@ -12,17 +12,17 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2aea2292ada0256e5ae7b988a8e65649dbc50c0d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000746"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856558"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Opções (página resultados da consulta-SQL Server-resultados em texto)
   Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de texto. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para alterar as opções das consultas atuais, clique em **Opções de consulta** no menu **consulta** ou clique com o botão direito do mouse na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] janela de consulta e selecione **Opções de consulta**. Na caixa de diálogo **Opções de Consulta**, em **Resultados**, clique em **Texto**.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Formato de saída**  
  Por padrão, a saída é exibida em colunas criadas preenchendo os resultados com espaços. Outras opções são o uso de vírgulas, tabulações ou espaços para separar as colunas. Selecione **Delimitador personalizado** nessa lista suspensa, a fim de especificar um caractere de delimitação diferente na caixa de texto **Delimitador personalizado**.  
   

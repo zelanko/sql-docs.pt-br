@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77b65e8361287ba09fa7f28cd74dd5f88d188f97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085552"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523962"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Criar uma consulta de mineração de dados usando XMLA
   Você pode criar várias consultas referentes a objetos de mineração de dados usando AMO, DMX ou XML/A.  
@@ -44,9 +43,9 @@ ms.locfileid: "66085552"
   
      Uma lista dos conjuntos de linha de esquema é retornada no painel **Resultados** que contém os nomes de todos os conjuntos de linhas disponíveis na instância atual.  
   
-2.  No painel de **consulta** , coloque o cursor após ** \<a lista de restrições>** e pressione ENTER para adicionar uma nova linha.  
+2.  No painel de **consulta** , coloque o cursor depois **\<Restriction List>** e pressione ENTER para adicionar uma nova linha.  
   
-3.  Coloque o cursor na linha em branco e digite ** \<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName>**  
+3.  Coloque o cursor na linha em branco e digite ** \<SchemaName> DMSCHEMA_MINING_MODEL_CONTENT \</SchemaName> **  
   
      A seção completa de restrições deverá ser parecida com esta:  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66085552"
   
      pela seguinte linha:  
   
-     **\<RequestType>\<DMSCHEMA_MINING_MODEL_CONTENT/RequestType>**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
   
 2.  Altere a lista de restrições para especificar um modelo de mineração pelo nome, adicionando uma nova condição às listas de restrições.  
   

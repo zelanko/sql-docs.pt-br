@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9d009b6cae346fd2b16d0651b0e905a0fb9e7eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076335"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536258"
 ---
 # <a name="create-a-report-data-source"></a>Criar uma fonte de dados de relatório
   Para que o Power View se conecte a um modelo multidimensional, você deve criar uma definição de fonte de dados de relatório compartilhada, também conhecida como um arquivo .rsds, em uma biblioteca do SharePoint. O arquivo .rsds especifica o nome de uma instância de servidor do Analysis Services, um tipo de conexão, uma cadeia de conexão, além de credenciais usadas para se conectar ao modelo multidimensional. Quando um usuário clica no .rsds, um novo relatório em branco do Power View (um arquivo .rdlx) é aberto no navegador.  
@@ -39,7 +38,7 @@ ms.locfileid: "66076335"
   
 1.  Clique na guia **Documentos** na faixa de opções da biblioteca.  
   
-2.  Clique em **novo documento** > **fonte de dados de relatório**.  
+2.  Clique em **novo documento**  >  **fonte de dados de relatório**.  
   
     > [!NOTE]  
     >  Caso você não veja o item **Fonte de Dados de Relatório** no menu, isso significa que o tipo de conteúdo da fonte de dados de relatório não foi habilitado para essa biblioteca. Para obter mais informações, consulte [adicionar tipos de conteúdo do servidor de relatório a uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  

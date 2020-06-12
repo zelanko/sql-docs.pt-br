@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9fa81839-dd8b-41d3-915e-c774a707ed53
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95d40cc0a6da642fe92f46a86308da348d5cc040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb7044a7b0c8b563a266cfbed9c7df44d5c79a55
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087294"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527202"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>Conectar a um banco de dados Microsoft Access (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar as configurações de conexão para um banco de dados do Microsoft Access. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087294"
 > [!NOTE]  
 >  As credenciais do usuário atual são usadas na seleção de um arquivo nesta página. Porém, a importação não terá êxito se o usuário especificado na página Informações sobre Representação não tiver privilégios suficientes para ler do arquivo selecionado.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome de conexão amigável**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   

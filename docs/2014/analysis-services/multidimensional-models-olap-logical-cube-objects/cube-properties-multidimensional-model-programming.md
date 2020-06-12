@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27d4202774107795eaddf76c27e21010d534d977
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727642"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545248"
 ---
 # <a name="cube-properties"></a>Propriedades do cubo
   Os cubos têm várias propriedades que você pode definir para afetar o comportamento de todo o cubo. Essas propriedades são resumidas na tabela a seguir.  
@@ -58,13 +57,13 @@ ms.locfileid: "62727642"
 |`Language`|Especifica o identificador de idioma padrão do cubo.|  
 |`Name`|Especifica o nome amigável do cubo.|  
 |`ProactiveCaching`|Define configurações de cache pró-ativas para o cubo.|  
-|`ProcessingMode`|Indica se a indexação e a agregação devem ocorrer durante ou após o processamento. As opções **regular** são regular `lazy`ou.|  
+|`ProcessingMode`|Indica se a indexação e a agregação devem ocorrer durante ou após o processamento. As opções são **regular** ou `lazy` .|  
 |`ProcessingPriority`|Determina a prioridade de processamento do cubo durante as operações em segundo plano, como agregações lentas e indexação. O valor padrão é **0**.|  
-|`ScriptCacheProcessingMode`|Indica se o cache de script deve ser criado durante ou após o processamento. As opções **regular** são regular `lazy`e.|  
-|`ScriptErrorHandlingMode`|Determina o tratamento de erros. As opções `IgnoreNone` são ou`IgnoreAll`|  
+|`ScriptCacheProcessingMode`|Indica se o cache de script deve ser criado durante ou após o processamento. As opções são **regular** e `lazy` .|  
+|`ScriptErrorHandlingMode`|Determina o tratamento de erros. As opções são `IgnoreNone` ou`IgnoreAll`|  
 |`Source`|Mostra a exibição da fonte de dados usada para o cubo.|  
 |`StorageLocation`|Especifica o local de armazenamento do sistema de arquivos para o cubo. Se nenhum for especificado, o local será herdado do banco de dados que contém o objeto de cubo.|  
-|`StorageMode`|Especifica o modo de armazenamento para o cubo. Os valores `MOLAP`são `ROLAP`, ou`HOLAP``.`|  
+|`StorageMode`|Especifica o modo de armazenamento para o cubo. Os valores são `MOLAP` , `ROLAP` ou`HOLAP``.`|  
 |`Visible`|Determina a visibilidade do cubo.|  
   
 > [!NOTE]  

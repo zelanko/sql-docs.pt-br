@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ce255a2dfe9e959ed0d68da62266e3a8acc353e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078896"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543428"
 ---
 # <a name="modifying-measures"></a>Modificando medidas
   Você pode usar a propriedade **FormatString** para definir configurações de formatação que controlam como as medidas são exibidas aos usuários. Nesta tarefa, você especificará propriedades de formatação para as medidas moeda e porcentagem do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -56,9 +55,9 @@ ms.locfileid: "66078896"
   
 7.  Na lista suspensa na parte superior da janela Propriedades (logo abaixo da barra de título), selecione a medida **Percentual de Desconto no Preço Unitário**e **Percentual** na lista **FormatString** .  
   
-8.  No janela Propriedades, altere a propriedade **nome** da medida **percentual de desconto de preço unitário** para `Unit Price Discount Percentage`.  
+8.  No janela Propriedades, altere a propriedade **nome** da medida **percentual de desconto de preço unitário** para `Unit Price Discount Percentage` .  
   
-9. No painel **medidas** , clique em **imposto AMT** e altere o nome dessa medida para `Tax Amount`.  
+9. No painel **medidas** , clique em **imposto AMT** e altere o nome dessa medida para `Tax Amount` .  
   
 10. Na janela Propriedades, clique no ícone **Ocultar Automaticamente** para ocultar a janela Propriedades. Depois, clique em **Mostrar Árvore de Medidas** na barra de ferramentas da guia **Estrutura do Cubo** .  
   

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2ca181b7c194fdd3909875f881d1030a77ae039
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62729062"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544898"
 ---
 # <a name="monitoring-traces-xmla"></a>Monitorando rastreamentos (XMLA)
-  Você pode usar o comando [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) no XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O comando `Subscribe` retorna os resultados de um rastreamento como um conjunto de linhas.  
+  Você pode usar o comando [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) no XML for Analysis (XMLA) para monitorar um rastreamento existente definido em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O comando `Subscribe` retorna os resultados de um rastreamento como um conjunto de linhas.  
   
 ## <a name="specifying-a-trace"></a>Especificando um rastreamento  
  A propriedade [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) do `Subscribe` comando deve conter uma referência de objeto para uma [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância ou um rastreamento em uma [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância. Se a propriedade `Object` não for especificada, ou se o identificador do rastreamento não for especificado na propriedade `Object`, o comando `Subscribe` vai monitorar o rastreamento padrão de sessão para a sessão explícita especificada no cabeçalho SOAP do comando.  
@@ -35,7 +34,7 @@ ms.locfileid: "62729062"
   
 |Coluna|Tipo de dados|Descrição|  
 |------------|---------------|-----------------|  
-|EventClass|Integer|A classe de evento do evento recebido pelo rastreamento.|  
+|EventClass|Inteiro|A classe de evento do evento recebido pelo rastreamento.|  
 |EventSubclass|Long integer|A subclasse do evento recebido pelo rastreamento.|  
 |CurrentTime|Datetime|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
 |StartTime|Datetime|O horário no qual o evento foi iniciado, quando disponível. Para filtragem, os formatos esperados são 'AAAA-MM-DD' e 'AAAA-MM-DD HH:MM:SS'.|  
@@ -52,10 +51,10 @@ ms.locfileid: "62729062"
 |ObjectName|String|O nome do objeto para o qual o evento ocorreu.|  
 |ObjectPath|String|O caminho hierárquico do objeto para o qual o evento ocorreu. O caminho é representado como uma cadeia de caracteres delimitada por vírgulas de identificadores de objetos para os pais do objeto especificado em ObjectName.|  
 |ObjectReference|String|A representação XML da referência de objeto para o objeto especificado em ObjectName.|  
-|NestLevel|Integer|O nível da transação para a qual o evento ocorreu.|  
+|NestLevel|Inteiro|O nível da transação para a qual o evento ocorreu.|  
 |NumSegments|Long integer|O número de segmentos de dados afetados ou acessados pelo comando para o qual o evento ocorreu.|  
-|Severity|Integer|O nível de severidade de uma exceção para o evento. A coluna pode conter um dos seguintes valores:<br /><br /> Valor: 0 = êxito<br /><br /> Valor: 1 = informações<br /><br /> Valor: 2 = aviso<br /><br /> Valor: 3 = erro|  
-|Êxito|Boolean|Indica se um comando teve êxito ou se falhou.|  
+|Severity|Inteiro|O nível de severidade de uma exceção para o evento. A coluna pode conter um dos seguintes valores:<br /><br /> Valor: 0 = êxito<br /><br /> Valor: 1 = informações<br /><br /> Valor: 2 = aviso<br /><br /> Valor: 3 = erro|  
+|Êxito|Booliano|Indica se um comando teve êxito ou se falhou.|  
 |Erro|Long integer|O número do erro do evento, se aplicável.|  
 |ConnectionID|String|O identificador da conexão para a qual o evento ocorreu.|  
 |DatabaseName|String|O nome do banco de dados para o qual o evento ocorreu.|  

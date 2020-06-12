@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d4b7309d7b5ea3d6295089f0fb2e778b1c9b4b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084294"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522323"
 ---
 # <a name="linear-regression-model-query-examples"></a>Exemplos de consulta de modelo de regressão linear
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo que fornece detalhes de padrões encontrados em análises ou uma consulta de previsão que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo pode fornecer mais detalhes sobre a fórmula de regressão, enquanto uma consulta de previsão pode informar se um novo ponto de dados se ajusta ao modelo. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
@@ -146,7 +145,7 @@ FROM LR_PredictIncome.CONTENT
  [Retornar ao início](#bkmk_top)  
   
 ###  <a name="sample-query-4-predicting-income-using-a-singleton-query"></a><a name="bkmk_Query4"></a>Exemplo de consulta 4: prevendo a renda usando uma consulta singleton  
- A maneira mais fácil de criar uma consulta single em um modelo de regressão é usando a caixa de diálogo **Entrada de Consulta Singleton** . Por exemplo, você pode criar a seguinte consulta DMX selecionando o modelo de regressão apropriado, escolhendo **consulta singleton**e, em `20` seguida, digitando como o valor de **idade**.  
+ A maneira mais fácil de criar uma consulta single em um modelo de regressão é usando a caixa de diálogo **Entrada de Consulta Singleton** . Por exemplo, você pode criar a seguinte consulta DMX selecionando o modelo de regressão apropriado, escolhendo **consulta singleton**e, em seguida, digitando `20` como o valor de **idade**.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  

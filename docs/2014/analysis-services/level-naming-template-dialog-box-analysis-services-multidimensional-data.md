@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96cad715-213e-4eac-9003-130a2f5fc985
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: febaae6051e8428d3fed2bb6533ce2c4d972950f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dd704e619e49f0dd1adb8fed8f1e743b61309af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078055"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541998"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Modelo de Nomeação de Nível (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Modelo de Nomeação de Nível** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para construir o modelo de nomeação de nível para um atributo pai em uma dimensão. Para obter mais informações sobre modelos de nomeação de nível, consulte [Elemento NamingTemplate &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl). Você pode exibir a caixa de diálogo **modelo de nomeação de nível** clicando no botão de reticências (**...**) no `NamingTemplate` valor de uma tradução para um atributo no painel **detalhes da conversão** na guia **traduções** do **Designer de dimensão**.  
@@ -28,7 +27,7 @@ ms.locfileid: "66078055"
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Definir o modelo de nível**|Exibe uma grade na qual é possível projetar a hierarquia de níveis no atributo pai. A grade contém as seguintes colunas:<br /><br /> **Nível**: exibe a posição ordinal do nível para o qual o nome especificado em **nome** é usado. Para adicionar um novo modelo de nomeação para um nível, selecione **Nome** na linha que contém um asterisco (\*) em **Nível**.<br /><br /> **Nome**: contém o modelo de nomenclatura usado para o nível indicado em **nível**. Para adicionar um espaço reservado para a posição ordinal do nível no modelo de nomeação, adicione um único asterisco (*). Para adicionar um asterisco como parte do nome criado pelo modelo de nomeação, adicione dois asteriscos (\*\*).|  
+|**Definir o modelo de nível**|Exibe uma grade na qual é possível projetar a hierarquia de níveis no atributo pai. A grade contém as seguintes colunas:<br /><br /> **Nível**: exibe a posição ordinal do nível para o qual o nome especificado em **nome** é usado. Para adicionar um novo modelo de nomeação para um nível, selecione **Nome** na linha que contém um asterisco (\*) em **Nível**.<br /><br /> **Nome**: contém o modelo de nomenclatura usado para o nível indicado em **nível**. Para adicionar um espaço reservado para a posição ordinal do nível no modelo de nomeação, adicione um único asterisco (*). Para adicionar um asterisco como parte do nome criado pelo modelo de nomeação, adicione dois asteriscos ( \* \* ).|  
 |**Apagar tudo**|Selecione para remover todas as linhas em **Definir o modelo de nível**.|  
 |**Disso**|Exibe o modelo de nomeação de nível construído pela caixa de diálogo.|  
   

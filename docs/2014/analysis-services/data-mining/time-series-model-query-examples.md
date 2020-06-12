@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6b6ed2674d5f1d852b6281c6244af4f2f6ad3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082746"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520313"
 ---
 # <a name="time-series-model-query-examples"></a>Exemplos de consulta de um modelo de série temporal
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes de padrões descobertos em análises, ou uma consulta de previsão, que usa os padrões no modelo para fazer previsões para novos dados. Por exemplo, uma consulta de conteúdo para um modelo de série temporal pode fornecer detalhes adicionais sobre as estrutura periódicas encontradas, enquanto uma consulta de previsão pode informar as previsões para as próximas 5-10 frações de tempo. Você também pode recuperar metadados sobre o modelo usando uma consulta.  
@@ -66,7 +65,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},....|  
+|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT = {1,3} ,....|  
   
  A dica de periodicidade padrão é {1} e aparece em todos os modelos. Esse modelo de exemplo foi criado com uma dica adicional que pode não estar presente no final do modelo.  
   
@@ -156,7 +155,7 @@ AND NODE_TYPE = 15
   
  Por exemplo, suponha que o modelo existente possua seis de meses de dados. Você deseja estender esse modelo adicionando os valores de vendas dos últimos três meses. Ao mesmo tempo, você quer fazer uma previsão sobre os próximos três meses. Para obter apenas as previsões novas ao adicionar os novos dados, especifique o ponto de partida como fração de tempo 4 e o ponto final como fração de tempo 7. Você também pode solicitar um total de seis previsões, mas as frações de tempo para as três primeiras seriam sobrepostas com os novos dados recém-adicionados.  
   
- Para obter exemplos de consulta e mais informações sobre a sintaxe `REPLACE_MODEL_CASES` para `EXTEND_MODEL_CASES`usar o e o, consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Para obter exemplos de consulta e mais informações sobre a sintaxe para usar o `REPLACE_MODEL_CASES` e o `EXTEND_MODEL_CASES` , consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="making-predictions-with-extend_model_cases"></a><a name="bkmk_EXTEND"></a> Fazendo previsões com EXTEND_MODEL_CASES  
  O comportamento de previsão difere dependendo se você estende ou substitui os casos de modelo. Quando você estende um modelo, os novos dados são anexados ao fim da série e o tamanho do conjunto de treinamento aumenta. Porém, as frações de tempo usadas para consultas de previsão sempre iniciam no término da série original. Portanto, se você adicionar três novos pontos de dados e solicitar seis previsões, as três primeiras previsões retornariam sobrepostas com os novos dados. Nesse caso, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retorna os pontos de dados novos reais ao invés de fazer uma previsão, até que os novos pontos de dados sejam usados. Então, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] faz previsões com base na série composta.  
@@ -198,10 +197,10 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  Com REPLACE_MODEL_CASES, iniciar no timestamp 1 fornece novas previsões com base em novos dados que substituem os dados de treinamento antigos.  
   
- Para obter exemplos de consulta e mais informações sobre a sintaxe `REPLACE_MODEL_CASES` para `EXTEND_MODEL_CASES`usar o e o, consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Para obter exemplos de consulta e mais informações sobre a sintaxe para usar o `REPLACE_MODEL_CASES` e o `EXTEND_MODEL_CASES` , consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="missing-value-substitution-in-time-series-models"></a><a name="bkmk_MissingValues"></a>Substituição de valor ausente nos modelos de série temporal  
- Ao adicionar novos dados em um modelo de série temporal usando uma instrução `PREDICTION JOIN`, o novo conjunto de dados não poderá ter dados ausentes. Se qualquer série estiver incompleta, o modelo deverá fornecer os valores ausentes usando um valor nulo, uma média numérica, uma média numérica específica ou um valor previsto. Se você especificar o `EXTEND_MODEL_CASES`, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] substituirá os valores ausentes com previsões baseadas no modelo original. Se você usar `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o substituirá os valores ausentes pelo valor especificado no parâmetro *MISSING_VALUE_SUBSTITUTION* .  
+ Ao adicionar novos dados em um modelo de série temporal usando uma instrução `PREDICTION JOIN`, o novo conjunto de dados não poderá ter dados ausentes. Se qualquer série estiver incompleta, o modelo deverá fornecer os valores ausentes usando um valor nulo, uma média numérica, uma média numérica específica ou um valor previsto. Se você especificar o `EXTEND_MODEL_CASES`, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] substituirá os valores ausentes com previsões baseadas no modelo original. Se você usar `REPLACE_MODEL_CASES` , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o substituirá os valores ausentes pelo valor especificado no parâmetro *MISSING_VALUE_SUBSTITUTION* .  
   
 ## <a name="list-of-prediction-functions"></a>Lista de funções de previsão  
  Todos os algoritmos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] dão suporte a um conjunto comum de funções. Entretanto, o algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series oferece suporte às funções adicionais relacionadas na tabela a seguir:  

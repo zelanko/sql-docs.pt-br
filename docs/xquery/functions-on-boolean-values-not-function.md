@@ -1,5 +1,6 @@
 ---
 title: Não função (XQuery) | Microsoft Docs
+description: Saiba como a função XQuery not () é usada com valores Boolianos.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038907"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524378"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funções em Valores Boolianos – função not 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +44,8 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Usando a função not () XQuery para localizar modelos de produto cujas descrições de catálogo não incluem \<as especificações> elemento.  
- A consulta a seguir constrói XML que contém IDs de modelo de produto para modelos de produto cujas descrições de catálogo não `Specifications` incluem o elemento <>.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Usando a função not () XQuery para localizar modelos de produto cujas descrições de catálogo não incluem o \<Specifications> elemento.  
+ A consulta a seguir constrói XML que contém IDs de modelo de produto para modelos de produto cujas descrições de catálogo não incluem o `Specifications` elemento <>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -65,14 +66,14 @@ WHERE CatalogDescription.exist('
   
 -   Em seguida, a consulta constrói o XML que inclui o `Product` elemento <> e seu atributo **ProductModelID** .  
   
--   A cláusula WHERE usa o [método exist () (tipo de dados XML)](../t-sql/xml/exist-method-xml-data-type.md) para filtrar as linhas. O método **exist ()** retornará true se houver elementos \<de> ProductDescription que não têm \<especificação> elementos filho. Observe o uso da função **not ()** .  
+-   A cláusula WHERE usa o [método exist () (tipo de dados XML)](../t-sql/xml/exist-method-xml-data-type.md) para filtrar as linhas. O método **exist ()** retornará true se houver \<ProductDescription> elementos que não têm \<Specification> elementos filho. Observe o uso da função **not ()** .  
   
- Este conjunto de resultados está vazio, pois cada descrição do catálogo de modelos \<de produto inclui as especificações> elemento.  
+ Este conjunto de resultados está vazio, pois cada descrição do catálogo de modelos de produto inclui o \<Specifications> elemento.  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. Usando a função not() XQuery para recuperar locais de centro de trabalho que não têm um atributo MachineHours  
  A consulta a seguir é especificada na coluna Instructions. Essa coluna armazena instruções de fabricação para os modelos de produtos.  
   
- Para um modelo de produto em particular, a consulta recupera locais de centro de trabalho que não especificam MachineHours. Ou seja, o atributo **MachineHours** não é especificado para o \<local> elemento.  
+ Para um modelo de produto em particular, a consulta recupera locais de centro de trabalho que não especificam MachineHours. Ou seja, o atributo **MachineHours** não é especificado para o \<Location> elemento.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -91,7 +92,7 @@ WHERE ProductModelID=7
   
 -   O **declarenamespace** no [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define o prefixo de namespace de instruções de fabricação da Adventure Works. Ela representa o mesmo namespace usado no documento de instruções de fabricação.  
   
--   Na consulta, o predicado **not (@MachineHours)** retornará true se não houver nenhum atributo **MachineHours** .  
+-   Na consulta, o predicado **not ( @MachineHours )** retornará true se não houver nenhum atributo **MachineHours** .  
   
  Este é o resultado:  
   

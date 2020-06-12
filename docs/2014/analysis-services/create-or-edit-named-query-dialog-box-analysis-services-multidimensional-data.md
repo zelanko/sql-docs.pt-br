@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97f01b0bbf3d1ddc54ea4db2b771723e12d168d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87253123e42349aac4a6fef204de0bffb63c101c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086806"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526572"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Criar/Editar Consulta Nomeada (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Criar/Editar Consulta Nomeada** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar ou editar uma consulta nomeada no **Designer de Exibição da Fonte de Dados**. Uma consulta nomeada pode ser tratada como uma tabela, na qual você pode basear outros objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Criar/Editar Consulta Nomeada** :  
@@ -53,7 +52,7 @@ ms.locfileid: "66086806"
  **Definição da consulta**  
  A definição da consulta fornece uma barra de ferramentas e painéis onde definir e testar a consulta, dependendo da exibição selecionada.  
   
- **Barra**  
+ **Barra de ferramentas**  
  Use a barra de ferramentas para gerenciar conjuntos de dados, selecionar painéis para exibição e controlar várias funções de consulta.  
   
 |Valor|Descrição|  
@@ -64,7 +63,7 @@ ms.locfileid: "66086806"
 |**Mostrar/Ocultar Painel Grade**|Mostra ou oculta o **painel de grade**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Painel Mostrar/Ocultar SQL**|Mostra ou oculta o painel **SQL**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Mostrar/Ocultar Painel Resultado**|Mostra ou oculta o painel **Resultado**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
-|**Funcionam**|Executa a consulta. Os resultados são exibidos no **painel de resultados**.|  
+|**Executar**|Executa a consulta. Os resultados são exibidos no **painel de resultados**.|  
 |**Verificar SQL**|Verifica a instrução SQL na consulta.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Classificação crescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem crescente.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Classificação decrescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem decrescente.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  

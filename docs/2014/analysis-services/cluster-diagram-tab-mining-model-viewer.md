@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1855150cdfbb4d2132c1edc7c08604dd90b87a9d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088012"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527452"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Guia Diagrama de Cluster (Visualizador do Modelo de Mineração)
   A guia **Diagrama de Cluster** fornece uma exibição gráfica de todos os clusters que o modelo de clustering contém.  
@@ -66,7 +65,7 @@ ms.locfileid: "66088012"
  **State**  
  Selecione um único estado da **Variável de Sombreamento** para usar no diagrama de cluster.  
   
- **Links**  
+ **Vincule**  
  Ajuste quantos links são mostrados entre clusters, movendo o controle deslizante para cima ou para baixo. Abaixar o controle deslizante deixa somente as associações mais fortes entre clusters.  
   
 ## <a name="see-also"></a>Consulte Também  

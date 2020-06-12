@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6b9ab6db9fc50b09b752b5deaa59d42c4664bd5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070752"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539986"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Processar (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Processar** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para processar objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Processar** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das seguintes maneiras:  
@@ -36,7 +35,7 @@ ms.locfileid: "66070752"
  **Lista de objetos**  
  Selecione os objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a serem processados e as opções e configurações de processamento a serem aplicadas. A grade contém as seguintes colunas:  
   
- **Nome do objeto**  
+ **Object Name**  
  Exibe o nome do objeto a ser processado. O ícone à esquerda do nome indica o tipo do objeto.  
   
  **Tipo**  
@@ -48,7 +47,7 @@ ms.locfileid: "66070752"
  **Configurações**  
  Exibe o hiperlink **Configurar** quando você escolhe **Processar Incremental** em **Opções de Processo** para cubos, grupos de medidas ou partições. Clique em **Configurar** para iniciar a caixa de diálogo **Atualização Incremental** . Para obter mais informações sobre a caixa de diálogo **Atualização Incremental**, consulte [Caixa de diálogo Atualização Incremental &#40;Analysis Services – Dados Multidimensionais&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Remover**  
+ **Removerr**  
  Clique para remover os itens selecionados da **Lista de objetos**.  
   
  **Análise de Impacto**  
@@ -60,7 +59,7 @@ ms.locfileid: "66070752"
  **Alterar configurações**  
  Clique para abrir a caixa de diálogo **Alterar Configurações** e alterar as configurações que controlam o processamento dos objetos selecionados, incluindo configurações de processamento em lote, configurações de write-back e configurações de erro de chave de dimensão. Para obter mais informações sobre a caixa de diálogo **Alterar Configurações**, consulte [Caixa de diálogo Alterar Configurações &#40;Analysis Services – Dados Multidimensionais&#41;](change-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Funcionam**  
+ **Executar**  
  Clique para processar os objetos.  
   
 ## <a name="see-also"></a>Consulte Também  

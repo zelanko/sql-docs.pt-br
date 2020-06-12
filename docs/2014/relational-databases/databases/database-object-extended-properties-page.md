@@ -12,17 +12,17 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7575fc5d539c31e901b5229d215a3bfeb42b221c
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917201"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859440"
 ---
 # <a name="database-object-extended-properties-page"></a>Objeto de banco de dados (página Propriedades Estendidas)
   Propriedades estendidas permitem adicionar propriedades personalizadas a objetos de banco de dados. Use essa página para exibir ou modificar propriedades estendidas do objeto selecionado. A página **Propriedades Estendidas** é a mesma para todos os tipos de objetos de banco de dados.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Backup de banco de dados**  
  Exibe o nome do banco de dados selecionado. Esse campo é somente leitura.  
   

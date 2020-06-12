@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c8db9d2dd582651d852f34372d5d2ae74c958f72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0004ff14da14170f0b194eab93eacab9d6146fe2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175305"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543028"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definindo o membro desconhecido e as propriedades de processamento nulo
   Quando o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] processa uma dimensão, todos os valores distintos das colunas subjacentes nas tabelas, ou nas exibições da fonte de dados, populam os atributos na dimensão. Por padrão, se o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] detecta um valor nulo durante o processamento, ele converte o valor nulo em zero no caso de colunas numéricas ou em cadeia vazia no caso de colunas de cadeia de caracteres. Você pode modificar as configurações padrão ou converter valores nulos em seu processo de extração, transformação e carregamento (caso haja algum) do data warehouse relacional subjacente. Além disso, você pode usar o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para converter o valor nulo em um valor designado, configurando três propriedades: **UnknownMember** e **UnknownMemberName** para a dimensão e **NullProcessing** para o atributo de chave da dimensão.
@@ -24,7 +23,7 @@ ms.locfileid: "78175305"
 
  Entretanto, ao criar dimensões floco de neve de forma incremental, como estamos fazendo na dimensão Product, ou ao definir dimensões usando o Designer de Dimensão e incorporar essas dimensões existentes em um cubo, talvez as propriedades **UnknownMember** e **NullProcessing** precisem ser definidas manualmente.
 
- Nas tarefas deste tópico, você adicionará os atributos da categoria e subcategoria de produto à dimensão Produto das tabelas floco de neve que você adicionará à exibição da fonte de dados [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. Em seguida, você habilitará a propriedade **UnknownMember** para a dimensão produto `Assembly Components` , especificará como o valor da propriedade **UnknownMemberName** , `Subcategory` relacionará os atributos e `Category` ao atributo nome do produto e, em seguida, definirá o tratamento de erro personalizado para o atributo de chave de membro que vincula as tabelas floco de neve.
+ Nas tarefas deste tópico, você adicionará os atributos da categoria e subcategoria de produto à dimensão Produto das tabelas floco de neve que você adicionará à exibição da fonte de dados [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. Em seguida, você habilitará a propriedade **UnknownMember** para a dimensão produto, especificará `Assembly Components` como o valor da propriedade **UnknownMemberName** , relacionará os `Subcategory` `Category` atributos e ao atributo nome do produto e, em seguida, definirá o tratamento de erro personalizado para o atributo de chave de membro que vincula as tabelas floco de neve.
 
 > [!NOTE]
 >  Caso tenha adicionado os atributos Subcategoria e Categoria durante a definição do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando o Assistente para Cubos, estas etapas foram feitas automaticamente.
@@ -51,7 +50,7 @@ ms.locfileid: "78175305"
 
      ![Coleção de propriedades ErrorConfiguration](../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "Coleção de propriedades ErrorConfiguration")
 
-5.  Clique na guia **navegador** , verifique se **linhas de modelo de produto** está selecionada na lista **hierarquia** e, em `All Products`seguida, expanda.
+5.  Clique na guia **navegador** , verifique se **linhas de modelo de produto** está selecionada na lista **hierarquia** e, em seguida, expanda `All Products` .
 
      Observe os cinco membros do nível Linha de Produto.
 
@@ -87,7 +86,7 @@ ms.locfileid: "78175305"
 
 8.  No painel **Exibição da Fonte de Dados** , localize a tabela **DimProductCategory** , clique com o botão direito do mouse em **ProductCategoryKey** nessa tabela e clique em **Novo Atributo da Coluna**.
 
-9. No painel **atributos** , altere o nome desse novo atributo para `Category`.
+9. No painel **atributos** , altere o nome desse novo atributo para `Category` .
 
 10. No janela Propriedades, clique no campo de propriedade **NameColumn** e, em seguida, clique no botão procurar (**...**) para abrir a caixa de diálogo **coluna de nome** .
 
@@ -95,13 +94,13 @@ ms.locfileid: "78175305"
 
 12. No painel **Exibição da Fonte de Dados** , localize a tabela **DimProductSubcategory** , clique com o botão direito do mouse em **ProductSubcategoryKey** na tabela e clique em **Novo Atributo da Coluna**.
 
-13. No painel **atributos** , altere o nome desse novo atributo para `Subcategory`.
+13. No painel **atributos** , altere o nome desse novo atributo para `Subcategory` .
 
 14. No janela Propriedades, clique no campo de propriedade **NameColumn** e, em seguida, clique no botão procurar **(...)** para abrir a caixa de diálogo **coluna de nome** .
 
 15. Selecione **EnglishProductSubcategoryName** na lista **Coluna de origem** e clique em **OK**.
 
-16. Crie uma nova hierarquia definida pelo usuário chamada **categorias de produto** com os seguintes níveis, em ordem de cima para baixo `Category`: `Subcategory`, e **nome do produto**.
+16. Crie uma nova hierarquia definida pelo usuário chamada **categorias de produto** com os seguintes níveis, em ordem de cima para baixo: `Category` , `Subcategory` e **nome do produto**.
 
 17. Especifique `All Products` como o valor para a propriedade de todos os **Membros** da hierarquia definida pelo usuário categorias de produtos.
 
@@ -123,27 +122,27 @@ ms.locfileid: "78175305"
 
 6.  Clique na guia **Navegador** do Designer de Dimensão da dimensão **Produto** e clique em **Reconectar**.
 
-7.  Verifique se **as linhas de modelo do produto** aparecem na lista **hierarquia** , expanda `All Products`e expanda **componentes**.
+7.  Verifique se **as linhas de modelo do produto** aparecem na lista **hierarquia** , expanda `All Products` e expanda **componentes**.
 
-8.  Selecione **categorias de produtos** na lista **hierarquia** , expanda `All Products`e expanda **componentes**.
+8.  Selecione **categorias de produtos** na lista **hierarquia** , expanda `All Products` e expanda **componentes**.
 
      Observe que nenhum dos componentes do assembly é exibido.
 
- Para modificar o comportamento mencionado na tarefa anterior, você habilitará a propriedade **UnknownMember** da dimensão Products, definirá um valor para a **Propriedade UnknownMemberName** , definirá a propriedade **NullProcessing** para `Subcategory` os atributos de **nome de modelo** e como **UnknownMember**, definirá o `Category` atributo como um `Subcategory` atributo relacionado do atributo e, em seguida, definirá o atributo de **linha de produto** como um atributo relacionado do atributo de nome de **modelo** . Essas ações farão com que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] use o valor do nome do membro desconhecido para cada produto que não tem um valor para a coluna **SubcategoryKey** , como você verá na próxima tarefa.
+ Para modificar o comportamento mencionado na tarefa anterior, você habilitará a propriedade **UnknownMember** da dimensão Products, definirá um valor para a propriedade **UnknownMemberName** , definirá a propriedade **NullProcessing** para os atributos de `Subcategory` nome de **modelo** e como **UnknownMember**, definirá o `Category` atributo como um atributo relacionado do `Subcategory` atributo e, em seguida, definirá o atributo de **linha de produto** como um atributo relacionado do atributo de nome de **modelo** . Essas ações farão com que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] use o valor do nome do membro desconhecido para cada produto que não tem um valor para a coluna **SubcategoryKey** , como você verá na próxima tarefa.
 
 ## <a name="enabling-the-unknown-member-defining-attribute-relationships-and-specifying-custom-processing-properties-for-nulls"></a>Ativando o membro desconhecido, definindo relações de atributo e especificando as propriedades de processamento personalizado como nulas
 
 1.  Clique na guia **Estrutura de Dimensão** no Designer de Dimensão da dimensão **Produto** e selecione **Produto** no painel **Atributos** .
 
-2.  Na janela **Propriedades** , altere a propriedade **UnknownMember** para **visível**e, em seguida, altere o valor da propriedade **UnknownMemberName** para `Assembly Components`.
+2.  Na janela **Propriedades** , altere a propriedade **UnknownMember** para **visível**e, em seguida, altere o valor da propriedade **UnknownMemberName** para `Assembly Components` .
 
      Alterar a propriedade **UnknownMember** para **Visível** ou **Oculto** habilita a propriedade **UnknownMember** da dimensão.
 
 3.  Clique na guia **Relações de Atributo** .
 
-4.  No diagrama, clique com o botão direito `Subcategory` do mouse no atributo e selecione **nova relação de atributo**.
+4.  No diagrama, clique com o botão direito do mouse no `Subcategory` atributo e selecione **nova relação de atributo**.
 
-5.  Na caixa de diálogo **criar relação de atributo** , o atributo de `Subcategory` **origem** é. Defina o **atributo relacionado** como `Category`. Deixe o tipo de relação definido como **Flexível**.
+5.  Na caixa de diálogo **criar relação de atributo** , o **atributo de origem** é `Subcategory` . Defina o **atributo relacionado** como `Category` . Deixe o tipo de relação definido como **Flexível**.
 
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
@@ -159,7 +158,7 @@ ms.locfileid: "78175305"
 
 12. Altere a propriedade **NullProcessing** para **UnknownMember**.
 
-     Devido a essas alterações, quando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o encontra um valor nulo para `Subcategory` o atributo ou o atributo de **nome do modelo** durante o processamento, o valor do membro desconhecido será substituído como o valor da chave e as hierarquias definidas pelo usuário serão construídas corretamente.
+     Devido a essas alterações, quando o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] encontra um valor nulo para o `Subcategory` atributo ou o atributo de **nome do modelo** durante o processamento, o valor do membro desconhecido será substituído como o valor da chave e as hierarquias definidas pelo usuário serão construídas corretamente.
 
 ## <a name="browsing-the-product-dimension-again"></a>Navegando na dimensão Produto novamente
 
@@ -167,11 +166,11 @@ ms.locfileid: "78175305"
 
 2.  Quando a implantação for concluída com êxito, clique na guia **Navegador** do Designer de Dimensão da dimensão **Produto** e clique no botão **Reconectar**.
 
-3.  Verifique se **categorias de produto** está selecionada na lista **hierarquia** e, em seguida `All Products`, expanda.
+3.  Verifique se **categorias de produto** está selecionada na lista **hierarquia** e, em seguida, expanda `All Products` .
 
      Observe que Componentes do Assembly aparece como um novo membro do nível Categoria.
 
-4.  Expanda `Assembly Components` o membro do `Category` nível e expanda o `Assembly Components` membro do `Subcategory` nível.
+4.  Expanda o `Assembly Components` membro do `Category` nível e expanda o `Assembly Components` membro do `Subcategory` nível.
 
      Observe que todos os componentes do assembly agora são exibidos no nível **Nome do Produto** , como mostra a imagem a seguir.
 

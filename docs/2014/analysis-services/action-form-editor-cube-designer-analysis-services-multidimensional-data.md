@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0353d2af250f620237a165a3f9878a4efc14fdf0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062955"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528262"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel Editor de Formulário de Ação na guia **Ações** do Designer de Cubo para criar e modificar ações padrão.  
@@ -84,7 +83,7 @@ ms.locfileid: "66062955"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Lote|A ação deve ser executada como parte de uma operação em lote ou de uma tarefa do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactive (Interativo)|A ação é executada quando o usuário a invoca.|  
+|Interativo|A ação é executada quando o usuário a invoca.|  
 |Em Aberto|A ação é executada quando o cubo é aberto pela primeira vez.|  
   
  **Aplicativo**  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a08f7fbccf1192f946043ebe932020d0fe5d3409
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175798"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537558"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visualizadores do Modelo de Mineração (Designer do Modelo de Mineração de Dados)
   Use a guia **Visualizador do Modelo de Mineração** para explorar os modelos de mineração contidos em uma estrutura de mineração.
@@ -31,7 +30,7 @@ ms.locfileid: "78175798"
 
  **Modelo de mineração** Escolha um modelo de mineração para exibir o que está presente na estrutura de mineração atual. O modelo de mineração será aberto primeiro no visualizador personalizado associado.
 
- **Visualizador** Escolha um visualizador a ser utilizado para explorar o modelo de mineração selecionado. Essa lista inclui os visualizadores [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que o fornece para cada modelo de [!INCLUDE[msCoName](../includes/msconame-md.md)] mineração, o Visualizador de conteúdo de mineração e quaisquer visualizadores de plug-in.
+ **Visualizador** Escolha um visualizador a ser utilizado para explorar o modelo de mineração selecionado. Essa lista inclui os visualizadores que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o fornece para cada modelo de mineração, o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de conteúdo de mineração e quaisquer visualizadores de plug-in.
 
  O diagrama a seguir mostra um visualizador personalizado e um genérico para o mesmo modelo.
 

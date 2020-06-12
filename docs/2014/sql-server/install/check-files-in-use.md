@@ -10,12 +10,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096526"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856582"
 ---
 # <a name="check-files-in-use"></a>Verificar arquivos em uso
   Para evitar a necessidade de reiniciar o Windows após a instalação das atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use a página Verificar Arquivos em Uso para identificar processos que estão bloqueando arquivos necessários ao programa de Instalação de atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -42,11 +42,11 @@ ms.locfileid: "66096526"
   
 -   Nome do arquivo bloqueado  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
   
-|Nome|Descrição|  
+|Name|Descrição|  
 |----------|-----------------|  
-|Processo|Exibe o nome completo do processo que está usando os arquivos a serem atualizados.|  
+|Processar|Exibe o nome completo do processo que está usando os arquivos a serem atualizados.|  
 |Tipo|Exibe o tipo de processo.|  
 |Conta|Exibe a conta sob a qual o processo está sendo executado.|  
 |ID do Processo|Exibe a ID do processo.|  

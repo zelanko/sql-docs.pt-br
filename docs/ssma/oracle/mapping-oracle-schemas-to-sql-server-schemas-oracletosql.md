@@ -1,5 +1,6 @@
 ---
 title: Mapeando esquemas Oracle para esquemas de SQL Server (OracleToSQL) | Microsoft Docs
+description: Saiba como personalizar o SSMA para mapeamentos Oracle entre esquemas Oracle e SQL Server ou aceite o padrão.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,20 +11,20 @@ ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e375c07ceddc995b599930c14f00710af040d6c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5639687a22749ccb8315262347807bb44ac79210
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262909"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293823"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Mapeamento de esquemas do Oracle para esquemas do SQL Server (OracleToSQL)
-No Oracle, cada banco de dados tem um ou mais esquemas. Por padrão, o SSMA migra todos os objetos em um esquema Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um banco de dados chamado para o esquema. No entanto, você pode personalizar o mapeamento entre esquemas e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados Oracle.  
+No Oracle, cada banco de dados tem um ou mais esquemas. Por padrão, o SSMA migra todos os objetos em um esquema Oracle para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados chamado para o esquema. No entanto, você pode personalizar o mapeamento entre esquemas e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados Oracle.  
   
 ## <a name="oracle-and-sql-server-schemas"></a>Esquemas do Oracle e do SQL Server  
 Um banco de dados Oracle contém esquemas. Uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém vários bancos de dados, cada um deles pode ter vários esquemas.  
   
-O conceito da Oracle de um esquema é mapeado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o conceito de um banco de dados e de um de seus esquemas. Por exemplo, o Oracle pode ter um esquema chamado **HR**. Uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ter um banco de dados chamado **HR**e, nesse banco de dados, são esquemas. Um esquema é o esquema de **dbo** (ou proprietário do banco de dados). Por padrão, a **HR** do esquema Oracle será mapeada para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados e o esquema **hr. dbo**. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA se refere à combinação de banco de dados e esquema como um esquema.  
+O conceito da Oracle de um esquema é mapeado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conceito de um banco de dados e de um de seus esquemas. Por exemplo, o Oracle pode ter um esquema chamado **HR**. Uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ter um banco de dados chamado **HR**e, nesse banco de dados, são esquemas. Um esquema é o esquema de **dbo** (ou proprietário do banco de dados). Por padrão, a **HR** do esquema Oracle será mapeada para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados e o esquema **hr. dbo**. O SSMA se refere à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinação de banco de dados e esquema como um esquema.  
   
 Você pode modificar o mapeamento entre Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas.  
   
@@ -50,7 +51,7 @@ No SSMA, você pode mapear um esquema Oracle para qualquer [!INCLUDE[ssNoVersion
   
 -   Mapeando para SQL Server  
   
-Você pode mapear o banco de dados de origem para qualquer banco de dados de destino. Por padrão, banco de dados de origem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é mapeado para o banco de dados de destino com o qual você se conectou usando o SSMA. Se o banco de dados de destino que está sendo mapeado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]não for existente no, você será solicitado com uma mensagem **"o banco de dados e/ou esquema não existe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos metadados de destino. Ele seria criado durante a sincronização. Deseja continuar? "** Clique em Sim. Da mesma forma, você pode mapear o esquema para um esquema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não existente no banco de dados de destino que será criado durante a sincronização.  
+Você pode mapear o banco de dados de origem para qualquer banco de dados de destino. Por padrão, banco de dados de origem é mapeado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o banco de dados de destino com o qual você se conectou usando o SSMA. Se o banco de dados de destino que está sendo mapeado não for existente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você será solicitado com uma mensagem **"o banco de dados e/ou esquema não existe nos metadados de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele seria criado durante a sincronização. Deseja continuar? "** Clique em Sim. Da mesma forma, você pode mapear o esquema para um esquema não existente no banco de dados de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que será criado durante a sincronização.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Revertendo para o banco de dados e esquema padrão  
 Se você personalizar o mapeamento entre um esquema Oracle e um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema, poderá reverter o mapeamento de volta para os valores padrão.  

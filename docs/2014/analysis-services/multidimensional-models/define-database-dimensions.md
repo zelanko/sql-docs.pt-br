@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2915b0214b5b1a53392f025fbb4cce6eb3d14674
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075607"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547028"
 ---
 # <a name="define-database-dimensions"></a>Definir as dimensões do banco de dados
-  Use o designer de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] dimensão no para configurar uma dimensão de banco [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de dados existente em um projeto ou banco de dados. Você pode usar o Designer de Dimensão para fazer o seguinte:  
+  Use o designer de dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para configurar uma dimensão de banco de dados existente em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto ou banco de dados. Você pode usar o Designer de Dimensão para fazer o seguinte:  
   
 -   Configurar as propriedades do nível de dimensão.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66075607"
   
  O Designer de Dimensão tem três guias diferentes que são descritas na tabela a seguir.  
   
-|Tab|Descrição|  
+|Tab|Description|  
 |---------|-----------------|  
 |**Estrutura da Dimensão**|Use esta guia para trabalhar com a estrutura de uma dimensão-para examinar ou criar o esquema de exibição da fonte de dados para uma dimensão, para trabalhar com atributos e para organizar atributos em hierarquias definidas pelo usuário.|  
 |**Relações de Atributo**|Use essa guia para criar, modificar ou excluir as relações de atributo de uma dimensão.|  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b514d2d85a01fdb4b13c922e81a39e694308334
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070295"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539240"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação de Relatório (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Formulário de Ação de Relatório** na guia **Ações** do Designer de Cubo para modificar a ação de relatório selecionada no painel **Organizador de Ações** .  
@@ -63,7 +62,7 @@ ms.locfileid: "66070295"
  **Formato do relatório**  
  Selecione o formato no qual o relatório é retornado. A tabela a seguir descreve os formatos disponíveis.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |HTML5|O relatório é retornado em um formato em conformidade com o HTML 5.0.|  
 |HTML3|O relatório é retornado em um formato em conformidade com o HTML 3.2.|  
@@ -89,10 +88,10 @@ ms.locfileid: "66070295"
   
  A tabela a seguir descreve as configurações disponíveis.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
-|Lote|A ação deve ser executada como parte de uma operação em lote [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou de uma tarefa.|  
-|Interactive (Interativo)|A ação é executada quando o usuário a invoca.|  
+|Lote|A ação deve ser executada como parte de uma operação em lote ou de uma [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tarefa.|  
+|Interativo|A ação é executada quando o usuário a invoca.|  
 |Em Aberto|A ação é executada quando o cubo é aberto pela primeira vez.|  
   
  **Aplicativo**  

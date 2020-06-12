@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05cd74af77cc62dc637eeb4141478a79fee4ad02
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070926"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547718"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services
   Este tópico explica como usar as conexões de modelo semântico de BI que você criou usando as instruções em outros tópicos. Se você ainda não tiver criado um modelo semântico de BI, consulte [criar uma conexão de modelo semântico de bi para uma pasta de trabalho PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) e [criar uma conexão de modelo semântico de bi para um banco de dados modelo de tabela](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66070926"
   
 2.  Clique em **Do Analysis Services** e use o Assistente de Conexão de Dados para importar os dados.  
   
-3.  Insira a URL do SharePoint do arquivo de conexão de modelo semântico de BI (por exemplo, ** http://mysharepoint/shared Documents/MyData. BISM**). Aceite o log padrão em opção de credenciais, **Usar Autenticação do Windows**. Clique em **Avançar**.  
+3.  Insira a URL do SharePoint do arquivo de conexão de modelo semântico de BI (por exemplo, ** http://mysharepoint/shared Documents/MyData. BISM**). Aceite o log padrão em opção de credenciais, **Usar Autenticação do Windows**. Clique em **Próximo**.  
   
 4.  Na próxima página, clique novamente em **Avançar** . Embora você seja solicitado a selecionar um banco de dados, pode usar apenas o banco de dados especificado na conexão de modelo semântico de BI.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27b143a9cc5c888c6e464d300d2ccfea114ef9bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f5455b71306b3dd75406f107e5c1e971f6b923b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380677"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544998"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Desenvolvendo com XMLA no Analysis Services
   O XMLA (XML for Analysis) é um protocolo XML baseado em SOAP, criado especificamente para acesso a dados universal para qualquer fonte de dados multidimensional padrão que pode ser acessado por meio de uma conexão HTTP. O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa o XMLA como seu único protocolo para se comunicar com aplicativos cliente. Basicamente, todas as bibliotecas de cliente com suporte do Analysis Services formulam solicitações e respostas em XMLA.  
@@ -45,12 +44,12 @@ ms.locfileid: "80380677"
 |[Bloqueando e desbloqueando bancos de dados &#40;XMLA&#41;](locking-and-unlocking-databases-xmla.md)|Detalhes de como usar os comandos [Lock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) e [Unlock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) para bloquear e desbloquear um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados.|  
 |[Processando objetos &#40;XMLA&#41;](processing-objects-xmla.md)|Descreve como usar o comando [process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) para processar um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto.|  
 |[Mesclando partições &#40;&#41;XMLA](merging-partitions-xmla.md)|Descreve como usar o comando [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) para mesclar partições em uma [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância do.|  
-|[Criando agregações &#40;XMLA&#41;](designing-aggregations-xmla.md)|Descreve como usar o comando [DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) , no modo iterativo ou em lotes, para criar agregações para um design de agregação no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|[Criando agregações &#40;XMLA&#41;](designing-aggregations-xmla.md)|Descreve como usar o comando [DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) , no modo iterativo ou em lotes, para criar agregações para um design de agregação no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[Fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](backing-up-restoring-and-synchronizing-databases-xmla.md)|Descreve como usar os comandos [backup](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) e [Restore](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla) para fazer backup e restaurar um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados de um arquivo de backup.<br /><br /> Também descreve como usar o comando [Synchronize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) para sincronizar um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados com um banco de dados existente na mesma instância ou em uma instância diferente.|  
 |[Inserindo, atualizando e descartando Membros &#40;XMLA&#41;](inserting-updating-and-dropping-members-xmla.md)|Descreve como usar os comandos [Insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [Update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)e [drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) para adicionar, alterar ou excluir membros de uma dimensão habilitada para gravação.|  
 |[Atualizando células &#40;&#41;XMLA](updating-cells-xmla.md)|Descreve como usar o comando [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) para alterar os valores de células em uma partição habilitada para gravação.|  
 |[Gerenciando caches &#40;XMLA&#41;](managing-caches-xmla.md)|Detalhes de como usar o comando [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) para limpar os caches de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos.|  
-|[Monitoramento de rastreamentos &#40;&#41;XMLA](monitoring-traces-xmla.md)|Descreve como usar o comando [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) para assinar e monitorar um rastreamento existente em uma [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância do.|  
+|[Monitoramento de rastreamentos &#40;&#41;XMLA](monitoring-traces-xmla.md)|Descreve como usar o comando [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) para assinar e monitorar um rastreamento existente em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="data-mining-with-xmla"></a>Mineração de dados com o XMLA  
  O XML for Analysis dá suporte completo a conjuntos de linhas do esquema de mineração de dados. Esses conjuntos de linhas fornecem informações para consultar modelos de Data Mining usando o método [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) . Para obter mais informações sobre conjuntos de linhas de esquema Data Mining, consulte conjuntos de linhas de [esquema de mineração de dados](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
@@ -60,7 +59,7 @@ ms.locfileid: "80380677"
 ## <a name="namespace-and-schema"></a>Namespace e esquema  
   
 ### <a name="namespace"></a>Namespace  
- O esquema definido nesta especificação usa o namespace `https://schemas.microsoft.com/AnalysisServices/2003/Engine` XML e a abreviação padrão "DDL".  
+ O esquema definido nesta especificação usa o namespace XML `https://schemas.microsoft.com/AnalysisServices/2003/Engine` e a abreviação padrão "DDL".  
   
 ### <a name="schema"></a>Esquema  
  A definição de um esquema da linguagem XSD para a linguagem de definição do objeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] baseia-se na definição dos elementos de esquema e na hierarquia desta seção.  

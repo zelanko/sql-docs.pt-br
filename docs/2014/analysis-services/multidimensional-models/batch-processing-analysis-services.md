@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb5ef5f0f9d662f66b9fb3203e518316d87c21b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076936"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544618"
 ---
 # <a name="batch-processing-analysis-services"></a>Processamento em lotes (Analysis Services)
   No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o comando Batch para enviar vários comandos de processamento para o servidor em uma única solicitação. O processamento em lotes dá a você uma maneira de controlar quais objetos serão processados e em qual ordem. Além disso, o processamento em lotes pode ser executado como uma série de trabalhos autônomos ou uma transação na qual a falha de um processo causa uma reversão do lote completo.  
@@ -35,7 +34,7 @@ ms.locfileid: "66076936"
 ##  <a name="batch-processing-in-sql-server-data-tools"></a><a name="bkmk_ssdt"></a>Processamento em lotes no SQL Server Data Tools  
  Antes que os objetos possam ser processados no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o projeto que contém os objetos deve ser implantado. Para obter mais informações, consulte [Implantar projetos do Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
-1.  Abra o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+1.  Abra [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 2.  Abra um projeto que foi implantado.  
   

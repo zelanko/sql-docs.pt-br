@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41471645e3443d59294f980eba35fbf9074d7728
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073896"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546140"
 ---
 # <a name="subselects-in-queries"></a>Subseleções em consultas
   Expressões de subseleção são expressões SELECT aninhadas que são usadas para restringir o espaço do cubo onde o SELECT externo exterior está sendo avaliado. Subseleções permitem definir um novo espaço sobre os quais todos os cálculos são avaliados.  
@@ -305,7 +304,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||Todos os Territórios de Vendas|Austrália|Canada|Central|Noroeste|Sudoeste|  
+||Todos os Territórios de Vendas|Austrália|Canadá|Central|Noroeste|Sudoeste|  
 |Todos os Produtos|$7,591,495.49|$1,281,059.99|$1,547,298.12|$600,205.79|$1,924,763.50|$2,238,168.08|  
 |Mountain-200 Silver, 38|$1,449,576.15|$248,702.93|$275,052.45|$141,103.65|$349,487.01|$435,230.12|  
 |Mountain-200 Black, 38|$1,722,896.50|$218,024.05|$418,726.43|$123,929.46|$486,694.63|$475,521.93|  
@@ -328,7 +327,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||Todos os Territórios de Vendas|Austrália|Canada|Noroeste|Sudoeste|United Kingdom|  
+||Todos os Territórios de Vendas|Austrália|Canadá|Noroeste|Sudoeste|Reino Unido|  
 |Todos os Produtos|$7,938,218.56|$1,096,312.24|$1,474,255.49|$2,042,674.72|$2,238,099.55|$1,086,876.56|  
 |Mountain-200 Silver, 38|$1,520,958.53|$248,702.93|$275,052.45|$349,487.01|$435,230.12|$212,486.03|  
 |Mountain-200 Silver, 42|$1,392,237.14|$198,127.15|$229,679.01|$361,233.58|$407,854.24|$195,343.16|  
@@ -349,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   A cláusula HAVING não é permitida em uma cláusula de eixo. Em vez disso, use uma expressão de função [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx).  
   
--   Por padrão, membros calculados não são permitidos em subseleções; no entanto, essa restrição pode ser alterada, de acordo com `SubQueries` a sessão, atribuindo um valor à propriedade da cadeia de conexão <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> na `DBPROP_MSMD_SUBQUERIES` propriedade ou nas [Propriedades XMLA com suporte &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Consulte [membros calculados em subseleções e subcubos](calculated-members-in-subselects-and-subcubes.md) para obter uma explicação detalhada do comportamento de membros calculados dependendo dos valores de `SubQueries` ou. `DBPROP_MSMD_SUBQUERIES`  
+-   Por padrão, membros calculados não são permitidos em subseleções; no entanto, essa restrição pode ser alterada, de acordo com a sessão, atribuindo um valor à `SubQueries` propriedade da cadeia de conexão <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> na `DBPROP_MSMD_SUBQUERIES` propriedade ou nas [propriedades xmla com suporte &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Consulte [membros calculados em subseleções e subcubos](calculated-members-in-subselects-and-subcubes.md) para obter uma explicação detalhada do comportamento de membros calculados dependendo dos valores de `SubQueries` ou `DBPROP_MSMD_SUBQUERIES` .  
   
   

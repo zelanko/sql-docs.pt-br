@@ -3,9 +3,9 @@ title: sys. dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165923"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627396"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-SQL)
 
@@ -61,7 +61,7 @@ Retorna as configurações de capacidade e configuração reais usadas pelos mec
 |**initial_db_file_size_in_mb**|BIGINT|Tamanho padrão para o novo arquivo de dados, em MB. Consulte [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**log_size_in_mb**|BIGINT|Tamanho padrão para o novo arquivo de log, em MB. Consulte [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**instance_cap_cpu**|INT|Somente para uso interno.|
-|**instance_max_log_rate**|BIGINT|Limite de taxa de geração de log para a instância de SQL Server, em bytes por segundo. Aplica-se a todos os logs gerados pela instância `tempdb` , incluindo e outros bancos de dados do sistema. Em um pool elástico, aplica-se ao log gerado por todos os bancos de dados no pool.|
+|**instance_max_log_rate**|BIGINT|Limite de taxa de geração de log para a instância de SQL Server, em bytes por segundo. Aplica-se a todos os logs gerados pela instância, incluindo `tempdb` e outros bancos de dados do sistema. Em um pool elástico, aplica-se ao log gerado por todos os bancos de dados no pool.|
 |**instance_max_worker_threads**|INT|Limite de thread de trabalho para a instância de SQL Server.|
 |**replica_type**|INT|Tipo de réplica, em que 0 é primário e 1 é secundário.|
 |**max_transaction_size**|BIGINT|Espaço de log máximo usado por qualquer transação, em KB.|

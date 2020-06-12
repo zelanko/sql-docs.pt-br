@@ -16,21 +16,20 @@ helpviewer_keywords:
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a4f41e548746d443ff9cbed5eca17e557127240
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064669"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527742"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Procurando um modelo de árvores de decisão
-  Quando você abre um modelo de classificação usando **procurar**, o modelo é exibido em um visualizador de árvore de decisão interativa, [!INCLUDE[msCoName](../includes/msconame-md.md)] semelhante ao Visualizador de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]árvores de decisão no. O visualizador exibe os resultados da classificação como um gráfico que foi criado para realçar os critérios que diferenciam um grupo de dados do outro. Você também pode analisar subconjuntos individuais da árvore e recuperar os dados subjacentes.  
+  Quando você abre um modelo de classificação usando **procurar**, o modelo é exibido em um visualizador de árvore de decisão interativa, semelhante ao [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de árvores de decisão no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . O visualizador exibe os resultados da classificação como um gráfico que foi criado para realçar os critérios que diferenciam um grupo de dados do outro. Você também pode analisar subconjuntos individuais da árvore e recuperar os dados subjacentes.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorar o modelo  
  Os modelos baseados no algoritmo Árvores de Decisão têm várias informações interessantes para explorar. A janela **procurar** inclui as seguintes guias e painéis para ajudá-lo a aprender os padrões e prever os resultados usando o grafo:  
   
--   [Árvore de Decisão](#BKMK_DecisionTree)  
+-   [Árvore de decisões](#BKMK_DecisionTree)  
   
 -   [Rede de Dependências](#BKMK_DNetwork)  
   
@@ -87,13 +86,13 @@ ms.locfileid: "66064669"
   
      Apenas examinar a intensidade do sombreamento, você poderá se concentrar em alguns grupos de interesse, e obter dados mais detalhados sobre eles para comparação. Por exemplo, esses grupos têm uma probabilidade consideravelmente mais alta de comprar bicicletas:  
   
-    -   Age >= 32 e \< 53 e renda anual >= 26000 e filhos = 0  
+    -   Age >= 32 e \< 53 and Yearly Income > = 26000 e filhos = 0  
   
          Total de casos: 1150  
   
          Probabilidade do comprador de bicicletas: 18%  
   
-    -   Age >= 32 e \< 53 e receita anual >= 26000 e filhos não = 0 e estado civil = ' single '  
+    -   Age >= 32 e \< 53 and Yearly Income > = 26000 e filhos não = 0 e status civil = ' single '  
   
          Total de casos: 402  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66064669"
   
      ![Gráfico da rede de dependências para um modelo de associação](media/dm13-dec-tree-background-no.gif "Gráfico da rede de dependências para um modelo de associação")  
   
- **Sobre**  
+ **Dicas**  
   
 -   Se os dados puderem ser divididos em várias séries, um modelo diferente será criado para cada conjunto de dados que você quiser modelar.  
   

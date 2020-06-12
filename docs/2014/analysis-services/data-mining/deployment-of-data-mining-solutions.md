@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9cf77bf6c583a2f286c2b02d392314e9a2dad2e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084715"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522562"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Implantação de soluções de mineração de dados
   A última etapa no processo de mineração de dados é implantar os modelos para um ambiente de produção. A implantação é importante porque torna os modelos disponíveis para usuários, para que você possa executar qualquer uma das tarefas a seguir:  
@@ -43,7 +42,7 @@ ms.locfileid: "66084715"
  [Recursos relacionados](#bkmk_Resources)  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Implantar uma solução de Mineração de dados em versões anteriores do SQL Server](deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+ [Implantar uma solução de mineração de dados em versões anteriores do SQL Server](deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Exportar e importar objetos de mineração de dados](export-and-import-data-mining-objects.md)  
   

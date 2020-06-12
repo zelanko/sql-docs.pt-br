@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087352"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527232"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Conectar a um servidor de mineração de dados
   ![Botão Conexões](media/misc-connection.gif "Botão Conexões")  
   
- Clique no botão **conexão** para selecionar uma conexão existente ou para criar uma nova conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Clique no botão **conexão** para selecionar uma conexão existente ou para criar uma nova conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Por que preciso me conectar a um servidor?**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66087352"
   
  **Recebo uma mensagem dizendo "nenhuma conexão encontrada".**  
   
- Se o texto na parte inferior do botão **não diz nenhuma conexão**, isso significa que você não criou uma conexão com um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados ou que a conexão falhou. Você pode continuar trabalhando com os dados no Excel pelo Access ou outras origens, mas para criar um modelo de mineração de dados ou executar uma consulta de previsão, é necessário ter uma conexão ativa.  
+ Se o texto na parte inferior do botão **não diz nenhuma conexão**, isso significa que você não criou uma conexão com um banco de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dados ou que a conexão falhou. Você pode continuar trabalhando com os dados no Excel pelo Access ou outras origens, mas para criar um modelo de mineração de dados ou executar uma consulta de previsão, é necessário ter uma conexão ativa.  
   
  **Suponha que eu não tenha permissão para usar o servidor?**  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 546448bd05f3af45b7093acb2dbb9d1e1a8f1bd5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081463"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528492"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação de Extração de Detalhes (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Formulário de Ação de Extração de Detalhes** na guia **Ações** no Designer de Cubo para modificar a ação de extração de detalhes selecionada no painel **Organizador de Ações** . Para obter mais informações sobre ações de detalhamento, consulte [Ações &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -56,10 +55,10 @@ ms.locfileid: "66081463"
  **Propriedades Adicionais**  
  Expanda para exibir as opções **Padrão**, **Máximo de linhas**, **Invocação**, **Aplicativo**, **Descrição**, **Legenda**e **A legenda é MDX** .  
   
- **Padrão**  
+ **Default**  
  Selecione **True** para incluir esta como uma ação de detalhamento padrão; caso contrário, selecione **False**.  
   
- Se a `RETURN` cláusula for omitida de uma `DRILLTHROUGH` instrução MDX executada por um aplicativo cliente, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a instância avaliará todas as ações de detalhamento padrão e executará a primeira ação de detalhamento padrão que retorna um conjunto não vazio. Para obter mais informações sobre a `DRILLTHROUGH` instrução MDX, consulte [instrução de detalhamento &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
+ Se a `RETURN` cláusula for omitida de uma `DRILLTHROUGH` instrução MDX executada por um aplicativo cliente, a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância avaliará todas as ações de detalhamento padrão e executará a primeira ação de detalhamento padrão que retorna um conjunto não vazio. Para obter mais informações sobre a `DRILLTHROUGH` instrução MDX, consulte [instrução de detalhamento &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
   
 > [!NOTE]  
 >  Esta opção é usada para fins de compatibilidade com versões anteriores.  
@@ -75,10 +74,10 @@ ms.locfileid: "66081463"
   
  A tabela a seguir descreve as configurações disponíveis.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Lote|A ação deve ser executada como parte de uma operação em lote ou de uma tarefa do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactive (Interativo)|A ação é executada quando o usuário a invoca.|  
+|Interativo|A ação é executada quando o usuário a invoca.|  
 |Em Aberto|A ação é executada quando o cubo é aberto pela primeira vez.|  
   
  **Aplicativo**  

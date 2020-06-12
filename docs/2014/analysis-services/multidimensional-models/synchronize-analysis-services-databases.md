@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e3f47b6cfe97806f093ee4ac1c9c8574056042d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072847"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547348"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalentes copiando os dados e os metadados de um banco de dados em um servidor de origem para um banco de dados de um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
@@ -129,7 +128,7 @@ ms.locfileid: "66072847"
   
      A opção **Locais** exibe uma grade que lista detalhes sobre os locais nos quais partições remotas do banco de dados de origem são armazenadas, incluindo informações sobre a origem, o destino e o tamanho do armazenamento usado por cada local, disponíveis no banco de dados selecionado. A grade contém as seguintes colunas:  
   
-     **Sincronização**  
+     **Sincronizar**  
      Selecione para incluir um local que contém as partições remotas durante a sincronização.  
   
     > [!NOTE]  

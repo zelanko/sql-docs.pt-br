@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b70742b07fd6450b01cf205147a05f40c4b6121
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736389"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545668"
 ---
 # <a name="assl-xml-conventions"></a>Convenções de XML do ASSL
   A ASSL (Analysis Services Scripting Language) representa a hierarquia de objetos como um conjunto de tipos de elementos, cada um definindo os elementos filhos que podem conter.  
@@ -117,7 +116,7 @@ ms.locfileid: "62736389"
   
  ``  
   
-## <a name="data-types"></a>Tipos de Dados  
+## <a name="data-types"></a>Tipos de dados  
  O Analysis Services usa os seguintes tipos de dados XSD (linguagem de definição de esquema XML) padrão:  
   
  `Int`  

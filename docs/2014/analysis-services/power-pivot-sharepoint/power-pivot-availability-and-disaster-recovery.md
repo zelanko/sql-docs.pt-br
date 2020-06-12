@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf560d489a1631e31f470134d497d3d897f6f35e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c98b677aab756d4fd2b35c6751e925c463665441
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175675"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540398"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Disponibilidade do PowerPivot e recuperação de desastres (SQL Server 2014)
-  Os planos de recuperação de desastres e disponibilidade para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependem principalmente do design do seu farm do SharePoint, o tempo de inatividade aceitável para componentes diferentes, além de ferramentas e práticas recomendadas implementadas para disponibilidade do SharePoint. Este tópico resume as tecnologias e inclui exemplos de diagramas de topologia a serem considerados ao planejar a disponibilidade [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] e a recuperação de desastres para uma implantação.
+  Os planos de recuperação de desastres e disponibilidade para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependem principalmente do design do seu farm do SharePoint, o tempo de inatividade aceitável para componentes diferentes, além de ferramentas e práticas recomendadas implementadas para disponibilidade do SharePoint. Este tópico resume as tecnologias e inclui exemplos de diagramas de topologia a serem considerados ao planejar a disponibilidade e a recuperação de desastres para uma [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] implantação.
 
 ||
 |-|
@@ -80,18 +79,18 @@ ms.locfileid: "78175675"
 ||Comentários|
 |-|--------------|
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] em um farm para disponibilidade.|Com suporte, mas não é recomendado. A recomendação é usar o AlwaysOn no modo de confirmação síncrona.|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] no modo de confirmação síncrona|Suporte e recomendado.|
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] espelhamento assíncrono ou envio de logs para outro farm para a recuperação de desastres.| Com suporte.|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] com confirmação assíncrona para recuperação de desastre|Com suporte|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]no modo de confirmação síncrona|Suporte e recomendado.|
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] espelhamento assíncrono ou envio de logs para outro farm para a recuperação de desastres.|Com suporte.|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]com confirmação assíncrona para recuperação de desastre|Com suporte|
 
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]
 
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Envio de logs
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Envio de log
 
  Para obter mais informações sobre como planejar um cenário de espera a frio com [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], consulte [Recuperação de desastres do PowerPivot](https://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).
 
 ## <a name="verification"></a>Verificação
- Para obter orientações e scripts para ajudá-lo [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a verificar uma implantação antes e depois de um ciclo de recuperação de desastre, consulte [lista de verificação: usar o PowerShell para verificar PowerPivot para SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).
+ Para obter orientações e scripts para ajudá-lo a verificar uma [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] implantação antes e depois de um ciclo de recuperação de desastre, consulte [lista de verificação: usar o PowerShell para verificar PowerPivot para SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).
 
 ##  <a name="links-to-more-information"></a><a name="bkmk_more_resources"></a>Links para mais informações
 

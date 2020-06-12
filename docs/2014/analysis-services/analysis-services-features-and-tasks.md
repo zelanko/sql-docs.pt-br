@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c0e42f289c5d5aa0aebf546e1adeb0a31683d82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80eddefc7b4bafb28a1f4e4f166bfac1169632c2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062543"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528042"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Recursos e tarefas do Analysis Services
   A documentação básica do Analysis Services é organizada por modelagem e modo de servidor de forma que você possa se concentrar apenas nas ferramentas, nas tarefas e nos recursos que estão disponíveis no modo instalado. As tarefas de administração de servidor que abrangem vários modos podem ser localizadas nas instâncias de servidor.  

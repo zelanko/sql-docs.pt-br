@@ -12,12 +12,12 @@ ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4188a76609df3829455da05365d60776b8f6b815
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9dda41e229e36c0c4b86c5bdb00782c3b5871bfa
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000896"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858641"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propriedades do Índice de Texto Completo (página Agendas)
   Use esta página para exibir e criar agendas para executar um trabalho do SQL Server Agent que inicia uma população incremental de atualizações na tabela base do índice de texto completo. Se a tabela base ou a exibição não contiver uma coluna do tipo de dados `timestamp`, uma população completa será executada.  
@@ -26,7 +26,7 @@ ms.locfileid: "83000896"
   
 -   [Gerenciar índices de texto completo](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Agendas**  
  Lista cada população incremental agendada, se houver, na tabela base para o índice de texto completo.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "83000896"
  **Tipo de População**  
  Exibe o tipo de cada população agendada.  
   
- **Habilitada**  
+ **Enabled**  
  Indica se a população agendada está habilitada ou desabilitada atualmente.  
   
  **Descrição**  

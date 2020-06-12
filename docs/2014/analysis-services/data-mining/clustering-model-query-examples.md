@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085716"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524152"
 ---
 # <a name="clustering-model-query-examples"></a>Exemplos de consulta de modelo de clustering
   Ao criar uma consulta em um modelo de mineração de dados, é possível recuperar metadados sobre o modelo ou criar uma consulta de conteúdo que forneça detalhes sobre os padrões descobertos na análise. Se preferir, crie uma consulta de previsão, que usa os padrões do modelo para fazer previsões para os novos dados. Cada tipo de consulta fornece informações diferentes. Por exemplo, uma consulta de conteúdo pode fornecer detalhes adicionais sobre os clusters encontrados, enquanto uma consulta de previsão pode informar a qual cluster um novo ponto de dados provavelmente pertence.  
@@ -77,7 +76,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Cluster Model|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|Todos|  
+|NODE_DESCRIPTION|Tudo|  
   
  Para obter uma definição do que essas colunas significam em um modelo de clustering, consulte [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   

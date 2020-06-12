@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39cf9166-fa92-40fe-9962-210a52461257
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ab225433ca4ab08d7a7c013fa30dd37c05b9143
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 762ea6f33a94f65e7dd6895cd038d4a52d40d43e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072459"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535552"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-during-the-development-phase"></a>Trabalhando com projetos e bancos de dados do Analysis Services durante a fase de desenvolvimento
   Você pode desenvolver um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] em modo de projeto ou online.  

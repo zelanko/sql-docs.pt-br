@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9529edf-337e-4fdd-9a13-99cfe96b4fa1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59c27d5f34d6e5a3f33e0f153a9077995bd99650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a71a43eaced5100d48a386c60d39254b1266aaef
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080018"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543918"
 ---
 # <a name="features-off-by-default-analysis-services"></a>Recursos desativados por padrão (Analysis Services)
   Uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é considerada segura por padrão. Assim, os recursos que podem comprometer a segurança são desabilitados por padrão. Os recursos a seguir são instalados em um estado desabilitado e deverão ser habilitados especificamente se você quiser usá-los.  

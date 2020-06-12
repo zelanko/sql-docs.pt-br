@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968046a09214c4b5d7922302c911ca4d1f2b875
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077678"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537398"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Caixa de diálogo modificar mapeamento (Gráfico de precisão de mineração)
-  Use a caixa de diálogo **Modificar Mapeamento** para alterar como as colunas de entrada são unidas às colunas no modelo de mineração. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mapeará as colunas automaticamente com base no nome da coluna e no tipo de dados, mas você pode usar essa caixa de diálogo para alterar os mapeamentos de coluna. Ao fazer modificações, certifique-se de que as colunas da fonte de dados externos tem tipos de dados e tipos de conteúdo que correspondam com as colunas no modelo de mineração que você está testando.  
+  Use a caixa de diálogo **Modificar Mapeamento** para alterar como as colunas de entrada são unidas às colunas no modelo de mineração. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mapeará as colunas automaticamente com base no nome da coluna e no tipo de dados, mas você pode usar essa caixa de diálogo para alterar os mapeamentos de coluna. Ao fazer modificações, certifique-se de que as colunas da fonte de dados externos tem tipos de dados e tipos de conteúdo que correspondam com as colunas no modelo de mineração que você está testando.  
   
 ## <a name="options"></a>Opções  
  **Coluna de Estrutura de Mineração**  

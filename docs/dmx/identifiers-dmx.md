@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074810"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670389"
 ---
 # <a name="identifiers-dmx"></a>Identificadores (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Todos os objetos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no devem ter um identificador. O nome de um objeto é seu identificador. Servidores, banco de dados e objetos de banco de dados, como fontes de dados, exibições de fonte de dados, cubos, dimensões e modelos de mineração, entre outros, têm identificadores.  
+  Todos os objetos no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] devem ter um identificador. O nome de um objeto é seu identificador. Servidores, banco de dados e objetos de banco de dados, como fontes de dados, exibições de fonte de dados, cubos, dimensões e modelos de mineração, entre outros, têm identificadores.  
   
  Há duas classes de identificadores em extensões DMX:  
   
@@ -75,7 +75,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Quando palavras reservadas forem usadas em nomes de objeto ou partes de nomes de objeto.  
   
-     É recomendável não usar palavras-chave reservadas como nomes de objeto. Os bancos de dados que você atualiza de versões anteriores [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] do podem conter identificadores que incluem palavras que não foram reservadas na versão anterior [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] do, mas que são palavras[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]reservadas para o. Um identificador delimitado pode ser usado para fazer referência a um objeto assim, até que seja possível alterar o nome do objeto.  
+     É recomendável não usar palavras-chave reservadas como nomes de objeto. Os bancos de dados que você atualiza de versões anteriores do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podem conter identificadores que incluem palavras que não foram reservadas na versão anterior do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mas que são palavras reservadas para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Um identificador delimitado pode ser usado para fazer referência a um objeto assim, até que seja possível alterar o nome do objeto.  
   
 -   Quando se usam caracteres que não estão listados como identificadores qualificados.  
   

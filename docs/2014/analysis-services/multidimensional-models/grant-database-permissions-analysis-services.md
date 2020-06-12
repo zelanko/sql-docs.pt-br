@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b4e5ac88a81728d6e29d32b0d330ba8fd408633
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175727"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546678"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Conceder permissões de banco de dados (Analysis Services)
   Se você estiver acessando a administração de banco de dados do Analysis Services com experiência em bancos de dados relacionais, a primeira coisa que você precisa entender é que, em termos de acesso a dados, o banco de dados não é o principal objeto protegível no Analysis Services.
 
- A estrutura de consulta primária no Analysis Services é um cubo (ou um modelo de tabela), com permissões de usuário definidas nesses objetos particulares. Em contraste com o mecanismo de banco de dados relacional ─, em que os logons `db_datareader`de banco de dados e as permissões de usuário (muitas vezes) são definidos no próprio banco de dados, um banco de dado Analysis Services é basicamente um contêiner para os objetos de consulta principal em um modelo. Se o objetivo imediato é permitir o acesso a dados para um modelo de cubo ou de tabela, você pode ignorar as permissões de banco de dados agora e ir direto para este tópico: [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).
+ A estrutura de consulta primária no Analysis Services é um cubo (ou um modelo de tabela), com permissões de usuário definidas nesses objetos particulares. Em contraste com o mecanismo de banco de dados relacional ─, em que os logons de banco de dados e as permissões de usuário (muitas vezes `db_datareader` ) são definidos no próprio banco de dados, um banco de dado Analysis Services é basicamente um contêiner para os objetos de consulta principal em um modelo. Se o objetivo imediato é permitir o acesso a dados para um modelo de cubo ou de tabela, você pode ignorar as permissões de banco de dados agora e ir direto para este tópico: [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).
 
  As permissões de banco de dados no Analysis Services habilitam funções administrativas. Em um contexto mais amplo, como é o caso da permissão Controle Total do banco de dados ou de natureza mais granular se você estiver delegando operações de processamento. Os níveis de permissão para um banco de dados do Analysis Services são especificados no painel **Geral** da caixa de diálogo **Criar Função** , exibidos na ilustração a seguir e descritos abaixo.
 
@@ -72,10 +71,10 @@ ms.locfileid: "78175727"
 5.  Clique em **OK** para concluir a criação da função.
 
 ## <a name="process-database"></a>Processar Banco de Dados
- Ao definir uma função que concede permissões de banco de dados, `Full Control` você pode ignorar `Process Database`e escolher apenas. Essa permissão, definida no nível de banco de dados, permite o processamento de todos os objetos do banco de dados. Consulte [Conceder permissões de processo &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
+ Ao definir uma função que concede permissões de banco de dados, você pode ignorar `Full Control` e escolher apenas `Process Database` . Essa permissão, definida no nível de banco de dados, permite o processamento de todos os objetos do banco de dados. Consulte [Conceder permissões de processo &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
 
 ## <a name="read-definition"></a>Ler Definição
- Assim `Process Database`como, `Read Definition` a definição de permissões no nível do banco de dados tem um efeito em cascata em outros objetos do banco de dados. Se você deseja definir permissões de Ler Definição em um nível mais granular, desmarque Ler Definição como uma propriedade do banco de dados no painel Geral. Consultar [Conceder permissões para ler definição em metadados de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) para obter mais informações.
+ Assim como `Process Database` , `Read Definition` a definição de permissões no nível do banco de dados tem um efeito em cascata em outros objetos do banco de dados. Se você deseja definir permissões de Ler Definição em um nível mais granular, desmarque Ler Definição como uma propriedade do banco de dados no painel Geral. Consultar [Conceder permissões para ler definição em metadados de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) para obter mais informações.
 
 ## <a name="see-also"></a>Consulte Também
  [Conceder permissões de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) [conceder permissões de processo &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)

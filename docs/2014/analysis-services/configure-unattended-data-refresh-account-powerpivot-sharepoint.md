@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7f373dfa85e80de6bfd3a0bb33e9b28ab33a697
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087417"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527242"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Configurar a conta autônoma de atualização de dados PowerPivot (PowerPivot para SharePoint)
   A conta autônoma de atualização de dados PowerPivot é uma conta designada para executar trabalhos de atualização de dados PowerPivot em um farm do SharePoint. Ao configurá-lo, você habilita a opção **usar a conta de atualização de dados configurada pelo administrador** em uma página de agendamento de atualização de dados (veja abaixo). Autores de pasta de trabalho que agendarem a atualização de dados poderão escolher essa opção se quiserem usar a conta autônoma de atualização de dados PowerPivot para executar um trabalho de atualização de dados. Para obter mais informações sobre como exibir as opções de credenciais em uma agenda de atualização de dados, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
@@ -92,11 +91,11 @@ ms.locfileid: "66087417"
   
 8.  Ignore a URL da página do aplicativo de destino. A atualização de dados PowerPivot não usa essa URL.  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 10. Na página **especificar os campos de credenciais para seu aplicativo de destino de repositório seguro** , aceite os valores padrão. Os nomes e tipos de campo devem ser Nome de Usuário do Windows e Senha do Windows  
   
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 12. Em Administradores de Aplicativos de Destino, especifique a identidade do pool de aplicativos do aplicativo de serviço PowerPivot. O serviço requer permissões de **controle total** para que possa recuperar informações de conta de atualização de dados autônoma em tempo de execução. Além disso, especifique as contas de usuário de domínio do Windows de qualquer outro usuário do SharePoint que precise ter acesso administrativo às configurações do aplicativo.  
   

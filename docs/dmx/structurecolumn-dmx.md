@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68065392"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669986"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,14 +32,14 @@ StructureColumn('structure column name')
  O nome de uma coluna da estrutura de mineração de tabela aninhada ou caso.  
   
 ## <a name="result-type"></a>Tipo de resultado  
- O tipo retornado depende do tipo da coluna referenciada no nome da coluna de \<estrutura> parâmetro. Por exemplo, se a coluna da estrutura de mineração mencionada contiver um valor escalar, a função retornará um valor escalar.  
+ O tipo retornado depende do tipo da coluna referenciada no \< nome da coluna de estrutura> parâmetro. Por exemplo, se a coluna da estrutura de mineração mencionada contiver um valor escalar, a função retornará um valor escalar.  
   
  Se a coluna da estrutura de mineração mencionada for uma tabela aninhada, a função retornará um valor de tabela. O valor de tabela retornado pode ser usado na cláusula FROM de uma instrução sub-SELECT.  
   
 ## <a name="remarks"></a>Comentários  
  Esta função é polimórfica e pode ser usada em qualquer lugar de uma instrução que permite expressões, incluindo uma lista de expressões SELECT, uma expressão de condição WHERE e uma expressão ORDER BY.  
   
- O nome da coluna na estrutura de mineração é um valor de cadeia de caracteres e, como tal, deve ser colocado entre aspas simples: `StructureColumn('`por exemplo, **coluna 1**`')`. Se houver várias colunas com o mesmo nome, o nome será resolvido no contexto da instrução SELECT de circunscrição.  
+ O nome da coluna na estrutura de mineração é um valor de cadeia de caracteres e, como tal, deve ser colocado entre aspas simples: por exemplo, `StructureColumn('` **coluna 1** `')` . Se houver várias colunas com o mesmo nome, o nome será resolvido no contexto da instrução SELECT de circunscrição.  
   
  Os resultados retornados de uma consulta usando a função **StructureColumn** são afetados pela presença de filtros no modelo. Quer dizer, o filtro do modelo controla os casos que são incluídos no modelo de mineração. Desse modo, uma consulta na coluna de estrutura pode retornar somente os casos que foram usados no modelo de mineração. Consulte a seção Exemplos deste tópico para observar o exemplo de um código que mostra o efeito dos filtros de modelo de mineração nas tabelas de caso e em uma tabela aninhada.  
   
@@ -112,10 +112,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Observe que, neste exemplo, um filtro é aplicado à coluna de estrutura para restringir os casos aos clientes cuja ocupação é ' arquiteto ' (`WHERE StructureColumn('Occupation') = 'Architect'`). Como a condição de filtro do modelo sempre é aplicada aos casos quando o modelo é criado, somente os casos com pelo menos uma linha qualificada na tabela `Products` são incluídos nos casos do modelo. Desse modo, o filtro no tabela aninhada `Products` e o filtro no caso `('Occupation')` são aplicados.  
+ Observe que, neste exemplo, um filtro é aplicado à coluna de estrutura para restringir os casos aos clientes cuja ocupação é ' arquiteto ' ( `WHERE StructureColumn('Occupation') = 'Architect'` ). Como a condição de filtro do modelo sempre é aplicada aos casos quando o modelo é criado, somente os casos com pelo menos uma linha qualificada na tabela `Products` são incluídos nos casos do modelo. Desse modo, o filtro no tabela aninhada `Products` e o filtro no caso `('Occupation')` são aplicados.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Consulta de exemplo 3: Selecionando colunas de uma tabela aninhada  
- A consulta de exemplo a seguir retorna os nomes dos clientes que foram usados como casos de treinamento do modelo. Para cada cliente, a consulta também retorna uma tabela aninhada que contém os detalhes de compra. Embora o modelo inclua a `ProductName` coluna, o modelo não usa o valor da `ProductName` coluna. O modelo verifica apenas se o produto foi comprado em preço regular`NOT``OnSale`(). Esta consulta não só retorna o nome do produto, mas também retorna a quantidade adquirida, que não é incluída no modelo.  
+ A consulta de exemplo a seguir retorna os nomes dos clientes que foram usados como casos de treinamento do modelo. Para cada cliente, a consulta também retorna uma tabela aninhada que contém os detalhes de compra. Embora o modelo inclua a `ProductName` coluna, o modelo não usa o valor da `ProductName` coluna. O modelo verifica apenas se o produto foi comprado em preço regular ( `NOT``OnSale` ). Esta consulta não só retorna o nome do produto, mas também retorna a quantidade adquirida, que não é incluída no modelo.  
   
 ```  
 SELECT CustomerName,    

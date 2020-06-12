@@ -1,5 +1,6 @@
 ---
 title: Conectando-se ao BD SQL do Azure (AccessToSQL) | Microsoft Docs
+description: Saiba como se conectar a uma instância de destino do banco de dados SQL do Azure para migrar bancos de dados do Access. O SSMA obtém metadados sobre bancos de dados no banco de dados SQL do Azure.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006659"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293123"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Conectando-se ao BD SQL do Azure (AccessToSQL)
 Para migrar bancos de dados do Access para SQL Azure, você deve se conectar à instância de destino do SQL Azure. Quando você se conecta, o SSMA obtém metadados sobre todos os bancos de dados na instância do SQL Azure e exibe os metadados do banco de dados no SQL Azure Gerenciador de metadados. O SSMA armazena informações sobre a instância do SQL Azure à qual você está conectado, mas não armazena senhas.  
@@ -35,7 +36,7 @@ Os metadados sobre a instância do SQL Azure não são sincronizados automaticam
 ## <a name="required-sql-azure-permissions"></a>Permissões de SQL Azure necessárias  
 A conta usada para se conectar ao SQL Azure requer permissões diferentes dependendo das ações que a conta executa:  
   
--   Para converter objetos do Access [!INCLUDE[tsql](../../includes/tsql-md.md)] em sintaxe, para atualizar metadados de SQL Azure ou para salvar a sintaxe convertida em scripts, a conta deve ter permissão para fazer logon na instância do SQL Azure.  
+-   Para converter objetos do Access em [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe, para atualizar metadados de SQL Azure ou para salvar a sintaxe convertida em scripts, a conta deve ter permissão para fazer logon na instância do SQL Azure.  
   
 -   Para carregar objetos de banco de dados em SQL Azure, o requisito mínimo de permissão é a associação na função de banco de dados **db_owner** no banco de dados de destino.  
   

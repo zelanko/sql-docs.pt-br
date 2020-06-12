@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 123393c061d151240949f41e59e5d14b19056c52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078367"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542315"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lição 8: Criar indicadores chave de desempenho
   Nesta lição, você criará KPIs (indicadores chave de desempenho). Os KPIs são usados para medir o desempenho de um valor, definido por uma medida *Base* , em relação a um valor de *Destino* , também definido por uma medida ou um valor absoluto. Em aplicativos cliente de relatório, KPIs podem fornecer aos profissionais de negócios uma maneira rápida e fácil de entender um resumo de sucesso nos negócios ou para identificar tendências. Para obter mais informações, consulte [KPIs &#40;SSAS Tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
@@ -47,9 +46,9 @@ ms.locfileid: "66078367"
   
 5.  Na caixa de diálogo **Indicador Chave de Desempenho** , em **Definir Valor de Destino**, selecione a opção **Valor Absoluto** .  
   
-6.  No campo **valor absoluto** , digite `1.1`e pressione Enter.  
+6.  No campo **valor absoluto** , digite `1.1` e pressione Enter.  
   
-7.  Em **definir limites de status**, no campo de controle deslizante à esquerda (baixo `1`), digite e, no campo de controle deslizante à direita `1.07`(alto), digite.  
+7.  Em **definir limites de status**, no campo de controle deslizante à esquerda (baixo), digite `1` e, no campo de controle deslizante à direita (alto), digite `1.07` .  
   
 8.  Em **Selecionar Estilo de Ícone**, selecione o tipo de ícone losango (vermelho), triângulo (amarelo) e círculo (verde).  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66078367"
   
 4.  Na caixa de diálogo **Indicador Chave de Desempenho** , em **Definir Valor de Destino**, selecione a opção **Valor Absoluto** .  
   
-5.  No campo **valor absoluto** , digite `1.25`.  
+5.  No campo **valor absoluto** , digite `1.25` .  
   
 6.  Em **Definir Limites de Status**, deslize o campo de controle deslizante à esquerda (baixo) até que ele exiba **0.8**e deslize o campo de controle deslizante à direita (alto) até que ele exiba **1.03**.  
   

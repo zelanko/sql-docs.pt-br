@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088366"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527653"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Membro Calculado (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Formulário de Membro Calculado** na guia **Cálculos** do Designer de Cubo para criar ou modificar um membro calculado.  
@@ -42,7 +41,7 @@ ms.locfileid: "66088366"
  **Alteração**  
  Selecione para exibir a caixa de diálogo **Selecionar Membro Pai** e escolher um membro para **Membro pai**. Para obter mais informações sobre a caixa de diálogo **Selecionar Membro Pai**, consulte [Caixa de diálogo Selecionar Membro Pai &#40;Analysis Services – Dados Multidimensionais&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Expressão**  
+ **Expression**  
  Expanda para exibir ou editar a expressão MDX do membro calculado.  
   
  Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.  

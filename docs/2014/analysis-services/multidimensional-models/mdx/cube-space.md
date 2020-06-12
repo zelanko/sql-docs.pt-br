@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6a6da73815f06aa5ab80f6ad5a9d06227ed842
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074707"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546549"
 ---
 # <a name="cube-space"></a>Espaço de cubo
   Espaço de cubo é o produto dos membros das hierarquias de atributo de um cubo com as medidas do cubo. Portanto, o espaço de cubo é determinado pelo produto combinatório de todos os membros de hierarquia de atributo no cubo e as medidas do cubo e define o tamanho máximo do cubo. É importante observar que esse espaço inclui todas as possíveis combinações de membros de hierarquia de atributo, inclusive combinações que poderiam ser consideradas impossíveis no mundo real, como combinações onde a cidade é Paris e os países são Inglaterra, Espanha, Japão, Índia ou qualquer outro.  
@@ -78,7 +77,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Os valores das células retornadas serão idênticos, apesar de os metadados no conjunto de resultados serem diferentes. Por exemplo, com a consulta anterior, a hierarquia País foi movida para o eixo do slicer (na cláusula WHERE) e, portanto, não aparece explicitamente no conjunto de resultados.  
   
- Cada uma dessas três consultas anteriores demonstra o efeito do comportamento de existência automática no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Cada uma dessas três consultas anteriores demonstra o efeito do comportamento de existência automática no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>Hierarquias definidas pelo usuário e espaço do cubo  
  Os exemplos anteriores deste tópico definem posições no espaço do cubo, usando hierarquias de atributo. Porém, você também pode definir uma posição no espaço do cubo usando hierarquias definidas pelo usuário que foram definidas com base em hierarquias de atributo em uma dimensão. Uma hierarquia definida pelo usuário é uma hierarquia das hierarquias de atributo planejada para facilitar a procura de dados de cubo pelos usuários.  

@@ -1,5 +1,6 @@
 ---
 title: expanded-QName (XQuery) | Microsoft Docs
+description: Saiba como usar a função expanded-QName () para retornar o URI do namespace e a parte do nome local de um QName.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 295427f0b5b7dc9fe42ad363bb95ebab0a1be1eb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004588"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689338"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funções Relacionadas a QNames – expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 -   Você pode modificar ou comparar os valores de tipo QName existentes. Por exemplo, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` compara o valor do elemento, <`e`>, com QName retornado pela função **expanded-QName ()** .  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **xml** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. Substituindo um valor de nó do tipo QName  
  Este exemplo ilustra como você pode modificar o valor de um nó de elemento do tipo QName. O exemplo executa o seguinte:  
@@ -98,7 +99,7 @@ go
 </Root>   
 ```  
   
- Na consulta a seguir, o valor `ElemQN` do elemento <> é substituído usando o método **Modify ()** do tipo de dados XML e o valor de Replace de XML DML, conforme mostrado.  
+ Na consulta a seguir, o `ElemQN` valor do elemento <> é substituído usando o método **Modify ()** do tipo de dados XML e o valor de Replace de XML DML, conforme mostrado.  
   
 ```  
 -- the value.  
@@ -157,7 +158,7 @@ SELECT *
 FROM T  
 ```  
   
- A tentativa a seguir adiciona outro `root` <elemento>, mas falha, porque a função expanded-QName () não tem suporte na construção XML.  
+ A tentativa a seguir adiciona outro <`root` elemento>, mas falha, porque a função expanded-QName () não tem suporte na construção XML.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -165,7 +166,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- Uma solução para isso é primeiro inserir uma instância com um valor para o elemento <`root`> e, em seguida, modificá-la. Neste exemplo, um valor inicial nil é usado quando o elemento <`root`> é inserido. A coleção de esquema XML neste exemplo permite um valor nil para o elemento `root` <>.  
+ Uma solução para isso é primeiro inserir uma instância com um valor para o elemento <`root`> e, em seguida, modificá-la. Neste exemplo, um valor inicial nil é usado quando o elemento <`root`> é inserido. A coleção de esquema XML neste exemplo permite um valor nil para o `root` elemento <>.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -186,7 +187,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- Você pode comparar o valor QName, como mostrado na consulta a seguir. A consulta retorna apenas os elementos `root` <> cujos valores correspondem ao valor do tipo QName retornado pela função **expanded-QName ()** .  
+ Você pode comparar o valor QName, como mostrado na consulta a seguir. A consulta retorna apenas os `root` elementos <> cujos valores correspondem ao valor do tipo QName retornado pela função **expanded-QName ()** .  
   
 ```  
 SELECT xmlCol.query('  

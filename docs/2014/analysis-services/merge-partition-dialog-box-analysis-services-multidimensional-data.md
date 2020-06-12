@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1c94e250-ee18-4f98-b112-985f6346102a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07fb8bf093d4a6e0dfa7f73e771bd667a6383a79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077824"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545488"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Partição de Mesclagem (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Partição de Mesclagem** no **SQL Server Management Studio** para mesclar partições para um grupo de medidas em um cubo. É possível exibir a caixa de diálogo **Partição de Mesclagem** clicando com o botão direito do mouse na pasta Partições ou em uma partição no **Explorador de Objetos** e selecionando **Partições de Mesclagem** no menu de contexto.  
@@ -42,7 +41,7 @@ ms.locfileid: "66077824"
   
 |Coluna|Descrição|  
 |------------|-----------------|  
-|**Mescle**|Selecione para mesclar a partição de origem na partição de destino.|  
+|**Mesclar**|Selecione para mesclar a partição de origem na partição de destino.|  
 |**Nome da Partição**|Exibe o nome da partição de origem.|  
 |**Último Processamento**|Exibe a data e a hora nas quais a partição de origem foi processada pela última vez.|  
   

@@ -1,5 +1,6 @@
 ---
 title: Correspondência de tipo de sequência | Microsoft Docs
+description: Saiba como corresponder ao tipo de sequência retornado por uma expressão XQuery com um tipo específico.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8904ab2ea9e8f78037b03f886e6b61d692b65e60
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946225"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306065"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema de Tipos – Correspondência de Tipo de Sequência
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "67946225"
   
 -   Você pode querer saber se a expressão retorna um elemento XML ou um nó de atributo de um nome e tipo específicos.  
   
- Você pode usar o operador Booliano `instance of` na correspondência do tipo de sequência. Para obter mais informações sobre `instance of` a expressão, consulte [expressões SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
+ Você pode usar o operador Booliano `instance of` na correspondência do tipo de sequência. Para obter mais informações sobre a `instance of` expressão, consulte [expressões sequencetype &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Comparando o tipo do valor atômico retornado por uma expressão  
  Se uma expressão retornar uma sequência de valores atômicos, você terá que achar o tipo do valor na sequência. Os exemplos a seguir ilustram como o tipo da sintaxe de sequência pode ser usado para avaliar o tipo de valor atômico retornado por uma expressão.  
@@ -51,7 +52,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Agora, se uma instância XML com tipo especificar um valor para o `root` elemento <> `instance of empty()` , retornará false.  
+ Agora, se uma instância XML com tipo especificar um valor para o `root` elemento <>, `instance of empty()` retornará false.  
   
 ```  
 DECLARE @var XML(SC1)  
@@ -61,7 +62,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- Se o elemento `root` <> for nilled na instância, seu valor será uma sequência vazia e `instance of empty()` retornará true.  
+ Se o `root` elemento <> for nilled na instância, seu valor será uma sequência vazia e `instance of empty()` retornará true.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -255,7 +256,7 @@ element(*, ElementType?)
  Os exemplos a seguir ilustram cenários em que os testes de elemento e de atributo são úteis.  
   
 ### <a name="example-a"></a>Exemplo A  
- O esquema XML a seguir define `CustomerType` o tipo complexo em `firstName` que <> `lastName` e <elementos> são opcionais. Para uma instância XML especificada, você pode ter que determinar se o nome de um cliente específico existe.  
+ O esquema XML a seguir define o `CustomerType` tipo complexo em que <`firstName`> e <`lastName` elementos> são opcionais. Para uma instância XML especificada, você pode ter que determinar se o nome de um cliente específico existe.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -279,7 +280,7 @@ SET @var = '<x:customer xmlns:x="myNS">
 </x:customer>'  
 ```  
   
- A consulta a seguir usa `instance of element (firstName)` uma expressão para determinar se o primeiro elemento filho de `customer` <> é um elemento cujo nome é `firstName` <>. Nesse caso, ele retorna True.  
+ A consulta a seguir usa uma `instance of element (firstName)` expressão para determinar se o primeiro elemento filho de <`customer`> é um elemento cujo nome é <`firstName`>. Nesse caso, ele retorna True.  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   
@@ -287,7 +288,7 @@ SELECT @var.query('declare namespace x="myNS";
 GO  
 ```  
   
- Se você remover o elemento `firstName` <> da instância, a consulta retornará false.  
+ Se você remover o `firstName` elemento <> da instância, a consulta retornará false.  
   
  Você também pode usar o seguinte:  
   
@@ -308,7 +309,7 @@ GO
 ### <a name="example-b"></a>Exemplo B  
  O exemplo a seguir ilustra como determinar se o nó retornado por uma expressão é um nó de elemento com um nome específico. Ele usa o teste **Element ()** .  
   
- No exemplo a seguir, os dois <`Customer`> elementos na instância XML que estão sendo consultados são de dois tipos diferentes, `CustomerType` e. `SpecialCustomerType` Suponha que você deseja saber o tipo do elemento <`Customer`> retornado pela expressão. A seguinte coleção de esquemas XML define os tipos `CustomerType` e `SpecialCustomerType`.  
+ No exemplo a seguir, os dois <`Customer`> elementos na instância XML que estão sendo consultados são de dois tipos diferentes, `CustomerType` e `SpecialCustomerType` . Suponha que você deseja saber o tipo do `Customer` elemento <> retornado pela expressão. A seguinte coleção de esquemas XML define os tipos `CustomerType` e `SpecialCustomerType`.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -335,7 +336,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Essa coleção de esquema XML é usada para criar uma variável **XML** com tipo. A instância XML atribuída a essa variável tem dois elementos `customer` <> de dois tipos diferentes. O primeiro elemento é do tipo `CustomerType` e o segundo é do tipo `SpecialCustomerType`.  
+ Essa coleção de esquema XML é usada para criar uma variável **XML** com tipo. A instância XML atribuída a essa variável tem dois `customer` elementos <> de dois tipos diferentes. O primeiro elemento é do tipo `CustomerType` e o segundo é do tipo `SpecialCustomerType`.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -358,10 +359,10 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- Se você alterar a expressão da consulta anterior e recuperar o segundo elemento <`customer`> (`/x:customer)[2]`), o `instance of` retornará true.  
+ Se você alterar a expressão da consulta anterior e recuperar o segundo elemento <`customer`> ( `/x:customer)[2]` ), o `instance of` retornará true.  
   
 ### <a name="example-c"></a>Exemplo C  
- Este exemplo usa o teste de atributo. O esquema XML a seguir define o tipo complexo CustomerType com os atributos Customer ID e Age. O atributo Age é opcional. Para uma instância XML específica, talvez você queira determinar se o atributo age está presente no elemento <`customer`>.  
+ Este exemplo usa o teste de atributo. O esquema XML a seguir define o tipo complexo CustomerType com os atributos Customer ID e Age. O atributo Age é opcional. Para uma instância XML específica, talvez você queira determinar se o atributo age está presente no `customer` elemento <>.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -424,7 +425,7 @@ RETURN
   
 -   Não há suporte para o **elemento (ElementName, TypeName)** .  
   
--   Não há suporte para o **elemento (\*, TypeName)** .  
+-   Não há suporte para o **elemento ( \* , TypeName)** .  
   
 -   Não há suporte para o **elemento Schema ()** .  
   

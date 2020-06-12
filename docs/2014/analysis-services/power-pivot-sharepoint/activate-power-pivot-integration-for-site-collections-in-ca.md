@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b479564984727e47432754d0a660e6aa979244b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072005"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547628"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>Ativar a integração de recursos do PowerPivot para coleções de sites na Administração Central
   A ativação da integração de recursos do PowerPivot para coleções de sites específicas será necessária se você tiver usado a opção de instalação Farm Existente para instalar o SQL Server PowerPivot para SharePoint. Se você instalou o PowerPivot para SharePoint usando a opção Novo Servidor, poderá ignorar esta tarefa pois a Instalação do SQL Server já ativou a integração de recurso do PowerPivot para a coleção de sites raiz quando configurou sua implantação.  
@@ -31,7 +30,7 @@ ms.locfileid: "66072005"
   
 1.  Em um site do SharePoint, clique em **Ações do Site**.  
   
-     Por padrão, os aplicativos Web do SharePoint são acessados pela porta 80. Isso significa que, com frequência, você pode acessar um site do\<SharePoint digitando http://nome do computador> para abrir o conjunto de sites raiz.  
+     Por padrão, os aplicativos Web do SharePoint são acessados pela porta 80. Isso significa que você pode acessar frequentemente um site do SharePoint inserindo http://\<computer name> para abrir o conjunto de sites raiz.  
   
 2.  Clique em **Configurações de Site**.  
   

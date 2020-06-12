@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a997244a2d54cca8732196107dd21927b5f9e2f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62703087"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545439"
 ---
 # <a name="creating-stored-procedures"></a>Criando procedimentos armazenados
-  Todos os procedimentos armazenados devem ser associados a uma classe CLR (Common Language Runtime) ou COM (Component Object Model) para poderem seu usados. A classe deve ser instalada no servidor – geralmente na forma de um [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® biblioteca de vínculo dinâmico (DLL) e registrada como um assembly no servidor ou em um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados.  
+  Todos os procedimentos armazenados devem ser associados a uma classe CLR (Common Language Runtime) ou COM (Component Object Model) para poderem seu usados. A classe deve ser instalada no servidor – geralmente na forma de um [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® biblioteca de vínculo dinâmico (DLL) e registrada como um assembly no servidor ou em um banco de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dados.  
   
- Procedimentos armazenados são registrados em um servidor ou em um banco de dados. Procedimentos armazenados do servidor podem ser chamados a partir de qualquer contexto de consulta. Procedimentos armazenados do banco de dados podem ser acessados somente se o contexto do banco de dados for o banco de dados no qual o procedimento armazenado foi definido. Se as funções de um assembly chamarem funções de um assembly diferente, registre ambos no mesmo contexto (servidor ou banco de dados). Para um servidor ou um banco [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de dados implantado em um servidor [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , você pode usar o para registrar um assembly. Para um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Designer do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para registrar um assembly no projeto.  
+ Procedimentos armazenados são registrados em um servidor ou em um banco de dados. Procedimentos armazenados do servidor podem ser chamados a partir de qualquer contexto de consulta. Procedimentos armazenados do banco de dados podem ser acessados somente se o contexto do banco de dados for o banco de dados no qual o procedimento armazenado foi definido. Se as funções de um assembly chamarem funções de um assembly diferente, registre ambos no mesmo contexto (servidor ou banco de dados). Para um servidor ou um banco de dados implantado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um servidor, você pode usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o para registrar um assembly. Para um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Designer do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para registrar um assembly no projeto.  
   
 > [!IMPORTANT]  
 >  Os assemblies COM podem representar um risco à segurança. Devido a esse risco e outras considerações, os assemblies COM foram preteridos no [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]. Talvez não haja suporte para assemblies COM em versões futuras.  
@@ -36,7 +35,7 @@ ms.locfileid: "62703087"
   
 ### <a name="to-create-a-server-assembly"></a>Para criar um assembly de servidor  
   
-1.  Expanda a instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do no Pesquisador de objetos, clique com o botão direito do mouse na pasta **assemblies** e clique em **novo assembly**. Isso exibe a caixa de diálogo **registrar assembly do servidor** .  
+1.  Expanda a instância do no Pesquisador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos, clique com o botão direito do mouse na pasta **assemblies** e clique em **novo assembly**. Isso exibe a caixa de diálogo **registrar assembly do servidor** .  
   
 2.  Para o **tipo** , especifique o tipo de assembly:  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62703087"
   
 ### <a name="to-create-a-database-assembly-on-a-server"></a>Para criar um assembly de banco de dados em um servidor  
   
-1.  Expanda a instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do banco de dados no Pesquisador de objetos, clique com o botão direito do mouse na pasta **assemblies** e clique em **novo assembly**. Isso exibe a caixa de diálogo **registrar assembly de banco de dados** .  
+1.  Expanda a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados no Pesquisador de objetos, clique com o botão direito do mouse na pasta **assemblies** e clique em **novo assembly**. Isso exibe a caixa de diálogo **registrar assembly de banco de dados** .  
   
 2.  Para o **tipo** , especifique o tipo de assembly:  
   
@@ -82,11 +81,11 @@ ms.locfileid: "62703087"
   
 ### <a name="to-create-a-database-assembly-in-an-analysis-service-project"></a>Para criar um assembly de banco de dados em um projeto do Analysis Service  
   
-1.  Expanda a instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do banco de dados no Pesquisador de objetos, clique com o botão direito do mouse na pasta **assemblies** e clique em **nova referência de assembly**. Isso exibe a caixa de diálogo **Adicionar referência** . A guia **.net** da caixa de diálogo **Adicionar referência** lista os assemblies .net (CLR) existentes, enquanto a guia **projetos** lista os projetos.  
+1.  Expanda a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados no Pesquisador de objetos, clique com o botão direito do mouse na pasta **assemblies** e clique em **nova referência de assembly**. Isso exibe a caixa de diálogo **Adicionar referência** . A guia **.net** da caixa de diálogo **Adicionar referência** lista os assemblies .net (CLR) existentes, enquanto a guia **projetos** lista os projetos.  
   
-2.  Você pode clicar em um componente ou projeto existente e, **Add** em seguida, clicar em Adicionar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para adicioná-lo ao projeto. Para adicionar uma referência a uma DLL COM, clique na guia **procurar** para localizar o arquivo. A lista **projetos e componentes selecionados** mostra o nome, o tipo, a versão e o local de cada componente que você está adicionando ao projeto.  
+2.  Você pode clicar em um componente ou projeto existente e, em seguida, clicar em **Adicionar** para adicioná-lo ao [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto. Para adicionar uma referência a uma DLL COM, clique na guia **procurar** para localizar o arquivo. A lista **projetos e componentes selecionados** mostra o nome, o tipo, a versão e o local de cada componente que você está adicionando ao projeto.  
   
-3.  Quando terminar de selecionar os componentes a serem adicionados, clique em **OK** para adicioná- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] los ao projeto.  
+3.  Quando terminar de selecionar os componentes a serem adicionados, clique em **OK** para adicioná-los ao [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto.  
   
 ## <a name="script-format-for-an-assembly"></a>Formato de script para um assembly  
  Registrar um assembly .NET é bastante simples. Um assembly .NET é adicionado a um banco de dados em formato binário que usa o seguinte formato:  
