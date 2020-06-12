@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a8532b20ae5b71a9ef2353893272c628b9a80b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ce3bf2d5ad7df2b1cd74897b3b49c7cef97e8ed
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073676"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546118"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Trabalhando com membros, tuplas e conjuntos (MDX)
   A linguagem MDX fornece inúmeras funções que retornam um ou mais membros, tuplas ou conjuntos ou que agem como tais.  
@@ -122,7 +121,7 @@ FROM [Adventure Works]
 ## <a name="numeric-functions"></a>Funções numéricas  
  Uma função numérica age em uma expressão MDX para retornar um valor escalar. Por exemplo, a função [Agregado &#40;MDX&#41;](/sql/mdx/aggregate-mdx) retorna um valor escalar calculado agregando medidas sobre as tuplas de um conjunto especificado. Para obter mais informações sobre as funções numéricas, consulte [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
-## <a name="string-functions"></a>Funções da cadeia de caracteres  
+## <a name="string-functions"></a>Funções de Cadeia de Caracteres  
  A função de cadeia de caracteres age em uma expressão MDX para retornar uma cadeia de caracteres. Por exemplo, a função [UniqueName &#40;MDX&#41;](/sql/mdx/uniquename-mdx) retorna um valor de cadeia de caracteres que contém o nome exclusivo de uma dimensão, uma hierarquia, um nível ou um membro. Para obter mais informações sobre as funções de cadeia de caracteres, consulte [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="see-also"></a>Consulte Também  

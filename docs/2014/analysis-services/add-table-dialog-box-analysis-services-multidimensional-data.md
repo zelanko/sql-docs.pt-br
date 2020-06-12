@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b93f841f-0164-4e37-bd08-085aa179ea1f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c038e13706c44891bae021aaf35d04a10b715a97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062809"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528228"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Adicionar Tabela (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Adicionar Tabela** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para adicionar uma tabela enquanto cria uma consulta na caixa de diálogo **Criar Consulta Nomeada** , na caixa de diálogo **Criar Consulta de Sondagem** ou na caixa de diálogo **Criar Consulta de Processamento** . É possível exibir a caixa de diálogo **Adicionar Tabela** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] clicando em **Adicionar Tabela** no painel **Barra de Ferramentas** da caixa de diálogo **Criar Consulta Nomeada** , **Criar Consulta de Sondagem** ou **Criar Consulta de Processamento** .  

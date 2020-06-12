@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dc9c46cf4ddcc7ff04f0c9002bff59cdb3ba370
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175715"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545992"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Visão geral da arquitetura lógica (Analysis Services – Dados Multidimensionais)
   O Analysis Services funciona em um modo de implantação de servidor que determina a arquitetura de memória e o ambiente de runtime usados pelos diferentes tipos de modelos do Analysis Services. O modo de servidor é determinado durante a instalação. O **modo multidimensional e de mineração de dados** dá suporte a OLAP e Data Mining tradicionais. O **modo de tabela** dá suporte a modelos de tabela. O **modo integrado do SharePoint** refere-se a uma instância do Analysis Services que foi instalado como PowerPivot para SharePoint, usado para carregar e consultar modelos de dados do Excel ou PowerPivot dentro de uma pasta de trabalho.
@@ -26,7 +25,7 @@ ms.locfileid: "78175715"
  Este tópico explica a arquitetura básica do Analysis Services no modo Multidimensional e de Mineração de Dados. Para obter mais informações sobre outros modos, consulte [modelagem de tabela &#40;SSAS tabular&#41;](../../tabular-models/tabular-models-ssas.md) e [comparar soluções de tabela e multidimensionais &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).
 
 ## <a name="basic-architecture"></a>Arquitetura básica
- Uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pode conter vários bancos de dados, e um banco de dados pode ter objetos OLAP e objetos de mineração de dados simultaneamente. Os aplicativos se conectam a uma instância específica do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a um banco de dados específico. Um computador servidor pode servir de host de várias instâncias do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. As instâncias [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] do são nomeadas\<como " \\ ServerName\>><InstanceName". A ilustração a seguir mostra todas as relações [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mencionadas entre objetos.
+ Uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pode conter vários bancos de dados, e um banco de dados pode ter objetos OLAP e objetos de mineração de dados simultaneamente. Os aplicativos se conectam a uma instância específica do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e a um banco de dados específico. Um computador servidor pode servir de host de várias instâncias do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. As instâncias do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] são nomeadas como " \<ServerName> \\<InstanceName \> ". A ilustração a seguir mostra todas as relações mencionadas entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos.
 
  ![Relações de objetos de execução AMO](../../dev-guide/media/amo-runningobjects.gif "Relações de objetos de execução AMO")
 
@@ -36,14 +35,14 @@ ms.locfileid: "78175715"
 
  Os cubos são criados a partir de dimensões e grupos de medidas. As dimensões na coleta de dimensões de um cubo pertencem à coleta de dimensões do banco de dados. Os grupos de medidas são coletas de medidas que têm a mesma exibição de fonte de dados e têm o mesmo subconjunto de dimensões do cubo. Um grupo de medidas tem uma ou mais partições para gerenciar os dados físicos. Um grupo de medidas pode ter um projeto de agregação padrão. O projeto de agregação padrão pode ser usado por todas as partições no grupo de medidas, além disso, cada partição pode ser seu próprio projeto de agregação.
 
- Objetos de servidor cada instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] do é visto como um objeto de servidor diferente no amo; cada instância diferente é conectada a <xref:Microsoft.AnalysisServices.Server> um objeto por uma conexão diferente. Cada objeto de servidor contém uma ou mais fonte de dados, exibições de fonte de dados e objetos de banco de dados, bem como assemblies e funções de segurança.
+ Objetos de servidor cada instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é visto como um objeto de servidor diferente no amo; cada instância diferente é conectada a um <xref:Microsoft.AnalysisServices.Server> objeto por uma conexão diferente. Cada objeto de servidor contém uma ou mais fonte de dados, exibições de fonte de dados e objetos de banco de dados, bem como assemblies e funções de segurança.
 
  Objetos de dimensão cada objeto de banco de dados contém vários objetos de dimensão. Cada objeto de dimensão contém um ou mais atributos que são organizados em hierarquias.
 
  Objetos de cubo cada objeto de banco de dados contém um ou mais objetos de cubo. Um cubo é definido por suas medidas e dimensões. As medidas e dimensões em um cubo são derivadas de tabelas e exibições na exibição de fonte de dados, na qual o cubo teve base ou para a qual foi gerado a partir das definições de medida e dimensão.
 
 ## <a name="object-inheritance"></a>Herança de objetos
- O modelo de objeto ASSL contém muitos grupos de elementos repetidos. Por exemplo, o grupo de elementos,`Dimensions` " `Hierarchies`contém", define a hierarquia de dimensão de um elemento. Ambos `Cubes` e `MeasureGroups` contêm o grupo de elementos, “`Dimensions` contêm `Hierarchies`."
+ O modelo de objeto ASSL contém muitos grupos de elementos repetidos. Por exemplo, o grupo de elementos, " `Dimensions` contém `Hierarchies` ", define a hierarquia de dimensão de um elemento. Ambos `Cubes` e `MeasureGroups` contêm o grupo de elementos, “`Dimensions` contêm `Hierarchies`."
 
  A menos que explicitamente substituído, um elemento herda os detalhes desses grupos de elementos repetidos do nível mais alto. Por exemplo, o `Translations` para um `CubeDimension` é igual ao `Translations` de seu elemento ancestral, `Cube`.
 
@@ -62,7 +61,7 @@ ms.locfileid: "78175715"
 
  Os valores alfanuméricos menores ao redor do cubo são os membros das dimensões. Exemplos de membros são: terra (membro da dimensão Rota), África (membro da dimensão Origem) e 1º trimestre (membro da dimensão Horário).
 
-### <a name="measures"></a>medidas
+### <a name="measures"></a>Medidas
  Os valores nas células do cubo representam as duas medidas, Pacotes e Último. A medida Pacotes representa o número de pacotes importados e a função `Sum` é usada para agregar os fatos. A medida Último representa a data de recebimento e a função `Max` é usada para agregar os fatos.
 
 ### <a name="dimensions"></a>Dimensões

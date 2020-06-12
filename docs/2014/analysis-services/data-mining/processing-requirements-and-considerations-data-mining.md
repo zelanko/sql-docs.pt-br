@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f0a1dcf4793244a17bb52b38894bba2cb06d219
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083126"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520834"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisitos e considerações de processamento (mineração de dados)
   Este tópico descreve algumas considerações técnicas para lembrar ao processar objetos de mineração de dados. Para obter uma explicação geral do que é processamento e como isso se aplica à mineração de dados, consulte [Processando objetos de Data Mining](processing-data-mining-objects.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66083126"
   
  Quando você processa um modelo, ele não relê os dados da fonte de dados. Em vez disso, ele obtém o resumo dos dados da estrutura de mineração. Com o uso do cubo criado, junto com o cache do índice e os dados de caso em cache, o servidor cria threads independentes para treinar os modelos.  
   
- Para obter mais informações sobre as edições [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do que dão suporte ao processamento de modelo paralelo, consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+ Para obter mais informações sobre as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que dão suporte ao processamento de modelo paralelo, consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ##  <a name="processing-mining-structures"></a><a name="bkmk_ProcessStructures"></a> Processando estruturas de mineração  
  Uma estrutura de mineração pode ser processada junto com todos os modelos dependentes, ou separadamente. Processar uma estrutura de mineração separadamente de modelos pode ser útil quando é esperado que alguns modelos levem muito tempo para processar e você deseja adiar essa operação.  

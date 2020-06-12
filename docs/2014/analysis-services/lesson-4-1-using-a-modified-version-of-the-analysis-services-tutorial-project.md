@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6c55141db6491fe1532dfcdc37a6d7a688c7274
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493939"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543358"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Usando uma versão modificada do projeto do Tutorial do Analysis Services
   As demais lições neste tutorial tem como base uma versão aprimorada do projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você concluiu nas três primeiras lições. Foram adicionadas outras tabelas e cálculos nomeados à exibição da fonte de dados **Adventure Works DW 2012** e outras dimensões ao projeto. Essas novas dimensões foram adicionadas ao cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Além disso, um segundo grupo de medidas foi adicionado; ele contém medidas de uma segunda tabela de fatos. Esse projeto aprimorado permitirá que você continue a aprender como adicionar funcionalidades ao seu aplicativo de inteligência empresarial sem ter que repetir as ações já aprendidas.  
@@ -40,7 +39,7 @@ ms.locfileid: "69493939"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Carregando e processando o projeto aprimorado  
   
-1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **arquivo** , clique em **fechar solução** para fechar os arquivos que você não usará.  
+1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , no menu **arquivo** , clique em **fechar solução** para fechar os arquivos que você não usará.  
   
 2.  No menu **Arquivo** , aponte para **Abrir**e clique em **Projeto/Solução**.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "69493939"
 ### <a name="data-source-view"></a>Exibição da Fonte de Dados  
  A exibição da fonte de dados no projeto aprimorado contém uma tabela de fatos adicional e quatro tabelas de dimensão adicionais do banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Observe que, com dez tabelas na exibição da fonte de dados \<, todas as tabelas> diagrama estão ficando lotados. Isso dificulta a compreensão das relações entre as tabelas e a localização de tabelas específicas. Para solucionar esse problema, as tabelas são organizadas em dois diagramas lógicos: **Vendas pela Internet** e **Vendas do Revendedor** . Esses diagramas são organizados com base em uma única tabela de fato. Criar diagramas lógicos permite que você exiba e trabalhe com um subconjunto específico de tabelas em uma exibição de fonte de dado em vez de ter que exibir sempre todas as tabelas e suas relações em um único diagrama.  
+ Observe que, com dez tabelas na exibição da fonte de dados, o diagrama \<All Tables> está ficando muito cheio. Isso dificulta a compreensão das relações entre as tabelas e a localização de tabelas específicas. Para solucionar esse problema, as tabelas são organizadas em dois diagramas lógicos: **Vendas pela Internet** e **Vendas do Revendedor** . Esses diagramas são organizados com base em uma única tabela de fato. Criar diagramas lógicos permite que você exiba e trabalhe com um subconjunto específico de tabelas em uma exibição de fonte de dado em vez de ter que exibir sempre todas as tabelas e suas relações em um único diagrama.  
   
 #### <a name="internet-sales-diagram"></a>Diagrama Vendas pela Internet  
  O diagrama **Vendas pela Internet** contém as tabelas relacionadas à venda de produtos do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] diretamente aos clientes pela Internet. As tabelas do diagrama são as quatro tabelas de dimensão e a tabela de fatos que você adicionou à exibição da fonte de dados **Adventure Works DW 2012** na Lição 1. Essas tabelas são as seguintes:  
@@ -65,9 +64,9 @@ ms.locfileid: "69493939"
   
 -   **Cliente**  
   
--   **Date**  
+-   **Data**  
   
--   **Remessa**  
+-   **Produto**  
   
 -   **InternetSales**  
   
@@ -82,9 +81,9 @@ ms.locfileid: "69493939"
   
 -   **Geografia**  
   
--   **Date**  
+-   **Data**  
   
--   **Remessa**  
+-   **Produto**  
   
 -   **Employee**  
   

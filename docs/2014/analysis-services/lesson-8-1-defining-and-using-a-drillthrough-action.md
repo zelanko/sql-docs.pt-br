@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b34883d3dfa5a3d38f26a7ed905b5f00e7bcf8e6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493820"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542308"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definindo e usando uma ação de detalhamento
   Os dados de fato de dimensionamento em uma dimensão de fatos sem filtrar corretamente os dados que a consulta retorna podem causar lentidão no desempenho da consulta. Para evitar esse problema, defina uma ação de detalhamento que restrinja o número total de linhas que serão retornadas. Esse processo melhorará significativamente o desempenho da consulta.  
@@ -38,7 +37,7 @@ ms.locfileid: "69493820"
   
      ![Modelo de ação em branco no painel de exibição](../../2014/tutorials/media/l8-action2.gif "Modelo de ação em branco no painel de exibição")  
   
-3.  Na caixa **nome** , altere o nome dessa ação para `Internet Sales Details Drillthrough Action`.  
+3.  Na caixa **nome** , altere o nome dessa ação para `Internet Sales Details Drillthrough Action` .  
   
 4.  Na lista **Membros do grupo de medidas** , selecione **Vendas pela Internet**.  
   
@@ -52,9 +51,9 @@ ms.locfileid: "69493820"
   
      ![Caixa Propriedades Adicionais](../../2014/tutorials/media/l8-action4.gif "Caixa Propriedades Adicionais")  
   
-8.  Na caixa **máximo de linhas** , digite `10`.  
+8.  Na caixa **máximo de linhas** , digite `10` .  
   
-9. Na caixa **legenda** , digite `Drillthrough to Order Details...`.  
+9. Na caixa **legenda** , digite `Drillthrough to Order Details...` .  
   
      Essas configurações limitam o número de linhas a serem retornadas e especificam a legenda que será exibida no menu do aplicativo cliente. A imagem a seguir mostra essas configurações na caixa **Propriedades Adicionais** .  
   
@@ -104,11 +103,11 @@ ms.locfileid: "69493820"
   
     -   ShipDateKey  
   
-6.  Altere a propriedade **nome** do atributo de **chave de data** do `Order Date` pedido para, clique no botão procurar da propriedade **coluna de nome** e, na caixa de diálogo coluna de **nome** , selecione **Data** como a tabela de origem e selecione SimpleDate como a coluna de origem. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Altere a propriedade **nome** do atributo de **chave de data do pedido** para, `Order Date` clique no botão procurar da propriedade **coluna de nome** e, na caixa de diálogo coluna de **nome** , selecione **Data** como a tabela de origem e selecione SimpleDate como a coluna de origem. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Altere a propriedade **nome** do atributo de **chave de data** de `Due Date`vencimento para e, em seguida, usando o mesmo método que o atributo de **chave de data do pedido** , altere a propriedade de coluna de **nome** desse atributo para **Date. SimpleDate (WCHAR)**.  
+7.  Altere a propriedade **nome** do atributo de **chave de data de vencimento** para `Due Date` e, em seguida, usando o mesmo método que o atributo de **chave de data do pedido** , altere a propriedade de coluna de **nome** desse atributo para **Date. SimpleDate (WCHAR)**.  
   
-8.  Altere a propriedade **Name** do atributo de **chave de data** de `Ship Date`envio para e altere a propriedade de **coluna de nome** desse atributo para **Date. SimpleDate (WCHAR)**.  
+8.  Altere a propriedade **Name** do atributo de **chave de data de envio** para `Ship Date` e altere a propriedade de **coluna de nome** desse atributo para **Date. SimpleDate (WCHAR)**.  
   
 9. Mude para a guia **Ações** do Designer do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   

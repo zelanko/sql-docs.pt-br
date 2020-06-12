@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eef1dd188b0038c637dc15750a6538c929359299
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727652"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545270"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Armazenamento de cubo (Analysis Services – Dados Multidimensional)
-  O armazenamento pode incluir apenas os metadados do cubo ou todos os dados de origem da tabela de fatos, como as agregações definidas por dimensões relacionadas ao grupo de medidas. A quantidade de dados armazenados depende do modo de armazenamento selecionado e do número de agregações. A quantidade de dados armazenados afeta diretamente o desempenho de consulta. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o usa várias técnicas para minimizar o espaço necessário para o armazenamento de dados e agregações do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubo:  
+  O armazenamento pode incluir apenas os metadados do cubo ou todos os dados de origem da tabela de fatos, como as agregações definidas por dimensões relacionadas ao grupo de medidas. A quantidade de dados armazenados depende do modo de armazenamento selecionado e do número de agregações. A quantidade de dados armazenados afeta diretamente o desempenho de consulta. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o usa várias técnicas para minimizar o espaço necessário para o armazenamento de dados e agregações do cubo:  
   
 -   As opções de armazenamento permitem selecionar os modos e os locais de armazenamento mais apropriados para os dados do cubo.  
   

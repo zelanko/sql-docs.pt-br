@@ -1,7 +1,7 @@
 ---
 title: sys. dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 05/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2e3cfbea2f7ff9bb7cd976142db28acec3105fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 50c336c329f5e610d90637f80ef8ef24569bb204
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829410"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731883"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,11 @@ ms.locfileid: "82829410"
 |**pool_id**|**int**|ID do pool de recursos a que este grupo de carga de trabalho pertence.|  
 |**is_small**|**tinyint**|Quando definido como 1, indica que esta concessão usa o sinal do recurso pequeno. Quando definido como 0, indica que um sinal normal é usado.|  
 |**ideal_memory_kb**|**bigint**|Tamanho, em quilobytes (KB), da concessão de memória para ajustar tudo na memória física. Ele tem como base a estimativa de cardinalidade.|  
-|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|**pdw_node_id**|**int**|O identificador do nó em que essa distribuição está.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|**reserved_worker_count**|**bigint**|Número de [threads de trabalho](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)reservados.<br /><br />**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|**used_worker_count**|**bigint**|Número de [threads de trabalho](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) usados neste momento.<br /><br />**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**max_used_worker_count**|**bigint**|Número máximo de [threads de trabalho](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) usados até este momento.<br /><br />**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**reserved_node_bitmap**|**bigint**|Bitmap de nós NUMA em que os [threads de trabalho](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) são reservados.<br /><br />**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
   
 ## <a name="permissions"></a>Permissões  
 
@@ -117,6 +121,6 @@ Em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requer a permissão `V
 ## <a name="see-also"></a>Consulte Também  
  [sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
- [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
+ [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+ [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md)   
   

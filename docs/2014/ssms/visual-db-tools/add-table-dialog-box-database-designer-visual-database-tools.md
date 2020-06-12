@@ -13,12 +13,12 @@ ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a301857168f7da4040df0195bc25c0ab54861eb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e529f26ca6a0e032d9a6d580330ea4a4f968ce6d
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460146"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859158"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>Caixa de diálogo Adicionar Tabela (Designer de Banco de Dados) (Visual Database Tools)
   Permite adicionar tabelas no Designer de Banco de Dados.  
@@ -26,7 +26,7 @@ ms.locfileid: "63460146"
 > [!NOTE]  
 >  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Atualizar**  
  Atualizou a lista de tabelas para que correspondesse ao estado atual do banco de dados.  
   

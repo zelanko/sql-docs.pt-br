@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef72741b09666a4059fc0fdd09f282d749e4e99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080346"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544098"
 ---
 # <a name="analysis-services-instance-management"></a>Gerenciamento de instância do Analysis Services
   Uma instância do Analysis Services é uma cópia do executável `msmdsrv.exe` que é executada como um serviço do sistema operacional. Cada instância é completamente independente de outras instâncias no mesmo servidor, tendo seus próprios parâmetros de configuração, permissões, portas, contas de inicialização, armazenamento de arquivo e propriedades de modo de servidor.  

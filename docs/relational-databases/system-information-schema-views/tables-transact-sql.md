@@ -19,12 +19,12 @@ ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52416d954660aac6981ced8e2407672f04bc0bb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 655026163236a448b3f225cfa4aea4f2ffacd30e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078409"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669692"
 ---
 # <a name="tables-transact-sql"></a>TABLES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68078409"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificador da tabela.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> <strong> \* Importante \* \* </strong> Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição do catálogo sys.objects. As exibições INFORMATION_SCHEMA podem estar incompletas pois não são atualizadas para todos os novos recursos.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> Importante somente a maneira confiável de localizar o esquema de um objeto é consultar a exibição do catálogo sys. Objects. <strong> \* \* \* \* </strong> As exibições INFORMATION_SCHEMA podem estar incompletas pois não são atualizadas para todos os novos recursos.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela ou exibição.|  
 |**TABLE_TYPE**|**varchar (** 10 **)**|Tipo de tabela. Pode ser VIEW ou BASE TABLE.|  
   

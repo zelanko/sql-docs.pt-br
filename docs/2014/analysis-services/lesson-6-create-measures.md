@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef487927098e63c7fc870aa65e55f57faa26767d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078427"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542558"
 ---
 # <a name="lesson-7-create-measures"></a>Lição 7: Criar medidas
   Nesta lição, você criará medidas a serem incluída no modelo. Semelhante às colunas calculadas que você criou na lição anterior, uma medida é essencialmente um cálculo criado por meio de uma fórmula DAX. No entanto, diferente das colunas calculadas, são avaliadas medidas com base em um *filtro*selecionado pelo usuário; por exemplo, uma coluna ou uma segmentação de dados adicionada ao campo Rótulos de Linha em um Tabela Dinâmica.   Um valor para cada célula no filtro é então calculado pela medida aplicada. As medidas são cálculos avançados e flexíveis que você incluirá em quase todos os modelos de tabela, a fim de executar cálculos dinâmicos em dados numéricos. Para saber mais, consulte [Medidas &#40;SSAS Tabular&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "66078427"
   
      Observe que, agora, a célula superior esquerda contém um nome de medida, **Medida 1**, seguida do resultado, **30**. O nome da medida também precede a fórmula na barra de fórmulas.  
   
-5.  Para renomear a medida, na barra de fórmulas, realce o nome, **medida 1**, digite `Days Current Quarter to Date`e pressione Enter.  
+5.  Para renomear a medida, na barra de fórmulas, realce o nome, **medida 1**, digite `Days Current Quarter to Date` e pressione Enter.  
   
     > [!TIP]  
     >  Ao digitar uma fórmula na barra de fórmulas, primeiro digite o nome da medida seguido por dois-pontos (:), por um espaço e pela fórmula. Com esse método, você não precisa renomear a medida.  

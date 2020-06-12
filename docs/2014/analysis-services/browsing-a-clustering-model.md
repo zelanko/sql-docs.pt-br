@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3682d65ac06d970fed2d5346e9d39684485c5dfe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064677"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527752"
 ---
 # <a name="browsing-a-clustering-model"></a>Procurando um modelo de clustering
-  Quando você abre um modelo de clustering usando **procurar**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de clustering [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]no. O visualizador ajuda a explorar os clusters que foram criados e compreender características do cluster. Você também pode comparar e contrastar segmentos individuais com outros segmentos ou com a população.  
+  Quando você abre um modelo de clustering usando **procurar**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de clustering no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . O visualizador ajuda a explorar os clusters que foram criados e compreender características do cluster. Você também pode comparar e contrastar segmentos individuais com outros segmentos ou com a população.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorar o modelo  
  A janela **procurar** inclui as ferramentas a seguir para ajudá-lo a entender seu modelo de clustering e explorar os atributos dos grupos de dados subjacentes:  
@@ -65,7 +64,7 @@ ms.locfileid: "66064677"
   
 5.  Agora, clique na lista suspensa **variável de sombreamento** e escolha a variável **idade** . Como você faz isso, uma lista de valores é exibida na caixa de texto **estado** .  
   
-     A coluna Idade usada como entrada para este modelo contém valores numéricos contínuos, mas, para a finalidade de clustering, o algoritmo sempre discretiza números. Aqui você pode ver os compartimentos ou grupos que o algoritmo criou, como "muito baixo (\<= 27)" e "muito alto (>= 63)".  
+     A coluna Idade usada como entrada para este modelo contém valores numéricos contínuos, mas, para a finalidade de clustering, o algoritmo sempre discretiza números. Aqui você pode ver os compartimentos ou grupos que o algoritmo criou, como "muito baixo ( \<=27)" and "Very High (> = 63)".  
   
 6.  Nas listas suspensas de **estado** , selecione **muito alto** e veja como o diagrama é alterado.  
   
@@ -132,7 +131,7 @@ ms.locfileid: "66064677"
   
      ![Renomear clusters para facilitar o uso do gráfico](media/dm13-cluster-rename.gif "Renomear clusters para facilitar o uso do gráfico")  
   
- **Sobre**  
+ **Dicas**  
   
 -   Clique em um cabeçalho de coluna para classificar os atributos em ordem de importância para aquele cluster.  
   
@@ -177,7 +176,7 @@ ms.locfileid: "66064677"
   
      Observe que o gráfico das características do novo cluster é adicionado em sua própria planilha. Você pode movê-lo para a mesma planilha que o outro perfil para facilitar sua comparação, o que você fará na próxima etapa.  
   
- **Sobre**  
+ **Dicas**  
   
 -   Observe que a característica principal do cliente no cluster em mais de 65 é que eles não compram seu produto! Se você quiser saber por que isso acontece, poderá procurar clusters e comparar grupos ou poderá criar um modelo relacionado usando um algoritmo que é bom em explorar causas e resultados, como, por exemplo, um modelo de árvore de decisão ou um modelo Naïve Bayes.  
   
@@ -216,7 +215,7 @@ ms.locfileid: "66064677"
   
      Além de usar o Excel, recomendamos que você tente o visualizador de cluster para o Visio, que também permite que você exiba não apenas pontos de dados, mas também extensivamente modifique e aprimore o gráfico. Para obter mais informações, consulte [passo a passos de diagrama de Cluster &#40;suplementos de mineração de dados&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md).  
   
- **Sobre**  
+ **Dicas**  
   
  Depois de obter algumas informações sobre grupos de clientes, tente usar o cenário [What-If &#40;ferramentas de análise de tabela para o&#41;do Excel](what-if-scenario-table-analysis-tools-for-excel.md) ou [cenário de busca de metas &#40;ferramentas de análise de tabela para ferramentas de&#41;do Excel](goal-seek-scenario-table-analysis-tools-for-excel.md) , para explorar fatores no modelo que podem ser alterados para afetar o resultado.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bcc40c0b8ca91c621c9e269b4d19af0de4e1af7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079906"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543878"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Instalar o Analysis Services em modo Tabular
   Se você estiver instalando o Analysis Services para usar os novos recursos de modelagem tabular, você deverá instalar o Analysis Services em um modo de servidor que dá suporte a esse tipo de modelo. O modo de servidor é Tabular, e é configurado durante a instalação.  
@@ -55,7 +54,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|Este é o valor padrão. Se você não configurar o `ASSERVERMODE`, o servidor será instalado no modo de servidor Multidimensional.|  
+|MULTIDIMENSIONAL|Esse é o valor padrão. Se você não configurar o `ASSERVERMODE`, o servidor será instalado no modo de servidor Multidimensional.|  
 |POWERPIVOT|Esse valor é opcional. Na prática, se você configura o parâmetro `ROLE`, o modo de servidor é automaticamente definido como 1, tornando `ASSERVERMODE` opcional para uma instalação do PowerPivot para SharePoint. Para obter mais informações, consulte [Install PowerPivot from the Command Prompt](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
 |TABULAR|Esse valor é obrigatório se você estiver instalando o Analysis Services no modo Tabular usando a instalação de linha de comando.|  
   

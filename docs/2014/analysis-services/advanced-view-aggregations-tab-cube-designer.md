@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 23c095dd-f47a-4d6b-8d22-b49bbb954bcb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5972d690f89374e02cc18ac4aa13fcbae9de87c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f85a1933b0b3c08f2295b92ee58f71426fb6ea2d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062764"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528152"
 ---
 # <a name="advanced-view-aggregations-tab-cube-designer"></a>Exibição avançada (guia Agregações, Designer de Cubo)
   Use a **Exibição Avançada** do designer de agregação para criar e modificar manualmente designs de agregação e agregações individuais. Essa exibição só deverá ser usada por usuários avançados.  

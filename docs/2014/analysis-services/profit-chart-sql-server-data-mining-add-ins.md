@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 32ee1539c734c549f89d5b3db8ec4add467a72b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08da312fa1348266bbc33fafa6b1b3c6b07c64ad
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070587"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539757"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Gráfico de Ganho (Suplementos de Mineração de Dados do SQL Server)
   ![Botão Gráfico de Ganho na faixa de opções Mineração de Dados](media/dmc-profitchart.gif "Botão Gráfico de Ganho na faixa de opções Mineração de Dados")  

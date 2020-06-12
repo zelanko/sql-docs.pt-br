@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f806501ffbb52f3839fa343a05a8db57917533ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27b3e2e27b3e24a448e4f164ffdf78bb5b669a40
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546108"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>Modificar ou excluir um banco de dados do Analysis Services
   É possível alterar o nome e a descrição de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] antes da implantação no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e depois da implantação no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Também é possível ajustar configurações adicionais de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dependendo do ambiente.  

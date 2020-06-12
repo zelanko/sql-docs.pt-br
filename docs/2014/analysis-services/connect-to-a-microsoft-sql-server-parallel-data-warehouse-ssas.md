@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ab10518ff976562665317a75574ee2070be0d8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5f3c678968f8620414ceb4c7c2574be322674cd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087196"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527142"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Conectar a um Microsoft SQL Server Parallel Data Warehouse (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite especificar as configurações de conexão a um Microsoft SQL Server Parallel Data Warehouse (PDW). Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087196"
 > [!NOTE]  
 >  As credenciais do usuário atual são usadas na seleção de um banco de dados nesta página. Porém, a importação não terá êxito se o usuário especificado na página Informações sobre Representação não tiver privilégios suficientes para ler do banco de dados selecionado.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome de conexão amigável**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   

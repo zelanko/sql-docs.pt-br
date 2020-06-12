@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 069199c648b883f85dcddb2538efc154c1ee7ebf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085978"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525182"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Procurar um modelo usando o Visualizador MTS
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizador de série temporal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no exibe modelos de mineração que são criados [!INCLUDE[msCoName](../../includes/msconame-md.md)] com o algoritmo de série temporal. O algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de regressão que cria modelos de mineração de dados para previsão de colunas contínuas, tais como vendas de produtos, em um cenário de previsão. Esses modelos de série temporal podem incluir informações baseadas em diferentes algoritmos:  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizador de série temporal no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exibe modelos de mineração que são criados com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de série temporal. O algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é um algoritmo de regressão que cria modelos de mineração de dados para previsão de colunas contínuas, tais como vendas de produtos, em um cenário de previsão. Esses modelos de série temporal podem incluir informações baseadas em diferentes algoritmos:  
   
 -   O algoritmo ARTxp foi otimizado para previsão a curto prazo.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f753564c3be308f986a48e8a40203b7d338292f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087987"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527462"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Guia Características do Cluster (Visualizador do Modelo de Mineração)
   A guia **Características de Cluster** permite explorar as características de um cluster em um modelo de clustering ou o conjunto de todos os casos no modelo. O gráfico mostra a importância de cada par atributo-valor como uma característica que define o cluster, em comparação com outros clusters.  
@@ -34,10 +33,10 @@ ms.locfileid: "66087987"
  **Visualizador**  
  Escolha um visualizador a ser utilizado para explorar o modelo de mineração selecionado. Você pode usar o visualizador personalizado associado a esse tipo de modelo, ou o Visualizador de Conteúdo de Mineração do [!INCLUDE[msCoName](../includes/msconame-md.md)] . Você também pode usar visualizadores de plug-in que estiverem disponíveis.  
   
- **Cluster**  
+ **Em**  
  Escolha o cluster que você deseja exibir ou escolha **População (Tudo)** para ver a distribuição de atributos para o modelo como um todo.  
   
- **Características do \<cluster>**  
+ **Características de\<cluster>**  
  O gráfico contém as seguintes colunas, que descrevem as características do cluster selecionado.  
   
 |Valor|Descrição|  

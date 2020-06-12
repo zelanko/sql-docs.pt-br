@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072893"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547328"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
-  Frequentemente, há situações quando um administrador de banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) quer alterar o modo leitura/gravação de um banco de dados tabular ou multidimensional. Essas situações geralmente são orientadas pelas necessidades comerciais, como o compartilhamento do banco de dados entre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] um pool de servidores para uma melhor experiência do usuário.  
+  Frequentemente, há situações quando um administrador de banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) quer alterar o modo leitura/gravação de um banco de dados tabular ou multidimensional. Essas situações geralmente são orientadas pelas necessidades comerciais, como o compartilhamento do banco de dados entre um pool de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidores para uma melhor experiência do usuário.  
   
  Um modo de banco de dados pode ser alternado de várias formas. Este documento explica os cenários comuns a seguir:  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66072893"
   
 4.  Atribua uma senha ao banco de dados a ser desanexado e clique em **OK** para executar o comando Desanexar.  
   
-5.  Localize a pasta **bancos de dados** no painel esquerdo ou direito de. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+5.  Localize a pasta **bancos de dados** no painel esquerdo ou direito de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 6.  Clique com o botão direito do mouse na pasta **bancos de dados** e selecione **anexar..** .  
   

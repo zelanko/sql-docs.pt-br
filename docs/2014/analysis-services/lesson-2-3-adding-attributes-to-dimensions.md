@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c0411e2e19fbec88ab9c1bae8536d96725554f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079028"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543488"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Adicionando atributos em dimensões
   Agora que você definiu dimensões, pode populá-las com atributos que representam cada elemento de dados na dimensão. Os atributos geralmente são baseados em campos de uma exibição da fonte de dados. Ao adicionar atributos a uma dimensão, você pode incluir campos de qualquer tabela na exibição da fonte de dados.  
@@ -100,7 +99,7 @@ ms.locfileid: "66079028"
   
     -   **SizeRange**  
   
-    -   **Peso**  
+    -   **Weight**  
   
     -   **DaysToManufacture**  
   

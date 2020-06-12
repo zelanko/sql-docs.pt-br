@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d38e6ae0eaf7ed6015834052067db28993cbcccd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e9069b8d8503b2229c15c25edd70dcc53acc6a0
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67948617"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669546"
 ---
 # <a name="key_column_usage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "67948617"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Qualificador da restrição.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a restrição.<br /><br /> <strong> \* Importante \* \* </strong> Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a restrição.<br /><br /> Importante não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. <strong> \* \* \* \* </strong> INFORMATION_SCHEMA exibições representam apenas um subconjunto dos metadados de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**CONSTRAINT_NAME**|**nvarchar (** 128 **)**|Nome da restrição.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificador da tabela.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> <strong> \* Importante \* \* </strong> Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> Importante não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. <strong> \* \* \* \* </strong> INFORMATION_SCHEMA exibições representam apenas um subconjunto dos metadados de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nome da tabela.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Nome da coluna.|  
 |**ORDINAL_POSITION**|**int**|Posição ordinal na coluna.|  

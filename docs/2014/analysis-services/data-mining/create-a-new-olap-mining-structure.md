@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62f8fc247986609e3822168bff5aace34f3d1aa9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e36f718ebef46a63b52f309ccd28eed15a8e2b4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085455"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523782"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Criar uma nova estrutura de mineração OLAP
-  Você pode usar o assistente de mineração de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dados no para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
+  Você pode usar o assistente de mineração de dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Para criar uma nova estrutura de mineração OLAP  
   
@@ -42,13 +41,13 @@ ms.locfileid: "66085455"
   
      Por exemplo, se estiver tentando identificar agrupamentos de clientes, poderá escolher a dimensão Cliente; se estiver tentando analisar compras em transações, poderá escolher a dimensão Detalhes do Pedido de Vendas pela Internet. Você não está restrito a usar somente os dados desta dimensão, mas ela deve conter atributos importantes a serem usados na análise.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 6.  Na página **Selecionar a Chave do Caso** , em **Atributos**, selecione o atributo que será a chave da estrutura de mineração e clique em **Avançar**.  
   
      O atributo que você costuma usar como chave na estrutura de mineração também é uma chave da dimensão e será pré-selecionado.  
   
-7.  Na página **Selecionar Colunas de Nível de Caso** , em **Atributos e Medidas Relacionados**, selecione os atributos e as medidas que contêm valores a serem adicionados à estrutura de mineração como dados de caso. Clique em **Avançar**.  
+7.  Na página **Selecionar Colunas de Nível de Caso** , em **Atributos e Medidas Relacionados**, selecione os atributos e as medidas que contêm valores a serem adicionados à estrutura de mineração como dados de caso. Clique em **Próximo**.  
   
 8.  Na página **Especificar Uso de Colunas do Modelo de Mineração** , em **Estrutura do modelo de mineração**, primeiro defina a coluna previsível e depois escolha colunas para usar como entradas.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66085455"
   
      Note que as colunas designadas como chaves não podem ser usadas para entrada nem previsão.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 9. Na página **Especificar Uso de Colunas do Modelo de Mineração** , você também pode adicionar e remover tabelas aninhadas da estrutura de mineração, usando **Adicionar Tabelas Aninhadas** e **Tabelas Aninhadas**.  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66085455"
     > [!NOTE]  
     >  Os modelos de mineração OLAP não permitem o uso do recurso **Detectar** para detectar automaticamente se uma coluna contém dados contínuos ou distintos.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 11. Na página **Dividir Cubo de Origem** , é possível filtrar os dados usados para criar a estrutura de mineração.  
   
@@ -107,9 +106,9 @@ ms.locfileid: "66085455"
   
     -   **Parameters**: ignore esta caixa de seleção. Esta caixa de diálogo oferece suporte a vários cenários de filtragem de cubo e esta opção não é relevante para criar uma estrutura de mineração.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
-12. Na página **Dividir os dados em conjuntos de treinamento e teste** , especifique um percentual dos dados da estrutura de mineração a ser reservado para teste ou especifique o número máximo de casos de teste. Clique em **Avançar**.  
+12. Na página **Dividir os dados em conjuntos de treinamento e teste** , especifique um percentual dos dados da estrutura de mineração a ser reservado para teste ou especifique o número máximo de casos de teste. Clique em **Próximo**.  
   
      Se você especificar ambos os valores, os limites serão combinados para usar o que for o mais baixo.  
   

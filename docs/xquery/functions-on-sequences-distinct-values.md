@@ -1,5 +1,6 @@
 ---
 title: Função de valores distintos (XQuery) | Microsoft Docs
+description: Saiba como usar a função de valores distintos em um XQuery para remover valores duplicados de uma sequência.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c6e52209713ca94ab9cecc9f3c7910b6fc76ce9
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68223731"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215823"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Funções em Sequências – distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

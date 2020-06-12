@@ -1,21 +1,21 @@
 ---
-title: Selecione do &lt;modelo&gt;. SAMPLE_CASES (DMX) | Microsoft Docs
+title: Selecione do &lt; modelo &gt; . SAMPLE_CASES (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0838c688b0518bf1fc7ed6c5d65c3ef03d0a7aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928319"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670115"
 ---
-# <a name="select-from-ltmodelgtsample_cases-dmx"></a>Selecione do &lt;modelo&gt;. SAMPLE_CASES (DMX)
+# <a name="select-from-ltmodelgtsample_cases-dmx"></a>Selecione do &lt; modelo &gt; . SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retorna casos de exemplo que representam os casos utilizados para treinar o modelo de mineração de dados.  
@@ -49,7 +49,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
 ## <a name="remarks"></a>Comentários  
  Casos de exemplo podem ser gerados e podem não existir de fato nos dados de treinamento. O caso retornado é representativo do nó de conteúdo especificado.  
   
- Embora o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo clustering de sequências seja [!INCLUDE[msCoName](../includes/msconame-md.md)] o único algoritmo que dá suporte \<ao uso de SELECT do modelo>. SAMPLE_CASES, os algoritmos de terceiros também podem oferecer suporte a ele.  
+ Embora o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo clustering de sequências seja o único [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo que dá suporte ao uso de SELECT do \< modelo>. SAMPLE_CASES, os algoritmos de terceiros também podem oferecer suporte a ele.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna casos de exemplo utilizados para treinar o modelo de mineração de Correio de destino. Usar a função [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) na cláusula **Where** retorna apenas os casos associados ao nó ' 000000003 '. A cadeia de caracteres de nó pode se encontrar na coluna de NODE_UNIQUE_NAME do conjunto de linhas de esquema.  

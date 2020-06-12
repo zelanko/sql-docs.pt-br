@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d7e6aafe613e5ca43307aa75540d8fb1cea3ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086964"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526832"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copiar e colar dados (SSAS tabular)
   É possível copiar dados de tabelas de aplicativos externos e colá-los em uma nova tabela ou uma existente no designer de modelo. Os dados colados da Área de Transferência devem estar em formato HTML, por exemplo, dados que são copiados de Excel ou Word. O designer de modelo detectará e aplicará automaticamente os tipos de dados aos dados colados. Você também pode modificar manualmente o tipo de dados ou a formatação de exibição de uma coluna.  

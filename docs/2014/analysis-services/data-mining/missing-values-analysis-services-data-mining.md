@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91bc709d61c786c165711cfdb31ff696456997ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083354"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521197"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Mineração de dados)
   Tratar  *valores ausentes values* corretamente é uma parte importante da modelagem efetiva. Esta seção explica o que são valores ausentes, e descreve os recursos fornecidos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabalhar com valores ausentes ao criar estruturas de mineração de dados e modelos de mineração.  
@@ -44,7 +43,7 @@ ms.locfileid: "66083354"
   
  Quando você criar um modelo de mineração, um estado `Missing` será adicionado automaticamente ao modelo para todas as colunas discretas. Por exemplo, se a coluna de entrada de [Gênero] tiver dois valores possíveis, Masculino e Feminino, um terceiro valor será adicionado automaticamente para representar o valor `Missing`, e o histograma que mostra a distribuição de todos os valores da coluna sempre incluirá a contagem de casos com valores `Missing`. Se não houver valores ausentes na coluna Gênero, o histograma mostrará que o estado Ausente foi encontrado em 0 casos.  
   
- O raciocínio para incluir o estado `Missing` por padrão é claro se você considerar que os dados podem não ter exemplos de todos os valores possíveis e que não convém excluir uma possibilidade simplesmente porque não há um exemplo nos dados. Se, por exemplo, os dados de vendas de uma loja mostrarem que todos os clientes que compraram um determinado produto foram mulheres, não convém criar um modelo que prevê que somente mulheres comprariam esse produto. Em vez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disso, o adiciona um espaço reservado para o valor `Missing`desconhecido extra, chamado, como uma forma de acomodar possíveis outros Estados.  
+ O raciocínio para incluir o estado `Missing` por padrão é claro se você considerar que os dados podem não ter exemplos de todos os valores possíveis e que não convém excluir uma possibilidade simplesmente porque não há um exemplo nos dados. Se, por exemplo, os dados de vendas de uma loja mostrarem que todos os clientes que compraram um determinado produto foram mulheres, não convém criar um modelo que prevê que somente mulheres comprariam esse produto. Em vez disso, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o adiciona um espaço reservado para o valor desconhecido extra, chamado `Missing` , como uma forma de acomodar possíveis outros Estados.  
   
  Por exemplo, a tabela a seguir mostra a distribuição de valores do nó (All) no modelo de árvore de decisão criado para o tutorial Bike Buyer. No cenário do exemplo, a coluna [Bike Buyer] é um atributo previsível, em que 1 indica "Sim" e 0 indica "Não".  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66083354"
 |1|9098|  
 |Ausente|0|  
   
- Essa distribuição mostra que cerca de metade dos clientes comprou uma bicicleta e metade não. Esse conjunto de dados em particular é bem simples; portanto, cada caso tem um valor na coluna [Bike Buyer] e a contagem de valores `Missing` é 0. No entanto, se qualquer caso tiver um valor nulo no campo [comprador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bicicletas], o contaria essa linha como `Missing` um caso com um Value.  
+ Essa distribuição mostra que cerca de metade dos clientes comprou uma bicicleta e metade não. Esse conjunto de dados em particular é bem simples; portanto, cada caso tem um valor na coluna [Bike Buyer] e a contagem de valores `Missing` é 0. No entanto, se qualquer caso tiver um valor nulo no campo [comprador de bicicletas], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o contaria essa linha como um caso com um `Missing` Value.  
   
  Se a entrada for uma coluna contínua, o modelo tabulará dois estados possíveis para o atributo: `Existing` e `Missing`. Em outras palavras, ou a coluna contém um valor de algum tipo de dados numérico ou não contém valor algum. Nos casos que têm um valor, o modelo calculará o desvio médio padrão e outras estatísticas significativas. Para casos que não têm nenhum valor, o modelo fornecerá uma contagem dos valores `Missing` e ajustará as previsões de acordo. O método usado para ajustar a previsão varia dependendo do algoritmo e é descrito na próxima seção.  
   

@@ -1,5 +1,6 @@
 ---
 title: Definir predicados de seleção no caminho do local (SQLXML)
+description: Saiba como a especificação de predicados de seleção na expressão de caminho de local de uma consulta XPath (SQLXML 4,0) filtra o conjunto de nós que está sendo consultado.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a3eade8a706e95b3ddba72d96e37d8fabf1fd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3f62aa328573011d61a4a650aeb117516c3f9a6
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75256005"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306180"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificando predicados de seleção no caminho do local (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +36,13 @@ ms.locfileid: "75256005"
 >  Para obter informações sobre as limitações dessa implementação XPath do XPath e as diferenças entre ela e a especificação W3C, consulte [introdução ao uso de consultas XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="selection-predicate-example-1"></a>Predicado de seleção: exemplo 1  
- A seguinte expressão XPath (caminho de localização) seleciona do nó de contexto atual todos ** \<** os filhos do elemento>do cliente que têm o atributo **CustomerID** com o valor de ALFKI:  
+ A seguinte expressão XPath (caminho do local) seleciona a partir do nó de contexto atual todos os **\<Customer>** filhos do elemento que têm o atributo **CustomerID** com o valor de ALFKI:  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- Nesta consulta XPath, `child` e `attribute` são nomes de eixo. `Customer`é o teste de nó (verdadeiro `Customer` se for um ** \<nó de elemento>**, porque ** \<o elemento>** é o tipo de `child` nó principal para o eixo). `attribute::CustomerID="ALFKI"` é o predicado. No predicado `attribute` , é o eixo `CustomerID` e é o teste de nó (true se **CustomerID** é um atributo do nó de contexto, porque ** \<o atributo>** é o tipo de nó principal do eixo de **atributo** ).  
+ Nesta consulta XPath, `child` e `attribute` são nomes de eixo. `Customer`é o teste de nó (verdadeiro se `Customer` for um **\<element node>** , porque **\<element>** é o tipo de nó principal para o `child` eixo). `attribute::CustomerID="ALFKI"` é o predicado. No predicado, `attribute` é o eixo e `CustomerID` é o teste de nó (true se **CustomerID** é um atributo do nó de contexto, porque **\<attribute>** é o tipo de nó principal do eixo de **atributo** ).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -50,7 +51,7 @@ ms.locfileid: "75256005"
 ```  
   
 ## <a name="selection-predicate-example-2"></a>Predicado de seleção: exemplo 2  
- A seguinte expressão XPath (caminho de localização) seleciona a partir do nó de contexto atual toda a ** \<ordem>** netos que têm o atributo **SalesOrderID** com o valor 1:  
+ A seguinte expressão XPath (caminho de localização) seleciona a partir do nó de contexto atual todos os **\<Order>** netos que têm o atributo **SalesOrderID** com o valor 1:  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
@@ -65,17 +66,17 @@ ms.locfileid: "75256005"
 ```  
   
 ## <a name="selection-predicate-example-3"></a>Predicado de seleção: exemplo 3  
- A expressão XPath a seguir (caminho de localização) seleciona no nó de contexto atual ** \<** todos os>filhos que têm um ou mais ** \<contatos>** filhos:  
+ A seguinte expressão XPath (caminho de localização) seleciona a partir do nó de contexto atual todos os **\<Customer>** filhos que têm um ou mais **\<ContactName>** filhos:  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- Este exemplo pressupõe que o ** \<ContactName>** é um elemento filho do elemento ** \<Customer>** no documento XML, que é conhecido como *mapeamento centrado em elemento* em um esquema XSD anotado.  
+ Este exemplo pressupõe que o **\<ContactName>** é um elemento filho do **\<Customer>** elemento no documento XML, que é conhecido como *mapeamento centrado em elemento* em um esquema XSD anotado.  
   
- Nesta expressão XPath, `child` é o nome do eixo. `Customer`é o teste de nó (verdadeiro `Customer` se for um ** \<elemento>** nó, porque ** \<o elemento>** é o tipo de `child` nó principal para o eixo). `child::ContactName` é o predicado. No predicado `child` , é o eixo `ContactName` e é o teste de nó ( `ContactName` verdadeiro se for um ** \<elemento>** nó).  
+ Nesta expressão XPath, `child` é o nome do eixo. `Customer`é o teste de nó (TRUE se `Customer` for um **\<element>** nó, porque **\<element>** é o tipo de nó principal para `child` Axis). `child::ContactName` é o predicado. No predicado, `child` é o eixo e `ContactName` é o teste de nó (verdadeiro se `ContactName` for um **\<element>** nó).  
   
- Essa expressão retorna somente os ** \<** filhos do elemento de>do cliente do nó de contexto que tem ** \<o elemento ContactName>** filhos.  
+ Essa expressão retorna somente os **\<Customer>** filhos do elemento do nó de contexto que têm **\<ContactName>** elementos filhos.  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -84,15 +85,15 @@ Customer[ContactName]
 ```  
   
 ## <a name="selection-predicate-example-4"></a>Predicado de seleção: exemplo 4  
- A expressão XPath a seguir ** \<** seleciona o elemento filho do cliente>do nó de contexto que não tem ** \<** o elemento filho de ContactName>:  
+ A expressão XPath a seguir seleciona **\<Customer>** elementos filhos do nó de contexto que não têm **\<ContactName>** elementos filho:  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- Este exemplo supõe que ** \<ContactName>** é um elemento filho do elemento ** \<Customer>** no documento XML, e o campo ContactName não é necessário no banco de dados.  
+ Este exemplo pressupõe que **\<ContactName>** é um elemento filho do **\<Customer>** elemento no documento XML, e o campo ContactName não é necessário no banco de dados.  
   
- Neste exemplo, `child` é o eixo. `Customer`é o teste de nó (verdadeiro `Customer` se for \<um elemento> nó). `not(child::ContactName)` é o predicado. No predicado `child` , é o eixo `ContactName` e é o teste de nó ( `ContactName` verdadeiro se \<for um elemento> nó).  
+ Neste exemplo, `child` é o eixo. `Customer`é o teste de nó (verdadeiro se `Customer` for um \<element> nó). `not(child::ContactName)` é o predicado. No predicado, `child` é o eixo e `ContactName` é o teste de nó (verdadeiro se `ContactName` for um \<element> nó).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -101,13 +102,13 @@ Customer[not(ContactName)]
 ```  
   
 ## <a name="selection-predicate-example-5"></a>Predicado de seleção: exemplo 5  
- A expressão XPath a seguir seleciona no nó de contexto atual todos os ** \<clientes>** filhos que têm o atributo **CustomerID** :  
+ A expressão XPath a seguir seleciona a partir do nó de contexto atual todos os **\<Customer>** filhos que têm o atributo **CustomerID** :  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- Neste `child` exemplo, é o eixo `Customer` e é o teste de nó (verdadeiro `Customer` se for \<um elemento> nó). `attribute::CustomerID` é o predicado. No predicado `attribute` , é o eixo `CustomerID` e é o predicado `CustomerID` (true se for um ** \<atributo>** nó).  
+ Neste exemplo, `child` é o eixo e `Customer` é o teste de nó (verdadeiro se `Customer` for um \<element> nó). `attribute::CustomerID` é o predicado. No predicado, `attribute` é o eixo e `CustomerID` é o predicado (true se `CustomerID` for um **\<attribute>** nó).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   

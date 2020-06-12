@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84dd9e307279c83b955d6569571772414123f0f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086787"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526446"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Criar Conjunto de Testes (Assistente de Mineração de Dados)
   Use a página **Criar Conjunto de Testes** para especificar a quantidade de dados que precisa ser usada para treinamento e a quantidade que precisa ser reservada para uso como um conjunto de testes. Separando os dados em um conjunto de treinamento e outro de teste ao criar uma estrutura de mineração, você facilita a avaliação da precisão dos modelos de mineração que criar depois.  
@@ -28,7 +27,7 @@ ms.locfileid: "66086787"
   
  Se posteriormente você quiser alterar a quantidade de dados de teste ou treinamento, poderá modificar as `HoldoutMaxCases` Propriedades e `HoldoutMaxPercent` na estrutura de Data Mining usando a janela **Propriedades** . Porém, depois de alterar, você deve reprocessar a estrutura de mineração e todos os modelos de mineração associados. As seguintes limitações também se aplicam:  
   
--   O particionamento de uma estrutura de mineração de dados só tem suporte quando a estrutura de mineração de dados é armazenada no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. As versões anteriores [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] do não dão suporte ao cache de informações de partição para estruturas de mineração.  
+-   O particionamento de uma estrutura de mineração de dados só tem suporte quando a estrutura de mineração de dados é armazenada no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. As versões anteriores do não [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dão suporte ao cache de informações de partição para estruturas de mineração.  
   
 -   Você não pode particionar uma estrutura de mineração se esta contiver uma coluna Key Time, que é obrigatória para modelos de mineração de série temporal.  
   

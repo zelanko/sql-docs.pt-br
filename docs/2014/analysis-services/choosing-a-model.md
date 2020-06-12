@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f3b1e504b7e027e888458b8cc2eaee169ca272f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088089"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527532"
 ---
 # <a name="choosing-a-model"></a>Escolhendo um modelo
   **Algoritmo de mineração:** O *algoritmo* Data Mining é o mecanismo que cria padrões a partir de dados. Esse algoritmo define o modo como os dados são contados, como as relações são derivadas e como os padrões são armazenados. A seleção de um algoritmo depende parcialmente do tipo de dados que você deseja analisar. Por exemplo, alguns algoritmos só podem funcionar com números contínuos, enquanto que outros funcionam melhor com um número limitado de valores distintos.  
@@ -75,7 +74,7 @@ ms.locfileid: "66088089"
   
      Resumem sequências frequentes ou episódios em dados, como os caminhos que os usuários seguem quando navegam em um site.  
   
- Os algoritmos usados pelos Suplementos de Mineração de Dados do SQL Server para Office se baseiam nos algoritmos fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Você também pode usar algoritmos de terceiros que estão em conformidade com a OLE DB para especificação de mineração de dados, se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a instância do à qual você está conectado tiver sido configurada para permitir algoritmos de terceiros.  
+ Os algoritmos usados pelos Suplementos de Mineração de Dados do SQL Server para Office se baseiam nos algoritmos fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Você também pode usar algoritmos de terceiros que estão em conformidade com a OLE DB para especificação de mineração de dados, se a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à qual você está conectado tiver sido configurada para permitir algoritmos de terceiros.  
   
 ## <a name="requirements"></a>Requisitos  
  Cada algoritmo difere no tipo de dados com os quais pode trabalhar.  
@@ -104,7 +103,7 @@ ms.locfileid: "66088089"
 ## <a name="list-of-supported-algorithms"></a>Lista de algoritmos com suporte  
  Os seguintes algoritmos são fornecidos por padrão.  
   
-|Nome do algoritmo|Descrição|Usado em|  
+|Nome do algoritmo|Description|Usado em|  
 |--------------------|-----------------|-------------|  
 |Regras de Associação da Microsoft|Cria regras que descrevem quais itens provavelmente aparecem juntos em uma transação.|[Assistente para associar &#40;cliente de mineração de dados para Excel&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [Análise de cesta de compras &#40;tabela AnalysisTools para Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft Clustering|Identifica relações em um conjunto de dados que talvez não sejam derivadas de forma lógica por meio de observação casual. Usa técnicas iterativas para agrupar registros em clusters que contenham características semelhantes.|[Detectar categorias &#40;ferramentas de análise de tabela para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [Assistente de cluster &#40;suplementos de mineração de dados para Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2909ec00d184dc06eaa5ee05108752b47ac7186b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079707"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543828"
 ---
 # <a name="performance-counters-ssas"></a>Contadores de desempenho (SSAS)
   Usando o Monitor de Desempenho, você pode monitorar o desempenho de uma instância do Microsoft SQL Server Analysis Services (SSAS) usando contadores de desempenho.  
@@ -30,13 +29,13 @@ ms.locfileid: "66079707"
   
 ## <a name="counters-by-groups"></a>Contadores por grupos  
   
-|Agrupar|Descrição|  
+|Agrupar|Description|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|Estatísticas relacionadas ao cache de agregação do Analysis Services.|  
 |[Conexão](#bkmk_Connection)|Estatísticas relacionadas às conexões do Microsoft Analysis Services|  
 |[Previsão de Mineração de Dados](#bkmk_DataMiningPrediction)|Estatísticas relacionadas ao processamento de modelos de mineração de dados.|  
 |[Processamento do Modelo de Mineração de Dados](#bkmk_DataMiningModelProcessing)|Estatísticas relacionadas à criação de previsões de modelos de mineração de dados.|  
-|[Locks](#bkmk_Locks)|Estatísticas relativas a bloqueios do servidor interno do Microsoft Analysis Services.|  
+|[Bloquea](#bkmk_Locks)|Estatísticas relativas a bloqueios do servidor interno do Microsoft Analysis Services.|  
 |[MDX](#bkmk_MDX)|Estatísticas relacionadas a cálculos MDX do Microsoft Analysis Services.|  
 |[Memória](#bkmk_Memory)|Estatísticas relacionadas à memória do servidor interno do Microsoft Analysis Services.|  
 |[Cache pró-ativo](#bkmk_ProactiveCaching)|Estatísticas relacionadas ao cache pró-ativo do Microsoft Analysis Services.|  

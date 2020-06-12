@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a4f0fa1-afb2-46fd-a713-52ba1887e537
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98d61d019aadeedadc673e1a8860ceb94d2ef96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffbdf2b98cb94c2a0a8fb4e36587b255be3648b5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545418"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>Caixa de Diálogo Propriedades do Modelo de Mineração (Analysis Services – Mineração de Dados)
   Utilize a caixa de diálogo **Propriedades do Modelo de Mineração** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de um modelo de mineração em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Você pode exibir a caixa de diálogo **Propriedades do Modelo de Mineração** clicando com o botão direito do mouse em um modelo de mineração no **Pesquisador de Objetos** e selecionando **Propriedades**.  

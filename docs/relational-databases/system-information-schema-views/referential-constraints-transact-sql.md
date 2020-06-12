@@ -19,12 +19,12 @@ ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4b4d63a7ff49b580205415df4c2b428a07874e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 750850c9e01720b5f345f720e3a9f13db8fcd9f0
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68103262"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669508"
 ---
 # <a name="referential_constraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68103262"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Qualificador da restrição.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a restrição.<br /><br /> **&#42;&#42; importantes &#42;&#42;** Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a restrição.<br /><br /> **&#42;&#42; importantes &#42;&#42;** Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. INFORMATION_SCHEMA exibições representam apenas um subconjunto dos metadados de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nome da restrição.|  
 |**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Qualificador de restrição UNIQUE.|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a restrição UNIQUE.<br /><br /> **&#42;&#42; importantes &#42;&#42;** Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema que contém a restrição UNIQUE.<br /><br /> **&#42;&#42; importantes &#42;&#42;** Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. INFORMATION_SCHEMA exibições representam apenas um subconjunto dos metadados de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|Restrição UNIQUE.|  
 |**MATCH_OPTION**|**varchar (** 7 **)**|Condições de correspondência de restrição referenciais. Sempre retorna SIMPLE. Isso significa que nenhuma correspondência está definida. A condição é considerada uma correspondência quando uma das seguintes condições for verdadeira:<br /><br /> Pelo menos um valor na coluna de chave estrangeira é NULL.<br /><br /> Todos os valores na coluna de chave estrangeira não são NULL e há uma linha na tabela de chave primária que tem a mesma chave.|  
 |**UPDATE_RULE**|**varchar (** 11 **)**|Ação tomada quando uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] viola a integridade referencial definida por esta restrição. Retorna uma destas opções: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Se NO ACTION for especificado em ON UPDATE para esta restrição, a atualização da chave primária referenciada na restrição não será propagada para a chave estrangeira. Se essa atualização de uma chave primária causar uma violação de integridade referencial porque pelo menos uma chave estrangeira contém o mesmo valor, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não fará nenhuma alteração nas tabelas pai e de referência. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também gerará um erro.<br /><br /> Se CASCADE for especificado em ON UPDATE para esta restrição, qualquer mudança para o valor de chave primária será propagado automaticamente para o valor da chave estrangeira.|  

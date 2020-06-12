@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 003c70362c38ae1838b4679abf6485fa031a9143
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727460"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545058"
 ---
 # <a name="canceling-commands-xmla"></a>Cancelando comandos (XMLA)
   Dependendo das permissões administrativas do usuário que está emitindo o comando, o comando [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) no XML for Analysis (XMLA) pode cancelar um comando em uma sessão, uma sessão, uma conexão, um processo do servidor ou uma sessão ou conexão associada.  
@@ -44,7 +43,7 @@ ms.locfileid: "62727460"
 ## <a name="canceling-sessions"></a>Cancelando sessões  
  Ao especificar um identificador de sessão para uma sessão explícita na propriedade [SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) do `Cancel` comando, um administrador de banco de dados ou um administrador de servidor pode cancelar uma sessão, incluindo o comando atualmente em execução. Um administrador de banco de dados só poderá cancelar sessões para bancos de dados nos quais tiver permissões administrativas.  
   
- Um administrador de banco de dados pode recuperar as sessões ativas para um banco de dados especificado recuperando o conjunto de linhas do esquema DISCOVER_SESSIONS. Para recuperar o conjunto de linhas de esquema DISCOVER_SESSIONS, o administrador de `Discover` banco de dados usa o método XMLA e especifica o identificador de banco de dados apropriado para a `Discover` coluna de restrição SESSION_CURRENT_DATABASE na propriedade [Restrictions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) do método.  
+ Um administrador de banco de dados pode recuperar as sessões ativas para um banco de dados especificado recuperando o conjunto de linhas do esquema DISCOVER_SESSIONS. Para recuperar o conjunto de linhas de esquema DISCOVER_SESSIONS, o administrador de banco de dados usa o `Discover` método XMLA e especifica o identificador de banco de dados apropriado para a coluna de restrição SESSION_CURRENT_DATABASE na propriedade [Restrictions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) do `Discover` método.  
   
 ## <a name="canceling-connections"></a>Cancelando conexões  
  Ao especificar um identificador de conexão na propriedade [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) do `Cancel` comando, um administrador de servidor pode cancelar todas as sessões associadas a uma determinada conexão, incluindo todos os comandos em execução e cancelar a conexão.  

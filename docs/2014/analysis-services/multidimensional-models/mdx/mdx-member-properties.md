@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b7fdf989fc23ea70be7d7863f5d4c6ac0b61d8a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074157"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546318"
 ---
 # <a name="using-member-properties-mdx"></a>Usando propriedades do membro (MDX)
   As propriedades do membro incluem informações básicas sobre cada membro de cada tupla. Entre as informações básicas estão nome do membro, nível pai, número de filhos, e assim por diante. As propriedades do membro estão disponíveis para todos os membros de um determinado nível. Em termos de organização, elas são tratadas como dados organizados dimensionalmente, armazenados em uma única dimensão.  
@@ -40,10 +39,10 @@ ms.locfileid: "66074157"
   
  Para obter mais informações, consulte [Propriedades do membro definidas pelo usuário &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
- As propriedades intrínsecas e definidas pelo usuário podem ser recuperadas por meio do uso `PROPERTIES` da palavra-chave ou da função [Properties](/sql/mdx/properties-mdx) .  
+ As propriedades intrínsecas e definidas pelo usuário podem ser recuperadas por meio do uso da `PROPERTIES` palavra-chave ou da função [Properties](/sql/mdx/properties-mdx) .  
   
 ## <a name="using-the-properties-keyword"></a>Usando a palavra-chave PROPERTIES  
- A palavra-chave `PROPERTIES` especifica as propriedades do membro que serão usadas em uma determinada dimensão de eixo. A `PROPERTIES` palavra-chave é incluída `<axis specification>` na cláusula da instrução MDX [Select](/sql/mdx/mdx-data-manipulation-select) :  
+ A palavra-chave `PROPERTIES` especifica as propriedades do membro que serão usadas em uma determinada dimensão de eixo. A `PROPERTIES` palavra-chave é incluída na `<axis specification>` cláusula da instrução MDX [Select](/sql/mdx/mdx-data-manipulation-select) :  
   
 ```  
 SELECT [<axis_specification>  

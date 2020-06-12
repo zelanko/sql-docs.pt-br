@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b1a70753abe8e477bd1e522a37f4513cc12a52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073881"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546184"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>A consulta básica de MDX (MDX)
   A consulta MDX (expressões multidimensionais) básicas é a instrução SELECT – a consulta usada com mais frequência em MDX. Entendendo como a instrução MDX SELECT deve especificar um conjunto de resultados, como é sua sintaxe e como criar uma consulta simples usando a instrução SELECT, você terá uma compreensão sólida de como usar a linguagem MDX para consultar dados multidimensionais.  

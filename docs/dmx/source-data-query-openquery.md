@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887724"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670036"
 ---
-# <a name="ltsource-data-querygt---openquery"></a>&lt;consulta&gt; de dados de origem-OPENQUERY
+# <a name="ltsource-data-querygt---openquery"></a>&lt;consulta de dados &gt; de origem-OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Substitui uma consulta de dados de origem por uma consulta em uma fonte de dados existente. As instruções de inserção, seleção de junção de previsão e seleção de junção de previsão NATURAL dão suporte a **OPENQUERY**.  
@@ -29,7 +29,7 @@ OPENQUERY(<named datasource>, <query syntax>)
   
 ## <a name="arguments"></a>Argumentos  
  *fonte de fontes nomeada*  
- Uma fonte de dados que existe no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dado.  
+ Uma fonte de dados que existe no banco de dado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  *sintaxe de consulta*  
  Sintaxe de consulta que retorna um conjunto de linhas.  
@@ -44,7 +44,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir usa a fonte de dados MyDS já definida [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no banco de dado para criar uma [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] conexão com o Database e consultar a exibição **vTargetMail** .  
+ O exemplo a seguir usa a fonte de dados MyDS já definida no banco de dado [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para criar uma conexão com o [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Database e consultar a exibição **vTargetMail** .  
   
 ```  
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  

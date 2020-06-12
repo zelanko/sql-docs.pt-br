@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00554c9e56bebe12a5e63c9d50e4a2fa59149599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289134"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543818"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operações de log no Analysis Services
   Uma instância de Analysis Services registrará notificações, erros e avisos do servidor no arquivo msmdsrv. log-um para cada instância instalada. Os administradores consultam esse log para compreender eventos de rotina e extraordinários. Nas versões mais recentes, o registro em log foi aprimorado para incluir mais informações. Registros de log agora incluem informações de versão e edição do produto, bem como processador, memória, conectividade e eventos de bloqueio. Você pode revisar a lista inteira de alterações em [Aprimoramentos de log](https://support.microsoft.com/kb/2965035).  
@@ -34,7 +33,7 @@ ms.locfileid: "79289134"
   
 -   [Arquivos de mini Dump (. mdmp)](#bkmk_mdmp)  
   
--   [Dicas e práticas recomendadas](#bkmk_tips)  
+-   [Dicas e melhores práticas](#bkmk_tips)  
   
 > [!NOTE]  
 >  Se você estiver procurando informações sobre o registro em log, talvez também esteja interessado no rastreamento de operações que mostram o processamento e caminhos de execução de consulta. Objetos de rastreamento para rastreamento ad hoc e persistente (como a auditoria de acesso de cubo), bem como recomendações sobre como usar melhor o Flight Recorder, SQL Server Profiler e xEvents, podem ser encontrados usando os links nesta página: [Monitorar uma instância do Analysis Services](monitor-an-analysis-services-instance.md).  
@@ -42,11 +41,11 @@ ms.locfileid: "79289134"
 ##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>Local e tipos de logs  
  O Analysis Services fornece os logs descritos abaixo.  
   
-|Nome ou local do arquivo|Type|Usado para|Ativado por padrão|  
+|Nome ou local do arquivo|Tipo|Usada para|Ativado por padrão|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|Log de erros|Monitoramento de rotina e solução de problemas básicos|Sim|  
-|Tabela OlapQueryLog em um banco de dados relacional|Log de consultas|Coletar entradas para o Assistente de Otimização do Uso|Não|  
-|SQLDmp\<GUID>. mdmp arquivos|Falhas e exceções|Solução de problemas detalhada|Não|  
+|Msmdsrv.log|Log de erros|Monitoramento de rotina e solução de problemas básicos|Yes|  
+|Tabela OlapQueryLog em um banco de dados relacional|Log de consultas|Coletar entradas para o Assistente de Otimização do Uso|No|  
+|\<guid>Arquivos SQLDmp. mdmp|Falhas e exceções|Solução de problemas detalhada|No|  
   
  O link a seguir é altamente recomendável para a obtenção de recursos de informações adicionais que não são abordados neste tópico: [Dicas para coleta de dados inicial do Suporte da Microsoft](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -109,7 +108,7 @@ ms.locfileid: "79289134"
   
 2.  Conceda permissões suficientes à conta de serviço do Analysis Services no banco de dados. A conta precisa de permissão para criar uma tabela, gravar na tabela e ler da tabela.  
   
-3.  Em SQL Server Management Studio, clique com o botão direito do mouse em **Analysis Services** | **Propriedades** | **geral**, defina **CreateQueryLogTable** como true.  
+3.  Em SQL Server Management Studio, clique com o botão direito do mouse em **Analysis Services**  |  **Propriedades**  |  **geral**, defina **CreateQueryLogTable** como true.  
   
 4.  Opcionalmente, altere **QueryLogSampling** ou **QueryLogTableName** se desejar ver exemplos de consultas em uma taxa diferente ou use um nome diferente para a tabela.  
   

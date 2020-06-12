@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03b4264e421756fb1234a306f3834ca89a97489b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8569d07e5833b6a98d28484b578a8094a1eed2ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174569"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521643"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Referência técnica do algoritmo MTS
   O algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) inclui dois algoritmos separados para análise de série temporal:
@@ -147,7 +146,7 @@ ms.locfileid: "78174569"
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem
  O algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series) oferece suporte aos seguintes sinalizadores de modelagem. Ao criar um modelo ou uma estrutura de mineração, você define sinalizadores de modelagem para especificar como os valores em cada coluna são manipulados durante a análise. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).
 
-|Sinalizador de modelagem|Descrição|
+|Sinalizador de modelagem|Description|
 |-------------------|-----------------|
 |NOT NULL|Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se às colunas de estrutura de mineração.|
 |MODEL_EXISTENCE_ONLY|Significa que a  coluna será tratada como tendo dois estados possíveis: Ausente e Existente. Nulo é um valor ausente.<br /><br /> Aplica-se às colunas de modelo de mineração.|

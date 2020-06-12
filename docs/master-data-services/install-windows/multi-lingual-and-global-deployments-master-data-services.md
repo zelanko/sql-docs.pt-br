@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7173db1e255f4a7fe4f08a0e57ee80ece3d6c00f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 359a7e9768763b0083e1742f96f80fd202cc0cba
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606117"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731715"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>Implantações multilíngues e globais (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "83606117"
 ## <a name="how-languages-are-used"></a>Como são usados os idiomas  
  A tabela a seguir descreve o suporte de idiomas para os componentes e as ferramentas do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
   
-|Componente ou ferramenta|Descrição|  
+|Componente ou ferramenta|Description|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Instalação|Selecione o programa de Instalação em Inglês quando você quiser que o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] esteja disponível e tenha suporte em idiomas diferentes do idioma de Instalação. Para obter mais informações, consulte a descrição de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] abaixo.|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|O idioma de Instalação determina o idioma do [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] . Por exemplo, se você escolher alemão como o idioma de Instalação, o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] estará disponível em alemão nesse computador.|  

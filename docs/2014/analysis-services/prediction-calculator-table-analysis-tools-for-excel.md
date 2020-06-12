@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa763516511f3d2fd68ca5275cdeb6fe0af7d57b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070854"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547658"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Cálculo de Previsão (Ferramentas de Análise de Tabela para Excel)
   ![Ferramenta Cálculo de Previsão](media/tat-predcal.gif "Ferramenta Cálculo de Previsão")  
@@ -73,7 +72,7 @@ ms.locfileid: "66070854"
 -   Esta seção descreve as informações em cada relatório e como usar as várias opções de relatório.  
   
 ### <a name="prediction-report-with-graphs"></a>Relatório de previsão com elementos gráficos  
- O primeiro relatório de previsão é intitulado **cálculo de previsão relatório para o \<estado de destino> do \<atributo de destino>**. Ele contém uma tabela de fatores derivados da análise, junto com ferramentas para ajudá-lo a avaliar o impacto financeiro de uma determinada análise.  
+ O primeiro relatório de previsão é intitulado **cálculo de previsão relatório para o \<target state> de \<target attribute> **. Ele contém uma tabela de fatores derivados da análise, junto com ferramentas para ajudá-lo a avaliar o impacto financeiro de uma determinada análise.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>Tabela para especificar custos e lucros  
  A primeira ferramenta neste relatório, no lado superior esquerdo, é uma tabela na qual é possível especificar os custos e os lucros associados à previsão correta e incorreta de um valor.  Esses custos e lucros são necessários para calcular o limite de pontuação ideal para o cálculo.  
@@ -120,7 +119,7 @@ ms.locfileid: "66070854"
  Por exemplo, embora o primeiro gráfico sugira que buscar os 500 clientes principais previstos pelo modelo é um modo de maximizar os lucros, talvez você decida após examinar este segundo gráfico que os custos de buscar clientes incorretamente é muito grande e prefira cortar a campanha de marketing nos primeiros 400 clientes.  
   
 ### <a name="interactive-prediction-calculator"></a>Cálculo de Previsão Interativo  
- A segunda planilha criada pela ferramenta de Cálculo de Previsão é intitulada **cálculo de previsão para \<o estado de destino \<> do atributo de destino>**. Trata-se de uma planilha interativa que você pode usar para calcular pontuações individuais. Como essa planilha usa estatísticas e padrões armazenados no modelo, você pode fazer experiências com valores diferentes e verificar como eles afetam a pontuação prevista. Esse relatório também tem duas seções: uma é interativa e a outra é fornecida como referência.  
+ A segunda planilha criada pela ferramenta de Cálculo de Previsão é intitulada **cálculo de previsão para \<target state> o \<target attribute> de **. Trata-se de uma planilha interativa que você pode usar para calcular pontuações individuais. Como essa planilha usa estatísticas e padrões armazenados no modelo, você pode fazer experiências com valores diferentes e verificar como eles afetam a pontuação prevista. Esse relatório também tem duas seções: uma é interativa e a outra é fornecida como referência.  
   
 #### <a name="first-table"></a>Primeira tabela  
  Você pode selecionar ou digitar um novo valor na coluna **valor** da tabela para ver como a alteração do valor afeta a pontuação.  
@@ -135,13 +134,13 @@ ms.locfileid: "66070854"
 |Children|0|157|  
 |Educação|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
-|Home Owner|Sim|8|  
+|Home Owner|Yes|8|  
 |Cars|2|50|  
 |Distância do Trabalho|0-1 Miles|99|  
 |Região|América do Norte|0|  
 |Idade|37-46|5|  
 |Total||491|  
-|Previsão para 'Sim'||FALSE|  
+|Previsão para 'Sim'||FALSO|  
   
  Quando você digita o novo valor, a pontuação exibida na célula, Previsão para Sim, muda para verdadeiro e as pontuações de **impacto relativo** para os vários atributos também são atualizadas.  
   
@@ -152,11 +151,11 @@ ms.locfileid: "66070854"
  Esta tabela mostra as pontuações individuais para cada estado possível das colunas de entrada e o impacto relativo que a pontuação terá nos resultados. Esta tabela é estática e apenas para referência.  
   
 ### <a name="printable-prediction-calculator"></a>Cálculo de Previsão Imprimível  
- A terceira planilha criada pela ferramenta de Cálculo de Previsão é intitulada **PrintablePrediction Calculator para \<o estado de destino \<> do atributo de destino>**. Este scorecard deve ser impresso para que você possa calcular manualmente pontuações quando estiver longe do computador.  
+ A terceira planilha criada pela ferramenta de Cálculo de Previsão é intitulada **PrintablePrediction Calculator para \<target state> o \<target attribute> de **. Este scorecard deve ser impresso para que você possa calcular manualmente pontuações quando estiver longe do computador.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>Para imprimir e usar o relatório de pontuação gerado pelo Cálculo de Previsão  
   
-1.  Clique na guia que é chamada **de cálculo de previsão imprimível para \<>de atributo **.  
+1.  Clique na guia que é intitulada ** \<attribute> cálculo de previsão imprimível **.  
   
 2.  No menu arquivo do Excel, selecione **visualização de impressão**.  
   
@@ -175,7 +174,7 @@ ms.locfileid: "66070854"
 8.  Converta a pontuação em um resultado previsto usando os critérios impressos na planilha imediatamente após a linha de **total** .  
   
 ## <a name="related-tools"></a>Ferramentas relacionadas  
- O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece o algoritmo Regressão Logística da Microsoft para uso nesse tipo de análise. Se você já estiver familiarizado com a regressão logística, poderá criar facilmente modelos de regressão logística usando a opção **avançada** do cliente de mineração de dados para Excel. Para obter mais informações, consulte [modelagem avançada &#40;suplementos de mineração de dados para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Para obter mais informações sobre as opções e parâmetros para modelos de regressão logística, consulte o tópico "algoritmo de regressão logística [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da Microsoft" nos manuais online do.  
+ O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece o algoritmo Regressão Logística da Microsoft para uso nesse tipo de análise. Se você já estiver familiarizado com a regressão logística, poderá criar facilmente modelos de regressão logística usando a opção **avançada** do cliente de mineração de dados para Excel. Para obter mais informações, consulte [modelagem avançada &#40;suplementos de mineração de dados para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Para obter mais informações sobre as opções e parâmetros para modelos de regressão logística, consulte o tópico "algoritmo de regressão logística da Microsoft" nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] manuais online do.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Ferramentas de Análise de Tabela para Excel](table-analysis-tools-for-excel.md)  

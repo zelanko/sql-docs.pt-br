@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bb080721ccb3e5b5aef190eda3d1088df09762c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d21773bb4c2108511b2e7db852d0cb108f7b63b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086064"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525317"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft
   O Visualizador de Conteúdo do Modelo de Mineração Genérico da [!INCLUDE[msCoName](../../includes/msconame-md.md)] fornece informações detalhadas sobre os padrões encontrados pelo algoritmos de mineração e também fornece acesso a várias estatísticas geradas durante o processo de análise. A quantidade e o tipo de informação dependem do algoritmo usado, mas podem incluir as seguintes categorias:  

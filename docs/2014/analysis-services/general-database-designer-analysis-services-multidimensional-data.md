@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e7b2e1e72263d8edf362941985bb775457fc6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081080"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544462"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Geral (Designer de Banco de Dados) (Analysis Services - Dados Multidimensionais)
   Use a guia **Geral** para alterar as propriedades de um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -48,7 +47,7 @@ ms.locfileid: "66081080"
  **Idioma**  
  Selecione o idioma para a transação especificada.  
   
- Para adicionar uma nova tradução à grade, clique em ** \<Adicionar nova tradução>**.  
+ Para adicionar uma nova tradução à grade, clique em **\<Add new translation>** .  
   
  **Legenda traduzida**  
  Digite a legenda do banco de dados no idioma adequado para a tradução. Se estiver em branco, será usada a legenda padrão do banco de dados.  
@@ -67,7 +66,7 @@ ms.locfileid: "66081080"
  **Nome**  
  Digite o nome do tipo da conta.  
   
- Para adicionar um novo tipo de conta, clique em ** \<adicionar novo tipo de conta>**.  
+ Para adicionar um novo tipo de conta, clique em **\<Add new account type>** .  
   
  **Receber**  
  Define o nome padrão do tipo de conta para uso pelo Assistente de Business Intelligence. Se essa coluna for deixada em branco, o padrão na coluna **Nome** será usado.  

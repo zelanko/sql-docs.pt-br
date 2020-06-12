@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b9935f5ab13431033accf7431c1a9b6394569a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082887"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520506"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Suplementos de Mineração de Dados do SQL Server para Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplementos de Mineração de Dados do para Office é um conjunto de ferramentas leve para análise preditiva que permite a você usar dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração.  
@@ -46,7 +45,7 @@ ms.locfileid: "66082887"
   
 -   **Explorar e visualizar.** A mineração de dados não é uma atividade que pode ser totalmente automatizada. você precisa explorar e entender os resultados para tomar uma medida significativa. Os suplementos ajudam você na exploração, fornecendo visualizadores interativos no Excel, modelos do Visio que permitem personalizar os diagramas e a capacidade de exportar gráficos e tabelas para o Excel para filtragem ou modificação adicionais.  
   
--   **Implante e integre.** Quando você tiver criado um modelo útil, coloque seu modelo em produção usando as ferramentas de gerenciamento para exportar o modelo de seu servidor experimental para outra instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Implante e integre.** Quando você tiver criado um modelo útil, coloque seu modelo em produção usando as ferramentas de gerenciamento para exportar o modelo de seu servidor experimental para outra instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
      Você também pode deixar o modelo no servidor onde o criou, mas atualize os dados de treinamento e execute previsões usando o Integration Services ou scripts DMX.  
   

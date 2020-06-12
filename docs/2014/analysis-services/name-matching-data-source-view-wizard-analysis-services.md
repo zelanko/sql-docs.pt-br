@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69f68beecc8f4ce7f8f4da3e36f2f9f400575c9d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072403"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541258"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Correspondência de Nomes (Assistente de Exibição da Fonte de Dados) (Analysis Services)
   Use a página **Correspondência de Nomes** para selecionar o critério a ser usado para detectar possíveis relações entre as tabelas selecionadas para a exibição da fonte de dados e as outras tabelas no esquema. Se não existir nenhuma relação de chave estrangeira entre as tabelas, esse critério ajudará a identificar e adicionar tabelas relacionadas à exibição da fonte de dados. As relações lógicas identificadas pela correspondência de nomes também são adicionadas à exibição da fonte de dados.  

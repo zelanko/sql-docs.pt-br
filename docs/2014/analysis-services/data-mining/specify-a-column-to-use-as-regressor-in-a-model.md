@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3ce5a339275c834673afedcbbec50078407acdd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082907"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520404"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Especificar uma coluna para usar como regressor em um modelo
   Um modelo de regressão linear representa o valor do atributo previsível como resultado de uma fórmula, que combina as entradas de forma que os dados são ajustados o mais próximo possível a uma linha de regressão estimada. O algoritmo aceita somente valores numéricos como entradas e detecta automaticamente as entradas que oferecem o melhor ajuste.  
