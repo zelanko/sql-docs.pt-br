@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f06781ea61a1958d41f37a55026a60cba67b387
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081495"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528462"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Função de Segurança Duplicada do Analysis Services (Analysis Services - Dados Multidimensionais)
-  Use a caixa de diálogo **Analysis Services duplicar função de \<segurança \<-nome do banco de dados>-copiar do nome da função>** no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para duplicar uma função existente em um banco de dados. É possível exibir a caixa de diálogo **Duplicar Função** clicando com o botão direito do mouse em uma função no Explorador de Objetos e selecionando **Duplicar**.  
+  Use a caixa de diálogo **Analysis Services duplicar função de \<database name>  -  \<copy from role name> segurança** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para duplicar uma função existente em um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. É possível exibir a caixa de diálogo **Duplicar Função** clicando com o botão direito do mouse em uma função no Explorador de Objetos e selecionando **Duplicar**.  
   
 ## <a name="options"></a>Opções  
   

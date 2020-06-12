@@ -1,5 +1,6 @@
 ---
 title: Passando parâmetros para Updategrams (SQLXML)
+description: Saiba como passar parâmetros para Updategrams no SQLXML 4,0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e109543de3b45b5af0930a14541bf3e89c66edc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 462b9b2b8cd5239e6185b59dfabc028c4d7d8d6a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252407"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529795"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Transmitindo parâmetros a diagramas de atualização (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252407"
  Diagramas de atualização permitem passar NULL como um valor de parâmetro. Para passar o valor do parâmetro NULL, especifique o atributo **NullValue** . O valor atribuído ao atributo **NullValue** é então fornecido como o valor do parâmetro. Diagramas de atualização tratam esse valor como NULL.  
   
 > [!NOTE]  
->  Em ** \<SQL: header>** e ** \<updg: header>**, você deve especificar o **NullValue** como não qualificado; enquanto que, em ** \<updg: Sync>**, você especifica o **NullValue** como qualificado (por exemplo, **updg: NullValue**).  
+>  No **\<sql:header>** e no **\<updg:header>** , você deve especificar o **NullValue** como não qualificado; enquanto que, no **\<updg:sync>** , você especifica o **NullValue** como qualificado (por exemplo, **updg: NullValue**).  
   
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de trabalho usando os exemplos a seguir, você deve atender aos requisitos especificados em [requisitos para executar exemplos do SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
@@ -64,7 +65,7 @@ ms.locfileid: "75252407"
   
 1.  Copie o updategram acima no Bloco de Notas e salve-o em um arquivo como UpdategramWithParameters.xml.  
   
-2.  Prepare o script de teste do SQLXML 4,0 (Sqlxml4test. vbs) no [usando o ADO para executar consultas do sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para executar o updategram adicionando as seguintes `cmd.Properties("Output Stream").Value = outStream`linhas após o:  
+2.  Prepare o script de teste do SQLXML 4,0 (Sqlxml4test. vbs) no [usando o ADO para executar consultas do sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para executar o updategram adicionando as seguintes linhas após o `cmd.Properties("Output Stream").Value = outStream` :  
 
     ```  
     cmd.NamedParameters = True  
@@ -99,7 +100,7 @@ ms.locfileid: "75252407"
   
 1.  Copie o diagrama de atualização acima no Bloco de Notas e salve-o em um arquivo como UpdategramPassingNullvalues.xml.  
   
-2.  Prepare o script de teste do SQLXML 4,0 (Sqlxml4test. vbs) no [usando o ADO para executar consultas do sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para executar o updategram adicionando as seguintes `cmd.Properties("Output Stream").Value = outStream`linhas após o:  
+2.  Prepare o script de teste do SQLXML 4,0 (Sqlxml4test. vbs) no [usando o ADO para executar consultas do sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para executar o updategram adicionando as seguintes linhas após o `cmd.Properties("Output Stream").Value = outStream` :  
   
     ```  
     cmd.NamedParameters = True  

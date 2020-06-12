@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058ba6e78fd6c6e5aa7b06fbd5d34c256dac07b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081146"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544448"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrar o cubo de origem para uma estrutura de mineração
   Ao criar uma estrutura de mineração baseada em dados em um modelo multidimensional (um cubo OLAP), você pode *dividir* o cubo no qual a estrutura de mineração se baseia. A divisão permite criar subconjuntos de dados, como um tipo de filtro nos dados que são usados para treinar o modelo de mineração.  
   
 ### <a name="to-slice-a-cube"></a>Para fatiar um cubo  
   
-1.  No designer de mineração de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]dados no, selecione a guia **estrutura de mineração** ou a guia **modelos de mineração** .  
+1.  No designer de mineração de dados no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , selecione a guia **estrutura de mineração** ou a guia **modelos de mineração** .  
   
 2.  No menu **modelo de mineração** , selecione **definir fatia de cubo de estrutura de mineração**.  
   

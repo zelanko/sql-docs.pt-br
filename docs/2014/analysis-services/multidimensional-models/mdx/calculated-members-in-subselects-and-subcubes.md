@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89e87d8c1f15dfd0f70ebaca92a81603b06ff0ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074789"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546538"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membros calculados em subseleções e subcubos
   Nas versões anteriores, os membros calculados não eram permitidos em subseleções ou subcubos. No entanto, desde o SQL Server 2008, eles são permitidos e habilitados por uma propriedade de conexão. Além disso, um novo comportamento para membros calculados, em subseleções e subcubos, foi introduzido no SQL Server 2008 R2.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Membros calculados em subseleções e subcubos  
- A `SubQueries` propriedade da cadeia de <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> conexão no `DBPROPMSMDSUBQUERIES` ou a propriedade em [Propriedades XMLA com suporte &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) define o comportamento ou a concessão de membros calculados ou conjuntos calculados em subseleções ou subcubos. No contexto deste documento, subseleção se refere a subseleções e subcubos, exceto quando indicado o contrário.  
+ A `SubQueries` propriedade da cadeia de conexão no <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou a `DBPROPMSMDSUBQUERIES` propriedade em [propriedades XMLA com suporte &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) define o comportamento ou a concessão de membros calculados ou conjuntos calculados em subseleções ou subcubos. No contexto deste documento, subseleção se refere a subseleções e subcubos, exceto quando indicado o contrário.  
   
  A propriedade SubQueries permite os seguintes valores.  
   

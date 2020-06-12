@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 299b40b92b3d2f8c5559a5e10e511f80ab5a5bc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de11cdaf304b3010dcf21725edd2d3cbfa84ae0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175655"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540225"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   Configure, repare ou remova um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] com o ferramentas de configuração do PowerPivot.
@@ -49,7 +48,7 @@ ms.locfileid: "78175655"
 
  As ferramentas podem ser usada apenas com uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Não use-as com instalações do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .
 
-|Nome|Versão com suporte do SharePoint|Configuração detalhada|
+|Name|Versão com suporte do SharePoint|Configuração detalhada|
 |----------|-------------------------------------|----------------------------|
 |Configuração do PowerPivot para SharePoint 2013|SharePoint 2013|[Configurar ou reparar a ferramenta de configuração do PowerPivot para SharePoint 2013 &#40;o PowerPivot&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|
 |Ferramenta de Configuração do PowerPivot|SharePoint 2010 com SharePoint 2010|[Configurar ou reparar a ferramenta de configuração do PowerPivot para SharePoint 2010 &#40;o PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md)|
@@ -62,7 +61,7 @@ ms.locfileid: "78175655"
 |Configuração do PowerPivot para SharePoint 2013|Ferramenta de Configuração do PowerPivot|
 |--------------------------------------------------|-----------------------------------|
 |A página principal tem uma nova opção para **Servidor do PowerPivot para Serviços do Excel**. A opção dá suporte à nova arquitetura com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado fora do farm do SharePoint. Você configura Serviços do Excel para usar um ou mais servidores do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em execução no modo do SharePoint.<br /><br /> ![Servidor do PowerPivot na nova ferramenta de configuração](../media/as-powerpivot-configtool-differences-new-mainpage.gif "Servidor do PowerPivot na nova ferramenta de configuração")||
-||A ferramenta 2010 inclui a SQL Server Analysis Services de registro de página **(PowerPivot) no servidor local** para configurar uma instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]local do. Essa página não faz parte da ferramenta 2013 porque não há instância local do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> ![Conta de serviço AS na antiga ferramenta de configuração](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "Conta de serviço AS na antiga ferramenta de configuração")|
+||A ferramenta 2010 inclui a SQL Server Analysis Services de registro de página **(PowerPivot) no servidor local** para configurar uma instância local do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Essa página não faz parte da ferramenta 2013 porque não há instância local do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> ![Conta de serviço AS na antiga ferramenta de configuração](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "Conta de serviço AS na antiga ferramenta de configuração")|
 ||A página **Criar Aplicativo de Serviço PowerPivot** tem uma opção adicional de **Atualizar pastas de trabalho para habilitar atualização de dados**. Essa opção não está disponível na ferramenta 2013.<br /><br /> ![atualizar pastas de trabalho na antiga ferramenta de configuração](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "atualizar pastas de trabalho na antiga ferramenta de configuração")|
 |A ferramenta 2013 tem uma nova página **Configurar Servidores PowerPivot**. Essa página dá suporte à nova arquitetura do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executado fora do farm do SharePoint. Por padrão, o nome do servidor que foi digitado na página principal na caixa de texto **Servidor do PowerPivot para Serviços do Excel**também será listado em **Configurar Servidores PowerPivot**.<br /><br /> ![Registrar servidores do PowerPivot na nova ferramenta de configuração](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "Registrar servidores do PowerPivot na nova ferramenta de configuração")||
 |A ferramenta 2013 tem uma nova página **Registrar o Suplemento PowerPivot como Rastreador de Uso de Serviços do Excel**. Os Serviços do Excel no SharePoint 2010 não rastreiam dados de uso do PowerPivot.||
@@ -91,11 +90,11 @@ ms.locfileid: "78175655"
 
 1.  Na tela **Iniciar** , digite`powerpivot`
 
-     Na tela **Iniciar** , digite `powerpivot` ou no menu **Iniciar** , clique em **todos os programas**, clique [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]em **ferramentas de configuração**e, em seguida, clique em um dos seguintes:
+     Na tela **Iniciar** , digite `powerpivot` ou no menu **Iniciar** , clique em **todos os programas**, clique em ferramentas de configuração e, em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] seguida, clique em um dos seguintes: **Configuration Tools**
 
     -   **Ferramenta de configuração do PowerPivot**.
 
-    -   **OU**
+    -   **OR**
 
     -   **Configuração do PowerPivot para SharePoint 2013**.
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd751efccc038c131bc61338d7adcd8e10a67d93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079678"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543768"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Agendar tarefas administrativas do SSAS com o SQL Server Agent
   Usando o serviço SQL Server Agent, você pode agendar tarefas administrativas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para executar na ordem e nos horários em que você precisa. As tarefas agendadas ajudam a automatizar os processos que são executados em ciclos regulares ou previsíveis. Você pode agendar a execução de tarefas administrativas, como o processamento de cubos, nas horas de menor atividade comercial. Pode também estabelecer a ordem em que essas tarefas devem ser executadas criando etapas em um trabalho do SQL Server Agent. Por exemplo, é possível processar um cubo e, em seguida, fazer o backup do cubo.  
@@ -27,7 +26,7 @@ ms.locfileid: "66079678"
 ## <a name="prerequisites"></a>Pré-requisitos  
  O serviço SQL Server Agent deve ser instalado.  
   
- Por padrão, os trabalhos são executados na conta de serviço. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a conta padrão para SQL Server Agent é NT Service\SQLAgent $\<InstanceName>. Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Por padrão, os trabalhos são executados na conta de serviço. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , a conta padrão para SQL Server Agent é NT Service\SQLAgent $ \<instancename> . Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  Você também deveria ter um banco de dados de teste. Você pode implantar o banco de dados de exemplo multidimensional do AdventureWorks ou um projeto do tutorial multidimensional do Analysis Services para usar neste passo a passo. Para obter mais informações, consulte [instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional Analysis Services](../install-sample-data-and-projects.md).  
   
@@ -81,9 +80,9 @@ ms.locfileid: "66079678"
   
 6.  Na caixa de diálogo **Nova Etapa do Trabalho** , digite um nome de etapa em **Nome da Etapa**.  
   
-7.  Em **Servidor**, digite **localhost** como instância padrão de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e **localhost\\**\<*nome da instância*> como instância nomeada.  
+7.  Em **servidor**, digite **localhost** para uma instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e **localhost \\ ** \<*instance name*> para uma instância nomeada.  
   
-     Se você pretende executar o trabalho de um computador remoto, use o nome de servidor e nome de instância onde o trabalho será executado. Use o \< *nome do servidor* de formato> para uma instância padrão \<e o*nome de instância* do nome do *servidor*>\\<> para uma instância nomeada.  
+     Se você pretende executar o trabalho de um computador remoto, use o nome de servidor e nome de instância onde o trabalho será executado. Use o formato \<*server name*> para uma instância padrão e o \<*server name*> \\ < *nome da instância*> para uma instância nomeada.  
   
 8.  Em **Tipo**, selecione **Comando do SQL Server Analysis Services**.  
   

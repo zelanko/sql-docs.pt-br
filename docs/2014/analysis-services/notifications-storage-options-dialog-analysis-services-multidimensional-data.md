@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5675cdbf-bfaa-4b6e-b716-31b8e9da72b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23845118c4c202db781fe325c4afc2402ceee271
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8905ba7019ba85d8e9e0711b1102bf37e1185d42
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072199"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541048"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>Notificações (caixa de diálogo Opções de Armazenamento) (Analysis Services - Dados Multidimensionais)
   Use a guia **Notificações** da caixa de diálogo **Opções de Armazenamento** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir o método de notificação e as configurações relacionadas para uma dimensão, cubo, grupo de medidas ou partição.  
@@ -31,7 +30,7 @@ ms.locfileid: "66072199"
 |----------|----------------|  
 |**Modo de armazenamento**|Seleciona o modo de armazenamento a ser usado para o objeto.<br /><br /> **MOLAP**<br /> O objeto usa armazenamento MOLAP (OLAP multidimensional).<br /><br /> **HOLAP**<br /> O objeto usa armazenamento HOLAP (OLAP híbrido).<br /><br /> **ROLAP**<br /> O objeto usa armazenamento ROLAP (OLAP relacional).|  
 |**Habilitar cache pró-ativo**|Habilita o cache pró-ativo.<br /><br /> Observação: se essa opção não estiver selecionada, todas as opções, exceto **Modo de armazenamento** , estarão desabilitadas.|  
-|**SQL Server**|Usa um mecanismo de rastreamento especializado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no para identificar alterações em tabelas subjacentes para o objeto.|  
+|**SQL Server**|Usa um mecanismo de rastreamento especializado no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para identificar alterações em tabelas subjacentes para o objeto.|  
 |**Especificar tabelas de controle**|Especifique as tabelas subjacentes a serem controladas para o objeto e, em seguida, digite uma lista de tabelas delimitadas por ponto e vírgula (;) ou clique no botão de reticências (**...**) para abrir a caixa de diálogo **Objetos Relacionais** e escolha as tabelas a serem controladas. Para obter mais informações, consulte [Caixa de diálogo Objetos Relacionais &#40;Analysis Services – Dados Multidimensionais&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Se essa opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tentará determinar a lista de tabelas subjacentes a serem controladas para o objeto, se determinados requisitos forem atendidos. Para obter mais informações sobre esses requisitos, consulte [Cache proativo &#40;Partições&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |**Cliente iniciado**|Selecione para usar o comando XMLA (XML for Analysis), `NotifyTableChange`, para identificar alterações nas tabelas subjacentes do objeto. Essa opção será selecionada normalmente se você planejar usar um processo de notificação baseado em cliente.|  
 |**Especificar tabelas de controle**|Selecione para especificar que as tabelas subjacentes a serem controladas para o objeto e, em seguida, digite uma lista de tabelas delimitadas por ponto e vírgula (;) ou clique no botão de reticências (**...**) para abrir a caixa de diálogo **Objetos Relacionais** e escolha as tabelas a serem controladas. Para obter mais informações, consulte [Caixa de diálogo Objetos Relacionais &#40;Analysis Services – Dados Multidimensionais&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Se essa opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tentará determinar a lista de tabelas subjacentes a serem controladas para o objeto, se determinados requisitos forem atendidos. Para obter mais informações sobre esses requisitos, consulte [Cache proativo &#40;Partições&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  

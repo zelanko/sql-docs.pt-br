@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9512d0986b862b5865f8873b75a607f549cdac39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062851"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528182"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Caixa de diálogo Opções Avançadas de Exibição da Fonte de Dados (Assistente de Exibição da Fonte de Dados) (Analysis Services)
   A caixa de diálogo **Opções Avançadas de Exibição da Fonte de Dados** fornece controle adicional sobre como a exibição da fonte de dados extrai esquemas e relações da fonte de dados para criar a exibição.  

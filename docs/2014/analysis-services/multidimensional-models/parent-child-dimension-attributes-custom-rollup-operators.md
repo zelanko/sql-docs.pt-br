@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3ddd9fc-5fa3-4227-9322-8c45a5b5c2c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 20f25474b15ecf58c45383a8290bb13f956a5db8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db12ccc6703ee4863dd3b6bd598d2317b54fce6a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073458"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545858"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>Operadores de rollup personalizados em dimensões pai-filho
   Os operadores de acúmulo personalizado proporcionam uma maneira simples de controlar como os valores dos membros são acumulados nos valores pai em uma hierarquia pai-filho. Em uma dimensão que contém uma relação pai-filho, você especifica uma coluna que contém operadores unários que especificam o acúmulo para todos os membros não calculados do atributo pai. O operador unário é aplicado aos membros sempre que os valores dos membros pai são avaliados.  

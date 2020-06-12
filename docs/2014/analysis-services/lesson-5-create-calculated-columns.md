@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b39909acacb29f68b0de49ba2093c9b812510172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078559"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542708"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lição 6: Criar colunas calculadas
   Nesta lição, você criará novos dados no modelo adicionando colunas calculadas. Uma coluna calculada se baseia nos dados que já existem no modelo. Para saber mais, consulte [Colunas calculadas &#40;SSAS Tabular&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -52,7 +51,7 @@ ms.locfileid: "66078559"
     > [!NOTE]  
     >  Se você receber um erro, verifique se os nomes de coluna na fórmula correspondem aos nomes de coluna alterados na [Lição 3: Renomear colunas](rename-columns.md).  
   
-5.  Renomeie esta `Month Calendar`coluna como.  
+5.  Renomeie esta coluna como `Month Calendar` .  
   
  A coluna calculada Month Calendar fornece um nome classificável para o mês.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66078559"
   
      Ao concluir a criação da fórmula, pressione ENTER.  
   
-3.  Renomeie a `Day of Week`coluna para.  
+3.  Renomeie a coluna para `Day of Week` .  
   
 4.  Clique no título de coluna e arraste a coluna entre as colunas **Day Name** e **Day of Month** .  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66078559"
   
      Ao concluir a criação da fórmula, pressione ENTER.  
   
-4.  Renomeie a `Product Subcategory Name`coluna para.  
+4.  Renomeie a coluna para `Product Subcategory Name` .  
   
  A coluna calculada Product Subcategory Name é usada para criar uma hierarquia na tabela Product que inclui dados da coluna Product Subcategory Name na tabela Product Subcategory. Hierarquias não podem abranger mais de uma tabela. Você criará hierarquias posteriormente na lição 7.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66078559"
   
      Ao concluir a criação da fórmula, pressione ENTER.  
   
-3.  Renomeie a `Product Category Name`coluna para.  
+3.  Renomeie a coluna para `Product Category Name` .  
   
  A coluna calculada Product Category Name é usada para criar uma hierarquia na tabela Product que inclui dados da coluna Product Category Name na tabela Product Category. Hierarquias não podem abranger mais de uma tabela.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "66078559"
   
      Ao concluir a criação da fórmula, pressione ENTER.  
   
-4.  Renomeie a `Margin`coluna para.  
+4.  Renomeie a coluna para `Margin` .  
   
 5.  Arraste a coluna entre as colunas **Sales Amount** e **Tax Amt** .  
   

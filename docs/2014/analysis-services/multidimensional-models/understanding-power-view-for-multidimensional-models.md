@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddd54c22af1e7130940fb8ff3073de0821f4fc90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525457"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536018"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Noções básicas sobre o Power View para modelos multidimensionais
   Este artigo descreve o recurso Power View para Modelos Multidimensionais no Microsoft SQL Server 2014 e oferece informações importantes para profissionais de BI e administradores que pretendem implementar o Power View para Modelos Multidimensionais na respectiva organização.  
@@ -217,11 +216,11 @@ ms.locfileid: "79525457"
   
  A solicitação DISCOVER_CSDL_METADATA tem as seguintes restrições:  
   
-|Nome|Necessária|Descrição|  
+|Name|Obrigatório|Descrição|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|Sim|O nome do catálogo/banco de dados.|  
+|CATALOG_NAME|Yes|O nome do catálogo/banco de dados.|  
 |PERSPECTIVE_NAME|Sim, se o cubo contiver mais de uma perspectiva. Opcional se houver somente um cubo ou se houver uma perspectiva padrão.|O nome do cubo ou o nome da perspectiva no banco de dados multidimensional.|  
-|VERSION|Sim|Versão de CSDL solicitada pelo cliente. Recursos e construções multidimensionais têm suporte na versão 2.0.|  
+|VERSION|Yes|Versão de CSDL solicitada pelo cliente. Recursos e construções multidimensionais têm suporte na versão 2.0.|  
   
  O documento CSDL de saída de retorno representa o modelo como um namespace, que contém entidades, associações e propriedades.  
   

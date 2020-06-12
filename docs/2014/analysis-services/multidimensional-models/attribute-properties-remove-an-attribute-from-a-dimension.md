@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b41387c1-6c7d-42dc-bc14-d40586acb769
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16097355f8be43310c9db8dd334215a2fbea4e85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a98ab434ca46b77e72ec70a133b07c776bfd795f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077243"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544768"
 ---
 # <a name="remove-an-attribute-from-a-dimension"></a>Remover um atributo de uma dimensão
   Para remover um atributo de uma dimensão no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], clique com o botão direito do mouse no atributo no painel **Atributos** da guia **Estrutura da Dimensão** do Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e em **Excluir**. Na caixa de diálogo **Excluir Objetos** , clique em **OK**. Isso remove o atributo da dimensão, mas não afeta a exibição da fonte de dados da dimensão.  

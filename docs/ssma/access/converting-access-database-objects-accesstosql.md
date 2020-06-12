@@ -1,5 +1,6 @@
 ---
 title: Convertendo objetos de banco de dados do Access (AccessToSQL) | Microsoft Docs
+description: Saiba como selecionar objetos de banco de dados do Access depois de se conectar a SQL Server/banco de dados SQL do Azure e, em seguida, converter os esquemas em esquemas de banco de dados SQL Server/SQL.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -29,21 +30,21 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006623"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84302801"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertendo AccessToSQL (objetos de banco de dados do Access)
-Depois de adicionar bancos de dados do Access e conectados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, o SSMA exibe os metadados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acesso e ou SQL Azure objetos de banco de dados. Agora você pode selecionar acessar objetos de banco de dados e, em seguida, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converter os esquemas em ou SQL Azure esquemas.  
+Depois de adicionar bancos de dados do Access e conectados ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, o SSMA exibe os metadados para acesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure objetos de banco de dados. Agora você pode selecionar acessar objetos de banco de dados e, em seguida, converter os esquemas em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure esquemas.  
   
 ## <a name="the-conversion-process"></a>O processo de conversão  
-A conversão de objetos de banco de dados usa as definições de objeto dos metadados de [!INCLUDE[tsql](../../includes/tsql-md.md)] acesso, converte-os em sintaxe equivalente e, em seguida, carrega essas informações no projeto. Em seguida, você pode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibir os objetos ou SQL Azure e suas propriedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando ou SQL Azure o Gerenciador de metadados.  
+A conversão de objetos de banco de dados usa as definições de objeto dos metadados de acesso, converte-os em [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe equivalente e, em seguida, carrega essas informações no projeto. Em seguida, você pode exibir os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos ou SQL Azure e suas propriedades usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure o Gerenciador de metadados.  
   
 > [!IMPORTANT]  
-> A conversão de objetos não cria os objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ou SQL Azure. Ele apenas converte as definições de objeto e armazena as informações no projeto do SSMA.  
+> A conversão de objetos não cria os objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Ele apenas converte as definições de objeto e armazena as informações no projeto do SSMA.  
   
 Durante a conversão, o SSMA imprime o status no painel de saída e mensagens de erro, aviso e informativas no painel de Lista de Erros. Use essas informações para determinar se você precisa modificar seus bancos de dados do Access ou seu processo de conversão para obter os resultados de conversão desejados. Você também pode usar as informações no tópico [preparando bancos de dados do Access para migração](preparing-access-databases-for-migration-accesstosql.md) para determinar o que será e não será convertido.  
   
@@ -51,7 +52,7 @@ Durante a conversão, o SSMA imprime o status no painel de saída e mensagens de
 Antes de converter objetos, examine as opções de conversão do projeto na caixa de diálogo **configurações do projeto** . Usando essa caixa de diálogo, você pode definir como o SSMA Converte colunas de memorando indexadas, chaves primárias, restrições de chave estrangeira, carimbos de data/hora e tabelas sem índices. Para obter mais informações, consulte [configurações do projeto (conversão)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>Resultados da conversão  
-A tabela a seguir mostra quais objetos de acesso são convertidos e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os objetos resultantes ou SQL Azure:  
+A tabela a seguir mostra quais objetos de acesso são convertidos e os objetos resultantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure:  
   
 |Objeto de acesso|Objeto SQL Server resultante|  
 |-----------------|-------------------------------|  
@@ -100,7 +101,7 @@ Para converter objetos de banco de dados do Access, primeiro você deve selecion
 4.  Examine as mensagens no painel de **saída** e quaisquer erros e avisos no painel de **lista de erros** .  
   
 ## <a name="altering-tables-and-indexes"></a>Alterando tabelas e índices  
-Depois de converter os metadados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acesso para ou SQL Azure metadados e antes de carregar os objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ou SQL Azure, você pode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alterar ou SQL Azure tabelas e índices.  
+Depois de converter os metadados de acesso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure metadados e antes de carregar os objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você pode alterar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure tabelas e índices.  
   
 **Para alterar as propriedades da tabela ou do índice**  
   

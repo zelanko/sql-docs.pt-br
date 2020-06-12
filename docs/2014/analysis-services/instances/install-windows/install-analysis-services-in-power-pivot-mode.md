@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82836ab9b7d4d191f48895e215ffb9293f4ffe97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487387"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543938"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>Instalação do PowerPivot para SharePoint 2013
   Os procedimentos neste tópico conduzem você pela instalação de servidor único de um servidor [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo de implantação do SharePoint. As etapas incluem a execução do assistente de instalação do SQL Server, bem como as tarefas de configuração que usam a Administração Central do SharePoint 2013.  
@@ -24,7 +23,7 @@ ms.locfileid: "81487387"
   
  **Neste tópico:**  
   
- [Informações](#bkmk_background)  
+ [Tela de fundo](#bkmk_background)  
   
  [Pré-requisitos](#bkmk_prereq)  
   
@@ -65,14 +64,14 @@ ms.locfileid: "81487387"
   
 5.  Examine [os requisitos de hardware e software do Analysis Services Server no modo do SharePoint &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
   
-6.  Examine as notas de versão nas [notas de versão do SQL Server 2012 Service Pack 1](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
+6.  Examine as notas de versão nas [notas de versão do SQL Server 2012 Service Pack 1](https://go.microsoft.com/fwlink/?LinkID=248389) ( https://go.microsoft.com/fwlink/?LinkID=248389) .  
   
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a> Requisitos de edição do SQL Server  
- Os recursos de business intelligence não estão disponíveis em todas as edições do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obter detalhes, consulte [recursos com suporte nas edições do SQL Server 2012https://go.microsoft.com/fwlink/?linkid=232473) (](https://go.microsoft.com/fwlink/?linkid=232473) e [edições e componentes do SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+ Os recursos de business intelligence não estão disponíveis em todas as edições do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obter detalhes, consulte [recursos com suporte nas edições do SQL Server 2012 https://go.microsoft.com/fwlink/?linkid=232473) (](https://go.microsoft.com/fwlink/?linkid=232473) e [edições e componentes do SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
- As notas de versão atuais podem ser encontradas em [notas de versão do SQL Server 2012 SP1](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
+ As notas de versão atuais podem ser encontradas em [notas de versão do SQL Server 2012 SP1](https://go.microsoft.com/fwlink/?LinkID=248389) ( https://go.microsoft.com/fwlink/?LinkID=248389) .  
   
- [Notas de versão do Microsoft SQL Serverhttps://go.microsoft.com/fwlink/?LinkId=236893)2012 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
+ [Notas de versão do Microsoft SQL Server https://go.microsoft.com/fwlink/?LinkId=236893) 2012 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
 ##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>Etapa 1: instalar o PowerPivot para SharePoint  
  Nesta etapa, você executa a Instalação do SQL Server para instalar um servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do SharePoint. Em uma etapa subsequente, configure os Serviços do Excel para usar esse servidor para modelos de dados da pasta de trabalho.  
@@ -83,7 +82,7 @@ ms.locfileid: "81487387"
   
 3.  Clique em **Nova instalação autônoma do SQL Server ou adicionar recursos a uma instalação existente**.  
   
-4.  Se a página **Chave do Produto (Product Key)** aparecer, especifique a edição de avaliação ou digite a chave do produto (product key) de uma cópia licenciada da edição empresarial. Clique em **Avançar**. Para obter mais informações sobre edições, consulte [Editions and Components of SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+4.  Se a página **Chave do Produto (Product Key)** aparecer, especifique a edição de avaliação ou digite a chave do produto (product key) de uma cópia licenciada da edição empresarial. Clique em **Próximo**. Para obter mais informações sobre edições, consulte [Editions and Components of SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 5.  Examine e aceite os Termos de Licença do Software Microsoft do acordo e clique em **Avançar**.  
   
@@ -103,13 +102,13 @@ ms.locfileid: "81487387"
   
      Se você adicionou o Mecanismo de Banco de Dados, ele foi instalado como uma instância nomeada do **PowerPivot** . Sempre que você especificar uma conexão com esta instância, insira o nome do banco de dados neste formato: [`servername`]\PowerPivot.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
      ![Função de instalação](../../../sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "Função de instalação")  
   
-11. Em Seleção de Recursos, uma lista somente leitura dos recursos será exibida para fins informativos. Não é possível adicionar ou remover os itens pré-selecionados para essa função. Clique em **Avançar**.  
+11. Em Seleção de Recursos, uma lista somente leitura dos recursos será exibida para fins informativos. Não é possível adicionar ou remover os itens pré-selecionados para essa função. Clique em **Próximo**.  
   
-12. Na página **Configuração da Instância** , um nome de instância somente leitura do 'PowerPivot' é exibido para fins informativos. Esse nome de instância é obrigatório e não pode ser modificado. No entanto, é possível inserir um ID da Instância exclusivo para especificar um nome de diretório descritivo e chaves do Registro. Clique em **Avançar**.  
+12. Na página **Configuração da Instância** , um nome de instância somente leitura do 'PowerPivot' é exibido para fins informativos. Esse nome de instância é obrigatório e não pode ser modificado. No entanto, é possível inserir um ID da Instância exclusivo para especificar um nome de diretório descritivo e chaves do Registro. Clique em **Próximo**.  
   
 13. Na página de **Configuração do Servidor** , configure todos os serviços para **Tipo de Inicialização**automática. Especifique a conta de domínio e a senha desejadas para o **SQL Server Analysis Services**, **(1)** no diagrama a seguir.  
   
@@ -119,13 +118,13 @@ ms.locfileid: "81487387"
   
     -   Nunca provisione contas de serviço com sua própria conta de usuário de domínio. Isso concede ao servidor as mesmas permissões que você tem aos recursos em sua rede. Se um usuário mal-intencionado invadir o servidor, esse usuário estará conectado com suas credenciais de domínio. O usuário terá as permissões para baixar ou usar os mesmos dados e aplicativos que você.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
      ![Configuração do SSAS Server](../../../sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "Configuração do SSAS Server")  
   
 14. Se você estiver instalando o [!INCLUDE[ssDE](../../../includes/ssde-md.md)], a página **Configuração do Mecanismo de Banco de Dados** será exibida. Em Configuração do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , clique em **Adicionar Usuário Atual** para conceder à conta do usuário permissões de administrador na instância do Mecanismo de Banco de Dados.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 15. Na página **Configuração do Analysis Services** , clique em **Adicionar Usuário Atual** para conceder à conta do usuário permissões administrativas. Você precisará de permissão administrativa para configurar o servidor depois que Instalação seja concluída.  
   
@@ -134,7 +133,7 @@ ms.locfileid: "81487387"
     -   > [!NOTE]  
         >  Todos os aplicativos de serviço que precisam de acesso à instância de servidor do Analysis Services precisam ter as permissões administrativa do Analysis Service. Por exemplo, adicione as contas de serviço para Serviços do Excel, Power View e Performance Point Services. Além de isso, adicione a conta do farm do SharePoint, que é usada como identidade do aplicativo Web que hospeda a Administração Central.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 16. Na página **Relatório de Erros**, clique em **Avançar**.  
   
@@ -261,11 +260,11 @@ ms.locfileid: "81487387"
   
  **Redundância e carga do servidor:** instalar um segundo ou mais servidores do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no modo do SharePoint fornecerá a redundância da funcionalidade do servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Os servidores adicionais também distribuirão a carga entre os servidores. Para saber mais, consulte o seguinte:  
   
--   [Configure Analysis Services para processar modelos de dados nos serviços do Excel](https://technet.microsoft.com/library/jj614437\(v=office.15\)) (https://technet.microsoft.com/library/jj614437(v=office.15)).  
+-   [Configure Analysis Services para processar modelos de dados nos serviços do Excel](https://technet.microsoft.com/library/jj614437\(v=office.15\)) ( https://technet.microsoft.com/library/jj614437(v=office.15)) .  
   
--   [Gerenciar configurações do modelo de dados dos serviços do Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) (https://technet.microsoft.com/library/jj219780(v=office.15)).  
+-   [Gerenciar configurações do modelo de dados dos serviços do Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) ( https://technet.microsoft.com/library/jj219780(v=office.15)) .  
   
- ![As configurações do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") [enviam comentários e informações de contato por meio do Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![As configurações do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") [enviam comentários e informações de contato por meio do Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) ( https://connect.microsoft.com/SQLServer/Feedback) .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Migrar o PowerPivot para o SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)   

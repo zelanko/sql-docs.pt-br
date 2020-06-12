@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c4d728f810da7abf96d1addc6ef91156a3d5ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081030"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544418"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Assistente de Previsão (Suplementos de Mineração de Dados para Excel)
   ![Assistente para Associação na faixa de opções Mineração de Dados](media/dmc-forecast.gif "Assistente para Associação na faixa de opções Mineração de Dados")  
@@ -41,7 +40,7 @@ ms.locfileid: "66081030"
   
 3.  Na página **previsão** , para carimbo de data/ **hora**, selecione uma coluna que contenha um valor numérico exclusivo (isso inclui valores de dados e de hora) que podem ser usados como a série de casos. A fonte de dados deve ser classificada em ordem crescente por essa coluna.  
   
-     Se os dados não tiverem essa coluna, você poderá usar a opção \<sem carimbo de data/hora>. O assistente adicionará uma coluna de ordem exclusiva para os dados de entrada; em virtude disso, você deverá assegurar que os dados sejam classificados da maneira desejada antes de executar o assistente e escolher essa opção.  
+     Se os dados não tiverem essa coluna, você poderá usar a opção \<no time stamp> . O assistente adicionará uma coluna de ordem exclusiva para os dados de entrada; em virtude disso, você deverá assegurar que os dados sejam classificados da maneira desejada antes de executar o assistente e escolher essa opção.  
   
 4.  Opcionalmente, você pode clicar em **parâmetros** e personalizar o comportamento do modelo de mineração.  
   

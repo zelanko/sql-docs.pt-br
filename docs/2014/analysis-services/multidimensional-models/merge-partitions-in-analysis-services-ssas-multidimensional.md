@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65f7c51f3bba2431ce78f6a9287aedeef0fff7b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073644"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546078"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mesclar partições no Analysis Services (SSAS - Multidimensional)
   É possível mesclar partições em um banco de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para consolidar dados de fatos de várias partições do mesmo grupo de medidas.  
@@ -117,7 +116,7 @@ ms.locfileid: "66073644"
   
 1.  No Pesquisador de Objetos, expanda o nó **Grupos de Medidas** do cubo que contém as partições que você deseja mesclar, expanda **Partições**, clique com o botão direito do mouse na partição que é o destino da operação de mesclagem. Por exemplo, se você estiver movendo dados de fatos trimestrais para uma partição que armazena dados de fatos anuais, selecione a partição que contém os dados de fatos anuais.  
   
-2.  Clique em **mesclar partições** para abrir a caixa de diálogo **>nome da partição da \<partição de mesclagem** .  
+2.  Clique em **mesclar partições** para abrir a caixa de diálogo ** \<partition name> partição de mesclagem** .  
   
 3.  Em **Partições de Origem**, marque a caixa de seleção ao lado de cada partição de origem a ser mesclada com a partição de destino e clique em **OK**.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66073644"
   
 4.  Clique com o botão direito do mouse na partição que contém os dados acumulados e selecione **Propriedades**.  
   
-5.  Abra a `Source` Propriedade e modifique a cláusula WHERE para que ela inclua os dados da partição que você acabou de Mesclar. Lembre-se `Source` de que a propriedade não é atualizada automaticamente. Se você reprocessar sem primeiro atualizar o `Source`, talvez não obtenha todos os dados esperados.  
+5.  Abra a `Source` propriedade e modifique a cláusula WHERE para que ela inclua os dados da partição que você acabou de Mesclar. Lembre-se de que a `Source` propriedade não é atualizada automaticamente. Se você reprocessar sem primeiro atualizar o `Source` , talvez não obtenha todos os dados esperados.  
   
 ##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> Como mesclar partições usando o XMLA  
  Consulte este tópico para obter informações, [Mesclando partições &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  

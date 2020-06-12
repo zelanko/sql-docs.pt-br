@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bee7eee5-0650-41f1-a372-5076ae97a58c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6592d81e91e0582c79bc1a8bb1264b6ab9a7b733
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b29901213da4653c2d8867b9f450b359c39bded3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080702"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544249"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>Caixa de diálogo de informações de representação (Assistente de Importação de Tabela)
   Use a página **Informações sobre Representação** para especificar as credenciais que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usará para se conectar à fonte de dados. Para obter mais informações sobre como a representação de credenciais, consulte [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "66080702"
  **Nome de usuário**  
  Digite o domínio e o nome da conta de usuário a serem usados. Use o seguinte formato:  
   
- Nome de **\\** domínio>* \<nome da conta de usuário>* * \<*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  Essa opção estará habilitada apenas se a opção **Usar um nome e uma senha específicos** estiver selecionada.  
   

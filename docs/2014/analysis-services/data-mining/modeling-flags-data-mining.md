@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f1c802f6503b84ff4f6879c18d3bffebb46d7ad
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083308"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521064"
 ---
 # <a name="modeling-flags-data-mining"></a>Sinalizadores de modelagem (Mineração de Dados)
-  Você pode usar sinalizadores de modelagem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no para fornecer informações adicionais a um algoritmo Data Mining sobre os dados que são definidos em uma tabela de casos. O algoritmo pode usar essas informações para criar um modelo de mineração de dados mais preciso.  
+  Você pode usar sinalizadores de modelagem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fornecer informações adicionais a um algoritmo Data Mining sobre os dados que são definidos em uma tabela de casos. O algoritmo pode usar essas informações para criar um modelo de mineração de dados mais preciso.  
   
  Alguns sinalizadores de modelagem são definidos no nível da estrutura de mineração, enquanto outros são definidos no nível de coluna do modelo de mineração. Por exemplo, o sinalizador de modelagem `NOT NULL` é usado com colunas da estrutura de mineração. Você pode definir sinalizadores de modelagem adicionais nas colunas de modelo de mineração, dependendo do algoritmo usado para criar o modelo.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ba8299e-b990-4f77-a3c0-eee64e1f4281
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0548709be4a95bf67b295fe90e06843feb7ec48c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97029c73af8fa749f611c788f29bbee179920659
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073303"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545811"
 ---
 # <a name="power-view-for-multidimensional-models"></a>Power View para Modelos Multidimensionais
   Os modelos multidimensionais do Microsoft SQL Server 2014 Analysis Services oferecem suporte à análise de dados ad-hoc, exploração e visualização usando o Microsoft Power View.  

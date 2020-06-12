@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69d44846f37960ebebf4bce03924270163dabe8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079265"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543548"
 ---
 # <a name="lesson-12-create-roles"></a>Lição 12: Criar Funções
   Nesta lição, você criará funções. As funções fornecem objeto de banco de dados modelo e segurança de dados, limitando o acesso somente a esses usuários do Windows, que são os membros da função. Cada função é definida com uma única permissão: Nenhum, Leitura, Leitura e Processo, Processo ou Administrador. As funções podem ser definidas durante a criação do modelo usando a caixa de diálogo Gerenciador de Funções no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Depois que um modelo foi implantado, você pode gerenciar funções usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Funções &#40;SSAS Tabular&#41;](tabular-models/roles-ssas-tabular.md).  
@@ -48,7 +47,7 @@ ms.locfileid: "66079265"
   
      Uma nova função com a permissão Nenhum é adicionada à lista.  
   
-3.  Clique na nova função e, na coluna **nome** , renomeie a função como `Internet Sales Manager`.  
+3.  Clique na nova função e, na coluna **nome** , renomeie a função como `Internet Sales Manager` .  
   
 4.  Na coluna **Permissões**, clique na lista suspensa e, em seguida, selecione a permissão **Leitura**.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66079265"
   
      Uma nova função com a permissão Nenhum é adicionada à lista.  
   
-3.  Clique na nova função e, na coluna **nome** , renomeie a função como `Internet Sales US`.  
+3.  Clique na nova função e, na coluna **nome** , renomeie a função como `Internet Sales US` .  
   
 4.  Na coluna **Permissões**, clique na lista suspensa e, em seguida, selecione a permissão **Leitura**.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66079265"
   
 1.  Na caixa de diálogo **Gerenciador de Funções** , clique em **Novo**.  
   
-2.  Clique na nova função e, na coluna **nome** , renomeie a função como `Internet Sales Administrator`.  
+2.  Clique na nova função e, na coluna **nome** , renomeie a função como `Internet Sales Administrator` .  
   
 3.  Na coluna **Permissões** , clique na lista suspensa e selecione a permissão **Administrador** .  
   

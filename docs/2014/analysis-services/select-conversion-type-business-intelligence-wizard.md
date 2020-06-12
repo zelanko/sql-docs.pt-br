@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3fd3d7607cad8c8e721e21f4e5ad00255817792
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069615"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538258"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Selecionar Tipo de Conversão (Assistente de Business Intelligence)
   Use a página **Selecionar Tipo de Conversão** para definir a relação entre as moedas locais e as moedas de relatório para transações armazenadas em várias moedas. Uma moeda local é a moeda na qual as transações de medidas selecionadas na página **Selecionar Medidas** estão armazenadas. Uma moeda de relatório é a moeda na qual as transações selecionadas na página **Selecionar Medidas** são convertidas.  

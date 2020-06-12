@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a08cdf759ad3accd1f3c1405cefff9cde6b5319f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081053"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544471"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Previsão (Ferramentas de Análise de Tabela para Excel)
   ![Botão Previsão na faixa de opções Ferramentas de Análise de Tabela](media/tat-forecast.gif "Botão Previsão na faixa de opções Ferramentas de Análise de Tabela")  
@@ -41,11 +40,11 @@ ms.locfileid: "66081053"
   
 3.  Especifique as colunas a serem previstas. A ferramenta seleciona automaticamente colunas nos dados que têm um tipo de dados previsível – ou seja, dados numéricos contínuos. Talvez a ferramenta não selecione algumas colunas que tenham dados numéricos contínuos caso elas contenham muitos valores de zero ou nulos, porque os dados ausentes podem afetar os resultados. Se isso acontecer, você poderá corrigir os dados usando a ferramenta [rerotular &#40;SQL Server suplementos de mineração de dados&#41;](relabel-sql-server-data-mining-add-ins.md) .  
   
-4.  Especifique a coluna que contém um identificador de data, tempo ou outra série. Se você selecionar a opção ** \<sem carimbo de data/hora>** a ferramenta criará uma série com base na sequência de linhas nos dados de origem.  
+4.  Especifique a coluna que contém um identificador de data, tempo ou outra série. Se você selecionar a opção, **\<no time stamp>** a ferramenta criará uma série com base na sequência de linhas nos dados de origem.  
   
 5.  Especifique o número de previsões a serem feitas.  
   
-6.  Se desejar, forneça uma dica ao algoritmo para informar se você espera que os dados sejam repetidos semanalmente, mensalmente ou em outros períodos. Se os dados não couberem em nenhum dos padrões determinados, ou se você não estiver ciente de quaisquer padrões, selecione ** \<detectar automaticamente>** para que a ferramenta Localize os períodos de tempo de repetição.  
+6.  Se desejar, forneça uma dica ao algoritmo para informar se você espera que os dados sejam repetidos semanalmente, mensalmente ou em outros períodos. Se os dados não couberem em nenhum dos padrões determinados, ou se você não estiver ciente de quaisquer padrões, selecione **\<detect automatically>** para que a ferramenta Localize os períodos de tempo de repetição.  
   
 7.  O assistente adiciona as previsões à tabela de origem e cria um relatório de previsão em uma nova planilha.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66081053"
 ## <a name="related-tools"></a>Ferramentas relacionadas  
  O Cliente de Mineração de Dados para Excel, um suplemento separado que fornece funções de mineração de dados mais avançadas, também contém um assistente para previsão.  
   
- A ferramenta de **previsão** (nas ferramentas de análise de tabela para Excel) e o assistente de **previsão** (no cliente de mineração de dados para Excel [!INCLUDE[msCoName](../includes/msconame-md.md)] ) usam o algoritmo Time Series.  
+ A ferramenta de **previsão** (nas ferramentas de análise de tabela para Excel) e o assistente de **previsão** (no cliente de mineração de dados para Excel) usam o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Time Series.  
   
 -   A ferramenta de **previsão** é mais fácil de usar porque configura automaticamente o algoritmo para usar as configurações mais adequadas para seus dados.  
   

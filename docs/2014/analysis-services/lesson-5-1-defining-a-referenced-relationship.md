@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08c0eeb1315b9ca7ab63a870e2e31ad4896b2d59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175295"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542918"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definindo uma relação referenciada
   Até este ponto no tutorial, cada dimensão de cubo que você definiu teve como base uma tabela que estava diretamente vinculada à tabela de fatos de um grupo de medidas por uma relação de chave primária para chave estrangeira. Nas tarefas deste tópico, você vinculará a dimensão **Geografia** à tabela de fatos para vendas do revendedor por meio da dimensão **Revendedor** , conhecida como *dimensão de referência*. Isso permite aos usuários dimensionar as vendas do revendedor por geografia. Para obter mais informações, consulte [Definir uma relação referenciada e as propriedades da relação referenciada](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).
@@ -88,7 +87,7 @@ ms.locfileid: "78175295"
 
      O atributo Geografia Principal na dimensão Revendedor será usado apenas para vincular a dimensão Geografia à tabela de fatos Vendas do Revendedor. Como ele não será usado para pesquisa, não há valores ao definir essa hierarquia de atributo como visível. Além disso, ordenar e otimizar a hierarquia de atributo afetará negativamente o desempenho do processamento. Entretanto, o atributo deve estar habilitado para servir como vínculo entre as duas dimensões.
 
-4.  Alterne para o designer de cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para o cubo do tutorial, clique na guia **uso da dimensão** e, em seguida, clique no botão de reticências (**...**) na interseção do grupo de medidas **vendas do revendedor** e da dimensão de cubo **geografia** .
+4.  Alterne para o designer de cubo para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo do tutorial, clique na guia **uso da dimensão** e, em seguida, clique no botão de reticências (**...**) na interseção do grupo de medidas **vendas do revendedor** e da dimensão de cubo **geografia** .
 
 5.  Na lista **Selecionar tipo de relação** , selecione **Referenciada**.
 
@@ -104,7 +103,7 @@ ms.locfileid: "78175295"
 
 9. Na lista **Dimensões** da guia **Uso da Dimensão** , clique com o botão direito do mouse em **Geografia**e clique em **Renomear**.
 
-10. Altere o nome dessa dimensão do cubo para `Reseller Geography`.
+10. Altere o nome dessa dimensão do cubo para `Reseller Geography` .
 
      Como agora essa dimensão de cubo está vinculada ao grupo de medidas **Vendas do Revendedor** , os usuários poderão definir seu uso explicitamente no cubo, evitando uma possível confusão do usuário.
 
@@ -114,7 +113,7 @@ ms.locfileid: "78175295"
 
 2.  Quando a implantação for concluída com êxito, clique na guia **Navegador** do Designer do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e clique no botão **Reconectar** .
 
-3.  No painel metadados, expanda `Reseller Geography`, clique com o botão direito do mouse em **geografia**e clique em **Adicionar à área da linha**.
+3.  No painel metadados, expanda `Reseller Geography` , clique com o botão direito do mouse em **geografia**e clique em **Adicionar à área da linha**.
 
      Observe que agora a medida **Vendas do Revendedor/Valor das Vendas** foi dimensionada corretamente pelo atributo **País/Região** da hierarquia definida pelo usuário **Geografias** , como mostra a imagem a seguir.
 

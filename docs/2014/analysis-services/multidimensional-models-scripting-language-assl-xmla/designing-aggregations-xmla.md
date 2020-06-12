@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 632cc071605cff6e42adec4acd32c9bd9949fc77
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702126"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545038"
 ---
 # <a name="designing-aggregations-xmla"></a>Criando agregações (XMLA)
   Designs de agregação estão associados a partições de um determinado grupo de medidas para garantir que as partições usem a mesma estrutura ao armazenarem agregações. Usar a mesma estrutura de armazenamento para partições permite que você defina facilmente as partições que podem ser mescladas posteriormente usando o comando [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) . Para obter mais informações sobre designs de agregação, consulte [agregações e designs de agregação](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -36,18 +35,18 @@ ms.locfileid: "62702126"
 ## <a name="controlling-the-design-process"></a>Controlando o processo de design  
  Você pode usar as seguintes propriedades do comando `DesignAggregations` para controlar o algoritmo usado na definição de agregações para o design de agregação:  
   
--   A propriedade [Steps](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/steps-element-xmla) determina quantas iterações `DesignAggregations` o comando deve executar antes de retornar o controle ao aplicativo cliente.  
+-   A propriedade [Steps](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/steps-element-xmla) determina quantas iterações o `DesignAggregations` comando deve executar antes de retornar o controle ao aplicativo cliente.  
   
 -   A propriedade [time](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/time-element-xmla) determina quantos milissegundos o `DesignAggregations` comando deve levar antes de retornar o controle ao aplicativo cliente.  
   
--   A propriedade [Optimization](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/optimization-element-xmla) determina a porcentagem estimada de melhoria de `DesignAggregations` desempenho que o comando deve tentar alcançar. Se você estiver criando agregações iterativamente, só terá de enviar essa propriedade no primeiro comando.  
+-   A propriedade [Optimization](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/optimization-element-xmla) determina a porcentagem estimada de melhoria de desempenho que o `DesignAggregations` comando deve tentar alcançar. Se você estiver criando agregações iterativamente, só terá de enviar essa propriedade no primeiro comando.  
   
--   A propriedade de [armazenamento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla) determina a quantidade estimada de armazenamento em disco, em bytes, `DesignAggregations` usada pelo comando. Se você estiver criando agregações iterativamente, só terá de enviar essa propriedade no primeiro comando.  
+-   A propriedade de [armazenamento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla) determina a quantidade estimada de armazenamento em disco, em bytes, usada pelo `DesignAggregations` comando. Se você estiver criando agregações iterativamente, só terá de enviar essa propriedade no primeiro comando.  
   
--   A propriedade [materializar](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/materialize-element-xmla) determina se `DesignAggregations` o comando deve criar as agregações definidas durante o processo de design. Se estiver criando agregações iterativamente, essa propriedade deve ser definida como falsa até que você esteja pronto para salvar as agregações criadas. Quando definida como verdadeira, o processo de design atual terminará e as agregações definidas serão adicionadas ao design de agregação especificado.  
+-   A propriedade [materializar](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/materialize-element-xmla) determina se o `DesignAggregations` comando deve criar as agregações definidas durante o processo de design. Se estiver criando agregações iterativamente, essa propriedade deve ser definida como falsa até que você esteja pronto para salvar as agregações criadas. Quando definida como verdadeira, o processo de design atual terminará e as agregações definidas serão adicionadas ao design de agregação especificado.  
   
 ## <a name="specifying-queries"></a>Especificando consultas  
- O comando DesignAggregations dá suporte ao comando de otimização com base no uso, `Query` incluindo um ou mais elementos na propriedade [queries](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla) . A `Queries` propriedade pode conter um ou mais elementos de [consulta](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla) . Se a propriedade `Queries` não contiver elementos de `Query`, o design de agregação especificado no elemento de `Object` usará uma estrutura padrão com um conjunto geral de agregações. Esse conjunto geral de agregações é criado para atender aos critérios especificados nas propriedades `Optimization` e `Storage` do comando `DesignAggregations`.  
+ O comando DesignAggregations dá suporte ao comando de otimização com base no uso, incluindo um ou mais `Query` elementos na propriedade [queries](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla) . A `Queries` propriedade pode conter um ou mais elementos de [consulta](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla) . Se a propriedade `Queries` não contiver elementos de `Query`, o design de agregação especificado no elemento de `Object` usará uma estrutura padrão com um conjunto geral de agregações. Esse conjunto geral de agregações é criado para atender aos critérios especificados nas propriedades `Optimization` e `Storage` do comando `DesignAggregations`.  
   
  Cada elemento `Query` representa uma meta de consulta usada pelo processo de design para definir agregações que se destinam às consultas usadas com mais frequência. Você pode especificar suas próprias consultas de meta ou pode usar as informações armazenadas por uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no log de consultas para recuperar informações sobre as consultas usadas com mais frequência. O Assistente de Otimização com Base no Uso usa o log de consultas para recuperar consultas de meta com base no tempo, no uso ou em um usuário especificado quando envia um comando `DesignAggregations`. Para obter mais informações, consulte [Ajuda F1 do assistente de otimização com base no uso](../usage-based-optimization-wizard-f1-help.md).  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62702126"
 > [!NOTE]  
 >  Alguns atributos não são considerados no conjunto de dados. Para obter mais informações sobre atributos excluídos, consulte [elemento Query &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla).  
   
- Cada dimensão no grupo de medidas que contém o design de agregação é representada *Dataset* por um valor de `Query` conjunto de valores no elemento. A ordem de valores *Dataset* deve coincidir com a ordem de dimensões incluída no grupo de medidas.  
+ Cada dimensão no grupo de medidas que contém o design de agregação é representada por um valor de *conjunto* de valores no `Query` elemento. A ordem de valores *Dataset* deve coincidir com a ordem de dimensões incluída no grupo de medidas.  
   
 ## <a name="designing-aggregations-using-iterative-or-batch-processes"></a>Criando agregações usando processos iterativos ou em lote  
  Você pode usar o comando `DesignAggregations` como parte de um processo iterativo ou de um processo em lote, dependendo da interatividade exigida pelo processo de design.  
@@ -103,12 +102,12 @@ ms.locfileid: "62702126"
   
 |Coluna|Tipo de dados|Descrição|  
 |------------|---------------|-----------------|  
-|Etapas|Integer|O número de etapas executadas pelo comando antes que ele devolva o controle ao aplicativo cliente.|  
+|Etapas|Inteiro|O número de etapas executadas pelo comando antes que ele devolva o controle ao aplicativo cliente.|  
 |Hora|Long integer|O número de milissegundos que o comando leva antes de devolver o controle ao aplicativo cliente.|  
-|Otimização|Double|A porcentagem estimada de aperfeiçoamento de desempenho atingida pelo comando antes de devolver o controle ao aplicativo cliente.|  
+|Optimization|Double|A porcentagem estimada de aperfeiçoamento de desempenho atingida pelo comando antes de devolver o controle ao aplicativo cliente.|  
 |Armazenamento|Long integer|O número estimado de bytes que o comando leva antes de devolver o controle ao aplicativo cliente.|  
 |Agregações|Long integer|O número de agregações definido pelo comando antes de devolver o controle ao aplicativo cliente.|  
-|LastStep|Boolean|Indica se os dados do conjunto de linhas representam a última etapa no processo de design. Se a propriedade `Materialize` do comando foi definida como verdadeira, o valor dessa coluna será definido como true.|  
+|LastStep|Booliano|Indica se os dados do conjunto de linhas representam a última etapa no processo de design. Se a propriedade `Materialize` do comando foi definida como verdadeira, o valor dessa coluna será definido como true.|  
   
  Você pode usar as estatísticas de design contidas no conjunto de linhas retornadas depois de cada comando `DesignAggregations` no design iterativo e no design em lote. No design iterativo, você pode usar as estatísticas de design para determinar e exibir o andamento. Quando estiver criando agregações em lote, poderá usar as estatísticas de design para determinar o número de agregações criadas pelo comando.  
   

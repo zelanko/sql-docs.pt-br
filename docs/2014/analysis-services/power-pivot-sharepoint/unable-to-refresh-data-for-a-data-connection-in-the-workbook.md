@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81a72e0009659e06fd27e9c402f17ddab259d228
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070939"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540168"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Não é possível atualizar dados de uma conexão de dados na pasta de trabalho. Tente outra vez ou entre em contato com o administrador do sistema. As conexões a seguir não foram atualizadas: Dados PowerPivot
   Para pastas de trabalho do Excel contendo dados PowerPivot, os Serviços do Excel retornam este erro quando submetem uma solicitação de conexão a um servidor do PowerPivot e a solicitação falha.  
@@ -40,7 +39,7 @@ ms.locfileid: "66070939"
   
  A pasta de trabalho que você está tentando abrir pode ter sido criada na versão SQL Server 2008 R2 do PowerPivot para Excel. Muito provavelmente, o provedor de dados do Analysis Services especificado na cadeia de conexão de dados não está presente no computador que está executando a solicitação.  
   
- Se esse for o caso, você encontrará essa mensagem no log ULS: "falha na atualização de ' dados PowerPivot ' na URL da pasta\<de trabalho '> '", seguida por "não é possível obter uma conexão".  
+ Se esse for o caso, você encontrará essa mensagem no log ULS: "falha na atualização de ' dados PowerPivot ' na pasta de trabalho ' \<URL to workbook> '", seguida por "não é possível obter uma conexão".  
   
  Para determinar a versão da pasta de trabalho, abra-a no Excel e verifique o provedor de dados que está especificado na cadeia de conexão. Uma pasta de trabalho do SQL Server 2008 R2 usa MSOLAP.4 como provedor de dados.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66070939"
   
  Para solucionar este problema, una o computador ao mesmo domínio de servidor do PowerPivot ou instale um controlador de domínio em seu computador local. A segunda solução, instalar o controlador de domínio, exigirá que você crie contas de domínio locais para todos os serviços e usuários. Você precisará configurar contas de serviço e permissões do SharePoint para as contas que definir.  
   
- Instale um controlador de domínio em seu computador será útil se o seu objetivo for usar o PowerPivot para SharePoint no estado offline. Para obter instruções detalhadas sobre como usar o PowerPivot offline, consulte a entrada de blog "colocando o servidor PowerPivot fora da rede" [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241)em.  
+ Instale um controlador de domínio em seu computador será útil se o seu objetivo for usar o PowerPivot para SharePoint no estado offline. Para obter instruções detalhadas sobre como usar o PowerPivot offline, consulte a entrada de blog "colocando o servidor PowerPivot fora da rede" em [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241) .  
   
  **Cenário 4: servidor instável**  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d545f57db8b2c20630ef9443d84b9a8b30448234
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076433"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536498"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Criar uma dimensão usando o Assistente para Dimensões
   Você pode criar uma nova dimensão usando o Assistente para Dimensões no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "66076433"
   
          Se a lista **Colunas de Chaves** contiver várias colunas de chaves, você deverá especificar uma coluna de nome que forneça os valores de membro para o atributo de chave. Para fazer isso, você pode criar um cálculo nomeado na exibição da fonte de dados e usá-lo como a coluna de nome.  
   
-    5.  Clique em **Avançar**.  
+    5.  Clique em **Próximo**.  
   
 4.  Na página **Selecionar Tabelas Relacionadas** , selecione as tabelas relacionadas que você quer incluir em sua dimensão e clique em **Avançar**.  
   

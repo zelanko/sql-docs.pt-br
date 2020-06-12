@@ -14,17 +14,17 @@ ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8912b0e3cac7ccde8f89c1818fd9737c29ebc0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e1326a00a940b488487f9d602595e6528cb048
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211243"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856519"
 ---
 # <a name="delete-objects"></a>Excluir Objetos
   Use essa caixa de diálogo para excluir um banco de dados ou objeto de banco de dados.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Objeto a ser excluído**  
  Exibe os nomes, os tipos, os proprietários e o status dos objetos a serem excluídos, bem como qualquer mensagem sobre erros durante a execução.  
   

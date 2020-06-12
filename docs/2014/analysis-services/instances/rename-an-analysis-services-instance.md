@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f92fdd7ea01cb9a373bafc3357de65fd2e622add
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079617"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543776"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renomear uma instância do Analysis Services
-  Você pode renomear uma instância [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente do usando a caixa de diálogo **renomear instância** .  
+  Você pode renomear uma instância existente do usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a caixa de diálogo **renomear instância** .  
   
 > [!IMPORTANT]  
 >  Na renomeação da instância, a ferramenta Renomeação de Instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executada com privilégios elevados, atualizando o nome do serviço Windows, contas de segurança e entradas do Registro associados com essa instância. Para garantir a execução dessas ações, execute essa ferramenta como um administrador do sistema local.  
@@ -35,7 +34,7 @@ ms.locfileid: "66079617"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Para renomear uma instância do Analysis Services  
   
-1.  Inicie a ferramenta de **renomeação da instância** , **asinstancerename. exe**, de C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Inicie a ferramenta de **renomeação da instância** , **asinstancerename.exe**, em C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
   
 2.  Na caixa de diálogo **Renomear Instância** , na lista **Instância a ser renomeada** , selecione a instância que você deseja renomear.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66079617"
   
      O exemplo a seguir ilustra esse cenário. Suponha que você instalou um servidor de modo de tabela como uma instância chamada "tabular" usando a conta virtual padrão, resultando na seguinte configuração:  
   
-    1.  Nome da instância \<= servidor> \tabular  
+    1.  Nome da instância = \<server> \TABULAR  
   
     2.  Nome de serviço = MSOLAP$TABULAR  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079617"
   
      Agora suponha que você renomeie a instância como "TAB2". Como resultado da alteração de nome, sua configuração teria a seguinte aparência agora:  
   
-    1.  Nome da instância \<= servidor> \tab2  
+    1.  Nome da instância = \<server> \TAB2  
   
     2.  Nome de serviço = MSOLAP$TAB2  
   

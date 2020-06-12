@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075581"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546999"
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensões vinculadas
   Uma dimensão vinculada baseia-se uma dimensão criada e armazenada em outro banco de dados do Analysis Services na mesma versão e no mesmo nível de compatibilidade. Usando uma dimensão vinculada, você pode criar, armazenar e manter uma dimensão em um banco de dados, ao mesmo tempo disponibilizando-o para usuários de vários bancos de dados. Para usuários, uma dimensão vinculada aparece como qualquer outra dimensão.  
@@ -62,7 +61,7 @@ ms.locfileid: "66075581"
   
 2.  No Gerenciador de Conexões, verifique se o provedor é definido como **OLE DB Nativo\Provedor Microsoft OLE DB para Analysis Services 11.0**.  
   
-3.  Insira o nome do servidor (use *ServerName*\\*InstanceName* para uma instância nomeada)<sup>1</sup> ou digite **localhost** para se conectar a um Analysis Services Server em execução no mesmo computador.  
+3.  Insira o nome do servidor (use *ServerName* \\ *InstanceName* para uma instância nomeada)<sup>1</sup> ou digite **localhost** para se conectar a um Analysis Services Server em execução no mesmo computador.  
   
 4.  Use a autenticação do Windows na conexão.  
   

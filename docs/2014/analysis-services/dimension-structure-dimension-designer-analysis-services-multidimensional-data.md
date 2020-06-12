@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88409278-4f8a-4f1f-8730-e602866dbb36
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00bcf528f8f2c9a1541016d716d9d41c2ea7ee62
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081747"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528578"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Estrutura da Dimensão (Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use a página **Estrutura da Dimensão** no Designer de Dimensão para modificar os atributos, hierarquias e níveis da dimensão selecionada. A página **Estrutura da Dimensão** contém uma barra de ferramentas e três painéis.  

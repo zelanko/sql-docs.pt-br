@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69ccdaf9bf0f8b67309a1f88c0c44a90f3167b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 660f0d52d4057a9bdb9e2a0af0ed268d64a7747a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530922"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538842"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Script de tarefas administrativas no Analysis Services
   Você pode automatizar tarefas administrativas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gravando ou gerando scripts que podem ser executados manualmente ou agendados pelo SQL Server Agent. A tabela a seguir resume as opções de script disponíveis para você e fornece links para mais informações.  
@@ -33,7 +32,7 @@ ms.locfileid: "69530922"
 |MDX Script|.mdx|MDX é uma linguagem de consulta padrão do setor para fontes de dados analíticos que também faz parte da especificação de XMLA.<br /><br /> Você pode criar um arquivo de script MDX autônomo que consulte dados ou informações do sistema. Por exemplo, as exibições DMV (exibição de gerenciamento dinâmico) que expõem informações sobre as operações do servidor local e a integridade do servidor são acessadas por meio da instrução MDX Select.<br /><br /> O script MDX será executado em servidores no modo multidimensional e tabular. Você pode executar o script interativamente no SQL Server Management Studio ou em uma sessão do PowerShell usando `Invoke-ASCmd`.|[Conceitos básicos do script MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)<br /><br /> [Usar DMVs &#40;Exibições de Gerenciamento Dinâmico&#41; para monitorar o Analysis Services](instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)<br /><br /> [Usar modelos do Analysis Services no SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |DMX Script|.dmx|DMX é uma linguagem de definição, manipulação e consulta de dados para modelos de mineração de dados. Você pode usar um modelo como ponto de partida.|[Criar uma consulta DMX no SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Usar modelos do Analysis Services no SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] pacotes|.dtsx|[!INCLUDE[ssIS](../includes/ssis-md.md)] fornece tarefas e fluxos de dados que criam, modificam, excluem e processam objetos do Analysis Services, incluindo modelos de mineração de dados. Você pode agendar um pacote para ser executado usando o SQL Server Agent.|[Tarefa Executar DDL do Analysis Services](../integration-services/control-flow/analysis-services-execute-ddl-task.md)<br /><br /> [Tarefa Processamento do Analysis Services](../integration-services/control-flow/analysis-services-processing-task.md)<br /><br /> [Data Mining Query Task](../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Destino de treinamento do modelo de mineração de dados](../integration-services/data-flow/data-mining-model-training-destination.md)<br /><br /> [Destino de processamento de dimensões](../integration-services/data-flow/dimension-processing-destination.md)<br /><br /> [Destino de processamento de partições](../integration-services/data-flow/partition-processing-destination.md)|  
-|Objetos de Gerenciamento de Análise||AMO (Objetos de Gerenciamento de Análise) é uma interface gerenciada que os programadores podem usar para desenvolver aplicativos personalizados que automatizam operações administrativas. Usando o AMO, você pode desenvolver um aplicativo personalizado que executa scripts XMLA, MDX ou DMX fornecidos.|[Programando tarefas administrativas com AMO](https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo)|  
+|Objetos de Gerenciamento de Análise||AMO (Objetos de Gerenciamento de Análise) é uma interface gerenciada que os programadores podem usar para desenvolver aplicativos personalizados que automatizam operações administrativas. Usando o AMO, você pode desenvolver um aplicativo personalizado que executa scripts XMLA, MDX ou DMX fornecidos.|[Programando tarefas administrativas com o AMO](https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Analysis Services linguagem de script &#40;referência de&#41; do ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   

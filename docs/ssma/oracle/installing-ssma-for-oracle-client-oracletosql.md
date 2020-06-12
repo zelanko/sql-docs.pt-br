@@ -1,5 +1,6 @@
 ---
 title: Instalando o SSMA para Oracle Client (OracleToSQL) | Microsoft Docs
+description: Saiba mais sobre os pré-requisitos de instalação para o cliente do Assistente de Migração do SQL Server (SSMA) para Oracle e como instalá-los.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: fc295e108357040617bf6bdaa1af61fada2c97ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be5f48508c44dc456c2d19e1ff1eba985b982111
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259686"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293913"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Instalar o cliente SSMA para Oracle (OracleToSQL)
 O cliente do SSMA consiste nos arquivos de programa que executam as seguintes tarefas:  
@@ -26,16 +27,16 @@ O cliente do SSMA consiste nos arquivos de programa que executam as seguintes ta
   
 -   Conectar-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Converta objetos de banco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados Oracle em sintaxe.  
+-   Converta objetos de banco de dados Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxe.  
   
--   Carregue os objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Carregue os objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Migre dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o.  
+-   Migre dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Este tópico fornece os pré-requisitos de instalação e as instruções para instalar o SSMA.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
-O SSMA foi projetado para funcionar com o Oracle 9 ou versões posteriores e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]todas as edições do.  
+O SSMA foi projetado para funcionar com o Oracle 9 ou versões posteriores e todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Antes de instalar o SSMA, verifique se o computador atende aos seguintes requisitos:  
   
@@ -43,7 +44,7 @@ Antes de instalar o SSMA, verifique se o computador atende aos seguintes requisi
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 ou uma versão posterior.  
   
--   A [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versão 4,0 ou posterior. A [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versão 4,0 está disponível na mídia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do produto. Você também pode obtê-lo no [centro de desenvolvedores .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).  
+-   A [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versão 4,0 ou posterior. A [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versão 4,0 está disponível na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mídia do produto. Você também pode obtê-lo no [centro de desenvolvedores .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   Oracle Client 9,0 ou uma versão posterior e conectividade com os bancos de dados Oracle que você deseja migrar. A versão do cliente Oracle deve ser a mesma versão do, ou uma versão posterior à versão do banco de dados Oracle.  
   
@@ -60,7 +61,7 @@ Depois de baixar a versão mais recente, você deve extrair os arquivos de insta
   
 **Para instalar o cliente SSMA**  
   
-1.  Clique duas vezes em SSMA para Oracle *n*. Install. exe, em que *n* é o número de Build.  
+1.  Clique duas vezes em SSMA para Oracle *n*.Install.exe, em que *n* é o número da compilação.  
   
 2.  Na página de Boas-vindas, clique em **Avançar**.  
   
@@ -77,7 +78,7 @@ Depois de baixar a versão mais recente, você deve extrair os arquivos de insta
   
 O local de instalação padrão é C:\Program Files\Microsoft Assistente de Migração do SQL Server para Oracle.  
   
-Além dos arquivos de programa do SSMA, você também deve instalar o SSMA para Oracle Extension Pack em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [instalando componentes do SSMA em SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md).  
+Além dos arquivos de programa do SSMA, você também deve instalar o SSMA para Oracle Extension Pack em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [instalando componentes do SSMA em SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Instalando os componentes do SSMA em SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  

@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b93090918a0fffc9c98e1560b338177eff3d84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725380"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545924"
 ---
 # <a name="data-types-in-analysis-services"></a>Tipos de dados no Analysis Services
-  Para todos <xref:Microsoft.AnalysisServices.DataItem> os objetos [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , o oferece suporte ao `System.Data.OleDb.OleDbType`seguinte subconjunto de. Para definir ou ler o tipo de dados, use o [tipo de dados DataItem &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
+  Para todos os <xref:Microsoft.AnalysisServices.DataItem> objetos, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] o oferece suporte ao seguinte subconjunto de `System.Data.OleDb.OleDbType` . Para definir ou ler o tipo de dados, use o [tipo de dados DataItem &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
   
 ## <a name="supported-data-types"></a>Tipos de dados com suporte  
   
@@ -26,11 +25,11 @@ ms.locfileid: "62725380"
 |-|-|  
 |BigInt|Um inteiro de 64 bytes com sinal. O tipo de valor *bigint* representa inteiros com valores variando de 9.223.372.036.854.775.808 negativo para positivo 9.223.372.036.854.775.807.|  
 |Binário|Um fluxo de dados binários do tipo de **byte** . **Byte** é um tipo de valor que representa inteiros não assinados com valores que variam de 0 a 255.|  
-|Boolean|Instâncias desse tipo têm valores de `true` ou `false`.|  
-|Currency|Um valor de *moeda* que varia de-922337203685477,5808 a + 922337203685477,5807 com precisão de dez milésimos de uma unidade monetária (quatro casas decimais).|  
+|Booliano|Instâncias desse tipo têm valores de `true` ou `false`.|  
+|Moeda|Um valor de *moeda* que varia de-922337203685477,5808 a + 922337203685477,5807 com precisão de dez milésimos de uma unidade monetária (quatro casas decimais).|  
 |Data|Dados de data e hora armazenados como um duplo. A parte inteira é o número de dias desde 30 de dezembro de 1899 e a parte fracionária é uma fração de um dia ou hora do dia.|  
 |Double|Um número de ponto flutuante dentro do intervalo de -1,79769313486232E +308 a 1,79769313486232E +308. Um valor Double armazena informações numéricas com até 15 dígitos decimais de precisão.|  
-|Integer|Um número inteiro com sinal de 32 bits que representa números inteiros com valores que variam de 2.147.483.648 negativo a 2.147.483.647 positivo.|  
+|Inteiro|Um número inteiro com sinal de 32 bits que representa números inteiros com valores que variam de 2.147.483.648 negativo a 2.147.483.647 positivo.|  
 |Single|Um número de ponto flutuante dentro do intervalo de - 3,4028235E +38 a 3,4028235E +38. Um valor Single armazena informações numéricas com até sete dígitos decimais de precisão.|  
 |Smallint|Um inteiro com sinal de 16 bits. O tipo de valor *smallint* representa inteiros assinados com valores que variam de 32768 negativos a 32767 positivos.|  
 |Tinyint|Um inteiro com sinal de 8 bits. O tipo de valor Tinyint representa inteiros com valores que variam de 128 negativo a 127 positivo.|  
@@ -51,7 +50,7 @@ ms.locfileid: "62725380"
 ||CustomRollupColumn|Apenas WChar|  
 ||CustomRollupPropertiesColumn|Apenas WChar|  
 ||UnaryOperatorColumn|Apenas WChar|  
-||ValueColumn|Todos|  
+||ValueColumn|Tudo|  
 |AttributeTranslation|CaptionColumn|Apenas WChar|  
 |ScalarMiningStructureColumn|KeyColumns|Todos menos Binary|  
 ||NameColumn|Apenas WChar|  

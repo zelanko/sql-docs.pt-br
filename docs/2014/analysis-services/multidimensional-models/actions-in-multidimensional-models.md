@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19754c99e87c50121fc79b80649d7555b79ca59e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077501"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544870"
 ---
 # <a name="actions-in-multidimensional-models"></a>Ações em modelos multidimensionais
   Uma ação é uma operação iniciada pelo usuário final em um cubo selecionado ou em parte de um cubo. A operação pode iniciar um aplicativo com o item selecionado como parâmetro ou pode recuperar informações sobre o item selecionado. Para obter mais informações sobre ações, consulte [Ações &#40;Analysis Services – Dados Multidimensionais&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -57,7 +56,7 @@ ms.locfileid: "66077501"
  **Conteúdo da Ação**  
  Selecione o tipo de ação. A tabela a seguir resume os tipos disponíveis:  
   
-|Tipo|Descrição|  
+|Tipo|Description|  
 |----------|-----------------|  
 |Conjunto de Dados|Recupera um conjunto de dados.|  
 |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
@@ -72,7 +71,7 @@ ms.locfileid: "66077501"
   
 |Propriedade|Descrição|  
 |--------------|-----------------|  
-|**Invocação**|Especifica como a ação é executada. Interativo, o padrão, especifica que a ação será executada quando um usuário acessar um objeto. Os configurações possíveis são:<br /><br /> Lote<br /><br /> Interactive (Interativo)<br /><br /> Em Aberto|  
+|**Invocação**|Especifica como a ação é executada. Interativo, o padrão, especifica que a ação será executada quando um usuário acessar um objeto. Os configurações possíveis são:<br /><br /> Lote<br /><br /> Interativo<br /><br /> Em Aberto|  
 |**Aplicativo**|Descreve o aplicativo da ação.|  
 |**Descrição**|Descreve a ação.|  
 |**Legenda**|Fornece uma legenda que é exibida para a ação. Se a legenda for MDX, especifique `True` for **Caption é MDX**.|  

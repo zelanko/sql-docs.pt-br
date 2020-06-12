@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077493"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544828"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Anexar e desanexar Bancos de Dados do Analysis Services
-  Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deseja colocar o banco de dados offline em determinado período e colocá-lo online novamente na mesma instância do servidor ou em uma instância diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto. Para todos esses casos e muito mais, `Attach` os `Detach` comandos e permitem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que o DBA Coloque o banco de dados offline e coloque-o online novamente com pouco esforço.  
+  Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deseja colocar o banco de dados offline em determinado período e colocá-lo online novamente na mesma instância do servidor ou em uma instância diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto. Para todos esses casos e muito mais, `Attach` os `Detach` comandos e permitem que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA Coloque o banco de dados offline e coloque-o online novamente com pouco esforço.  
   
 ## <a name="attach-and-detach-commands"></a>Comandos Anexar e Desanexar  
  O comando `Attach` permite que o banco de dados que estava offline seja alterado para online. Você pode anexar o banco de dados à instância do servidor original ou a outra instância. Ao anexar um banco de dados, o usuário pode especificar a configuração **ReadWriteMode** para o banco de dados. O comando `Detach` permite colocar no modo offline um banco de dados do servidor.  

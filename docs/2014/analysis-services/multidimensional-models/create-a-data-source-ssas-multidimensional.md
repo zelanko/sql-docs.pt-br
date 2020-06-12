@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e7f387bb62f15acff8e3443e7e9fdc8888896e8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536666"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Criar uma fonte de dados (SSAS multidimensional)
   Em um modelo multidimensional do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um objeto de fonte de dados representa uma conexão para a fonte de dados com base na qual você está processando (ou importando) os dados. Um modelo multidimensional deve conter pelo menos um objeto de fonte de dados, mas você pode adicionar mais para combinar dados de vários data warehouses. Use as instruções neste tópico para criar um objeto de fonte de dados para seu modelo. Para obter mais informações sobre como definir propriedades nesse objeto, consulte [Definir propriedades da fonte de dados &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -82,11 +81,11 @@ ms.locfileid: "70175921"
   
      O provedor padrão de uma nova conexão é o provedor OLE DB nativo\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ele é usado para estabelecer a conexão com uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando OLE DB. Para conexões com um banco de dados relacional do SQL Server, com frequência, é mais rápido usar o Native OLE DB\SQL Server Native Client 11.0 do que usar provedores alternativos.  
   
-     Você pode escolher um provedor diferente para acessar outras fontes de dados. Para obter uma lista dos provedores e bancos de dados relacionais com suporte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]no, consulte [fontes de dado com suporte &#40;&#41;multidimensional do SSAS ](supported-data-sources-ssas-multidimensional.md).  
+     Você pode escolher um provedor diferente para acessar outras fontes de dados. Para obter uma lista dos provedores e bancos de dados relacionais com suporte no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consulte [fontes de dado com suporte &#40;&#41;multidimensional do SSAS ](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Insira as informações solicitadas pelo provedor selecionado para se conectar à fonte de dados subjacente. Se o provedor **OLE DB Nativo\SQL Server Native Client** estiver selecionado, insira as seguintes informações:  
   
-    1.  **Nome do Servidor** é o nome de rede da instância do Mecanismo de Banco de Dados. É possível especificá-lo como o endereço IP, o nome NETBIOS do computador ou um nome de domínio totalmente qualificado. Se o servidor estiver instalado como uma instância nomeada, você deverá incluir o nome da instância (por exemplo \<, computername>\\<InstanceName\>).  
+    1.  **Nome do Servidor** é o nome de rede da instância do Mecanismo de Banco de Dados. É possível especificá-lo como o endereço IP, o nome NETBIOS do computador ou um nome de domínio totalmente qualificado. Se o servidor estiver instalado como uma instância nomeada, você deverá incluir o nome da instância (por exemplo, \<computername> \\<InstanceName \> ).  
   
     2.  **Fazer logon no servidor** especifica como a conexão será autenticada. **Usar Autenticação do Windows** usa a autenticação do Windows. **Usar autenticação de SQL Server** especifica um logon de usuário de banco de dados para um ou SQL Server instância do Azure que dá suporte à autenticação de modo misto.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "70175921"
   
          A nova conexão aparece no painel **Conexões de Dados** da página **Selecione como definir a conexão** do Assistente para Fontes de Dados.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 7.  Em **Informações sobre Representação**, especifique as credenciais do Windows ou a identidade de usuário que o Analysis Services usará para se conectar à fonte de dados externa. Se você estiver usando autenticação de banco de dados, estas configurações serão ignoradas para fins de conexão.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "70175921"
   
      A conta que você especificar deve ter permissões de Leitura na fonte de dados.  
   
-8.  Clique em **Avançar**.  Em **Concluindo o Assistente**, insira um nome da fonte de dados ou use o nome padrão. O nome padrão é o nome do banco de dados especificado na conexão. O painel **Visualizar** exibe a cadeia de conexão dessa nova fonte de dados.  
+8.  Clique em **Próximo**.  Em **Concluindo o Assistente**, insira um nome da fonte de dados ou use o nome padrão. O nome padrão é o nome do banco de dados especificado na conexão. O painel **Visualizar** exibe a cadeia de conexão dessa nova fonte de dados.  
   
 9. Clique em **Concluir**.  A nova fonte de dados aparece na pasta **Fontes de Dados** do Gerenciador de Soluções.  
   
@@ -151,7 +150,7 @@ ms.locfileid: "70175921"
  Você pode criar mais de um objeto de fonte de dados para dar suporte a conexões com fontes de dados adicionais. Cada fonte de dados deve ter colunas que podem ser usadas para criar relações.  
   
 > [!NOTE]  
->  Se várias fontes de dados forem definidas e os dados forem consultados de várias fontes em uma única consulta, como para uma dimensão de flaked de neve, você deverá definir uma fonte de dados que ofereça `OpenRowset`suporte a consultas remotas usando o. Normalmente, será uma fonte de dados do Microsoft SQL Server.  
+>  Se várias fontes de dados forem definidas e os dados forem consultados de várias fontes em uma única consulta, como para uma dimensão de flaked de neve, você deverá definir uma fonte de dados que ofereça suporte a consultas remotas usando o `OpenRowset` . Normalmente, será uma fonte de dados do Microsoft SQL Server.  
   
  Os requisitos para usar várias fontes de dados incluem o seguinte:  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65840066d3e95571db511a2015a1bee64aa8d922
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702044"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544948"
 ---
 # <a name="merging-partitions-xmla"></a>Mesclando partições (XMLA)
   Se as partições tiverem o mesmo design e estrutura de agregação, você poderá mesclar a partição usando o comando [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) no XML for Analysis (XMLA). A mesclagem de partições é uma ação importante a ser executada quando você gerencia partições, principalmente as partições que contêm dados históricos divididos por data.  
@@ -46,7 +45,7 @@ ms.locfileid: "62702044"
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="description"></a>Descrição  
- O exemplo a seguir mescla todas as partições no grupo de medidas **Customer** Counts do cubo **Adventure Works** no banco de dados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exemplo do **Adventure Works DW** na partição **Customers_2004** .  
+ O exemplo a seguir mescla todas as partições no grupo de medidas **Customer** Counts do cubo **Adventure Works** no banco de dados de exemplo do **Adventure Works DW** na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] partição **Customers_2004** .  
   
 ### <a name="code"></a>Código  
   

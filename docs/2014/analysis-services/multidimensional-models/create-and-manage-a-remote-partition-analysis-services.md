@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c87de5fb72036848088afd2fbfd651be5d7b850
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076263"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536108"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Criar e gerenciar uma partição remota (Analysis Services)
   Ao particionar um grupo de medidas, você pode configurar um banco de dados secundário em uma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como um armazenamento da partição.  
@@ -80,7 +79,7 @@ ms.locfileid: "66076263"
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>Definir a propriedade do banco de dados MasterDataSourceID no servidor remoto (no SSMS)  
   
-1.  No servidor subordinado: clique com o botão direito do mouse na janela Banco de dados de armazenamento, armazenamento de banco de dados, ponto de **script como** | **alterar para** | **nova editor de consultas**.  
+1.  No servidor subordinado: clique com o botão direito do mouse na janela Banco de dados de armazenamento, armazenamento de banco de dados, ponto de **script como**  |  **alterar para**  |  **nova editor de consultas**.  
   
 2.  Adicione **MasterDataSourceID** ao XMLA e especifique a ID do banco de dados do cubo, db-master, como o valor. O XMLA deve ter a aparência a seguir.  
   

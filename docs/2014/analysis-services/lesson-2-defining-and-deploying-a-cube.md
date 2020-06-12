@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e149d5f7a6a8e14fbedc8e85ef31cbf42438b751
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078942"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543458"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lição 2: Definir e implantar um cubo
-  Depois de definir uma exibição da fonte de dados [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em seu projeto, você estará pronto para definir [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] um cubo inicial.  
+  Depois de definir uma exibição da fonte de dados em seu [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto, você estará pronto para definir um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo inicial.  
   
  Você pode definir um cubo e suas dimensões em uma etapa usando o Assistente para Cubos. Como alternativa, você pode definir uma ou mais dimensões e depois usar o Assistente para Cubos para definir um cubo que use aquelas dimensões. Se você estiver criando uma solução complexa, normalmente começará definindo as dimensões. Para obter mais informações, consulte [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md) ou [Cubos em modelos multidimensionais](multidimensional-models/cubes-in-multidimensional-models.md).  
   

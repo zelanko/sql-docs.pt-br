@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f37939fea1188c18079fc7e619cee6a336876e24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078034"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541848"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>Gerenciar Modelos (Suplementos de Mineração de Dados do SQL Server)
   ![Botão Gerenciar Modelos, faixa de opções Mineração de Dados](media/dmc-manage.gif "Botão Gerenciar Modelos, faixa de opções Mineração de Dados")  

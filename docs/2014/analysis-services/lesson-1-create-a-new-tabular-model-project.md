@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f21d1805eda75bfa0008214e2f46f54b67ab48f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079304"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543591"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lição 1: Criar um novo projeto de modelo de tabela
   Nesta lição, você criará um novo projeto de modelo de tabela em branco no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Quando seu novo projeto é criado, você pode começar a adicionar dados usando o Assistente de Importação de Tabela. Além de criar um novo projeto, esta lição inclui também uma introdução breve ao ambiente de criação de modelo de tabela em [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -35,20 +34,20 @@ ms.locfileid: "66079304"
   
 2.  Na caixa de diálogo **novo projeto** , em **modelos instalados**, clique em **Business Intelligence**, clique em **Analysis Services**e, em seguida, clique em **Analysis Services projeto de tabela**.  
   
-3.  Em **nome**, digite `AW Internet Sales Tabular Model`, em seguida, especifique um local para os arquivos de projeto.  
+3.  Em **nome**, digite `AW Internet Sales Tabular Model` , em seguida, especifique um local para os arquivos de projeto.  
   
      Por padrão, o **Nome da Solução** será o mesmo que o nome do projeto; no entanto, você pode digitar outro nome da solução.  
   
 4.  Clique em **OK**.  
   
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Compreendendo o ambiente de criação do modelo de tabela de ferramentas de dados do SQL Server  
- Agora que você criou um novo projeto de modelo de tabela, vamos reservar um momento para explorar o ambiente de criação de modelo de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] tabela no (Visual Studio 2010 ou posterior).  
+ Agora que você criou um novo projeto de modelo de tabela, vamos reservar um momento para explorar o ambiente de criação de modelo de tabela no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 ou posterior).  
   
- Depois que seu projeto for criado, ele será aberto no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Um modelo vazio será exibido no designer de modelos e o arquivo **Model.bim** estará selecionado na janela **Gerenciador de Soluções** . Quando você adiciona dados, tabelas e colunas aparecerão no designer. Se você não vir o designer (a janela vazia com a guia Model. BIM), em **Gerenciador de soluções**, em `AW Internet Sales Tabular Model`, clique duas vezes no arquivo **Model. BIM** .  
+ Depois que seu projeto for criado, ele será aberto no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Um modelo vazio será exibido no designer de modelos e o arquivo **Model.bim** estará selecionado na janela **Gerenciador de Soluções** . Quando você adiciona dados, tabelas e colunas aparecerão no designer. Se você não vir o designer (a janela vazia com a guia Model. BIM), em **Gerenciador de soluções**, em `AW Internet Sales Tabular Model` , clique duas vezes no arquivo **Model. BIM** .  
   
- Você pode exibir as propriedades básicas de projeto na janela **Propriedades** . Em **Gerenciador de soluções**, clique `AW Internet Sales Tabular Model`em. Observe que, na janela **Propriedades** , em **Arquivo de Projeto**, você verá **Modelo de Tabela de Vendas pela Internet do AW.smproj**. Esse é o nome do arquivo de projeto e, em **Pasta do Projeto**, você verá o local do arquivo do projeto.  
+ Você pode exibir as propriedades básicas de projeto na janela **Propriedades** . Em **Gerenciador de soluções**, clique em `AW Internet Sales Tabular Model` . Observe que, na janela **Propriedades** , em **Arquivo de Projeto**, você verá **Modelo de Tabela de Vendas pela Internet do AW.smproj**. Esse é o nome do arquivo de projeto e, em **Pasta do Projeto**, você verá o local do arquivo do projeto.  
   
- Em **Gerenciador de soluções**, clique com o botão `AW Internet Sales Tabular Model` direito do mouse no projeto e clique em **Propriedades**. A caixa de diálogo **Páginas de Propriedades de Modelo de Tabela de Vendas pela Internet do AW** é exibida. Essas são as propriedades do projeto avançadas. Você definirá posteriormente algumas dessas propriedades quando estiver pronto para implantar o modelo.  
+ Em **Gerenciador de soluções**, clique com o botão direito do mouse no `AW Internet Sales Tabular Model` projeto e clique em **Propriedades**. A caixa de diálogo **Páginas de Propriedades de Modelo de Tabela de Vendas pela Internet do AW** é exibida. Essas são as propriedades do projeto avançadas. Você definirá posteriormente algumas dessas propriedades quando estiver pronto para implantar o modelo.  
   
  Agora, vamos examinar as propriedades do modelo. Em **Gerenciador de Soluções**, clique em **Model.bim**. Na janela **Propriedades** , você verá as propriedades do modelo, sendo **Modo DirectQuery** a mais importante delas. Esta propriedade especifica se o modelo é implantado no modo Na Memória (Desativado) ou no modo DirectQuery (Ativado). Neste tutorial, você criará e implantará o modelo no modo Em Memória.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 301642f2e9ca7e1542a60c45f352bae6fe59712c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072271"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541051"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Caixa de diálogo Novo Grupo de Medidas (Designer de Cubo)
   Use a caixa de diálogo **Novo Grupo de Medidas** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para adicionar um novo grupo de medidas a um cubo no Designer de Cubo. Você pode exibir a caixa de diálogo **Novo Grupo de Medidas** das seguintes maneiras:  

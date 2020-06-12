@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef23d99b4542880d9756bbdad2e5cfb368b4f43c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070315"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539358"
 ---
 # <a name="lesson-3-rename-columns"></a>Lição 3: Renomear colunas
   Nesta lição, você renomeará muitas das colunas em cada tabela que você importou. A renomeação torna as colunas mais identificáveis e fáceis de navegar em ambos os designers de modelos, e também pelos usuários que selecionam campos em um aplicativo cliente. Para obter mais informações, consulte [Renomear uma tabela ou coluna &#40;SSAS Tabular&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "66070315"
   
      Quando você clica em uma guia, essa tabela fica ativa na janela do designer de modelos.  
   
-2.  Clique duas vezes no nome da coluna **CustomerKey** , `Customer  Id`digite e pressione Enter.  
+2.  Clique duas vezes no nome da coluna **CustomerKey** , digite `Customer  Id` e pressione Enter.  
   
     > [!TIP]  
     >  Você também pode renomear uma coluna na propriedade **nome da coluna** na janela **Propriedades** da coluna ou na exibição de diagrama.  
@@ -100,7 +99,7 @@ ms.locfileid: "66070315"
     |PostalCode|Código postal|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Remessa**  
+     **Produto**  
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
@@ -121,7 +120,7 @@ ms.locfileid: "66070315"
     |Preço do Revendedor|Preço do Revendedor|  
     |ModelName|Nome do modelo|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|Descrição|  
+    |EnglishDescription|Description|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
     |Status|Product Status|  

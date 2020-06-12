@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00ccbf26d040eb5285595a43a9eead93d1eeddbb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082107"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528802"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Definir Novas Medidas (Assistente para Cubos)
   Use a página **Definir Novas Medidas** para criar novas medidas para um cubo que está sendo criado sem usar uma fonte de dados.  
@@ -50,12 +49,12 @@ ms.locfileid: "66082107"
   
  Para alterar o grupo de medidas, clique no grupo de medidas e digite um novo grupo ou selecione um existente na lista.  
   
- **Tipo de dados**  
+ **Tipo de Dados**  
  Lista o tipo de dados da medida.  
   
  Para alterar o tipo de dados, clique no tipo de dados e selecione um tipo na lista.  
   
- **Agregação**  
+ **Aggregation**  
  Lista a agregação da medida.  
   
  Para alterar a agregação, clique na agregação e selecione um tipo de dados na lista.  
@@ -78,12 +77,12 @@ ms.locfileid: "66082107"
   
  Para alterar o grupo de medidas, clique no grupo de medidas e digite um novo grupo ou selecione um existente na lista.  
   
- **Tipo de dados**  
+ **Tipo de Dados**  
  Lista o tipo de dados da medida.  
   
  Para alterar o tipo de dados, clique no tipo de dados e selecione um tipo na lista.  
   
- **Agregação**  
+ **Aggregation**  
  Lista a agregação da medida.  
   
  Para alterar a agregação, clique na agregação e selecione um tipo de dados na lista.  

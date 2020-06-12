@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434eb332c7fc8829d515ac33102604dd9ca46d5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081068"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544392"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Geral (caixa de diálogo Propriedades da Partição) (SSMS)
   Use a página **Geral** da caixa de diálogo **Propriedades da Partição** no SQL Server Management Studio para definir as propriedades gerais de uma partição em um grupo de medidas para um cubo em um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -37,9 +36,9 @@ ms.locfileid: "66081068"
 |**Último Processamento**|Exibe a data e a hora do último processamento da partição.|  
 |**Última Atualização de Esquema**|Exibe a data e a hora da última atualização dos metadados da partição.|  
 |**Nome**|Exibe o nome da partição.|  
-|**Modo de Processamento**|Selecione o modo de processamento da partição. Para obter mais informações sobre os modos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de processamento para objetos, consulte [processamento de objeto de modelo multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
+|**Modo de Processamento**|Selecione o modo de processamento da partição. Para obter mais informações sobre os modos de processamento para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos, consulte [processamento de objeto de modelo multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
 |**ID da Fonte de Dados Remota**|Exibe o identificador da fonte de dados remota da qual são recuperados os dados de origem da partição.<br /><br /> Observação: essa propriedade contém um valor apenas para partições remotas.|  
-|**Slicer**|Exibe a expressão que identifica a fatia de dados representada pela partição.|  
+|**Fatia**|Exibe a expressão que identifica a fatia de dados representada pela partição.|  
 |**Fonte**|Exibe a tabela ou consulta que fornece os dados de origem da partição.|  
 |**State**|Exibe o estado do processamento atual da partição.|  
 |**Local de armazenamento**|Exibe a pasta na qual são armazenados os dados da partição.<br /><br /> Observação: essa propriedade conterá um valor apenas se um local de armazenamento diferente do local de armazenamento padrão for especificado para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  

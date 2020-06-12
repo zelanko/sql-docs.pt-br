@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5578bed4ce59ffb3c431c30e33418abe693a4165
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079873"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543838"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Verificar uma instalação do PowerPivot para SharePoint
   Uma instância do PowerPivot para SharePoint instalada em um farm do SharePoint é administrada por meio da Administração Central do SharePoint. É possível, ao menos, verificar as páginas na Administração Central e nos sites do SharePoint para verificar a disponibilidade dos componentes e recursos do servidor PowerPivot. No entanto, para verificar integralmente uma instalação, você deve ter uma pasta de trabalho PowerPivot que possa publicar no SharePoint e acessar em uma biblioteca. Para fins de teste, é possível publicar uma pasta de trabalho de exemplo que já contenha os dados PowerPivot e usá-la para confirmar se essa integração com o SharePoint está configurada corretamente.  
@@ -59,7 +58,7 @@ ms.locfileid: "66079873"
 ## <a name="verify-integration-at-the-site-level"></a>Verificar a integração no nível de site  
  Para verificar a integração do PowerPivot com um site do SharePoint, faça o seguinte:  
   
-1.  Em um navegador, abra o aplicativo Web criado. Se você usou valores padrão, você pode especificar http://\<o nome do seu computador> no endereço da URL.  
+1.  Em um navegador, abra o aplicativo Web criado. Se você usou valores padrão, poderá especificar http:// \<your computer name> no endereço da URL.  
   
 2.  Verifique se os recursos de acesso aos dados e de processamento do PowerPivot estão disponíveis no aplicativo. É possível fazer isso verificando a presença de modelos de biblioteca fornecidos pelo PowerPivot:  
   
@@ -84,14 +83,14 @@ ms.locfileid: "66079873"
   
 6.  Inicie o SQL Server Management Studio no grupo de programas [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] no menu Iniciar. Se essa ferramenta não estiver instalada no servidor, será possível passar à última etapa para confirmar a presença de arquivos armazenados em cache.  
   
-7.  Em Tipo de Servidor, selecione **Analysis Services**.  
+7.  Em tipo de servidor, selecione **Analysis Services**.  
   
-8.  Em nome do servidor, digite ** \<Server-Name> \powerpivot**, em que ** \<Server-Name>** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
+8.  Em nome do servidor, digite ** \<server-name> \powerpivot**, em que **\<server-name>** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
   
 9. Clique em **Conectar**. Isso verifica se o servidor do Analysis Services está disponível.  
   
 10. No Pesquisador de objetos, você pode clicar em **bancos** de dados para exibir a lista de arquivos de dados PowerPivot que são carregados.  
   
-11. No sistema de arquivos do computador, verifique a pasta a seguir para determinar se os arquivos estão armazenados no cache em disco. A presença de arquivos armazenados em cache é a verificação adicional de que a implantação é operacional. Para exibir o cache de arquivos, vá para \<a unidade>: \Program Files\Microsoft SQL Server\MSAS11. Pasta do aplicativo de serviço PowerPivot do POWERPIVOT\OLAP\Backup\Sandboxes\Default. Cada banco de dados armazenado em cache é armazenado em sua própria pasta, usando uma convenção de nomenclatura baseada em GUID para assegurar um nome exclusivo.  
+11. No sistema de arquivos do computador, verifique a pasta a seguir para determinar se os arquivos estão armazenados no cache em disco. A presença de arquivos armazenados em cache é a verificação adicional de que a implantação é operacional. Para exibir o cache de arquivos, acesse \<drive> : \Program Files\Microsoft SQL Server\MSAS11. Pasta do aplicativo de serviço PowerPivot do POWERPIVOT\OLAP\Backup\Sandboxes\Default. Cada banco de dados armazenado em cache é armazenado em sua própria pasta, usando uma convenção de nomenclatura baseada em GUID para assegurar um nome exclusivo.  
   
   

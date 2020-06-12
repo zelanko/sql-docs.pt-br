@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 85ed1433-81f9-468a-a14d-60c6f82bee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 439f46ba0fa58253572d017057bb236aa1bf2d67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99f98507289acd8f8fd0f2ff9ef8fed49813d80f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081324"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528432"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>Habilitar o Write-back de Dimensão (Dimensão) (Assistente de Business Intelligence)
   Use a página **Habilitar o Write-back de Dimensão** para selecionar uma dimensão para a qual o Assistente de Business Intelligence habilitará o write-back.  
@@ -26,7 +25,7 @@ ms.locfileid: "66081324"
 >  Essa página não será exibida se o Assistente de Business Intelligence tiver sido iniciado no Designer de Dimensão ou clicando com o botão direito do mouse em uma dimensão no Gerenciador de Soluções no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="options"></a>Opções  
- **Dimensão**  
+ **Dimensões**  
  Selecione a dimensão para a qual o assistente habilitará o write-back.  
   
 ## <a name="see-also"></a>Consulte Também  

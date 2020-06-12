@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 533b244a8a5b6ec5e2866b068cfbf5eb6f31a7a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72811594"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545098"
 ---
 # <a name="user-hierarchies"></a>Hierarquias do usuário
-  As hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  
+  As hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  
   
 |Ano|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -80,7 +79,7 @@ ms.locfileid: "72811594"
  O nível Província é populado com membros associados a outros membros no nível PaísRegião e os membros no nível Cidade são associados a seus membros correspondentes no nível Província. Entretanto, como o membro Cidade do Vaticano no nível PaísRegião não possui membros associados no nível Província, os membros devem ser associados do nível Cidade diretamente ao membro Cidade do Vaticano no nível PaísRegião. Devido às alterações, a hierarquia da dimensão está agora imperfeita. O pai de Cidade do Vaticano é a região/país Cidade do Vaticano, que não está imediatamente no nível acima do membro Cidade do Vaticano no nível Cidade. Para obter mais informações, consulte [Hierarquias desbalanceadas](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Hierarquias pai-filho  
- As hierarquias pai-filho de dimensões são definidas usando um atributo especial, chamado de atributo pai, para determinar como os membros relacionam-se entre si. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. O esquema de dimensão de uma hierarquia pai-filho depende de uma relação de autorreferência existente na tabela principal da dimensão. Por exemplo, o diagrama a seguir ilustra a tabela principal de dimensões de **dimorganização** no banco de dados de [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exemplo.  
+ As hierarquias pai-filho de dimensões são definidas usando um atributo especial, chamado de atributo pai, para determinar como os membros relacionam-se entre si. Um atributo pai descreve uma *relação de autorreferência*, ou *autojunção*, em uma tabela principal da dimensão. As hierarquias filho são construídas a partir de um único atributo pai. Somente um nível é atribuído a uma hierarquia pai-filho, pois os níveis existentes na hierarquia são extraídos das relações pai-filho entre os membros associados ao atributo pai. O esquema de dimensão de uma hierarquia pai-filho depende de uma relação de autorreferência existente na tabela principal da dimensão. Por exemplo, o diagrama a seguir ilustra a tabela principal de dimensões de **Dimorganização** no [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados de exemplo.  
   
  ![Junção autorreferenciável na tabela DimOrganization](../dev-guide/media/dimorganization.gif "Junção autorreferenciável na tabela DimOrganization")  
   

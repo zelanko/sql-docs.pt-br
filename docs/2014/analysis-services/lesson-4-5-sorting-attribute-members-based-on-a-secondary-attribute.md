@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfd8e0dcb72850dccb2cc6840f3e68baf37528b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493900"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543085"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Classificando membros de atributo com base em um atributo secundário
   Na Lição 3, você aprendeu a classificar membros de atributo com base no nome ou valor de chave deles. Aprendeu também a usar uma chave de membro composta para afetar os membros de atributo e a ordem de classificação. Para obter mais informações, consulte [Modificando a dimensão de data](lesson-3-4-modifying-the-date-dimension.md). No entanto, se nem o nome e nem a chave do atributo primário fornecerem a ordem de classificação desejada, você poderá usar um atributo secundário para obter a ordem desejada. Com a definição de uma relação entre os atributos, você pode usar o segundo atributo para classificar os membros do primeiro atributo.  

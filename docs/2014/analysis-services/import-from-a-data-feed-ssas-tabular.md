@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f1343f8234e23156981e416613cd2b899cf57f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080568"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544218"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importar de um feed de dados (SSAS tabular)
   Feeds de dados são um ou mais fluxos de dados XML gerados a partir de uma fonte de dados online e transmitidos para um documento ou aplicativo de destino. Você pode importar dados de um feed de dados para o modelo usando o Assistente de Importação de Tabela.  
@@ -122,7 +121,7 @@ ms.locfileid: "66080568"
   
 3.  Na página **Conectar a um Feed de Dados** , digite um nome descritivo para o feed que você está acessando. Se você estiver importando vários feeds ou fontes de dados, o uso de nomes descritivos para a conexão poderá ajudá-lo a lembrar como a conexão é usada.  
   
-4.  Em URL do feed de dados, digite um endereço para o serviço de dados \<da lista, substituindo o nome do servidor> pelo nome real do servidor do SharePoint:  
+4.  Em URL do feed de dados, digite um endereço para o serviço de dados da lista, substituindo \<server-name> pelo nome real do servidor do SharePoint:  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -156,7 +155,7 @@ ms.locfileid: "66080568"
   
 4.  Clique em **Procurar** e selecione um servidor de relatório.  
   
-     Se você usar relatórios regularmente em um servidor de relatório, talvez o servidor seja listado em **Sites e Servidores Recentes**. Caso contrário, em Nome, digite um endereço para um servidor de relatório e clique em **Abrir** para procurar as pastas no site de servidor de relatório. Um exemplo de endereço para um servidor de relatório pode\<ser http://ComputerName>/ReportServer.  
+     Se você usar relatórios regularmente em um servidor de relatório, talvez o servidor seja listado em **Sites e Servidores Recentes**. Caso contrário, em Nome, digite um endereço para um servidor de relatório e clique em **Abrir** para procurar as pastas no site de servidor de relatório. Um exemplo de endereço para um servidor de relatório pode ser http:// \<computername> /reportserver.  
   
 5.  Selecione o relatório e clique em **Abrir**. Se desejar, você pode colar um link para o relatório, incluindo o caminho completo e nome do relatório, na caixa de texto **Nome** . O Assistente de Importação de Tabela conecta-se ao relatório e o processa na área de visualização.  
   

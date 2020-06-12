@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 341468d521cebe1fda33d73ea999f3b6571cb01e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074273"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546348"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Trabalhando com a função RollupChildren (MDX)
   A função MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) [script for Search and Replace] acumula os filhos de um membro, aplicando um operador unário diferente a cada filho e retorna o valor desse ROLLUP como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
@@ -41,7 +40,7 @@ ms.locfileid: "66074273"
 ### <a name="using-a-custom-member-property"></a>Usando uma propriedade de membro personalizado  
  Se o cálculo acumulado for uma operação realizada com frequência, um método seria criar uma propriedade membro capaz de armazenar o operador que será usado com cada filho para um função específica. A tabela a seguir exibe os operadores unários válidos e descreve o resultado esperado.  
   
-|Operador|Result|  
+|Operador|Resultado|  
 |--------------|------------|  
 |+|total = total + filho atual|  
 |-|total = total – filho atual|  
@@ -64,7 +63,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  Quando a função é chamada, o valor de cada filho é aplicado ao total usando o operador armazenado na propriedade membro. Os membros de lucros interno e de exportação são ignorados e o total acumulado retornado pela função `RollupChildren` é multiplicado por 1,1.  
   
 ### <a name="using-the-iif-function"></a>Usando a função IIf  
- Se a operação de exemplo não for comum ou se a operação se aplicar somente a uma consulta MDX, a função [IIF](/sql/mdx/iif-mdx) poderá ser usada `RollupChildren` com a função para fornecer o mesmo resultado. A consulta MDX a seguir apresenta o mesmo resultado que o exemplo MDX anterior, mas sem reordenar para usar uma propriedade de membro personalizado:  
+ Se a operação de exemplo não for comum ou se a operação se aplicar somente a uma consulta MDX, a função [IIF](/sql/mdx/iif-mdx) poderá ser usada com a `RollupChildren` função para fornecer o mesmo resultado. A consulta MDX a seguir apresenta o mesmo resultado que o exemplo MDX anterior, mas sem reordenar para usar uma propriedade de membro personalizado:  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

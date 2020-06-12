@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de7fb2d398979bb1f3ced1319f068b70bff54c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889769"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669847"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Aplica-se A  
- Uma expressão que retorna uma tabela, como uma referência \<de coluna de tabela> ou uma função que retorna uma tabela.  
+ Uma expressão que retorna uma tabela, como uma \< referência de coluna de tabela> ou uma função que retorna uma tabela.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  \<> de expressão de tabela  
   
 ## <a name="remarks"></a>Comentários  
- A função **BottomSum** retorna as linhas inferiores em ordem crescente de classificação. A classificação baseia-se no valor avaliado da expressão \<de classificação> argumento para cada linha, de modo que a soma da \<expressão de classificação> valores é pelo menos o total determinado especificado pelo argumento \<Sum>. **BottomSum** retorna o menor número de elementos possíveis ao mesmo tempo em que atende ao valor SUM especificado.  
+ A função **BottomSum** retorna as linhas inferiores em ordem crescente de classificação. A classificação baseia-se no valor avaliado da \< expressão de classificação> argumento para cada linha, de modo que a soma da \< expressão de classificação> valores é pelo menos o total determinado especificado pelo \< argumento Sum>. **BottomSum** retorna o menor número de elementos possíveis ao mesmo tempo em que atende ao valor SUM especificado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma consulta de previsão em relação ao modelo de associação que você cria usando o [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

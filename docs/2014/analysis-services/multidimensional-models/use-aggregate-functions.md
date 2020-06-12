@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83cdc571019cffd8ae99e00f119541736c6f503b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072722"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541278"
 ---
 # <a name="use-aggregate-functions"></a>Usar funções de agregação
   Quando uma dimensão é usada para fatiar uma medida, a medida é resumida juntamente com hierarquias contidas nessa dimensão. O comportamento da soma depende da função de agregação especificada para a medida. Para mais medidas contendo dados numéricos, a função de agregação é `Sum`. O valor da medida totalizará valores diferentes, dependendo de qual nível da hierarquia está ativo.  
   
- No Analysis Services, cada medida que você cria é apoiada por uma função de agregação que determina a operação da medida. Os `Sum`tipos de agregação `Min`predefinidos incluem,, `Max`, `Count`a **contagem distinta**e várias outras funções mais especializadas. Como alternativa, se você precisar de agregações com base em fórmulas complexas ou personalizadas, poderá criar um cálculo de MDX em vez de usar uma função de agregação pré-compilada. Por exemplo, se você quiser definir uma medida para um valor de porcentagem, faria isso no MDX, usando uma medida calculada. Consulte [Instrução CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
+ No Analysis Services, cada medida que você cria é apoiada por uma função de agregação que determina a operação da medida. Os tipos de agregação predefinidos incluem `Sum` ,, `Min` , a `Max` `Count` **contagem distinta**e várias outras funções mais especializadas. Como alternativa, se você precisar de agregações com base em fórmulas complexas ou personalizadas, poderá criar um cálculo de MDX em vez de usar uma função de agregação pré-compilada. Por exemplo, se você quiser definir uma medida para um valor de porcentagem, faria isso no MDX, usando uma medida calculada. Consulte [Instrução CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
  Medidas criadas por meio do Assistente de cubo são atribuídas a um tipo de agregação como parte da definição da medida. O tipo de agregação é sempre `Sum`, supondo que a coluna de origem contém dados numéricos. `Sum` é atribuída, independentemente do tipo de dados da coluna de origem. Por exemplo, se você tiver usado o Assistente de cubo para criar medidas e preenchido todas as colunas por meio de uma tabela de fatos, notará que todas as medidas resultantes têm uma agregação de `Sum`, mesmo que a origem seja uma coluna de data e hora. Sempre examine os métodos de agregação pré-atribuídos para medidas criadas por meio do assistente para se certificar de que a função de agregação seja adequada.  
   

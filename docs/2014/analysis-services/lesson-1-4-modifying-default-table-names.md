@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44e7142da8c639f63b198983b1fda829c9099d38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079227"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543608"
 ---
 # <a name="modifying-default-table-names"></a>Modificando nomes de tabela padrão
   Você pode alterar o valor da propriedade **FriendlyName** para objetos na exibição da fonte de dados para facilitar sua observação e uso.  
@@ -33,11 +32,11 @@ ms.locfileid: "66079227"
   
      É mais fácil alterar as propriedades de cada tabela na exibição da fonte de dados quando a janela Propriedades permanece aberta. Caso não configure a janela para permanecer aberta usando o botão **Ocultar Automaticamente** , a janela fechará ao clicar em um objeto diferente no painel **Diagrama** .  
   
-3.  Altere a propriedade **FriendlyName** do objeto **FactInternetSales** para *`InternetSales`*.  
+3.  Altere a propriedade **FriendlyName** do objeto **FactInternetSales** para *`InternetSales`* .  
   
      Quando você clicar fora da célula da propriedade **FriendlyName** , a alteração será aplicada. Na próxima lição, você definirá um grupo de medidas com base nessa tabela de fatos. O nome da tabela de fatos será InternetSales em vez de FactInternetSales devido à alteração feita nessa lição.  
   
-4.  Clique em **DimProduct** no painel **Tabelas** . No janela Propriedades, altere a propriedade **FriendlyName** para *`Product`*.  
+4.  Clique em **DimProduct** no painel **Tabelas** . No janela Propriedades, altere a propriedade **FriendlyName** para *`Product`* .  
   
 5.  Altere a propriedade **FriendlyName** de cada tabela restante na exibição da fonte de dados da mesma forma para remover o prefixo "**Dim**".  
   

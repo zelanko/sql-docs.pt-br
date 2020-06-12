@@ -1,24 +1,32 @@
 ---
 title: O que há de novo no SSMA para Oracle (OracleToSQL) | Microsoft Docs
+description: Saiba mais sobre as alterações feitas no Assistente de Migração do SQL Server (SSMA) para Oracle (OracleToSQL) para cada versão.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 07dd930a853926be98dba5f2ca91bd7080b9a808
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 39da9754b75ebf1ce7dd5adb3df55d4d07718b32
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220681"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294063"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>O que há de novo no SSMA para Oracle (OracleToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para alterações de Oracle em cada versão.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+A versão v 8.10 do SSMA para Oracle contém pequenas melhorias de desempenho, bem como as seguintes alterações:
+
+* Correção para o problema do testador com tabelas organizadas por índice
+* Correção para os nomes dos procedimentos armazenados estendidos no pacote de extensões
 
 ## <a name="ssma-v89"></a>8.9 do SSMA v
 

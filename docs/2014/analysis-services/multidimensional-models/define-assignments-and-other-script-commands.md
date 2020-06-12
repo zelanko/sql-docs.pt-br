@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: caa3b6f49ce778b78f066abf687a3a51b61cc487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 184c998bb4bd27d077cca78e792a7e7712f87666
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075816"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547048"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>Definir atribuições e outros comandos de script
   Para criar um script vazio, no Designer de Cubo, na guia **Cálculos** , clique no ícone **Novo ScriptCommand** na barra de ferramentas. Quando você cria um novo script, inicialmente ele é exibido com um título em branco no painel **organizador de script** da guia cálculos. Os caracteres que você digitar no painel expressões de cálculo ficarão visíveis como o nome do item no **organizador de script**. Portanto, convém digitar um nome comentado na primeira linha para facilitar a identificação do script no painel **Organizador de Script** . Para obter mais informações, consulte [Introdução ao script MDX no Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892). Para obter mais informações sobre problemas de desempenho relacionados a cálculos e consultas MDX, consulte a seção "escrevendo MDX eficiente" no [Guia de desempenho do SQL Server 2005 Analysis Services](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  

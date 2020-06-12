@@ -1,5 +1,6 @@
 ---
 title: Especificando predicados em uma etapa de expressão de caminho | Microsoft Docs
+description: Saiba como especificar predicados na etapa eixo de uma expressão de caminho XQuery para filtrar uma sequência de nós XML.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45837533806f2294665abbb242627a39d041e6d6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946420"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529787"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Expressões de Caminho – Especificar Predicados
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,13 +71,13 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- Observe que em cada caso, o predicado associa-se ao nó na expressão de caminho em que ele é aplicado. Por exemplo, a primeira expressão de caminho seleciona o primeiro `Name` <elemento> dentro de cada nó/People/Person e, com a instância XML fornecida, retorna o seguinte:  
+ Observe que em cada caso, o predicado associa-se ao nó na expressão de caminho em que ele é aplicado. Por exemplo, a primeira expressão de caminho seleciona o primeiro <`Name` elemento> dentro de cada nó/People/Person e, com a instância XML fornecida, retorna o seguinte:  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
 ```  
   
- No entanto, a segunda expressão de caminho `Name` seleciona todos os elementos <> que estão no primeiro nó/People/Person. Portanto, ele retorna o seguinte:  
+ No entanto, a segunda expressão de caminho seleciona todos os `Name` elementos <> que estão no primeiro nó/People/Person. Portanto, ele retorna o seguinte:  
   
 ```  
 <Name>John</Name>  
@@ -105,7 +106,7 @@ select @x.query('/People/Person[contains(Name[1], "J") and xs:integer(Age[1]) < 
 /child::root/child::Location[attribute::LocationID=10]  
 ```  
   
- A condição especificada por esse predicado é aplicada a todos `Location` os <> nó filho do elemento. O resultado é que só aqueles locais de centro de trabalho cujo valor do atributo LocationID seja 10 serão retornados.  
+ A condição especificada por esse predicado é aplicada a todos os <`Location`> nó filho do elemento. O resultado é que só aqueles locais de centro de trabalho cujo valor do atributo LocationID seja 10 serão retornados.  
   
  A expressão de caminho anterior é executada na seguinte instrução SELECT:  
   
@@ -134,9 +135,9 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     A expressão de caminho nessa consulta retorna somente os nós `Location` de elemento <> que têm um atributo de lotes especificado. Se o predicado retornar uma sequência vazia para um `Location` <específico>, o local do centro de trabalho não será retornado no resultado.  
+     A expressão de caminho nessa consulta retorna somente os `Location` nós de elemento <> que têm um atributo de lotes especificado. Se o predicado retornar uma sequência vazia para um <específico `Location`>, o local do centro de trabalho não será retornado no resultado.  
   
-2.  Os valores de predicado só podem ser xs: Integer, xs:\*Boolean ou node. Para o\*nó, o predicado será avaliado como true se houver qualquer nó e false para uma sequência vazia. Qualquer outro tipo numérico, como dobro e tipo de float, gera um erro de tipo estático. O valor verdadeiro do predicado de uma expressão é True se e somente se o inteiro resultante for igual ao valor da posição de contexto. Além disso, somente valores literais inteiros e a função **Last ()** reduzem a cardinalidade da expressão de etapa filtrada como 1.  
+2.  Os valores de predicado só podem ser xs: Integer, xs: Boolean ou Node \* . Para \* o nó, o predicado será avaliado como true se houver qualquer nó e false para uma sequência vazia. Qualquer outro tipo numérico, como dobro e tipo de float, gera um erro de tipo estático. O valor verdadeiro do predicado de uma expressão é True se e somente se o inteiro resultante for igual ao valor da posição de contexto. Além disso, somente valores literais inteiros e a função **Last ()** reduzem a cardinalidade da expressão de etapa filtrada como 1.  
   
      Por exemplo, a consulta a seguir recupera o terceiro nó filho do elemento <`Features`>.  
   
@@ -160,7 +161,7 @@ WHERE ProductModelID=7
   
 3.  Se o valor da expressão do predicado é um valor de tipo simples de tipo Booliano, o valor verdadeiro do predicado é igual ao valor da expressão do predicado.  
   
-     Por exemplo, a consulta a seguir é especificada em uma variável de tipo **XML**que mantém uma instância XML, a instância XML de pesquisa do cliente. A consulta recupera aqueles clientes que têm filhos. Nesta consulta, isso seria \<HasChildren>1\</HasChildren>.  
+     Por exemplo, a consulta a seguir é especificada em uma variável de tipo **XML**que mantém uma instância XML, a instância XML de pesquisa do cliente. A consulta recupera aqueles clientes que têm filhos. Nesta consulta, isso seria \<HasChildren> 1 \</HasChildren> .  
   
     ```  
     declare @x xml  
@@ -193,7 +194,7 @@ WHERE ProductModelID=7
   
     -   A expressão no loop **for** tem duas etapas, e a segunda etapa especifica um predicado. O valor desse predicado é um valor de tipo Booliano. Se esse valor for True, o valor verdadeiro do predicado também será True.  
   
-    -   A consulta retorna o <`Customer` elemento> filho, cujo valor de predicado é true \<, da pesquisa> elemento filho da raiz do documento. Este é o resultado:  
+    -   A consulta retorna o <`Customer` elemento> filho, cujo valor de predicado é true, do \<Survey> elemento filho da raiz do documento. Este é o resultado:  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   
@@ -201,7 +202,7 @@ WHERE ProductModelID=7
   
 4.  Se o valor da expressão do predicado é uma sequência que contém no mínimo um nó, o valor verdadeiro do predicado é True.  
   
- Por exemplo, a consulta a seguir recupera ProductModelID para modelos de produto cuja descrição do catálogo XML inclui pelo menos um recurso, um elemento filho `Features` do elemento <>, do namespace associado ao prefixo do **WM** .  
+ Por exemplo, a consulta a seguir recupera ProductModelID para modelos de produto cuja descrição do catálogo XML inclui pelo menos um recurso, um elemento filho do `Features` elemento <>, do namespace associado ao prefixo do **WM** .  
   
 ```  
 SELECT ProductModelID  

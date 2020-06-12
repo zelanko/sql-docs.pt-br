@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3894f8ea42c0c5c91c3b6a5c5e7a6677b763b02
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081311"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528342"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Preencher com Base no Exemplo (Ferramentas de Análise de Tabela para Excel)
   ![Botão Preencher com Base no Exemplo em Ferramentas de Análise de Tabela](media/tat-fillex.gif "Botão Preencher com Base no Exemplo em Ferramentas de Análise de Tabela")  
@@ -70,7 +69,7 @@ ms.locfileid: "66081311"
 > [!NOTE]  
 >  O **impacto relativo** é mostrado como uma barra sombreada. Quanto maior a barra, maior a probabilidade de essa regra ser uma previsão do valor preenchido.  
   
- A ferramenta também adiciona uma nova coluna à tabela de dados original, denominada \<nome da coluna> estendida.  
+ A ferramenta também adiciona uma nova coluna à tabela de dados original, chamada \<column name> estendida.  
   
  Se a coluna de dados original contiver um valor, ele será copiado na nova coluna. No entanto, se a coluna contiver uma célula em branco, a nova coluna terá o valor previsto pelo assistente.  
   

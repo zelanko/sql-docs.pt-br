@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 606d453235529fbfed4dc0f07178ce2ae7132067
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062882"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528252"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Adicionar modelo à estrutura (Suplementos de Mineração de Dados para Excel)
   ![Botão Adicionar Modelo à Estrutura](media/dmc-addmodel.gif "Botão Adicionar Modelo à Estrutura")  
@@ -44,7 +43,7 @@ ms.locfileid: "66062882"
   
 4.  Recomendamos que você também clique no botão **parâmetros** para abrir a caixa de diálogo **parâmetros de algoritmo** e personalizar parâmetros no algoritmo. Essa opção é a maneira mais fácil de criar modelos de mineração personalizados.  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Na caixa de diálogo **selecionar colunas** , examine a lista de colunas e, se necessário, altere o uso das colunas para um destes valores:  
   
@@ -89,12 +88,12 @@ ms.locfileid: "66062882"
 |Opção|Comentários|  
 |------------|--------------|  
 |Caixa **de diálogo Selecionar estrutura ou modelo**|Escolha uma estrutura de mineração existente para usar como a base para criar um novo modelo.  A estrutura que você escolhe deve estar localizada na conexão atual. Caso contrário, altere as conexões usando a ferramenta [conectar-se a dados de origem &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md) .|  
-|Caixa de diálogo **selecionar algoritmo de mineração**|A lista de algoritmos de mineração de dados varia de acordo com o servidor ao qual você está conectado. O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece algoritmos diferentes nas edições Standard e Enterprise. O administrador também pode ter adicionado algoritmos personalizados.<br /><br /> Se você não puder ver algoritmos, verifique se você está conectado a uma instância [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]do.|  
+|Caixa de diálogo **selecionar algoritmo de mineração**|A lista de algoritmos de mineração de dados varia de acordo com o servidor ao qual você está conectado. O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece algoritmos diferentes nas edições Standard e Enterprise. O administrador também pode ter adicionado algoritmos personalizados.<br /><br /> Se você não puder ver algoritmos, verifique se você está conectado a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Parâmetros de algoritmo** Caixa de diálogo|Nessas configurações, você pode personalizar cada algoritmo usando parâmetros específicos ao método analítico. Você também pode definir uma semente para garantir que os resultados do modelo possam ser reproduzidos nas passagens de treinamento.<br /><br /> Para obter mais informações, consulte [parâmetros de algoritmo &#40;SQL Server suplementos de mineração de dados&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Definir sinalizadores de modelo de coluna** Caixa de diálogo|Os sinalizadores de modelagem podem melhorar seu modelo especificando como os dados ausentes devem ser tratados. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](data-mining/modeling-flags-data-mining.md).|  
   
 ###  <a name="setting-column-usage"></a><a name="Bkmk_mdlcolumn"></a>Definindo o uso da coluna  
- Ao adicionar um novo modelo a uma estrutura de mineração existente, você deverá especificar como o modelo usará cada coluna de dados na estrutura de mineração. Você provavelmente observará que as opções neste assistente são muito mais detalhadas do que as opções na estrutura de mineração. Por quê?  
+ Ao adicionar um novo modelo a uma estrutura de mineração existente, você deverá especificar como o modelo usará cada coluna de dados na estrutura de mineração. Você provavelmente observará que as opções neste assistente são muito mais detalhadas do que as opções na estrutura de mineração. Por que?  
   
  Isso ocorre porque, quando você cria um modelo e uma estrutura juntos usando um assistente, muitas das opções que controlam a forma como os dados são usados pelo algoritmo são definidas automaticamente. No entanto, ao adicionar um novo modelo a um existente, você precisa ver essas opções manualmente e especificar se os dados devem ser usados para análise, se o tipo de dados está correto e assim por diante.  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c2a376df410f900bece968b7476c048182d484
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083109"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520822"
 ---
 # <a name="process-a-mining-structure"></a>Processar uma estrutura de mineração
   Para poder procurar ou trabalhar com modelos de mineração que são associados a uma estrutura de mineração, você deve implantar o projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e processar a estrutura de mineração e os modelos de mineração. Além disso, se fizer uma alteração na estrutura de mineração ou nos modelos de mineração, você será solicitado a reimplantá-los e processá-los. Processar a estrutura na guia de **Estrutura de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , processa todos os modelos associados.  
@@ -38,13 +37,13 @@ ms.locfileid: "66083109"
   
      Caso faça alterações na estrutura, você receberá uma solicitação para implantar a estrutura novamente antes de processar os modelos. Clique em **Sim**.  
   
-2.  Clique em **executar** na caixa de diálogo **processando estrutura de mineração \<– estrutura>** .  
+2.  Clique em **executar** na caixa de diálogo **processando estrutura de mineração- \<structure> ** .  
   
      A caixa de diálogo **Andamento do Processo** é aberta para exibir os detalhes sobre o processamento do modelo.  
   
 3.  Clique em **Fechar** na caixa de diálogo **Andamento do Processo** após os modelos completarem seu processamento.  
   
-4.  Clique em **fechar** na caixa de diálogo **processando estrutura de mineração \<– estrutura>** .  
+4.  Clique em **fechar** na caixa de diálogo **processando estrutura de mineração- \<structure> ** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções da estrutura de mineração](mining-structure-tasks-and-how-tos.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bfc4b3a0890ebf662fd5a4ac2697aa3c63464c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079092"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543518"
 ---
 # <a name="defining-a-dimension"></a>Definindo uma dimensão
   Na tarefa a seguir, você usará o Assistente para Dimensões para criar uma dimensão Data.  
@@ -35,7 +34,7 @@ ms.locfileid: "66079092"
   
 5.  Na lista **Tabela principal** , selecione **Date**.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 7.  Na página **Selecionar Atributos de Dimensão** , marque as caixas de seleção dos seguintes atributos:  
   
@@ -45,13 +44,13 @@ ms.locfileid: "66079092"
   
     -   **Nome do Mês em Inglês**  
   
-    -   **Calendar Quarter**  
+    -   **Trimestre do calendário**  
   
-    -   **Calendar Year**  
+    -   **Ano civil**  
   
     -   **Calendar Semester**  
   
-8.  Altere a configuração da coluna **Tipo de Atributo** do atributo **Full Date Alternate Key** de **Regular** para **Date**. Para fazer isso, clique em **Regular** na coluna **Tipo de Atributo** . Em seguida, clique na seta para expandir as opções. Em seguida, clique**em data do****calendário** > de **Data** > . Clique em **OK**. Repita essas etapas para alterar o tipo de atributo dos atributos da seguinte maneira:  
+8.  Altere a configuração da coluna **Tipo de Atributo** do atributo **Full Date Alternate Key** de **Regular** para **Date**. Para fazer isso, clique em **Regular** na coluna **Tipo de Atributo** . Em seguida, clique na seta para expandir as opções. Em seguida, clique em data do calendário de **Data**  >  **Calendar**  >  **Date**. Clique em **OK**. Repita essas etapas para alterar o tipo de atributo dos atributos da seguinte maneira:  
   
     -   **English Month Name** para **Month**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66079092"
   
     -   **Calendar Semester** para **Half Year**  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 10. Na página **Concluindo o Assistente** , no painel Visualização, é possível ver a dimensão **Data** e seus atributos.  
   

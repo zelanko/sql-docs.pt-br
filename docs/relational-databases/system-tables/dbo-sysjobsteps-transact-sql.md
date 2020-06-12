@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobsteps (Transact-SQL) | Microsoft Docs
+title: dbo.sysJobSteps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d98b1ccc4dc8da3ba9d494a78bfea3727102da07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4bf7ed1c52aedb63ffe1e2e257022e004b327787
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827301"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423364"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "82827301"
 |**step_id**|**int**|ID da etapa no trabalho.|  
 |**step_name**|**sysname**|Nome da etapa do trabalho.|  
 |**subsistema**|**nvarchar(40)**|Nome do subsistema usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para executar a etapa de trabalho.|  
-|**linha**|**nvarchar(max)**|Comando a ser executado pelo **subsistema**.|  
+|**command**|**nvarchar(max)**|Comando a ser executado pelo **subsistema**.|  
 |**sinalizadores**|**int**|Reservado.|  
 |**additional_parameters**|**ntext**|Reservado.|  
 |**cmdexec_success_code**|**int**|Valor de nível de erro retornado pelas etapas do subsistema **CmdExec** para indicar êxito.|  
-|**on_success_action**|**tinyint**|Ação a ser executada quando uma etapa é executada com êxito.|  
+|**on_success_action**|**tinyint**|Ação a ser executada quando uma etapa é executada com êxito.<br /><br /> **1** = (padrão) sair com êxito<br /><br /> **2** = encerrar com falha<br /><br /> **3** = ir para a próxima etapa<br /><br /> **4** = ir para a etapa _on_success_step_id_|
 |**on_success_step_id**|**int**|ID da próxima etapa a ser executada quando uma etapa for executada com êxito.|  
-|**on_fail_action**|**tinyint**|Ação a ser executada quando uma etapa não é executada com êxito.|  
+|**on_fail_action**|**tinyint**|Ação a ser executada quando uma etapa não é executada com êxito.<br /><br /> **1** = encerrar com êxito<br /><br /> **2** = (padrão) sair com falha<br /><br /> **3** = ir para a próxima etapa<br /><br /> **4** = ir para a etapa _on_fail_step_id_|
 |**on_fail_step_id**|**int**|ID da próxima etapa a ser executada quando uma etapa não for executada com êxito.|  
-|**servidor**|**sysname**|Reservado.|  
+|**server**|**sysname**|Reservado.|  
 |**database_name**|**sysname**|Nome do banco de dados no qual o **comando** será executado se o **subsistema** for TSQL.|  
 |**database_user_name**|**sysname**|Nome do usuário de banco de dados cuja conta será usada ao executar a etapa.|  
 |**retry_attempts**|**int**|Número de novas tentativas feitas se a etapa apresentar falha.|  

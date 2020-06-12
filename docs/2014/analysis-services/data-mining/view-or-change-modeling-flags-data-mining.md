@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ad72ec94c8125b2f3bd9067a3a2ce413eeaba21
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082675"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520192"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Exibir ou alterar sinalizadores de modelagem (mineração de dados)
   Sinalizadores de modelagem são propriedades que você define em uma coluna da estrutura de mineração ou em colunas do modelo de mineração para controlar como o algoritmo processa os dados durante a análise.  

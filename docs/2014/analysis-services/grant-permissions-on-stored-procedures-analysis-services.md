@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 960b0ef3f050b780998a0f86dcd7b7edf121676d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080727"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544308"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Conceder permissões nos procedimentos armazenados (Analysis Services)
   Os procedimentos armazenados, ou assemblies, no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] são rotinas externas, escritas em uma linguagem de programação [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET, que estende os recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Os assemblies permitem que o desenvolvedor aproveite a integração em qualquer idioma, a manipulação de exceções, o suporte ao controle de versões, o suporte à implantação e o suporte à depuração.  
@@ -29,7 +28,7 @@ ms.locfileid: "66080727"
   
  A seguir são apresentados os conjuntos de permissões usados para executar procedimentos armazenados:  
   
--   **Seguro** Com o conjunto de permissões seguro, um procedimento armazenado não pode acessar os recursos protegidos [!INCLUDE[msCoName](../includes/msconame-md.md)] no .NET Framework. Esse conjunto de permissões somente é usado para cálculos. Esse é o conjunto de permissões mais seguro; as informações não vazam para for a do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], as permissões não podem ser elevadas e o risco de ataques de violação de dados é minimizado.  
+-   **Seguro** Com o conjunto de permissões seguro, um procedimento armazenado não pode acessar os recursos protegidos no [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework. Esse conjunto de permissões somente é usado para cálculos. Esse é o conjunto de permissões mais seguro; as informações não vazam para for a do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], as permissões não podem ser elevadas e o risco de ataques de violação de dados é minimizado.  
   
 -   **Acesso externo** Com o conjunto de permissões de acesso externo, um procedimento armazenado pode acessar recursos externos usando código gerenciado. A definição de um procedimento armazenado para esse conjunto de permissões não causará erros de programação que poderiam levar à instabilidade do servidor. No entanto, esse conjunto de permissões pode provocar o vazamento de informações para fora do servidor, e a possibilidade de uma elevação na permissão e de ataques de violação de dados.  
   

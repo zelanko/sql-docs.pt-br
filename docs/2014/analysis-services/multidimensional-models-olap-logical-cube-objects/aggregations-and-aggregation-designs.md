@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c56e80482ef71e8041f8518ae9901691a1809990
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727692"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545326"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Agregações e designs de agregação
   Um objeto <xref:Microsoft.AnalysisServices.AggregationDesign> define um conjunto de definições de agregação que podem ser compartilhadas por várias partições.  
@@ -41,7 +40,7 @@ ms.locfileid: "62727692"
  Apesar do pré-cálculo de todas as agregações possíveis em um cubo fornecer o tempo de resposta mais rápido possível para todas as consultas, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode facilmente calcular alguns valores de agregação de outras agregações pré-calculadas. Além disso, calcular todas as agregações possíveis requer tempo de processamento e armazenamento significativos. Portanto, há um equilíbrio entre requisitos de armazenamento e a porcentagem de possíveis agregações que são pré-calculadas. Se nenhuma agregação for pré-calculada (0%), a quantidade de tempo de processamento e espaço de armazenamento, necessários para um cubo, serão reduzidos mas o tempo de resposta da consulta será maior, pois os dados necessários para responder a cada consulta deverão ser recuperados de células folha e, em seguida, agregados na consulta. Por exemplo, retornar um único número que responda à questão feita anteriormente ("Quais são as vendas do produto X em 1998 para a região noroeste"), pode exigir a leitura de milhares de linhas de dados, extraindo o valor da coluna usada para fornecer a medida Vendas de cada linha e, então, calcular a soma. Além disso, o período de tempo necessário para recuperar esses dados dependerá muito do modo de armazenamento escolhido para os dados-MOLAP, HOLAP ou ROLAP.  
   
 ## <a name="designing-aggregations"></a>Projetando agregações  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incorpora um algoritmo sofisticado para selecionar agregações para o precálculo para que outras agregações possam ser rapidamente computadas a partir dos valores [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-calculados. Por exemplo, se as agregações forem pré-calculadas para o nível Mês da hierarquia Tempo, o cálculo do nível Trimestre exigirá apenas o resumo de três números, os quais podem ser rapidamente computados sob demanda. Essa técnica economiza tempo de processamento e reduz os requisitos de armazenamento, com efeito mínimo sobre o tempo de resposta de consulta.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incorpora um algoritmo sofisticado para selecionar agregações para o precálculo para que outras agregações possam ser rapidamente computadas a partir dos valores pré-calculados. Por exemplo, se as agregações forem pré-calculadas para o nível Mês da hierarquia Tempo, o cálculo do nível Trimestre exigirá apenas o resumo de três números, os quais podem ser rapidamente computados sob demanda. Essa técnica economiza tempo de processamento e reduz os requisitos de armazenamento, com efeito mínimo sobre o tempo de resposta de consulta.  
   
  O Assistente de Design de Agregação oferece opções para você especificar as restrições de armazenamento e a porcentagem no algoritmo para atingir um equilíbrio satisfatório entre o tempo de resposta da consulta e os requisitos de armazenamento. Porém, o algoritmo do Assistente de Design de Agregação assume que todas as consultas possíveis são igualmente prováveis. O Assistente de Otimização com Base no Uso permite ajustar o projeto da agregação para um grupo de medidas, analisando as consultas enviadas por aplicativos cliente. Usando o assistente para ajustar a agregação do cubo, você pode aumentar a capacidade de resposta para consultas frequentes e diminuir a capacidade de resposta de consultas não frequentes sem afetar significativamente o armazenamento necessário para o cubo.  
   

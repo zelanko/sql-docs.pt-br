@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e017a792f2554b757170a7669b83fada43dfb6a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f00b42620e0014de32550db28a79058f5162b77a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082032"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528782"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>Definir Escopo de Cálculos (Assistente de Business Intelligence)
   Use a página **Definir Escopo de Cálculos** para associar os novos cálculos de tempo a medidas individuais.  
@@ -26,7 +25,7 @@ ms.locfileid: "66082032"
  **Medidas disponíveis**  
  Selecione as medidas às quais os cálculos de tempo devem ser aplicados.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Seleciona todas as medidas listadas em **Medidas disponíveis**.  
   
  **Apagar tudo**  

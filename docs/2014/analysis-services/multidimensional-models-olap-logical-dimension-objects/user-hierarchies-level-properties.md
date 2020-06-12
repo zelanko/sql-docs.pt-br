@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: dabb7335-887b-442a-b67c-4901ba1242b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c55a596461e03ce91a822e4578f7de56fe27f8f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 553503b9d35142bcc998b4ec12ad2e29d4c66318
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702202"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545068"
 ---
 # <a name="level-properties"></a>Propriedades de nível 
   A tabela a seguir lista e descreve as propriedades de um nível em uma hierarquia definida pelo usuário.  
   
 |Propriedade|Descrição|  
 |--------------|-----------------|  
-|Descrição|Contém a descrição do nível.|  
-|HideMemberIf|Indica se, e quando, um membro em um nível ficará oculto pelos aplicativos cliente. Essa propriedade pode ter os seguintes valores:<br /><br /> Never<br /> Membros nunca são ocultados. Este é o valor padrão.<br /><br /> OnlyChildWithNoName<br /> Um membro é ocultado quando o membro for o único filho de seu pai e seu nome estiver vazio.<br /><br /> OnlyChildWithParentName<br /> Um membro é ocultado quando o membro for o único filho de seu pai e seu nome for idêntico ao de seu pai.<br /><br /> NoName<br /> Um membro é ocultado quando o nome do membro estiver vazio.<br /><br /> ParentName<br /> Um membro é ocultado quando o nome do membro for idêntico ao de seu pai.|  
+|Description|Contém a descrição do nível.|  
+|HideMemberIf|Indica se, e quando, um membro em um nível ficará oculto pelos aplicativos cliente. Essa propriedade pode ter os seguintes valores:<br /><br /> Nunca<br /> Membros nunca são ocultados. Esse é o valor padrão.<br /><br /> OnlyChildWithNoName<br /> Um membro é ocultado quando o membro for o único filho de seu pai e seu nome estiver vazio.<br /><br /> OnlyChildWithParentName<br /> Um membro é ocultado quando o membro for o único filho de seu pai e seu nome for idêntico ao de seu pai.<br /><br /> NoName<br /> Um membro é ocultado quando o nome do membro estiver vazio.<br /><br /> ParentName<br /> Um membro é ocultado quando o nome do membro for idêntico ao de seu pai.|  
 |ID|Contém o identificador exclusivo (ID) do nível.|  
-|Nome|Contém o nome amigável do nível. Por padrão, o nome de um nível é igual ao nome do atributo de origem.|  
+|Name|Contém o nome amigável do nível. Por padrão, o nome de um nível é igual ao nome do atributo de origem.|  
 |SourceAttribute|Contém o nome do atributo de origem no qual o nível tem como base.|  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -1,5 +1,6 @@
 ---
 title: Introdução com o SSMA para MySQL (MySQLToSQL) | Microsoft Docs
+description: Saiba mais sobre o processo de instalação do SSMA (Assistente de Migração do SQL Server) para MySQL e familiarize-se com a interface do usuário do SSMA.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6dce90d0c8626032d92c9ecec61cbbaf2556e90
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984540"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293793"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introdução ao SSMA para MySQL (MySQLToSQL)
 O Assistente de Migração do SQL Server (SSMA) para MySQL permite converter rapidamente esquemas de banco de dados MySQL em esquemas de BD SQL Server ou SQL do Azure, carregar os esquemas resultantes em SQL Server ou BD SQL do Azure e migrar dados de MySQL para SQL Server ou BD SQL do Azure.  

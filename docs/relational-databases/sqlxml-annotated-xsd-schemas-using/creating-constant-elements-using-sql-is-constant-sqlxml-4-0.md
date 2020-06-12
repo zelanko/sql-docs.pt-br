@@ -1,5 +1,6 @@
 ---
 title: 'Tornar elementos constantes com SQL: is-constant (SQLXML)'
+description: 'Saiba como usar a anotação sql: is-constant no SQLXML 4,0 para criar elementos constantes em um esquema XSD que não mapeia para nenhuma tabela ou coluna de banco de dados.'
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 854378b57a4798375e4f97841c8bd72ef0d7d0f3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257485"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524885"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Criando elementos constantes usando sql:is-constant (SQLXML 4.0)
 
@@ -35,17 +36,17 @@ ms.locfileid: "75257485"
   
 -   Adicionar um elemento de nível superior ao documento XML. XML requer um único elemento de nível superior (elemento root) para o documento.  
   
--   Criar elementos de contêiner, como um ** \<elemento Orders>** que encapsula todos os pedidos.  
+-   Criando elementos de contêiner, como um **\<Orders>** elemento que encapsula todos os pedidos.  
   
- A anotação **SQL: is-constant** pode ser adicionada a um ** \<elemento>complexo** .  
+ A anotação **SQL: is-constant** pode ser adicionada a um **\<complexType>** elemento.  
   
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Especificando sql:is-constant para adicionar um elemento do contêiner  
- Neste esquema XSD anotado, ** \<CustomerOrders>** é definido como um elemento constante especificando o atributo **SQL: is-constant** com um valor de 1. Portanto, ** \<o CustomerOrders>** não está mapeado para nenhuma tabela ou coluna de banco de dados. Esse elemento Constant consiste na ** \<ordem>** elementos filho.  
+ Neste esquema XSD anotado, **\<CustomerOrders>** é definido como um elemento constante, especificando o atributo **SQL: is-constant** com um valor de 1. Portanto, o **\<CustomerOrders>** não é mapeado para nenhuma tabela ou coluna de banco de dados. Esse elemento Constant consiste nos **\<Order>** elementos filho.  
   
- Embora ** \<CustomerOrders>** não seja mapeado para nenhuma tabela ou coluna de banco de dados, ele ainda aparece no XML resultante como um elemento de contêiner que contém a ** \<ordem>** elementos filho.  
+ Embora o não **\<CustomerOrders>** mapeie para nenhuma tabela ou coluna de banco de dados, ele ainda aparece no XML resultante como um elemento de contêiner que contém os **\<Order>** elementos filho.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b8fd9f9e4294e085f2bb7b100fc409f25adb818
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080784"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544295"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Hierarquias (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use o painel **Hierarquias** para gerenciar as hierarquias e níveis para a dimensão atualmente selecionada. Para obter mais informações, consulte [Criar hierarquias definidas pelo usuário](multidimensional-models/user-defined-hierarchies-create.md).  

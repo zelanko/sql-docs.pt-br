@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07617e2a49d784352911088f7c5e09bc727ab7d0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070097"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539008"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Guia Regras (Visualizador do Modelo de Mineração)
   Use o painel **Regras** em um modelo de associação para exibir as regras que o algoritmo extraiu dos dados. As regras descrevem como os itens estão relacionados uns com os outros e podem ser usados para criar recomendações.  
@@ -76,12 +75,12 @@ ms.locfileid: "66070097"
   
  Clique no cabeçalho da coluna para classificar por probabilidade.  
   
- **Porta**  
+ **Importância**  
  Esta coluna no gráfico exibe a importância para cada regra.  
   
  Clique no cabeçalho da coluna para classificar por importância.  
   
- **Régua**  
+ **Regra**  
  Esta coluna no gráfico exibe a descrição de texto para cada regra, de acordo com o formato especificado usando as opções **Mostrar** e **Mostrar nome longo**.  
   
  Clique no cabeçalho da coluna para classificar pelo texto da regra.  

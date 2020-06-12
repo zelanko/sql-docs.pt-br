@@ -1,5 +1,6 @@
 ---
 title: Expressões de sequência (XQuery) | Microsoft Docs
+description: Saiba mais sobre expressões de sequência XQuery que constroem, filtram e combinam uma sequência de itens.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72b8a066ce1480cd70f46658c8756b2548174b5b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946302"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529760"
 ---
 # <a name="sequence-expressions-xquery"></a>Expressões de sequência (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Exemplo C  
- A consulta a seguir é especificada na coluna AdditionalContactInfo do tipo **XML** na tabela Contact. Essa coluna armazena informações adicionais do contato, como um ou mais números de telefone, números de pager e endereços. O \<> telephoneNumber, \<o pager> e outros nós podem aparecer em qualquer lugar do documento. A consulta constrói uma sequência que contém todos os \<telephoneNumber> filhos do nó de contexto, seguido pelo \<pager> filhos. Observe o uso do operador de sequência vírgula na expressão de retorno, `($a//act:telephoneNumber, $a//act:pager)`.  
+ A consulta a seguir é especificada na coluna AdditionalContactInfo do tipo **XML** na tabela Contact. Essa coluna armazena informações adicionais do contato, como um ou mais números de telefone, números de pager e endereços. O \<telephoneNumber> , o \<pager> e outros nós podem aparecer em qualquer lugar do documento. A consulta constrói uma sequência que contém todos os \<telephoneNumber> filhos do nó de contexto, seguidos pelos \<pager> filhos. Observe o uso do operador de sequência vírgula na expressão de retorno, `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -131,7 +132,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Filtrando sequências  
- Você pode filtrar a sequência retornada por uma expressão adicionando um predicado à expressão. Para obter mais informações, consulte [expressões de caminho &#40;&#41;XQuery ](../xquery/path-expressions-xquery.md). Por exemplo, a consulta a seguir retorna uma sequência de três `a` <> nós de elemento:  
+ Você pode filtrar a sequência retornada por uma expressão adicionando um predicado à expressão. Para obter mais informações, consulte [expressões de caminho &#40;&#41;XQuery ](../xquery/path-expressions-xquery.md). Por exemplo, a consulta a seguir retorna uma sequência de três <`a`> nós de elemento:  
   
 ```  
 declare @x xml  
@@ -202,7 +203,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- O exemplo a seguir aplica um filtro de predicado. A expressão localiza os elementos `a` <> e `b` <> que contêm `c` <de elemento>.  
+ O exemplo a seguir aplica um filtro de predicado. A expressão localiza os elementos <`a`> e <`b`> que contêm <de elemento> `c` .  
   
 ```  
 declare @x xml  

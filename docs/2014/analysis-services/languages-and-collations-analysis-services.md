@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 641f161ede6daebdd879c3316ce73a2e446c21c1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079377"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543654"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e ordenações (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a idiomas e ordenações fornecidos pelos sistemas operacionais Windows [!INCLUDE[msCoName](../includes/msconame-md.md)]. As propriedades `Language` e `Collation` são inicialmente definidas no nível da instância durante a instalação, mas podem ser alteradas posteriormente em diferentes níveis da hierarquia de objetos.  
@@ -51,7 +50,7 @@ ms.locfileid: "66079377"
 -   [Suporte a GB18030 no Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>Objetos que dão suporte a propriedades de agrupamento e idioma  
- `Language`as `Collation` Propriedades e geralmente são expostas em conjunto – `Language`onde você pode definir, `Collation`você também pode definir.  
+ `Language``Collation`as propriedades e geralmente são expostas em conjunto – onde você pode definir `Language` , você também pode definir `Collation` .  
   
  Você pode definir `Language` e `Collation` nesses objetos:  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079377"
   
      Qualquer idioma e ordenação definido no cubo é usado por todas as medidas e dimensões contidas no cubo. A única maneira de definir propriedades de ordenação mais individualizadas é se você estiver criando traduções em um atributo de dimensão. Caso contrário, supondo que não existe tradução no nível do atributo, haverá uma ordenação por cubo.  
   
- Além disso, você pode `Language`definir, por si só, um objeto de **tradução** .  
+ Além disso, você pode definir `Language` , por si só, um objeto de **tradução** .  
   
  Um objeto de tradução é criado quando você adiciona traduções a um cubo ou dimensão. `Language`faz parte da definição de tradução. `Collation`, por outro lado, é definido no cubo ou superior e compartilhado por todas as traduções. Isso fica evidente no XMLA de um cubo que contém traduções, onde você verá várias propriedades de idioma (uma para cada tradução), mas apenas uma ordenação. Observe que há uma exceção para traduções do atributo de dimensão, onde você pode substituir a ordenação do cubo para especificar uma ordenação de atributos que corresponda à coluna de origem (o mecanismo de banco de dados dá suporte a ordenação de configuração em colunas individuais e é comum configurar traduções individuais para obter dados de membro de diferentes colunas de origem). Caso contrário, para todas as outras traduções, `Language` é usado por si só, sem um resultado de `Collation`. Consulte [Traduções &#40;Analysis Services&#41;](translations-analysis-services.md) para ver mais detalhes.  
   
@@ -140,9 +139,9 @@ ms.locfileid: "66079377"
   
 -   Reprocessar partições e dimensões após atualização da ordenação.  
   
- Você pode usar o SQL Server Management Studio ou o PowerShell do AMO para alterar o idioma padrão ou a ordenação no nível de servidor. Como alternativa, você pode modificar as configurações de ** \<>de idioma** e ** \<CollationName>** no arquivo msmdsrv. ini, especificando o LCID do idioma.  
+ Você pode usar o SQL Server Management Studio ou o PowerShell do AMO para alterar o idioma padrão ou a ordenação no nível de servidor. Como alternativa, você pode modificar as **\<Language>** **\<CollationName>** configurações e no arquivo msmdsrv.ini, ESPECIFICANDO o LCID do idioma.  
   
-1.  Em Management Studio, clique com o botão direito do mouse em nome do servidor | **Properties** | **Linguagem/agrupamento**de propriedades.  
+1.  Em Management Studio, clique com o botão direito do mouse em nome do servidor | **Propriedades**  |  do **Idioma/Agrupamento**.  
   
 2.  Escolha as opções de classificação. Para selecionar **Binário** ou **Binário 2**, primeiro desmarque a caixa de seleção **Diferenciar Acentos**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "66079377"
   
  Antes de usar o XMLA para modificar um banco de dados existente, certifique-se de não estar inserindo discrepâncias entre o banco de dados e os arquivos de origem usados para compilá-lo. Por exemplo, você talvez queira usar XMLA para alterar rapidamente idioma ou ordenação para testes de verificação de conceito, mas prosseguir com alterações no arquivo de origem (consulte [Alterar o idioma ou a ordenação em um cubo](#bkmk_cube)), reimplantando a solução usando procedimentos operacionais já existentes.  
   
-1.  Em Management Studio, clique com o botão direito do mouse no banco de dados | **Script de banco de dados como** | **ALTER para a** | **nova janela do editor de consultas**.  
+1.  Em Management Studio, clique com o botão direito do mouse no banco de dados | **Script de banco de dados como**  |  **Alterar para**  |  **Nova janela do editor de consultas**.  
   
 2.  Pesquisar e substituir a ordenação ou idioma existente por um valor alternativo.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aca2cd956850de245f507e8cf24b93e87404429b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39a1622ceccf6465b616fcc23de7093b4aa45d8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174249"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543549"
 ---
 # <a name="granting-process-database-permissions"></a>Concedendo permissões ao banco de dados do processo
   Depois da instalação de uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todos os membros da função do administrador de servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nessa instância têm permissões em todo o servidor para executar qualquer tarefa na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Por padrão, nenhum outro usuário tem qualquer permissão para administrar ou exibir objetos na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].
@@ -30,7 +29,7 @@ ms.locfileid: "78174249"
 
 2.  Clique na caixa de seleção **Processar banco de dados** .
 
-3.  No janela Propriedades, altere a propriedade **Name** para essa nova função para `Process Database Objects Role`.
+3.  No janela Propriedades, altere a propriedade **Name** para essa nova função para `Process Database Objects Role` .
 
      ![Designer de Função](../../2014/tutorials/media/l10-security-1.png "Designer de Função")
 

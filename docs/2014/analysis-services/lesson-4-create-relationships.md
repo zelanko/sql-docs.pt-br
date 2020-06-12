@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63fe9b7d83eea026a9a0f61213e2ccd30bba3591
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078576"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542898"
 ---
 # <a name="lesson-5-create-relationships"></a>Lição 5: Criar Relações
   Nesta lição, você aprenderá a verificar as relações que foram criadas automaticamente quando os dados foram importados e adicionará novas relações entre tabelas diferentes. Uma relação é uma conexão criada entre duas tabelas que estabelece como os dados dessas tabelas devem ser correlacionados. Por exemplo, as tabelas Product e Product Subcategory têm uma relação baseada no fato de que cada produto pertence a uma subcategoria. Para obter mais informações, consulte [Relações &#40;SSAS Tabular&#41;](tabular-models/relationships-ssas-tabular.md).  
@@ -47,11 +46,11 @@ ms.locfileid: "66078576"
   
     |Ativo|Tabela|Tabela de Pesquisa Relacionada|  
     |------------|-----------|--------------------------|  
-    |Sim|**Customer [Geography Id]**|**Geography [Geography Id]**|  
-    |Sim|**Product [Product Subcategory Id]**|**Product Subcategory [Product Subcategory Id]**|  
-    |Sim|**Product Subcategory [Product Category Id]**|**Product Category [Product Category Id]**|  
-    |Sim|**Internet Sales [Customer Id]**|**Customer [Customer Id]**|  
-    |Sim|**Internet Sales [Product Id]**|**Product [Product Id]**|  
+    |Yes|**Customer [Geography Id]**|**Geography [Geography Id]**|  
+    |Yes|**Product [Product Subcategory Id]**|**Product Subcategory [Product Subcategory Id]**|  
+    |Yes|**Product Subcategory [Product Category Id]**|**Product Category [Product Category Id]**|  
+    |Yes|**Internet Sales [Customer Id]**|**Customer [Customer Id]**|  
+    |Yes|**Internet Sales [Product Id]**|**Product [Product Id]**|  
   
  Se qualquer uma das relações na tabela acima estiver ausente, verifique se o modelo inclui as tabelas a seguir: Customer, Date, Geography, Product, Product Category, Product Subcategory e Internet Sales. Se as tabelas da mesma conexão de fonte de dados forem importadas em momentos distintos, eventuais relações entre essas tabelas não serão criadas e deverão ser criadas manualmente.  
   

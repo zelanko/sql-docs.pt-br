@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76d57bb421a7f486983476a6549a5121ce88ee9b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736610"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545688"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objetos e características de objeto ASSL
   Os objetos da ASSL (Analysis Services Scripting Language) seguem diretrizes específicas a respeito de grupos de objetos, herança, nomenclatura, expansão e processamento.  
   
 ## <a name="object-groups"></a>Grupos de objetos  
- Todos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] os objetos têm uma representação XML. Os objetos estão divididos em dois grupos:  
+ Todos os [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos têm uma representação XML. Os objetos estão divididos em dois grupos:  
   
  **Objetos principais**  
  Os objetos principais podem ser criados, alterados e excluídos de forma independente. Entre eles, estão incluídos:  
@@ -47,7 +46,7 @@ ms.locfileid: "62736610"
   
 -   Partições  
   
--   perspectivas  
+-   Perspectivas  
   
 -   Modelos de mineração  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62736610"
   
 -   Atributos  
   
--   medidas  
+-   Medidas  
   
 -   Colunas do modelo de mineração  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62736610"
 ## <a name="object-expansion"></a>Expansão de objetos  
  A restrição `ObjectExpansion` pode ser usada para controlar o grau de expansão do XML ASSL retornado pelo servidor. As opções dessa restrição estão relacionadas na tabela a seguir.  
   
-|Valor de enumeração|Permitido para \<ALTER>|Descrição|  
+|Valor de enumeração|Permitido para\<Alter>|Description|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|não|Retorna somente o nome, a ID e o carimbo de data/hora do objeto solicitado e de todos os objetos principais contidos de forma recursiva.|  
 |*ObjectProperties*|sim|Expande o objeto solicitado e os objetos secundários contidos, mas não retorna objetos principais contidos.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b206facd1a8dc3faa58c58ae97e783d8a5c630b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079342"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543618"
 ---
 # <a name="defining-a-data-source"></a>Definindo uma fonte de dados
   Depois de criar um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , normalmente, você começa a trabalhar com esse projeto definindo uma ou mais fontes de dados que serão usadas pelo projeto. Ao definir uma fonte de dados, você está definindo as informações da cadeia de conexão que será usada para conectar-se à fonte de dados. Para obter mais informações, veja [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -34,9 +33,9 @@ ms.locfileid: "66079342"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] também dá suporte a outros provedores que são exibidos na lista **Provedor** .  
   
-5.  Na caixa de texto **nome do servidor** , `localhost`digite.  
+5.  Na caixa de texto **nome do servidor** , digite `localhost` .  
   
-     Para se conectar a uma instância nomeada no computador local, digite **localhost\\<nome\>da instância**. Para conectar-se ao computador específico em vez do computador local, digite o nome do computador ou o endereço IP.  
+     Para se conectar a uma instância nomeada no computador local, digite **localhost \\<\> nome da instância**. Para conectar-se ao computador específico em vez do computador local, digite o nome do computador ou o endereço IP.  
   
 6.  Verifique se a opção **Usar Autenticação do Windows** está selecionada. Na lista **Selecionar ou inserir um nome de banco de dados** , selecione **AdventureWorksDW2012**.  
   

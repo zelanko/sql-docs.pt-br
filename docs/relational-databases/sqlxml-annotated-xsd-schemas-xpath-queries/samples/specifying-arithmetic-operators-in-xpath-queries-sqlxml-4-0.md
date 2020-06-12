@@ -1,5 +1,6 @@
 ---
 title: Usar operadores aritméticos em consultas XPath (SQLXML)
+description: Saiba como especificar operadores aritméticos nas consultas XPath do SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64b13492b7359fa6baad7cee21dfb291f655cdea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252630"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529869"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores aritméticos em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252630"
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>a. Especifique o operador aritmético *.  
- Essa consulta XPath retorna ** \<elementos de>OrderDetail** que atendem ao predicado especificado:  
+ Esta consulta XPath retorna **\<OrderDetail>** elementos que atendem ao predicado especificado:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- `child` Na consulta, é o eixo e `OrderDetail` é o teste de nó (true se **OrderDetail** é um ** \<nó de elemento>**, porque o ** \<elemento>** nó é o nó primário do eixo **filho** ). Para todos os nós de elementos do ** \<>OrderDetail** , o teste no predicado é aplicado e somente os nós que atendem à condição são retornados.  
+ Na consulta, `child` é o eixo e `OrderDetail` é o teste de nó (true se **OrderDetail** for um **\<element node>** , porque o **\<element>** nó é o nó primário para o eixo **filho** ). Para todos os **\<OrderDetail>** nós de elemento, o teste no predicado é aplicado e somente os nós que atendem à condição são retornados.  
   
 > [!NOTE]  
 >  Os números em XPath são números de pontos flutuantes de precisão dupla e a comparação de números de pontos flutuantes como no exemplo provoca arredondamento.  

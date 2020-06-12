@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6102fe9c623e785c0ca207660697bffebce82bb5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081169"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544480"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Caixa de diálogo Filtro (gráfico de precisão de mineração)
   A caixa de diálogo **Filtro** o ajuda a criar condições que você pode aplicar em um conjunto de dados. O conjunto de dados pode ser um conjunto externo usado para teste ou os dados de caso usados para treinar um modelo de mineração. Essa caixa de diálogo ajuda a criar critérios que podem ser salvos como parte de critérios de filtragem mais complexos na caixa de diálogo **Filtro de Conjunto de Dados** ou na caixa de diálogo **Filtro de Modelos** .  

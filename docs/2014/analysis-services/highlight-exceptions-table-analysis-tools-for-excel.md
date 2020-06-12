@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab9289705bbea8d1e2c21d5f5820746e58b48cc5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080763"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544278"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Realçar Exceções (Ferramentas de Análise de Tabela para Excel)
   ![Botão Realçar Exceções na faixa de opções](media/tat-highlightex.gif "Botão Realçar Exceções na faixa de opções")  
@@ -39,7 +38,7 @@ ms.locfileid: "66080763"
   
 3.  Clique em **Executar**.  
   
-4.  Abra a planilha intitulada nome da \<tabela> exceções para exibir um resumo das exceções encontradas.  
+4.  Abra a planilha intitulada \<table name> exceções para exibir um resumo das exceções que foram encontradas.  
   
 5.  Para alterar o número de realces, clique nas setas para cima e para baixo na linha **limite de exceção** do **relatório de realce de exceções**.  
   

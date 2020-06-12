@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0da9467d293c0081309accd99fb46d7589fb4b8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2e18917b56d40f8b813ba10083cc1b408e51a98
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736570"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545642"
 ---
 # <a name="xmla-concepts"></a>Conceitos de XMLA
-  O padrão XMLA (XML for Analysis) oferece suporte a acesso a dados para fontes de dados que residem na World Wide Web. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementa o XMLA de acordo com a especificação XMLA [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 1,1.  
+  O padrão XMLA (XML for Analysis) oferece suporte a acesso a dados para fontes de dados que residem na World Wide Web. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] implementa o XMLA de acordo com a especificação XMLA 1,1.  
   
- O XMLA (XML for Analysis) é um protocolo XML baseado em SOAP, criado especificamente para acesso a dados universal para qualquer fonte de dados multidimensional padrão residente na Web. O XMLA também elimina a necessidade de implantar um componente de cliente que expõe as interfaces Component Object Model [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (com) ou .NET Framework. O XMLA é otimizado para a Internet, quando viagens de ida e volta ao servidor são onerosas em termos de tempo e de recursos e quando conexões com estado para uma fonte de dados podem limitar conexões do usuário no servidor.  
+ O XMLA (XML for Analysis) é um protocolo XML baseado em SOAP, criado especificamente para acesso a dados universal para qualquer fonte de dados multidimensional padrão residente na Web. O XMLA também elimina a necessidade de implantar um componente de cliente que expõe as interfaces Component Object Model (COM) ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. O XMLA é otimizado para a Internet, quando viagens de ida e volta ao servidor são onerosas em termos de tempo e de recursos e quando conexões com estado para uma fonte de dados podem limitar conexões do usuário no servidor.  
   
- O XMLA é o protocolo nativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]para, usado para toda a interação entre um aplicativo cliente e uma [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]instância do. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oferece suporte completo ao XML for Analysis 1.1 e também oferece extensões para oferecer suporte ao gerenciamento de metadados, gerenciamento de sessão e a recursos de bloqueio. O AMO (Objetos de Gerenciamento de Análise) e o ADOMD.NET usam o protocolo XMLA ao se comunicarem com uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ O XMLA é o protocolo nativo para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , usado para toda a interação entre um aplicativo cliente e uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oferece suporte completo ao XML for Analysis 1.1 e também oferece extensões para oferecer suporte ao gerenciamento de metadados, gerenciamento de sessão e a recursos de bloqueio. O AMO (Objetos de Gerenciamento de Análise) e o ADOMD.NET usam o protocolo XMLA ao se comunicarem com uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="handling-xmla-communications"></a>Manipulando comunicações do XMLA  
  O padrão aberto XMLA descreve dois métodos geralmente acessíveis: `Discover` e `Execute`. Esses métodos usam a arquitetura de cliente e de servidor acoplada de forma flexível suportada pelo XML para manipular informações de entrada e de saída sobre uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

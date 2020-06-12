@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd90dd467d0e09f96901847b6a167477f35eeab8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3d08a4458ce9347f4e26238d8a28c2b49a22a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175235"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543888"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrar o PowerPivot para o SharePoint 2013
 
@@ -31,7 +30,7 @@ ms.locfileid: "78175235"
 |1|2|3|4|
 |-------|-------|-------|-------|
 |Preparar o farm do SharePoint 2013|Fazer backup, cópia e restauração de bancos de dados.|Montar bancos de dados de conteúdo|Migrar agendas do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]|
-||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|Administração Central do SharePoint<br /><br /> Usando o Windows PowerShell|Páginas do aplicativo do SharePoint<br /><br /> Usando o Windows PowerShell|
+||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|Administração Central do SharePoint<br /><br /> Windows PowerShell|Páginas do aplicativo do SharePoint<br /><br /> Windows PowerShell|
 
  **Neste tópico:**
 
@@ -72,7 +71,7 @@ ms.locfileid: "78175235"
 5.  **Definir banco de dados para leitura e gravação:** defina o **Banco de Dados Somente Leitura** como **False**.
 
 ##  <a name="3-prepare-web-applications-and-mount-content-databases"></a><a name="bkmk_prepare_mount_databases"></a>3) preparar aplicativos Web e montar bancos de dados de conteúdo
- Para obter uma explicação mais detalhada dos procedimentos a seguir, consulte [atualizar bancos de dados do sharepoint 2010 para o sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+ Para obter uma explicação mais detalhada dos procedimentos a seguir, consulte [atualizar bancos de dados do sharepoint 2010 para o sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .
 
 1.  **Colocar o banco de dados offline:**
 
@@ -96,7 +95,7 @@ ms.locfileid: "78175235"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]
     ```
 
-     Para obter mais informações, consulte [anexar ou desanexar bancos de dados de conteúdo (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx).
+     Para obter mais informações, consulte [anexar ou desanexar bancos de dados de conteúdo (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) ( https://technet.microsoft.com/library/ff628582.aspx) .
 
      **Status quando a etapa está concluída:**  quando a operação de montagem estiver concluída, os usuários podem ver os arquivos que estavam no banco de dados de conteúdo antigo. Portanto os usuários podem ver e abrir as pastas de trabalho na biblioteca de documentos.
 
@@ -129,7 +128,7 @@ ms.locfileid: "78175235"
 
 -   **Migrar opção 1 Agendas: administrador de farm do SharePoint**
 
-    1.  No gerenciamento do SharePoint 2013, execute `Set-PowerPivotServiceApplication` o cmdlet com `-StartMigratingRefreshSchedules` a opção para habilitar o ![conteúdo relacionado ao PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")de migração de agendamento automático sob demanda. O script do Windows PowerShell a seguir supõe que haja apenas um aplicativo de serviço PowerPivot.
+    1.  No gerenciamento do SharePoint 2013, execute o `Set-PowerPivotServiceApplication` cmdlet com a `-StartMigratingRefreshSchedules` opção para habilitar o ![conteúdo relacionado ao PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell")de migração de agendamento automático sob demanda. O script do Windows PowerShell a seguir supõe que haja apenas um aplicativo de serviço PowerPivot.
 
         ```powershell
         $app = Get-PowerPivotServiceApplication
@@ -170,8 +169,8 @@ ms.locfileid: "78175235"
 
 -   [Atualizar pastas de trabalho e a atualização de dados agendada &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).
 
--   [Visão geral do processo de atualização para o SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Visão geral do processo de atualização para o SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) ( https://go.microsoft.com/fwlink/p/?LinkId=256688) .
 
--   [Limpar preparações antes de uma atualização para o SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).
+-   [Limpar preparações antes de uma atualização para o SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) ( https://go.microsoft.com/fwlink/p/?LinkId=256689) .
 
--   [Atualize os bancos de dados do sharepoint 2010 para o sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+-   [Atualize os bancos de dados do sharepoint 2010 para o sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .

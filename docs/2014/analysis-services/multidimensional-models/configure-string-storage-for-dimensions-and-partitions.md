@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbac2e675a08bbcdba6a43727e3de6896a52e56c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076539"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536878"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar o armazenamento de cadeia de caracteres para dimensões e partições
   Você pode reconfigurar o armazenamento de cadeia de caracteres para acomodar cadeias de caracteres muito grandes em atributos de dimensão ou partições que excedem o limite de tamanho de arquivo do 4 GB para repositórios de cadeias de caracteres. Se suas dimensões ou partições incluírem repositórios de cadeias de caracteres desse tamanho, você poderá contornar a restrição de tamanho do arquivo alterando a propriedade **StringStoresCompatibilityLevel** em nível de dimensão ou de partição para objetos locais e vinculados (locais ou remotos).  
