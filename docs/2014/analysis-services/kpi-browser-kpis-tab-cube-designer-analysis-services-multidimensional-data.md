@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b6d15cbb75f3528546c566a72f8b23323df8772
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079497"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543704"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Navegador KPI (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Navegador de KPI** na guia **KPIs** do Designer de Cubo para exibir e testar os resultados dos KPIs (indicadores chave de desempenho). Os KPIs devem primeiro ser implantados em uma [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância antes da navegação.  
@@ -29,7 +28,7 @@ ms.locfileid: "66079497"
  **Grade de subcubo**  
  Use para definir um subcubo e restringir os resultados dos KPIs a serem exibidos no painel **Resultados** . A grade contém as seguintes colunas:  
   
- **Dimensão**  
+ **Dimensões**  
  Selecione a dimensão à qual esse filtro se aplica.  
   
  **Hierarquia**  
@@ -42,7 +41,7 @@ ms.locfileid: "66079497"
 |-----------|-----------------|  
 |**Igual**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
 |**Diferente de**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
-|**No**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
+|**Em**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Não está em**|Os resultados são restringidos aos membros excluídos pelo conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Terá**|Os resultados são restringidos aos membros cujos nomes contêm a sequência de caracteres na **Expressão de Filtro**.|  
 |**Começa Com**|Os resultados são restringidos aos membros cujos nomes começam com a sequência de caracteres na **Expressão de Filtro**.|  
@@ -74,7 +73,7 @@ ms.locfileid: "66079497"
  **Trend**  
  Exibe o gráfico de tendências do KPI.  
   
- **Peso**  
+ **Weight**  
  Exibe o fator de peso do KPI.  
   
  **Ndescrição**  

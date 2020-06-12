@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077019"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544658"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizando o acesso a objetos e operações (Analysis Services)
   O acesso do usuário não administrativo a objetos como cubos, dimensões e modelos de mineração em um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é concedido por meio de associação em uma ou mais funções de banco de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Os administradores criam essas funções de banco de dados, concedem permissões de leitura ou leitura/gravação em objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e atribuem usuários e grupos do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cada função.  
@@ -37,7 +36,7 @@ ms.locfileid: "66077019"
 ## <a name="list-roles-defined-for-your-database"></a>Listar funções definidas para o banco de dados  
  Os administradores podem executar uma única consulta DMV no SQL Server Management Studio para obter uma lista de todas as funções definidas no servidor.  
   
-1.  No SSMS, clique com o botão direito do mouse em um banco de dados e selecione **nova consulta** | **MDX**.  
+1.  No SSMS, clique com o botão direito do mouse em um banco de dados e selecione **nova consulta**  |  **MDX**.  
   
 2.  Digite a consulta a seguir e pressione F5 para executá-la:  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6adfd4b23b6fe9129641271fc3c2381e161119ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530886"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545883"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
   Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras e os caracteres reservados que não podem ser usados em nomes de objetos, códigos ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -80,10 +79,10 @@ ms.locfileid: "69530886"
   
 |Modo de servidor e nível de compatibilidade de banco de dados|Caracteres reservados permitidos?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (todas as versões)|Não|  
-|Tabela - 1050|Não|  
-|Tabela - 1100|Não|  
-|Tabular-1130 e superior|Sim|  
+|MOLAP (todas as versões)|No|  
+|Tabela - 1050|No|  
+|Tabela - 1100|No|  
+|Tabular-1130 e superior|Yes|  
   
  Bancos de dados podem ter um ModelType padrão. O padrão é equivalente a multidimensional e, portanto, não dá suporte ao uso de caracteres reservados em nomes de colunas.  
   

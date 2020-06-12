@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 115444c832fe8fe9b258a0c23b97b97553f32e8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073973"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546208"
 ---
 # <a name="existing-keyword-mdx"></a>Palavra-chave EXISTING (MDX)
   Força a avaliação de um conjunto especificado no contexto atual.  
@@ -39,7 +38,7 @@ Existing Set_Expression
  Por padrão, são avaliados conjuntos no contexto do cubo que contém os membros do conjunto. A palavra-chave `Existing` força a avaliação de um conjunto especificado no contexto atual.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir retorna a contagem dos revendedores cujas vendas caíram ao longo do período anterior, com base em valores de Estado do membro, selecionados pelo usuário, avaliados usando a função `Aggregate`. A palavra-chave [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) e [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) são usadas para retornar valores por queda de vendas por categorias de produto na dimensão Produto. A `Existing` palavra-chave força o conjunto `Filter` na função a ser avaliada no contexto atual, ou seja, para os membros Washington e Oregon da hierarquia de atributo State-província.  
+ O exemplo a seguir retorna a contagem dos revendedores cujas vendas caíram ao longo do período anterior, com base em valores de Estado do membro, selecionados pelo usuário, avaliados usando a função `Aggregate`. A palavra-chave [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) e [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) são usadas para retornar valores por queda de vendas por categorias de produto na dimensão Produto. A `Existing` palavra-chave força o conjunto na `Filter` função a ser avaliada no contexto atual, ou seja, para os membros Washington e Oregon da hierarquia de atributo State-província.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

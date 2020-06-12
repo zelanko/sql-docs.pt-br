@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d34bd76a4e5a0ecb183d8e8db5b96bf3e98114
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074885"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546648"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Conceder permissões de processo (Analysis Services)
   Como administrador, você pode criar uma função dedicada às operações de processamento do Analysis Services, o que lhe permitirá delegar essa tarefa específica a outros usuários ou a aplicativos usados para o processamento autônomo agendado. As permissões de processo podem ser concedidas nos níveis de banco de dados, cubo, dimensão e estrutura de mineração. A menos que você esteja trabalhando com um grande cubo ou banco de dados de tabelas, recomendamos a concessão de direitos de processamento no nível de banco de dados, incluindo aqueles que apresentem dependências entre si.  
@@ -35,9 +34,9 @@ ms.locfileid: "66074885"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abra a pasta Bancos de Dados e selecione um banco de dados.  
   
-2.  Clique com o botão direito do mouse em **funções** | **nova função**. Insira um nome e uma descrição.  
+2.  Clique com o botão direito do mouse em **funções**  |  **nova função**. Insira um nome e uma descrição.  
   
-3.  No painel **geral** , marque a caixa `Process Database` de seleção. Além disso, `Read Definition` selecione também habilitar o processamento interativo por meio de uma das ferramentas de SQL Server [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como.  
+3.  No painel **geral** , marque a `Process Database` caixa de seleção. Além disso, selecione `Read Definition` também habilitar o processamento interativo por meio de uma das ferramentas de SQL Server, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 4.  No painel **Associação** , adicione as contas de usuário e de grupo do Windows com permissão para processar qualquer objeto nesse banco de dados.  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66074885"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abra a pasta Bancos de Dados e selecione um banco de dados.  
   
-2.  Clique com o botão direito do mouse em **funções** | **nova função**. Insira um nome e uma descrição.  
+2.  Clique com o botão direito do mouse em **funções**  |  **nova função**. Insira um nome e uma descrição.  
   
 3.  No painel **geral** , desmarque a `Process Database` caixa de seleção. As permissões de banco de dados substituem a capacidade de definir permissões em objetos de nível mais baixo, tornando as opções de função acinzentadas ou não selecionáveis.  
   
-     Tecnicamente, nenhuma permissão de banco de dados é necessária para as funções de processamento dedicadas. Mas sem `Read Definition` no nível do banco de dados, não é possível exibir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o banco de dados no, tornando o teste mais difícil.  
+     Tecnicamente, nenhuma permissão de banco de dados é necessária para as funções de processamento dedicadas. Mas sem `Read Definition` no nível do banco de dados, não é possível exibir o banco de dados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , tornando o teste mais difícil.  
   
 4.  Selecione objetos individuais para processar:  
   
@@ -77,11 +76,11 @@ ms.locfileid: "66074885"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Defina permissões de processamento em uma estrutura de mineração de dados  
  Você pode criar uma função que conceda permissão para processar estruturas de mineração de dados. Isso inclui o processamento de todos os modelos de mineração.  
   
- **Drill** -through `Read Definition` e permissões usadas para navegar em um modelo de mineração e estrutura são atômicas e podem ser adicionadas à mesma função ou separadas em uma função diferente.  
+ **Drill-through** e `Read Definition` permissões usadas para navegar em um modelo de mineração e estrutura são atômicas e podem ser adicionadas à mesma função ou separadas em uma função diferente.  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abra a pasta Bancos de Dados e selecione um banco de dados.  
   
-2.  Clique com o botão direito do mouse em **funções** | **nova função**. Insira um nome e uma descrição. No painel **Geral** , verifique se as caixas de seleção de permissão do banco de dados estão desmarcadas. As permissões de banco de dados substituirão a capacidade de definir permissões em objetos de nível mais baixo, tornando as opções de função acinzentadas ou não selecionáveis.  
+2.  Clique com o botão direito do mouse em **funções**  |  **nova função**. Insira um nome e uma descrição. No painel **Geral** , verifique se as caixas de seleção de permissão do banco de dados estão desmarcadas. As permissões de banco de dados substituirão a capacidade de definir permissões em objetos de nível mais baixo, tornando as opções de função acinzentadas ou não selecionáveis.  
   
 3.  No painel **Estruturas de Mineração** , marque a caixa de seleção **Processar** para cada estrutura de mineração.  
   

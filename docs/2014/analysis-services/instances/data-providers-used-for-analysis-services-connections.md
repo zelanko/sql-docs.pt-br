@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a48316bb89f92ba8b44e3160a6b38e77762f3be
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080096"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543978"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Provedores de dados usados para conexões do Analysis Services
   O Analysis Services fornece três provedores de dados do servidor e acesso a dados. Todos os aplicativos que se conectam ao Analysis Services fazem isso usando um desses provedores. Dois dos provedores, ADOMD.NET e AMO (objetos de gerenciamento do Analysis Services), são provedores de dados gerenciados. O provedor OLE DB do Analysis Services (MSOLAP DLL) é um provedor de dados nativo.  
@@ -54,7 +53,7 @@ ms.locfileid: "66080096"
   
 1.  Vá para \Arquivos de Programas\Microsoft Analysis Services\AS OLEDB\120.  
   
-2.  Clique com o botão direito do mouse em msolap120. dll e clique em **Propriedades**.  
+2.  Clique com o botão direito do mouse em msolap120.dll e clique em **Propriedades**.  
   
  Se você não conseguir localizar o arquivo nesse local, ou se o caminho da pasta incluir AS OLEDB\110 ou AS OLEDB\90, você está usando uma biblioteca antiga e deve instalar a versão mais recente agora (AS OLEDB\11) para conectar-se ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66080096"
   
  MSOLAP130.dll é a versão do provedor OLE DB para Analysis Services fornecida com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Outras versões anteriores recentes incluem o MSOLAP10.dll (para SQL Server 2008 e 2008 R2) e o MSOLAP90.dll (para SQL Server 2005).  
   
- Provedores de OLE DB costumam ser especificados em cadeias de conexão. Uma cadeia de conexão Analysis Services usa um nomenclatura diferente para fazer referência ao provedor de OLE DB: MSOLAP. \<versão>. dll  
+ Provedores de OLE DB costumam ser especificados em cadeias de conexão. Uma cadeia de conexão Analysis Services usa um nomenclatura diferente para se referir ao provedor de OLE DB: MSOLAP. \<version> . dll  
   
  O MSOLAP.5.dll é o provedor OLE DB atual do Analysis Services instalado com o Excel 2013. As versões anteriores, como MSOLAP.4.dll ou MSOLAP.3.dll, geralmente são encontradas em estações de trabalho que executam versões anteriores do Excel. Alguns recursos do Analysis Services, como o suplemento PowerPivot, exigem versões específicas do provedor OLE DB. Consulte [Propriedades da cadeia de conexão &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md) para obter mais informações.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66080096"
   
  O AMO é instalado pela Instalação do SQL Server e usado por aplicativos cliente do SQL Server para conectar-se ao Analysis Services. Você também pode baixar e instalá-lo manualmente usando o AMO em código personalizado (consulte [Como determinar a versão dos provedores de dados do Analysis Services](#bkmk_LibUpdate) neste tópico). O AMO pode ser encontrado no cache de assembly global, como `Microsoft.AnalysisServices`.  
   
- Uma conexão usando AMO normalmente é mínima, consistindo em "Data Source =\<servername>". Depois que uma conexão é estabelecida, você usa a API para trabalhar com coleções de banco de dados e grandes objetos. Tanto o SSDT quanto o SSMS usam o AMO para se conectar a uma instância do Analysis Services.  
+ Uma conexão usando AMO normalmente é mínima, consistindo em "Data Source = \<servername> ". Depois que uma conexão é estabelecida, você usa a API para trabalhar com coleções de banco de dados e grandes objetos. Tanto o SSDT quanto o SSMS usam o AMO para se conectar a uma instância do Analysis Services.  
   
  Para obter mais informações sobre conexões programáticas, consulte [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   

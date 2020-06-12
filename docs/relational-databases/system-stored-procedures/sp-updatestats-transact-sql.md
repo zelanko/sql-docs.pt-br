@@ -18,12 +18,12 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808877"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806842"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="remarks"></a>Comentários  
  **sp_updatestats** é executado `UPDATE STATISTICS` , especificando a `ALL` palavra-chave, em todas as tabelas internas e definidas pelo usuário no banco de dados. sp_updatestats exibe mensagens que indicam seu progresso. Quando a atualização é concluída, ela informa que as estatísticas foram atualizadas em todas as tabelas.  
   
-O sp_updatestats atualiza estatísticas em índices não clusterizados desabilitados e não atualiza estatísticas em índices clusterizados desabilitados.  
+**sp_updatestats** atualiza estatísticas em índices não clusterizados desabilitados e não atualiza estatísticas em índices clusterizados desabilitados.  
   
 Para tabelas baseadas em disco, o **sp_updatestats** atualiza as estatísticas com base nas informações de **modification_counter** na exibição de catálogo **Sys. dm_db_stats_properties** , atualizando as estatísticas em que pelo menos uma linha foi modificada. As estatísticas em tabelas com otimização de memória sempre são atualizadas durante a execução de **sp_updatestats**. Portanto, não execute **sp_updatestats** mais do que o necessário.  
   
@@ -58,7 +58,8 @@ Para tabelas baseadas em disco, o **sp_updatestats** atualiza as estatísticas c
 Para bancos de dados com um nível de compatibilidade abaixo de 90, a execução de **sp_updatestats** não preserva a configuração NORECOMPUTE mais recente para estatísticas específicas. Para bancos de dados com um nível de compatibilidade de 90 ou superior, sp_updatestats preserva a opção NORECOMPUTE mais recente para estatísticas específicas. Para obter mais informações sobre como desabilitar e reabilitar atualizações de estatísticas, veja [Estatísticas](../../relational-databases/statistics/statistics.md).  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na função de servidor fixa **sysadmin** ou Propriedade do banco de dados (**dbo**).  
+
+Para executar **sp_updatestats**, o usuário deve ser o proprietário do banco de dados (o `dbo` , não apenas membro da função `db_owner` ) ou ser membro da função de servidor fixa sysadmin.
 
 ## <a name="examples"></a>Exemplos  
 O exemplo a seguir atualiza as estatísticas de tabelas no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  

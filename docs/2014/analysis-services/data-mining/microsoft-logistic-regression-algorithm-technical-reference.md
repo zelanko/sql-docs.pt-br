@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b2613c4ca9c706e549aca9ed577a6defacd0e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174505"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521824"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referência técnica do algoritmo Regressão Logística da Microsoft
   O algoritmo Regressão Logística da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Rede Neural da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , no qual o parâmetro *HIDDEN_NODE_RATIO* é definido como 0. Essa configuração criará um modelo de rede neural que não contém uma camada oculta e, portanto, é equivalente à regressão logística.
@@ -84,7 +83,7 @@ WHERE NODE_TYPE = 23
 
  Para cada valor de saída, essa consulta retorna os coeficientes e uma ID que aponta para o nó de entrada relacionado. Também retorna uma linha que contém o valor da saída e da interseção. Cada X de entrada tem seu próprio coeficiente (CI), mas a tabela aninhada também contém um coeficiente "livre" (co), calculado de acordo com a seguinte fórmula:
 
- F (X) = x1 * C1 + X2\*C2 +... + xn\*CN + x0
+ F (X) = x1 * C1 + X2 \* C2 +... + xn \* CN + x0
 
  Ativação: exp(F (X)) / (1 + exp(F (X)) )
 
@@ -129,7 +128,7 @@ WHERE NODE_TYPE = 23
 
  Aplica-se às colunas de estrutura de mineração.
 
- MODEL_EXISTENCE_ONLY significa que a coluna será tratada como tendo dois Estados possíveis: `Missing` e. `Existing` Nulo é um valor ausente.
+ MODEL_EXISTENCE_ONLY significa que a coluna será tratada como tendo dois Estados possíveis: `Missing` e `Existing` . Nulo é um valor ausente.
 
  Aplica-se à coluna de modelo de mineração.
 

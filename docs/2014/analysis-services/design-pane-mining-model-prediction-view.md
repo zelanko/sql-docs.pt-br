@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32ac73a2d6fde38d15d1f45a8439293695749ea4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081847"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528692"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Painel Design (Exibição da Previsão do Modelo de Mineração)
   O painel **Design** contém o Construtor de Consulta de Previsão, que você pode utilizar para criar previsões de mineração de dados. É possível projetar consultas de previsão que usam tabelas de dados de entrada de uma exibição da fonte de dados, gerar previsões em massa ou criar consultas de previsão singleton, que permitem fornecer valores individuais.  
@@ -81,7 +80,7 @@ ms.locfileid: "66081847"
  **Campo**  
  Selecione uma coluna na lista de colunas derivada da tabela de origem. Se você selecionou a opção **Função de Previsão** em **Origem**, ela conterá a função de previsão disponível para o modelo de mineração selecionado.  
   
- **Agrupar**  
+ **Group**  
  Use com a coluna **E/ou** para agrupar expressões. Por exemplo, `(expr1 Or expr2) And expr3`.  
   
  **E/ou**  

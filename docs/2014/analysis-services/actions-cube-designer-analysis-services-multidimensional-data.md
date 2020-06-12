@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3da39338fd5f5e86de083ec30cd0ce4bbe531f30
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062898"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528202"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>Ações (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Ações** do Designer de Cubo para exibir e editar ações, incluindo ações de extração de detalhes e ações de relatório, para o cubo selecionado.  
   
 ## <a name="panes"></a>Painéis  
- **Barra**  
+ **Barra de ferramentas**  
  Use a barra de ferramentas para executar ações comuns nessa guia. Para obter mais informações sobre esse painel, consulte a [barra de ferramentas &#40;guia ações, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Organizador de Ações**  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42285f94057441d01259c5fd54ce896dd0316b94
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077616"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537358"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Guia Modelos (Visualizadores do Modelo de Mineração)
   A guia **Modelo** no Visualizador MTS exibe uma representação de uma série temporal como um nó em um gráfico, semelhante aos usados em modelos de árvore de decisão.  
@@ -60,7 +59,7 @@ ms.locfileid: "66077616"
   
  Se a árvore mostrada na lista suspensa tiver uma barra colorida mais longa, isso significará que o modelo tem muitas ramificações na árvore. Ramificar significa que a regressão é mais complexa e o modelo tem que ser quebrado em vários segmentos, com uma equação diferente (ou par de equações) em cada nó.  
   
- **Informações**  
+ **Tela de fundo**  
  Use este controle para selecionar o estado que é representado pela cor do plano de fundo em cada nó.  
   
  **Expansão padrão**  

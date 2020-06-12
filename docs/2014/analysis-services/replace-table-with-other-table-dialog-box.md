@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac74a4147541837e642c9d3ab9637555ef16fb0d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070266"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539246"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Caixa de diálogo Substituir Tabela por Outra
   Use a caixa de diálogo **Substituir Tabela por Outra** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para substituir uma tabela existente em uma exibição de fonte de dados por uma tabela na fonte de dados subjacente que ainda não esteja incluída na exibição de fonte de dados. É possível exibir a caixa de diálogo **Substituir Tabela por Outra** clicando com o botão direito do mouse no nome de uma tabela no painel **Diagrama** ou no painel **Tabelas** do **Designer de Exibição da Fonte de Dados** e selecionando **Por Outra Tabela** em **Substituir Tabela**.  
@@ -28,7 +27,7 @@ ms.locfileid: "66070266"
  **Fonte de dados**  
  Selecione a fonte de dados da qual recuperar a tabela.  
   
- **Grade**  
+ **Grid**  
  Exibe os objetos e seus tipos disponíveis na fonte de dados selecionada que ainda não estão incluídos na exibição da fonte de dados.  
   
  **Filter**  

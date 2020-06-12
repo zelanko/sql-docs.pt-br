@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6044c22f84abdc17adf7015804627266ccff09b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175245"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542428"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definindo e procurando KPIs
   Para definir KPIs (indicadores chave de desempenho), você deve definir primeiramente um nome de KPI e o grupo de medidas ao qual o KPI será associado. Um KPI pode ser associado a todos ou apenas a um único grupo de medidas. Depois disso, você define os seguintes elementos do KPI:
@@ -67,7 +66,7 @@ ms.locfileid: "78175245"
 
      ![Modelo de KPI em branco no painel de exibição](../../2014/tutorials/media/l7-kpi-2.gif "Modelo de KPI em branco no painel de exibição")
 
-3.  Na caixa **nome** , digite `Reseller Revenue`e, em seguida, selecione **vendas do revendedor** na lista grupo de **medidas associado** .
+3.  Na caixa **nome** , digite e, em `Reseller Revenue` seguida, selecione **vendas do revendedor** na lista **grupo de medidas associado** .
 
 4.  Na guia **Metadados** do painel **Ferramentas de Cálculo** , expanda **Medidas**e **Vendas do Revendedor**e arraste a medida **Vendas do Revendedor-Valor de Vendas** até a caixa **Expressão de Valor** .
 
@@ -152,7 +151,7 @@ ms.locfileid: "78175245"
 
 1.  Clique no botão **Exibição de Formulário** na barra de ferramentas da guia **KPIs** e clique no botão **Novo KPI** .
 
-2.  Na caixa **nome** , digite `Product Gross Profit Margin`e verifique se ** \<todos os>** aparecem na lista grupo de **medidas associado** .
+2.  Na caixa **nome** , digite `Product Gross Profit Margin` e, em seguida, verifique se **\<All>** aparece na lista **grupo de medidas associado** .
 
 3.  Na guia **Metadados** no painel **Ferramentas de Cálculo** , arraste a medida **MLB Total** até a caixa **Expressão de Valor** .
 

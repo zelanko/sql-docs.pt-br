@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b01aa630-0b70-42a5-a743-f45a030cf26b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a79df6d154b5b5f2363eb14af0a4ffae5c9cb618
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d79ce686a9a0e3cdf58c81ea9060daa8a05e953d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081362"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528420"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>Habilitar Write-back de Dimensão (Assistente de Business Intelligence)
   Use a página **Habilitar Write-back de Dimensão** para habilitar ou desabilitar a funcionalidade de write-back para a dimensão selecionada.  

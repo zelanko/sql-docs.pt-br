@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0fb91b5343bd6f45eaadb93f71a73b85cb7f3a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084735"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522742"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistente de Mineração de Dados (Analysis Services - Mineração de dados)
-  O assistente de mineração de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dados do é iniciado sempre que você adiciona uma nova estrutura de mineração a um projeto Data Mining. O assistente ajuda a escolher uma fonte de dados e configurar uma exibição da fonte de dados que define os dados a serem usados para análise e, em seguida, ajuda a criar um modelo inicial.  
+  O assistente de mineração de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é iniciado sempre que você adiciona uma nova estrutura de mineração a um projeto Data Mining. O assistente ajuda a escolher uma fonte de dados e configurar uma exibição da fonte de dados que define os dados a serem usados para análise e, em seguida, ajuda a criar um modelo inicial.  
   
  Na fase final do assistente, você pode dividir seus dados opcionalmente em conjuntos de treinamento e teste, e habilitar recursos como detalhamento.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66084735"
   
 -   Quais colunas ou atributos você deseja usar para previsão? Quais colunas ou atributos são bons para usar como entrada para análise?  
   
--   Qual algoritmo você deve usar? Os algoritmos fornecidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em todos têm características diferentes e produzem resultados diferentes. Felizmente, você não está limitado a um modelo para cada conjunto de dados. Portanto, fique à vontade para experimentar adicionando modelos diferentes.  
+-   Qual algoritmo você deve usar? Os algoritmos fornecidos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] todos têm características diferentes e produzem resultados diferentes. Felizmente, você não está limitado a um modelo para cada conjunto de dados. Portanto, fique à vontade para experimentar adicionando modelos diferentes.  
   
 -   Você precisa ser capaz de testar seus modelos em um conjunto de dados unificado? Nesse caso, use a opção para separar alguns dados para teste. Você pode escolher um percentual e limitar um número especificado de linhas, se desejar.  
   

@@ -1,21 +1,21 @@
 ---
-title: SELECIONAR da &lt;junção&gt; de previsão de modelo (DMX) | Microsoft Docs
+title: SELECIONAR da &lt; junção de previsão de modelo &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928339"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670133"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECIONAR da &lt;junção&gt; de previsão de modelo (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECIONAR da &lt; junção de previsão de modelo &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Usa um modelo de mineração para predizer os estados de colunas em uma fonte de dados externa. A instrução de **junção de previsão** corresponde a cada caso da consulta de origem para o modelo.  
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  A consulta de fonte para a junção de previsão pode ser uma tabela ou uma consulta singleton.  
   
- Você pode especificar funções de previsão que não retornam uma expressão de tabela na \< *lista de expressões Select*> e \<a *expressão de condição*>.  
+ Você pode especificar funções de previsão que não retornam uma expressão de tabela na \< *lista de expressões Select*> e a \< *expressão de condição*>.  
   
  A **junção de previsão natural** mapeia automaticamente os nomes de coluna da consulta de origem que correspondem aos nomes de coluna no modelo. Se você usar a **previsão natural**, poderá omitir a cláusula on.  
   
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>Exemplo 2: Usando OPENQUERY  
- O exemplo a seguir mostra como criar uma consulta de previsão de lote usando uma lista de clientes potenciais armazenados em um conjunto de um DataSet externo. Como a tabela faz parte de uma exibição da fonte de dados que foi definida em uma instância [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]do, a consulta pode usar [OPENQUERY](../dmx/source-data-query-openquery.md) para recuperar os dados. Como os nomes das colunas na tabela são diferentes daqueles no modelo de mineração, a cláusula **on** deve ser usada para mapear as colunas na tabela para as colunas no modelo.  
+ O exemplo a seguir mostra como criar uma consulta de previsão de lote usando uma lista de clientes potenciais armazenados em um conjunto de um DataSet externo. Como a tabela faz parte de uma exibição da fonte de dados que foi definida em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , a consulta pode usar [OPENQUERY](../dmx/source-data-query-openquery.md) para recuperar os dados. Como os nomes das colunas na tabela são diferentes daqueles no modelo de mineração, a cláusula **on** deve ser usada para mapear as colunas na tabela para as colunas no modelo.  
   
  A consulta retorna o primeiro e o último nome de cada pessoa na tabela, junto com uma coluna booliana que indica se cada pessoa provavelmente comprará uma bicicleta, onde 0 significa "provavelmente não comprará uma bicicleta" e 1 significa "provavelmente comprará uma bicicleta". A última coluna contém a probabilidade do resultado previsto.  
   

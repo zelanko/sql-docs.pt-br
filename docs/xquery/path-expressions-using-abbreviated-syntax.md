@@ -1,5 +1,6 @@
 ---
 title: Usando a sintaxe abreviada em uma expressão de caminho | Microsoft Docs
+description: Saiba como usar a sintaxe abreviada em expressões de caminho XQuery.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeb7026f341af60f289a1d3854e24656073add61
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946416"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306005"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>Expressões de Caminho – Usar Sintaxe Abreviada
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +38,11 @@ child::ProductDescription[attribute::ProductModelID=19]
   
 -   O eixo **filho** é o eixo padrão. Portanto, o eixo **Child::** pode ser omitido de uma etapa em uma expressão. Por exemplo, `/child::ProductDescription/child::Summary` pode ser escrito como `/ProductDescription/Summary`.  
   
--   Um eixo de **atributo** pode ser abreviado @como. Por exemplo, `/child::ProductDescription[attribute::ProductModelID=10]` pode ser escrito como `/ProudctDescription[@ProductModelID=10]`.  
+-   Um eixo de **atributo** pode ser abreviado como @ . Por exemplo, `/child::ProductDescription[attribute::ProductModelID=10]` pode ser escrito como `/ProudctDescription[@ProductModelID=10]`.  
   
 -   Um **/descendant-or-self:: node ()/** pode ser abreviado como//. Por exemplo, `/descendant-or-self::node()/child::act:telephoneNumber` pode ser escrito como `//act:telephoneNumber`.  
   
-     A consulta anterior recupera todos os números de telefone armazenados na coluna AdditionalContactInfo na tabela Contact. O esquema para AdditionalContactInfo é definido de forma que um \<elemento de> de telephoneNumber possa aparecer em qualquer lugar do documento. Então, para recuperar todos os números de telefone, você deve pesquisar cada nó no documento. A pesquisa inicia na raiz do documento e continua por todos os nós descendentes.  
+     A consulta anterior recupera todos os números de telefone armazenados na coluna AdditionalContactInfo na tabela Contact. O esquema para AdditionalContactInfo é definido de forma que um \<telephoneNumber> elemento possa aparecer em qualquer lugar do documento. Então, para recuperar todos os números de telefone, você deve pesquisar cada nó no documento. A pesquisa inicia na raiz do documento e continua por todos os nós descendentes.  
   
      A consulta a seguir recupera todos os números de telefone de um contato de cliente específico:  
   

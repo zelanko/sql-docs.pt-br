@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 558f9936b7a8e78b3ef75f3bb525185ae497959c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087025"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526962"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Conectar ao Microsoft SQL Server Analysis Services (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar configurações para importar dados de um cubo do Microsoft SQL Server Analysis Services ou de uma pasta de trabalho PowerPivot que esteja hospedada no SharePoint. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087025"
 > [!NOTE]  
 >  As credenciais do usuário atual são usadas na seleção de um banco de dados nesta página. Porém, a importação não terá êxito se o usuário especificado na página Informações sobre Representação não tiver privilégios suficientes para ler do banco de dados selecionado.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome de conexão amigável**  
  Digite um nome exclusivo para esta conexão de fonte de dados. Esse é um campo obrigatório.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66087025"
   
 -   Digite a URL de uma pasta de trabalho do PowerPivot publicada no SharePoint.  
   
- **Usar autenticação do Windows**  
+ **Usar Autenticação do Windows**  
  Especifique se a Autenticação do Windows será usada para conectar a um servidor do SQL Server Analysis Services.  
   
  O modo de Autenticação do Windows permite que um usuário se conecte por meio de uma conta de usuário do Windows. Sempre que for possível, use a Autenticação do Windows.  

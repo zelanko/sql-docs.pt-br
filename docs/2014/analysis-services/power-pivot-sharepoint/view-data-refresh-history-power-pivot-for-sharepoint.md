@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3efe11a733408124490ece2e85c9bd40db34f3fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ad05ca790b42756a51f0dfc419d369e8a24f70d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070914"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547678"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Exibir histórico de atualização de dados (PowerPivot para SharePoint)
   O histórico de atualização de dados é um registro de todas as atividades de atualização de dados PowerPivot em uma pasta de trabalho do Excel. As operações da atualização de dados são executadas em uma instância de servidor do Analysis Services em um farm do SharePoint em uma agenda fornecida por você. Por padrão, o histórico de atualização de dados é mantido durante um ano. No entanto, um administrador de farm pode especificar uma política de retenção diferente para o histórico de uso e de eventos que determine por quanto tempo os registros de atualização de dados são mantidos.  
@@ -62,11 +61,11 @@ ms.locfileid: "66070914"
   
 |Item|Descrição|  
 |----------|-----------------|  
-|Nome|Especifica o nome do arquivo da pasta de trabalho do Excel que contém dados PowerPivot.|  
+|Name|Especifica o nome do arquivo da pasta de trabalho do Excel que contém dados PowerPivot.|  
 |Status atual|Os valores incluem **Agendado**, **Atualizando**, **Êxito**ou **Falha**.<br /><br /> **Agendado** é exibido quando a agenda é criada pela primeira vez. Depois que a atualização de dados ocorre pela primeira vez, essa mensagem de status não é mais exibida.<br /><br /> **Atualizando** indica que a atualização de dados está em andamento. Uma solicitação está na fila de processamento ou está sendo executada ativamente no servidor.<br /><br /> **Êxito** indica que a última operação de atualização de dados foi concluída e a pasta de trabalho atualizada está verificada na biblioteca do SharePoint.<br /><br /> **Falha** indica que a última operação de atualização de dados não obteve êxito. Os dados atualizados não foram salvos. A pasta de trabalho contém os mesmos dados que tinha antes do início da atualização de dados.|  
 |Última atualização bem-sucedida|Especifica a data na qual a última atualização de dados foi concluída com êxito.|  
 |Próxima atualização agendada|Especifica a data na qual a próxima atualização de dados está agendada.<br /><br /> O link **Configurar agendamento** leva à página de definição da agenda. Se você tiver permissões de colaboração na pasta de trabalho, poderá clicar no link para exibir e modificar as informações de agenda que controlam a atualização de dados PowerPivot na pasta de trabalho.|  
-|Started (iniciado)|Dentro da seção de detalhes do histórico, **Iniciado** indica a hora de processamento real. A hora de processamento real pode ser diferente da que foi agendada. O processamento será iniciado quando houver memória suficiente disponível no servidor. Se o servidor estiver muito ocupado, o processamento talvez seja iniciado várias horas depois da hora de início especificada.|  
+|Iniciado|Dentro da seção de detalhes do histórico, **Iniciado** indica a hora de processamento real. A hora de processamento real pode ser diferente da que foi agendada. O processamento será iniciado quando houver memória suficiente disponível no servidor. Se o servidor estiver muito ocupado, o processamento talvez seja iniciado várias horas depois da hora de início especificada.|  
 |Concluído|Na seção de detalhes do histórico, **Concluído** indica quando a operação de atualização de dados foi concluída. A data e a hora indicam quando a pasta de trabalho for verificada na biblioteca.<br /><br /> Se houve falha na atualização de dados, uma ou mais mensagens de erro explicam a causa da falha. Você pode expandir cada registro para exibir o status detalhado. Cada fonte de dados é listada individualmente, junto com as mensagens de êxito ou de falha que explicam por que a atualização de dados não foi concluída.|  
 |Hora|Fornece o tempo cumulativo entre o início e a conclusão da atualização de dados.|  
 |Status|Fornece um registro histórico da falha ou do êxito de uma operação de atualização.|  

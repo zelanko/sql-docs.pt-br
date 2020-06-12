@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2925542236adfc7e79ea1dccd0ca3ca1008e7de1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064625"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527762"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>Navegador (Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use a guia **Navegador** do Designer de Dimensão para procurar dados e metadados de uma dimensão. Se o write-back de dimensão estiver habilitado para a dimensão selecionada no momento, use essa exibição para alterar os dados de membro da dimensão.  
@@ -27,7 +26,7 @@ ms.locfileid: "66064625"
 ## <a name="panes"></a>Painéis  
  A guia **Navegador** contém os seguintes painéis:  
   
- [Barra](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barra de ferramentas](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Use a barra de ferramentas para executar ações comuns na guia **Navegador** do Designer de Dimensão.  
   
  [Nível e Membros](level-members-dimension-designer-analysis-services-multidimensional-data.md)  

@@ -1,5 +1,6 @@
 ---
 title: Conectando-se ao MySQL (MySQLToSQL) | Microsoft Docs
+description: Saiba como se conectar a um banco de dados iMySQL de destino para migrar um banco de dados MySQL. O SSMA obtém metadados sobre bancos de dados no banco de dados SQL do Azure.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d82a23735cde22773c693dce5f6e8dc86b9654b4
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103167"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293653"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Conectar-se ao MySQL (MySQLToSQL)
 Para migrar bancos de dados MySQL para SQL Server ou SQL Azure, você deve se conectar ao banco de dados MySQL que deseja migrar. Quando você se conecta, o SSMA obtém metadados sobre todos os esquemas do MySQL e, em seguida, exibe-os no painel do Gerenciador de metadados do MySQL. O SSMA armazena informações sobre o servidor de banco de dados, mas não armazena senhas.  

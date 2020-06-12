@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d69c7efb919a01e6e9d704c4f0fe2ef3d7c25799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072315"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541158"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Rede Neural (Visualizador do Modelo de Mineração)
   Use o visualizador da **Rede Neural** para explorar modelos de mineração que sejam baseados no algoritmo Rede Neural da [!INCLUDE[msCoName](../includes/msconame-md.md)] ou no algoritmo Regressão Logística da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -39,7 +38,7 @@ ms.locfileid: "66072315"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Atributo**|Escolha um atributo de entrada na lista. Se você deixar a seleção como padrão, ** \<todos os>**, o gráfico mostrará uma lista de todos os atributos de entrada, classificados por seu impacto sobre o atributo previsível.|  
+|**Atributo**|Escolha um atributo de entrada na lista. Se você deixar a seleção como padrão, **\<All>** o gráfico mostrará uma lista de todos os atributos de entrada, classificados por seu impacto sobre o atributo previsível.|  
 |**Valor**|Escolha um valor para o atributo de entrada.|  
   
  **Saída**  
@@ -58,8 +57,8 @@ ms.locfileid: "66072315"
 |-----------|-----------------|  
 |**Atributo**|Mostra o nome do atributo de entrada selecionado em **Atributo**.|  
 |**Valor**|Mostra o valor para o atributo de entrada selecionado.|  
-|**Favorece \<o valor 1>**|Exibe uma barra que indica quanto esta combinação específica de atributo e valor afeta o resultado de destino escolhido em **Valor 1**.|  
-|**Favorece \<o valor 2>**|Exibe uma barra que indica quanto esta combinação específica de atributo e valor afeta o resultado de destino escolhido em **Valor 2**.|  
+|**Enfatiza\<Value 1>**|Exibe uma barra que indica quanto esta combinação específica de atributo e valor afeta o resultado de destino escolhido em **Valor 1**.|  
+|**Enfatiza\<Value 2>**|Exibe uma barra que indica quanto esta combinação específica de atributo e valor afeta o resultado de destino escolhido em **Valor 2**.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d8293cd61ef105352e6c6e1aaccb7f44494b2d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077461"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544858"
 ---
 # <a name="add-a-standard-action"></a>Adicionar uma ação padrão
   Você adiciona uma ação a um banco de dados usando a exibição Ações no Designer de Cubo. Essa exibição pode ser acessada pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois de você criar uma ação, ela ficará disponível a usuários depois que você reprocessar o cubo pertinente. Para obter mais informações, consulte [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "66077461"
   
     -   Na lista suspensa **Tipo** , selecione o tipo de ação que você quer criar. A tabela a seguir lista os tipos de ações disponíveis.  
   
-        |Tipo|Descrição|  
+        |Tipo|Description|  
         |----------|-----------------|  
         |Dataset|Recupera um conjunto de dados.|  
         |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
@@ -63,7 +62,7 @@ ms.locfileid: "66077461"
   
         |Opção|Descrição|  
         |------------|-----------------|  
-        |Interactive (Interativo)|A ação é disparada pela interação do usuário.|  
+        |Interativo|A ação é disparada pela interação do usuário.|  
         |Lote|A ação é executada como uma operação de lote.|  
         |Em aberto|A ação é executada quando um usuário abre o cubo.|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66077461"
         > [!NOTE]  
         >  As ações proprietárias não são retornadas para o servidor a menos que o aplicativo cliente restrinja explicitamente o conjunto de linhas de esquema para retornar somente ações que correspondam ao nome especificadas em **Aplicativo**.  
   
-    -   Em **conteúdo da ação**, se você estiver usando o tipo de URL, coloque o endereço da Internet entre aspas, porhttp://www.adventure-works.comexemplo, "".  
+    -   Em **conteúdo da ação**, se você estiver usando o tipo de URL, coloque o endereço da Internet entre aspas, por exemplo, " http://www.adventure-works.com ".  
   
     -   Em **Descrição**, digite uma descrição para a ação.  
   

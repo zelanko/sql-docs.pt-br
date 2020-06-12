@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8af87605bb8c4c2cf4bcd53cce3f7ab0019b7d94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087966"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527512"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matriz de classificação (Suplementos de Mineração de Dados do SQL Server)
   ![Botão Matriz de Classificação, faixa de opções Mineração de dados](media/dmc-cmatrix.gif "Botão Matriz de Classificação, faixa de opções Mineração de dados")  
@@ -84,7 +83,7 @@ ms.locfileid: "66087966"
   
 -   O modelo de mineração de dados e os novos dados que você estiver usando para teste deverão conter pelo menos uma coluna que possa ser prevista, e as colunas devem conter o mesmo tipo de dados.  
   
-### <a name="known-issues"></a>Problemas conhecidos  
+### <a name="known-issues"></a>Problemas Conhecidos  
  No SQL Server 2012 e SQL Server 2014, a capacidade de mapear o conjunto de dados de teste interno para o modelo não está funcionando na ferramenta de **matriz de classificação** . No entanto, você pode especificar um conjunto de dados externo, e selecionar o treinamento definido como a entrada para determinar o erro no conjunto de dados original.  
   
 ## <a name="see-also"></a>Consulte Também  

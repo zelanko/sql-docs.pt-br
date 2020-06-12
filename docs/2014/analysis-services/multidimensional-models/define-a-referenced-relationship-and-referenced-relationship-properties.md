@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00305d00bb3a11cc4237e005a057c70d4c5f3397
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a84cf2ed95ab3660c5a6b3c039dc58351dc43264
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075757"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547060"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>Definir uma relação referenciada e as propriedades da relação referenciada
   Uma relação de dimensão de referência é definida na guia **Uso da Dimensão** do Designer de Cubo. A relação de dimensão de referência é definida especificando-se o seguinte:  

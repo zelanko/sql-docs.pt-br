@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893879"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666689"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *referência de coluna de tabela>, clic de coluna escalar>\< * * \<*  
+ * \< referência de coluna de tabela>*, * \< clic de coluna escalar>*  
  Especifica o nome da coluna a ser prevista. A coluna pode conter dados escalares ou tabulares.  
   
  *n*  
@@ -90,7 +90,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 >  Você pode obter diferentes resultados do seu modelo. Os resultados dos exemplos a seguir são fornecidos somente para ilustrar o formato do resultado.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>Exemplo 1: Prevendo um número de frações de tempo  
- O exemplo a seguir usa a função **PredictTimeSeries** para retornar uma previsão para as próximas três etapas de tempo e restringe os resultados para a série M200 nas regiões Europe e Pacífico. Nesse modelo específico, o atributo previsível é quantidade, portanto, você deve `[Quantity]` usar como o primeiro argumento para a função PredictTimeSeries.  
+ O exemplo a seguir usa a função **PredictTimeSeries** para retornar uma previsão para as próximas três etapas de tempo e restringe os resultados para a série M200 nas regiões Europe e Pacífico. Nesse modelo específico, o atributo previsível é quantidade, portanto, você deve usar `[Quantity]` como o primeiro argumento para a função PredictTimeSeries.  
   
 ```  
 SELECT FLATTENED  
@@ -185,7 +185,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- Como a consulta usa a opção *EXTEND_MODEL_CASES* , [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o executa as seguintes ações para suas previsões:  
+ Como a consulta usa a opção *EXTEND_MODEL_CASES* , o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] executa as seguintes ações para suas previsões:  
   
 -   Aumenta o tamanho total dos casos de treinamento adicionando os dois novos meses de dados ao modelo.  
   
@@ -220,7 +220,7 @@ WHERE ([Model Region] = 'M200 Europe'
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Exemplo 4: Retornando estatísticas em uma previsão de série temporal  
  A função **PredictTimeSeries** não oferece suporte a *INCLUDE_STATISTICS* como parâmetro. No entanto, a seguinte consulta pode ser usada para retornar as estatísticas de previsão para uma consulta de série temporal. Esse método também pode ser usado com modelos que possuam colunas de tabela aninhada.  
   
- Nesse modelo específico, o atributo previsível é quantidade, portanto, você deve `[Quantity]` usar como o primeiro argumento para a função PredictTimeSeries. Se seu modelo usa um atributo previsível diferente, você pode substituir um nome de coluna diferente.  
+ Nesse modelo específico, o atributo previsível é quantidade, portanto, você deve usar `[Quantity]` como o primeiro argumento para a função PredictTimeSeries. Se seu modelo usa um atributo previsível diferente, você pode substituir um nome de coluna diferente.  
   
 ```  
 SELECT FLATTENED [Model Region],  

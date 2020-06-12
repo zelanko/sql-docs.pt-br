@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cc232f6c861a3b7dbde44b342deaa831de6c99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070128"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547388"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Filtros de linha (designer de função) (modelo de tabela)
   Use a página **Filtros de Linha** do Designer de Função para definir os filtros de nível de linha para a função associada. Os filtros de linha podem ser definidos somente para funções com as permissões Ler e Ler e Processar.  
@@ -32,7 +31,7 @@ ms.locfileid: "66070128"
  **Filtro DAX**  
  Uma fórmula DAX que avalia para uma condição Booliana.  
   
- **Filtro DAX- \<TableName>**  
+ **Filtro DAX-\<tablename>**  
  Digite uma fórmula DAX que avalia para uma condição Booliana.  
   
 ## <a name="see-also"></a>Consulte Também  

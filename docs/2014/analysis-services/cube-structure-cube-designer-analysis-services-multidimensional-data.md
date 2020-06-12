@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 00f0b605-5352-4b42-84f5-bd6c3e42d3d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19a1fd2e52e680c4efb3ab7ec3ba826a6892d2a9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086575"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526062"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Estrutura do Cubo (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Estrutura do Cubo** no **Designer de Cubo** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar e modificar medidas e grupos de medidas, adicionar dimensões de cubos e exibir os objetos incluídos no cubo a partir da exibição da fonte de dados associada.  
@@ -28,8 +27,8 @@ ms.locfileid: "66086575"
   
 |Painel|Definição|  
 |----------|----------------|  
-|**Barra**|Use a barra de ferramentas para executar ações comuns nesta guia. Para obter mais informações sobre esse painel, consulte [barra de ferramentas &#40;guia estrutura do cubo, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
-|**medidas**|Use o painel **Medidas** para criar e modificar medidas e grupos de medidas para o cubo selecionado. Para obter mais informações sobre esse painel, consulte [Medidas &#40;guia Estrutura do Cubo, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barra de ferramentas**|Use a barra de ferramentas para executar ações comuns nesta guia. Para obter mais informações sobre esse painel, consulte [barra de ferramentas &#40;guia estrutura do cubo, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Determina**|Use o painel **Medidas** para criar e modificar medidas e grupos de medidas para o cubo selecionado. Para obter mais informações sobre esse painel, consulte [Medidas &#40;guia Estrutura do Cubo, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Dimensões**|Use o painel **Dimensões** para incluir e modificar dimensões do cubo selecionado. Para obter mais informações sobre esse painel, consulte [Dimensões &#40;guia Estrutura do Cubo, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Exibição da Fonte de Dados**|Use o painel **Exibição da Fonte de Dados** para exibir e editar a exibição da fonte de dados associada ao cubo selecionado. Para obter mais informações sobre esse painel, consulte [Exibição da fonte de dados &#40;guia Estrutura do Cubo, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d5940acf827ee8cff73527d211f6bb8249a6e19
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070506"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539528"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Caixa de diálogo Atualizar Exibição da Fonte de Dados
   Use a caixa de diálogo **Atualizar Exibição da Fonte de Dados** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para aceitar ou cancelar as alterações que ocorrerão como resultado da atualização da exibição da fonte de dados. A caixa de diálogo mostra as alterações que serão feitas à exibição da fonte de dados como resultado de alterações feitas à fonte de dados subjacente. Clique em **OK** para aceitar as alterações e atualizar a exibição da fonte de dados ou em **Cancelar** para ignorar as alterações e deixar a exibição da fonte de dados inalterada. É possível exibir a caixa de diálogo **Atualizar Exibição da Fonte de Dados** das seguintes maneiras:  

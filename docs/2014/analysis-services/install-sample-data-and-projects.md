@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6185d3d9aeb3221b1ae194790b89265787e4621
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530822"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544109"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services
   Use as instruções e links fornecidos neste tópico para instalar todos os dados e arquivos de projeto usados nos Tutoriais do Analysis Services.  
@@ -98,7 +97,7 @@ ms.locfileid: "69530822"
   
      Os tutoriais do 2012 são válidos para a versão do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
-     O arquivo "tutorial de Analysis Services SQL Server 2012. zip" será salvo na pasta de downloads em seu computador.  
+     O arquivo "Analysis Services tutorial SQL Server 2012.zip" será salvo na pasta downloads no seu computador.  
   
 2.  Mova o arquivo .zip para uma pasta debaixo da unidade de raiz (por exemplo, C:\Tutorial). Essa etapa reduz o erro de "caminho muito longo" que às vezes ocorre se você tentar descompactar os arquivos na pasta de downloads.  
   

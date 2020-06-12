@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371b515bbd548b544fba0125cf3d6b58b0098470
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076755"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544548"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Procurar dados e metadados no Cubo
   Use a guia **Navegador** do Designer de Cubo para procurar dados do cubo. Você pode usar esta exibição para examinar a estrutura de um cubo e verificar dados, cálculo, formatação e segurança de objetos de banco de dados. Você pode examinar rapidamente um cubo como usuários finais o veem em ferramentas de relatório ou outros aplicativos cliente. Quando você procurar dados do cubo, poderá exibir dimensões diferentes, detalhar os membros e segmentar as dimensões.  
@@ -57,15 +56,15 @@ ms.locfileid: "66076755"
   
      \- ou –  
   
--   Na coluna **dimensão** do painel **filtro** , clique em ** \<selecionar dimensão>** e selecione uma dimensão na lista, em seguida, clique em ** \<selecionar hierarquia>** na coluna **hierarquia** e selecione uma hierarquia na lista.  
+-   Na coluna **dimensão** do painel **filtro** , clique em **\<Select dimension>** e selecione uma dimensão na lista, clique **\<Select hierarchy>** na coluna **hierarquia** e selecione uma hierarquia na lista.  
   
  Depois que você especificar a hierarquia, especifique o operador e a expressão de filtro. A tabela a seguir descreve os operadores e as expressões de filtro.  
   
-|Operador|Expressão de filtro|Descrição|  
+|Operador|Expressão de filtro|Description|  
 |--------------|-----------------------|-----------------|  
-|Igual a|Um ou mais membros|Os valores devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
+|Igual|Um ou mais membros|Os valores devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
 |Diferente de|Um ou mais membros|Os valores não devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
-|No|Um ou mais conjuntos nomeados|Os valores devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  
+|Em|Um ou mais conjuntos nomeados|Os valores devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  
 |Não está em|Um ou mais conjuntos nomeados|Os valores não devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  
 |Intervalo (Inclusivo)|Um ou dois membros delimitadores de um intervalo|Os valores devem estar entre ou ser iguais aos membros delimitadores. Se os membros delimitadores forem iguais ou somente um membro for especificado, nenhum intervalo será imposto e todos os valores serão permitidos.<br /><br /> (Suporte somente a hierarquias de atributo. O intervalo deve estar em um nível de uma hierarquia. Não há suporte para intervalos não associados no momento.)|  
 |Intervalo (Exclusivo)|Um ou dois membros delimitadores de um intervalo|Os valores devem estar entre os membros delimitadores. Se os membros delimitadores forem iguais ou somente um membro for especificado, os valores deve ser maiores que ou menores que o membro delimitador.<br /><br /> (Suporte somente a hierarquias de atributo. O intervalo deve estar em um nível de uma hierarquia. Não há suporte para intervalos não associados no momento.)|  

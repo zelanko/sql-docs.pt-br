@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21e8c6f7cb6938e629be9d252c208c61c04d17d8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084547"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522471"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Consultas de detalhamento (mineração de dados)
   Uma *consulta de detalhamento* permite que você recupere detalhes de casos subjacentes ou estrutura de dados, enviando uma consulta ao modelo de mineração. O detalhamento é útil se você quiser exibir os casos que foram utilizados para treinar o modelo, versus os casos utilizados para testar o modelo, ou se você quiser ver detalhes adicionais dos dados dos casos.  
@@ -69,7 +68,7 @@ ms.locfileid: "66084547"
 -   Se a estrutura de mineração não permitir o detalhamento, mas o modelo de mineração permitir, você poderá exibir informações somente dos casos de modelo e não da estrutura de mineração.  
   
 ###  <a name="security-issues-for-drillthrough"></a><a name="bkmk_Security"></a> Problemas de segurança para detalhamento  
- Se desejar detalhar os casos de estrutura do modelo, você deve verificar se a estrutura de mineração e o modelo de mineração têm a propriedade [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) definida como `True`. Além disso, você deve ser um membro da função que tem as permissões de detalhamento no modelo e na estrutura. Para obter informações sobre como criar funções, consulte [Designer de Função &#40;Analysis Services – Dados Multidimensionais&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). consulte.  
+ Se desejar detalhar os casos de estrutura do modelo, você deve verificar se a estrutura de mineração e o modelo de mineração têm a propriedade [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) definida como `True` . Além disso, você deve ser um membro da função que tem as permissões de detalhamento no modelo e na estrutura. Para obter informações sobre como criar funções, consulte [Designer de Função &#40;Analysis Services – Dados Multidimensionais&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). consulte.  
   
  As permissões de detalhamento são definidas separadamente na estrutura e no modelo. A permissão para o modelo lhe permite detalhar do modelo, mesmo que você não tenha permissões na estrutura. As permissões para detalhamento na estrutura fornecem a capacidade adicional de incluir colunas de estrutura em consultas de detalhamento do modelo, usando a função [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
   
@@ -82,11 +81,11 @@ ms.locfileid: "66084547"
   
 |Nome do algoritmo|Problema|  
 |--------------------|-----------|  
-|Algoritmo Microsoft Naïve Bayes|Sem suporte. Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
-|Algoritmo Rede Neural da Microsoft|Sem suporte. Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
-|Algoritmo Regressão Logística da Microsoft|Sem suporte. Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
-|Algoritmo Regressão Linear da Microsoft| Com suporte. Porém, como o modelo cria um único nó, `All`, o detalhamento retorna todos os casos de treinamento para o modelo. Se o conjunto de treinamento for grande, o carregamento dos resultados poderá demorar muito tempo.|  
-|Algoritmo Microsoft Time Series| Com suporte. Porém, você não pode detalhar a estrutura nem os dados de casos utilizando o **Visualizador de Modelo de Mineração** no Designer de Mineração de Dados. Em vez disso, você deve criar uma consulta DMX.<br /><br /> Além disso, você não pode detalhar nós específicos nem gravar uma consulta DMX para recuperar casos em nós específicos do modelo Time Series. Você pode recuperar dados de casos a partir da redução do modelo ou da estrutura utilizando outros critérios, como valores data ou de atributo.<br /><br /> Você também pode retornar as datas dos casos no modelo, usando a função [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx).<br /><br /> Se você quiser ver detalhes dos nós ARTXP e ARIMA criados pelo algoritmo MTS, poderá utilizar o [Visualizador de Árvore de Conteúdo Genérico da Microsoft &#40;Mineração de dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).|  
+|Algoritmo Microsoft Naïve Bayes|Não há suporte. Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
+|Algoritmo Rede Neural da Microsoft|Não há suporte. Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
+|Algoritmo Regressão Logística da Microsoft|Não há suporte. Estes algoritmos não atribuem casos a nós específicos no conteúdo.|  
+|Algoritmo Regressão Linear da Microsoft|Com suporte. Porém, como o modelo cria um único nó, `All`, o detalhamento retorna todos os casos de treinamento para o modelo. Se o conjunto de treinamento for grande, o carregamento dos resultados poderá demorar muito tempo.|  
+|Algoritmo Microsoft Time Series|Com suporte. Porém, você não pode detalhar a estrutura nem os dados de casos utilizando o **Visualizador de Modelo de Mineração** no Designer de Mineração de Dados. Em vez disso, você deve criar uma consulta DMX.<br /><br /> Além disso, você não pode detalhar nós específicos nem gravar uma consulta DMX para recuperar casos em nós específicos do modelo Time Series. Você pode recuperar dados de casos a partir da redução do modelo ou da estrutura utilizando outros critérios, como valores data ou de atributo.<br /><br /> Você também pode retornar as datas dos casos no modelo, usando a função [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx).<br /><br /> Se você quiser ver detalhes dos nós ARTXP e ARIMA criados pelo algoritmo MTS, poderá utilizar o [Visualizador de Árvore de Conteúdo Genérico da Microsoft &#40;Mineração de dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).|  
   
 ##  <a name="related-tasks"></a><a name="bkmk_Tasks"></a> Tarefas relacionadas  
  Use os links a seguir para trabalhar com detalhamento em cenários específicos.  

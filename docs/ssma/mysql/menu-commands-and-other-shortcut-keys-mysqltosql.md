@@ -1,5 +1,6 @@
 ---
 title: Comandos de menu e outras teclas de atalho (MySQLToSQL) | Microsoft Docs
+description: Saiba mais sobre os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do aplicativo SSMA para MySQL.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908806"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293597"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandos de menu e outras teclas de atalho (MySQLToSQL)
 As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do aplicativo SSMA para MySQL.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 006f1090faed746737a89041593222d95637d387
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072376"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541198"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabalhar com diagramas em um Designer de exibição da fonte de dados (Analysis Services)
   Um diagrama DSV (exibição de fonte de dados) é uma representação visual dos objetos em um DSV. Você pode trabalhar com o diagrama interativamente para adicionar, ocultar, excluir ou modificar objetos específicos. Você também pode criar vários diagramas no mesmo DSV para concentrar a atenção em um subconjunto dos objetos.  
@@ -46,11 +45,11 @@ ms.locfileid: "66072376"
   
  Para criar um novo diagrama, clique com o botão direito do mouse em qualquer lugar do painel **Organizador de Diagramas** , clique em **Novo Diagrama**.  
   
- Quando você define inicialmente uma DSV (exibição da fonte de dados) em um projeto Analysis Services, todas as tabelas e exibições adicionadas à exibição da fonte \<de dados são adicionadas ao diagrama todas as tabelas>. Esse diagrama aparece no painel Organizador de Diagramas do Designer de Exibição da Fonte de Dados, suas tabelas (bem como colunas e relações) são listadas no painel Tabelas e as tabelas desse diagrama (bem como colunas e relações) são exibidas graficamente no painel do esquema. No entanto, à medida que você adiciona tabelas, exibições \<e consultas nomeadas ao diagrama de todas as tabelas>, o número enorme de objetos nesse diagrama dificulta a visualização de relações, particularmente, pois várias tabelas de fatos são adicionadas ao diagrama, e tabelas de dimensões se relacionam com várias tabelas de fatos.  
+ Quando você define inicialmente uma DSV (exibição da fonte de dados) em um projeto Analysis Services, todas as tabelas e exibições adicionadas à exibição da fonte de dados são adicionadas ao \<All Tables> diagrama. Esse diagrama aparece no painel Organizador de Diagramas do Designer de Exibição da Fonte de Dados, suas tabelas (bem como colunas e relações) são listadas no painel Tabelas e as tabelas desse diagrama (bem como colunas e relações) são exibidas graficamente no painel do esquema. No entanto, à medida que você adiciona tabelas, exibições e consultas nomeadas ao \<All Tables> diagrama, o grande número de objetos nesse diagrama dificulta a visualização de relações – particularmente, já que várias tabelas de fatos são adicionadas ao diagrama, e tabelas de dimensões se relacionam com várias tabelas de fatos.  
   
  Para reduzir a poluição visual quando você quer apenas exibir um subconjunto das tabelas da exibição da fonte de dados, é possível definir subdiagramas (chamados simplesmente de diagramas) formados por subconjuntos das tabelas, exibições e consultas nomeadas da exibição da fonte de dados. Você pode usar diagramas para agrupar itens da exibição da fonte de dados de acordo com as necessidades dos negócios ou da solução.  
   
- É possível agrupar tabelas e consultas nomeadas relacionadas em diagramas separados de acordo com os negócios e facilitar o entendimento da exibição da fonte de dados que contém muitas tabelas, exibições e consultas nomeadas. A mesma tabela ou consulta nomeada pode ser incluída em vários diagramas, exceto \<para todas as tabelas> diagrama. No diagrama \<todas as tabelas>, todos os objetos contidos na exibição da fonte de dados são mostrados exatamente uma vez.  
+ É possível agrupar tabelas e consultas nomeadas relacionadas em diagramas separados de acordo com os negócios e facilitar o entendimento da exibição da fonte de dados que contém muitas tabelas, exibições e consultas nomeadas. A mesma tabela ou consulta nomeada pode ser incluída em vários diagramas, exceto para o \<All Tables> diagrama. No \<All Tables> diagrama, todos os objetos contidos na exibição da fonte de dados são mostrados exatamente uma vez.  
   
 ##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>Editar ou excluir um diagrama  
  Ao trabalhar com um diagrama, preste atenção aos comandos usados por adicionar e remover objetos. Por exemplo, excluir um objeto de um diagrama o excluirá da DSV. Se você apenas desejar excluí-lo do diagrama, use **Ocultar Tabela** em vez disso.  

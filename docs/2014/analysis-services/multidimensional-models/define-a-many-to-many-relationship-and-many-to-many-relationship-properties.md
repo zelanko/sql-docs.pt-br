@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075775"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547078"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definir uma relação muitos-para-muitos e as propriedades da relação muitos-para-muitos
   Este tópico explica as dimensões muitos-para-muitos no Analysis Services, incluindo quando usá-las e como criá-las.  
@@ -142,7 +141,7 @@ ms.locfileid: "66075775"
   
 1.  Implante o projeto e procure o cubo para confirmar se as agregações são válidas.  
   
-2.  No Excel, clique em **dados** | **de outras fontes** | **de Analysis Services**. Insira o nome do servidor, escolha o banco de dados e o cubo.  
+2.  No Excel, clique em **dados**  |  **de outras fontes**  |  **de Analysis Services**. Insira o nome do servidor, escolha o banco de dados e o cubo.  
   
 3.  Crie uma Tabela Dinâmica que use o seguinte:  
   

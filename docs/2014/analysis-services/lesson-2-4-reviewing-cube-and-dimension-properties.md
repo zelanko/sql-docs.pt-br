@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e30096bcd23f517e640903b0c9036633ad5427d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078996"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543498"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Revisando as propriedades de dimensão e cubo
   Depois que você definir um cubo, você pode revisar os resultados usando o Designer de Cubos. Na tarefa a seguir, você revisará a estrutura do cubo no projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -52,7 +51,7 @@ ms.locfileid: "66078996"
   
 9. No Gerenciador de Soluções, clique com o botão direito do mouse no **Tutorial do Analysis Services** do nó **Cubos** e clique em **Exibir Código**. Talvez você precise esperar um pouco.  
   
-     O código XML para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo do tutorial é exibido na guia ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial. Cube [XML]** . Esse é o código real usado para criar o cubo em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] durante a implantação. Para obter mais informações, consulte [Exibir o XML de um projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     O código XML para o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo do tutorial é exibido na guia ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial. Cube [XML]** . Esse é o código real usado para criar o cubo em uma instância do durante a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] implantação. Para obter mais informações, consulte [Exibir o XML de um projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Feche a guia do código XML.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fa1d14c1a96a89cbd890dbf4d133d84897b9197
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085305"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523672"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Criar uma consulta Singleton no Designer de Mineração de Dados
   Uma consulta singleton será útil se você quiser criar uma previsão para um único caso. Para obter mais informações sobre as consultas singleton, veja [Consultas de mineração de dados](data-mining-queries.md).  
@@ -57,7 +56,7 @@ AS [t]
   
 4.  Na tabela **Entrada da Consulta Singleton** , selecione os valores na coluna **Valor** para descrever o caso para o qual deseja criar uma previsão.  
   
-     Por exemplo, selecione **2** para **número de filhos em casa**e, em `45` seguida, digite para **idade**.  
+     Por exemplo, selecione **2** para **número de filhos em casa**e, em seguida, digite `45` para **idade**.  
   
 5.  Arraste uma coluna previsível da tabela do **modelo de mineração** para a coluna de **origem** na parte inferior da guia. opcionalmente, você pode digitar um alias para a coluna.  
   

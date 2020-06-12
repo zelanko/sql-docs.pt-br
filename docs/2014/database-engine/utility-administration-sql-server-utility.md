@@ -10,17 +10,17 @@ ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773748"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857842"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administração do Utilitário (Utilitário do SQL Server)
   Use as guias de Administração do Utilitário para gerenciar configurações de políticas, segurança e data warehouse para um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. Para obter mais informações sobre os conceitos do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , veja [Recursos e tarefas do Utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  Guia Política - Use a guia Política para exibir ou especificar políticas de monitoramento globais.  
   
  Definir políticas de monitoramento de aplicativo da camada de dados. Para expandir a lista de valores dessa opção, clique na seta ao lado do nome da política ou clique no título da política.  
@@ -64,7 +64,7 @@ ms.locfileid: "62773748"
  Reduzindo o ruído de violação de políticas em recursos altamente voláteis. Para expandir os controles desse recurso, clique na seta para baixo à direita da exibição.  
  Para obter mais informações, veja [Reduzir o ruído em políticas de utilização da CPU &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  Guia Segurança - Exibe nomes de logon com permissões de administração ou leitura no UCP.  
   
  Selecione os logons do UCP que serão adicionados à função Leitor do Utilitário.  
@@ -80,7 +80,7 @@ ms.locfileid: "62773748"
   
  Para ser um administrador do Utilitário, você deve ter privilégios de sysadmin na instância do SQL Server. Para adicionar ou alterar contas de usuário para o UCP do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use Pesquisador de Objetos no SSMS para adicionar o usuário aos logons do servidor da instância do UCP do SQL Server. Para obter mais informações, veja [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql).  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  Guia Data Warehouse - Exibe os detalhes da configuração do data warehouse de gerenciamento do utilitário.  
   
  Retenção de dados  

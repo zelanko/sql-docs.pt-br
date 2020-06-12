@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23f7debc1d2253938f235461279f39bb085c2b2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081646"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528542"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Cenários de implantação do DirectQuery (SSAS tabular)
   Este tópico fornece um passo a passo do processo de design e implantação para modelos DirectQuery. Você pode configurar o DirectQuery para usar somente dados relacionais (somente DirectQuery) ou pode configurar o modelo para alternar entre usar somente dados armazenados em cache ou somente dados relacionais (modo híbrido). Este tópico explica o processo de implementação para ambos os modos e descreve possíveis diferenças em resultados da consulta dependendo do modo e da configuração de segurança.  
@@ -39,7 +38,7 @@ ms.locfileid: "66081646"
   
  Por padrão, o DirectQuery fica desabilitado. Portanto, você deve configurar o ambiente de design para oferecer suporte ao modo DirectQuery.  
   
- Clique com o botão direito do mouse no nó **Model. BIM** em Gerenciador de soluções e defina a propriedade, `On` **modo DirectQuery**, para.  
+ Clique com o botão direito do mouse no nó **Model. BIM** em Gerenciador de soluções e defina a propriedade, **modo DirectQuery**, para `On` .  
   
  Você pode ativar a qualquer momento o DirectQuery; porém, verifique se você não criou colunas ou fórmulas que são incompatíveis com o modo DirectQuery, é recomendável habilitar o modo DirectQuery desde o início.  
   
@@ -111,8 +110,8 @@ ms.locfileid: "66081646"
   
 |||  
 |-|-|  
-|**DirectQuery sem cache**|Nenhum dado é carregado no cache. O modelo nunca pode ser processado.<br /><br /> O modelo só pode ser consultado usando clientes que suporte consultas de DAX. Especifica a origem da qual os resultados da consulta são retornados.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **DirectQuery do querymode****DirectQuery**  = |  
-|**DirectQuery com consultas apenas no cache**|Falha na implantação. Não há suporte para essa configuração.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode****na memória**  = |  
+|**DirectQuery sem cache**|Nenhum dado é carregado no cache. O modelo nunca pode ser processado.<br /><br /> O modelo só pode ser consultado usando clientes que suporte consultas de DAX. Especifica a origem da qual os resultados da consulta são retornados.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  =  **DirectQuery**|  
+|**DirectQuery com consultas apenas no cache**|Falha na implantação. Não há suporte para essa configuração.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  =  **Na memória**|  
   
  **Modo híbrido**  
  A implantação de seu modelo em um modo híbrido tem muitas vantagens: você pode obter dados atualizados da fonte de dados do SQL Server, se necessário, mas a preservação do cache oferece a possibilidade de trabalhar com dados na memória para melhorar o desempenho ao criar relatórios ou testar o modelo.  
@@ -123,8 +122,8 @@ ms.locfileid: "66081646"
   
 |||  
 |-|-|  
-|**Modo híbrido com cache preferencial**|O modelo pode ser processado e dados podem ser carregados no cache. Consultas usam o cache por padrão.  Se um cliente desejar usar a origem de DirectQuery, um parâmetro deverá ser inserido na cadeia de conexão.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode****na memória com DirectQuery**  = |  
-|**Modo híbrido com DirectQuery preferencial**|O modelo pode ser processado e dados podem ser carregados no cache. Porém, consultas usam o DirectQuery por padrão. Se um cliente desejar usar os dados em cache, deverá ser inserido um parâmetro na cadeia de conexão. Se as tabelas do modelo forem particionadas, a partição principal do cache de dados também será definida como **Na Memória com DirectQuery**.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode****DirectQuery com na memória**  = |  
+|**Modo híbrido com cache preferencial**|O modelo pode ser processado e dados podem ser carregados no cache. Consultas usam o cache por padrão.  Se um cliente desejar usar a origem de DirectQuery, um parâmetro deverá ser inserido na cadeia de conexão.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  =  **Na memória com DirectQuery**|  
+|**Modo híbrido com DirectQuery preferencial**|O modelo pode ser processado e dados podem ser carregados no cache. Porém, consultas usam o DirectQuery por padrão. Se um cliente desejar usar os dados em cache, deverá ser inserido um parâmetro na cadeia de conexão. Se as tabelas do modelo forem particionadas, a partição principal do cache de dados também será definida como **Na Memória com DirectQuery**.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  =  **DirectQuery com na memória**|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Modo DirectQuery &#40;SSAS de tabela&#41;](tabular-models/directquery-mode-ssas-tabular.md)   

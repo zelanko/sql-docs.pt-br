@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bca58767285718b733dd820970cc48a99d0ea14
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083375"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521238"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Estruturas de mineração (Analysis Services – Mineração de dados)
   A estrutura de mineração define os dados a partir dos quais os modelos de mineração são criados. Ela especifica a exibição da fonte de dados, o número e tipo de colunas e uma partição opcional nos conjuntos de treinamento e teste. Uma única estrutura de mineração pode oferecer suporte a vários modelos de mineração que compartilham o mesmo domínio. O diagrama a seguir mostra a relação da estrutura de mineração de dados com a fonte de dados e com os modelos de mineração de dados que a compõe.  
@@ -54,7 +53,7 @@ ms.locfileid: "66083375"
   
 -   Definir uma chave para a estrutura, incluindo a chave para a tabela aninhada, se aplicável.  
   
--   Especifique se os dados de origem devem estar separados em um conjunto de treinamento e um conjunto de teste. Essa etapa é opcional.  
+-   Especifique se os dados de origem devem estar separados em um conjunto de treinamento e um conjunto de teste. Esta etapa é opcional.  
   
 -   Processe a estrutura.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66083375"
 |Trabalhar com estruturas de mineração com base em cubos OLAP|[Criar uma nova estrutura de mineração OLAP](create-a-new-olap-mining-structure.md)<br /><br /> [Filtrar o cubo de origem para uma estrutura de mineração](../filter-the-source-cube-for-a-mining-structure.md)|  
 |Trabalhar com colunas em uma estrutura de mineração|[Adicionar colunas a uma estrutura de mineração](add-columns-to-a-mining-structure.md)<br /><br /> [Remover colunas de uma estrutura de mineração](remove-columns-from-a-mining-structure.md)|  
 |Alterar ou consultar dados e propriedades da estrutura de mineração|[Alterar as propriedades de uma estrutura de mineração](change-the-properties-of-a-mining-structure.md)|  
-|Trabalhar com as fontes de dados subjacentes e atualizar dados de origem|[Editar a exibição da fonte de dados usada para a estrutura de mineração](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Processar uma estrutura de mineração](process-a-mining-structure.md)|  
+|Trabalhar com as fontes de dados subjacentes e atualizar dados de origem|[Editar a exibição da fonte de dados usada para a Estrutura de Mineração](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Processar uma estrutura de mineração](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Objetos de banco de dados &#40;Analysis Services-&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   

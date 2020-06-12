@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e781e26dc2e45c6637b6868304be08452d31a996
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077415"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544798"
 ---
 # <a name="define-a-default-member"></a>Definir um membro padrão
   O membro padrão de uma hierarquia de atributo será usado para avaliar as expressões quando uma hierarquia de atributo não for explicitamente incluída em uma consulta. O membro padrão será ignorado sempre que a consulta tiver uma hierarquia de atributo ou hierarquia de usuário que contenha o atributo que dá origem à hierarquia de atributo. Isso porque será usado o membro especificado na consulta.  
@@ -35,7 +34,7 @@ ms.locfileid: "66077415"
 ## <a name="specifying-the-default-member"></a>Especificando o membro padrão  
  Cada atributo em uma dimensão no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tem um membro padrão, que você pode especificar usando a `DefaultMember` propriedade de um atributo. Essa configuração será usada para avaliar expressões se não houver um atributo incluído em uma consulta. Se a consulta especificar a hierarquia de uma dimensão, os membros padrão dos atributos da hierarquia serão ignorados. Se uma consulta não especificar uma hierarquia em uma dimensão, as `DefaultMember` configurações para atributos de dimensão entrarão em vigor.  
   
- Se a `DefaultMember` configuração de um atributo estiver em branco e `IsAggregatable` sua propriedade for definida `True`como, o membro padrão será o membro todos. Se a `IsAggregatable` propriedade for definida como `False`, o membro padrão será o primeiro membro do primeiro nível visível.  
+ Se a `DefaultMember` configuração de um atributo estiver em branco e sua `IsAggregatable` propriedade for definida como `True` , o membro padrão será o membro todos. Se a `IsAggregatable` propriedade for definida como `False` , o membro padrão será o primeiro membro do primeiro nível visível.  
   
  A `DefaultMember` configuração de um atributo se aplica a todas as hierarquias nas quais o atributo participa. Não é possível usar configurações diferentes para hierarquias diferentes em uma dimensão. Por exemplo, se o membro [1998] for o membro padrão do atributo [Ano], essa configuração será válida para todas as hierarquias da dimensão. A `DefaultMember` configuração nesse caso não pode ser [1998] em uma hierarquia e [1997] em uma hierarquia diferente.  
   

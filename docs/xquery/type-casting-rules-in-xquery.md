@@ -1,5 +1,6 @@
 ---
 title: Regras de conversão de tipo em XQuery | Microsoft Docs
+description: Saiba mais sobre as regras que são aplicadas quando uma conversão explícita ou implícita de um tipo de dados para outro no XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9dcae8facc642d43620bde77ab7f01467a8a54d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946211"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520123"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Regras de conversão de tipos em XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67946211"
   
  Este tópico descreve as regras de conversão de tipos aplicadas à conversão de um tipo em outro usando um dos seguintes métodos:  
   
--   A conversão explícita que você faz usando **Cast** as ou as funções de construtor de tipo (por `xs:integer("5")`exemplo,).  
+-   A conversão explícita que você faz usando **Cast** as ou as funções de construtor de tipo (por exemplo, `xs:integer("5")` ).  
   
 -   Conversão implícita que ocorre durante a promoção de tipos  
   
@@ -95,7 +96,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- A consulta a seguir retorna um erro estático, porque você não sabe quantos elementos de> de `root` nível superior <estão na instância do documento.  
+ A consulta a seguir retorna um erro estático, porque você não sabe quantos `root` elementos de> de nível superior <estão na instância do documento.  
   
 ```  
 declare @x xml(myCollection)  
@@ -105,7 +106,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- Ao especificar um <`root` singleton> elemento na expressão, a consulta é realizada com sucesso. A consulta retorna uma sequência de um valor de tipo simples digitada como xs:string.  
+ Ao especificar um <singleton `root`> elemento na expressão, a consulta é realizada com sucesso. A consulta retorna uma sequência de um valor de tipo simples digitada como xs:string.  
   
 ```  
 declare @x xml(myCollection)  
@@ -115,7 +116,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- No exemplo a seguir, a variável de tipo xml inclui uma palavra-chave de documento que especifica a coleção de esquemas XML. Isso indica que a instância XML deve ser um documento que tenha um único elemento de nível superior. Se você criar dois elementos `root` de> <na instância XML, ele retornará um erro.  
+ No exemplo a seguir, a variável de tipo xml inclui uma palavra-chave de documento que especifica a coleção de esquemas XML. Isso indica que a instância XML deve ser um documento que tenha um único elemento de nível superior. Se você criar dois `root` elementos de> <na instância XML, ele retornará um erro.  
   
 ```  
 declare @x xml(document myCollection)  
@@ -167,7 +168,7 @@ min(xs:integer("1"), xs:double("1.1"))
  Na conversão em tipos binários, como xs:base64Binary ou xs:hexBinary, de um tipo de cadeia de caracteres ou untypedAtomic, os valores de entrada precisam ser codificados como base64 ou hex, respectivamente.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>Convertendo um valor em um tipo de cadeia de caracteres ou untypedAtomic  
- A conversão em um tipo de cadeia de caracteres ou untypedAtomic transforma o valor em sua representação léxica canônica do XQuery. Especificamente, isso pode significar que um valor que pode ter obedecido a um padrão específico ou outra restrição durante a entrada não será representado de acordo com essa restrição.  Para informar os usuários sobre isso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , os tipos de sinalizadores em que a restrição de tipo pode ser um problema, fornecendo um aviso quando esses tipos são carregados na coleção de esquemas.  
+ A conversão em um tipo de cadeia de caracteres ou untypedAtomic transforma o valor em sua representação léxica canônica do XQuery. Especificamente, isso pode significar que um valor que pode ter obedecido a um padrão específico ou outra restrição durante a entrada não será representado de acordo com essa restrição.  Para informar os usuários sobre isso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] os tipos de sinalizadores em que a restrição de tipo pode ser um problema, fornecendo um aviso quando esses tipos são carregados na coleção de esquemas.  
   
  Ao converter um valor do tipo xs:float ou xs:double, ou qualquer um de seus subtipos, em um tipo de cadeia de caracteres ou untypedAtomic, o valor será representado em notação científica. Isso só é realizado quando o valor absoluto do valor é inferior a 1.0E-6, ou superior ou igual a 1.0E6. Isso significa que 0 é serializado em notação científica para 0.0E0.  
   

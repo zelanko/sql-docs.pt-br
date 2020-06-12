@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e55e6833b1fdeb600ddecdbf70f615565a38bb05
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493772"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542258"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definindo e procurando perspectivas
   Uma perspectiva pode simplificar a exibição de um cubo para propósitos específicos. Por padrão, os usuários podem ver todos os elementos em um cubo para o qual têm permissões. O quê os usuários visualizam ao exibir um cubo completo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] é a perspectiva padrão para o cubo. Uma exibição de todo o cubo pode ser muito complexa para os usuários pesquisarem, principalmente para usuários que precisam apenas interagir com uma pequena parte do cubo para satisfazer seus requisitos de inteligência empresarial e geração de relatórios.  
@@ -41,7 +40,7 @@ ms.locfileid: "69493772"
   
      ![Nova perspectiva na coluna Nome da Perspectiva](../../2014/tutorials/media/l9-perspectives-2.gif "Nova perspectiva na coluna Nome da Perspectiva")  
   
-3.  Altere o nome da perspectiva `Internet Sales`para.  
+3.  Altere o nome da perspectiva para `Internet Sales` .  
   
 4.  Na próxima linha, defina DefaultMeasure como **Vendas pela Internet/Valor das Vendas**.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "69493772"
   
 1.  Na barra de ferramentas da guia **Perspectivas** , clique no botão **Nova Perspectiva** .  
   
-2.  Altere o nome da nova perspectiva para `Reseller Sales`.  
+2.  Altere o nome da nova perspectiva para `Reseller Sales` .  
   
 3.  Defina **Vendas do Revendedor/Valor das Vendas** como a medida padrão.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "69493772"
   
 1.  Na barra de ferramentas da guia **Perspectivas** , clique no botão **Nova Perspectiva** .  
   
-2.  Altere o nome da nova perspectiva para `Sales Summary`.  
+2.  Altere o nome da nova perspectiva para `Sales Summary` .  
   
     > [!NOTE]  
     >  Você não pode especificar uma medida calculada como a medida padrão.  

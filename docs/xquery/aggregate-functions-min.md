@@ -1,5 +1,6 @@
 ---
 title: Função min (XQuery) | Microsoft Docs
+description: Saiba mais sobre a função do XQuery min () que retorna um item em uma sequência cujo valor é menor que o de todos os outros.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b209f6d46c47de5a604eee3c14c681a333bcdec8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985753"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529953"
 ---
 # <a name="aggregate-functions---min"></a>Funções de Agregação – min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ WHERE ProductModelID=7
   
 -   A palavra-chave **namespace** no prólogo XQuery define um prefixo de namespace. Esse prefixo é então usado no corpo do XQuery.  
   
- O corpo do XQuery constrói o XML que tem um \<elemento de> local com os atributos WCID e **LaborHrs** .  
+ O corpo do XQuery constrói o XML que tem um \<Location> elemento com os atributos WCID e **LaborHrs** .  
   
 -   A consulta também recupera os valores ProductModelID e nome.  
   
