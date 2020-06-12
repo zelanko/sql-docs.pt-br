@@ -1,5 +1,6 @@
 ---
 title: 'SQL: overflow-field (SQLXML)'
+description: 'Saiba como usar a anotação sql: overflow-field para identificar uma coluna como uma coluna de estouro que receberá todos os dados não consumidos do documento XML.'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246807"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689234"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretação de anotação – sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75246807"
   
  Como ele armazena dados na coluna Overflow, o carregamento em massa de XML também armazena as marcas de abertura e fechamento do elemento pai para o qual **SQL: overflow-field** é definido.  
   
- Por exemplo, o esquema a seguir descreve os ** \<elementos Customers>** e ** \<CustOrder>** . Cada um destes elementos identifica uma coluna de estouro:  
+ Por exemplo, o esquema a seguir descreve os elementos ** \< customers>** e ** \< CustOrder>** . Cada um destes elementos identifica uma coluna de estouro:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +76,9 @@ ms.locfileid: "75246807"
 </xsd:schema>  
 ```  
   
- No esquema, o elemento ** \<>do cliente** é mapeado para a tabela Cust e o ** \<elemento Order>** é mapeado para a tabela CustOrder.  
+ No esquema, o elemento ** \<>do cliente** é mapeado para a tabela Cust e o elemento ** \< Order>** é mapeado para a tabela CustOrder.  
   
- Os elementos ** \<>do cliente** e ** \<ordem>** identificam uma coluna de estouro. Assim, o carregamento em massa de XML salva todos os elementos filho e atributos não consumidos do elemento ** \<>do cliente** na coluna Overflow da tabela Cust e todos os elementos filho e atributos não consumidos do elemento ** \<Order>** na coluna Overflow da tabela CustOrder.  
+ Os elementos ** \<>do cliente** e ** \< ordem>** identificam uma coluna de estouro. Assim, o carregamento em massa de XML salva todos os elementos filho e atributos não consumidos do elemento ** \<>do cliente** na coluna Overflow da tabela Cust e todos os elementos filho e atributos não consumidos do elemento ** \< Order>** na coluna Overflow da tabela CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6973256746d668569d977cedbc2500ee007cd6ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081557"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528508"
 ---
 # <a name="dmx-templates"></a>Modelos DMX
   Os modelos de mineração de dados o ajudam a criar rapidamente consultas sofisticadas. Embora a sintaxe geral para consultas DMX seja bem-documentada, usar os modelos torna mais fácil criar consultas clicando e apontando para argumentos e fontes de dados.  
@@ -74,7 +73,7 @@ ms.locfileid: "66081557"
   
  **Criar**  
   
- Use esses modelos para criar modelos ou estruturas de dados personalizados. Você não está limitado aos modelos suportados pelos assistentes-você pode usar qualquer Data Mining algoritmo com suporte na instância do à qual [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] você está conectado, incluindo algoritmos de plug-in.  
+ Use esses modelos para criar modelos ou estruturas de dados personalizados. Você não está limitado aos modelos suportados pelos assistentes-você pode usar qualquer Data Mining algoritmo com suporte na instância do à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qual você está conectado, incluindo algoritmos de plug-in.  
   
 -   Modelo de mineração  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66081557"
   
 -   Estrutura temporária  
   
- **Propriedades de modelo**  
+ **Propriedades do modelo**  
   
  Use esses modelos para criar consultas que obtêm metadados sobre o modelo e o conjunto de treinamento. Você também pode recuperar detalhes do conteúdo do modelo ou obter um perfil estatístico dos dados de treinamento.  
   

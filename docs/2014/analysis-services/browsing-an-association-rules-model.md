@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69002d17205a5631d555e1022b8adeb9e51d3db2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088465"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527725"
 ---
 # <a name="browsing-an-association-rules-model"></a>Procurando um modelo de regras de associação
-  Quando você abre um modelo de associação usando **procurar**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de regras de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]associação no.  O visualizador permite observar rapidamente quais itens foram correlacionados entre si e exibir as regras que você pode usar para previsão ou fazer recomendações.  
+  Quando você abre um modelo de associação usando **procurar**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de regras de associação no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  O visualizador permite observar rapidamente quais itens foram correlacionados entre si e exibir as regras que você pode usar para previsão ou fazer recomendações.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>Explorar o modelo  
  Quando você abre um modelo de mineração criado usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo regras de associação, a janela **procurar** inclui as seguintes exibições, cada uma projetada para permitir que você explore um aspecto diferente do modelo:  
@@ -53,7 +52,7 @@ ms.locfileid: "66088465"
   
  Você pode filtrar o número de conjuntos de itens que são exibidos na guia alterando os valores **mínimos de suporte** e **máximo de linhas** . Se você aumentar o valor **mínimo de suporte** , a lista mostrará menos conjuntos de itens, mas os conjuntos de itens serão os mais comuns nos dados de entrada. Se Common é o mesmo que importante é outra pergunta, que você pode explorar usando a guia **regras** .  
   
- Observe que alterar o valor de suporte ou outros controles na guia **conjuntos** de itens altera apenas os itens que são exibidos e não afeta o modelo subjacente. Se você quiser gerar menos ou mais conjuntos de itens, ou limitar seu tamanho, deverá usar os parâmetros `MINIMUM_SUPPORT` e `MAXIMUM_SUPPORT`, disponível na caixa de diálogo **parâmetros de algoritmo** .  
+ Observe que alterar o valor de suporte ou outros controles na guia **conjuntos** de itens altera apenas os itens que são exibidos e não afeta o modelo subjacente. Se você quiser gerar menos ou mais conjuntos de itens, ou limitar seu tamanho, deverá usar os parâmetros `MINIMUM_SUPPORT` e `MAXIMUM_SUPPORT` , disponível na caixa de diálogo **parâmetros de algoritmo** .  
   
 ##### <a name="explore-the-itemsets-list"></a>Explorar a lista de conjuntos de itens  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66088465"
   
 2.  Para se concentrar em um determinado conjunto de interesse, fora das combinações de muitos milhares possíveis, digite algum texto na caixa **Filtrar conjunto** .  
   
-     Aqui, digitamos `Gloves`. Quando você aplica o filtro, a lista será atualizada para mostrar somente os conjuntos de itens que contêm luvas. Isso permite que você se concentre nas transações em que os clientes compraram luvas e algum outro item.  
+     Aqui, digitamos `Gloves` . Quando você aplica o filtro, a lista será atualizada para mostrar somente os conjuntos de itens que contêm luvas. Isso permite que você se concentre nas transações em que os clientes compraram luvas e algum outro item.  
   
      A opção **Filtrar Conjunto de Itens** também exibe uma lista dos filtros que você usou anteriormente.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66088465"
  [Voltar ao início](#BKMK_ViewerTabs)  
   
 ## <a name="more-about-association-models"></a>Mais sobre modelos de associação  
- Você pode usar o recurso **procurar** para abrir e explorar qualquer modelo criado usando o algoritmo regras de associação da Microsoft. Isso inclui modelos criados usando a [análise de cesta de compras &#40;tabela AnalysisTools para a ferramenta de&#41;do Excel](shopping-basket-analysis-table-analysistools-for-excel.md) , na faixa de ferramentas [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de análise de **tabela** ou no.  
+ Você pode usar o recurso **procurar** para abrir e explorar qualquer modelo criado usando o algoritmo regras de associação da Microsoft. Isso inclui modelos criados usando a [análise de cesta de compras &#40;tabela AnalysisTools para a ferramenta de&#41;do Excel](shopping-basket-analysis-table-analysistools-for-excel.md) , na faixa de **ferramentas de análise de tabela** ou no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Se você criar um modelo de regras de associação usando a ferramenta Análise de Cesta de Compras, muitas das opções avançadas serão configuradas automaticamente para você.  
   

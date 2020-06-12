@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a66a940e916cc05bb3fe502cb6f4d10a9c2fae6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 088006037fc9941021270287011f42d8d4bd4299
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082138"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528812"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>Definir Inteligência de Dimensão (Assistente de Business Intelligence)
   Use a página **Definir Inteligência de Dimensão** para mapear atributos de dimensão existentes para tipos de atributos para o tipo de dimensão especificado.  

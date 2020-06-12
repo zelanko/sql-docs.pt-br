@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874410"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544337"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Dicas de globalização e práticas recomendadas (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Somente multidimensional  
@@ -102,7 +101,7 @@ ms.locfileid: "70874410"
   
 -   Adicione `Locale Identifier=1036` à cadeia de conexão. Salve e feche o arquivo.  
   
--   Abrir o Excel | Conexões de **dados** | **existentes**. Filtre a lista para apenas os arquivos de conexão neste computador. Localize a conexão para a Adventure Works (observe atentamente o nome; você pode ter mais de um). Abra a conexão.  
+-   Abrir o Excel | **Dados**  |  do **Conexões existentes**. Filtre a lista para apenas os arquivos de conexão neste computador. Localize a conexão para a Adventure Works (observe atentamente o nome; você pode ter mais de um). Abra a conexão.  
   
      Você deve ver as traduções de francês do banco de dados de exemplo Adventure Works.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "70874410"
   
  No Management Studio, você pode especificar o Identificador de Localidade em uma conexão de servidor.  
   
--   No Pesquisador de objetos | **Conecte** | **Analysis Services**Analysis Services | **Opções**, clique na guia **parâmetros de conexão adicionais** .  
+-   No Pesquisador de objetos | **Conectar**  |  **Analysis Services**  |  **Opções**, clique na guia **parâmetros de conexão adicionais** .  
   
 -   Insira `Local Identifier=1036` e, em seguida, clique em **Conectar**.  
   

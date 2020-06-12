@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8775ec4dbfb7d851d98e0a943d052589f45b1ade
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084904"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523062"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Consultando os conjuntos de linhas de esquema de mineração de dados (Analysis Services - Mineração de Dados)
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], muitos dos conjuntos de linhas de esquema de mineração de dados OLE DB existentes foram expostos como um conjunto de tabelas do sistema que pode ser consultado usando as instruções DMX (Data Mining Extensions). Ao criar consultas no conjunto de linhas de esquema de mineração de dados, é possível identificar os serviços disponíveis, obter atualizações sobre o status de seus modelos e estruturas e localizar detalhes sobre o conteúdo ou os parâmetros do modelo. Para obter uma descrição dos conjuntos de linhas de esquema de mineração de dados, consulte [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "66084904"
 ## <a name="list-of-data-mining-schema-rowsets"></a>Lista de conjuntos de linhas de esquema de mineração de dados  
  A tabela a seguir lista os conjuntos de linhas de esquema de mineração de dados que podem ser úteis para consultas e monitoramentos.  
   
-|Nome do conjunto de linhas|Descrição|  
+|Nome do conjunto de linhas|Description|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|Lista todos os modelos de mineração no contexto atual.<br /><br /> As informações incluem a data de criação, os parâmetros usados para criar o modelo e o tamanho do treinamento definido.|  
 |DMSCHEMA_MINING_COLUMNS|Lista todas as colunas usadas nos modelos de mineração no contexto atual.<br /><br /> As informações incluem o mapeamento para a coluna de origem de estrutura de mineração, o tipo de dados, a precisão e as funções de previsão que podem ser usadas com a coluna.|  

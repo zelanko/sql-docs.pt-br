@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa501e2a5b23f32fbd10d244788b1e6e938e938b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070534"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539728"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Consulta e filtro (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Esta área da guia **Navegador** do Designer de Cubo contém uma área de consultas e filtros para ajudar a escolher dados do cubo para usar ao navegar ou em consultas. Você pode adicionar quantos objetos cubo desejar e então exibir os resultados na área de dados ou exportar os resultados para um relatório usando Analisar no Excel para visualizar como os dados seriam exibidos pelos usuários finais.  
@@ -28,7 +27,7 @@ ms.locfileid: "66070534"
  Por padrão, as credenciais do usuário atual, e não as credenciais especificadas na página **Informações da Representação** , são usadas na conexão com a fonte de dados quando uma consulta é executada. Porém, você também pode alterar o contexto de usuário para a consulta ou relatório clicando em **Alterar Usuário** na **Barra de Ferramentas**.  
   
 ## <a name="options"></a>Opções  
- **Dimensão**  
+ **Dimensões**  
  Selecione a dimensão na qual fatiar o subcubo.  
   
  **Hierarquia**  
@@ -41,7 +40,7 @@ ms.locfileid: "66070534"
 |-----------|-----------------|  
 |**Igual**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
 |**Diferente de**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
-|**No**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
+|**Em**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Não está em**|Os resultados são restringidos aos membros excluídos pelo conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Terá**|Os resultados são restringidos aos membros cujos nomes contêm a sequência de caracteres na **Expressão de Filtro**.|  
 |**Começa Com**|Os resultados são restringidos aos membros cujos nomes começam com a sequência de caracteres na **Expressão de Filtro**.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083526"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521249"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de série temporal (Analysis Services – Mineração de dados)
   Todos os modelos de mineração usam a mesma estrutura para armazenar conteúdo. Essa estrutura é definida de acordo com o conjunto de linhas de esquema do conteúdo da mineração de dados. Entretanto, em uma estrutura padrão, os nós que contêm informações são organizados de formas diferentes para representar vários tipos de árvores. Este tópico descreve como os nós são organizados e o que cada nó significa para os modelos de mineração que têm como base o algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -121,7 +120,7 @@ ms.locfileid: "66083526"
   
  **ARTXP:**  
   
-|ID do tipo de nó|Descrição|  
+|ID do tipo de nó|Description|  
 |------------------|-----------------|  
 |1 (Modelo)|Série temporal|  
 |3 (Interior)|Representa uma ramificação interior em uma árvore de série temporal ARTXP.|  
@@ -130,7 +129,7 @@ ms.locfileid: "66083526"
   
  **ARIMA**  
   
-|ID do tipo de nó|Descrição|  
+|ID do tipo de nó|Description|  
 |------------------|-----------------|  
 |27 (Raiz ARIMA)|O nó superior de uma árvore ARIMA.|  
 |28 (Estrutura periódica ARIMA)|Componente de uma árvore ARIMA que descreve uma única estrutura periódica.|  
@@ -311,7 +310,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="understanding-the-arima-tree"></a><a name="bkmk_ARIMA_1"></a> Entendendo a árvore ARIMA  
  Cada estrutura em um modelo ARIMA corresponde a uma *periodicidade* ou *estrutura periódica*. Uma estrutura periódica é um padrão de dados que se repete ao longo da série de dados. São permitidas algumas pequenas variações no padrão, dentro de limites estatísticos. A periodicidade é medida de acordo com as unidades de tempo padrão que foram usadas nos dados de treinamento. Por exemplo, se os dados de treinamento fornecem informações de vendas para cada dia, a unidade de tempo padrão é um dia e todas as estruturas periódicas são definidas como um número específico de dias.  
   
- Cada período detectado pelo algoritmo adquire seu próprio nó de estrutura. Por exemplo, se você estiver analisando dados de vendas diárias, os modelo pode detectar estruturas periódicas que representam semanas. Nesse caso, o algoritmo criará duas estruturas periódicas no modelo concluído: uma para o período diário padrão, denotada como {1}e outra para semanas, indicada por. {7}  
+ Cada período detectado pelo algoritmo adquire seu próprio nó de estrutura. Por exemplo, se você estiver analisando dados de vendas diárias, os modelo pode detectar estruturas periódicas que representam semanas. Nesse caso, o algoritmo criará duas estruturas periódicas no modelo concluído: uma para o período diário padrão, denotada como {1} e outra para semanas, indicada por {7} .  
   
  Por exemplo, a consulta a seguir retorna todas as estruturas ARIMA de um modelo de mineração.  
   
@@ -384,9 +383,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Equação ARIMA:  
   
- Interceptação{1,1}ARIMA (, 0, {1, 1.49791920964142, 1.10640053499397, 0.888873034670339,-5.05429403071953 e-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}): 56.8888888888889  
+ {1,1}Interceptação ARIMA (, 0, {1, 1.49791920964142, 1.10640053499397, 0.888873034670339,-5.05429403071953 e-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}): 56.8888888888889  
   
- Esta equação é o formato ARIMA completo que inclui os valores dos coeficientes e a interceptação. O formato curto dessa equação seria {1,0,7}, em que 1 indica o período como uma contagem de frações de tempo, 0 indica a ordem de diferença de termos e 7 indica o número de coeficientes.  
+ Esta equação é o formato ARIMA completo que inclui os valores dos coeficientes e a interceptação. O formato curto dessa equação seria {1,0,7} , em que 1 indica o período como uma contagem de frações de tempo, 0 indica a ordem de diferença de termos e 7 indica o número de coeficientes.  
   
 > [!NOTE]  
 >  Uma constante é calculada pelo Analysis Services para computar a variância, mas a própria constante não é exibida na interface do usuário. Porém, você pode exibir a variância para qualquer ponto da série como uma função desta constante; basta selecionar **Exibir Desvios** na exibição **Gráfico** . A dica de ferramenta para cada série de dados mostra a variação para um ponto previsto específico.  
@@ -396,7 +395,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Um modelo ARIMA para uma série de dados contém a equação periódica básica em quatro formatos diferentes; você escolhe o formato de acordo com o aplicativo.  
   
- **NODE_CAPTION:** exibe a equação em forma abreviada. O formato reduzido indica quantas estruturas periódicas são representas e quantos coeficientes elas têm. Por exemplo, se o formato curto da equação for {4,0,6}, o nó representará uma estrutura periódica com 6 coeficientes. Se o formato curto for algo como {2,0,8} x {1,0,0}(4), o nó conterá duas estruturas periódicas.  
+ **NODE_CAPTION:** exibe a equação em forma abreviada. O formato reduzido indica quantas estruturas periódicas são representas e quantos coeficientes elas têm. Por exemplo, se o formato curto da equação for {4,0,6}, o nó representará uma estrutura periódica com 6 coeficientes. Se o formato curto for algo como {2,0,8} x {1,0,0} (4), o nó conterá duas estruturas periódicas.  
   
  **NODE DESCRIPTION:** exibe o formato completo da equação, que também é o formato da equação que aparece na **Legenda de Mineração**. O formato completo da equação é parecido com o reduzido, exceto pelo fato de os valores reais dos coeficientes serem exibidos em vez de contabilizados.  
   
@@ -444,6 +443,6 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  [Conteúdo do modelo de mineração &#40;Analysis Services Mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo do Microsoft Time Series](microsoft-time-series-algorithm.md)   
  [Exemplos de consulta de modelo de série temporal](time-series-model-query-examples.md)   
- [Referência técnica do algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)  
+ [Referência técnica do algoritmo MTS](microsoft-time-series-algorithm-technical-reference.md)  
   
   

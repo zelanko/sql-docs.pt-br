@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e2c62d4b-27d9-4ee0-9d90-a6dd4ca2906d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 01862762cdea7ea0ef49c12a3c82ee1fd1c972cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af8139d03addb49ca1c092420cc8eecd4ad41e75
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087076"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526972"
 ---
 # <a name="connect-to-database-dialog-box"></a>Caixa de diálogo Conectar ao Banco de Dados
   Use a caixa de diálogo **Conectar ao Banco de Dados** para conectar a um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

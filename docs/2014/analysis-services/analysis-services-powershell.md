@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a6bbeab13d3a29c9dd7cf769dd28d776d3ae229
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782647"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528022"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   O [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] contém um provedor SQLAS (Analysis Services PowerShell) e cmdlets para que você possa usar o Windows PowerShell para navegar em, administrar e consultar objetos do Analysis Services.  
@@ -60,10 +59,10 @@ Para obter mais informações sobre sintaxe e exemplos, consulte [Analysis Servi
 |Instâncias e bancos de dados multidimensionais|Com suporte para administração local e remota.<br /><br /> A partição de mesclagem exige uma conexão local.|  
 |Instâncias e bancos de dados tabulares|Com suporte para administração local e remota.<br /><br /> Para obter mais informações, consulte um blog de agosto de 2011 sobre como [gerenciar modelos tabulares usando o PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |Instâncias e bancos de dados PowerPivot para SharePoint|Suporte limitado. É possível usar conexões HTTP e o provedor SQLAS para visualizar informações da instância e do banco de dados.<br /><br /> Porém, não há suporte para usar os cmdlets. Você não deve usar o Analysis Services PowerShell para fazer backup e restauração de banco de dados PowerPivot na memória, nem deve adicionar ou remover funções, processar os dados ou executar script XMLA arbitrário.<br /><br /> Para fins de configuração, o PowerPivot para SharePoint tem suporte interno ao PowerShell que é fornecido separadamente. Para obter mais informações, consulte [referência do PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
-|Conexões nativas a cubos locais<br /><br /> "Data Source = c:\backup\test.Cub"|Sem suporte.|  
-|Conexões HTTP a arquivos de conexão do modelo semântico BI (.bism) no SharePoint<br /><br /> "Fonte de dadoshttp://server/shared_docs/name.bism="|Sem suporte.|  
-|Conexões inseridas em bancos de dados PowerPivot<br /><br /> "Data Source = $Embedded $"|Sem suporte.|  
-|Contexto de servidor local em procedimentos armazenados do Analysis Services<br /><br /> "Fonte de dados = *"|Sem suporte.|  
+|Conexões nativas a cubos locais<br /><br /> "Data Source = c:\backup\test.Cub"|Não há suporte.|  
+|Conexões HTTP a arquivos de conexão do modelo semântico BI (.bism) no SharePoint<br /><br /> "Fonte de dados = http://server/shared_docs/name.bism "|Não há suporte.|  
+|Conexões inseridas em bancos de dados PowerPivot<br /><br /> "Data Source = $Embedded $"|Não há suporte.|  
+|Contexto de servidor local em procedimentos armazenados do Analysis Services<br /><br /> "Fonte de dados = *"|Não há suporte.|  
   
 ##  <a name="authentication-requirements-and-security-considerations"></a><a name="bkmk_auth"></a>Requisitos de autenticação e considerações de segurança  
  Ao conectar-se ao Analysis Services, você deve fazer a conexão usando uma identidade de usuário do Windows. Na maioria das vezes, a conexão é feita usando uma segurança integrada do Windows, onde a identidade do usuário atual define o contexto de segurança sob o qual as operações de servidor são realizadas. No entanto, outros métodos de autenticação ficam disponíveis quando você configura o acesso de HTTP para o Analysis Services. Esta seção explica como o tipo de conexão determina quais opções de autenticação você pode usar.  
@@ -82,7 +81,7 @@ Para obter mais informações sobre sintaxe e exemplos, consulte [Analysis Servi
   
 3.  O nome de usuário e a senha fornecidos pelo objeto de credencial são resolvidos para uma identidade de usuário do Windows. O Analysis Services usa esta identidade como usuário atual. Se o usuário não for Windows ou não tiver permissões suficientes para realizar a operação solicitada, a solicitação falhará.  
   
- Para criar um objeto de credencial, você pode usar o cmdlet Get-Credential para coletar as credenciais do operador. Você poderá então usar o objeto de credencial em um comando que conecta-se ao Analysis Services. O exemplo a seguir ilustra a sintaxe uma abordagem. Neste exemplo, a conexão é para uma instância local (`SQLSERVER:\SQLAS\HTTP_DS`) configurada para acesso http.  
+ Para criar um objeto de credencial, você pode usar o cmdlet Get-Credential para coletar as credenciais do operador. Você poderá então usar o objeto de credencial em um comando que conecta-se ao Analysis Services. O exemplo a seguir ilustra a sintaxe uma abordagem. Neste exemplo, a conexão é para uma instância local ( `SQLSERVER:\SQLAS\HTTP_DS` ) configurada para acesso http.  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -201,7 +200,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  As conexões HTTP são úteis se você configurou o servidor para acesso HTTP usando as instruções neste tópico: [Configurar o acesso http para Analysis Services em Serviços de Informações da Internet &#40;IIS&#41; 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- Supondo que uma URL http://localhost/olap/msmdpump.dllde servidor do, uma conexão pode ser parecida com a seguinte:  
+ Supondo que uma URL de servidor do http://localhost/olap/msmdpump.dll , uma conexão pode ser parecida com a seguinte:  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

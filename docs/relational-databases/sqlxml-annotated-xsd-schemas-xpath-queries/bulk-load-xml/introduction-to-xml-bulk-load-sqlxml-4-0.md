@@ -1,5 +1,6 @@
 ---
 title: Introdução ao carregamento em massa de XML (SQLXML)
+description: Saiba mais sobre o utilitário de carregamento em massa XML, um objeto COM autônomo no SQLXML 4,0 que permite carregar dados XML semiestruturados em tabelas Microsoft SQL Server.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4116bef21a70e6de699046019fd404798826bf18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11b89a9d6981281bdb2e89bb5511c2f803c91b31
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246744"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529710"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Introdução ao XML Bulk Load (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  O carregamento em massa de XML é um objeto COM autônomo que permite carregar dados XML semiestruturados em tabelas da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft.  
+  O carregamento em massa de XML é um objeto COM autônomo que permite carregar dados XML semiestruturados em tabelas da Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Você pode inserir dados XML em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando um comando INSERT e a função OPENXML; no entanto, o utilitário Bulk Load garante um melhor desempenho quando você precisa inserir grandes quantidades de dados XML.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "75246744"
 ## <a name="streaming-of-xml-data"></a>Fluindo de dados XML   
  Como o documento XML de origem pode ser grande, ele não é lido na memória para o processamento do carregamento em massa. Em vez disso, o XML Bulk Load interpreta os dados XML como um fluxo e faz a leitura deles. À medida que o utilitário lê os dados, ele identifica a(s) tabela(s) de banco de dados, gera o(s) registro(s) apropriado(s) a partir da fonte de dados XML e envia o(s) registro(s) para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para inserção.  
   
- Por exemplo, o documento XML de origem a seguir consiste em elementos de ** \<>do cliente** e ** \<ordenar>** elementos filho:  
+ Por exemplo, o seguinte documento XML de origem consiste em **\<Customer>** elementos e **\<Order>** elementos filho:  
   
 ```  
 <Customer ...>  
@@ -58,7 +59,7 @@ ms.locfileid: "75246744"
 ...  
 ```  
   
- Como o carregamento em massa de XML lê o elemento de ** \<>do cliente** , ele gera um registro para o CustomerTable. Quando ele lê a marca de fim ** \</Customer>** , o carregamento em massa de XML insere esse registro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]na tabela no. Da mesma forma, quando ele lê o elemento ** \<Order>** , o carregamento em massa de XML gera um registro para ordertable e, em seguida, insere esse [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registro na tabela ao ler a marca de ** \<fim/Order>** .  
+ Como o carregamento em massa de XML lê o **\<Customer>** elemento, ele gera um registro para o CustomerTable. Quando ele lê a **\</Customer>** marca de fim, o carregamento em massa de XML insere esse registro na tabela no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Da mesma forma, quando ele lê o **\<Order>** elemento, o carregamento em massa de XML gera um registro para ordertable e insere esse registro na tabela ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ler a marca de **\</Order>** fim.  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Operações de carregamento em massa de XML transacionadas e não transacionadas  
  O XML Bulk Load pode operar no modo transacionado ou não transacionado. O desempenho geralmente é ideal se você estiver carregando em massa em um modo não-Transacted: ou seja, a propriedade Transaction está definida como FALSE) e qualquer uma das condições a seguir é verdadeira:  

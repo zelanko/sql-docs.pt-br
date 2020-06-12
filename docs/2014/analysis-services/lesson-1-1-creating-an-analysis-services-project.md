@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e1e21053603c73e018585d9f8f8d043b4831cfb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079356"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543678"
 ---
 # <a name="creating-an-analysis-services-project"></a>Criando um projeto do Analysis Services
-  Na tarefa a seguir, você usa [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] o para criar um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] novo projeto `Analysis Services Tutorial`chamado, com base [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no modelo de projeto. Um *projeto* é uma coleção de objetos relacionados. Os projetos existem dentro de uma solução que inclui um ou mais projetos. Para obter mais informações, consulte [Criar um projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
+  Na tarefa a seguir, você usa o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar um novo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto chamado `Analysis Services Tutorial` , com base no modelo de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto. Um *projeto* é uma coleção de objetos relacionados. Os projetos existem dentro de uma solução que inclui um ou mais projetos. Para obter mais informações, consulte [Criar um projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Para criar um novo projeto do Analysis Services  
   
@@ -32,9 +31,9 @@ ms.locfileid: "66079356"
   
      Observe que o nome de projeto padrão, o local e o nome de solução padrão são gerados na parte inferior da caixa de diálogo. Por padrão, um novo diretório será criado para a solução.  
   
-4.  Altere o nome do projeto `Analysis Services Tutorial`para, que também altera a caixa **nome da solução** e clique em **OK**.  
+4.  Altere o nome do projeto para `Analysis Services Tutorial` , que também altera a caixa **nome da solução** e clique em **OK**.  
   
- Você criou o `Analysis Services Tutorial` projeto com êxito, com base no modelo de **projeto Analysis Services multidimensional e de mineração de dados** , em uma nova solução que também `Analysis Services Tutorial`é denominada.  
+ Você criou o projeto com êxito `Analysis Services Tutorial` , com base no modelo de **projeto Analysis Services multidimensional e de mineração de dados** , em uma nova solução que também é denominada `Analysis Services Tutorial` .  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo uma fonte de dados](lesson-1-2-defining-a-data-source.md)  

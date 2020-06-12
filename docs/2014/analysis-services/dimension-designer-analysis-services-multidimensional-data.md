@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70ff168f2be759c7c5bb405868d7e569362f8430
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081775"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528606"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Designer de Dimensão (Analysis Services - Dados multidimensionais)
   Use o Designer de Dimensão no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para procurar os dados que a dimensão contém e modificar várias propriedades de uma dimensão existente: atributos, hierarquias, níveis, relações de atributo e conversões.  
@@ -32,7 +31,7 @@ ms.locfileid: "66081775"
   
     -   Clique duas vezes em uma dimensão.  
   
-## <a name="pages"></a>Pages (Páginas)  
+## <a name="pages"></a>Páginas  
  O Designer de Dimensão contém as seguintes páginas:  
   
  [Estrutura da Dimensão](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2473157bed334345f6c18177f97ac0415612232
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175275"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542778"
 ---
 # <a name="defining-a-fact-relationship"></a>Definindo uma relação de fatos
   Algumas vezes, os usuários desejam dimensionar medidas por itens de dados que estão na tabela de fatos ou consultar a tabela de fatos em busca de informações relacionadas específicas, como, por exemplo, números de faturas ou de ordens de compra relacionados a determinados fatos de vendas. Ao definir uma dimensão com base em um item da tabela de fatos, a dimensão será chamada *dimensão de fatos*. As dimensões de fatos também são conhecidas como dimensões de degeneração. Elas são úteis para agrupar em conjunto as linhas de tabelas de fatos relacionadas, como, por exemplo, todas as linhas que estiverem relacionadas a um determinado número de fatura. Embora seja possível colocar essas informações em uma tabela de dimensões separada no banco de dados relacional, criar uma tabela de dimensões separada para essas informações não fornecerá benefício algum, pois a tabela de dimensões tende a aumentar na mesma proporção que a tabela de fatos, duplicando dados e tornando maior sua complexidade.
@@ -51,7 +50,7 @@ ms.locfileid: "78175275"
 
 7.  Na lista **Coluna de nome** , selecione **SalesOrderLineNumber**.
 
-8.  Clique em **Avançar**.
+8.  Clique em **Próximo**.
 
 9. Na página **Selecionar Tabelas Relacionadas** , desmarque as caixas de seleção ao lado de todas as tabelas e clique em **Avançar**.
 
@@ -69,9 +68,9 @@ ms.locfileid: "78175275"
 
 16. Adicione o atributo **Número do Pedido de Vendas** à dimensão arrastando a coluna **SalesOrderNumber** da tabela **InternetSales** no painel **Exibição da Fonte de Dados** até o painel **Atributos** .
 
-17. Altere a propriedade **nome** do atributo número do novo **pedido** de vendas `Order Number`para e altere a propriedade **OrderBy** para **chave**.
+17. Altere a propriedade **nome** do atributo número do novo **pedido de vendas** para `Order Number` e altere a propriedade **OrderBy** para **chave**.
 
-18. No painel **hierarquias** , crie uma hierarquia de usuário **pedidos de vendas pela Internet** que `Order Number` contenha os níveis de descrição e de **Item** , nessa ordem.
+18. No painel **hierarquias** , crie uma hierarquia de usuário **pedidos de vendas pela Internet** que contenha os `Order Number` níveis de descrição e de **Item** , nessa ordem.
 
 19. No painel **Atributos** , selecione **Detalhes do Pedido de Vendas pela Internet**e examine o valor da propriedade **StorageMode** na janela Propriedades.
 

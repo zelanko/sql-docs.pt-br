@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 247f5153189cdfa5943e42b2d922ed0cc40d5dd7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070048"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538898"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Salvar Arquivo como (Analysis Services - Dados Multidimensionais)
   A caixa de diálogo **Salvar Arquivo Como** exibe uma lista de arquivos disponíveis em pastas de dados e de log definidas para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Você pode selecionar um arquivo listado ou especificar uma pasta e arquivo diferentes se necessário. A caixa de diálogo **Salvar Arquivo Como** é exibida de uma das seguintes maneiras:  

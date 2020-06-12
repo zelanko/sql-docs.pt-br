@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 991185cbf8545fab21270d77ab90267c09380566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2093bfc0fc36b324054fe30c11ff1e61042c6b21
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083437"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521176"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tarefas e instruções da estrutura de mineração
   A guia **Estrutura de Mineração** do Designer de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contém ferramentas que você pode usar para criar, editar e processar uma estrutura de mineração.  
@@ -36,7 +35,7 @@ ms.locfileid: "66083437"
   
 -   [Alterar as propriedades de uma estrutura de mineração](change-the-properties-of-a-mining-structure.md)  
   
--   [Editar a exibição da fonte de dados usada para a estrutura de mineração](edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar a exibição da fonte de dados usada para a Estrutura de Mineração](edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Processar uma estrutura de mineração](process-a-mining-structure.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: namespace-função URI (XQuery) | Microsoft Docs
+description: Saiba como usar a função namespace-URI em um XQuery para retornar o URI do namespace de um QName especificado.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929949"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306055"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funções em Nós – namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  Em razão do QName especificado não possuir a parte do namespace URI, mas só a parte de nome local, o resultado será uma cadeia de caracteres de comprimento zero.  
   
- A consulta a seguir é especificada em relação à coluna **XML** de instruções tipadas. A expressão, `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`, retorna o URI do namespace do primeiro <`Location`> filho do elemento <`root`>.  
+ A consulta a seguir é especificada em relação à coluna **XML** de instruções tipadas. A expressão, `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` , retorna o URI do namespace do primeiro <`Location`> filho do elemento <`root`>.  
   
 ```  
 SELECT Instructions.query('  
@@ -98,7 +99,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- Você pode alterar o namespace URI na consulta anterior para `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Em seguida, você receberá todos os filhos do nó de `ProductDescription` elemento do <> elemento cuja parte do URI do namespace `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`do QName expandido é.  
+ Você pode alterar o namespace URI na consulta anterior para `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Em seguida, você receberá todos os filhos do nó de elemento do <`ProductDescription`> elemento cuja parte do URI do namespace do QName expandido é `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` .  
   
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  

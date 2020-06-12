@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27df4456d774f7c80f30fd4840c521ddf93c77a6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082594"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520212"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Exibir a fórmula para um modelo de série temporal (mineração de dados)
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] designer de mineração de dados do Visualizador de séries temporais fornece a maneira mais fácil de exibir os detalhes da equação de regressão usada em um modelo de série temporal.  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Designer de mineração de dados do Visualizador de séries temporais fornece a maneira mais fácil de exibir os detalhes da equação de regressão usada em um modelo de série temporal.  
   
  Você pode extrair a fórmula de regressão para um modelo de série temporal consultando o conteúdo do modelo. No entanto, para exibir a fórmula ARTXP ou ARIMA completa, recomendamos que você use a **legenda de mineração** do [Visualizador do Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md), que apresenta todas as constantes em um formato legível.  
   
@@ -80,6 +79,6 @@ ms.locfileid: "66082594"
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções do Visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
  [Procurar um modelo usando o Visualizador do Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Exemplos de consulta de modelos de série temporal](time-series-model-query-examples.md)  
+ [Exemplos de consulta de um modelo de série temporal](time-series-model-query-examples.md)  
   
   
