@@ -1,5 +1,6 @@
 ---
 title: Criar e publicar uma regra de negócio
+description: Saiba como criar uma regra de negócio no Master Data Services para garantir a precisão dos dados mestres. Depois de criar uma regra, publique-a para aplicar a regra.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729446"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796388"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Criar e publicar uma regra de negócio (Master Data Services)
 
@@ -79,7 +80,7 @@ ms.locfileid: "73729446"
   
 19. Preencha quaisquer campos obrigatórios.  
   
-20. Clique em **Salvar**. A nova linha será adicionada à grade **Então** .  
+20. Clique em **Save** (Salvar). A nova linha será adicionada à grade **Então** .  
   
 21. Opcionalmente, para adicionar a ação **Senão** , conclua as etapas a seguir.  
   
@@ -91,9 +92,9 @@ ms.locfileid: "73729446"
   
     4.  Preencha quaisquer campos obrigatórios.  
   
-    5.  Clique em **Salvar**. Uma nova linha será adicionada à grade **Senão** .  
+    5.  Clique em **Save** (Salvar). Uma nova linha será adicionada à grade **Senão** .  
   
-22. Clique em **Salvar**. Uma nova linha será adicionada à grade regras de negócio.  
+22. Clique em **Save** (Salvar). Uma nova linha será adicionada à grade regras de negócio.  
   
 23. Clique em **Publicar Tudo**.  
   
@@ -102,11 +103,11 @@ ms.locfileid: "73729446"
 ## <a name="grid-columns"></a>Colunas da grade  
  Para cada regra de negócio criada, uma linha com seis colunas é adicionada à grade. A seguir estão as colunas.  
   
-|Nome|Descrição|  
+|Name|Descrição|  
 |----------|-----------------|  
 |Status|Quando você clica em **Salvar** , a imagem a seguir é exibida indicando que a regra de negócio está sendo atualizada.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Se houver erros ao criar ou editar uma regra de negócio, a imagem a seguir será exibida.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|Nome|O nome da regra de negócio.|  
-|Descrição|A descrição da regra de negócio.|  
+|Name|O nome da regra de negócio.|  
+|Description|A descrição da regra de negócio.|  
 |Estado da Regra de Negócio|Um dos seguintes status de regra de negócio: Regra não definida, Ativa, Excluída, Alterações pendentes, Exclusão pendente e Exclusão pendente.|  
 |Excluído|Especifica se a regra de negócio é ou não excluída.|  
 |Notification|Especifica o usuário ou grupo selecionado para o qual enviar a notificação por email.|  

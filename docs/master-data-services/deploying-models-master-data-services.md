@@ -1,5 +1,6 @@
 ---
 title: Implantando modelos
+description: Implante pacotes de modelo para mover cópias de modelos de um ambiente Master Data Services para outro ou para criar novos modelos em seu ambiente.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef909fd817da4835e9f3d0903a4e8a7f8f1a4658
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728283"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796357"
 ---
 # <a name="deploying-models-master-data-services"></a>Implantando modelos (Master Data Services)
 
@@ -27,7 +28,7 @@ ms.locfileid: "73728283"
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um pacote é um arquivo XML que contém uma estrutura de modelo implantável, e opcionalmente, dados do modelo. Use pacotes modelo para mover cópias de modelos de um ambiente MDS para outro, ou crie novos modelos em seu ambiente MDS existente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]A **ferramenta MDSModelDeploy** é compatível com versões anteriores com os [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] pacotes criados no ou superior.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]A **ferramenta MDSModelDeploy** é compatível com versões anteriores com os pacotes criados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ou superior.  
   
 ## <a name="tools-for-deploying-models"></a>Ferramentas para implantar modelos  
  Para trabalhar com pacotes de modelo, você pode usar uma das três ferramentas, dependendo de suas necessidades.  
@@ -46,7 +47,7 @@ ms.locfileid: "73728283"
   
  Todos os objetos de modelo são incluídos em um pacote. Esses objetos são:  
   
--   Entidades  
+-   Entities  
   
 -   Atributos  
   

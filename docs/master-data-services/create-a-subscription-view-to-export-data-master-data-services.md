@@ -1,5 +1,6 @@
 ---
 title: Criar uma exibição de assinatura para exportar dados
+description: Saiba como criar uma exibição de assinatura para exportar dados de Master Data Services para sistemas de assinatura, que cria uma exibição dos dados.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728474"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796401"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Criar uma exibição de assinatura para exportar dados (Master Data Services)
 
@@ -60,7 +61,7 @@ ms.locfileid: "73728474"
   
 10. Se você escolheu **Níveis Explícitos** ou **Níveis Derivados** da lista **Formato** , digite o número de níveis na hierarquia para incluir na exibição.  
   
-11. Clique em **Salvar**.  
+11. Clique em **Save** (Salvar).  
   
 ## <a name="view-information"></a>Informações de Exibição  
  Para cada exibição criada, uma linha com dez colunas é adicionada à grade. A tabela a seguir descreve as colunas.  
@@ -68,7 +69,7 @@ ms.locfileid: "73728474"
 |Coluna|Descrição|  
 |------------|-----------------|  
 |Status|O status da exibição.<br /><br /> Quando você clica em **salvar**, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status") é exibido, indicando que a exibição está sendo atualizada.<br /><br /> Se houver erros ao criar ou editar um modo de exibição, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK") é exibido.|  
-|Nome|O nome da exibição de assinatura.|  
+|Name|O nome da exibição de assinatura.|  
 |Modelo|O nome do modelo.|  
 |Versão|O nome da versão.|  
 |Sinalizador de Versão|O nome do sinalizador de versão.|  

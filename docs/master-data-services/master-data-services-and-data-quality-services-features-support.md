@@ -1,5 +1,6 @@
 ---
 title: Suporte a recursos do Data Quality Services
+description: Este artigo resume Master Data Services e o suporte aos recursos do Data Quality Services para as diferentes edições do SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a3e90ac3-69a6-47c9-aa18-8e9084717369
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9cd3259e29d3d54216ccf4a73599766631f2548e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 314bd631ba092afb087b3daf4cfead89ff77ebaf
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728047"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796254"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>Suporte a recursos do Master Data Services e do Data Quality Services
 

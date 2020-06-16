@@ -1,5 +1,6 @@
 ---
 title: Business Rules Extension
+description: Você pode aplicar scripts SQL definidos pelo usuário como uma extensão de condições e ações de regra de negócio predefinidas no Master Data Services.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a8a5215438a7cbed7796c5b9afaae5f8d59db9a
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728681"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796527"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Extensão das Regras de Negócio (Master Data Services)
 
@@ -103,7 +104,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  Atribuir um valor a cada parâmetro  
   
-    5.  Clique em **Salvar**.  
+    5.  Clique em **Save** (Salvar).  
   
 8.  Faça o seguinte para utilizar um script definido pelo usuário como uma ação.  
   
@@ -111,7 +112,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  Na lista suspensa **Operador** , selecione a função definida pelo usuário em **Script definido pelo usuário** .  
   
-    3.  Clique em **Salvar**.  
+    3.  Clique em **Save** (Salvar).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   

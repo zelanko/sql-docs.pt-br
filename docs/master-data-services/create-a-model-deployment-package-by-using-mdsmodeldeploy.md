@@ -1,5 +1,6 @@
 ---
 title: Criar um pacote de implantação de modelo (MDSModelDeploy)
+description: Use MDSModelDeploy para criar um pacote de implantação no Master Data Services. Um pacote pode conter apenas objetos de modelo ou objetos e dados de modelo.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 404faa39224c74e7768aa011fffd8818d6274455
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728507"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796411"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Criar um pacote de implantação de modelo usando o MDSModelDeploy
 

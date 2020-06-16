@@ -1,5 +1,6 @@
 ---
 title: Adicionar um Usuário
+description: Saiba como adicionar um usuário à lista de usuários no Master Data Manager. Você deve adicionar um usuário para iniciar o processo de atribuição de permissão ao aplicativo Web.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c17a3356949375ab6836db94a31910f5e54ca2a
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729812"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796576"
 ---
 # <a name="add-a-user-master-data-services"></a>Adicionar um usuário (Master Data Services)
 
@@ -37,7 +38,7 @@ ms.locfileid: "73729812"
   
 2.  Na página **Usuários** , clique **Adicionar usuários**.  
   
-3.  Digite o nome do usuário precedido pelo nome de domínio Active Directory ou pelo nome do computador do servidor, como em *domain*\\*user_name* de domínio ou *computador \ user_name*.  
+3.  Digite o nome do usuário precedido pelo nome de domínio Active Directory ou pelo nome do computador do servidor, como em *domain* \\ *user_name* de domínio ou *computador \ user_name*.  
   
 4.  Opcionalmente, clique em **Verificar nomes**.  
   

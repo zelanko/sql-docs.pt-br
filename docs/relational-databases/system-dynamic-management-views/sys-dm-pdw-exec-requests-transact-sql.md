@@ -12,18 +12,18 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087556"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796517"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contém informações sobre todas as solicitações no momento ou recentemente [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ativas no. Ele lista uma linha por solicitação/consulta.  
+  Contém informações sobre todas as solicitações no momento ou recentemente ativas no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Ele lista uma linha por solicitação/consulta.  
   
 |Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
@@ -38,13 +38,13 @@ ms.locfileid: "82087556"
 |label|**nvarchar (255)**|Cadeia de caracteres de rótulo opcional associada a algumas instruções de consulta SELECT.|Qualquer cadeia de caracteres contendo ' a-z ', ' A-Z ', ' 0-9 ', ' _ '.|  
 |error_id|**nvarchar (36)**|ID exclusiva do erro associado à solicitação, se houver.|Consulte [Sys. dm_pdw_errors &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); Defina como NULL se nenhum erro tiver ocorrido.|  
 |database_id|**int**|Identificador do banco de dados usado pelo contexto explícito (por exemplo, USE DB_X).|Consulte a ID em [Sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|command|**nvarchar(4000)**|Mantém o texto completo da solicitação como enviado pelo usuário.|Qualquer consulta ou texto de solicitação válido. Consultas com mais de 4000 bytes são truncadas.|  
+|.|**nvarchar(4000)**|Mantém o texto completo da solicitação como enviado pelo usuário.|Qualquer consulta ou texto de solicitação válido. Consultas com mais de 4000 bytes são truncadas.|  
 |resource_class|**nvarchar (20)**|O grupo de cargas de trabalho usado para esta solicitação. |Classes de recurso estáticas</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classes de recurso dinâmicas</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importance|**nvarchar(128)**|A importância definindo a solicitação executada em.  Essa é a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados.  A importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho.</br>Aplica-se a: SQL Data Warehouse do Azure|NULO</br>low</br>below_normal</br>normal (padrão)</br>above_normal</br>high|
 |group_name|**sysname** |Para solicitações que utilizam recursos, group_name é o nome do grupo de carga de trabalho sob o qual a solicitação está sendo executada.  Se a solicitação não utilizar recursos, group_name será NULL.</br>Aplica-se a: SQL Data Warehouse do Azure|
 |classifier_name|**sysname**|Para solicitações que utilizam recursos, o nome do classificador usado para atribuir recursos e importância.||
 |resource_allocation_percentage|**decimal (5, 2)**|A quantidade percentual de recursos alocados para a solicitação.</br>Aplica-se a: SQL Data Warehouse do Azure|
-|result_cache_hit|**hexadecimais**|Detalha se uma consulta concluída usou o cache do conjunto de resultados.  </br>Aplica-se a: SQL Data Warehouse do Azure| 1 = impacto no cache do conjunto de resultados </br> 0 = erro de cache do conjunto de resultados </br> Valores negativos = motivos pelos quais o cache do conjunto de resultados não foi usado.  Consulte a seção comentários para obter detalhes.|
+|result_cache_hit|**decimal**|Detalha se uma consulta concluída usou o cache do conjunto de resultados.  </br>Aplica-se a: SQL Data Warehouse do Azure| 1 = impacto no cache do conjunto de resultados </br> 0 = erro de cache do conjunto de resultados </br> Valores negativos = motivos pelos quais o cache do conjunto de resultados não foi usado.  Consulte a seção comentários para obter detalhes.|
 ||||
   
 ## <a name="remarks"></a>Comentários 

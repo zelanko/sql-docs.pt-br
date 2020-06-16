@@ -1,5 +1,6 @@
 ---
 title: Membros
+description: Em Master Data Services, os membros são os dados mestre físicos, como uma bicicleta Road-150 em uma entidade de produto ou um cliente específico em uma entidade de cliente.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c027f6403a8d3f156eedc5a1962cde44633e40a5
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728010"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800553"
 ---
 # <a name="members-master-data-services"></a>Membros (Master Data Services)
 

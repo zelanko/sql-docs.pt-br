@@ -1,5 +1,6 @@
 ---
 title: Criar um modelo
+description: Saiba como criar um modelo no Master Data Services para conter objetos de modelo. Você deve ter permissões para a área de administração do sistema.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55a0ff697fd9f20f34c2ddc878016ba75f5fa673
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728486"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796404"
 ---
 # <a name="create-a-model-master-data-services"></a>Criar um modelo (Master Data Services)
 
@@ -55,7 +56,7 @@ ms.locfileid: "73728486"
   
  Para cada modelo criado, uma linha com oito colunas é adicionada à grade. As oito colunas são:  
   
--   **Status**: o status do modelo. Quando você clica no botão **salvar modelo** , a imagem de ![atualização](../master-data-services/media/mds-model-status-updating.png "Atualizando") é exibida, o que indica que o modelo está sendo atualizado. Se houver erros ao criar ou editar um modelo, a imagem de ![erro](../master-data-services/media/mds-model-status-error.png "Erro") será exibida. Caso contrário, o status será OK e a imagem ![OK](../master-data-services/media/mds-model-status-ok.png "OK") será exibida.  
+-   **Status**: o status do modelo. Quando você clica no botão **salvar modelo** , a imagem de ![atualização](../master-data-services/media/mds-model-status-updating.png "Atualizar") é exibida, o que indica que o modelo está sendo atualizado. Se houver erros ao criar ou editar um modelo, a imagem de ![erro](../master-data-services/media/mds-model-status-error.png "Erro") será exibida. Caso contrário, o status será OK e a imagem ![OK](../master-data-services/media/mds-model-status-ok.png "OK") será exibida.  
   
 -   **Nome**: o nome do modelo.  
   

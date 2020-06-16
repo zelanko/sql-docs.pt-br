@@ -1,5 +1,6 @@
 ---
 title: Ações de regras de negócio
+description: Em Master Data Services, as regras de negócio causam ações. Saiba mais sobre ações de valor padrão, ações de valor de alteração, ações de validação e ações externas.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3aa704289844143dc07f63a384269a1ff45f31b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adb0a6798291148cc03c7e9a0a80ca8a59f3952f
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729738"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796540"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Ações de regras de negócio (Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "73729738"
 ## <a name="default-value-actions"></a>Ações de valor padrão  
  As ações de**Valor padrão** definem o valor padrão de um atributo especificado. Os usuários com permissão podem alterar esses valores padrão.  
   
-|Nome do valor|Descrição|  
+|Nome do valor|Description|  
 |----------------|-----------------|  
 |**segue o padrão**|O atributo selecionado **segue o padrão** de um atributo específico, um valor de atributo específico ou está em branco.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
 |**segue o padrão de um valor gerado**|O atributo selecionado **segue o padrão de um valor gerado** que é determinado pela inserção de um valor inicial e incremental.<br /><br /> Esta ação é válida para valores de texto e número.|  
@@ -38,7 +39,7 @@ ms.locfileid: "73729738"
 ## <a name="change-value-actions"></a>Ações de alteração de valor  
  As ações de**Alterar valor** atualizam o valor de um atributo especificado ou de um atributo. Os usuários somente poderão alterar esses valores se o novo valor fizer com que a ação seja verdadeira.  
   
-|Nome do valor|Descrição|  
+|Nome do valor|Description|  
 |----------------|-----------------|  
 |**Seja**|O atributo selecionado é alterado para um valor de atributo definido, outro atributo ou espaço em branco.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
 |**igual a um valor concatenado**|O atributo selecionado é alterado para um valor concatenado, que é determinado pela especificação de vários atributos.<br /><br /> Esta ação é válida para valores de texto e link.|  
@@ -48,10 +49,10 @@ ms.locfileid: "73729738"
   
  As únicas exceções são as ações **é obrigatório** e **não é válido** . Essas ações devem ser combinadas com uma ação de alteração de valor, de forma que os dados possam ser validados com êxito e a versão confirmada.  
   
-|Nome da validação|Descrição|  
+|Nome da validação|Description|  
 |---------------------|-----------------|  
 |**é necessário**|O atributo selecionado **é necessário**, o que significa que não pode ser nulo ou em branco.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
-|**não é válido**|O atributo selecionado **não é válido**.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
+|**Não é válido**|O atributo selecionado **não é válido**.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
 |**deve conter o padrão**|O atributo selecionado **deve conter o padrão** que é especificado. Use expressões regulares do .NET Framework para especificar o padrão.<br /><br /> Para obter mais informações sobre expressões regulares, consulte [Elementos de linguagem das expressões regulares](https://go.microsoft.com/fwlink/?LinkId=164401) na Biblioteca MSDN.<br /><br /> Esta ação é válida para valores de texto e link.|  
 |**deve ser exclusivo**|O atributo selecionado **deve ser exclusivo** , independentemente ou em combinação com os atributos definidos.<br /><br /> **Prática recomendada:** combine esta ação com uma condição obrigatória para assegurar a validade de campos de índice em sistemas de assinatura.<br /><br /> Esta ação é válida para valores de texto, número, data e link.<br /><br /> **OBSERVAÇÃO**: se o primeiro atributo for do tipo DateTime, ele não poderá ser usado em combinação com um atributo do tipo Numeric ou Text. Se o primeiro atributo for do tipo Numeric, ele não poderá ser usado em combinação com um atributo do tipo DateTime.|  
 |**deve ter um dos seguintes valores**|O atributo selecionado **deve ter um dos valores** especificados em uma lista.<br /><br /> Esta ação é válida para valores de texto.|  
@@ -67,7 +68,7 @@ ms.locfileid: "73729738"
 ## <a name="external-action"></a>Ação externa  
  As ações**externas** interagem com aplicativos fora do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-|Nome da ação|Descrição|  
+|Nome da ação|Description|  
 |-----------------|-----------------|  
 |**iniciar fluxo de trabalho**|Inicia um fluxo de trabalho externo. Os dados que fizeram com que essa ação ocorresse são passados para o fluxo de trabalho. Para obter mais informações, consulte [Integração do fluxo de trabalho do SharePoint com o Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
   

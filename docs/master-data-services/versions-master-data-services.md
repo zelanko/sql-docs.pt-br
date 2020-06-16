@@ -1,5 +1,6 @@
 ---
 title: Versões
+description: Você pode criar várias versões dos dados mestres dentro de um modelo no Master Data Services. Saiba mais sobre as versões e quando usá-las.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d30880029a9bb8fba85466d28f8b002b0f044ec3
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727799"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796467"
 ---
 # <a name="versions-master-data-services"></a>Versões (Master Data Services)
 

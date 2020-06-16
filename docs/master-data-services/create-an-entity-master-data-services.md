@@ -1,5 +1,6 @@
 ---
 title: Criar uma entidade
+description: Saiba como criar uma entidade no Master Data Services para conter membros e seus atributos. Você deve ter permissões para a área de administração do sistema.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43ffa259fd30d7aeaf4e2336780a2b92b2ef289
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728467"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796387"
 ---
 # <a name="create-an-entity-master-data-services"></a>Criar uma entidade (Master Data Services)
 
@@ -64,16 +65,16 @@ ms.locfileid: "73728467"
   
 9. Opcional. Marque a caixa de seleção **Habilitar a Compactação de Dados** . A compactação de linha é ativada por padrão. Para obter mais informações, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
-10. Clique em **Salvar**.  
+10. Clique em **Save** (Salvar).  
   
 ## <a name="grid-columns"></a>Colunas da grade  
  Para cada entidade criada, uma linha com treze colunas é adicionada à grade. A seguir estão as colunas.  
   
-|Nome|Descrição|  
+|Name|Descrição|  
 |----------|-----------------|  
 |Status|O status da entidade. Quando você clica em **Salvar** , a imagem a seguir é exibida, indicando que a entidade está atualizando.<br /><br /> ![Ícone para atualizar o status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status")<br /><br /> Se houver erros ao criar ou editar uma entidade, a imagem a seguir será exibida.<br /><br /> ![Ícone para status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro")<br /><br /> Se o status for OK, a imagem a seguir será exibida.<br /><br /> ![Ícone para status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK")|  
-|Nome|O nome da entidade.|  
-|Descrição|A descrição da entidade.|  
+|Name|O nome da entidade.|  
+|Description|A descrição da entidade.|  
 |Tabela de preparo|Nome do prefixo da tabela usado para armazenar dados.|  
 |Tipo de Log de Transações|O tipo de log de transações da entidade.|  
 |Criação automática de código|Especifica se a criação automática de código está habilitada.|  

@@ -1,5 +1,6 @@
 ---
 title: Preparando procedimento armazenado
+description: Use um dos três procedimentos armazenados para iniciar o processo de preparo de SQL Server Management Studio no Master Data Services.
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82b068612f0699cdba3788e4931fb6bdfe8c7e69
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727887"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796497"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Preparando procedimento armazenado (Master Data Services)
 
@@ -23,11 +24,11 @@ ms.locfileid: "73727887"
 
   Ao iniciar o processo de preparo no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], você usa um entre três procedimentos armazenados.  
   
--   stg.udp_\<name>_Leaf  
+-   STG. udp_ \<name> _Leaf  
   
--   stg.udp_\<name>_Consolidated  
+-   STG. udp_ \<name> _Consolidated  
   
--   stg.udp_\<name>_Relationship  
+-   STG. udp_ \<name> _Relationship  
   
  Onde nome é o nome da tabela de preparo que foi especificada quando a entidade foi criada.  
   
@@ -36,8 +37,8 @@ ms.locfileid: "73727887"
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> Necessária|O nome da versão. Pode ou não diferenciar maiúsculas de minúsculas, dependendo de sua configuração de ordenação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|**LogFlag**<br /><br /> Necessária|Determina se as transações são registradas em log durante o processo de preparo. Os valores possíveis são:<br /><br /> **0**: não registrar transações em log.<br /><br /> **1**: registrar transações em log.<br /><br /> <br /><br /> Para obter mais informações sobre transações, consulte [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
+|**VersionName**<br /><br /> Obrigatório|O nome da versão. Pode ou não diferenciar maiúsculas de minúsculas, dependendo de sua configuração de ordenação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|**LogFlag**<br /><br /> Obrigatório|Determina se as transações são registradas em log durante o processo de preparo. Os valores possíveis são:<br /><br /> **0**: não registrar transações em log.<br /><br /> **1**: registrar transações em log.<br /><br /> <br /><br /> Para obter mais informações sobre transações, consulte [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
 |**BatchTag**<br /><br /> Necessário, exceto pelo serviço Web|O valor **BatchTag** conforme especificado na tabela de preparo.|  
 |**Batch_ID**<br /><br /> Necessário apenas pelo serviço Web|O valor **Batch_ID** , conforme especificado na tabela de preparo.|  
 |**Nome de usuário**|Parâmetro opcional|  

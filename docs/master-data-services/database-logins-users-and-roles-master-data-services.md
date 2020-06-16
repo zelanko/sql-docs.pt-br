@@ -1,5 +1,6 @@
 ---
 title: Logons, usuários e funções de banco de dados
+description: Master Data Services inclui logons, usuários e funções instalados na instância de Mecanismo de Banco de Dados de SQL Server que hospeda o banco de dados Master Data Services.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54d0d7db0f76407836b266c3534198d0e177c679
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729487"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796377"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Logons, usuários e funções de banco de dados (Master Data Services)
 
@@ -32,21 +33,21 @@ ms.locfileid: "73729487"
   
 ## <a name="logins"></a>Logons  
   
-|Logon|Descrição|  
+|Logon|Description|  
 |-----------|-----------------|  
 |**mds_dlp_login**|Permite a criação de assemblies UNSAFE. Para obter mais informações, consulte [Criando um assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> - Logon desabilitado com senha gerada aleatoriamente.<br /><br /> – É mapeado para o dbo do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> – Para o msdb, mds_clr_user é mapeado para esse logon.|  
 |**mds_email_login**|Logon habilitado usado para notificações.<br /><br /> No msdb e no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user é mapeado para esse logon.|  
   
 ## <a name="msdb-users"></a>Usuários de msdb  
   
-|Usuário|Descrição|  
+|Usuário|Description|  
 |----------|-----------------|  
 |**mds_clr_user**|Não usado. Mapeia para mds_dlp_login.|  
 |**mds_email_user**|Usado para notificações.<br /><br /> – Mapeado para mds_dlp_login.<br /><br /> – É um membro da função DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Usuários de banco de dados do Master Data Services  
   
-|Usuário|Descrição|  
+|Usuário|Description|  
 |----------|-----------------|  
 |**mds_email_user**|Usado para notificações.<br /><br /> – Tem permissão SELECT para o esquema de mdm.<br /><br /> – Tem permissão EXECUTE para o tipo de tabela definida pelo usuário mdm.MemberGetCriteria.<br /><br /> – Tem permissão EXECUTE para o procedimento armazenado mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|É proprietário dos esquemas mdm e mdq. O esquema padrão é mdm.<br /><br /> Não está associado a um logon.|  
