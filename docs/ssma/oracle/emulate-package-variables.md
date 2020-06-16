@@ -1,18 +1,19 @@
 ---
 title: Emular variáveis do pacote do Oracle
 description: Descreve como o Assistente de Migração do SQL Server (SSMA) para Oracle emula variáveis de pacote Oracle no SQL Server.
-authors: nahk-ivanov
-ms.service: ssma
+author: nahk-ivanov
+ms.prod: sql
+ms.technology: ssma
 ms.devlang: sql
 ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
-ms.openlocfilehash: 9a8ca5c7dfdda98e1c005c3851d061957cf67449
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab7de81e16d1324aabd5f07421c1db4c51b3cf7c
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76762820"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779458"
 ---
 # <a name="emulating-oracle-package-variables"></a>Emular variáveis do pacote do Oracle
 
@@ -27,9 +28,9 @@ Este artigo descreve como Assistente de Migração do SQL Server (SSMA) para Ora
 
 ## <a name="conversion-basics"></a>Noções básicas de conversão
 
-Para armazenar variáveis de pacote, o SSMA para Oracle usa procedimentos armazenados que residem em `ssma_oracle` um esquema especial `ssma_oracle.db_storage` juntamente com a tabela. Esta tabela é filtrada `SPID` pelo (identificador de sessão) e pelo tempo de logon. Essa filtragem permite que você Diferencie entre variáveis de diferentes sessões.
+Para armazenar variáveis de pacote, o SSMA para Oracle usa procedimentos armazenados que residem em um `ssma_oracle` esquema especial juntamente com a `ssma_oracle.db_storage` tabela. Esta tabela é filtrada pelo `SPID` (identificador de sessão) e pelo tempo de logon. Essa filtragem permite que você Diferencie entre variáveis de diferentes sessões.
 
-No início de cada procedimento de pacote convertido, o SSMA coloca uma chamada `ssma_oracle.db_check_init_package` para o procedimento especial, que verifica se o pacote foi inicializado e o inicializa, se necessário. Cada procedimento de inicialização limpa a tabela de armazenamento e define valores padrão para cada variável de pacote.
+No início de cada procedimento de pacote convertido, o SSMA coloca uma chamada para o `ssma_oracle.db_check_init_package` procedimento especial, que verifica se o pacote foi inicializado e o inicializa, se necessário. Cada procedimento de inicialização limpa a tabela de armazenamento e define valores padrão para cada variável de pacote.
 
 ## <a name="example"></a>Exemplo
 
@@ -82,11 +83,11 @@ END
 
 ## <a name="emulating-get-and-set-methods-for-package-variables"></a>Emulando métodos get e Set para variáveis de pacote
 
-O Oracle `Get` usa `Set` e métodos para as variáveis de pacote, para evitar permitir que outros subprogramas os leiam e gravem diretamente. Se houver um requisito para manter algumas variáveis disponíveis entre as chamadas do subprograma na mesma sessão, essas variáveis serão tratadas como variáveis globais.
+O Oracle usa `Get` e `Set` métodos para as variáveis de pacote, para evitar permitir que outros subprogramas os leiam e gravem diretamente. Se houver um requisito para manter algumas variáveis disponíveis entre as chamadas do subprograma na mesma sessão, essas variáveis serão tratadas como variáveis globais.
 
-Para superar essa regra de escopo, o SSMA para Oracle usa procedimentos `ssma_oracle.set_pv_varchar` armazenados como para cada tipo de variável. Para acessar essas variáveis, o SSMA usa um conjunto de `get_*` `set_*` procedimentos e funções independentes de transação.
+Para superar essa regra de escopo, o SSMA para Oracle usa procedimentos armazenados como `ssma_oracle.set_pv_varchar` para cada tipo de variável. Para acessar essas variáveis, o SSMA usa um conjunto de procedimentos e funções independentes de transação `get_*` `set_*` .
 
-| Tipo de dados no Oracle | Procedimento `Set` do SSMA           |
+| Tipo de dados no Oracle | Procedimento do SSMA `Set`           |
 | ------------------- | ------------------------------ |
 | VARCHAR             | `ssma_oracle.set_pv_varchar`   |
 | DATE                | `ssma_oracle.set_pv_datetime2` |
@@ -94,4 +95,4 @@ Para superar essa regra de escopo, o SSMA para Oracle usa procedimentos `ssma_or
 | INT                 | `ssma_oracle.set_pv_float`     |
 | FLOAT               | `ssma_oracle.set_pv_float`     |
 
-Para distinguir entre variáveis de diferentes sessões, o SSMA armazena as variáveis junto com `SPID` seu (identificador de sessão) e o tempo de logon da sessão. Assim, `get_*` os `set_*` procedimentos e mantêm as variáveis independentes das sessões que as executam.
+Para distinguir entre variáveis de diferentes sessões, o SSMA armazena as variáveis junto com seu `SPID` (identificador de sessão) e o tempo de logon da sessão. Assim, `get_*` os `set_*` procedimentos e mantêm as variáveis independentes das sessões que as executam.

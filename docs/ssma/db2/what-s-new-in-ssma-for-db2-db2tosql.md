@@ -1,7 +1,7 @@
 ---
 title: O que há de novo no SSMA para DB2 (DB2ToSQL) | Microsoft Docs
 description: Saiba mais sobre as alterações feitas no Assistente de Migração do SQL Server (SSMA) para DB2 (DB2ToSQL) para cada versão.
-authors: HJToland3;nahk-ivanov
+author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
 ms.date: 6/2/2020
@@ -9,13 +9,13 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-ms.author: jtoland;alexiva
-ms.openlocfilehash: 73a0afb17e8c44aea6cdb25d590cedeecdc274cf
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.author: alexiva
+ms.openlocfilehash: 18e7ba16dcbcc44155172f239accbfe26fe86fc2
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293973"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779048"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>O que há de novo no SSMA para DB2 (DB2ToSQL)
 

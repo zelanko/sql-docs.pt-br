@@ -1,7 +1,7 @@
 ---
 title: Função SQLGetCursorName | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/12/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3ac65dc07897ddc789ee03b06b1bc1f71d37c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413b1a6982a5411d9af204a54536c4778b5593b9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285544"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779058"
 ---
 # <a name="sqlgetcursorname-function"></a>Função SQLGetCursorName
 **Conformidade**  
@@ -54,22 +54,22 @@ SQLRETURN SQLGetCursorName(
  Se *cursorname* for nulo, *NameLengthPtr* ainda retornará o número total de caracteres (excluindo o caractere de terminação nula para dados de caractere) disponível para retornar no buffer apontado pelo *cursorname*.  
   
  *BufferLength*  
- Entrada Comprimento de \* *cursorname*, em caracteres. Se o valor em * \*cursorname* for uma cadeia de caracteres Unicode (ao chamar **SQLGetCursorNameW**), o argumento *BufferLength* deverá ser um número par.  
+ Entrada Comprimento de \* *cursorname*, em caracteres. 
   
  *NameLengthPtr*  
- Der Ponteiro para memória na qual retornar o número total de caracteres (excluindo o caractere de terminação nula) disponível para retornar \*em *cursorname*. Se o número de caracteres disponíveis para retornar for maior ou igual a *BufferLength*, o nome do cursor em \* *cursorname* será truncado para *BufferLength* menos o comprimento de um caractere de terminação nula.  
+ Der Ponteiro para memória na qual retornar o número total de caracteres (excluindo o caractere de terminação nula) disponível para retornar em \* *cursorname*. Se o número de caracteres disponíveis para retornar for maior ou igual a *BufferLength*, o nome do cursor em \* *cursorname* será truncado para *BufferLength* menos o comprimento de um caractere de terminação nula.  
   
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLGetCursorName** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetCursorName** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa específica do driver. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
 |01004|Dados de cadeia de caracteres, truncados à direita|O \* *cursorname* do buffer não era grande o suficiente para retornar o nome do cursor inteiro, portanto, o nome do cursor estava truncado. O comprimento do nome do cursor não truncado é retornado em **NameLengthPtr*. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *StatementHandle*. Esta função assíncrona ainda estava em execução quando a função **SQLGetCursorName** foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para *StatementHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para o *StatementHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  

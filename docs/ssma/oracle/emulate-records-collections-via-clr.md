@@ -1,18 +1,19 @@
 ---
 title: Emular registros e coleções por meio do tipo de dado CLR definido pelo usuário
 description: Aborda como o Assistente de Migração do SQL Server (SSMA) para Oracle usa os tipos de dados (UDT) definidos pelo usuário SQL Server CLR (Common Language Runtime) para emular registros e coleções do Oracle.
-authors: nahk-ivanov
-ms.service: ssma
+author: nahk-ivanov
+ms.prod: sql
+ms.technology: ssma
 ms.devlang: sql
 ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
-ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73991999cf0a6e7bd2c8cd541ec58a37d1f18f09
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76762810"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779376"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>Emular registros e coleções por meio do tipo de dado CLR definido pelo usuário
 
@@ -26,7 +27,7 @@ O SSMA cria três UDTs baseados em CLR:
 * `CollectionIndexString`
 * `Record`
 
-O `CollectionIndexInt` tipo destina-se à emulação de coleções indexadas por inteiro `VARRAY`, como s, tabelas aninhadas e Matrizes associativas baseadas em chave de inteiro. O `CollectionIndexString` tipo é usado para matrizes associativas indexadas por chaves de caracteres. A funcionalidade de registro Oracle é emulada pelo `Record` tipo.
+O `CollectionIndexInt` tipo destina-se à emulação de coleções indexadas por inteiro, como `VARRAY` s, tabelas aninhadas e Matrizes associativas baseadas em chave de inteiro. O `CollectionIndexString` tipo é usado para matrizes associativas indexadas por chaves de caracteres. A funcionalidade de registro Oracle é emulada pelo `Record` tipo.
 
 Todas as declarações dos tipos de registro ou coleção são convertidas nesta Declaração Transact-SQL:
 
@@ -101,7 +102,7 @@ BEGIN
 END
 ```
 
-Aqui, como a `Manager` tabela está associada a um índice numérico (`INDEX BY PLS_INTEGER`), a declaração T-SQL correspondente usada é do tipo `@CollectionIndexInt$TYPE`. Se a tabela estiver associada a um índice de conjunto de caracteres `VARCHAR2`, como, a declaração T-SQL correspondente será do `@CollectionIndexString$TYPE`tipo:
+Aqui, como a `Manager` tabela está associada a um índice numérico ( `INDEX BY PLS_INTEGER` ), a declaração T-SQL correspondente usada é do tipo `@CollectionIndexInt$TYPE` . Se a tabela estiver associada a um índice de conjunto de caracteres, como `VARCHAR2` , a declaração T-SQL correspondente será do tipo `@CollectionIndexString$TYPE` :
 
 ```sql
 -- Oracle
@@ -112,13 +113,13 @@ TYPE Manager_table is TABLE OF Manager INDEX BY VARCHAR2(40);
     ' TABLE INDEX BY STRING OF ( RECORD ( MGRID INT , MGRNAME STRING , HIREDATE DATETIME ) )'
 ```
 
-A funcionalidade de registro Oracle é emulada somente `Record` pelo tipo.
+A funcionalidade de registro Oracle é emulada `Record` somente pelo tipo.
 
-Cada um dos tipos, `CollectionIndexInt`, `CollectionIndexString`e `Record`, tem uma propriedade `[Null]` estática que retorna uma instância vazia. O `SetType` método é chamado para receber um objeto vazio de um tipo específico (como visto no exemplo acima).
+Cada um dos tipos, `CollectionIndexInt` , `CollectionIndexString` e `Record` , tem uma propriedade estática que `[Null]` retorna uma instância vazia. O `SetType` método é chamado para receber um objeto vazio de um tipo específico (como visto no exemplo acima).
 
 ## <a name="constructor-call-conversions"></a>Conversões de chamada de Construtor
 
-A notação de construtor pode ser usada somente para `VARRAY`tabelas aninhadas e s, portanto, todas as chamadas de `CollectionIndexInt` Construtor explícitas são convertidas usando o tipo. Chamadas de Construtor vazias são `SetType` convertidas por chamada invocada na instância nula do `CollectionIndexInt`. A `[Null]` propriedade retorna a instância nula. Se o Construtor contiver uma lista de elementos, as chamadas de método especiais serão aplicadas sequencialmente para adicionar o valor à coleção.
+A notação de construtor pode ser usada somente para tabelas aninhadas e `VARRAY` s, portanto, todas as chamadas de Construtor explícitas são convertidas usando o `CollectionIndexInt` tipo. Chamadas de Construtor vazias são convertidas por `SetType` chamada invocada na instância nula do `CollectionIndexInt` . A `[Null]` propriedade retorna a instância nula. Se o Construtor contiver uma lista de elementos, as chamadas de método especiais serão aplicadas sequencialmente para adicionar o valor à coleção.
 
 Por exemplo:
 
@@ -255,14 +256,14 @@ TRIM (n) | `TrimN(@count int) returns <UDT_type>`
 
 ## <a name="bulk-collect-operation"></a>Operação de coleta em massa
 
-O SSMA `BULK COLLECT INTO` converte instruções em `SELECT ... FOR XML PATH` SQL Server instrução, cujo resultado é encapsulado em uma das seguintes funções:
+O SSMA converte `BULK COLLECT INTO` instruções em SQL Server `SELECT ... FOR XML PATH` instrução, cujo resultado é encapsulado em uma das seguintes funções:
 
 * `ssma_oracle.fn_bulk_collect2CollectionSimple`
 * `ssma_oracle.fn_bulk_collect2CollectionComplex`
 
-A escolha depende do tipo do objeto de destino. Essas funções retornam valores XML que podem ser analisados `CollectionIndexInt`por `CollectionIndexString` e `Record` tipos. Uma função `AssignData` especial atribui a coleção baseada em XML ao UDT.
+A escolha depende do tipo do objeto de destino. Essas funções retornam valores XML que podem ser analisados `CollectionIndexInt` por `CollectionIndexString` e `Record` tipos. Uma `AssignData` função especial atribui a coleção baseada em XML ao UDT.
 
-O SSMA reconhece três tipos `BULK COLLECT INTO` de instruções.
+O SSMA reconhece três tipos de `BULK COLLECT INTO` instruções.
 
 ### <a name="the-collection-contains-elements-with-scalar-types-and-the-select-list-contains-one-column"></a>A coleção contém elementos com tipos escalares e a `SELECT` lista contém uma coluna
 
@@ -340,4 +341,4 @@ SELECT
 
 ## <a name="select-into-record"></a>SELECIONAR no registro
 
-Quando o resultado da consulta Oracle é salvo em uma variável de registro PL/SQL, você tem duas opções dependendo da configuração do SSMA para **converter registro como uma lista de variáveis separadas** (disponível no menu **ferramentas** , **configurações do projeto**e conversão **geral** -> **Conversion**). Se o valor dessa configuração for **Sim** (o padrão), o SSMA não criará uma instância do tipo de registro. Em vez disso, ele divide o registro nos campos que constituem criando uma variável Transact-SQL separada por cada campo de registro. Se a configuração for **não**, o registro será instanciado e cada campo receberá um valor usando `Set` métodos.
+Quando o resultado da consulta Oracle é salvo em uma variável de registro PL/SQL, você tem duas opções dependendo da configuração do SSMA para **converter registro como uma lista de variáveis separadas** (disponível no menu **ferramentas** , **configurações do projeto**e conversão **geral**  ->  **Conversion**). Se o valor dessa configuração for **Sim** (o padrão), o SSMA não criará uma instância do tipo de registro. Em vez disso, ele divide o registro nos campos que constituem criando uma variável Transact-SQL separada por cada campo de registro. Se a configuração for **não**, o registro será instanciado e cada campo receberá um valor usando `Set` métodos.

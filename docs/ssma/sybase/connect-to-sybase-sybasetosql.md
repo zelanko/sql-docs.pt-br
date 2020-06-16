@@ -1,7 +1,7 @@
 ---
 title: Conectar-se ao Sybase (SybaseToSQL) | Microsoft Docs
 description: Conecte-se à instância do SAP ASE para começar a migração usando o SSMA para Sybase (SAP ASE). Use a caixa de diálogo Conectar-se ao Sybase.
-authors: nahk-ivanov
+author: nahk-ivanov
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 ms.author: alexiva
-ms.openlocfilehash: 2fb73b6f5abe1feeb5b341ad81fc97f21331e824
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: 72c6797bfc8d673069cab41002a4a93596d7e5d9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454409"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779408"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conectar-se ao Sybase (SybaseToSQL)
 

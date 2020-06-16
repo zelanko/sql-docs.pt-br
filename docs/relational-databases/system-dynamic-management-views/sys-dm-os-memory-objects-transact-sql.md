@@ -20,12 +20,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eece83b3c1fcde0d33a515c85eeb2cdac0a72cf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61cc363e15a200ed23de4ac94aba64680e1bc4a6
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827871"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716770"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "82827871"
 |**pages_in_bytes**|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Quantidade de memória em bytes alocada por essa instância do objeto de memória. Não permite valor nulo.|  
 |**creation_options**|**int**|Somente para uso interno. Permite valor nulo.|  
 |**bytes_used**|**bigint**|Somente para uso interno. Permite valor nulo.|  
-|**tipo**|**nvarchar(60)**|Tipo de objeto de memória.<br /><br /> Isso indica algum componente ao qual este objeto de memória pertence ou a função do objeto de memória. Permite valor nulo.|  
+|**type**|**nvarchar(60)**|Tipo de objeto de memória.<br /><br /> Isso indica algum componente ao qual este objeto de memória pertence ou a função do objeto de memória. Permite valor nulo.|  
 |**name**|**varchar(128)**|Somente para uso interno. Anulável.|  
 |**memory_node_id**|**smallint**|ID de um nó de memória que está sendo usado por esse objeto de memória. Não permite valor nulo.|  
 |**creation_time**|**datetime**|Somente para uso interno. Permite valor nulo.|  
@@ -50,10 +50,10 @@ ms.locfileid: "82827871"
 |**page_allocator_address**|**varbinary (8)**|Endereço de memória do alocador de página. Não permite valor nulo. Para obter mais informações, consulte [Sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**creation_stack_address**|**varbinary (8)**|Somente para uso interno. Permite valor nulo.|  
 |**sequence_num**|**int**|Somente para uso interno. Permite valor nulo.|  
-|**partition_type**|**int**|O tipo de partição:<br /><br /> 0-objeto de memória não particionável<br /><br /> 1-objeto de memória particionável, atualmente não particionado<br /><br /> 2-objeto de memória particionável, particionado por nó NUMA. Em um ambiente com um único nó NUMA, isso é equivalente a 1.<br /><br /> 3-objeto de memória particionável, particionado por CPU.|  
-|**contention_factor**|**real**|Um valor que especifica a contenção nesse objeto de memória, com 0 significando que não há contenção. O valor é atualizado sempre que um número especificado de alocações de memória foi feito refletindo a contenção durante esse período. Aplica-se somente a objetos de memória thread-safe.|  
-|**waiting_tasks_count**|**bigint**|Número de esperas neste objeto de memória. Esse contador é incrementado sempre que a memória é alocada a partir deste objeto de memória. O incremento é o número de tarefas que estão aguardando acesso a esse objeto de memória no momento. Aplica-se somente a objetos de memória thread-safe. Esse é um valor de melhor esforço sem uma garantia de exatidão.|  
-|**exclusive_access_count**|**bigint**|Especifica com que frequência este objeto de memória foi acessado exclusivamente. Aplica-se somente a objetos de memória thread-safe.  Esse é um valor de melhor esforço sem uma garantia de exatidão.|  
+|**partition_type**|**int**|**Aplica-se a**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] e posterior.<br /><br /> O tipo de partição:<br /><br /> 0-objeto de memória não particionável<br /><br /> 1-objeto de memória particionável, atualmente não particionado<br /><br /> 2-objeto de memória particionável, particionado por nó NUMA. Em um ambiente com um único nó NUMA, isso é equivalente a 1.<br /><br /> 3-objeto de memória particionável, particionado por CPU.|  
+|**contention_factor**|**real**|**Aplica-se a**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] e posterior.<br /><br /> Um valor que especifica a contenção nesse objeto de memória, com 0 significando que não há contenção. O valor é atualizado sempre que um número especificado de alocações de memória foi feito refletindo a contenção durante esse período. Aplica-se somente a objetos de memória thread-safe.|  
+|**waiting_tasks_count**|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] e posterior.<br /><br /> Número de esperas neste objeto de memória. Esse contador é incrementado sempre que a memória é alocada a partir deste objeto de memória. O incremento é o número de tarefas que estão aguardando acesso a esse objeto de memória no momento. Aplica-se somente a objetos de memória thread-safe. Esse é um valor de melhor esforço sem uma garantia de exatidão.|  
+|**exclusive_access_count**|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] e posterior.<br /><br /> Especifica com que frequência este objeto de memória foi acessado exclusivamente. Aplica-se somente a objetos de memória thread-safe.  Esse é um valor de melhor esforço sem uma garantia de exatidão.|  
 |**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**e **exclusive_access_count** ainda não foram implementadas no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .  
