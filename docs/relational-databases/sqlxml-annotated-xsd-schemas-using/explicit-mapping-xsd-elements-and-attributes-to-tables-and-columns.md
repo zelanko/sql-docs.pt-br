@@ -1,5 +1,6 @@
 ---
 title: Mapeamentos XSD personalizados para tabelas/colunas (SQLXML)
+description: Saiba como criar um mapeamento personalizado em uma consulta XPath do SQLXML entre os elementos e atributos de um esquema XSD e as tabelas e colunas de um banco de dados relacional.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -29,12 +30,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d7e4c58234ff5db68cdf51265100b88df5cef
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885598"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Mapeamentos XSD personalizados para tabelas/colunas (SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,10 +60,10 @@ ms.locfileid: "75257428"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Especificando as anotações sql:relation e sql:field  
- Neste exemplo, o esquema XSD consiste em um ** \<elemento Contact>** de tipo complexo com ** \<fname>** e ** \<lname>** elementos filho e o atributo **ContactID** .  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>a. Especificando as anotações sql:relation e sql:field  
+ Neste exemplo, o esquema XSD consiste em um **\<Contact>** elemento de tipo complexo com **\<FName>** elementos filho e e **\<LName>** o atributo **ContactID** .  
   
- A anotação **SQL: relation** mapeia o ** \<elemento Contact>** para a tabela Person. Contact no banco de dados AdventureWorks. A anotação **SQL: Field** mapeia o ** \<elemento fname>** para a coluna FirstName e o ** \<elemento lname>** para a coluna LastName.  
+ A anotação **SQL: relation** mapeia o **\<Contact>** elemento para a tabela Person. Contact no banco de dados AdventureWorks. A anotação **SQL: Field** mapeia o **\<FName>** elemento para a coluna FirstName e o **\<LName>** elemento para a coluna LastName.  
   
  Nenhuma anotação foi especificada para o atributo **ContactID** . Isso resulta em um mapeamento padrão do atributo na coluna com o mesmo nome.  
   

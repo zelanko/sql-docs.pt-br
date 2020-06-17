@@ -1,5 +1,6 @@
 ---
 title: Função Position (XQuery) | Microsoft Docs
+description: Saiba mais sobre a posição da função XQuery () que retorna um valor inteiro que indica a posição de um item de contexto dentro de uma sequência de itens.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45dffc809f223f9b18cd1dae1c5b951d5a8f1463
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881929"
 ---
 # <a name="context-functions---position-xquery"></a>Funções de Contexto – position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +36,13 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **fn: Position ()** só pode ser usada no contexto de um predicado dependente de contexto. Especificamente, ele só pode ser usado entre parênteses ([ ]). A comparação contra essa função não reduz a cardinalidade durante a inferência de tipo estática.  
+ Em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , **fn: Position ()** só pode ser usada no contexto de um predicado dependente de contexto. Especificamente, ele só pode ser usado entre parênteses ([ ]). A comparação contra essa função não reduz a cardinalidade durante a inferência de tipo estática.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **xml** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
-### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Usando a função position() XQuery para recuperar os primeiros dois recursos de produto  
- A consulta a seguir recupera os dois primeiros recursos, os dois primeiros elementos filho do elemento `Features` <>, da descrição do catálogo de modelos do produto. Se houver mais recursos, ele adicionará um elemento `there-is-more/` <> ao resultado.  
+### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>a. Usando a função position() XQuery para recuperar os primeiros dois recursos de produto  
+ A consulta a seguir recupera os dois primeiros recursos, os dois primeiros elementos filho do `Features` elemento <>, da descrição do catálogo de modelos do produto. Se houver mais recursos, ele adicionará um `there-is-more/` elemento <> ao resultado.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -69,11 +70,11 @@ WHERE CatalogDescription is not null
   
 -   A palavra-chave **namespace** no [prólogo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define um prefixo de namespace que é usado no corpo da consulta.  
   
--   O corpo da consulta constrói XML que tem um \<elemento de> de produto com os atributos **ProductModelID** e **ProductModelName** e tem recursos de produto retornados como elementos filho.  
+-   O corpo da consulta constrói XML que tem um \<Product> elemento com os atributos **ProductModelID** e **ProductModelName** e tem recursos do produto retornados como elementos filho.  
   
--   A função **Position ()** é usada no predicado para determinar a posição dos \<recursos> elemento filho no contexto. Se ele for o primeiro ou segundo recurso, será retornado.  
+-   A função **Position ()** é usada no predicado para determinar a posição do \<Features> elemento filho no contexto. Se ele for o primeiro ou segundo recurso, será retornado.  
   
--   A instrução IF adiciona um \<elemento há mais/> ao resultado se houver mais de dois recursos no catálogo de produtos.  
+-   A instrução IF adiciona um \<there-is-more/> elemento ao resultado se houver mais de dois recursos no catálogo de produtos.  
   
 -   Como nem todos os modelos de produtos têm as descrições de catálogo armazenadas na tabela, a cláusula WHERE é usada para descartar linhas em que CatalogDescriptions é NULL.  
   

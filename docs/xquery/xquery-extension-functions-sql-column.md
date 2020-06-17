@@ -1,5 +1,6 @@
 ---
 title: 'SQL: função de coluna () (XQuery) | Microsoft Docs'
+description: 'Saiba como a função do XQuery SQL: Column () pode ser usada para associar dados relacionais não XML dentro de XML e colocar dados relacionais e XML juntos.'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946017"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881501"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funções de Extensão XQuery – sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ sql:column("columnName")
 ## <a name="remarks"></a>Comentários  
  Observe que a referência a uma coluna especificada na função **SQL: Column ()** dentro de um XQuery refere-se a uma coluna na linha que está sendo processada.  
   
- No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você só pode fazer referência a uma instância **XML** no contexto da expressão de origem de uma instrução XML-DML insert; caso contrário, você não pode fazer referência a colunas que são do tipo **XML** ou um tipo CLR definido pelo usuário.  
+ No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , você só pode fazer referência a uma instância **XML** no contexto da expressão de origem de uma instrução XML-DML insert; caso contrário, não é possível fazer referência a colunas que são do tipo **XML** ou um tipo CLR definido pelo usuário.  
   
  Não há suporte para a função **SQL: Column ()** em operações de junção. Em vez disso, pode ser usada a operação APPLY.  
   
@@ -105,7 +106,7 @@ ProductID               Result
 ...  
 ```  
   
- A consulta a seguir constrói XML que contenha informações específicas do produto. Tais informações incluem ProductID, ProductName, ProductPrice e, se disponível, ProductModelName de todos os produtos que pertencem a um modelo de produto específico, ProductModelID=19. Em seguida, o XML é atribuído @x à variável do tipo **XML** .  
+ A consulta a seguir constrói XML que contenha informações específicas do produto. Tais informações incluem ProductID, ProductName, ProductPrice e, se disponível, ProductModelName de todos os produtos que pertencem a um modelo de produto específico, ProductModelID=19. Em seguida, o XML é atribuído à @x variável do tipo **XML** .  
   
 ```sql
 declare @x xml  
@@ -134,7 +135,7 @@ select @x
  [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [&#40;de dados XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Criar instâncias de dados XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md)   
- [Linguagem de modificação de dados XML &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Métodos de tipos de dados xml](../t-sql/xml/xml-data-type-methods.md)   
+ [XML DML &#40;linguagem de manipulação de dados XML &#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

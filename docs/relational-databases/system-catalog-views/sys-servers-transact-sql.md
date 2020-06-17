@@ -20,12 +20,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4b141520b21902c4dadb26a3ac013b1ee334928
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832687"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818214"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,6 +59,7 @@ ms.locfileid: "82832687"
 |**is_nonsql_subscriber**|**bit**|Servidor não é um Assinante de replicação.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Se 1, chamando um procedimento armazenado remoto dará início a uma transação distribuída e inscrever a transação com o MS DTC. Para obter mais informações, consulte [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Data em que as informações do servidor foram alteradas pela última vez.|  
+|**is_rda_server**|**bit**|O servidor é o arquivo morto de dados remotos habilitar (habilitado para Stretch). Para obter mais informações, consulte [habilitar Stretch Database no servidor](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer). Aplica-se a SQL Server 2016 e mais recente.|
   
 ## <a name="permissions"></a>Permissões  
  O valor em **provider_string** é sempre nulo, a menos que o chamador tenha a permissão ALTER ANY linkd Server.  

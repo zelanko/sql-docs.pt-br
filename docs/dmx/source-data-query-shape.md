@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670004"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881803"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;consulta de dados &gt; de origem-forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,30 +26,30 @@ ms.locfileid: "83670004"
   
 ```  
   
-SHAPE {<master query>}  
+SHAPE {<primary query>}  
 APPEND ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS <column table name>  
 [  
      ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS < column table name>  
 ...  
 ]       
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *consulta mestra*  
+ *consulta principal*  
  Consulta que retorna a tabela pai.  
   
  *consulta de tabela filho*  
  Consulta que retorna a tabela aninhada.  
   
- *coluna mestra*  
+ *coluna primária*  
  Coluna da tabela pai para identificar linhas filho no resultado de uma consulta de tabela filho.  
   
  *coluna filho*  
- Coluna da tabela filho para identificar linhas pai no resultado de uma consulta mestre.  
+ A coluna na tabela filho para identificar a linha pai do resultado de uma consulta primária.  
   
  *nome da tabela de colunas*  
  Nome de coluna recentemente adicionada à tabela pai da tabela aninhada.  

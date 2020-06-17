@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7609ecdf63f1bec0a344c9c6c8456a009ca3bbfa
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880663"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Cenário do tutorial de Analysis Services
   Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde a empresa emprega 500 trabalhadores. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
@@ -26,7 +26,7 @@ ms.locfileid: "84528032"
 ## <a name="current-analysis-environment"></a>Ambiente de análise atual  
  Para dar suporte às necessidades de análise de dados das equipes de vendas e marketing e do gerenciamento sênior, atualmente, a empresa usa dados transacionais do banco de dados [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] e informações não transacionais, como cotas de vendas de planilhas, e consolida essas informações no data warehouse relacional **AdventureWorksDW2012** . No entanto, o data warehouse relacional apresenta os seguintes desafios:  
   
--   Os relatórios são estáticos. Os usuários não têm como explorar os dados de maneira interativa para obter informações mais detalhadas, como eles fariam com uma tabela dinâmica do [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Embora o conjunto existente de relatórios predefinidos seja suficiente para muitos usuários, os usuários mais avançados precisam do acesso de consulta direta ao banco de dados para consultas interativas e relatórios especializados. Entretanto, devido à complexidade do banco de dados **AdventureWorksDW2012** , é preciso muito tempo para que esses usuários possam criar consultas eficientes.  
+-   Os relatórios são estáticos. Os usuários não têm como explorar os dados de maneira interativa para obter informações mais detalhadas, como eles fariam com uma tabela dinâmica do [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Embora o conjunto existente de relatórios predefinidos seja suficiente para muitos usuários, os usuários mais avançados precisam do acesso de consulta direta ao banco de dados para consultas interativas e relatórios especializados. No entanto, devido à complexidade do banco de dados **AdventureWorksDW2012** , é necessário muito tempo para que esses usuários aprendam a criar consultas efetivas.  
   
 -   O desempenho da consulta é amplamente variável. Por exemplo, algumas consultas retornam resultados muito rapidamente, em apenas alguns segundos, enquanto outras precisam de muitos minutos.  
   

@@ -1,5 +1,6 @@
 ---
 title: Diretrizes e limitações de Updategrams (SQLXML)
+description: Saiba mais sobre as diretrizes e limitações do uso de Updategrams XML no SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,26 +14,26 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9eb717968b191bb7d80f5d68542178bf32734b00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f94a0dc61b5b8278193ea84beea750383bf3bbc6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241303"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883595"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>Diretrizes e limitações dos diagramas de atualização XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Lembre-se das recomendações a seguir ao usar diagramas de atualização XML:  
   
--   Se você estiver usando um updategram para uma operação de inserção com apenas um único par de ** \<antes>** e ** \<depois** de blocos de>, o ** \<bloco before>** poderá ser omitido. Por outro lado, no caso de uma operação Delete, o ** \<bloco After>** pode ser omitido.  
+-   Se você estiver usando um updategram para uma operação de inserção com apenas um único par **\<before>** de **\<after>** blocos e, o **\<before>** bloco poderá ser omitido. Por outro lado, no caso de uma operação de exclusão, o **\<after>** bloco pode ser omitido.  
   
--   Se você estiver usando um updategram com vários ** \<antes de>** e ** \<depois** de blocos de>na marca de ** \<>de sincronização** , ** \<antes de>** blocos e ** \<depois de>** blocos devem ser especificados para formar ** \<antes** de>e depois de ** \<>** pares.  
+-   Se você estiver usando um updategram com vários **\<before>** **\<after>** blocos e na **\<sync>** marca, os **\<before>** blocos e blocos **\<after>** deverão ser especificados para formar **\<before>** e **\<after>** emparelhar.  
   
 -   As atualizações em um diagrama de atualização são aplicadas à exibição XML fornecida pelo esquema XML. Portanto, para o mapeamento padrão obter êxito em qualquer uma das situações, você precisará especificar o nome do arquivo de esquema no diagrama de atualização ou, se o nome do arquivo não for fornecido, os nomes de elemento e atributo precisarão corresponder aos nomes de tabela e coluna no banco de dados.  
   
 -   O SQLXML 4.0 exige que todos os valores de coluna de um diagrama de atualização sejam mapeados explicitamente no esquema (XDR ou XSD) fornecido para compor a exibição XML de seus elementos filho. Esse comportamento é diferente de versões anteriores do SQLXML, que permitia um valor para uma coluna não mapeada no esquema se ele estava implícito como parte da chave estrangeira em uma anotação **SQL: relationship** . (Observe que essa alteração não influencia na propagação dos valores de chave primária para os elementos filho, que ainda ocorrerá para o SQLXML 4.0 se nenhum valor for especificado explicitamente para o elemento filho.  
   
--   Se você estiver usando um updategram para modificar dados em uma coluna binária (como o tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de dados **Image** ), deverá fornecer um esquema de mapeamento no qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados (por exemplo, **SQL: datatype = "Image"**) e o tipo de dados XML (por exemplo, **dt: Type = "BinHex"** ou **dt: Type = "binbase64**) devem ser especificados. Os dados da coluna binária devem ser especificados no updategram; a anotação **SQL: url-encode** especificada no esquema de mapeamento é ignorada pelo updategram.  
+-   Se você estiver usando um updategram para modificar dados em uma coluna binária (como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados **Image** ), deverá fornecer um esquema de mapeamento no qual o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados (por exemplo, **SQL: datatype = "Image"**) e o tipo de dados XML (por exemplo, **dt: Type = "BinHex"** ou **dt: Type = "binbase64**) devem ser especificados. Os dados da coluna binária devem ser especificados no updategram; a anotação **SQL: url-encode** especificada no esquema de mapeamento é ignorada pelo updategram.  
   
 -   Quando você estiver gravando um esquema XSD, se o valor especificado para a anotação **SQL: relation** ou **SQL: Field** incluir um caractere especial, como um caractere de espaço (por exemplo, no nome da tabela "detalhes do pedido"), esse valor deverá ser colocado entre colchetes (por exemplo, "[detalhes do pedido]").  
   
@@ -46,9 +47,9 @@ ms.locfileid: "75241303"
   
 -   Os Updategrams não permitem a passagem de dados de tipo de **imagem** como parâmetros durante atualizações.  
   
--   Tipos BLOB (objeto binário grande) como **Text/ntext** e images não devem ser usados no bloco ** \<before>** no ao trabalhar com Updategrams, pois isso os incluirá para uso no controle de simultaneidade. Isso pode causar problemas com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devido às limitações de comparação para tipos BLOB. Por exemplo, a palavra-chave LIKE é usada na cláusula WHERE para comparar entre colunas do tipo de dados **Text** ; no entanto, as comparações falharão no caso de tipos de BLOB em que o tamanho dos dados seja maior que 8K.  
+-   Tipos BLOB (objeto binário grande) como **Text/ntext** e images não devem ser usados no **\<before>** bloco in ao trabalhar com Updategrams, pois isso os incluirá para uso no controle de simultaneidade. Isso pode causar problemas com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devido às limitações de comparação para tipos BLOB. Por exemplo, a palavra-chave LIKE é usada na cláusula WHERE para comparar entre colunas do tipo de dados **Text** ; no entanto, as comparações falharão no caso de tipos de BLOB em que o tamanho dos dados seja maior que 8K.  
   
--   Caracteres especiais em dados **ntext** podem causar problemas com o SQLXML 4,0 devido às limitações de comparação para tipos de BLOB. Por exemplo, o uso de "[Serializable]" no bloco ** \<before>** de um updategram quando usado na verificação de simultaneidade de uma coluna de tipo **ntext** falhará com a seguinte descrição de erro SQLOLEDB:  
+-   Caracteres especiais em dados **ntext** podem causar problemas com o SQLXML 4,0 devido às limitações de comparação para tipos de BLOB. Por exemplo, o uso de "[Serializable]" no **\<before>** bloco de Updategrams quando usado na verificação de simultaneidade de uma coluna de tipo **ntext** falhará com a seguinte descrição de erro SQLOLEDB:  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

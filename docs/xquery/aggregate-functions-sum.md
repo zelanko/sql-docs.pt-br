@@ -1,5 +1,6 @@
 ---
 title: Função SUM (XQuery) | Microsoft Docs
+description: Saiba mais sobre a função XQuery Sum () que retorna a soma de uma sequência de números.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b6efd2cc3d5793d4524c4ab3d058a6375d23892
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985747"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886927"
 ---
 # <a name="aggregate-functions---sum"></a>Funções de Agregação – sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +49,9 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  A função retorna um erro de runtime quando um estouro ou exceção fora do intervalo acontece.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **xml** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
-### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. Usando a função sum() XQuery para localizar o número combinado total de horas de trabalho para todos os locais do centro de trabalho no processo de fabricação.  
+### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>a. Usando a função sum() XQuery para localizar o número combinado total de horas de trabalho para todos os locais do centro de trabalho no processo de fabricação.  
  A consulta a seguir acha o total de horas de trabalho de todos os locais de centro de trabalho no processo de fabricação de todos os modelos de produtos nos quais as instruções de fabricação são armazenadas.  
   
 ```  

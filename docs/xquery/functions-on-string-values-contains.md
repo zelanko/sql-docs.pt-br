@@ -1,5 +1,6 @@
 ---
 title: Função Contains (XQuery) | Microsoft Docs
+description: Saiba como usar a função Contains em um XQuery para determinar se um valor de cadeia de caracteres especificado contém o valor de subcadeia de caracteres especificado.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881860"
 ---
 # <a name="functions-on-string-values---contains"></a>Funções em Valores da Cadeia de Caracteres – contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML armazenadas em várias colunas do tipo XML no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Usando a função contains() XQuery para pesquisar uma cadeia de caracteres específica  
+### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>a. Usando a função contains() XQuery para pesquisar uma cadeia de caracteres específica  
  A consulta a seguir localiza produtos que contêm a palavra Aerodynamic nas descrições resumidas. A consulta retorna o ProductID e o <`Summary` elemento> para esses produtos.  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: Instrução e iteração de FLWOR (XQuery) | Microsoft Docs
+description: Saiba mais sobre as cláusulas for, Let, Where, order by e Return que compõem a sintaxe de iteração do FLOWer em XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c03c6c2faa156aff513cfcc44fc99dcf461a62f5
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038906"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880966"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Iteração e instrução FLWOR (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68038906"
   
 -   Uma expressão `return`. A expressão na cláusula `return` constrói o resultado da instrução FLWOR.  
   
- Por exemplo, a consulta a seguir itera sobre o <`Step`> elementos no primeiro local de fabricação e retorna o valor de cadeia de caracteres `Step` do <nós>:  
+ Por exemplo, a consulta a seguir itera sobre o <`Step`> elementos no primeiro local de fabricação e retorna o valor de cadeia de caracteres do <`Step` nós>:  
   
 ```sql
 declare @x xml  
@@ -96,13 +97,13 @@ where ProductModelID=7
   
 -   A `$Step` é a variável de iterador.  
   
--   A [expressão](../xquery/path-expressions-xquery.md)de caminho `//AWMI:root/AWMI:Location[1]/AWMI:step`,, gera a sequência de entrada. Essa sequência é a sequência do <`step` nó de elemento> filhos do primeiro <`Location` nó de elemento>.  
+-   A [expressão de caminho](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step` , gera a sequência de entrada. Essa sequência é a sequência do <`step` nó de elemento> filhos do primeiro <`Location` nó de elemento>.  
   
 -   A cláusula de predicado opcional, `where`, não é usada.  
   
--   A `return` expressão retorna um valor de cadeia de caracteres `step` do elemento <>.  
+-   A `return` expressão retorna um valor de cadeia de caracteres do `step` elemento <>.  
   
- A [função de cadeia de caracteres (XQuery)](../xquery/data-accessor-functions-string-xquery.md) é usada para recuperar o valor da `step` cadeia de caracteres do <> nó.  
+ A [função de cadeia de caracteres (XQuery)](../xquery/data-accessor-functions-string-xquery.md) é usada para recuperar o valor da cadeia de caracteres do <`step`> nó.  
   
  Este é o resultado parcial:  
   
@@ -246,7 +247,7 @@ where ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   A `where` palavra-chave usa a função **Count ()** para contar o número `step` de <> elementos filho em cada local do centro de trabalho.  
+-   A `where` palavra-chave usa a função **Count ()** para contar o número de <`step`> elementos filho em cada local do centro de trabalho.  
   
 -   A expressão `return` constrói o XML desejado a partir dos resultados da iteração.  
   
@@ -267,7 +268,7 @@ where ProductModelID=7
 4.  Caso contrário, ele gera um erro estático.  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>Associação de variável múltipla em FLWOR  
- Você pode ter uma única expressão FLWOR que associa diversas variáveis a sequências de entrada. No exemplo a seguir, a consulta é especificada em uma coluna xml não digitada. A expressão do FLUÍdor retorna a primeira `Step` <> filho do elemento em `Location` cada elemento de> <.  
+ Você pode ter uma única expressão FLWOR que associa diversas variáveis a sequências de entrada. No exemplo a seguir, a consulta é especificada em uma coluna xml não digitada. A expressão do FLUÍdor retorna a primeira <`Step`> filho do elemento em cada `Location` elemento de> <.  
   
 ```sql
 declare @x xml  
@@ -293,7 +294,7 @@ SELECT @x.query('
   
  Observe o seguinte na consulta anterior:  
   
--   A `for` expressão define `$Loc` e $`FirstStep` Variables.  
+-   A `for` expressão define `$Loc` e $ `FirstStep` Variables.  
   
 -   As expressões `two`, `/ManuInstructions/Location` e `$FirstStep in $Loc/Step[1]`, são correlacionadas pelo fato de que os valores de `$FirstStep` dependem dos valores de `$Loc`.  
   
@@ -352,7 +353,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>Usando a cláusula order by  
- A classificação no XQuery é executada usando a cláusula `order by` na expressão FLWOR. As expressões de classificação passadas `order by` para a cláusula devem retornar valores cujos tipos são válidos para o operador **gt** . Cada expressão de classificação deve resultar em uma sequência singleton com um item. Por padrão, a classificação é executada em ordem crescente. Você pode especificar opcionalmente a ordem crescente ou decrescente para cada expressão de classificação.  
+ A classificação no XQuery é executada usando a cláusula `order by` na expressão FLWOR. As expressões de classificação passadas para a `order by` cláusula devem retornar valores cujos tipos são válidos para o operador **gt** . Cada expressão de classificação deve resultar em uma sequência singleton com um item. Por padrão, a classificação é executada em ordem crescente. Você pode especificar opcionalmente a ordem crescente ou decrescente para cada expressão de classificação.  
   
 > [!NOTE]  
 >  A classificação de comparações em valores da cadeia de caracteres executada pela implementação do XQuery no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sempre é realizada usando a ordenação Unicode Codepoint binário.  
@@ -373,7 +374,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- Observe que o processo de [atomização (XQuery)](../xquery/atomization-xquery.md) recupera o valor atômico do <`number`> elementos antes de passá- `order by`lo para. Você pode escrever a expressão usando a função **Data ()** , mas isso não é necessário.  
+ Observe que o processo de [atomização (XQuery)](../xquery/atomization-xquery.md) recupera o valor atômico do <`number`> elementos antes de passá-lo para `order by` . Você pode escrever a expressão usando a função **Data ()** , mas isso não é necessário.  
   
 ```  
 order by data($a/act:number[1]) descending  
@@ -450,7 +451,7 @@ where ProductModelID=19;
   
  Observe o seguinte na consulta anterior:  
   
--   A `/p1:ProductDescription/p1:Specifications/*` expressão retorna os filhos do elemento `Specifications` de <>.  
+-   A `/p1:ProductDescription/p1:Specifications/*` expressão retorna os filhos do elemento de <`Specifications`>.  
   
 -   A expressão `order by (local-name($a))` classifica a sequência pela parte local do nome de elemento.  
   

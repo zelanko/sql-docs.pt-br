@@ -1,5 +1,6 @@
 ---
 title: Função minúscula (XQuery) | Microsoft Docs
+description: Saiba mais sobre a função XQuery com letras minúsculas () que converte cada caractere em uma cadeia de caracteres especificada em minúsculas equivalentes.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077665"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886589"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funções em Valores da Cadeia de Caracteres – lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>a. Alterando uma cadeia de caracteres para letras maiúsculas  
- O exemplo a seguir altera a cadeia de caracteres de entrada ' abcDEF! ' @4' para letras minúsculas.  
+ O exemplo a seguir altera a cadeia de caracteres de entrada ' abcDEF! @4 ' para letras minúsculas.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

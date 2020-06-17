@@ -1,5 +1,6 @@
 ---
 title: Formatação XML do lado do servidor (SQLXML)
+description: Saiba mais sobre a formatação XML do lado do servidor de documentos gerados por consultas do SQLXML 4,0 executadas em um banco de dados Microsoft SQL Server.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec84fdfad468124f59cefde73486d5b19a5a4110
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be657e9fa17be6c6ea2b0441d852f51efa6882be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882140"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Formatação XML do lado do servidor (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "75255896"
   
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você pode armazenar e recuperar documentos XML para e de tabelas de banco de dados. Para recuperar um documento XML, use a extensão de consulta FOR XML em uma consulta SELECT.  
   
- Por exemplo, suponha que um aplicativo cliente execute um comando em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] relação ao que consiste na [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguinte consulta:  
+ Por exemplo, suponha que um aplicativo cliente execute um comando em relação [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ao que consiste na seguinte [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta:  
   
 ```  
 SELECT FirstName, LastName  

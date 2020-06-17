@@ -1,5 +1,6 @@
 ---
 title: Atomização (XQuery) | Microsoft Docs
+description: Saiba mais sobre o processo de atomização no XQuery no qual os valores tipados de um item são extraídos.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70d623d8583535aae7ddcc23f26ab7c5e4e36fc7
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985711"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886889"
 ---
 # <a name="atomization-xquery"></a>Atomização (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
 -   Na construção do atributo OriginalLaborHours, a atomização é aplicada implicitamente à sequência de singleton retornada por (`$WC/@LaborHours`). O valor digitado do atributo LaborHours é atribuído a OriginalLaborHours.  
   
--   Na construção do atributo UpdatedLaborHoursV1, o operador aritmético requer valores atômicos. Portanto, **Data ()** é aplicado implicitamente ao atributo LaborHours que é retornado por (`$WC/@LaborHours`). O valor atômico 1 é então adicionado a ele. A construção do atributo UpdatedLaborHoursV2 mostra a aplicação explícita de **dados ()**, mas não é necessária.  
+-   Na construção do atributo UpdatedLaborHoursV1, o operador aritmético requer valores atômicos. Portanto, **Data ()** é aplicado implicitamente ao atributo LaborHours que é retornado por ( `$WC/@LaborHours` ). O valor atômico 1 é então adicionado a ele. A construção do atributo UpdatedLaborHoursV2 mostra a aplicação explícita de **dados ()**, mas não é necessária.  
   
 ```  
 SELECT Instructions.query('  

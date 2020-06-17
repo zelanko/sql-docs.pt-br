@@ -1,5 +1,6 @@
 ---
 title: Sistema de tipos (XQuery) | Microsoft Docs
+description: Saiba mais sobre o sistema de tipos XQuery que inclui tipos internos de esquema XML e tipos definidos no namespace XPath-datatypes.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82cfc060b021e28c5b5e73602285b1edc3fcf20
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946209"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886555"
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "67946209"
 ## <a name="built-in-types-of-xml-schema"></a>Tipos internos do esquema XML  
  Os tipos internos do esquema XML têm um prefixo de namespace predefinido de xs. Alguns desses tipos incluem **xs: integer** e **xs: String**. Há suporte para todos esses tipos internos. Você pode usar esses tipos ao criar uma coleção de esquemas XML.  
   
- Ao consultar XML digitado, o tipo estático e dinâmico dos nós é determinado pela coleção de esquemas XML associada à coluna ou variável sendo consultada. Para obter mais informações sobre tipos estáticos e dinâmicos, consulte [avaliação de contexto de expressão e consulta &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Por exemplo, a consulta a seguir é especificada em uma coluna **XML** com`Instructions`tipo (). A expressão usa `instance of` para verificar se o valor digitado do atributo `LotSize` retornado é do tipo `xs:decimal`.  
+ Ao consultar XML digitado, o tipo estático e dinâmico dos nós é determinado pela coleção de esquemas XML associada à coluna ou variável sendo consultada. Para obter mais informações sobre tipos estáticos e dinâmicos, consulte [avaliação de contexto de expressão e consulta &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Por exemplo, a consulta a seguir é especificada em uma coluna **XML** com tipo ( `Instructions` ). A expressão usa `instance of` para verificar se o valor digitado do atributo `LotSize` retornado é do tipo `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -105,7 +106,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   A [função de cadeia de caracteres &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md) retorna o valor da cadeia de caracteres do nó.  
   
- Na seguinte coleção de esquema XML, o elemento `root` <> do tipo Integer é definido:  
+ Na seguinte coleção de esquema XML, o `root` elemento <> do tipo Integer é definido:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +133,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- O exemplo a seguir calcula o total dos atributos de `LaborHours`. A `data()` função recupera os valores tipados `LaborHours` de atributos de todos os `Location` elementos de <> para um modelo de produto. De acordo com o esquema XML associado à `Instruction` coluna, `LaborHours` é do tipo **xs: decimal** .  
+ O exemplo a seguir calcula o total dos atributos de `LaborHours`. A `data()` função recupera os valores tipados de `LaborHours` atributos de todos os `Location` elementos de <> para um modelo de produto. De acordo com o esquema XML associado à `Instruction` coluna, `LaborHours` é do tipo **xs: decimal** .  
   
 ```  
 SELECT Instructions.query('   
@@ -149,7 +150,7 @@ WHERE ProductModelID=7
 >  O uso explícito da função **Data ()** neste exemplo é apenas para fins ilustrativos. Se não for especificado, **Sum ()** aplicará implicitamente a função **Data ()** para extrair os valores tipados dos nós.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelos e permissões de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões do SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Fundamentos de XQuery](../xquery/xquery-basics.md)  
   
   

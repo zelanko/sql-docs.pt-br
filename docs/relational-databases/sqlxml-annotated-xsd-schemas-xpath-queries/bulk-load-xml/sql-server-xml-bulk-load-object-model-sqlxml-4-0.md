@@ -1,5 +1,6 @@
 ---
 title: Modelo de objeto de carregamento em massa (SQLXML) do SQL Server XML
+description: Saiba mais sobre os métodos e as propriedades do objeto SQLXMLBulkLoad que é usado para o carregamento em massa de XML no SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -32,16 +33,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dff7936e236ae76333543e902f588fa8ead1be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246706"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882559"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objeto de carregamento em massa de XML do SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  O modelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de objeto de carregamento em massa do Microsoft XML consiste no objeto SQLXMLBulkLoad. Esse objeto suporta os métodos e propriedades a seguir.  
+  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modelo de objeto de carregamento em massa do Microsoft XML consiste no objeto SQLXMLBulkLoad. Esse objeto suporta os métodos e propriedades a seguir.  
   
 ## <a name="methods"></a>Métodos  
  Execute (executar)  
@@ -145,7 +146,7 @@ ms.locfileid: "75246706"
  Especifica se o Carregamento em Massa deveria ser executado como uma transação, caso em que a reversão será garantida se houver falha do Carregamento em Massa. Essa é uma propriedade booliana. Se a propriedade for definida como TRUE, o Carregamento em Massa ocorrerá em um contexto transacional. A propriedade TempFilePath é útil somente quando a transação é definida como TRUE.  
   
 > [!NOTE]  
->  Se você estiver carregando dados binários (como os tipos de dados XML bin. Hex, bin. base64 para os tipos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados Binary, Image), a propriedade Transaction deverá ser definida como false.  
+>  Se você estiver carregando dados binários (como os tipos de dados XML bin. Hex, bin. base64 para os tipos de dados Binary, Image [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), a propriedade Transaction deverá ser definida como false.  
   
  O valor padrão é FALSE.  
   

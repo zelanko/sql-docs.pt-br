@@ -1,5 +1,6 @@
 ---
 title: Modelos
+description: Um modelo define a estrutura de dados em sua solução de gerenciamento de dados mestre. Os modelos são o nível mais alto de organização de dados no Master Data Services.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba07d02389ed15b93e8a67992514c76f80906224
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727951"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800543"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
 

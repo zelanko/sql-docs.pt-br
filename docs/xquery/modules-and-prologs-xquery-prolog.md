@@ -1,5 +1,6 @@
 ---
 title: Prólogo XQuery | Microsoft Docs
+description: Saiba mais sobre o prólogo do XQuery que contém uma série de declarações e definições que criam o ambiente necessário para o processamento de consultas.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c1d73fca8bdc91205110d89cceb3a694725c18
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946604"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881668"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Módulos e prólogos – Prólogo XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ WHERE ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   O prólogo XQuery inclui uma declaração de prefixo de namespace (AWMI `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`),.  
+-   O prólogo XQuery inclui uma declaração de prefixo de namespace (AWMI), `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";` .  
   
 -   A palavra-chave `declare namespace` define um prefixo de namespace que depois é usado no corpo da consulta.  
   

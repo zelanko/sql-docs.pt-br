@@ -1,5 +1,6 @@
 ---
 title: Manipulando namespaces no XQuery | Microsoft Docs
+description: Veja exemplos de tratamento de namespaces em um XQuery que incluem como declarar namespaces novos e padrão.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7b427dfa3756b83eb3d0a73f6ff5dd0be23b0c7
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004535"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880711"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Manipulando namespaces em XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. Construção com o uso de namespaces padrão  
- Você também pode definir um namespace padrão para uso em XML construído. Por exemplo, a consulta a seguir mostra como você pode especificar um namespace padrão, "URI: SomeNamespace\\", para usar como o padrão para os elementos nomeados localmente que são construídos, como `<Result>` o elemento.  
+ Você também pode definir um namespace padrão para uso em XML construído. Por exemplo, a consulta a seguir mostra como você pode especificar um namespace padrão, "URI: SomeNamespace" \\ , para usar como o padrão para os elementos nomeados localmente que são construídos, como o `<Result>` elemento.  
   
 ```  
 SELECT CatalogDescription.query('  

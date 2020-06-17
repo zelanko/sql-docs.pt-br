@@ -1,5 +1,6 @@
 ---
 title: Função concat (XQuery) | Microsoft Docs
+description: Saiba mais sobre a função do XQuery Concat () que retorna uma cadeia de caracteres criada pela concatenação de zero ou mais cadeias de caracteres especificadas como argumentos.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d3762f419789732406564606ad7a3b990e30fd
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099835"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881814"
 ---
 # <a name="functions-on-string-values---concat"></a>Funções em Valores da Cadeia de Caracteres – concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ fn:concat ($string as xs:string?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados de exemplo AdventureWorks.  
   
-### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Uso da função concat() XQuery para concatenar cadeias de caracteres  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>a. Uso da função concat() XQuery para concatenar cadeias de caracteres  
  Para um modelo de produto específico, essa consulta retorna uma cadeia de caracteres criada concatenando o período de garantia e a descrição de garantia. No documento de descrição do catálogo, o `Warranty` elemento <> é composto de <`WarrantyPeriod`> e <`Description` elementos filho>.  
   
 ```  
@@ -83,7 +84,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- A consulta anterior recupera informações de um produto específico. A consulta a seguir recupera as mesmas informações de todos os produtos para os quais são armazenadas descrições do catálogo XML. O método **exist ()** do tipo de dados **XML** na cláusula WHERE retornará true se o documento XML nas linhas tiver um elemento <`ProductDescription`>.  
+ A consulta anterior recupera informações de um produto específico. A consulta a seguir recupera as mesmas informações de todos os produtos para os quais são armazenadas descrições do catálogo XML. O método **exist ()** do tipo de dados **XML** na cláusula WHERE retornará true se o documento XML nas linhas tiver um `ProductDescription` elemento <>.  
   
 ```  
 WITH XMLNAMESPACES (  

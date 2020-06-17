@@ -1,5 +1,6 @@
 ---
 title: Requisitos para executar exemplos do SQLXML
+description: Conheça os requisitos para criar exemplos de trabalho usando os exemplos na seção conceitos de programação do SQLXML 4,0.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c3c04eccdae6f9c5bb1bd2da0272f8878f9d2d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8cd9e57f2ca7b9da3f13ef0438b7aa8ffc01b3a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882121"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Requisitos para executar exemplos do SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

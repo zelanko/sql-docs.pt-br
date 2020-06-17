@@ -1,5 +1,6 @@
 ---
 title: Manipulação nula (SQLXML)
+description: 'Saiba como atributos ou elementos nulos podem ser especificados em um updategram 4,0 do SQLXML usando o atributo updg: NullValue.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b04802083aa505f963fc1a644d71799b37e13cf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7944369c409975eba2331fe12b55ec873dda61fd
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252418"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882163"
 ---
 # <a name="null-handling-sqlxml-40"></a>Manipulação de NULL (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  A sintaxe XML indica NULL como uma ausência. (Por exemplo, se um atributo ou valor de elemento for nulo, esse atributo ou elemento estará ausente do documento XML.) No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, o atributo **updg: NullValue** HABILITA a especificação de NULL para um valor de elemento ou atributo.  
+  A sintaxe XML indica NULL como uma ausência. (Por exemplo, se um atributo ou valor de elemento for nulo, esse atributo ou elemento estará ausente do documento XML.) No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, o atributo **updg: NullValue** habilita a especificação de NULL para um valor de elemento ou atributo.  
   
  Por exemplo, o updategram a seguir garante que o valor de **título** de um contato com **contactid** de 64 seja NULL e, em seguida, atualiza o valor do **título** para "Mr". para este contato.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "75252418"
 </ROOT>  
 ```  
   
- Quando os parâmetros são passados para um diagrama de atualização, é possível passar NULL como o valor do parâmetro. Isso é feito especificando o atributo **NullValue** no bloco ** \<updg: header>** . Para obter um exemplo, consulte [passando parâmetros para updategrams &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md).  
+ Quando os parâmetros são passados para um diagrama de atualização, é possível passar NULL como o valor do parâmetro. Isso é feito especificando o atributo **NullValue** no **\<updg:header>** bloco. Para obter um exemplo, consulte [passando parâmetros para updategrams &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Considerações de segurança do updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  

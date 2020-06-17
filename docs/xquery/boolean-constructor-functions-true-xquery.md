@@ -1,5 +1,6 @@
 ---
 title: Função true (XQuery) | Microsoft Docs
+description: Saiba mais sobre a função XQuery true () que retorna o valor booliano true.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb3625b1377d11907ca118faee8d81c06b8d6af6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886570"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Funções do Construtor Booliano – true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ fn:true() as xs:boolean
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-true-xquery-boolean-function"></a>A. Usando a função booliana true() XQuery  
+### <a name="a-using-the-true-xquery-boolean-function"></a>a. Usando a função booliana true() XQuery  
  O exemplo a seguir consulta uma variável **XML** não tipada. A expressão no método **Value ()** retorna booliano **true ()** se "AAA" for o valor do atributo. O método **Value ()** do tipo de dados **XML** converte o valor booliano em um bit e o retorna.  
   
 ```  
@@ -49,7 +50,7 @@ go
   
  No exemplo a seguir, a consulta é especificada em uma coluna **XML** com tipo. A `if` expressão verifica o valor booliano digitado do `ROOT` elemento <> e retorna o XML construído, de acordo. O exemplo executa o seguinte:  
   
--   Cria uma coleção de esquema XML que define o `ROOT` <elemento> do tipo xs: Boolean.  
+-   Cria uma coleção de esquema XML que define o <`ROOT` elemento> do tipo xs: Boolean.  
   
 -   Cria uma tabela com uma coluna **XML** com tipo usando a coleção de esquema XML.  
   

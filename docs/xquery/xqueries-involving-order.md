@@ -1,5 +1,6 @@
 ---
 title: XQueries envolvendo a ordem | Microsoft Docs
+description: Exibir exemplos de XQueries que se baseiam na sequência em que os nós aparecem em um documento.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946118"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880511"
 ---
 # <a name="xqueries-involving-order"></a>XQueries que envolvem ordem
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Bancos de dados relacionais não têm um conceito de sequência. Por exemplo, você não pode fazer uma solicitação como "Obtenha o primeiro cliente do banco de dados". No entanto, você pode consultar um documento XML e recuperar \<o primeiro elemento de> do cliente. Então, você sempre recuperará o mesmo cliente.  
+  Bancos de dados relacionais não têm um conceito de sequência. Por exemplo, você não pode fazer uma solicitação como "Obtenha o primeiro cliente do banco de dados". No entanto, você pode consultar um documento XML e recuperar o primeiro \<Customer> elemento. Então, você sempre recuperará o mesmo cliente.  
   
  Este tópico ilustra consultas baseadas na sequência em que os nós aparecem no documento.  
   
@@ -81,7 +82,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- A consulta anterior recupera apenas os nós de texto. Se você quiser que todo o `step` <> elemento retornado, remova a função **String ()** da consulta:  
+ A consulta anterior recupera apenas os nós de texto. Se você quiser que todo o <`step`> elemento retornado, remova a função **String ()** da consulta:  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Localizar todos os materiais e ferramentas usados no segundo local do centro de trabalho na fabricação de um produto  
  Para um modelo de produto específico, a consulta a seguir recupera as ferramentas e os materiais usados no segundo centro de trabalho na sequência de locais de centro de trabalho no processo de produção.  
@@ -115,7 +116,7 @@ where ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   A consulta constrói o elemento <localizável`tion`> e recupera seus valores de atributo do banco de dados.  
+-   A consulta constrói o elemento <localizável `tion`> e recupera seus valores de atributo do banco de dados.  
   
 -   Ela usa duas iterações FLWOR (for...return): uma para recuperar ferramentas e outra para recuperar o material usado.  
   
@@ -157,7 +158,7 @@ where ProductModelID=19
   
  Observe o seguinte na consulta anterior:  
   
- O corpo da consulta constrói XML que inclui o elemento `ProductModel` <> que tem os atributos ProductModelID e ProductModelName.  
+ O corpo da consulta constrói XML que inclui o `ProductModel` elemento <> que tem os atributos ProductModelID e ProductModelName.  
   
 -   A consulta usa um para... Loop de retorno para recuperar as descrições de recursos do modelo de produto. A função **Position ()** é usada para recuperar os dois primeiros recursos.  
   

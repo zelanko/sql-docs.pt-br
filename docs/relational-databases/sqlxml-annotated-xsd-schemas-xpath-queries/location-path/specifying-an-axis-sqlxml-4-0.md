@@ -1,5 +1,6 @@
 ---
 title: Especificando um eixo (SQLXML)
+description: Saiba como especificar um eixo em uma consulta XPath do SQLXML 4,0 especifica a relação de árvore entre os nós selecionados pela etapa local e o nó de contexto.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43daf972eacd67dcd7e75eabd1aca87bb3f67932
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253061"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882182"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificando um eixo (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "75253061"
   
      Contém o filho do nó de contexto.  
   
-     A seguinte expressão XPath (caminho de localização) seleciona no nó de contexto atual todos os>filhos do ** \<cliente** :  
+     A seguinte expressão XPath (caminho de localização) seleciona a partir do nó de contexto atual todos os **\<Customer>** filhos:  
   
     ```  
     child::Customer  
@@ -47,7 +48,7 @@ ms.locfileid: "75253061"
   
      Contém o pai do nó de contexto.  
   
-     A expressão XPath a seguir seleciona todos os ** \<clientes>** pais da ** \<ordem>** filhos:  
+     A expressão XPath a seguir seleciona todos os **\<Customer>** pais dos **\<Order>** filhos:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -69,7 +70,7 @@ ms.locfileid: "75253061"
   
      Contém o próprio nó de contexto.  
   
-     A expressão XPath a seguir selecionará o nó atual se for o nó de ** \<>de ordem** :  
+     A expressão XPath a seguir selecionará o nó atual se ele for o **\<Order>** nó:  
   
     ```  
     self::Order  

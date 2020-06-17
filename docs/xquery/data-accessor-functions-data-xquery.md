@@ -1,5 +1,6 @@
 ---
 title: Função de dados (XQuery) | Microsoft Docs
+description: Saiba como usar os dados da função XQuery () para retornar o valor digitado para cada item em uma sequência especificada de itens.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac340466d1d816139249e4b007c7b2bc733dd390
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038974"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881873"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Funções do Acessador de Dados – data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Usando a função data() XQuery para extrair valor com tipo de um nó  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>a. Usando a função data() XQuery para extrair valor com tipo de um nó  
  A consulta a seguir ilustra como a função **Data ()** é usada para recuperar valores de um atributo, um elemento e um nó de texto:  
   
 ```  
@@ -125,7 +126,7 @@ WHERE ProductModelID = 19
   
  Os exemplos a seguir ilustram as instâncias nas quais a função **Data ()** é necessária.  
   
- Na consulta a seguir, **$PD/P1: Specifications/material** retorna o `Material` elemento <>. Além disso, **os dados ($PD/P1: especificações/material)** retornam dados de caractere digitados como xdt `Material` : untypedAtomic, porque <> é não tipado. Quando a entrada é não tipada, o resultado de **Data ()** é digitado como **xdt: untypedAtomic**.  
+ Na consulta a seguir, **$PD/P1: Specifications/material** retorna o `Material` elemento <>. Além disso, **os dados ($PD/P1: especificações/material)** retornam dados de caractere digitados como xdt: untypedAtomic, porque <`Material`> é não tipado. Quando a entrada é não tipada, o resultado de **Data ()** é digitado como **xdt: untypedAtomic**.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -149,7 +150,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- Na consulta a seguir, os **dados ($PD/P1: Features/WM: warrantion)** retorna um erro estático, `Warranty` porque <> é um elemento de tipo complexo.  
+ Na consulta a seguir, os **dados ($PD/P1: Features/WM: warrantion)** retorna um erro estático, porque <`Warranty`> é um elemento de tipo complexo.  
   
 ```  
 WITH XMLNAMESPACES (  

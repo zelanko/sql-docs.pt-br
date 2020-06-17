@@ -1,5 +1,6 @@
 ---
 title: Usar operadores boolianos em consultas XPath (SQLXML)
+description: Saiba como usar operadores boolianos em consultas XPath do SQLXML 4,0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a53f9d1b04d0f96e854a9e85c1588aa33e60fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41c521f2e8d1984ab8c10b8970c83c7ebe495f99
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884183"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores boolianos em consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252577"
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>a. Especificar o operador booliano OR  
- Essa consulta XPath retorna o ** \<** elemento de>do cliente filho do nó de contexto com o valor do atributo **CustomerID** de 13 ou 31:  
+ Essa consulta XPath retorna o **\<Customer>** elemento filho do nó de contexto com o valor do atributo **CustomerID** de 13 ou 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -43,7 +44,7 @@ ms.locfileid: "75252577"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- No predicado `attribute` , é o eixo `CustomerID` e é o teste de nó (true se **CustomerID** é um ** \<atributo>** nó, porque o ** \<atributo>** nó é o nó primário para o eixo de **atributo** ). O predicado filtra os elementos de ** \<>do cliente** e retorna apenas aqueles que atendem à condição especificada no predicado.  
+ No predicado, `attribute` é o eixo e `CustomerID` é o teste de nó (true se **CustomerID** for um **\<attribute>** nó, porque o **\<attribute>** nó é o nó primário para o eixo de **atributo** ). O predicado filtra os **\<Customer>** elementos e retorna apenas aqueles que atendem à condição especificada no predicado.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Para testar as consultas XPath com relação ao esquema de mapeamento  
   

@@ -1,5 +1,6 @@
 ---
 title: Contexto de expressão e avaliação de consulta (XQuery) | Microsoft Docs
+description: Saiba como as informações do contexto estático e dinâmico de uma expressão XQuery são usadas para analisá-la e avaliá-la.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cadfc71bdbb137650d897dc8374ed1caa8d193ab
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038923"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881899"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexto de expressão e avaliação de consulta (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68038923"
   
     -   Qualquer namespace definido usando WITH XMLNAMESPACES. Para obter mais informações, consulte [Adicionar namespaces a consultas com with SQLnamespaces](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   Qualquer namespace definido no prólogo da consulta. Observe que as declarações de namespace no prólogo podem substituir a declaração de namespace no WITH XMLNAMESPACES. Por exemplo, na consulta a seguir, WITH XMLNAMESPACES declara um prefixo (PD) que o associa ao namespace (`https://someURI`). Entretanto, na cláusula WHERE, o prólogo da consulta substitui a associação.  
+    -   Qualquer namespace definido no prólogo da consulta. Observe que as declarações de namespace no prólogo podem substituir a declaração de namespace no WITH XMLNAMESPACES. Por exemplo, na consulta a seguir, WITH XMLNAMESPACES declara um prefixo (PD) que o associa ao namespace ( `https://someURI` ). Entretanto, na cláusula WHERE, o prólogo da consulta substitui a associação.  
   
         ```  
         WITH XMLNAMESPACES ('https://someURI' AS pd)  
@@ -119,7 +120,7 @@ ms.locfileid: "68038923"
   
 2.  Resolução dos nomes de tipo e função especificados na expressão.  
   
-3.  Digitação estática da consulta. Isso garante que a consulta é do tipo seguro. Por exemplo, a consulta a seguir retorna um erro estático, porque **+** o operador requer argumentos de tipo primitivos numéricos:  
+3.  Digitação estática da consulta. Isso garante que a consulta é do tipo seguro. Por exemplo, a consulta a seguir retorna um erro estático, porque o **+** operador requer argumentos de tipo primitivos numéricos:  
   
     ```  
     declare @x xml  
@@ -127,7 +128,7 @@ ms.locfileid: "68038923"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     No exemplo a seguir, o operador **Value ()** requer um singleton. Conforme especificado no esquema XML, pode haver vários \<elementos de> Elem. A análise estática da expressão estabelece que não é de tipo seguro e um erro estático é retornado. Para resolver o erro, a expressão deve ser reescrita para especificar um singleton (`data(/x:Elem)[1]`) explicitamente.  
+     No exemplo a seguir, o operador **Value ()** requer um singleton. Conforme especificado no esquema XML, pode haver vários \<Elem> elementos. A análise estática da expressão estabelece que não é de tipo seguro e um erro estático é retornado. Para resolver o erro, a expressão deve ser reescrita para especificar um singleton (`data(/x:Elem)[1]`) explicitamente.  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  

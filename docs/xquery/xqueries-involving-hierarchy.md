@@ -1,5 +1,6 @@
 ---
 title: XQueries envolvendo hierarquia | Microsoft Docs
+description: Veja exemplos de XQueries que envolvem hierarquias.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ab17b99dc1d90d867689c5f79425fde0775a4b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946102"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880634"
 ---
 # <a name="xqueries-involving-hierarchy"></a>XQueries que envolvem hierarquias
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "67946102"
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>a. Nos documentos de instruções de fabricação, recuperar os locais de centro de trabalho junto com a primeira etapa de fabricação nesses locais  
- Para o modelo de produto 7, a consulta constrói XML que inclui o `ManuInstr` elemento <>, com os atributos **ProductModelID** e **ProductModelName** , e um ou `Location` mais <> elementos filho.  
+ Para o modelo de produto 7, a consulta constrói XML que inclui o `ManuInstr` elemento <>, com os atributos **ProductModelID** e **ProductModelName** , e um ou mais <`Location`> elementos filho.  
   
- Cada elemento `Location` de> de <tem seu próprio conjunto de atributos e `step` um <elemento filho>. Esse <`step`> elemento filho é a primeira etapa de fabricação no local do centro de trabalho.  
+ Cada `Location` elemento de> de <tem seu próprio conjunto de atributos e um <`step` elemento filho>. Esse <`step`> elemento filho é a primeira etapa de fabricação no local do centro de trabalho.  
   
 ```sql
 SELECT Instructions.query('  
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   Ao construir o elemento <`Location`>, $WC/@ * recupera todos os atributos de local do centro de trabalho.  
   
--   A função **String ()** retorna o valor da cadeia de caracteres `step` do elemento <>.  
+-   A função **String ()** retorna o valor da cadeia de caracteres do `step` elemento <>.  
   
  Este é um resultado parcial:  
   
@@ -84,7 +85,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Localizar todos os números de telefone na coluna AdditionalContactInfo  
- A consulta a seguir recupera números de telefone adicionais para um contato de cliente específico pesquisando toda a hierarquia `telephoneNumber` para o elemento <>. Como o elemento `telephoneNumber` <> pode aparecer em qualquer lugar na hierarquia, a consulta usa o descendente e o operador self (//) na pesquisa.  
+ A consulta a seguir recupera números de telefone adicionais para um contato de cliente específico pesquisando toda a hierarquia para o `telephoneNumber` elemento <>. Como o `telephoneNumber` elemento <> pode aparecer em qualquer lugar na hierarquia, a consulta usa o descendente e o operador self (//) na pesquisa.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -111,7 +112,7 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Para recuperar apenas os números de telefone de nível superior, especificamente o `telephoneNumber` <> elementos filho de `AdditionalContactInfo` <>, a expressão for na consulta é alterada para  
+ Para recuperar apenas os números de telefone de nível superior, especificamente o <`telephoneNumber`> elementos filho de <`AdditionalContactInfo`>, a expressão for na consulta é alterada para  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   

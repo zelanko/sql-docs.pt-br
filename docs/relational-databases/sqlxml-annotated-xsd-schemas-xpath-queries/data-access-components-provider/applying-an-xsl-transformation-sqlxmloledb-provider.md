@@ -1,5 +1,6 @@
 ---
 title: Aplicar um XSL Transformation (SQLXMLOLEDB)
+description: Saiba como aplicar uma transformação XSL em um aplicativo ADO usando as propriedades ClientSideXML e XSL do provedor SQLXMLOLEDB.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3040c337853a33748fe24a72892739664f8e8304
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c02c5f41ec11ec15d849e5b7fc6897ee0c798d01
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882705"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Aplicando um XSL Transformation (provedor SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: Hierarquias recursivas
+description: No Master Data Services, uma hierarquia recursiva inclui uma relação recursiva, que existe quando uma entidade tem um atributo baseado em domínio baseado na entidade.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac3df398e486f143b871c736e6f2fee643092b7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ae5653804f59809a9270ccf0357d412218fc36c
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728956"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800524"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Hierarquias recursivas (Master Data Services)
 
