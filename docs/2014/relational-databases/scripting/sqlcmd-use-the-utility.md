@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35f7bcf1c8e5ebcb225a9198944cf4144321bad3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c2a07ae5d4248b4c37ab5fa8124582c99a1e6f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703689"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063417"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Usar o utilitário sqlcmd
   O utilitário `sqlcmd` é um utilitário de linha de comando para execução interativa ad hoc dos scripts e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], e para automatização das tarefas de script do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para usar o `sqlcmd` de forma interativa ou para criar arquivos de script para serem executados com o `sqlcmd`, os usuários devem entender o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O utilitário `sqlcmd` é normalmente usado das seguintes maneiras:  
@@ -563,8 +562,8 @@ SQLCMD -E -N -C
 ## <a name="see-also"></a>Consulte Também  
  [Utilitário sqlcmd](../../tools/sqlcmd-utility.md)   
  [Usar sqlcmd com variáveis de script](sqlcmd-use-with-scripting-variables.md)   
- [Editar scripts SQLCMD com o editor de consultas](edit-sqlcmd-scripts-with-query-editor.md)   
+ [Editar scripts SQLCMD com o Editor de Consultas](edit-sqlcmd-scripts-with-query-editor.md)   
  [Gerenciar etapas de trabalho](../../ssms/agent/manage-job-steps.md)   
- [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
+ [Criar uma etapa de trabalho CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

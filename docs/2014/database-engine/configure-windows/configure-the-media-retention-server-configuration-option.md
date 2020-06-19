@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 092e0a2b5cfc30fd2d2362645fc1242bf4a1651e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811337"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935649"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Configurar a opção de configuração de servidor media retention
   Este tópico descreve como configurar a opção de configuração de servidor **media retention** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **media retention** especifica a duração da retenção de cada conjunto de backups. A opção ajuda a proteger os backups para que não sejam substituídos até que o número especificado de dias tenha se passado. Depois de configurar a opção **media retention** , não é necessário especificar a quantidade de tempo para reter backups de sistema cada vez em que se executa um backup. O valor padrão é 0 dias e o valor máximo é 365 dias.  

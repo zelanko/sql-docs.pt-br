@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a57b4666-2177-419c-b9b6-28be93485b0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7468843aa111e8317efe4a9a088e93b675bc93c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842971"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928767"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>Compatibilidade com versões anteriores das Ferramentas de Gerenciamento do SQL Server
   Os tópicos da seção de compatibilidade com versões anteriores descrevem alterações no comportamento entre versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

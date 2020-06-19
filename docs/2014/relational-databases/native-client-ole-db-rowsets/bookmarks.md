@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d9076f2-bf9c-452e-b816-70371a0c1644
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 436cbd68ae60446df94b63283cd3291c9fc63fee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: be8e5486e5a442ddafa133a9cbd3f408d30a50d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055971"
 ---
 # <a name="bookmarks"></a>Indicadores
   Os indicadores permitem que os consumidores voltem rapidamente para uma linha. Com os indicadores, os consumidores podem acessar linhas aleatoriamente com base no valor do indicador. A coluna do indicador é a coluna 0 no conjunto de linhas. O consumidor define o valor de campo dwFrag da estrutura associada como DBCOLUMNSINFO_ISBOOKMARK para indicar que a coluna é usada como um indicador. O consumidor também define a propriedade DBPROP_BOOKMARKS do conjunto de linhas como VARIANT_TRUE. Isso permite que a coluna 0 esteja presente no conjunto de linhas. Em seguida, o método **IRowsetLocate::GetRowsAt** é usado para buscar linhas, começando com a linha especificada como um deslocamento de um indicador.  

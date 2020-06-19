@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab803bcaa5ab6b6187c1a994abef02f81ae105c6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811540"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935714"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurar o Mecanismo de Banco de Dados para escuta em várias portas TCP
   Este tópico descreve como configurar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para escutar em diversas portas TCP no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. Quando TCP/IP está habilitado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssDE](../../includes/ssde-md.md)] escutará conexões de entrada em um ponto de conexão que consiste em um endereço IP e número de porta TCP. Os procedimentos a seguir criam um ponto de extremidade de protocolo TDS, de forma que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escutará em uma porta TCP adicional.  
@@ -82,7 +81,7 @@ ms.locfileid: "62811540"
   
 4.  Clique com o botão direito do mouse em **IPAll**e clique em **Propriedades**.  
   
-5.  Na caixa **Porta TCP** , digite as portas nas quais deseja que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] efetue a escura, separadas por vírgulas. Em nosso exemplo, se a porta padrão 1433 estiver listada, `,1500` digite para a caixa `1433,1500`ler e clique em **OK**.  
+5.  Na caixa **Porta TCP** , digite as portas nas quais deseja que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] efetue a escura, separadas por vírgulas. Em nosso exemplo, se a porta padrão 1433 estiver listada, digite `,1500` para a caixa ler `1433,1500` e clique em **OK**.  
   
     > [!NOTE]  
     >  Se você não estiver habilitando a porta em todos os endereços IP, configure a porta adicional na caixa de propriedades para apenas o endereço desejado. Em seguida, no painel de console, clique com o botão direito do mouse em **TCP/IP**, clique em **Propriedades**e, na caixa **Escutar Tudo** , selecione **Não**.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063572"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de recursos do Administrador de Recursos
   No Administrador de Recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um pool de recursos representa um subconjunto dos recursos físicos de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar dentro do pool de recursos. Cada pool de recursos pode conter um ou mais grupos de cargas de trabalho. Quando uma sessão é iniciada, o classificador do Administrador de Recursos atribui a sessão a um grupo de cargas de trabalho específico e a sessão deve ser executada, usando os recursos atribuídos ao grupo de cargas de trabalho.  
@@ -117,10 +116,10 @@ ms.locfileid: "63209871"
 |Descreve como excluir um pool de recursos.|[Excluir um pool de recursos](delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Resource Governor](resource-governor.md)   
- [Grupo de carga de trabalho Resource Governor](resource-governor-workload-group.md)   
+ [Administrador de Recursos](resource-governor.md)   
+ [Grupos de carga de trabalho do Administrador de Recursos](resource-governor-workload-group.md)   
  [Resource Governor função de classificação](resource-governor-classifier-function.md)   
- [Configurar Resource Governor usando um modelo](configure-resource-governor-using-a-template.md)   
- [View Resource Governor Properties](view-resource-governor-properties.md)  
+ [Configurar o administrador de recursos usando um modelo](configure-resource-governor-using-a-template.md)   
+ [Exibir Propriedades do Administrador de Recursos](view-resource-governor-properties.md)  
   
   

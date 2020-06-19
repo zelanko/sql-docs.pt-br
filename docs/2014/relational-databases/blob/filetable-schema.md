@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d624f5cbfd72a68541890e39674bc5bcad50716
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010117"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955176"
 ---
 # <a name="filetable-schema"></a>Esquema da FileTable
   Descreve o esquema predefinido e fixo de uma FileTable.  
@@ -34,13 +33,13 @@ ms.locfileid: "66010117"
 |**creation_time**|`datetime2(4)`<br /><br /> `not null`|8 bytes|Hora atual.|A data e a hora em que o arquivo foi criado.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
 |**last_write_time**|`datetime2(4)`<br /><br /> `not null`|8 bytes|Hora atual.|Data e hora em que o arquivo foi atualizado pela última vez.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
 |**last_access_time**|`datetime2(4)`<br /><br /> `not null`|8 bytes|Hora atual.|Data e hora em que o arquivo foi acessado pela última vez.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
-|**is_directory**|`bit`<br /><br /> `not null`|1 byte|FALSE|Indica se a linha representa um diretório. Esse valor é calculado automaticamente e não pode ser definido.|Calculado automaticamente. Não pode ser definido.|  
-|**is_offline**|`bit`<br /><br /> `not null`|1 byte|FALSE|Atributo de arquivo offline.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
-|**is_hidden**|`bit`<br /><br /> `not null`|1 byte|FALSE|Atributo de arquivo oculto.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
-|**is_readonly**|`bit`<br /><br /> `not null`|1 byte|FALSE|Atributo de arquivo somente leitura.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
-|**is_archive**|`bit`<br /><br /> `not null`|1 byte|FALSE|Atributo de arquivo morto.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
-|**is_system**|`bit`<br /><br /> `not null`|1 byte|FALSE|Atributo de arquivo do sistema.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
-|**is_temporary**|`bit`<br /><br /> `not null`|1 byte|FALSE|Atributo de arquivo temporário.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
+|**is_directory**|`bit`<br /><br /> `not null`|1 byte|FALSO|Indica se a linha representa um diretório. Esse valor é calculado automaticamente e não pode ser definido.|Calculado automaticamente. Não pode ser definido.|  
+|**is_offline**|`bit`<br /><br /> `not null`|1 byte|FALSO|Atributo de arquivo offline.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
+|**is_hidden**|`bit`<br /><br /> `not null`|1 byte|FALSO|Atributo de arquivo oculto.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
+|**is_readonly**|`bit`<br /><br /> `not null`|1 byte|FALSO|Atributo de arquivo somente leitura.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
+|**is_archive**|`bit`<br /><br /> `not null`|1 byte|FALSO|Atributo de arquivo morto.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
+|**is_system**|`bit`<br /><br /> `not null`|1 byte|FALSO|Atributo de arquivo do sistema.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
+|**is_temporary**|`bit`<br /><br /> `not null`|1 byte|FALSO|Atributo de arquivo temporário.|Calculado automaticamente. Também pode ser definido por meio de APIs do Windows.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar, alterar e remover FileTables](create-alter-and-drop-filetables.md)  

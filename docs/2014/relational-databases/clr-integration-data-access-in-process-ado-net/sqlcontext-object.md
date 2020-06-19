@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72ff29ff35f1f09898b6f6e890aae5aba1d3d2d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920050"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955206"
 ---
 # <a name="sqlcontext-object"></a>Objeto SqlContext
   O código gerenciado é invocado no servidor quando você chama um procedimento ou uma função, quando chama um método em um tipo CLR (Common Language Runtime) definido pelo usuário ou quando sua ação dispara um gatilho definido em qualquer das linguagens do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Como a execução desse código é exigida como parte de uma conexão de usuário, o acesso ao contexto do chamador a partir do código em execução no servidor é necessário. Além disso, determinadas operações de acesso a dados podem ser válidas somente se executadas no contexto do chamador. Por exemplo, o acesso a pseudotabelas inseridas e excluídas usadas em operações de gatilho será válido somente no contexto do chamador.  
@@ -28,9 +27,9 @@ ms.locfileid: "62920050"
   
  `SqlContext` fornece acesso aos seguintes componentes:  
   
--   `SqlPipe`: o objeto `SqlPipe` representa o "pipe" pelo qual os resultados fluem para o cliente. Para obter mais informações sobre `SqlPipe` o objeto, consulte [objeto SqlPipe](sqlpipe-object.md).  
+-   `SqlPipe`: o objeto `SqlPipe` representa o "pipe" pelo qual os resultados fluem para o cliente. Para obter mais informações sobre o `SqlPipe` objeto, consulte [objeto SqlPipe](sqlpipe-object.md).  
   
--   `SqlTriggerContext`: o objeto `SqlTriggerContext` pode ser recuperado somente de dentro um gatilho CLR. Ele fornece informações sobre a operação que fez o gatilho ser acionado e um mapa das colunas que foram atualizadas. Para obter mais informações sobre `SqlTriggerContext` o objeto, consulte [objeto SqlTriggerContext](sqltriggercontext-object.md).  
+-   `SqlTriggerContext`: o objeto `SqlTriggerContext` pode ser recuperado somente de dentro um gatilho CLR. Ele fornece informações sobre a operação que fez o gatilho ser acionado e um mapa das colunas que foram atualizadas. Para obter mais informações sobre o `SqlTriggerContext` objeto, consulte [objeto SqlTriggerContext](sqltriggercontext-object.md).  
   
 -   `IsAvailable`: a propriedade `IsAvailable` é usada para determinar a disponibilidade de contexto.  
   

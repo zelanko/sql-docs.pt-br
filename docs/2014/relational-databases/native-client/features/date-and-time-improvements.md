@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07788d27d71dc320ef72bc68ba90e8022705380b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 66f417b943f5f7c2472120076f5fd45d09f94427
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047983"
 ---
 # <a name="date-and-time-improvements"></a>Melhorias de data e hora
   Este tópico descreve o suporte ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para os novos tipos de dados de data e hora que foram incluídos no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  

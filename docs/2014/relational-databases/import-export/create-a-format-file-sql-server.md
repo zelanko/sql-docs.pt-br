@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66265156"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026893"
 ---
 # <a name="create-a-format-file-sql-server"></a>Criar um formato de arquivo (SQL Server)
   Quando você importa em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exporta em massa dados de uma tabela, pode usar um arquivo de formato para um sistema flexível para gravar arquivos de dados que exigem pouca ou nenhuma edição para ficar em conformidade com outros formatos de dados ou para ler arquivos de dados de outros programas de software.  
@@ -27,7 +26,7 @@ ms.locfileid: "66265156"
  Geralmente, arquivos de formato XML e não XML são intercambiáveis. Entretanto, recomendamos que você use a sintaxe XML para novos arquivos de formato porque eles oferecem diversas vantagens em relação aos arquivos de formato não XML.  
   
 > [!NOTE]  
->  A versão do utilitário **bcp** (Bcp.exe) usada para ler um arquivo de formato deve ser igual ou posterior à versão usada para criar o arquivo de formato. Por exemplo, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** pode ler um arquivo de formato da versão 10,0, que [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]é gerado pelo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**, mas o **bcp** não pode ler um arquivo de formato da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]versão 11,0, que é gerado pelo **bcp**.  
+>  A versão do utilitário **bcp** (Bcp.exe) usada para ler um arquivo de formato deve ser igual ou posterior à versão usada para criar o arquivo de formato. Por exemplo, o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** pode ler um arquivo de formato da versão 10,0, que é gerado pelo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**, mas [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o **bcp** não pode ler um arquivo de formato da versão 11,0, que é gerado pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**.  
   
  Este tópico descreve como usar o [utilitário bcp](../../tools/bcp-utility.md) para criar um arquivo de formato para uma tabela específica. O arquivo de formato se baseia na opção do tipo de dados especificada ( **-n**, **-c**, **-w**ou **-N**) e nos delimitadores de exibição ou tabela.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66265156"
 ### <a name="examples"></a>Exemplos  
  Esta seção contém os seguintes exemplos que mostram como usar comandos **bcp** para criar um arquivo de formato não XML:  
   
--   A. Criando um arquivo de formato não XML para dados nativos  
+-   a. Criando um arquivo de formato não XML para dados nativos  
   
 -   B. Criando um arquivo de formato não XML para dados de caracteres  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66265156"
   
  Os exemplos usam a tabela `HumanResources.Department` no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . A tabela `HumanResources.Department` contém quatro colunas: `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
   
-#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>A. Criando um arquivo de formato não XML para dados nativos  
+#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>a. Criando um arquivo de formato não XML para dados nativos  
  O exemplo a seguir cria um arquivo de formato XML, `Department-n.xml`, para a tabela [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . O arquivo de formato usa tipos de dados nativos. O conteúdo do arquivo de formato gerado é apresentado após o comando.  
   
  O comando **bcp** contém os qualificadores a seguir.  

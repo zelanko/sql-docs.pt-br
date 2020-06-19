@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7b61bd02d44639cb3f5ad540d53ebeebcff4da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 428677947f864175c97c52ed2687c4ffcf952703
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919902"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Tarefa do Hive do Azure HDInsight
 Use a **Tarefa do Hive do Azure HDInsight** para executar o script do Hive em um cluster Azure HDInsight.

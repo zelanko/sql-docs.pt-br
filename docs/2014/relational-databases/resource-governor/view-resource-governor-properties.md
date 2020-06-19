@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cd7af8f4f8eb3cd0531bc907011846f73f94f6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063520"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   Você pode criar ou configurar entidades do Administrador de Recursos, como pools de recursos e grupos de cargas de trabalho, usando a página de Propriedades do Administrador de Recursos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -31,13 +30,13 @@ ms.locfileid: "63209688"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Além de exibir as propriedades de entidades do Administrador de Recursos, você pode executar várias tarefas de configuração usando a página **Propriedades do Administrador de Recursos** . Para saber mais, consulte esses tópicos:  
   
--   [Habilitar Administrador de Recursos](enable-resource-governor.md)  
+-   [Habilitar o Resource Governor](enable-resource-governor.md)  
   
 -   [Desabilitar o Resource Governor](disable-resource-governor.md)  
   
 -   [Criar um pool de recursos](create-a-resource-pool.md)  
   
--   [Criar um grupo de cargas de trabalho](create-a-workload-group.md)  
+-   [Criar um grupo de carga de trabalho](create-a-workload-group.md)  
   
 -   [Alterar configurações do pool de recursos](change-resource-pool-settings.md)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "63209688"
  **Nome da função de classificação**  
  Especifique a função de classificação selecionando-a na lista.  
   
- **Habilitar Administrador de Recursos**  
+ **Habilitar o Resource Governor**  
  Habilite ou desabilite o Administrador de Recursos selecionando ou desmarcando a caixa de seleção.  
   
  **Pools de recursos**  
@@ -98,7 +97,7 @@ ms.locfileid: "63209688"
  **Nome**  
  Especifique o nome do grupo de carga de trabalho.  
   
- **Porta**  
+ **Importância**  
  Especifique a importância relativa de uma solicitação no grupo de carga de trabalho. Configurações disponíveis são Baixa, Média, e Alta.  
   
  **Máximo de Solicitações**  
@@ -126,10 +125,10 @@ ms.locfileid: "63209688"
 2.  Para exibir a configuração atual de entidades do administrador de recursos, use o [Exibições de gerenciamento dinâmico relacionadas ao Administrador de Recursos &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Resource Governor](resource-governor.md)   
- [Habilitar Resource Governor](enable-resource-governor.md)   
- [Resource Governor pool de recursos](resource-governor-resource-pool.md)   
- [Grupo de carga de trabalho Resource Governor](resource-governor-workload-group.md)   
+ [Administrador de Recursos](resource-governor.md)   
+ [Habilitar Administrador de Recursos](enable-resource-governor.md)   
+ [Pool de recursos do Administrador de Recursos](resource-governor-resource-pool.md)   
+ [Grupos de carga de trabalho do Administrador de Recursos](resource-governor-workload-group.md)   
  [Função de classificação do Administrador de Recursos](resource-governor-classifier-function.md)  
   
   

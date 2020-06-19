@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0e2da7ef135a5e2a631c05b6815154188a99fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935797"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados
   Este tópico descreve como configurar um firewall de Windows para acesso ao Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. Os sistemas de Firewall ajudam a impedir o acesso não autorizado aos recursos do computador. Para acessar uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] através de um firewall, é necessário configurar o firewall no computador que estiver executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -68,7 +67,7 @@ ms.locfileid: "62812288"
   
 3.  Na caixa de diálogo **Tipo de Regra** , selecione **Porta**e clique em **Avançar**.  
   
-4.  Na caixa de diálogo **Protocolo e Portas** , selecione **TCP**. Selecione **portas locais específicas**e, em seguida, digite o número da porta da instância [!INCLUDE[ssDE](../../includes/ssde-md.md)]do, como `1433` para a instância padrão. Clique em **Próximo**.  
+4.  Na caixa de diálogo **Protocolo e Portas** , selecione **TCP**. Selecione **portas locais específicas**e, em seguida, digite o número da porta da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , como `1433` para a instância padrão. Clique em **Próximo**.  
   
 5.  Na caixa de diálogo **Ação**, selecione **Permitir a conexão** e clique em **Avançar**.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62812288"
   
 3.  Na caixa de diálogo **Tipo de Regra** , selecione **Programa**e clique em **Avançar**.  
   
-4.  Na caixa de diálogo **Programa** , selecione **Este caminho de programa**. Clique em **Procurar**, navegue até a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja acessar pelo firewall e clique em **Abrir**. Por padrão, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Clique em **Próximo**.  
+4.  Na caixa de diálogo **Programa** , selecione **Este caminho de programa**. Clique em **Procurar**, navegue até a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja acessar pelo firewall e clique em **Abrir**. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Clique em **Próximo**.  
   
 5.  Na caixa de diálogo **Ação**, selecione **Permitir a conexão** e clique em **Avançar**.  
   

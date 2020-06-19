@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45c452300c008d486bd1f4ab4c92b5f76b96ecd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027379"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacotes de Eventos Estendidos do SQL Server
   Um pacote é um contêiner para objetos de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Há três tipos de pacotes de Eventos Estendidos que incluem o seguinte:  
@@ -70,7 +69,7 @@ ms.locfileid: "82719175"
 #### <a name="event-categorization"></a>Categorização do evento  
  O Extended Events usa um modelo de categorização de evento semelhante ao ETW (Rastreamento de Eventos do Windows). Duas propriedades de evento são usadas para categorização, canal e palavra-chave. O uso dessas propriedades dá suporte à integração do Extended Events com o ETW e suas ferramentas.  
   
- **Canaliza**  
+ **Channel**  
   
  Um canal identifica a audiência para um evento. Esses canais são descritos na tabela a seguir.  
   
@@ -147,7 +146,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   tipo  
+-   type  
   
  Para obter mais informações, veja [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   

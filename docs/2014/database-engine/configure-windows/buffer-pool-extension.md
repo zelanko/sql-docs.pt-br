@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a8873f4046a307e3b8ec1ce703a34bf8cb0df2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175425"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935887"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
   Introduzida no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a extensão do pool de buffers fornece a integração consistente de uma extensão de memória RAM não volátil (isto é, unidade de estado sólido) com o pool de buffers do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para melhorar significativamente a taxa de transferência de E/S. A extensão do pool de buffers não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
@@ -46,11 +45,11 @@ ms.locfileid: "78175425"
 
  Unidades de estado sólido de SSD (unidade de estado sólido) armazenam dados na memória (RAM) de maneira persistente. Para obter mais informações, consulte [esta definição](http://en.wikipedia.org/wiki/Solid-state_drive).
 
- Buffer no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um buffer é uma página de 8 KB na memória, o mesmo tamanho de uma página de dados ou de índice. Portanto, o cache do buffer é dividido em páginas de 8 KB. Uma página permanece no cache do buffer até que o gerenciador de buffer precise da área de buffer para ler mais dados. Os dados serão gravados no disco apenas se forem modificados. Essas páginas modificadas na memória são conhecidas como páginas sujas. Uma página está limpa quando equivale à sua imagem de banco de dados no disco. Os dados podem ser modificados no cache do buffer várias vezes antes de serem gravados no disco.
+ Buffer no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um buffer é uma página de 8 KB na memória, o mesmo tamanho de uma página de dados ou de índice. Portanto, o cache do buffer é dividido em páginas de 8 KB. Uma página permanece no cache do buffer até que o gerenciador de buffer precise da área de buffer para ler mais dados. Os dados serão gravados no disco apenas se forem modificados. Essas páginas modificadas na memória são conhecidas como páginas sujas. Uma página está limpa quando equivale à sua imagem de banco de dados no disco. Os dados podem ser modificados no cache do buffer várias vezes antes de serem gravados no disco.
 
  Pool de buffers também chamado de cache de buffer. O pool de buffers é um recurso global compartilhado por todos os bancos de dados para suas páginas de dados armazenadas em cache. O tamanho máximo e mínimo do cache do pool de buffers é determinado durante a inicialização ou quando a instância do SQL Server é reconfigurada dinamicamente usando sp_configure. Esse tamanho determina o número máximo de páginas que podem ser armazenadas em cache no pool de buffers a qualquer momento na instância em execução.
 
- Ponto de verificação um ponto de verificação cria um bom momento [!INCLUDE[ssDE](../../includes/ssde-md.md)] conhecido do qual o pode iniciar a aplicação de alterações contidas no log de transações durante a recuperação após um desligamento ou falha inesperada. Um ponto de verificação grava as páginas sujas e as informações do log de transações da memória no disco e, além disso, registra informações sobre o log de transações. Para obter mais informações, consulte [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).
+ Ponto de verificação um ponto de verificação cria um bom momento conhecido do qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode iniciar a aplicação de alterações contidas no log de transações durante a recuperação após um desligamento ou falha inesperada. Um ponto de verificação grava as páginas sujas e as informações do log de transações da memória no disco e, além disso, registra informações sobre o log de transações. Para obter mais informações, consulte [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).
 
 ## <a name="buffer-pool-extension-details"></a>Detalhes da extensão do pool de buffers
  O armazenamento de SSD é usado como uma extensão para o subsistema de memória, e não para o subsistema de armazenamento de disco. Isto é, o arquivo de extensão do pool de buffers permite que o gerenciador do pool de buffers use a memória flash NAND e DRAM para manter um pool de buffers muito maior de páginas indiferentes na memória RAM não volátil apoiada por SSDs. Isso cria uma hierarquia de cache de vários níveis com o nível 1 (L1) como a DRAM e o nível 2 (L2) como o arquivo de extensão do pool de buffers na SSD. Somente páginas limpas são gravadas no cache L2, o que ajuda a manter a segurança dos dados. O gerenciador de buffer manipula a movimentação de páginas limpas entre os caches L1 e L2.
@@ -61,7 +60,7 @@ ms.locfileid: "78175425"
 
  Quando habilitada, a extensão do pool de buffers especifica o tamanho e o caminho do arquivo de cache do pool de buffers na SSD. Esse arquivo é uma extensão contígua de armazenamento na SSD e é configurado estaticamente durante a inicialização da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As alterações nos parâmetros da configuração do arquivo poderão ser realizadas somente quando o recurso de extensão do pool de buffers estiver desabilitado. Quando a extensão do pool de buffers é desabilitada, todas as definições da configuração relacionadas são removidas do Registro. O arquivo de extensão do pool de buffers é excluído durante o desligamento da instância do SQL Server.
 
-## <a name="best-practices"></a>Práticas recomendadas
+## <a name="best-practices"></a>Práticas Recomendadas
  É recomendável seguir estas práticas recomendadas.
 
 -   Depois de habilitar a extensão do Pool de buffers pela primeira vez, é recomendável reiniciar a instância do SQL Server para obter todos os benefícios de desempenho.

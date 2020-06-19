@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48b0c0b72b7b27ca944e78603d2c574a8f4d27dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001767"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
   Este tópico descreve como configurar o log de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] histórico de trabalhos do Agent.  
@@ -43,7 +42,7 @@ ms.locfileid: "63033569"
   
 3.  Na caixa de diálogo **Propriedades do SQL Server Agent** , selecione a página **Histórico** .  
   
-4.  Escolha uma das seguintes opções:  
+4.  Escolha dentre as seguintes opções:  
   
     1.  Marque **Limitar tamanho do log do histórico de trabalho**e indique o número máximo de linhas para o log de histórico de trabalhos e o número máximo de linhas por trabalho.  
   

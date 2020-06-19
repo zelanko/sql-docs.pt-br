@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e181a0d4ebdb2acde1709b18e452f5a290f13c8f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900916"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913865"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agregar valores em um conjunto de dados por meio da transformação Agregação
   Para adicionar e configurar uma transformação de Agregação, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma origem.  
@@ -54,7 +53,7 @@ ms.locfileid: "62900916"
     > [!NOTE]  
     >  O fornecimento do número de valores distintos, exato ou aproximado, melhora o desempenho, pois a transformação pode alocar antecipadamente uma quantidade da memória para fazer seu trabalho.  
   
-12. Como opção, clique em **Avançado** e atualize o nome da saída da transformação Agregação. Se as agregações incluírem `Group By` uma operação, você poderá selecionar uma contagem aproximada de valores de chave de agrupamento na coluna **escala de chaves** ou especificar um número exato de valores de chave de agrupamento na coluna **chaves** .  
+12. Como opção, clique em **Avançado** e atualize o nome da saída da transformação Agregação. Se as agregações incluírem uma `Group By` operação, você poderá selecionar uma contagem aproximada de valores de chave de agrupamento na coluna **escala de chaves** ou especificar um número exato de valores de chave de agrupamento na coluna **chaves** .  
   
     > [!NOTE]  
     >  O fornecimento do número de valores distintos, exato ou aproximado, melhora o desempenho, pois a transformação pode alocar antecipadamente uma quantidade da memória para fazer seu trabalho.  

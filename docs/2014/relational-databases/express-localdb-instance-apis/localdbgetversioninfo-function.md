@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4350badedcaf2a4e2b977b57cf9e6cfde6c1b275
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce316685bccb2724eb89965e4e466fe58fb807e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032227"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027729"
 ---
 # <a name="localdbgetversioninfo-function"></a>Função LocalDBGetVersionInfo
   Retorna informações sobre a versão de LocalDB do SQL Server Express especificada, como se existe ou não, e o número da versão total do LocalDB (incluindo números de versão e compilação).  
@@ -85,7 +84,7 @@ HRESULT LocalDBGetVersionInfo(
  Erro inesperado. Consulte o log de eventos para obter detalhes.  
   
 ## <a name="details"></a>Detalhes  
- A lógica por trás da introdução do argumento `struct` de tamanho (*lpVersionInfoSize*) é permitir que a API retorne versões diferentes do **LocalDBVersionInfostruct**, habilitando efetivamente a compatibilidade com versões anteriores e posteriores.  
+ A lógica por trás da introdução do `struct` argumento de tamanho (*lpVersionInfoSize*) é permitir que a API retorne versões diferentes do **LocalDBVersionInfostruct**, habilitando efetivamente a compatibilidade com versões anteriores e posteriores.  
   
  Se o `struct` argumento Size (*lpVersionInfoSize*) corresponder ao tamanho de uma versão conhecida do **LocalDBVersionInfostruct**, essa versão do `struct` será retornada. Caso contrário, LOCALDB_ERROR_INVALID_PARAMETER será retornado.  
   

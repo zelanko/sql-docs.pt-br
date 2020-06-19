@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b1212117f5428da0a2b1a8e01232a2b97e5cc12
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 20156e41bffcdca51ac8d1e16bcbff8d61079c73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008195"
 ---
 # <a name="choosing-a-network-protocol"></a>Escolhendo um protocolo de rede
   Para se conectar ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , você deve ter um protocolo de rede habilitado. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o pode atender a solicitações em vários protocolos ao mesmo tempo. Os clientes se conectam ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com um único protocolo. Se o programa cliente não souber qual protocolo o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando, configure o cliente para tentar sequencialmente vários protocolos. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para habilitar, desabilitar e configurar os protocolos de rede.  

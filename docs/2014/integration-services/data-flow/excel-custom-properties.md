@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8d556a199b608659a9ceaaeb3b7036155886d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d03e321ddacd2e033880420f427145c99d30ff88
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827229"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915726"
 ---
 # <a name="excel-custom-properties"></a>Propriedades personalizadas do Excel
   **Propriedades personalizadas de fontes**  
@@ -26,7 +25,7 @@ ms.locfileid: "62827229"
   
 |Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|O modo usado para acessar o banco de dados. Os valores possíveis são **abrir conjunto de linhas**, **abrir conjunto de linhas de variável**, `SQL Command`e **comando SQL da variável**. O valor padrão é **Abrir Conjunto de Linhas**.|  
+|AccessMode|Integer|O modo usado para acessar o banco de dados. Os valores possíveis são **abrir conjunto de linhas**, **abrir conjunto de linhas de variável**, `SQL Command` e **comando SQL da variável**. O valor padrão é **Abrir Conjunto de Linhas**.|  
 |CommandTimeOut|Integer|O número de segundos antes de um comando expirar.  Um valor de 0 indica que nunca expirará.<br /><br /> **Observação** : esta propriedade não está disponível no **Editor de Origem do Excel**, mas pode ser definida usando o **Editor Avançado**.|  
 |OpenRowset|String|O nome do objeto de banco de dados usado para abrir um conjunto de linhas.|  
 |OpenRowsetVariable|String|A variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas.|  
@@ -52,9 +51,9 @@ ms.locfileid: "62827229"
 |FastLoadKeepNulls|Boolean|Um valor que especifica se os valores Nulos devem ser copiados quando os dados são carregados. Essa propriedade só está disponível com uma das opções de carregamento rápido. O valor padrão dessa propriedade é **False**.|  
 |FastLoadMaxInsertCommitSize|Integer|Um valor que especifica o tamanho do lote que o destino Excel tenta confirmar durante as operações de carregamento rápido. O valor padrão é **2147483647**. Um valor de **0** indica uma única operação de confirmação após o processamento de todas as linhas.|  
 |FastLoadOptions|String|Uma coleção de opções de carregamento rápido. As opções de carregamento rápido incluem o bloqueio de tabelas e a verificação de restrições. É possível especificar uma, ambas ou nenhuma.<br /><br /> Observação: Algumas opções dessa propriedade não estão disponíveis no **Editor de Destinos Excel**, mas podem ser definidas no **Editor Avançado**.|  
-|OpenRowset|String|Quando AccessMode é `OpenRowset`, o nome da tabela ou exibição que o destino do Excel acessa.|  
-|OpenRowsetVariable|String|Quando AccessMode é `OpenRowset from Variable`, o nome da variável que contém o nome da tabela ou exibição que o destino do Excel acessa.|  
-|SqlCommand|String|Quando AccessMode é `SQL Command`, a instrução TRANSACT-SQL usada pelo destino do Excel para especificar as colunas de destino para os dados.|  
+|OpenRowset|String|Quando AccessMode é `OpenRowset` , o nome da tabela ou exibição que o destino do Excel acessa.|  
+|OpenRowsetVariable|String|Quando AccessMode é `OpenRowset from Variable` , o nome da variável que contém o nome da tabela ou exibição que o destino do Excel acessa.|  
+|SqlCommand|String|Quando AccessMode é `SQL Command` , a instrução Transact-SQL usada pelo destino do Excel para especificar as colunas de destino para os dados.|  
   
  A entrada e as colunas de entrada do destino Excel não têm nenhuma propriedade personalizada.  
   
