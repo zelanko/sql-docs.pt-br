@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9b8f6bf20fa02981e3275299849d1cb04036dfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77903893"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939037"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ Retorna uma linha para cada item classificado no banco de dados.
 
 |Nome da coluna|Tipo de dados|Descrição|
 |-----------------|---------------|-----------------|  
-|**classe**|**int**|Identifica a classe do item no qual a classificação existe. Sempre terá o valor 1 (representando uma coluna)|  
+|**class**|**int**|Identifica a classe do item no qual a classificação existe. Sempre terá o valor 1 (representando uma coluna)|  
 |**class_desc**|**varchar (16)**|Uma descrição da classe do item no qual a classificação existe. sempre terá o valor *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Representa a ID da tabela que contém a coluna classificada, correspondente a sys. all_objects. object_id|  
 |**minor_id**|**int**|Representa a ID da coluna na qual a classificação existe, correspondente a sys. all_columns. column_id|   
@@ -58,7 +58,7 @@ Retorna uma linha para cada item classificado no banco de dados.
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>a. Listando todas as colunas classificadas e sua classificação correspondente
 
-O exemplo a seguir retorna uma tabela que lista o nome da tabela, o nome da coluna, o rótulo, a ID do rótulo, o tipo de informação, a ID do tipo de informação para cada coluna classificada no banco de dados.
+O exemplo a seguir retorna uma tabela que lista o nome da tabela, o nome da coluna, o rótulo, a ID do rótulo, o tipo de informação, a ID do tipo de informação, a classificação e a descrição da classificação para cada coluna classificada no banco de dados.
 
 > [!NOTE]
 > O rótulo é uma palavra-chave para SQL Data Warehouse do Azure.

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7f7af7d70cb136b530cfb761cb402ecf0dc6b58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873404"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970406"
 ---
 # <a name="system-data-collection-set-reports"></a>Relatórios do conjuntos de coleta de dados do sistema
   O coletor de dados fornece um relatório histórico para cada um dos conjuntos de coleta de Dados do Sistema. Cada um dos relatórios a seguir usa dados que estão armazenados no data warehouse de gerenciamento:  

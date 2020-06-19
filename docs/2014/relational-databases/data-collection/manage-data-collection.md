@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a7d88923bc41939541bedeed2d40908e454e9c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970446"
 ---
 # <a name="manage-data-collection"></a>Gerenciar coleta de dados
   Você pode usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados e funções para gerenciar diferentes aspectos da coleta de dados, como habilitar ou desabilitar a coleta de dados, alterar a configuração de um conjunto de coleta ou exibir dados no data warehouse de gerenciamento.  

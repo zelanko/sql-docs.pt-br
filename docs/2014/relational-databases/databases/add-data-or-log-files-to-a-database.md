@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952346"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Adicionar arquivos de dados ou de log a um banco de dados
   Este tópico descreve como adicionar um arquivo de dados ou de log a um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -71,7 +70,7 @@ ms.locfileid: "62917696"
   
 6.  Selecione o tipo de arquivo, de dados ou de log.  
   
-7.  Para um arquivo de dados, selecione o grupo de arquivos no qual o arquivo deve ser incluído da lista ou selecione **\<novo grupo de arquivos>** para criar um novo grupo de arquivos. Logs de transações não podem ser colocados em grupos de arquivos.  
+7.  Para um arquivo de dados, selecione o grupo de arquivos no qual o arquivo deve ser incluído na lista ou selecione **\<new filegroup>** para criar um novo grupo de arquivos. Logs de transações não podem ser colocados em grupos de arquivos.  
   
 8.  Especifique o tamanho inicial do arquivo. Deixe os arquivos de dados tão grandes quanto possível, com base na quantidade máxima de dados que você espera ter no banco de dados.  
   

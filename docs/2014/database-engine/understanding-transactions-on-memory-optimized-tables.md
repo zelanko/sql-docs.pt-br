@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 06075248-705e-4563-9371-b64cd609793c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c50ad866b9c658b54107e5f8e3da45c15dae231c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773372"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927865"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>Compreendendo transações em tabelas com otimização de memória
   As transações acessam as tabelas com otimização de memória usando um formulário de controle de simultaneidade otimista e de várias versões. Isso significa que há versões diferentes de dados. Cada transação opera sua própria versão do banco de dados consistente transacionalmente, independentemente de outras transações simultaneamente em execução. Além disso, as transações operam sob a suposição otimista de que não haverá conflitos com outras transações simultâneas. Isso evita a necessidade de usar bloqueios, mas exige que o sistema detecte conflitos e encerre uma das transações conflitantes. Conflitos podem ocorrer apenas em transações de gravação/gravação e em transações de leitura/gravação. Se houver um conflito de gravação/gravação, uma transação de gravação será encerrada.  
@@ -38,6 +37,6 @@ ms.locfileid: "62773372"
  Para obter mais informações, veja [Controlar a durabilidade da transação](../relational-databases/logs/control-transaction-durability.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1af7ba28b217612a37a0649cd69892bff6f272b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479996"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971846"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Criar um atributo de arquivo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de arquivo para popular os valores de atributo com arquivos.  
@@ -58,7 +57,7 @@ ms.locfileid: "65479996"
   
 9. Na caixa **Exibir largura em pixels** , digite a largura da coluna de atributo a ser exibida na grade do **Gerenciador** .  
   
-10. Na lista **extensão de arquivo** , selecione um ou mais tipos de arquivo que um usuário pode carregar ou deixe o padrão (*.\*) para permitir todos os tipos de arquivo.  
+10. Na lista **extensão de arquivo** , selecione um ou mais tipos de arquivo que um usuário pode carregar ou deixe o padrão (*. \* ) para permitir todos os tipos de arquivo.  
   
 11. Opcionalmente, selecione **Habilitar controle de alterações** para controlar alterações de grupos de atributos. Para obter mais informações, consulte [Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   

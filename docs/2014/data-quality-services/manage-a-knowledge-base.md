@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 552cd3a091699c42001ab42e64ff875760fe1e53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f23893201520f8d99d13b034b758fbc4a0cfdd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484170"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937537"
 ---
 # <a name="manage-a-knowledge-base"></a>Gerenciar uma base de dados de conhecimento
   Este tópico descreve como executar funções de gerenciamento em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você pode excluir uma base de dados de conhecimento, desbloqueá-la, descartar seu trabalho nela, renomeá-la e exibir suas propriedades.  

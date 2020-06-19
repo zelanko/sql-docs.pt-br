@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe42e394482e3abf4d87c00c6e79ee84db6ba278
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872251"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951986"
 ---
 # <a name="create-a-database"></a>Criar um banco de dados
   Este tópico descreve como criar um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -69,7 +68,7 @@ ms.locfileid: "62872251"
   
 #### <a name="to-create-a-database"></a>Para criar um banco de dados  
   
-1.  No Pesquisador de **objetos**, conecte-se a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uma instância do e expanda essa instância.  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
   
 2.  Clique com o botão direito do mouse em **bancos**de **dados**e clique em novo.  
   
@@ -133,7 +132,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Arquivos de banco de dados e grupos de arquivo](database-files-and-filegroups.md)   
- [SQL Server desanexar e anexar &#40;de banco de dados&#41;](database-detach-and-attach-sql-server.md)   
+ [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Adicionar arquivos de dados ou de log a um banco de dados](add-data-or-log-files-to-a-database.md)  
   

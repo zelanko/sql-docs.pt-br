@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfe3ca671dd333db50d232cd07dda86ffdd6d9fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936747"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Mantendo um banco de dados de publicação AlwaysOn (SQL Server)
   Este tópico discute considerações especiais para manter um banco de dados de publicação quando você usa grupos de disponibilidade AlwaysOn.  
@@ -32,17 +31,17 @@ ms.locfileid: "62791948"
   
 -   O monitor de replicação sempre exibe informações de publicação sob o publicador original. Entretanto, estas informações podem ser exibidas no Monitor de Replicação de qualquer réplica, adicionando o publicador original como um servidor.  
   
--   Ao usar os procedimentos armazenados ou RMO (Replication Management Objects) para gerenciar na réplica primária atual, nos casos em que você especifica o nome do Publicador, especifique o nome da instância na qual o banco de dados foi habilitado para a replicação (o publicador original). Para determinar o nome apropriado, use a função `PUBLISHINGSERVERNAME`. Quando um banco de dados de publicação ingressa em um grupo de disponibilidade, os metadados de replicação armazenados nas réplicas de banco de dados secundárias são idênticos aos da réplica primária. Portanto, para os bancos de dados de publicação habilitados para replicação na réplica primária, o nome da instância do publicador armazenado em tabelas do sistema na réplica secundária é o nome da réplica primária, e não da secundária. Isso afeta a configuração e a manutenção da replicação, em caso de falha do banco de dados de publicação para uma réplica secundária. Por exemplo, se você estiver configurando a replicação com procedimentos armazenados em um secundário após o failover e quiser uma assinatura pull para um banco de dados de publicação que foi habilitado em uma réplica diferente, deverá especificar o nome do Publicador original em vez do *@publisher* Publicador `sp_addpullsubscription` atual `sp_addmergepulllsubscription`como o parâmetro de ou. Entretanto, se você habilitar um banco de dados de publicação depois do failover, o nome de instância de publicador armazenado nas tabelas do sistema será o nome do host primário atual. Nesse caso, você usaria o nome do host da réplica primária atual para o *@publisher* parâmetro.  
+-   Ao usar os procedimentos armazenados ou RMO (Replication Management Objects) para gerenciar na réplica primária atual, nos casos em que você especifica o nome do Publicador, especifique o nome da instância na qual o banco de dados foi habilitado para a replicação (o publicador original). Para determinar o nome apropriado, use a função `PUBLISHINGSERVERNAME`. Quando um banco de dados de publicação ingressa em um grupo de disponibilidade, os metadados de replicação armazenados nas réplicas de banco de dados secundárias são idênticos aos da réplica primária. Portanto, para os bancos de dados de publicação habilitados para replicação na réplica primária, o nome da instância do publicador armazenado em tabelas do sistema na réplica secundária é o nome da réplica primária, e não da secundária. Isso afeta a configuração e a manutenção da replicação, em caso de falha do banco de dados de publicação para uma réplica secundária. Por exemplo, se você estiver configurando a replicação com procedimentos armazenados em um secundário após o failover e quiser uma assinatura pull para um banco de dados de publicação que foi habilitado em uma réplica diferente, deverá especificar o nome do Publicador original em vez do Publicador atual como o *@publisher* parâmetro de `sp_addpullsubscription` ou `sp_addmergepulllsubscription` . Entretanto, se você habilitar um banco de dados de publicação depois do failover, o nome de instância de publicador armazenado nas tabelas do sistema será o nome do host primário atual. Nesse caso, você usaria o nome do host da réplica primária atual para o *@publisher* parâmetro.  
   
     > [!NOTE]  
-    >  Para alguns procedimentos, como `sp_addpublication`, o *@publisher* parâmetro tem suporte apenas para Publicadores que não são instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; nesses casos, ele não é relevante para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o AlwaysOn.  
+    >  Para alguns procedimentos, como `sp_addpublication` , o *@publisher* parâmetro tem suporte apenas para Publicadores que não são instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ; nesses casos, ele não é relevante para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn.  
   
 -   Para sincronizar uma assinatura no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] após o failover, sincronize as assinaturas pull do assinante e sincronize as assinaturas push do publicador ativo.  
   
 ##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> Removendo um banco de dados publicado de um grupo de disponibilidade  
  Considere os problemas a seguir se um banco de dados publicado for removido de um grupo de disponibilidade, ou se um grupo de disponibilidade que tem um banco de dados de membro publicado for removido.  
   
--   Se o banco de dados de publicação no Publicador original for removido de uma réplica primária do grupo de `sp_redirect_publisher` disponibilidade, você deverá executar sem *@redirected_publisher* especificar um valor para o parâmetro a fim de remover o redirecionamento do par Publicador/banco de dados.  
+-   Se o banco de dados de publicação no Publicador original for removido de uma réplica primária do grupo de disponibilidade, você deverá executar `sp_redirect_publisher` sem especificar um valor para o *@redirected_publisher* parâmetro a fim de remover o redirecionamento do par Publicador/banco de dados.  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -68,7 +67,7 @@ ms.locfileid: "62791948"
     > [!NOTE]  
     >  Quando um grupo de disponibilidade que publicou bancos de dados de membro é removido, ou um banco de dados publicado é removido de um grupo de disponibilidade, todas as cópias dos bancos de dados publicados permanecem no estado de recuperação. Se restaurado, cada um aparecerá como um banco de dados publicado. Apenas uma cópia deve ser retida com metadados de publicação. Para desabilitar a replicação para uma cópia de banco de dados publicada, primeiro remova todas as assinaturas e publicações do banco de dados.  
   
-     Execute `sp_dropsubscription` para remover assinaturas da publicação. Certifique-se de definir o *@ignore_distributributor* parâmetro como 1 para preservar os metadados do banco de dados de publicação ativa no distribuidor.  
+     Execute `sp_dropsubscription` para remover assinaturas da publicação. Certifique-se de definir o parâmetro *@ignore_distributributor* como 1 para preservar os metadados do banco de dados de publicação ativa no distribuidor.  
   
     ```  
     USE MyDBName;  

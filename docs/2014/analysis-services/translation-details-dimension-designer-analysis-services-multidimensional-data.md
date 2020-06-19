@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a3d7934cb3bff570a2060becde6715bec88f02f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938297"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Detalhes de conversão (guia Conversões, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use o painel **Detalhes da conversão** na guia **Conversões** do Designer de Dimensão para definir e gerenciar conversões da dimensão atualmente selecionada.  
@@ -54,7 +53,7 @@ ms.locfileid: "66065848"
   
      Propriedade `Caption`  
   
- **\<>de idiomas**  
+ **\<Language>**  
  Digite ou selecione o valor de propriedade do objeto de dimensão na linguagem selecionada. Clicar no botão de reticências (**...**) abre caixas de diálogo adicionais, dependendo da propriedade que está sendo editada:  
   
 -   Propriedade `NamingTemplate`  

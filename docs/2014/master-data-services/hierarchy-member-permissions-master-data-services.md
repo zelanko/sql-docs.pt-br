@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8a50ce407e0f9284d07a7248f08decacf434fee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971406"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permissões de membro de hierarquia (Master Data Services)
   As permissões de membro de hierarquia são opcionais e devem ser usadas somente quando você desejar que um usuário tenha acesso limitado a membros específicos. Se você não atribuir permissões na guia **Membros da Hierarquia** , as permissões do usuário serão baseadas somente nas permissões atribuídas na guia **Modelos** .  
   
- As permissões de membro de hierarquia são [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] atribuídas na interface do usuário, na área funcional **permissões de usuário e grupo** na guia **membros da hierarquia** . Essas permissões determinam quais membros um usuário pode acessar na área funcional do **Gerenciador** da interface do usuário.  
+ As permissões de membro de hierarquia são atribuídas na [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] interface do usuário, na área funcional **permissões de usuário e grupo** na guia **membros da hierarquia** . Essas permissões determinam quais membros um usuário pode acessar na área funcional do **Gerenciador** da interface do usuário.  
   
  Na guia **Membros da Hierarquia** , cada hierarquia é representada como uma estrutura de árvore. Quando você atribuir permissão para um nó na árvore, todos os filhos herdam essa permissão a menos que ela seja atribuída explicitamente a um nível inferior.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "65482948"
 |----------------|-----------------|  
 |**Somente leitura**|Os membros são exibidos, mas o usuário não pode alterá-los. O usuário também não pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.<br /><br /> Observação: se você atribuir permissão **somente leitura** à **raiz**, os membros em **raiz** serão somente leitura; no entanto, em hierarquias explícitas e coleções, o usuário pode mover membros para **raiz** e pode adicionar novos membros à **raiz**.|  
 |**Atualização**|Os membros são exibidos e o usuário pode alterá-los. O usuário também pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.|  
-|**Negar**|Os membros não são exibidos.|  
+|**Deny**|Os membros não são exibidos.|  
   
  Na guia **Membros da Hierarquia** , as permissões que você atribui não entram em vigor imediatamente. A frequência com que as permissões são aplicadas depende da **Configuração de intervalo de processamento da segurança de membro** na tabela de Configurações do Sistema no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . É possível aplicar permissões de membros imediatamente seguindo as etapas em [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md).  
   

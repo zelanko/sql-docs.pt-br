@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc978cd0280c9885fe7d4d4b499d01adc8f540cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789838"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937267"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Sobre Acesso de conexão de cliente a réplicas de disponibilidade (SQL Server)
   Em um grupo de disponibilidade AlwaysOn, você pode configurar uma ou mais réplicas de disponibilidade para permitir conexões somente leitura quando elas estiverem sendo executadas na função secundária (ou seja, executando como uma réplica secundária). Você também pode configurar cada réplica de disponibilidade para permitir ou excluir conexões somente leitura quando ela estiver sendo executada na função primária (ou seja, em execução como uma réplica primária).  
@@ -53,7 +52,7 @@ ms.locfileid: "62789838"
  Nenhuma conexão de usuário é permitida. Os bancos de dados secundários não estão disponíveis para acesso de leitura. Esse é o comportamento padrão na função secundária.  
   
  Conexões somente de intenção de leitura  
- Os bancos de dados secundários estão disponíveis somente para conexão para a qual `Application Intent` a propriedade de conexão está `ReadOnly` definida como (*conexões de intenção de leitura*).  
+ Os bancos de dados secundários estão disponíveis somente para conexão para a qual a `Application Intent` propriedade de conexão está definida como `ReadOnly` (conexões de*intenção de leitura*).  
   
  Para obter mais informações sobre essa propriedade de conexão, consulte [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62789838"
  As conexões de leitura/gravação e somente leitura são permitidas nos bancos de dados primários. Esse é o comportamento padrão para a função primária.  
   
  Permitir apenas conexões de leitura/gravação  
- Quando a `Application Intent` propriedade de conexão é definida como **ReadWrite** ou não está definida, a conexão é permitida. Conexões para as quais `Application Intent` a palavra-chave da cadeia `ReadOnly` de conexão está definida não são permitidas. Permitir apenas conexões de leitura/gravação pode ajudar a impedir que os clientes conectem uma carga de trabalho de intenção de leitura à réplica primária por engano.  
+ Quando a `Application Intent` propriedade de conexão é definida como **ReadWrite** ou não está definida, a conexão é permitida. Conexões para as quais a `Application Intent` palavra-chave da cadeia de conexão está definida `ReadOnly` não são permitidas. Permitir apenas conexões de leitura/gravação pode ajudar a impedir que os clientes conectem uma carga de trabalho de intenção de leitura à réplica primária por engano.  
   
  Para obter mais informações sobre essa propriedade de conexão, consulte [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62789838"
   
 |Função da Réplica|Acesso de conexão com suporte na réplica|Tentativa de conexão|Resultado da tentativa de conexão|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secundário|Todos|Intenção de leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Êxito|  
+|Secundário|Todos|Intenção de leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Sucesso|  
 |Secundário|Nenhum (este é o comportamento padrão da função secundária).|Intenção de leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Falha|  
-|Secundário|Tentativa de leitura somente|Intenção de leitura|Êxito|  
+|Secundário|Tentativa de leitura somente|Intenção de leitura|Sucesso|  
 |Secundário|Tentativa de leitura somente|Intenção de leitura/gravação ou nenhuma intenção de conexão especificada|Falha|  
-|Primária|Tudo (esse é o comportamento padrão da função primária).|Intenção de somente leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Êxito|  
-|Primária|Leitura-gravação|Tentativa de leitura somente|Falha|  
-|Primária|Leitura-gravação|Intenção de leitura/gravação ou nenhuma intenção de conexão especificada|Êxito|  
+|Primário|Tudo (esse é o comportamento padrão da função primária).|Intenção de somente leitura, leitura/gravação ou nenhuma intenção de conexão especificada|Sucesso|  
+|Primário|Leitura-gravação|Tentativa de leitura somente|Falha|  
+|Primário|Leitura-gravação|Intenção de leitura/gravação ou nenhuma intenção de conexão especificada|Sucesso|  
   
  Para obter informações sobre como configurar um grupo de disponibilidade para aceitar conexões de cliente às suas réplicas, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -97,7 +96,7 @@ ms.locfileid: "62789838"
   
 |Réplica|Modo de confirmação|Função inicial|Acesso de conexão para a função secundária|Acesso de conexão para a função primária|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|Síncrona|Primária|Nenhum|Leitura-gravação|  
+|Replica1|Síncrona|Primário|Nenhum|Leitura-gravação|  
 |Replica2|Síncrona|Secundário|Nenhum|Leitura-gravação|  
 |Replica3|Assíncrona|Secundário|Somente tentativa de leitura|Leitura-gravação|  
 |Replica4|Assíncrona|Secundário|Tentativa de leitura somente|Leitura-gravação|  
@@ -124,7 +123,7 @@ ms.locfileid: "62789838"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Estatísticas](../../../relational-databases/statistics/statistics.md)  
   
   

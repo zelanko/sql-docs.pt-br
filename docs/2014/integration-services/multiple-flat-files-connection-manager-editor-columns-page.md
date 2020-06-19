@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 365a22cc515a971ff460a6433973f884c640c973
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057495"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950806"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Colunas)
   Use o nó **Colunas** da caixa de diálogo **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para especificar as informações da linha e da coluna e visualizar o primeiro arquivo selecionado.  
@@ -42,9 +41,9 @@ ms.locfileid: "66057495"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
-|**{CR}**|As linhas são delimitadas por um retorno de carro.|  
+|**CD**|As linhas são delimitadas por um retorno de carro.|  
 |**{LF}**|As linhas são delimitadas por um avanço de linha.|  
-|**Ponto-e-vírgula {;}**|As linhas são delimitadas por um ponto-e-vírgula.|  
+|**Ponto e vírgula {;}**|As linhas são delimitadas por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|As linhas são delimitadas por dois-pontos.|  
 |**Pontos{,}**|As linhas são delimitadas por uma vírgula.|  
 |**Tabulação {t}**|As linhas são delimitadas por uma tabulação.|  
@@ -56,9 +55,9 @@ ms.locfileid: "66057495"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
-|**{CR}**|As colunas são delimitadas por um retorno de carro.|  
+|**CD**|As colunas são delimitadas por um retorno de carro.|  
 |**{LF}**|As colunas são delimitadas por uma alimentação de linha.|  
-|**Ponto-e-vírgula {;}**|As colunas são delimitadas por um ponto-e-vírgula.|  
+|**Ponto e vírgula {;}**|As colunas são delimitadas por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|As colunas são delimitadas por dois-pontos.|  
 |**Pontos{,}**|As colunas são delimitadas por uma vírgula.|  
 |**Tabulação {t}**|As colunas são delimitadas por uma tabulação.|  
@@ -97,9 +96,9 @@ ms.locfileid: "66057495"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
-|**{CR}**|As linhas são delimitadas por um retorno de carro.|  
+|**CD**|As linhas são delimitadas por um retorno de carro.|  
 |**{LF}**|As linhas são delimitadas por um avanço de linha.|  
-|**Ponto-e-vírgula {;}**|As linhas são delimitadas por um ponto-e-vírgula.|  
+|**Ponto e vírgula {;}**|As linhas são delimitadas por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|As linhas são delimitadas por dois-pontos.|  
 |**Pontos{,}**|As linhas são delimitadas por uma vírgula.|  
 |**Tabulação {t}**|As linhas são delimitadas por uma tabulação.|  

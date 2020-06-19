@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b85704b8110eb84ea6f4c33dfa79694112c2328
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937254"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)
   Os recursos secundários ativos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluem suporte para acesso somente leitura para uma ou mais réplicas secundárias (*réplicas secundárias legíveis*). Uma réplica secundária legível permite acesso somente leitura a todos os seus bancos de dados secundários. No entanto, os bancos de dados secundários legíveis não são definidos como somente leitura. Eles são dinâmicos. Um banco de dados secundário determinado muda conforme as alterações nos dados do banco de dados primário correspondente são aplicadas ao banco de dados secundário. Para uma réplica secundária típica, os dados, incluindo tabelas com otimização de memória durável, nos bancos de dados secundários estão quase em tempo real. Além disso, os índices de texto completo são sincronizados com os bancos de dados secundários. Em muitas circunstâncias, a latência de dados entre um banco de dados primário e o banco de dados secundário correspondente é de somente alguns segundos.  
@@ -36,7 +35,7 @@ ms.locfileid: "62789848"
   
  
   
-##  <a name="benefits"></a><a name="bkmk_Benefits"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_Benefits"></a> Benefícios  
  Direcionar conexões somente leitura a réplicas secundárias legíveis tem os seguintes benefícios:  
   
 -   Descarrega suas cargas de trabalho somente leitura secundárias de sua réplica primária, o que conserva seus recursos para cargas de trabalho críticas. Se você tiver missão carga de trabalho de leitura crítica ou que não possa tolerar latência, execute-a na primária.  
@@ -53,7 +52,7 @@ ms.locfileid: "62789848"
   
 -   As operações DML são permitidas em variáveis de tabela para os tipos baseados em disco e em tabela com otimização de memória na réplica secundária.  
   
-##  <a name="prerequisites-for-the-availability-group"></a><a name="bkmk_Prerequisites"></a>Pré-requisitos para o grupo de disponibilidade  
+##  <a name="prerequisites-for-the-availability-group"></a><a name="bkmk_Prerequisites"></a> Pré-requisitos para o grupo de disponibilidade  
   
 -   **Réplicas secundárias legíveis (obrigatório)**  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62789848"
   
      Para obter mais informações, consulte [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
--   **Ouvinte do grupo de disponibilidade**  
+-   **Ouvinte de grupo de disponibilidade**  
   
      Para dar suporte ao roteamento somente leitura, um grupo de disponibilidade deve ter um [ouvinte do grupo de disponibilidade](../../listeners-client-connectivity-application-failover.md). O cliente somente leitura deve direcionar suas solicitações de conexão para este ouvinte e a cadeia de conexão do cliente deve especificar a intenção do aplicativo como "somente leitura." Ou seja, elas devem ser *solicitações de conexão de intenção de leitura*.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "62789848"
 > [!NOTE]  
 >  Se você consultar a exibição de gerenciamento dinâmico [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) em uma instância de servidor que está hospedando uma réplica secundária legível, poderá encontrar um problema de bloqueio REDO. Isso ocorre porque essa exibição de gerenciamento dinâmico adquire um bloqueio IS na exibição ou tabela de usuário especificada, que pode bloquear solicitações por um thread REDO para um bloqueio X na exibição ou tabela de usuário.  
   
-##  <a name="performance-considerations"></a><a name="bkmk_Performance"></a>Considerações sobre desempenho  
+##  <a name="performance-considerations"></a><a name="bkmk_Performance"></a> Considerações sobre desempenho  
  Esta seção aborda várias considerações sobre desempenho de bancos de dados secundários legíveis  
   
  
@@ -154,7 +153,7 @@ GO
   
 ```  
   
-###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a>Impacto de carga de trabalho somente leitura  
+###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> Impacto da carga de trabalho somente leitura  
  Ao configurar uma réplica secundária para acesso somente leitura, suas cargas de trabalho somente leitura nos bancos de dados secundários consumirão recursos do sistema, como CPU e E/S (para tabelas baseadas em disco) de threads de restauração, especialmente se as cargas de trabalho somente leitura (para tabelas baseadas em disco) consumirem muitos recursos de E/S. Não há nenhum impacto de E/S ao acessar tabelas com otimização de memória porque todas as linhas residem na memória.  
   
  Além disso, as cargas de trabalho somente leitura nas réplicas secundárias podem bloquear alterações de DDL (linguagem de definição de dados) aplicadas por meio de registros de log.  
@@ -168,7 +167,7 @@ GO
 > [!NOTE]  
 >  Se um thread de restauração estiver bloqueado por consultas em uma réplica secundária, o XEvent **sqlserver.lock_redo_blocked** será gerado.  
   
-###  <a name="indexing"></a><a name="bkmk_Indexing"></a>Indexação  
+###  <a name="indexing"></a><a name="bkmk_Indexing"></a> Indexação  
  Para otimizar cargas de trabalho somente leitura nas réplicas secundárias legíveis, talvez você queira criar índices nas tabelas nos bancos de dados secundários. Como você não pode fazer alterações de esquema ou de dados nos bancos de dados secundários, crie índices nos bancos de dados primários e permita que as alterações sejam transferidas para o banco de dados secundário por meio do processo de refazer.  
   
  Para monitorar a atividade de uso de índice em uma réplica secundária, consulte as colunas **user_seeks**, **user_scans**e **user_lookups** da exibição de gerenciamento dinâmico [sys.dm_db_index_usage_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql) .  
@@ -180,9 +179,9 @@ GO
   
  Somente o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode criar e atualizar estatísticas temporárias. No entanto, você pode excluir estatísticas temporárias e monitorar suas propriedades usando as mesmas ferramentas que você utiliza para estatísticas permanentes:  
   
--   Exclua estatísticas temporárias usando a instrução [drop Statistics](/sql/t-sql/statements/drop-statistics-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+-   Exclua estatísticas temporárias usando a instrução [DROP STATISTICS](/sql/t-sql/statements/drop-statistics-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
--   Para monitorar as estatísticas, use as exibições de catálogo **sys.stats** e **sys.stats_columns**. **sys_stats** inclui uma coluna, **is_temporary**, para indicar quais estatísticas são permanentes e quais são temporárias.  
+-   Para monitorar as estatísticas, use as exibições de catálogo **sys.stats** e **sys.stats_columns** . **sys_stats** inclui uma coluna, **is_temporary**, para indicar quais estatísticas são permanentes e quais são temporárias.  
   
  Não há suporte para a atualização automática de estatísticas para tabelas com otimização de memória na réplica primária ou secundária. Você deve monitorar o desempenho de consulta e os planos na réplica secundária e atualizar manualmente as estatísticas na réplica primária quando necessário. No entanto, as estatísticas ausentes são criadas automaticamente na réplica primária e secundária.  
   
@@ -297,7 +296,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Estatísticas](../../../relational-databases/statistics/statistics.md)  
   
   

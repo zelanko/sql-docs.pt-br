@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb904cd0f0649c43553b5d6c8b031c5f284901f4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936807"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover e modos de failover (grupos de disponibilidade AlwaysOn)
   Dentro do contexto de um grupo de disponibilidade, as funções primária e secundária das réplicas de disponibilidade, normalmente, são intercambiáveis em um processo conhecido como *failover*. Existem três formas de failover: failover automático (sem perda de dados), failover manual planejado (sem perda de dados) e failover manual forçado (com possível perda de dados), geralmente chamado de *failover forçado*. Os failovers automáticos e manuais planejados preservam todos os seus dados. Um grupo de disponibilidade faz failover no nível da réplica de disponibilidade. Ou seja, um grupo de disponibilidade realiza failover em uma de suas réplicas secundárias (o *destino de failover*atual).  
@@ -78,11 +77,11 @@ ms.locfileid: "62814473"
 ### <a name="failover-sets"></a>Conjuntos de failover  
  As formas de failover possíveis para um determinado grupo de disponibilidade podem ser compreendidas em termos de conjuntos de failover. Um conjunto de failover consiste na réplica primária e nas réplicas secundárias que oferecem suporte a uma determinada forma de failover, da seguinte maneira:  
   
--   (opcional): ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] **  Dentro de um determinado grupo de disponibilidade, um par de réplicas de disponibilidade (incluindo a réplica primária atual) configuradas para o modo de confirmação síncrona com failover automático, se houver. Um conjunto de failover automático terá efeito apenas se a réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
+-   ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (opcional):** em um determinado grupo de disponibilidade, um par de réplicas de disponibilidade (incluindo a réplica primária atual) configuradas para o modo de confirmação síncrona com failover automático, se houver. Um conjunto de failover automático terá efeito apenas se a réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
   
--   (opcional): ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] **  Dentro de um determinado grupo de disponibilidade, um conjunto de duas ou três réplicas de disponibilidade (incluindo a réplica primária atual) configuradas para o modo de confirmação síncrona, se houver. Um conjunto de failover de confirmação síncrona terá efeito se as réplicas secundárias estiverem configuradas para o modo de failover manual e pelo menos uma réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
+-   ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):** em um determinado grupo de disponibilidade, um conjunto de duas ou três réplicas de disponibilidade (incluindo a réplica primária atual) configuradas para o modo de confirmação síncrona, se houver. Um conjunto de failover de confirmação síncrona terá efeito se as réplicas secundárias estiverem configuradas para o modo de failover manual e pelo menos uma réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Dentro de um determinado grupo de disponibilidade, o conjunto de todas as réplicas de disponibilidade cujo estado operacional está ONLINE no momento, independentemente do modo de disponibilidade e do modo de failover. O conjunto de failover inteiro se tornará relevante quando nenhuma réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
+-   ** [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :** Em um determinado grupo de disponibilidade, o conjunto de todas as réplicas de disponibilidade cujo estado operacional está online no momento, independentemente do modo de disponibilidade e do modo de failover. O conjunto de failover inteiro se tornará relevante quando nenhuma réplica secundária estiver SYNCHRONIZED no momento com a réplica primária.  
   
  Quando você configura uma réplica de disponibilidade como confirmação síncrona com failover automático, a réplica de disponibilidade se torna parte do [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Porém, se a definição entra em vigor ou não depende da primária atual. Os formulários de failover que são realmente possíveis em um determinado momento dependem de quais conjuntos de failover estão em vigor atualmente.  
   
@@ -235,7 +234,7 @@ ms.locfileid: "62814473"
   
 1.  Conecte-se à réplica primária.  
   
-2.  Consulte as `last_commit_lsn` colunas (LSN da última transação confirmada `last_commit_time` ) e (hora da última confirmação) da exibição de gerenciamento dinâmico [Sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) .  
+2.  Consulte as `last_commit_lsn` colunas (LSN da última transação confirmada) e `last_commit_time` (hora da última confirmação) da exibição de gerenciamento dinâmico [Sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) .  
   
 3.  Compare os valores retornados para cada banco de dados primário e cada um de seus bancos de dados secundários. A diferença entre LSNs da Última Confirmação indica o tempo de retardo.  
   

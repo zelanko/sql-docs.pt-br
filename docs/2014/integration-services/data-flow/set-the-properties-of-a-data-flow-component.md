@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc360da93b905bed20f118812898b5c029c570cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa19bd588839711b7e26ce632be906f41d3628fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914216"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Definir as propriedades de um componente de fluxo de dados
   Para definir as propriedades de componentes de fluxo de dados, que incluem origens, destinos e transformações, use um dos seguintes recursos:  

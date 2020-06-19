@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fca4ea655ffdcf8471d1340016d16f2c5b9c352a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857842"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927661"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administração do Utilitário (Utilitário do SQL Server)
   Use as guias de Administração do Utilitário para gerenciar configurações de políticas, segurança e data warehouse para um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. Para obter mais informações sobre os conceitos do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , veja [Recursos e tarefas do Utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -89,11 +88,11 @@ ms.locfileid: "83857842"
  Informações de Configuração do Data Warehouse do Utilitário  
  Os parâmetros de configuração a seguir não podem ser configurados nesta versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Nome do UMDW: Sysutility_mdw_\<GUID>_DATA.  
+-   Nome do UMDW: Sysutility_mdw_ \<GUID> _DATA.  
   
 -   Frequência de carregamento do conjunto de coleta: a cada 15 minutos.  
   
- O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> normalmente é a unidade C:\. O arquivo de log, UMDW_\<GUID>_LOG, está localizado no mesmo diretório.  
+ O diretório UMDW é configurável: \<System drive> : \Program Files\Microsoft SQL Server \ MSSQL10_50. <UCP_Name> \MSSQL\Data \\ , onde \<System drive> é normalmente o C:\ Dirigir. O arquivo de log, UMDW_ \<GUID> _LOG, está localizado no mesmo diretório.  
   
 > [!NOTE]  
 >  O local do arquivo UMDW (sysutility_mdw) pode ser alterado usando-se desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

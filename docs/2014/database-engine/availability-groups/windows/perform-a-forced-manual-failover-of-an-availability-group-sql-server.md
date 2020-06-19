@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c751f6d7b56cc43c6a8548d4776ce4c2b4f390cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f36908102a09eb1ef1f7a485898da715deb4253b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782878"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936703"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Executar um failover manual forçado de um grupo de disponibilidade (SQL Server)
   Este tópico descreve como executar um failover forçado (com possível perda de dados) em um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um failover forçado é uma forma de failover manual cujo objetivo é estritamente a recuperação de desastres, quando um [failover manual planejado](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) não é possível. Se você forçar o failover em uma réplica secundária não sincronizada, talvez ocorra alguma perda de dados. Portanto, recomendamos veementemente que você só force o failover se for necessário restaurar o serviço imediatamente para o grupo de disponibilidade e se estiver disposto a correr o risco de perder dados.  
@@ -151,7 +150,7 @@ ms.locfileid: "72782878"
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para forçar o failover (com possível perda de dados)**  
   
-1.  Altere o diretório`cd`() para uma instância de servidor que hospede uma réplica cuja função esteja no estado secundário ou resolvendo no grupo de disponibilidade que precisa passar por failover.  
+1.  Altere o diretório ( `cd` ) para uma instância de servidor que hospede uma réplica cuja função esteja no estado secundário ou resolvendo no grupo de disponibilidade que precisa passar por failover.  
   
 2.  Use o cmdlet `Switch-SqlAvailabilityGroup` com o parâmetro `AllowDataLoss` em um dos seguintes formatos:  
   

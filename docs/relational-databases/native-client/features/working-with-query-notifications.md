@@ -1,5 +1,6 @@
 ---
 title: Trabalhando com notificações de consulta | Microsoft Docs
+description: As notificações de consulta permitem solicitar a notificação durante um período de tempo limite quando os dados subjacentes de uma consulta são alterados no SQL Server Native Client.
 ms.custom: ''
 ms.date: 05/24/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8561d6c0e48e37dba7e22939fd868376c0ebdc9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 908da6bd9c0b978c273acd7e42cde7c8ad7f954d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303198"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948716"
 ---
 # <a name="working-with-query-notifications"></a>Trabalhando com notificações de consulta
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,16 +71,16 @@ CREATE SERVICE myService ON QUEUE myQueue
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte à notificação do consumidor na modificação do conjunto de linhas. O consumidor recebe uma notificação em cada fase da modificação do conjunto de linhas e em qualquer tentativa de alteração.  
   
 > [!NOTE]  
->  Passar uma consulta de notificações para o servidor com **ICommand:: execute** é a única maneira válida de assinar notificações de consulta com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo.  
+>  Passar uma consulta de notificações para o servidor com **ICommand:: execute** é a única maneira válida de assinar notificações de consulta com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>O conjunto de propriedades DBPROPSET_SQLSERVERROWSET  
- Para dar suporte a notificações de consulta por meio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do OLE DB, o Native Client adiciona as novas propriedades a seguir ao conjunto de propriedades DBPROPSET_SQLSERVERROWSET.  
+ Para dar suporte a notificações de consulta por meio do OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client adiciona as novas propriedades a seguir ao conjunto de propriedades DBPROPSET_SQLSERVERROWSET.  
   
 |Nome|Type|Descrição|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|O número de segundos que a notificação de consulta permanece ativa.<br /><br /> O padrão é 432000 segundos (5 dias). O valor mínimo é 1 segundo e o valor máximo é 2^31-1 segundos.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|O texto da mensagem da notificação. É definido pelo usuário e não tem um formato predefinido.<br /><br /> Por padrão, a cadeia de caracteres fica vazia. Você pode especificar uma mensagem que contenha entre 1-2000 caracteres.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|As opções de notificação de consulta. Eles são especificados em uma cadeia de caracteres com a sintaxe de*valor* de *nome*=. O usuário é responsável por criar o serviço e ler as notificações da fila.<br /><br /> O padrão é uma cadeia de caracteres vazia.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|As opções de notificação de consulta. Eles são especificados em uma cadeia de caracteres com a sintaxe de valor de *nome* = *value* . O usuário é responsável por criar o serviço e ler as notificações da fila.<br /><br /> O padrão é uma cadeia de caracteres vazia.|  
   
  A assinatura de notificação é sempre confirmada, independentemente do fato de a instrução ter sido executada em uma transação de usuário ou em uma confirmação automática ou se a transação na qual a instrução foi executada tiver sido confirmada ou revertida. A notificação do servidor é acionada mediante uma das seguintes condições inválidas de notificação: alteração dos dados subjacentes ou do esquema ou quando o tempo limite expira; a que ocorrer primeiro. Os registros de notificação são excluídos assim que são disparados. Consequentemente, em caso de recebimento de notificações, o aplicativo deve realizar uma nova assinatura caso queira obter mais atualizações.  
   

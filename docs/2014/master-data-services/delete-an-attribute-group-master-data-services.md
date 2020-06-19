@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d7d86080444e06aeaa50a274323805c31e12566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950736"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Excluir um grupo de atributos (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua um grupo de atributos quando você não precisar mais da guia para exibir a área funcional **Explorer** do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  

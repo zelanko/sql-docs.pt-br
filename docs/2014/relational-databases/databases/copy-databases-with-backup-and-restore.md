@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8ffed36767f961f7482aa0dccf755118c80c019
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917463"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952090"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bancos de dados com backup e restauração
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], é possível criar um novo banco de dados por meio da restauração de um backup de um banco de dados do usuário criado por meio do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou de uma versão posterior. No entanto, backups de **master**, **model** e **msdb** que foram criados em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser restaurados pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Além disso, backups do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não podem ser restaurados por nenhuma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usa um caminho padrão diferente das versões anteriores. Portanto, para restaurar backups de um banco de dados criados no local padrão de versões anteriores, você deve usar a opção MOVE. Para obter informações sobre o novo caminho padrão [, consulte locais de arquivo para instâncias padrão e nomeadas de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obter mais informações sobre como mover arquivos de banco de dados, consulte "Movendo arquivos do banco de dados", mais adiante neste tópico.  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usa um caminho padrão diferente das versões anteriores. Portanto, para restaurar backups de um banco de dados criados no local padrão de versões anteriores, você deve usar a opção MOVE. Para obter informações sobre o novo caminho padrão, veja [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obter mais informações sobre como mover arquivos de banco de dados, consulte "Movendo arquivos do banco de dados", mais adiante neste tópico.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Etapas gerais para usar Backup e Restauração para copiar um banco de dados  
  Quando você usa backup e restauração para copiar um banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os computadores de origem e de destino podem ser todas as plataformas na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado.  
@@ -38,7 +37,7 @@ ms.locfileid: "62917463"
   
 1.  Faça backup do banco de dados de origem que pode residir em uma instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior. O computador no qual essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada é o *computador de origem*.  
   
-2.  No computador para o qual você deseja copiar o banco de dados (o *computador de destino*), conecte-se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à instância do na qual você planeja restaurar o banco de dados. Se necessário, na instância do servidor de destino, crie os mesmos dispositivos usados para fazer o backup dos bancos de dados de origem.  
+2.  No computador para o qual você deseja copiar o banco de dados (o *computador de destino*), conecte-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual você planeja restaurar o banco de dados. Se necessário, na instância do servidor de destino, crie os mesmos dispositivos usados para fazer o backup dos bancos de dados de origem.  
   
 3.  Restaure o backup do banco de dados de origem no computador de destino. A restauração do banco de dados cria automaticamente todos os arquivos de banco de dados.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62917463"
  Para evitar erros e consequências indesejadas, antes da operação de restauração, você pode usar a tabela de histórico do [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) para descobrir o banco de dados e os arquivos de log no backup que você planeja restaurar.  
   
 ## <a name="moving-the-database-files"></a>Movendo os arquivos do banco de dados  
- Se os arquivos que estão no backup do banco de dados não puderem ser restaurados no computador de destino pelas razões mencionadas anteriormente, será necessário mover os arquivos para um novo local enquanto estiverem sendo restaurados. Por exemplo:  
+ Se os arquivos que estão no backup do banco de dados não puderem ser restaurados no computador de destino pelas razões mencionadas anteriormente, será necessário mover os arquivos para um novo local enquanto estiverem sendo restaurados. Por exemplo:   
   
 -   Você deseja restaurar um banco de dados de backups criado no local padrão da versão anterior.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62917463"
  O nome de banco de dados que é fornecido explicitamente ao restaurar um banco de dados é usado, automaticamente, como o nome do novo banco de dados. Como o nome do banco de dados ainda não existe, é criado um novo usando os arquivos no backup.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Ao atualizar um banco de dados usando a restauração  
- Ao restaurar backups de uma versão anterior, é útil saber com antecedência se o caminho (unidade e diretório) de cada catálogo de texto completo em um backup existe no computador de destino. Para listar os nomes lógicos e nomes físicos, caminho e nome de arquivo, de todos os arquivos de um backup, inclusive os arquivos de catálogo, use uma instrução RESTORE FILELISTONLY FROM *<backup_device>*. Para obter mais informações, veja [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
+ Ao restaurar backups de uma versão anterior, é útil saber com antecedência se o caminho (unidade e diretório) de cada catálogo de texto completo em um backup existe no computador de destino. Para listar os nomes lógicos e nomes físicos, caminho e nome de arquivo, de todos os arquivos de um backup, inclusive os arquivos de catálogo, use uma instrução RESTORE FILELISTONLY FROM *<backup_device>* . Para obter mais informações, veja [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
  Se o mesmo caminho não existir no computador de destino, você terá duas alternativas:  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62917463"
  Quando um banco de dados é restaurado em outro computador, o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usuário Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] que inicia a operação de restauração torna-se automaticamente o novo proprietário do banco de dados. Quando o banco de dados é restaurado, o administrador de sistema ou o novo proprietário do banco de dados pode alterar a propriedade do banco de dados. Para prevenir a restauração não autorizada de um banco de dados, use senhas para conjuntos de mídias ou de backup.  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>Administrando metadados ao restaurar em outra instância do servidor  
- Ao restaurar um banco de dados em outra instância do servidor, para oferecer uma experiência consistente aos usuários e aplicativos, talvez seja necessário recriar alguns ou todos os metadados para o banco de dados, como logons e trabalhos, na outra instância de servidor. Para obter mais informações, consulte [gerenciar metadados ao disponibilizar um banco de dados em outra instância de servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Ao restaurar um banco de dados em outra instância do servidor, para oferecer uma experiência consistente aos usuários e aplicativos, talvez seja necessário recriar alguns ou todos os metadados para o banco de dados, como logons e trabalhos, na outra instância de servidor. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
  **Para exibir os dados e arquivos de log em um conjunto de backup**  
   
@@ -131,9 +130,9 @@ ms.locfileid: "62917463"
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
 ## <a name="see-also"></a>Consulte Também  
- [Copiar bancos de dados para outros servidores](copy-databases-to-other-servers.md)   
- [Locais de arquivo para instâncias padrão e nomeadas de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTAURAR FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+ [Copiar bancos de dados em outros servidores](copy-databases-to-other-servers.md)   
+ [Locais de arquivos para instâncias padrão e nomeadas do SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
+ [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

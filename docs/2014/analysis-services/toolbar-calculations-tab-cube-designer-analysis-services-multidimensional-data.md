@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac81f846f3f85f2ed8ea91592aea28942d557857
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938427"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Cálculo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel da **Barra de Ferramentas** para executar operações comuns na guia **Cálculos** do Designer de Cubo.  

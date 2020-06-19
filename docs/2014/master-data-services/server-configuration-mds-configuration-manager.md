@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40dcdc2e6413e2b9944dfbdb0194da410b05733c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971076"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Página Configuração do Servidor do Master Data Services (Gerenciador de Configuração)
   Use a página **Configuração do Servidor** para exibir informações de configuração para o computador do servidor local.  

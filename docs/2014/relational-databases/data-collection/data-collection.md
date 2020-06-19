@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a7b7c959283f934ed94f654293d1de2ef8cd9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970486"
 ---
 # <a name="data-collection"></a>Coleta de dados
   O Coletor de Dados é um componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que coleta diferentes conjuntos de dados. A coleta de dados é executada constantemente ou em uma agenda definida pelo usuário. O coletor de dados armazena os dados coletados em um banco de dados relacional conhecido como data warehouse de gerenciamento.
@@ -67,7 +66,7 @@ ms.locfileid: "78175965"
 
  provedor de dados uma fonte de dados conhecida, específica para um tipo de destino que fornece dados para um tipo de coletor.
 
- coletor digite um wrapper lógico em volta [!INCLUDE[ssIS](../../includes/ssis-md.md)] dos pacotes que fornecem o mecanismo real para coletar dados e carregá-los no data warehouse de gerenciamento.
+ coletor digite um wrapper lógico em volta dos [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacotes que fornecem o mecanismo real para coletar dados e carregá-los no data warehouse de gerenciamento.
 
  item de coleção uma instância de um tipo de coletor. Um item de coleta é criado com um conjunto específico de propriedades de entrada e uma frequência de coleta.
 

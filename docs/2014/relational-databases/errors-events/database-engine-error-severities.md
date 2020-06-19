@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acd8ec235d357853266b0419024ae406fa62fb90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969933"
 ---
 # <a name="database-engine-error-severities"></a>Severidade dos erros do Mecanismo de Banco de Dados
   Quando um erro é gerado pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], sua severidade indica o tipo de problema encontrado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

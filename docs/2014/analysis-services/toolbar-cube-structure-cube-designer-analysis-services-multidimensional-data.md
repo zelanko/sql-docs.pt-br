@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d44311bc2622bbf93a8bb42afbc05f740ac36e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b925452094fc283e871c2998c7068b60d635c7dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938417"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Barra de Ferramentas** para executar ações comuns, como processar ou criar novos grupos de medidas na guia **Estrutura do Cubo** no Designer de Cubo.  

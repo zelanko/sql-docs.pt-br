@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91e22e536a91878609feedf2977ffa7d78a54d61
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917273"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970196"
 ---
 # <a name="database-files-and-filegroups"></a>Arquivos e grupos de arquivos do banco de dados
   Todo o banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem, no mínimo, dois arquivos de sistema operacional: um arquivo de dados e um arquivo de log. Os arquivos de dados contêm dados e objetos como tabelas, índices, procedimentos armazenados e exibições. Os arquivos de log contêm as informações necessárias para recuperar todas as transações no banco de dados. Os arquivos de dados podem ser agrupados em grupos de arquivos para propósitos de alocação e administração.  

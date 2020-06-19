@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e08fd0455e42717a5efcc33f9cb9757e81867ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970732"
 ---
 # <a name="retrieving-udt-data"></a>Recuperando dados UDT
   Para criar um tipo definido pelo usuário (UDT) no cliente, o assembly que foi registrado como UDT em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve estar disponível para o aplicativo cliente. O assembly UDT pode ser colocado no mesmo diretório que o aplicativo ou no Cache de Assembly Global (GAC). Também é possível definir uma referência para o assembly em seu projeto.  
@@ -157,10 +156,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>Associando UDTs como bytes  
- Em algumas situações, você pode desejar recuperar os dados raw da coluna UDT. Talvez o tipo não esteja disponível localmente ou você não queira instanciar uma instância uma instância do UDT. Você pode ler os bytes brutos em uma matriz de bytes usando o método **GetBytes** de um `SqlDataReader`. Esse método lê um fluxo de bytes do deslocamento de coluna especificado no buffer de uma matriz, começando com um deslocamento de buffer especificado. Outra opção é usar um dos métodos **GetSqlBytes** ou **GetSqlBinary** e ler todo o conteúdo em uma única operação. De qualquer maneira, o objeto UDT nunca é instanciado; assim, não é necessário definir uma referência para o UDT no assembly cliente.  
+ Em algumas situações, você pode desejar recuperar os dados raw da coluna UDT. Talvez o tipo não esteja disponível localmente ou você não queira instanciar uma instância uma instância do UDT. Você pode ler os bytes brutos em uma matriz de bytes usando o método **GetBytes** de um `SqlDataReader` . Esse método lê um fluxo de bytes do deslocamento de coluna especificado no buffer de uma matriz, começando com um deslocamento de buffer especificado. Outra opção é usar um dos métodos **GetSqlBytes** ou **GetSqlBinary** e ler todo o conteúdo em uma única operação. De qualquer maneira, o objeto UDT nunca é instanciado; assim, não é necessário definir uma referência para o UDT no assembly cliente.  
   
 ### <a name="example"></a>Exemplo  
- Este exemplo mostra como recuperar os dados do **ponto** como bytes brutos em uma matriz de bytes `SqlDataReader`usando um. O código usa um `System.Text.StringBuilder` para converter os bytes brutos em uma representação de cadeia de caracteres a ser exibida na janela do console.  
+ Este exemplo mostra como recuperar os dados do **ponto** como bytes brutos em uma matriz de bytes usando um `SqlDataReader` . O código usa um `System.Text.StringBuilder` para converter os bytes brutos em uma representação de cadeia de caracteres a ser exibida na janela do console.  
   
 ```vb  
 Option Explicit On  

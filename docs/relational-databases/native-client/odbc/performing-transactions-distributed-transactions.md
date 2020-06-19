@@ -1,5 +1,6 @@
 ---
 title: Criar transações distribuídas | Microsoft Docs
+description: Os aplicativos podem usar o MSDTC para estender ou distribuir uma transação em várias instâncias do SQL Server. Uma classe .NET também pode distribuir uma transação.
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f21ea9b7146b2907a09688f5189d6d9ae4f3f26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f7a98b35483103059600086c37294c5acb56ad0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303672"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950367"
 ---
 # <a name="create-a-distributed-transaction"></a>Criar uma transação distribuída
 
@@ -38,7 +39,7 @@ Uma transação distribuída pode ser criada para diferentes sistemas Microsoft 
 
 ## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>O driver ODBC chama o MSDTC para SQL Server local
 
-O Microsoft Coordenador de Transações Distribuídas (MSDTC) permite que os aplicativos estendam ou _distribuam_ uma transação entre duas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou mais instâncias do. A transação distribuída funciona mesmo quando as duas instâncias são hospedadas em computadores separados.
+O Microsoft Coordenador de Transações Distribuídas (MSDTC) permite que os aplicativos estendam ou _distribuam_ uma transação entre duas ou mais instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A transação distribuída funciona mesmo quando as duas instâncias são hospedadas em computadores separados.
 
 O MSDTC é instalado para Microsoft SQL Server local, mas não está disponível para o serviço de nuvem do banco de dados SQL do Microsoft Azure.
 
@@ -57,7 +58,7 @@ _(1)_ o MSDTC pode ser invocado sem ODBC. Nesse caso, o MSDTC torna-se o Gerenci
 
 ### <a name="only-one-distributed-transaction"></a>Apenas uma transação distribuída
 
-Suponha que seu aplicativo ODBC nativo do cliente do C++ seja inscrito em uma transação distribuída. Em seguida, o aplicativo se lista em uma segunda transação distribuída. Nesse caso, o driver [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC do Native Client deixa a transação distribuída original e as inlistas na nova transação distribuída.
+Suponha que seu aplicativo ODBC nativo do cliente do C++ seja inscrito em uma transação distribuída. Em seguida, o aplicativo se lista em uma segunda transação distribuída. Nesse caso, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client deixa a transação distribuída original e as inlistas na nova transação distribuída.
 
 Para obter mais informações, consulte [referência do programador do DTC](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
 

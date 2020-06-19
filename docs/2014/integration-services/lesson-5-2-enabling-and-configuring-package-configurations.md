@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06d31a4244da2a751bc501080cdf501d540fbc92
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891052"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951526"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Etapa 2: Habilitar e configurar configurações de pacote
   Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e habilitará configurações de pacote usando o Assistente de Configuração de Pacotes. Você usará esse assistente para gerar um arquivo de configuração XML que contenha definições de configuração para a propriedade `Directory` do contêiner Loop Foreach. O valor da propriedade de diretório é fornecido por uma nova variável de nível de pacote que você pode atualizar no tempo de execução. Adicionalmente, você populará uma pasta de dados de exemplo para usar durante o teste.  
@@ -41,7 +40,7 @@ ms.locfileid: "62891052"
   
 8.  Na página **coleção** do editor de **loop foreach**, clique em **expressões**e, em seguida, clique no botão de reticências **(...)**.  
   
-9. No **Editor de expressões de propriedade**, clique na lista de **Propriedades** e selecione `Directory`.  
+9. No **Editor de expressões de propriedade**, clique na lista de **Propriedades** e selecione `Directory` .  
   
 10. Na caixa **expressão** , clique no botão de reticências **(...)**.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62891052"
   
 15. Clique em **Concluir**.  
   
-16. Clique em **Fechar**.  
+16. Clique em **fechar**  
   
 17. O assistente cria um arquivo de configuração, chamado SSISTutorial.dtsConfig, que contém as definições de configuração de `value` da variável que define a propriedade `Directory` do enumerador.  
   
@@ -93,12 +92,12 @@ ms.locfileid: "62891052"
     >  Um arquivo de configuração geralmente contém informações complexas sobre as propriedades do pacote, mas, para este tutorial, a única informação de configuração deveria ser  
     > <Configuration ConfiguredType="Property"  
     > Path = "\Package.Variables [User:: varFolderName]. Properties [valor] "ValueType =" cadeia de caracteres "\>  
-    >  \<Configurevalue>\</ConfiguredValue>  
-    > \<>/configuração.  
+    >  \<ConfiguredValue>\</ConfiguredValue>  
+    > \</Configuration>.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Para criar e popular uma nova pasta de dados de exemplo  
   
-1.  No Windows Explorer, no nível raiz da unidade (por exemplo, C:\\), crie uma nova pasta chamada. `New Sample Data`  
+1.  No Windows Explorer, no nível raiz da unidade (por exemplo, C: \\ ), crie uma nova pasta chamada `New Sample Data` .  
   
 2.  Localize os arquivos de exemplo no computador e copie três dos arquivos da pasta.  
   

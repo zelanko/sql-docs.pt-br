@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b43cc124ff6f5147a3255cbdf164679bae55d18
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 955a17857ce0d847fb712473dddd581a072ab83d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858533"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970166"
 ---
 # <a name="database-properties-files-page"></a>Propriedades do Banco de Dados (página Arquivos)
   Use esta página para criar um novo banco de dados ou para exibir ou modificar as propriedades do banco de dados selecionado. Este tópico se aplica às **Propriedades do Banco de Dados (página Arquivos)** de bancos de dados existentes e ao **Novo Banco de Dados (página Geral)** .  
@@ -46,7 +45,7 @@ ms.locfileid: "83858533"
  Para adicionar arquivos (contêineres) a um grupo de arquivos de dados de Filestream, o FILESTREAM deve estar habilitado. Você pode habilitar o FILESTREAM usando a caixa de diálogo [Propriedades do Servidor (página Avançado)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Grupo de arquivos**  
- Selecione o grupo de arquivos do arquivo na lista. Por padrão, o grupo de arquivos é PRIMARY. É possível criar um novo grupo de arquivos selecionando **\<novo grupo de arquivos>** e inserindo informações sobre ele na caixa de diálogo **Novo grupo de arquivos**. Um novo grupo de arquivos também pode ser criado na página **Grupo de Arquivos** . Você não pode modificar o grupo de arquivos de um arquivo existente.  
+ Selecione o grupo de arquivos do arquivo na lista. Por padrão, o grupo de arquivos é PRIMARY. Você pode criar um novo grupo de arquivos selecionando **\<new filegroup>** e inserindo informações sobre o grupo de arquivos na caixa de diálogo **novo grupo de arquivos** . Um novo grupo de arquivos também pode ser criado na página **Grupo de Arquivos** . Você não pode modificar o grupo de arquivos de um arquivo existente.  
   
  Ao adicionar arquivos (contêineres) a um grupo de arquivos com otimização de memória, o campo de **Grupo de Arquivos** será preenchido com o nome do grupo de arquivos com otimização de memória do banco de dados.  
   

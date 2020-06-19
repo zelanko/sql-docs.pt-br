@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 685560b35eafd4092c149a809089abc299da6bbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29e41e2b65df744cdf495441a8e7bd72accc9ce9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175455"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936527"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
   Este tópico contém informações sobre como configurar o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para funcionar com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Os três cenários para usar o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] são bancos de dados para fontes de dados de relatório, bancos de dados do servidor de relatório e design de relatório. A funcionalidade com suporte e a configuração exigida é diferente para os três cenários.
 
  O principal benefício de usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com fontes de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é aproveitar réplicas secundárias legíveis como uma fonte de dados de relatório enquanto, ao mesmo tempo, as réplicas secundárias estão fornecendo um failover para um banco de dados primário.
 
- Para obter informações gerais [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]sobre o, consulte [perguntas frequentes sobrehttps://msdn.microsoft.com/sqlserver/gg508768)o AlwaysOn para SQL Server 2012 (](https://msdn.microsoft.com/sqlserver/gg508768).
+ Para obter informações gerais sobre o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consulte [perguntas frequentes sobre https://msdn.microsoft.com/sqlserver/gg508768) o AlwaysOn para SQL Server 2012 (](https://msdn.microsoft.com/sqlserver/gg508768).
 
  
 
 ##  <a name="requirements-for-using-reporting-services-and-alwayson-availability-groups"></a><a name="bkmk_requirements"></a>Requisitos para usar Reporting Services e Grupos de Disponibilidade AlwaysOn
- Para usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]com o, você precisa baixar e instalar um hotfix para o .net 3,5 SP1. O hotfix adiciona suporte a Cliente SQL para os recursos do AG e suporte das propriedades da cadeia de conexão **ApplicationIntent** e **MultiSubnetFailover**. Se o Hotfix não estiver instalado em cada computador que hospeda um servidor de relatório, os usuários que tentarem visualizar relatórios verão uma mensagem de erro semelhante à seguinte, e a mensagem de erro será gravada no log de rastreamento do servidor de relatório:
+ Para usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o com o, você precisa baixar e instalar um hotfix para o .net 3,5 SP1. O hotfix adiciona suporte a Cliente SQL para os recursos do AG e suporte das propriedades da cadeia de conexão **ApplicationIntent** e **MultiSubnetFailover**. Se o Hotfix não estiver instalado em cada computador que hospeda um servidor de relatório, os usuários que tentarem visualizar relatórios verão uma mensagem de erro semelhante à seguinte, e a mensagem de erro será gravada no log de rastreamento do servidor de relatório:
 
 > **Mensagem de erro:** "Não há suporte para a palavra-chave ' applicationintent '"
 
@@ -41,7 +40,7 @@ ms.locfileid: "78175455"
  Para obter informações sobre outros requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).
 
 > [!NOTE]
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]arquivos de configuração, como **RSReportServer. config** , não têm suporte como [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] parte da funcionalidade. Se você fizer alterações manualmente em um arquivo de configuração em um dos servidores de relatórios, precisará atualizar as réplicas manualmente.
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]arquivos de configuração, como **RSreportserver.config** , não são suportados como parte da [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] funcionalidade. Se você fizer alterações manualmente em um arquivo de configuração em um dos servidores de relatórios, precisará atualizar as réplicas manualmente.
 
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a>Fontes de dados de relatório e grupos de disponibilidade
  O comportamento de fontes de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] com base no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pode variar, dependendo de como o administrador configurou o ambiente do AG.

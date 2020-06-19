@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6750456d708d68e57aadd4b1139f6e108a93b9ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d946440e2950192299c42652babb4082790dbd03
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937028"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Alterar o modo de failover de uma réplica de disponibilidade (SQL Server)
   Este tópico descreve como alterar o modo de failover de uma réplica de disponibilidade em um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. O modo de failover é uma propriedade de réplica que determina o modo de failover para réplicas que executam sob modo de disponibilidade de confirmação síncrona. Para obter mais informações, consulte [Failover e modos de failover &#40;Grupos de disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) e [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](availability-modes-always-on-availability-groups.md).  
@@ -70,11 +69,11 @@ ms.locfileid: "72783016"
   
      }  )  
   
-     where  
+     onde  
   
     -   *group_name* é o nome do grupo de disponibilidade.  
   
-    -   {'*system_name*[\\*instance_name*] ' | '*FCI_network_name*[\\*instance_name*] '}  
+    -   { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
          Especifica o endereço da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica de disponibilidade a ser alterada. Os componentes desse endereço são os seguintes:  
   

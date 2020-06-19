@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: e952ef1102ac67bd0ed9f72d0c201d54b320b5ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935987"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configurar o Backup Gerenciado (SQL Server Management Studio)
   A caixa de diálogo **Backup gerenciado** permite que você configure padrões do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para a instância. Este tópico descreve como usar essa caixa de diálogo para configurar configurações padrão [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para a instância e opções que você deve considerar ao fazer isso. Quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está configurado para a instância, as configurações são aplicadas a qualquer novo banco de dados criado depois disso.  
@@ -69,7 +68,7 @@ ms.locfileid: "82849434"
   
  Especifique a **URL de armazenamento** para a conta de armazenamento do Azure, a credencial SQL que armazena as informações de autenticação para a conta de armazenamento e o período de retenção para os arquivos de backup.  
   
- O formato da URL de armazenamento é: https:// \< StorageAccount>. blob.Core.Windows.net/  
+ O formato da URL de armazenamento é: https:// \<StorageAccount> . blob.Core.Windows.net/  
   
  Para definir as configurações de criptografia no nível da instância, marque a opção **Criptografar Backup** e especifique o algoritmo e um certificado ou chave assimétrica a serem usados na criptografia.  Isso é definido no nível da instância e é usado para todos os novos bancos de dados criados depois de essa configuração ser aplicada.  
   

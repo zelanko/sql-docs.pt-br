@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951830"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Ajuda de F1 do Visualizador de Perfil de Dados
   Use o Visualizador de Perfil de Dados para exibir a saída da tarefa Criação de Perfil de Dados.  
@@ -46,11 +45,11 @@ ms.locfileid: "66059716"
   
 ### <a name="profile-type--column-length-distribution-profile"></a>Tipo de Perfil = Perfil de Distribuição de Comprimento de Coluna  
   
-#### <a name="column-length-distribution-profile---column-pane"></a>Perfil de Distribuição de Tamanho de Coluna – painel \<coluna>  
+#### <a name="column-length-distribution-profile---column-pane"></a>Perfil de distribuição de comprimento de coluna- \<column> painel  
  **Comprimento Mínimo**  
  Exibe o comprimento mínimo de valores nesta coluna.  
   
- **Comprimento Máximo**  
+ **Comprimento máximo**  
  Exibe o comprimento máximo de valores nesta coluna.  
   
  **Ignorar Espaços à Esquerda**  
@@ -59,7 +58,7 @@ ms.locfileid: "66059716"
  **Ignorar Espaços à Direita**  
  Exibe se este perfil foi computado com um valor `IgnoreTrailingSpaces` de True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
   
- **Contagem de Linhas**  
+ **Contagem de linhas**  
  Exibe o número de linhas na tabela ou exibição.  
   
 #### <a name="detailed-length-distribution-pane"></a>Painel Distribuição de Comprimento Detalhado  
@@ -69,44 +68,44 @@ ms.locfileid: "66059716"
  **Count**  
  Exibe o número de linhas nas quais o valor da coluna cujo perfil está sendo criado tem o tamanho mostrado na coluna **Tamanho** .  
   
- **Percentual**  
+ **Porcentagem**  
  Exibe o percentual de linhas nas quais o valor da coluna cujo perfil está sendo criado tem o tamanho exibido na coluna **Tamanho** .  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>Tipo de Perfil = Perfil de Razão Nula de Coluna  
   
-#### <a name="column-null-ratio-profile---column-pane"></a>Perfil de Razão Nula de Coluna – painel \<coluna>  
+#### <a name="column-null-ratio-profile---column-pane"></a>Perfil de razão nula de coluna- \<column> painel  
  **Contagem Nula**  
  Exibe o número de linhas nas quais a coluna perfilada tem um valor nulo.  
   
  **Porcentagem nula**  
  Exibe a porcentagem de linhas nas quais a coluna cujo perfil está sendo criado tem um valor nulo  
   
- **Contagem de Linhas**  
+ **Contagem de linhas**  
  Exibe o número de linhas na tabela ou exibição.  
   
 ### <a name="profile-type--column-pattern-profile"></a>Tipo de Perfil = Perfil Padrão de Coluna  
   
-#### <a name="column-pattern-profile---column-pane"></a>Perfil de Padrão de Coluna – painel \<coluna>  
- **Contagem de Linhas**  
+#### <a name="column-pattern-profile---column-pane"></a>Painel de Perfil de Padrão de Coluna \<column>  
+ **Contagem de linhas**  
  Exibe o número de linhas na tabela ou exibição.  
   
 #### <a name="pattern-distribution-pane"></a>Painel Distribuição de Padrão  
  **Padrão**  
  Exibe os padrões computados para a coluna cujo perfil está sendo criado.  
   
- **Percentual**  
+ **Porcentagem**  
  Exibe o percentual de linhas cujos valores correspondem ao padrão exibido na coluna **Padrão** .  
   
 ### <a name="profile-type--column-statistics-profile"></a>Tipo de Perfil = Perfil de Estatísticas da Coluna  
   
-#### <a name="column-statistics-profile---column-pane"></a>Perfil de Estatísticas da Coluna – painel \<coluna>  
+#### <a name="column-statistics-profile---column-pane"></a>Perfil de estatísticas de coluna – \<column> painel  
  **Máximo**  
  Exibe o valor mínimo localizado na coluna cujo perfil está sendo criado.  
   
  **Maior**  
  Exibe o valor máximo localizado na coluna cujo perfil está sendo criado.  
   
- **Média**  
+ **Significa**  
  Exibe a média dos valores encontrados na coluna cujo perfil está sendo criado.  
   
  **Desvio padrão**  
@@ -114,11 +113,11 @@ ms.locfileid: "66059716"
   
 ### <a name="profile-type--column-value-distribution-profile"></a>Tipo de Perfil = Perfil de Distribuição de Valor da Coluna  
   
-#### <a name="column-value-distribution-profile---column-pane"></a>Perfil de Distribuição de Valor da Coluna – painel \<coluna>  
+#### <a name="column-value-distribution-profile---column-pane"></a>Perfil de distribuição de valor de coluna- \<column> painel  
  **Número de Valores Distintos**  
  Exibe a contagem de valores distintos encontrados na coluna cujo perfil está sendo criado.  
   
- **Contagem de Linhas**  
+ **Contagem de linhas**  
  Exibe o número de linhas na tabela ou exibição.  
   
 #### <a name="detailed-value-distribution-pane"></a>Painel Distribuição de Valor Detalhado  
@@ -128,12 +127,12 @@ ms.locfileid: "66059716"
  **Count**  
  Exibe o número de linhas nas quais a coluna cujo perfil está sendo criado tem o valor exibido na coluna **Valor** .  
   
- **Percentual**  
+ **Porcentagem**  
  Exibe o percentual de linhas nas quais a coluna cujo perfil está sendo criado tem o valor exibido na coluna **Valor** .  
   
 ### <a name="profile-type--candidate-key-profile"></a>Tipo de Perfil = Perfil-Chave de Candidato  
   
-#### <a name="candidate-key-profile---table-pane"></a>Perfil-Chave de Candidato – painel \<tabela>  
+#### <a name="candidate-key-profile---table-pane"></a>Perfil-chave de candidato- \<table> painel  
  **Colunas de Chave**  
  Exibe as colunas que foram selecionadas para criação de perfil como chave candidata.  
   
@@ -141,7 +140,7 @@ ms.locfileid: "66059716"
  Exibe a intensidade (em porcentagem) da coluna da chave candidata ou da combinação de colunas. Uma intensidade de chave inferior a 100% indica que existem valores em duplicata.  
   
 #### <a name="key-violations-pane"></a>Painel Violações de Chave  
- **\<Coluna1>, \<Coluna2>, etc.**  
+ **\<column1>, \<column2> , etc.**  
  Exibe os valores em duplicata encontrados na coluna cujo perfil está sendo criado.  
   
  **Count**  
@@ -164,17 +163,17 @@ ms.locfileid: "66059716"
 > [!NOTE]  
 >  Uma porcentagem alta de valores errôneos nos dados poderia conduzir a resultados inesperados de um perfil Dependência Funcional. Por exemplo, 90% das linhas têm um valor de “WI” em Estado para um valor de Código Postal de "98052". O perfil informa linhas que contêm o valor de estado correto de "WA" como violações.  
   
- **\<nome de coluna determinante>**  
+ **\<determinant column name>**  
  Exibe o valor da coluna determinante ou combinação de colunas na instância de uma violação de dependência funcional.  
   
- **\<nome de coluna dependente>**  
+ **\<dependent column name>**  
  Exibe o valor da coluna dependente na instância de uma violação de dependência funcional.  
   
  **Contagem de Suporte**  
  Exibe o número de linhas nas quais o valor de coluna determinante determina a coluna dependente.  
   
  **Contagem de Violação**  
- Exibe o número de linhas nas quais o valor de coluna determinante não determina a coluna dependente (Essas são as linhas em que o valor dependente é o valor mostrado no ** \<nome da coluna dependente>** coluna.)  
+ Exibe o número de linhas nas quais o valor de coluna determinante não determina a coluna dependente (Essas são as linhas em que o valor dependente é o valor mostrado na **\<dependent column name>** coluna.)  
   
  **Percentual de Suporte**  
  Exibe a porcentagem de linhas nas quais a coluna determinante determina a coluna dependente.  
@@ -192,7 +191,7 @@ ms.locfileid: "66059716"
  Exibe a intensidade (em porcentagem) da sobreposição entre colunas. Uma intensidade de chave inferior a 100% indica que há casos nos quais o valor do subconjunto não está localizado entre os valores do superconjunto.  
   
 #### <a name="inclusion-violations-pane"></a>Painel Violações de Inclusão  
- **\<Coluna1>, \<Coluna2>, etc.**  
+ **\<column1>, \<column2> , etc.**  
  Exibe os valores na coluna de subconjunto ou colunas que não foram localizadas na coluna ou colunas do superconjunto.  
   
  **Count**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eea051fbf4a34257d61ff8eaf4f796debf49a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786731"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936007"
 ---
 # <a name="collations-and-code-pages"></a>Páginas de código de ordenações
   O [!INCLUDE[hek_2](../includes/hek-2-md.md)] tem restrições nas páginas de código com suporte para colunas (var)char em tabelas com otimização de memória e ordenações com suporte usados em índices e em procedimentos armazenados compilados nativamente.  
@@ -82,7 +81,7 @@ GO
   
 -   Todas as expressões e operações de classificação dentro dos procedimentos armazenados compilados nativamente devem usar ordenações BIN2. A implicação é que todas as comparações e operações de classificação são baseadas nos pontos de código Unicode dos caracteres (representações binárias). Por exemplo, todas as classificações diferenciam maiúsculas de minúsculas ('Z' vem antes de 'a'). Se necessário, use [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado para classificação e comparação sem diferenciação de maiúsculas e minúsculas.  
   
--   O truncamento de dados UTF-16 não tem suporte dentro de procedimentos armazenados compilados nativamente. Isso significa que n (var) valores de Char (*n*) não podem ser convertidos para o tipo n (var) Char (*i*), se *eu* < *n*, se o agrupamento tiver a propriedade _SC. Por exemplo, o seguinte não tem suporte:  
+-   O truncamento de dados UTF-16 não tem suporte dentro de procedimentos armazenados compilados nativamente. Isso significa que n (var) valores de Char (*n*) não podem ser convertidos para o tipo n (var) Char (*i*), se *eu*  <  *n*, se o agrupamento tiver a propriedade _SC. Por exemplo, o seguinte não tem suporte:  
   
     ```sql  
     -- column definition using an _SC collation  

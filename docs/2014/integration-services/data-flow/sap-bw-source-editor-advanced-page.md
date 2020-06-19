@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 80a3d1d0fa667821616909a327a946a4116d06de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee99b512358fd69dfa27f66acf2f4305940152f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914396"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Editor de Origem de SAP BW (página Avançado)
   Use a página **Avançado** do **Editor de Fonte SAP BW** para especificar a regra de conversão de cadeia de caracteres e o período de tempo limite, e também para redefinir o status de uma ID de Solicitação específica.  

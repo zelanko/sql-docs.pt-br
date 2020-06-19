@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c832fe601eb7151e438d7f93c3e39e9b249ea246
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a9959189b3ce805c7d8e97dd3b4948a3674b0cb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483320"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971726"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Criar um grupo de atributo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie grupos de atributos quando você desejar exibir atributos em guias individuais na grade do **Gerenciador** .  
@@ -66,7 +65,7 @@ ms.locfileid: "65483320"
   
 13. Opcionalmente, clique nas setas para **cima** e para **baixo** para alterar a ordem da esquerda para a direita dos atributos.  
   
-14. Clique em **Salvar**.  
+14. Clique em **Save** (Salvar).  
   
 ## <a name="next-steps"></a>Próximas etapas  
   

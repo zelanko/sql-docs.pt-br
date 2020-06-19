@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a15a914c243f1fafd3b913d98113e984bf533086
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970864"
 ---
 # <a name="manage-filetables"></a>Gerenciar FileTables
   Descreve tarefas administrativas comuns para gerenciar FileTables.  
@@ -62,7 +61,7 @@ GO
   
      Se o comando ALTER DATABASE for cancelado ou terminar com um tempo limite, o nível de acesso transacional não será alterado.  
   
--   Se você chamar a instrução ALTER DATABASE com uma cláusula WITH \<termination> (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), todos os identificadores de arquivos não transacionais abertos serão eliminados.  
+-   Se você chamar a instrução ALTER DATABASE com uma \<termination> cláusula WITH (rollback após Integer [seconds] | REVERSÃO IMEDIATA | NO_WAIT), todos os identificadores de arquivo não transacionais abertos são eliminados.  
   
 > [!WARNING]  
 >  A eliminação de identificadores de arquivos abertos pode levar os usuários a perderem dados não salvos. Esse comportamento é consistente com o comportamento do próprio sistema de arquivos.  

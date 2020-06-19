@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dedd2c5b8d075dee8aeeb438904137558c664d95
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872084"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970206"
 ---
 # <a name="database-instant-file-initialization"></a>Inicialização imediata de arquivo do banco de dados
   Arquivos de dados e de log são inicializados para substituir todos os dados existentes que foram deixados no disco por arquivos excluídos anteriormente. Primeiro, os arquivos de dados e de log são inicializados ao serem completados com zeros quando você executa uma das seguintes operações:  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0114aa3ca6f6744303c3053003a622185d33f547
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fee43f41bb0c0d3755b7b48f374279adb08e140
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479906"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971574"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>Excluir usuários ou grupos (Master Data Services)
   Exclua usuários ou grupos quando não desejar mais que eles acessem o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d5847025770882851de21f20d331af5ce6c975a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970308"
 ---
 # <a name="row-compression-implementation"></a>Implementação da compactação de linha
   Este tópico resume como o [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa a compactação de linha. Este resumo fornece informações básicas para ajudar no planejamento do espaço de armazenamento exigido pelos dados.  

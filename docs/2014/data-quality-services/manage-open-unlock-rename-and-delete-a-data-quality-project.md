@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5e3ec1fc7c3c811b588aaf4145aa286d9aa078e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 062a02688a81235686635db4315754e16dc38d08
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937497"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>Gerenciar (abrir, desbloquear, renomear e excluir) um projeto de qualidade de dados
   Este tópico descreve como gerenciar um projeto de qualidade de dados usando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , por exemplo, como abrir, desbloquear, renomear e excluir um projeto de qualidade de dados.  

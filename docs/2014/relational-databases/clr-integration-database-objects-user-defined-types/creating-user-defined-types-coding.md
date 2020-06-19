@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7427de92691a2d5c0a92aac55ac16f47dd2ef6b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4daa52a25ebc44e1668fa2c4d98619dc08f2dc26
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232235"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970697"
 ---
 # <a name="coding-user-defined-types"></a>codificando tipos definidos pelo usuário
   Ao codificar a definição UDT (tipo definido pelo usuário), você deve implementar vários recursos, dependendo da implementação da UDT como classe ou estrutura, bem como das opções de formato e de serialização escolhidas.  
@@ -367,10 +366,10 @@ private bool ValidatePoint()
 ### <a name="validation-method-limitations"></a>Limitações do método de validação  
  O servidor chama o método de validação ao realizar conversões, e não quando os dados são inseridos definindo propriedades individuais, ou quando eles são inseridos usando uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT.  
   
- Você deve chamar explicitamente o método de validação de setters de propriedade `Parse` e o método se desejar que o método de validação seja executado em todas as situações. Não se trata de um requisito e, em alguns casos, talvez não seja sequer desejável.  
+ Você deve chamar explicitamente o método de validação de setters de propriedade e o `Parse` método se desejar que o método de validação seja executado em todas as situações. Não se trata de um requisito e, em alguns casos, talvez não seja sequer desejável.  
   
 ### <a name="parse-validation-example"></a>Exemplo de validação de Parse  
- Para garantir que o `ValidatePoint` método seja invocado na `Point` classe, você deve chamá-lo do `Parse` método e dos procedimentos de propriedade que definem os valores de coordenadas X e Y. O fragmento de código a seguir mostra como chamar `ValidatePoint` o método de validação `Parse` da função.  
+ Para garantir que o `ValidatePoint` método seja invocado na `Point` classe, você deve chamá-lo do `Parse` método e dos procedimentos de propriedade que definem os valores de coordenadas X e Y. O fragmento de código a seguir mostra como chamar o `ValidatePoint` método de validação da `Parse` função.  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -416,7 +415,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ### <a name="property-validation-example"></a>Exemplo de validação da propriedade  
- O fragmento de código a seguir mostra como chamar `ValidatePoint` o método de validação dos procedimentos de propriedade que definem as coordenadas X e Y.  
+ O fragmento de código a seguir mostra como chamar o `ValidatePoint` método de validação dos procedimentos de propriedade que definem as coordenadas X e Y.  
   
 ```vb  
 Public Property X() As Int32  
@@ -543,7 +542,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  A classe `Microsoft.SqlServer.Server.SqlMethodAttribute` fornece atributos personalizados que podem ser usados para marcar definições de método a fim de especificar determinismo, comportamento em chamada nula e determinar se um método é um modificador. Os valores padrão dessas propriedades são pressupostos, e o atributo personalizado só é usado quando um valor não padrão é necessário.  
   
 > [!NOTE]  
->  A classe `SqlMethodAttribute` é herdada da classe `SqlFunctionAttribute`, assim `SqlMethodAttribute` herda os campos `FillRowMethodName` e `TableDefinition` de `SqlFunctionAttribute`. Isso indica que é possível escrever um método com valor de tabela, o que não é o caso. O método é compilado e o assembly é implantado, mas um erro sobre `IEnumerable` o tipo de retorno é gerado em tempo de execução com a seguinte mensagem: "o método,\<a propriedade ou o campo '\<nome> ' na classe '\<Class> ' no assembly ' assembly> ' tem um tipo de retorno inválido."  
+>  A classe `SqlMethodAttribute` é herdada da classe `SqlFunctionAttribute`, assim `SqlMethodAttribute` herda os campos `FillRowMethodName` e `TableDefinition` de `SqlFunctionAttribute`. Isso indica que é possível escrever um método com valor de tabela, o que não é o caso. O método é compilado e o assembly é implantado, mas um erro sobre o `IEnumerable` tipo de retorno é gerado em tempo de execução com a seguinte mensagem: "o método, a propriedade ou o campo ' \<name> ' na classe ' ' \<class> no assembly ' \<assembly> ' tem um tipo de retorno inválido."  
   
  A seguinte tabela descreve algumas das propriedades `Microsoft.SqlServer.Server.SqlMethodAttribute` relevantes que podem ser usadas em métodos de UDT, além de listar os valores padrão.  
   
@@ -620,7 +619,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  O propósito do preenchimento é assegurar que a cultura seja totalmente separada do valor de moeda, para que quando uma UDT seja comparada com outra no código [!INCLUDE[tsql](../../includes/tsql-md.md)], os bytes de cultura sejam comparados com os bytes de cultura e os valores de byte da moeda, com os valores de byte da moeda.  
   
- Para obter a listagem de código completa `Currency` para o UDT, siga as instruções para instalar os exemplos de CLR em [exemplos de mecanismo de banco de dados de SQL Server](https://msftengprodsamples.codeplex.com/).  
+ Para obter a listagem de código completa para o `Currency` UDT, siga as instruções para instalar os exemplos de CLR em [exemplos de Mecanismo de Banco de Dados de SQL Server](https://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Atributos Currency  
  A UDT `Currency` é definida com os atributos a seguir.  
@@ -744,7 +743,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- Para obter a listagem de código completa `Currency` para o UDT, consulte [SQL Server mecanismo de banco de dados Samples](https://msftengprodsamples.codeplex.com/).  
+ Para obter a listagem de código completa para o `Currency` UDT, consulte [SQL Server mecanismo de banco de dados Samples](https://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um tipo definido pelo usuário](creating-user-defined-types.md)  

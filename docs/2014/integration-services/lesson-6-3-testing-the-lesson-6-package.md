@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c78ccd21b39cd882c037f44c0b37c5deb3bc06d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951476"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>Etapa 3: Testar o pacote da Lição 6
   Em tempo de execução, seu pacote irá obter o valor para a propriedade Diretório a partir do parâmetro VarFolderName.  

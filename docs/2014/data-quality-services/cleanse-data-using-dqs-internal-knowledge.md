@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 26e4c7394f1af445534e32f9a960cb71480f72c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9962cdc87fca0014d8e70738069bb52b5a36092d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481137"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938017"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
   Este tópico descreve como limpar seus dados usando um projeto de qualidade de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A limpeza de dados é executada na fonte de dados com o uso de uma base de dados de conhecimento que foi criada no DQS a partir de um conjunto de dados de alta qualidade. Para obter mais informações, consulte [Criando uma base de dados de conhecimento](../../2014/data-quality-services/building-a-knowledge-base.md).  
@@ -157,17 +156,17 @@ ms.locfileid: "65481137"
   
     -   **Dados e Informações de Limpeza**: clique no botão de opção para exportar os seguintes dados para cada domínio:  
   
-        -   >_Source de domínio: o valor original no domínio. ** \<**  
+        -   ** \<Domain> _Source**: o valor original no domínio.  
   
-        -   >_Output de domínio: os valores limpos no domínio. ** \<**  
+        -   ** \<Domain> _Output**: os valores limpos no domínio.  
   
-        -   >_Reason de domínio: o motivo especificado para a correção do valor. ** \<**  
+        -   ** \<Domain> _Reason**: o motivo especificado para a correção do valor.  
   
-        -   >_Confidence de domínio: o nível de confiança para todos os termos que foram corrigidos. ** \<** É exibida como o valor decimal equivalente ao valor percentual correspondente. Por exemplo, um nível de confiança de 95% será exibido como .9500000.  
+        -   ** \<Domain> _Confidence**: o nível de confiança para todos os termos que foram corrigidos. É exibida como o valor decimal equivalente ao valor percentual correspondente. Por exemplo, um nível de confiança de 95% será exibido como .9500000.  
   
-        -   >_Status de domínio: o status do valor de domínio após a limpeza de dados. ** \<** Por exemplo, **Sugerido**, **Novo**, **Inválido**, **Corrigido**ou **Correto**.  
+        -   ** \<Domain> _Status**: o status do valor de domínio após a limpeza de dados. Por exemplo, **Sugerido**, **Novo**, **Inválido**, **Corrigido**ou **Correto**.  
   
-        -   **Status do Registro**: além de ter um campo de status para cada domínio mapeado, **(\<DomainName>_Status**), o campo **Status do Registro** exibe o status de um registro. Se qualquer um dos status do domínio no registro for *novo* ou *correto*, o **status do registro** será definido como *correto*. Se qualquer um dos status do domínio no registro for *sugerido*, *inválido*ou *corrigido*, o status do **registro** será definido como o respectivo valor. Por exemplo, se qualquer um dos status do domínio no registro for *sugerido*, o **status do registro** será definido como *sugerido*.  
+        -   **Status do registro**: além de ter um campo de status para cada domínio mapeado **( \<DomainName> _Status**), o campo **status do registro** exibe o status de um registro. Se qualquer um dos status do domínio no registro for *novo* ou *correto*, o **status do registro** será definido como *correto*. Se qualquer um dos status do domínio no registro for *sugerido*, *inválido*ou *corrigido*, o status do **registro** será definido como o respectivo valor. Por exemplo, se qualquer um dos status do domínio no registro for *sugerido*, o **status do registro** será definido como *sugerido*.  
   
             > [!NOTE]  
             >  Se você usar o serviço de dados de referência para a operação de limpeza, alguns dados adicionais sobre o valor de domínio também estarão disponíveis para exportação. Para obter mais informações, consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

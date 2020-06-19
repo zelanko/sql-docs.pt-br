@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d6dc089acb1d15491817d8876dee82951e4495d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061685"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925847"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor de origem ADO NET (Página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem ADO NET** para selecionar o gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)] para a origem. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
@@ -47,11 +46,11 @@ ms.locfileid: "66061685"
 |Tabela ou exibição|Recupere os dados de uma tabela ou visualize na fonte de dados [!INCLUDE[vstecado](../includes/vstecado-md.md)] .|  
 |Comando SQL|Recupere os dados da fonte de dados [!INCLUDE[vstecado](../includes/vstecado-md.md)] usando uma consulta SQL.|  
   
- **Visualizar**  
+ **Visualização**  
  Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A**visualização** pode exibir até 200 linhas.  
   
 > [!NOTE]  
->  Quando você visualiza os dados, as colunas com um tipo de dado CLR definido pelo usuário não contêm dados. Em vez disso, o valor \<valor muito grande para ser exibido> ou System.Byte[] é exibido. O primeiro é exibido quando a fonte de dados é acessada usando o provedor [!INCLUDE[vstecado](../includes/vstecado-md.md)] , o último ao usar o provedor Native Client do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  Quando você visualiza os dados, as colunas com um tipo de dado CLR definido pelo usuário não contêm dados. Em vez disso, os valores \<value too big to display> ou System. Byte [] são exibidos. O primeiro é exibido quando a fonte de dados é acessada usando o provedor [!INCLUDE[vstecado](../includes/vstecado-md.md)] , o último ao usar o provedor Native Client do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="data-access-mode-dynamic-options"></a>Opções dinâmicas de modo de acesso aos dados  
   

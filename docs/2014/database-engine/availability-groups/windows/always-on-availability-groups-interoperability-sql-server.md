@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55e19c050d0dd5d0a07c12f88076c423ade3281a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937197"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Grupos de disponibilidade AlwaysOn: interoperabilidade (SQL Server)
   Este tópico documenta interoperabilidade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com outros recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -31,7 +30,7 @@ ms.locfileid: "62815742"
 |Recurso|Mais informações|  
 |-------------|----------------------|  
 |captura de dados de alterações|[Replicação, Controle de Alterações, captura de dados de alteração e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
-|controle de alterações|[Replicação, Controle de Alterações, captura de dados de alteração e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
+|Change tracking|[Replicação, Controle de Alterações, captura de dados de alteração e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
 |Bancos de dados independentes|[Bancos de dados independentes com grupos de disponibilidade AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)|  
 |Criptografia de banco de dados|[Bancos de dados criptografados com Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |Instantâneos de banco de dados|[Instantâneos do banco de dados com Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
@@ -40,7 +39,7 @@ ms.locfileid: "62815742"
 |Envio de logs|[Pré-requisitos para migrar do envio de logs para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
 |RBS (Armazenamento de Blob Remoto)|[Remote BLOB Store &#40;RBS&#41; e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
 |Replicação[Configurar replicação para grupos de disponibilidade AlwaysOn (SQL Server)](configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [Mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [Replicação, Controle de Alterações, captura de dados de alteração e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [Assinantes de replicação e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)|  
-|Serviços de análise|[Analysis Services com grupos de disponibilidade AlwaysOn](analysis-services-with-always-on-availability-groups.md)|  
+|Analysis Services|[Analysis Services com grupos de disponibilidade AlwaysOn](analysis-services-with-always-on-availability-groups.md)|  
 |Reporting Services|Utilize réplicas secundárias somente leitura como uma fonte de dados de relatório e reduza a carga em sua réplica de leitura/gravação primária.<br /><br /> [Reporting Services com Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](reporting-services-with-always-on-availability-groups-sql-server.md)|  
 |Agente de Serviço|[Service Broker com Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
 |SQL Server Agent||  
