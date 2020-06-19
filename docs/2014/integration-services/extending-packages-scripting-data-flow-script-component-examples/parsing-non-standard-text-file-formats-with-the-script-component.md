@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40139962f6c5fd77611ccd486785cd6afadeff69
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769002"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968596"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisando formatos de arquivo de texto fora do padrão com o componente Script
   Quando seus dados de origem estiverem dispostos em um formato não padrão, talvez seja mais conveniente consolidar toda a sua lógica de análise em um único script do que reunir várias transformações [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para chegar ao mesmo resultado.  

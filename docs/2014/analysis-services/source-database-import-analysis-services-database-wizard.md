@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 64f1c970-5be4-4a36-939e-f1d1960d477f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7af29b6a9ea8decb6739052ed1cb06f62547b46f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c368f438bc0e6f98034d8f386d0f314d7b75f4df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940487"
 ---
 # <a name="source-database-import-analysis-services-database-wizard"></a>Banco de dados de origem (Assistente para Importação de Bancos de Dados do Analysis Services)
   Use a página **Banco de dados de origem** para selecionar a instância e o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dos quais criar um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

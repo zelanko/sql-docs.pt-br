@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39e84cf00810a45e48d1d1210bca54cd30ddfff6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62634263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061889"
 ---
 # <a name="change-the-environment-layout"></a>Alterar o layout do ambiente
   Os componentes do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] competem por espaço de tela. Para ter mais espaço, você pode fechar, ocultar ou mover componentes do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Os exercícios desta página movem os componentes para locais diferentes.  
@@ -52,7 +51,7 @@ ms.locfileid: "62634263"
   
     -   Float  
   
-    -   Encaixar  
+    -   Dock  
   
     -   Encaixar como documento com guias  
   

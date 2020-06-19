@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289444"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068379"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gerenciamento extensível de chaves usando o Azure Key Vault (SQL Server)
-  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conector para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que a criptografia Aproveite o serviço de Azure Key Vault como um [gerenciamento extensível de chaves &#40;](extensible-key-management-ekm.md) provedor de&#41;do EKM para proteger suas chaves de criptografia.
+  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conector para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permite que a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografia Aproveite o serviço de Azure Key Vault como um [gerenciamento extensível de chaves &#40;](extensible-key-management-ekm.md) provedor de&#41;do EKM para proteger suas chaves de criptografia.
 
  Incluso neste tópico:
 
@@ -94,7 +93,7 @@ ms.locfileid: "79289444"
 
      Links para a documentação do Azure Key Vault
 
-    -   [O que é o Azure Key Vault?](https://go.microsoft.com/fwlink/?LinkId=521401)
+    -   [O que é o Cofre da Chave do Azure?](https://go.microsoft.com/fwlink/?LinkId=521401)
 
     -   [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)
 
@@ -159,9 +158,9 @@ ms.locfileid: "79289444"
 2.  Instalação de uma credencial [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um logon de administrador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar o cofre de chave a fim de configurar e gerenciar cenários de criptografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
     > [!IMPORTANT]
-    >  O argumento **Identity** de `CREATE CREDENTIAL` requer o nome do cofre de chaves. O argumento **Secret** de `CREATE CREDENTIAL` requer que a * \<ID do cliente>* (sem hifens) e * \<>de segredo* sejam transmitidos juntos sem um espaço entre eles.
+    >  O argumento **Identity** de `CREATE CREDENTIAL` requer o nome do cofre de chaves. O argumento **Secret** de `CREATE CREDENTIAL` requer o *\<Client ID>* (sem hifens) e *\<Secret>* deve ser passado juntos sem um espaço entre eles.
 
-     No exemplo a seguir, a **ID** do cliente`EF5C8E09-4D2A-4A76-9998-D93440D8115D`() é removida dos hifens e inserida como a `EF5C8E094D2A4A769998D93440D8115D` cadeia de caracteres e o **segredo** é representado pela cadeia de caracteres *SECRET_sysadmin_login*.
+     No exemplo a seguir, a **ID do cliente** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) é removida dos hifens e inserida como a cadeia de caracteres `EF5C8E094D2A4A769998D93440D8115D` e o **segredo** é representado pela cadeia de caracteres *SECRET_sysadmin_login*.
 
     ```sql
     USE master;
@@ -175,7 +174,7 @@ ms.locfileid: "79289444"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     Para obter um exemplo de como usar variáveis `CREATE CREDENTIAL` para os argumentos e remover programaticamente os hifens da ID do cliente, consulte [criar credencial &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
+     Para obter um exemplo de como usar variáveis para os `CREATE CREDENTIAL` argumentos e remover programaticamente os hifens da ID do cliente, consulte [criar credencial &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
 
 3.  Se você importou uma chave assimétrica, conforme descrito anteriormente na etapa 1, seção 3, abra a chave fornecendo o nome da chave no exemplo a seguir.
 
@@ -224,9 +223,9 @@ ms.locfileid: "79289444"
 1.  Crie uma credencial [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para usar quando acessar o cofre chave EKM durante o carregamento de banco de dados.
 
     > [!IMPORTANT]
-    >  O argumento **Identity** de `CREATE CREDENTIAL` requer o nome do cofre de chaves. O argumento **Secret** de `CREATE CREDENTIAL` requer que a * \<ID do cliente>* (sem hifens) e * \<>de segredo* sejam transmitidos juntos sem um espaço entre eles.
+    >  O argumento **Identity** de `CREATE CREDENTIAL` requer o nome do cofre de chaves. O argumento **Secret** de `CREATE CREDENTIAL` requer o *\<Client ID>* (sem hifens) e *\<Secret>* deve ser passado juntos sem um espaço entre eles.
 
-     No exemplo a seguir, a **ID** do cliente`EF5C8E09-4D2A-4A76-9998-D93440D8115D`() é removida dos hifens e inserida como a `EF5C8E094D2A4A769998D93440D8115D` cadeia de caracteres e o **segredo** é representado pela cadeia de caracteres *SECRET_DBEngine*.
+     No exemplo a seguir, a **ID do cliente** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) é removida dos hifens e inserida como a cadeia de caracteres `EF5C8E094D2A4A769998D93440D8115D` e o **segredo** é representado pela cadeia de caracteres *SECRET_DBEngine*.
 
     ```sql
     USE master;

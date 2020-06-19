@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f7a685a57bf07b812aefc2bd5406210b86054c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781065"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933502"
 ---
 # <a name="links-in-clr-integration-security"></a>Links em segurança da integração CLR
   Esta seção descreve como partes do código do usuário podem chamar uma à outra no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tanto em [!INCLUDE[tsql](../../includes/tsql-md.md)] quanto em uma das linguagens gerenciadas. Essas relações entre objetos são conhecidas como links.  

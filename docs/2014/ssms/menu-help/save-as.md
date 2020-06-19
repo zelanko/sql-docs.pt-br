@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 441ed50984ef6bbfcdaec47be0fb29aa37cf69c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062011"
 ---
 # <a name="save-as"></a>Salvar como
-  Use essa caixa de diálogo para salvar uma instância do item atual em um local específico em um formato de arquivo específico. Para exibir essa caixa de diálogo, clique em **salvar** * \<arquivo>* **como** no menu **arquivo** (em que * \<arquivo>* é o nome do item atual) ou pressione ALT + F, a no editor de códigos.  
+  Use essa caixa de diálogo para salvar uma instância do item atual em um local específico em um formato de arquivo específico. Para exibir essa caixa de diálogo, clique em **salvar** *\<file>* **como** no menu **arquivo** (em que *\<file>* é o nome do item atual) ou pressione ALT + F, a no editor de códigos.  
   
 ## <a name="central-panel"></a>Painel central  
  **Salvar em**  

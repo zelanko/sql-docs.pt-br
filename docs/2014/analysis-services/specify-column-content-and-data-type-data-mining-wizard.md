@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f23bc2e0f21f15c0af1a26d64e528c65632d75a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940417"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Especificar tipo de conteúdo e de dados da coluna (Assistente de Mineração de Dados)
   Use a página **Especificar Tipo de Conteúdo e de Dados da Coluna** para especificar o uso e o tipo de dados de cada coluna selecionada na página anterior do assistente. Se desejar ignorar a coluna, clique em **Voltar** para voltar à página **Especificar os Dados de Treinamento**e desmarque todas as caixas de seleção.  
@@ -50,7 +49,7 @@ ms.locfileid: "66068465"
 |Discretizado|Especifique que a coluna contém valores numéricos que foram tornados discretos ou podem ser tratados como valores discretos.|  
 |Discreto|Especifique que a coluna contém valores de texto ou outros valores não numéricos.|  
   
- **Tipo de dados**  
+ **Data type**  
  Especifique o tipo de dados da coluna.  
   
  Os seguintes valores estão disponíveis:  

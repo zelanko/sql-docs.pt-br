@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53eaf828dd3fe6f5fa4056bda9dbc428dfa5d385
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054635"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>URL do Gerenciador de Relatórios (modo nativo do SSRS)
   Use a página URL do Gerenciador de Relatórios para configurar ou modificar a URL usada para acessar o Gerenciador de Relatórios. Por padrão, a URL do Gerenciador de Relatórios herda o prefixo, o endereço IP e a porta da URL do serviço Web Servidor de Relatórios. Isso ocorre porque o Gerenciador de Relatórios fornece acesso front-end ao serviço Web que é executado no mesmo serviço do Servidor de Relatório. Se você estiver isolando os aplicativos de serviço e usando o Gerenciador de Relatórios para acessar um serviço Web Servidor de Relatórios em um computador diferente, deverá editar o arquivo RSReportServer.config para apontar o Gerenciador de Relatórios para uma instância diferente. Para obter mais informações sobre como configurar uma conexão de Report Manager com um servidor de relatório remoto, consulte [Gerenciador de Configurações do Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
  Se estiver configurando o servidor de relatório para execução no modo integrado do SharePoint, não crie uma URL do Gerenciador de Relatórios. Não há suporte ao Gerenciador de Relatórios em um servidor de relatório que é executado no modo integrado do SharePoint. Se já existir uma URL para o Gerenciador de Relatórios, ela ficará indisponível depois que você configurar o servidor de relatório para execução no modo integrado do SharePoint.  
   

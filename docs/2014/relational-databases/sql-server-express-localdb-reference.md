@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 06774a1a450570973541d4e77db8b7c259ca0243
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb726c57c213363e10478068d6ef8fe1c979036
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62715153"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068326"
 ---
 # <a name="sql-server-express-localdb-reference"></a>Referência de LocalDB do SQL Server Express
   Esta seção contém informações sobre o LocalDB do SQL Server Express:  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf4eb1d7595d16369a0355562f090b746a4203ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da8d6adce66ac5b97e533b5afaefabda40e4b966
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953416"
 ---
 # <a name="set-a-session-language"></a>Definir um idioma de sessão
   O idioma da sessão pode ser usado para definir como os seguintes elementos são exibidos no servidor com base na preferência cultural e de idioma:  

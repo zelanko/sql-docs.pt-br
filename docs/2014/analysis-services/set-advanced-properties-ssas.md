@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c657b4670acaab008bafa24def05102938a99d0e
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: dd015873e8ca513e6a5a3b34b77a872b7fd8906b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940567"
 ---
 # <a name="set-advanced-properties-ssas"></a>Definir propriedades avançadas (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar configurações de propriedades adicionais para uma conexão de fonte de dados. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
   
 ## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
- **Fornecedor**  
+ **Provedores**  
  Selecione o provedor a ser usado para a conexão de fonte de dados. Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador.  
   
  **Cadeia de conexão**  

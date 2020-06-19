@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257fec0f1d7ce59ce84cc3c54b9b5d105440a6f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968708"
 ---
 # <a name="developing-a-custom-log-provider"></a>Desenvolvendo um provedor de log personalizado
   O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tem recursos de log extensos que possibilitam capturar eventos que ocorrem durante a execução do pacote. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui vários provedores de logs que permitem a criação e o armazenamento de logs em formatos como XML, texto, banco de dados ou no log de eventos do Windows. Se os provedores de log e os formatos de saída fornecidos não atenderem totalmente aos seus requisitos, você poderá criar um provedor de log personalizado.
@@ -36,14 +35,14 @@ ms.locfileid: "78176289"
 
  [Codificando um provedor de log personalizado](coding-a-custom-log-provider.md) Descreve como implementar um provedor de log personalizado substituindo os métodos e as propriedades da classe base.
 
- [Desenvolvendo uma interface do usuário para um provedor de log personalizado](developing-a-user-interface-for-a-custom-log-provider.md) Não há suporte para interfaces de usuário personalizadas para provedores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]log personalizados no.
+ [Desenvolvendo uma interface do usuário para um provedor de log personalizado](developing-a-user-interface-for-a-custom-log-provider.md) Não há suporte para interfaces de usuário personalizadas para provedores de log personalizados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 ### <a name="information-common-to-all-custom-objects"></a>Informações comuns a todos os objetos personalizados
  Para obter informações comuns a todos os tipos de objetos personalizados que você pode criar no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consulte os tópicos a seguir:
 
- [Desenvolvendo objetos personalizados para Integration Services](../developing-custom-objects-for-integration-services.md) Descreve as etapas básicas na implementação de todos os tipos de objetos [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]personalizados para o.
+ [Desenvolvendo objetos personalizados para Integration Services](../developing-custom-objects-for-integration-services.md) Descreve as etapas básicas na implementação de todos os tipos de objetos personalizados para o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
  [Persistência de objetos personalizados](../persisting-custom-objects.md) Descreve a persistência personalizada e explica quando é necessário.
 

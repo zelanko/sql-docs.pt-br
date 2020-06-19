@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176266"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968561"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Criando uma fonte com o componente Script
   Você usa um componente de origem no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para carregar dados de uma fonte de dados a serem passados para transformações e destinos downstream. Normalmente, você se conecta à fonte de dados por um gerenciador de conexões existente.
@@ -60,7 +59,7 @@ ms.locfileid: "78176266"
 -   Talvez você queira criar uma ou mais saídas adicionais, tais como uma saída de erro simulada para linhas que contêm valores inesperados. Use os botões **Adicionar Saída** e **Remover Saída** para gerenciar as saídas do componente de origem. Todas as linhas de entrada são direcionadas a todas as saídas disponíveis, a menos que você também especifique um valor idêntico diferente de zero para a propriedade `ExclusionGroup` das saídas onde você pretende direcionar cada linha a apenas uma das saídas que compartilham o mesmo valor `ExclusionGroup`. O valor de inteiro específico selecionado para identificar o `ExclusionGroup` não é significante.
 
     > [!NOTE]
-    >  Você também poderá usar um valor de propriedade `ExclusionGroup` diferente de zero com uma única saída quando não quiser gerar todas as linhas. Porém, nesse caso, você deve chamar explicitamente o método **DirectRowTo\<outputbuffer>** para cada linha que deseja enviar à saída.
+    >  Você também poderá usar um valor de propriedade `ExclusionGroup` diferente de zero com uma única saída quando não quiser gerar todas as linhas. Nesse caso, no entanto, você deve chamar explicitamente o método **DirectRowTo \<outputbuffer> ** para cada linha que deseja enviar para a saída.
 
 -   Talvez você queira atribuir um nome amigável às saídas. Posteriormente, você fará referência às saídas pelos nomes no seu script, usando as propriedades de acessador digitadas, criadas para você no código gerado automaticamente.
 
@@ -69,7 +68,7 @@ ms.locfileid: "78176266"
  Para obter mais informações sobre a página **Entradas e Saídas** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Entradas e Saídas&#41;](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Adicionando variáveis
- Se houver qualquer variável existente cujos valores você deseja usar em seu script, você poderá adicioná-las nos campos de `ReadOnlyVariables` propriedade `ReadWriteVariables` e na página **script** do **Editor de transformação scripts**.
+ Se houver qualquer variável existente cujos valores você deseja usar em seu script, você poderá adicioná-las nos campos de `ReadOnlyVariables` `ReadWriteVariables` propriedade e na página **script** do **Editor de transformação scripts**.
 
  Ao inserir diversas variáveis nos campos de propriedade, separe os nomes delas por vírgulas. Você também pode inserir várias variáveis clicando no botão de reticências (**...**) ao lado `ReadOnlyVariables` dos `ReadWriteVariables` campos de propriedade e e selecionando variáveis na caixa de diálogo **Selecionar variáveis** .
 
@@ -87,7 +86,7 @@ ms.locfileid: "78176266"
 
  A classe `ScriptMain` inclui um stub para o método `CreateNewOutputRows`. O `CreateNewOutputRows` é o método mais importante em um componente de origem.
 
- Se você abrir a janela **Explorador de projeto** no VSTA, poderá ver que o componente script também gerou itens de projeto e `BufferWrapper` `ComponentWrapper` somente leitura. A classe `ScriptMain` herda da classe `UserComponent` no item de projeto `ComponentWrapper`.
+ Se você abrir a janela **Explorador de projeto** no VSTA, poderá ver que o componente script também gerou itens de `BufferWrapper` projeto e somente leitura `ComponentWrapper` . A classe `ScriptMain` herda da classe `UserComponent` no item de projeto `ComponentWrapper`.
 
  Em tempo de execução, o mecanismo de fluxo de dados invoca o método `PrimeOutput` na classe `UserComponent`, que substitui o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> da classe pai <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. O método `PrimeOutput`, por sua vez, chama os seguintes métodos:
 
@@ -114,14 +113,14 @@ ms.locfileid: "78176266"
  Os exemplos a seguir demonstram o código personalizado que é requerido na classe `ScriptMain` para criar um componente de origem.
 
 > [!NOTE]
->  Esses exemplos usam a tabela **Person. Address** no banco `AdventureWorks` de dados de exemplo e passam sua primeira e quarta colunas, as colunas City **intAddressID** e **nvarchar (30)** , por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.
+>  Esses exemplos usam a tabela **Person. Address** no `AdventureWorks` banco de dados de exemplo e passam sua primeira e quarta colunas, as colunas City **intAddressID** e **nvarchar (30)** , por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.
 
 ### <a name="adonet-source-example"></a>Exemplo de origem do ADO.NET
  Esse exemplo demonstra um componente de origem que usa um gerenciador de conexões do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente para carregar dados de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no fluxo de dados.
 
  Se você quiser executar esse código de exemplo, configure o pacote e o componente desta forma:
 
-1.  Crie um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexões que use `SqlClient` o provedor para se conectar `AdventureWorks` ao banco de dados.
+1.  Crie um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexões que use o `SqlClient` provedor para se conectar ao `AdventureWorks` banco de dados.
 
 2.  Adicione um novo componente Script à superfície do designer Fluxo de Dados e configure-o como uma origem.
 
@@ -134,7 +133,7 @@ ms.locfileid: "78176266"
 
 5.  Na página **Script**, clique em **Editar Script** e insira o script a seguir. Em seguida, feche o ambiente de desenvolvimento de script e o **Editor de Transformação Scripts**.
 
-6.  Crie e configure um componente de destino, como um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o componente de destino de exemplo demonstrado em [Criando um destino com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), que espera as colunas **AddressID** e **City**. Depois, conecte o componente de origem ao destino. (Você pode conectar uma fonte diretamente a um destino sem nenhuma transformação.) Você pode criar uma tabela de destino executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] comando no banco `AdventureWorks` de dados:
+6.  Crie e configure um componente de destino, como um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o componente de destino de exemplo demonstrado em [Criando um destino com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), que espera as colunas **AddressID** e **City**. Depois, conecte o componente de origem ao destino. (Você pode conectar uma fonte diretamente a um destino sem nenhuma transformação.) Você pode criar uma tabela de destino executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] comando no `AdventureWorks` banco de dados:
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -255,7 +254,7 @@ ms.locfileid: "78176266"
 
  Se você quiser executar esse código de exemplo, configure o pacote e o componente desta forma:
 
-1.  Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assistente de importação e exportação do para exportar a tabela **Person. Address** do banco de dados de `AdventureWorks` exemplo para um arquivo simples delimitado por vírgula. Esse exemplo usa o nome de arquivo ExportedAddresses.txt.
+1.  Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de importação e exportação do para exportar a tabela **Person. Address** do `AdventureWorks` banco de dados de exemplo para um arquivo simples delimitado por vírgula. Esse exemplo usa o nome de arquivo ExportedAddresses.txt.
 
 2.  Crie um gerenciador de conexões de arquivos simples que se conecta ao arquivo de dados exportado.
 
@@ -267,7 +266,7 @@ ms.locfileid: "78176266"
 
 6.  Na página **Script**, clique em **Editar Script** e insira o script a seguir. Em seguida, feche o ambiente de desenvolvimento de script e o **Editor de Transformação Scripts**.
 
-7.  Crie e configure um componente de destino, como um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o componente de destino de exemplo demonstrado em [Criando um destino com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Depois, conecte o componente de origem ao destino. (Você pode conectar uma fonte diretamente a um destino sem nenhuma transformação.) Você pode criar uma tabela de destino executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] comando no banco `AdventureWorks` de dados:
+7.  Crie e configure um componente de destino, como um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o componente de destino de exemplo demonstrado em [Criando um destino com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Depois, conecte o componente de origem ao destino. (Você pode conectar uma fonte diretamente a um destino sem nenhuma transformação.) Você pode criar uma tabela de destino executando o seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] comando no `AdventureWorks` banco de dados:
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b450d603ec1d7b8c930a0361d8070519b6a2a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068897"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940589"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurar propriedades de servidor no Analysis Services
   Um administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode modificar as propriedades padrão de configuração do servidor para uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cada instância tem suas próprias propriedades de configuração que podem ser definidas independentemente de outras instâncias no mesmo servidor.  
@@ -82,15 +81,15 @@ ms.locfileid: "66068897"
 |[Propriedades gerais](general-properties.md)|As propriedades gerais são básicas e avançadas e, incluem propriedades que definem o diretório de dados, diretório de backup e outros comportamentos do servidor.|  
 |[Propriedades de mineração de dados](data-mining-properties.md)|As propriedades de mineração de dados que controlam quais algoritmos são habilitados e quais são desabilitados. Por padrão, todos os algoritmos são habilitados.|  
 |DSO|DSO não tem mais suporte. Propriedades DSO são ignoradas.|  
-|[Propriedades de recurso](feature-properties.md)|As propriedades do recurso pertencem aos recursos de produtos, a maioria delas avançadas, inclusive propriedades que controlam vínculos entre instâncias do servidor.|  
-|[Propriedades FileStore](filestore-properties.md)|As propriedades de repositório de arquivos são apenas para uso avançado. Elas incluem configurações de gerenciamento de memória avançadas.|  
-|[Propriedades do gerenciador de bloqueio](lock-manager-properties.md)|As propriedades do gerenciador de bloqueio definem os comportamentos do servidor em relação aos bloqueios e aos tempos limite. A maioria dessas propriedades é apenas para uso avançado.|  
+|[Propriedades do recurso](feature-properties.md)|As propriedades do recurso pertencem aos recursos de produtos, a maioria delas avançadas, inclusive propriedades que controlam vínculos entre instâncias do servidor.|  
+|[Propriedades do repositório de filestore](filestore-properties.md)|As propriedades de repositório de arquivos são apenas para uso avançado. Elas incluem configurações de gerenciamento de memória avançadas.|  
+|[Propriedades do Gerenciador de bloqueio](lock-manager-properties.md)|As propriedades do gerenciador de bloqueio definem os comportamentos do servidor em relação aos bloqueios e aos tempos limite. A maioria dessas propriedades é apenas para uso avançado.|  
 |[Propriedades do log](log-properties.md)|As propriedades de log controlam onde e como os eventos são registrados no servidor. Isso inclui log de erros, log de exceções, flight recorder, log de consultas e rastreamentos.|  
 |[Propriedades de memória](memory-properties.md)|As propriedades de memória controlam como o servidor usa a memória. Eles são principalmente para uso avançado.|  
-|[Propriedades de rede](network-properties.md)|As propriedades de rede controlam o comportamento do servidor referente ao sistema de rede, inclusive propriedades que controlam a compressão e XML binário. A maioria dessas propriedades é apenas para uso avançado.|  
+|[Propriedades da rede](network-properties.md)|As propriedades de rede controlam o comportamento do servidor referente ao sistema de rede, inclusive propriedades que controlam a compressão e XML binário. A maioria dessas propriedades é apenas para uso avançado.|  
 |[Propriedades OLAP](olap-properties.md)|As propriedades OLAP controlam o processamento de dimensões e cubo, processamento lento, cache de dados e comportamento das consultas. Isso inclui propriedades básicas e avançadas.|  
 |[Propriedades de segurança](security-properties.md)|A seção de segurança contém propriedades básicas e avançadas que definem as permissões de acesso. Isso inclui configurações que pertencem a administradores e usuários.|  
-|[Propriedades de pool de threads](thread-pool-properties.md)|As propriedades de pool de threads controlam quantos threads o servidor cria. Essas são principalmente propriedades avançadas.|  
+|[Propriedades do pool de threads](thread-pool-properties.md)|As propriedades de pool de threads controlam quantos threads o servidor cria. Essas são principalmente propriedades avançadas.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciamento de instância do Analysis Services](../instances/analysis-services-instance-management.md)   

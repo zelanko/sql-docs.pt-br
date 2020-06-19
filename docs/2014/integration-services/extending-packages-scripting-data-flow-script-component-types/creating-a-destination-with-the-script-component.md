@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176284"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968560"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Criando um destino com o componente Script
   Você usa um componente de destino no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para salvar dados recebidos de fontes upstream e transformações em uma fonte de dados. Em geral, o componente de destino se conecta à fonte de dados através de um gerenciador de conexões existente.
@@ -66,9 +65,9 @@ ms.locfileid: "78176284"
  Para obter mais informações sobre a página **Entradas e Saídas** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Entradas e Saídas&#41;](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Adicionando variáveis
- Se você quiser usar variáveis existentes em seu script, poderá adicioná-las nos campos de `ReadOnlyVariables` propriedade `ReadWriteVariables` e na página **script** do **Editor de transformação scripts**.
+ Se você quiser usar variáveis existentes em seu script, poderá adicioná-las nos campos de `ReadOnlyVariables` `ReadWriteVariables` propriedade e na página **script** do **Editor de transformação scripts**.
 
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar várias variáveis clicando no botão de reticências (**...**) ao lado `ReadOnlyVariables` dos `ReadWriteVariables` campos de propriedade e e selecionando as variáveis na caixa de diálogo **Selecionar variáveis** .
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar várias variáveis clicando no botão de reticências (**...**) ao lado dos `ReadOnlyVariables` campos de propriedade e e `ReadWriteVariables` selecionando as variáveis na caixa de diálogo **Selecionar variáveis** .
 
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -82,7 +81,7 @@ ms.locfileid: "78176284"
 ### <a name="understanding-the-auto-generated-code"></a>Compreendendo o código gerado automaticamente
  Quando você abre o VSTA IDE depois de criar e configurar um componente de destino, a classe `ScriptMain` editável aparece no editor de códigos com um stub para o método `ProcessInputRow`. A classe `ScriptMain` é onde você escreverá seu código personalizado, e `ProcessInputRow` é o método mais importante em um componente de destino.
 
- Se você abrir a janela **Explorador de projeto** no VSTA, poderá ver que o componente script também gerou itens de projeto e `BufferWrapper` `ComponentWrapper` somente leitura. A classe `ScriptMain` herda da classe `UserComponent` no item de projeto `ComponentWrapper`.
+ Se você abrir a janela **Explorador de projeto** no VSTA, poderá ver que o componente script também gerou itens de `BufferWrapper` projeto e somente leitura `ComponentWrapper` . A classe `ScriptMain` herda da classe `UserComponent` no item de projeto `ComponentWrapper`.
 
  Em tempo de execução, o mecanismo de fluxo de dados invoca o método `ProcessInput` na classe `UserComponent`, que substitui o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> da classe pai <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. O método `ProcessInput`, por sua vez, executa um loop nas linhas do buffer de entrada e chama o método `ProcessInputRow` uma vez para cada linha.
 
@@ -101,14 +100,14 @@ ms.locfileid: "78176284"
  Os exemplos a seguir demonstram o código que é exigido na classe `ScriptMain` para criar um componente de destino.
 
 > [!NOTE]
->  Esses exemplos usam a tabela **Person. Address** no banco `AdventureWorks` de dados de exemplo e passam sua primeira e quarta colunas, as colunas **int * AddressID*** e **nvarchar (30) City** , por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.
+>  Esses exemplos usam a tabela **Person. Address** no `AdventureWorks` banco de dados de exemplo e passam sua primeira e quarta colunas, as colunas **int * AddressID*** e **nvarchar (30) City** , por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.
 
 ### <a name="adonet-destination-example"></a>Exemplo de destino ADO.NET
  Esse exemplo demonstra um componente de destino que usa um gerenciador de conexões existente do [!INCLUDE[vstecado](../../includes/vstecado-md.md)] para salvar dados do fluxo de dados em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Se você quiser executar esse código de exemplo, configure o pacote e o componente desta forma:
 
-1.  Crie um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexões que use `SqlClient` o provedor para se conectar `AdventureWorks` ao banco de dados.
+1.  Crie um [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gerenciador de conexões que use o `SqlClient` provedor para se conectar ao `AdventureWorks` banco de dados.
 
 2.  Crie uma tabela de destino executando o seguinte comando [!INCLUDE[tsql](../../includes/tsql-md.md)] no banco de dados `AdventureWorks`:
 

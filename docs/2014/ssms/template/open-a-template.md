@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b00a531c3b8abde6e9728039ece1de6a1866d3d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad12b20233cb753b28c4618ce53cd28ed850984c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63071865"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061952"
 ---
 # <a name="open-a-template"></a>Abrir um modelo
   Você pode abrir um modelo a partir do Explorador de Modelos.  

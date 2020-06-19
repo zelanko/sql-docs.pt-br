@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7c4df482-4a83-4da0-802b-3637b507693a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 801eb84df08837ec8e49b6bb0e28fc1f1115e674
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7195311fefe3f0f1b7b4d6d789aa8d8487bc3bfe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933497"
 ---
 # <a name="issabort-ole-db"></a>ISSAbort (OLE DB)
   A interface **ISSAbort** , que é exposta no provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, fornece o método [ISSAbort::Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) que é usado para cancelar o conjunto de linhas atual, além de todos os comandos executados em lotes com o comando que gerou inicialmente o conjunto de linhas e cuja execução ainda não foi concluída.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b9007ce0c5f0c05638f88fcb1ac27658b9f91c7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b77cc00c6b6faef7e22fc636a0b33703864d34d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926747"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Instalação de início rápido do SQL Server 2014
     
@@ -58,7 +57,7 @@ ms.locfileid: "82706883"
   
      Consulte [instalar SQL Server 2014 usando um arquivo de configuração](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md) para obter a sintaxe de exemplo e parâmetros de instalação para executar a instalação por meio de um arquivo de configuração.  
   
--   **SysPrep**  
+-   **Submeti**  
   
      Consulte [instalar SQL Server 2014 usando o Sysprep](../database-engine/install-windows/install-sql-server-using-sysprep.md) para obter informações de procedimentos sobre como instalar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando o Sysprep.  
   
@@ -138,7 +137,7 @@ ms.locfileid: "82706883"
 |Descrição|Tópico|  
 |-----------------|-----------|  
 |Use as informações deste tópico para determinar se você precisa desbloquear portas em um firewall para permitir o acesso ao [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou ao PowerPivot para SharePoint. Você pode seguir as etapas fornecidas neste tópico para definir as configurações de porta e firewall.|[Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
-|Este tópico apresenta uma visão geral da configuração do firewall e resume informações de interesse de um administrador do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|Este tópico apresenta uma visão geral da configuração do firewall e resume informações de interesse de um administrador do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Configurar o Firewall do Windows para permitir acesso SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Este tópico descreve como configurar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um ambiente multihomed.|[Configurar um computador multihomed para acesso ao SQL Server](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
 ###  <a name="uninstalling-sscurrent"></a><a name="BKMK_Uninstalling"></a>Desinstalando[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  

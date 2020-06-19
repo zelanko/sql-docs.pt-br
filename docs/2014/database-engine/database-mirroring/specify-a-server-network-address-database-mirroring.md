@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5da49fee774b7f70a0ab6108ee302d0ee28cec1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755063"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933927"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar um endereço de rede do servidor (Espelhamento de banco de dados)
   A configuração de uma sessão de espelhamento de banco de dados requer um endereço de rede de servidor para cada uma das instâncias de servidor. O endereço de rede de servidor de uma instância de servidor deve identificar a instância de forma inequívoca fornecendo um endereço de sistema e número de porta na qual a instância está escutando.  
@@ -32,11 +31,11 @@ ms.locfileid: "62755063"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Sintaxe para um endereço de rede de servidor  
  A sintaxe para um endereço de rede de servidor é do formato:  
   
- <strong>TCP<strong>://</strong>*\<sistema->de endereços *:<strong>*\<porta>* 
+ TCP<strong>://</strong> *\<system-address>* <strong> :<strong>*\<port>* 
   
- where  
+ onde  
   
--   *o endereço do sistema>é uma cadeia de caracteres que identifica inequivocamente o sistema do computador de destino. \<* Normalmente, o endereço de servidor é um nome de sistema (se os sistemas estiverem no mesmo domínio), um nome de domínio completamente qualificado ou um endereço de IP.  
+-   *\<system-address>* é uma cadeia de caracteres que identifica inequivocamente o sistema de computador de destino. Normalmente, o endereço de servidor é um nome de sistema (se os sistemas estiverem no mesmo domínio), um nome de domínio completamente qualificado ou um endereço de IP.  
   
     -   Se os sistemas estiverem no mesmo domínio, você poderá usar o nome do sistema de computador; por exemplo, `SYSTEM46`.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62755063"
         > [!NOTE]  
         >  Para obter informações sobre como achar um nome de domínio completamente qualificado, consulte "Encontrando o nome de domínio completamente qualificado", mais abaixo neste tópico.  
   
--   a porta>é o número da porta usado pelo ponto de extremidade de espelhamento da instância do servidor parceiro. * \<* Para obter informações sobre como especificar um ponto de extremidade, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   *\<port>* é o número da porta usado pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter informações sobre como especificar um ponto de extremidade, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Um ponto de extremidade de espelhamento de banco de dados pode usar qualquer porta disponível no sistema do computador. Cada número de porta em um sistema de computador deve estar associado a somente um ponto de extremidade e cada ponto de extremidade está associado a uma única instância de servidor; e assim, diferentes instâncias de servidor no mesmo servidor escutam em diferentes pontos de extremidade com portas diferentes. Por isso, a porta que você especifica no endereço de rede de servidor quando você configura uma sessão de espelhamento de banco de dados sempre dirigirá a sessão à instância de servidor cujo ponto de extremidade está associado a essa porta.  
   

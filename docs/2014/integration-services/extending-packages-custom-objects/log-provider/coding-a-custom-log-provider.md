@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d055769a8f854b58e455eec873c1c94a7f740393
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968726"
 ---
 # <a name="coding-a-custom-log-provider"></a>Codificando um provedor de log personalizado
   Depois de criar uma classe que herda da classe base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> e aplicar o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> a essa classe, você deve substituir a implementação das propriedades e dos métodos da classe base para fornecer sua funcionalidade personalizada.  
@@ -132,7 +131,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Gravando entradas de log  
- O método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> é chamado sempre que um objeto no pacote gera um evento chamando-se um método Fire\<evento> em uma das interfaces do evento. Cada evento normalmente é gerado com informações sobre seu contexto e uma mensagem explicativa. Entretanto, nem toda chamada para o método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> inclui informações de cada parâmetro do método. Por exemplo, alguns eventos padrão cujos nomes são autoexplicativos não fornecem MessageText e DataCode e DataBytes são destinados para informações suplementares opcionais.  
+ O <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> método é chamado toda vez que um objeto no pacote gera um evento chamando um \<event> método Fire em uma das interfaces de evento. Cada evento normalmente é gerado com informações sobre seu contexto e uma mensagem explicativa. Entretanto, nem toda chamada para o método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> inclui informações de cada parâmetro do método. Por exemplo, alguns eventos padrão cujos nomes são autoexplicativos não fornecem MessageText e DataCode e DataBytes são destinados para informações suplementares opcionais.  
   
  O exemplo de código seguinte implementa o método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> e grava os eventos no fluxo que foi aberto na seção anterior.  
   

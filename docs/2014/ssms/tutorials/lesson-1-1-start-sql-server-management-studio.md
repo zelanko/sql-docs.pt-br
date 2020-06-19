@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8c74a4c427e4fc89d32c0dcf961bf5f4b839fff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78288990"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061972"
 ---
 # <a name="start-sql-server-management-studio"></a>Iniciar o SQL Server Management Studio
   Para iniciar este tutorial, vamos olhar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "78288990"
     > [!NOTE]  
     >  O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não é instalado por padrão. Se o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] não estiver disponível, instale-o executando a Instalação. O [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] não está disponível com o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]O Express está disponível como um download gratuito no [centro de download da Microsoft](https://www.microsoft.com/download/details.aspx?id=14630), mas tem uma interface do usuário diferente da descrita neste tutorial.  
   
-2.  Na caixa de diálogo **Conectar ao Servidor** , verifique as configurações padrão e clique em **Conectar**. Para se conectar, a caixa **nome do servidor** deve conter o nome do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o está instalado. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] for uma instância nomeada, a caixa **nome do servidor** também deverá conter o nome da instância no \< *computer_name*>\\<*instance_name*>.  
+2.  Na caixa de diálogo **Conectar ao Servidor** , verifique as configurações padrão e clique em **Conectar**. Para se conectar, a caixa **nome do servidor** deve conter o nome do computador onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado. Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] for uma instância nomeada, a caixa **nome do servidor** também deverá conter o nome da instância no formato \<*computer_name*> \\ < *instance_name*>.  
   
 ## <a name="management-studio-components"></a>Componentes do Management Studio  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apresenta informações em janelas dedicadas a tipos específicos de informações. Informações de banco de dados são exibidas no Pesquisador de Objetos e janelas de documentos.  
