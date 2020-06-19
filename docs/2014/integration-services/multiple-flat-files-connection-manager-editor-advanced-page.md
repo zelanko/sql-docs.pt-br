@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de238c1012a255ceb59086e542d5529b8b907915
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5da68a6379c0d65c4d5a83af2b359f96784d4ae2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950906"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (Página Avançado)
   Use a página **Avançado** da caixa de diálogo **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para definir propriedades como o tipo de dados e os delimitadores de cada coluna nos arquivos de texto com os quais o gerenciador de conexões de arquivos simples se conecta.  
@@ -46,7 +45,7 @@ ms.locfileid: "66057545"
 |**TextQualified**|Indica se os dados de texto são qualificados usando um caractere de qualificador de texto. Os valores válidos são:<br /><br /> **True**: os dados de texto no arquivo simples são qualificados.<br /><br /> **False**: os dados de texto no arquivo simples não são qualificados.|  
 |**Nome**|Forneça um nome de coluna. O padrão é uma lista numerada das colunas; entretanto, é possível escolher qualquer nome exclusivo e descritivo.|  
 |**DataScale**|Especifica a escala de dados numéricos. A escala se refere ao número de casas decimais. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}** – as colunas são delimitadas por uma combinação de retorno de carro e de alimentação de linha<br /><br /> **{CR}** -as colunas são delimitadas por um retorno de carro<br /><br /> **{LF}** -as colunas são delimitadas por um feed de linha<br /><br /> **Ponto e vírgula {;}** -as colunas são delimitadas por ponto e vírgula<br /><br /> **Dois pontos {:}** -as colunas são delimitadas por dois-pontos<br /><br /> As colunas de **vírgulas {,} ** são delimitadas por uma vírgula<br /><br /> **Tab {t}** -as colunas são delimitadas por uma guia<br /><br /> **Barra vertical {&#124;}** – as colunas são delimitadas por uma barra vertical|  
+|**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}** – as colunas são delimitadas por uma combinação de retorno de carro e de alimentação de linha<br /><br /> **{CR}** -as colunas são delimitadas por um retorno de carro<br /><br /> **{LF}** -as colunas são delimitadas por um feed de linha<br /><br /> **Ponto e vírgula {;}** -as colunas são delimitadas por ponto e vírgula<br /><br /> **Dois pontos {:}** -as colunas são delimitadas por dois-pontos<br /><br /> **Vírgula {,} ** -as colunas são delimitadas por uma vírgula<br /><br /> **Tab {t}** -as colunas são delimitadas por uma guia<br /><br /> **Barra vertical {&#124;}** – as colunas são delimitadas por uma barra vertical|  
 |**DataPrecision**|Especifica a precisão de dados numéricos. A precisão se refere ao número de dígitos. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Especifica um valor a ser armazenado como contagem de bytes; no caso de arquivos Unicode, isso será exibido como contagem de caracteres. Este valor é ignorado nas colunas delimitadas.<br /><br /> **Observação** No modelo de objeto, o nome desta propriedade é ColumnWidth.|  
   

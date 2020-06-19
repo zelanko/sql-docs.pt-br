@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18dfb8c120facf60bdd60d3c88103fcf3402452a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914221"
 ---
 # <a name="sap-bw-source"></a>Origem SAP BW
   A fonte SAP BW é o componente de fonte do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW. Assim, a origem do SAP BW extrai dados de um sistema SAP Netweaver BW versão 7 e torna estes dados disponíveis para o fluxo de dados em um pacote do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

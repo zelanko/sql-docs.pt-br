@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e80d5790f78c83a8a1ff3059e12e0946e206c060
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a6503caec3f153878e360ee29ce09a5c099ade5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211456"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064526"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Criar um trabalho mestre do SQL Server Agent
-  Este tópico descreve como criar um trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente mestre no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
+  Este tópico descreve como criar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente mestre no usando o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
@@ -35,7 +34,7 @@ ms.locfileid: "68211456"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Trabalhos distribuídos que possuem etapas associadas a um proxy são executados no contexto da conta proxy no servidor de destino. Certifique-se de que as seguintes condições sejam atendidas, ou as etapas de trabalho associadas a um proxy não serão baixadas do servidor mestre para o destino:  
   
--   A subchave do registro **\ HKEY_LOCAL_MACHINE\\<\software\microsoft\microsoft SQL Server*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) é definida como 1 (true). Por padrão, essa subchave encontra-se definida como 0 (falso).  
+-   A subchave do registro **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ < *instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) é definida como 1 (true). Por padrão, essa subchave encontra-se definida como 0 (falso).  
   
 -   Existe uma conta proxy no servidor de destino com o mesmo nome da conta proxy do servidor mestre sob a qual a etapa de trabalho é executada.  
   

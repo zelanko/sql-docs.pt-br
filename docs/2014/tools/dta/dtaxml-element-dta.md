@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0682c6100a96fbfb3016dec4bead4c385190192f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87866ebff3a7c6ae74157053492b76f49d713927
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470033"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048467"
 ---
 # <a name="dtaxml-element-dta"></a>Elemento DTAXML (DTA)
   O elemento raiz de um arquivo de entrada ou saída XML do Orientador de Otimização do Mecanismo de Banco de Dados, **DTAXML** , contém todos os elementos que descrevem a entrada e a saída de ajuste geradas pelo Orientador.  
@@ -37,18 +36,18 @@ ms.locfileid: "62470033"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
-|`xmlns:xsi`|Obrigatórios. Identifica o namespace da instância do esquema XML. Os atributos deste espaço para namespace são usados como referência ao esquema que é utilizado para validar o arquivo XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Valor obrigatório:[http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
+|`xmlns:xsi`|Obrigatórios. Identifica o namespace da instância do esquema XML. Os atributos deste espaço para namespace são usados como referência ao esquema que é utilizado para validar o arquivo XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Valor obrigatório: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |`xmlns`|Obrigatórios. Identifica o namespace do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Se você editar o arquivo XML do Orientador de Otimização do Mecanismo de Banco de Dados usando o editor de XML no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], esse valor será usado pela Ajuda de F1 e pela Ajuda Dinâmica para localizar possíveis tópicos de referência nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Valor obrigatório:<br /><br /> do[Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados](https://go.microsoft.com/fwlink/?LinkId=43100)|  
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|**Tipo de dados e comprimento**|Nenhum.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**C'**|Obrigatória uma vez por arquivo XML DTA.|  
+|**Ocorrência**|Obrigatória uma vez por arquivo XML DTA.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62470033"
  Para obter exemplos de elementos **DTAXML** típicos, consulte [Exemplos de arquivo de entrada XML &#40;DTA&#41;](xml-input-file-samples-dta.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
+ [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
  [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

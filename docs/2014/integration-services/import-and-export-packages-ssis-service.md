@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058147"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965666"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importar e exportar pacotes (serviço SSIS)
     
@@ -50,7 +49,7 @@ ms.locfileid: "66058147"
   
  Você pode importar ou exportar um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de ou para os seguintes locais:  
   
--   Você pode importar um pacote armazenado em uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no sistema de arquivos ou no repositório de [!INCLUDE[ssIS](../includes/ssis-md.md)] pacotes. O pacote importado é salvo no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou em uma pasta do armazenamento de pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+-   Você pode importar um pacote armazenado em uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , no sistema de arquivos ou no [!INCLUDE[ssIS](../includes/ssis-md.md)] repositório de pacotes. O pacote importado é salvo no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou em uma pasta do armazenamento de pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 -   É possível exportar um pacote armazenado em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no sistema de arquivos ou no Repositório de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] para outro formato e outro local de armazenamento.  
   
@@ -70,11 +69,11 @@ ms.locfileid: "66058147"
   
     -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
   
-    -   Na caixa **nome do servidor** , forneça um nome de servidor ou clique em ** \<procurar mais... >** e localize o servidor a ser usado.  
+    -   Na caixa **nome do servidor** , forneça um nome de servidor ou clique **\<Browse for more...>** e localize o servidor a ser usado.  
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   
-4.  No Pesquisador de Objetos, expanda a pasta **Pacotes Armazenados** .  
+4.  No Pesquisador de objetos, expanda a pasta **pacotes armazenados** .  
   
 5.  Expanda as subpastas para localizar a pasta para a qual você deseja importar um pacote.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66058147"
   
     -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
   
-    -   Na caixa **nome do servidor** , forneça um nome de servidor ou clique em ** \<procurar mais... >** e localize o servidor a ser usado.  
+    -   Na caixa **nome do servidor** , forneça um nome de servidor ou clique **\<Browse for more...>** e localize o servidor a ser usado.  
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cad01eae45d534f0f74911ce8f57827858cc920
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211982"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063228"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Criar uma especificação de auditoria de banco de dados e de servidor
   Este tópico descreve como criar uma especificação de auditoria de servidor e de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto de *auditoria SQL Server* coleta uma única instância de ações no nível de servidor ou banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação de Auditoria de Banco de Dados* pertence a uma auditoria. É possível criar uma especificação da auditoria de banco de dados por banco de dados do SQL Server por auditoria. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
+ *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação de Auditoria de Banco de Dados* pertence a uma auditoria. É possível criar uma especificação da auditoria de banco de dados por banco de dados do SQL Server por auditoria. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
   
  **Neste tópico**  
   
@@ -62,7 +61,7 @@ ms.locfileid: "68211982"
   
 #### <a name="to-create-a-server-audit"></a>Para criar uma auditoria de servidor  
   
-1.  No Pesquisador de objetos, expanda a pasta **segurança** .  
+1.  No Pesquisador de Objetos, expanda a pasta **Segurança** .  
   
 2.  Clique com o botão direito do mouse na pasta **auditorias** e selecione **nova auditoria...**. Para obter mais informações, consulte [criar uma auditoria de servidor e uma especificação de auditoria de servidor](create-a-server-audit-and-server-audit-specification.md).  
   
@@ -90,13 +89,13 @@ ms.locfileid: "68211982"
      **Esquema de Objeto**  
      Exibe o esquema para **Object Name**especificado.  
   
-     **Nome do objeto**  
+     **Object Name**  
      Nome do objeto a ser auditado. Isso só está disponível para ações de auditoria e não se aplica a grupos de auditoria.  
   
      **Reticências (...)**  
      Abre a caixa de diálogo **Selecionar Objetos** para procurar e selecionar um objeto disponível, com base no **Tipo de Ação de Auditoria**especificado.  
   
-     **Nome da entidade**  
+     **Nome Principal**  
      A conta para filtrar a auditoria para o objeto que está sendo auditado.  
   
      **Reticências (...)**  

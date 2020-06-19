@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3aad4cf16c39897bc0796f4fb161eaf39abdb5fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874494"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938597"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Ordenação e armazenamento de cadeia de caracteres em modelos tabulares
   Cadeias de caracteres (valores de texto) são armazenadas em um formato altamente compactado em modelos de tabela; por causa desta compactação, você pode obter resultados inesperados ao recuperar cadeias de caracteres inteiras ou parciais. Além disso, como a localidade e a ordenação são herdadas hierarquicamente do objeto pai mais próximo, se o idioma da cadeia de caracteres não for definido explicitamente, a localidade e a ordenação do pai poderão afetar como cada cadeia de caracteres é armazenada e se ela é exclusiva ou combinada com cadeias de caracteres semelhantes, conforme definido pela ordenação pai.  
@@ -41,7 +40,7 @@ ms.locfileid: "70874494"
 |Árvore|  
 |PlAnT|  
 |trEE|  
-|árvore|  
+|tree|  
 |PlAnT|  
 |trEE|  
   

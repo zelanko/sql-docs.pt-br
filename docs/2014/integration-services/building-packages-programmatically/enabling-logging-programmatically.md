@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bff8df8004c4553d5fa07ebb5ca46863a998bd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4eb09433e2b2db77e6a2f40c1acf204513585a9f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924887"
 ---
 # <a name="enabling-logging-programmatically"></a>Habilitando o registro em log programaticamente
   O mecanismo de tempo de execução fornece uma coleção de objetos <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> que permitem que informações específicas a eventos sejam capturadas durante a validação e a execução de pacotes. Os objetos <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> estão disponíveis para objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, inclusive os objetos <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> e <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. O registro em log é habilitado em contêineres individuais ou no pacote inteiro.

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 856aa12f6ad5e5094324e0df65941bc63d611451
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011898"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026692"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Manter valores nulos ou use os valores padrão durante a importação em massa (SQL Server)
   Por padrão, quando os dados são importados para uma tabela, o comando **bcp** e a instrução BULK INSERT observam os padrões definidos para as colunas na tabela. Por exemplo, se houver um campo nulo em um arquivo de dados, o valor padrão para a coluna será carregado no campo nulo. O comando **bcp** e a instrução BULK INSERT permitem que você especifique a retenção de campos nulos.  
@@ -99,12 +98,12 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Para inserir "`NULL`" em vez de`Default value of Col2`"", você precisa usar a `-k` opção switch ou KEEPNULL, conforme demonstrado nos exemplos de **bcp** e BULK INSERT a seguir.  
+ Para inserir " `NULL` " em vez de " `Default value of Col2` ", você precisa usar a `-k` opção switch ou KEEPNULL, conforme demonstrado nos exemplos de **bcp** e BULK INSERT a seguir.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Usando bcp e mantendo valores nulos  
  O exemplo a seguir demonstra como manter valores nulos em um comando **bcp** . O comando **bcp** contém as seguintes opções:  
   
-|Opção|Descrição|  
+|Alternar|Descrição|  
 |------------|-----------------|  
 |`-f`|Especifica que o comando está usando um arquivo de formato...|  
 |`-k`|Especifica que colunas vazias devem reter um valor nulo durante a operação, em vez de qualquer valor padrão nas colunas inseridas.|  

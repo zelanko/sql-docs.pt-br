@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4216619154cb8b4a89d91d01c49e53988ac62bfc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971959"
 ---
 # <a name="collections-master-data-services"></a>Coleções (Master Data Services)
   Uma coleção é um grupo de membros folha e consolidados de uma única entidade. Use coleções quando não precisar de uma hierarquia completa e desejar exibir agrupamentos diferentes de membros para relatório ou análise, ou quando precisar criar uma taxonomia.  

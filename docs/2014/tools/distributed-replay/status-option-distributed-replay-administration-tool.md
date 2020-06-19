@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e56a5229f0f26dfe701a425653b3d7f5a4ece842
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ce3d07bc357c5f3788fb6f995a43399021b3553
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048451"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opção de status (ferramenta de administração do Distributed Replay)
-  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração de `DReplay.exe`Distributed Replay,, é uma ferramenta de linha de comando que você pode usar para se comunicar com o Distributed Replay Controller. Este tópico descreve a opção de linha de comando **status** e a sintaxe correspondente.
+  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração de Distributed Replay, `DReplay.exe` , é uma ferramenta de linha de comando que você pode usar para se comunicar com o Distributed Replay Controller. Este tópico descreve a opção de linha de comando **status** e a sintaxe correspondente.
 
  A opção **status** consulta o controlador e exibe o status atual.
 
@@ -31,7 +30,7 @@ ms.locfileid: "78171915"
 dreplay status [-mcontroller] [-fstatus_interval]
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  **-m** *Controller* especifica o nome do computador do controlador. Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.
 
  Se o parâmetro **-m** não for especificado, será usado o computador local.

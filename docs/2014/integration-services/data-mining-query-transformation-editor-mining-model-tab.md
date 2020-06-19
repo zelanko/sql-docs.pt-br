@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a994ee7b9e01b310ba9d90c5acf35ba93877c0a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939098"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Editor de Transformação Consultas de Mineração de Dados (guia Modelo de Mineração)
   Use a guia **Modelo de Mineração** da caixa de diálogo **Editor de Transformação Consultas de Mineração de Dados** para selecionar a estrutura e os modelos de mineração de dados.  

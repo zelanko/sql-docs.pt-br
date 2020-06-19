@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 680b90401f800a9c435bdae33b8e55385541cc4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188743"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064417"
 ---
 # <a name="view-information-about-an-operator"></a>Exibir informações sobre um operador
-  Este tópico descreve como exibir informações sobre um operador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de agente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
+  Este tópico descreve como exibir informações sobre um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operador de agente no usando o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Neste tópico**  
   

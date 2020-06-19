@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f5354ff3b4e461196a9f84e6efc2ff755cf40c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 63e18bfd9c907e5604f82d0e5462b80d07279556
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971666"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Caixa de diálogo Criar Site (Gerenciador de Configuração do Master Data Services)
   Use a caixa de diálogo **Criar Site** para criar um novo site no computador local. Quando você cria um site no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], o site é adicionado ao IIS (Serviços de Informações da Internet) no computador local com um aplicativo raiz configurado como o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Um novo pool de aplicativos também é criado e o aplicativo Web é colocado nesse pool de aplicativos.  

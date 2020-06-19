@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 957e99d67360d72e1d8920d3bad2611c67f747de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 303de22f2eb5ec40c76266116ada843fbf3905c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048220"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>Analisar dados de desempenho de driver (ODBC)
   Este exemplo mostra as opções específicas do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar estatísticas de desempenho. O exemplo cria um arquivo: odbcperf.log. Esse exemplo mostra tanto a criação de um arquivo de log de dados de desempenho quanto a exibição dos dados de desempenho diretamente da estrutura de dados SQLPERF (a estrutura SQLPERF é definida em Odbcss.h.). Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  

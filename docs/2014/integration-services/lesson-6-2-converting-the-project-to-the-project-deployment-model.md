@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8eb90b24b8b1d6d9137022a5128d78183dcf077
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767348"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951406"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Etapa 2: Convertendo o projeto para o modelo de implantação de projeto
   Nesta tarefa, você usará o Assistente de conversão de projeto do Integration Services para converter o projeto para o modelo de implantação do projeto.  

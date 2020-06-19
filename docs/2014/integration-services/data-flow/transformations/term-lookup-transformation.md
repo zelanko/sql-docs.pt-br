@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cc4ec27de159735b43f88dd978e7070cb0f0983
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770312"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939254"
 ---
 # <a name="term-lookup-transformation"></a>transformação Pesquisa de Termos
   A transformação Pesquisa de Termo corresponde termos extraídos de texto em uma coluna de entrada de transformação com termos em uma tabela de referência. Ela conta o número de vezes em que um termo na tabela de pesquisa ocorre no conjunto de dados de entrada e grava a contagem junto com o termo da tabela de referência nas colunas na saída de transformação. Essa transformação é útil para criar uma lista de palavras personalizada com base no texto de entrada, completa com estatísticas de frequência de palavras.  
@@ -62,7 +61,7 @@ ms.locfileid: "62770312"
 |Termos de referência|Windows, Windows 7 Professional|  
 |Saída|Windows|  
   
- A transformação pesquisa de termos pode corresponder substantivos e locuções nominais que contenham caracteres especiais e os dados na tabela de referência podem incluir esses caracteres. Os caracteres especiais são os seguintes: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
+ A transformação pesquisa de termos pode corresponder substantivos e locuções nominais que contenham caracteres especiais e os dados na tabela de referência podem incluir esses caracteres. Os caracteres especiais são os seguintes:%, @, &, $, #, \* ,:,;,., **,** ,!,?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "e".  
   
 ## <a name="data-types"></a>Tipos de dados  
  A transformação pesquisa de termos só pode usar uma coluna que tenha tipo de dados DT_WSTR ou DT_NTEXT. Se uma coluna contiver texto, mas não tiver um desses tipos de dados, a transformação Conversão de Dados poderá adicionar uma coluna com tipo de dados DT_WSTR ou DT_NTEXT para o fluxo de dados e copiar os valores da coluna para a coluna nova. A saída da transformação Conversão de Dados pode ser usada, então, como entrada para a transformação pesquisa de termos. Para obter mais informações, consulte [Data Conversion Transformation](data-conversion-transformation.md).  

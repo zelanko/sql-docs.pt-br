@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fac51c7916e6fda90d4f04d5e6f3603709e48dd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775382"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931817"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Atualizar para o SQL Server 2014 usando o Assistente de Instalação (instalação)
   O Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma única árvore de recursos para a atualização de componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também pode instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] lado a lado com uma versão anterior, ou migrar bancos de dados existentes e parâmetros de configuração de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicá-los a uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -62,7 +61,7 @@ ms.locfileid: "62775382"
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, vá para a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   
-2.  O Assistente de Instalação inicia o Centro de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para atualizar uma instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clique **em instalação** na área de navegação à esquerda e, em seguida, clique em **Atualizar [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)],, ou **.  
+2.  O Assistente de Instalação inicia o Centro de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para atualizar uma instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **instalação** na área de navegação à esquerda e, em seguida, clique em **Atualizar do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **.  
   
 3.  Na página Chave do Produto, clique em uma opção para indicar se você está atualizando uma edição gratuita do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou se tem uma chave de PID para uma versão de produção do produto. Para obter mais informações, consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [atualizações de versão e edição com suporte](supported-version-and-edition-upgrades.md).  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62775382"
      Os pré-requisitos dos recursos selecionados são exibidos no painel à direita. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação instalará os pré-requisitos ainda não instalados na etapa de instalação descrita posteriormente neste procedimento.  
   
     > [!NOTE]  
-    >  Se você tiver optado por atualizar os recursos compartilhados selecionando ** \<atualizar somente recursos compartilhados>** na página **selecionar instância** , todos os recursos compartilhados serão selecionados na página seleção de recursos. Todos os componentes compartilhados são atualizados ao mesmo tempo.  
+    >  Se você tiver optado por atualizar os recursos compartilhados selecionando **\<Upgrade shared features only>** na página **selecionar instância** , todos os recursos compartilhados serão selecionados na página seleção de recursos. Todos os componentes compartilhados são atualizados ao mesmo tempo.  
   
 12. Na página Configuração da Instância, especifique a ID da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

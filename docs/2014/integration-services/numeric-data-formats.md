@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f9e37d3062bba763f44e0eef14b216972b29f1d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057393"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965106"
 ---
 # <a name="numeric-data-formats"></a>Formatos de dados numéricos
   A análise rápida fornece uma análise de dados rápida e simples a um conjunto de rotinas sem diferenciação de localidade. A análise rápida suporta apenas um conjunto limitado de formatos para tipos de dados de números inteiros.  

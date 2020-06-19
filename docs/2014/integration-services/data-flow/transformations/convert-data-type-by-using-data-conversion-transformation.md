@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 13faac66894298c4d08cd40a1eab9d3d823fd0ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11b381ab7063f44fad9a6505d167d9953b200619
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900840"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939667"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>Converter dados em um tipo de dados diferente por meio da transformação Conversão de Dados
   Para adicionar e configurar uma transformação Conversão de Dados, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b94819974c53e9bd73aa085580018bad22a3bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064394"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Propriedades da conta proxy e nova conta proxy (guia Entidades)
-  Use esta página para exibir ou alterar as entidades de segurança que podem usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uma conta proxy do Agent em etapas de trabalho.  
+  Use esta página para exibir ou alterar as entidades de segurança que podem usar uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta proxy do Agent em etapas de trabalho.  
   
 ## <a name="options"></a>Opções  
  **Principais da conta proxy**  
@@ -29,7 +28,7 @@ ms.locfileid: "62650217"
  **Adicionar**  
  Adiciona um principal à lista.  
   
- **Remover**  
+ **Removerr**  
  Remove o principal selecionado da lista.  
   
 ## <a name="see-also"></a>Consulte Também  

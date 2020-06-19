@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f93d60b28488dbb910dcb727015c25848db220e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6207f01290b21c556ed16a836d12974d227e2d3c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939337"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>Selecionar uma Tabela e Chaves de Dimensão (Assistente para Dimensões de Alteração Lenta)
   Use a página **Selecionar uma Tabela e Chaves de Dimensão** para selecionar uma tabela de dimensões a ser carregada. Mapeie colunas do fluxo de dados para as colunas que serão carregadas.  

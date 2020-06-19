@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97d6731c5e85c3b37facc7172ecacbd2c7c74176
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c140715b3f6c6003992ef42f6af6352de17c2c4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938627"
 ---
 # <a name="table-properties-ssas-tabular"></a>Propriedades da tabela (SSAS tabular)
   Este tópico descreve as propriedades do modelo de tabela. As propriedades descritas aqui são diferentes daquelas na caixa de diálogo Editar Propriedades de Tabela, que definem quais colunas da origem são importadas.  
@@ -33,12 +32,12 @@ ms.locfileid: "66066468"
   
 |Propriedade|Configuração padrão|Descrição|  
 |--------------|---------------------|-----------------|  
-|**Nome da Conexão**|\<nome da conexão>|O nome da conexão com a fonte de dados da tabela.<br /><br /> Para editar a conexão, clique no botão.|  
+|**Nome da conexão**|\<connection name>|O nome da conexão com a fonte de dados da tabela.<br /><br /> Para editar a conexão, clique no botão.|  
 |**Oculto**|Falso|Especifica se a tabela é ocultada das listas de campo de cliente de relatório.|  
 |**Partições**||As partições para a tabela não podem ser exibidas na janela **Propriedades** . Para exibir, criar ou editar partições, clique no botão para abrir o Gerenciador de Partições.|  
 |**Dados de origem**||Os dados de origem da tabela não podem ser exibidos na janela **Propriedades** . Para exibir ou editar os dados de origem, clique no botão para abrir a caixa de diálogo Editar Propriedades da Tabela.|  
 |**Descrição da tabela**||Uma descrição de texto da tabela.<br /><br /> No [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], se um usuário final colocar o cursor sobre esta tabela na lista de campos, a descrição aparecerá como uma dica de ferramenta.|  
-|**Nome da Tabela**|\<nome amigável>|Especifica o nome amigável da tabela. O nome da tabela pode ser especificado quando uma tabela é importada com o uso do Assistente de Importação de Tabela ou a qualquer momento após a importação. O nome da tabela no modelo pode ser diferente da tabela associada na origem. O nome amigável da tabela aparece na lista de campos do aplicativo cliente de relatório e no banco de dados modelo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|**Nome da Tabela**|\<friendly name>|Especifica o nome amigável da tabela. O nome da tabela pode ser especificado quando uma tabela é importada com o uso do Assistente de Importação de Tabela ou a qualquer momento após a importação. O nome da tabela no modelo pode ser diferente da tabela associada na origem. O nome amigável da tabela aparece na lista de campos do aplicativo cliente de relatório e no banco de dados modelo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
  **Propriedades de relatório**  
   

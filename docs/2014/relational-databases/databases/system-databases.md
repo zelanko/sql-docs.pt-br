@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 916fd6d996a1a5270173d290c61f262ddf3f797b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65deee685c2205a7c6e41ed86f71c69639555d7c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871123"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965716"
 ---
 # <a name="system-databases"></a>Bancos de dados do sistema
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui os seguintes bancos de dados do sistema.  
@@ -52,7 +51,7 @@ ms.locfileid: "62871123"
 ## <a name="viewing-system-database-data"></a>exibindo dados de sistema do banco de dados  
  Você não deve codificar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que fazem consulta diretamente nas tabelas do sistema, a menos que seja a única maneira de obter as informações exigidas pelo aplicativo. Em lugar disso, os aplicativos devem obter informações de catálogos e do sistema usando o seguinte:  
   
--   Exibições de catálogo do sistema  
+-   Exibições do catálogo do sistema  
   
 -   SQL-SMO  
   

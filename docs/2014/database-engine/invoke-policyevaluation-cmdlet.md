@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6153626439ca8a529dc4b763ba70922b059ec7a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931527"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>cmdlet Invoke-PolicyEvaluation
   O**Invoke-PolicyEvaluation** é um cmdlet do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que relata se um conjunto de objetos SQL Server de destino é compatível com as condições especificadas em uma ou mais políticas do Gerenciamento Baseado em Políticas.  

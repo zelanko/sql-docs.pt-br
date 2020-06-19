@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 50981c958e65dcb26f78980d91efae672ff6d39f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f4403ba79fada44d9eca47b533a718fe7167689d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694804"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055994"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>Criando conjuntos de linhas com ICommand::Execute
   Para conjuntos de linhas criados usando o método **ICommand::Execute**, as propriedades que você deseja obter no conjunto de linhas resultante podem restringir o texto do comando. Isto é especialmente crítico para consumidores que dão suporte a texto de comando dinâmico.  

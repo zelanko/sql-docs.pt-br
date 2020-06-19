@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d95e0bb2adf3bacf7057b881ab2e85afd50feef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063237"
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar e configurar a pesquisa semântica
   Descreve os pré-requisitos para a pesquisa semântica estatística e como instalá-los ou verificá-los.  
@@ -61,9 +60,9 @@ GO
   
     -   Localize o pacote do Windows Installer nomeado **SemanticLanguageDatabase.msi** na mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Localize a versão de 32 ou 64 bits do pacote de instalador, dependendo do sistema de destino. O nome da pasta contêiner identifica a versão de 32 ou 64 bits do arquivo; o nome do arquivo é o mesmo para ambas as versões.  
   
-    -   Baixar o pacote do instalador da [Microsoft? SQL Server?? 2014 Estatísticas Semânticas de Idioma](https://go.microsoft.com/fwlink/?LinkID=296743) página no centro [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de download.  
+    -   Baixar o pacote do instalador da [Microsoft? SQL Server?? 2014 Estatísticas Semânticas de Idioma](https://go.microsoft.com/fwlink/?LinkID=296743) página no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] centro de download.  
   
-2.  Execute o pacote do Windows Installer **SemanticLanguageDatabase. msi** para extrair o banco de dados e o arquivo de log.  
+2.  Execute o **SemanticLanguageDatabase.msi** pacote do Windows Installer para extrair o banco de dados e o arquivo de log.  
   
      Se desejar, você pode alterar o diretório de destino. Por padrão, o instalador extrai os arquivos para uma pasta chamada **banco de dados de idioma semântico da Microsoft** na pasta arquivos de programas de 32 bits ou 64 bits. O arquivo MSI contém um arquivo de banco de dados compactado e um arquivo de log.  
   

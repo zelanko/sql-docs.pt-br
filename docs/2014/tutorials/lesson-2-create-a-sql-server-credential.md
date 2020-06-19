@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95118647df945840d306d2f549f9d6b1f9b5c04d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063968"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lição 2: Criar uma credencial do SQL Server
-  **Credencial:** Uma credencial do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.  Aqui, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] os processos de backup e restauração usam a credencial para autenticar o serviço de armazenamento de BLOBs do Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre como exibir, copiar ou gerar novamente as **access keys**da conta de armazenamento, consulte [Chaves de acesso da conta de armazenamento](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+  **Credencial:** Uma credencial do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.  Aqui, os [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processos de backup e restauração usam a credencial para autenticar o serviço de armazenamento de BLOBs do Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre como exibir, copiar ou gerar novamente as **access keys**da conta de armazenamento, consulte [Chaves de acesso da conta de armazenamento](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
  Para obter informações gerais sobre credenciais, consulte [credenciais](../relational-databases/security/authentication-access/credentials-database-engine.md).  
   

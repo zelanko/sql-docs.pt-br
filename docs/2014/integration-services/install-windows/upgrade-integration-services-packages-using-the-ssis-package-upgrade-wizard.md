@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f31c514b8fbb68be7a326f3fd94ac67f0805ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767869"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965486"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS
   Você pode atualizar pacotes criados nas versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o formato do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usado pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o Assistente de Atualização de Pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] para ajudar neste processo. Como é possível configurar o assistente para fazer backup dos pacotes originais, você poderá continuar usando esses pacotes caso tenha dificuldades com a atualização.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767869"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>Para executar o assistente no prompt de comando  
   
--   No prompt de comando, execute o arquivo SSISUpgrade. exe na pasta **C:\Program Files\Microsoft SQL Server\120\DTS\Binn**  
+-   No prompt de comando, execute o arquivo SSISUpgrade.exe na pasta **C:\Program Files\Microsoft SQL Server\120\DTS\Binn**  
   
 ## <a name="backing-up-the-original-packages"></a>Fazendo backup de pacotes originais  
  Para fazer backup de pacotes originais, esses pacotes originais e os pacotes atualizados devem ser armazenados na mesma pasta no sistema de arquivos. Dependendo do modo como você executa o assistente, o local de armazenamento pode ser selecionado automaticamente.  
@@ -86,7 +85,7 @@ ms.locfileid: "62767869"
 2.  Na página **Selecionar Opções de Gerenciamento de Pacote** do assistente, selecione a opção **Fazer backup dos pacotes originais** .  
   
     > [!WARNING]  
-    >  A opção **fazer backup de pacotes originais** não é exibida quando você [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] abre [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] um projeto [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]do ou no, que inicia automaticamente o assistente.  
+    >  A opção **fazer backup de pacotes originais** não é exibida quando você abre um [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] projeto do ou no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , que inicia automaticamente o assistente.  
   
 3.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], execute o Assistente de Atualização de Pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   

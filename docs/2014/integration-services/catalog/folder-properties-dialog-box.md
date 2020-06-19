@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc76f612f598144172ac81f8addbe0a25ec15e54
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924377"
 ---
 # <a name="folder-properties-dialog-box"></a>Caixa de diálogo Propriedades da Pasta
   Uma pasta contém projetos e ambientes no catálogo do `SSISDB`. Cada pasta define permissões que se aplicam aos conteúdo da pasta. Para obter mais informações sobre permissões do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [catalog.grant_permission &#40;Banco de Dados do SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  

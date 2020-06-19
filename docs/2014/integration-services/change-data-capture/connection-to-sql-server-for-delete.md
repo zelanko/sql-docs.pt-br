@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: acb755f8cc1e425e38714013511948f7b5b4c580
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15db72d9faf2683b02a359b928266c5456e3c9aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836856"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923481"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>Conexão para o SQL Server para exclusão
   Quando um logon sem uma função de banco de dados que inclui permissão de gravação (por exemplo a função **db_owner** ) ao banco de dados MSXDBCDC tenta excluir uma instância Oracle CDC, a caixa de diálogo Conectar-se ao SQL Server é exibida.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b446d566e7c9aa18e635799e81120d1ac73470
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965170"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Etapa 3: Testar o pacote de tutorial da Lição 3
   Nesta tarefa, você executará o pacote Lesson 3.dtsx. Quando o pacote for executado, a janela Eventos de Log listará as entradas de log gravadas no arquivo de log. Após a execução do pacote ser concluída, você verificará o conteúdo do arquivo de log gerado pelo provedor do log.  
@@ -43,7 +42,7 @@ ms.locfileid: "62891584"
   
 -   Com o bloco de notas ou qualquer outro editor de texto, abra o arquivo TutorialLog.log.  
   
--   Embora a `PipelineExecutionPlan` semântica das informações geradas para os eventos e `PipelineExecutionTrees` esteja além do escopo deste tutorial, você pode ver que a primeira linha lista os campos de informações especificados na guia **detalhes** da caixa de diálogo **Configurar Logs do SSIS** . Além disso, é possível verificar se os dois eventos selecionados, PipelineExecutionPlan e PipelineExecutionTrees, foram conectados para cada iteração do Loop Foreach.  
+-   Embora a semântica das informações geradas para os `PipelineExecutionPlan` eventos e `PipelineExecutionTrees` esteja além do escopo deste tutorial, você pode ver que a primeira linha lista os campos de informações especificados na guia **detalhes** da caixa de diálogo **Configurar Logs do SSIS** . Além disso, é possível verificar se os dois eventos selecionados, PipelineExecutionPlan e PipelineExecutionTrees, foram conectados para cada iteração do Loop Foreach.  
   
 ## <a name="next-lesson"></a>Próxima lição  
  [Lição 4: Adicionar redirecionamento de fluxo de erro](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

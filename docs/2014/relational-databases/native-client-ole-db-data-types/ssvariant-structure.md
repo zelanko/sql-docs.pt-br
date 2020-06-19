@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3877e7b8c6ccd0d5364b3aea291facb1799bff7d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b2859c9d124382892949b32cb6efb65821663c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705099"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048082"
 ---
 # <a name="ssvariant-structure"></a>Estrutura SSVARIANT
   A estrutura `SSVARIANT`, definida em sqlncli.h, corresponde a um valor DBTYPE_SQLVARIANT no provedor OLEDB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

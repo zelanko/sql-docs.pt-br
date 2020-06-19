@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d1135be55065ab62e649d84c00cec4eebf60b58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba90d60a9ec3b3651c4889be423a5c1311fc9c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938477"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use os recursos na **Barra de Ferramentas** no Designer de Cubo para executar operações comuns ao criar ou procurar um cubo ou seu objeto, ou ao criar uma consulta MDX. As operações comuns ao tempo de design e exibição de consulta incluem a definição de o contexto do usuário, o processamento dos objetos e a definição do idioma padrão.

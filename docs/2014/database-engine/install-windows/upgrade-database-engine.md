@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931925"
 ---
 # <a name="upgrade-database-engine"></a>Atualizar o Mecanismo de Banco de Dados
   Este tópico fornece as informações necessárias para preparar e entender o processo de atualização; ele abrange:  
@@ -102,7 +101,7 @@ ms.locfileid: "62774964"
  Você pode atualizar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] por meio do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Nível de compatibilidade do banco de dados após a atualização  
- Os níveis de compatibilidade dos `tempdb`bancos `model`de `msdb` dados de **recursos** , e são definidos como 120 após a atualização. O banco de dados do sistema `master` mantém o nível de compatibilidade anterior à atualização.  
+ Os níveis de compatibilidade dos `tempdb` `model` bancos de `msdb` dados de **recursos** , e são definidos como 120 após a atualização. O banco de dados do sistema `master` mantém o nível de compatibilidade anterior à atualização.  
   
  Se o nível de compatibilidade de um banco de dados de usuário era 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade era 90 antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5037448a3ec3cb3590e6fd649d83878bb573f48c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1077766d6853ed7c029b8eefa76515c89ad861fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995022"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   Este tópico descreve como agendar um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

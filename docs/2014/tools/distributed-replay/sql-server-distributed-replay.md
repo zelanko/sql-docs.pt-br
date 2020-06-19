@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 021e37ee7efb8d525cdbc16d2f7b1111045ea7a6
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 1991b9a960d0314b00d2a5cd45997e0502890698
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048518"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   O recurso [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay ajuda a avaliar o impacto de atualizações futuras do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Também é possível usar esse recurso para ajudar a avaliar o impacto das atualizações de hardware e sistemas operacionais e ajuste do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
@@ -49,7 +48,7 @@ ms.locfileid: "82925040"
 
 -   **Ferramenta de administração de Distributed Replay**: um aplicativo de console, `DReplay.exe` , usado para se comunicar com o controlador do Distributed Replay. Use a ferramenta de administração para controlar a reprodução distribuída.
 
--   **controlador Distributed Replay**: um computador que executa o serviço Windows denominado controlador Distributed Replay do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O controlador Distributed Replay orquestra as ações dos clientes de reprodução distribuída. Cada ambiente de Distributed Replay pode conter apenas uma instância de controlador.
+-   **Controlador do Distributed Replay**: um computador que executa o serviço Windows denominado controlador Distributed Replay do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O controlador Distributed Replay orquestra as ações dos clientes de reprodução distribuída. Cada ambiente de Distributed Replay pode conter apenas uma instância de controlador.
 
 -   **Clientes do Distributed Replay**: um ou mais computadores (físicos ou virtuais) que executam o serviço Windows denominado Cliente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay. Os clientes do Distributed Replay trabalham juntos para simular cargas de trabalho em uma instância do SQL Server do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pode haver um ou mais clientes em cada ambiente do Distributed Replay.
 

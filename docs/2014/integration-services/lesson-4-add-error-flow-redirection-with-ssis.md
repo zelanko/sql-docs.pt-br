@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a97a07c4854fc1e25913aff7b6e966be79032e86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891312"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951554"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>Lição 4: Adicionar redirecionamento de fluxo de erro
-  Para lidar com erros que podem ocorrer no processo de transformação [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o oferece a capacidade de decidir por componente e por coluna como manipular dados que não podem ser transformados. Você pode escolher ignorar uma falha em determinadas colunas, redirecionar toda a linha com falha ou apenas causar falha no componente. Por padrão, todos os componentes no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são configurados para falhar quando ocorrerem erros. Causar falha em um componente, por sua vez, faz com que o pacote falhe e todo o processamento subsequente pare.  
+  Para lidar com erros que podem ocorrer no processo de transformação, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o oferece a capacidade de decidir por componente e por coluna como manipular dados que não podem ser transformados. Você pode escolher ignorar uma falha em determinadas colunas, redirecionar toda a linha com falha ou apenas causar falha no componente. Por padrão, todos os componentes no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são configurados para falhar quando ocorrerem erros. Causar falha em um componente, por sua vez, faz com que o pacote falhe e todo o processamento subsequente pare.  
   
  Em vez de permitir que as falhas interrompam a execução do pacote, é bom configurar e tratar erros de processamento em potencial conforme ocorrem dentro da transformação. Como você pode escolher ignorar as falhas para garantir que seu pacote seja executado com êxito, frequentemente é melhor redirecionar a linha com falhas para outro caminho de processamento, em que os dados e o erro podem ser persistentes, examinados e reprocessados posteriormente.  
   

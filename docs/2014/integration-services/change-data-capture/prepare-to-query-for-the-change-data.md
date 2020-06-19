@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 559af9cdd7e7014e114b431dddf25b09dd18dc81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e82378cd044c40abb4b8519a0c6d60bb906e3f23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771255"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922627"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Preparar para consultar os dados de alterações
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a terceira e última tarefa servem para consultar as alterações dos dados e adicionar uma tarefa de fluxo de dados.  

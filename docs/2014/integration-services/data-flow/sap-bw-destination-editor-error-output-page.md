@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 196d7f2bb3a227bd29ccc6fd5d427a59070d525a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0964fe66273d4d6e36500ca7f562359aab32ae2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914486"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>Editor de Destino de SAP BW (página Saída de Erro)
   Use a página **Saída de Erro** do **Editor de Destino SAP BW** para especificar opções de tratamento de erro.  
