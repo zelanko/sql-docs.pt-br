@@ -1,5 +1,5 @@
 ---
-title: Propriedades do&lt;NS $&gt; Service Name (guia serviço) | Microsoft Docs
+title: '&lt;Propriedades do NS $ Service Name &gt; (guia serviço) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3c5d473f8f57a6ecec7084af912940a2687c0cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008022"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Propriedades do NS$&lt;nome do serviço&gt; (guia Serviço)
   Este é o serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  

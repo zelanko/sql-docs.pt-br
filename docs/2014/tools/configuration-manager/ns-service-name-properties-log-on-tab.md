@@ -1,5 +1,5 @@
 ---
-title: Propriedades do&lt;NS $&gt; Service Name (guia fazer logon) | Microsoft Docs
+title: Propriedades do NS $ &lt; Service Name &gt; (guia fazer logon) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a811e815cf4321dca126ecb584cd226a225a306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008012"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>Propriedades do NS$&lt;nome do serviço&gt; (guia Logon)
   Use a guia **Fazer Logon** da caixa de diálogo **Propriedades de Notification Services** para especificar a conta usada pelo serviço [!INCLUDE[ssNS](../../includes/ssns-md.md)] e para iniciar e parar o serviço.  

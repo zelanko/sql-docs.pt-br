@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa86a6e08fffb4c417a450d19b569e9d0b696140
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 386b248edfdb6e0ac5eb97b3aeb6c0bbc505a5a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055823"
 ---
 # <a name="transactions-in-odbc"></a>Transações em ODBC
   As transações em ODBC são gerenciadas no nível da conexão. Quando um aplicativo conclui uma transação, ele confirma ou reverte todo o trabalho concluído através de todos os identificadores de instrução nessa conexão. Para confirmar ou reverter uma transação, os aplicativos devem chamar [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) , em vez de enviar uma instrução COMMIT ou ROLLBACK.  

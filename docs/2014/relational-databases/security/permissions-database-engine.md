@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c58abd60ecc6236e52e302f6e11daaaa244ff21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063177"
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
   Todo protegível do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem permissões associadas que podem ser concedidas a uma entidade de segurança. Este tópico fornece as seguintes informações:  
@@ -49,11 +48,11 @@ ms.locfileid: "81487150"
   
      Confere a capacidade de alterar as propriedades, menos a propriedade de um protegível específico. Quando concedido em um escopo, ALTER também concede a capacidade de alterar, criar ou descartar qualquer protegível contido naquele escopo. Por exemplo, a permissão ALTER em um esquema inclui a capacidade de criar, alterar e descartar objetos do esquema.  
   
--   Alterar qualquer \<> *protegível do servidor* , em que o *protegível do servidor* pode ser qualquer protegível do servidor.  
+-   ALTER ANY \<*Server Securable*> , em que o *protegível do servidor* pode ser qualquer protegível do servidor.  
   
      Confere a capacidade de criar, alterar ou remover instâncias individuais do *Protegível de Servidor*. Por exemplo, ALTER ANY LOGIN confere a capacidade de criar, alterar ou descartar qualquer logon na instância.  
   
--   Alterar qualquer \<> *protegível do banco* de dados, em que o protegível do banco de *dados* pode ser qualquer protegível no nível do banco de dados.  
+-   ALTER ANY \<*Database Securable*> , em que o *protegível do banco de dados* pode ser qualquer protegível no nível do banco de dados.  
   
      Confere a capacidade de criar, alterar ou remover instâncias individuais do *Protegível do Banco de Dados*. Por exemplo, ALTER ANY SCHEMA confere a capacidade de criar, alterar ou descartar qualquer esquema no banco de dados.  
   
@@ -61,23 +60,23 @@ ms.locfileid: "81487150"
   
      Habilita o usuário autorizado a assumir propriedade do protegível no qual é concedido.  
   
--   Representar \< *logon*>  
+-   REPRESENTAM\<*Login*>  
   
      Permite que o usuário autorizado represente o logon.  
   
--   Representar \< *usuário*>  
+-   REPRESENTAM\<*User*>  
   
      Permite que o usuário autorizado represente o usuário.  
   
--   Criar \< *protegível do servidor*>  
+-   CRIADA\<*Server Securable*>  
   
      Confere ao usuário autorizado a habilidade para criar o *Protegível de Servidor*.  
   
--   Criar \< *protegível de banco de dados*>  
+-   CRIADA\<*Database Securable*>  
   
      Confere ao usuário autorizado a habilidade de criar o *Protegível de Banco de Dados*.  
   
--   Criar \< *protegível continha o esquema*>  
+-   CRIADA\<*Schema-contained Securable*>  
   
      Confere a capacidade para criar o protegível contido em esquema. Porém, a permissão ALTER no esquema é necessária para criar o protegível em um esquema específico.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "81487150"
      A permissão REFERENCES é necessária em um objeto para criar uma FUNCTION ou VIEW com a cláusula `WITH SCHEMABINDING` que faz referência àquele objeto.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de permissões do SQL Server  
- Para um gráfico de tamanho de pôster [!INCLUDE[ssDE](../../includes/ssde-md.md)] de todas as permissões no formato [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)PDF, consulte.  
+ Para um gráfico de tamanho de pôster de todas [!INCLUDE[ssDE](../../includes/ssde-md.md)] as permissões no formato PDF, consulte [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) .  
   
 ##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Permissões aplicáveis a protegíveis específicos  
  A tabela a seguir lista classes principais de permissões e os tipos de protegíveis aos quais elas podem ser aplicadas.  
@@ -157,7 +156,7 @@ ms.locfileid: "81487150"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Observação: aplica-se [!INCLUDE[ssSDS](../../includes/sssds-md.md)]somente a.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Observação: aplica-se somente a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +164,7 @@ ms.locfileid: "81487150"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Observação: aplica-se [!INCLUDE[ssSDS](../../includes/sssds-md.md)]somente a.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Observação: aplica-se somente a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +203,7 @@ ms.locfileid: "81487150"
 |DATABASE|Delete (excluir)|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Execute|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Observação: aplica-se [!INCLUDE[ssSDS](../../includes/sssds-md.md)]somente a. Usar ALTER ANY CONNECTION no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Observação: aplica-se somente a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Usar ALTER ANY CONNECTION no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -399,7 +398,7 @@ ms.locfileid: "81487150"
 ##  <a name="examples"></a><a name="_examples"></a> Exemplos  
  Os exemplos nesta seção mostram como recuperar informações sobre permissões.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Retornando a lista completa de permissões que podem ser concedidas  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>a. Retornando a lista completa de permissões que podem ser concedidas  
  A instrução a seguir retorna todas as permissões de [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a função `fn_builtin_permissions` . Para obter mais informações, veja [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ```  

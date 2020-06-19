@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f18fd2485c9b2e62586d9f3e81f76f6cf680dbfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063006"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   Uma instância `MultiPolygon` é uma coleção de zero ou mais instâncias `Polygon`.
@@ -59,7 +58,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Instâncias válidas
  Uma instância de `MultiPolygon` será válida se for uma instância de `MultiPolygon` vazia ou se atender aos critérios a seguir.
 
-1.  Todas as instâncias que englobam a instância de `MultiPolygon` são instâncias de `Polygon` válidas. Para instâncias `Polygon` válidas, consulte [Polygon](../spatial/polygon.md).
+1.  Todas as instâncias que englobam a instância de `MultiPolygon` são instâncias de `Polygon` válidas. Para instâncias válidas `Polygon` , consulte [Polygon](../spatial/polygon.md).
 
 2.  Nenhuma das instâncias de `Polygon` que englobe a instância de `MultiPolygon` se sobreporá.
 

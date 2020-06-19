@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d6da9e7d9fd17d35d9868834c6b0d688519ff7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 786101d76185c21763787ab11fd29600938be198
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704176"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055806"
 ---
 # <a name="running-stored-procedures-ole-db"></a>Executando procedimentos armazenados (OLE DB)
   Ao executar instruções, a chamada a um procedimento armazenado na fonte de dados (em vez de executar ou preparar uma instrução diretamente no aplicativo cliente) pode fornecer:  

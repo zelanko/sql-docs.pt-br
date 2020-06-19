@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: efda11d7bcbb4afd37143c6f9669e15f0cc16f5f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d978b53754d8b233f1f8b7e58b30d806c0bfdb26
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055796"
 ---
 # <a name="stored-procedures"></a>Procedimentos armazenados
   Um procedimento armazenado ([&#40;Mecanismo de Banco de Dados&#41; de Procedimento Armazenado](../../stored-procedures/stored-procedures-database-engine.md))é um objeto executável armazenado em um banco de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a:  

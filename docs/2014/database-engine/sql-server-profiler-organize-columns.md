@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 449f8000db655012ca7e66e5f186467b5671ea56
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928617"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler – Organizar Colunas
   Use a caixa de diálogo **Organizar Colunas** para selecionar colunas de dados para agrupar ou agregar eventos exibidos em um rastreamento, o que torna os arquivos ou tabelas de rastreamento grandes mais fáceis de exibir e analisar.  
   
- A agregação movimenta e recolhe todos os eventos no rastreamento em seu respectivo tipo de classe de evento. Um sinal de adição**+**() aparece à esquerda do nome da classe de evento. Clicando no sinal de mais, você expande a classe de evento para exibir todos os eventos desse tipo.  
+ A agregação movimenta e recolhe todos os eventos no rastreamento em seu respectivo tipo de classe de evento. Um sinal de adição ( **+** ) aparece à esquerda do nome da classe de evento. Clicando no sinal de mais, você expande a classe de evento para exibir todos os eventos desse tipo.  
   
  O agrupamento organiza todas as classes de evento de um tipo específico juntando-as na janela de rastreamento. Porém, os eventos não são recolhidos sob o tipo de classe de evento.  
   
@@ -34,12 +33,12 @@ ms.locfileid: "66089762"
  **Grupos**  
  Mova os nomes da coluna de dados sob **Grupos** para agrupar ou agregar classes de evento na janela de rastreamento.  
   
- Para agregar eventos, mova uma coluna de dados para **Grupos**. Com isso, todos os eventos de um tipo específico são recolhidos abaixo do nome do tipo de classe de evento na janela de rastreamento. Um sinal de adição**+**() aparece à esquerda do nome da classe de evento. Clique no sinal de mais para expandir o tipo de classe de evento e exibir todos os eventos. Você pode ativar e desativar a agregação e o agrupamento clicando em **Exibição Agregada** ou **Exibição Agrupada** no menu **Exibição** .  
+ Para agregar eventos, mova uma coluna de dados para **Grupos**. Com isso, todos os eventos de um tipo específico são recolhidos abaixo do nome do tipo de classe de evento na janela de rastreamento. Um sinal de adição ( **+** ) aparece à esquerda do nome da classe de evento. Clique no sinal de mais para expandir o tipo de classe de evento e exibir todos os eventos. Você pode ativar e desativar a agregação e o agrupamento clicando em **Exibição Agregada** ou **Exibição Agrupada** no menu **Exibição** .  
   
  Para agrupar eventos, mova mais de uma coluna de dados para **Grupos**. Com isso, todos os eventos de um tipo específico são agrupados na janela de rastreamento, mas os eventos não são recolhidos abaixo do nome de cada tipo de classe de evento. Você pode alternar entre exibições agrupadas e não agrupadas clicando em **Exibição Agrupada** no menu Exibição. Quando mais de uma coluna de dados é movida para **Grupos**, a opção de alternar para a **Exibição Agregada** fica indisponível.  
   
  **Colunas**  
- Lista de colunas de dados disponíveis para serem movidas para **Grupos**. Clique no sinal de adição**+**() à esquerda das **colunas** para expandir a lista.  
+ Lista de colunas de dados disponíveis para serem movidas para **Grupos**. Clique no sinal de adição ( **+** ) à esquerda das **colunas** para expandir a lista.  
   
  **Para cima**  
  Depois de selecionar uma coluna de dados, clique em **Para Cima** para mover colunas de dados para **Grupos**. Você também pode clicar em **Acima** para reorganizar a exibição de colunas na janela de rastreamento.  

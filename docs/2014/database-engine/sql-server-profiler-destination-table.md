@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 88ee6090-b2f5-4dc5-997a-1d45fa7e3e84
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70849b85b391f46fd22e659b1b6b367c63b8f7ac
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928727"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - tabela de destino
   Use a caixa de diálogo **Tabela de Destino** para especificar uma tabela em que você deseja armazenar o rastreamento.  
@@ -39,7 +38,7 @@ ms.locfileid: "66088927"
   
 ## <a name="see-also"></a>Consulte Também  
  [Salvar resultados de rastreamento em uma tabela &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [Modelos e permissões de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões do SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

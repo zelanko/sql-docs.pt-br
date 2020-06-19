@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7115a4f8953ade5fc91e4be3197772f4bc3784c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935747"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurar permissões do sistema de arquivos para acesso ao mecanismo de banco de dados
   Este tópico descreve como conceder ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]acesso ao sistema de arquivos ao local onde os arquivos de banco de dados são armazenados. O serviço do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ter a permissão do sistema de arquivos do Windows para acessar a pasta onde os arquivos de banco de dados são armazenados. A permissão para o local padrão é configurada durante a instalação. Se você colocar seus arquivos de banco de dados em um local diferente, poderá precisar seguir estas etapas para conceder ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] a permissão de controle total para esse local.  
@@ -42,7 +41,7 @@ ms.locfileid: "62811318"
   
 7.  Clique em **OK** novamente para retornar à caixa de diálogo **permissões** .  
   
-8.  Na caixa nomes de **grupo ou de usuário** , selecione o SID por serviço e, na caixa **permissões para** \<nome>, marque a caixa de seleção **permitir** para **controle total**.  
+8.  Na caixa nomes de **grupo ou de usuário** , selecione o SID por serviço e, na caixa **permissões para** \<name> , marque a caixa de seleção **permitir** para **controle total**.  
   
 9. Clique em **Aplicar**e em **OK** duas vezes para sair.  
   

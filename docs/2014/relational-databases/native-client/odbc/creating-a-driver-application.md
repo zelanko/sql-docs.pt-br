@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4c5dc6e2452ea538f30e9ac10fa27b051aba13a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4a7566e62fbaaca9645409792e104491fadd30c2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055887"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>Criando um aplicativo de driver ODBC do SQL Server Native Client
   A arquitetura ODBC tem quatro componentes que executam as funções a seguir.  
