@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc3fdb873a567bef9326232e5435cea5649b041
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054883"
 ---
 # <a name="database-ssrs-native-mode"></a>Banco de dados (modo nativo do SSRS)
   Use a página Banco de Dados para criar e configurar os bancos de dados do servidor de relatório que fornecem armazenamento interno para uma ou mais instâncias do servidor de relatório. Se você estiver configurando um servidor de relatório para usar um banco de dados de servidor de relatório remoto, deverá usar o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para criar o banco de dados.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
  A criação de um banco de dados de servidor de relatório e a configuração da conexão são um processo de várias etapas. Para orientá-lo pelas etapas, esta página fornece Assistentes para cada tipo de tarefa. As permissões e logons são criados ou atualizados para você. Você pode monitorar o status de cada etapa na página Progresso. Se ocorrer um erro, você poderá clicar no erro para obter informações sobre como resolvê-lo.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "71952316"
  **Nome do SQL Server**  
  Em Banco de Dados do Servidor de Relatório Atual, o **Nome do SQL Server** especifica o nome do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executa o banco de dados do servidor de relatório. Não é possível usar uma instância nomeada ou padrão em um computador local ou remoto.  
   
- **Nome do banco de dados**  
+ **Database Name**  
  Especifica o nome do banco de dados do servidor de relatório que armazena dados do servidor.  
   
  **Modo do Servidor de Relatório**  
@@ -47,7 +46,7 @@ ms.locfileid: "71952316"
  Especifica credenciais que o servidor de relatório usa para conectar-se ao banco de dados do servidor de relatório. Os tipos de credencial que podem ser especificados incluem a conta de serviço, um usuário de domínio do Windows, o usuário local do Windows ou o logon do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre como selecionar credenciais, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nome de usuário**  
- Especifica uma conta de usuário de domínio se você estiver usando credenciais do Windows, ou um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se você estiver usando credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se você estiver usando credenciais do Windows, especifique-as neste formato: * \<domínio \\>conta\>de<*.  
+ Especifica uma conta de usuário de domínio se você estiver usando credenciais do Windows, ou um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se você estiver usando credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se você estiver usando credenciais do Windows, especifique-as neste formato: * \<domain> \\<\> conta*.  
   
  **Senha**  
  Especifica a senha para a conta.  

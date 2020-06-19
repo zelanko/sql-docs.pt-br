@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2599fc6f5373b7bf048ab173bccd9c44be6ae58e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1e40603dc9cbe86e32c59037350b25f31bddf14
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968554"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Criando uma transformação síncrona com o componente Script
   Você usa um componente de transformação no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar e analisar dados à medida que eles passam da origem ao destino. Uma transformação com saídas síncronas processa cada linha de entrada que passa pelo componente. Uma transformação com saídas assíncronas espera até receber todas as linhas de entrada para completar seu processamento. Este tópico discute uma transformação síncrona. Para obter informações sobre transformações assíncronas, consulte [Criando uma transformação assíncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Compreender as transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md).
@@ -58,7 +57,7 @@ ms.locfileid: "78176256"
 -   Crie uma ou mais saídas adicionais, como uma saída de erro simulada para linhas que contêm valores inesperados. Use os botões **Adicionar Saída** e **Remover Saída** para gerenciar as saídas do componente de transformação síncrona. Todas as linhas de entrada são direcionadas para todas as saídas disponíveis, a menos que você indique que pretende redirecionar cada linha para uma ou outra saída. Você indica que pretende redirecionar linhas especificando um valor de inteiro diferente de zero para a propriedade `ExclusionGroup` nas saídas. O valor de inteiro específico inserido em `ExclusionGroup` para identificar as saídas não é significativo, mas você deve usar o mesmo inteiro de forma consistente para o grupo especificado de saídas.
 
     > [!NOTE]
-    >  Você também poderá usar um valor de propriedade `ExclusionGroup` diferente de zero com uma única saída quando não quiser gerar todas as linhas. No entanto, nesse caso, você deve chamar explicitamente o método **DirectRowTo\<outputbuffer>** para cada linha que deseja enviar à saída.
+    >  Você também poderá usar um valor de propriedade `ExclusionGroup` diferente de zero com uma única saída quando não quiser gerar todas as linhas. No entanto, nesse caso, você deve chamar explicitamente o método **DirectRowTo \<outputbuffer> ** para cada linha que deseja enviar para a saída.
 
 -   Atribua um nome mais descritivo para a entrada e as saídas. O componente Script utiliza esses nomes para gerar as propriedades de acessador digitadas que você utilizará para referenciar a entrada e as saídas no seu script.
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176256"
  Para obter mais informações sobre a página **Entradas e Saídas** do **Editor de Transformação Scripts**, consulte [Editor de Transformação Scripts &#40;página Entradas e Saídas&#41;](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Adicionando variáveis
- Se você quiser usar variáveis existentes em seu script, poderá adicioná-las nos campos de `ReadOnlyVariables` propriedade `ReadWriteVariables` e na página **script** do **Editor de transformação scripts**.
+ Se você quiser usar variáveis existentes em seu script, poderá adicioná-las nos campos de `ReadOnlyVariables` `ReadWriteVariables` propriedade e na página **script** do **Editor de transformação scripts**.
 
- Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar várias variáveis clicando no botão de reticências (**...**) ao lado `ReadOnlyVariables` dos `ReadWriteVariables` campos de propriedade e e selecionando as variáveis na caixa de diálogo **Selecionar variáveis** .
+ Ao adicionar diversas variáveis aos campos de propriedade, separe os nomes das variáveis com vírgulas. Você também pode selecionar várias variáveis clicando no botão de reticências (**...**) ao lado dos `ReadOnlyVariables` campos de propriedade e e `ReadWriteVariables` selecionando as variáveis na caixa de diálogo **Selecionar variáveis** .
 
  Para obter informações gerais sobre como usar variáveis com o componente Script, consulte [Usando variáveis no componente Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -85,7 +84,7 @@ ms.locfileid: "78176256"
 ### <a name="understanding-the-auto-generated-code"></a>Compreendendo o código gerado automaticamente
  Quando você abre o VSTA IDE depois de criar e configurar um componente de transformação, a classe `ScriptMain` editável aparece no editor de códigos com um stub para o método `ProcessInputRow`. A classe `ScriptMain` é onde você escreverá seu código personalizado, e `ProcessInputRow` é o método mais importante em um componente de transformação.
 
- Se você abrir a janela **Explorador de projeto** no VSTA, poderá ver que o componente script também gerou itens de projeto e `BufferWrapper` `ComponentWrapper` somente leitura. A classe `ScriptMain` foi herdada da classe `UserComponent` no item de projeto `ComponentWrapper`.
+ Se você abrir a janela **Explorador de projeto** no VSTA, poderá ver que o componente script também gerou itens de `BufferWrapper` projeto e somente leitura `ComponentWrapper` . A classe `ScriptMain` foi herdada da classe `UserComponent` no item de projeto `ComponentWrapper`.
 
  Em tempo de execução, o mecanismo de fluxo de dados invoca o método `ProcessInput` na classe `UserComponent`, que substitui o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> da classe pai <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. O método `ProcessInput`, por sua vez, executa um loop nas linhas do buffer de entrada e chama o método `ProcessInputRow` uma vez para cada linha.
 
@@ -130,13 +129,13 @@ else
 }
 ```
 
- Neste exemplo, o componente Script gera os métodos **DirectRowTo\<OutputBufferX>** para você baseando-se nos nomes das saídas que foram configurados. Você pode usar um código semelhante para direcionar linhas de erro a uma saída de erro simulada.
+ Neste exemplo, o componente script gera os métodos **DirectRowTo \<OutputBufferX> ** para você, com base nos nomes das saídas que você configurou. Você pode usar um código semelhante para direcionar linhas de erro a uma saída de erro simulada.
 
 ## <a name="examples"></a>Exemplos
  Estes exemplos demonstram o código personalizado que é necessário na classe `ScriptMain` para criar um componente de transformação síncrono.
 
 > [!NOTE]
->  Esses exemplos usam a tabela **Person. Address** no banco `AdventureWorks` de dados de exemplo e passam sua primeira e quarta colunas, as colunas City **intAddressID** e **nvarchar (30)** , por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.
+>  Esses exemplos usam a tabela **Person. Address** no `AdventureWorks` banco de dados de exemplo e passam sua primeira e quarta colunas, as colunas City **intAddressID** e **nvarchar (30)** , por meio do fluxo de dados. Os mesmos dados são usados nos exemplos de origem, transformação e destino nessa seção. Pré-requisitos e suposições adicionais são documentados para cada exemplo.
 
 ### <a name="single-output-synchronous-transformation-example"></a>Exemplo de transformação síncrona de saída única
  Este exemplo demonstra um componente de transformação síncrono com uma única saída. Essa transformação passa pela coluna **AddressID** e converte a coluna **City** em maiúsculas.

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 484b1ccb084ca6e3ed5f80f0ed8a98fd8c1c7c49
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069259"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940797"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Selecionar a chave do caso (Assistente de Mineração de Dados)
   Use a página **Selecionar a Chave do Caso** para selecionar o atributo da dimensão do cubo de origem que será a chave da estrutura de mineração. Esse atributo deve estar em uma hierarquia ou ter sua hierarquia de atributo habilitada.  
