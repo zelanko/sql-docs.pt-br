@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004053"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
   Para definir consultas de texto completo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa os predicados de texto completo (CONTAINS e FREETEXT) e as funções (CONTAINSTABLE e FREETEXTTABLE). Elas dão suporte à avançada sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] que comporta uma variedade de formas de termos de consulta. Para gravar consultas de texto completo, você deve saber quando e como usar esses predicados e funções.  
@@ -130,7 +129,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. Usando FREETEXTTABLE  
- O exemplo a seguir estende uma consulta FREETEXTTABLE para retornar primeiro as linhas com classificação mais alta e adicionar a classificação de cada linha à lista de seleção. Para especificar a consulta, você deve saber que **ProductDescriptionID** é a coluna de chave exclusiva para `ProductDescription` a tabela.  
+ O exemplo a seguir estende uma consulta FREETEXTTABLE para retornar primeiro as linhas com classificação mais alta e adicionar a classificação de cada linha à lista de seleção. Para especificar a consulta, você deve saber que **ProductDescriptionID** é a coluna de chave exclusiva para a `ProductDescription` tabela.  
   
 ```  
 USE AdventureWorks2012  

@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 071d8c50-de8a-490d-b4a7-c809ba79df18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c15fdcc6d36383f8a1561259e7a876ebea7ba800
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e25d9047e06b30411941b60ae98d228b8d21f02
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068486"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940427"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>Especificar a Ordenação de Atributos (Dimensão) (Assistente de Business Intelligence)
   Use a página **Especificar a Ordenação de Atributos** para selecionar uma dimensão para a qual o Assistente de Business Intelligence definirá um atributo e critérios de ordenação que serão usados para classificar membros em cada atributo contido naquela dimensão.  
   
 ## <a name="options"></a>Opções  
- **Dimensão**  
+ **Dimensões**  
  Selecione a dimensão para a qual o assistente definirá um atributo e critérios de ordenação que serão usados para classificar membros em cada atributo contido naquela dimensão.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754270"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933870"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimizar o tempo de inatividade de bancos de dados espelhados ao atualizar instâncias do servidor
-  Ao atualizar instâncias de servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]para o, você pode reduzir o tempo de inatividade de cada banco de dados espelhado para apenas um único failover manual executando uma atualização sequencial, conhecida como *atualização sem interrupção*. Uma atualização sem-interrupção consiste em um processo de várias etapas que, em sua forma mais simples, envolve atualizar a instância do servidor que funciona como o servidor espelho de uma sessão de espelhamento, executar o failover manual no banco de dados espelho, atualizar o antigo servidor principal e continuar o espelhamento. Na prática, o processo exato dependerá do modo de operação e do número e do layout de sessões de espelhamento em execução nas instâncias do servidor que você está atualizando.  
+  Ao atualizar instâncias de servidor para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o, você pode reduzir o tempo de inatividade de cada banco de dados espelhado para apenas um único failover manual executando uma atualização sequencial, conhecida como *atualização sem interrupção*. Uma atualização sem-interrupção consiste em um processo de várias etapas que, em sua forma mais simples, envolve atualizar a instância do servidor que funciona como o servidor espelho de uma sessão de espelhamento, executar o failover manual no banco de dados espelho, atualizar o antigo servidor principal e continuar o espelhamento. Na prática, o processo exato dependerá do modo de operação e do número e do layout de sessões de espelhamento em execução nas instâncias do servidor que você está atualizando.  
   
 > [!NOTE]  
 >  Para obter informações sobre como executar uma atualização sem interrupção para instalar um service pack ou hotfix, consulte [instalar um Service Pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  

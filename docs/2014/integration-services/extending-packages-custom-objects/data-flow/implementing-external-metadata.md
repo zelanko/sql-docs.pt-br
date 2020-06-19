@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 70e99073f07e7e285d1fcbfad51cf9a275dd9441
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a4aec2f63a5f811b8e61a5ac9c107394f3d53db
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896147"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968882"
 ---
 # <a name="implementing-external-metadata"></a>Implementando metadados externos
   Quando um componente é desconectado de sua fonte de dados, você pode validar as colunas nas coleções de colunas de entrada e saída com base nas colunas da fonte de dados externa por meio da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Essa interface permite que você mantenha um instantâneo das colunas na fonte de dados externa e as mapeie para as colunas da coleção de colunas de entrada e saída do componente.  
@@ -77,7 +76,7 @@ End Sub
 ### <a name="connected-validation"></a>Validação conectada  
  Quando um componente é conectado a uma fonte de dados externa, as colunas nas coleções de entrada ou saída são verificadas diretamente na fonte de dados externa. Adicionalmente, as colunas na coleção de metadados externos devem ser validadas. Isso é necessário porque a coleção de metadados externos pode ser modificada por meio do **Editor Avançado** no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e as alterações feitas à coleção não são detectáveis. Portanto, quando conectados, os componentes devem verificar se as colunas da coleção de colunas de metadados externos continuam refletindo as colunas da fonte de dados externa.  
   
- Você pode optar por ocultar a coleção de metadados externos no **Editor avançado** definindo a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> propriedade da coleção como `false`. Entretanto, esse procedimento também oculta a guia **Mapeamento de Coluna** do editor, a qual permite que os usuários mapeiem as colunas da coleção de entrada ou saída para as colunas da coleção de colunas de metadados externos. A definição desta propriedade como `false` não impede que os desenvolvedores modifiquem programaticamente a coleção, mas, efetivamente, fornece um nível de proteção para a coleção de colunas de metadados externos de um componente que é utilizado exclusivamente no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Você pode optar por ocultar a coleção de metadados externos no **Editor avançado** definindo a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> propriedade da coleção como `false` . Entretanto, esse procedimento também oculta a guia **Mapeamento de Coluna** do editor, a qual permite que os usuários mapeiem as colunas da coleção de entrada ou saída para as colunas da coleção de colunas de metadados externos. A definição desta propriedade como `false` não impede que os desenvolvedores modifiquem programaticamente a coleção, mas, efetivamente, fornece um nível de proteção para a coleção de colunas de metadados externos de um componente que é utilizado exclusivamente no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="disconnected-validation"></a>Validação desconectada  
  Quando um componente é desconectado de uma fonte de dados externa, a validação é simplificada porque as colunas da coleção de entrada ou saída são verificadas diretamente com base nas colunas da coleção de metadados externos e não com base na fonte externa. Um componente deve executar a validação desconectada quando a conexão com sua fonte de dados externa não tiver sido estabelecida ou quando a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> for `false`.  

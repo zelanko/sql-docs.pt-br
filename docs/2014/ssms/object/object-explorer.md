@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bd8009f3270c35f34c4cac87247263caac35854
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3acefcd03af1b39d467625800d8837553ff5253b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058576"
 ---
 # <a name="object-explorer"></a>Pesquisador de Objetos
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece recursos para gerenciar objetos em instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

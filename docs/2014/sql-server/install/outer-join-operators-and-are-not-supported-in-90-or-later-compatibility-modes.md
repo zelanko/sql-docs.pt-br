@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 62a6f9e016abf24f28660b04e7a6242fdd6606ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 357c729e6d53cc17f2e4c169dd66613b6cfd2f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065258"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Os operadores de junção externa \*= e =\* não são compatíveis com o modo de compatibilidade 90 ou posterior
-  O supervisor de atualização detectou o uso \*de operadores de\*junção externa = e =. Esses operadores não são aceitos no modo de compatibilidade 90 ou posterior. Quando você faz a atualização, os bancos de dados de usuários mantêm seus modos de compatibilidade. As instruções que usam esses operadores falhará.  
+  O supervisor de atualização detectou o uso de operadores de junção externa \* = e = \* . Esses operadores não são aceitos no modo de compatibilidade 90 ou posterior. Quando você faz a atualização, os bancos de dados de usuários mantêm seus modos de compatibilidade. As instruções que usam esses operadores falhará.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>Ação corretiva  
- Antes de alterar o modo de compatibilidade do banco de dados para 90 ou posterior, modifique as instruções que \*usam os operadores\* de junção externa = e = para usar palavras-chave de junção externa equivalentes. O exemplo a seguir mostra uma consulta que usa o operador `\*=` e uma consulta equivalente que usa as palavras-chave `LEFT OUTER JOIN`.  
+ Antes de alterar o modo de compatibilidade do banco de dados para 90 ou posterior, modifique as instruções que usam os operadores de junção externa \* = e = \* para usar palavras-chave de junção externa equivalentes. O exemplo a seguir mostra uma consulta que usa o operador `\*=` e uma consulta equivalente que usa as palavras-chave `LEFT OUTER JOIN`.  
   
 ```  
 -- This query uses an old-style outer join operator.  

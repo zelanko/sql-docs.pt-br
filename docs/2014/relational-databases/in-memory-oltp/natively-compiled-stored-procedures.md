@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3b7b1e91323290059b5208f9c2582ced1da8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714913"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050059"
 ---
 # <a name="natively-compiled-stored-procedures"></a>procedimentos armazenados compilados nativamente
   Os procedimentos armazenados compilados nativamente são procedimentos armazenados [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados no código nativo que acessam tabelas com otimização de memória. Procedimentos armazenados compilados nativamente permitem a execução eficiente de consultas e lógica de negócios no procedimento armazenado. Para obter mais detalhes sobre o processo de compilação nativo, consulte [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md). Para mais informações sobre a migração de procedimentos armazenados baseados em disco para procedimentos armazenados compilados de modo nativo, veja [Problemas de migração para procedimentos armazenados compilados de modo nativo](migration-issues-for-natively-compiled-stored-procedures.md).  
@@ -46,6 +45,6 @@ ms.locfileid: "62714913"
 -   [Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas com otimização de memória](memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

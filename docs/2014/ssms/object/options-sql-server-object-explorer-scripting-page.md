@@ -12,27 +12,26 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9966db2e5b08cd16976e2c16434cec0adca8445f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058561"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Opções (página de Pesquisador de Objetos do SQL Server de scripts)
   Use esta página para definir opções de script que se aplicam aos seguintes comandos nos menus de contexto de objeto no **Pesquisador de Objetos**:  
   
 -   Comandos **Editar** para tabelas de usuário e exibições.  
   
--   **Script \<de objeto> como** comandos para objetos criados pelo usuário.  
+-   Comandos **Script \<object> as** para objetos criados pelo usuário.  
   
 -   Comando **Modificar** para objetos criados pelo usuário.  
   
 -   Esta página também define os padrões da opção de script para o **Assistente para Gerar Scripts do SQL Server**.  
   
 ## <a name="remarks"></a>Comentários  
- Os comandos **Editar** e **Modificar** podem produzir resultados diferentes do **objeto \<script> como** comando para a mesma configuração de opção. Os comandos **Editar** e **Modificar** destinam-se a modificar objetos no banco de dados atual durante uma sessão do Editor de Consultas. O **objeto \<script> como** Command foi projetado para gerar um script para que ele possa ser usado posteriormente para criar objetos.  
+ Os comandos **Editar** e **Modificar** podem gerar resultados diferentes do comando **Script \<object> as** para a mesma configuração de opção. Os comandos **Editar** e **Modificar** destinam-se a modificar objetos no banco de dados atual durante uma sessão do Editor de Consultas. O comando **Script \<object> as** destina-se a gerar um script de modo que este possa ser usado mais adiante para criar objetos.  
   
 ## <a name="options"></a>Opções  
  Especifique opções de script selecionando as configurações disponíveis na lista à direita de cada opção.  
@@ -56,7 +55,7 @@ ms.locfileid: "63031930"
  **Catálogos de texto completo de script**  
  Inclui um script para catálogos de texto completo. O padrão é Falso. Para obter mais informações, consulte [criar catálogo de texto completo &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
   
- **>de \<banco de dados de uso de script**  
+ **USO de script\<database>**  
  Adiciona a instrução USE DATABASE ao script para criar objetos do banco de dados no contexto do banco de dados do **Pesquisador de Objetos** atual. Quando se espera que o script seja usado em um banco de dados diferente, selecione Falso para omitir. O padrão é True. Para obter mais informações, veja [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 ### <a name="object-scripting-options"></a>Opções de script de objeto  

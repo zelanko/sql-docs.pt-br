@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97e44dc259c79c7bb1aef5cc5cbff8b06dc6c48e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 998a40b507c92e3c57bb4a10ceab9f597b8156e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068752"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940557"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Definir Opções de Conversão de Moeda (Assistente de Business Intelligence)
   Use a página **Definir Opções de Conversão de Moeda** para definir cálculos de conversão de moeda para um grupo de medidas que contém taxas de câmbio.  

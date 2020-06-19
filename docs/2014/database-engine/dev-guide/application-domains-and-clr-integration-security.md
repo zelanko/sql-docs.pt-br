@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54ee904e-e21a-4ee7-b4ad-a6f6f71bd473
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f2ff171562929a035cb80fed556c954508c5557
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85d6e66b1d51cc9d7c5829b8e83c510bea750e2a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753768"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933752"
 ---
 # <a name="application-domains-and-clr-integration-security"></a>Domínios do aplicativo e segurança da integração CLR
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carrega assemblies que pertencem ao mesmo proprietário no mesmo domínio do aplicativo. Em virtude de um conjunto de assemblies estar sendo executado no mesmo domínio de aplicativo, os assemblies podem descobrir uns aos outros durante a execução usando as interfaces de programação de aplicativo de reflexão do .NET Framework ou outros meios, e podem chamá-los em forma de associação tardia. Pelo fato dessas chamadas estarem ocorrendo nos assemblies que pertencem ao mesmo proprietário, não há permissões de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificadas para elas. O esquema de posicionamento de assemblies em domínios de aplicativo é projetado principalmente para obter escalabilidade, segurança e isolamento, podendo ser alterado em versões futuras. Consequentemente, você não deve confiar na localização de assemblies no mesmo domínio do aplicativo através de mecanismos de associação tardia.  

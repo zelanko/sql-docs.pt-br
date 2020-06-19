@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a4834e8a32f5cb2cb512061777715f314f84299
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637827"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916291"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
   Este tópico fornece sugestões sobre como projetar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas comuns de desempenho. Este tópico também provê informações sobre recursos e ferramentas que podem ser usados para diagnosticar o desempenho de pacotes.  
@@ -94,7 +93,7 @@ ms.locfileid: "73637827"
  Independente do componente de fluxo de dados, existem duas instruções gerais que devem ser seguidas para melhorar o desempenho: otimizar consultas e evitar cadeias de caracteres desnecessárias.  
   
 #### <a name="optimize-queries"></a>Otimizar Consultas  
- Um determinado número de componentes de fluxo de dados usa consultas, tanto quando extraem dados das origens quanto em operações de pesquisa para criar tabelas de referências. A consulta padrão usa a sintaxe SELECT * FROM \<tableName>. Este tipo de consulta retorna todas as colunas na tabela de origem. Considerando que você tenha todas as colunas disponíveis no momento da criação, é possível escolher qualquer coluna como uma coluna de pesquisa, passagem ou origem. No entanto, depois de selecionar as colunas que serão usadas, será preciso revisar a consulta para incluir somente as colunas selecionadas. Remover as colunas supérfluas faz com que o fluxo de dados torne-se mais eficaz, pois quanto menor for o número de colunas, menor será a linha criada. Uma linha pequena significa que mais linhas podem ser ajustadas no buffer e o trabalho para processar todas as linhas no conjunto de dados é menor.  
+ Um determinado número de componentes de fluxo de dados usa consultas, tanto quando extraem dados das origens quanto em operações de pesquisa para criar tabelas de referências. A consulta padrão usa a sintaxe SELECT * FROM \<tableName> . Este tipo de consulta retorna todas as colunas na tabela de origem. Considerando que você tenha todas as colunas disponíveis no momento da criação, é possível escolher qualquer coluna como uma coluna de pesquisa, passagem ou origem. No entanto, depois de selecionar as colunas que serão usadas, será preciso revisar a consulta para incluir somente as colunas selecionadas. Remover as colunas supérfluas faz com que o fluxo de dados torne-se mais eficaz, pois quanto menor for o número de colunas, menor será a linha criada. Uma linha pequena significa que mais linhas podem ser ajustadas no buffer e o trabalho para processar todas as linhas no conjunto de dados é menor.  
   
  Para construir uma consulta, é preciso inseri-la ou usar o Construtor de Consultas.  
   

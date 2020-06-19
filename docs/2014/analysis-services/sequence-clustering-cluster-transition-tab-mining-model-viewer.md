@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31fa9942ccfe25c5c56cc0edbce98f6946afad98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940683"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Guia Transição de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
   A guia **Transições de Estado** no **Visualizador MSC** fornece uma visão mais detalhada das transições entre pares atributo-valor ou estados no cluster selecionado.  
@@ -48,7 +47,7 @@ ms.locfileid: "66069076"
  **Copiar Todo o Gráfico**  
  Copie todo o diagrama na área de transferência.  
   
- **Cluster**  
+ **Em**  
  Escolha um cluster para ser exibido no visualizador. Por padrão, **População (Todos)** é selecionada, o que significa que os estados e as transições do modelo inteiro são incluídos no gráfico. Quando você escolhe um cluster específico, somente os estados e as transições que estão naquele cluster são exibidos.  
   
  **Dica:** Você pode renomear clusters usando a guia **diagrama de cluster** . Basta selecionar um cluster, clicar com o botão direito do mouse e selecionar **renomear**. Renomear clusters com um rótulo mais descritivo facilita a comparação de clusters na guia **de Transições de Estado** .  

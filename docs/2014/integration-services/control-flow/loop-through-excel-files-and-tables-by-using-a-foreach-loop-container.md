@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93bb5d5d1625c4d558b865bdd28445e377abbfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918567"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach
   Os procedimentos neste tópico descrevem como criar um loop através de pastas de trabalho do Excel ou através de tabelas em uma pasta de trabalho do Excel, usando o contêiner Loop Foreach com o enumerador apropriado.  
@@ -49,7 +48,7 @@ ms.locfileid: "62830577"
   
 8.  Selecione o novo gerenciador de conexões do Excel, clique na propriedade **Expressões** na janela Propriedades e clique nas reticências.  
   
-9. No **Editor de expressões de propriedade**, selecione `ConnectionString` a propriedade e clique nas reticências.  
+9. No **Editor de expressões de propriedade**, selecione a `ConnectionString` propriedade e clique nas reticências.  
   
 10. No Construtor de Expressões, digite a expressão a seguir:  
   

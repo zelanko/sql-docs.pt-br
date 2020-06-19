@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167cec89a772084cbd171be14001dded42e059d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796633"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996807"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Gerenciando serviços e configurações de rede através do provedor do WMI
   O provedor do WMI é uma interface publicada que é usada pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) para gerenciar os serviços e protocolos de rede do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No SMO, o objeto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> representa o Provedor do WMI.  

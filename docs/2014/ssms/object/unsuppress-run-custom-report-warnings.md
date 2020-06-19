@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae7f4d08ac613113d715728a5cb78ae37bd6f99b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62824385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058526"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Cancelar supressão da execução de avisos de relatório personalizado
   Há duas caixas de diálogo de aviso para relatórios personalizados. Este tópico descreve como cancelar a supressão da exibição dessas caixas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -28,21 +27,21 @@ ms.locfileid: "62824385"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>Para cancelar a supressão da caixa de diálogo de aviso do relatório personalizado principal  
   
-1.  Conectar- \<se à*unidade* de*compartilhamento*>|\< *do servidor*>\\<> \Documents\>and Settings\\<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
+1.  Conecte-se ao \<*Server*> \\ < *compartilhamento* >| \<*Drive*> \Documents and Settings \\<USERPROFILE \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
   
-2.  Clique `reports.xml`com o botão direito do mouse em e clique em **Editar**.  
+2.  Clique com o botão direito do mouse em `reports.xml` e clique em **Editar**.  
   
-3.  Altere**\<SuppressWarning>true\</SuppressWarning> para \<SuppressWarning>false\</SuppressWarning>**.  
+3.  Altere** \<SuppressWarning> true \</SuppressWarning> para \<SuppressWarning> false \</SuppressWarning> **.  
   
 4.  Reinicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>Para cancelar a supressão da caixa de diálogo de aviso do relatório detalhado personalizado  
   
-1.  Conectar- \<se à*unidade* de*compartilhamento*>|\< *do servidor*>\\<> \Documents\>and Settings\\<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
+1.  Conecte-se ao \<*Server*> \\ < *compartilhamento* >| \<*Drive*> \Documents and Settings \\<USERPROFILE \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
   
-2.  Clique `reports.xml`com o botão direito do mouse e clique em **Editar**.  
+2.  Clique com o botão direito do mouse `reports.xml` e clique em **Editar**.  
   
-3.  Altere ** \<SuppressDrillthroughWarning>true\</SuppressDrillthroughWarning>para \<SuppressDrillthroughWarning>false\</SuppressDrillthroughWarning>**.  
+3.  Altere ** \<SuppressDrillthroughWarning> true \</SuppressDrillthroughWarning> para \<SuppressDrillthroughWarning> false \</SuppressDrillthroughWarning> **.  
   
 4.  Reinicie o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

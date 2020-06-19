@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27aeece212883fbfe28fe5eed408e594052fa204
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999302"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058539"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>Opções (Pesquisador de Objetos do SQL Server-comandos)
   Quando você clica com o botão direito do mouse em uma tabela ou exibição no Pesquisador de Objetos, existem as seguintes duas opções para exibição de linhas na tabela:  
@@ -33,13 +32,13 @@ ms.locfileid: "62999302"
  Use a caixa de diálogo **Opções de Script Gerais** para alterar o número de linhas que serão abertas.  
   
 ## <a name="general-scripting-options"></a>Opções de Script Gerais  
- **Valor do comando selecionar \<n> auditoria de registro Top**  
+ **Valor do comando Selecionar \<n> registro de Auditoria Superior**  
  Especifica o número de linhas de auditoria a retornar. O padrão é 1000 linhas  
   
- **Valor do comando Editar \<as n> linhas superiores**  
+ **Valor do comando Editar \<n> Linhas Superiores**  
  Especifica o número de linhas a serem retornadas quando você estiver editando linhas em uma tabela. O padrão é 200 linhas.  
   
- **Valor do comando selecionar \<n> linhas superiores**  
+ **Valor do comando Selecionar \<n> Linhas Superiores**  
  Especifica o número de linhas a serem retornadas especificado no script do Editor de Consultas criado. O padrão é 1000 linhas.  
   
 ## <a name="see-also"></a>Consulte Também  

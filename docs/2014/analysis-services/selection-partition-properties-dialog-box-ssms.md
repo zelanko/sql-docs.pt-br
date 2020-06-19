@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9884f29124984e605f5a72b9b712b0f076eda7d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940767"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Seleção (caixa de diálogo Propriedades da Partição) (SSMS)
   Use a página **Seleção** da caixa de diálogo **Propriedades da Partição** no SQL Server Management Studio para selecionar uma partição de um grupo de medidas da qual exibir ou modificar propriedades no painel **Geral**, **Cache Pró-ativo**ou **Configuração de Erro** .  
   
 ## <a name="options"></a>Opções  
- **Grade**  
+ **Grid**  
  Exibe as partições do grupo de medidas que contêm a partição selecionada.  
   
  Selecione a partição da qual exibir as propriedades na página **Geral**, **Cache Pró-ativo**ou **Configuração de Erro** .  
@@ -33,7 +32,7 @@ ms.locfileid: "66069220"
 |Coluna|Descrição|  
 |------------|-----------------|  
 |**Nome**|Exibe o nome da partição.|  
-|**Fonte**|Exibe a tabela ou consulta usada para fornecer dados de origem para a partição.|  
+|**Origem**|Exibe a tabela ou consulta usada para fornecer dados de origem para a partição.|  
 |**Agregações**|Exibe uma cadeia de caracteres que descreve o design de agregação usado pela partição.|  
   
 ## <a name="see-also"></a>Consulte Também  

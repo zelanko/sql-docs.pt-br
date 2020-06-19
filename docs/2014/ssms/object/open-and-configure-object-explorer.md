@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4793aa69a2d26d5375b10eb74026b3a53c96ca43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058568"
 ---
 # <a name="open-and-configure-object-explorer"></a>Abrir e configurar o Pesquisador de Objetos
   Abra o Pesquisador de Objetos usando o menu **Exibir** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure as opções do Pesquisador de Objetos usando **Opções** no menu **Ferramentas** .  

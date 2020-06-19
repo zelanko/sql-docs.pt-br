@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f43034d81af8092a44c25db466fa8fa51b9eaa8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961536"
 ---
 # <a name="metadata-master-data-services"></a>Metadados (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], metadados definidos pelo usuário são informações usadas para descrever objetos de modelo. Por exemplo, você pode acompanhar os proprietários de um modelo ou entidade específicos ou acompanhar os sistemas de origem que fornecem dados a uma entidade.  
   
- Os metadados definidos pelo usuário são gerenciados por um modelo chamado **metadados**. Esse modelo é incluído automaticamente quando [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] o é instalado e é semelhante a todos os outros modelos do MDS, exceto pelo fato de que você não pode criar versões dele.  
+ Os metadados definidos pelo usuário são gerenciados por um modelo chamado **metadados**. Esse modelo é incluído automaticamente quando o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] é instalado e é semelhante a todos os outros modelos do MDS, exceto pelo fato de que você não pode criar versões dele.  
   
  Depois de popular o modelo de Metadados com metadados definidos pelo usuário, você pode incluí-lo em exibições de assinatura para que seja consumido por sistemas assinantes.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66054043"
   
 -   Um atributo de forma livre chamado Data da Última Revisão, que você usa para acompanhar a data que um objeto foi revisado pela última vez pelo proprietário.  
   
--   Um atributo baseado em domínio chamado fontes, que você usa para acompanhar e gerenciar os sistemas de origem que interagem [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] com a instância do.  
+-   Um atributo baseado em domínio chamado fontes, que você usa para acompanhar e gerenciar os sistemas de origem que interagem com a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] instância do.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82bab25b25c8d27e1aad2e2692d9ca519c9269b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069172"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940757"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Guia Características de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
   A guia **Características de Cluster** no **Visualizador de Clustering de Sequência da Microsoft** fornece uma lista detalhada das características que definem um cluster de sequência. Essas características podem incluir pares atributo-valor simples assim como podem fazer a transição entre estados.  
@@ -36,10 +35,10 @@ ms.locfileid: "66069172"
  **Visualizador**  
  Escolha um visualizador que será usado para explorar o modelo de mineração selecionado. Você pode usar o visualizador personalizado, ou o **Visualizador de Árvore de Conteúdo Genérica da Microsoft**. Você também pode usar visualizadores de plug-in se houver.  
   
- **Cluster**  
+ **Em**  
  Escolha o cluster que você quer exibir.  
   
- **Características do \<cluster>**  
+ **Características de\<Cluster>**  
  Esta tabela fornece uma lista das sequências que foram atribuídas ao cluster atual, ordenadas por probabilidade. Lembre-se de que uma sequência é basicamente um par atributo-valor, seguido por um ou mais pares atributo-valor adicionais. A combinação de sequências e as probabilidades são as características que definem cada cluster.  
   
  Por exemplo, em um modelo de clustering de sequência baseado em análise da cesta de compras, um cluster pode ter como sua principal característica um cliente escolhendo o item de venda e terminando a transação sem comprar nada mais. Em um modelo de clustering de sequência que procura analisar falhas de servidor, as características principais de um cluster podem ser uma série de eventos de erro de alta frequência.  
@@ -47,7 +46,7 @@ ms.locfileid: "66069172"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável**|Esta coluna indica se a característica é um valor, ou uma transição.<br /><br /> Se a característica for um valor, a coluna **variável** conterá o nome do atributo.<br /><br /> Se a característica representar uma transição de estado, a coluna **variável** conterá o texto "transições".|  
-|**Valores**|O valor desta coluna depende se a característica é um par atributo-valor simples, ou uma transição de estado que representa uma sequência comum de itens ou eventos.<br /><br /> Se a característica for um valor, a coluna **valor** conterá o estado.<br /><br /> Se a característica representar uma transição de estado, a coluna **valor** conterá a descrição da transição de estado.|  
+|**Os**|O valor desta coluna depende se a característica é um par atributo-valor simples, ou uma transição de estado que representa uma sequência comum de itens ou eventos.<br /><br /> Se a característica for um valor, a coluna **valor** conterá o estado.<br /><br /> Se a característica representar uma transição de estado, a coluna **valor** conterá a descrição da transição de estado.|  
 |**Probabilidade**|Esta coluna exibe uma barra que indica a probabilidade relativa que esta característica (um par atributo-valor simples ou uma combinação de estados) ser membro do cluster atual.<br /><br /> Você pode passar o mouse sobre o par para exibir o valor de frequência da característica.|  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9d388fd0e1362bb8844e874cd89162912e93e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467882"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050052"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para usar tabelas com otimização de memória
   Além dos requisitos de [hardware e software para a instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), veja a seguir os requisitos para usar o OLTP na memória:  
@@ -36,7 +35,7 @@ ms.locfileid: "62467882"
   
 -   Para instalar OLTP na memória, selecione **Serviços de Mecanismo de Banco de Dados** ao instalar o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-     Para instalar a geração de relatórios ([determinando se uma tabela ou um procedimento armazenado deve ser movido para OLTP na memória](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e (para gerenciar o OLTP na [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] memória por meio do pesquisador de objetos), selecione **ferramentas de gerenciamento-básicas** ou [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] **ferramentas de gerenciamento-avançadas** ao instalar o.  
+     Para instalar a geração de relatórios ([determinando se uma tabela ou um procedimento armazenado deve ser movido para OLTP na memória](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) e [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (para gerenciar o OLTP na memória por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pesquisador de objetos), selecione **ferramentas de gerenciamento-básicas** ou **ferramentas de gerenciamento-avançadas** ao instalar o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 ## <a name="important-notes-on-using-hek_2"></a>Observações importantes sobre o uso do [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62467882"
 -   Se você criar um ou vários bancos de dados com tabelas com otimização de memória, deverá habilitar a inicialização imediata de arquivo (conceda à conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o direito de usuário SE_MANAGE_VOLUME_NAME) para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sem a inicialização imediata de arquivo, os arquivos de armazenamento com otimização de memória (arquivos delta e de dados) serão inicializados após a criação, que pode ter um impacto negativo no desempenho de sua carga de trabalho. Para obter mais informações sobre a inicialização imediata de arquivo, consulte [Inicialização de arquivo de banco de dados](../databases/database-instant-file-initialization.md). Para obter informações sobre como habilitar a inicialização imediata de arquivo, consulte [Como e por que habilitar a inicialização imediata de arquivo](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos ouvindo  
- Quais são as informações que você está procurando? Você as localizou? Estamos ouvindo seus comentários para melhorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
+ Quais são as informações que você está procurando? Você as localizou? Estamos ouvindo seus comentários para melhorar o conteúdo. Envie seus comentários para [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page) .  
   
 ## <a name="see-also"></a>Consulte Também  
  [OLTP in-memory &#40;Otimização na memória&#41;](in-memory-oltp-in-memory-optimization.md)  

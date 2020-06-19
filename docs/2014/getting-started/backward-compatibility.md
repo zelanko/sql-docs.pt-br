@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2c6ed19ca2167a07068c0471194c598fb067fc0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd8be66efd648f5b6703a76855a549a9bd30f1e3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927177"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   As seções a seguir contêm informações sobre compatibilidade com versões anteriores para componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Este conteúdo inclui informações sobre recursos descontinuados (substituídos), recursos suspensos, alterações que causam interrupções e alterações de comportamento.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 445f6eeaea7057a6267ad41d5e2490eaab253460
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011482"
 ---
 # <a name="server-element-dta"></a>Elemento de servidor (DTA)
   Contém a informações de identificação do servidor no qual residem os bancos de dados a serem ajustados.  
@@ -36,7 +35,7 @@ ms.locfileid: "63273428"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
