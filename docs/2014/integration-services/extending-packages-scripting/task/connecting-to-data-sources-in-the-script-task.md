@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4464b0ca035bc19695b37aea01385f737549fec1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50d0914efce0fd8b91d0a4ac2e93d01d910849e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768392"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967197"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Conectando a fontes de dados na tarefa Script
   Gerenciadores de conexões fornecem acesso a fontes de dados que foram configuradas no pacote. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](../../connection-manager/integration-services-ssis-connections.md).  
@@ -38,12 +37,12 @@ ms.locfileid: "62768392"
  Quando você chama o método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> de um gerenciador de conexões, este se conecta à fonte de dados, se já não estiver conectado, e retorna a conexão apropriada ou as informações da conexão para você utilizar no código da tarefa Script.  
   
 > [!NOTE]  
->  Você deve saber o tipo de conexão retornado pelo Gerenciador de conexões antes de `AcquireConnection`chamar. Como a tarefa Script tem `Option Strict` habilitada, você deve converter a conexão, que é retornada como tipo `Object`, para o tipo de conexão adequado antes de poder usá-lo.  
+>  Você deve saber o tipo de conexão retornado pelo Gerenciador de conexões antes de chamar `AcquireConnection` . Como a tarefa Script tem `Option Strict` habilitada, você deve converter a conexão, que é retornada como tipo `Object`, para o tipo de conexão adequado antes de poder usá-lo.  
   
  É possível usar o método <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Contains%2A> da coleção <xref:Microsoft.SqlServer.Dts.Runtime.Connections> retornada pela propriedade <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> para procurar uma conexão existente antes de usá-la no seu código.  
   
 > [!IMPORTANT]  
->  Você não pode chamar o método AcquireConnection de gerenciadores de conexões que retornam objetos não gerenciados, tais como o gerenciador de conexões OLE DB e o Excel, no código gerenciado de uma tarefa Script. No entanto, você pode ler a propriedade ConnectionString desses gerenciadores de conexões e conectar-se à fonte de dados diretamente em seu código usando a cadeia `OledbConnection` de conexão com um do namespace **System. Data. OleDb** .  
+>  Você não pode chamar o método AcquireConnection de gerenciadores de conexões que retornam objetos não gerenciados, tais como o gerenciador de conexões OLE DB e o Excel, no código gerenciado de uma tarefa Script. No entanto, você pode ler a propriedade ConnectionString desses gerenciadores de conexões e conectar-se à fonte de dados diretamente em seu código usando a cadeia de conexão com um `OledbConnection` do namespace **System. Data. OleDb** .  
 >   
 >  Se você deve chamar o método AcquireConnection de um gerenciador de conexões que retorna um objeto não gerenciado, use um gerenciador de conexões [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Quando você configura o gerenciador de conexões [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] para usar um provedor OLE DB, ele se conecta usando o Provedor de Dados [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para OLE DB. Nesse caso, o método AcquireConnection retorna um `System.Data.OleDb.OleDbConnection` em vez de um objeto não gerenciado. Para configurar um gerenciador de conexões [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] para usar com uma fonte de dados Excel, selecione o OLE DB Provider for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Jet, especifique um arquivo em Excel e insira `Excel 8.0` (para Excel 97 e mais recente) como valor de **Propriedades Estendidas** na página **Todas** da caixa de diálogo **Gerenciador de Conexões**.  
   

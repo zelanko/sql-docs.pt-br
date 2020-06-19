@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e4db32776e59c6100594933fd8706129e8652790
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbf78e3ccc56268304440ebacb0b8dfd2bc953b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967366"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (Maior ou igual a) (Expressão SSIS)
   Executa uma comparação para determinar se a primeira expressão é maior que ou igual à segunda. O avaliador de expressões converte automaticamente muitos tipos de dados antes de executar a comparação.  

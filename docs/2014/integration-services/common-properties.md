@@ -18,26 +18,25 @@ helpviewer_keywords:
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77bb61af021bb7499f6656d2fd604f4bdc06bfeb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060956"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922097"
 ---
 # <a name="common-properties"></a>Propriedades comuns
-  Os objetos de fluxo de dados [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no modelo de objeto têm propriedades comuns e propriedades personalizadas nos níveis de componente, entrada e saída e coluna de entrada e saída. Muitas propriedades têm valores somente leitura, atribuídos em tempo de execução pelo mecanismo de fluxo de dados.  
+  Os objetos de fluxo de dados no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modelo de objeto têm propriedades comuns e propriedades personalizadas nos níveis de componente, entrada e saída e coluna de entrada e saída. Muitas propriedades têm valores somente leitura, atribuídos em tempo de execução pelo mecanismo de fluxo de dados.  
   
  Este tópico lista e descreve as propriedades comuns de objetos de fluxo de dados.  
   
 -   [Componentes](#components)  
   
--   [Entradas](#inputs)  
+-   [Informações](#inputs)  
   
 -   [Colunas de entrada](#inputcolumns)  
   
--   [outputs](#outputs)  
+-   [Produz](#outputs)  
   
 -   [Colunas de saída](#outputcolumns)  
   
@@ -109,7 +108,7 @@ ms.locfileid: "66060956"
 |Descrição|String|Descrição da entrada.|  
 |ErrorOrTruncationOperation|String|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
-|HasSideEffects|Boolean|Indica se um componente pode ser removido do plano de execução do fluxo de dados quando não está anexado a um componente downstream e quando `RunInOptimizedMode` é. `true`|  
+|HasSideEffects|Boolean|Indica se um componente pode ser removido do plano de execução do fluxo de dados quando não está anexado a um componente downstream e quando `RunInOptimizedMode` é `true` .|  
 |ID|Integer|Valor que identifica a entrada com exclusividade.|  
 |IdentificationString|String|Cadeia de caracteres que identifica a entrada.|  
 |IsSorted|Boolean|Indica se os dados na entrada são classificados.|  
@@ -158,7 +157,7 @@ ms.locfileid: "66060956"
 |ID|Integer|Valor que identifica a saída com exclusividade.|  
 |IdentificationString|String|Cadeia de caracteres que identifica a saída.|  
 |IsErrorOut|Boolean|Indica se a saída é uma saída de erro.|  
-|IsSorted|Boolean|Indica se a saída está classificada. O valor padrão é `False`.<br /><br /> ** \* Importante \* \* ** Definir o valor da `IsSorted` Propriedade como `True` não classifica os dados. Esta propriedade apenas fornece uma dica aos componentes downstream de que os dados foram classificados previamente. Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Indica se a saída está classificada. O valor padrão é `False`.<br /><br /> Importante a definição do valor da propriedade como não classifica ** \* os dados. \* \* \* ** `IsSorted` `True` Esta propriedade apenas fornece uma dica aos componentes downstream de que os dados foram classificados previamente. Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nome|String|Nome da saída.|  
 |SynchronousInputID|Integer|ID de uma entrada que é síncrona à saída.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  

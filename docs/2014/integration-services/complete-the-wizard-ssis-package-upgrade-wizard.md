@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 57fbbf1702109546037fe91872a7a983bc5713bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b684a20563bf73a50b4df9f624b59047c768865c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922007"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Concluir o Assistente (Assistente de Atualização de Pacotes SSIS)
   Use a página **Concluir o Assistente** para revisar e confirmar as opções de atualização de pacote que você selecionou. Esta é a última página do assistente que permite voltar e alterar as opções dessa sessão do assistente.  

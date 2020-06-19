@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a02fa726d7fef74c4baf3ba44a24519a5cbb680
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65805159"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933917"
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
   Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de Espelhamento de Banco de Dados** .  
@@ -30,7 +29,7 @@ ms.locfileid: "65805159"
   
 ## <a name="options"></a>Opções  
  *A instância de servidor e seu status de conexão*  
- Nome de uma instância de servidor parceiro no formato _SYSTEM_**\\**_INSTANCE_NAME_do sistema. Com relação a uma instância de servidor padrão, o nome do sistema é exibido.  
+ Nome de uma instância de servidor parceiro no formato _SYSTEM_ **\\** _INSTANCE_NAME_do sistema. Com relação a uma instância de servidor padrão, o nome do sistema é exibido.  
   
  Esse campo indica também se o monitor está conectado atualmente à instância de servidor. Os status de conexão possíveis são:  
   
@@ -72,10 +71,10 @@ ms.locfileid: "65805159"
 |**Avisar se a idade da transação não enviada mais antiga exceder o limite**|O limite indica o número de minutos de transações que ainda não foram enviadas da fila de envio para a instância de servidor de espelho. Esse valor ajuda a medir o potencial de perda de dados em termos de tempo.|  
 |**Avisar se a sobrecarga espelhada confirmada exceder o limite**|O limite indica o número de milissegundos de retardo por transação (pertinente só em modo de alta segurança). Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração.|  
   
- **Habilitado em '** *\<instância do servidor>* **'**  
+ **Habilitado em '** *\<server instance>* **'**  
  Uma caixa de seleção em branco indica que o aviso está desabilitado presentemente na instância de servidor. Para habilitar um aviso, clique em sua caixa de seleção.  
   
- **Limite em '** *\<instância do servidor>* **'**  
+ **Limite em '** *\<server instance>* **'**  
  Quando um aviso for habilitado, defina o limite no lado esquerdo dessa coluna. Um evento ocorrerá se o limite especificado tiver sido atingido quando a tabela de status for atualizada. Se você desabilitar um limite depois de configurar um valor, o valor permanecerá no campo e será usado quando você reabilitar o aviso.  
   
  Quando um aviso não for habilitado, o campo permanecerá inativo.  

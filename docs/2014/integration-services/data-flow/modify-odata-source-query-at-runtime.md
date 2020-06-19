@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901183"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915206"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modifique a consulta de origem do OData em runtime
   Você pode alterar a consulta de origem OData em runtime adicionando uma expressão à propriedade de **[OData Source].[Consulta]** da Tarefa de Fluxo de Dados.  
@@ -29,7 +28,7 @@ ms.locfileid: "62901183"
   
 1.  Clique com o botão direito do mouse em **Tarefa de Fluxo de Dados** e selecione a opção **Parametrizar...** .  
   
-2.  No diálogo **Parametrizar**, selecione **[\<Nome do Componente de OData Source].[Consulta]** para **Propriedade**.  
+2.  Na caixa de diálogo **parametrizar** , selecione **[ \<Name of the OData Source Component> ]. [ Query]** para **Propriedade**.  
   
 3.  Escolha se deseja **criar novo parâmetro** ou **usar um parâmetro existente**.  
   

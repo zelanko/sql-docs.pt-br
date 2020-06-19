@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8301c1f88eb8cf928066a3c12b14452ddbd98cda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783063"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958486"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Excluindo arquivos de blob de backup com arrendamentos ativos
   Ao fazer backup ou restaurar do armazenamento do Azure, o SQL Server adquire uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob só poderá ser gravado ou excluído quando a concessão for liberada. Este tópico descreve como liberar a concessão e excluir o blob.  
@@ -39,7 +38,7 @@ ms.locfileid: "72783063"
 3.  **Excluindo o blob:** para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
   
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a>Exemplo de script do PowerShell  
- ** \* Importante \* \* ** Se você estiver executando o PowerShell 2,0, poderá ter problemas ao carregar o assembly Microsoft WindowsAzure. Storage. dll. Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
+ Importante se você estiver executando o PowerShell 2,0, poderá ter problemas ao carregar o assembly do Microsoft WindowsAzure.Storage.dll. ** \* \* \* \* ** Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
   
 -   Crie ou modifique o arquivo powershell.exe.config para carregar os assemblies do .NET 2.0 e do .NET 4.0 em runtime com o seguinte:  
   
@@ -79,9 +78,9 @@ ms.locfileid: "72783063"
   
      **Interrompendo arrendamentos**  
   
-     **A concessão na \<URL do Blob> é uma concessão de restauração: você verá esta mensagem apenas se tiver um blob com uma concessão de restauração que ainda está ativa.**  
+     **A concessão em \<URL of the Blob> é uma concessão de restauração: você verá esta mensagem somente se tiver um blob com uma concessão de restauração que ainda está ativa.**  
   
-     **A concessão na \<URL do Blob> não é uma concessão de restauração Interrompendo concessão na \<URL do Bob>.**  
+     **A concessão em \<URL of the Blob> não é uma concessão de restauração que quebra a concessão em \<URL of the Bob> .**  
   
 ```powershell
 param(  
@@ -150,4 +149,4 @@ if($lockedBlobs.Count -gt 0)
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [Solução de problemas e melhores práticas de backup do SQL Server para URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

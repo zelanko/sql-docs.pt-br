@@ -1,5 +1,6 @@
 ---
 title: Processar códigos de retorno e parâmetros de saída (ODBC) | Microsoft Docs
+description: Saiba mais sobre o SQLSTATE, que fornece informações detalhadas sobre a causa de um aviso ou erro no driver ODBC SQL Server Native Client.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c0f9fadf13ae32581e66b55a0f0ea13b48d47c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967557"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Executar procedimentos armazenados – Processar códigos e parâmetros de saída de retorno
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.locfileid: "81281876"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- A primeira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () cria um procedimento armazenado usado por este exemplo.  
+ A primeira [!INCLUDE[tsql](../../includes/tsql-md.md)] listagem de código () cria um procedimento armazenado usado por este exemplo.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib. Em seguida, execute o programa.  
   
- A terceira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () exclui o procedimento armazenado usado por este exemplo.  
+ A terceira [!INCLUDE[tsql](../../includes/tsql-md.md)] listagem de código () exclui o procedimento armazenado usado por este exemplo.  
   
 ```  
 use AdventureWorks  

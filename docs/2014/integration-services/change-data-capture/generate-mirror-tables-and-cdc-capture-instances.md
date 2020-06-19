@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 848de74437835311c8585001f5906169aa1dbb7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93837d6a410d4d6c1a4e7e71af2f591a5f4230a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771352"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923152"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>Gerar tabelas de espelho e instâncias de captura CDC
   Use a página Gerar Tabelas de Espelho para gerar as tabelas de espelho para as tabelas incluídas na instância CDC  

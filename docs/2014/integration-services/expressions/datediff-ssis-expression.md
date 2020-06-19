@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e51592134e626647577bf69319e452a77359ff0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967396"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (Expressão SSIS)
   Retorna o número de limites de data e hora entre duas datas especificadas. O parâmetro *datepart* identifica quais limites de data e hora serão comparados.  

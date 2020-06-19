@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e5c59f3-5a2d-44de-b1ba-2c56b76d3c8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8703ec6f199290185829a15a0079cd9b04e42fbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 130070f029e6b4007ca12bd57f6b8fa05c035257
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940537"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Definir Opções de Agregação (Assistente de Otimização com Base no Uso)
   Use a página **Definir Opções de Agregação** para iniciar o processo de design de agregação e especificar limites de armazenamento ou desempenho para as agregações geradas pelo Assistente de Otimização Baseada no Uso.  

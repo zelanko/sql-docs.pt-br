@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31f648e31c736d502f84df71d080551db2bc495f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068881"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940627"
 ---
 # <a name="network-properties"></a>Propriedades de rede
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor listadas nas tabelas a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

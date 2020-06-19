@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0aefc386d2da3cc17c7ed335a6438667b715d11a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c794a2823474f5b4f3f3f8d4cb522f9dbe85e7f6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835142"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922177"
 ---
 # <a name="work-with-cdc-services"></a>Trabalhar com serviços CDC
   Você pode usar o Console de Configuração do Serviço CDC para criar um novo serviço CDC e preparar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para CDC.  

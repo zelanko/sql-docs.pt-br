@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f12b0d97d2e2065c5bb08d175253c22dffb032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755251"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933687"
 ---
 # <a name="clr-triggers"></a>Gatilhos CLR
   Por causa da integração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com CLR (Common Language Runtime) do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], você pode usar qualquer linguagem do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para criar gatilhos CLR. Esta seção contém informações específicas para gatilhos implementados com a integração CLR. Para obter uma discussão completa sobre gatilhos, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "62755251"
   
 -   Acessar informações sobre objetos de banco de dados afetados pela execução de instruções DDL.  
   
- Essas capacidades são fornecidas inerentemente na linguagem de consulta, ou pela classe `SqlTriggerContext`. Para obter informações sobre as vantagens da integração CLR e como escolher entre código [!INCLUDE[tsql](../../includes/tsql-md.md)]gerenciado e, consulte [visão geral da integração do CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Essas capacidades são fornecidas inerentemente na linguagem de consulta, ou pela classe `SqlTriggerContext`. Para obter informações sobre as vantagens da integração CLR e como escolher entre código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [visão geral da integração do CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Usando a classe SqlTriggerContext  
  A classe `SqlTriggerContext` não pode ser criada publicamente e só pode ser obtida por meio do acesso à propriedade `SqlContext.TriggerContext` dentro do corpo de um gatilho CLR. A classe `SqlTriggerContext` pode ser obtida do `SqlContext` ativo chamando a propriedade `SqlContext.TriggerContext`:  
@@ -480,7 +479,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- A [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução que cria o gatilho no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é a seguinte e pressupõe que o assembly **SQLCLRTest** já esteja registrado no banco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados atual.  
+ A [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução que cria o gatilho no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é a seguinte e pressupõe que o assembly **SQLCLRTest** já esteja registrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados atual.  
   
 ```  
 CREATE TRIGGER EmailAudit  

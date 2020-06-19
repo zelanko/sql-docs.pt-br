@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb8b61bf8cfa9a2b26646df19810a94705a30d14
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771162"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922127"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabalhando com o Serviço Oracle CDC
   Esta seção descreve alguns conceitos importantes do Serviço Oracle CDC. Os conceitos incluídos nesta seção são:  
@@ -70,7 +69,7 @@ ms.locfileid: "62771162"
   
  A tabela a seguir descreve os itens incluídos na tabela **dbo.xdbcdc_trace** .  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |timestamp|O carimbo de data/hora UTC exato quando o registro de rastreamento foi gravado.|  
 |type|Contém um dos seguintes valores.<br /><br /> ERROR<br /><br /> INFO<br /><br /> RASTREAMENTO|  
@@ -89,7 +88,7 @@ ms.locfileid: "62771162"
   
  A tabela a seguir descreve os itens incluídos na tabela **dbo.xdbcdc_databases** .  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |name|O nome do banco de dados Oracle na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|O carimbo de data/hora (UTC) para a última alteração na tabela **xdbcdc_config** correspondente do banco de dados CDC ou o carimbo de data/hora (UTC) para a linha atual nesta tabela.<br /><br /> O gatilho UPDATE impõe um valor de GETUTCDATE() para este item. **config_version** deixa o serviço CDC identificar a instância CDC que precisa ser verificada para alteração de configuração ou para habilitar/desabilitar.|  
@@ -101,14 +100,14 @@ ms.locfileid: "62771162"
   
  A tabela a seguir descreve os itens do estado de captura incluídos na tabela **dbo.xdbcdc_databases** .  
   
-|Item|DESCRIÇÃO|  
+|Item|Descrição|  
 |----------|-----------------|  
 |cdc_service_name|O nome do Serviço Oracle CDC (o nome de serviço do Windows).|  
 |cdc_service_sql_login|O nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Serviço Oracle CDC para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um novo usuário de SQL chamado cdc_service é criado e associado com este nome de logon e é, em seguida, adicionado como membro das funções de banco de dados fixas db_ddladmin, db_datareader e db_datawriter para cada banco de dados CDC tratado pelo serviço.|  
 |ref_count|Este item conta o número de computadores em que o mesmo Serviço Oracle CDC está instalado. Ele é incrementado com cada adição de serviço Oracle CDC de mesmo nome e é decrementado quando este serviço é removido. Quando o contador chegar a zero, esta linha será excluída.|  
 |active_service_node|O nome do nó de Windows que atualmente trata o serviço CDC. Quando o serviço é parado corretamente, esta coluna é definida como nulo, indicando que não há mais um serviço ativo.|  
 |active_service_heartbeat|Este item acompanha o serviço CDC atual para determinar se ele ainda está ativo.<br /><br /> Este item é atualizado com o carimbo de data/hora UTC do banco de dados atual para o serviço CDC ativo em intervalos regulares. O intervalo padrão é de 30 segundos; porém, o intervalo é configurável.<br /><br /> Quando um serviço CDC pendente detecta que a pulsação não foi atualizada depois que o intervalo configurado foi transmitido, o serviço pendente tenta assumir a função de serviço do CDC ativo.|  
-|opções|Este item especifica as opções secundárias, como rastreamento ou ajuste. Ele é gravado no formato de **nome[=value][; ]** . A cadeia de caracteres de opções usa a mesma semântica que a cadeia de conexão ODBC. Se a opção for Booliana (com um valor de sim/não), o valor só poderá incluir o nome.<br /><br /> o rastreamento tem os seguintes valores possíveis:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> Desligar<br /><br /> \<nome de classe>,[nome de classe>]<br /><br /> O valor padrão é **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** é o intervalo de tempo (em segundos) para o serviço atualizar a coluna active_service_heartbeat. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **service_config_polling_interval** é o intervalo de sondagem (em segundos) para o serviço CDC verificar as alterações de configuração. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **sql_command_timeout** é o tempo limite de comando que funciona com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor padrão é **1**. O valor máximo é **3600**.|  
+|opções|Este item especifica as opções secundárias, como rastreamento ou ajuste. Ele é gravado no formato de **nome[=value][; ]** . A cadeia de caracteres de opções usa a mesma semântica que a cadeia de conexão ODBC. Se a opção for Booliana (com um valor de sim/não), o valor só poderá incluir o nome.<br /><br /> o rastreamento tem os seguintes valores possíveis:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> Desligar<br /><br /> \<class name>[, nome da classe>]<br /><br /> O valor padrão é **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** é o intervalo de tempo (em segundos) para o serviço atualizar a coluna active_service_heartbeat. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **service_config_polling_interval** é o intervalo de sondagem (em segundos) para o serviço CDC verificar as alterações de configuração. O valor padrão é **30**. O valor máximo é **3600**.<br /><br /> **sql_command_timeout** é o tempo limite de comando que funciona com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor padrão é **1**. O valor máximo é **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Os procedimentos armazenados do banco de dados MSXDBCDC  
@@ -157,7 +156,7 @@ ms.locfileid: "62771162"
 ###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  O procedimento **dbo.xcbcdc_add_service** adiciona uma entrada à tabela **MSXDBCDC.xdbcdc_services** e adiciona um incremento de um à coluna ref_count para o nome de serviço na tabela **MSXDBCDC.xdbcdc_services** . Quando **ref_count** é 0, exclui a linha.  
   
- Para usar o procedimento **dbo.xcbcdc_add_service\<nome do serviço, nome do usuário>** , o usuário deve ser um membro da função de banco de dados **db_owner** para o banco de dados da instância CDC que está sendo nomeada ou membro da função de servidor fixa **sysadmin** ou **serveradmin**.  
+ Para usar o procedimento **dbo. \<service name, username> xcbcdc_add_service** , o usuário deve ser membro da função de banco de dados **db_owner** para o banco de dados da instância CDC que está sendo nomeada ou membro da função de servidor fixa **sysadmin** ou **ServerAdmin** .  
   
 ###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  O procedimento **dbo.xdbcdc_start** envia uma solicitação de início ao serviço CDC que trata a instância CDC selecionada para iniciar o processamento de alteração.  

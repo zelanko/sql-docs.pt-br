@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80126a2f1955356ae451e2f1092869e962674689
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771189"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922467"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar um intervalo de dados de alteração
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a primeira tarefa serve para calcular os pontos de extremidade do intervalo de alteração. Estes pontos de extremidade são valores `datetime` e são armazenados em variáveis do pacote para uso posterior.  
@@ -73,7 +72,7 @@ ms.locfileid: "62771189"
   
 -   **Calculando a data e hora inicial**. Usar a data e hora final da carga anterior como a data e hora inicial atual. Se você usar um intervalo fixo para cargas incrementais, calcule este valor usando as funções `datetime` da Transact-SQL ou da linguagem de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Caso contrário, talvez seja preciso manter os pontos de extremidade entre execuções e usar uma tarefa Execute SQL ou uma tarefa Script para carregar o ponto de extremidade anterior.  
   
--   **Calculando a data e hora final**. Se você usar um intervalo fixo para cargas incrementais, calcule a data e hora final atual como um deslocamento da data e hora inicial. Novamente, você pode calcular esse valor usando as `datetime` funções do TRANSACT-SQL ou da linguagem de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expressão.  
+-   **Calculando a data e hora final**. Se você usar um intervalo fixo para cargas incrementais, calcule a data e hora final atual como um deslocamento da data e hora inicial. Novamente, você pode calcular esse valor usando as `datetime` funções do Transact-SQL ou da linguagem de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expressão.  
   
  No procedimento seguinte, o intervalo de alteração usa um intervalo fixo e assume que o pacote de carga incremental é executado diariamente sem exceção. Caso contrário, os dados de alteração para intervalos ausentes seriam perdidos. O ponto inicial para o intervalo é meia-noite de anteontem, ou seja, entre 24 e 48 horas atrás. O ponto final para o intervalo é meia-noite de ontem, ou seja, a noite anterior, entre 0 e 24 horas atrás.  
   

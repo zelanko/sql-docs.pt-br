@@ -1,5 +1,6 @@
 ---
 title: Excluir uma fonte de dados (ODBC) | Microsoft Docs
+description: Saiba como excluir uma fonte de dados usando o Administrador ODBC, programaticamente, ou usando um arquivo, antes de usar aplicativos ODBC com o SQL Server 2005 ou posterior.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93ea12968c92f7849876d29d31207b8028714482
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1c8abf66fdd5a54b021008229b3218f1299ccf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294458"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967616"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurar o Driver ODBC do SQL Server – Excluir uma fonte de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

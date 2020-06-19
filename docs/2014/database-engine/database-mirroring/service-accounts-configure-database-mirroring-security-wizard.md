@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6497e3e28f5ea3347cc735292cc3502a42301ce
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754392"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933987"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>Contas de Serviço (Assistente para Configurar Segurança de Espelhamento do Banco de Dados)
   Ao usar a Autenticação do Windows, se as instâncias de servidor usarem contas diferentes, especifique as contas de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essas contas de serviço devem ser todas contas de domínio (nos mesmos domínios ou domínios confiáveis).  
@@ -34,20 +33,20 @@ ms.locfileid: "62754392"
 -   [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
 ## <a name="options"></a>Opções  
- **Beneficiário**  
+ **Principal**  
  Especifique a conta de serviço da instância de servidor principal. Digite o nome de domínio em letras maiúsculas:  
   
- *DOMAINNAME*\\*Nome de usuário* DomainName  
+ *Nome_do_domínio* \\ *nome de usuário*  
   
  **Espelho**  
  Especifique a conta de serviço da instância de servidor espelho. Digite o nome de domínio em letras maiúsculas:  
   
- *DOMAINNAME*\\*Nome de usuário* DomainName  
+ *Nome_do_domínio* \\ *nome de usuário*  
   
  **Witness (testemunha)**  
  Especifique a conta de serviço da instância de servidor testemunha. Digite o nome de domínio em letras maiúsculas:  
   
- *DOMAINNAME*\\*Nome de usuário* DomainName  
+ *Nome_do_domínio* \\ *nome de usuário*  
   
 ## <a name="see-also"></a>Consulte Também  
  [Propriedades do banco de dados &#40;página espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

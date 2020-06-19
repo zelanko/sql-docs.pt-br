@@ -1,5 +1,6 @@
 ---
 title: Processando resultados (ODBC) | Microsoft Docs
+description: Saiba mais sobre o processamento de dados que SQL Server retorna quando um aplicativo ODBC envia uma instrução SQL.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39dafbb865ef951356bb01c4fd8f646bf943346b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53c7b25cfe1429e18ee944f296ca8ebe6b50ce17
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967535"
 ---
 # <a name="processing-results-odbc"></a>Processando resultados (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

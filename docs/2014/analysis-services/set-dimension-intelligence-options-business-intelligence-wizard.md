@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 3fe16614-bf5b-458a-9f30-67ebc8ac2a8e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f85ec2a21b478771a9ace733c22ff93a521c8430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 024aac42e6a5f0ee391ff7c9d00f9e035bd4dca5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068711"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940577"
 ---
 # <a name="set-dimension-intelligence-options-business-intelligence-wizard"></a>Definir Opções de Inteligência de Dimensão (Assistente de Business Intelligence)
-  Use a página **Definir Opções de Inteligência de Dimensão** para selecionar a dimensão à qual o Assistente de Business Intelligence aplicará inteligência de dimensão. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a vários tipos de negócios padrão para dimensões e atributos, como dimensões de produtos ou dimensões de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] conta. Aplicativos cliente podem usar esses tipos de negócios para fornecer suporte à análise adicional para soluções de business intelligence. Para obter mais informações sobre os tipos de dimensão e de atributo disponíveis, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) e [Atributos e hierarquias de atributo](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+  Use a página **Definir Opções de Inteligência de Dimensão** para selecionar a dimensão à qual o Assistente de Business Intelligence aplicará inteligência de dimensão. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a vários tipos de negócios padrão para dimensões e atributos, como dimensões de produtos ou dimensões de conta. Aplicativos cliente podem usar esses tipos de negócios para fornecer suporte à análise adicional para soluções de business intelligence. Para obter mais informações sobre os tipos de dimensão e de atributo disponíveis, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) e [Atributos e hierarquias de atributo](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
 ## <a name="options"></a>Opções  
- **Dimensão**  
+ **Dimensões**  
  Selecione a dimensão à qual o assistente aplicará inteligência de dimensão.  
   
 ## <a name="see-also"></a>Consulte Também  

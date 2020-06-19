@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0579a98e3302b6944f68ca449d3e7cda0ecc01d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754238"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933777"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinando o número de buckets correto para índices de hash não clusterizados
   Você deve especificar um valor para o parâmetro `BUCKET_COUNT` quando cria a tabela com otimização de memória. Este tópico faz recomendações para determinar o valor apropriado para o parâmetro `BUCKET_COUNT`. Se você não puder determinar o número de buckets correto, use um índice não clusterizado.  Um valor incorreto de `BUCKET_COUNT`, especialmente muito baixo, pode afetar significativamente o desempenho da carga de trabalho, bem como o tempo de recuperação do banco de dados. É melhor superestimar o número de buckets.  
@@ -24,7 +23,7 @@ ms.locfileid: "62754238"
   
  Para obter mais informações sobre índices de hash não clusterizados, consulte [Hash Indexes](hash-indexes.md) and [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Uma tabela de hash é alocada para cada índice de hash em uma tabela com otimização de memória. O tamanho da tabela de hash alocada para um índice é especificado pelo `BUCKET_COUNT` parâmetro em [CREATE TABLE &#40;transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) ou [criar tipo &#40;&#41;do Transact-SQL ](/sql/t-sql/statements/create-type-transact-sql). O número de buckets será arredondado internamente até a próxima potência de dois. Por exemplo, especificar um número de buckets 300.000 resultará em um número real de buckets 524.288.  
+ Uma tabela de hash é alocada para cada índice de hash em uma tabela com otimização de memória. O tamanho da tabela de hash alocada para um índice é especificado pelo `BUCKET_COUNT` parâmetro em [CREATE TABLE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) ou [criar tipo &#40;&#41;do Transact-SQL ](/sql/t-sql/statements/create-type-transact-sql). O número de buckets será arredondado internamente até a próxima potência de dois. Por exemplo, especificar um número de buckets 300.000 resultará em um número real de buckets 524.288.  
   
  Para obter links para um artigo e vídeo sobre contas buckets, consulte [Como determinar a contagem de buckets correta para índices de hash (OLTP na memória)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
@@ -177,7 +176,7 @@ GO
 -   Se as verificações de índice completo forem as operações essenciais para o desempenho predominantes, use um número de buckets próximo ao número real de valores de chave de índice.  
   
 ### <a name="big-tables"></a>Tabelas grandes  
- Para tabelas grandes, a utilização de memória pode se tornar um problema. Por exemplo, com uma tabela de linha de 250 milhões que tem quatro índices de hash, cada um com um número de buckets de 1.000.000.000, a sobrecarga para as tabelas de hash \* é 4 índices * 1.000.000.000 buckets 8 bytes = 32 gigabytes de utilização de memória. Ao escolher um número de buckets equivalente a 250 milhões para cada um dos índices, a sobrecarga total das tabelas de hash será de 8 gigabytes. Observe que isso é além dos 8 bytes de uso de memória que cada índice adiciona a cada linha individual, que é 8 gigabytes nesse cenário (4 índices \* 8 bytes \* 250 milhões linhas).  
+ Para tabelas grandes, a utilização de memória pode se tornar um problema. Por exemplo, com uma tabela de linha de 250 milhões que tem quatro índices de hash, cada um com um número de buckets de 1.000.000.000, a sobrecarga para as tabelas de hash é 4 índices * 1.000.000.000 buckets \* 8 bytes = 32 gigabytes de utilização de memória. Ao escolher um número de buckets equivalente a 250 milhões para cada um dos índices, a sobrecarga total das tabelas de hash será de 8 gigabytes. Observe que isso é além dos 8 bytes de uso de memória que cada índice adiciona a cada linha individual, que é 8 gigabytes nesse cenário (4 índices \* 8 bytes \* 250 milhões linhas).  
   
  As verificações completas de tabelas em geral não estão no caminho essencial para o desempenho para cargas de trabalho do OLTP. Consequentemente, a escolha é entre a utilização de memória versus o desempenho da pesquisa de ponto e as operações de inserção:  
   

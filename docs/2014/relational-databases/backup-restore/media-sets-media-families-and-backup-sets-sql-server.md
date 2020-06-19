@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d22511424ff9a7b72edba8c8e3987a8a3185217
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853451ea5a7c43cd073fdf75703b3c4651b442d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175966"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958016"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de mídias, famílias de mídia e conjuntos de backup (SQL Server)
   Este tópico apresenta a terminologia básica de mídia de backup da restauração e do backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e destina-se a leitores que não têm experiência com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tópico descreve o formato que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa na mídia de backup, a correspondência entre mídia de backup e dispositivos de backup, a organização dos backups na mídia de backup, e as várias considerações sobre conjuntos de mídias e famílias de mídia. O tópico também descreve as etapas de inicialização ou formatação de mídia de backup antes que você use isso pela primeira vez ou substitua um conjunto de mídias antigo por um novo conjunto de mídias, como substituir conjuntos de backup antigos em um conjunto de mídias, e como acrescentar novos conjuntos de backup a um conjunto de mídias.
@@ -86,7 +85,7 @@ ms.locfileid: "78175966"
 -   A descrição de mídia contém um rótulo de mídia MTF ou uma descrição de mídia.
 
     > [!NOTE]
-    >  Toda a mídia usada para uma operação de backup ou restauração usa um formato de backup padrão [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] chamado preserva qualquer rótulo de mídia MTF gravado por outro aplicativo, mas não grava rótulos de mídia de MTF.
+    >  Toda a mídia usada para uma operação de backup ou restauração usa um formato de backup padrão chamado [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] preserva qualquer rótulo de mídia MTF gravado por outro aplicativo, mas não grava rótulos de mídia de MTF.
 
 -   O rótulo de mídia de formato de fita [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ou a descrição de mídia (em texto de formato livre).
 
@@ -137,7 +136,7 @@ WITH
 
  ![Segundo conjunto de backups espalhado em três fitas de conjunto de mídias](../../database-engine/media/bnr-mediaset-appendedto.gif "Segundo conjunto de backups espalhado em três fitas de conjunto de mídias")
 
- Ao restaurar backups, você pode usar a opção FILE para especificar quais backups deseja usar. O exemplo a seguir mostra o uso de **=** cláusulas de _backup_set_file_number_ de arquivo ao restaurar um backup de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados completo do banco de dados, seguido por um backup de banco de dados diferencial no mesmo conjunto de mídias. O conjunto de mídias usa três fitas de backup, que estão nas unidades de fita `\\.\tape0`, `tape1`e `tape2`.
+ Ao restaurar backups, você pode usar a opção FILE para especificar quais backups deseja usar. O exemplo a seguir mostra o uso de cláusulas FILE **=** _backup_set_file_number_ ao restaurar um backup de banco de dados completo do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguido de um backup de banco de dados diferencial no mesmo conjunto de mídias. O conjunto de mídias usa três fitas de backup, que estão nas unidades de fita `\\.\tape0`, `tape1`e `tape2`.
 
 ```
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'
@@ -244,7 +243,7 @@ GO
 
      Um número de sequência de mídia indica a ordem das mídias físicas dentro de uma família de mídia. O número de sequência é 1 para a mídia inicial do backup. Esse é marcado com 1; o segundo (a primeira fita de continuação) é marcado com 2; e assim por diante. Quando o conjunto de backup é restaurado, os números de sequência de mídia garantem que o operador que restaura o backup montará as mídias corretas na ordem correta.
 
-###  <a name="multiple-devices"></a><a name="MultipleDevices"></a>Vários dispositivos
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> Vários dispositivos
  Quando você usa várias unidades de fita ou arquivos de disco, as considerações seguintes se aplicam:
 
 -   Para backup:

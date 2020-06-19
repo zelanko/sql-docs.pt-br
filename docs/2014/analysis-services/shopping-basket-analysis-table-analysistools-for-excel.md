@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f5d571d1a3f88f20600947d3093bf1e37feeee2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068675"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940517"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Análise da Cesta de Compras (Ferramentas de Análise de Tabela para Excel)
   ![Ferramenta Cesta de Compras](media/tat-shopbskt.gif "Ferramenta Cesta de Compras")  
   
- A ferramenta de **análise de cesta** de compras `associations` ajuda você a encontrar em seus dados. Uma associação pode informar quais itens são frequentemente adquiridos ao mesmo tempo. Em Data Mining, essa técnica é um método conhecido conhecido como análise de *cesta*de compras, usado para analisar o comportamento de compra de clientes em conjuntos de dados muito grandes. Os analistas de marketing podem usar as informações para recomendar produtos relacionados aos clientes e promover produtos relacionados substituindo-os em páginas da Web próximas, em catálogos ou no comércio.  
+ A ferramenta de **análise de cesta de compras** ajuda você a encontrar `associations` em seus dados. Uma associação pode informar quais itens são frequentemente adquiridos ao mesmo tempo. Em Data Mining, essa técnica é um método conhecido conhecido como análise de *cesta*de compras, usado para analisar o comportamento de compra de clientes em conjuntos de dados muito grandes. Os analistas de marketing podem usar as informações para recomendar produtos relacionados aos clientes e promover produtos relacionados substituindo-os em páginas da Web próximas, em catálogos ou no comércio.  
   
  Para usar a análise da cesta de compras, os itens que você deseja analisar devem estar relacionados por uma ID da transação. Por exemplo, se você estiver analisando todos os pedidos recebidos por meio de um site, cada pedido terá uma ID do pedido ou da transação associada a um ou mais itens comprados.  
   

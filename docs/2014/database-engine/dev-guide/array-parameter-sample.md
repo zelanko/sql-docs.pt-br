@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a670b2e4f4a7a276f9e026cb650855c8aa2108a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74055910"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933721"
 ---
 # <a name="array-parameter-sample"></a>Exemplo de parâmetro de matriz
   Às vezes, é útil para criar, atualizar ou excluir um conjunto de linhas em um banco de dados. Há várias abordagens que você pode usar para alcançar essa meta. Um delas é passar uma matriz de informações de um cliente para um procedimento armazenado de integração CLR (Common Language Runtime) no servidor usando um tipo de dados de integração CLR definido pelo usuário. A natureza desses tipos de dados definidos pelo usuário limita o tamanho dos dados fornecidos ao servidor a 8000 bytes. Portanto, essa abordagem não é satisfatória para dados grandes ou complexos. Se os dados que estão sendo manipulados forem pequenos e simples, essa abordagem poderá ser muito mais eficiente do que chamar um procedimento armazenado para cada linha. Ao passar uma matriz, a ordem dos dados é preservada para os aplicativos onde a ordem é significativa. Este exemplo contém o seguinte:  

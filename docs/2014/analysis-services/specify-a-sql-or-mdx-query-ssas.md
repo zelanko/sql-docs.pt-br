@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e4128221-3b46-48be-b0f1-d82477ce6782
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 682fbbbeba570ad067a3f702edf66959eabfd5ee
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: bce5e92aaed7a62311e989d6963e4fa5764028ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857798"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940467"
 ---
 # <a name="specify-a-sql-or-mdx-query-ssas"></a>Especificar uma consulta SQL ou MDX (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite importar dados com a utilização de uma consulta SQL ou MDX. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

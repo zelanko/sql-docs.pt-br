@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc1080c2e75c58dfe732a2b0238f1d46f292816d
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 9333c239504a79184e08776acb3f1d845f06cc4b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940477"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Especificar uma cadeia de conexão (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar uma cadeia de conexão para estabelecer conexão com uma fonte de dados OLE DB ou ODBC. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -31,7 +30,7 @@ ms.locfileid: "83857932"
  **Cadeia de conexão**  
  Digite uma cadeia de caracteres de conexão para se conectar a uma fonte de dados OLE DB ou ODBC.  
   
- **Build**  
+ **Compilar**  
  Especifique as propriedades de uma cadeia de conexão usando a caixa de diálogo **Propriedades de Link de Dados** . Para obter mais informações, consulte a Ajuda do Microsoft Data Link Help disponível nessa caixa de diálogo.  
   
  **Testar conexão**  

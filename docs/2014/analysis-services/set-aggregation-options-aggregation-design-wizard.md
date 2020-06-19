@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faca5e882a89d14fc18e29e3d4c87cc757d6512e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068806"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940547"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Definir Opções de Agregação (Assistente de Design de Agregação)
   Use a página **Definir Opções de Agregação** para iniciar o processo de design de agregação e especificar limites de armazenamento ou desempenho para as agregações geradas.  
