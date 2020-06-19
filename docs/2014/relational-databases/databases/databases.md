@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea3da64ce6da8cbcb32b5854f14e8d24349c0c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970076"
 ---
 # <a name="databases"></a>Bancos de dados
   Um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é composto de uma coleção de tabelas que armazena um conjunto específico de dados estruturados. Uma tabela contém uma coleção de linhas, também chamadas de registros ou tuplas, e colunas, também chamadas de atributos. Cada coluna da tabela é projetada para armazenar um determinado tipo de informação, por exemplo, datas, nomes, valores em dinheiro e números.  
@@ -57,7 +56,7 @@ ms.locfileid: "70154579"
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Índices](../indexes/indexes.md)  
   
- [Modos de exibição](../views/views.md)  
+ [Exibições](../views/views.md)  
   
  [Procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   

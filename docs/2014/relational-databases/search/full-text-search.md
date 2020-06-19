@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063314"
 ---
 # <a name="full-text-search"></a>Pesquisa de Texto Completo
   A Pesquisa de Texto Completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite que usuários e aplicativos executem consultas de texto completo em dados baseados em caracteres nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para que você possa executar consultas de texto completo em uma tabela, o administrador de banco de dados deve criar um índice de texto completo na tabela. O índice de texto completo inclui uma ou mais colunas baseadas em caractere da tabela. Essas colunas podem ter qualquer um destes tipos de dados: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` ou `varbinary(max)` e FILESTREAM. Cada índice de texto completo indexa uma ou mais colunas da tabela base, e cada coluna pode usar um idioma específico.
@@ -134,7 +133,7 @@ ms.locfileid: "78176836"
 ###  <a name="full-text-indexing-process"></a><a name="indexing"></a>Processo de indexação de texto completo
  Quando uma população de texto completo (também conhecida como rastreamento) é iniciada, o mecanismo de texto completo entrega grandes lotes de dados à memória e notifica o host do daemon de filtro. O host filtra e o Word divide os dados e converte os dados convertidos em listas de palavras invertidas. A pesquisa de texto completo pega os dados convertidos nas listas de palavras, processa-os para remover palavras irrelevantes e mantém as listas de palavras para um lote em um ou mais índices invertidos.
 
- Ao indexar dados armazenados em uma `varbinary(max)` coluna `image` ou, o filtro, que implementa a interface **IFilter** , extrai o texto com base no formato de arquivo especificado para esses dados (por exemplo [!INCLUDE[msCoName](../../includes/msconame-md.md)] , Word). Em alguns casos, os componentes de filtro exigem `varbinary(max)`que os `image` dados, ou sejam gravados na pasta FilterData, em vez de serem enviados para a memória.
+ Ao indexar dados armazenados em uma `varbinary(max)` `image` coluna ou, o filtro, que implementa a interface **IFilter** , extrai o texto com base no formato de arquivo especificado para esses dados (por exemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Em alguns casos, os componentes de filtro exigem que os `varbinary(max)` dados, ou `image` sejam gravados na pasta FilterData, em vez de serem enviados para a memória.
 
  Como parte do processamento, os dados de texto reunidos são passados por um separador de palavras para que o texto seja separado em tokens individuais ou palavras-chave. A linguagem usada para geração de tokens é especificada no nível da coluna, podendo ser identificada em dados `varbinary(max)`, `image` ou `xml`, pelo componente de filtro.
 

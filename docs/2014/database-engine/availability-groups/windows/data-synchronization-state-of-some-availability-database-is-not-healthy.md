@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 45f1479d96838ce69a7bde35cd2a2fbd9c7e684d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d128d38a1123e89b45dc3fdcaa0343aa5fd3d5b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814244"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936858"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>O estado de sincronização de dados de algum banco de dados de disponibilidade não é íntegro
     
@@ -29,7 +28,7 @@ ms.locfileid: "62814244"
 |-|-|  
 |**Nome da Política**|Estado de Sincronização de Dados de Réplicas de Disponibilidade|  
 |**Problema**|O estado de sincronização de dados de algum banco de dados de disponibilidade não é íntegro.|  
-|**Categoria**|**Alerta**|  
+|**Categoria**|**Aviso**|  
 |**Particular**|Réplica de disponibilidade|  
   
 ## <a name="description"></a>Descrição  

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d73724cd1aebd1d06048f634da3a1ad32ff8e49c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175978"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970246"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
   A exportação de um aplicativo de camada de dados implantado (DAC) ou de um banco de dados cria um arquivo de exportação que contém as definições dos objetos no banco de dados e todos os dados contidos nas tabelas. O arquivo de exportação pode ser importado para outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], ou para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC entre instâncias, criar um backup lógico ou criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -105,7 +104,7 @@ ms.locfileid: "70175978"
 ##  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use esta página para analisar a origem especificada e as configurações de destino para a operação. Para concluir a operação de exportação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de exportação e sair do Assistente, clique em **Cancelar**.  
   
-##  <a name="progress-page"></a><a name="Progress"></a>Página progresso  
+##  <a name="progress-page"></a><a name="Progress"></a> Página Progresso  
  Esta página exibe a barra de progresso que indica o status da operação. Para exibir o status detalhado, clique na opção **Exibir detalhes** .  
   
 ##  <a name="results-page"></a><a name="Results"></a>Página de resultados  

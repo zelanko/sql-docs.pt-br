@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51b5913e9c3ce65faa5a1fddc5846cc7c94d149f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011257"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063246"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
   O desempenho da indexação de texto completo e das consultas de texto completo é influenciado por recursos de hardware, como memória, velocidade de disco, velocidade da CPU, e pela arquitetura do computador.  
@@ -58,7 +57,7 @@ ms.locfileid: "66011257"
 ##  <a name="tuning-the-performance-of-full-text-indexes"></a><a name="tuning"></a>Ajustando o desempenho de índices de texto completo  
  Para maximizar o desempenho de seus índices de texto completo, implemente as seguintes práticas recomendadas:  
   
--   Para usar todos os processadores ou núcleos até o máximo, [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)defina sp_configure`max full-text crawl ranges`' ' como o número de CPUs no sistema. Para obter informações sobre essa opção de configuração, veja [Opção max full-text crawl range de configuração de servidor](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   Para usar todos os processadores ou núcleos até o máximo, defina [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)' `max full-text crawl ranges` ' como o número de CPUs no sistema. Para obter informações sobre essa opção de configuração, veja [Opção max full-text crawl range de configuração de servidor](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Verifique se a tabela base tem um índice clusterizado. Use um tipo de dados integer para a primeira coluna do índice clusterizado. Evite usar GUIDs na primeira coluna do índice clusterizado. Uma população de vários intervalos em um índice clusterizado pode gerar a maior velocidade de população. É recomendável que a coluna que funciona como chave de texto completo tenha um tipo de dados integer.  
   
@@ -105,11 +104,11 @@ ms.locfileid: "66011257"
   
  A quantidade de memória consumida (em bytes) pelo host do daemon de filtro pode ser estimada aproximadamente usando a fórmula a seguir:  
   
- *number_of_crawl_ranges* \`ism_size '*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \` ism_size '*max_outstanding_isms* \* 2  
   
  Os valores padrão das variáveis na fórmula anterior são os seguintes:  
   
-|**Variável**|**Valor padrão**|  
+|**Ela**|**Valor padrão**|  
 |------------------|-----------------------|  
 |*number_of_crawl_ranges*|O número de CPUs|  
 |*ism_size*|1 MB para computadores x86<br /><br /> 4 MB, 8 MB ou 16MB para computadores x64, dependendo da memória física total|  
@@ -121,17 +120,17 @@ ms.locfileid: "66011257"
   
 -   *T*, que é o total de memória física disponível no sistema (em MB).  
   
--   *M*, que é a configuração `max server memory` ideal.  
+-   *M*, que é a `max server memory` configuração ideal.  
   
 > [!IMPORTANT]  
 >  Para obter informações essenciais sobre as fórmulas, consulte <sup>1</sup>, <sup>2</sup>e <sup>3</sup>, abaixo.  
   
-|Plataforma|Estimando os requisitos de memória do fdhost. exe em MB-*F*<sup>1</sup>|Fórmula para calcular a memória máxima do servidor-*M*<sup>2</sup>|  
+|Plataforma|Estimando fdhost.exe requisitos de memória em MB-*F*<sup>1</sup>|Fórmula para calcular a memória máxima do servidor-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _número de intervalos de rastreamento_ **&#42;** 50|_M_ **= mínimo (** _T_ **,** 2000 **)-*`F`* ** 500|  
-|x64|_Número F_ **=** _de intervalos de rastreamento_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ T **-** _F_ F **-** 500|  
+|x86|_F_ **=** _número de intervalos de rastreamento_ **&#42;** 50|_M_ **= mínimo (** _T_ **,** 2000 **)- *`F`* - ** 500|  
+|x64|_F_ **=** _Número F de intervalos de rastreamento_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> se várias populações completas estiverem em andamento, calcule os requisitos de memória fdhost. exe de cada um separadamente, como *F1*, *F2*e assim por diante. Em seguida, calcule *M* como _T_**-** sigma **(**_F_i **)**.  
+ <sup>1</sup> se várias populações completas estiverem em andamento, calcule os requisitos de memória de fdhost.exe de cada um separadamente, como *F1*, *F2*e assim por diante. Em seguida, calcule *M* como _T_**-** sigma **(**_F_i **)**.  
   
  <sup>2</sup> 500 MB é uma estimativa da memória exigida por outros processos no sistema. Se o sistema estiver executando trabalho adicional, aumente esse valor de maneira correspondente.  
   
@@ -143,13 +142,13 @@ ms.locfileid: "66011257"
   
  `F = 8*10*8=640`  
   
- O próximo cálculo Obtém o valor ideal para `max server memory` - *M*. *T*o total de memória física disponível neste sistema em MB-*T*-é `8192`.  
+ O próximo cálculo Obtém o valor ideal para `max server memory` - *M*. *T*o total de memória física disponível neste sistema em MB-*T*-é `8192` .  
   
  `M = 8192-640-500=7052`  
   
  **Exemplo: Definindo a configuração max server memory**  
   
- Este exemplo usa as instruções [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) e [reconfigure](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] para definir `max server memory` o valor calculado para *M* no exemplo anterior, `7052`:  
+ Este exemplo usa as instruções [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) e [reconfigure](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] para definir `max server memory` o valor calculado para *M* no exemplo anterior, `7052` :  
   
 ```  
 USE master;  
@@ -203,7 +202,7 @@ GO
   
  Por razões de segurança, os filtros são carregados por processos de host do daemon de filtro. Uma instância de servidor usa um processo multi-threaded para todos os filtros multi-threaded e um processo single-threaded para todos os filtros single-threaded. Quando um documento que usa um filtro multithread contém um documento incorporado que usa um filtro de thread único, o Mecanismo de Texto Completo inicia um processo de thread único para o documento incorporado. Por exemplo, ao encontrar um documento do Word que contém um documento em PDF, o Mecanismo de Texto Completo usa o processo multithread para o conteúdo do Word e inicia um processo de thread único para o conteúdo do PDF. Um filtro de thread único pode não funcionar bem neste ambiente e pode desestabilizar o processo de filtragem. Em determinadas circunstâncias em que o processo de incorporação é comum, a desestabilização pode causar o travamento do processo de filtragem. Quando isso ocorrer, o Mecanismo de Texto Completo refaz a rota do documento que falhou (por exemplo, um documento do Word que contém um conteúdo em PDF incorporado) para o processo de filtragem em thread único. Se isso acontecer com frequência, ocorrerá uma degradação de desempenho do processo de indexação de texto completo.  
   
- Para solucionar esse problema, marque o filtro para o documento que contém o conteúdo (neste caso, o Word) como filtro de thread único. É possível alterar o valor do registro de filtro para marcar um determinado filtro como filtro de thread único. Para marcar um filtro como um filtro de thread único, você precisa definir o valor do registro **ThreadingModel** para o filtro como `Apartment Threaded`. Para obter informações sobre Single-Threaded Apartments, veja o white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Compreendendo e usando os modelos de threading COM).  
+ Para solucionar esse problema, marque o filtro para o documento que contém o conteúdo (neste caso, o Word) como filtro de thread único. É possível alterar o valor do registro de filtro para marcar um determinado filtro como filtro de thread único. Para marcar um filtro como um filtro de thread único, você precisa definir o valor do registro **ThreadingModel** para o filtro como `Apartment Threaded` . Para obter informações sobre Single-Threaded Apartments, veja o white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Compreendendo e usando os modelos de threading COM).  
   
   
   

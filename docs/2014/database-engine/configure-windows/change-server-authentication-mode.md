@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bda31ca7d0c5949173a9a3e5ea656c1757c04f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812292"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935853"
 ---
 # <a name="change-server-authentication-mode"></a>Alterar modo de autenticação do servidor
   Este tópico descreve como alterar o modo de autenticação de servidor no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durante a instalação, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] é definido como **Modo de Autenticação do Windows** ou **Modo de Autenticação do SQL Server e do Windows**. Após a instalação, você pode alterar o modo de autenticação a qualquer momento.  
@@ -58,7 +57,7 @@ ms.locfileid: "62812292"
   
 #### <a name="to-enable-the-sa-login"></a>Para habilitar o logon sa  
   
-1.  No Pesquisador de objetos, expanda **segurança**, logons, clique `sa`com o botão direito do mouse e clique em **Propriedades**.  
+1.  No Pesquisador de objetos, expanda **segurança**, logons, clique com o botão direito do mouse `sa` e clique em **Propriedades**.  
   
 2.  Na página **Geral** , talvez seja necessário criar e confirmar uma senha para o logon.  
   

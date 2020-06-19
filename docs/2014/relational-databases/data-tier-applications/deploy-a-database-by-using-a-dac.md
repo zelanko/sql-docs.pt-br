@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0da23febcc1f2e97b1dfaff29a5df5ced16c7e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970266"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
   Use o Assistente **Implantar Banco de Dados no SQL Azure** para implantar um banco de dados entre uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e um servidor [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ou entre dois servidores [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -100,7 +99,7 @@ ms.locfileid: "62873027"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]configurações do banco de dados:**  
   
--   edição – selecione a edição do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no menu suspenso. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
+-   ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] edição** – selecione a edição do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no menu suspenso.  
   
 -   **Tamanho máximo do banco de dados** – selecione o tamanho máximo do banco de dados no menu suspenso.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62873027"
 ##  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use esta página para analisar a origem especificada e as configurações de destino para a operação. Para concluir a operação de implantação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de implantação e sair do Assistente, clique em **Cancelar**.  
   
-##  <a name="progress-page"></a><a name="Progress"></a>Página progresso  
+##  <a name="progress-page"></a><a name="Progress"></a> Página Progresso  
  Esta página exibe a barra de progresso que indica o status da operação. Para exibir o status detalhado, clique na opção **Exibir detalhes** .  
   
 ##  <a name="results-page"></a><a name="Results"></a>Página de resultados  

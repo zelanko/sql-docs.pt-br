@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2344ff0b95e82bd83e801df9ff6bd60328a2ae33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783069"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970272"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
   Você pode implantar um DAC (aplicativo da camada de dados) de um pacote de DAC para uma instância existente do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando um assistente ou um script do PowerShell. O processo de implantação registra uma instância do DAC armazenando a definição do DAC no banco de dados do sistema **msdb** (**master** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), cria um banco de dados e o preenche com todos os objetos de banco de dados definidos no DAC.  
@@ -107,7 +106,7 @@ ms.locfileid: "72783069"
   
  **Descrição** – Uma caixa somente leitura que exibe a descrição escrita quando o DAC foi criado ou extraído de um banco de dados.  
   
- Anterior – retorna à página **introdução** . ** \< **  
+ ** \< Anterior** – retorna à página **introdução** .  
   
  **Avançar >** – Exibe uma barra de progresso enquanto o assistente confirma se o arquivo selecionado é um pacote de DAC válido.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "72783069"
   
  **Validando o conteúdo do DAC** – A barra de progresso que relata o status atual do processo de validação.  
   
- Anterior – retorna ao estado inicial da página **selecionar pacote** . ** \< **  
+ ** \< Anterior** – retorna ao estado inicial da página **selecionar pacote** .  
   
  **Avançar >** – Segue para a versão final da página **Selecionar Pacote**.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "72783069"
   
  **Ignorar violações de política** – Use esta caixa de seleção para continuar a implantação se houver falha em uma ou mais condições de política. Somente selecione essa opção se você tiver certeza de que todas as condições que falharam não impedirão o funcionamento bem-sucedido do DAC.  
   
- Anterior – retorna para a página **selecionar pacote** . ** \< **  
+ ** \< Anterior** – retorna para a página **selecionar pacote** .  
   
  **Avançar >** – Segue para a página **Atualizar Configuração**.  
   
@@ -158,7 +157,7 @@ ms.locfileid: "72783069"
   
  **Caminho e nome do arquivo de log:** – Especifique o caminho completo e o nome de arquivo para o arquivo de log. A caixa é populada com o caminho e o nome de arquivo padrão. Edite a cadeia de caracteres na caixa para alterar o padrão ou use o botão **Procurar** para navegar para a pasta em que o arquivo de log será colocado.  
   
- Anterior – retorna para a página **selecionar pacote de DAC** . ** \< **  
+ ** \< Anterior** – retorna para a página **selecionar pacote de DAC** .  
   
  **Avançar >**: continua para a página **Resumo**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72783069"
   
  **As configurações a seguir serão usadas para implantar o DAC.** - Examine as informações exibidas para assegurar que as ações executadas estarão corretas. A janela exibe o pacote de DAC selecionado e o nome selecionado para a instância de DAC escolhida. A janela também exibe as configurações que serão usadas durante a criação do banco de dados associado ao DAC.  
   
- Anterior-retorna para a página de **configuração de atualização** para alterar suas seleções. ** \< **  
+ ** \< Anterior** -retorna para a página de **configuração de atualização** para alterar suas seleções.  
   
  **Avançar >** – Implanta o DAC e exibe os resultados na página **Implantar DAC**.  
   

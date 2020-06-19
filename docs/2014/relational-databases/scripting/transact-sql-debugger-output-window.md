@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc15a7f6002675c4e81b3ae8169a78648b210f44
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1d490f4355f1dac4c337002e22f2d4dae82a7e9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063312"
 ---
 # <a name="output-window"></a>Janela de saída
   Esta janela exibe mensagens de status para vários recursos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. A saída é fornecida em painéis especiais da janela **Saída** no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] , em recursos de ferramentas externas ou em comandos executados na **Janela Comando**do depurador. A saída, que normalmente é exibida na janela Prompt de Comando de ferramentas externas como arquivos .bat ou .com, também fica disponível.  

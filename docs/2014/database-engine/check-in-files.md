@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 052859e4605162daa87789b5c61d2ef9d33d4177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936037"
 ---
 # <a name="check-in-files"></a>Fazer check-in de arquivos
   Para tornar arquivos com controle do código-fonte disponíveis para outros usuários, você deve fazer o check-in dos arquivos no controle do código-fonte. Quando você faz check-in de um arquivo, essa versão é salva no provedor de controle do código-fonte e torna-se a versão mais recente do arquivo.  
@@ -32,7 +31,7 @@ ms.locfileid: "62812541"
   
 2.  Se a caixa de diálogo **Check-in** for exibida, selecione as opções apropriadas e clique em **OK**.  
   
-     **Check-in**  
+     **Fazer Check-in**  
      Efetua check-in de todos os itens selecionados.  
   
      **Colunas**  
@@ -56,7 +55,7 @@ ms.locfileid: "62812541"
      **Classificar**  
      Classifica a ordem das colunas exibidas.  
   
-     **Exibição de Árvore**  
+     **Exibição de árvore**  
      Exibe a hierarquia de pastas e arquivos dos itens dos quais está fazendo check-in.  
   
  Se o arquivo com check-in não fizer parte de uma saída compartilhada, o ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fará imediatamente o check-in do arquivo. Caso contrário, você pode ser solicitado a mesclar sua versão com versões criadas por outros usuários.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a00c72e6f444ec1e62082f254d6b77894b479d09
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919577"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Padrão de Coluna** selecionada no painel de solicitações. Um perfil de Padrão de Coluna informa um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres. Esse perfil pode ajudá-lo a identificar problemas em seus dados, como cadeias de caracteres inválidas, além de sugerir expressões regulares que podem ser usadas posteriormente para validar novos valores. Por exemplo, um perfil de padrão de uma coluna Códigos Postais dos Estados Unidos pode produzir as expressões regulares: \d{5}-\d{4}, \d{5} e \d{9}. Se você vir outras expressões regulares, seus dados provavelmente conterão valores inválidos ou que estão em um formato incorreto.  
@@ -32,7 +31,7 @@ ms.locfileid: "62832603"
   
 -   **Delimitadores** Por padrão, a lista de delimitadores contém os seguintes caracteres: espaço, guia horizontal (\t), nova linha (\n) e retorno de carro (\r). É possível especificar delimitadores adicionais, mas não é possível remover os delimitadores padrão.  
   
--   **Símbolos** do Por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'`~ =&/@!? () <> []{}| # * ^%`. For example, if the symbols are "`()-' ", o valor" (425) 123-4567 "é indexado como [" ("," 425 ",") "," 123 ","-"," 4567 ",") "].  
+-   **Símbolos** do Por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'` ~ =&/@!? () <> [] {} | # * ^% `. For example, if the symbols are "` ()-' ", o valor" (425) 123-4567 "é indexado como [" ("," 425 ",") "," 123 ","-"," 4567 ",") "].  
   
  Um caractere não pode ser um delimitador e um símbolo ao mesmo tempo.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62832603"
  Para obter mais informações, consulte a seção "Opções TableOrView" neste tópico.  
   
  **Coluna**  
- Selecione a coluna existente para a qual um perfil será criado. Selecione **(\*)** para criar o perfil de todas as colunas.  
+ Selecione a coluna existente para a qual um perfil será criado. Selecione **( \* )** para criar o perfil de todas as colunas.  
   
  Para obter mais informações, consulte a seção “Opções Column” neste tópico.  
   
@@ -100,10 +99,10 @@ ms.locfileid: "62832603"
   
 #### <a name="column-options"></a>Opções de Coluna  
  **IsWildCard**  
- Especifica se o **curinga\*()** foi selecionado. Esta opção será definida como **True** se você tiver selecionado **(\*)** para analisar todas as colunas. Será **Falso** se você selecionou uma coluna individual para a criação de um perfil. Esta opção é somente leitura.  
+ Especifica se o curinga **( \* )** foi selecionado. Esta opção será definida como **True** se você tiver selecionado **(\*)** para analisar todas as colunas. Será **Falso** se você selecionou uma coluna individual para a criação de um perfil. Esta opção é somente leitura.  
   
  **ColumnName**  
- Exibe o nome da coluna selecionada. Essa opção estará em branco se você tiver **selecionado\*()** para criar o perfil de todas as colunas. Esta opção é somente leitura.  
+ Exibe o nome da coluna selecionada. Essa opção estará em branco se você tiver selecionado **( \* )** para criar o perfil de todas as colunas. Esta opção é somente leitura.  
   
  **StringCompareOptions**  
  Esta opção não é aplicável ao Perfil de Criação de Coluna.  
@@ -127,8 +126,8 @@ ms.locfileid: "62832603"
   
  Para obter mais informações, consulte "Compreendendo o uso de delimitadores e símbolos" anteriormente neste tópico.  
   
- **Símbolos**  
- Liste os símbolos que deveriam ser retidos como parte de padrões. Exemplos poderiam incluir "/" para datas, ":" para horários e "@" para endereços de email. Por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'`~ =&/@!? () <> []{}| # * ^% '.  
+ **Symbol**  
+ Liste os símbolos que deveriam ser retidos como parte de padrões. Exemplos poderiam incluir "/" para datas, ":" para horários e "@" para endereços de email. Por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'` ~ =&/@!? () <> [] {} | # * ^% '.  
   
  Para obter mais informações, consulte "Compreendendo o uso de delimitadores e símbolos" anteriormente neste tópico.  
   

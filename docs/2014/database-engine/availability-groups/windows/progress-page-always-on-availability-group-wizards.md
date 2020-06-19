@@ -18,13 +18,12 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 25b16d4380157b49031cd05fb1ecbe5dac1ba811
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4722e844e527f04ccde62c699d46b0fbc955a416
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858698"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936617"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Página de Progresso (Assistentes de Grupo de Disponibilidade AlwaysOn)
   Use esta caixa de diálogo para exibir o progresso de um assistente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que você está executando no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A barra de progresso indica o progresso relativo das etapas que o assistente está executando.  
@@ -39,7 +38,7 @@ ms.locfileid: "83858698"
  **Status**  
  Indica o resultado das etapas concluídas e o percentual de conclusão da etapa atual, da seguinte maneira:  
   
-|Result|Description|  
+|Result|Descrição|  
 |------------|-----------------|  
 |**Erro**|Indica que a operação desta etapa experimentou um erro. Clique no link para exibir uma caixa de diálogo de mensagem que descreve o erro.|  
 |**Em andamento (** *percentual concluído* **)**|Indica que a operação está ocorrendo agora e estima o percentual desta etapa que foi concluída.|  

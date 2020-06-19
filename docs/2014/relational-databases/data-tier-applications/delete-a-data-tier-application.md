@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fd058eb14b45fe9f5aaaea4e9e37c8741c19d6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970269"
 ---
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
   Você poderá excluir um aplicativo da camada de dados usando o Assistente para Excluir Aplicativo da Camada de Dados ou um script do Windows PowerShell. É possível especificar se o banco de dados associado será retido, desanexado ou removido.  
@@ -101,7 +100,7 @@ ms.locfileid: "72782741"
   
  Os dados e os arquivos de log do banco de dados são excluídos permanentemente.  
   
- Anterior – retorna à página **introdução** . ** \< **  
+ ** \< Anterior** – retorna à página **introdução** .  
   
  **Avançar >**: continua para a página **Resumo**.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "72782741"
   
  **Review your selection summary (Examinar o resumo de sua seleção)** : examine o DAC, o banco de dados e o método de exclusão exibidos na caixa. Se as informações estiverem corretas, selecione **Avançar** ou **Concluir** para excluir o DAC. Se o DAC e as informações do banco de dados não estiverem corretas, selecione **Cancelar** e selecione o DAC correto. Se o método de exclusão não estiver correto, selecione **Anterior** para retornar ou a página **Escolher Método** e selecione um método diferente.  
   
- Anterior – retorna para a página **escolher método** para escolher um método de exclusão diferente. ** \< **  
+ ** \< Anterior** – retorna para a página **escolher método** para escolher um método de exclusão diferente.  
   
  **Avançar >**: exclui a instância de DAC usando o método escolhido na página anterior e continua para a página **Excluir Aplicativo da Camada de Dados**.  
   
@@ -223,5 +222,5 @@ $dacName  = "MyApplication"
  [Aplicativos da camada de dados](data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)   
  [Registrar um banco de dados como um DAC](register-a-database-as-a-dac.md)   
- [Backup e restauração de bancos de dados SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

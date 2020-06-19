@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e809d84071089ce57c66bc8f9a388203923fe66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dc9fc81fb02f004eb86c1bfef5662460aa4005f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936787"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>Introdução aos Grupos de Disponibilidade AlwaysOn (SQL Server)
   Este tópico apresenta as etapas para configurar instâncias do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para dar suporte a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e para criar, gerenciar e monitorar um grupo de disponibilidade.  
@@ -48,7 +47,7 @@ ms.locfileid: "75228759"
 |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|**Ingresse réplicas secundárias no grupo de disponibilidade.** Conecte a cada instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que está hospedando uma réplica secundária e una a réplica secundária local ao grupo de disponibilidade.|[Unir uma réplica secundária a um grupo de disponibilidade](join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> Dica: se você usar o assistente de Novo Grupo de Disponibilidade, esta etapa será automatizada.|  
 |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|**Preparar bancos de dados secundários.** Em cada instância de servidor que está hospedando uma réplica secundária, restaure os backups dos bancos de dados primários usando RESTORE WITH NORECOVERY.|[Prepare manualmente um banco de dados secundário](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> Dica: o Assistente de Novo Grupo de Disponibilidade pode preparar os bancos de dados secundários para você. Para obter mais informações, consulte "Pré-requisitos para usar a sincronização de dados inicial total" em [Selecionar página de sincronização de dados inicial &#40;Assistentes do Grupo de Disponibilidade AlwaysOn&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).|  
 |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|**Unir bancos de dados secundários ao grupo de disponibilidade.** Em cada instância de servidor que está hospedando uma réplica secundária, una cada banco de dados secundário local ao grupo de disponibilidade. Ao unir o grupo de disponibilidade, um determinado banco de dados secundário inicia a sincronização de dados com o banco de dados primário correspondente.|[Unir um banco de dados secundário a um grupo de disponibilidade](join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> Dica: o Assistente de Novo Grupo de Disponibilidade poderá executar esta etapa se cada banco de dados secundário existir em cada réplica secundária.|  
-||**Criar um ouvinte de grupo de disponibilidade.**  Esta etapa é necessária a menos que você já tenha criado o ouvinte do grupo de disponibilidade enquanto criou o grupo de disponibilidade.|[Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
+||**Crie um ouvinte de grupo de disponibilidade.**  Esta etapa é necessária a menos que você já tenha criado o ouvinte do grupo de disponibilidade enquanto criou o grupo de disponibilidade.|[Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|**Dê o nome de host DNS do ouvinte aos desenvolvedores de aplicativos.**  Desenvolvedores precisam especificar esse nome de DNS nas cadeias de conexão para direcionar solicitações de conexão para o ouvinte do grupo de disponibilidade. Para obter mais informações, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).|"Acompanhamento: depois de criar um ouvinte de grupo de disponibilidade" em [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Verificação](../../media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|**Configurar onde estão os trabalhos de backup.**  Para executar backups em bancos de dados secundários, você deverá criar um script de trabalho de backup que leva em conta a preferência de backup automatizado. Criar um script para cada banco de dados no grupo de disponibilidade em cada instância de servidor que hospeda uma réplica de disponibilidade para o grupo de disponibilidade.|“Acompanhamento: depois de configurar o backup em réplicas secundárias” em [Configurar backup em réplicas de disponibilidade &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)|  
   
