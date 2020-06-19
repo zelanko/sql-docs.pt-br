@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b9385d9b801ee615a377a78a44e087589a581ac
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873813"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953469"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrições do modelo de programação da Integração CLR
-  Quando você está criando um procedimento armazenado gerenciado ou outro objeto de banco de dados gerenciado, há determinadas verificações de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] código executadas pelo realiza verificações no assembly de código gerenciado quando ele é registrado pela primeira vez no `CREATE ASSEMBLY` banco de dados, usando a instrução e também em tempo de execução. O código gerenciado também é verificado em runtime porque, em um assembly, talvez haja caminhos de código que jamais possam ser alcançados em runtime.  Isso proporciona flexibilidade para registrar, especialmente, assemblies de terceiros, logo um assembly não seria bloqueado quando houvesse um código 'não seguro' projetado para execução em um ambiente do cliente, mas que jamais seria executado no CLR hospedado. Os requisitos que o código gerenciado deve atender dependem se o assembly está registrado como, `SAFE` `EXTERNAL_ACCESS`ou `UNSAFE`, `SAFE` sendo o mais estrito, e está listado abaixo.  
+  Quando você está criando um procedimento armazenado gerenciado ou outro objeto de banco de dados gerenciado, há determinadas verificações de código executadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza verificações no assembly de código gerenciado quando ele é registrado pela primeira vez no banco de dados, usando a `CREATE ASSEMBLY` instrução e também em tempo de execução. O código gerenciado também é verificado em runtime porque, em um assembly, talvez haja caminhos de código que jamais possam ser alcançados em runtime.  Isso proporciona flexibilidade para registrar, especialmente, assemblies de terceiros, logo um assembly não seria bloqueado quando houvesse um código 'não seguro' projetado para execução em um ambiente do cliente, mas que jamais seria executado no CLR hospedado. Os requisitos que o código gerenciado deve atender dependem se o assembly está registrado como `SAFE` , `EXTERNAL_ACCESS` ou `UNSAFE` , `SAFE` sendo o mais estrito, e está listado abaixo.  
   
  Além das restrições colocadas nos assemblies de código gerenciado, também há permissões de segurança de código que são concedidas. O CLR (Common Language Runtime) oferece suporte a um modelo de segurança chamado segurança de acesso do código (CAS) destinado ao código gerenciado. Nesse modelo, são concedidas permissões a assemblies com base na identidade do código. Os assemblies `SAFE`, `EXTERNAL_ACCESS` e `UNSAFE` têm permissões CAS diferentes. Para obter mais informações, consulte [segurança de acesso ao código de integração CLR](../security/clr-integration-code-access-security.md).  
   
@@ -37,9 +36,9 @@ ms.locfileid: "62873813"
   
 -   O assembly é um daqueles para os quais há suporte. Para obter mais informações, consulte [bibliotecas de .NET Framework com suporte](supported-net-framework-libraries.md).  
   
--   Você está usando `CREATE ASSEMBLY FROM` * \<o local>* e todos os assemblies referenciados e suas dependências estão disponíveis no * \<local>*.  
+-   Você está usando `CREATE ASSEMBLY FROM` o * \<location> ,* e todos os assemblies referenciados e suas dependências estão disponíveis no *\<location>* .  
   
--   Você está usando `CREATE ASSEMBLY FROM` * \<bytes... >* e todas as referências são especificadas por meio de bytes separados por espaço.  
+-   Você está usando `CREATE ASSEMBLY FROM` * \<bytes ...> ,* e todas as referências são especificadas por meio de bytes separados por espaço.  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  Todos os assemblies `EXTERNAL_ACCESS` devem atender aos seguintes critérios:  
@@ -97,7 +96,7 @@ ms.locfileid: "62873813"
   
 -   SelfAffectingThreading  
   
--   Synchronization  
+-   Sincronização  
   
 -   SharedState  
   

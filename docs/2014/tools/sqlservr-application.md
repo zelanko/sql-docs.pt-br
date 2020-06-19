@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48dcf9d22686aa87f267304fe844a1989fe4e24c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211010"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007042"
 ---
 # <a name="sqlservr-application"></a>Aplicativo sqlservr
   O aplicativo **sqlservr** inicia, interrompe, pausa e continua uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando um prompt de comando.  
@@ -61,13 +60,13 @@ ms.locfileid: "68211010"
  Inicia uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com configuração mínima. Isso será útil se a definição de um valor de configuração (por exemplo, sobrecarga de confirmação de memória) impediu o servidor de ser iniciado.  
   
  **-e** _error_log_path_  
- Indica o caminho completamente qualificado para o arquivo de log de erros. Se não for especificado, o local padrão será * \<Drive>*: \Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog para a instância padrão e * \<a unidade>*: \Program Files\Microsoft SQL Server\MSSQL $*instance_name*\Log\Errorlog para uma instância nomeada. Não há espaços entre **-e** e *error_log_path*.  
+ Indica o caminho completamente qualificado para o arquivo de log de erros. Se não for especificado, o local padrão será *\<Drive>* : \Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog para a instância padrão e *\<Drive>* : \Program Files\Microsoft SQL Server\MSSQL $*instance_name*\Log\Errorlog para uma instância nomeada. Não há espaços entre **-e** e *error_log_path*.  
   
  **-l** _master_log_path_  
  Indica o caminho totalmente qualificado para o arquivo de log de transações do banco de dados **master** . Não há espaços entre **-l** e *master_log_path*.  
   
  **-m**  
- Indica para iniciar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em modo de usuário único. Somente um único usuário pode conectar quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado em modo de usuário único. O mecanismo de CHECKPOINT, que garante que transações concluídas sejam gravadas regularmente do cache de disco para o dispositivo de banco de dados, não foi iniciado. (Normalmente, esta opção será usada se você experimentar problemas com bancos de dados do sistema que devem ser corrigidos.) Habilita a opção **sp_configure allow updates** . Por padrão, a opção **allow updates** está desabilitada.  
+ Indica para iniciar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em modo de usuário único. Somente um único usuário pode conectar quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado em modo de usuário único. O mecanismo de CHECKPOINT, que garante que transações concluídas sejam gravadas regularmente do cache de disco para o dispositivo de banco de dados, não foi iniciado. (Normalmente, esta opção será usada se você experimentar problemas com bancos de dados do sistema que devem ser corrigidos.) Habilita a opção **sp_configure allow updates**. Por padrão, a opção **allow updates** está desabilitada.  
   
  **-n**  
  Permite iniciar uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sem o parâmetro **-s** definido, a instância padrão tenta a inicialização. Você deve passar para o diretório BINN apropriado da instância em um prompt de comando antes de iniciar o **sqlservr.exe**. Por exemplo, se Instance1 tiver de usar \mssql$Instance1 para seus binários, o usuário deverá estar no diretório \mssql$Instance1\binn para iniciar **sqlservr.exe -s instance1**. Caso você inicie uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com a opção **-n** , recomendamos usar também a opção **-e** ou os eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não serão registrados.  
@@ -76,7 +75,7 @@ ms.locfileid: "68211010"
  Indica que uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento especificado (*trace#*) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
->  Ao especificar um sinalizador de rastreamento, use **-T** para passar o número do sinalizador de rastreamento. Um t minúsculo (**-t**) é aceito por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; entretanto, **-t** define outros sinalizadores de rastreamento internos que são exigidos pelos engenheiros de suporte do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  Ao especificar um sinalizador de rastreamento, use **-T** para passar o número do sinalizador de rastreamento. Um t minúsculo ( **-t**) é aceito por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; entretanto, **-t** define outros sinalizadores de rastreamento internos que são exigidos pelos engenheiros de suporte do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Exibe o número de versão do servidor.  
@@ -91,9 +90,9 @@ ms.locfileid: "68211010"
   
  Use o padrão para o parâmetro **-g** , a menos que você veja algum dos seguintes avisos no log de erros do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
--   “Falha nos bytes virtuais alocados: FAIL_VIRTUAL_RESERVE \<size>”  
+-   "Falha nos bytes virtuais alocados: FAIL_VIRTUAL_RESERVE \<size> "  
   
--   “Falha nos bytes virtuais alocados: FAIL_VIRTUAL_COMMIT \<size>”  
+-   "Falha nos bytes virtuais alocados: FAIL_VIRTUAL_COMMIT \<size> "  
   
  Essas mensagens podem indicar que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está tentando liberar partes do pool de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para encontrar espaço para itens como arquivos .dll de procedimento armazenado estendido ou objetos de automação. Nesse caso, considere aumentar a quantidade de memória reservada pela opção **-g**.  
   

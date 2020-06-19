@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72c3ada0e524287073f1ecf0d5a2fa633566a6c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000312"
 ---
 # <a name="droponlymode-element-dta"></a>Elemento DropOnlyMode (DTA)
   Especifica que o Orientador de Otimização do Mecanismo de Banco de Dados deve apenas considerar descartar índices, exibições indexadas ou partições existentes durante a sessão de ajuste. Nenhuma nova estrutura de design físico é considerada quando esta opção de ajuste é especificada.  
@@ -38,9 +37,9 @@ ms.locfileid: "62659569"
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|**Tipo de dados e comprimento**|Nenhum.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**C'**|Opcional. Pode-se usar apenas uma vez para cada elemento de `TuningOptions`. Não poderá ser usado se os elementos seguintes forem especificados no elemento de `TuningOptions`:<br /><br /> [Elemento FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Elemento Partitioning &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> O [Elemento KeepExisting &#40;DTA&#41;](keepexisting-element-dta.md) é definido como **ALL**|  
+|**Ocorrência**|Opcional. Pode-se usar apenas uma vez para cada elemento de `TuningOptions`. Não poderá ser usado se os elementos seguintes forem especificados no elemento de `TuningOptions`:<br /><br /> [Elemento FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Elemento Partitioning &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> O [Elemento KeepExisting &#40;DTA&#41;](keepexisting-element-dta.md) é definido como **ALL**|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

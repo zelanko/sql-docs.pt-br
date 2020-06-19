@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 914629fca09d4bcffb5ac931316331bbb7e7eebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 705fb7bfd5fe8df27d39f81ed648f6406b6aa8dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069142"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940737"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Guia Discriminação de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
   A guia  **Discriminação do Cluster** no **Visualizador de Cluster de Sequência da Microsoft** compara clusters selecionados de um modelo de clustering de sequências.  
@@ -44,7 +43,7 @@ ms.locfileid: "66069142"
   
  Se você não selecionar outro cluster, por padrão o cluster selecionado será comparado com seu complemento, ou seja, todos os casos no modelo que não estão no Cluster 1.  
   
- **Pontuações de \<discriminação para cluster 1 \<> e cluster 2>**  
+ **Pontuações de discriminação para \<cluster 1> e\<cluster 2>**  
  Este gráfico fornece a comparação detalhada dos clusters que você selecionou. Em geral, um modelo de clustering raramente atribui estados ou valores exclusivamente a um único cluster. Portanto, o visualizador apenas indica que um atributo específico ou estado *favorece* um cluster específico.  
   
  Em geral, um determinado cluster pode conter mais de um estado: por exemplo, um estado comum pode ser a compra de uma Garrafa de Água e Suporte de Garrafa de Água na sequência. Porém, a sequência pode estar presente em outros clusters que têm características de definição mais importantes. Por exemplo, outro cluster pode ser caracterizado mais fortemente por tempos de transação muito curtos, e uma análise revelaria que os itens Garrafa de Água e Suporte de Garrafa de Água estão posicionados para geralmente poderem ser agrupados neste cluster, mas não sempre.  
@@ -52,8 +51,8 @@ ms.locfileid: "66069142"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Variáveis**|Um atributo no modelo de mineração.|  
-|**Valores**|Um estado do atributo listado em **Variáveis**.|  
-|**Favorece \<o cluster 1>**|Contém uma barra sombreada que indica a força de o atributo e o estado listados em **Variáveis** e **Valor** favorecerem o cluster selecionado em **Cluster 1.**|  
+|**Os**|Um estado do atributo listado em **Variáveis**.|  
+|**Enfatiza\<cluster 1>**|Contém uma barra sombreada que indica a força de o atributo e o estado listados em **Variáveis** e **Valor** favorecerem o cluster selecionado em **Cluster 1.**|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

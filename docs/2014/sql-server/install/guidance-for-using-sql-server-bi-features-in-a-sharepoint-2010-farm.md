@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 02aaab5056d5e2b095d9440f696edcc77475323e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba400e1030bb18b3370a023f88d069711a44c7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172475"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054836"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Orientação para usar os recursos de BI do SQL Server em um farm do SharePoint 2010
   Este tópico resume a disponibilidade de recursos com base nas versões e nas edições do software que você está usando. Também explica os requisitos de instalação do SharePoint 2010 para o uso de recursos específicos do SQL Server. Para obter informações relacionadas ao SharePoint 2013, consulte [topologias de implantação para recursos SQL Server bi no SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).
@@ -57,7 +56,7 @@ ms.locfileid: "78172475"
 
 -   Você quer usar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e a ferramenta de configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].
 
- Um dos principais motivos para o SP1 ser necessário para instalações do SharePoint [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] em execução com o é o recurso do mecanismo de banco de dados **sp_dboption**, que foi preterido em uma [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versão anterior, foi descontinuado na versão. Para obter mais informações, consulte [mecanismo de banco de dados funcionalidade descontinuada no SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
+ Um dos principais motivos para o SP1 ser necessário para instalações do SharePoint em execução com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o é o recurso do mecanismo de banco de dados **sp_dboption**, que foi preterido em uma versão anterior, foi descontinuado na [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versão. Para obter mais informações, consulte [mecanismo de banco de dados funcionalidade descontinuada no SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
 
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>Orientação de instalação do SharePoint 2010 SP1
  [Baixe o SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697) e aplique-o em todos os servidores no farm.

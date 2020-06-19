@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50580bcb80e58b73931fd867a1be83cac58a9911
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068581"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objetos criados no Editor Oracle
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a replicação instala objetos de banco de dados no Publicador Oracle para habilitar o controle[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de alterações e o encaminhamento (não instala arquivos binários no Publicador Oracle). A tabela seguinte lista os objetos que são criados no Editor Oracle quando este é identificado como um Publicador no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . As descrições de objeto são fornecidas apenas para fins informativos. Esses objetos não devem ser modificados.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replicação instala objetos de banco de dados no Publicador Oracle para habilitar o controle de alterações e o encaminhamento (não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala arquivos binários no Publicador Oracle). A tabela seguinte lista os objetos que são criados no Editor Oracle quando este é identificado como um Publicador no Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . As descrições de objeto são fornecidas apenas para fins informativos. Esses objetos não devem ser modificados.  
   
 |Nome do Objeto|Tipo de objeto|DESCRIÇÃO|  
 |-----------------|-----------------|-----------------|  

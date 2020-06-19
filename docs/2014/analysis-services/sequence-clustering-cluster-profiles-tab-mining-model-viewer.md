@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b7aff4d6a7f4f685fe589e2fb141848296bb82b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069103"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940696"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Guia Perfis de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
   A guia **Perfis de Cluster** no **Visualizador MSC** fornece uma exibição codificada por cores das sequências que são incluídas em cada cluster.  
@@ -49,9 +48,9 @@ ms.locfileid: "66069103"
   
  Dois conjuntos de histogramas são exibidos para cada cluster no modelo, cada em uma linha diferente no gráfico:  
   
--   **nome do atributo>. Samples: os histogramas nessa linha mostram as sequências de itens que são representativos de cada cluster. \<** Nos termos do DMX, estes são os casos de exemplo para cada cluster.  
+-   ** \<attribute name> . Samples**: os histogramas nessa linha mostram as sequências de itens que são representativos de cada cluster. Nos termos do DMX, estes são os casos de exemplo para cada cluster.  
   
--   nome do atributo>: os histogramas nesta linha descrevem todos os itens que o cluster contém e sua distribuição geral. ** \< ** Clique em um histograma quando **Legenda de Mineração** estiver visível e você puder ver os valores numéricos para cada  
+-   **\<attribute name>**: Os histogramas nesta linha descrevem todos os itens que o cluster contém e sua distribuição geral. Clique em um histograma quando **Legenda de Mineração** estiver visível e você puder ver os valores numéricos para cada  
   
  **Estados**  
  Esta coluna no gráfico é opcional e pode ser exibida ou removida selecionando a opção **Mostrar Legenda** . A coluna **Estados** fornece um guia sobre qual estado é representado por qual cor no histograma de clusters correspondente.  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79df95cff33b18379d126e2ea5fe5db9e84a98aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022423"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068531"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script para conceder permissões da Oracle
-  O script fornecido neste tópico é usado durante a configuração de Oracle Database que publicará dados usando a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esse script também está disponível no seguinte diretório após a instalação: *\<unidade>* :\\\Arquivos de Programas\Microsoft SQL Server\\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql. Para obter mais informações sobre como configurar o banco de dados Oracle, consulte [Configurar um Publicador Oracle](configure-an-oracle-publisher.md).  
+  O script fornecido neste tópico é usado durante a configuração de Oracle Database que publicará dados usando a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esse script também está disponível no seguinte diretório após a instalação: *\<drive>* : \\ \program Files\Microsoft SQL Server \\ *\<InstanceName>* \MSSQL\Install\oracleadmin.Sql. Para obter mais informações sobre como configurar o banco de dados Oracle, consulte [Configurar um Publicador Oracle](configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Este script inclui a instrução `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`que é necessária para os gatilhos usados pela replicação transacional. Se você usar somente replicação de instantâneos, remova essa linha do script.  

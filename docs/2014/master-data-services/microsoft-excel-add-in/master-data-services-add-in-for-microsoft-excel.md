@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f84048371eac930974ebbd3d0693e25761f9a784
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482620"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961116"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Suplemento do Master Data Services para Microsoft Excel
-  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], as listas mestras de dados de referência podem ser distribuídas a todos na sua organização que usa o Excel. A segurança determina quais usuários dos dados podem ver e atualizar.  
+  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] , as listas mestras de dados de referência podem ser distribuídas a todos na sua organização que usa o Excel. A segurança determina quais usuários dos dados podem ver e atualizar.  
   
  Você pode carregar listas filtradas de dados do MDS no Excel, onde você pode trabalhar com elas da mesma maneira que você trabalharia com outros dados. Quando você terminar, poderá publicar os dados no MDS novamente, onde serão armazenados centralmente.  
   

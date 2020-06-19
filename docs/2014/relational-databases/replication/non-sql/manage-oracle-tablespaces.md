@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3624aed38a7a5bf75e0c0807aa8d3657156264f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068599"
 ---
 # <a name="manage-oracle-tablespaces"></a>Gerenciar espaços de tabela Oracle
   Um espaço de tabela é uma unidade de armazenamento de banco de dados que é aproximadamente equivalente a um grupo de arquivo no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os espaços de tabela permitem armazenamento e gerenciamento de objetos de banco de dados dentro de grupos individuais. Para obter mais informações, consulte a documentação Oracle.  
@@ -31,15 +30,15 @@ ms.locfileid: "63022294"
   
 -   Use [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). Para usar **sp_changearticle**, especifique o seguinte:  
   
-    -   O nome do Publicador Oracle para o parâmetro **@publisher**.  
+    -   O nome do Publicador Oracle para o parâmetro **@publisher** .  
   
-    -   O nome da publicação Oracle para o parâmetro **@publication**.  
+    -   O nome da publicação Oracle para o parâmetro **@publication** .  
   
-    -   O nome do artigo para o parâmetro **@article**.  
+    -   O nome do artigo para o parâmetro **@article** .  
   
-    -   Um valor de ' tablespace ' para o parâmetro **@property**.  
+    -   Um valor de ' tablespace ' para o parâmetro **@property** .  
   
-    -   O nome do espaço de tabela para o **@value**parâmetro.  
+    -   O nome do espaço de tabela para o parâmetro **@value** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar um Publicador Oracle](configure-an-oracle-publisher.md)   

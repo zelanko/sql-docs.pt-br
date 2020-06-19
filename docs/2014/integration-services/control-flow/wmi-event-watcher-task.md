@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee713086be138a204ca5b79f3ec172f8e376ea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917657"
 ---
 # <a name="wmi-event-watcher-task"></a>Tarefa Detector de Eventos do WMI
   A tarefa Detector de Eventos do WMI detecta um evento de Instrumentação de Gerenciamento do Windows (WMI) por meio de uma consulta de evento WQL (Management Instrumentation Query Language, Linguagem de Consulta de Instrumentação de Gerenciamento) para especificar eventos de interesse. É possível utilizar a tarefa Detector de Eventos do WMI para as seguintes finalidades:  
@@ -75,7 +74,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Definir como a tarefa responde ao evento. A tarefa pode ser configurada para ter êxito ou falhar, dependendo do evento, ou a tarefa pode apenas detectar o evento novamente.  
   
--   Especifique a ação que a tarefa executará quando a consulta WMI atingir o tempo limite. Você pode registrar o tempo limite e o status após o tempo limite ou gerar um evento personalizado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , indicando que o evento WMI atingiu o tempo limite e registrando em log o tempo limite e o status de tempo limite.  
+-   Especifique a ação que a tarefa executará quando a consulta WMI atingir o tempo limite. Você pode registrar o tempo limite e o status após o tempo limite ou gerar um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] evento personalizado, indicando que o evento WMI atingiu o tempo limite e registrando em log o tempo limite e o status de tempo limite.  
   
 -   Defina como a tarefa responde ao tempo limite. A tarefa pode ser configurada para ser bem-sucedida ou falhar, ou a tarefa pode apenas inspecionar o evento novamente.  
   

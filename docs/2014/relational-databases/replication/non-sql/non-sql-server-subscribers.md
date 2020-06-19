@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1f285243e2b925cca9d263a53c9b70087ea5d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068592"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   Os seguintes Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem assinar as publicações de instantâneo e transacionais usando assinaturas push. As assinaturas oferecem suporte para as duas versões mais recentes de cada banco de dados listadas usando a mais recente versão do provedor OLE DB listado.  
@@ -49,7 +48,7 @@ ms.locfileid: "63022244"
   
 -   A replicação dá suporte a tabelas de publicação e exibições indexadas como tabelas para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (exibições indexadas não podem ser replicadas como exibições indexadas).  
   
--   Ao criar uma publicação no Assistente para nova publicação e, em seguida, habilitá-la para assinantes não SQL Server usando a caixa de diálogo Propriedades da publicação, o proprietário de todos os objetos no banco[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de dados de assinatura [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não é especificado para assinantes não, enquanto para assinantes, ele é definido como o proprietário do objeto correspondente no banco de dados de publicação.  
+-   Ao criar uma publicação no Assistente para nova publicação e, em seguida, habilitá-la para assinantes não SQL Server usando a caixa de diálogo Propriedades da publicação, o proprietário de todos os objetos no banco de dados de assinatura não é especificado para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assinantes não, enquanto para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assinantes, ele é definido como o proprietário do objeto correspondente no banco de dados de publicação.  
   
 -   Se a publicação tiver Assinantes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a publicação deverá ser habilitada para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de qualquer Assinante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ser criado.  
   

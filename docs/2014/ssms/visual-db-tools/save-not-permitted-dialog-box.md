@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5540fd90b71bd75336cf9fc094926c1f643d56e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e5f848f20cf74feb3e802e931cbde3aa8d3dc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044180"
 ---
 # <a name="save-not-permitted-dialog-box"></a>Caixa de diálogo Salvar (Não Permitido)
   A caixa de diálogo **Salvar** (Não Permitido) avisa que não é permitido salvar as alterações que você fez, pois elas requerem que as tabelas listadas sejam descartadas e recriadas.  
