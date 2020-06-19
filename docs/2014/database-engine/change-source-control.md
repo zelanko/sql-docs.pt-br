@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a615e26ac966fcf0c2af580825019c344889a5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936047"
 ---
 # <a name="change-source-control"></a>Alterar Controle do Código-Fonte
   Cria e gerencia as conexões e associações que vinculam uma solução ou projeto salvo localmente com uma pasta do banco de dados de controle do código fonte.  
@@ -43,10 +42,10 @@ ms.locfileid: "62812729"
  **Connect**  
  Crie uma conexão entre itens selecionados e o servidor de controle do código fonte.  
   
- **Connected**  
+ **Conectado**  
  Exibe o status da conexão de uma solução ou projeto selecionado.  
   
- **Desligar**  
+ **Disconnect**  
  Desconecte a cópia local de uma solução ou projeto em seu computador a partir de sua cópia mestre no banco de dados. Use esse comando antes de desconectar seu computador do servidor de controle do código fonte, por exemplo, ao trabalhar offline no seu laptop.  
   
  **OK**  
@@ -77,7 +76,7 @@ ms.locfileid: "62812729"
 |----------------|---------------------|  
 |Válido|O item está corretamente associado e conectado com a pasta de servidor à qual pertence.|  
 |Inválido|O item está incorretamente associado com a pasta à qual pertence ou desconectado dela. Use o comando **Adicionar ao Controle do Código Fonte** em vez de **Associar** neste item.|  
-|Unknown|O status do item sob controle do código fonte ainda não foi determinado.|  
+|Unknown (desconhecido)|O status do item sob controle do código fonte ainda não foi determinado.|  
 |Não Controlado|O item não foi colocado sob controle do código fonte.|  
   
  **Desassociar**  

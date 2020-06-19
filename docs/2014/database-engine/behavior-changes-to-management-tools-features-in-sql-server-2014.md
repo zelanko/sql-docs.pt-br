@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830ec9a5-68fd-4454-a935-4957abf8a052
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6319d9b1c5e091297e371c03949daf73e9551bd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 274ff0379ea7b745949d3e45dcc000db61bfc58d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936127"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>Alterações de comportamento feitas em recursos das Ferramentas de Gerenciamento do SQL Server 2014
   Este tópico descreve alterações de comportamento feitas em recursos das Ferramentas de Gerenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 419f1cd22e0a7aa314f6a1036793091bb7b385fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788319"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936295"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Usar os detalhes do Pesquisador de Objetos para monitorar grupos de disponibilidade (SQL Server Management Studio)
   Este tópico descreve como usar o painel **Detalhes do Pesquisador de Objetos** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para monitorar e gerenciar grupos de disponibilidade AlwaysOn, réplicas de disponibilidade e bancos de dados de disponibilidade existentes.  
@@ -99,8 +98,8 @@ ms.locfileid: "62788319"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Desconectado**|Para uma réplica de disponibilidade remota, indica que ela está desconectada da réplica de disponibilidade local. A resposta da réplica local ao estado Desconectado depende de sua função, da seguinte forma:<br /><br /> na réplica primária, se uma réplica secundária estiver desconectada, os bancos de dados secundários serão marcados como **Não Sincronizado** na réplica primária, e a réplica primária esperará que a secundária seja reconectada.<br /><br /> Na réplica secundária, ao detectar que está desconectada, a réplica secundária tentará reconectar-se à réplica primária.|  
-|**Connected**|Uma réplica de disponibilidade remota que está conectada atualmente à réplica local.|  
-|**NULO**|Se a réplica local for uma réplica secundária, esse valor será NULL para outras réplicas secundárias.|  
+|**Conectado**|Uma réplica de disponibilidade remota que está conectada atualmente à réplica local.|  
+|**NULL**|Se a réplica local for uma réplica secundária, esse valor será NULL para outras réplicas secundárias.|  
   
  **Estado da Sincronização**  
  Indica se uma réplica secundária está sincronizada no momento com a réplica primária. Os valores possíveis são os seguintes:  
@@ -109,7 +108,7 @@ ms.locfileid: "62788319"
 |-----------|-----------------|  
 |**Não sincronizado**|O banco de dados não está sincronizado ou ainda não foi unido ao grupo de disponibilidade.|  
 |**Realizada**|O banco de dados está sincronizado com o banco de dados primário na réplica primária atual, se houver, ou na réplica primária mais recente.<br /><br /> Observação: em modo de desempenho, o banco de dados nunca está no estado Sincronizado.|  
-|**NULO**|Estado desconhecido. Este valor ocorre quando a instância do servidor local não pode se comunicar com o cluster de failover do WSFC (isto é, o nó local não faz parte do quorum do WSFC).|  
+|**NULL**|Estado desconhecido. Este valor ocorre quando a instância do servidor local não pode se comunicar com o cluster de failover do WSFC (isto é, o nó local não faz parte do quorum do WSFC).|  
   
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade, veja [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
@@ -136,7 +135,7 @@ ms.locfileid: "62788319"
 |-----------|-----------------|  
 |**Suspenso**|Esse estado indica que o banco de dados está suspenso localmente e precisa ser retomado manualmente.<br /><br /> Na réplica primária, o valor não é confiável para um banco de dados secundário. Para determinar com confiança se um banco de dados secundário está suspenso, consulte-o na réplica secundária que hospeda o banco de dados.|  
 |**Não Unido**|Indica que o banco de dados secundário não foi unido ao grupo de disponibilidade ou foi removido do grupo.|  
-|**Conectar**|Indica que o banco de dados não está suspenso na réplica de disponibilidade local e que o banco de dados está conectado.|  
+|**Online**|Indica que o banco de dados não está suspenso na réplica de disponibilidade local e que o banco de dados está conectado.|  
 |**Não conectado**|Indica que a réplica secundária não pode conectar-se à réplica primária.|  
   
 > [!NOTE]  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ab5c3112bfeddd41c9c877365e36780e32b4241e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c09a6f967b85d19a8d07563862537787d45f1b42
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055384"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962476"
 ---
 # <a name="ssis-package-explorer-tab"></a>Guia Explorador de Pacotes do SSIS
   Use a guia **Explorador de Pacotes** do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] para obter uma exibição hierárquica de todos os elementos em um pacote: configurações, conexões, manipuladores de eventos, objetos executáveis como tarefas e contêiners, provedores de log, restrições de precedência e variáveis. Se um pacote contém uma tarefa de fluxo de dados, a guia **Explorador de Pacotes** incluirá um nó que contém uma exibição hierárquica dos componentes do fluxo de dados.  

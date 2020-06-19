@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10c076f7bee35e0e466fc22aec9ad9f6984bac6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936027"
 ---
 # <a name="check-out-files"></a>Fazer check-out de arquivos
   A menos que você tenha configurado o ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para permitir a edição de arquivos que tenham feito check-in, faça o check-out de um arquivo antes de modificá-lo. Quando você faz o check-out de um arquivo, uma cópia da versão de arquivo é copiada no disco local e o atributo somente leitura é removido.  
@@ -55,7 +54,7 @@ ms.locfileid: "62786741"
      Exiba os itens de check-out como listas simples em suas conexões de controle do código fonte.  
   
      **Editar**  
-     Modificar um item sem verificá-lo. O botão **Editar** será exibido somente se você [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tiver configurado o para dar suporte à edição de arquivos com check-in.  
+     Modificar um item sem verificá-lo. O botão **Editar** será exibido somente se você tiver [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] configurado o para dar suporte à edição de arquivos com check-in.  
   
      **Nome**  
      Exibe os nomes dos itens disponíveis para check-out. Os itens selecionados são exibidos com caixas de seleção ao lado. Se não quiser fazer check-out de um item em particular, desmarque sua caixa de seleção.  
@@ -66,7 +65,7 @@ ms.locfileid: "62786741"
      **Classificar**  
      Classifique a ordem das colunas exibidas.  
   
-     **Exibição de Árvore**  
+     **Exibição de árvore**  
      Exiba a hierarquia de pastas e arquivos do item de check-out.  
   
 ## <a name="see-also"></a>Consulte Também  

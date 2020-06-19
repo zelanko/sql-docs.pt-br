@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e8780fd707e82093bb5df50a423cb2aaa0ff5d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925597"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor da Tarefa Executar DDL do Analysis Services (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Executar DDL do Analysis Services** para nomear e descrever a tarefa Executar DDL do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

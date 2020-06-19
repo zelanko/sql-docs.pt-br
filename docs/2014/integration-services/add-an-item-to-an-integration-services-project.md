@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ba0bf4d1-c974-4c64-b916-3db2be854cde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66b23e65542cd4f87818d6cc719dca59a9a4adec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15ab42ce5ef8632d62c6b3cff6cba1ebb6c49f10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926225"
 ---
 # <a name="add-an-item-to-an-integration-services-project"></a>Adicionar um item a um projeto do Integration Services
   Este procedimento descreve como adicionar itens novos e existentes a um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

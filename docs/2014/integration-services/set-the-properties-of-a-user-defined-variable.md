@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53eeb46b5ce23a8976c9de1aaace7959bc708a84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055648"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963076"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Definir as propriedades de uma variável definida pelo usuário
   Para definir as propriedades de uma variável definida pelo usuário no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você pode usar um dos seguintes recursos:  
@@ -34,21 +33,21 @@ ms.locfileid: "66055648"
   
  Quando você usa a janela **Propriedades** para definir as expressões em uma variável definida pelo usuário:  
   
--   O valor de uma variável pode ser definido pela propriedade Value ou Expression. Por padrão, a Propriedade EvaluateAsExpression é definida como `False` e o valor da variável é definido pela propriedade Value. Para usar uma expressão para definir o valor, você deve primeiro definir EvaluateAsExpression como `True`e, em seguida, fornecer uma expressão na Propriedade Expression. A propriedade Value é definida automaticamente como o resultado de avaliação da expressão.  
+-   O valor de uma variável pode ser definido pela propriedade Value ou Expression. Por padrão, a Propriedade EvaluateAsExpression é definida como `False` e o valor da variável é definido pela propriedade Value. Para usar uma expressão para definir o valor, você deve primeiro definir EvaluateAsExpression como `True` e, em seguida, fornecer uma expressão na Propriedade Expression. A propriedade Value é definida automaticamente como o resultado de avaliação da expressão.  
   
--   A propriedade ValueType contém o tipo de dados do valor na propriedade Value. Quando Value é definido por uma expressão, ValueType é atualizado automaticamente para um tipo de dados compatível com o resultado da avaliação da expressão. Por exemplo, se o valor contiver 0 e a propriedade ValueType contiver **Int32** e você definir Expression como GETDATE (), Value conterá a data e a hora atuais `DateTime`e ValueType será definido como.  
+-   A propriedade ValueType contém o tipo de dados do valor na propriedade Value. Quando Value é definido por uma expressão, ValueType é atualizado automaticamente para um tipo de dados compatível com o resultado da avaliação da expressão. Por exemplo, se o valor contiver 0 e a propriedade ValueType contiver **Int32** e você definir Expression como GETDATE (), Value conterá a data e a hora atuais e ValueType será definido como `DateTime` .  
   
 -   A janela **Propriedades** para a variável fornece acesso à caixa de diálogo **Construtor de Expressões** . É possível usar essa ferramenta para criar, validar e avaliar expressões. Para obter mais informações, consulte [Construtor de Expressões](expressions/expression-builder.md) e [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
  Quando você usa a janela **Variáveis** para definir as expressões em uma variável definida pelo usuário:  
   
--   Para usar uma expressão para definir o valor da variável, primeiro confirme se o tipo de dados da variável é compatível com o resultado da avaliação da expressão e, em seguida `Expression` , forneça uma expressão na coluna da janela **variáveis** . A Propriedade EvaluateAsExpression na janela **Propriedades** é automaticamente definida como `True`.  
+-   Para usar uma expressão para definir o valor da variável, primeiro confirme se o tipo de dados da variável é compatível com o resultado da avaliação da expressão e, em seguida, forneça uma expressão na `Expression` coluna da janela **variáveis** . A Propriedade EvaluateAsExpression na janela **Propriedades** é automaticamente definida como `True` .  
   
 -   Quando você atribui uma expressão a uma variável, um marcador de ícone especial é exibido ao lado da variável. Esse marcador de ícone especial também é exibido ao lado de gerenciadores de conexões e tarefas que têm expressões definidas neles.  
   
 -   A janela **Variáveis** para a variável fornece acesso à caixa de diálogo **Construtor de Expressões** . É possível usar essa ferramenta para criar, validar e avaliar expressões. Para obter mais informações, consulte [Construtor de Expressões](expressions/expression-builder.md) e [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
- Na janela **variáveis** e **Propriedades** , se você atribuir uma expressão à variável e `EvaluateAsExpression` estiver definido como `True`, não poderá alterar o tipo de dados Variable.  
+ Na janela **variáveis** e **Propriedades** , se você atribuir uma expressão à variável e `EvaluateAsExpression` estiver definido como `True` , não poderá alterar o tipo de dados Variable.  
   
  **Definindo o namespace e as propriedades do nome**  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66055648"
   
 4.  Opcionalmente, na janela **Variáveis** , clique em **Opções de Grade**e selecione as colunas para serem exibidas na janela **Variáveis** e selecione os filtros para serem aplicados na lista de variáveis.  
   
-5.  Selecione a variável na lista e, em seguida, atualize os valores `Name`no, **tipo**de `Value`dados `Namespace`,,, **gerar evento de alteração**, `Expression` **Descrição** e colunas.  
+5.  Selecione a variável na lista e, em seguida, atualize os valores no `Name` , **tipo de dados**,,, `Value` `Namespace` **gerar evento de alteração**, **Descrição** e `Expression` colunas.  
   
 6.  Selecione a variável na lista e, em seguida, clique **Mover Variável** para alterar o escopo.  
   

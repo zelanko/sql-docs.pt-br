@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a94ba92b44c00442f97f9e11bbd72d06556d8fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061589"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925607"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Editor de Transformação Agregação (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação Agregação** para definir propriedades de componentes, especificar agregações e definir propriedades de colunas de entrada e saída.  
@@ -38,7 +37,7 @@ ms.locfileid: "66061589"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade **Escala de chave** não é usada.|  
-|Baixa|A agregação pode gravar aproximadamente 500.000 chaves.|  
+|Baixo|A agregação pode gravar aproximadamente 500.000 chaves.|  
 |Médio|A agregação pode gravar aproximadamente 5.000.000 de chaves.|  
 |Alta|A agregação pode gravar mais de 25.000.000 de chaves.|  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66061589"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade Escala de Distinção de Contagem não é usada.|  
-|Baixa|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
+|Baixo|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
 |Médio|A agregação pode gravar aproximadamente 5.000.000 valores distintos.|  
 |Alta|A agregação pode gravar mais de 25.000.000 de valores de distinção.|  
   

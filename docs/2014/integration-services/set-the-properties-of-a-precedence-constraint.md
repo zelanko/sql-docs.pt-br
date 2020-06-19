@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963106"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Definir as propriedades de uma restrição de precedência
   Para definir propriedades em restrições de precedência, você pode usar uma destas ferramentas:  
@@ -43,14 +42,14 @@ ms.locfileid: "66055738"
   
 5.  Na lista suspensa **Operação de avaliação** , selecione uma operação de avaliação.  
   
-6.  Na lista `Value` suspensa, selecione o resultado da execução do executável de precedência.  
+6.  Na `Value` lista suspensa, selecione o resultado da execução do executável de precedência.  
   
 7.  Se a operação de avaliação usar uma expressão, na `Expression` caixa, digite uma expressão e clique em **testar** para avaliar a expressão.  
   
     > [!NOTE]  
     >  Nomes de variáveis diferenciam maiúsculas e minúsculas.  
   
-8.  Se várias tarefas ou contêineres estiverem conectados ao executável restrito, selecione **lógico e** para especificar que os resultados da execução de todos os executáveis anteriores devem ser avaliados como `true`. Selecione **lógico ou** para especificar que apenas um resultado de execução deve ser `true`avaliado como.  
+8.  Se várias tarefas ou contêineres estiverem conectados ao executável restrito, selecione **lógico e** para especificar que os resultados da execução de todos os executáveis anteriores devem ser avaliados como `true` . Selecione **lógico ou** para especificar que apenas um resultado de execução deve ser avaliado como `true` .  
   
 9. Clique em **OK** para fechar o **Editor de Restrição de Precedência**.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66055738"
     |Propriedade de leitura/gravação|Ação de configuração|  
     |--------------------------|--------------------------|  
     |Descrição|Forneça uma descrição.|  
-    |EvalOp|Selecione uma operação de avaliação. Se a `Expression`operação, **ExpressionAndConstant**ou **ExpressionOrConstant** for selecionada, você poderá especificar uma expressão.|  
+    |EvalOp|Selecione uma operação de avaliação. Se a `Expression` operação, **ExpressionAndConstant**ou **ExpressionOrConstant** for selecionada, você poderá especificar uma expressão.|  
     |Expression|Se a operação de avaliação incluir uma expressão, forneça uma expressão. A expressão deve ser avaliada como um booliano. Para obter mais informações sobre a linguagem de expressão, consulte [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Defina `LogicalAnd` para especificar se a restrição de precedência é avaliada em conjunto com outras restrições de precedência, quando vários executáveis precedem e estão vinculados ao executável restrito|  
     |Nome|Atualize o nome da restrição de precedência.|  

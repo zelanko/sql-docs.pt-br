@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b72584b8-4289-41d3-bed8-5e5393adc356
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 557e849713ff6a58172dfbc3ddcd8e0816ef2b7f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055433"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962719"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Editor do Gerenciador de Conexões do SQL Server Compact Edition (página de Conexão)
   Use a caixa de diálogo **Gerenciador de Conexões do SQL Server Compact Edition** para especificar as propriedades de conexão com um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  

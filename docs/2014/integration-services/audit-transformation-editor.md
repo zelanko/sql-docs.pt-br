@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061415"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925517"
 ---
 # <a name="audit-transformation-editor"></a>Editor de Transformação Auditoria
   A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfebde8a9431026e8faedb2a1e76eb2f2d82e207
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935947"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Opção affinity mask de configuração de servidor
     
@@ -59,7 +58,7 @@ ms.locfileid: "62814029"
   
  Se você especificar uma máscara de afinidade que tenta fazer mapeamento para uma CPU inexistente, o comando RECONFIGURE reportará uma mensagem de erro à sessão do cliente e ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O uso da opção RECONFIGURE WITH OVERRIDE não tem nenhum efeito nesse caso, e o mesmo erro de configuração é reportado novamente.  
   
- Você também pode excluir atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de processadores com atribuições de carga de trabalho específicas aos sistemas operacionais Windows 2000 ou Windows Server 2003. Se você definir um bit representando um processador como 1, esse processador será selecionado pelo Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atribuição de thread. Quando você define `affinity mask` como 0 (o padrão), os algoritmos de agendamento do Microsoft Windows 2000 ou do windows Server 2003 definem a afinidade do thread. Quando você define a `affinity mask` como qualquer valor diferente de zero, a afinidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta o valor como um bitmask que especifica esses processadores qualificados para seleção.  
+ Você também pode excluir atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de processadores com atribuições de carga de trabalho específicas aos sistemas operacionais Windows 2000 ou Windows Server 2003. Se você definir um bit representando um processador como 1, esse processador será selecionado pelo Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atribuição de thread. Quando você define `affinity mask` como 0 (o padrão), os algoritmos de agendamento do Microsoft windows 2000 ou do Windows Server 2003 definem a afinidade do thread. Quando você define a `affinity mask` como qualquer valor diferente de zero, a afinidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta o valor como um bitmask que especifica esses processadores qualificados para seleção.  
   
  Ao isolar threads do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da execução em determinados processadores, o Microsoft Windows 2000 ou o Windows Server 2003 pode avaliar melhor como o sistema está controlando os processos específicos do Windows. Por exemplo, em um servidor de 8 CPUs que executa duas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (instâncias A e B), o administrador do sistema poderia usar a opção de máscara de afinidade para atribuir o primeiro conjunto de 4 CPUs à instância A e o segundo conjunto de 4 CPUs à instância B. Para configurar mais de 32 processadores, defina a máscara de afinidade e a máscara de afinidade64. Os valores para `affinity mask` são os seguintes:  
   

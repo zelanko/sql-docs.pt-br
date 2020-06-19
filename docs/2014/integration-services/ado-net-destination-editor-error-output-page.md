@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee3c73e6875c65ab5204d122cda2db4144df8e1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925859"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Editor de Destino ADO NET (Página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Destino ADO NET** para especificar as opções para tratamento de erros.  
@@ -33,7 +32,7 @@ ms.locfileid: "66061764"
 3.  No **Editor de Destino ADO NET**, clique em **Saída de Erro**.  
   
 ## <a name="options"></a>Opções  
- **Entrada ou Saída**  
+ **Entrada ou saída**  
  Visualize o nome da entrada.  
   
  **Coluna**  

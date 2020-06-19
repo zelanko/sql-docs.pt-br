@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4086ab60e4f9fab576ba2d28ab0bbe332435ba58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfeed4c8d067c97e012bdd72ef0c7ebaac340098
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963056"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>Definir o valor de uma restrição de precedência por meio do menu de atalho
   Este procedimento descreve como definir um valor de restrição de precedência usando o menu de atalho.  
