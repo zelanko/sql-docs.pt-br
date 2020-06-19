@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78f3dbabe5d9671d243b7c6f9a295146a047daba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63066304"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068660"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   Resolvedores personalizados fornecem maior flexibilidade do que o mecanismo de resolução padrão, e podem implementar a lógica comercial exigida por aplicativos usando dados replicados. Um resolvedor personalizado com base em COM é uma biblioteca de vínculo dinâmico (DLL) que implementa a interface COM **ICustomResolver** , seus métodos e propriedades e outras interfaces de suporte e definições de tipo criadas especificamente para resolução de conflito.  

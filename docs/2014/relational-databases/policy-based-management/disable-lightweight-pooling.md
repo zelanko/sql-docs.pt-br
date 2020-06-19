@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 481bb43d-6fe5-497c-9096-971fb6bf733b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8e04ec8fa809f4bea8c19e2e0167b943767224c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41735f374b811df4400282cbdde67e914ef7ec67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068835"
 ---
 # <a name="disable-lightweight-pooling"></a>Desabilitar o Lightweight Pooling
   Esta regra verifica se o lightweight pooling está desabilitado no servidor. Definir lightweightpooling como 1 faz com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alterne para a programação de modo fibra. O modo fibra foi projetado para determinadas situações nas quais a alternância de contexto dos trabalhadores UMS é o gargalo importante no desempenho. Como isso é raro, o modo fibra raramente aumenta o desempenho ou a escalabilidade no sistema típico.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b040198b4ed152f8fa4ea00571375de911822687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f29cdaad3f362c190372ec510f24cb67efe15f7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961386"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>Conectar-se a um repositório do MDS (suplemento MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], você deve se conectar a um repositório do MDS antes de poder carregar ou publicar dados.  

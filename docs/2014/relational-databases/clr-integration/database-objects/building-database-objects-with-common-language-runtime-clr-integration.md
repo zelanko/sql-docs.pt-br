@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd5717b545913bd9e5ee98debe670a1af616fc61
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919250"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953570"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Criando objetos de banco de dados com integração CLR (Common Language Runtime)
-  Você pode criar objetos de banco de [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados usando o é chamado de "rotina CLR". Essas rotinas incluem:  
+  Você pode criar objetos de banco de dados usando o [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é chamado de "rotina CLR". Essas rotinas incluem:  
   
 -   Funções definidas pelo usuário com valor escalar (UDFs escalares)  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62919250"
   
  As rotinas CLR têm a mesma estrutura no código gerenciado. Elas são mapeadas para métodos públicos e estáticos (compartilhados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET) de uma classe. Além das rotinas, também podem ser definidos UDTs (tipos definidos pelo usuário) e funções de agregação definida pelo usuário usando o .NET Framework. Os UDTs e as agregações definidas pelo usuário são mapeados para classes inteiras do .NET Framework.  
   
- Cada tipo de rotina de .NET Framework tem [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] um que [!INCLUDE[tsql](../../../includes/tsql-md.md)] o equivalente pode ser usado. Por exemplo, UDFs escalares podem ser usados em qualquer expressão escalar. Uma TVF pode ser usada em qualquer cláusula FROM. Um procedimento pode ser invocado em uma instrução EXEC ou de um aplicativo cliente.  
+ Cada tipo de rotina de .NET Framework tem um [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] que o [!INCLUDE[tsql](../../../includes/tsql-md.md)] equivalente pode ser usado. Por exemplo, UDFs escalares podem ser usados em qualquer expressão escalar. Uma TVF pode ser usada em qualquer cláusula FROM. Um procedimento pode ser invocado em uma instrução EXEC ou de um aplicativo cliente.  
   
 > [!NOTE]  
 >  A execução de um objeto CLR (função definida pelo usuário, tipo definido pelo usuário ou gatilho) no Common Language Runtime poderá acontecer em vários threads (plano paralelo), se o otimizador de consulta achar que isso é benéfico. No entanto, se uma função definida pelo usuário acessar dados, a execução estará em um plano serial. Quando executado em uma versão de servidor antes do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], se uma função definida pelo usuário contiver parâmetros LOB ou valores de retorno, execução também deverá estar em um plano serial.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b446c3300b2c8a440a092084f01c55105c9be95e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63240208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068672"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   Todos os resolvedores baseados em COM fornecidos com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam de conflitos de atualização e, quando indicado, tratam de conflitos de inserção e exclusão. Todos eles tratam de rastreamento de colunas; a maioria também trata de rastreamento de linhas. Estes e todos os outros resolvedores baseados em COM declaram os tipos de conflito que eles podem tratar e o Merge Agent usa o resolvedor padrão para todos os outros tipos de conflito.  

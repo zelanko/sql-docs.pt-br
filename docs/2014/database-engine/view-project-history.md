@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a595df602a6506f96d9f645dadecb14c5d5f4b2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927357"
 ---
 # <a name="view-project-history"></a>Exibir histórico de projetos
   O histórico de um projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) inclui uma lista de todas as ações executadas em cada um dos arquivos do projeto, incluindo criação, adição, exclusão e recuperação de arquivos.  
@@ -36,7 +35,7 @@ ms.locfileid: "62773492"
   
 2.  No menu **arquivo** , aponte para **controle do código-fonte** e clique em **Exibir histórico**.  
   
-3.  Na caixa de diálogo **histórico de> do** \<projeto, execute qualquer uma das seguintes ações:  
+3.  Na caixa **de diálogo histórico de** \<Project> , execute qualquer uma das seguintes ações:  
   
     -   Exiba a cópia do sistema de controle do código-fonte de um arquivo selecionado.  
   

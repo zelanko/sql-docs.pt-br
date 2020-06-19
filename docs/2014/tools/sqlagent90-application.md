@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf72b26a7b5649b8d48a3d1da6dd6eab8d6c264a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07371d910608c210d917da9201394fa356c2530b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035351"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007097"
 ---
 # <a name="sqlagent90-application"></a>aplicativo sqlagent90
   O aplicativo **sqlagent90** inicia o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent no prompt de comando. Normalmente, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent deve ser executado no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou usando métodos SQL-SMO em um aplicativo. Execute o **sqlagent90** no prompt de comando apenas quando estiver diagnosticando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent ou quando for direcionado a ele por seu provedor de suporte.  

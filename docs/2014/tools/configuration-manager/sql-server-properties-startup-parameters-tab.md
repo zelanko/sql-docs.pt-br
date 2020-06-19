@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f45a017ab1d04643b4bc85454f9dfe0db0d17792
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000516"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriedades do SQL Server (guia Parâmetros de Inicialização)
   Use esta caixa de diálogo para adicionar ou remover parâmetros de inicialização do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os parâmetros de inicialização podem ter um grande efeito no desempenho do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Antes de adicionar ou alterar os parâmetros de inicialização, consulte o tópico "Usando as opções de inicialização do Serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

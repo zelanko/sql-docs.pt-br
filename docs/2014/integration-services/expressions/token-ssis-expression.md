@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43381593b6a43f9e912088a67d5e10401ef3fc6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768702"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968996"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (expressão SSIS)
   Retorna um token (subcadeia de caracteres) de uma cadeia de caracteres com base nos delimitadores especificados, que separam os tokens na cadeia de caracteres, e o número do token que denota qual token deve ser retornado.  
@@ -40,13 +39,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>Comentários  
- Essa função divide a cadeia de caracteres <character_expression> em um conjunto de tokens separados pelos delimitadores especificados na <delimiter_string> e retorna o enésimo token, em que N é o número de ocorrência do token especificado pelo parâmetro \<occurrence>. Consulte a seção Exemplos para obter os usos dessa função.  
+ Essa função divide o <character_expression cadeia de caracteres> em um conjunto de tokens separados pelos delimitadores especificados no <delimiter_string> e, em seguida, retorna o enésimo token em que N é o número de ocorrência do token especificado pelo \<occurrence> parâmetro. Consulte a seção Exemplos para obter os usos dessa função.  
   
  Os comentários a seguir se aplicam à função TOKEN:  
   
 -   A cadeia de caracteres delimitadores pode conter um ou mais caracteres delimitadores.  
   
--   Se o valor do parâmetro \<occurrence> for mais alto que o número total de tokens na cadeia de caracteres, a função retornará NULL.  
+-   Se o valor do \<occurrence> parâmetro for maior do que o número total de tokens na cadeia de caracteres, a função retornará NULL.  
   
 -   Delimitadores à esquerda são ignorados.  
   

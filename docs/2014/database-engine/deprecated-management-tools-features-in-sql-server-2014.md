@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a08d1354-cc91-4ab7-a73f-3ad815af3d5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 617ceb4a94af69877ad2c79dd01f23ccd2dab799
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933787"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Recursos das Ferramentas de Gerenciamento obsoletos no SQL Server 2014
   Este tópico descreve os recursos obsoletos das Ferramentas de Gerenciamento que ainda estão disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  

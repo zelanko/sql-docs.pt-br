@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c174dd70611d39a4938146480583615e09ad3914
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068655"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940507"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Mostrar Tabela (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Mostrar Tabela** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para incluir tabelas da exibição da fonte de dados associada a uma dimensão, cubo ou estrutura de mineração. É possível exibir esta caixa de diálogo no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das seguintes maneiras:  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db55c753317f945a8156b671fa9cbcd72ce4c641
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 9c7ed5dd25ed2b02445bfae5eb78ac03b2270552
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927947"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Solucionar problemas de backup gerenciado do SQL Server para Azure
   Este tópico descreve as tarefas e as ferramentas que você pode usar para solucionar erros que podem ocorrer durante as operações do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -102,7 +101,7 @@ ms.locfileid: "82849594"
 ### <a name="troubleshooting-system-issues"></a>Solucionando problemas do sistema  
  Estes são alguns cenários possíveis quando há um problema no sistema (SQL Server, SQL Server Agent) e seus efeitos no [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:  
   
--   O **sqlservr. exe para de responder ou para de funcionar quando o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está em execução:** se SQL Server parar de funcionar, o agente do SQL será desligado normalmente, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] também parará e os eventos serão registrados no arquivo SQL Agent. out.  
+-   **Sqlservr.exe para de responder ou para de funcionar quando o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está em execução:** se SQL Server para de funcionar, o agente do SQL será desligado normalmente, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] também parará e os eventos serão registrados no arquivo SQL Agent. out.  
   
      Se o SQL Server parar de responder, os eventos serão registrados no canal de administração.  Um exemplo do log de eventos:  
   

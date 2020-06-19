@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b9b3ec2d8b7459f9d66313c6a40b1cbc26450e0d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb47804daee38427f48baefdf3997edda5fb90b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952161"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054754"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>Instalar o ADO.NET Data Services para dar suporte a exportações do feed de dados das listas do SharePoint
   O ADO.NET Data Services é obrigatório para uma exportação do feed de dados das listas do SharePoint. Como o SharePoint 2010 não inclui esse componente no programa SharePoint Prerequisite Installer, você deve instalá-lo manualmente.  

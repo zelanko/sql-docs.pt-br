@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9344f3b0858050441452238800758a769bcf3d27
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190431"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023373"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Recursos e tarefas do Utilitário do SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisam gerenciar seu ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um todo. Isso é abordado nesta versão por meio do conceito de gerenciamento de aplicativo e multisservidor do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

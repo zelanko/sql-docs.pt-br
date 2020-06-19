@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f34e133e7aa7699f49660684cafce6c3a9e2fde
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176481"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917900"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Valide documentos XML e obtenha saída de erros completa habilitando a propriedade `ValidationDetails` da tarefa XML.
@@ -32,7 +31,7 @@ ms.locfileid: "78176481"
  A funcionalidade de validação de XML é facilmente dimensionada para documentos XML e grandes números de erros. Como o arquivo de saída é em formato XML, você pode consultar e analisar a saída. Por exemplo, se a saída contiver um grande número de erros, você poderá agrupar os erros usando uma consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] , conforme descrito neste tópico.
 
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduziu `ValidationDetails` a propriedade [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no Service Pack 2. A propriedade também está disponível no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e no SQL Server 2016.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) introduziu a `ValidationDetails` propriedade no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. A propriedade também está disponível no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e no SQL Server 2016.
 
 ## <a name="sample-output-for-xml-thats-valid"></a>Exemplo de saída de XML válida
  Veja um arquivo de saída de exemplo com os resultados da validação para um arquivo XML válido.
@@ -54,7 +53,7 @@ ms.locfileid: "78176481"
 ```
 
 ## <a name="sample-output-for-xml-thats-not-valid"></a>Exemplo de saída de XML que não é válido
- Veja um arquivo de saída de exemplo com os resultados de validação para um arquivo XML que contém um pequeno número de erros. O texto dos elementos \<error> foi encapsulado para facilitar a leitura.
+ Veja um arquivo de saída de exemplo com os resultados de validação para um arquivo XML que contém um pequeno número de erros. O texto dos \<error> elementos foi encapsulado para facilitar a leitura.
 
 ```xml
 

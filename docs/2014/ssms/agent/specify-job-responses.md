@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8e19977300bc32bf832028b0d7e060fbaeb1665
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062128"
 ---
 # <a name="specify-job-responses"></a>Especificar respostas de trabalho
   As respostas de trabalho especificam ações que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve efetuar após a conclusão de um trabalho. As respostas de trabalho asseguram que os administradores de banco de dados saibam quando os trabalhos são concluídos e a frequência com que são executados. São respostas de trabalho típicas:  

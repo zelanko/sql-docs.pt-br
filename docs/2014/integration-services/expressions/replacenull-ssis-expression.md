@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 884561561f9b5a37d69f7246b446d547599920b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31b228ac01c3e687b2fa0e5df5758d9a942fa6ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897503"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969116"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (Expressão SSIS)
   Retornará o valor do parâmetro da segunda expressão se o valor do parâmetro da primeira expressão for NULL; caso contrário, retornará o valor da primeira expressão.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 29cafc7e9669ca322571ff171961dd64cab114cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cd46a08037bcb6eee178a96d84bdab358e5350d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754333"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933957"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Configurar um banco de dados espelho para usar a propriedade confiável (Transact-SQL)
   Quando é feito backup de um banco de dados, a propriedade TRUSTWORTHY do banco de dados é definida como OFF. Portanto, em um novo banco de dados espelho, TRUSTWORTHY está sempre OFF. Se o banco de dados precisar estar confiável após um failover, serão necessárias etapas adicionais de instalação após o início do espelhamento.  

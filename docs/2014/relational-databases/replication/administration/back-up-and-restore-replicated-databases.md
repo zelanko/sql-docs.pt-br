@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e91505bacf67f7f4628bd1b3f6b2cc78a6bc4c3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068726"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Fazer backup e restaurar bancos de dados replicados
   Bancos de dados replicados requerem atenção especial em relação a backup e restauração de dados. Este tópico fornece informações iniciais e links para obter mais informações sobre estratégias de backup e restauração para cada tipo de replicação.  

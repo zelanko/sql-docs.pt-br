@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc291a9677efe2acf875f5b5a37d9153fcb3eee3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e36d048b11fcc71b27ab0ab2ee815b0284187c4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068828"
 ---
 # <a name="add-non-sql-server-subscriber"></a>Adicionar Assinante não SQL Server
   A replicação oferece suporte à criação de assinaturas push para publicações de instantâneo e transacionais para Assinantes Oracle e IBM DB2.  

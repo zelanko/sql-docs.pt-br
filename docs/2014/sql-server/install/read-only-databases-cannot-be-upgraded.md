@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 414b26cf860ab32bb11beaa1ccbef3316c68f557
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba48ed2bd80961a4949dc13f04fed0637ecc27ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093367"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054678"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>Bancos de dados somente leitura não podem ser atualizados
   O Supervisor de Atualização determinou que alguns bancos de dados nesta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não podem ser atualizados.  
@@ -29,7 +28,7 @@ ms.locfileid: "66093367"
  Um banco de dados somente leitura foi detectado. Para atualizar o banco de dados, a Instalação deve poder gravar no banco de dados.  
   
 ## <a name="corrective-action"></a>Ação corretiva  
- Quando ninguém estiver usando o banco de dados, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Enterprise Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)],, ou a instrução ALTER DATABASE para alterar o banco de dados para leitura/gravação. As instruções a seguir alteram o banco de dados para leitura e gravação:  
+ Quando ninguém estiver usando o banco de dados, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , ou a instrução ALTER DATABASE para alterar o banco de dados para leitura/gravação. As instruções a seguir alteram o banco de dados para leitura e gravação:  
   
 ```  
 USE master;  

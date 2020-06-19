@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4fef2df598d96b33def41f27345f88226fd4c6b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fee4afd04218bab8efe5060a990a4f7c15869531
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63185418"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000382"
 ---
 # <a name="databasetoconnect-element-dta"></a>Elemento DatabaseToConnect (DTA)
   Especifica o primeiro banco de dados que o Orientador de Otimização do Mecanismo de Banco de Dados conecta ao ajustar uma carga de trabalho.  
@@ -35,7 +34,7 @@ ms.locfileid: "63185418"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  

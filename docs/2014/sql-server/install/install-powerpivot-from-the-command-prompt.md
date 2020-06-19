@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c69caf370d454c708484a61576716c213663f3d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054698"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Instalar o PowerPivot pelo prompt de comando
   É possível executar a Instalação na linha de comando para instalar o SQL Server PowerPivot para SharePoint. Você deve incluir o parâmetro `/ROLE` no comando e excluir o parâmetro `/FEATURES`.  
@@ -41,7 +40,7 @@ ms.locfileid: "72798334"
  Em comparação com as versões anteriores, todas as tarefas de configuração de servidor são executadas como tarefas pós-instalação. Se você estiver automatizando as etapas de instalação e configuração, poderá usar o PowerShell para configurar o servidor. Para obter mais informações, consulte [configuração do PowerPivot usando o Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Comandos de exemplo  
- Os exemplos a seguir ilustram o uso de cada opção. O exemplo 1 `SPI_AS_ExistingFarm`mostra.  
+ Os exemplos a seguir ilustram o uso de cada opção. O exemplo 1 mostra `SPI_AS_ExistingFarm` .  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -80,7 +79,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  Substitua os espaços reservados para \<o domínio \ \<nomedousuário> e senha forte>com contas de usuário e senhas válidas.  
+3.  Substitua os espaços reservados para \<domain\username> e \<StrongPassword> por contas de usuário e senhas válidas.  
   
      Os `/assvaccount` parâmetros e **/assvcpassword** são usados para configurar a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instância no servidor de aplicativos. Substitua esses espaços reservados pelas informações de conta válidas.  
   

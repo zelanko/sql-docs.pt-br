@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df34c21e200f5a9f4a9242a3280913acf14adf76
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968967"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expressão SSIS)
   Retorna o número de tokens em uma cadeia de caracteres que contém tokens separados pelos delimitadores especificados.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce20813bcde670b5987624fa4b26b5c1fa633717
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cff23206923825d0e86e47ad6921c19f45e68b35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667394"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068626"
 ---
 # <a name="start-the-replication-monitor"></a>Iniciar o Replication Monitor
   O Replication Monitor pode ser iniciado no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] em qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou no prompt de comando. Depois de iniciar o Replication Monitor, adicione um ou mais Publicadores a serem monitorados. Para obter mais informações, veja [Adicionar e remover Publicadores do Replication Monitor](add-and-remove-publishers-from-replication-monitor.md).  

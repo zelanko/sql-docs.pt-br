@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 438e5eacfc2bb1fc2e3e20fbb95ff2d3c768c49a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f9ab795149344eec1d7cbbdf88cbd749bd6d73e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068475"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Habilitar, desabilitar e excluir pontos de interrupção
   Para exibir e gerenciar todos os pontos de interrupção abertos, você pode usar a janela **Pontos de Interrupção** . Use a janela para exibir informações de ponto de interrupção e executar ações como excluir, desabilitar ou habilitar pontos de interrupção.  

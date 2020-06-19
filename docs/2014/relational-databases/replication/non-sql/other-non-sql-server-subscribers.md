@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e6a01bfc16041db89ea6160c36af1a7536290ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068548"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Outros assinantes não SQL Server
   Para uma lista de Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , suportados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)], consulte [Non-SQL Server Subscribers](non-sql-server-subscribers.md). Esse tópico inclui informações sobre exigências para drivers ODBC e provedores OLE DB.  
@@ -89,7 +88,7 @@ ms.locfileid: "63021946"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** é necessário criar acessadores de parâmetro. Se o provedor oferecer **IColumnRowset**suporte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IColumnRowset, o usará essa interface para determinar se uma coluna é uma coluna de identidade.  
+ **IAccessor** é necessário criar acessadores de parâmetro. Se o provedor oferecer suporte a **IColumnRowset**, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usará essa interface para determinar se uma coluna é uma coluna de identidade.  
   
 ### <a name="rowset-object-interfaces"></a>Interfaces de objeto de conjunto de linhas  
  As seguintes interfaces são exigidas:  

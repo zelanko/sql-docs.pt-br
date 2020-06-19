@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a26aca7b33a7355500350572ea5e8ed21bddeacb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250585"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068717"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
   O Replication Snapshot Agent é um arquivo executável que prepara arquivos de instantâneo contendo esquema e dados de tabelas publicadas e objetos do banco de dados, armazena os arquivos na pasta de instantâneo e registra trabalhos de sincronização no banco de dados de distribuição.  
@@ -138,7 +137,7 @@ ms.locfileid: "63250585"
  Para obter mais informações, consulte [replicação do SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
  **-FieldDelimiter** _field_delimiter_  
- É o caractere ou cadeia de caracteres que marca o fim de um campo no arquivo de dados de cópia em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O padrão é \n\<x$3>\n.  
+ É o caractere ou cadeia de caracteres que marca o fim de um campo no arquivo de dados de cópia em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O padrão é \n \<x$3> \n.  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  Especifica a quantidade de histórico registrada durante uma operação de instantâneo. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
@@ -181,7 +180,7 @@ ms.locfileid: "63250585"
  Se exclusões irrelevantes forem enviadas ao Assinante. Exclusões irrelevantes são comandos DELETE enviados aos Assinantes por linhas que não pertencem à partição do Assinante. Exclusões irrelevantes não afetam a integridade ou convergência dos dados, mas podem resultar em tráfego de rede desnecessário. O valor padrão de **MaxNetworkOptimization** é **0**. Definindo **MaxNetworkOptimization** como **1** minimiza as chances de exclusões irrelevantes, reduzindo o tráfego de rede e maximizando a otimização da rede. A definição desse parâmetro como **1** também aumenta o armazenamento de metadados e causa degradação de desempenho no Publicador se vários níveis de filtro de junção e filtros de subconjuntos complexos estiverem presentes. Você deve avaliar com cuidado a topologia da replicação e definir **MaxNetworkOptimization** como **1** somente se o tráfego de rede de exclusões irrelevantes estiver inaceitavelmente alto.  
   
 > [!NOTE]
->  Definir esse parâmetro como **1** é útil somente quando a opção de otimização de sincronização da publicação de mesclagem **true** é definida como **@keep_partition_changes** true (o parâmetro de [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
+>  Definir esse parâmetro como **1** é útil somente quando a opção de otimização de sincronização da publicação de mesclagem é definida como **true** (o **@keep_partition_changes** parâmetro de [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
   
  **-Output** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
@@ -243,10 +242,10 @@ ms.locfileid: "63250585"
  Especifica o tipo de replicação. Um valor de **1** indica replicação transacional e um valor de **2** indica replicação de mesclagem.  
   
  **-RowDelimiter** _row_delimiter_  
- É o caractere ou cadeia de caracteres que marca o fim de uma linha no arquivo de dados de cópia em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O padrão é \n\<,@g>\n.  
+ É o caractere ou cadeia de caracteres que marca o fim de uma linha no arquivo de dados de cópia em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O padrão é \n \<,@g> \n.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- É o número máximo de segundos que o Agente de Instantâneo aguarda quando o número de processos de instantâneo dinâmico simultâneos em execução está no limite definido pela **@max_concurrent_dynamic_snapshots** propriedade de [sp_addmergepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Se o número máximo de segundos for alcançado e o Snapshot Agent ainda estiver esperando, será fechado. Um valor de 0 significa que o agente espera indefinidamente, embora possa ser cancelado.  
+ É o número máximo de segundos que o Agente de Instantâneo aguarda quando o número de processos de instantâneo dinâmico simultâneos em execução está no limite definido pela **@max_concurrent_dynamic_snapshots** propriedade de [sp_addmergepublication &#40;&#41;de TRANSACT-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Se o número máximo de segundos for alcançado e o Snapshot Agent ainda estiver esperando, será fechado. Um valor de 0 significa que o agente espera indefinidamente, embora possa ser cancelado.  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  Esse parâmetro foi preterido e só tem suporte para compatibilidade com versões anteriores.  

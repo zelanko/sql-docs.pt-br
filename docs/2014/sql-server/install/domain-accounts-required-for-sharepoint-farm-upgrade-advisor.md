@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c4079ea4213d7ecbec0165c32c82b3449bbb5aee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d68237b2b46147b5e9e5180b7796b5cdb02cee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952516"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054829"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Contas de domínio necessárias ao farm do SharePoint (Supervisor de Atualização)
   Os produtos do SharePoint configurados para um ambiente de farm requerem o uso de contas de domínio.  
@@ -35,7 +34,7 @@ ms.locfileid: "71952516"
  "O servidor de relatório está sendo executado em uma conta NT AUTHORITY\NETWORK interna, que não tem suporte em uma instalação de farm do SharePoint. Reconfigure o servidor de relatório para ser executado em uma conta de domínio."  
   
 ## <a name="corrective-action"></a>Ação corretiva  
- Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o e versões anteriores, use a Gerenciador de configurações do Reporting Services para alterar a conta atribuída como a conta de serviço do servidor de relatório.  
+ Para o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versões anteriores, use a Gerenciador de configurações do Reporting Services para alterar a conta atribuída como a conta de serviço do servidor de relatório.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Para alterar a conta de serviço no Gerenciador de Configuração  
   

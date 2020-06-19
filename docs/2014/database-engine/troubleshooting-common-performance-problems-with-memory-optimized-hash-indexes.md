@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ebf3f066dec03ba9e9f74dfdf551ccaababf032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842521"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927967"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Solucionando problemas comuns de desempenho com índices de hash com otimização de memória
   Este tópico abordará a solução de problemas e como contornar problemas comuns com índices de hash.  

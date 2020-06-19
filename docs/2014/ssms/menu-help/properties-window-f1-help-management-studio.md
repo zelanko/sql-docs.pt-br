@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73ac04e428a07cd607969a18ec88c68ea07df9ed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062054"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ajuda F1 da janela Propriedades (Management Studio)
   Use a janela **Propriedades** para exibir as propriedades de elementos selecionados. Você também pode usar a janela **Propriedades** para exibir o arquivo, o projeto e as propriedades da solução. A janela **Propriedades** está disponível ao clicar em **Janela de Propriedades** no menu **Exibir** .  

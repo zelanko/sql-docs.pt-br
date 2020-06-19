@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a73af1c1f3a7196d87f77681ee9d62a3ef248a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068779"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Administrar uma topologia ponto a ponto (Programação Transact-SQL de replicação)
   A administração de uma topologia ponto a ponto é semelhante à administração de uma topologia de replicação transacional comum, porém, há algumas áreas com considerações especiais. A diferença principal na administração da topologia ponto a ponto é que algumas alterações exigem que o sistema seja *confirmado*. Fechar um sistema para novas sessões envolve parar as atividades em tabelas publicadas em todos os nós e garantir que todos os nós tenham recebido todas as alterações de todos os demais nós. Para obter mais informações, consulte [Como confirmar uma topologia de replicação &#40;Programação Transact-SQL de replicação&#41;](quiesce-a-replication-topology-replication-transact-sql-programming.md).  
@@ -63,7 +62,7 @@ ms.locfileid: "62629717"
   
 ## <a name="see-also"></a>Consulte Também  
  [Perguntas frequentes sobre administração de replicação](frequently-asked-questions-for-replication-administrators.md)   
- [Backup e restauração de bancos de dados SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)  
   
   

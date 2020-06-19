@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2fd28a126b3a0a7f833c6410d4e590b5dc07e5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c63f0b3d2aff8b909e3a7fc841c9038cf95a475e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969456"
 ---
 # <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
     
@@ -30,7 +29,7 @@ ms.locfileid: "62869611"
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBLKIO_DEVOPENFAILED|  
-|Texto da mensagem|%ls: Não foi possível abrir arquivo %ls para o número de arquivo %d.  Erro de SO: %ls.|  
+|Texto da mensagem|%ls: não foi possível abrir arquivo %ls para o número de arquivo %d.  Erro de SO: %ls.|  
   
 ## <a name="explanation"></a>Explicação  
  O SQL Server não pôde abrir o arquivo indicado devido ao erro especificado.  

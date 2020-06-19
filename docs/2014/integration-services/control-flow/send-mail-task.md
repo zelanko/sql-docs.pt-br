@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 701416b401d428cda9fe0e78b9219dfb2ef53167
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830390"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918206"
 ---
 # <a name="send-mail-task"></a>Tarefa Enviar Email
   A tarefa Enviar Email envia uma mensagem de email. Usando a tarefa Enviar Email, um pacote pode enviar mensagens se as tarefas no fluxo de trabalho do pacote tiverem êxito ou falharem ou enviar mensagens em resposta a um evento que o pacote ativa em tempo de execução. Por exemplo, a tarefa pode notificar um administrador de banco de dados sobre o êxito ou a falha da tarefa Fazer Backup do Banco de Dados.  
