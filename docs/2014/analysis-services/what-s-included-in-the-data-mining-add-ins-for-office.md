@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54128ccbeab2a40a8e9f65da138b52602f45a86c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065326"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938087"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>O que&#39;s incluídos nos suplementos de mineração de dados para Office
   Quando você instalar os Suplementos de Mineração de Dados para Office 2013, e selecionar todas as opções de instalação, as seguintes barras de ferramentas e modelos serão adicionados:  
@@ -56,9 +55,9 @@ ms.locfileid: "66065326"
   
      O local padrão da pasta de trabalho de exemplo depende de qual versão você instalou:  
   
-    -   \<unidade>: \Program Files\Microsoft SQL Server 2014 DM Add-ins  
+    -   \<drive>: \Program Files\Microsoft SQL Server 2014 DM Add-ins  
   
-    -   \<unidade>: \Program Files (x86) \Microsoft SQL Server 2014 DM Add-ins  
+    -   \<drive>: \Program Files (x86) \Microsoft SQL Server 2014 DM Add-ins  
   
 ## <a name="see-also"></a>Consulte Também  
  [Introdução com mineração de dados &#40;suplementos de mineração de dados para Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

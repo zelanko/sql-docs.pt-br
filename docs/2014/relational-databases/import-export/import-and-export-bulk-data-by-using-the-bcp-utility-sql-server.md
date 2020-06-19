@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
-ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d1892b26f3c638a696d8ed15e739f56ac2e682f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71708218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026779"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importar e exportar dados em massa usando o utilitário bcp (SQL Server)
 
@@ -74,11 +73,11 @@ Este tópico oferece uma visão geral de como usar o [utilitário bcp](../../too
 
 ## <a name="see-also"></a>Consulte Também
 
-[Inserir &#40;cláusula de seleção de&#41;](/sql/t-sql/statements/insert-transact-sql) 
-Transact-SQL [&#40;o Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
- [utilitário bcp](../../tools/bcp-utility.md)   
-[Preparar para importação de dados em massa &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
- [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
- [importação e exportação em massa de dados &#40;](bulk-import-and-export-of-data-sql-server.md) 
-SQL SERVERT&#41;[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
- [criar um arquivo de formato &#40;](create-a-format-file-sql-server.md) SQL Server&#41;
+[Inserir &#40;&#41;](/sql/t-sql/statements/insert-transact-sql) 
+ de Transact-SQL [Cláusula SELECT &#40;&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+ Transact-SQL [utilitário bcp](../../tools/bcp-utility.md)   
+[Preparar para importar &#40;de dados em massa SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
+&#41;&#40;Transact [-SQL de BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) 
+ [Importação e exportação em massa de &#40;de dados SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md) 
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+ [Criar um arquivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)

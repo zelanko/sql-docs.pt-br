@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1f3ad2a94ffe3e0f1db19a8e66f85497e7143dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011816"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026487"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar tipo de armazenamento de arquivo usando bcp (SQL Server)
   O *tipo de armazenamento de arquivo* descreve como são armazenados os dados no arquivo de dados. Podem ser exportados dados para um arquivo de dados como seu tipo de tabela de banco de dados (formato nativo), em sua representação de caractere (formato de caractere), ou como qualquer tipo de dados onde há suporte para conversão implícita; por exemplo, copiando um `smallint` como um `int`. Os tipos de dados definidos pelo usuário como tipos básicos são exportados.  
@@ -45,11 +44,11 @@ ms.locfileid: "66011816"
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text` <sup>2</sup>|`T`[`ext`]|  
+    |`text`<sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image` <sup>2</sup>|`I`[`mage`]|  
+    |`image`<sup>2</sup>|`I`[`mage`]|  
     |`datetime`|**d[ate]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
@@ -73,9 +72,9 @@ ms.locfileid: "66011816"
     |`UDT` (um tipo de dados definido pelo usuário)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> a interação do tamanho do campo, do comprimento do prefixo e dos terminadores determina a quantidade de espaço de armazenamento alocada em um arquivo de dados para dados não caracteres que `char` são exportados como o tipo de armazenamento de arquivo.  
+     <sup>1</sup> a interação do tamanho do campo, do comprimento do prefixo e dos terminadores determina a quantidade de espaço de armazenamento alocada em um arquivo de dados para dados não caracteres que são exportados como o `char` tipo de armazenamento de arquivo.  
   
-     <sup>2</sup> os `ntext`tipos `text`de dados `image` , e serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No novo projeto de desenvolvimento, evite usar esses tipos de dados e planeje modificar os aplicativos que atualmente os utilizam. Use `nvarchar(max)`, `varchar(max)`e `varbinary(max)` em vez disso.  
+     <sup>2</sup> os `ntext` `text` tipos de dados, e `image` serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No novo projeto de desenvolvimento, evite usar esses tipos de dados e planeje modificar os aplicativos que atualmente os utilizam. Use `nvarchar(max)` , `varchar(max)` e `varbinary(max)` em vez disso.  
   
 ## <a name="native-file-storage-types"></a>Tipos de armazenamento de arquivos nativos  
  Cada tipo de armazenamento de arquivo nativo é registrado no arquivo de formato como um tipo de dados do arquivo host correspondente.  
@@ -86,11 +85,11 @@ ms.locfileid: "66011816"
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text` <sup>2</sup>|SQLCHAR|  
-|`ntext` <sup>2</sup>|SQLNCHAR|  
+|`text`<sup>2</sup>|SQLCHAR|  
+|`ntext`<sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image` <sup>2</sup>|SQLBINARY|  
+|`image`<sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -109,9 +108,9 @@ ms.locfileid: "66011816"
 |`timestamp`|SQLBINARY|  
 |UDT (um tipo de dados definido pelo usuário)|SQLUDT|  
   
- <sup>1</sup> arquivos de dados que são armazenados em formato de `char` caractere usam como o tipo de armazenamento de arquivo. Então, para arquivos de dados de caractere, SQLCHAR é o único tipo de dados que aparece em um arquivo de formato.  
+ <sup>1</sup> arquivos de dados que são armazenados em formato de caractere usam `char` como o tipo de armazenamento de arquivo. Então, para arquivos de dados de caractere, SQLCHAR é o único tipo de dados que aparece em um arquivo de formato.  
   
- <sup>2</sup> você não pode importar dados em `text`massa `ntext`para as `image` colunas, e que têm valores padrão.  
+ <sup>2</sup> você não pode importar dados em massa para as `text` `ntext` colunas, e `image` que têm valores padrão.  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>Considerações adicionais para tipos de armazenamento de arquivo  
  Quando você agrupa dados exportados de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados:  

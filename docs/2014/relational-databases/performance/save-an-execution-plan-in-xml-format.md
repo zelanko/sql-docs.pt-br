@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84ed341d186993ed77260e8361156b324c597839
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150858"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047893"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Salvar um plano de execução em formato XML
   Use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para salvar planos de execução como um arquivo XML e abri-los para exibição.  
@@ -65,9 +64,9 @@ ms.locfileid: "63150858"
   
 4.  No painel **Resultados** , clique com o botão direito do mouse em **Plano de execução XML do Microsoft SQL Server** que contém o plano de consulta e clique em **Salvar Resultados Como**.  
   
-5.  Na caixa de diálogo **Salvar** \<Grade ou Texto> **Resultados**, na caixa **Salvar como tipo**, clique em **Todos os arquivos (\*.\*)**.  
+5.  Na caixa de diálogo **salvar** \<Grid or Text> **resultados** , na caixa **salvar como tipo** , clique em **todos os arquivos ( \* . \* )**.  
   
-6.  Na caixa **nome do arquivo** , forneça um nome, no formato \<nome **>. sqlplan**e, em seguida, clique em **salvar**.  
+6.  Na caixa **nome do arquivo** , forneça um nome, no formato \<name**> . sqlplan * * e, em seguida, clique em **salvar**.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Para salvar um plano de execução usando opções do SQL Server Management Studio  
   
@@ -79,7 +78,7 @@ ms.locfileid: "63150858"
   
 3.  Na caixa de diálogo **Salvar Como**, verifique se a opção **Salvar como tipo** está definida como **Arquivos de Plano de Execução (\*.sqlplan)**.  
   
-4.  Na caixa **nome do arquivo** , forneça um nome, no formato \<nome **>. sqlplan**e, em seguida, clique em **salvar**.  
+4.  Na caixa **nome do arquivo** , forneça um nome, no formato \<name**> . sqlplan * * e, em seguida, clique em **salvar**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Para abrir um plano de consulta XML salvo em SQL Server Management Studio  
   

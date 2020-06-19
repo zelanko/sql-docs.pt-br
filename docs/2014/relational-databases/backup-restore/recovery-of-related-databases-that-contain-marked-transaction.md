@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968322f92c7a135adb5fd0733b5774e7562bc39
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875718"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957563"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperação de bancos de dados relacionados que contêm transação marcada
   Este tópico é relevante apenas para os bancos de dados que contêm transações marcadas e que usam modelos de recuperação bulk-logged ou completos.  
@@ -61,11 +60,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintaxe Transact-SQL para recuperar a uma marca  
  Quando você assinala uma transação marcada usando uma instrução[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
   
--   Use a cláusula WITH STOPATMARK **=*`<mark_name>`*' '** para especificar que a transação marcada é o ponto de recuperação.  
+-   Use a cláusula WITH STOPATMARK = **' *`<mark_name>`* '** para especificar que a transação marcada é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e inclui a transação marcada no roll-forward.  
   
--   Use a cláusula WITH STOPBEFOREMARK **=*`<mark_name>`*' '** para especificar que o registro de log que está imediatamente antes da marca é o ponto de recuperação.  
+-   Use a cláusula WITH STOPBEFOREMARK = **' *`<mark_name>`* '** para especificar que o registro de log que está imediatamente antes da marca é o ponto de recuperação.  
   
      O STOPATMARK roll-forward até a marca e exclui a transação marcada do roll-forward.  
   

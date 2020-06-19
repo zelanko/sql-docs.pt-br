@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11c56c29f685eb8f3746431a79b4d6a42a4b9fe5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057479"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965136"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Geral)
   Use a página **Geral** da caixa de diálogo do **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para selecionar um grupo de arquivos que têm o mesmo formato de dados e para especificar seu formato de dados. Uma conexão de vários arquivos simples habilita um pacote a conectar-se com um grupo de arquivos de texto que têm o mesmo formato.  
@@ -39,7 +38,7 @@ ms.locfileid: "66057479"
  **Procurar**  
  Procure os nomes de arquivo para usar na conexão de vários arquivos simples. Você pode selecionar vários arquivos. Todos os arquivos devem ter o mesmo formato de dados.  
   
- **Localidade**  
+ **Local**  
  Especifique a localidade para fornecer informações de classificação e de conversão de data e hora.  
   
  **Unicode**  
@@ -48,7 +47,7 @@ ms.locfileid: "66057479"
  **Página de código**  
  Especifique a página de código do texto não Unicode.  
   
- **Ao**  
+ **Formatar**  
  Indique se será usada formatação delimitada, de largura fixa ou irregular à direita. Todos os arquivos devem ter o mesmo formato de dados.  
   
 |Valor|Descrição|  
@@ -66,9 +65,9 @@ ms.locfileid: "66057479"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
-|**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
+|**CD**|A linha do cabeçalho é delimitada por um retorno de carro.|  
 |**{LF}**|A linha do cabeçalho é delimitada por um avanço de linha.|  
-|**Ponto-e-vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
+|**Ponto e vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|A linha do cabeçalho é delimitada por dois-pontos.|  
 |**Pontos{,}**|A linha do cabeçalho é delimitada por uma vírgula.|  
 |**Tabulação {t}**|A linha do cabeçalho é delimitada por uma tabulação.|  

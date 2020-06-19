@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d72c84a7ed84503e0c88d2a46c808196903900b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026738"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
     
-##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Você pode importar documentos XML em massa em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um banco de dados ou exportá-los em massa de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados. Este tópico fornece exemplos de ambas as operações.  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Você pode importar documentos XML em massa em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados ou exportá-los em massa de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados. Este tópico fornece exemplos de ambas as operações.  
   
  Para importar dados em massa de em arquivo de dados para uma tabela ou exibição não particionada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode usar o seguinte:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66011966"
 ## <a name="examples"></a>Exemplos  
  Os exemplos são:  
   
--   A. [Importação em massa de dados XML como um fluxo de bytes binários](#binary_byte_stream)  
+-   a. [Importação em massa de dados XML como um fluxo de bytes binários](#binary_byte_stream)  
   
 -   B. [Importação em massa de dados XML em uma linha existente](#existing_row)  
   

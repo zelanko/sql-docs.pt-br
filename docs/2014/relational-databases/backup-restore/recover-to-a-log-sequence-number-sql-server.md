@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df55c3468fc009d86cffd58a837d6935f5ce14b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957501"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar para um número de sequência de log (SQL Server)
   Este tópico é relevante apenas para bancos de dados que estejam usando modelos de recuperação completa ou bulk-logged.  
@@ -38,7 +37,7 @@ ms.locfileid: "62875759"
   
  Cada registro do log de transações é identificado de forma exclusiva por um LSN (número da sequência de log). Os LSNs são ordenados de tal modo que se LSN2 for maior do que LSN1, a alteração descrita pelo registro de log mencionado por LSN2 ocorreu depois da alteração descrita pelo registro de log LSN.  
   
- O LSN de um registro de log no qual ocorreu um evento significativo pode ser útil para construir sequências de restauração corretas. Como LSNs são ordenados, eles podem ser comparados por igualdade e desigualdade (ou **\<** seja **>**, **=** ** \< **,, **>=**,,). Essas comparações são úteis ao construir sequências de restauração.  
+ O LSN de um registro de log no qual ocorreu um evento significativo pode ser útil para construir sequências de restauração corretas. Como LSNs são ordenados, eles podem ser comparados por igualdade e desigualdade (ou seja,,, **\<**, **>** **=** **\<=**, **>=** ). Essas comparações são úteis ao construir sequências de restauração.  
   
 > [!NOTE]  
 >  Os LSNs são valores do tipo de dados `numeric`(25,0). Operações aritméticas (por exemplo, adição ou subtração) não são significativas e não devem ser usadas com LSNs.  
@@ -64,11 +63,11 @@ ms.locfileid: "62875759"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxe de Transact-SQL para restaurar para um LSN  
  Usando uma instrução [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) é possível parar no LSN ou imediatamente antes, da seguinte maneira:  
   
--   Use a cláusula WITH STOPATMARK **= '** LSN:_<lsn_number>_ **'** , em que LSN:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log que contém o LSN especificado é o ponto de recuperação.  
+-   Use a cláusula WITH STOPATMARK **= '** LSN:_<lsn_number>_ **'** , em que LSN: *\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log que contém o LSN especificado é o ponto de recuperação.  
   
      O STOPATMARK efetua roll forward para o LSN e inclui o registro de log no roll forward.  
   
--   Use a cláusula WITH STOPBEFOREMARK **= '** LSN:_<lsn_number>_ **'** , em que LSN:*\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log imediatamente antes do registro de log que contém o número de LSN especificado é o ponto de recuperação.  
+-   Use a cláusula WITH STOPBEFOREMARK **= '** LSN:_<lsn_number>_ **'** , em que LSN: *\<lsnNumber>* é uma cadeia de caracteres que especifica que o registro de log imediatamente antes do registro de log que contém o número de LSN especificado é o ponto de recuperação.  
   
      O STOPATMARK efetua roll forward para o LSN e exclui o registro de log do roll forward.  
   

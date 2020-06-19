@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bb86fc6020b6a9421861f6d946438aea326feb45
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 381d22e666fb8d490013004d00f5354b972e5215
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062910"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Aplicando uma transformação XSL (classes gerenciadas SQLXML)
   Neste exemplo, uma consulta SQL é executada no banco de dados AdventureWorks. A transformação XSL é aplicada ao resultado da consulta para gerar uma tabela de duas colunas com os nomes e sobrenomes dos funcionários.  
