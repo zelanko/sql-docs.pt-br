@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d8efab57dd195993ab9ab12c0cb9b3f167bd796
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938827"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gerenciar funções usando SSMS (SSAS tabular)
   Você pode criar, editar e gerenciar funções para um modelo de tabela implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -52,18 +51,18 @@ ms.locfileid: "66067042"
     |----------------|-----------------|  
     |**Controle total (Administrador)**|Os membros podem fazer modificações ao esquema modelo e podem exibir todos os dados.|  
     |**Processar Banco de Dados**|Membros podem executar operações de Processar e Processar Tudo. Não é possível modificar o esquema modelo e não é possível exibir dados.|  
-    |**Ler**|Os membros têm permissão de exibir dados (com base em filtros de linha) mas não podem fazer nenhuma alteração ao esquema modelo.|  
+    |**Leitura**|Os membros têm permissão de exibir dados (com base em filtros de linha) mas não podem fazer nenhuma alteração ao esquema modelo.|  
   
 5.  Na caixa de diálogo **Criar Função** , na janela Selecionar uma página, clique em **Associação**.  
   
 6.  Na janela de configurações de associação, clique em **Adicionar**e, na caixa de diálogo **Selecionar Usuários ou Grupos** , adicione os usuários ou grupos do Windows que você deseja adicionar como membros.  
   
-7.  Se a função que você está criando tem permissões de Leitura, você pode adicionar filtros de linha para qualquer tabela usando uma fórmula DAX. Para adicionar filtros de linha, na caixa de diálogo **Propriedades da função – \<roleName>** , em **selecionar uma página**, clique em **filtros de linha**.  
+7.  Se a função que você está criando tem permissões de Leitura, você pode adicionar filtros de linha para qualquer tabela usando uma fórmula DAX. Para adicionar filtros de linha, na caixa de diálogo **Propriedades \<rolename> da função** , em **selecionar uma página**, clique em **filtros de linha**.  
   
-8.  Na janela filtros de linha, selecione uma tabela e, em seguida, clique no campo **filtro Dax** e, em seguida, no campo **Dax filter \<-TableName>** , digite uma fórmula DAX.  
+8.  Na janela filtros de linha, selecione uma tabela, clique no campo **filtro Dax** e, em seguida, no campo ** \<tablename> filtro Dax** , digite uma fórmula DAX.  
   
     > [!NOTE]  
-    >  O campo de> \<de TableName de filtro Dax não contém um editor de consulta de preenchimento automático ou recurso de função de inserção. Para usar o Preenchimento Automático ao escrever uma fórmula DAX, você deverá usar um editor de fórmula DAX no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  O campo filtro DAX não \<tablename> contém um editor de consulta de preenchimento automático ou recurso de função INSERT. Para usar o Preenchimento Automático ao escrever uma fórmula DAX, você deverá usar um editor de fórmula DAX no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Clique em **OK** para salvar a função.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66067042"
   
 -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja editar, expanda **Funções**e, em seguida, clique com o botão direito do mouse na função e clique em **Propriedades**.  
   
-     Na caixa de diálogo **Propriedades** \<da função roleName>, você pode alterar permissões, adicionar ou remover membros e adicionar/editar filtros de linha.  
+     Na caixa de diálogo **Propriedades da função** \<rolename> , você pode alterar permissões, adicionar ou remover membros e adicionar/editar filtros de linha.  
   
 ###  <a name="to-delete-a-role"></a><a name="bkmk_deletet_role"></a>Para excluir uma função  
   

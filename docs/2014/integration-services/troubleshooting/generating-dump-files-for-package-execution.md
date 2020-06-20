@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8022532dcb038b7c9a5839acb0541337ac3d5001
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3a44a21e375d37115f71ff8762b941bd87ef2ae
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972713"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Gerando arquivos de despejo para execução de pacote
   No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode criar arquivos de despejo de depuração que fornecem informações sobre a execução de um pacote. As informações contidas nestes arquivos podem ajudá-lo a solucionar os problemas sobre a execução do pacote.  
@@ -42,7 +41,7 @@ ms.locfileid: "62766140"
   
 -   O arquivo de despejo de depuração .tmp. Esse é um arquivo de texto formatado.  
   
- Por padrão, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o armazena esses arquivos na pasta, * \<unidade>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena esses arquivos na pasta, * \<drive> :* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  A tabela a seguir descreve apenas algumas seções no arquivo .tmp. O arquivo .tmp inclui dados adicionais que não estão listados na tabela.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62766140"
 |-------------------------|-----------------|-------------|  
 |Ambiente|A versão do sistema operacional, os dados de uso da memória, a ID do processo e o nome da imagem do processo. As informações sobre o ambiente estão no começo do arquivo .tmp.|# Despejo Textual do SSIS realizado em 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Nome da Imagem [C:\Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Em execução em 2 processadores amd64 em WOW64<br /><br /> # Memória: 58% em uso. Física: 845M/2044M  Paginação: 2404M/4095M (disp./total)|  
 |Caminho e versão da DLL (Dynamic-link library)|Caminho e versão de cada DLL que o sistema carrega durante o processamento de um pacote.|# Módulo carregado: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Módulo carregado: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Módulo carregado: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Mensagens recentes|Mensagens recentes emitidas pelo sistema. Inclui hora, tipo, descrição e ID de thread de cada mensagem.|[M:1]   Entrada de buffer de anel:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Carimbo de data/hora: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         ID de Thread: 2368           (ThreadID)<br /><br /> [E:3]         Nome do evento: OnError                        (EventName)<br /><br /> [E:3]         Nome da fonte:                (SourceName)<br /><br /> [E:3]         ID da fonte:                        (SourceID)<br /><br /> [E:3]         ID de execução:                 (ExecutionGUID)<br /><br /> [E:3]         Código de dados: -1073446879              (DataCode)<br /><br /> [E:3]         Descrição: o componente está ausente, não está registrado, não pode ser atualizado ou não tem as interfaces necessárias. As informações de contato desse componente são "".|  
+|Mensagens recentes|Mensagens recentes emitidas pelo sistema. Inclui hora, tipo, descrição e ID de thread de cada mensagem.|[M:1]   Entrada de buffer de anel:              (*pRecord)<br /><br /> [D:2]       <<\<CRingBufferLogging::RingBufferLoggingRecord>>>  ( \@ 0282F1A8)<br /><br /> [E:3]         Carimbo de data/hora: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         ID de Thread: 2368           (ThreadID)<br /><br /> [E:3]         Nome do evento: OnError                        (EventName)<br /><br /> [E:3]         Nome da fonte:                (SourceName)<br /><br /> [E:3]         ID da fonte:                        (SourceID)<br /><br /> [E:3]         ID de execução:                 (ExecutionGUID)<br /><br /> [E:3]         Código de dados: -1073446879              (DataCode)<br /><br /> [E:3]         Descrição: o componente está ausente, não está registrado, não pode ser atualizado ou não tem as interfaces necessárias. As informações de contato desse componente são "".|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Execute Package Dialog Box](../execute-package-dialog-box.md)  

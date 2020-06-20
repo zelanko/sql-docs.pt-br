@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2b70684a74677437d0491e1fc724c832bb7e0a67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 916458d2d6b8fbba81940257ee85ffe014d1f12e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936937"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Configurar a replicação para Grupos de Disponibilidade AlwaysOn (SQL Server)
   A configuração dos grupos de disponibilidade AlwaysOn e da replicação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve sete etapas. Cada etapa está descrita com mais detalhes nas seções a seguir.  
@@ -49,7 +48,7 @@ ms.locfileid: "72797704"
         @security_mode = 1;  
     ```  
   
-3.  Configurar o publicador remoto. Se estiverem sendo usados procedimentos armazenados para configurar o distribuidor, execute `sp_adddistpublisher`. O *@security_mode* parâmetro é usado para determinar como o procedimento armazenado de validação do Publicador executado a partir dos agentes de replicação, conecta-se ao primário atual. Se a autenticação do Windows definida como 1 for usada na conexão à primária atual. Se definido como 0, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a autenticação será usada com os *@login* valores *@password* e especificados. O logon e a senha especificada devem ser válidos em cada réplica secundária para o procedimento armazenado de validação se conectar com êxito a essa réplica.  
+3.  Configurar o publicador remoto. Se estiverem sendo usados procedimentos armazenados para configurar o distribuidor, execute `sp_adddistpublisher`. O *@security_mode* parâmetro é usado para determinar como o procedimento armazenado de validação do Publicador executado a partir dos agentes de replicação, conecta-se ao primário atual. Se a autenticação do Windows definida como 1 for usada na conexão à primária atual. Se definido como 0, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a autenticação será usada com os *@login* valores e especificados *@password* . O logon e a senha especificada devem ser válidos em cada réplica secundária para o procedimento armazenado de validação se conectar com êxito a essa réplica.  
   
     > [!NOTE]  
     >  Se qualquer agente de replicação modificado for executado em um computador que não seja o distribuidor, o uso da autenticação do Windows para a conexão à réplica primária exigirá a configuração da autenticação Kerberos para a comunicação entre os computadores host da réplica. O uso de um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a conexão à réplica primária atual não requer a autenticação Kerberos.  
@@ -69,7 +68,7 @@ ms.locfileid: "72797704"
   
 ### <a name="configure-the-publisher-at-the-original-publisher"></a>Configurar o publicador no publicador original
   
-1.  Configurar um distribuidor remoto. Se estiverem sendo usados procedimentos armazenados para configurar o publicador, execute `sp_adddistributor`. Especifique o mesmo valor para *@password* o que foi usado `sp_adddistrbutor` quando foi executado no distribuidor para configurar a distribuição.  
+1.  Configurar um distribuidor remoto. Se estiverem sendo usados procedimentos armazenados para configurar o publicador, execute `sp_adddistributor`. Especifique o mesmo valor para o *@password* que foi usado quando `sp_adddistrbutor` foi executado no distribuidor para configurar a distribuição.  
   
     ```sql
     exec sys.sp_adddistributor  
@@ -132,7 +131,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- Em cada host de réplica secundária, configure a distribuição. Identifique o distribuidor do publicador original como o distribuidor remoto. Use a mesma senha que foi usada na execução original do `sp_adddistributor` no distribuidor. Se procedimentos armazenados estiverem sendo usados para configurar a distribuição, *@password* o parâmetro `sp_adddistributor` de será usado para especificar a senha.  
+ Em cada host de réplica secundária, configure a distribuição. Identifique o distribuidor do publicador original como o distribuidor remoto. Use a mesma senha que foi usada na execução original do `sp_adddistributor` no distribuidor. Se procedimentos armazenados estiverem sendo usados para configurar a distribuição, o *@password* parâmetro de `sp_adddistributor` será usado para especificar a senha.  
   
 ```sql
 EXEC sp_adddistributor   
@@ -172,7 +171,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- O `sp_validate_replica_hosts_as_publishers` de procedimento armazenado deve ser executado de um logon com autorização suficiente em cada host de réplica de grupo de disponibilidade para consultar informações sobre o grupo de disponibilidade. Ao `sp_validate_redirected_publisher`contrário de, ele usa as credenciais do chamador e não usa o logon retido em msdb. dbo. MSdistpublishers para se conectar às réplicas do grupo de disponibilidade.  
+ O `sp_validate_replica_hosts_as_publishers` de procedimento armazenado deve ser executado de um logon com autorização suficiente em cada host de réplica de grupo de disponibilidade para consultar informações sobre o grupo de disponibilidade. Ao contrário de `sp_validate_redirected_publisher` , ele usa as credenciais do chamador e não usa o logon retido em msdb. dbo. MSdistpublishers para se conectar às réplicas do grupo de disponibilidade.  
   
 > [!NOTE]  
 >  O `sp_validate_replica_hosts_as_publishers` falhará com o erro a seguir na validação de hosts de réplica secundária que não permitem acesso de leitura, ou exigem a especificação da intenção de leitura.  
@@ -183,7 +182,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Foram encontrados um ou mais erros de validação de publicador para o host de réplica 'MyReplicaHostName'.  
   
- Este comportamento é esperado. Você deve verificar a presença das entradas de servidor de assinante nesses hosts de réplica secundária, consultando as entradas de sysserver diretamente no host.  
+ Esse comportamento é esperado. Você deve verificar a presença das entradas de servidor de assinante nesses hosts de réplica secundária, consultando as entradas de sysserver diretamente no host.  
   
 ##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a> 7. Adicionar o publicador original ao Replication Monitor  
  Em cada réplica de grupo de disponibilidade, adicione o publicador original ao Replication Monitor.  

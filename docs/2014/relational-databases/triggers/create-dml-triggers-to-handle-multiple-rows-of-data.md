@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e29e7e8d02c2857322b3488bc209648630ed44b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042973"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Crie gatilhos DML para tratar várias linhas de dados
   Ao gravar o código de um gatilho DML, considere que a instrução que aciona o gatilho pode ser uma única instrução que afeta diversas linhas de dados, em vez de uma única linha. Esse comportamento é comum para os gatilhos UPDATE e DELETE, pois essas instruções geralmente afetam várias linhas. O comportamento é menos comum para gatilhos INSERT, pois a instrução INSERT básica adiciona apenas uma única linha. Entretanto, como o gatilho INSERT pode ser acionado por uma instrução INSERT INTO (*table_name*) SELECT, a inserção de várias linhas pode causar a invocação de um único gatilho.  

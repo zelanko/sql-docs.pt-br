@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eae7433569972c217161f1681b2f7089c7604335
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74430ab1bed232b8d510a8c28a8a690d88d1f6ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091506"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041648"
 ---
 # <a name="upgrade-lookup-transformations"></a>Atualizar transformação Pesquisa
   Ao atualizar do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , considere a possibilidade de modificar pacotes para aproveitar os novos recursos da Transformação Pesquisa. A transformação dá suporte a tipos de cache e opções de saída de dados disponíveis no [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]. Para obter mais informações sobre saídas de dados e cache adicionais, consulte [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
@@ -33,6 +32,6 @@ ms.locfileid: "66091506"
  Para obter mais informações, consulte [Editor de transformação pesquisa &#40;&#41;de página Geral ](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Transformação pesquisa](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Transformação Pesquisa](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

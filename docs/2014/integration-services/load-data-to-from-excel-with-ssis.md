@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767308"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951246"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
@@ -81,7 +80,7 @@ Insira o caminho e o nome do arquivo no seguinte formato:
 
 -   Para um arquivo no computador local, **C:\\TestData.xlsx**.
 
--   Para um arquivo em um compartilhamento de rede ** \\ \\,\\Sales data\\TestData. xlsx**.
+-   Para um arquivo em um compartilhamento de rede, ** \\ \\ \\ \\TestData.xlsxde dados de vendas **.
 
 Ou clique em **Procurar** para localizar a planilha usando a caixa de diálogo **Abrir**.  
   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2c48ef876dbe3843715496751205f24fcf26f12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774739"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929677"
 ---
 # <a name="password-expired"></a>Senha expirada
-  Aparece quando você se conecta a um servidor [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] com [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o usando a autenticação do e a senha fornecida está correta, mas expirou. Também aparece quando você se conecta a um servidor com uma nova conta que foi criada usando a opção **O usuário deve alterar a senha no próximo logon** . Use a caixa de diálogo **Senha Expirada** para alterar a senha para esse logon de autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Aparece quando você se conecta a um servidor com [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o usando a autenticação do e a senha fornecida está correta, mas expirou. Também aparece quando você se conecta a um servidor com uma nova conta que foi criada usando a opção **O usuário deve alterar a senha no próximo logon** . Use a caixa de diálogo **Senha Expirada** para alterar a senha para esse logon de autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opções  
  **Logon**  

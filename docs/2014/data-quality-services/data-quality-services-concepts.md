@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b68b667e329f99f23faf3d46cd985ce4a9dde21
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154451"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937787"
 ---
 # <a name="data-quality-services-concepts"></a>Conceitos do Data Quality Services
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) em gerenciamento de conhecimento, projetos de qualidade de dados e administração de qualidade de dados.  
@@ -71,7 +70,7 @@ ms.locfileid: "70154451"
   
  O monitoramento de atividades exibe o status e o estado de cada atividade executada em um intervalo de dados, fornece dados para cada atividade e permite que os administradores do DQS controlem uma atividade. Para obter mais informações, consulte [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
- **Configuração**  
+ **Configuration**  
   
  A opção de Configuração permite que você:  
   

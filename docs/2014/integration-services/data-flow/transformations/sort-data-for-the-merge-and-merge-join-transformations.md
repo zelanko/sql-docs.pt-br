@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddd2342f766edd30af99f6e01d47c4086360ff61
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939307"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Classificar dados para as transformações Mesclagem e Junção de Mesclagem
   No [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], as transformações Mesclagem e Junção de Mesclagem exigem dados classificados para suas entradas. Os dados de entrada devem ser classificados fisicamente e as opções de classificação devem ser definidas nas saídas e nas colunas de saída na origem ou na transformação upstream. Se as opções de classificação indicarem que os dados estão classificados, mas os dados não estiverem efetivamente classificados, os resultados da operação de mesclagem ou junção de mesclagem são imprevisíveis.  
@@ -71,7 +70,7 @@ ms.locfileid: "62900309"
   
 5.  Clique na guia **Propriedades de Entrada e Saída** .  
   
-6.  Clique em ** \<nome do componente> saída**e defina `IsSorted` a propriedade `True`como.  
+6.  Clique em ** \<component name> saída**e defina a `IsSorted` propriedade como `True` .  
   
     > [!NOTE]  
     >  Se você definir manualmente a propriedade `IsSorted` da saída como `True` e os dados não forem classificados, ausências de dados ou comparações de dados inválidas poderão ocorrer na transformação Mesclagem ou Junção de Mesclagem de downstream durante a execução do pacote.  

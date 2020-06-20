@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce29f56d7877712dd99553968b364b1c33471c2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d132fbf5ce541a2bdab82e44dc55e6fc92df536d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007750"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Opção de cancelamento (ferramenta de administração do Distributed Replay)
-  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração de `DReplay.exe`Distributed Replay,, é uma ferramenta de linha de comando que você pode usar para se comunicar com o Distributed Replay Controller. Este tópico descreve a opção de linha de comando **cancel** e a sintaxe correspondente.
+  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração de Distributed Replay, `DReplay.exe` , é uma ferramenta de linha de comando que você pode usar para se comunicar com o Distributed Replay Controller. Este tópico descreve a opção de linha de comando **cancel** e a sintaxe correspondente.
 
  A opção **cancel** cancela a operação atual que está em execução no controlador.
 
@@ -31,7 +30,7 @@ ms.locfileid: "78177318"
 dreplay cancel [-mcontroller] [-q] 
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  **-m** *controlador* o nome do computador do controlador. Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.
 
  Se o parâmetro **-m** não for especificado, será usado o computador local.

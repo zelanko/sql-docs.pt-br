@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33384f1e764cbc60bbd8e836aceffe6db3610c57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972226"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Atribuir permissões de área funcional (Master Data Services)
   Atribuir permissão de área funcional para conceder a usuários ou grupos o acesso às areas funcionais do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed61dbba038068b8584d8d73893e48adb832683b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aca9aeb899d24d5f9516716e02fadc0fcf7f7c7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176476"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917301"
 ---
 # <a name="create-connection-managers"></a>Criar gerenciadores de conexões
   O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui uma variedade de gerenciadores de conexões adequados às necessidades das tarefas para se conectarem aos diferentes tipos de servidores e fontes de dados. Os gerenciadores de conexões são usados pelos componentes do fluxo de dados, que extraem e carregam dados em diferentes tipos de armazenamentos de dados, e pelos provedores de log que gravam logs em um servidor, tabela ou arquivo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Por exemplo, um pacote com uma tarefa Enviar Email usa um tipo de gerenciador de conexões para conectar-se a um servidor de protocolo SMTP (Simple Mail Transfer Protocol). Um pacote com uma tarefa Executar SQL pode usar um gerenciador de conexões OLE DB para conectar-se a um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](connection-manager/integration-services-ssis-connections.md).
@@ -52,7 +51,7 @@ ms.locfileid: "78176476"
 
  No tempo de execução, a versão correta é usada e não importa se você especificou a versão de 32 bits do provedor no tempo de design. A versão de 64 bits do provedor pode ser executada mesmo que o pacote esteja sendo executado no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].
 
- Ambas as versões do provedor têm o mesmo ID. Para especificar se o tempo de execução do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa uma versão de 64 bits disponível do provedor, você define a propriedade Run64BitRuntime do projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se a propriedade Run64BitRuntime for definida como `true`, o tempo de execução localizará e usará o provedor de 64 bits; se Run64BitRuntime for `false`, o tempo de execução localizará e usará o provedor de 32 bits. Para obter mais informações sobre as propriedades que você pode definir em projetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consulte [Integration Services &#40;SSIS&#41; e Studio Environments](integration-services-ssis-development-and-management-tools.md).
+ Ambas as versões do provedor têm o mesmo ID. Para especificar se o tempo de execução do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa uma versão de 64 bits disponível do provedor, você define a propriedade Run64BitRuntime do projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se a propriedade Run64BitRuntime for definida como `true` , o tempo de execução localizará e usará o provedor de 64 bits; se Run64BitRuntime for `false` , o tempo de execução localizará e usará o provedor de 32 bits. Para obter mais informações sobre as propriedades que você pode definir em projetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consulte [Integration Services &#40;SSIS&#41; e Studio Environments](integration-services-ssis-development-and-management-tools.md).
 
 ## <a name="see-also"></a>Consulte Também
  [Control Flow](control-flow/control-flow.md) [Fluxo de dados](data-flow/data-flow.md) de fluxo de controle [Integration Services &#40;os MANIPULADORes de eventos&#41; SSIS](integration-services-ssis-event-handlers.md)

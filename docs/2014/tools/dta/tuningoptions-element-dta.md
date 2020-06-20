@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3050ce285cc98386f6de6278bedd2520cb39ba36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c58386630e3ee531e14af25306a1cc3b3ca3540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007505"
 ---
 # <a name="tuningoptions-element-dta"></a>Elemento TuningOptions (DTA)
   Contém as opções de ajuste de uma sessão de ajuste específica.  
@@ -37,7 +36,7 @@ ms.locfileid: "63061060"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

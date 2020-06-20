@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 812419f7ebf9501ab2409876c4cc5c0a775492b9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9d3e94cf4983fb6ee05beff3a495ef6ccbd5c54b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020787"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>Cursores de somente avanço rápido (ODBC)
   Quando conectado a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte a otimizações de desempenho para cursores somente de encaminhamento e somente leitura. Os cursores de somente avanço são implementados internamente pelo driver e pelo servidor de maneira bem semelhante a conjuntos de resultados padrão. Além de ter alto desempenho, os cursores de somente avançado também têm essas características:  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d79e68ddd375a0e61a07a48dec413034a822419
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972566"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Exibir eventos para o serviço do Integration Services
   Há duas ferramentas nas quais você pode exibir eventos do serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
@@ -32,7 +31,7 @@ ms.locfileid: "66054669"
   
 ### <a name="to-view-service-events-for-integration-services-in-sql-server-management-studio"></a>Para exibir eventos do serviço para Integration Services no SQL Server Management Studio  
   
-1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  No menu **Arquivo** , clique em **Conectar Pesquisador de Objetos**.  
   

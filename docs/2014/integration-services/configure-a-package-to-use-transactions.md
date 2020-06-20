@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d16473832d321e252753fa79e8b3178f2c2dcf6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060855"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921912"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>Configurar um pacote para usar transações
   Quando você configura um pacote para usar transações, há duas opções:  
@@ -29,9 +28,9 @@ ms.locfileid: "66060855"
  Os procedimentos a seguir descrevem como configurar ambas as opções.  
   
 ## <a name="configuring-a-single-transaction"></a>Configurando uma única transação  
- Nesta opção, o pacote propriamente dito inicia uma única transação. Configure o pacote para iniciar essa transação definindo a propriedade TransactionOption do pacote como `Required`.  
+ Nesta opção, o pacote propriamente dito inicia uma única transação. Configure o pacote para iniciar essa transação definindo a propriedade TransactionOption do pacote como `Required` .  
   
- Em seguida, inscreva as tarefas e os contêineres específicos desta única transação. Para inscrever uma tarefa ou um contêiner em uma transação, defina a propriedade TransactionOption da tarefa ou do contêiner `Supported`como.  
+ Em seguida, inscreva as tarefas e os contêineres específicos desta única transação. Para inscrever uma tarefa ou um contêiner em uma transação, defina a propriedade TransactionOption da tarefa ou do contêiner como `Supported` .  
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>Para configurar um pacote para usar uma única transação  
   
@@ -43,11 +42,11 @@ ms.locfileid: "66060855"
   
 4.  Clique com o botão direito do mouse em qualquer lugar da tela de fundo da superfície de design do fluxo de controle e clique em **Propriedades**.  
   
-5.  Na janela **Propriedades** , defina a propriedade TransactionOption como `Required`.  
+5.  Na janela **Propriedades** , defina a propriedade TransactionOption como `Required` .  
   
 6.  Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse na tarefa ou no contêiner que deseja inserir na transação e clique em **Propriedades**.  
   
-7.  Na janela **Propriedades** , defina a propriedade TransactionOption como `Supported`.  
+7.  Na janela **Propriedades** , defina a propriedade TransactionOption como `Supported` .  
   
     > [!NOTE]  
     >  Para inscrever uma conexão em uma transação, inscreva as tarefas que usam a conexão na transação. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](connection-manager/integration-services-ssis-connections.md).  
@@ -55,9 +54,9 @@ ms.locfileid: "66060855"
 8.  Repita as etapas 6 e 7 para cada tarefa e contêiner que você deseja inscrever na transação.  
   
 ## <a name="configuring-multiple-transactions"></a>Configurando várias transações  
- Nesta opção, o próprio pacote dá suporte a transações, mas não inicia uma transação. Configure o pacote para dar suporte a transações definindo a propriedade TransactionOption do pacote como `Supported`.  
+ Nesta opção, o próprio pacote dá suporte a transações, mas não inicia uma transação. Configure o pacote para dar suporte a transações definindo a propriedade TransactionOption do pacote como `Supported` .  
   
- Em seguida, configure as tarefas e os contêineres desejados do pacote para iniciar ou participar de transações. Para configurar uma tarefa ou um contêiner para iniciar uma transação, defina a propriedade TransactionOption da tarefa ou do contêiner como `Required`.  
+ Em seguida, configure as tarefas e os contêineres desejados do pacote para iniciar ou participar de transações. Para configurar uma tarefa ou um contêiner para iniciar uma transação, defina a propriedade TransactionOption da tarefa ou do contêiner como `Required` .  
   
 #### <a name="to-configure-a-package-to-use-multiple-transactions"></a>Configurar um pacote para usar várias transações  
   
@@ -69,18 +68,18 @@ ms.locfileid: "66060855"
   
 4.  Clique com o botão direito do mouse em qualquer lugar da tela de fundo da superfície de design do fluxo de controle e clique em **Propriedades**.  
   
-5.  Na janela **Propriedades** , defina a propriedade TransactionOption como `Supported`.  
+5.  Na janela **Propriedades** , defina a propriedade TransactionOption como `Supported` .  
   
     > [!NOTE]  
     >  O pacote suporta transações, mas as transações são iniciadas por tarefa ou contêineres no pacote.  
   
 6.  Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse na tarefa ou no contêiner no pacote no qual deseja iniciar uma transação e clique em **Propriedades**.  
   
-7.  Na janela **Propriedades** , defina a propriedade TransactionOption como `Required`.  
+7.  Na janela **Propriedades** , defina a propriedade TransactionOption como `Required` .  
   
 8.  Se a transação for iniciada por um contêiner, clique com o botão direito do mouse na tarefa ou no contêiner que deseja inserir na transação e clique em **Propriedades**.  
   
-9. Na janela **Propriedades** , defina a propriedade TransactionOption como `Supported`.  
+9. Na janela **Propriedades** , defina a propriedade TransactionOption como `Supported` .  
   
     > [!NOTE]  
     >  Para inscrever uma conexão em uma transação, inscreva as tarefas que usam a conexão na transação. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](connection-manager/integration-services-ssis-connections.md).  

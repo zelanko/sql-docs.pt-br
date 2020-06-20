@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12dad78b6094e940a926fbcde7147d66ca1e2dfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007595"
 ---
 # <a name="storageboundinmb-element-dta"></a>Elemento StorageBoundInMB (DTA)
   Especifica o espaço de máximo em megabytes que podem ser consumidos pela recomendação de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados (índice e conjunto de particionamento).  
@@ -36,7 +35,7 @@ ms.locfileid: "63460106"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`unsignedInt`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
@@ -62,7 +61,7 @@ ms.locfileid: "63460106"
   
 ## <a name="example"></a>Exemplo  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  O seguinte exemplo de código mostra como definir um limite de 1500 megabytes como o espaço de disco de máximo que uma recomendação de ajuste pode consumir:  
   
 ## <a name="code"></a>Código  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 018cc6fa8b85c4a1b09ab53a6a1a94d8a7670bae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8118f0781d7c9e3d839c029c6bdaf8b01e074b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060249"
 ---
 # <a name="transparent-data-encryption-tde"></a>Criptografia de Dados Transparente (TDE)
   *Transparent Data Encryption* (TDE) criptografa os arquivos de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , o que é conhecido como criptografia de dados em repouso. Você pode adotar várias precauções para ajudar a proteger o banco de dados, como a criação de um sistema seguro, a criptografia de ativos confidenciais e a criação de um firewall em torno de servidores de bancos de dados. No entanto, em um cenário em que a mídia física (como unidades ou fitas de backup) é roubada, uma entidade mal-intencionada pode simplesmente restaurar ou anexar o banco de dados e procurar os dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.
@@ -42,13 +41,13 @@ ms.locfileid: "78176756"
 ## <a name="about-tde"></a>Sobre a TDE
  A criptografia do arquivo de banco de dados é executada em nível de página. As páginas em um banco de dados criptografado são criptografadas antes de serem gravadas no disco e descriptografadas quando lidas na memória. A TDE não aumenta o tamanho do banco de dados criptografado.
 
- **Informações aplicáveis a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**
+ **Informações aplicáveis a[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**
 
  Ao usar TDE com [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([visualização em algumas regiões](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) o certificado de nível de servidor armazenado no banco de dados mestre é criado automaticamente para você por [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para mover um banco de dados de TDE no [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] é necessário descriptografar o banco de dados, movê-lo e habilitar novamente a TDE no destino [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para obter instruções passo a passo para a TDE em [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consulte [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).
 
  A visualização do status da TDE aplica-se até mesmo ao subconjunto de regiões geográficas em que versão da família V12 de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] é anunciada como apresentando agora status de disponibilidade geral. A TDE para [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] não se destina para uso em bancos de dados de produção até o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] anunciar a promoção da TDE, de visualização para GA. Para obter mais informações sobre [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12, consulte [Novidades no Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).
 
- **Informações aplicáveis a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**
+ **Informações aplicáveis a[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**
 
  Depois de protegido, o banco de dados pode ser restaurado usando o certificado correto. Para obter mais informações sobre certificados, consulte [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).
 
@@ -215,7 +214,7 @@ GO
  Depois que uma chave de criptografia de banco de dados foi modificada duas vezes, um backup de log deve ser executado para que a chave de criptografia de banco de dados possa ser modificada novamente.
 
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Transparent Data Encryption e o banco de dados do sistema tempdb
- O banco de dados do sistema tempdb será criptografado se qualquer outro banco de dados da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for criptografado usando TDE. Isso pode ter um efeito de desempenho em bancos de dados não criptografados na mesma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o banco de dados do sistema tempdb, [Banco de dados tempdb](../../databases/tempdb-database.md).
+ O banco de dados do sistema tempdb será criptografado se qualquer outro banco de dados da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for criptografado usando TDE. Isso pode ter um efeito de desempenho em bancos de dados não criptografados na mesma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o banco de dados do sistema tempdb, confira [Banco de dados tempdb](../../databases/tempdb-database.md).
 
 ### <a name="transparent-data-encryption-and-replication"></a>Transparent Data Encryption e replicação
  A replicação não replica automaticamente os dados de um banco de dados habilitado para TDE em um formulário criptografado. É necessário habilitar separadamente a TDE se você deseja proteger a distribuição e os bancos de dados dos assinantes. A replicação de instantâneo, assim como a distribuição inicial de dados para replicações transacionais e de mesclagem, pode armazenar dados em arquivos intermediários não criptografados, como os arquivos bcp, por exemplo.  Durante replicação transacional ou de mesclagem, a criptografia pode ser habilitada para proteger o canal de comunicação. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).

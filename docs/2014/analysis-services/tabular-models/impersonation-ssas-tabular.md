@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e04c7af85592d71d70abf8ea5f61518690599342
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067055"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938877"
 ---
 # <a name="impersonation-ssas-tabular"></a>Representação (SSAS tabular)
   Este tópico fornece a autores de modelos tabulares uma compreensão de como as credenciais de logon são usados pelo Analysis Services ao conectar-se a uma fonte de dados para importar e processar (atualizar) dados.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067055"
   
 -   [Configurando a representação](#bkmk_conf_imp_info)  
   
-##  <a name="benefits"></a><a name="bkmk_how_imper"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a> Benefícios  
  *Representação* é a capacidade de um aplicativo de servidor, como o Analysis Services, de assumir a identidade de um aplicativo cliente. O Analysis Services é executado com uma conta de serviço, no entanto, quando o servidor estabelece uma conexão com uma fonte de dados, ele usa representação de forma que verificações de acesso para a importação e processamento de dados possam ser executadas.  
   
  As credenciais usadas para representação são diferentes das credenciais do usuário que está conectado no momento. As credenciais do usuário conectado são usadas para operações no cliente ao criar um modelo.  
@@ -67,7 +66,7 @@ ms.locfileid: "66067055"
   
 |Opção|ImpersonationMode<sup>1</sup>|Descrição|  
 |------------|-----------------------------------|-----------------|  
-|**Nome de usuário e senha específicos do Windows** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usam o seguinte formato:**\<nome de \\ domínio><nome\>da conta de usuário**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
+|**Nome de usuário e senha específicos do Windows** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opção especifica que o modelo usa uma conta de usuário do Windows para importar ou processar dados da fonte de dados. O domínio e o nome da conta de usuário usam o seguinte formato:** \<Domain name> \\<nome \> da conta de usuário**. Ao criar um novo modelo por meio do Assistente de Importação de Tabela, essa é a opção padrão.|  
 |**Conta de serviço**|ImpersonateServiceAccount|Esta opção especifica que o modelo usa as credenciais de segurança associadas à instância de serviço do Analysis Services que gerencia o modelo.|  
   
  <sup>1</sup> ImpersonationMode especifica o valor para o [elemento DataSourceImpersonationInfo &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) Propriedade na fonte de dados.  
@@ -90,7 +89,7 @@ ms.locfileid: "66067055"
 ##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a>Configurando a representação  
  O local e o contexto onde um modelo existe determinará como as informações de representação serão configuradas. Para modelos que estão sendo criados no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode configurar informações de representação na página **Informações sobre Representação** no Assistente de Importação de Tabela ou por meio da edição de uma conexão de fonte de dados na caixa de diálogo **Conexões Existentes** . Para exibir conexões existentes, no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], no menu **Model** , clique em **Conexões Existentes**.  
   
- Para modelos implantados em um servidor de Analysis Services, as informações de representação podem ser configuradas clicando nas reticências (...) da propriedade informações de representação da fonte de dados [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]da caixa de diálogo Propriedades do **banco** de **dado** do.  
+ Para modelos implantados em um servidor de Analysis Services, as informações de representação podem ser configuradas clicando nas reticências (...) da propriedade **informações de representação da fonte de dados** da caixa de diálogo Propriedades do **banco** de dado do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Modo DirectQuery &#40;SSAS de tabela&#41;](directquery-mode-ssas-tabular.md)   

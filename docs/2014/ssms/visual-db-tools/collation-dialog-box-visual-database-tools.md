@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 28c32be0bfb42b923041169c542e21b21074cf70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13306f74ab0d49fddd271878a2af2337c2299861
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067254"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Caixa de diálogo Ordenação (Ferramentas de Banco de Dados Visual)
   Essa caixa de diálogo lhe permite especificar uma sequência de ordenação para a coluna. A sequência de ordenação de uma coluna é usada em qualquer operação que compare os valores da coluna com os de outra coluna ou com valores constantes. Isso também afeta o comportamento de algumas funções de cadeia de caracteres, como SUBSTRING e CHARINDEX. Para uma lista completa dos efeitos da configuração de ordenação de uma coluna, consulte a documentação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
