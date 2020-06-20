@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef2599ea202fad2b85881951692f1f04898e94e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006568"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tarefa 4: Gerenciando e exibindo resultados
   Nesta tarefa, você revisará os resultados da limpeza auxiliada por computador, além de executar a limpeza interativa nos dados do fornecedor. Consulte [estágio de limpeza interativa](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) para obter mais detalhes.  
   
 1.  Selecione **contato** de domínio de email na lista de domínios.  
   
-2.  Alterne para a guia **inválido** no painel direito. Observe que dois endereços de email que estavam com caracteres ' s ausentes no final. Esses dois emails que foram considerados inválidos pela regra de domínio que exigem que todos os endereços de email terminem com ** \@Adventure-Works.com** (com '). O DQS usa a regra de domínio enquanto faz a limpeza para determinar se um email é válido ou não. Essa guia exibe os valores de domínio que foram marcados como inválidos na base de dados de conhecimento ou que não estavam de acordo com uma regra de domínio. Nesse caso, esses valores não estavam em conformidade com a regra de domínio (Email Validation).  
+2.  Alterne para a guia **inválido** no painel direito. Observe que dois endereços de email que estavam com caracteres ' s ausentes no final. Esses dois emails que foram considerados inválidos pela regra de domínio que exigem que todos os endereços de email terminem com ** \@ Adventure-Works.com** (com '). O DQS usa a regra de domínio enquanto faz a limpeza para determinar se um email é válido ou não. Essa guia exibe os valores de domínio que foram marcados como inválidos na base de dados de conhecimento ou que não estavam de acordo com uma regra de domínio. Nesse caso, esses valores não estavam em conformidade com a regra de domínio (Email Validation).  
   
-3.  Na coluna **corrigir para** , digite o endereço de email correto que termina com ** \@Adventure-Works.com** (com ').  
+3.  Na coluna **corrigir para** , digite o endereço de email correto que termina com ** \@ Adventure-Works.com** (com ').  
   
      ![Regra de validação Correções de Email](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Regra de validação Correções de Email")  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72313650"
   
 5.  Alterne para a **nova** guia no painel direito. Os valores dessa guia são os valores para os quais o DQS ainda não tem informações suficientes na base de dados de conhecimento para determinar se eles estão corretos. Consequentemente, ele não pode modificar nem sugerir alterações para os valores de domínio.  
   
-6.  Examine os valores para confirmar se todos os emails terminam com ** \@Adventure-Works.com** e clique em **aprovar todos os termos** na barra de ferramentas. Os valores aprovados dessa guia se movem para a guia **correta** .  
+6.  Examine os valores para confirmar se todos os emails terminam com ** \@ Adventure-Works.com** e clique em **aprovar todos os termos** na barra de ferramentas. Os valores aprovados dessa guia se movem para a guia **correta** .  
   
 7.  Selecione o domínio **país** na lista de domínios.  
   

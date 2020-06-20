@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 05891576872818e0d15d7bcae728dd3f19cdc252
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 651b7899e104fe5a7dbc6d584ceba6e5cf8de570
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055119"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificando um eixo (SQLXML 4.0)
     
@@ -33,7 +32,7 @@ ms.locfileid: "82703092"
   
      Contém o filho do nó de contexto.  
   
-     A seguinte expressão XPath (caminho de localização) seleciona no nó de contexto atual todos os>filhos do ** \< cliente** :  
+     A seguinte expressão XPath (caminho de localização) seleciona a partir do nó de contexto atual todos os **\<Customer>** filhos:  
   
     ```  
     child::Customer  
@@ -45,7 +44,7 @@ ms.locfileid: "82703092"
   
      Contém o pai do nó de contexto.  
   
-     A expressão XPath a seguir seleciona todos os ** \< clientes>** pais da ** \< ordem>** filhos:  
+     A expressão XPath a seguir seleciona todos os **\<Customer>** pais dos **\<Order>** filhos:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -67,7 +66,7 @@ ms.locfileid: "82703092"
   
      Contém o próprio nó de contexto.  
   
-     A expressão XPath a seguir selecionará o nó atual se for o nó de ** \<>de ordem** :  
+     A expressão XPath a seguir selecionará o nó atual se ele for o **\<Order>** nó:  
   
     ```  
     self::Order  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e51f45e06939971ada6166fb977c787ad0354926
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047671"
 ---
 # <a name="sql-server-replication"></a>Replicação do SQL Server
   A replicação é um conjunto de tecnologias para copiar e distribuir dados e objetos de um banco de dados para outro e, em seguida, sincronizar entre os bancos de dados para manter a consistência. Usando replicação, é possível distribuir dados para diferentes locais e para usuários remotos e móveis através de redes locais e de longa distância, conexões discadas, conexões sem-fio e a Internet.  
@@ -91,7 +90,7 @@ Para informações de compatibilidade com versões anteriores, confira [Compatib
 -   [Create a Pull Subscription](create-a-pull-subscription.md)    
 -   [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)    
 -   [Excluir uma assinatura pull](delete-a-pull-subscription.md)    
--   [Criar uma assinatura push](create-a-push-subscription.md)   
+-   [Criar uma Assinatura Push](create-a-push-subscription.md)   
 -   [Exibir e modificar propriedades de assinatura push](view-and-modify-push-subscription-properties.md)   
 -   [Excluir uma assinatura push](delete-a-push-subscription.md)   
 -   [Especificar agendas de sincronização](specify-synchronization-schedules.md)    

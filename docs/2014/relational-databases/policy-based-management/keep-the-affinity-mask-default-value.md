@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7996eaaad9d900a8839191d22c86cf7ab014e516
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bafa51979ac618dbc4a15672ff77b7d2454c24f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704952"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063848"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>Manter o valor padrão da máscara de afinidade
   Esta regra verifica se a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a máscara de afinidade está definida como 0, que é o valor padrão. A opção de máscara de afinidade controla dinamicamente a afinidade de CPU.  

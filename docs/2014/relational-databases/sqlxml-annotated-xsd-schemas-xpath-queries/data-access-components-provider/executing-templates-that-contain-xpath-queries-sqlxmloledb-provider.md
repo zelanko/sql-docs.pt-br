@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60b20a1ee5a90b2b51abbe71a189add066e1b7e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 227c8a5b3222bdddab9632ec2e80f0bb4dd54250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703256"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015601"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Executando modelos que contêm consultas XPath (provedor SQLXMLOLEDB)
   Este exemplo mostra como usar as propriedades específicas do Provedor SQLXMLOLEDB a seguir:  
@@ -34,7 +33,7 @@ ms.locfileid: "82703256"
   
 -   Esquema de mapeamento  
   
- Neste aplicativo ADO de exemplo, um modelo XML que consiste em uma consulta XPath (raiz) é especificado em relação ao esquema de mapeamento XSD (MySchema. xml) descrito em [executando consultas XPath &#40;provedor de SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).  
+ Neste aplicativo ADO de exemplo, um modelo XML que consiste em uma consulta XPath (raiz) é especificado em relação ao esquema de mapeamento XSD (MySchema.xml) descrito em [executando consultas xpath &#40;provedor de SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).  
   
  A propriedade esquema de mapeamento fornece o esquema de mapeamento XSD no qual a consulta XPath é executada. A propriedade caminho base fornece o caminho do arquivo para o esquema de mapeamento.  
   

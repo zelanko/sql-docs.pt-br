@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d04fe1a3e3417210f9615dae8a8e49ce592a94d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044465"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Tópicos de instruções de como criar consultas e exibições (Visual Database Tools)
   O Designer de Consulta e Exibição pode ajudar a criar e a manter a recuperação de dados e as partes de manipulação de dados de seu aplicativo.  

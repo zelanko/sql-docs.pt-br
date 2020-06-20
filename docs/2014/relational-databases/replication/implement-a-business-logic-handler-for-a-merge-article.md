@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2996a8ca8471ef59d4781e21239a72262daa759
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068696"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar um manipulador de lógica de negócios para um artigo de mesclagem
   Este tópico descreve como implementar um manipulador de lógica de negócios para um artigo de mesclagem no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a programação de replicação o RMO (Replication Management Objects).  
@@ -58,7 +57,7 @@ ms.locfileid: "62721196"
   
 2.  Adicione referências ao projeto para os seguintes namespaces.  
   
-    |Referência de assembly|Local|  
+    |Referência de assembly|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalação padrão)|  
     |<xref:System.Data>|GAC (componente do .NET Framework)|  
@@ -99,10 +98,10 @@ ms.locfileid: "62721196"
   
 1.  No Publicador, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) para verificar se o assembly ainda não foi registrado como manipulador de lógica de negócios.  
   
-2.  No distribuidor, execute [sp_registercustomresolver &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), especificando um nome amigável para o manipulador de lógica de negócios **@article_resolver**para, um valor `true` de **@is_dotnet_assembly**para, o nome do assembly para **@dotnet_assembly_name**e o nome totalmente qualificado da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para. **@dotnet_class_name**  
+2.  No distribuidor, execute [sp_registercustomresolver &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), especificando um nome amigável para o manipulador de lógica de negócios para **@article_resolver** , um valor de `true` para **@is_dotnet_assembly** , o nome do assembly para **@dotnet_assembly_name** e o nome totalmente qualificado da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Se o assembly não estiver implantado no mesmo diretório que o Agente de Mesclagem executável, no mesmo diretório que o aplicativo que inicia de forma síncrona o Agente de Mesclagem ou no GAC (cache de assembly global), você precisará especificar o caminho completo com o nome do **@dotnet_assembly_name**assembly para. Ao usar a sincronização da Web, especifique o local do assembly no servidor da Web.  
+    >  Se o assembly não estiver implantado no mesmo diretório que o Agente de Mesclagem executável, no mesmo diretório que o aplicativo que inicia de forma síncrona o Agente de Mesclagem ou no GAC (cache de assembly global), você precisará especificar o caminho completo com o nome do assembly para **@dotnet_assembly_name** . Ao usar a sincronização da Web, especifique o local do assembly no servidor da Web.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Para usar um manipulador de lógica de negócios com um novo artigo de tabela  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62721196"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Para usar um manipulador de lógica de negócios com um artigo de tabela existente  
   
-1.  Execute [sp_changemergearticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando **@publication**, **@article**, um valor de **article_resolver** para **@property**e o nome amigável do manipulador de lógica de negócios para **@value**.  
+1.  Execute [sp_changemergearticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando **@publication** , **@article** , um valor de **article_resolver** para **@property** e o nome amigável do manipulador de lógica de negócios para **@value** .  
   
 ###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a>Exemplos (programação de replicação)  
  Esse exemplo mostra um manipulador de lógica de negócios que cria um log de auditoria.  
@@ -131,7 +130,7 @@ ms.locfileid: "62721196"
   
 2.  Adicione referências ao projeto para os seguintes namespaces.  
   
-    |Referência de assembly|Local|  
+    |Referência de assembly|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalação padrão)|  
     |<xref:System.Data>|GAC (componente do .NET Framework)|  

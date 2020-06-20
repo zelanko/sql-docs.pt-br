@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23e684213114f3c9bb2f1ad56de06fcfc89b819a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049492"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementar o resolvedor de conflitos personalizado para um artigo de mesclagem
    Este tópico descreve como implementar um resolvedor de conflitos personalizado para um artigo de mesclagem no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] ou um [resolvedor personalizado com base em COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "62721233"
  Você pode gravar seu próprio resolvedor de conflito personalizado como um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] em cada Publicador. Durante a sincronização, esse procedimento armazenado será invocado quando forem encontrados conflitos em um artigo para o qual o resolvedor foi registrado, e a informação na linha em conflito é passada pelo Merge Agent para os parâmetros requeridos do procedimento. Resolvedores de conflito personalizados com base em procedimento armazenado sempre são criados no Publicador.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os resolvedores de procedimento armazenado são invocados apenas para lidar com conflitos baseados em alteração de linha. Eles não podem ser usados para tratar de outros tipos de conflitos como falhas de inserção devido a violações de PRIMARY KEY ou violações de restrições de índice exclusivo.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)]os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resolvedores de procedimento armazenado são invocados apenas para lidar com conflitos baseados em alteração de linha. Eles não podem ser usados para tratar de outros tipos de conflitos como falhas de inserção devido a violações de PRIMARY KEY ou violações de restrições de índice exclusivo.  
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>Para criar um resolvedor de conflitos personalizado com base em procedimentos armazenados  
   
@@ -61,13 +60,13 @@ ms.locfileid: "62721233"
   
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>Para usar um resolvedor de conflito personalizado com um novo artigo de tabela  
   
-1.  Execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) para definir um artigo, especificando um valor do **MicrosoftSQL** **resolvedor de procedimentos armazenados** do servidor **@article_resolver** MicrosoftSQL para o parâmetro e o nome do procedimento armazenado que implementa a lógica do resolvedor de conflitos para o **@resolver_info** parâmetro. Para obter mais informações, consulte [Define an Article](publish/define-an-article.md).  
+1.  Execute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) para definir um artigo, especificando um valor do **MicrosoftSQL** **resolvedor de procedimentos armazenados do servidor** MicrosoftSQL para o **@article_resolver** parâmetro e o nome do procedimento armazenado que implementa a lógica do resolvedor de conflitos para o **@resolver_info** parâmetro. Para obter mais informações, consulte [Define an Article](publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Para usar um resolvedor de conflito personalizado com um artigo de tabela existente  
   
-1.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando **@publication**, **@article**, um valor de **article_resolver** para **@property**, e um valor de servidor **MicrosoftSQL** **armazenado ProcedureResolver** para **@value**.  
+1.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando **@publication** , **@article** , um valor de **article_resolver** para **@property** , e um valor de servidor **MicrosoftSQL** **armazenado ProcedureResolver** para **@value** .  
   
-2.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando **@publication**, **@article**, um valor de **resolver_info** para **@property**, e o nome do procedimento armazenado que implementa a lógica do resolvedor de **@value**conflitos para.  
+2.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando **@publication** , **@article** , um valor de **resolver_info** para **@property** , e o nome do procedimento armazenado que implementa a lógica do resolvedor de conflitos para **@value** .  
   
 ##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a>Usando um resolvedor personalizado com base em COM  
  O namespace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa uma interface, permitindo que você grave lógicas empresariais complexas para manipular eventos e resolva conflitos que ocorram durante o processo de sincronização da replicação de mesclagem. Para obter mais informações, consulte [implementar um manipulador de lógica de negócios para um artigo de mesclagem](implement-a-business-logic-handler-for-a-merge-article.md). Você também pode gravar sua própria lógica corporativa personalizada com base em código nativo para resolver conflitos. Essa lógica é criada como um componente COM e compilada em bibliotecas de vínculo dinâmico (DLL), usando produtos como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Um resolvedor de conflitos personalizado baseado em COM deve implementar a interface **ICustomResolver** , que é projetada especificamente para resolução de conflitos.  
@@ -97,7 +96,7 @@ ms.locfileid: "62721233"
   
 8.  No Publicador, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) para verificar se a biblioteca já não está registrada como um resolvedor de conflitos personalizado.  
   
-9. Para registrar a biblioteca como um resolvedor de conflitos personalizado, execute [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), no Distributor. Especifique o nome amigável do **@article_resolver**objeto com para, a ID da biblioteca (CLSID) para **@resolver_clsid**e um valor de `false` para. **@is_dotnet_assembly**  
+9. Para registrar a biblioteca como um resolvedor de conflitos personalizado, execute [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), no Distributor. Especifique o nome amigável do objeto COM para **@article_resolver** , a ID da biblioteca (CLSID) para **@resolver_clsid** e um valor de `false` para **@is_dotnet_assembly** .  
   
     > [!NOTE]  
     >  Quando não for mais necessário, um resolvedor de conflitos personalizado poderá ter o registrado cancelado, usando [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql).  
@@ -108,24 +107,24 @@ ms.locfileid: "62721233"
   
 1.  No Publicador, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) e observe o nome amigável do resolvedor desejado.  
   
-2.  No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) para definir um artigo. Especifique o nome amigável do resolvedor de artigo da etapa 1 **@article_resolver**para. Para obter mais informações, consulte [Define an Article](publish/define-an-article.md).  
+2.  No Publicador no banco de dados de publicação, execute o [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) para definir um artigo. Especifique o nome amigável do resolvedor de artigo da etapa 1 para **@article_resolver** . Para obter mais informações, consulte [Define an Article](publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Para usar um resolvedor de conflito personalizado com um artigo de tabela existente  
   
 1.  No Publicador, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) e observe o nome amigável do resolvedor desejado.  
   
-2.  Execute [sp_changemergearticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando **@publication**, **@article**, um valor de **article_resolver** para **@property**e o nome amigável do resolvedor de artigo da etapa 1 para **@value**.  
+2.  Execute [sp_changemergearticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando **@publication** , **@article** , um valor de **article_resolver** para **@property** e o nome amigável do resolvedor de artigo da etapa 1 para **@value** .  
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Exibindo um resolvedor personalizado de exemplo  
   
-1.  Um exemplo está disponível nos arquivos de exemplo do SQL Server 2000. Baixe o [**sql2000samples. zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip). Isso baixa 3 arquivos de valor para 6,9 MB.  
+1.  Um exemplo está disponível nos arquivos de exemplo do SQL Server 2000. Baixe o [**sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip). Isso baixa 3 arquivos de valor para 6,9 MB.  
   
 2.  Extraia os arquivos do arquivo .cab compactado que foi baixado.  
   
-3.  Executar **Setup. exe**  
+3.  Executar **setup.exe**  
   
     > [!NOTE]  
-    >  Ao escolher as opções de instalação, é necessário apenas instalar os exemplos de **Replicação** . (O caminho de instalação padrão é **C:\Program Files (x86) \microsoft SQL Server\\2000 Samples\1033**)  
+    >  Ao escolher as opções de instalação, é necessário apenas instalar os exemplos de **Replicação** . (O caminho de instalação padrão é **C:\Program Files (x86) \microsoft SQL Server \\ 2000 Samples\1033**)  
   
 4.  Vá para a pasta de instalação. (A pasta padrão é **C:\Arquivos de Programas (x86) \Microsoft SQL Server 2000 Samples\1033\sqlrepl\unzip_sqlreplSP3.exe**)  
   

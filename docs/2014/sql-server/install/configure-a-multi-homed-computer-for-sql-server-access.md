@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba04b8d41c3e5ca4927abb53cf27cfa3013fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211502"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036989"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar um computador multihomed para acesso ao SQL Server
   Quando um servidor deve fornecer uma conexão a duas ou mais redes ou sub-redes de rede, um cenário típico usa um computador multihomed. Frequentemente este computador está localizado em uma rede de perímetro (também conhecida como DMZ, zona desmilitarizada ou sub-rede filtrada). Este tópico descreve como configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Firewall do Windows com Segurança Avançada para fornecer conexões de rede a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um ambiente multihomed.  
@@ -55,7 +54,7 @@ ms.locfileid: "68211502"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Para determinar os endereços IP no computador.  
   
-1.  No computador no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, clique em **Iniciar**e em **executar**, `cmd` digite e [!INCLUDE[clickOK](../../includes/clickok-md.md)], em seguida.  
+1.  No computador no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, clique em **Iniciar**e em **executar**, digite `cmd` e, em seguida [!INCLUDE[clickOK](../../includes/clickok-md.md)] .  
   
 2.  Na janela do prompt de comando, digite `ipconfig,` e pressione ENTER para listar os endereços IP disponíveis neste computador.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68211502"
   
 1.  Clique em **Iniciar**, escolha **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], para **Ferramentas de Configuração**e clique em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
   
-2.  Em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, no painel do console, expanda **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuração de Rede**, expanda **Protocolos para \<instance name>** e clique duas vezes em **TCP/IP**.  
+2.  No ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, no painel de console, expanda ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuração de rede**, expanda **protocolos para \<instance name> **e clique duas vezes em **TCP/IP**.  
   
 3.  Na caixa de diálogo **Propriedades de TCP/IP** , na guia **Endereços IP** , vários endereços IP aparecem no formato **IP1**, **IP2**, até **IPAll**. Um desses é para o endereço IP do adaptador de loopback, 127.0.0.1. Endereços IP adicionais aparecem para cada Endereço IP configurado no computador.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "68211502"
   
 1.  No computador no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, faça logon como um administrador.  
   
-2.  Clique em **Iniciar**, **executar**, digite `wf.msc`e clique em **OK**.  
+2.  Clique em **Iniciar**, **executar**, digite `wf.msc` e clique em **OK**.  
   
 3.  Na caixa de diálogo **Controle de Conta de Usuário** , clique em **Continuar** para usar as credenciais de Administrador para abrir o snap-in Firewall do Windows com Segurança Avançada.  
   

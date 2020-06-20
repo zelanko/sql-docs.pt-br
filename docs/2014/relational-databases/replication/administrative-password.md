@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd0182b4657cd034edaad778a16e9fe30f67eb10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186947"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055696"
 ---
 # <a name="administrative-password"></a>Senha Administrativa
   Se na página **Distribuidores** deste assistente você selecionou um Distribuidor remoto para esse Publicador, terá de inserir uma senha para a conexão que a replicação faz entre o Publicador e o Distribuidor, usando o logon **distributor_admin** . A senha deve corresponder à senha especificada na página **Senha do Distribuidor** do Assistente para Configurar Distribuição ou da página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor** .  

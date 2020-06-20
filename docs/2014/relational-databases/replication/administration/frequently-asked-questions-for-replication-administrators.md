@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02f12008b9ab8e9cd4c7d08ed81a902629b90827
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063835"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Perguntas frequentes para os administradores de replicação
   As perguntas e as respostas a seguir fornecem orientação sobre várias tarefas enfrentadas pelos administradores de bancos de dados replicados.  
@@ -103,7 +102,7 @@ ms.locfileid: "63207058"
   
 -   Opção de sincronização da Web para replicação de mesclagem. Para obter mais informações, consulte [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
- Todos os tipos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de replicação podem replicar dados por uma VPN, mas você deve considerar a sincronização da Web se estiver usando a replicação de mesclagem.  
+ Todos os tipos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replicação podem replicar dados por uma VPN, mas você deve considerar a sincronização da Web se estiver usando a replicação de mesclagem.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>A replicação será retomada se uma conexão for cancelada  
  Sim. O processamento de replicação é retomado no ponto em que ele foi interrompido quando a conexão foi cancelada. Se estiver usando uma replicação de mesclagem em uma rede não confiável, tente usar os registros lógicos, isto garantirá que as alterações sejam processadas como uma unidade. Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -121,7 +120,7 @@ ms.locfileid: "63207058"
   
 -   A definição de um objeto, como uma instrução CREATE TABLE. Por padrão, a replicação copia as definições de todos os objetos replicados para o Assinante.  
   
--   O namespace dentro do qual um objeto é criado: \<Database>.\<Schema>.\<Object>. Os esquemas são definidos usando a instrução CREATE SCHEMA.  
+-   O namespace no qual um objeto é criado: \<Database> . \<Schema> . \<Object> . Os esquemas são definidos usando a instrução CREATE SCHEMA.  
   
 -   A replicação tem o seguinte comportamento padrão no Assistente para Nova Publicação em relação à propriedade de esquemas e objetos:  
   
@@ -133,7 +132,7 @@ ms.locfileid: "63207058"
   
 -   Para artigos em publicações que usam instantâneos de modo de caracteres (que são usados para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Assinantes [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): por padrão o proprietário é deixado em branco. O proprietário assume o padrão do proprietário associado à conta usada pelo Agente de Distribuição ou Agente de Mesclagem para se conectar ao Assinante.  
   
- O proprietário do objeto pode ser alterado por meio da caixa de diálogo **Propriedades do Artigo – \<***Artigo***>** e dos seguintes procedimentos armazenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Para obter mais informações, consulte [Exibir e modificar as propriedades da publicação](../publish/view-and-modify-publication-properties.md), [Definir um artigo](../publish/define-an-article.md) e [Exibir e modificar as propriedades do artigo](../publish/view-and-modify-article-properties.md).  
+ O proprietário do objeto pode ser alterado por meio da caixa de diálogo **Propriedades \<***Article***> do artigo –** e por meio dos seguintes procedimentos armazenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**e **sp_changemergearticle**. Para obter mais informações, consulte [Exibir e modificar as propriedades da publicação](../publish/view-and-modify-publication-properties.md), [Definir um artigo](../publish/define-an-article.md) e [Exibir e modificar as propriedades do artigo](../publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>Como as concessões no banco de dados de assinatura podem ser configuradas para corresponder às concessões no banco de dados de publicação?  
  Por padrão, a replicação não executa instruções GRANT no banco de dados de assinatura. Se quiser que as permissões no banco de dados de assinatura correspondam àquelas no banco de dados de publicação, use um dos seguintes métodos:  
@@ -153,7 +152,7 @@ ms.locfileid: "63207058"
   
     -   Execute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) ou [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique um valor de 'pre_creation_cmd' (**sp_changearticle**) ou 'pre_creation_command' (**sp_changemergearticle**) para o parâmetro **@property** e um valor de 'nenhum', 'excluir' ou 'truncar' para o parâmetro **@value**.  
   
-    -   Na caixa de diálogo **Propriedades \<do artigo – artigo>** na seção **objeto de destino** , selecione um valor de **manter objeto existente inalterado**, **excluir dados. Se o artigo tiver um filtro de linha, exclua somente os dados que correspondem ao filtro.** ou **Truncar todos os dados no objeto existente** para a opção **Ação se o nome estiver em uso**. Para mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](../publish/view-and-modify-publication-properties.md).  
+    -   Na caixa de diálogo **Propriedades \<Article> do artigo –** na seção **objeto de destino** , selecione um valor de **manter objeto existente inalterado**, **excluir dados. Se o artigo tiver um filtro de linha, exclua somente os dados que correspondem ao filtro.** ou **Truncar todos os dados no objeto existente** para a opção **Ação se o nome estiver em uso**. Para mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](../publish/view-and-modify-publication-properties.md).  
   
 ## <a name="database-maintenance"></a>Manutenção do banco de dados  
   
@@ -181,7 +180,7 @@ ms.locfileid: "63207058"
  Em versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], para mover ou renomear arquivos de banco de dados era necessário desanexar e tornar a anexar o banco de dados. Como um banco de dados replicado não pode ser desanexado, a replicação devia ser removida antes que os bancos de dados. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], é possível mover ou renomear arquivos sem desanexar e anexar novamente o banco de dados, e não produzir efeito sobre a replicação. Para mais informações sobre as operações de renomeação e movimentação, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>Como posso descartar uma tabela que está sendo replicada?  
- Primeiro, remova o artigo da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>**, em seguida, remova-o do banco de dados usando `DROP <Object>`. Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
+ Primeiro, descarte o artigo da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)ou a caixa de diálogo **Propriedades \<Publication> da publicação –** e, em seguida, solte-o do banco de dados usando `DROP <Object>` . Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Como posso adicionar ou descartar colunas em uma tabela publicada?  
  O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a uma grande variedade de alterações de esquema em objetos publicados, inclusive a adição e o descarte de colunas. Por exemplo, execute ALTER TABLE... Solte a coluna no Publicador, e a instrução é replicada para os assinantes e, em seguida, executada para descartar a coluna. Os Assinantes executando versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] possuem suporte para a adição e descarte de colunas por meio dos procedimentos armazenados [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) e [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
@@ -192,10 +191,10 @@ ms.locfileid: "63207058"
  Use a validação. A validação informa se um determinado Assinante está sincronizado com o Publicador. Para obter mais informações, consulte [Validar os dados replicados](../validate-data-at-the-subscriber.md). A validação não fornece qualquer informação sobre possíveis linhas sincronizadas incorretamente, mas a [utilidade tablediff](../../../tools/tablediff-utility.md) faz isso.  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>Como posso adicionar uma tabela a uma publicação existente?  
- Não é necessário interromper a atividade no banco de dados de publicação ou de assinatura para adicionar uma tabela (ou qualquer outro objeto). Adicione uma tabela a uma publicação com a caixa de diálogo **Propriedades de Publicação – \<Publicação>** ou os procedimentos armazenados [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) e [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
+ Não é necessário interromper a atividade no banco de dados de publicação ou de assinatura para adicionar uma tabela (ou qualquer outro objeto). Adicione uma tabela a uma publicação por meio da caixa de diálogo **Propriedades da publicação \<Publication> –** ou os procedimentos armazenados [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) e [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>Como posso remover uma tabela de uma publicação?  
- Remova a tabela da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>**. Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
+ Remova uma tabela da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)ou a caixa de diálogo **Propriedades da \<Publication> publicação-** . Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>Que ações exigem que as assinaturas sejam reinicializadas?  
  Há várias alterações em artigos e publicações que exigem a reinicialização das assinaturas. Para obter mais informações, consulte [Alterar propriedade da publicação e do artigo](../publish/change-publication-and-article-properties.md).  

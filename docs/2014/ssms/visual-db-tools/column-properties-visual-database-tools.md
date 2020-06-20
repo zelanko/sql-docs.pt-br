@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aeb4d01cae7c09c27cafa8284638bf0a7de9691
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058217"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
   Existem dois conjuntos de propriedades para colunas: um conjunto completo que pode ser visto na guia **Propriedades da Coluna** dentro do Designer de Tabela (disponível somente para bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e um subconjunto que pode ser visto na janela Propriedades usando o Gerenciador de Servidores.  
@@ -179,7 +178,7 @@ ms.locfileid: "62990199"
  Mostra se essa coluna é replicada em outro local.  
   
  **É RowGuid**  
- Indica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a coluna como ROWGUID. Você pode definir esse valor como **Sim** apenas para uma coluna com o tipo de dados `uniqueidentifier`de. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
+ Indica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a coluna como ROWGUID. Você pode definir esse valor como **Sim** apenas para uma coluna com o tipo de dados de `uniqueidentifier` . Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
  **Tamanho**  
  Mostra o tamanho em bytes permitido pelo tipo de dados de coluna. Por exemplo, um tipo de dados `nchar` pode ter um comprimento de 10 (número de caracteres), mas teria um tamanho de 20 para conjuntos de caracteres Unicode.  

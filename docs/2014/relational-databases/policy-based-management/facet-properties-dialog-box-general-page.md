@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e1f29d8e9edcccf093ac85cc134b5b92b9c2173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704851"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061666"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Caixa de diálogo Propriedades de Faceta, página Geral
   Use esta caixa de diálogo para exibir as propriedades de uma faceta de Gerenciamento Baseado em Políticas. Cada faceta pode ser se aplicada a um ou mais tipos de destino. Por exemplo: servidor, banco de dados ou tabela. Use esta página para exibir os tipos de destino relacionados a essa faceta. As propriedades de uma faceta são definidas quando ela é criada e não podem ser alteradas com o uso desta página.  

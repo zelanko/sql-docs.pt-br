@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a7cce55becbe02982fcf3f7ffaf6f18954735499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fac0802b474f38f6a6c314dd727fa335d14598d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018699"
 ---
 # <a name="allocating-a-statement-handle"></a>Alocando um identificador de instrução
   Para que um aplicativo possa executar uma instrução, deve alocar um identificador de instrução. Ele faz isso chamando **SQLAllocHandle** com o parâmetro *HandleType* definido como SQL_HANDLE_STMT e *InputHandle* apontando para um identificador de conexão.  

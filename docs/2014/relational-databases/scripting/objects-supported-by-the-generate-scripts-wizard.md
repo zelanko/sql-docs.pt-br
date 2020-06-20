@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1cfee492433da4a9812a6961d34b741cf8bff089
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5ddc1da0d2f87fc12dfbe034a683802f54b7d34f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009750"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>Objetos com suporte no Assistente para Gerar Scripts
   O Assistente para Gerar e Publicar Scripts oferece suporte a um subconjunto dos objetos com suporte no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

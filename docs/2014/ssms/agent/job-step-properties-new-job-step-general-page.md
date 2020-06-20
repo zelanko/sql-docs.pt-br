@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062244"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Propriedades da Etapa de Trabalho: Nova Etapa de Trabalho (página Geral)
   Use esta página para exibir e alterar as propriedades de uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] etapa de trabalho do Agent ou para definir uma nova etapa de trabalho.  
@@ -44,7 +43,7 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
  **Cópia**  
@@ -73,7 +72,7 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
  **Cópia**  
@@ -89,7 +88,7 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
  **Cópia**  
@@ -102,7 +101,7 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o script de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do script.  
   
  **Cópia**  
@@ -112,7 +111,7 @@ ms.locfileid: "62510950"
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-distributor-job-steps"></a>Opções para etapas de trabalho do Distribuidor de Replicação  
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
  **Cópia**  
@@ -122,7 +121,7 @@ ms.locfileid: "62510950"
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-merge-job-steps"></a>Opções para etapas de trabalho de Mesclagem de Replicação  
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
  **Cópia**  
@@ -135,7 +134,7 @@ ms.locfileid: "62510950"
  **Backup de banco de dados**  
  O banco de dados a ser usado para a etapa de trabalho.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
  **Cópia**  
@@ -145,7 +144,7 @@ ms.locfileid: "62510950"
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-snapshot-job-steps"></a>Opções para etapas de trabalho do instantâneo de replicação  
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
  **Cópia**  
@@ -155,7 +154,7 @@ ms.locfileid: "62510950"
  Cole o conteúdo da área de transferência.  
   
 ## <a name="options-for-replication-transaction-log-reader-job-steps"></a>Opções para etapas de trabalho do Leitor do Log de Transações da Replicação  
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
  **Cópia**  
@@ -171,7 +170,7 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
  **Cópia**  
@@ -190,7 +189,7 @@ ms.locfileid: "62510950"
  **Abrir**  
  Carregue o comando de um arquivo.  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Selecione o texto do comando.  
   
  **Cópia**  
@@ -216,7 +215,7 @@ ms.locfileid: "62510950"
  **Servidor**  
  Digite o nome do servidor em que o pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)] está armazenado. Essa opção só está disponível quando **SQL Server** ou **Repositório de Pacotes SSIS** está especificado para **Origem do Pacote**.  
   
- **Usar autenticação do Windows**  
+ **Usar Autenticação do Windows**  
  Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Usar autenticação SQL Server**  
@@ -240,7 +239,7 @@ ms.locfileid: "62510950"
  **Adicionar**  
  Adicione um arquivo de configuração para o pacote.  
   
- **Remover**  
+ **Removerr**  
  Remova um arquivo de configuração para o pacote.  
   
  **Mover para Cima**  
@@ -258,7 +257,7 @@ ms.locfileid: "62510950"
  **Adicionar**  
  Adicione um arquivo de comando.  
   
- **Remover**  
+ **Removerr**  
  Remova o arquivo de comando selecionado.  
   
  **Mover para Cima**  
@@ -315,7 +314,7 @@ ms.locfileid: "62510950"
  **Cadeia de Caracteres de Configuração**  
  Digite a cadeia de caracteres de configuração para o provedor de log.  
   
- **Remover**  
+ **Removerr**  
  Remova o provedor de log.  
   
 ### <a name="set-values-tab"></a>Guia Definir Valores  
@@ -327,7 +326,7 @@ ms.locfileid: "62510950"
  **Valor**  
  Exiba ou altere o valor para a propriedade.  
   
- **Remover**  
+ **Removerr**  
  Remova a propriedade.  
   
 ### <a name="verification-tab"></a>Guia Verificação  

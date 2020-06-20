@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05b11804630de6bd57681a569225971864c15814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036902"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Chaves de Criptografia (modo nativo do SSRS)
   Use a página Chaves de Criptografia para gerenciar a chave simétrica usada para criptografar e descriptografar dados em um servidor de relatório. O gerenciamento das chaves de criptografia é uma parte importante da configuração do servidor de relatório. A chave simétrica é criada e aplicada automaticamente quando você cria o banco de dados do servidor de relatórios. Crie uma cópia de backup da chave simétrica de modo que você possa executar operações de manutenção rotineiras. As seguintes tarefas de manutenção requerem que você tenha uma cópia válida da chave simétrica:  
@@ -28,7 +27,7 @@ ms.locfileid: "71952167"
   
 -   Configurar uma nova instância de servidor de relatório para compartilhar ou usar um banco de dados de servidor de relatório existente.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
 > [!IMPORTANT]  
 >  Alterar periodicamente a chave de criptografia do Reporting Services é uma prática recomendada de segurança. Um momento indicado para alterar a chave é imediatamente após uma atualização de versão principal do Reporting Services. Alterar a chave depois de uma atualização minimiza a interrupção de serviço adicional causada pela alteração da chave de criptografia do Reporting Services fora do ciclo de atualização.  
@@ -48,7 +47,7 @@ ms.locfileid: "71952167"
  **Backup**  
  Copia a chave simétrica para um arquivo que você especificar. A chave simétrica nunca é armazenada em texto sem-formatação. Você deve digitar uma senha para proteger o arquivo.  
   
- **Restauração**  
+ **Restaurar**  
  Aplica uma cópia previamente salva da chave simétrica ao banco de dados do servidor de relatório. Você deve fornecer a senha para desbloquear o arquivo.  
   
  A cópia anterior da chave simétrica para a instância do servidor de relatório à qual você está conectado atualmente será substituída pela versão restaurada. Depois que você restaurar a chave simétrica, deverá inicializar todos os servidores de relatório que usam o banco de dados do servidor de relatório. Para obter mais informações sobre como inicializar servidores de relatório, consulte [inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  

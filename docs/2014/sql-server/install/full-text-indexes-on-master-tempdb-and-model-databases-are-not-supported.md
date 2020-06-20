@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f7992965-42c1-4eb8-a7fb-afb38b67c740
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 743c7153b034cf5e1267c6a0da1e585845800980
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbd5e3133ed87fed9bdaf6d668df62c6471df766
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012462"
 ---
 # <a name="full-text-indexes-on-master-tempdb-and-model-databases-are-not-supported"></a>Não há suporte para índices de texto completo em bancos de dados mestre, tempdb e modelo
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não aceita índices de texto completo em nenhum banco de dados do sistema.  

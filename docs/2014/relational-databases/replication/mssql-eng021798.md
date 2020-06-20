@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51cf4acc8ed270c8302137fe5050c06cb35e91ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 327b4a373c28376701ea12400215ab00367df66a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023527"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057141"
 ---
 # <a name="mssql_eng021798"></a>MSSQL_ENG021798
     
@@ -44,7 +43,7 @@ ms.locfileid: "63023527"
  Os procedimentos armazenados **sp_addlogreader_agent** e **sp_addqreader_agent** criam um trabalho de agente e permitem que você especifique a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows em que o agente é executado. Para usuários na função **sysadmin** , os trabalhos de agente são criados implicitamente se **sp_addlogreader_agent** e **sp_addqreader_agent** não forem executados. Os agentes são executados no contexto da conta do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no Distribuidor. Embora **sp_addlogreader_agent** e **sp_addqreader_agent** não sejam solicitados para usuários na função **sysadmin** , é uma prática recomendada de segurança especificar uma conta separada para os agentes. Para obter mais informações, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 ## <a name="user-action"></a>Ação do usuário  
- Certifique-se de executar os procedimentos na ordem correta. Para obter mais informações, consulte [criar uma publicação](publish/create-a-publication.md), atualizar esses scripts para incluir os procedimentos armazenados e os parâmetros [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] exigidos pelo e pelas versões posteriores. Para obter mais informações, consulte [Atualizar scripts de replicação &#40;programação Transact-SQL de replicação&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md).  
+ Certifique-se de executar os procedimentos na ordem correta. Para obter mais informações, consulte [criar uma publicação](publish/create-a-publication.md), atualizar esses scripts para incluir os procedimentos armazenados e os parâmetros exigidos pelo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e pelas versões posteriores. Para obter mais informações, consulte [Atualizar scripts de replicação &#40;programação Transact-SQL de replicação&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)  

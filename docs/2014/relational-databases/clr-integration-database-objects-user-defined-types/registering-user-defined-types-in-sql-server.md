@@ -32,16 +32,15 @@ helpviewer_keywords:
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d24f7948e093335eff708f3c4a8a7361cfc156f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919946"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954602"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrando tipos definidos pelo usuário no SQL Server
-  Para usar um UDT (tipo definido pelo usuário) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve registrá-lo. O registro de um UDT envolve o registro do assembly e a criação do tipo no banco de dados em que deseja usá-lo. Os UDTs têm escopo em um único banco de dados e não podem ser usados em vários bancos de dados, a menos que o assembly e a UDT idênticos sejam registrados em cada banco de dados. Quando o assembly do UDT é registrado e o tipo é criado, você pode usar a UDT no [!INCLUDE[tsql](../../includes/tsql-md.md)] e em código de cliente. Para obter mais informações, veja [Tipos CLR definidos pelo usuário](clr-user-defined-types.md).  
+  Para usar um UDT (tipo definido pelo usuário) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você deve registrá-lo. O registro de um UDT envolve o registro do assembly e a criação do tipo no banco de dados em que deseja usá-lo. Os UDTs têm escopo em um único banco de dados e não podem ser usados em vários bancos de dados, a menos que o assembly e a UDT idênticos sejam registrados em cada banco de dados. Quando o assembly do UDT é registrado e o tipo é criado, você pode usar a UDT no [!INCLUDE[tsql](../../includes/tsql-md.md)] e em código de cliente. Para obter mais informações, veja [Tipos CLR definidos pelo usuário](clr-user-defined-types.md).  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Usando o Visual Studio para implantar UDTs  
  O modo mais fácil de implantar seu UDT é usar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. Para cenários de implantação mais complexos e mais flexibilidade, entretanto, use o [!INCLUDE[tsql](../../includes/tsql-md.md)] como discutido posteriormente neste tópico.  
@@ -69,7 +68,7 @@ ms.locfileid: "62919946"
  Quando CREATE ASSEMBLY for executada com o conjunto de permissões SAFE ou EXTERNAL_ACCESS, o assembly será marcado para garantir que seja verificável e fortemente tipado. Se você omitir a especificação de um conjunto de permissões, SAFE será considerado. Códigos com o conjunto de permissões UNSAFE não serão marcados. Para obter mais informações sobre conjuntos de permissões de assembly, confira [Criando assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 #### <a name="example"></a>Exemplo  
- A instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir registra o assembly de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ponto no no banco de dados **AdventureWorks** , com o conjunto de permissões seguro. Se a cláusula WITH PERMISSION_SET for omitida, o assembly será registrado com o conjunto de permissões SAFE.  
+ A instrução a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] registra o assembly de ponto no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no banco de dados **AdventureWorks** , com o conjunto de permissões seguro. Se a cláusula WITH PERMISSION_SET for omitida, o assembly será registrado com o conjunto de permissões SAFE.  
   
 ```  
 USE AdventureWorks;  
@@ -78,7 +77,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- A instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir registra o assembly usando *<argumento assembly_bits>* na cláusula FROM. Este valor `varbinary` representa o arquivo como um fluxo de bytes.  
+ A instrução a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] registra o assembly usando *<argumento assembly_bits>* na cláusula FROM. Este valor `varbinary` representa o arquivo como um fluxo de bytes.  
   
 ```  
 USE AdventureWorks;  
@@ -123,7 +122,7 @@ DROP ASSEMBLY Point;
 ### <a name="finding-udt-dependencies"></a>Localizando dependências do UDT  
  Se houver objetos dependentes, como tabelas com definições de coluna de UDT, a instrução DROP TYPE falhará. Ela também falhará se houver funções, procedimentos armazenados ou gatilhos criados no banco de dados usando a cláusula WITH SCHEMABINDING, se essas rotinas usarem variáveis ou parâmetros do tipo definido pelo usuário. Você deve descartar todos os objetos dependentes primeiro e, em seguida, executar a instrução DROP TYPE.  
   
- A consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir localiza todas as colunas e parâmetros que usam um UDT no banco de dados **AdventureWorks** .  
+ A consulta a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] localiza todas as colunas e parâmetros que usam um UDT no banco de dados **AdventureWorks** .  
   
 ```  
 USE Adventureworks;  
@@ -159,7 +158,7 @@ FROM '\\Projects\Point\bin\Point.dll'
 ### <a name="using-alter-assembly-to-add-source-code"></a>Usando ALTER ASSEMBLY para adicionar código-fonte  
  A cláusula ADD FILE na sintaxe ALTER ASSEMBLY não está presente em CREATE ASSEMBLY. Você pode usá-la para adicionar código-fonte ou outros arquivos associados a um assembly. Os arquivos serão copiados dos seus locais originais e armazenados em tabelas do sistema do banco de dados. Isso garante que você sempre tenha código-fonte ou outros arquivos à mão, se precisar recriar ou documentar a versão atual do UDT.  
   
- A instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER assembly a seguir adiciona o código-fonte da classe `Point` Point.cs para o UDT. O texto contendo o arquivo Point.cs será copiado e armazenado no banco de dados com o nome "PointSource".  
+ A [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ALTER assembly a seguir adiciona o código-fonte da classe Point.cs para o `Point` UDT. O texto contendo o arquivo Point.cs será copiado e armazenado no banco de dados com o nome "PointSource".  
   
 ```  
 ALTER ASSEMBLY Point  

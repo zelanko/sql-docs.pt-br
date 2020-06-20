@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29a82df217eef719b4f0efffb3fc0c24b36a27aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62854906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047281"
 ---
 # <a name="column-properties-general-page"></a>Propriedades da coluna (página Geral)
   Use esta página para exibir as propriedades da coluna selecionada.  

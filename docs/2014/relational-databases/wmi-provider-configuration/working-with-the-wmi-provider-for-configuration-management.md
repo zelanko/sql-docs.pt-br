@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4a4c956f1bf60f6d874ee2bda3b261dd954836d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048863"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Trabalhando com o provedor WMI para o Gerenciamento de configuração
   Considere o seguinte antes de programar com o provedor WMI para Gerenciamento do Computador:  
@@ -43,7 +42,7 @@ ms.locfileid: "68195771"
   
  onde `instance_name` assume `MSSQLSERVER` como padrão em uma instalação padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Observação:** Se você estiver se conectando por meio do firewall do Windows, precisará verificar se os computadores estão configurados corretamente. Consulte o artigo "conectando por meio do firewall do Windows" na [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentação do Instrumentação de gerenciamento do Windows no [site](https://go.microsoft.com/fwlink/?linkid=15426)do MSDN.  
+ **Observação:** Se você estiver se conectando por meio do firewall do Windows, precisará verificar se os computadores estão configurados corretamente. Consulte o artigo "conectando por meio do firewall do Windows" na documentação do Instrumentação de Gerenciamento do Windows no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [site](https://go.microsoft.com/fwlink/?linkid=15426)do MSDN.  
   
 ## <a name="permissions-and-server-authentication"></a>Permissões e autenticação do servidor  
  Para acessar o provedor WMI para gerenciamento de configuração, o script de gerenciamento WMI do cliente deve estar sendo executado no contexto de um administrador no computador de destino. Você precisa ser membro do grupo local de administradores do Windows no computador que deseja gerenciar.  

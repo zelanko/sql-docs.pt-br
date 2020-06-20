@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a4765c6b9ef6dce7511a2ffe120d60efe8b6d235
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45fa4214fc8ab68d1f0e646d21ef8877d8de9f3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049497"
 ---
 # <a name="articles"></a>Artigos
   Na página **Artigos** , você especifica quais objetos de banco de dados incluir como artigos na publicação. Se você estiver publicando um objeto de banco de dados que depende de outros objetos de banco de dados, terá de publicar todos os objetos referenciados. Por exemplo, se você publicar uma exibição que depende de uma tabela, terá de publicar a tabela também.  
@@ -58,12 +57,12 @@ ms.locfileid: "62721988"
  **Propriedades do Artigo**  
  Clique em **Propriedades do Artigo**e depois clique em uma das opções seguintes:  
   
--   Clique em **Definir as Propriedades do Artigo \<ObjectType> Realçado** para iniciar a caixa de diálogo **Propriedades do Artigo – \<ObjectName >** . As alterações de propriedade feitas nessa caixa de diálogo são aplicadas somente ao objeto que está realçado no painel de objetos na página **Artigos**.  
+-   Clique em **definir propriedades do \<ObjectType> artigo realçado** para iniciar as **Propriedades do artigo – \<ObjectName> ** caixa de diálogo; as alterações de propriedade feitas nessa caixa de diálogo são aplicadas somente ao objeto que está realçado no painel objeto na página **artigos** .  
   
--   Clique em **Definir as Propriedades de Todos os Artigos \<ObjectType>** , para iniciar a caixa de diálogo **Propriedades de Todos os Artigos \<ObjectType>** ; as alterações à propriedade feitas nessa caixa de diálogo são aplicadas a todos os objetos desse tipo, no painel de objetos da página **Artigos**, incluindo os ainda não selecionados para publicação.  
+-   Clique em **definir propriedades de todos os \<ObjectType> artigos**para iniciar a caixa de diálogo **Propriedades de todos os \<ObjectType> artigos** . as alterações de propriedade feitas nessa caixa de diálogo são aplicadas a todos os objetos desse tipo no painel de objetos da página **artigos** , incluindo aqueles ainda não selecionados para publicação.  
   
     > [!NOTE]  
-    >  Alterações de propriedade feitas na caixa de diálogo **Propriedades para Todos os Artigos \<ObjectType>** substituem todas as alterações feitas anteriormente na caixa de diálogo **Propriedades do Artigo – \<ObjectName>** . Se, por exemplo, você quiser definir um número de padrões para todos os artigos de um tipo de objeto, mas também quer definir algumas propriedades para objetos individuais, defina primeiro os padrões para todos os artigos. Em seguida, defina as propriedades para os objetos individuais.  
+    >  As alterações de propriedade feitas na caixa de diálogo **Propriedades de todos os \<ObjectType> artigos** substituem as feitas anteriormente na caixa de diálogo **Propriedades do artigo – \<ObjectName> ** . Se, por exemplo, você quiser definir um número de padrões para todos os artigos de um tipo de objeto, mas também quer definir algumas propriedades para objetos individuais, defina primeiro os padrões para todos os artigos. Em seguida, defina as propriedades para os objetos individuais.  
   
  **A tabela realçada é somente para download**  
  Somente replicação de mesclagem. Somente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Selecione para especificar que as alterações serão desabilitadas no Assinante se uma assinatura de cliente for usada. Como artigos somente para download não podem ser atualizados no Assinante, metadados de controle não são enviados aos Assinantes. Isso pode resultar em armazenamento reduzido nos Assinantes e em um benefício no desempenho, principalmente se a conexão de rede for lenta. Essa opção corresponde ao valor **Download somente para Assinante, proibir alterações do Assinante** para a opção **Direção de sincronização** na caixa de diálogo **Propriedades do Artigo** . Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](merge/optimize-merge-replication-performance-with-download-only-articles.md).  

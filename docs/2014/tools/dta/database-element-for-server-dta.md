@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87df538858c9294cb8986da3df0d2b3814411326
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661828"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057757"
 ---
 # <a name="database-element-for-server-dta"></a>Elemento de banco de dados para servidor (DTA)
   Especifica o banco de dados que deseja ajustar em um servidor específico.  
@@ -35,7 +34,7 @@ ms.locfileid: "62661828"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Nenhum.|  
 |Valor padrão|Nenhum.|  
@@ -52,7 +51,7 @@ ms.locfileid: "62661828"
  Esse elemento tem o nome **DatabaseDetailsTypecomplexType** no Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Não confunda este elemento do `Database` com aquele cujo pai raiz é o elemento `Configuration`. Para obter mais informações, veja [Elemento Database para configuração &#40;DTA&#41;](database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Exemplo  
- Para obter um exemplo de uso `Database` do elemento, consulte [elemento de servidor &#40;DTA&#41;](server-element-dta.md).  
+ Para obter um exemplo de uso do `Database` elemento, consulte [elemento de servidor &#40;DTA&#41;](server-element-dta.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

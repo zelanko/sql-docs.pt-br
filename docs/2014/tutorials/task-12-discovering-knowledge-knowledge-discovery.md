@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bad2760a5dc9b16b24d75bb35617759543205f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064781"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarefa 12: Descobrindo a base de dados de conhecimento (descoberta da base de dados de conhecimento)
   Nesta tarefa, você executa a atividade de **descoberta de conhecimento** nos domínios ID do **fornecedor** e nome do **fornecedor** . Neste cenário, o processo de descoberta da base de dados de conhecimento importa basicamente valores desses dois domínios.  
@@ -28,7 +27,7 @@ ms.locfileid: "65484679"
   
 2.  Selecione o **arquivo do Excel** para a fonte de **dados**.  
   
-3.  Clique em **procurar**, navegue e selecione **suppliers. xls**e clique em **abrir**.  
+3.  Clique em **procurar**, navegue e selecione **Suppliers.xls**e clique em **abrir**.  
   
 4.  Selecione **fornecedores para descoberta** da **planilha**.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "65484679"
   
 6.  Clique em **Avançar** para alternar para a página de **descoberta** .  
   
-7.  Na página **descobrir** , clique em **Iniciar** para iniciar o processo de descoberta. A descoberta é executada nas colunas **CódigoDoFornecedor** e **nome do fornecedor** no arquivo **suppliers. xls** . Os domínios **ID do fornecedor** e nome do **fornecedor** devem ser preenchidos com o conhecimento desenhado da descoberta.  
+7.  Na página **descobrir** , clique em **Iniciar** para iniciar o processo de descoberta. A descoberta é executada nas colunas **CódigoDoFornecedor** e **nome do fornecedor** no arquivo de **Suppliers.xls** . Os domínios **ID do fornecedor** e nome do **fornecedor** devem ser preenchidos com o conhecimento desenhado da descoberta.  
   
      ![Página Descoberta do Processo de Descoberta](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "Página Descoberta do Processo de Descoberta")  
   

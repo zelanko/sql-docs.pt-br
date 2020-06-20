@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e7016b056c404d1e60f53bd0d0afd1270fdbb73a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cacaae123da110fdec189fed36f699a1303a624
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191096"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062691"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Propriedade Version (classe ClientNetLibInfo)
   Obtém a versão do arquivo de biblioteca de rede do cliente.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe ClientNetLibInfo](clientnetlibinfo-class.md) que representa informações sobre a biblioteca de rede de cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68e02c4933f559bff62b8e352016a911990049a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049573"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas
-  O gerenciamento baseado em políticas permite que você monitore as [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]práticas recomendadas para o. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece um conjunto de arquivos de política que podem ser importados como políticas de práticas recomendadas e, em seguida, avaliar as políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de Database. É possível avaliar as políticas manualmente, defini-las para avaliar um conjunto de destino de acordo com um agendamento ou defini-las para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](administer-servers-by-using-policy-based-management.md).  
+  O gerenciamento baseado em políticas permite que você monitore as práticas recomendadas para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece um conjunto de arquivos de política que podem ser importados como políticas de práticas recomendadas e, em seguida, avaliar as políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de Database. É possível avaliar as políticas manualmente, defini-las para avaliar um conjunto de destino de acordo com um agendamento ou defini-las para avaliar um conjunto de destino de acordo com um evento. Para obter mais informações sobre o gerenciamento baseado em políticas, veja [Administrar servidores usando o gerenciamento baseado em políticas](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Política e regras para o mecanismo de banco de dados  
  A tabela a seguir lista as políticas incluídas com a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inclui informações sobre as regras de práticas recomendadas que cada política avalia. As políticas são armazenadas como arquivos XML e são importadas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como importar políticas, consulte [Importar uma política de gerenciamento baseado em políticas](import-a-policy-based-management-policy.md).  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf9e435156d452a83b50adcf34771c7dd45b7bfd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965347"
 ---
 # <a name="integration-services-transactions"></a>Transações do Integration Services
   Os pacotes usam transações para associar as ações do banco de dados realizadas pelas tarefas em unidades atômicas e, ao fazer isso, a integridade dos dados é mantida. Todos os tipos de contêineres do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], como os pacotes, o Loop For, o Loop Foreach, os contêineres de sequência e os hosts de tarefa que encapsulam cada tarefa, podem ser configurados para usar transações. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece três opções para configurar transações: **Sem Suporte**, **Há Suporte**e **Necessário**.  
@@ -34,7 +33,7 @@ ms.locfileid: "62767618"
  Você configura transações definindo a propriedade TransactionOption no contêiner. É possível definir essa propriedade na janela **Propriedades** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ou definir a propriedade programaticamente.  
   
 > [!NOTE]  
->  A propriedade `TransactionOption` influencia a aplicação ou não do valor da propriedade `IsolationLevel` solicitada por um contêiner. Para obter mais informações, consulte a descrição da `IsolationLevel` Propriedade no tópico [definindo propriedades do pacote](set-package-properties.md).  
+>  A propriedade `TransactionOption` influencia a aplicação ou não do valor da propriedade `IsolationLevel` solicitada por um contêiner. Para obter mais informações, consulte a descrição da `IsolationLevel` propriedade no tópico [definindo propriedades do pacote](set-package-properties.md).  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>Para configurar um pacote para usar transações  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39acaf350a4d63fc8896b3a55ca88fe4ed91461f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067486"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Servidores de Destino (guia Instruções de Download)
   Use esta página para exibir e atualizar as instruções de download de um ou mais servidores de destino.  
@@ -35,7 +34,7 @@ ms.locfileid: "63245338"
  **Operação**  
  Exiba a operação que a instrução de download executará.  
   
- **Nome do objeto**  
+ **Object Name**  
  Exiba o nome do objeto que será afetado pela instrução de download.  
   
  **Data da Postagem**  
@@ -50,7 +49,7 @@ ms.locfileid: "63245338"
  **Delete (excluir)**  
  Exclua a instrução de download selecionada.  
   
- **Formatação**  
+ **Limpar**  
  Limpe o status da instrução de download selecionada.  
   
 ## <a name="see-also"></a>Consulte Também  
