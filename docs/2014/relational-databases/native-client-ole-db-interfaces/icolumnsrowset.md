@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e35d37ed-dd9b-4a34-a76a-bc9251f06c4f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8b10069c6358849e3ed3dc6f1f8a8de43950520
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a0d3975bb60934af33414ee8028c6dd1322bfe6d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056210"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client acrescenta a coluna DBCOLUMN_BASETABLEINSTANCE a IColumnsRowset::GetColumnRowset. Essa coluna retorna DBTYPE_I2 e é reservada para uso pela Microsoft. As informações nessa coluna estão sujeitas à alteração em versões futuras.  

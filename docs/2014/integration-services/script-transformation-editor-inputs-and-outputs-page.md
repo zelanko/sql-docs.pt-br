@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45eff63fe3f5cf3bf4e764cb741b19656cf7f254
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963946"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Editor de Transformação Scripts (página Entradas e Saídas)
   Use a página **Entradas e Saídas** da caixa de diálogo do **Editor de Transformação Scripts** para adicionar, remover e configurar entradas e saídas para a Transformação Scripts.  

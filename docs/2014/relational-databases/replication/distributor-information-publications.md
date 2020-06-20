@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ca0717a63c9660c225ec238e1e4d2423f7d01ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721365"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010787"
 ---
 # <a name="distributor-information-dialog-box"></a>Caixa de diálogo informações do distribuidor 
 Este tópico fornece informações sobre a caixa de diálogo **distribuidor** 
@@ -64,7 +63,7 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
 -   Não está em execução    
 -   Nunca iniciado  
   
- **Editor**  
+ **Publicador**  
  A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Publicador.  
   
  **Publicação**  
@@ -79,7 +78,7 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
  **Hora da última inicialização**  
  A última hora de início do agente.  
   
- **Permanência**  
+ **Duration**  
  O tempo de execução do agente. O tempo representa o tempo decorrido, se o agente estiver sendo executado no momento, e o tempo total, se o agente foi executado anteriormente.  
   
  **Última Ação**  
@@ -88,7 +87,7 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
  **Taxa de Entrega**  
  A taxa, em comandos por segundo, com a qual os comandos de inicialização são confirmados no banco de dados de distribuição durante a execução mais recente do agente.  
   
- **Latency**  
+ **Latência**  
  É o tempo, em segundos, que decorreu entre a alteração mais recente sendo confirmada no banco de dados de publicação e o comando correspondente sendo confirmado no banco de dados de distribuição.  
   
  **#Trans**  
@@ -110,7 +109,7 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
 -   Não está em execução    
 -   Nunca iniciado  
   
- **Editor**  
+ **Publicador**  
  A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Publicador.  
   
  **Publicação**  
@@ -125,7 +124,7 @@ Este tópico fornece informações sobre a caixa de diálogo **distribuidor**
  **Hora da última inicialização**  
  A última hora de início do agente.  
   
- **Permanência**  
+ **Duration**  
  O tempo de execução do agente. O tempo representa o tempo decorrido, se o agente estiver sendo executado no momento, e o tempo total, se o agente foi executado anteriormente.  
   
  **Última Ação**  

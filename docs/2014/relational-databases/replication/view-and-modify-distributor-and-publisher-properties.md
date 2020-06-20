@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 571f6f3a0d44f0fc87c67885249fca441776946d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212023"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055566"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Exibir e modificar propriedades de Publicador e Distribuidor
   Este tópico descreve como exibir e modificar propriedades do Distribuidor e do Publicador no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -58,7 +57,7 @@ ms.locfileid: "68212023"
   
 2.  Clique com o botão direito do mouse na pasta **Replicação** e em seguida clique em **Propriedades do Distribuidor**.  
   
-3.  Exibir e modificar as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**.  
+3.  Exiba e modifique as propriedades na caixa de diálogo **Propriedades do distribuidor – \<Distributor> ** .  
   
     -   Para exibir e modificar as propriedades de um banco de dados de distribuição, clique no botão de propriedades (**...**) do banco de dados na página **Geral** da caixa de diálogo.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "68212023"
   
 2.  Clique com o botão direito do mouse na pasta **Replicação** e, em seguida, em **Propriedades do Publicador**.  
   
-3.  Exiba e modifique as propriedades na caixa de diálogo **Propriedades do Publicador – \< >do Publicador** .  
+3.  Exiba e modifique as propriedades na caixa de diálogo ** \< Publisher > Propriedades do Publicador** .  
   
     -   Um usuário na função de servidor fixa **sysadmin** pode ativar bancos de dados para replicação na página **Bancos de Dados de Publicação** . Habilitando um banco de dados não publica esse banco de dados, mas permite que qualquer usuário na função de banco de dados fixa **db_owner** para aquele banco de dados crie uma ou mais publicações no banco de dados.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "68212023"
   
 4.  No Distribuidor, execute [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) para alterar as propriedades de um Publicador usando o Distribuidor.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  O seguinte exemplo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] retorna as informações sobre o Distribuidor e o banco de dados de distribuição.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  

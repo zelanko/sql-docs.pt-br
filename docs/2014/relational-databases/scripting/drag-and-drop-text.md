@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f18600ac4ab01d2f34fc6a63d91a4d3cb65c189a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5104db8ce520b8a98ffe223fd8832806564d5f12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056806"
 ---
 # <a name="drag-and-drop-text"></a>Arrastar e soltar texto
   Você pode selecionar texto e depois arrastá-lo e soltá-lo em outro local. É possível arrastar e soltar texto:  

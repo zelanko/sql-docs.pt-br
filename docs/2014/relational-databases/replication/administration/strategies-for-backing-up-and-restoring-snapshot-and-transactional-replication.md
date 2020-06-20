@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f6cf1a61e4df9db79bc5fd90429f86d70a99f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210778"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055741"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional
   Ao projetar uma estratégia de backup e restauração para instantâneo e replicação transacional, há três áreas a serem consideradas:  
@@ -207,13 +206,13 @@ ms.locfileid: "68210778"
   
     2.  Recrie a assinatura no banco de dados **B** para a publicação no banco **de dados a**, especificando que a assinatura deve ser inicializada com um backup (um valor de **inicializar com backup** para o **@sync_type** parâmetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa c.  
   
-    3.  Recrie a assinatura no banco **de** dados a para a publicação no banco de dado **B**, especificando que o Assinante já tem os dados (um valor de suporte **@sync_type** de **replicação somente** para o parâmetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa 8.  
+    3.  Recrie a assinatura no banco **de** dados a para a publicação no banco de dado **B**, especificando que o Assinante já tem os dados (um valor de **suporte de replicação somente** para o **@sync_type** parâmetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa 8.  
   
 8.  Execute o Agente de Distribuição para sincronizar as assinaturas nos bancos de dados **A** e **B**. Se houver alguma coluna de identidade nas tabelas publicadas, vá para a etapa 9. Caso contrário, vá para a etapa 10.  
   
 9. Após a restauração, o intervalo de identidade atribuído para cada tabela no banco de dados **A** será usado também no banco de dados **B**. Verifique se o banco de dados restaurado **B** recebeu todas as alterações do banco de dados que apresentou falha **B** que foram propagadas para o banco de dados **A** e o banco de dados **C**; e, então, propague novamente o intervalo de identidade para cada tabela.  
   
-    1.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o **@request_id**parâmetro de saída. Vá para a etapa b.  
+    1.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o parâmetro de saída **@request_id** . Vá para a etapa b.  
   
     2.  Por padrão, o Distribution Agent está definido para executar continuamente; portanto, tokens devem ser enviados automaticamente a todos os nós. Se o Distribution Agent não estiver executando em modo contínuo, execute o agente. Para obter mais informações, consulte [Conceitos Executáveis do Agente de Replicação](../concepts/replication-agent-executables-concepts.md) ou [Iniciar e Parar um Agente de Replicação &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Vá para a etapa c.  
   
@@ -229,7 +228,7 @@ ms.locfileid: "68210778"
   
     1.  Pare todas as atividades nas tabelas publicadas na topologia ponto a ponto. Vá para a etapa b.  
   
-    2.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o **@request_id**parâmetro de saída. Vá para a etapa c.  
+    2.  Execute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) no banco de dados **B** e recupere o parâmetro de saída **@request_id** . Vá para a etapa c.  
   
     3.  Por padrão, o Distribution Agent está definido para executar continuamente; portanto, tokens devem ser enviados automaticamente a todos os nós. Se o Distribution Agent não estiver executando em modo contínuo, execute o agente. Vá para a etapa d.  
   
@@ -243,7 +242,7 @@ ms.locfileid: "68210778"
   
     1.  No banco de dados **B**, consulte a tabela [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) para recuperar o LSN (número de sequência de log) da mais recente transação que o banco de dados **B** recebeu do banco de dados **C**.  
   
-    2.  Recrie a assinatura no banco de dados **B** para a publicação no banco de dados **C**, especificando que a assinatura deve ser inicializada com base no LSN (um valor de **@sync_type** **inicializar do LSN** para o parâmetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa b.  
+    2.  Recrie a assinatura no banco de dados **B** para a publicação no banco de dados **C**, especificando que a assinatura deve ser inicializada com base no LSN (um valor de **inicializar do lsn** para o **@sync_type** parâmetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vá para a etapa b.  
   
     3.  Recrie a assinatura no banco de dados **C** para a publicação no banco de dados **B**, especificando que o Assinante já possui os dados. Vá para a etapa 13.  
   

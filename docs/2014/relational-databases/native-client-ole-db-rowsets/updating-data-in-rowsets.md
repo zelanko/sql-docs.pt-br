@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2d1c1e70e704c50b619a34b28a899ce10316d446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 993cfb67d4e6b72eec7cc0537e9b47371e94af10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011188"
 ---
 # <a name="updating-data-in-rowsets"></a>Atualizando dados em conjuntos de linhas
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo atualiza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os dados quando um consumidor atualiza um conjunto de linhas modificável que contém esses dados. Um conjunto de linhas modificável é criado quando o consumidor solicita suporte para a interface **IRowsetChange** ou **IRowsetUpdate**.  

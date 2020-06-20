@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a45dfa7-51fc-420c-96f6-ce2a1f61b684
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8cd7aec26338516d397c2b125e586ba1f94601a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1c235493b801af8032c6e6e32488175dc9d2259
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029878"
 ---
 # <a name="exception-event-class"></a>classe de evento Exception
   A classe de evento Exception indica que uma exceção ocorreu em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bdc55bde4d5dfb11d669d9e7b4aad06482ce7e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056622"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Propriedades do alerta – novo alerta (página Geral)
   Use esta página para exibir e modificar as propriedades gerais de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas do Agent.  

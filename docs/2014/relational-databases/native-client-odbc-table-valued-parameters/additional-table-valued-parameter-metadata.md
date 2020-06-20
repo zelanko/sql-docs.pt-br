@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f0d46200df3881d7b24cf582b5c252f4e66e255b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 362699ca4aec82315d86b99a440e8714fe6e0e72
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048098"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Metadados adicionais de parâmetros com valor de tabela
   Para recuperar metadados para um parâmetro com valor de tabela, um aplicativo chama SQLProcedureColumns. Para um parâmetro com valor de tabela, SQLProcedureColumns retorna uma única linha. Duas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colunas específicas adicionais, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME, foram adicionadas para fornecer informações de esquema e de catálogo para tipos de tabela associados a parâmetros com valor de tabela. Em conformidade com a especificação ODBC, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME aparecem antes de todas as colunas específicas do driver adicionadas em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e depois de todas as colunas exigidas pelo próprio ODBC.  
@@ -29,8 +28,8 @@ ms.locfileid: "82709741"
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint não NULL|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128) não NULL|O nome do tipo do parâmetro com valor de tabela.|  
-|COLUMN_SIZE|Inteiro|NULO|  
-|BUFFER_LENGTH|Inteiro|0|  
+|COLUMN_SIZE|Integer|NULO|  
+|BUFFER_LENGTH|Integer|0|  
 |DECIMAL_DIGITS|Smallint|NULO|  
 |NUM_PREC_RADIX|Smallint|NULO|  
 |NULLABLE|Smallint não NULL|SQL_NULLABLE|  
@@ -38,7 +37,7 @@ ms.locfileid: "82709741"
 |COLUMN_DEF|WVarchar(4000)|NULO|  
 |SQL_DATA_TYPE|Smallint não NULL|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULO|  
-|CHAR_OCTET_LENGTH|Inteiro|NULO|  
+|CHAR_OCTET_LENGTH|Integer|NULO|  
 |ORDINAL_POSITION|Integer não NULL|A posição ordinal do parâmetro.|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128) não NULL|O catálogo que contém a definição de tipo do tipo de tabela do parâmetro com valor de tabela.|  
