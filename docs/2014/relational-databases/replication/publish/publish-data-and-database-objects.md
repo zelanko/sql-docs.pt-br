@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6d7fdce36d42591b0f2dda8ae6a08b6dbef4953
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060491"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar dados e objetos de banco de dados
   Ao criar uma publicação, você escolhe as tabelas e outros objetos de banco de dados que deseja publicar. Você pode publicar os objetos de banco de dados a seguir usando replicação.  
@@ -170,7 +169,7 @@ ms.locfileid: "74479321"
     > [!NOTE]  
     >  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **\@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **\@processing_order** de **sp_addmergearticle** e especifique o valor **2** para o parâmetro **\@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **\@article**. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. Você pode usar números diferentes para cada artigo desde que o número para a função seja menor do que o número para a tabela.  
   
--   Os nomes de publicação não podem incluir nenhum dos seguintes caracteres: % * [ ] | : " ? \< >.  
+-   Os nomes de publicação não podem incluir nenhum dos seguintes caracteres: % * [ ] | : " ? \ / \< >.  
   
 ### <a name="limitations-on-publishing-objects"></a>Limitações na publicação de objetos  
   
@@ -184,7 +183,7 @@ ms.locfileid: "74479321"
   
 -   Padrões associados criados com [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) não são replicados (padrões associados são preteridos a favor de padrões criados com a palavra-chave DEFAULT de ALTER TABLE ou CREATE TABLE).  
   
--   Funções contendo a dica `NOEXPAND` em exibições indexadas não podem ser publicadas na mesma publicação que as tabelas referenciadas e as exibições indexadas, devido à ordem na qual os agentes e distribuição as entrega. Para solucionar esse problema, coloque a tabela e a criação de exibição indexada em uma primeira publicação e adicione funções contendo a dica `NOEXPAND` nas exibições indexadas para uma segunda publicação, que você publica após a primeira publicação ser concluída. Ou crie scripts para essas funções e forneça o script usando o `sp_addpublication` * \@parâmetro post_snapshot_script* de.  
+-   Funções contendo a dica `NOEXPAND` em exibições indexadas não podem ser publicadas na mesma publicação que as tabelas referenciadas e as exibições indexadas, devido à ordem na qual os agentes e distribuição as entrega. Para solucionar esse problema, coloque a tabela e a criação de exibição indexada em uma primeira publicação e adicione funções contendo a dica `NOEXPAND` nas exibições indexadas para uma segunda publicação, que você publica após a primeira publicação ser concluída. Ou crie scripts para essas funções e forneça o script usando o parâmetro * \@ post_snapshot_script* de `sp_addpublication` .  
   
 ### <a name="schemas-and-object-ownership"></a>Propriedade de esquemas e objetos  
  A replicação tem o seguinte comportamento padrão no Assistente para Nova Publicação em relação à propriedade de esquemas e objetos:  
@@ -197,7 +196,7 @@ ms.locfileid: "74479321"
   
 -   Para artigos em publicações que usam instantâneos de modo de caracteres (que são usados para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Assinantes [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): por padrão o proprietário é deixado em branco. O proprietário assume o padrão do proprietário associado à conta usada pelo Agente de Distribuição ou Agente de Mesclagem para se conectar ao Assinante.  
   
- O proprietário do objeto pode ser alterado por meio da caixa de diálogo **Propriedades do Artigo – \<***Artigo***>** e dos seguintes procedimentos armazenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Para obter mais informações, consulte [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md), [Definir um artigo](define-an-article.md) e [Exibir e modificar as propriedades do artigo](view-and-modify-article-properties.md).  
+ O proprietário do objeto pode ser alterado por meio da caixa de diálogo **Propriedades \<***Article***> do artigo –** e por meio dos seguintes procedimentos armazenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**e **sp_changemergearticle**. Para obter mais informações, consulte [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md), [Definir um artigo](define-an-article.md) e [Exibir e modificar as propriedades do artigo](view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publicando dados para Assinantes que executam versões anteriores do SQL Server  
   

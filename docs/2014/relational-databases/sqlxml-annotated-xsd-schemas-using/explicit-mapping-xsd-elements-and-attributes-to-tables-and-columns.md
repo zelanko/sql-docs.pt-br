@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 267f9044505126cbe7f865e6577da3cbe2f26bcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055151"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapeamento explícito de atributos e elementos XSD em tabelas e colunas (SQLXML 4.0)
   Ao usar um esquema XSD para fornecer uma exibição XML do banco de dados relacional, os elementos e atributos do esquema devem ser mapeados em tabelas e colunas do banco de dados. As linhas na tabela/exibição do banco de dados serão mapeadas em elementos no documento XML. Os valores de coluna no banco de dados são mapeados em atributos ou elementos.  
@@ -58,9 +57,9 @@ ms.locfileid: "82703615"
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>a. Especificando as anotações sql:relation e sql:field  
- Neste exemplo, o esquema XSD consiste em um elemento ** \< Contact>** de tipo complexo com ** \< fname>** e ** \< lname>** elementos filho e o atributo **ContactID** .  
+ Neste exemplo, o esquema XSD consiste em um **\<Contact>** elemento de tipo complexo com **\<FName>** elementos filho e e **\<LName>** o atributo **ContactID** .  
   
- A `sql:relation` anotação mapeia o elemento ** \< Contact>** para a tabela Person. Contact no banco de dados AdventureWorks. A `sql:field` anotação mapeia o elemento ** \< fname>** para a coluna FirstName e o elemento ** \< lname>** para a coluna LastName.  
+ A `sql:relation` anotação mapeia o **\<Contact>** elemento para a tabela Person. Contact no banco de dados AdventureWorks. A `sql:field` anotação mapeia o **\<FName>** elemento para a coluna FirstName e o **\<LName>** elemento para a coluna LastName.  
   
  Nenhuma anotação foi especificada para o atributo **ContactID** . Isso resulta em um mapeamento padrão do atributo na coluna com o mesmo nome.  
   

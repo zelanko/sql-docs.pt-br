@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62dc29f8143f92fc9674ed10c092dc6ad08570fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85bd8f79f7be5a46e8f714f69a0b61de560a0aed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63060325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051689"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>Classe de evento SQL:StmtCompleted
   A classe de evento SQL:StmtCompleted indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] foi concluída.  

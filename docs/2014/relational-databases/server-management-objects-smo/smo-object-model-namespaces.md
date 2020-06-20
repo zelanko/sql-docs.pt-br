@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ceef262411bf420330cf9e650d61a916719cb0e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f20c9413923c68ae393315230511722c13f207d6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055240"
 ---
 # <a name="smo-namespaces"></a>Namespaces do SMO
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) tem vários namespaces. Os diversos namespaces representam áreas de funcionalidades diferentes no SMO.  
@@ -34,7 +33,7 @@ ms.locfileid: "63130773"
   
 |Classe|Função|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|Contém classes de instância, classes utilitárias e enumerações que são usadas para manipular [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programaticamente.|  
+|<xref:Microsoft.SqlServer.Management.Smo>|Contém classes de instância, classes utilitárias e enumerações que são usadas para manipular programaticamente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |<xref:Microsoft.SqlServer.Management.Common>|Contém as classes que são comuns ao RMO (Replication Management Objects) e ao SMO, como classes de conexão.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|Contém classes que representam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|Contém classes que representam o Provedor WMI.|  

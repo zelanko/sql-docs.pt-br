@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f56d5ea637adc2ce8fc5490c44408bdd1de7f3f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e1dea1ba2a3370d18d22d0c23f1561d3d454254
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999528"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054516"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Propriedades do servidor de relatório (guia Fazer Logon)
   Use a guia **Fazer Logon** da caixa de diálogo **Propriedades de Servidor de Relatório** para especificar a conta usada pelo serviço Servidor de Relatório e para iniciar e parar o serviço.  

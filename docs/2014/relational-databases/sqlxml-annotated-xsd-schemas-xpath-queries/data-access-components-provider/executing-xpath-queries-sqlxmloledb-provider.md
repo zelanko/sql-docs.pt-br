@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0c6b15235f74ba2765a34f028aba39379fd6beb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eaf7017d2cf3d831f300180f002c004487a317e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015683"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Executando consultas XPath (provedor SQLXMLOLEDB)
   Este exemplo ilustra o uso das seguintes propriedades específicas de provedor SQLXMLOLEDB:  
@@ -32,7 +31,7 @@ ms.locfileid: "82703244"
   
 -   `Mapping Schema`  
   
- Neste aplicativo de exemplo do ADO, uma consulta XPath (raiz) é especificada em um esquema de mapeamento XSD (MySchema.xml). O esquema tem um elemento ** \< contacts>** com os atributos **ContactID**, **FirstName**e **LastName** . No esquema, ocorre o mapeamento padrão: um nome de elemento é mapeado para a tabela com o mesmo nome, e os atributos do tipo simples, para as colunas com os mesmos nomes.  
+ Neste aplicativo de exemplo do ADO, uma consulta XPath (raiz) é especificada em um esquema de mapeamento XSD (MySchema.xml). O esquema tem um **\<Contacts>** elemento com os atributos **ContactID**, **FirstName**e **LastName** . No esquema, ocorre o mapeamento padrão: um nome de elemento é mapeado para a tabela com o mesmo nome, e os atributos do tipo simples, para as colunas com os mesmos nomes.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

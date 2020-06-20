@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 481e0b383fd877ec81385bcd4ca4ee37106bb298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646f25740ebb007f8d04a89690d3b712781efcc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060717"
 ---
 # <a name="mssql_repl020011"></a>MSSQL_REPL020011
     
@@ -33,7 +32,7 @@ ms.locfileid: "63022764"
 |Texto da mensagem|O processo não pôde executar '%1' em '%2'.|  
   
 ## <a name="explanation"></a>Explicação  
- Esse erro pode ser acionado em várias circunstâncias durante o processamento da replicação transacional, como quando o Agente de Leitor de Log executa **sp_replcmds** (O processo não pôde executar 'sp_replcmds' em \<ServerName>) ou **sp_repldone** (O processo não pôde executar 'sp_repldone' em \<ServerName>).  
+ Esse erro pode ser gerado em várias circunstâncias durante o processamento de replicação transacional, como quando o Agente de Leitor de Log é executado **sp_replcmds** (o processo não pôde executar ' sp_replcmds ' no \<ServerName> ) ou **sp_repldone** (o processo não pôde executar ' sp_repldone ' em \<ServerName> ).  
   
 ## <a name="user-action"></a>Ação do usuário  
  Se o erro for gerado em um banco de dados que você acabou de restaurar de um backup, certifique-se de ter seguido as etapas descritas na documentação de backup e restauração, inclusive executando **sp_replrestart** , se apropriado. Para obter mais informações, consulte [Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional](administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  

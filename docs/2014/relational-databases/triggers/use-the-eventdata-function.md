@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57fb59a3954fb00ab943944c58cccd352c7270d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014352"
 ---
 # <a name="use-the-eventdata-function"></a>Usar a função EVENTDATA
   As informações sobre um evento que aciona um disparador DDL são capturadas por meio da função EVENTDATA. Essa função retorna um valor `xml`. O esquema XML contém informações sobre o seguinte:  
@@ -49,7 +48,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- A instrução `EVENTDATA()` no gatilho DDL captura o texto da instrução `CREATE TABLE` , que não é permitida. Isso é feito usando uma instrução XQuery em relação aos `xml` dados gerados pelo EVENTDATA e recuperando o \<elemento CommandText>. Para obter mais informações, veja [Referência da linguagem XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ A instrução `EVENTDATA()` no gatilho DDL captura o texto da instrução `CREATE TABLE` , que não é permitida. Isso é feito usando uma instrução XQuery em relação aos `xml` dados gerados por EVENTDATA e recuperando o \<CommandText> elemento. Para obter mais informações, veja [Referência da linguagem XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  A EVENTDATA captura os dados de eventos CREATE_SCHEMA, bem como o <schema_element> da definição CREATE SCHEMA correspondente, se houver. Além disso, EVENTDATA reconhece a definição <schema_element>como um evento separado. Portanto, um disparador DDL criado em ambos os eventos CREATE SCHEMA e um evento representado pelo <schema_element> da definição CREATE SCHEMA podem retornar os mesmos dados de evento duas vezes, como os dados de `TSQLCommand`. Por exemplo, considere um disparador DDL criado em ambos os eventos CREATE_SCHEMA e CREATE_TABLE e a execução do seguinte lote:  

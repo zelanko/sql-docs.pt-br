@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a8e727b288625fcb69b9498f6d79ceb13b7e13b2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f90c668e586b10b328b8471bc3d8ab043a6b49df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039213"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Executar uma função definida pelo usuário e processar o código de retorno (OLE DB)
   Neste exemplo, uma função definida pelo usuário é executada e o código de retorno é impresso. Este exemplo não tem suporte em IA64.  

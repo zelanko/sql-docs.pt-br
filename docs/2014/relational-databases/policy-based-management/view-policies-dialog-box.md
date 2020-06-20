@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d5cd144cf02dcfacf0cfca3a3e4623809266250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676844"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038353"
 ---
 # <a name="view-policies-dialog-box"></a>Caixa de diálogo Exibir Políticas
   Use esta caixa de diálogo para exibir as políticas efetivas para esse destino. Esta caixa de diálogo mostra as políticas relevantes, bem como suas categorias e informações.  

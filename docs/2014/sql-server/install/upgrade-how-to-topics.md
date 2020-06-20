@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2055865c-f25e-4113-b7e4-2b8ba426335b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 74fcbb6fb9e9f4fe3f2b50f5fb434cbae6491113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff43cf072f73fca56fefaeedc39a9691e6de50ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091477"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041707"
 ---
 # <a name="upgrade-how-to-topics"></a>Tópicos de informações práticas sobre atualização
   Os tópicos desta seção descrevem como atualizar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1d22ec44b7be6562c7186272b403a76cd562be62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe88888b63aace25a345da203d0455e14c4e4a78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055279"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Conectando-se a uma instância do SQL Server
-  A primeira etapa de programação em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] um aplicativo Smo (Management Objects) é criar uma instância do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto e estabelecer sua conexão com uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  A primeira etapa de programação em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplicativo Smo (Management Objects) é criar uma instância do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto e estabelecer sua conexão com uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Você pode criar uma instância do objeto <xref:Microsoft.SqlServer.Management.Smo.Server> e estabelecer uma conexão com a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de três maneiras. A primeira é usar uma variável do objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> para fornecer as informações de conexão. A segunda é fornecer as informações de conexão definindo explicitamente as propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.Server>. A terceira é transmitir o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no construtor do objeto <xref:Microsoft.SqlServer.Management.Smo.Server>.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "63192082"
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Conectando-se à instância local do SQL Server usando a Autenticação do Windows no Visual Basic  
  A conexão com a instância local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não exige muito código. Em vez disso, ela depende das configurações padrão para o servidor e o método de autenticação. A primeira operação que exige a recuperação dos dados faz com que uma conexão seja criada.  
   
- Este exemplo é [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] um código .NET que se conecta à instância local [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do usando a autenticação do Windows.  
+ Este exemplo é um [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] código .NET que se conecta à instância local do usando a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticação do Windows.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VB1](SMO How to#SMO_VB1)]  -->  
   
@@ -89,7 +88,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Conectando-se a uma instância remota do SQL Server usando a Autenticação do Windows no Visual Basic  
  Ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a Autenticação do Windows, você não precisa especificar o tipo de autenticação. A Autenticação do Windows é o padrão.  
   
- Este exemplo é [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] um código .NET que se conecta à instância remota [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do usando a autenticação do Windows. A variável de cadeia de caracteres *strServer* contém o nome da instância remota.  
+ Este exemplo é um [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] código .NET que se conecta à instância remota do usando a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticação do Windows. A variável de cadeia de caracteres *strServer* contém o nome da instância remota.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VB2](SMO How to#SMO_VB2)]  -->  
   
@@ -113,7 +112,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>Conectando-se a uma instância do SQL Server usando a Autenticação do SQL Server no Visual Basic  
  Ao conectar-se a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você deve especificar o tipo de autenticação. Este exemplo demonstra o método alternativo de declarar uma variável do objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, que habilita as informações de conexão a serem reutilizadas.  
   
- O exemplo é [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] um código .NET que demonstra como se conectar ao remoto e *vPassword* contém o logon e a senha.  
+ O exemplo é um [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] código .NET que demonstra como se conectar ao remoto e *vPassword* contém o logon e a senha.  
   
 ```  
 ' compile with:   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb72255fa14695a16f4bc382fe0d617441dfaeb6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021724"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038433"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriedades da Publicação, Opções de Assinatura
   A página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação** permite visualizar e definir propriedades de nível de publicação associadas a assinaturas. As propriedades são agrupadas nas categorias seguintes:  
@@ -63,7 +62,7 @@ ms.locfileid: "63021724"
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se deve haver permissão para que os arquivos de backup sejam usados para inicializar assinaturas. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Permitir Assinantes não SQL Server**  
- Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação oferece suporte a Assinantes não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Definir essa opção como **true** define outras propriedades de publicação para dar suporte[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a assinantes não. Se houver assinaturas, essa opção será somente leitura; ela não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata**, **Permitir assinaturas de atualização enfileirada**ou **Permitir assinaturas ponto a ponto** forem definidas como **Verdadeiro**. Para obter mais informações, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+ Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação oferece suporte a Assinantes não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Definir essa opção como **true** define outras propriedades de publicação para dar suporte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não. Se houver assinaturas, essa opção será somente leitura; ela não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata**, **Permitir assinaturas de atualização enfileirada**ou **Permitir assinaturas ponto a ponto** forem definidas como **Verdadeiro**. Para obter mais informações, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformação de dados  
  **Permitir transformações de dados**  

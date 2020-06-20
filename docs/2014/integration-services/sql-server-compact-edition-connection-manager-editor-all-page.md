@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e6b326e86e1a9e21a740c3bf1bd1fedb6919e98
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055464"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962706"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Editor do Gerenciador de Conexões do SQL Server Compact Edition (Página Tudo)
   Use a caixa de diálogo **Gerenciador de Conexões do SQL Server Compact Edition** para especificar as propriedades de conexão com um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
@@ -56,7 +55,7 @@ ms.locfileid: "66055464"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Somente Leitura**|Especifica acesso somente de leitura ao banco de dados.|  
-|**Leitura Gravação**|Especifica a permissão de leitura e gravação ao banco de dados.|  
+|**Leitura/gravação**|Especifica a permissão de leitura e gravação ao banco de dados.|  
 |**Exclusive**|Especifica o acesso exclusivo ao banco de dados.|  
 |**Shared Read**|Especifica que outros usuários podem ler de banco de dados ao mesmo tempo.|  
   

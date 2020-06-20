@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4941a02deb770678f4efcf4d2dfc7b08243fff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022599"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005399"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
   As publicações dos Editores Oracle são criadas da mesma forma que são criados os instantâneos e as publicações transacionais mas, antes de criar uma publicação de um Publicador Oracle, você deverá completar as etapas a seguir (etapas um, três e quatro que estão detalhadamente descritas neste tópico):  
@@ -41,7 +40,7 @@ ms.locfileid: "63022599"
 > [!NOTE]  
 >  Remover o sinônimo público **MSSQLSERVERDISTRIBUTOR** e o usuário de replicação Oracle configurado com a opção **CASCADE** fará com que todos os objetos de replicação do Publicador Oracle sejam removidos.  
   
- Um script de amostra foi fornecido para ajudar na instalação do esquema de usuário de replicação Oracle. O script está disponível no seguinte diretório após a instalação de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: * \<Drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.Sql. Também está incluído no tópico [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
+ Um script de amostra foi fornecido para ajudar na instalação do esquema de usuário de replicação Oracle. O script está disponível no seguinte diretório após a instalação de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : *\<drive>* : \\ \Program Files\Microsoft SQL Server \\ *\<InstanceName>* \MSSQL\Install\oracleadmin.Sql. Também está incluído no tópico [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
   
  Conecte-se ao banco de dados Oracle usando uma conta com privilégios DBA e execute o script. Os prompts de script do usuário e senha para o esquema de usuário administrativo de replicação, assim como o espaço de tabela padrão, no qual os objetos serão criados (o espaço de tabela já deve existir no banco de dados Oracle). Para obter informações sobre como especificar outros espaços de tabela para objetos, consulte [Gerenciar espaços de tabela Oracle](manage-oracle-tablespaces.md). Escolha um nome de usuário e uma senha forte e anote ambas as informações, pois serão solicitadas depois que o banco de dados Oracle estiver configurado como um Publicador. É recomendado que o esquema seja usado apenas para objetos exigidos pelo aplicativo, não crie tabelas para serem publicadas nesse esquema.  
   

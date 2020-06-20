@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 395df605926f0ff4ddc30970cdcebce0f1d0c8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fad4d1cbeaa84b5c6be683d7a87997d1a3f89bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052635"
 ---
 # <a name="qnparameter-table-event-class"></a>Classe de evento QN:Parameter Table
   O evento QN:Parameter table fornece informações sobre as operações necessárias para criar, manter contagens de referência e descartar as tabelas internas que armazenam informações sobre parâmetros. Esse evento também informa a atividade interna para reajustar a contagem de uso para uma tabela de parâmetros.  
@@ -38,7 +37,7 @@ ms.locfileid: "63044441"
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|Não|  
-|LoginName|`nvarchar`|O nome do logon do usuário ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon de segurança do ou as credenciais de logon do Windows na forma de nome de*usuário*do *domínio*\\).|11|Não|  
+|LoginName|`nvarchar`|O nome do logon do usuário ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon de segurança do ou as credenciais de logon do Windows na forma de nome de usuário do *domínio* \\ *Username*).|11|Não|  
 |LoginSID|`image`|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo sys.server_principals. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |NTDomainName|`nvarchar`|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|`nvarchar`|O nome do usuário proprietário da conexão que gerou este evento.|6|Sim|  

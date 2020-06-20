@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fea70d6b1230b67b2eedcdf1c7d2e82d2324a0b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016315"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
   O Assistente para Indexação de Texto Completo guia você por uma série de etapas planejadas para ajudá-lo a criar um índice de texto completo.  
@@ -49,7 +48,7 @@ ms.locfileid: "66010896"
      **Coluna de tipo**  
      Selecione o nome da coluna que possui o tipo de documento de coluna que está sendo indexado com texto completo.  
   
-     A **coluna tipo** só é habilitada quando a coluna denominada na coluna **colunas disponíveis** é do `varbinary(max)` tipo `image`ou.  
+     A **coluna tipo** só é habilitada quando a coluna denominada na coluna **colunas disponíveis** é do tipo `varbinary(max)` ou `image` .  
   
      **Semântica Estatística**  
      Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](semantic-search-sql-server.md).  
@@ -95,7 +94,7 @@ ms.locfileid: "66010896"
   
     |Valor|Descrição|  
     |-----------|-----------------|  
-    |**\<>padrão**|Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou exibição for particionada, o grupo de arquivos primário será utilizado.|  
+    |**\<default>**|Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou exibição for particionada, o grupo de arquivos primário será utilizado.|  
     |**PRIMARY**|Selecione para usar o grupo de arquivos primário para o novo índice de texto completo.|  
     |*grupo de arquivos padrão especificado pelo usuário*|Se existir uma lista de palavras irrelevantes padrão definida pelo usuário, selecione seu nome na lista para usar esse grupo de arquivos para o novo índice de texto completo.|  
   
@@ -108,8 +107,8 @@ ms.locfileid: "66010896"
   
     |Valor|Descrição|  
     |-----------|-----------------|  
-    |**\<>do sistema**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
-    |**\<desativar>**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  
+    |**\<system>**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
+    |**\<off>**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  
     |*user-defined-stoplist-name*|A lista exibe o nome de cada lista de palavras irrelevantes definida pelo usuário, se houver alguma, que foi criada no banco de dados. Selecione qualquer lista de palavras irrelevantes definida pelo usuário para usar no novo índice de texto completo.|  
   
 4.  Opcionalmente, defina a agenda de população. As operações de indexação começarão imediatamente, a menos que tenham sido agendadas para execução futura. Serão criadas agendas imediatamente, embora elas sejam executadas somente na hora agendada.  
@@ -131,7 +130,7 @@ ms.locfileid: "66010896"
      **Parar**  
      Interrompe a operação atual e impede que sejam executadas operações de texto completo subsequentes pelo assistente durante esta sessão.  
   
-     **Relatório**  
+     **Report**  
      Quando todas as operações terminarem de executar, clique nesse botão para acessar um relatório sobre as operações executadas. Você pode exibir o relatório, imprimi-lo em um arquivo, copiá-lo na área de transferência ou enviá-lo por email.  
   
   

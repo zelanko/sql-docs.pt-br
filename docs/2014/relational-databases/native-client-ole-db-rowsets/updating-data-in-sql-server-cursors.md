@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 037176b5e1833b3cbfcbc93131560fcafcc8e404
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 42e6221a85c30e3adb97df3a11c9cbdc49216b4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039123"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Atualizando dados em cursores do SQL Server
   Ao buscar e atualizar dados por meio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo de consumidor de provedor de OLE DB de cliente nativo é associado pelas mesmas considerações e restrições que se aplicam a qualquer outro aplicativo cliente.  

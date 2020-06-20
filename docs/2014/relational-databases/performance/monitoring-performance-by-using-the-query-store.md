@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d74b9c4def9c0314569a8d0bd87939cdcb11b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175855"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038709"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   O recurso repositório de consultas fornece aos DBAs insights sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, permitindo que você localize rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O recurso captura automaticamente um histórico de consultas, planos e estatísticas de runtime e os mantém para sua análise. Ele separa os dados por janelas de tempo, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .
@@ -506,7 +505,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
  Ao usar `sp_query_store_force_plan` você só pode impor planos registrados pelo repositório de consultas como um plano para essa consulta. Em outras palavras, os únicos planos disponíveis para uma consulta são aqueles que já foram usados para executar Q1 enquanto o repositório de consultas estava ativo.
 
- **Remover a imposição de plano para uma consulta.** Para confiar novamente no otimizador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consulta para calcular o plano de consulta ideal, `sp_query_store_unforce_plan` use para não forçar o plano selecionado para a consulta.
+ **Remover a imposição de plano para uma consulta.** Para confiar novamente no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] otimizador de consulta para calcular o plano de consulta ideal, use `sp_query_store_unforce_plan` para não forçar o plano selecionado para a consulta.
 
 ```
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

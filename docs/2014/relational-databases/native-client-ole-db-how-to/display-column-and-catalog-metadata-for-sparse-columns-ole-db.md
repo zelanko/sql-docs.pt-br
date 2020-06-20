@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a1259ef4b320e097998f2a631367b2e52e7c789e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 429ce6ca8ffa59181f1b15af477a3408702a2514
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704916"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039269"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Exibir metadados de colunas e catálogos para colunas esparsas (OLE DB)
   Este exemplo compila uma tabela com três colunas: uma coluna esparsa, uma coluna que não é esparsa e uma coluna de conjunto de colunas. Em seguida, o exemplo exibe o sinalizador OLE DB mostrando os metadados da coluna e do catálogo paras as colunas que não são esparsas e para a coluna do conjunto de colunas.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a10e6333f6dd38a850a832b82a7cb7a0e0bf698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934805"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955576"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Criar, alterar e remover FileTables
   Descreve como criar uma nova FileTable, ou alterar ou remover uma FileTable existente.  
@@ -35,7 +34,7 @@ ms.locfileid: "76934805"
   
 -   Os nomes a serem usados para as 3 chaves primária e restrições exclusivas que são criadas automaticamente.  
   
-###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Como: Criar uma FileTable  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Como criar uma FileTable  
  **Criar uma FileTable usando Transact-SQL**  
  Crie uma FileTable chamando a instrução [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) com a opção **AS FileTable**. Como uma FileTable tem um esquema fixo, você não precisa especificar uma lista de colunas. Você pode especificar as seguintes configurações para a nova FileTable:  
   
@@ -107,7 +106,7 @@ GO
   
  Para obter informações sobre como usar a instrução ALTER TABLE para habilitar ou desabilitar o namespace da FileTable, incluindo as restrições definidas pelo sistema, consulte [Gerenciar FileTables](manage-filetables.md).  
   
-###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Como: Alterar o diretório de uma FileTable  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Como alterar o diretório de uma FileTable  
  **Alterar o diretório para uma FileTable usando Transact-SQL**  
  Chame a instrução ALTER TABLE e forneça um novo valor válido para a opção **FILETABLE_DIRECTORY** SET.  
   
@@ -175,7 +174,7 @@ GO
 |Verificar restrições|As restrições de verificação definidas pelo sistema impõem os seguintes requisitos:<br /><br /> Nomes de arquivo válidos.<br /><br /> Atributos de arquivo válidos.<br /><br /> O objeto pai deve ser um diretório.<br /><br /> A hierarquia de namespaces é bloqueada durante a manipulação do arquivo.|  
   
  **Convenção de nomenclatura para as restrições definidas pelo sistema**  
- As restrições definidas pelo sistema descritas acima são nomeadas no formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** , em que:  
+ As restrições definidas pelo sistema descritas acima são nomeadas no formato ** \<constraintType> _ \<tablename> [ \_ \<columnname> ] \_ \<uniquifier> ** , em que:  
   
 -   *<constraint_type>* é CK (restrição de verificação), DF (restrição padrão), FK (chave estrangeira), PK (chave primária) ou UQ (restrição exclusiva).  
   

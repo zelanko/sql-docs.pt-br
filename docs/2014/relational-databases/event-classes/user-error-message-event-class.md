@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afd556972ea3f5b47850e8cc20a8a5624ed45da5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d23a8ee66cafc4bef1f258e40dbe51274a308eb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63064563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051368"
 ---
 # <a name="user-error-message-event-class"></a>classe de evento User Error Message
   A classe de evento User Error Message exibe a mensagem de erro como é vista pelo usuário no caso de um erro ou exceção. O texto da mensagem de erro se aparece no campo TextData.  
