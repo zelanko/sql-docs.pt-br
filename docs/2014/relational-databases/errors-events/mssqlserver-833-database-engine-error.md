@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 070e024eb752ebffc7aa113d0f4a6fc4a95f4175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62762071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031813"
 ---
 # <a name="mssqlserver_833"></a>MSSQLSERVER_833
     
@@ -30,7 +29,7 @@ ms.locfileid: "62762071"
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|BUF_LONG_IO|  
-|Texto da mensagem|SQL Server encontrou% d ocorrência (s) de solicitações de e/s demorando mais do que% d segundos para serem concluídas no arquivo [`[%ls] (%d)`% ls] no banco de dados.  O identificador de arquivo do SO é 0x%p.  O deslocamento da E/S mais demorada é: %#016I64x.|  
+|Texto da mensagem|SQL Server encontrou% d ocorrência (s) de solicitações de e/s demorando mais do que% d segundos para serem concluídas no arquivo [% ls] no banco de dados `[%ls] (%d)` .  O identificador de arquivo do SO é 0x%p.  O deslocamento da E/S mais demorada é: %#016I64x.|  
   
 ## <a name="explanation"></a>Explicação  
  Esta mensagem indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitiu uma solicitação de leitura ou gravação de disco, e que a solicitação demorou mais de 15 segundos para retornar. Esse erro é informado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e indica um problema com o subsistema de E/S.  

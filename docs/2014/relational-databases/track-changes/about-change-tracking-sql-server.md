@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8a817421aeca7906d31e4a70c25a12b6af7c0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670910"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064519"
 ---
 # <a name="about-change-tracking-sql-server"></a>Sobre o controle de alterações (SQL Server)
-  O controle de alterações é uma solução leve que fornece um mecanismo de controle de alterações eficiente para aplicativos. Em geral, para permitir que os aplicativos consultassem as alterações nos dados de um banco de dados e acessassem as informações relacionadas às alterações, os desenvolvedores de aplicativos precisavam implementar mecanismos personalizados de controle de alterações. A criação desses mecanismos geralmente envolvia muito trabalho e frequentemente envolvida usando uma combinação de gatilhos `timestamp` , colunas, novas tabelas para armazenar informações de rastreamento e processos de limpeza personalizados.  
+  O controle de alterações é uma solução leve que fornece um mecanismo de controle de alterações eficiente para aplicativos. Em geral, para permitir que os aplicativos consultassem as alterações nos dados de um banco de dados e acessassem as informações relacionadas às alterações, os desenvolvedores de aplicativos precisavam implementar mecanismos personalizados de controle de alterações. A criação desses mecanismos geralmente envolvia muito trabalho e frequentemente envolvida usando uma combinação de gatilhos, `timestamp` colunas, novas tabelas para armazenar informações de rastreamento e processos de limpeza personalizados.  
   
  Tipos distintos de aplicativos têm requisitos diferentes quanto à quantidade de informações que precisam sobre as alterações. Os aplicativos podem usar o controle de alterações para responder às seguintes perguntas sobre as alterações feitas na tabela de um usuário:  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 905b1ceed2df8afc854ad38ee07d2b21596530f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afd1544b5412c6ce2d83a9a1e9a50ddf662b3056
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011048"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar a publicação e a distribuição
   Este tópico descreve como configurar publicação e distribuição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
@@ -31,7 +30,7 @@ ms.locfileid: "73882260"
  Para obter mais informações, consulte [implantação de replicação segura](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Configure a distribuição, usando o Assistente para Novas Publicações ou o Assistente para Configurar a Distribuição. Depois que o Distribuidor estiver configurado, exiba e modifique as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** . Use o Assistente para Configurar Distribuição se você desejar configurar um Distribuidor para que os membros de funções de banco de dados fixas **db_owner** possam criar publicações ou para configurar um Distribuidor remoto que não é um Publicador.  
+ Configure a distribuição, usando o Assistente para Novas Publicações ou o Assistente para Configurar a Distribuição. Depois que o distribuidor estiver configurado, exiba e modifique as propriedades na caixa de diálogo **Propriedades do distribuidor – \<Distributor> ** . Use o Assistente para Configurar Distribuição se você desejar configurar um Distribuidor para que os membros de funções de banco de dados fixas **db_owner** possam criar publicações ou para configurar um Distribuidor remoto que não é um Publicador.  
   
 #### <a name="to-configure-distribution"></a>Para configurar a distribuição  
   
@@ -41,7 +40,7 @@ ms.locfileid: "73882260"
   
 3.  Siga o Assistente para Configurar Distribuição para:  
   
-    -   Selecionar um Distribuidor. Para usar um distribuidor local, selecione **'\<ServerName> ' atuará como seu próprio distribuidor; SQL Server criará um banco de dados de distribuição e um log**. Para usar um Distribuidor remoto, selecione **Use o seguinte servidor como Distribuidor**e, em seguida, selecione um servidor. O servidor já deve ser configurado como um Distribuidor e o Publicador deve ser habilitado a usar o Distribuidor. Para obter mais informações, consulte [Habilitar um Publicador Remoto em um Distribuidor &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).  
+    -   Selecionar um Distribuidor. Para usar um distribuidor local, selecione **' \<ServerName> ' atuará como seu próprio distribuidor; SQL Server criará um banco de dados de distribuição e um log**. Para usar um Distribuidor remoto, selecione **Use o seguinte servidor como Distribuidor**e, em seguida, selecione um servidor. O servidor já deve ser configurado como um Distribuidor e o Publicador deve ser habilitado a usar o Distribuidor. Para obter mais informações, consulte [Habilitar um Publicador Remoto em um Distribuidor &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).  
   
          Se você selecionar um Distribuidor remoto, você deverá inserir uma senha na página **Senha Administrativa** para conexões feitas do Publicador ao Distribuidor. Esta senha deve corresponder à senha especificada quando o Publicador foi habilitado no Distribuidor remoto.  
   
@@ -62,27 +61,27 @@ ms.locfileid: "73882260"
   
     -   Se o valor **installed** no resultado definido for **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) no Distribuidor no banco de dados mestre.  
   
-    -   Se o valor **bd de distribuição instalado** no resultado definido for **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) no Distribuidor no banco de dados mestre. Especifique o nome do banco de dados de distribuição para o ** \@banco de dados**. Opcionalmente, você pode especificar o período máximo de retenção transacional para ** \@max_distretention** e o período de retenção do histórico para ** \@history_retention**. Se um banco de dados novo estiver sendo criado, especifique os parâmetros de propriedade de banco de dados desejados.  
+    -   Se o valor **bd de distribuição instalado** no resultado definido for **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) no Distribuidor no banco de dados mestre. Especifique o nome do banco de dados de distribuição para o ** \@ banco de dados**. Opcionalmente, você pode especificar o período máximo de retenção transacional para ** \@ max_distretention** e o período de retenção do histórico para ** \@ history_retention**. Se um banco de dados novo estiver sendo criado, especifique os parâmetros de propriedade de banco de dados desejados.  
   
-2.  No distribuidor, que também é o Publicador, execute [sp_adddistpublisher &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), especificando o compartilhamento UNC que será usado como pasta de instantâneo padrão para ** \@working_directory**.  
+2.  No distribuidor, que também é o Publicador, execute [sp_adddistpublisher &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), especificando o compartilhamento UNC que será usado como pasta de instantâneo padrão para ** \@ working_directory**.  
   
-3.  No Editor, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique o banco de dados que está sendo publicado para ** \@dbname**, o tipo de replicação para ** \@OptName**e `true` um valor de para ** \@valor**.  
+3.  No Editor, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique o banco de dados que está sendo publicado para ** \@ dbname**, o tipo de replicação para ** \@ OptName**e um valor de `true` para ** \@ valor**.  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>Para configurar publicação usando um distribuidor remoto  
   
 1.  Execute [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) para determinar se o servidor já está configurado como um Distribuidor.  
   
-    -   Se o valor **installed** no resultado definido for **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) no Distribuidor no banco de dados mestre. Especifique uma senha forte para ** \@a senha**. Essa senha para a conta **distributor_admin** será usada pelo Publicador ao se conectar ao Distribuidor.  
+    -   Se o valor **installed** no resultado definido for **0**, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) no Distribuidor no banco de dados mestre. Especifique uma senha forte para a ** \@ senha**. Essa senha para a conta **distributor_admin** será usada pelo Publicador ao se conectar ao Distribuidor.  
   
-    -   Se o valor **bd de distribuição instalado** no resultado definido for **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) no Distribuidor no banco de dados mestre. Especifique o nome do banco de dados de distribuição para o ** \@banco de dados**. Opcionalmente, você pode especificar o período máximo de retenção transacional para ** \@max_distretention** e o período de retenção do histórico para ** \@history_retention**. Se um banco de dados novo estiver sendo criado, especifique os parâmetros de propriedade de banco de dados desejados.  
+    -   Se o valor **bd de distribuição instalado** no resultado definido for **0**, execute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) no Distribuidor no banco de dados mestre. Especifique o nome do banco de dados de distribuição para o ** \@ banco de dados**. Opcionalmente, você pode especificar o período máximo de retenção transacional para ** \@ max_distretention** e o período de retenção do histórico para ** \@ history_retention**. Se um banco de dados novo estiver sendo criado, especifique os parâmetros de propriedade de banco de dados desejados.  
   
-2.  No distribuidor, execute [sp_adddistpublisher &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), especificando o compartilhamento UNC que será usado como pasta de instantâneo padrão para ** \@working_directory**. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distribuidor usar autenticação ao se conectar ao Publicador, você também deverá especificar um valor de **0** para ** \@security_mode** e as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações de logon para ** \@logon** e ** \@senha**.  
+2.  No distribuidor, execute [sp_adddistpublisher &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), especificando o compartilhamento UNC que será usado como pasta de instantâneo padrão para ** \@ working_directory**. Se o distribuidor usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação ao se conectar ao Publicador, você também deverá especificar um valor de **0** para ** \@ security_mode** e as [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações de logon para ** \@ logon** e ** \@ senha**.  
   
-3.  No Editor do banco de dados mestre, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql). Especifique a senha forte usada na etapa 1 para ** \@senha**. Essa senha será usada pelo Publicador ao se conectar ao Distribuidor.  
+3.  No Editor do banco de dados mestre, execute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql). Especifique a senha forte usada na etapa 1 para ** \@ senha**. Essa senha será usada pelo Publicador ao se conectar ao Distribuidor.  
   
-4.  No Editor, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique o banco de dados que está sendo publicado para ** \@dbname**, o tipo de replicação para ** \@OptName**e um valor de true para ** \@Value**.  
+4.  No Editor, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique o banco de dados que está sendo publicado para ** \@ dbname**, o tipo de replicação para ** \@ OptName**e um valor de true para ** \@ Value**.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  O exemplo a seguir mostra como configurar publicação e distribuição programaticamente. Nesse exemplo, o nome do servidor que está sendo configurado como publicador e um distribuidor local são fornecidos usando variáveis de script. Publicação e distribuição de replicação podem ser configuradas de forma programada, usando-se procedimentos de replicação armazenados.  
   
  [!code-sql[HowTo#AddDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/adddistpub.sql#adddistpub)]  

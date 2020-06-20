@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b9d60675ef4c0bdaef1d45c6e8fe230ac70393c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933377"
 ---
 # <a name="send-dataset-sample"></a>Exemplo Send DataSet
   O exemplo Send `DataSet` demonstra como retornar um `DataSet` baseado em ADO.NET em um procedimento armazenado de servidor baseado em CLR (common language runtime) como um conjunto de resultados para o cliente. Isso é útil, por exemplo, quando tal procedimento armazenado preenche um `DataSet` usando os resultados de uma consulta e, em seguida, manipula os dados contidos nesse `DataSet`. Alternativamente, isso será útil se o procedimento armazenado criar e popular um `DataSet` do zero. O exemplo é composto de duas classes, `DataSetUtilities` e `TestSendDataSet`. O método `SendDataSet` na classe `DataSetUtilities` implementa um modo geral de transmitir o conteúdo de uma instância `DataSet` ao cliente. O método `DoTest` definido na classe `TestSendDataSet` verifica se o método `SendDataSet` funciona criando um `DataSet` e preenchendo-o com os dados do procedimento armazenado Transact-SQL `uspGetTwoBOMTestData` . O `uspGetTwoBOMTestData` executa o procedimento armazenado Transact-SQL `uspGetBillOfMaterials` duas vezes para consultar repetidamente a lista de materiais dos dois produtos especificados como parâmetros para o procedimento armazenado `usp_GetTwoBOMTestData` . Em geral, depois de preencher o conjunto de dados, os dados seriam modificados antes de invocar `SendDataSet` para entregar os dados no conjunto de dados como um conjunto de resultados para o cliente. Para simplificar, esse exemplo retorna os dados sem modificação.  

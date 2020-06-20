@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b5877fb70a66fd9864e52223b30eca4b01b6db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064476"
 ---
 # <a name="job-step-properties-new-job-step-advanced-page"></a>Propriedades da Etapa de Trabalho: Nova Etapa de Trabalho (página Avançado)
   Use esta página para exibir e alterar as propriedades de uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] etapa de trabalho do Agent.  
@@ -43,7 +42,7 @@ ms.locfileid: "62937185"
  Procura o arquivo a usar para saída da etapa de trabalho.  
   
  **Exibir**  
- No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão é desabilitado para exibir arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
+ No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esse botão é desabilitado para exibir arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
  **Anexar saída ao arquivo existente**  
  Anexa a saída aos conteúdos existentes no arquivo. Caso contrário, os conteúdos anteriores do arquivo serão substituídos a cada vez que a etapa de trabalho for executada.  
@@ -71,7 +70,7 @@ ms.locfileid: "62937185"
  Procura o arquivo a usar para saída da etapa de trabalho.  
   
  **Exibir**  
- No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão é desabilitado para exibir arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
+ No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esse botão é desabilitado para exibir arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
  **Anexar saída ao arquivo existente**  
  Anexa a saída da etapa de trabalho aos conteúdos anteriores do arquivo a cada vez que é executada.  
@@ -96,7 +95,7 @@ ms.locfileid: "62937185"
  Procura o arquivo a usar para saída da etapa de trabalho.  
   
  **Exibir**  
- No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão é desabilitado para exibir arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
+ No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esse botão é desabilitado para exibir arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
  **Anexar saída ao arquivo existente**  
  Anexa a saída da etapa de trabalho aos conteúdos anteriores do arquivo a cada vez que é executada.  

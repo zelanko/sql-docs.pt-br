@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 author: yualan
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 249f29e40701658ddcc85f4a2a79fc8c0ac2cff5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925127"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarefa de Upload do SQL DW do Azure
 A **Tarefa de Upload do SQL DW do Azure** permite que um pacote do SSIS carregue dados locais em uma tabela no SQL Data Warehouse (DW) do Azure. O formato de arquivo de dados de origem com suporte atualmente é texto delimitado em codificação UTF8. O processo de carregamento segue a abordagem de polybase eficiente. Especificamente, os dados serão primeiro carregados no Armazenamento de Blobs do Azure e, em seguida, no SQL DW do Azure. Portanto, é necessário uma conta de Armazenamento de Blobs do Azure para usar essa tarefa.
@@ -42,7 +41,7 @@ RetainFiles|Especifica se os arquivos carregados no Armazenamento do Azure serã
 CompressionType|Especifica o formato de compactação a ser usado ao carregar arquivos no Armazenamento do Azure. A origem local não é afetada.
 CompressionLevel|Especifica o nível de compactação a ser usado para o formato de compactação.
 AzureDwConnection|Especifica um Gerenciador de conexões ADO.NET para o SQL DW do Azure.
-TableName|Especifica o nome da tabela de destino. Escolha um nome de tabela existente ou crie um novo escolhendo ** \<nova tabela... >**.
+TableName|Especifica o nome da tabela de destino. Escolha um nome de tabela existente ou crie um novo escolhendo **\<New Table ...>** .
 TableDistribution|Especifica o método de distribuição para a nova tabela. Aplica-se caso um novo nome de tabela para **TableName**seja especificado.
 HashColumnName|Especifica a coluna usada para a distribuição da tabela de hash. Aplica-se caso **HASH** for especificado para **TableDistribution**.
 

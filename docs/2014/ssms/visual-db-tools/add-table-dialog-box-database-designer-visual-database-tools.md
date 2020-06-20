@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e529f26ca6a0e032d9a6d580330ea4a4f968ce6d
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 6ae9d3763ef66c0a7580cc516169c2f273f36528
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058243"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>Caixa de diálogo Adicionar Tabela (Designer de Banco de Dados) (Visual Database Tools)
   Permite adicionar tabelas no Designer de Banco de Dados.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7314598bffe53b6db1c24ecaaec2cf32ee06cb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008599"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
   Este passo a passo ilustra como criar e modificar um diagrama de banco de dados e fazer alterações no banco de dados por meio do componente de diagramas de banco de dados. Você verá como adicionar tabelas a diagramas, criar relações entre tabelas, criar restrições e índices em colunas, e alterar o nível das informações exibidas em cada tabela.  
@@ -70,11 +69,11 @@ ms.locfileid: "63273741"
   
 1.  Clique com o botão direito do mouse no Designer de Diagramas fora das tabelas existentes e escolha **Nova Tabela**.  
   
-2.  Na caixa de diálogo **escolher nome** , clique em **OK** para aceitar o nome `Table1`padrão.  
+2.  Na caixa de diálogo **escolher nome** , clique em **OK** para aceitar o nome padrão `Table1` .  
   
      Uma nova grade de tabela aparece com três colunas: **Nome da Coluna**, **Tipo de Dados**e **Permitir Nulos**.  
   
-3.  Adicione as seguintes informações a `Table1`:  
+3.  Adicione as seguintes informações a `Table1` :  
   
     |**Nome da Coluna**|**Tipo de Dados**|**Permitir Nulos**|  
     |---------------------|-------------------|---------------------|  
@@ -88,7 +87,7 @@ ms.locfileid: "63273741"
   
 5.  No menu **Arquivo** , clique em **Salvar Diagrama1**.  
   
-6.  Na caixa de diálogo **escolher nome** , clique em **OK** para aceitar o nome `Diagram1`padrão.  
+6.  Na caixa de diálogo **escolher nome** , clique em **OK** para aceitar o nome padrão `Diagram1` .  
   
 7.  A caixa de diálogo **Save** aparece com uma mensagem informando que `Table1` será salva no banco de dados. Clique em **Sim**.  
   
@@ -113,13 +112,13 @@ ms.locfileid: "63273741"
   
      `Table1` agora tem uma restrição que todos os valores inseridos em `T1col3` devem ser maior que 5.  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 #### <a name="to-create-relationships-between-tables"></a>Para criar relações entre tabelas  
   
 1.  Crie uma nova tabela no Designer de Diagrama denominada `Table2` com as seguintes colunas:  
   
-    |**Nome da coluna**|**Tipo de dados**|**Permitir Nulos**|  
+    |**Nome da coluna**|**Tipo de Dados**|**Permitir Nulos**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|não verificado|  
     |`T2col2`|`varchar(50)`|checked|  
@@ -177,7 +176,7 @@ ms.locfileid: "63273741"
   
      Um índice XML com valores padrão será adicionado à lista **Índice XML Selecionado** .  
   
-4.  Clique em **Fechar**.  
+4.  Clique em **fechar**  
   
     > [!NOTE]  
     >  Os índices XML são criados por coluna. O primeiro índice XML é primário; qualquer índice adicional é secundário.  

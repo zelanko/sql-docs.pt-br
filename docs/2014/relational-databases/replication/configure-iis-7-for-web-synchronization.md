@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 807c3e955f4772b5263cfee95b3bc5ebbff2a146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011023"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar o IIS 7 para sincronização da Web
   Os procedimentos deste tópico guiarão você pelo processo de configuração manual do Serviços de Informações da Internet (IIS) versão 7 e mais recentes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para uso com sincronização da Web para replicação de mesclagem. 
@@ -48,13 +47,13 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 1. Instale a replicação do SQL Server no computador com IIS.
 
-2.  Crie um novo diretório de arquivos para replisapi.dll no computador que está executando o IIS. É possível criar o diretório onde desejar, mas é recomendável criá-lo no diretório \<*drive*>:\Inetpub. Por exemplo, crie o diretório \<*drive*>:\Inetpub\SQLReplication\\.  
+2.  Crie um novo diretório de arquivos para replisapi.dll no computador que está executando o IIS. Você pode criar o diretório onde desejar, mas é recomendável criar o diretório no \<*drive*> diretório: \inetpub Por exemplo, crie o diretório \<*drive*> : \Inetpub\SQLReplication \\ .  
   
 3.  Copie replisapi.dll do diretório [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ para o diretório de arquivos que você criou na etapa 1.  
   
 4.  Registre replisapi.dll:  
   
-    1.  Clique em **Iniciar**e em **Executar**. Na caixa **abrir** , digite `cmd`e clique em **OK**.  
+    1.  Clique em **Iniciar**e em **Executar**. Na caixa **abrir** , digite `cmd` e clique em **OK**.  
   
     2.  No diretório criado na etapa 1, execute o comando a seguir:  
   
@@ -66,9 +65,9 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , no painel **Conexões** , clique com o botão direito em **Site Padrão**e selecione **Adicionar Diretório virtual**.  
   
-    2.  Para **alias**, insira `SQLReplication`.  
+    2.  Para **alias**, insira `SQLReplication` .  
   
-    3.  Para **Caminho físico**, insira **\<unidade>:\Inetpub\SQLReplication\\** e, em seguida, clique em **OK**.  
+    3.  Para **caminho físico**, digite ** \<drive> : \Inetpub\SQLReplication \\ **e clique em **OK**.  
   
 7.  Configure o IIS para habilitar a execução de replisapi.dll.  
   
@@ -78,11 +77,11 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     3.  No painel **Ações** , clique em **Adicionar Mapeamento de Módulo**.  
   
-    4.  Para caminho de **solicitação** , `replisapi.dll`insira.  
+    4.  Para caminho de **solicitação** , insira `replisapi.dll` .  
   
     5.  Na lista suspensa **Módulo** , selecione **IsapiModule**.  
   
-    6.  Para **Executável**, insira **\<unidade>:\Inetpub\SQLReplication\replisapi.dll**.  
+    6.  Para **executável**, insira ** \<drive>:\Inetpub\SQLReplication\replisapi.dll**.  
   
     7.  Para **Nome**, insira `Replisapi`.  
   
@@ -218,7 +217,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
     2.  Na guia **Segurança** , clique em **Editar**.  
   
-    3.  Na caixa de diálogo **Permissões para \<foldername>** , clique em **Adicionar** para adicionar a conta criada na etapa 1.  
+    3.  Na caixa de diálogo **permissões para \<foldername> ** , clique em **Adicionar** para adicionar a conta que você criou na etapa 1.  
   
     4.  Verifique se **Deste local** exibe o nome do computador local (não um domínio). Se esse campo não exibir o nome do computador local, clique em **Locais**. Na caixa de diálogo **Locais** , selecione o computador local e clique em **OK**.  
   
@@ -307,7 +306,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
     > [!NOTE]  
     >  Os certificados serão instalados para os usuários. Esse processo deve ser executado para cada usuário que sincronizará com o IIS.  
   
-4.  Na caixa de diálogo **Conectar a \<ServerName>** , especifique o logon e a senha que o Agente de Mesclagem usará para se conectar ao IIS. Essas credenciais também serão especificadas no Assistente para Nova Assinatura.  
+4.  Na caixa de diálogo **conectar a \<ServerName> ** , especifique o logon e a senha que o agente de mesclagem será usado para se conectar ao IIS. Essas credenciais também serão especificadas no Assistente para Nova Assinatura.  
   
 5.  Na janela do Internet Explorer chamada **Informação diagnóstica do SQL Websync**, verifique se o valor em cada coluna **Status** na página é **ÊXITO**.  
   

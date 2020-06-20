@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 868338d3-29c8-4a55-ab02-51a358d5b7ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b35c578ca1edbaebb9871d1633627811536f42bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054314"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lição 1: Avaliar práticas recomendadas sob demanda
   Usando o método sob demanda (ou "ad hoc") de avaliação de política, você pode avaliar rapidamente as políticas de práticas recomendadas para determinar se uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] corresponde a diretrizes de práticas recomendadas.  
   
- Nesta lição, você executará uma avaliação sob demanda das políticas de práticas recomendadas para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] em uma ou mais instâncias do. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ Nesta lição, você executará uma avaliação sob demanda das políticas de práticas recomendadas para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] em uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Eis os tópicos desta lição:  
   

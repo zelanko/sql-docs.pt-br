@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1b66cbbed716a4ce7b2d5cf9611e161141f162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934573"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Correlacionar um rastreamento com dados do log de desempenho do Windows (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]pode correlacionar contadores do monitor do sistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Microsoft Windows a eventos ou. O Monitor do Sistema do Windows registra a atividade do sistema em logs de desempenho para os contadores especificados.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]pode correlacionar contadores do monitor do sistema do Microsoft Windows a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eventos ou. O Monitor do Sistema do Windows registra a atividade do sistema em logs de desempenho para os contadores especificados.  
   
 > [!NOTE]  
 >  Para obter informações sobre como compartilhar logs entre versões diferentes do Windows, consulte o procedimento ao final desse tópico.  
@@ -64,7 +63,7 @@ ms.locfileid: "66065047"
 11. Clique em **OK** para criar o log de desempenho.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelos e permissões de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões do SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Iniciar o SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

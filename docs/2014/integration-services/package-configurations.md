@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84acc1541e8c66da15405330ca48b41f256811ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056889"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964873"
 ---
 # <a name="package-configurations"></a>Configurações do Pacote
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece configurações de pacote que você pode usar para atualizar os valores de propriedades em tempo de execução.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fornece configurações de pacote que você pode usar para atualizar os valores de propriedades em tempo de execução.  
   
 > [!NOTE]  
 >  As configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -79,12 +78,12 @@ ms.locfileid: "66056889"
   
 -   Não é possível usar a opção **/ConfigFile** para carregar as configurações que substituem as configurações especificadas no design.  
   
- Para obter mais informações sobre essas opções e como o comportamento dessas opções é diferente entre [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] o e versões anteriores, consulte [alterações de comportamento para Integration Services recursos no SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+ Para obter mais informações sobre essas opções e como o comportamento dessas opções é diferente entre o [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] e versões anteriores, consulte [alterações de comportamento para Integration Services recursos no SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 ## <a name="package-configuration-types"></a>Tipos de configuração de pacotes  
  A tabela a seguir descreve os tipos de configuração de pacotes.  
   
-|Tipo|Descrição|  
+|Type|Descrição|  
 |----------|-----------------|  
 |Arquivo de configuração XML|Um arquivo XML contém as configurações. O arquivo XML pode incluir várias configurações.|  
 |Variável de ambiente|Uma variável de ambiente contém a configuração.|  
@@ -123,7 +122,7 @@ ms.locfileid: "66056889"
 ### <a name="registry-entry"></a>Entrada do Registro  
  Se você desejar usar uma entrada de Registro para armazenar a configuração, poderá usar uma chave existente ou criar uma nova chave em HKEY_CURRENT_USER. A chave do Registro que você usa deve ter um valor denominado `Value`. O valor pode ser um DWORD ou uma cadeia de caracteres.  
   
- Se você selecionar o tipo de configuração **Entrada de Registro** , digitará o nome da chave do Registro na caixa de entrada de Registro. O formato é \<registry key>. Se desejar usar uma chave do Registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave. Por exemplo, para usar a chave MyPackage localizada em SSISPackages, digite `SSISPackages\MyPackage`.  
+ Se você selecionar o tipo de configuração **Entrada de Registro** , digitará o nome da chave do Registro na caixa de entrada de Registro. O formato é \<registry key>. Se você quiser usar uma chave do registro que não esteja na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave. Por exemplo, para usar a chave MyPackage localizada em SSISPackages, digite `SSISPackages\MyPackage`.  
   
 ### <a name="sql-server"></a>SQL Server  
  Se você selecionar o tipo de configuração **SQL Server** , especifique a conexão para o banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em que deseja armazenar as configurações. Você pode salvar as configurações em uma tabela existente ou criar uma tabela no banco de dados especificado.  

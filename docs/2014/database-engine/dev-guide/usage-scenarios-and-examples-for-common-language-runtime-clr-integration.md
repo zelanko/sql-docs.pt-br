@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30a54064d398ec6db09a9ccd54eed9411a7f905a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780706"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933207"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Cenários de uso e exemplos para a integração de CLR (Common Language Runtime)
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui aplicativos de exemplo, exemplos de pacote e vários exemplos de codificação que você pode usar para conhecer os recursos de programação da integração CLR (common language runtime).  
@@ -39,7 +38,7 @@ ms.locfileid: "62780706"
 |[Função de conversão e tipo de moeda](../../../2014/database-engine/dev-guide/currency-type-and-conversion-function.md)|Define um tipo de dados Currency definido pelo usuário por meio do C#.|  
 |[Manipulando objetos grandes usando CLR](../../../2014/database-engine/dev-guide/handling-large-objects-using-clr.md)|Demonstra a transferência de LOBs (objetos binários grandes) entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um sistema de arquivos acessível ao servidor usando procedimentos armazenados CLR.|  
 |[Exemplo pronto do Hello World](../../../2014/database-engine/dev-guide/hello-world-ready-sample.md)|Demonstra as operações básicas para criar, implantar e testar um procedimento armazenado internacionalizado simples baseado na integração CLR.|  
-|[Exemplo Hello World](../../../2014/database-engine/dev-guide/hello-world-sample.md)|Demonstra as operações básicas para criar, implantar e testar um procedimento armazenado baseado em integração CLR simples.|  
+|[Exemplo do Hello World](../../../2014/database-engine/dev-guide/hello-world-sample.md)|Demonstra as operações básicas para criar, implantar e testar um procedimento armazenado baseado em integração CLR simples.|  
 |[Exemplo de acesso a dados em processo](../../../2014/database-engine/dev-guide/in-process-data-access-sample.md)|Contém várias funções simples que demonstram vários recursos do provedor de acesso de dados CLR em processo.|  
 |[Exemplo de conjunto de resultados](../../../2014/database-engine/dev-guide/result-set-sample.md)|Demonstra como executar comandos durante a leitura dos resultados de uma consulta, sem abrir uma nova conexão e sem ler todos os resultados na memória.|  
 |[Exemplo Send DataSet](../../../2014/database-engine/dev-guide/send-dataset-sample.md)|Demonstra como retornar um conjunto de dados baseado no ADO.NET em um procedimento armazenado de servidor baseado em CLR como um conjunto de resultados para o cliente.|  

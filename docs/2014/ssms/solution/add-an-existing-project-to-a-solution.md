@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f86c4fd09033f0b50d46a09a35453ec6ef24b5bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058324"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Adicionar um projeto existente a uma solução
   Você pode adicionar um ou mais projetos a uma solução existente. Um projeto pode ser associado a mais de uma solução.  

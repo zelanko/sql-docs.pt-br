@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9af1d89e4bb53af3d3f640e7efb010e5ac8de35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064408"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Novo Agendamento de Trabalho: Propriedades do Agendamento de Trabalho
   Use essa página para exibir e alterar as propriedades da agenda.  
@@ -30,10 +29,10 @@ ms.locfileid: "62704621"
  **Trabalhos na agenda**  
  Exiba os trabalhos que usam a agenda.  
   
- **Tipo de agendamento**  
+ **Tipo de agenda**  
  Selecione o tipo de agenda.  
   
- **Habilitada**  
+ **Enabled**  
  Marque para habilitar ou desabilitar a agenda.  
   
 ## <a name="recurring-schedule-types-options"></a>Opções de tipos de agenda recorrentes  
@@ -43,10 +42,10 @@ ms.locfileid: "62704621"
  **Repete-se a cada**  
  Selecione o número de dias ou semanas entre ocorrências periódicas da agenda. Essa opção não está disponível para agendas que ocorrem mensalmente.  
   
- **Monday**  
+ **Segunda-feira**  
  Defina o trabalho para ocorrer em uma segunda-feira. Disponível somente para agendamentos semanais recorrentes.  
   
- **Terça**  
+ **Terça-feira**  
  Defina o trabalho para ocorrer em uma terça-feira. Disponível somente para agendamentos semanais recorrentes.  
   
  **Quarta-feira**  
@@ -55,16 +54,16 @@ ms.locfileid: "62704621"
  **Quinta-feira**  
  Defina o trabalho para ocorrer em uma quinta-feira. Disponível somente para agendamentos semanais recorrentes.  
   
- **Às**  
+ **Sexta-feira**  
  Defina o trabalho para ocorrer em uma sexta-feira. Disponível somente para agendamentos semanais recorrentes.  
   
  **Sábado**  
  Defina o trabalho para ocorrer em um sábado. Disponível somente para agendamentos semanais recorrentes.  
   
- **Sunday**  
+ **Domingo**  
  Defina o trabalho para ocorrer em um domingo. Disponível somente para agendamentos semanais recorrentes.  
   
- **Diário**  
+ **Day**  
  Selecione o dia do mês que a agenda ocorre. Disponível somente para agendas mensais recorrentes.  
   
  **de cada**  

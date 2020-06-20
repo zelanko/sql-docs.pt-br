@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5558bc5684f2eb9053c935543db0c05d6225daf7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797930"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934377"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows (Transact-SQL)
   Este tópico descreve como criar um ponto de extremidade de espelhamento de banco de dados que usa a Autenticação do Windows no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para oferecer suporte ao espelhamento de banco de dados ou ao [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige um ponto de extremidade de espelhamento de banco de dados. Uma instância do servidor só pode ter em um ponto de extremidade do espelhamento de banco de dados, que tem uma porta única. Um ponto de extremidade do espelhamento de banco de dados poderá usar qualquer porta que estiver disponível no sistema local quando o ponto de extremidade for criado. Todas as sessões de espelhamento de banco de dados em uma instância do servidor escutam aquela porta e todas as conexões que chegam para o espelhamento de banco de dados usam aquela porta.  
@@ -65,37 +64,37 @@ ms.locfileid: "72797930"
   
 4.  Para usar o Transact-SQL para criar um ponto de extremidade para ser usado com a Autenticação do Windows, use uma instrução CREATE ENDPOINT. A instrução leva o seguinte formato geral:  
   
-     Criar ponto de extremidade EndpointName * \<>*  
+     CRIAR PONTO DE EXTREMIDADE*\<endpointName>*  
   
      STATE=STARTED  
   
-     Como TCP (LISTENER_PORT = * \<listenerPortList>* )  
+     COMO TCP (LISTENER_PORT = *\<listenerPortList>* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [Authentication = **Windows** [ * \<authorizationMethod>* ]  
+     [autenticação = **Windows** [ *\<authorizationMethod>* ]  
   
      ]  
   
      [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [Algoritmo { * \<Algorithm>* }]  
+     [Algoritmo { *\<algorithm>* }]  
   
      ]  
   
-     [**,**] ROLE = *\<role>*  
+     [**,**] FUNÇÃO =*\<role>*  
   
      )  
   
-     where  
+     onde  
   
-    -   EndpointName>é um nome exclusivo para o ponto de extremidade de espelhamento de banco de dados da instância do servidor. * \<*  
+    -   *\<endpointName>* é um nome exclusivo para o ponto de extremidade de espelhamento de banco de dados da instância do servidor.  
   
     -   STARTED especifica que o ponto de extremidade deve ser iniciado e começar a escutar conexões. Um ponto de extremidade do espelhamento de banco de dados é normalmente criado no estado STARTED. Alternativamente, você pode iniciar uma sessão em um estado STOPPED (o padrão) ou no estado DISABLED.  
   
-    -   listenerPortList>é um número de porta única (*nnnn*) no qual você deseja que o servidor escute mensagens de espelhamento de banco de dados. * \<* Só o TCP é permitido; se qualquer outro protocolo for especificado causará um erro.  
+    -   *\<listenerPortList>* é um número de porta única (*nnnn*) no qual você deseja que o servidor escute mensagens de espelhamento de banco de dados. Só o TCP é permitido; se qualquer outro protocolo for especificado causará um erro.  
   
          Um número de porta só pode ser usado uma vez por um sistema de computador. Um ponto de extremidade do espelhamento de banco de dados poderá usar qualquer porta que estiver disponível no sistema local quando o ponto de extremidade for criado. Para identificar as portas que estão sendo usadas atualmente pelos pontos de extremidade de TCP no sistema, use a seguinte instrução Transact-SQL:  
   
@@ -106,7 +105,7 @@ ms.locfileid: "72797930"
         > [!IMPORTANT]  
         >  Cada instância do servidor requer uma e apenas uma porta do ouvinte exclusiva.  
   
-    -   Para a Autenticação do Windows, a opção AUTHENTICATION é opcional, a menos que você deseje que o ponto de extremidade use apenas NTLM ou Kerberos para autenticar conexões. authorizationMethod>especifica o método usado para autenticar conexões como um dos seguintes: NTLM, Kerberos ou Negotiate. * \<* O padrão, NEGOTIATE, faz o ponto de extremidade usar o protocolo de negociação Windows para escolher NTLM ou Kerberos. A negociação habilita conexões com ou sem autenticação, dependendo do nível de autenticação do ponto de extremidade oposto.  
+    -   Para a Autenticação do Windows, a opção AUTHENTICATION é opcional, a menos que você deseje que o ponto de extremidade use apenas NTLM ou Kerberos para autenticar conexões. *\<authorizationMethod>* Especifica o método usado para autenticar conexões como um dos seguintes: NTLM, KERBEROS ou NEGOTIAte. O padrão, NEGOTIATE, faz o ponto de extremidade usar o protocolo de negociação Windows para escolher NTLM ou Kerberos. A negociação habilita conexões com ou sem autenticação, dependendo do nível de autenticação do ponto de extremidade oposto.  
   
     -   ENCRYPTION é definido como REQUIRED por padrão. Isso especifica que todas as conexões para esse ponto de extremidade devem usar criptografia. Porém, você pode desabilitar a criptografia ou deixá-la opcional em um ponto de extremidade. As alternativas são como segue:  
   
@@ -118,19 +117,19 @@ ms.locfileid: "72797930"
   
          Se um ponto de extremidade requisitar criptografia, o outro ponto de extremidade deve ter ENCRYPTION definido como SUPPORTED ou REQUIRED.  
   
-    -   o>de algoritmo fornece a opção de especificar os padrões de criptografia para o ponto de extremidade. * \<* O valor do * \<algoritmo>* pode ser um dos seguintes algoritmos ou combinações de algoritmos: RC4, AES, AES RC4 ou RC4 AES.  
+    -   *\<algorithm>* fornece a opção de especificar os padrões de criptografia para o ponto de extremidade. O valor de *\<algorithm>* pode ser um dos seguintes algoritmos ou combinações de algoritmos: RC4, AES, AES RC4 ou RC4 AES.  
   
          AES RC4 especifica que esse ponto de extremidade negociará um algoritmo de criptografia, dando preferência ao algoritmo AES. RC4 AES especifica que esse ponto de extremidade negociará um algoritmo de criptografia, dando preferência ao algoritmo RC4. Se ambos os ponto de extremidade especificarem ambos os algoritmos, mas em ordens diferentes, vence o ponto de extremidade que aceita a conexão.  
   
         > [!NOTE]  
         >  O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.  
   
-    -   a função>define a função ou funções que o servidor pode executar. * \<* Especificar ROLE é necessário. Entretanto, a função do ponto de extremidade é relevante apenas para o espelhamento de banco de dados. Para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], a função do ponto de extremidade é ignorada.  
+    -   *\<role>* define a função ou funções que o servidor pode executar. Especificar ROLE é necessário. Entretanto, a função do ponto de extremidade é relevante apenas para o espelhamento de banco de dados. Para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], a função do ponto de extremidade é ignorada.  
   
          Para permitir que uma instância do servidor sirva como uma função em uma sessão de espelhamento de banco de dados e uma função diferente em outra sessão, especifique ROLE=ALL. Para restringir uma instância do servidor como sendo um parceiro ou uma testemunha, especifique ROLE=PARTNER ou ROLE=WITNESS, respectivamente.  
   
         > [!NOTE]  
-        >  Para obter mais informações sobre opções de espelhamento de banco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dados para edições diferentes do, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+        >  Para obter mais informações sobre opções de espelhamento de banco de dados para edições diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
      Para obter uma descrição completa da sintaxe CREATE ENDPOINT, veja [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   

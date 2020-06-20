@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59ce040242b87cfc955054e062a09fd579f77a14
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890159"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964836"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referência da interface do usuário do utilitário de Execução de Pacotes (DtExecUI)
-  Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos. Essa interface do usuário, que pode ser aberta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de ou digitando `dtexecui` em um prompt de comando, é uma alternativa à execução de pacotes usando a ferramenta de prompt de comando **dtexec** .  
+  Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos. Essa interface do usuário, que pode ser aberta de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou digitando `dtexecui` em um prompt de comando, é uma alternativa à execução de pacotes usando a ferramenta de prompt de comando **dtexec** .  
   
  Os pacotes são executados no mesmo processo que o utilitário **dtexecui.exe** . Como esse utilitário é uma ferramenta de 32 bits, os pacotes são executados por meio do **dtexecui.exe** em um ambiente de 64 bits no Windows on Win32 (WOW). Ao desenvolver e testar comandos por meio do utilitário dtexecui.exe em um computador de 64 bits, será necessário testar os comandos no modo de 64 bits com a versão de 64 bits do **dtexec.exe** antes de implantar ou agendar os comandos em um servidor de produção.  
   

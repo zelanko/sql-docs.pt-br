@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60ebcc5ae689b6781a17cc7725020f6e2382e987
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284949"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919118"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -56,7 +55,7 @@ ms.locfileid: "67284949"
   
  De modo contrário, às vezes você pode desejar que os pacotes pai e filho falhem em conjunto como uma unidade, ou que não incorra a sobrecarga adicional de outro processo. Por exemplo, se um processo filho falhar e o processamento subsequente no processo pai do pacote depender do sucesso do processo filho, o pacote filho deveria ser executado no processo do pacote pai.  
   
- Por padrão, a Propriedade ExecuteOutOfProcess da tarefa executar pacote é definida como `False`e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como `True`, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se você definir a propriedade como `True`, você não poderá depurar o pacote em uma instalação somente ferramentas. Você deve instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Instalar o Integration Services](../install-windows/install-integration-services.md)  
+ Por padrão, a Propriedade ExecuteOutOfProcess da tarefa executar pacote é definida como `False` e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como `True`, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se você definir a propriedade como `True`, você não poderá depurar o pacote em uma instalação somente ferramentas. Você deve instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Instalar o Integration Services](../install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>Estendendo transações  
  A transação que o pacote pai usa pode se estender ao pacote filho; logo, o trabalho que ambos os pacotes executa pode ser confirmado ou revertido. Por exemplo, o banco de dados insere que as execuções do pacote pai podem ser confirmadas ou revertidas, dependendo das inserções do banco de dados executadas pelo pacote filho, e vice-versa. Para obter mais informações, consulte [Inherited Transactions](../inherited-transactions.md).  

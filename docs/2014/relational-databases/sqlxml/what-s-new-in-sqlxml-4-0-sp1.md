@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 76c0b882b6ff198a38c0903a51e15b4664aafc29
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 880937520385fbe6ce64be3fdfcbbf7d11c73741
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702817"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009453"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>O que&#39;s New no SQLXML 4,0 SP1
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 inclui várias atualizações e aprimoramentos. Este tópico resume as atualizações e fornece links a informações mais detalhadas. O SQLXML 4.0 SP1 tem aprimoramentos adicionais para dar suporte aos novos tipos de dados apresentados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Este tópico abrange os seguintes assuntos:  

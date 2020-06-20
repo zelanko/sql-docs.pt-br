@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95de509e0c78c807c3c9de25b317eb2b540db93a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935028"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Conectar-se a um outro computador (SQL Server Configuration Manager)
   Este tópico descreve como conectar-se a outro computador no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Siga o primeiro procedimento para abrir o Windows Computer Management [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc), conecte-se ao computador e expanda a árvore Serviços e Aplicativos. Siga o segundo procedimento para criar um arquivo com um link para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager em um computador remoto.  
@@ -37,7 +36,7 @@ ms.locfileid: "62810344"
   
 3.  Na caixa de diálogo **Selecionar Computador** , na caixa de texto **Outro computador** , digite o nome do computador que você deseja administrar e clique em **OK**.  
   
-     O Computer Management exibe os serviços que estão sendo executados no computador remoto. O nó de nível superior é alterado para **Gerenciamento de Computador** \<*remotecomputer*>.  
+     O Computer Management exibe os serviços que estão sendo executados no computador remoto. O nó de nível superior muda para **Gerenciamento do computador** \<*remotecomputer*> .  
   
 4.  Na árvore de console, expanda **Serviços e Aplicativos**e expanda o **SQL Server Configuration Manager** para administrar os serviços do computador remoto.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62810344"
   
 8.  Na janela **Adicionar/Remover Snap-in** , clique em **OK**.  
   
-9. Expanda **Gerenciamento de Computador (***\<nome do computador>***)** e **Serviços e Aplicativos**.  
+9. Expanda **Gerenciamento do computador ( ***\<computer name>*** )** e **serviços e aplicativos**.  
   
 10. Clique com o botão direito do mouse no **SQL Server Configuration Manager**e clique em **Nova Janela daqui**.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80e858e75cec96b7e56e16fa7465a22048563726
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808394"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934597"
 ---
 # <a name="connection-properties-dialog-box"></a>caixa de diálogo Propriedades da conexão
   Use essa caixa de diálogo para exibir as propriedades da conexão atual. Essa caixa de diálogo está disponível quando você clica em **Exibir propriedades da conexão** em várias caixas de diálogo do Pesquisador de Objetos. As propriedades exibidas nessa página são somente leitura.  
@@ -29,7 +28,7 @@ ms.locfileid: "62808394"
  Observe que o período limite de consulta para o SQL Azure é de 30 minutos.  
   
 ## <a name="authentication"></a>Autenticação  
- Exiba propriedades de autenticação para a conexão atual. As propriedades de autenticação são o logon e método de autenticação quando a conexão foi estabelecida. Para alterar as propriedades de autenticação, desconectar de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e, em seguida, conectar o pesquisador de objetos ao servidor novamente, usando as opções de conexão desejadas.  
+ Exiba propriedades de autenticação para a conexão atual. As propriedades de autenticação são o logon e método de autenticação quando a conexão foi estabelecida. Para alterar as propriedades de autenticação, desconectar de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e, em seguida, conectar o pesquisador de objetos ao servidor novamente, usando as opções de conexão desejadas.  
   
  **Método de autenticação**  
  O método de autenticação usado para a conexão atual.  

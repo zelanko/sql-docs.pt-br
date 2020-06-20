@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c622d4d0c39d685b7808c6c4cf1bebbe7f455b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053046"
 ---
 # <a name="deprecation-announcement-event-class"></a>classe de evento Deprecation Announcement
   A classe de evento **Deprecation Announcement** ocorre quando você usa um recurso que será removido de uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não será removido da próxima versão principal. Para que seus aplicativos tenham tempo de vida mais longo, evite usar recursos que provocam a classe de evento **Deprecation Announcement** ou a **Deprecation Final Support** .  
@@ -47,7 +46,7 @@ ms.locfileid: "62662992"
 |Deslocamento|`int`|O deslocamento inicial da instrução no lote ou procedimento armazenado.|61|Sim|  
 |RequestID|`int`|ID da solicitação que contém a instrução.|49|Sim|  
 |ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
-|SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao usando Login1 e executar uma instrução como Login2 `SessionLoginName` , mostrará `LoginName` Login1 e mostrará Login2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
+|SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando Login1 e executar uma instrução como Login2, `SessionLoginName` mostrará Login1 e `LoginName` mostrará Login2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|`int`|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |SqlHandle|`image`|Identificador binário que pode ser usado para identificar lotes SQL ou procedimentos armazenados.|63|Sim|  
 |StartTime|`datetime`|Hora de início do evento, se disponível.|14|Sim|  

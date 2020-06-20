@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e63db637566cd9e2e481731c4d742f02c261ddd
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 02128dcaad829054fe513d8e5353223502cb1802
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964756"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   A caixa de diálogo **Parametrizar** permite que você associe um novo parâmetro ou um existente à propriedade de uma tarefa. Você abre a caixa de diálogo clicando com o botão direito em uma tarefa ou na guia Fluxo de Controle no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] e, em seguida, clique em **Parametrizar**. A lista a seguir descreve os elementos da interface de usuário na caixa de diálogo. Para obter mais informações sobre parâmetros, consulte [Parâmetros do Integration Services &#40;SSIS&#41;](integration-services-ssis-package-and-project-parameters.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "83856468"
  **Diferencia**  
  Especifique se o parâmetro é confidencial marcando ou desmarcando a caixa de seleção. Valores de parâmetros confidenciais são criptografados no catálogo e aparecem como um valor NULL quando exibidos com o Transact-SQL ou o SQL Server Management Studio.  
   
- **Necessária**  
+ **Necessário**  
  Especifique se o parâmetro exige que um valor diferente do padrão de design seja especificado para que o pacote possa ser executado.  
   
 ## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  

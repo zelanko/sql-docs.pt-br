@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 530a88929f2add4ff64a7495e5a81c50e552d0b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892431"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965256"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>Etapa 2: Adicionar e configurar registro em log
   Nesta tarefa, você habilitará o log do fluxo de dados no pacote Lesson 3.dtsx. Então, você configurará um provedor de log de arquivo de texto para armazenar os eventos PipelineExecutionPlan e PipelineExecuteTrees em log. O provedor de log de arquivos de texto cria logs que são fáceis exibir e transportar. A simplicidade destes arquivos de log faz estes arquivos especialmente úteis durante a fase de teste básico de um pacote. É possível também exibir as entradas de log na janela Eventos de Log do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
@@ -30,15 +29,15 @@ ms.locfileid: "62892431"
   
      Integration Services adiciona um novo provedor de log de arquivo de texto ao pacote com o **provedor de log SSIS de nome padrão para arquivos de texto**. Agora é possível configurar o novo provedor de log.  
   
-4.  Na coluna **nome** , digite `Lesson 3 Log File`.  
+4.  Na coluna **nome** , digite `Lesson 3 Log File` .  
   
 5.  Opcionalmente, modifique a **Descrição**.  
   
-6.  Na coluna **configuração** , clique em ** \<nova conexão>** para especificar o destino no qual as informações de log são gravadas.  
+6.  Na coluna **Configuração** , clique em **\<New Connection>** para especificar o destino no qual as informações de log serão gravadas.  
   
      Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos** , para **Tipo de uso**, selecione **Criar Arquivo**e clique em **Procurar**. Por padrão, a caixa de diálogo **Selecione Arquivo** abrirá a pasta do projeto, mas você pode salvar o log em qualquer localização.  
   
-7.  Na caixa de diálogo **Selecionar arquivo** , na caixa **nome do arquivo** , `TutorialLog.log`digite e clique em **abrir**.  
+7.  Na caixa de diálogo **Selecionar arquivo** , na caixa **nome do arquivo** `TutorialLog.log` , digite e clique em **abrir**.  
   
 8.  Clique em **OK** para fechar a caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos** .  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62892431"
   
 12. Clique em **Básico** para ocultar as categorias de informações.  
   
-13. Na guia **provedor e logs** , na coluna **nome** , selecione `Lesson 3 Log File`. Assim que tiver criado um provedor de log para seu pacote, poderá, como opção, retirar a seleção para temporariamente desligar o registro em log, sem ter que excluir e recriar o provedor de log.  
+13. Na guia **provedor e logs** , na coluna **nome** , selecione `Lesson 3 Log File` . Assim que tiver criado um provedor de log para seu pacote, poderá, como opção, retirar a seleção para temporariamente desligar o registro em log, sem ter que excluir e recriar o provedor de log.  
   
 14. Clique em **OK**.  
   

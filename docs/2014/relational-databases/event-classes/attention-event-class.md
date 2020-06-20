@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 695214082f9d2d3c2655d2e1da00c5d1db9697a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7f032d4e58dd0539d2bbe05d0d5ceebec800edd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031111"
 ---
 # <a name="attention-event-class"></a>classe de evento Attention
   A classe de evento **Attention** indica que ocorreu um evento que requer atenção, como cancelamentos, solicitações de interrupção de cliente e perda de conexões com clientes. Operações de cancelamento também podem ser vistas como parte da implementação de tempos limite de acesso a dados do driver.  

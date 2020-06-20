@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49c6031d15a2140f5a5c269d90cce0cd230eee1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211924"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055231"
 ---
-# <a name="programming-languages"></a>Linguagens de Programação
-  Esta seção descreve como programar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Management Objects (SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) em Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)] .net, Visual C# .NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] e Visual C++.  
+# <a name="programming-languages"></a>Linguagens de programação
+  Esta seção descreve como programar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (Smo) em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .net e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++.  
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
