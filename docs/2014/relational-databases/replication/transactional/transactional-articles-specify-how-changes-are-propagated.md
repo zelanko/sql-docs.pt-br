@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb07987bfdca341a01a523c13db3e346ab5085f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016572"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Especificar como as alterações são propagadas para artigos transacionais
   A replicação transacional permite que você especifique como as alterações de dados são propagadas do Publicador aos Assinantes. Para cada tabela publicada, você pode especificar uma das quatro maneiras em que cada operação (INSERT, UPDATE ou DELETE) deverá ser propagada ao Assinante:  
@@ -37,13 +36,13 @@ ms.locfileid: "62655671"
 ## <a name="default-and-custom-stored-procedures"></a>Procedimentos armazenados padrão e personalizados  
  Os três procedimentos que a replicação cria por padrão para cada artigo de tabela são:  
   
--   **sp_MSins_\<** *tablename* **>**, que manipula inserções.  
+-   **sp_MSins_ \<** *tablename* **> **, que manipula inserções.  
   
--   **sp_MSupd_\<** *tablename* **>**, que manipula atualizações.  
+-   **sp_MSupd_ \<** *tablename* **> **, que manipula as atualizações.  
   
--   **sp_MSdel_\<** *tablename* **>**, que manipula exclusões.  
+-   **sp_MSdel_ \<** *tablename* **> **, que manipula as exclusões.  
   
- O ** \< ***tablename*** TableName> ** usado no procedimento depende de como o artigo foi adicionado à publicação e se o banco de dados de assinatura contém uma tabela de mesmo nome com um proprietário diferente.  
+ O **\<***tablename***>** usado no procedimento depende de como o artigo foi adicionado à publicação e se o banco de dados de assinatura contém uma tabela de mesmo nome com um proprietário diferente.  
   
  Qualquer um desses procedimentos pode ser substituído com um procedimento personalizado que você especifica ao adicionar um artigo a uma publicação. Os procedimentos personalizados são usados se um aplicativo requerer lógica personalizada, como inserir dados em uma tabela de auditoria quando uma linha é atualizada em um Assinante. Para obter mais informações sobre como especificar procedimentos armazenados personalizados, consulte os tópicos de instruções relacionados acima.  
   

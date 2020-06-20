@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36409f2ce256325da1c9849e5bec7e7ce114cf25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014713"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Gerenciar o controle de alterações (SQL Server)
   Este tópico descreve como gerenciar o controle de alterações. Ele também descreve como configurar a segurança e determinar os efeitos sobre o armazenamento e o desempenho quando você usa o controle de alterações.  

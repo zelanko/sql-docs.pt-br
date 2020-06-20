@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 615582b2d961f87a2d3df151175d7bd5d06e305f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f827c05952eadfdae4b666f256750760959bf962
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000379"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049409"
 ---
 # <a name="monitoring-replication"></a>Monitorando (Replicação)
   Monitorar uma topologia de replicação é um aspecto importante na implantação da replicação. Já que a atividade de replicação é distribuída, é essencial controlar sua atividade e o status em todos os computadores envolvidos na replicação. As seguintes ferramentas podem ser usadas para monitorar a replicação:  

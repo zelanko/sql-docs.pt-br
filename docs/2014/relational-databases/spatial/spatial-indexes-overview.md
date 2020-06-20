@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36406bd60b4204469aca3d20862020870a8832fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176656"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068386"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a dados e índices espaciais. Um *índice espacial* é um tipo de índice estendido que permite indexar uma coluna espacial. Uma coluna espacial é uma coluna de uma tabela que contém tipo de dados espaciais, como `geometry` ou `geography`.
@@ -58,7 +57,7 @@ ms.locfileid: "78176656"
  Você pode controlar o processo de decomposição especificando densidades de grade não padrão. Por exemplo, densidades diferentes de grade em diferentes níveis podem ser úteis para ajuste fino de um índice com base no tamanho do espaço indexado e nos objetos na coluna espacial.
 
 > [!NOTE]
->  As densidades de grade de um índice espacial são visíveis nas colunas level_1_grid, level_2_grid, level_3_grid, e level_4_grid da exibição de catálogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) quando o nível de compatibilidade do banco de dados é definido como 100 ou abaixo. As `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` opções de esquema de mosaico não preenchem essas colunas. a exibição de catálogo sys. `NULL` spatial_index_tessellations tem valores para essas colunas quando as opções de grade automática são usadas.
+>  As densidades de grade de um índice espacial são visíveis nas colunas level_1_grid, level_2_grid, level_3_grid, e level_4_grid da exibição de catálogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) quando o nível de compatibilidade do banco de dados é definido como 100 ou abaixo. As `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` Opções de esquema de mosaico não preenchem essas colunas. a exibição de catálogo sys. spatial_index_tessellations tem `NULL` valores para essas colunas quando as opções de grade automática são usadas.
 
 ###  <a name="tessellation"></a><a name="tessellation"></a> Mosaico
  Após a decomposição de um espaço indexado em uma hierarquia de grade, o índice espacial lê os dados da coluna espacial, linha a linha. Depois de ler os dados de um objeto espacial (ou instância), o índice espacial executa um *processo de mosaico* para esse objeto. O processo de mosaico ajusta o objeto na hierarquia da grade associando o objeto a um conjunto de células da grade tocadas por ele (*células tocadas*). Iniciando no nível 1 da hierarquia de grade, o processo de mosaico continua com *amplitude primeiro* em todo o nível. Potencialmente, o processo pode continuar por todos os quatro níveis, um nível de cada vez.
@@ -98,7 +97,7 @@ ms.locfileid: "78176656"
 
  Por exemplo, considere a ilustração anterior que mostra um octógono que se ajusta completamente à célula 15 da grade de nível 1. Na figura, a célula 15 foi incluída no mosaico, dissecando o octógono em nove células de nível 2. Esta ilustração pressupõe que o limite de células por objeto é 9 ou maior. No entanto, se o limite de células por objeto fosse 8 ou menor, a célula 15 não seria incluída no mosaico e a apenas a célula 15 seria contada para o objeto.
 
- Por padrão, o limite de células por objeto é de 16, o que fornece uma troca satisfatória entre espaço e precisão para a maior parte dos índices espaciais. No entanto, a instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] dá`=`suporte a uma cláusula CELLS_PER_OBJECT*n* que permite especificar um limite de células por objeto entre 1 e 8192, inclusive.
+ Por padrão, o limite de células por objeto é de 16, o que fornece uma troca satisfatória entre espaço e precisão para a maior parte dos índices espaciais. No entanto, a instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] dá suporte a uma cláusula CELLS_PER_OBJECT `=` *n* que permite especificar um limite de células por objeto entre 1 e 8192, inclusive.
 
 > [!NOTE]
 >  A configuração **cells_per_object** de um índice espacial é visível na exibição de catálogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .
@@ -113,9 +112,9 @@ ms.locfileid: "78176656"
 ###  <a name="tessellation-schemes"></a><a name="schemes"></a> Esquemas de mosaico
  O comportamento de um índice espacial depende parcialmente de seu *esquema de mosaico*. O esquema de mosaico é específico ao tipo de dados. No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], índices espaciais oferecem suporte a dois esquemas de mosaico:
 
--   *Mosaico de grade geométrica*, que é o `geometry` esquema para o tipo de dados.
+-   *Mosaico de grade geométrica*, que é o esquema para o `geometry` tipo de dados.
 
--   *Mosaico de grade geography*, que se `geography` aplica a colunas do tipo de dados.
+-   *Mosaico de grade geography*, que se aplica a colunas do `geography` tipo de dados.
 
 > [!NOTE]
 >  A configuração **tessellation_scheme** de um índice espacial é visível na exibição de catálogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .
@@ -124,10 +123,10 @@ ms.locfileid: "78176656"
  O mosaico GEOMETRY_AUTO_GRID é o esquema de mosaico padrão para o tipo de dados `geometry` no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e versões posteriores.  O mosaico GEOMETRY_GRID é o único esquema de mosaico disponível para tipos de dados geometry no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta seção discute aspectos do mosaico de grade geométrica que são relevantes para trabalhar com índices espaciais: métodos com suporte e caixas delimitadoras.
 
 > [!NOTE]
->  Você pode especificar explicitamente esse esquema de mosaico usando a cláusula using (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
+>  Você pode especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
 ##### <a name="the-bounding-box"></a>A caixa delimitadora
- Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas `(` _, x-min_**,**_y-min_ `)` e `(` _x-Max_**,**_y-Max_`)`, que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:
+ Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, `(` _x-min_**,**_y-min_ `)` e `(` _x-Max_**,**_y-Max_ `)` , que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:
 
 -   *x-min* é a coordenada X do canto inferior esquerdo da caixa delimitadora.
 
@@ -140,11 +139,11 @@ ms.locfileid: "78176656"
 > [!NOTE]
 >  Essas coordenadas são especificadas pela cláusula BOUNDING_BOX da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
- As `(` _coordenadas x-min_**,**_y-min_ `)` e `(` _x-Max_**,**_y-Max_ `)` determinam o posicionamento e as dimensões da caixa delimitadora. O espaço fora da caixa delimitadora é tratado como uma única célula numerada como 0.
+ As `(` coordenadas _x-min_**,**_y-min_ `)` e `(` _x-Max_**,**_y-Max_ `)` determinam o posicionamento e as dimensões da caixa delimitadora. O espaço fora da caixa delimitadora é tratado como uma única célula numerada como 0.
 
  O índice espacial decompõe o espaço dentro da caixa delimitadora. A grade de nível 1 da hierarquia de grade preenche a caixa delimitadora. Para colocar um objeto geométrico na hierarquia da grade, o índice espacial compara as coordenadas do objeto com as coordenadas da caixa delimitadora.
 
- A ilustração a seguir mostra os pontos definidos pelas `(` _x-min_**,**_y-min_ `)` e `(` _x-Max_**,**_y-Max_ `)` da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.
+ A ilustração a seguir mostra os pontos definidos pelas `(` coordenadas _x-min_**,**_y-min_ `)` e `(` _x-Max_**,**_y-Max_ `)` da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.
 
  ![Caixa delimitadora mostrando coordenadas e a célula 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Caixa delimitadora mostrando coordenadas e a célula 0.")
 
@@ -157,7 +156,7 @@ ms.locfileid: "78176656"
  Este esquema de mosaico aplica-se apenas a uma coluna de `geography`. Esta seção resume os métodos que têm suporte do mosaico de grade geográfica e discute como o espaço geodésico é projetado em um plano que, em seguida, é decomposto em uma hierarquia de grade.
 
 > [!NOTE]
->  Você pode especificar explicitamente esse esquema de mosaico usando a cláusula using (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
+>  Você pode especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
 ##### <a name="projection-of-the-geodetic-space-onto-a-plane"></a>Projeção do espaço geodésico em um plano
  Computações em instâncias (objetos) de `geography` tratam o espaço que contém os objetos como um elipsoide geodésico. Para decompor esse espaço, o esquema de mosaico de grade geográfica divide a superfície do elipsoide em seus hemisférios superior e inferior e executa as seguintes etapas:

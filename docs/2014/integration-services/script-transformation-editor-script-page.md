@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f172aa778cbaa959671da870521641147186f571
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056066"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964016"
 ---
 # <a name="script-transformation-editor-script-page"></a>Editor de Transformação Scripts (página Script)
   Use a guia **Script** da caixa de diálogo **Editor de Transformação Scripts** para especificar um script e propriedades relacionadas.  

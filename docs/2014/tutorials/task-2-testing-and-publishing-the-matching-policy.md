@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434052f26f8cddcb818decdae42e573a10edc678
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006553"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarefa 2: Testando e publicando a política de correspondência
   Nesta tarefa, você testará e publicará a política de correspondência **remover fornecedores duplicados** .  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ffb1d252167250cbb6cf665d8b3f70179e0285b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 89bc125be4f6ae3aca7150082ddf28107c2706f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015450"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Usando o provedor SQLXMLOLEDB (SQLXML 4.0)
   Os tópicos desta seção fornecem aplicativos de exemplo de ADO que ilustram o uso de propriedades específicas do provedor SQLXMLOLEDB.  

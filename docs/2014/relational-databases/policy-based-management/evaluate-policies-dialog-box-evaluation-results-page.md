@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e645d5cd606f9a466bec35bef4159ef7dd32644
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047787"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Caixa de diálogo Avaliar Políticas, página Resultados da Avaliação
   Use esta caixa de diálogo para exibir os resultados da avaliação de políticas e para aplicar políticas do Gerenciamento Baseado em Políticas em um destino que não está em conformidade com as políticas.  

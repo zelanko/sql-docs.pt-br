@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0104fe6b64ff2ecc1a37bb1da9691e34d7913f21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381738"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061089"
 ---
 # <a name="task-4-setting-domain-rules"></a>Tarefa 4: Definindo regras de domínio
-  Nesta tarefa, você cria uma regra para o domínio de **email de contato** para verificar se o endereço de email termina com ** \@Adventure-Works.com**. Consulte o tópico [criando uma regra de domínio](https://msdn.microsoft.com/library/hh510397.aspx) para obter mais detalhes sobre a página.  
+  Nesta tarefa, você cria uma regra para o domínio de **email de contato** para verificar se o endereço de email termina com ** \@ Adventure-Works.com**. Consulte o tópico [criando uma regra de domínio](https://msdn.microsoft.com/library/hh510397.aspx) para obter mais detalhes sobre a página.  
   
 1.  Clique em **email de contato** na lista de **domínios**.  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72381738"
   
 5.  No painel **criar uma regra** , clique na **seta para baixo**e selecione **valor termina com**.  
   
-6.  Digite ** \@Adventure-Works.com** na caixa de texto e pressione **Tab**. Você pode adicionar mais condições clicando em **Adicionar uma nova condição ao** botão da barra de ferramentas da cláusula selecionada no painel **criar uma regra** .  
+6.  Digite ** \@ Adventure-Works.com** na caixa de texto e pressione **Tab**. Você pode adicionar mais condições clicando em **Adicionar uma nova condição ao** botão da barra de ferramentas da cláusula selecionada no painel **criar uma regra** .  
   
      ![Regra Validação de Email](../../2014/tutorials/media/et-settingdomainrules-02.jpg "Regra Validação de Email")  
   
@@ -44,9 +43,9 @@ ms.locfileid: "72381738"
   
      ![Caixa de diálogo de regra Testar Domínio](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Caixa de diálogo de regra Testar Domínio")  
   
-9. Digite **frank7\@Adventure-Works.com** (um valor válido) na coluna **email de contato** .  
+9. Digite **frank7 \@ Adventure-Works.com** (um valor válido) na coluna **email de contato** .  
   
-10. Repita as duas etapas anteriores para **Adicionar\@joe2 Adventure-Work.com** (um valor inválido sem ' ').  
+10. Repita as duas etapas anteriores para adicionar **joe2 \@ Adventure-Work.com** (um valor inválido sem ' ').  
   
 11. Clique no botão último (**teste a regra de domínio em todos os termos**) na barra de ferramentas para testar os dados de entrada em relação à regra.  
   

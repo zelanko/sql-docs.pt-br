@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59bb28e8afbee86a901e69ea745b13352ff0f438
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068689"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar uma assinatura transacional sem um instantâneo
   Por padrão, uma assinatura a uma publicação transacional é inicializada com um instantâneo, que é gerado pelo Agente de Instantâneo e aplicado pelo Agente de Distribuição. Em alguns cenários, como os que envolvem grandes conjuntos de dados iniciais, é preferível inicializar uma assinatura usando outro método. Outros métodos de inicializar um Assinante incluem:  
@@ -74,6 +73,6 @@ ms.locfileid: "62721147"
  Para inicializar uma assinatura com um método alternativo, consulte [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Inicializar uma assinatura](initialize-a-subscription.md)  
+ [Inicializar uma Assinatura](initialize-a-subscription.md)  
   
   

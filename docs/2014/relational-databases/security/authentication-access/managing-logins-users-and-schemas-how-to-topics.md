@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7427c05643a8619a5913f568ec50fb7ecf4ae34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016253"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Tópicos de instruções sobre gerenciamento de logons, usuários e esquemas
   Esta página fornece links para tópicos que mostram a você como gerenciar logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , usuários de banco de dados e esquemas de banco de dados, e também como unir uma função e conceder permissões para uma entidade de segurança.  

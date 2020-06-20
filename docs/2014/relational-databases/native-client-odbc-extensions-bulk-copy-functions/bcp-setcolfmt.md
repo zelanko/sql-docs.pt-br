@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a8bd75854cc81c661d6e8ac60cab88e23d6efffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705290"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019237"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   A função **bcp_setcolfmt** substitui [bcp_colfmt](bcp-colfmt.md). Ao especificar a ordenação de coluna, a função **bcp_setcolfmt** precisa ser usada. É possível usar[bcp_setbulkmode](bcp-setbulkmode.md) para especificar mais de um formato de coluna.  

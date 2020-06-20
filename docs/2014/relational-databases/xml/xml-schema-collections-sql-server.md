@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ee4757f1353278447ee55e97c8d4ba23aa2d649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702257"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046498"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
   Conforme descrito no tópico [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), o SQL Server fornece armazenamento nativo de dados XML por meio do `xml` tipo de dados. Opcionalmente, você pode associar esquemas XSD a uma variável ou a uma coluna do `xml` tipo por meio de uma coleção de esquema XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
@@ -119,7 +118,7 @@ ms.locfileid: "82702257"
   
 -   **Customer** é um componente de ELEMENT.  
   
- Quando você importa um esquema no banco de dados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não armazena o próprio esquema. Em vez disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os vários componentes individuais. Ou seja, a marca \<Schema> não é armazenada, apenas os componentes que estão definidos dentro dela são preservados. Todos os elementos do esquema não são preservados. Se a marca \<Schema> contiver atributos que especificam o comportamento padrão de seus componentes, esses atributos serão movidos para os componentes do esquema dentro dela durante o processo de importação, conforme mostrado na tabela a seguir.  
+ Quando você importa um esquema no banco de dados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não armazena o próprio esquema. Em vez disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os vários componentes individuais. Ou seja, a \<Schema> marca não é armazenada, somente os componentes definidos dentro dela são preservados. Todos os elementos do esquema não são preservados. Se a \<Schema> marca contiver atributos que especificam o comportamento padrão de seus componentes, esses atributos serão movidos para os componentes do esquema dentro dele durante o processo de importação, conforme mostrado na tabela a seguir.  
   
 |Nome do atributo|Comportamento|  
 |--------------------|--------------|  

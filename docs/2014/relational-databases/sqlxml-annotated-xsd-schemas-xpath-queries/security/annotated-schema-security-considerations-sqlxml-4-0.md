@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a04bbba08d3609fd9a4fccb96e515c23db62f6fb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 098f554410a846ed0223d17117b51025dfcf7897
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717694"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002763"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>Considerações sobre a segurança de esquemas anotados (SQLXML 4.0)
   Seguem diretrizes de segurança para o uso de esquemas anotados:  

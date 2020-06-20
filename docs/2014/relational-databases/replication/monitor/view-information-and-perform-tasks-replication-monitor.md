@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60586083e8bdfe7f0227db605d9f36d50a59ef0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667121"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049361"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Exibir informações e executar tarefas usando o Replication Monitor
 O Replication Monitor fornece uma série de guias e opções para exibir informações e realizar diversas tarefas. Este artigo descreve os diferentes itens que podem ser exibidos e realizados ao usar o Replication Monitor.
@@ -64,7 +63,7 @@ O Replication Monitor fornece uma série de guias e opções para exibir informa
   
 -   **Publicações** – essa guia exibe informações sobre todas as publicações no Publicador selecionado.  
   
--   **Lista de observação da assinatura** -esta guia destina-se a exibir informações sobre assinaturas de todas as publicações disponíveis no Publicador selecionado que têm erros, avisos ou o desempenho mais baixo. Essa guia não é exibida para distribuidores que executam [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]versões anteriores ao.  
+-   **Lista de observação da assinatura** -esta guia destina-se a exibir informações sobre assinaturas de todas as publicações disponíveis no Publicador selecionado que têm erros, avisos ou o desempenho mais baixo. Essa guia não é exibida para distribuidores que executam versões anteriores ao [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
 -   Guia **agentes** – essa guia exibe informações detalhadas sobre os agentes e trabalhos que são usados por todos os tipos de replicação. A guia também permite que você inicie e interrompa cada agente e trabalho.  
   
@@ -106,7 +105,7 @@ O Replication Monitor fornece uma série de guias e opções para exibir informa
   
 1.  Expanda um Grupo do publicador no painel esquerdo e clique em um Publicador.   
 2.  Para exibir informações sobre assinaturas, clique na guia **Lista de Observação da Assinatura** .  
-3.  Selecione o tipo de assinatura a ser exibido da lista suspensa **Mostrar \<Assinaturas <SubscriptionType>** . Para exibir somente as assinaturas em um determinado estado, por exemplo, em sincronização, selecione uma opção da lista suspensa **Mostrar** .    
+3.  Selecione o tipo de assinatura a ser exibido na lista suspensa **Mostrar \<SubscriptionType> assinaturas** . Para exibir somente as assinaturas em um determinado estado, por exemplo, em sincronização, selecione uma opção da lista suspensa **Mostrar** .    
 4.  Para exibir e modificar as propriedades da assinatura, clique com o botão direito do mouse na assinatura  e, então, clique em **Propriedades**. Você também pode acessar informações mais detalhadas e executar tarefas nessa guia. Para obter mais informações, consulte [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
 
 ## <a name="for-publication-agents"></a>Para Agentes de Publicação

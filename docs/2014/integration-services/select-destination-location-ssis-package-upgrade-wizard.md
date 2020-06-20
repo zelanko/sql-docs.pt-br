@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c397e1e174703b40a7bada8ed6fe42675a0c9c24
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963816"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Selecionar Local de Destino (Assistente de Atualização de Pacotes SSIS)
   Use a página **Selecionar Local de Destino** para especificar o destino no qual os pacotes atualizados serão salvos.  
@@ -43,7 +42,7 @@ ms.locfileid: "66056006"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Sistema de arquivos**|Indica que os pacotes atualizados serão salvos em uma pasta no computador local.|  
+|**Sistema de Arquivos**|Indica que os pacotes atualizados serão salvos em uma pasta no computador local.|  
 |**Armazenamento de Pacotes SSIS**|Indica que os pacotes atualizados serão salvos no armazenamento de pacotes do Integration Services. O repositório de pacotes consiste no conjunto de pastas do sistema de arquivos gerenciado pelo serviço do Integration Services. Para obter mais informações, consulte [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](service/package-management-ssis-service.md).<br /><br /> Selecione esse valor para exibir as opções dinâmicas de **Origem do pacote** correspondentes.|  
 |**Microsoft SQL Server**|Indica que os pacotes atualizados serão salvos em uma instância existente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Selecione esse valor para exibir as opções dinâmicas de **Origem do pacote** correspondentes.|  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66056006"
  **Servidor**  
  Digite o nome do servidor onde os pacotes de atualização serão salvos ou selecione esse servidor na lista.  
   
- **Usar a autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Selecione para usar a Autenticação do Windows para estabelecer conexão com o servidor.  
   
  **Usar Autenticação do SQL Server**  

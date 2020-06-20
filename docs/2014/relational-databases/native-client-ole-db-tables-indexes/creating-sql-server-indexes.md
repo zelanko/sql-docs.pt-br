@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4d810978a7326b1be4356d60c495b24806d95183
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3693355eec7a290c03658c10db500161aa52062d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704560"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017909"
 ---
 # <a name="creating-sql-server-indexes"></a>Criando índices do SQL Server
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe a função **IIndexDefinition:: CreateIndex** , permitindo que os consumidores definam novos índices em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas.  

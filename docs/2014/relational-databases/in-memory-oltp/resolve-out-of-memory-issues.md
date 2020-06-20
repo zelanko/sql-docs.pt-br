@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f0ba7a901a3e55644b3129ebbd9d9e2d3e2944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025833"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa mais memória e de maneiras diferentes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível que a quantidade de memória que você instalou e atribuiu para o [!INCLUDE[hek_2](../../includes/hek-2-md.md)] torne-se inadequada para suas necessidades de crescimento. Se for o caso, você pode ficar sem memória. Este tópico aborda como se recuperar de uma situação de OOM. Veja [Monitorar e solucionar problemas de uso da memória](monitor-and-troubleshoot-memory-usage.md) para obter diretrizes que podem ajudá-lo a evitar várias situações de OOM.  
@@ -24,12 +23,12 @@ ms.locfileid: "67624403"
   
 |Tópico|Visão geral|  
 |-----------|--------------|  
-| [Resolver falhas de restauração de banco de dados devido a OOM](#resolve-database-restore-failures-due-to-oom) |O que fazer se você receber a mensagem de erro “Falha na operação de restauração do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '”.|  
+| [Resolver falhas de restauração de banco de dados devido a OOM](#resolve-database-restore-failures-due-to-oom) |O que fazer se você receber a mensagem de erro "falha na operação de restauração do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '."|  
 | [Resolver o impacto de pouca memória ou condições de OOM na carga de trabalho](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|O que fazer se você desconfiar que os problemas de pouca memória estão comprometendo o desempenho.|  
-| [Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |O que fazer se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '”. ...” quando a memória disponível é suficiente para a operação.|  
+| [Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |O que fazer se você receber a mensagem de erro "desautorizando as alocações de página do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '. ...” quando a memória disponível é suficiente para a operação.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Resolver falhas de restauração de banco de dados devido a OOM  
- Ao tentar restaurar um banco de dados, você pode receber a mensagem de erro: "falha na operação de restauração do banco de dados '*\<DatabaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'." Antes de restaurar com êxito o banco de dados, você deve resolver o problema de memória insuficiente disponibilizando mais memória.  
+ Ao tentar restaurar um banco de dados, você pode receber a mensagem de erro: "falha na operação de restauração do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '." Antes de restaurar com êxito o banco de dados, você deve resolver o problema de memória insuficiente disponibilizando mais memória.  
   
  Para resolver a falha de recuperação devido a OOM, aumente a memória disponível usando qualquer ou todos esses meios para aumentar temporariamente a memória disponível para a operação de recuperação.  
   
@@ -128,14 +127,14 @@ GO
  Para obter informações sobre os valores máximos para MAX_MEMORY_PERCENT, confira a seção do tópico [Percentual de memória disponível para índices e tabelas com otimização de memória](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes).  
   
 ##### <a name="install-additional-memory"></a>Instalar a memória adicional  
- Por fim, a melhor solução, se possível, é instalar mais memória física. Se você fizer isso, lembre-se de que você provavelmente também poderá aumentar o valor de MAX_MEMORY_PERCENT (consulte o subtópico [alterar MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool existente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), pois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provavelmente não precisará de mais memória, o que permitirá que você torne a maior parte do que a memória recém-instalada disponível para o pool de recursos.  
+ Por fim, a melhor solução, se possível, é instalar mais memória física. Se você fizer isso, lembre-se de que você provavelmente também poderá aumentar o valor de MAX_MEMORY_PERCENT (consulte o subtópico [alterar MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool existente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), pois o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provavelmente não precisará de mais memória, o que permitirá que você torne a maior parte do que a memória recém-instalada disponível para o pool de recursos.  
   
 > [!IMPORTANT]  
 >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT como o mesmo.   
 > Consulte o tópico [práticas recomendadas: usando o OLTP na memória em um ambiente de VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível  
- Se você receber a mensagem de erro "desautorizando as alocações de página do banco de dados '*\<DatabaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'. Consulte '<https://go.microsoft.com/fwlink/?LinkId=330673>' para obter mais informações. " No log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra devido a um Administrador de Recursos desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
+ Se você receber a mensagem de erro "desautorizando as alocações de página para o banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '. Consulte ' <https://go.microsoft.com/fwlink/?LinkId=330673> ' para obter mais informações. " No log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra devido a um Administrador de Recursos desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
   
  Para resolver isso, é necessário habilitar o Administrador de Recursos.  
   
