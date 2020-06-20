@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1b930b3238cb541965e1984d1561f1a1c22d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011153"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004211"
 ---
 # <a name="limit-search-results-with-rank"></a>Limite resultados de pesquisa com RANK
   As funções [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) retornam uma coluna denominada RANK que contém valores ordinais de 0 a 1000 (valores de classificação). Esses valores são usados para classificar as linhas retornadas de acordo com o grau de correspondência com os critérios de seleção. Os valores de classificação indicam apenas uma ordem relativa de relevância das linhas no conjunto de resultados, sendo que um valor inferior indica menor relevância. Os valores reais não são importantes e geralmente são diferentes em cada execução da consulta.  
@@ -143,7 +142,7 @@ GO
   
  Estatísticas como `IndexRowCount` podem variar muito. Por exemplo, se um catálogo tem 2 bilhões de linhas no índice mestre, um novo documento será indexado no índice intermediário da memória, e a classificação daquele documento será com base no número de documentos no índice da memória que poderão ser inclinados quando comparados às classificações dos documentos do índice mestre. Por esta razão, recomenda-se que, após qualquer população que resulte em um grande número de linhas, os índices indexados ou reindexados sejam mesclados em um índice mestre usando a função ALTER FULLTEXT CATALOG... Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. O Mecanismo de Texto Completo também mesclará automaticamente os índices com base em parâmetros como o número e o tamanho dos índices intermediários.  
   
- Os valores `MaxOccurrence` são normalizados em 1 de 32 intervalos. Isto significa, por exemplo, que um documento de 50 palavras é tratado da mesma forma que um documento de 100 palavras. Abaixo está a tabela usada para normalização. Como os comprimentos do documento estão no intervalo entre os valores de tabela adjacentes 32 e 128, eles são efetivamente tratados como tendo o mesmo comprimento, 128 `docLength` (32 < <= 128).  
+ Os valores `MaxOccurrence` são normalizados em 1 de 32 intervalos. Isto significa, por exemplo, que um documento de 50 palavras é tratado da mesma forma que um documento de 100 palavras. Abaixo está a tabela usada para normalização. Como os comprimentos do documento estão no intervalo entre os valores de tabela adjacentes 32 e 128, eles são efetivamente tratados como tendo o mesmo comprimento, 128 (32 < `docLength` <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 709707caa9087ceadaa11cfd4b415eadd6c3702c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927927"
 ---
 # <a name="use-sql-server-management-studio"></a>Usar o SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) é um ambiente integrado para acessar, configurar, gerenciar, administrar e desenvolver todos os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O SSMS combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para desenvolvedores e administradores de todos os níveis de conhecimento.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) é um ambiente integrado para acessar, configurar, gerenciar, administrar e desenvolver todos os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . O SSMS combina um amplo grupo de ferramentas gráficas com vários editores de script avançados para fornecer acesso ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para desenvolvedores e administradores de todos os níveis de conhecimento.  
   
  O SSMS combina os recursos do Enterprise Manager, do Analisador de Consultas e do Analysis Manager, incluídos em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], em um único ambiente. Além disso, o SSMS funciona com todos os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , tais como o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Desenvolvedores terão uma experiência familiar e os administradores de banco de dados terão um único utilitário abrangente que combina ferramentas gráficas fáceis de usar com sofisticadas capacidades de script.  
   

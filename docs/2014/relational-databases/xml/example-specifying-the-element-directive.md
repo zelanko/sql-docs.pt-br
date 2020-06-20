@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbf710587d67bf56d2c5f56d7d89a436608c572f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d91c0ddc4bd9c15a033e728d450abd153cac2756
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067812"
 ---
 # <a name="example-specifying-the-element-directive"></a>Exemplo: Especificando a diretiva ELEMENT
   Isso recupera informações de funcionários e gera XML centrado em elemento conforme mostrado no seguinte:  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b74de0c0ac044f3bdcadf3381976dcecc777e36c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037192"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
   Antes de instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você deve selecionar o hardware e o sistema operacional nos quais o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será executado. Você também deve configurar o WSFC (Clustering de Failover do Windows Server) e examinar a rede, a segurança e as considerações sobre outros softwares que serão executados no cluster de failover.  
@@ -45,9 +44,9 @@ ms.locfileid: "63190350"
   
     -   O Windows PowerShell já não é instalado pela Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O Windows PowerShell 2.0 é um pré-requisito da instalação dos componentes do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] e do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se o Windows PowerShell 2.0 não estiver presente no computador, você poderá habilitá-lo seguindo as instruções da página sobre [estrutura de gerenciamento do Windows](https://go.microsoft.com/fwlink/?LinkId=186214).  
   
-    -   O .NET Framework 3.5 SP1 não é mais instalado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mas pode ser necessário durante a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em sistemas operacionais antigos do Windows. Para obter mais informações, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]consulte [notas de versão](https://go.microsoft.com/fwlink/?LinkId=296445).  
+    -   O .NET Framework 3.5 SP1 não é mais instalado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mas pode ser necessário durante a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em sistemas operacionais antigos do Windows. Para obter mais informações, consulte [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [notas de versão](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Atualizar pacote:** Para evitar a reinicialização do computador devido à instalação .NET Framework [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 4 durante a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] instalação, a instalação do exige que uma atualização seja instalada no computador.  Se você estiver instalando o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] no Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, essa atualização será incluída. Se você estiver instalando em um sistema operacional Windows mais antigo, baixe-o em [Microsoft Update para .NET Framework 4.0 no Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Pacote de atualização:** para evitar a reinicialização do computador devido à instalação .NET Framework 4 durante a instalação, a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instalação requer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] que uma atualização seja instalada no computador.  Se você estiver instalando o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] no Windows 7 SP1 ou [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, essa atualização será incluída. Se você estiver instalando em um sistema operacional Windows mais antigo, baixe-o em [Microsoft Update para .NET Framework 4.0 no Windows Vista e Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
     -   .NET Framework 4: a instalação instala o .NET Framework 4 em um sistema operacional clusterizado. Para reduzir o tempo de instalação, convém instalar o .NET Framework 4 antes de executar a Instalação.  
   
@@ -199,7 +198,7 @@ ms.locfileid: "63190350"
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clusters não têm suporte no modo WOW. Isso inclui atualizações de versões anteriores de clusters de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que haviam sido instaladas originalmente no WOW. Para esses itens, a única opção de atualização é instalar a nova versão lado a lado e migrar.  
   
- <sup>2</sup> com suporte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para clustering de failover de várias sub-redes.  
+ <sup>2</sup> com suporte para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clustering de failover de várias sub-redes.  
   
   
   
@@ -220,7 +219,7 @@ ms.locfileid: "63190350"
   
 1.  A dependência de recurso de endereço IP é definida como OR em uma configuração de várias sub-redes. Para obter mais informações, consulte [criar um novo SQL Server Cluster de Failover &#40;configuração&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  Não há suporte para dependências de endereço IP AND-OR mistas. Por exemplo, não há suporte para \<IP1> AND \<IP2> OR \<IP3>.  
+2.  Não há suporte para dependências de endereço IP AND-OR mistas. Por exemplo, \<IP1> e \<IP2> ou \<IP3> não tem suporte.  
   
 3.  Não há suporte para mais de um endereço IP por sub-rede.  
   

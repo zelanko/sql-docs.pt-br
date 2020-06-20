@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 77f7fdb2689d910d6fe9534a5f1f65e1c381b351
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6c243115e940f7af085c0068d2ca5c277aa5162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928887"
 ---
 # <a name="sql-server-database-engine"></a>Mecanismo de Banco de Dados do SQL Server
   O [!INCLUDE[ssDE](../includes/ssde-md.md)] é o serviço principal para armazenamento, processamento e segurança de dados. O [!INCLUDE[ssDE](../includes/ssde-md.md)] fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos mais exigentes aplicativos de consumo de dados dentro de sua empresa.

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9fb706a5175a2eb673e8f175a154f681b3af3c43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b630fa075ae07b84e4886ad8bc115611da8e2d5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940037"
 ---
 # <a name="calculated-measure-representation-tabular"></a>Representação de medida calculada (de tabela)
   Uma medida calculada é uma expressão DAX nomeada avaliada toda vez que é usada.  
@@ -23,7 +22,7 @@ ms.locfileid: "62757658"
 ## <a name="calculated-measure-representation"></a>Representação de medida calculada  
   
 ### <a name="calculated-measure-in-amo"></a>Medidas calculadas no AMO  
- Ao usar o AMO para gerenciar uma medida calculada de modelo de tabela, há uma correspondência um-para-um entre o objeto de Medida Calculada lógica e uma medida definida em um objeto <xref:Microsoft.AnalysisServices.Command> do objeto <xref:Microsoft.AnalysisServices.MdxScript>. Cada **medida calculada** é definida como `CREATE MEASURE` uma expressão dentro <xref:Microsoft.AnalysisServices.Command> de um objeto e separada por um ponto-e-vírgula. Todas as medidas calculadas em um modelo de tabela correspondem à cadeia de caracteres `CREATE MEASURE` da coleção em um objeto de comando em um objeto <xref:Microsoft.AnalysisServices.MdxScript>. Para cada medida calculada, há um mapeamento um para um com <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Ao usar o AMO para gerenciar uma medida calculada de modelo de tabela, há uma correspondência um-para-um entre o objeto de Medida Calculada lógica e uma medida definida em um objeto <xref:Microsoft.AnalysisServices.Command> do objeto <xref:Microsoft.AnalysisServices.MdxScript>. Cada **medida calculada** é definida como uma `CREATE MEASURE` expressão dentro de um <xref:Microsoft.AnalysisServices.Command> objeto e separada por um ponto-e-vírgula. Todas as medidas calculadas em um modelo de tabela correspondem à cadeia de caracteres `CREATE MEASURE` da coleção em um objeto de comando em um objeto <xref:Microsoft.AnalysisServices.MdxScript>. Para cada medida calculada, há um mapeamento um para um com <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
  O snippet de código a seguir mostra como criar uma medida calculada.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ba34b01a-6289-4eb8-8341-fa3d9ec87b3f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2d4a0acb4a099cc5d495b9c65865d550c29db07
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808667"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934677"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Conectar ao Servidor (página Parâmetros Adicionais de Conexão)
   A caixa de diálogo **Conectar a** do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] apresenta os valores de cadeia de conexão mais comuns como opções. Use a página **Parâmetros Adicionais de Conexão** para acrescentar mais parâmetros de conexão à cadeia de conexões.  

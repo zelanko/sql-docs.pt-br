@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d06bda9-0bbf-4baa-b270-07b1c1f640eb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7eebd70d700a36898c59f1fce8a51806bc78f91d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2e7d3b8da56b407d3937b05cd980c3f8a4eb0c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036806"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>Significativa melhora nos separadores de palavras e filtros da Pesquisa de Texto Completo no SQL Server 2005 e SQL Server 2008
   Os separadores de palavras e os filtros foram alterados significativamente. Foram implementadas outras melhorias nos separadores de palavras, incluindo aperfeiçoamento com relação à abrangência do idioma e à confiabilidade.  

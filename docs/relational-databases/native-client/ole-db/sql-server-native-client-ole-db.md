@@ -1,5 +1,6 @@
 ---
 title: OLE DB
+description: O provedor de OLE DB SQL Server Native Client é uma API COM para acessar dados, usada para ferramentas, utilitários ou componentes de nível baixo que precisam de alto desempenho.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df931b1d79d930aa7900e8fbc6980aec58b9171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f945ca5abaa515823ea81ad30ca4292cc42690
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948649"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,9 +67,9 @@ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE D
   
 -   [Suporte a FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [Transactions](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [Transações](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
--   [Errors](../../../relational-databases/native-client-ole-db-errors/errors.md)  
+-   [Erros](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   
 -   [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
@@ -76,7 +77,7 @@ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE D
   
 -   [SQL Server Native Client &#40;OLE DB referência de&#41;](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [Tópicos de instruções sobre OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Tópicos de instruções do OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Programação do SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

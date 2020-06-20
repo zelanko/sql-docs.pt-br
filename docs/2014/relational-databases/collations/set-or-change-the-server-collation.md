@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c1a941494de632ff286b0ad7007d851a1db5454
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918572"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970530"
 ---
 # <a name="set-or-change-the-server-collation"></a>Definir ou alterar a ordenação do servidor
   A ordenação do servidor atua como a ordenação padrão de todos os bancos de dados do sistema instalados com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e também com quaisquer bancos de dados de usuário recém-criados. A ordenação do servidor é especificada durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](collation-and-unicode-support.md).  
@@ -53,6 +52,6 @@ ms.locfileid: "62918572"
  [Suporte a ordenações e a Unicode](collation-and-unicode-support.md)   
  [Definir ou alterar o agrupamento de banco de dados](set-or-change-the-database-collation.md)   
  [Definir ou alterar o agrupamento de colunas](set-or-change-the-column-collation.md)   
- [Recriar bancos de dados do sistema](../databases/system-databases.md)  
+ [Recompilar bancos de dados do sistema](../databases/system-databases.md)  
   
   

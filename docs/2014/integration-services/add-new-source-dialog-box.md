@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 619e437b-e00f-49a9-a94c-8feafc4af713
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 755f2955e7bcd12ac022b29e6e4d3c7cf3aa80be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed1b5851868705000d5aa04eb885b8e188dd45ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061847"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925907"
 ---
 # <a name="add-new-source-dialog-box"></a>Caixa de diálogo Adicionar Nova Origem
   A tabela a seguir lista as opções disponíveis na caixa de diálogo da Adicionar Nova Origem.  
@@ -25,7 +24,7 @@ ms.locfileid: "66061847"
 |Opção|Descrição|  
 |------------|-----------------|  
 |Tipos|Selecione o tipo de origem ao qual você deseja conectar-se.|  
-|Gerenciadores de conexões|Selecione um Gerenciador de conexões existente ou clique em ** \<novo>** para criar um novo Gerenciador de conexões.|  
+|Gerenciadores de conexões|Selecione um Gerenciador de conexões existente ou clique **\<New>** para criar um novo Gerenciador de conexões.|  
 |Mostrar somente itens instalados|Especifique se apenas origens instaladas devem ser exibidas.|  
 |OK|Clique para salvar suas alterações e abrir uma caixa de diálogo subsequente para configurar opções adicionais.|  
   

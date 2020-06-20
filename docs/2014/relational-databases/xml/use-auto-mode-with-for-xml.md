@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8b1acd069ebbb64c090cd167b2f6feb2903af3b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 232cc046667c6d31cb9657a7abdc862204507d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059406"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Usar o modo AUTO com FOR XML
   Conforme descrito em [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md), o modo AUTO retorna os resultados da consulta como elementos XML aninhados. Isso não fornece muito controle sobre a forma do XML gerado em um resultado de consulta. As consultas em modo AUTO são úteis para gerar hierarquias simples. No entanto, [Usar o modo EXPLICIT com FOR XML](use-explicit-mode-with-for-xml.md) e [Usar o modo PATH com FOR XML](use-path-mode-with-for-xml.md) fornecem mais controle e flexibilidade para decidir a forma do XML em um resultado de consulta.  
@@ -121,7 +120,7 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- Nessa consulta, os valores de CustomerID são comparados de uma linha à seguinte, para criar os elementos \<Cust>, pois CustomerID é a chave primária da tabela. Se CustomerID não for identificado como a chave primária da tabela, todos os valores das colunas (CustomerID e CustomerType nessa consulta) serão comparados de uma linha para a seguinte; Se os valores forem diferentes, um novo elemento \<Cust> será adicionado ao XML.  
+ Nessa consulta, os valores de CustomerID são comparados de uma linha para a próxima na criação dos \<Cust> elementos, porque CustomerID é a chave primária da tabela. Se CustomerID não for identificado como a chave primária da tabela, todos os valores das colunas (CustomerID e CustomerType nessa consulta) serão comparados de uma linha para a seguinte; Se os valores forem diferentes, um novo \<Cust> elemento será adicionado ao XML.  
   
  Ao comparar esses valores de colunas, se qualquer uma das colunas a serem comparadas for do tipo **text**, **ntext**, **image**ou **xml**, FOR XML assumirá que os valores são diferentes e não comparados, embora possam parecer os mesmos. Isso é porque a comparação de objetos grandes não tem suporte. Os elementos são adicionados ao resultado de cada linha selecionada. Observe que as colunas **(n)varchar(max)** e **varbinary(max)** são comparadas.  
   

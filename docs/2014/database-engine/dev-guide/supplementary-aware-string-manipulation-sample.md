@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51fe880ce3865e44620e0f7ae88c2103b0796f38
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928100"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933257"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Exemplo de manipulação de cadeias de caracteres com reconhecimento de suplementares
-  O exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demonstra o processamento de cadeia de caracteres com reconhecimento de caracteres suplementares. Este exemplo mostra a implementação de cinco funções da cadeia de caracteres do Transact-SQL que fornecem as mesmas funções de manipulação de cadeia de caracteres, como as funções internas, porém com capacidade de reconhecimento de caracteres suplementares adicionais para tratar cadeias de caracteres suplementares e Unicode. As cinco funções são lentes ( `lefts(), rights(), subs()` ) e `replace_s()` que são equivalentes às funções `LEN(), LEFT(), RIGHT(), SUBSTRING()` internas e `REPLACE()` às funções de cadeia de caracteres.  
+  O exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demonstra o processamento de cadeia de caracteres com reconhecimento de caracteres suplementares. Este exemplo mostra a implementação de cinco funções da cadeia de caracteres do Transact-SQL que fornecem as mesmas funções de manipulação de cadeia de caracteres, como as funções internas, porém com capacidade de reconhecimento de caracteres suplementares adicionais para tratar cadeias de caracteres suplementares e Unicode. As cinco funções são lentes () `lefts(), rights(), subs()` e `replace_s()` que são equivalentes às funções internas `LEN(), LEFT(), RIGHT(), SUBSTRING()` e às funções de `REPLACE()` cadeia de caracteres.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  

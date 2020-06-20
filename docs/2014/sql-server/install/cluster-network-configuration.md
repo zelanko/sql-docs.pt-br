@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04b0d412cd577fb0869f2188d99c1ea6a5646d2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096443"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037166"
 ---
 # <a name="cluster-network-configuration"></a>Configuração de rede do cluster
   Use a página **Seleção de Rede de Cluster** para especificar os recursos de rede para sua instância de cluster de failover.  
   
 ## <a name="options"></a>Opções  
- Nome de rede do cluster de failover-esse é o nome usado para identificar a instância de cluster de failover na rede. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
+ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nome de rede do cluster de failover** -esse é o nome usado para identificar a instância de cluster de failover na rede.  
   
  **Configurações de Rede** — Especifique o tipo e o endereço IP da instância de cluster de failover.  
   

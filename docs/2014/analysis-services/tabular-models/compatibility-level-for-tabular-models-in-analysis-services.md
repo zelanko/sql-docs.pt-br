@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a1e67db8bcbf17dc964f7341df25a396c36ad0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5727bd88bd04deab0e1b8364bd6cbefe9e6c142
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067595"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939867"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>Nível de compatibilidade (SP1 de tabela SSAS)
   Você pode especificar o *nível de compatibilidade* ao criar novos projetos de modelo de tabela ao atualizar projetos de modelo de tabela existentes, ao atualizar os bancos de dados de modelo de tabela implantados existentes ou ao importar pastas de trabalho PowerPivot.  
@@ -39,7 +38,7 @@ ms.locfileid: "66067595"
  Você também pode especificar um nível de compatibilidade padrão selecionando a opção **Não mostrar esta mensagem novamente** . Todos os projetos subsequentes usarão o nível de compatibilidade especificado. É possível alterar o nível de compatibilidade padrão no SSDT em Opções.  
   
 ### <a name="upgrade-an-existing-tabular-model-project-to-1103-compatibility-level"></a>Atualizar um projeto de modelo de tabela existente para o nível de compatibilidade 1103  
- Você pode atualizar um projeto de modelo de tabela criado no SSDT antes [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] de instalar ou posterior para ser compatível com a versão 1103 do banco de dados usando a propriedade **nível de compatibilidade** na janela **Propriedades** do modelo. Para atualizar um projeto de modelo de tabela, o computador em que o SSDT está instalado deve ter o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior instalado e a instância do Analysis Services na qual o banco de dados de workspace reside também deve ter o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] instalado. Não é possível fazer downgrade para uma versão anterior.  
+ Você pode atualizar um projeto de modelo de tabela criado no SSDT antes de instalar [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior para ser compatível com a versão 1103 do banco de dados usando a propriedade **nível de compatibilidade** na janela **Propriedades** do modelo. Para atualizar um projeto de modelo de tabela, o computador em que o SSDT está instalado deve ter o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior instalado e a instância do Analysis Services na qual o banco de dados de workspace reside também deve ter o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] instalado. Não é possível fazer downgrade para uma versão anterior.  
   
 ### <a name="upgrade-a-deployed-tabular-model-database-to-1103-compatibility-level"></a>Atualizar um banco de dados modelo de tabela implantado para o nível de compatibilidade 1103  
  Você pode atualizar um banco de dados modelo de tabela implantado existente para o banco de dados versão 1103 compatível com o SSMS (SQL Server Management Studio) usando a propriedade **nível de compatibilidade** nas propriedades do **banco de dados**. Para atualizar, o computador no qual a instância do SQL Server Analysis Services está instalada deve ter o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ou posterior instalado. Não é possível fazer downgrade de um banco de dados modelo de tabela implantado para uma versão anterior.  
@@ -48,9 +47,9 @@ ms.locfileid: "66067595"
  Ao criar um novo projeto de modelo de tabela importando do PowerPivot, você pode especificar se deseja atualizar o nível de compatibilidade para o nível de compatibilidade padrão (se configurado previamente no SSDT) ou deixar o nível de compatibilidade já especificado na pasta de trabalho PowerPivot.  
   
 ### <a name="check-compatibility-level-for-a-tabular-model-database-in-ssms"></a>Verificar o nível de compatibilidade de um banco de dados modelo de tabela no SSMS  
- Você pode verificar o nível de compatibilidade de um banco de dados modelo de tabela no SSMS exibindo a propriedade nível [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]de **compatibilidade** (novo no) nas propriedades do banco de **dados**.  
+ Você pode verificar o nível de compatibilidade de um banco de dados modelo de tabela no SSMS exibindo a propriedade **nível de compatibilidade** (novo no [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ) nas **Propriedades do banco de dados**.  
   
 ### <a name="check-supported-compatibility-level-for-an-analysis-services-instance-in-ssms"></a>Verificar o nível de compatibilidade com suporte para uma instância do Analysis Services no SSMS  
- Você pode verificar o nível de compatibilidade com suporte no SSMS exibindo a propriedade **nível de compatibilidade com suporte** na página **informações** (novo no [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]) em Propriedades de **Analysis Services**. Um nível de compatibilidade de 1103 com suporte indica que o SQL Server SP1 ou posterior está instalado. O nível de compatibilidade com suporte não pode ser alterado.  
+ Você pode verificar o nível de compatibilidade com suporte no SSMS exibindo a propriedade **nível de compatibilidade com suporte** na página **informações** (novo no [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] ) em **Propriedades de Analysis Services**. Um nível de compatibilidade de 1103 com suporte indica que o SQL Server SP1 ou posterior está instalado. O nível de compatibilidade com suporte não pode ser alterado.  
   
   

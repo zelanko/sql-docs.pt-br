@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3aaa7cc6fb40c2f600e734cb3e2250a40e15d63e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c08aa85254dcbd8aad0ea95edf5daac3ba9380c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717296"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059527"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>Colunas que contêm um valor nulo por padrão
   Por padrão, um valor nulo em uma coluna é mapeado para a ausência do atributo, nó ou elemento. Esse comportamento padrão pode ser substituído solicitando XML centrado em elemento usando a diretiva ELEMENTS e especificando XSINIL para solicitar a adição de elementos para valores NULL, conforme mostrado na consulta a seguir:  

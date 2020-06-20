@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a08c37ae8fbd1b190e3a3cd4f846109d7e8fca2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 46a95265228c006e61448d16352a529f8232dd95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716777"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067834"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>Exemplo: Especificando a diretiva CDATA
   Se a diretiva for definida como **CDATA**, os dados contidos não serão codificados como entidade, mas colocados na seção CDATA. Os atributos **CDATA** não devem ter nomes.  

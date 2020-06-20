@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48c4b11963d8e05ff7787ce9200329daf2e899ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873552"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970366"
 ---
 # <a name="data-compression"></a>Data Compression
   O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte à compactação de linha e página para tabelas e índices rowstore, e oferece suporte a columnstore e à compactação de arquivamento columnstore para tabelas e índices columnstore.  
@@ -63,7 +62,7 @@ ms.locfileid: "62873552"
   
 -   A compactação pode permitir que mais linhas sejam armazenadas em uma página, mas não altera o tamanho máximo de linha de uma tabela ou de um índice.  
   
--   Uma tabela não pode ser habilitada para compactação quando o tamanho máximo da linha mais a sobrecarga de compactação exceder o tamanho máximo de linha de 8060 bytes. Por exemplo, uma tabela que tem as colunas C1`char(8000)` e C2`char(53)` não pode ser compactada devido à sobrecarga de compactação adicional. Quando o formato de armazenamento vardecimal é usado, a verificação do tamanho da linha é executada quando o formato é habilitado. Para a compactação de linha e de página, a verificação do tamanho da linha é executada quando o objeto é inicialmente compactado e, depois, verificado à medida que cada linha é inserida ou modificada. A compactação impõe as duas regras seguintes:  
+-   Uma tabela não pode ser habilitada para compactação quando o tamanho máximo da linha mais a sobrecarga de compactação exceder o tamanho máximo de linha de 8060 bytes. Por exemplo, uma tabela que tem as colunas C1 `char(8000)` e C2 `char(53)` não pode ser compactada devido à sobrecarga de compactação adicional. Quando o formato de armazenamento vardecimal é usado, a verificação do tamanho da linha é executada quando o formato é habilitado. Para a compactação de linha e de página, a verificação do tamanho da linha é executada quando o objeto é inicialmente compactado e, depois, verificado à medida que cada linha é inserida ou modificada. A compactação impõe as duas regras seguintes:  
   
     -   Uma atualização para um tipo de comprimento fixo sempre deve ter êxito.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62873552"
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>Noções básicas  
  As tabelas e os índices columnstore são sempre armazenados com a compactação columnstore. Você pode reduzir ainda mais o tamanho dos dados de columnstore configurando um compactação adicional denominada compactação de arquivamento.  Para executar a compactação de arquivamento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa o algoritmo de compactação XPRESS da Microsoft nos dados. Adicione ou remova a compactação de arquivamento usando os seguintes tipos de compactação de dados:  
@@ -167,7 +166,7 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>Metadados  
  As seguintes exibições do sistema contêm informações sobre compactação de dados para índices clusterizados:  
   
--   [Sys. indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type` as `type_desc` colunas e incluem columnstore clusterizado e não clusterizado.  
+-   [Sys. indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type` as `type_desc` colunas e incluem columnstore CLUSTERIZAdo e não clusterizado.  
   
 -   [Sys. partitions &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression` as `data_compression_desc` colunas e incluem COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
   

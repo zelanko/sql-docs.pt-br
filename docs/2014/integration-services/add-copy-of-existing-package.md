@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2642f9f5ba5d20fc124dc80f4098f2e148af288
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772235"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926187"
 ---
 # <a name="add-copy-of-existing-package"></a>Adicionar Cópia de Pacote Existente
   Use a caixa de diálogo **Adicionar Cópia de Pacote Existente** para adicionar uma cópia de um pacote armazenado no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no sistema de arquivos ou no Repositório de Pacote do SSIS a um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

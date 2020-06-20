@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c62ec98e826a14b1472345d40ce9ad440df8f133
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928113"
 ---
 # <a name="trace-template-properties-general-tab"></a>Propriedades do modelo de rastreamento (guia Geral)
   Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para criar novos modelos de rastreamento usando as opções a seguir. Para acessar essa caixa de diálogo, no menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Arquivo** aponte para **Modelos**e clique em **Novo Modelo**.  
@@ -39,7 +38,7 @@ ms.locfileid: "66088695"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modelos e permissões de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões do SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

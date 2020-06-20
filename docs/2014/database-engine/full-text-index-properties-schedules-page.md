@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dda41e229e36c0c4b86c5bdb00782c3b5871bfa
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 97ba002eafc02f445f3f7104811b2c347668e300
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858641"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932947"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propriedades do Índice de Texto Completo (página Agendas)
   Use esta página para exibir e criar agendas para executar um trabalho do SQL Server Agent que inicia uma população incremental de atualizações na tabela base do índice de texto completo. Se a tabela base ou a exibição não contiver uma coluna do tipo de dados `timestamp`, uma população completa será executada.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ace573ddc016c074f1ad5bb29f099d7e62c5c81d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154299"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934561"
 ---
 # <a name="connect-to-azure-storage"></a>Conectar-se a um Armazenamento do Azure
   Use a caixa de diálogo **Conexão de Armazenamento do Microsoft Azure** para especificar uma conta de armazenamento e validar sua conexão com o Azure.  

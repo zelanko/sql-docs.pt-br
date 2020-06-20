@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061109"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924547"
 ---
 # <a name="catalog-properties-dialog-box"></a>Caixa de diálogo Propriedades do Catálogo
-  Use a caixa de diálogo de Propriedades do Catálogo para configurar o catálogo do SSISDB. As propriedades do catálogo definem como os dados confidenciais são criptografados, como as operações e os dados de controle de versão do projeto são retidos e quando as operações de validação expiram. O catálogo do SSISDB é um ponto de administração e armazenamento [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] central para projetos, pacotes, parâmetros e ambientes.  
+  Use a caixa de diálogo de Propriedades do Catálogo para configurar o catálogo do SSISDB. As propriedades do catálogo definem como os dados confidenciais são criptografados, como as operações e os dados de controle de versão do projeto são retidos e quando as operações de validação expiram. O catálogo do SSISDB é um ponto de administração e armazenamento central para [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projetos, pacotes, parâmetros e ambientes.  
   
  Você também pode exibir propriedades do catálogo na exibição catalog.catalog_property e definir propriedades por meio do procedimento armazenado catalog.configure_catalog. Para obter mais informações, consulte [catalog.catalog_properties &#40;banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) e [catalog.configure_catalog &#40;banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 72b88bd1bd2a033683f83dd53cca8404eccb613f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922155"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059352"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) e Reporting Services
   The SharePoint Claims to Windows Token Service (c2WTS) is required with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se você desejar usar a autenticação do Windows para Fontes de Dados que estão fora do farm do SharePoint. Isso ocorre mesmo quando o usuário acessa as fontes de dados com a Autenticação do Windows porque a comunicação entre o WFE (front-end da Web) e o serviço compartilhado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sempre será uma autenticação de Reivindicações.  
@@ -69,9 +68,9 @@ ms.locfileid: "82922155"
   
 2.  Configurar o c2WTS ' AllowedCallers '  
   
-     o c2WTS requer as identidades de "chamadores" explicitamente listadas no arquivo de configuração, **arquivo c2wtshost. exe. config**. o c2WTS não aceita solicitações de todos os usuários autenticados no sistema, a menos que esteja configurado para fazer isso. Neste caso, o “chamador” é o grupo WSS_WPG do Windows. O arquivo c2wtshost.exe.confi é salvo no seguinte local:  
+     c2WTS requer que as identidades dos "chamadores" sejam explicitamente listadas no arquivo de configuração, **c2wtshost.exe.config**. o c2WTS não aceita solicitações de todos os usuários autenticados no sistema, a menos que esteja configurado para fazer isso. Neste caso, o “chamador” é o grupo WSS_WPG do Windows. O arquivo c2wtshost.exe.confi é salvo no seguinte local:  
   
-     **\Program Programas\windows Identity Foundation\v3.5\c2wtshost.exe.config**  
+     **\Arquivos de Programas\windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   
      Este é um exemplo do arquivo de configuração:  
   

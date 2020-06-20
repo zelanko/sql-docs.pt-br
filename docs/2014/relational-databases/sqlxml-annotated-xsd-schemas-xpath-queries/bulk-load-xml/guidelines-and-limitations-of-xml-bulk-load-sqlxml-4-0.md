@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 593e51e34be3b607af121bfcba92497e019eba3f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b39f5347a7ace6dc449be804144b105957b33e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068201"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Diretrizes e limitações de Carregamento em Massa de XML (SQLXML 4.0)
   Ao usar o Carregamento em Massa de XML, você deve estar familiarizado com as diretrizes e limitações a seguir:  
@@ -35,9 +34,9 @@ ms.locfileid: "82703385"
   
 -   Quaisquer informações de prólogo XML são ignoradas.  
   
-     O carregamento em massa de XML ignora todas as informações antes e depois do \< elemento de> raiz no documento XML. Por exemplo, o Carregamento em Massa de XML ignora qualquer declaração XML, definições de DTD internas, referências de DTD externas, comentários e assim por diante.  
+     O carregamento em massa de XML ignora todas as informações antes e depois do \<root> elemento no documento XML. Por exemplo, o Carregamento em Massa de XML ignora qualquer declaração XML, definições de DTD internas, referências de DTD externas, comentários e assim por diante.  
   
--   Se você tiver um esquema de mapeamento que define um relacionamento de chave primária/chave estrangeira entre duas tabelas (como entre Customer e CustOrder), a tabela com a chave primária deverá ser descrita primeiro no esquema. A tabela com a coluna de chave estrangeira deve aparecer depois no esquema. O motivo disso é que a ordem na qual as tabelas são identificadas no esquema é a ordem usada para carregá-las no banco de dados. Por exemplo, o seguinte esquema XDR produzirá um erro quando ele for usado no carregamento em massa XML, pois o elemento ** \< Order>** é descrito antes do elemento ** \< Customer>** . A coluna CustomerID em CustOrder é uma coluna de chave estrangeira que se refere à coluna de chave primária CustomerID na tabela Cust.  
+-   Se você tiver um esquema de mapeamento que define um relacionamento de chave primária/chave estrangeira entre duas tabelas (como entre Customer e CustOrder), a tabela com a chave primária deverá ser descrita primeiro no esquema. A tabela com a coluna de chave estrangeira deve aparecer depois no esquema. O motivo disso é que a ordem na qual as tabelas são identificadas no esquema é a ordem usada para carregá-las no banco de dados. Por exemplo, o esquema XDR a seguir produzirá um erro quando ele for usado no carregamento em massa de XML, pois o **\<Order>** elemento é descrito antes do **\<Customer>** elemento. A coluna CustomerID em CustOrder é uma coluna de chave estrangeira que se refere à coluna de chave primária CustomerID na tabela Cust.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -77,7 +76,7 @@ ms.locfileid: "82703385"
   
 -   Se o esquema não especificar colunas de estouro usando a anotação `sql:overflow-field`, o Carregamento em Massa de XML ignorará todos os dados presentes no documento XML porém não descritos no esquema de mapeamento.  
   
-     O Carregamento em Massa de XML aplica o esquema de mapeamento que você especifica sempre que encontra marcas conhecidas no fluxo de dados XML. Ele ignora dados presentes no documento XML mas não descritos no esquema. Por exemplo, suponha que você tenha um esquema de mapeamento que descreve um elemento de ** \<>do cliente** . O arquivo de dados XML tem uma marca raiz ** \<>de usuários** (que não está descrita no esquema) que inclui todos os elementos de ** \<>do cliente** :  
+     O Carregamento em Massa de XML aplica o esquema de mapeamento que você especifica sempre que encontra marcas conhecidas no fluxo de dados XML. Ele ignora dados presentes no documento XML mas não descritos no esquema. Por exemplo, suponha que você tenha um esquema de mapeamento que descreve um **\<Customer>** elemento. O arquivo de dados XML tem uma **\<AllCustomers>** marca de raiz (que não está descrita no esquema) que inclui todos os **\<Customer>** elementos:  
   
     ```  
     <AllCustomers>  
@@ -87,9 +86,9 @@ ms.locfileid: "82703385"
     </AllCustomers>  
     ```  
   
-     Nesse caso, o carregamento em massa de XML ignora o elemento ** \<>de usuários** e começa o mapeamento no elemento ** \<>do cliente** . O Carregamento em Massa de XML ignora os elementos não descritos no esquema mas presentes no documento XML.  
+     Nesse caso, o carregamento em massa de XML ignora o **\<AllCustomers>** elemento e começa o mapeamento no **\<Customer>** elemento. O Carregamento em Massa de XML ignora os elementos não descritos no esquema mas presentes no documento XML.  
   
-     Considere outro arquivo de dados de origem XML que contenha elementos de ** \< ordem>** . Esses elementos não são descritos no esquema de mapeamento:  
+     Considere outro arquivo de dados de origem XML que contenha **\<Order>** elementos. Esses elementos não são descritos no esquema de mapeamento:  
   
     ```  
     <AllCustomers>  
@@ -105,11 +104,11 @@ ms.locfileid: "82703385"
     </AllCustomers>  
     ```  
   
-     O carregamento em massa de XML ignora esses elementos de ** \<>de ordem** . Mas se você usar a `sql:overflow-field` anotação no esquema para identificar uma coluna como uma coluna de estouro, a carga em massa de XML armazenará todos os dados não consumidos nesta coluna.  
+     O carregamento em massa de XML ignora esses **\<Order>** elementos. Mas se você usar a `sql:overflow-field` anotação no esquema para identificar uma coluna como uma coluna de estouro, a carga em massa de XML armazenará todos os dados não consumidos nesta coluna.  
   
 -   As referências de entidade e seções CDATA são traduzidas para os respectivos equivalentes de cadeia de caracteres antes de serem armazenadas no banco de dados.  
   
-     Neste exemplo, uma seção CDATA encapsula o valor do elemento ** \< City>** . O carregamento em massa de XML extrai o valor da cadeia de caracteres ("NY") antes de inserir o elemento de ** \<>de cidade** no banco de dados.  
+     Neste exemplo, uma seção CDATA encapsula o valor do **\<City>** elemento. O carregamento em massa de XML extrai o valor da cadeia de caracteres ("NY") antes de inserir o **\<City>** elemento no banco de dados.  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -142,7 +141,7 @@ ms.locfileid: "82703385"
     </Schema>  
     ```  
   
-     Nesses dados XML, o atributo **HireDate** está ausente do segundo elemento>do ** \< cliente** . Quando o carregamento em massa de XML insere o segundo elemento de ** \< clientes>** no banco de dados, ele usa o valor padrão especificado no esquema.  
+     Nesses dados XML, o atributo **HireDate** está faltando no segundo **\<Customers>** elemento. Quando o carregamento em massa de XML insere o segundo **\<Customers>** elemento no banco de dados, ele usa o valor padrão especificado no esquema.  
   
     ```  
     <ROOT>  

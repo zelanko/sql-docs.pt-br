@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f0fb62636f16cab5e74718c6b9565969b477f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934267"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de Espelhamento de Banco de Dados (página Status)
   Essa página somente leitura exibe o status mais recente de espelhamento das instâncias de servidor principal e espelho do banco de dados selecionadas atualmente na árvore de navegação. Se as informações sobre uma instância estiverem indisponíveis atualmente, algumas das células na grade **Status** correspondente a essa instância ficarão esmaecidas e exibirão o status **Desconhecido**.  
@@ -44,8 +43,8 @@ ms.locfileid: "62754704"
 |**Conexão de Testemunha**|Status de conexão da testemunha, precedido por um ícone de status, **Desconhecido**, **Conectado**ou **Desconectado**.|  
 |**Histórico**|Clique para exibir o histórico de espelhamento na instância de servidor. Isso abre a caixa de diálogo **Histórico do Espelhamento de Banco de Dados** , que exibe o histórico de status e as estatísticas de espelhamento de um banco de dados espelho em uma determinada instância de servidor.<br /><br /> O botão **Histórico** ficará esmaecido se o monitor não for conectado à instância de servidor.|  
   
- **Log principal (** * \<tempo>* **)**  
- Status do log na instância do servidor principal a partir da hora local na instância do servidor, indicada por * \<tempo>*. Os parâmetros seguintes são exibidos:  
+ **Log principal (** *\<time>* **)**  
+ Status do log na instância do servidor principal a partir da hora local na instância do servidor, indicada por *\<time>* . Os parâmetros seguintes são exibidos:  
   
  **Log não enviado**  
  A quantidade de log em espera na fila de envio (em quilobytes).  
@@ -62,8 +61,8 @@ ms.locfileid: "62754704"
  **Taxa atual de transações novas**  
  Taxa em que as transações de entrada estão sendo inseridas no log do servidor principal, em KB por segundo. Para determinar se o espelhamento está atrasado, ativo ou atualizado, compare esse valor ao valor do **Tempo para enviar o log (estimado)** .  
   
- **Log de espelhamento (** * \<tempo>* **)**  
- Status do log na instância do servidor espelho a partir da hora local na instância do servidor, indicada por * \<tempo>*. Os parâmetros seguintes são exibidos:  
+ **Log de espelhamento (** *\<time>* **)**  
+ Status do log na instância do servidor espelho a partir da hora local na instância do servidor, indicada por *\<time>* . Os parâmetros seguintes são exibidos:  
   
  **Log não restaurado**  
  A quantidade de log esperando na fila de restauração (em KB).  
@@ -93,7 +92,7 @@ ms.locfileid: "62754704"
 -   **Alta segurança com failover automático (síncrono)**  
   
 ## <a name="remarks"></a>Comentários  
- Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Eles dependem do **Trabalho do Monitor de Espelhamento de Banco de Dados**para atualizar a tabela de status em intervalos regulares. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **log principal (***\<tempo>***)** e **log espelhado (***\<tempo>***)** .  
+ Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Eles dependem do **Trabalho do Monitor de Espelhamento de Banco de Dados**para atualizar a tabela de status em intervalos regulares. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **log principal ( ***\<time>*** )** e **log de espelho ( ***\<time>*** )** .  
   
  Se esse trabalho não existir ou se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent estiver parado, o status se tornará cada vez mais obsoleto e poderá deixar de refletir a configuração da sessão espelhada. Por exemplo, depois de um failover, poderá parecer que os parceiros compartilham a mesma função, principal ou espelhada ou o servidor principal atual poderá ser mostrado como o espelho e o servidor espelhado atual como o principal.  
   
