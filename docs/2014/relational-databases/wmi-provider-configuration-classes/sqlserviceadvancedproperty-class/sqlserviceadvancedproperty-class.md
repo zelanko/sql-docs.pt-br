@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 903c33c2679d4869bd26e95392e6eb5dcd2f9fb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c33ed9c41577c02b6d37f21db0ceca91a5449f1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188590"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059597"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Classe SqlServiceAdvancedProperty
   A [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) representa uma propriedade avançada do serviço que é referenciada pelo objeto de [classe SqlService](../sqlservice-class/sqlservice-class.md) .  

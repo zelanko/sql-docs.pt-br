@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04a0d0e08804724def9e586c05bb4b6e72cdbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058934"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implantação de expansão (modo nativo do Servidor de Relatório)
   Use a página **Implantação de Expansão** no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para exibir o status de inicialização de uma implantação de expansão ou para unir um servidor de relatório a uma implantação de expansão. Uma *implantação de expansão* se refere a duas ou mais instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
  Um *servidor de relatório inicializado* descreve um servidor que pode criptografar e descriptografar dados confidenciais que estão armazenados em um banco de dados do servidor de relatório (credenciais armazenadas e cadeias de conexão são exemplos de dados criptografados que são armazenados no banco de dados). A inicialização do servidor de relatório é um requisito para as operações do servidor de relatório.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "71952425"
  **Nome do SQL Server**  
  Especifique o nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância que hospeda o banco de dados do servidor de relatório.  
   
- **Nome do banco de dados**  
+ **Database Name**  
  Especifica o nome do banco de dados ao qual a instância do servidor de relatório está atualmente conectada.  
   
  **Modo do Servidor**  
@@ -68,7 +67,7 @@ ms.locfileid: "71952425"
   
  Uma instância de servidor de relatório estará disponível somente se você configurou anteriormente uma conexão com o banco de dados do servidor de relatório compartilhado. Além disso, é necessário executar a inicialização a partir de um servidor de relatório que já esteja inicializado para usar o banco de dados do servidor de relatório.  
   
- **Remover**  
+ **Removerr**  
  Clique em **Remover** para remover do banco de dados do servidor de relatório as chaves de criptografia da instância selecionada do servidor de relatório. Você pode remover chaves para remover um servidor de relatório de uma implantação de expansão ou para solucionar um problema de migração ou instalação. Com esta opção, apenas as chaves de criptografia da instância especificada do servidor de relatório são removidas. Os dados criptografados do banco de dados do servidor de relatório não são afetados.  
   
  Como precaução, certifique-se de criar uma cópia de backup da chave simétrica antes de removê-la. Depois de remover as chaves de criptografia do último servidor de relatório na lista, introduza novos requisitos para qualquer inicialização subsequente do servidor de relatório para esse banco de dados. O novo requisito consiste em que, depois de inicializar um servidor de relatório, você deve restaurar uma cópia de backup da chave simétrica. A restauração da chave simétrica será necessária se você deseja acessar os dados criptografados que estejam atualmente no banco de dados do servidor de relatório.  

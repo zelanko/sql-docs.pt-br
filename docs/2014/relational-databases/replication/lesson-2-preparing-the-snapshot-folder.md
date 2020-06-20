@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbe571002a1168ca3f60592b86fb58fd482ecd05
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4b760885a85f29a94affab8f0e016f1596bf0f6d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000392"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065938"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lição 2: Preparando a pasta do instantâneo
   Nesta lição, você aprenderá a configurar a pasta do instantâneo, usada para criar e armazenar o instantâneo de publicação.  
@@ -36,9 +35,9 @@ ms.locfileid: "83000392"
   
 6.  Na guia **Segurança** , clique em **Editar**.  
   
-7.  Na caixa de diálogo **Permissões** , clique em **Adicionar**. Na caixa de texto **Selecionar usuário, computadores, conta de serviço ou grupos** , digite o nome da conta de agente de instantâneo criada na lição 1, como \< _Machine_Name>_ **\ repl_snapshot**, em que \< *Machine_Name>* é o nome do Publicador. Clique em **Verificar Nomes**e em **OK**.  
+7.  Na caixa de diálogo **Permissões** , clique em **Adicionar**. Na caixa de texto **Selecionar usuário, computadores, conta de serviço ou grupos** , digite o nome da conta de agente de instantâneo criada na lição 1, como \<_Machine_Name> _**\ repl_snapshot**, em que \<*Machine_Name> * é o nome do Publicador. Clique em **Verificar Nomes**e em **OK**.  
   
-8.  Repita a etapa anterior para adicionar permissões para o Agente de Distribuição, como \<_Machine_Name>_**\repl_distribution** e para o Agente de Mesclagem, como \<_Machine_Name>_**\repl_merge**.  
+8.  Repita a etapa anterior para adicionar permissões para o agente de distribuição, como \<_Machine_Name> _ **\ repl_distribution**, e para o agente de mesclagem como \<_Machine_Name> _ **\ repl_merge**.  
   
 9. Verifique se as permissões a seguir são permitidas:  
   

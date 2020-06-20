@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6599a087efa16a1fa83a37e1a26b362b971cbc6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb057c6deaec85ffae2c69fde0bf5f6419bedc88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096461"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037113"
 ---
 # <a name="cluster-resource-group"></a>Grupo de Recursos de Cluster
   Use a página Grupo de Recursos de Cluster para especificar o disco onde os recursos do servidor virtual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão localizados.  

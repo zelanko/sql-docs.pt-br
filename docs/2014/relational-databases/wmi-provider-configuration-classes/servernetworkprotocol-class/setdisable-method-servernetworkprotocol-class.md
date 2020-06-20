@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 37a68a1dbc3a35ba4e72b173b1785efd1108241b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3176227aba4de1e5aca1be35ec1f071a15caa49e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63143418"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059862"
 ---
 # <a name="setdisable-method-servernetworkprotocol-class"></a>Método SetDisable (classe ServerNetworkProtocol)
   Desabilita o protocolo de rede de servidor.  
@@ -38,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
- Um objeto [ServerNetworkProtocol Class] ServerNetworkProtocol-class.md) que representa o protocolo de rede usado pela instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *object*  
+ Um objeto [ServerNetworkProtocol Class] ServerNetworkProtocol-class.md) que representa o protocolo de rede usado pela instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  

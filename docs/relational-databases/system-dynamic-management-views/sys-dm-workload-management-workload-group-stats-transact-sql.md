@@ -10,19 +10,18 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 6e77239d019cb51e66a34a3a5b909e01c28a7faa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01d735e07a7c44c84c0087865e4f488318d65a75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73633430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066166"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Retorna estatísticas do grupo de carga de trabalho e os valores efetivos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]do grupo de cargas de trabalho no.  
+Retorna estatísticas do grupo de carga de trabalho e os valores efetivos do grupo de cargas de trabalho no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
 |Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  

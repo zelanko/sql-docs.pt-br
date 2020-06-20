@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 279302423cfe6c1fb9ecf28128b48c153e694e72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b1750081198a258d1b49231324dd296084f6cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069213"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940787"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>Selecionar o método de definição (Assistente de Mineração de Dados)
   Use a página **Selecionar o Método de Definição** para selecionar a fonte para criar o modelo de mineração novo. O seu caminho pelo assistente mudará dependendo do que você selecionar, pois uma estrutura de mineração baseada em um cubo requer etapas diferentes para ser criada do que uma estrutura de mineração baseada em uma fonte de dados relacional.  

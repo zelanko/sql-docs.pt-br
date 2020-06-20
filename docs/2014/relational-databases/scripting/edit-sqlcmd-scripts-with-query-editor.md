@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 365a20848416e73e96731722abecfd6d94ebbfc5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: afcf38e662b152a5039043017624a46b214e263f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065754"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Editar scripts SQLCMD com o Editor de Consultas
   Com o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , você pode gravar e editar consultas como scripts SQLCMD. Você usa scripts SQLCMD quando precisa processar comandos de Sistema do Windows e instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no mesmo script.  
@@ -76,7 +75,7 @@ ms.locfileid: "82703955"
   
     -   (6 linha(s) afetada(s))  
   
-    -   \<As informações do diretório>  
+    -   \<The directory information>  
   
     -   (4 linha(s) afetada(s))  
   
@@ -138,7 +137,7 @@ ms.locfileid: "82703955"
 > [!NOTE]  
 >  Para `:error` e `:out`, `stderr` e `stdout` envia a saída à guia de mensagens.  
   
- O Editor de Consultas não oferece suporte aos comandos SQLCMD não listados acima. Na execução de um script que contém palavras-chave SQLCMD sem suporte, o Editor de Consultas enviará uma mensagem "Ignorando comando *\<comando ignorado*>" para o destino de cada palavra-chave sem suporte. O script será executado com êxito, mas os comandos sem suporte serão ignorados.  
+ O Editor de Consultas não oferece suporte aos comandos SQLCMD não listados acima. Quando um script que contém palavras-chave SQLCMD sem suporte é executado, o editor de consultas enviará uma mensagem "ignorando comando * \<ignored command*> " para o destino para cada palavra-chave sem suporte. O script será executado com êxito, mas os comandos sem suporte serão ignorados.  
   
 > [!CAUTION]  
 >  Como você não está iniciando o SQLCMD na linha de comando, existem algumas limitações na execução do Editor de Consultas no Modo SQLCMD. Você não pode passar parâmetros de linha de comando como variáveis e, como o Editor de Consultas não tem a capacidade para responder a prompts do sistema operacional, tenha cuidado para não executar instruções interativas.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a237fac7322ed1529a8962b096c6b918ffee33b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968206"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Etapa 3: Modificar o gerenciador de conexões de arquivo simples
   Nesta tarefa, você modificará o gerenciador de conexões de arquivo simples que você criou e configurou na Lição 1. Quando foi criado originalmente, o gerenciador de conexões de arquivo simples foi configurado para carregar estatisticamente um único arquivo. Para habilitar o gerenciador de conexões de Arquivo Simples a carregar arquivos de forma iterativa, você deve modificar a propriedade ConnectionString do gerenciador de conexões para aceitar a variável definida pelo usuário `User:varFileName`, que contém o caminho do arquivo a ser carregado em tempo de execução.  
@@ -28,7 +27,7 @@ ms.locfileid: "62767428"
   
 2.  No janela Propriedades, para **expressões**, clique na célula vazia e, em seguida, clique no botão de reticências **(...)**.  
   
-3.  Na caixa de diálogo **Editor de expressões de propriedade** , na coluna **Propriedade** , digite ou `ConnectionString`selecione.  
+3.  Na caixa de diálogo **Editor de expressões de propriedade** , na coluna **Propriedade** , digite ou selecione `ConnectionString` .  
   
 4.  Na coluna **expressão** , clique no botão de reticências **(...)** para abrir a caixa de diálogo **Construtor de expressões** .  
   

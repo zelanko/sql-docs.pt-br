@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1d0b1d2ef6eed113061cd0f79508a637ec078495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 549bab6484613bbd313d0938dd1e744047b26257
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037136"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>Listas de verificação para instalar recursos com SharePoint.
   Esta seção fornece listas de verificação para instalar os recursos de BI do SQL Server em combinações diferentes ou em topologias em expansão. Se você já souber como executar um programa de Instalação para instalar um recurso de BI, uma lista de verificação será a próxima etapa para entender a ordem de instalação recomendada e se alterações de configuração adicionais serão necessárias para habilitar cenários de integração de recursos.  

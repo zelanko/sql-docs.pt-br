@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8f2e75eb5272f30153814e923048b4f5c4f8b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011921"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016208"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece funções do nível de servidor para ajudar a gerenciar as permissões em um servidor. Estas funções são entidades de segurança que agrupam outras entidades de segurança. Essas funções abrangem todo o servidor em seus escopos de permissões. (As*funções* são como *grupos* no sistema operacional Windows.)  
@@ -45,7 +44,7 @@ ms.locfileid: "63011921"
 |------------------------------|-----------------|  
 |sysadmin|Os membros da função de servidor fixa sysadmin podem executar qualquer atividade no servidor.|  
 |serveradmin|Os membros da função de servidor fixa serveradmin podem alterar as opções de configuração de todo o servidor e fechar o servidor.|  
-|securityadmin|Os membros da função de servidor fixa securityadmin gerenciam logons e suas propriedades. Eles podem CONCEDER, NEGAR e REVOGAR permissões de nível de servidor. Também podem executar as permissões de nível de banco de dados GRANT, DENY e REVOKE se tiverem acesso ao banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> Observação de ** \* segurança \* \* ** A capacidade de conceder acesso ao [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e ao para configurar permissões de usuário permite que o administrador de segurança atribua a maioria das permissões de servidor. A `securityadmin` função deve ser tratada como equivalente à `sysadmin` função.|  
+|securityadmin|Os membros da função de servidor fixa securityadmin gerenciam logons e suas propriedades. Eles podem CONCEDER, NEGAR e REVOGAR permissões de nível de servidor. Também podem executar as permissões de nível de banco de dados GRANT, DENY e REVOKE se tiverem acesso ao banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> Observação de segurança a capacidade de conceder acesso ao e ao configurar permissões de usuário permite que o administrador de segurança atribua a maioria das permissões de servidor. ** \* \* \* \* ** [!INCLUDE[ssDE](../../../includes/ssde-md.md)] A `securityadmin` função deve ser tratada como equivalente à `sysadmin` função.|  
 |processadmin|Os membros da função de servidor fixa processadmin podem encerrar os processos em execução em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |setupadmin|Os membros da função de servidor fixa setupadmin podem adicionar e remover servidores vinculados usando instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] . (A associação sysadmin é necessária ao usar o [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
 |bulkadmin|Os membros da função de servidor fixa bulkadmin podem executar a instrução BULK INSERT.|  
@@ -57,7 +56,7 @@ ms.locfileid: "63011921"
  Cada função de servidor fixa tem certas permissões atribuídas a ela. Para um gráfico das permissões atribuídas às funções de servidor, consulte [Funções fixas de servidor e de banco de dados do Mecanismo de Banco de Dados](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  A permissão `CONTROL SERVER` é semelhante, mas não idêntica à função de servidor fixa do `sysadmin`. As permissões não implicam associações de função e as associações de função não concedem permissões. Por exemplo, `CONTROL SERVER`Não implica a associação na função `sysadmin` de servidor fixa.) No entanto, às vezes é possível representar entre funções e permissões equivalentes. A maioria dos comandos `DBCC` e muitos procedimentos do sistema requerem associação na função de servidor fixa `sysadmin`. Para obter uma lista de procedimentos armazenados do sistema 171 `sysadmin` que exigem associação, consulte a seguinte postagem do blog por Andreas Wolter [Control Server vs. sysadmin/SA: permissões, procedimentos do sistema, DBCC, criação automática de esquema e escalonamento de privilégios-advertências](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  A permissão `CONTROL SERVER` é semelhante, mas não idêntica à função de servidor fixa do `sysadmin`. As permissões não implicam associações de função e as associações de função não concedem permissões. Por exemplo, `CONTROL SERVER`Não implica a associação na `sysadmin` função de servidor fixa.) No entanto, às vezes é possível representar entre funções e permissões equivalentes. A maioria dos comandos `DBCC` e muitos procedimentos do sistema requerem associação na função de servidor fixa `sysadmin`. Para obter uma lista de procedimentos armazenados do sistema 171 que exigem `sysadmin` associação, consulte a seguinte postagem do blog por Andreas Wolter [Control Server vs. sysadmin/SA: permissões, procedimentos do sistema, DBCC, criação automática de esquema e escalonamento de privilégios-advertências](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Permissão em nível de servidor  
  Somente podem ser acrescentadas permissões do nível de servidor a funções de servidor definidas pelo usuário. Para listar as permissões em nível de servidor, execute a instrução a seguir. As permissões em nível de servidor são:  

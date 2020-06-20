@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767578"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966086"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Etapa 1: Compilar o utilitário de implantação
   Nesta tarefa, você configurará e compilará um utilitário de implantação para o projeto do Tutorial de Implantação.  
@@ -34,7 +33,7 @@ ms.locfileid: "62767578"
   
 4.  Na caixa de diálogo **Páginas de Propriedades do Tutorial de Implantação** , expanda Propriedades de Configurações e clique em Utilitário de Implantação.  
   
-5.  No painel direito da caixa de diálogo **páginas de propriedades do tutorial de implantação** , `AllowConfigurationChanges` Verifique se está `true`definido como `CreateDeploymentUtility` , `true`defina como e, opcionalmente, atualize o `DeploymentOutputPath`valor padrão de.  
+5.  No painel direito da caixa de diálogo **páginas de propriedades do tutorial de implantação** , verifique se `AllowConfigurationChanges` está definido como `true` , defina `CreateDeploymentUtility` como e, `true` opcionalmente, atualize o valor padrão de `DeploymentOutputPath` .  
   
 6.  Clique em **OK**.  
   

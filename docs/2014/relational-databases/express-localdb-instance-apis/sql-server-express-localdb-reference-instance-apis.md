@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adfddc5de02f13b592b1f03107a67c4a3c449d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42b71df860f82fe470cbd01dbd9e1c0f6c07e2a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050939"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>Referência de API da instância LocalDB do SQL Server Express
   No mundo do SQL Server tradicional baseado em serviço, as instâncias individuais do SQL Server instaladas em um único computador são separadas fisicamente; ou seja, cada instância deve ser instalada e removida separadamente, ter um conjunto separado de binários e ser executada em um processo de serviço separado. O nome da instância do SQL Server é usado para especificar a qual instância do SQL Server o usuário deseja se conectar.  
@@ -64,7 +63,7 @@ ms.locfileid: "63128634"
 ### <a name="named-instance-naming-rules"></a>Regras de nomeação de instância nomeada  
  Um nome de instância de LocalDB pode ter até 128 caracteres (o limite é imposto pelo tipo de dados `sysname`). Essa é uma diferença significativa se comparada aos nomes de instância tradicionais do SQL Server, que são limitados aos nomes NetBIOS de 16 caracteres ASCII. A razão para essa diferença é que o LocalDB trata os bancos de dados como arquivos e, portanto, implica a semântica baseada em arquivo, portanto, é intuitivo para os usuários terem mais liberdade na escolha de nomes de instância.  
   
- Um nome de instância de LocalDB pode conter qualquer caractere Unicode que seja legal no componente de nome de arquivo. Caracteres ilegais em um componente de nome de arquivo geralmente incluem os seguintes caracteres: caracteres ASCII/Unicode de 1 a 31, bem como aspas ("),\<menor que (), maior que (>), pipe (|), backspace (\b), tabulação (\t), dois-pontos (:), asterisco (*), ponto de interrogação (?), barra invertida (\\) e barra (/). Observe que o caractere nulo (\0) é permitido porque é usado na terminação de cadeias de caracteres; tudo o que aparecer após o primeiro caractere nulo será ignorado.  
+ Um nome de instância de LocalDB pode conter qualquer caractere Unicode que seja legal no componente de nome de arquivo. Caracteres ilegais em um componente filename geralmente incluem os seguintes caracteres: caracteres ASCII/Unicode de 1 a 31, bem como aspas ("), menor que ( \<), greater than (> ), pipe (|), backspace (\b), tabulação (\t), dois-pontos (:), asterisco (*), ponto de interrogação (?), barra invertida ( \\ ) e barra (/) Observe que o caractere nulo (\0) é permitido porque é usado na terminação de cadeias de caracteres; tudo o que aparecer após o primeiro caractere nulo será ignorado.  
   
 > [!NOTE]  
 >  A lista de caracteres ilegais possivelmente dependerá do sistema operacional e mudará nas versões futuras.  

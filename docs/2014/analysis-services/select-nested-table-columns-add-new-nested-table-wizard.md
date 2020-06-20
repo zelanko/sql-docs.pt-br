@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 737a2e6c837baea373262e586e528a7307b1db6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069362"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940917"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Selecionar colunas de tabela aninhada (Assistente para Adicionar Nova Tabela Aninhada)
   Use a página **Selecionar Colunas de Tabela Aninhada** para selecionar os atributos e medidas a serem incluídos na tabela aninhada e definir como o modelo de mineração usará os atributos e medidas.  
