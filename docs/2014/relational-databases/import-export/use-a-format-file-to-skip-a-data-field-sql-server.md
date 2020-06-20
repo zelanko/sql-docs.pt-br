@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d3f78c3c97c5bbe862867d5f51ff35f57d147df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026346"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Usar um arquivo de formato para ignorar um campo de dados (SQL Server)
   Um arquivo de dados pode conter mais campos do que o número de colunas na tabela. Este tópico descreve como modificar arquivos de formato XML e não XML para acomodar um arquivo de dados com mais campos, mapeando as colunas de tabela para os campos de dados correspondentes e ignorando os campos extras.  
@@ -30,7 +29,7 @@ ms.locfileid: "66011721"
  Os exemplos de arquivos de formato modificados neste tópico baseiam-se na tabela e no arquivo de dados a seguir.  
   
 ### <a name="sample-table"></a>Tabela de exemplo  
- Os exemplos requerem que uma tabela denominada `myTestSkipField` seja criada no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] no esquema `dbo` . Para criar essa tabela, no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editor de consultas, execute o seguinte código:  
+ Os exemplos requerem que uma tabela denominada `myTestSkipField` seja criada no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] no esquema `dbo` . Para criar essa tabela, no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, execute o seguinte código:  
   
 ```  
 USE AdventureWorks2012;  

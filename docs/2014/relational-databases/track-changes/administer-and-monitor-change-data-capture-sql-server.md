@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d97929ead145d1b0de1a1f83becb15ade397683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048933"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar e monitorar a captura de dados de alteração (SQL Server)
   Este tópico descreve como administrar e monitorar a captura de dados de alterações.  
@@ -37,10 +36,10 @@ ms.locfileid: "76929188"
  O parâmetro *maxscans* especifica o número máximo de ciclos de verificação que tentaram esgotar o log antes de retornar (continuous = 0) ou executar waitfor (continuous = 1).  
   
 #### <a name="continuous-parameter"></a>Parâmetro continuous  
- O parâmetro *Continuous* controla `sp_cdc_scan` se o controle deve ser esgotado depois de descarregar o log ou executar o número máximo de ciclos de verificação (modo de uma imagem). Também controla se `sp_cdc_scan` continua sendo executado até ser explicitamente interrompido (modo contínuo).  
+ O parâmetro *Continuous* controla se o `sp_cdc_scan` controle deve ser esgotado depois de descarregar o log ou executar o número máximo de ciclos de verificação (modo de uma imagem). Também controla se `sp_cdc_scan` continua sendo executado até ser explicitamente interrompido (modo contínuo).  
   
 ##### <a name="one-shot-mode"></a>Modo mono estável  
- No modo One shot, o trabalho de captura `sp_cdc_scan` solicita a execução de até *maxtrans* verificações para tentar drenar o log e retornar. Qualquer transação além de *maxtrans* presente no log será processada nas verificações posteriores.  
+ No modo One shot, o trabalho de captura solicita a `sp_cdc_scan` execução de até *maxtrans* verificações para tentar drenar o log e retornar. Qualquer transação além de *maxtrans* presente no log será processada nas verificações posteriores.  
   
  O modo monoestável é usado em testes controlados, nos quais o volume de transações a serem processadas é conhecido e há vantagens no fato de o trabalho fechar automaticamente quando concluído. O modo monoestável não é recomendado para uso de produção. Isso ocorre porque ele depende da agenda de trabalho para gerenciar a frequência com que o ciclo de verificação é executado.  
   
@@ -105,7 +104,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 ### <a name="use-data-collector-to-collect-sampling-data"></a>Usar o coletor de dados para coletar dados de amostragem  
  O coletor de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite coletar instantâneos de dados de qualquer tabela ou exibição de gerenciamento dinâmico e criar um data warehouse de desempenho. Quando a captura de dados de alteração está habilitada em um banco de dados, ela é útil para obter instantâneos das exibições sys.dm_cdc_log_scan_sessions e sys.dm_cdc_errors em intervalos regulares para análise posterior. O procedimento a seguir configura um coletor de dados para coletar dados de amostra da exibição de gerenciamento sys.dm_cdc_log_scan_sessions.  
   
- **Configuração a coleta de dados**  
+ **Configurando a coleta de dados**  
   
 1.  Habilite o coletor de dados e configure um data warehouse de gerenciamento. Para obter mais informações, consulte [Gerenciar coleta de dados](../data-collection/data-collection.md).  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962946"
 ---
 # <a name="smo-connection-manager-editor"></a>Editor do Gerenciador de Conexões SMO
   Use o **Editor do Gerenciador de Conexões SMO** para configurar uma conexão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para uso das várias tarefas que transferem objetos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -33,7 +32,7 @@ ms.locfileid: "66055601"
  **Atualizar**  
  Atualize a lista de instâncias [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponíveis que podem ser detectadas na rede.  
   
- **Usar autenticação do Windows**  
+ **Usar Autenticação do Windows**  
  Use a Autenticação do Windows para conectar-se à instância [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] selecionada.  
   
  **Usar autenticação SQL Server**  

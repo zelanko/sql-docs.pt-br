@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 107ba245f19ae77eec2be82d63c62e5c3d45d092
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025251"
 ---
 # <a name="index-disk-space-example"></a>Exemplo de espaço em disco de índice
   Sempre que um índice é criado, recriado, ou cancelado, o espaço em disco tanto para a velha (fonte) quanto para a nova (destino) estrutura é necessário em seus arquivos e grupos de arquivos apropriados. A estrutura antiga não é desalocada até que a transação de criação do índice seja confirmada. Pode igualmente ser necessário espaço temporário em disco adicional, para classificação de operações. Para obter mais informações, consulte [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
@@ -96,7 +95,7 @@ ms.locfileid: "63161800"
   
 -   Determine espaço para o índice de mapeamento temporário.  
   
-     Neste exemplo, o indicador antigo é a ID de linha (RID) do heap (8 bytes) e o novo indicador é a chave de clustering (24 bytes, incluindo `uniqueifier`a). Não há nenhuma coluna sobreposta entre os indicadores novos e velhos.  
+     Neste exemplo, o indicador antigo é a ID de linha (RID) do heap (8 bytes) e o novo indicador é a chave de clustering (24 bytes, incluindo a `uniqueifier` ). Não há nenhuma coluna sobreposta entre os indicadores novos e velhos.  
   
      Tamanho de índice de mapeamento temporário = 1 milhão * (8 bytes + 24 bytes) / 80% ~ 40 MB.  
   

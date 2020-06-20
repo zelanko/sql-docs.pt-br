@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d871e2cfb6eb0d4e095a19ba9893b26418230e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010732"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Habilitar um Publicador remoto em um Distribuidor (SQL Server Management Studio)
-   Habilite um Publicador a usar um Distribuidor remoto na página **Publicadores**. Esta página está disponível no Assistente para Configurar Distribuição e na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**. Para mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Configurar publicação e distribuição](configure-publishing-and-distribution.md) e [Exibir e modificar o distribuidor e as propriedades do publicador](view-and-modify-distributor-and-publisher-properties.md).  
+   Habilite um Publicador a usar um Distribuidor remoto na página **Publicadores**. Essa página está disponível no Assistente para configurar a distribuição e na caixa de diálogo **Propriedades do distribuidor – \<Distributor> ** . Para mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Configurar publicação e distribuição](configure-publishing-and-distribution.md) e [Exibir e modificar o distribuidor e as propriedades do publicador](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>Para habilitar um Publicador no Assistente para Configurar Distribuição  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62721314"
   
 ### <a name="to-enable-a-publisher-in-the-distributor-properties-dialog-box"></a>Para habilitar um Publicador na caixa de diálogo Propriedades de Distribuidor  
   
-1.  Na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**, clique em **Adicionar**.  
+1.  Na página **Publicadores** da caixa de diálogo **Propriedades \<Distributor> do distribuidor –** , clique em **Adicionar**.  
   
 2.  Clique em **Adicionar Editor SQL Server**. Para obter informações sobre como habilitar um Oracle Publisher para usar um Distribuidor, consulte [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md).  
   

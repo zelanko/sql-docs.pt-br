@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7eb4324d56c3ab45486063cb8097603ac3a416b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702220"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050009"
 ---
 # <a name="supported-sql-server-features"></a>Recursos do SQL Server com suporte
   Este tópico aborda os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com ou sem suporte para uso com objetos com otimização de memória.  
@@ -33,7 +32,7 @@ ms.locfileid: "82702220"
   
 -   Controle de simultaneidade otimista e várias versões. Para obter mais informações, consulte [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md).  
   
--   Backup e restauração de um banco de dados que contém grupo de arquivos de dados com otimização de memória. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Backup e restauração de um banco de dados que contém grupo de arquivos de dados com otimização de memória. Para obter mais informações, consulte [backup e restauração de bancos de dados SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 -   Exibições de catálogo, exibições de gerenciamento dinâmico e eventos estendidos para capacidade de suporte. Para obter mais informações, consulte [Exibições do sistema, procedimentos armazenados, tipos de espera e DMVs para OLTP na memória](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "82702220"
 |Servidor vinculado|Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../linked-servers/linked-servers-database-engine.md).|  
 |Registro em massa|Independentemente do modelo de recuperação do banco de dados, todas as operações nas tabelas duráveis com otimização de memória sempre são completamente registradas.|  
 |Log mínimo|O log mínimo não tem suporte para tabelas com otimização de memória. Para obter mais informações sobre log mínimo, veja [O log de transações &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md) e [Pré-requisitos para log mínimo na importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|controle de alterações|O controle de alterações pode ser habilitado em um banco de dados com objetos OLTP na memória. No entanto, as alterações em tabelas com otimização de memória não são rastreadas.|  
+|Change tracking|O controle de alterações pode ser habilitado em um banco de dados com objetos OLTP na memória. No entanto, as alterações em tabelas com otimização de memória não são rastreadas.|  
 |gatilhos DDL|Os gatilhos DDL no nível de servidor e de banco de dados não têm suporte com tabelas OLTP na memória e procedimentos armazenados compilados nativamente.|  
 |Change Data Capture (CDC)|O CDC não deve ser habilitado em um banco de dados que tenha objetos OLTP na memória, pois isso impede determinadas operações, como DROP.|  
 |Contenção do banco de dados|A contenção de banco de dados não é suportada em um banco de dados com procedimentos armazenados compilados nativamente e tabelas com otimização de memória. Para obter mais informações, consulte [Contained Databases](../databases/contained-databases.md).|  
@@ -107,8 +106,8 @@ ms.locfileid: "82702220"
   
 |Bancos de dados|Permitido|Descrição|  
 |---------------|-------------|-----------------|  
-|Bancos de dados de usuário, modelo e msdb|No|Não há suporte para consultas e transações entre bancos de dados.<br /><br /> As consultas e transações que acessam tabelas com otimização de memória ou procedimentos armazenados compilados nativamente não podem acessar outros bancos de dados, com exceção dos bancos de dados do sistema mestre (acesso somente leitura) e tempdb.|  
-|Banco de dados de recursos e tempdb|Yes|Não há nenhuma limitação em transações entre bancos de dados que, salvo um banco de dados de usuário único, usam somente banco de dados de recursos e o tempdb.|  
+|Bancos de dados de usuário, modelo e msdb|Não|Não há suporte para consultas e transações entre bancos de dados.<br /><br /> As consultas e transações que acessam tabelas com otimização de memória ou procedimentos armazenados compilados nativamente não podem acessar outros bancos de dados, com exceção dos bancos de dados do sistema mestre (acesso somente leitura) e tempdb.|  
+|Banco de dados de recursos e tempdb|Sim|Não há nenhuma limitação em transações entre bancos de dados que, salvo um banco de dados de usuário único, usam somente banco de dados de recursos e o tempdb.|  
 |master|somente leitura|As transações entre bancos de dados que tocam o OLTP na memória e o banco de dados mestre falharão na confirmação se incluírem gravações no banco de dados mestre. As transações entre bancos de dados que leem apenas no mestre e usam somente um banco de dados de usuário são permitidas.|  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 51784663fdfec66f851bed479184ae21170a3681
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3996850833efdc8737febec4691353d1c0a835f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030487"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>classe de evento Broker:Forwarded Message Sent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento Broker:Forwarded Message Sent quando o Service Broker encaminha uma mensagem.  
@@ -51,7 +50,7 @@ ms.locfileid: "62664002"
 |ServerName|`nvarchar`|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SPID|`int`|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |StartTime|`datetime`|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
-|Êxito|`int`|O tempo gasto pelo processo de encaminhamento.|23|Não|  
+|Sucesso|`int`|O tempo gasto pelo processo de encaminhamento.|23|Não|  
 |TargetLoginName|`nvarchar`|O endereço de rede para o qual a instância enviou a mensagem. Note que pode diferir do destino final da mensagem.|42|Não|  
 |TargetUserName|`nvarchar`|O nome do serviço que iniciou a mensagem.|39|Não|  
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Não|  

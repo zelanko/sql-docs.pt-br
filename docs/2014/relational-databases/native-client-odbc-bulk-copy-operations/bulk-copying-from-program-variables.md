@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3cbc8673d38cc21a92f0d333df1dc485db6d733
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a76f86f1be8012e0df2ed80960095eb83d6882e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021445"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Cópia em massa de variáveis do programa
   Você pode fazer cópias em massa diretamente de variáveis de programa. Depois de alocar variáveis para manter os dados de uma linha e chamar [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para iniciar a cópia em massa, chame [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para cada coluna para especificar o local e o formato da variável de programa a ser associada à coluna. Preencha cada variável com os dados e, em seguida, chame [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) para enviar uma linha de dados para o servidor. Repita o processo de preenchimento das variáveis e a chamada de **bcp_sendrow** até que todas as linhas tenham sido enviadas ao servidor e, em seguida, chame [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) para especificar que a operação foi concluída.  
