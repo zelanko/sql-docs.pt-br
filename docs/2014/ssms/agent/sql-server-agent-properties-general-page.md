@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 667a07744acf4b6d8b0dfa1e83adca738add0b4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245776"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058712"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>Propriedades do SQL Server Agent (página Geral)
-  Use esta página para exibir e modificar as propriedades gerais do serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Agent.  
+  Use esta página para exibir e modificar as propriedades gerais do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço do Agent.  
   
 ## <a name="options"></a>Opções  
  **Estado do serviço**  
@@ -32,7 +31,7 @@ ms.locfileid: "63245776"
  **Reiniciar automaticamente o SQL Server Agent se ele parar inesperadamente**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reiniciará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent parar inesperadamente.  
   
- **Nome do arquivo**  
+ **Nome de arquivo**  
  Especifica o nome do arquivo para o log de erros.  
   
  **...**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a899bbe9a17a64083592e1078e8cac93365f02b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015998"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Uma `CompoundCurve` é uma coleção de zero ou mais instâncias `CircularString` ou `LineString` contínuas dos tipos geometry ou geography.
@@ -90,7 +89,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- `@g1` não é válido porque a segunda instância não é uma instância de LineString válida. `@g2` não é válido porque a instância de `LineString` não é válida. `@g3` não é válido porque a instância de `CircularString` não é válida. Para obter mais informações sobre `CircularString` as `LineString` instâncias e válidas, consulte [circularstring](circularstring.md) e [LineString](linestring.md).
+ `@g1` não é válido porque a segunda instância não é uma instância de LineString válida. `@g2` não é válido porque a instância de `LineString` não é válida. `@g3` não é válido porque a instância de `CircularString` não é válida. Para obter mais informações sobre as `CircularString` instâncias e válidas `LineString` , consulte [Circularstring](circularstring.md) e [LineString](linestring.md).
 
 ## <a name="examples"></a>Exemplos
 

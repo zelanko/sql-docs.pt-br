@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 865c23dc88571e0c9ee317eca280286a6c37118f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1454e29835c0087fb75c93a1680f452dfe0f2c05
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810430"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935077"
 ---
 # <a name="change-the-password-of-the-accounts-used-by-sql-server-sql-server-configuration-manager"></a>Alterar a senha das contas usadas pelo SQL Server (SQL Server Configuration Manager)
   Este tópico descreve como alterar a senha das contas usadas pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] e pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent são executados em um computador como um serviço usando credenciais fornecidas inicialmente durante a instalação. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo executada na conta de domínio e a senha para aquela conta for alterada, a senha usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser atualizada para a senha nova. Se a senha não for atualizada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá perder acesso a alguns recursos de domínio e se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parar, o serviço não será reinicializado até que a senha seja atualizada.  
@@ -49,15 +48,15 @@ ms.locfileid: "62810430"
     >  Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager é um snap-in do programa Console de Gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)] e não um programa autônomo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager não aparece como um aplicativo nas versões mais recentes do Windows.  
     >   
     >  -   **Windows 10**:  
-    >          Para abrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, na **página inicial**, digite SQLServerManager12. msc (para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). Para versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] substitua 12 por um número menor. Clique em SQLServerManager12.msc para abrir o Configuration Manager. Para fixar o Configuration Manager na página inicial ou na barra de tarefas, clique com o botão direito do mouse em SQLServerManager12. msc e clique em **abrir local do arquivo**. No explorador de arquivos do Windows, clique com o botão direito do mouse em SQLServerManager12. msc e clique em **fixar para iniciar** ou **fixar na barra de tarefas**.  
+    >          Para abrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, na **página inicial**, digite SQLServerManager12. msc (para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ). Para versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] substitua 12 por um número menor. Clique em SQLServerManager12.msc para abrir o Configuration Manager. Para fixar o Configuration Manager na página inicial ou na barra de tarefas, clique com o botão direito do mouse em SQLServerManager12. msc e clique em **abrir local do arquivo**. No explorador de arquivos do Windows, clique com o botão direito do mouse em SQLServerManager12. msc e clique em **fixar para iniciar** ou **fixar na barra de tarefas**.  
     > -   **Windows 8**:  
-    >          Para abrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no botão **Pesquisar** , em **aplicativos**, digite **SQLServerManager\<versão>. msc** , como `SQLServerManager12.msc`e pressione **Enter**.  
+    >          Para abrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no botão **Pesquisar** , em **aplicativos**, digite **SQLServerManager \<version> . msc** `SQLServerManager12.msc` , como e pressione **Enter**.  
   
 2.  No SQL Server Configuration Manager, clique em **Serviços do SQL Server**.  
   
-3.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (** \<instancename> **)** e, depois, clique em **Propriedades**.  
+3.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (** \<instancename> **)** e clique em **Propriedades**.  
   
-4.  Na caixa de diálogo **Propriedades do SQL Server (** \<instancename> **)** , na guia Logon, para a conta listada na caixa **Nome da Conta**, digite a nova senha nas caixas **Senha** e **Confirmar Senha** e, depois, clique em **OK**.  
+4.  Na caixa de diálogo Propriedades de **SQL Server (** \<instancename> **)** , na guia logon, para a conta listada na caixa **nome da conta** , digite a nova senha nas caixas **senha** e **Confirmar senha** e clique em **OK**.  
   
      A senha entra em vigor imediatamente, sem reinicializar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -67,9 +66,9 @@ ms.locfileid: "62810430"
   
 2.  No SQL Server Configuration Manager, clique em **Serviços do SQL Server**.  
   
-3.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server Agent (** \<instancename> **)** e, depois, clique em **Propriedades**.  
+3.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server Agent (** \<instancename> **)** e clique em **Propriedades**.  
   
-4.  Na caixa de diálogo **Propriedades do SQL Server Agent (** \<instancename> **)** , na guia Logon, para a conta listada na caixa **Nome da Conta**, digite a nova senha nas caixas **Senha** e **Confirmar Senha** e, depois, clique em **OK**.  
+4.  Na caixa de diálogo Propriedades de **SQL Server Agent (** \<instancename> **)** , na guia logon, para a conta listada na caixa **nome da conta** , digite a nova senha nas caixas **senha** e **Confirmar senha** e clique em **OK**.  
   
      Em uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a senha entra em vigor imediatamente, sem reinicializar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em uma instância clusterizada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia usar o recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline, e exigir uma reinicialização.  
   

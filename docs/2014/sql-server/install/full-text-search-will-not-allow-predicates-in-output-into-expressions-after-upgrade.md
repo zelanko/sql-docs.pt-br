@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f6473409-121a-414d-8fe9-ea9aea6cb7eb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9223d3d42a4b103aa1f90fa7a540ba6bc06ba1a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095004"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036783"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>Depois da atualização, a Pesquisa de Texto Completo não permitirá predicados na expressão OUTPUT INTO
   Predicados de texto completo não são permitidos na cláusula OUTPUT quando o nível de compatibilidade do banco de dados está definido como 100 ou superior.  

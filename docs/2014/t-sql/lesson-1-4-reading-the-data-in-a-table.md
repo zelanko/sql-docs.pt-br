@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bdaaeeddf8f35792c536624abfe6ff11b2dbd2e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68187293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011708"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>Lendo os dados em uma tabela (tutorial)
   Use a instrução SELECT para ler os dados em uma tabela. A instrução SELECT é um das instruções [!INCLUDE[tsql](../includes/tsql-md.md)] mais importantes e há muitas variações na sintaxe. Para este tutorial, você trabalhará com cinco versões simples.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b85da6a7-42f6-4707-a25e-3ded8958b94f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2f3c8af333cc20398e7951bd6fd53433da0288c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 061e7bad0bae5a74d103406265ad79195f79f7db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059210"
 ---
 # <a name="modify-updatetext-statements-that-read-and-write-to-binary-large-objects-blobs"></a>Modificar instruções UPDATETEXT que leem e gravam em BLOBs (objetos grandes binários)
   O Supervisor de Atualização detectou instruções UPDATETEXT que leem e gravam no mesmo BLOB (objeto binário grande) usando o mesmo ponteiro de texto. O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não oferece suporte para o uso de ponteiros de texto dessa forma.  

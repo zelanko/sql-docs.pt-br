@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62c95f0cb6c8239fee86b27b231e3e1830fb5009
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050903"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Características de execução de procedimentos armazenados estendidos
     
@@ -27,7 +26,7 @@ ms.locfileid: "62512208"
   
  A execução de um procedimento armazenado estendido tem as seguintes características:  
   
--   A função de procedimento armazenado estendido é executada no contexto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]segurança do.  
+-   A função de procedimento armazenado estendido é executada no contexto de segurança do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   A função de procedimento armazenado estendido é executada no espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62512208"
   
 -  
   
- Depois que a DLL de procedimento armazenado estendido é carregada, a DLL permanece carregada no espaço de endereço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servidor até que o seja interrompido ou o administrador descarregue explicitamente a DLL usando DBCC *dll_name* (gratuito).  
+ Depois que a DLL de procedimento armazenado estendido é carregada, a DLL permanece carregada no espaço de endereço do servidor até que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o seja interrompido ou o administrador descarregue explicitamente a DLL usando DBCC *dll_name* (gratuito).  
   
  O procedimento armazenado estendido pode ser executado a partir do [!INCLUDE[tsql](../../includes/tsql-md.md)] como um procedimento armazenado usando a instrução EXECUTE:  
   

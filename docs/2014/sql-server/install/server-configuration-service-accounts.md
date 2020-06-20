@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a894475f9dbdc95396f27b32f25f56bc409f0348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76921134"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036718"
 ---
 # <a name="server-configuration---service-accounts"></a>Configuração do servidor - Contas de serviço
   Use a página Configuração do Servidor do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atribuir contas de logon aos serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os serviços reais configurados nessa página dependem dos recursos que você selecionou para instalação.  
   
-As contas de inicialização usadas para iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e executar podem ser contas de usuário de domínio, contas de usuário locais, contas de serviço gerenciado, contas virtuais ou contas de sistema internas.  
+As contas de inicialização usadas para iniciar e executar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser contas de usuário de domínio, contas de usuário locais, contas de serviço gerenciado, contas virtuais ou contas de sistema internas.  
   
 ## <a name="options"></a>Opções  
  Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. A conta padrão é recomendada para a maioria das instalações.  

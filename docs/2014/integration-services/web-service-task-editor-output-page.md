@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b8dbb9847f3591d0f26a2dc7ca6e31f1b22da83
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054467"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972446"
 ---
 # <a name="web-service-task-editor-output-page"></a>Editor da Tarefa Serviço da Web (página Saída)
   Use a página **Saída** da caixa de diálogo **Editor da Tarefa Serviço da Web** para especificar onde armazenar o resultado retornado pelo método Web.  
@@ -39,13 +38,13 @@ ms.locfileid: "66054467"
   
 ### <a name="outputtype--file-connection"></a>OutputType = File Connection  
  **Arquivo**  
- Selecione um Gerenciador de conexões de arquivo na lista ou \<clique em **nova conexão...**> para criar um novo Gerenciador de conexões.  
+ Selecione um Gerenciador de conexões de arquivo na lista ou clique \<**New Connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variável**  
- Selecione uma variável na lista ou clique em \< **nova variável...**> para criar uma nova variável.  
+ Selecione uma variável na lista ou clique \<**New Variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados:**  [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   

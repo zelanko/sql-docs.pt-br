@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a1b0b28afbb83028af8d71644af08ca660a0b36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1a7286f15af28f97e488b8b40fd745a0d320108
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997143"
 ---
 # <a name="files-and-version-numbers"></a>Arquivos e números de versão
-  Todos os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes do SMO (Management Objects) necessários são instalados como parte de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uma instância do cliente ou do servidor. SMO é implementado em vários assemblies gerenciados. Você pode desenvolver aplicativos SMO em um cliente ou um servidor.  
+  Todos os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes do SMO (Management Objects) necessários são instalados como parte de uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente ou do servidor. SMO é implementado em vários assemblies gerenciados. Você pode desenvolver aplicativos SMO em um cliente ou um servidor.  
   
 |Diretório|Arquivo|Descrição|  
 |---------------|----------|-----------------|  

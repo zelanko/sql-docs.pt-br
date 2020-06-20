@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f500eb460cab8734a062ddf6561cbdf01d0f773
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927567"
 ---
 # <a name="view-a-list-of-modified-files"></a>Exibir uma lista de arquivos modificados
   Você pode usar a janela **check-ins pendentes** para exibir sempre uma lista dos arquivos com check-out na solução atual e fazer check-in desses arquivos com um único clique de botão.  
@@ -30,9 +29,9 @@ ms.locfileid: "62773422"
   
 1.  No menu **Exibir** , clique em **check-ins pendentes**.  
   
-2.  Para fazer check-in nos arquivos selecionados, clique em **fazer check-in**. Como alternativa, você pode encaixar a janela **check-ins pendentes** no lado [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] direito do ambiente para que você possa fazer check-in nos arquivos quando terminar de trabalhar.  
+2.  Para fazer check-in nos arquivos selecionados, clique em **fazer check-in**. Como alternativa, você pode encaixar a janela **check-ins pendentes** no lado direito do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente para que você possa fazer check-in nos arquivos quando terminar de trabalhar.  
   
-     **Check-in**  
+     **Fazer Check-in**  
      Faz o check-in na solução.  
   
      **Comentários**  
@@ -51,7 +50,7 @@ ms.locfileid: "62773422"
      **Colunas**  
      Exibe uma lista das colunas que você pode adicionar à lista Itens da janela.  
   
-     **Exibição de Árvore**  
+     **Exibição de árvore**  
      Exibe a hierarquia da pasta e do arquivo para a solução ou projeto que você está fazendo o check-in.  
   
      **Exibição Simples**  

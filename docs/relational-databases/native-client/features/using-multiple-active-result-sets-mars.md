@@ -1,5 +1,6 @@
 ---
 title: Usando MARS (vários conjuntos de resultados ativos) | Microsoft Docs
+description: O SQL Server dá suporte a vários conjuntos de resultados ativos. Os aplicativos podem ter mais de uma solicitação pendente e um conjunto de resultados padrão ativo por conexão.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf953bd5cb1835b2d2f6cc0e868a3687e53e852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b83a79a92680c6499a4f2270ad3707082b324938
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303176"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950416"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Usando MARS (vários conjuntos de resultados ativos)
 
@@ -50,7 +51,7 @@ ms.locfileid: "81303176"
 -   No MARS, a representação de escopo por sessão é proibida durante a execução dos lotes simultâneos.  
 
 > [!NOTE]
-> Por padrão, a funcionalidade MARS não é habilitada pelo driver. Para usar MARS ao se conectar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o Native Client, você deve habilitar o Mars especificamente em uma cadeia de conexão. No entanto, alguns aplicativos podem habilitar o MARS por padrão, se o aplicativo detectar que o driver oferece suporte a MARS. Para esses aplicativos, você pode desabilitar MARS na cadeia de conexão, conforme necessário. Para obter mais informações, consulte o provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e as seções sobre o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, mais adiante neste tópico.
+> Por padrão, a funcionalidade MARS não é habilitada pelo driver. Para usar MARS ao se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, você deve habilitar o Mars especificamente em uma cadeia de conexão. No entanto, alguns aplicativos podem habilitar o MARS por padrão, se o aplicativo detectar que o driver oferece suporte a MARS. Para esses aplicativos, você pode desabilitar MARS na cadeia de conexão, conforme necessário. Para obter mais informações, consulte o provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e as seções sobre o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, mais adiante neste tópico.
 
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client não limita o número de instruções ativas em uma conexão.  
   
@@ -77,7 +78,7 @@ ms.locfileid: "81303176"
   
  Para obter um exemplo de como usar MARS do ADO, consulte [usando o ADO com SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
   
-## <a name="in-memory-oltp"></a>OLTP na memória  
+## <a name="in-memory-oltp"></a>OLTP in-memory  
  O OLTP in-memory dá suporte a MARS usando consultas e procedimentos armazenados compilados nativamente. O MARS permite solicitar dados de várias consultas sem a necessidade de recuperar completamente cada conjunto de resultados antes de enviar uma solicitação para buscar linhas de um novo conjunto de resultados. Para ler com êxito de vários conjuntos de resultados abertos, você deve usar uma conexão de MARS habilitado.  
   
  O MARS é desabilitado por padrão, portanto, você precisa habilitá-lo explicitamente adicionando `MultipleActiveResultSets=True` a uma cadeia de conexão. O seguinte exemplo demonstra como se conectar a uma instância do SQL Server e como especificar que o MARS está habilitado:  
@@ -115,12 +116,12 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo oferece suporte a Mars por meio da adição da propriedade de inicialização da fonte de dados SSPROP_INIT_MARSCONNECTION, que é implementada no conjunto de propriedades DBPROPSET_SQLSERVERDBINIT. Além disso, uma nova palavra-chave de cadeia de conexão, **MarsConn**, foi adicionada. Ele aceita valores **true** ou **false**, sendo **false** o padrão.  
   
- A propriedade da fonte de dados DBPROP_MULTIPLECONNECTIONS é padronizada como VARIANT_TRUE. Isto significa que o provedor gerará várias conexões para oferecer suporte a vários objetos simultâneos do conjunto de linhas e do comando. Quando o MARS está habilitado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o Native Client pode dar suporte a vários objetos Command e Rowset em uma única conexão, portanto MULTIPLE_CONNECTIONS é definido como VARIANT_FALSE por padrão.  
+ A propriedade da fonte de dados DBPROP_MULTIPLECONNECTIONS é padronizada como VARIANT_TRUE. Isto significa que o provedor gerará várias conexões para oferecer suporte a vários objetos simultâneos do conjunto de linhas e do comando. Quando o MARS está habilitado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client pode dar suporte a vários objetos Command e Rowset em uma única conexão, portanto MULTIPLE_CONNECTIONS é definido como VARIANT_FALSE por padrão.  
   
  Para obter mais informações sobre aprimoramentos realizados no conjunto de propriedades DBPROPSET_SQLSERVERDBINIT, confira [Propriedades de inicialização e autorização](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>Exemplo de provedor OLE DB do SQL Server Native Client  
- Neste exemplo, um objeto de fonte de dados é criado usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o provedor de OLE DB nativo, e o Mars é habilitado usando a propriedade DBPROPSET_SQLSERVERDBINIT definida antes que o objeto de sessão seja criado.  
+ Neste exemplo, um objeto de fonte de dados é criado usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB nativo, e o Mars é habilitado usando a propriedade DBPROPSET_SQLSERVERDBINIT definida antes que o objeto de sessão seja criado.  
   
 ```cpp
 #include <sqlncli.h>  
@@ -234,7 +235,7 @@ SQLFetch(hstmt2);
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Recursos de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Recursos do SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Usando conjuntos de resultados padrão do SQL Server](../../../relational-databases/native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md)  
   
   

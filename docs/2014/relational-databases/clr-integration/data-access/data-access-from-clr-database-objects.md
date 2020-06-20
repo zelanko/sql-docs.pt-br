@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d229d490a9f3a7bc6f613259ee0535218de47975
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970640"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Acesso aos dados dos objetos de banco de dados CLR
-  Uma rotina Common Language Runtime (CLR) pode acessar facilmente os dados armazenados na instância do [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] na qual ele é executado, bem como os dados armazenados em instâncias remotas. Os dados específicos que a rotina pode acessar são determinados pelo contexto de usuário no qual o código está sendo executado. Acesse dados de dentro de um objeto CLR Database usando o .NET Framework Provedor de Dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para dados de aplicativos de cliente gerenciado e de camada intermediária. Por causa disto, você pode aproveitar seu conhecimento do ADO.NET e do `SqlClient` em aplicativos cliente e de camada intermediária.  
+  Uma rotina Common Language Runtime (CLR) pode acessar facilmente os dados armazenados na instância do [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] na qual ele é executado, bem como os dados armazenados em instâncias remotas. Os dados específicos que a rotina pode acessar são determinados pelo contexto de usuário no qual o código está sendo executado. Acesse dados de dentro de um objeto CLR Database usando o .NET Framework Provedor de Dados para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados de aplicativos de cliente gerenciado e de camada intermediária. Por causa disto, você pode aproveitar seu conhecimento do ADO.NET e do `SqlClient` em aplicativos cliente e de camada intermediária.  
   
 > [!NOTE]  
 >  Os métodos de tipos definidos pelo usuário e as funções definidas pelo usuário não são permitidos para executar o acesso a dados por padrão. Você deve definir a propriedade `DataAccess` de `SqlMethodAttribute` ou de `SqlFunctionAttribute` como `DataAccessKind.Read` para habilitar o acesso a dados somente leitura de métodos de UDT (Tipo Definido pelo Usuário) ou de funções definidas pelo usuário. As operações de modificação de dados não são permitidas de UDTs ou de funções definidas pelo usuário e lançam exceções em tempo de execução, se houver alguma tentativa.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd3e075f187118c6c2ab7f6898b911be44d2cf31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095867"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012890"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Configuração do Mecanismo de Banco de Dados – Provisionamento de conta
   Use esta página para definir o modo de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e adicionar grupos ou usuários do Windows como administradores do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -49,7 +48,7 @@ ms.locfileid: "66095867"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Nunca defina uma senha de sa em branco ou fraca.  
   
- **Modo misto (autenticação do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou autenticação)**  
+ **Modo misto (autenticação do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação)**  
  Permite que os usuários se conectem usando Autenticação do Windows ou Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os usuários que se conectarem por uma conta de usuário do Windows podem usar conexões confiáveis que são validadas pelo Windows.  
   
  Se você deve escolher Autenticação de Modo Misto e tem um requisito para usar logons do SQL a fim de acomodar aplicativos herdados, deverá definir senhas fortes para todas as contas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
