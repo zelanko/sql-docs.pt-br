@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 018d5add95e5d0936f6055e1c6710b6a8ddabdab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269886"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061466"
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabalhar com dados de alterações (SQL Server)
   Os dados de alteração ficam disponíveis para consumidores de Change Data Capture através das TVFs (funções com valor de tabela). Todas as consultas dessas funções exigem dois parâmetros para definir o intervalo de LSNs (números de sequência de log) qualificados para serem considerados no desenvolvimento do conjunto de dados retornado. Tanto o valor superior quanto o valor inferior do LSN indica que o limite do intervalo é considerado ao ser incluído no intervalo.  

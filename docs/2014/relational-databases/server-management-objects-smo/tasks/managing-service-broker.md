@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f175351120ab22fe4f64ecc0a33d0d78e3da48ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996785"
 ---
 # <a name="managing-service-broker"></a>Gerenciando o Service Broker
   No SMO, os objetos do [!INCLUDE[ssSB](../../../includes/sssb-md.md)] são localizados no namespace `Microsoft.SqlServer.Management.Smo.Broker`, que requer uma referência ao Microsoft.SqlServer.Smo.dll. Uma referência ao Microsoft.SqlServer.ServiceBrokerEnum.dll também é necessária para suportar informações de classe.  

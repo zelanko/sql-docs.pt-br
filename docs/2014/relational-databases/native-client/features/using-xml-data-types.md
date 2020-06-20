@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86230cd0de145f7f1ccb9f9b2709a5fd29ae78fa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 24a4f5750af22e8fd588c9c70c1c0399de948907
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707166"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039005"
 ---
 # <a name="using-xml-data-types"></a>Usando tipos de dados XML
   O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu um tipo de dados **xml** que permite armazenar documentos e fragmentos XML em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O tipo de dados **xml** é interno no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e tem algumas semelhanças com outros tipos internos, como **int** e **varchar**. Assim como ocorre em outros tipos internos, você pode usar o tipo de dados **xml** como um tipo de coluna ao criar uma tabela; como um tipo de variável, de parâmetro ou de retorno de função; ou em funções CAST e CONVERT.  
@@ -135,7 +134,7 @@ ms.locfileid: "82707166"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Os conjuntos de linhas de esquema de COLUMNS e PROCEDURE_PARAMETERS  
  Entre as adições aos conjuntos de linhas de esquema de COLUMNS e PROCEDURE_PARAMETERS estão as colunas a seguir.  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|O nome de um catálogo no qual uma coleção de esquema XML é definida. NULL para uma coluna não XML ou coluna de XML não digitada.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|O nome de um esquema no qual uma coleção de esquema XML é definida. NULL para uma coluna não XML ou coluna de XML não digitada.|  
@@ -147,7 +146,7 @@ ms.locfileid: "82707166"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>O conjunto de linhas de esquema de SS_XMLSCHEMA  
  Um novo conjunto de linhas de esquema de SS_XMLSCHEMA é introduzido para que os clientes recuperem as informações de esquema XML. O conjunto de linhas de SS_XMLSCHEMA contém as colunas a seguir.  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|O catálogo ao qual pertence uma coleção XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|O esquema ao qual pertence uma coleção XML.|  
@@ -167,7 +166,7 @@ ms.locfileid: "82707166"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>O conjunto de propriedades de DBPROPSET_SQLSERVERPARAMETER  
  Para oferecer suporte ao tipo de dados **XML** por meio do OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client implementa o novo conjunto de propriedades DBPROPSET_SQLSERVERPARAMETER, que contém os valores a seguir.  
   
-|Nome|Tipo|Description|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|O nome de um catálogo (banco de dados) no qual é definida uma coleção de esquemas XML. Uma parte do identificador de nome de três partes SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|O nome de um esquema XML em uma coleção de esquemas. Uma parte do identificador de nome de três partes SQL.|  
@@ -176,7 +175,7 @@ ms.locfileid: "82707166"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>O conjunto de propriedades de DBPROPSET_SQLSERVERCOLUMN  
  Para dar suporte à criação de tabelas na interface **ITableDefinition** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client adiciona três novas colunas ao conjunto de propriedades DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nome|Tipo|Description|  
+|Nome|Type|Descrição|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Para colunas de XML digitadas, esta propriedade é uma cadeia de caracteres que especifica o nome do catálogo em que está armazenado o esquema XML. Para outros tipos de coluna, esta propriedade retorna uma cadeia de caracteres vazia.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Para colunas de XML digitadas, esta propriedade é uma cadeia de caracteres que especifica o nome do esquema XML que define esta coluna.|  
@@ -196,7 +195,7 @@ ms.locfileid: "82707166"
 #### <a name="the-icolumnsrowset-interface"></a>A interface IColumnsRowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]O Native Client adiciona as seguintes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colunas específicas ao conjunto de linhas retornado pelo método **IColumnRowset:: GetColumnsRowset** . Estas colunas contêm o nome de três partes de uma coleção de esquemas XML. Para colunas não XML ou colunas de XML não digitadas, as três colunas assumem o valor padrão de NULL.  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|O catálogo ao qual pertence uma coleção de esquema XML;<br /><br /> NULL em caso contrário.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|O esquema ao qual pertence uma coleção de esquemas XML. NULL em caso contrário.|  

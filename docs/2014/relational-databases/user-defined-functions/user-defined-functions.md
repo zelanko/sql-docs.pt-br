@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7e4b1a77f2fe5a13e21d8b3fe59e37931669b30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054984"
 ---
 # <a name="user-defined-functions"></a>Funções definidas pelo usuário
   Assim como as funções em linguagens de programação, as funções do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas pelo usuário são rotinas que aceitam parâmetros, executam uma ação, como um cálculo complexo, e retornam o resultado dessa ação como um valor. O valor de retorno pode ser um único valor escalar ou um conjunto de resultados.  
@@ -69,7 +68,7 @@ ms.locfileid: "68211691"
  Funções de sistema  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas funções de sistema que você pode usar para executar uma variedade de operações. Elas não podem ser modificadas. Para obter mais informações, consulte [Funções internas &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [Funções armazenadas do sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql) e [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  
   
-##  <a name="guidelines"></a><a name="Guidelines"></a>Diretrizes  
+##  <a name="guidelines"></a><a name="Guidelines"></a> Diretrizes  
  Erros de [!INCLUDE[tsql](../../includes/tsql-md.md)] que levam ao cancelamento de uma instrução e continuam com a instrução seguinte no módulo (como gatilhos ou procedimentos armazenados) tratados de modo diferente em uma função. Nas funções, esses erros fazem com que a execução da função seja interrompida. Em troca, isso faz com que a instrução que chamou a função seja cancelada.  
   
  As instruções em um bloco BEGIN... END não podem ter nenhum efeito colateral. Os efeitos colaterais da função são as alterações permanentes realizada no estado de um recurso que tem um escopo fora da função como uma modificação em uma tabela do banco de dados. As únicas alterações que podem ser feitas pelas instruções na função são alterações em objetos locais à função, como cursores ou variáveis locais. As modificações em tabelas de banco de dados, operações em cursores que não são locais à função, envio de e-mail, tentativa de modificação em catálogo e geração de um conjunto de resultados retornados ao usuário são exemplos de ações que não devem ser realizadas em uma função.  

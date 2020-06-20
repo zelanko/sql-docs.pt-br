@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2b489fda1c051ecd08b63f28d6232a0e213d9fcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f97044c0070d06d511348d182c2fc478a904db3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188881"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023536"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Modificar uma definição de política de integridade de recursos (Utilitário do SQL Server)
   Este tópico descreve como modificar uma definição de política de integridade de recursos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Antes de modificar uma política de utilização de recursos no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você deve criar um UCP (ponto de controle de utilitário). Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](sql-server-utility-features-and-tasks.md).  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 865bd792c073688491ef53ed6730667c6fcdb472
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a61e80867abb8ecb4d2628b74dc9956051c8e4ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022389"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a atualizações e exclusões em cascata por meio do mecanismo de restrição de chave estrangeira. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará SQL_CASCADE para as colunas UPDATE_RULE e/ou DELETE_RULE se a opção CASCADE estiver especificada na cláusula ON UPDATE e/ou ON DELETE das restrições FOREIGN KEY. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará SQL_NO_ACTION para as colunas UPDATE_RULE e/ou DELETE_RULE se a opção NO ACTION estiver especificada na cláusula ON UPDATE e/ou ON DELETE das restrições FOREIGN KEY.  

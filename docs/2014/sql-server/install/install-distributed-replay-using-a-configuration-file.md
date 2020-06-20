@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3259232c-6963-4c9c-9d10-ae42aa262eef
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9db8127a9a43478d891d5955190bd594fb6647b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e05dbb32bb5680e8d123842a4b0b4d1e4cf1a191
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054730"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>Instalar o Distributed Replay usando um arquivo de configuração
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece a capacidade de gerar um arquivo de configuração baseado na entrada do usuário e nos padrões do sistema. Se você especificar que deseja instalar as ferramentas de Gerenciamento, poderá usar o arquivo de configuração para implantar os três componentes de Distributed Replay (Ferramenta de Administração, Distributed Replay Controller e Distributed Replay Client). Há suporte para a Instalação, reparo e desinstalação dos componentes do Distributed Replay.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1d8d7d0684d528276cc18adfdd3df837a79d551
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047461"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimento armazenados (Mecanismo de Banco de Dados)
   Um procedimento armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um grupo de uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou uma referência a um método CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Os procedimentos lembram as construções em outras linguagens de programação porque podem:  

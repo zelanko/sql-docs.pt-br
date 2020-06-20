@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22cb73877dcea8fb880d4c565b809990e5ce7123
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0527fb6da8219176fccd9053b13d5f112f68d8ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030625"
 ---
 # <a name="brokerconnection-event-class"></a>classe de evento Broker:Connection
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Connection** para informar o status de uma conexão de transporte gerenciado pelo Service Broker.  
@@ -34,8 +33,8 @@ ms.locfileid: "62664372"
 |**Erro**|`int`|O número de identificação da mensagem em **Sys. messages** para o texto no evento. Se esse evento informar um erro, ele será o número de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|31|Não|  
 |**EventClass**|`int`|O tipo de classe de evento capturado. Sempre **138** para **Broker:Connection**.|27|Não|  
 |**EventSequence**|`int`|Número de sequência para esse evento.|51|Não|  
-|**EventSubClass**|`nvarchar`|O estado da conexão. Para esse evento, a subclasse é um dos valores a seguir:<br /><br /> **Conectando**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está iniciando uma conexão de transporte.<br /><br /> **Conectado**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estabeleceu uma conexão de transporte.<br /><br /> **Connect Failed**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falhou em estabelecer uma conexão de transporte.<br /><br /> **Closing**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está encerrando a conexão de transporte.<br /><br /> **Fechado**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encerrou a conexão de transporte.<br /><br /> **Accept**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceitou uma conexão de transporte de outra instância.<br /><br /> **Send IO Error**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou um erro de transporte ao enviar uma mensagem.<br /><br /> **Receive IO Error**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou um erro de transporte ao receber uma mensagem.|21|Sim|  
-|**GUID**|`uniqueidentifier`|A ID de ponto de extremidade desta conexão.|54|Não|  
+|**EventSubClass**|`nvarchar`|O estado da conexão. Para esse evento, a subclasse é um dos valores a seguir:<br /><br /> **Conectando**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está iniciando uma conexão de transporte.<br /><br /> **Conectado**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estabeleceu uma conexão de transporte.<br /><br /> **Connect Failed**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falhou em estabelecer uma conexão de transporte.<br /><br /> **Closing**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está encerrando a conexão de transporte.<br /><br /> **Fechado**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encerrou a conexão de transporte.<br /><br /> **Aceitar**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceitou uma conexão de transporte de outra instância.<br /><br /> **Send IO Error**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou um erro de transporte ao enviar uma mensagem.<br /><br /> **Receive IO Error**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou um erro de transporte ao receber uma mensagem.|21|Sim|  
+|**VOLUME**|`uniqueidentifier`|A ID de ponto de extremidade desta conexão.|54|Não|  
 |**HostName**|`nvarchar`|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função **HOST_NAME** .|8|Sim|  
 |**IntegerData**|`int`|O número de horas em que esta conexão esteve fechada.|25|Sim|  
 |**IsSystem**|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|Não|  

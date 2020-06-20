@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d598ec6f828fc7d8d59b3f998b775a752b94c4a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773472"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928864"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Especificar uma versão como a versão mais recente
   Quando você faz o check-in de um arquivo no controle do código-fonte, essa versão se torna a mais recente; usuários que fazem check-out ou recuperam a versão mais recente recebem cópias locais do item em que foi feito check-in recentemente.  
@@ -40,7 +39,7 @@ ms.locfileid: "62773472"
   
 3.  No menu **arquivo** , aponte para **controle do código-fonte** e clique em **ViewHistory**.  
   
-4.  Na caixa **de diálogo histórico de> de** \<arquivo, selecione a versão que você deseja especificar como a mais recente e clique em **fixar**.  
+4.  Na caixa **de diálogo histórico de** \<file> , selecione a versão que você deseja especificar como a mais recente e clique em **fixar**.  
   
      Um símbolo de alfinete aparece próximo à versão selecionada, indicando que essa é a versão atual do arquivo. Se você tiver uma versão diferente carregada no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], será solicitado a recarregar o arquivo.  
   

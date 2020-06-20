@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea6ec9f196acd0a64a0b785024bd6426cd6a5381
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922148"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959047"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação completa)
   Em uma restauração completa de banco de dados, a meta é restaurar todo o banco de dados. O banco de dados inteiro fica offline durante a restauração. Antes que qualquer parte do banco de dados possa ficar online, todos os dados são recuperados a um ponto consistente, no qual todas as partes do banco de dados estejam no mesmo momento determinado e não exista nenhuma transação não confirmada.  
@@ -73,7 +72,7 @@ ms.locfileid: "62922148"
 >  Ao restaurar um backup de banco de dados em uma instância de servidor diferente, veja [Copiar bancos de dados com Backup e Restauração](../databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Sintaxe básica de RESTORE do Transact-SQL  
- A sintaxe de [restauração](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] básica para a sequência de restauração na ilustração anterior é a seguinte:  
+ A sintaxe básica de [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] para a sequência de restauração na ilustração anterior é a seguinte:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -179,8 +178,8 @@ GO
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [&#41;&#40;Transact-SQL de sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [Backups completos de banco de dados &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [Backups de bancos de dados completos &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9c4d9b65fed30d09bf739271131d3b83afcd0902
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 971f45fd69f381a8997bb2f8f08444f4d9c107c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010137"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955396"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   O FILESTREAM permite que aplicativos baseados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenem dados não estruturados, como documentos e imagens, no sistema de arquivos. Os aplicativos podem utilizar as APIs de streaming avançado e o desempenho do sistema de arquivos e, ao mesmo tempo, manter consistência transacional entre os dados não estruturados e os dados estruturados correspondentes.  
@@ -158,11 +157,11 @@ ms.locfileid: "66010137"
   [Criar aplicativos clientes para dados FILESTREAM](create-client-applications-for-filestream-data.md)  
   [Acessar dados do FILESTREAM com OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)  
   [Fazer atualizações parciais em dados do FILESTREAM](make-partial-updates-to-filestream-data.md)  
-  [Evitar conflitos com operações de banco de dados em aplicativos de FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
+  [Evitar conflitos com operações de banco de dados em aplicativos FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   [Mover um banco de dados habilitado para FILESTREAM](move-a-filestream-enabled-database.md)  
   [Configurar FILESTREAM em um cluster de failover](set-up-filestream-on-a-failover-cluster.md)  
   [Configurar um firewall para acesso ao FILESTREAM](configure-a-firewall-for-filestream-access.md)  
   
 ##  <a name="related-content"></a><a name="relcontent"></a> Conteúdo relacionado  
- [Compatibilidade do FILESTREAM com outros recursos do SQL Server](filestream-compatibility-with-other-sql-server-features.md)  
+ [Compatibilidade de FILESTREAM com outros recursos de SQL Server](filestream-compatibility-with-other-sql-server-features.md)  
   

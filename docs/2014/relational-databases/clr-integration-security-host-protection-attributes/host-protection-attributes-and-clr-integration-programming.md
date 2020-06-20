@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68f1f114002ab0ef38c7565a523723a06958048d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b46ac1c923695abf4a8bbbb4f074f14593ddcd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874351"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954146"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Atributos de proteção de host e programação da Integração CLR
   O CLR (Common Language Runtime) fornece um mecanismo para anotar APIs (interfaces de programação de aplicativo ) gerenciadas que fazem parte do .NET Framework com determinados atributos que podem ser de interesse de um host do CLR como, por exemplo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], desde o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Entre os exemplos desses HPAs (atributos de proteção de host) estão:  
@@ -46,7 +45,7 @@ ms.locfileid: "62874351"
   
 -   Poderia levar à desestabilização do próprio processo do servidor.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Não permite `HostProtectionAttribute` o uso de um tipo ou membro que tenha um que especifique uma `System.Security.Permissions.HostProtectionResource` enumeração com um valor de `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading`,,,, `SharedState`, `Synchronization`ou. `UI` Isso impede que os assemblies chamem membros que permitam compartilhar o estado, realizar a sincronização, causar um vazamento de recurso na terminação ou afetar a integridade do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Não permite o uso de um tipo ou membro que tenha um `HostProtectionAttribute` que especifique uma `System.Security.Permissions.HostProtectionResource` enumeração com um valor de,,,,,, `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading` `SharedState` , `Synchronization` ou `UI` . Isso impede que os assemblies chamem membros que permitam compartilhar o estado, realizar a sincronização, causar um vazamento de recurso na terminação ou afetar a integridade do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="disallowed-types-and-members"></a>Tipos e membros desaprovados  
  Os seguintes tópicos identificam tipos e membros cujos valores `HostProtectionResource` são desaprovados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

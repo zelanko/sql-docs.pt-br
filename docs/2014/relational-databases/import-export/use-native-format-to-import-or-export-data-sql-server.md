@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab42ba3eb6468aac3da2fa780d371818c8776690
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011656"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026299"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar o formato nativo para importar ou exportar dados (SQL Server)
   O formato nativo é recomendado quando você transfere dados em massa entre várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um arquivo de dados que não contém nenhum conjunto de caracteres estendidos ou DBCS (Conjunto de caracteres de byte duplo).  
@@ -60,7 +59,7 @@ ms.locfileid: "66011656"
      No início de cada `char` campo ou `varchar` , o **bcp** adiciona o comprimento do prefixo.  
   
     > [!IMPORTANT]  
-    >  Quando o modo nativo é usado, por padrão, o utilitário **bcp** converte caracteres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de para caracteres OEM antes de copiá-los para um arquivo de dados. O utilitário **bcp** converte os caracteres de um arquivo de dados em caracteres ANSI antes de importá [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -los em uma tabela. Durante essas conversões, podem ser perdidos dados de caractere estendidos. Para caracteres estendidos, use o formato nativo Unicode ou especifique uma página de código.  
+    >  Quando o modo nativo é usado, por padrão, o utilitário **bcp** converte caracteres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para caracteres OEM antes de copiá-los para um arquivo de dados. O utilitário **bcp** converte os caracteres de um arquivo de dados em caracteres ANSI antes de importá-los em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. Durante essas conversões, podem ser perdidos dados de caractere estendidos. Para caracteres estendidos, use o formato nativo Unicode ou especifique uma página de código.  
   
 -   Dados `sql_variant`  
   

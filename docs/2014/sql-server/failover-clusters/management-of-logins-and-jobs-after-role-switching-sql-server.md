@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c099bf9ea271b5ea93fdebfe8f35c98864bca09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252862"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062547"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administração de logons e trabalhos depois de troca de funções (SQL Server)
    Ao implantar uma solução de alta disponibilidade ou de recuperação de desastre para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é importante reproduzir informações relevantes que são armazenadas para o banco de dados nos bancos de dados **master** ou **msdb**. Normalmente, as informações relevantes incluem os trabalhos do banco de dados principal/primário e os logons de usuários ou de processos que precisam se conectar ao banco de dados. É necessário duplicar essas informações em qualquer instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda um banco de dados secundário/espelho. Se for possível, após a troca de funções, o melhor é reproduzir de forma programática as informações do banco de dados primário/principal.  
@@ -46,7 +45,7 @@ ms.locfileid: "63252862"
 >  Diferentes instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderiam ser configuradas de forma diferente, com diferentes letras de unidade de fita ou algo semelhante. Os trabalhos de cada parceiro devem permitir essas diferenças.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciar metadados ao disponibilizar um banco de dados em outra instância de servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](troubleshoot-orphaned-users-sql-server.md)  
   
   

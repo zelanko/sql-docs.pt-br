@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8bcd42996ee35839162ee4e541f5be44c2d602aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93c517ff64ded2a77011f4b0a81be49798aa11d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056937"
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>Reiniciar Assinatura(s) - todas as assinaturas
   A caixa de diálogo **Reiniciar Assinatura(s)** permite marcar todas as assinaturas de uma publicação para reinicialização. A reinicialização envolve a aplicação de um instantâneo a cada Assinante; é executada pelo Distribution Agent para assinaturas em publicações transacionais e pelo Merge Agent para assinaturas em publicações de mesclagem.  

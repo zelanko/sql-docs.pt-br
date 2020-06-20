@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd1727ffaa24edf12ed7ad8a5fb4f55f4910855e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064816"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Tarefa 10: Configurando o domínio composto para usar o serviço de dados de referência
   Nesta tarefa, você configura o domínio composto de **validação de endereço** para usar o serviço de verificação de **endereço de dados Melissa** . Em runtime, durante a atividade de limpeza, o DQS passa os valores de domínios existentes no domínio Address Validation para o serviço de limpeza. Consulte [mapear domínio/domínio de composição para dados de referência](https://msdn.microsoft.com/library/hh213030.aspx) para obter mais detalhes.  

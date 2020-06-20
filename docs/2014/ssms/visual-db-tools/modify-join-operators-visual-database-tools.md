@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 573be4884c385f8e2c391334bf0f862a66e19efa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044383"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modificar operadores de junção (Visual Database Tools)
   Por padrão, o [Designer de Consulta e Exibição](visual-database-tools.md) une tabelas que usam um sinal de igual (um equijoin), o qual faz corresponder valores nas duas colunas de junção. Se desejar, você pode alterar o operador usado para comparar valores nas colunas de junção.  

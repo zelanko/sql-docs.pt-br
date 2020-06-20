@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 75b7fb5a1b98f599a07e47101f93268779ca39b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ec88695b4df1e2d4ee5ec7f446574961adc76b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970906"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>Exibir os erros ocorridos durante o processo de preparo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode exibir os erros ocorridos durante o processo de preparo. No banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , há duas exibições que mostram erros:  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3bb87bbf5e3e17f5468fabe50c158b30239777d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890925"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951486"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Etapa 4: Testar o pacote de tutorial da Lição 5
   Em tempo de execução, o pacote irá obter o valor da propriedade `Directory` de uma variável atualizada em tempo de execução, ao invés de utilizar o nome original de diretório que foi especificado quando você criou o pacote. O valor da variável é populado pelo arquivo SSISTutorial.dtsConfig.  

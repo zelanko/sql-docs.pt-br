@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f93f5abc749f589ab4208b3a4c9434ca63b8769
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935027"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>Impedir a inicialização automática de uma instância do SQL Server (SQL Server Configuration Manager)
   Este tópico descreve como impedir que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicie automaticamente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é normalmente configurado para iniciar automaticamente. Você pode alterar isso definindo o modo de início da instância como manual.  
@@ -37,9 +36,9 @@ ms.locfileid: "62810042"
   
 3.  No painel detalhes, clique com o botão direito do mouse em **MSSQLServer**e clique em **Propriedades.**  
   
-4.  Na caixa de diálogo **Propriedades de \<**_instancename_**> do SQL Server**, na caixa **Propriedades**, defina o valor de **Modo Inicial** como **Manual**.  
+4.  Na caixa de diálogo ** \<**_instancename_**> propriedades do SQL Server** , na **caixa Propriedades** , defina o valor do **modo de início** como **manual**.  
   
-5.  Clique em **OK** para fechar a caixa de diálogo **Propriedades de \<**_instancename_**> do SQL Server** e feche o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
+5.  Clique em **OK** para fechar a caixa de diálogo ** \<**_instancename_**> Propriedades do SQL Server** e feche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](start-stop-pause-resume-restart-sql-server-services.md)  

@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd2a71e6acd52ba92f44c26f184bbd3141de6f4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954668"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funções de valor escalar CLR
-  Uma função de valor escalar (SVF) retorna um único valor, como uma cadeia de caracteres, um inteiro ou um valor de bit. Você pode criar funções de valor escalar definidas pelo usuário em código gerenciado usando qualquer linguagem de programação do .NET Framework. Essas funções são acessíveis a [!INCLUDE[tsql](../../includes/tsql-md.md)] ou outro código gerenciado. Para obter informações sobre as vantagens da integração CLR e como escolher entre código [!INCLUDE[tsql](../../includes/tsql-md.md)]gerenciado e, consulte [visão geral da integração do CLR](../clr-integration/clr-integration-overview.md).  
+  Uma função de valor escalar (SVF) retorna um único valor, como uma cadeia de caracteres, um inteiro ou um valor de bit. Você pode criar funções de valor escalar definidas pelo usuário em código gerenciado usando qualquer linguagem de programação do .NET Framework. Essas funções são acessíveis a [!INCLUDE[tsql](../../includes/tsql-md.md)] ou outro código gerenciado. Para obter informações sobre as vantagens da integração CLR e como escolher entre código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [visão geral da integração do CLR](../clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisitos das funções de valor escalar do CLR  
- As SVFs do .NET Framework são implementadas como métodos em uma classe de um assembly do .NET Framework. Os parâmetros de entrada e o tipo retornado de um SVF podem ser qualquer um dos tipos de dados escalares com `varchar`suporte `char`no `rowversion` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `text`exceto `ntext`, `image`, `timestamp`, `table`,, `cursor`,, ou. As SVFs devem garantir uma correspondência entre o tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o tipo de dados de retorno do método de implementação. Para obter mais informações sobre conversões de tipo, consulte [mapeando dados de parâmetro CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ As SVFs do .NET Framework são implementadas como métodos em uma classe de um assembly do .NET Framework. Os parâmetros de entrada e o tipo retornado de um SVF podem ser qualquer um dos tipos de dados escalares com suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto `varchar` ,,,,,, `char` `rowversion` `text` `ntext` `image` `timestamp` , `table` ou `cursor` . As SVFs devem garantir uma correspondência entre o tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o tipo de dados de retorno do método de implementação. Para obter mais informações sobre conversões de tipo, consulte [mapeando dados de parâmetro CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  Ao implementar uma SVF do .NET Framework em uma linguagem do .NET Framework, o atributo personalizado `SqlFunction` pode ser especificado para incluir informações adicionais sobre a função. O atributo `SqlFunction` indica se a função acessa ou modifica os dados, se é determinística e se envolve operações de ponto flutuante.  
   

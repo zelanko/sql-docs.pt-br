@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9692b27e2c9c366808ba70ca9bd7ff0c14771bf7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d570dda8bb6e7a839ae901b7d9f8709895c2e88a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62867330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031117"
 ---
 # <a name="audit-add-role-event-class"></a>Classe de evento Audit Add Role
   A classe de evento **Função de Adição de Auditoria** ocorre quando uma função de banco de dados é adicionada ou removida de um banco de dados. Esta classe de evento é usada pelos procedimentos armazenados **sp_addrole** e **sp_droprole** .  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebcdace31407c1b5ca8568595bb4b10e245b4da0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204588"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064280"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipos de consultas (Visual Database Tools)
   O Designer de Consulta e Exibição fornece recursos internos para alguns tipos de consulta - Selecionar, Inserir Resultados, Inserir Valores, Atualizar, Excluir e Criar Tabela - e também oferece suporte a expressões de consultas UNION, pesquisa de texto completo e CASE.  

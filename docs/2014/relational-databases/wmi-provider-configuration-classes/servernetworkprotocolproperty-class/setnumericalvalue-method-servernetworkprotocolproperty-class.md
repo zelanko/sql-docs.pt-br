@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e2b3318b9aae0412e827875af35cbdf0477e059f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5fe5915240130336bc1f16100a693e4b81e8d163
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736276"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056777"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>Método SetNumericalValue (classe ServerNetworkProtocolProperty)
   Define o valor numérico da propriedade referenciada.  
@@ -40,8 +39,8 @@ NumValue
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
- Um objeto [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md) que representa um atributo do protocolo de rede na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *object*  
+ Um objeto [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md) que representa um atributo do protocolo de rede na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parâmetros  
   

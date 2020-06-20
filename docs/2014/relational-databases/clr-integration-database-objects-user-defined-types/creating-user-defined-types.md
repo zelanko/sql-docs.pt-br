@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a26ef6e6f2c7b394191a292bd2d92155eb40450c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb949573b73463712e9981cad90e9c7fad9c7c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970686"
 ---
 # <a name="creating-a-user-defined-type"></a>Criar um tipo definido pelo usuário
   Para criar um tipo definido pelo usuário (UDT) que possa ser instalado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primeiro crie uma classe em uma das linguagens de programação .NET Framework com suporte, como Visual C# ou Visual Basic, que esteja de acordo com as especificações para criação de UDTs. A classe poderá, então, ser compilada como uma DLL (Dynamic-Link Library), que poderá ser carregada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também poderá criar e implantar UDTs com o Visual Studio.  

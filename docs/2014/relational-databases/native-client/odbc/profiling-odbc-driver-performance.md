@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3c5863489bcdda590137587273b9b31b4bae3cc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e2b1e0f8ba22eacff01929ed3364dcffe0cf815
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011109"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Criando perfil de desempenho do driver ODBC
   O driver ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client driver pode criar perfil de dois tipos de dados de desempenho:  
@@ -74,7 +73,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Estatísticas de perfil de aplicativo  
   
-|Campo de SQLPERF|Description|  
+|Campo de SQLPERF|Descrição|  
 |-------------------|-----------------|  
 |TimerResolution|Resolução mínima da hora de relógio do servidor em milissegundos. Isto será relatado normalmente como 0 (zero) e deverá ser considerado somente se o número relatado for maior. Se a resolução mínima do relógio do servidor for maior que o intervalo provável para algumas das estatísticas baseadas em temporizador, estas estatísticas poderão ser aumentadas.|  
 |SQLidu|Número de instruções INSERT, DELETE ou UPDATE depois de SQL_PERF_START.|  
@@ -112,7 +111,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Time Statistics  
   
-|Campo SQLPERF|Description|  
+|Campo SQLPERF|Descrição|  
 |-------------------|-----------------|  
 |msExecutionTime|Quantidade cumulativa de horas que o driver gastou processando depois de SQL_PERF_START, incluindo o tempo gasto esperando respostas do servidor.|  
 |msNetworkServerTime|Quantidade cumulativa de horas que o driver gastou esperando respostas do servidor.|  

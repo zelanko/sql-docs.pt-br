@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb5e3fa319259df5ba0da1d6234fedee9cb604
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025185"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conexão usando outro computador
   Para aumentar a segurança, o [!INCLUDE[ssDE](../includes/ssde-md.md)] das edições Developer, Express e Evaluation do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode ser acessado de outro computador quando inicialmente instalado. Esta lição mostra a você como habilitar os protocolos, configurar as portas e configurar o Firewall do Windows para se conectar de outros computadores.  
@@ -44,7 +43,7 @@ ms.locfileid: "63144800"
     > [!NOTE]  
     >  Você pode ter opções de 32 bits e de 64 bits disponíveis.  
   
-2.  Em **SQL Server Configuration Manager**, expanda **SQL Server configuração de rede**e clique em **protocolos para** _ \<InstanceName>_.  
+2.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server** e, em seguida, clique em **Protocolos para** _\<InstanceName>_.  
   
      A instância padrão (uma instância sem nome) é listada como **MSSQLSERVER**. Se você instalou uma instância nomeada, o nome fornecido será listado. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)]instala como **SQLExpress**, a menos que você tenha alterado o nome durante a instalação.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63144800"
  Para aprimorar a segurança, o Windows Server 2008, o [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]e o Windows 7 ativam o Firewall do Windows. Para se conectar à esta instância a partir de outro computador, abra uma porta de comunicação no firewall. A instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)] escuta na porta 1433; portanto, não é preciso configurar uma porta fixa. No entanto, instâncias nomeadas incluindo [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] escutam em portas dinâmicas. Antes de abrir uma porta no firewall, você deve primeiro configurar o [!INCLUDE[ssDE](../includes/ssde-md.md)] para escutar em uma porta específica conhecida como fixa ou estática; caso contrário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] poderia escutar em uma porta diferente toda vez que fosse iniciado. Para obter mais informações sobre firewalls, as configurações padrão do Firewall do Windows e uma descrição das portas TCP que afetam o Mecanismo de Banco de Dados, o Analysis Services, o Reporting Services e o Integration Services, veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
->  As atribuições de número de porta são gerenciadas pela autoridade de números atribuídos [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)da Internet e estão listadas em. Os números de porta devem ser atribuídos dos números de 49152 a 65535.  
+>  As atribuições de número de porta são gerenciadas pela autoridade de números atribuídos da Internet e estão listadas em [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) . Os números de porta devem ser atribuídos dos números de 49152 a 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Configure o SQL Server para escutar em uma porta específica  
   
@@ -67,13 +66,13 @@ ms.locfileid: "63144800"
   
 3.  Na caixa de diálogo **Propriedades de TCP/IP** , clique na guia **Endereços IP** .  
   
-4.  Na caixa **Porta TCP** da seção **IPAll** , digite um número de porta disponível. Para este tutorial, usaremos `49172`.  
+4.  Na caixa **Porta TCP** da seção **IPAll** , digite um número de porta disponível. Para este tutorial, usaremos `49172` .  
   
 5.  Clique em **OK** para fechar a caixa de diálogo e clique em **OK** no aviso de que o serviço deve ser reiniciado.  
   
 6.  No painel esquerdo, clique em **Serviços do SQL Server**.  
   
-7.  No painel direito, clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e clique em **Reiniciar**. Quando o [!INCLUDE[ssDE](../includes/ssde-md.md)] for reiniciado, ele escutará na porta `49172`.  
+7.  No painel direito, clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e clique em **Reiniciar**. Quando o [!INCLUDE[ssDE](../includes/ssde-md.md)] for reiniciado, ele escutará na porta `49172` .  
   
 ##  <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>Abrindo portas no firewall  
  Os sistemas de Firewall ajudam a impedir o acesso não autorizado aos recursos do computador. Para conectar-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a partir de outro computador quando um firewall estiver ativo, abra uma porta no firewall.  
@@ -91,7 +90,7 @@ ms.locfileid: "63144800"
   
 3.  Na caixa de diálogo **Tipo de Regra**, selecione **Porta** e clique em **Avançar**.  
   
-4.  Na caixa de diálogo **Protocolo e Portas**, selecione **TCP**. Selecione **Portas locais específicas**e digite o número da porta da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Digite 1433 para a instância padrão. Digite `49172` se você estiver configurando uma instância nomeada e configurado uma porta fixa na tarefa anterior. Clique em **Avançar**.  
+4.  Na caixa de diálogo **Protocolo e Portas**, selecione **TCP**. Selecione **Portas locais específicas**e digite o número da porta da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Digite 1433 para a instância padrão. Digite `49172` se você estiver configurando uma instância nomeada e configurado uma porta fixa na tarefa anterior. Clique em **Próximo**.  
   
 5.  Na caixa de diálogo **Ação**, selecione **Permitir a conexão** e clique em **Avançar**.  
   

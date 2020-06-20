@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 781963ddd2011c9e16cf67fdcd878039527546cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cf5e7ba15416be16b494b36859838e52aff7ce1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63294459"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064907"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>Caixa de diálogo Definições de Consulta Diferem (Visual Database Tools)
   A caixa de diálogo notifica que a consulta não pode ser representada graficamente nos painéis de Diagrama e de Critério e que será possível editar a consulta apenas no painel SQL.  

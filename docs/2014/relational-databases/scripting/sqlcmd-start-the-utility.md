@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 08ba399bd9ebe4a8ba4c064aa2e0bce39b82d533
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 304260311c2297f1849b3d0ac1b1771956dfca49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703667"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063391"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Iniciar o utilitário sqlcmd
   Para começar a usar o `sqlcmd`, você deve primeiro iniciar o utilitário e se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode se conectar a uma instância padrão ou nomeada. A primeira etapa é iniciar o utilitário `sqlcmd`.  

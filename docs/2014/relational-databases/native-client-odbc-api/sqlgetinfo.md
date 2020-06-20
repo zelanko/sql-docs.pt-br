@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2788847a52d47596c38a9f63161d122543fe8099
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2721e3fc4d46d2cfbf5284986d343d5baca5862
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022152"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   A tabela mostra os valores retornados por **SQLGetInfo**. Estes valores podem variar com base no número de versão do servidor conectado.  
   
- **SQLGetInfo** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo difere de **SQLGetInfo** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC (SQLSRV32. DLL) quando **SQLGetInfo** é chamado com SQL_KEYWORDS e um comprimento de buffer 0.  O driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retorna SQL_SUCCESS, mas o driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna SQL_SUCCESS_WITH_INFO.  No entanto, quando chamado com um comprimento de buffer diferente de zero que é menor que a cadeia de caracteres de palavra-chave output, **SQLGetInfo** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retorna SQL_SUCCESS_WITH_INFO e um SQLSTATE de 01004.  
+ **SQLGetInfo** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo difere de **SQLGetInfo** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC (SQLSRV32.DLL) quando **SQLGetInfo** é chamado com SQL_KEYWORDS e um comprimento de buffer 0.  O driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retorna SQL_SUCCESS, mas o driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna SQL_SUCCESS_WITH_INFO.  No entanto, quando chamado com um comprimento de buffer diferente de zero que é menor que a cadeia de caracteres de palavra-chave output, **SQLGetInfo** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retorna SQL_SUCCESS_WITH_INFO e um SQLSTATE de 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -117,7 +116,7 @@ ms.locfileid: "82706002"
 |SQL_IDENTIFIER_QUOTE_CHAR|" (o caractere de aspas duplas)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|Solicitação sem suporte do driver.|  
-|SQL_INFO_SS_NETLIB_NAME|Atributo específico do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. O nome da biblioteca de rede em uso pela conexão.<br /><br /> Por padrão, DBNETLIB é retornado.  Nessa situação, DBNETLIB refere-se à biblioteca de rede e não está relacionada a DBNETLIB. dll.|  
+|SQL_INFO_SS_NETLIB_NAME|Atributo específico do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. O nome da biblioteca de rede em uso pela conexão.<br /><br /> Por padrão, DBNETLIB é retornado.  Nessa situação, DBNETLIB refere-se à biblioteca de rede e não está relacionada a dbnetlib.dll.|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  

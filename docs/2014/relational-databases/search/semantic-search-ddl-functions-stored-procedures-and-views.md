@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce6c23f9a8ff1d0dac8986bf6b44c7725d4badc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011042"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004009"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>Pesquisa de semântica DDL, funções, procedimentos armazenados e exibições
   Lista as instruções Transact-SQL e os objetos de banco de dados que oferecem suporte à pesquisa semântica estatística no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Para obter a lista de instruções e objetos de banco de dados que dão suporte à pesquisa de texto completo, consulte [DDL, funções, procedimentos armazenados e exibições de pesquisa de texto completo](../views/views.md).  
   
-##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a>Instruções DDL (linguagem de definição de dados) Transact-SQL  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Instruções DDL (linguagem de definição de dados) Transact-SQL  
   
 |Objeto|Mais informações|  
 |------------|----------------------|  
@@ -57,7 +56,7 @@ ms.locfileid: "66011042"
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[Instalar e configurar a pesquisa semântica](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[Instalar e configurar a pesquisa semântica](install-and-configure-semantic-search.md)|  
   
-##  <a name="system-views---catalog-views"></a><a name="cv"></a>Exibições do sistema – exibições do catálogo  
+##  <a name="system-views---catalog-views"></a><a name="cv"></a> Exibições do sistema – Exibições do catálogo  
   
 |Objeto|Mais informações|  
 |------------|----------------------|  
@@ -65,7 +64,7 @@ ms.locfileid: "66011042"
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[Instalar e configurar a pesquisa semântica](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[Instalar e configurar a pesquisa semântica](install-and-configure-semantic-search.md)|  
   
-##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a>Exibições do sistema – exibições de gerenciamento dinâmico  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> Exibições do sistema – Exibições de gerenciamento dinâmico  
   
 |Objeto|Mais informações|  
 |------------|----------------------|  

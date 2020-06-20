@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ffcef923eaeb3ba48eacaca870bd3355fb6661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66822375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035582"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Realize uma avaliação sob demanda usando servidores registrados
 
@@ -39,7 +38,7 @@ ms.locfileid: "66822375"
   
 2.  Expanda **mecanismo de banco de dados**e, em seguida, expanda **grupos de servidores locais**ou **servidores de gerenciamento central**, dependendo de sua configuração.  
   
-3.  Execute um destes procedimentos:  
+3.  Siga um destes procedimentos:  
   
     -   Para avaliar as políticas em relação a todos os servidores gerenciados pelo grupo de servidores local ou do servidor de gerenciamento central, clique com o botão direito do mouse no nome do grupo de servidores locais ou no nome do servidor de gerenciamento central e clique em **avaliar políticas**.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66822375"
   
 4.  Na caixa de diálogo **avaliar políticas** , ao lado da caixa **origem** , clique no botão de reticências (**...**).  
   
-5.  Na caixa de diálogo **selecionar origem** , você pode selecionar **arquivos** ou **servidor** como a origem dos arquivos de política a serem avaliados. Se você clicar em **servidor**, poderá executar uma avaliação sob demanda de todas as políticas de práticas recomendadas que foram importadas anteriormente para o gerenciamento baseado em políticas em um servidor local ou remoto. Neste tutorial, você clicará em **arquivos**e, em seguida, selecionará os arquivos de política individuais que deseja avaliar. Para fazer isso, execute estas etapas:  
+5.  Na caixa de diálogo **selecionar origem** , você pode selecionar **arquivos** ou **servidor** como a origem dos arquivos de política a serem avaliados. Se você clicar em **servidor**, poderá executar uma avaliação sob demanda de todas as políticas de práticas recomendadas que foram importadas anteriormente para o gerenciamento baseado em políticas em um servidor local ou remoto. Neste tutorial, você clicará em **arquivos**e, em seguida, selecionará os arquivos de política individuais que deseja avaliar. Para fazer isso, siga estas etapas:  
   
     1.  Clique em **arquivos**.  
   

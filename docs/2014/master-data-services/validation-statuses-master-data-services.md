@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b4ad97a783781596fccbbc2c159140d819586b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a4d1695bf21426c61cf81658bc90952338735f9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478540"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970922"
 ---
 # <a name="validation-statuses-master-data-services"></a>Status da validação (Master Data Services)
   Na área funcional **Gerenciamento de Versões** , na página **Validar Versão** , os seguintes status são possíveis.  

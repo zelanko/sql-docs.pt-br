@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 91def0dda11d1a16ceaac4d12a3c9294a084d247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46c61f8a5383c87d46fa0dbda18876b43ffb7739
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056931"
 ---
 # <a name="replication-over-the-internet"></a>Replicação na Internet
   A replicação de dados pela Internet permite que usuários remotos e desconectados acessem dados quando necessitarem, usando uma conexão com a Internet. Replique os dados pela Internet, por meio de:  

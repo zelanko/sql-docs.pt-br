@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2ac1f46529dc16c67de7237f191f81decf9a2c0c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 576f6257f3ff5378dc4adb975ab3ef3847dd928c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021621"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField pode ser usado para definir campos de descritor para parâmetros com valor de tabela e colunas de parâmetro com valor de tabela. Para obter informações sobre os campos disponíveis, consulte [campos de descritor de parâmetro com valor de tabela](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) e [campos de descritor para colunas constituintes de parâmetro com valor de tabela](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md).  
