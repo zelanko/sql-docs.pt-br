@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13994ac9a235a9259a1f436dc8bf0dd6435a51a3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058517"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966366"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Editor de Loop Foreach (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor de Loop Foreach** para nomear e descrever um contêiner Loop Foreach que usa um enumerador especificado para repetir um fluxo de trabalho para cada membro em uma coleção.  

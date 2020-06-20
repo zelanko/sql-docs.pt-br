@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d26cda51087ff0bf0cbe648e74e09332724c1d10
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058677"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966446"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Editor de Destino de Arquivo Simples (Página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino de Arquivo Simples** para mapear colunas de entrada para colunas de destino.  
@@ -34,7 +33,7 @@ ms.locfileid: "66058677"
  Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis para colunas de entrada.  
   
  **Coluna de Entrada**  
- Exiba as colunas de entrada selecionadas anteriormente neste tópico. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**. Selecione ** \<ignorar>** para excluir a coluna da saída.  
+ Exiba as colunas de entrada selecionadas anteriormente neste tópico. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**. Selecione **\<ignore>** para excluir a coluna da saída.  
   
  **Coluna de destino**  
  Exiba cada coluna de destino disponível, seja ela mapeada ou não.  

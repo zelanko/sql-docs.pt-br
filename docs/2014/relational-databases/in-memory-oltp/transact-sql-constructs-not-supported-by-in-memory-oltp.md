@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 95b657064f36045dfd0d916c24097b81c0e44867
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2b5df47d05730b8f6ec6a82045686d462ace1682
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718860"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025557"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
   As tabelas com otimização de memória e os procedimentos armazenados nativamente compilados não oferecem suporte à área de superfície completa do [!INCLUDE[tsql](../../includes/tsql-md.md)] que tem suporte em tabelas com base em disco e procedimentos armazenados pelo [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado. Ao tentar usar um dos recursos sem suporte, o servidor retornará um erro.  
@@ -35,7 +34,7 @@ ms.locfileid: "82718860"
 ## <a name="databases-that-use-in-memory-oltp"></a>Bancos de dados que usam OLTP na memória  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem ser exibidos no texto da mensagem de erro que envolve um banco de dados de OLTP na memória.  
   
-|Tipo|Name|Resolução|  
+|Type|Nome|Resolução|  
 |----------|----------|----------------|  
 |Opção|AUTO_CLOSE|A opção de banco de dados AUTO_CLOSE=ON não tem suporte nos bancos de dados que têm um grupo de arquivos MEMORY_OPTIMIZED_DATA.|  
 |Opção|ATTACH_REBUILD_LOG|A opção ATTACH_REBUILD_LOG do banco de dados CREATE não tem suporte nos bancos de dados que têm um grupo de arquivos MEMORY_OPTIMIZED_DATA.|  
@@ -46,7 +45,7 @@ ms.locfileid: "82718860"
 ## <a name="memory-optimized-tables"></a>Tabelas com otimização de memória  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve uma tabela com otimização de memória, bem como a ação corretiva para resolver o erro.  
   
-|Tipo|Name|Resolução|  
+|Type|Nome|Resolução|  
 |----------|----------|----------------|  
 |Recurso|ATIVADO|As tabelas com otimização de memória não podem ser colocadas em um grupo de arquivos ou esquema de partição. Remova a cláusula ON da instrução `CREATE TABLE`.|  
 |Tipo de dados|*Nome do tipo de dados*|Não há suporte para o tipo de dados indicado. Substitua o tipo por um dos tipos de dados com suporte. Para obter mais informações, consulte [tipos de dados com suporte](supported-data-types-for-in-memory-oltp.md).|  
@@ -84,7 +83,7 @@ ms.locfileid: "82718860"
 ## <a name="indexes-on-memory-optimized-tables"></a>Índices em tabelas com otimização de memória  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve um índice em uma tabela com otimização de memória, bem como a ação corretiva para resolver o erro.  
   
-|Tipo|Name|Resolução|  
+|Type|Nome|Resolução|  
 |----------|----------|----------------|  
 |Recurso|Índice filtrado|Os índices filtrados não têm suporte com tabelas com otimização de memória. Omita a cláusula `WHERE` da especificação de índice.|  
 |Recurso|UNIQUE|Não há suporte para índices exclusivos nas tabelas com otimização de memória. Remova o argumento `UNIQUE` da especificação de índice.|  
@@ -98,14 +97,14 @@ ms.locfileid: "82718860"
 ## <a name="nonclustered-hash-indexes"></a>Índices de hash não clusterizados  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve um índice de hash não clusterizado, bem como a ação corretiva para resolver o erro.  
   
-|Tipo|Name|Resolução|  
+|Type|Nome|Resolução|  
 |----------|----------|----------------|  
 |Opção|ASC/DESC|Os índices de hash não clusterizados não são ordenados. Remova as palavras-chave `ASC` e `DESC` da especificação de chave de índice.|  
   
 ## <a name="natively-compiled-stored-procedures"></a>procedimentos armazenados compilados nativamente  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve procedimentos armazenados nativamente compilados, bem como a ação corretiva para resolver o erro.  
   
-|Tipo|Recurso|Resolução|  
+|Type|Recurso|Resolução|  
 |----------|-------------|----------------|  
 |Recurso|Variáveis de tabela alinhadas|Os tipos de tabela não podem ser declarados alinhados com declarações de variável. Os tipos de tabela devem ser declarados explicitamente usando uma instrução `CREATE TYPE`.|  
 |Recurso|Cursores|Os cursores não têm suporte em procedimentos armazenados nativamente compilados.<br /><br /> -Ao executar o procedimento do cliente, use RPC em vez da API do cursor. Com o ODBC, evite a instrução `EXECUTE` do [!INCLUDE[tsql](../../includes/tsql-md.md)], em vez de especificar o nome do procedimento diretamente.<br /><br /> -Ao executar o procedimento de um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote ou outro procedimento armazenado, evite usar um cursor com o procedimento armazenado compilado nativamente.<br /><br /> -Ao criar um procedimento armazenado compilado nativamente, em vez de usar um cursor, use a lógica baseada em conjunto ou um `WHILE` loop.|  
@@ -199,7 +198,7 @@ ms.locfileid: "82718860"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transações que acessam tabelas com otimização de memória  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve transações que acessam tabelas com otimização de memória, bem como a ação corretiva para resolver o erro.  
   
-|Tipo|Name|Resolução|  
+|Type|Nome|Resolução|  
 |----------|----------|----------------|  
 |Recurso|ponto de salvamento|Não há suporte para a criação de pontos de salvamento explícitos em transações que acessam tabelas com otimização de memória.|  
 |Recurso|transação associada|As sessões associadas não podem participar de transações que acessam tabelas com otimização de memória. Não associe a sessão antes de executar o procedimento.|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee19526ffa4d88948d2efa2313be212ca094522
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062648"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Criar um novo cluster de failover do SQL Server (instalação)
   Para instalar ou atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você deve executar o programa de instalação em cada nó do cluster de failover. Para adicionar um nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , é necessário executar a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no nó a ser adicionado à instância do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Não execute a Instalação no nó ativo para gerenciar os outros nós.  
@@ -232,7 +231,7 @@ ms.locfileid: "68893710"
     >   
     >  A edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que você está instalando deve corresponder em todos os nós de um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Quando você adiciona um novo nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , especifique que a edição corresponde à edição do cluster de failover existente.  
   
-##  <a name="prepare"></a><a name="prepare"></a> Preparar  
+##  <a name="prepare"></a><a name="prepare"></a>Deixar  
   
 #### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Etapa 1 da instalação avançada/corporativa do cluster de failover: Preparar  
   
@@ -278,7 +277,7 @@ ms.locfileid: "68893710"
     > [!IMPORTANT]  
     >  Use o mesmo InstanceID para todos os nós que estejam preparados para o cluster de failover  
   
-     **Diretório raiz da instância** – por padrão, o diretório raiz da instância é\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\C:\Program Files. Para especificar um diretório raiz não padrão, use o campo fornecido ou clique no botão de reticências para localizar uma pasta de instalação.  
+     **Diretório raiz da instância** – por padrão, o diretório raiz da instância é C:\Program Files \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\ . Para especificar um diretório raiz não padrão, use o campo fornecido ou clique no botão de reticências para localizar uma pasta de instalação.  
   
      **Instâncias instaladas** : a grade mostra as instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que estão no computador em que a Instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Clique em **Avançar** para continuar.  
   
@@ -304,7 +303,7 @@ ms.locfileid: "68893710"
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
-16. Use a guia **configuração do servidor – agrupamento** para especificar agrupamentos não padrão para [!INCLUDE[ssDE](../../../includes/ssde-md.md)] o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e o. Para obter mais informações, consulte [Configuração do SQL Server – Ordenação](../../install/server-configuration-collation.md).  
+16. Use a guia **configuração do servidor – agrupamento** para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Para obter mais informações, consulte [Configuração do SQL Server – Ordenação](../../install/server-configuration-collation.md).  
   
 17. Use **Configuração de Servidor - Filestream** para habilitar o FILESTREAM para a sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Configuração do Mecanismo de Banco de Dados – Fluxo de arquivos](../../install/database-engine-configuration-filestream.md). Clique em **Próximo** para continuar.  
   

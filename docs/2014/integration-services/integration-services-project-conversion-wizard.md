@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057982"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965411"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistente de Conversão de Projeto do Integration Services
   O **Assistente de Conversão de Projeto do Integration Services** converte um projeto no modelo de implantação de projeto.  
@@ -81,7 +80,7 @@ ms.locfileid: "66057982"
  **Servidor**  
  Digite o nome do servidor ou selecione o servidor.  
   
- **Usar a autenticação do Windows**  
+ **Usar autenticação do Windows**  
  O modo de Autenticação do Microsoft Windows permite que um usuário se conecte por meio de uma conta de usuário do Windows. Se usar Autenticação do Windows, não será preciso fornecer um nome de usuário nem senha.  
   
  **Usar Autenticação do SQL Server**  
@@ -103,7 +102,7 @@ ms.locfileid: "66057982"
  **Status**  
  Indica se um pacote está pronto para ser convertido ao modelo de implantação de projeto.  
   
- **Mensagem**  
+ **Message**  
  Exibe uma mensagem associada ao pacote.  
   
  **Senha**  

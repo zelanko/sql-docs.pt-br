@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f54f2a3520a0d34290cb81b411a5ce41a59d7c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062174"
 ---
 # <a name="manage-schedules"></a>Gerenciar Agendas
-  Permite exibir e alterar as propriedades de agendas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Permite exibir e alterar as propriedades de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agendas de trabalho do Agent.  
   
 ## <a name="options"></a>Opções  
  **Agendas disponíveis**  
@@ -29,7 +28,7 @@ ms.locfileid: "63255069"
  **Nome**  
  Exibe o nome da agenda.  
   
- **Habilitada**  
+ **Enabled**  
  Selecione esta opção para habilitar a agenda.  
   
  **Descrição**  

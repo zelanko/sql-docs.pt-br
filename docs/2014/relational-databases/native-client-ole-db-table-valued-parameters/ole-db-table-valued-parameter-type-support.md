@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87dcc1df096d72610be680013776748aca1a11ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7ea078b34dee99b3bc2b97f6c0ce2a6ee8d25113
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704598"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018122"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Suporte ao tipo de parâmetro com valor de tabela OLE DB
   Este tópico descreve suporte ao tipo OLE DB para parâmetros com valor de tabela.  

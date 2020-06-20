@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab35cd849d020a265fac097f2a0314a81c20dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965436"
 ---
 # <a name="integration-services-features-and-tasks"></a>Recursos e tarefas do Integration Services
   Encontre informações que qualquer pessoa-designer, desenvolvedor, analista ou administrador precisa para criar e desenvolver [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacotes. Em seguida, aprenda a incorporar esses pacotes em seus aplicativos e sites da Web.  

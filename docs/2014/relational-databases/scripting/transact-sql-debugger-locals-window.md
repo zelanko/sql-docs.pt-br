@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 70beb09d12cab07290d38178cad296509a914983
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6f8f62eb69a50d7543af41dddb9c62c842d17151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718366"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063298"
 ---
 # <a name="locals-window"></a>Janela Locais
   A janela **Locais** exibe informações sobre as expressões locais no escopo atual do depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . O escopo é definido como o quadro atual da pilha de chamadas selecionada na janela **Pilha de Chamadas** . Você deve estar no modo de depuração para exibir as expressões locais.  

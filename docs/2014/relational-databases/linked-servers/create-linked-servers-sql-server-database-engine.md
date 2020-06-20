@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743482"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024972"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
   Este tópico mostra como criar um servidor vinculado e acessar dados de outro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Criar um servidor vinculado permite trabalhar com dados de várias origens. O servidor vinculado não precisa ser outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas esse é um cenário comum.  
@@ -35,7 +34,7 @@ ms.locfileid: "62743482"
 ##  <a name="security"></a><a name="Security"></a> Segurança  
   
 ### <a name="permissions"></a>Permissões  
- Ao usar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, é `ALTER ANY LINKED SERVER` necessária a permissão no servidor ou associação na função de servidor fixa **setupadmin** . Ao usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o `CONTROL SERVER` requer permissão ou associação na função de servidor fixa **sysadmin** .  
+ Ao usar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, é necessária `ALTER ANY LINKED SERVER` a permissão no servidor ou associação na função de servidor fixa **setupadmin** . Ao usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] `CONTROL SERVER` o requer permissão ou associação na função de servidor fixa **sysadmin** .  
   
 ##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> Como criar um servidor vinculado  
  Você pode usar qualquer um dos itens a seguir:  
@@ -102,7 +101,7 @@ ms.locfileid: "62743482"
      **Adicionar**  
      Adicione um novo logon local.  
   
-     **Remover**  
+     **Removerr**  
      Remova um logon local existente.  
   
      **Não serão feitas**  
@@ -152,7 +151,7 @@ ms.locfileid: "62743482"
   
      Se 0, use o valor **sp_configure** padrão da opção [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) .  
   
-     **Tempo limite da consulta**  
+     **Tempo Limite da Consulta**  
      O valor do tempo limite em segundos para as consultas em um servidor vinculado.  
   
      Se 0, use o valor **sp_configure** padrão da opção [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) .  

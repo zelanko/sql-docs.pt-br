@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eec806bffba330ac3ab995c1b3bfd3504589ecfd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011292"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063287"
 ---
 # <a name="get-started-with-full-text-search"></a>Iniciar a pesquisa de texto completo
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por padrão, os bancos de dados são habilitados para texto completo. No entanto, para usar um índice de texto completo em uma tabela, você deve configurar o recurso de indexação de texto completo nas colunas das tabelas que deseja acessar usando o Mecanismo de Texto Completo.  
@@ -34,7 +33,7 @@ ms.locfileid: "66011292"
   
     1.  Identifique cada coluna de texto a ser incluída no índice de texto completo.  
   
-    2.  Se uma determinada coluna contiver documentos armazenados como dados binários`varbinary(max)`( `image` ou dados), você deverá especificar uma coluna de tabela (a *coluna de tipo*) que identifica o tipo de cada documento na coluna que está sendo indexada.  
+    2.  Se uma determinada coluna contiver documentos armazenados como dados binários ( `varbinary(max)` ou `image` dados), você deverá especificar uma coluna de tabela (a *coluna de tipo*) que identifica o tipo de cada documento na coluna que está sendo indexada.  
   
     3.  Especifique o idioma que a pesquisa de texto completo deverá usar nos documentos da coluna.  
   
@@ -101,14 +100,14 @@ ms.locfileid: "66011292"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Associando uma lista de palavras irrelevantes (stoplist) ao índice de texto completo  
  O [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduz as listas de palavras irrelevantes (stoplists). Uma *lista de palavras irrelevantes* também é conhecida como lista de palavras de ruído. Uma lista de palavras irrelevantes é associada a cada índice de texto completo, e as palavras dessa lista são aplicadas a consultas de texto completo nesse índice. Por padrão, a lista de palavras irrelevantes do sistema é associada a um novo índice de texto completo. Porém, você pode criar e usar sua própria lista de palavras irrelevantes. Para obter mais informações, veja [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Por exemplo, a[!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) a seguir cria uma NovaList de texto completo chamada myStoplist3 copiando da System STOPLIST:  
+ Por exemplo, a instrução [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) a seguir [!INCLUDE[tsql](../../../includes/tsql-md.md)] cria uma NovaList de texto completo chamada myStoplist3 copiando da System STOPLIST:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- A[!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) a seguir altera uma STOPLIST chamada myStoplist, adicionando a palavra ' en ', primeiro para espanhol e, em seguida, para francês:  
+ A instrução [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) a seguir [!INCLUDE[tsql](../../../includes/tsql-md.md)] altera uma STOPLIST chamada myStoplist, adicionando a palavra ' en ', primeiro para espanhol e, em seguida, para francês:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

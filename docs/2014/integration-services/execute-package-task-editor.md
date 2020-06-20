@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059055"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966826"
 ---
 # <a name="execute-package-task-editor"></a>Editor da tarefa Executar Pacote
   Use o Editor da tarefa Executar Pacote para configurar a Tarefa Executar Pacote. A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  
@@ -61,12 +60,12 @@ ms.locfileid: "66059055"
  Se o pacote filho for protegido por senha, forneça a senha dele ou clique no botão de reticências (...) e crie uma senha para ele.  
   
  `ExecuteOutOfProcess`  
- Especifique se o pacote filho é executado no processo do pacote pai ou um processo separado. Por padrão, a Propriedade ExecuteOutOfProcess da tarefa executar pacote é definida como `False`e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como `true`, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se a propriedade foi definida como `true`, você não poderá depurar o pacote em uma instalação somente ferramentas; você deve instalar o produto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Instalar o Integration Services](install-windows/install-integration-services.md).  
+ Especifique se o pacote filho é executado no processo do pacote pai ou um processo separado. Por padrão, a Propriedade ExecuteOutOfProcess da tarefa executar pacote é definida como `False` e o pacote filho é executado no mesmo processo que o pacote pai. Se você definir esta propriedade como `true`, o pacote filho será executado em um processo separado. Isto pode reduzir a velocidade do lançamento do pacote filho. Além disso, se a propriedade foi definida como `true`, você não poderá depurar o pacote em uma instalação somente ferramentas; você deve instalar o produto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para obter mais informações, consulte [Instalar o Integration Services](install-windows/install-integration-services.md).  
   
 ### <a name="referencetype-dynamic-options"></a>Opções dinâmicas ReferenceType  
   
 #### <a name="referencetype--external-reference"></a>ReferenceType = referência externa  
- **Local**  
+ **Localidade**  
  Selecione o local de armazenamento do pacote filho. As opções dessa propriedade são listadas na tabela a seguir.  
   
 |Valor|Descrição|  
@@ -88,7 +87,7 @@ ms.locfileid: "66059055"
   
 #### <a name="location--sql-server"></a>Local = SQL Server  
  **Conexão**  
- Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
+ Selecione um OLE DB Gerenciador de conexões na lista ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md), [Configurar Gerenciador de Conexões OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66059055"
   
 #### <a name="location--file-system"></a>Local = Sistema de arquivos  
  **Conexão**  
- Selecione um Gerenciador de conexões de arquivo na lista ou clique \<em **nova conexão...**> para criar um novo Gerenciador de conexões.  
+ Selecione um Gerenciador de conexões de arquivo na lista ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66059055"
  **Adicionar**  
  Clique para mapear um parâmetro ou variável para um parâmetro de pacote filho.  
   
- **Remover**  
+ **Removerr**  
  Clique para remover um mapeamento entre um parâmetro ou variável e um parâmetro de pacote filho.  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab6d134177c7861c3a8f92cf767c71c0b56e233
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843699"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929097"
 ---
 # <a name="set-source-control-options"></a>Definir opções de controle do código-fonte
   Antes de poder se beneficiar dos recursos internos de controle do código-fonte do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], é necessário configurar as opções de controle do código-fonte dos vários ambientes em que você trabalha.  
@@ -54,7 +53,7 @@ ms.locfileid: "62843699"
     |----------|-----------------|  
     |**Visual SourceSafe**|Especifica que você deseja usar as configurações usadas com mais frequência pelos [!INCLUDE[msCoName](../includes/msconame-md.md)] usuários do Visual SourceSafe.|  
     |**Desenvolvedor Independente**|Especifica que você está trabalhando independentemente.|  
-    |**Custom**|Especifica que você modificou as configurações para uma função.|  
+    |**Personalizado**|Especifica que você modificou as configurações para uma função.|  
   
      **Executar atualizações de status em plano de fundo**  
      Atualiza automaticamente os ícones de sinalização do controle do código fonte no Gerenciador de Soluções conforme o status de um item é alterado. Se você constatar atrasos ao executar operações que exijam muito do servidor, especialmente ao abrir uma solução ou projeto do controle do código fonte, tente desmarcar essa caixa de seleção, pois isso pode melhorar o desempenho.  
@@ -78,7 +77,7 @@ ms.locfileid: "62843699"
     |----------|-----------------|  
     |**Visual SourceSafe**|Especifica que você deseja usar as configurações usadas com mais frequência pelos [!INCLUDE[msCoName](../includes/msconame-md.md)] usuários do Visual SourceSafe.|  
     |**Desenvolvedor Independente**|Especifica que você está trabalhando independentemente.|  
-    |**Custom**|Especifica que você modificou as configurações para uma função.|  
+    |**Personalizado**|Especifica que você modificou as configurações para uma função.|  
   
      Selecionar uma dessas funções faz com que as opções de controle do código-fonte apropriadas sejam automaticamente selecionadas.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62843699"
      Especifica que ao fazer o check-in de itens para atualizar o armazenamento de controle do código fonte, os itens devem permanecer com o check-out aplicado para você. Se você quiser alterar essa opção para um check-in específico, clique na seta **Opções** na caixa de diálogo **check-in** e desmarque a caixa de seleção **manter check-out** .  
   
      **Itens verificados**  
-     Exibe uma lista de opções que especificam [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como o deve se comportar quando você tenta editar um item cujo check-out não foi feito. As tabelas a seguir descrevem as opções disponíveis.  
+     Exibe uma lista de opções que especificam como o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] deve se comportar quando você tenta editar um item cujo check-out não foi feito. As tabelas a seguir descrevem as opções disponíveis.  
   
      **Tentando**  
   

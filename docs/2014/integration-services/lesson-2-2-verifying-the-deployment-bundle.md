@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c035446034c5f9f8dfdeeed6a9b6b4be2ea77d72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966046"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>Etapa 2: Verificar o pacote de implantação
   Na lição 1, você criou o projeto do Tutorial de Implantação e adicionou pacotes e arquivos auxiliares ao projeto; na tarefa anterior você compilou um utilitário de implantação para o projeto.  
@@ -50,7 +49,7 @@ ms.locfileid: "62891759"
   
      `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  Verifique se `AllowConfigurationChanges` o valor do atributo é **true** e se o XML inclui um `Package` elemento para cada um dos dois pacotes, um `MiscellaneousFile` elemento para cada um dos quatro arquivos que não são de pacote e `ConfigurationFile` um elemento para cada um dos dois arquivos de configuração XML.  
+4.  Verifique se o valor do `AllowConfigurationChanges` atributo é **true** e se o XML inclui um `Package` elemento para cada um dos dois pacotes, um `MiscellaneousFile` elemento para cada um dos quatro arquivos que não são de pacote e um `ConfigurationFile` elemento para cada um dos dois arquivos de configuração XML.  
   
 5.  Saia do Internet Explorer ou do editor de textos.  
   

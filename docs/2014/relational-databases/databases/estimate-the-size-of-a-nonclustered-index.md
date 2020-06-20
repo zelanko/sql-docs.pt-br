@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054114"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965963"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar o tamanho de um índice não clusterizado
   Siga estas etapas para estimar a quantidade de espaço necessária para armazenar um índice não clusterizado:  
@@ -181,7 +180,7 @@ ms.locfileid: "66054114"
   
 5.  Calcule o tamanho da linha de índice:  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (para sobrecarga de cabeçalho de linha de uma linha de índice) + 6 (para o ponteiro de ID de página filho)  
+     ***Leaf_Row_Size***   =  ***Fixed_Leaf_Size***  +  ***Variable_Leaf_Size***  +  ***Leaf_Null_Bitmap*** + 1 (para sobrecarga de cabeçalho de linha de uma linha de índice) + 6 (para o ponteiro de ID de página filho)  
   
 6.  Calcule o número de linhas de índice por página (8.096 bytes livres por página):  
   
@@ -210,7 +209,7 @@ ms.locfileid: "66054114"
   
 1.  Calcule o número de níveis não folha no índice:  
   
-     ***Níveis não folha*** = 1 + Index_Rows_Per_Page de log (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Níveis não folha*** = 1 + Index_Rows_Per_Page de log (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      Arredonde esse valor até o número inteiro mais próximo. Esse valor não inclui o nível folha do índice não clusterizado.  
   
