@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeedc1f735fd296169f704b794d1bb0e69adab22
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972266"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], há dois tipos de administradores: administradores de modelo e o administrador do sistema do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="model-administrators"></a>Administradores de modelo  
- No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um administrador de modelo é um usuário que tem a permissão **Atualizar** atribuída ao objeto de modelo de nível superior na guia **objetos de modelo** e nenhuma outra permissão atribuída.  
+ No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , um administrador de modelo é um usuário que tem a permissão **Atualizar** atribuída ao objeto de modelo de nível superior na guia **objetos de modelo** e nenhuma outra permissão atribuída.  
   
 -   Se o usuário tiver acesso à área funcional **Gerenciador** , ele poderá adicionar, excluir e atualizar todos os dados mestre nessa área.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "65480013"
  Um usuário ou pode ser configurado como um administrador de modelo no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou programaticamente. Para obter mais informações, consulte [Criar um administrador de modelo &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
   
 ## <a name="master-data-services-system-administrator"></a>Administrador do sistema do Master Data Services  
- Há somente um administrador do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. O administrador do sistema é o usuário especificado para a **conta de administrador** quando você [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] cria o banco de dados.  
+ Há somente um administrador do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. O administrador do sistema é o usuário especificado para a **conta de administrador** quando você cria o banco de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] dados.  
   
  O administrador do sistema do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]:  
   

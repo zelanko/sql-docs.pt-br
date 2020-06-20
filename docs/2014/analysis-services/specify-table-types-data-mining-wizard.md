@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b854c683cdbc3ff503751efbaf564dfa9e3110f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068137"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940287"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Especificar tipos de tabelas (Assistente de Mineração de Dados)
   Use a página **Especificar Tipos de Tabelas** para identificar as tabelas a serem usadas para definir a estrutura de mineração. Se uma tabela não for selecionada, ela não será usada para definir a estrutura de mineração.  

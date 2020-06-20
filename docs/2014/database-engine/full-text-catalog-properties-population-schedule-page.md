@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 62d69cdc42745fcbb5eb7d2cb05f90b710e5c70d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000928"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932997"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Catálogo de propriedades de texto completo (Página Agenda de População)
   Use essa caixa de diálogo para adicionar ou alterar agendas que determinam quando o catálogo de texto completo será populado ou repopulado.  
@@ -31,7 +30,7 @@ ms.locfileid: "83000928"
  **Tipo de População**  
  Exiba ou modifique a operação de população: cheio, com incremento ou uma operação de otimização.  
   
- **Habilitada**  
+ **Enabled**  
  Selecione ou desmarque essa caixa de seleção para habilitar ou desabilitar a operação agendada.  
   
  **Descrição**  
@@ -43,7 +42,7 @@ ms.locfileid: "83000928"
  **Editar**  
  Clique nesse botão para editar a agenda de população selecionada.  
   
- **Excluir**  
+ **Delete (excluir)**  
  Clique nesse botão para remover a agenda de população selecionada.  
   
 ## <a name="see-also"></a>Consulte Também  

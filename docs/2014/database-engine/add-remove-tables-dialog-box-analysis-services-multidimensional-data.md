@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04192a5990126d06c4b3f7b6a77cc218f3a631de
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889215"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937330"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Adicionar-remover tabelas (Analysis Services-dados multidimensionais)
   Use a caixa de diálogo **Adicionar/Remover Tabelas** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para adicionar tabelas em uma fonte de dados a uma exibição da fonte de dados ou removê-la dessa exibição. Você pode exibir a caixa de diálogo **Adicionar/Remover Tabelas** das seguintes maneiras:  
@@ -35,7 +34,7 @@ ms.locfileid: "68889215"
  **Objetos disponíveis**  
  Exibe os objetos e seus tipos na fonte de dados que ainda não estão incluídos na exibição da fonte de dados.  
   
- Clique **>>** para transferir todos os objetos listados em **objetos disponíveis** para **objetos incluídos**, ou selecione um ou mais objetos e **>** clique para transferir os objetos selecionados para **objetos incluídos**.  
+ Clique **>>** para transferir todos os objetos listados em **objetos disponíveis** para **objetos incluídos**, ou selecione um ou mais objetos e clique **>** para transferir os objetos selecionados para **objetos incluídos**.  
   
  **Filter**  
  Digite o filtro usado para restringir os objetos listados em **Objetos disponíveis** e clique no botão para filtrar os objetos listados.  
@@ -46,7 +45,7 @@ ms.locfileid: "68889215"
  **Objetos incluídos**  
  Exibe os objetos e os tipos que já foram adicionados à exibição da fonte de dados.  
   
- Clique **<<** para transferir todos os objetos listados em **objetos incluídos** para os **objetos disponíveis**ou selecione um ou mais objetos e **<** clique para transferir os objetos selecionados para **objetos disponíveis**.  
+ Clique **<<** para transferir todos os objetos listados em **objetos incluídos** para os **objetos disponíveis**ou selecione um ou mais objetos e clique **<** para transferir os objetos selecionados para **objetos disponíveis**.  
   
  **Adicionar tabelas relacionadas**  
  Clique para adicionar todas as tabelas que estão relacionadas às tabelas selecionadas em **Objetos incluídos**.  

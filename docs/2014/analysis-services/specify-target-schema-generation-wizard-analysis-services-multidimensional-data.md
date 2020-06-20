@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 343cb7d3957f1859b8676629a14b165e756b450d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940277"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>Especificar Destino (Assistente de Geração de Esquema) (Analysis Services – Dados Multidimensionais)
   Use a página **Especificar Destino** para identificar a exibição da fonte de dados na qual os esquemas relacionais devem ser criados.  

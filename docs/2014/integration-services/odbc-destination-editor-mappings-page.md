@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca1ac00668e6a4383b022ae5e1ed108da6ef603d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965016"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Editor de Destino ODBC (página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo **ODBC Destination Editor (Editor de Destino ODBC)** para mapear colunas de entrada para colunas de destino.  
@@ -33,7 +32,7 @@ ms.locfileid: "66057231"
  A lista de colunas de destino disponíveis. Arraste e solte uma coluna de destino em uma coluna de entrada disponível para mapear as colunas.  
   
 ### <a name="input-column"></a>Coluna de Entrada  
- Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando ** \<ignorar>** para excluir colunas da saída.  
+ Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando **\<ignore>** para excluir colunas da saída.  
   
 ### <a name="destination-column"></a>Coluna de Destino  
  Exiba todas as colunas de destino disponíveis, mapeadas e não mapeadas.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67e8e1ef-c7c6-434e-bd36-4b35f3cb7759
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7eea2aaca722ed2621127120f21b2ec350392606
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60e1bc5248f2ba85c505beb11ff78e5bbd3ded2b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069466"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940977"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>Selecionar Tabelas de Grupos de Medidas (Assistente para Cubos)
   Use a página **Selecionar Tabelas de Grupos de Medidas** para identificar a exibição da fonte de dados e selecionar as tabelas de grupos de medidas para o cubo.  

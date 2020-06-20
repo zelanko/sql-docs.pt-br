@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1043bc93-965d-4939-bd1c-21e9d8d3e9ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1cee588e7db1e219f3d2810e29bb77a68a21b7ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b690b93a99578e5cb9c7cf876c4a4b3fd6440e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780837"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933347"
 ---
 # <a name="sql-server-driver-extensions"></a>Extensões do driver do SQL Server
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implementa funções específicas de driver que permitem aos aplicativos ODBC acessar recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

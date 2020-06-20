@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 309cd3f67cb6fd4d41e3513aa6d3876af53bbc1b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483274"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971736"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>Caixa de diálogo Criar perfil e conta do Database Mail (Gerenciador de Configuração do Master Data Services)
   Use a caixa de diálogo **Criar Perfil e Conta do Database Mail** para criar um perfil e uma conta do Database Mail para o banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Este perfil será usado para notificar usuários e grupos através de email quando falhar a validação de regras de negócio.  
   
 ## <a name="database-mail-profile-and-account"></a>Perfil e conta do Database Mail  
- Um *perfil de Database Mail* é uma coleção de contas de Database Mail. Uma *conta de Database Mail* contém as informações [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que o usa para enviar mensagens de email para um servidor SMTP. Quando você cria o perfil e a conta no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], a conta é acrescentada automaticamente ao perfil e as informações de conta são usadas para enviar emails.  
+ Um *perfil de Database Mail* é uma coleção de contas de Database Mail. Uma *conta de Database Mail* contém as informações que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa para enviar mensagens de email para um servidor SMTP. Quando você cria o perfil e a conta no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], a conta é acrescentada automaticamente ao perfil e as informações de conta são usadas para enviar emails.  
   
 > [!NOTE]  
 >  Você não pode usar o [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] para atualizar perfis ou contas existentes do Database Mail, nem pode configurar mais de uma conta para um perfil. Para realizar mais tarefas avançadas com o Database Mail, você pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou scripts Transact-SQL. Para obter mais informações, consulte a seção [objetos de configuração do Database Mail](../relational-databases/database-mail/database-mail-configuration-objects.md) nos Manuais Online do SQL Server.  
@@ -37,10 +36,10 @@ ms.locfileid: "65483274"
   
 |Nome do controle|Descrição|  
 |------------------|-----------------|  
-|**Endereço de email**|Digite o nome do endereço de email da conta. Esse é o endereço de email do qual o email é enviado e deve estar no formato *email_name*@*domain_name*. Um exemplo de endereço de email é sales@contoso.com.|  
+|**Endereço de email**|Digite o nome do endereço de email da conta. Esse é o endereço de email do qual o email é enviado e deve estar no formato *email_name* @ *domain_name*. Um exemplo de endereço de email é sales@contoso.com.|  
 |**Nome de exibição**|Configuração opcional. Digite o nome que será exibido nas mensagens de email enviadas por essa conta. Um nome para exibição de exemplo é Grupo de Vendas da Contoso.|  
 |**Endereço de email de resposta**|Configuração opcional. Digite o endereço de email a ser usado em respostas a mensagens de email enviadas desta conta. Um exemplo de endereço de email de resposta é admin@contoso.com.|  
-|**Servidor SMTP**|Digite o nome ou o endereço IP do servidor SMTP usado pela conta para enviar email. Um formato de servidor SMTP de `smtp.` exemplo é *<COMPANY_NAME>* `.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.|  
+|**Servidor SMTP**|Digite o nome ou o endereço IP do servidor SMTP usado pela conta para enviar email. Um formato de servidor SMTP de exemplo é `smtp.` *<COMPANY_NAME>* `.com` . Para obter mais ajuda sobre isso, consulte o administrador de mail.|  
 |**Número da porta**|Digite o número da porta do servidor SMTP para a conta. A porta SMTP padrão é 25.|  
 |**Esse servidor requer uma conexão segura (SSL)**|Criptografa a comunicação usando o protocolo SSL (Secure Sockets Layer).|  
   
@@ -49,8 +48,8 @@ ms.locfileid: "65483274"
   
 |Nome do controle|Descrição|  
 |------------------|-----------------|  
-|**Autenticação do Windows usando as credenciais do serviço Mecanismo de Banco de Dados**|Especifique que Database Mail deve usar as credenciais da conta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de serviço do Windows para autenticação no servidor SMTP.|  
-|**Autenticação básica**|Especifique que o Database deve usar nome de usuário e senha específicos para autenticar no servidor SMTP. Estas informações são usadas somente para autenticação no servidor de email, e a conta não precisa corresponder a um usuário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou ao usuário no computador que executa o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|**Autenticação do Windows usando as credenciais do serviço Mecanismo de Banco de Dados**|Especifique que Database Mail deve usar as credenciais da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] conta de serviço do Windows para autenticação no servidor SMTP.|  
+|**Autenticação Básica**|Especifique que o Database deve usar nome de usuário e senha específicos para autenticar no servidor SMTP. Estas informações são usadas somente para autenticação no servidor de email, e a conta não precisa corresponder a um usuário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou ao usuário no computador que executa o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Nome de usuário**|Digite o nome da conta de usuário que o Database Mail usa para fazer logon no servidor SMTP. Um nome do usuário será necessário se o servidor SMTP exigir autenticação básica.|  
 |**Senha**|Digite a senha que o Database Mail usa para fazer logon no servidor SMTP. Uma senha será necessária se o servidor SMTP exigir autenticação básica.|  
 |**Confirmar senha**|Digite a senha novamente para confirmar.|  

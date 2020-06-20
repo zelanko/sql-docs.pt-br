@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831607"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918816"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote
   As tarefas de criação de perfil e limpeza de dados não são candidatas a um processo automatizado em seus estágios iniciais. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a saída da tarefa Criação de Perfil de Dados normalmente exige uma análise visual e uma opinião humana para determinar se as violações relatadas são significativas ou demasiadas. Mesmo depois de reconhecer os problemas de qualidade dos dados, ainda é necessário fazer um planejamento cuidadoso para escolher a melhor abordagem de limpeza.  
@@ -85,7 +84,7 @@ ms.locfileid: "62831607"
   
 2.  Adicione um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ao pacote. Configure esse gerenciador de conexões para usar o Provedor de Dados NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) e conecte-o a uma instância disponível do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     Por padrão, o gerenciador de conexões tem o seguinte nome: \<nome do servidor>.AdventureWorks1.  
+     Por padrão, o Gerenciador de conexões tem o seguinte nome: \<server name> . AdventureWorks1.  
   
 3.  Adicione um gerenciador de conexões de arquivos ao pacote. Configure esse gerenciador de conexões para criar o arquivo de saída para a tarefa Criação de Perfil de Dados.  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831607"
   
 -   Na janela **Variáveis** , adicione e configure as duas seguintes variáveis de pacote:  
   
-    -   Insira o nome, `ProfileConnectionName`, para uma das variáveis e defina o tipo dessa variável como **String**.  
+    -   Insira o nome, `ProfileConnectionName` , para uma das variáveis e defina o tipo dessa variável como **String**.  
   
-    -   Insira o nome, `AddressLine2NullRatio`, para a outra variável e defina o tipo dessa variável como **Double**.  
+    -   Insira o nome, `AddressLine2NullRatio` , para a outra variável e defina o tipo dessa variável como **Double**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Configurar a tarefa Criação de Perfil de Dados  
  A tarefa Criação de Perfil de Dados deve ser configurada do seguinte modo:  
@@ -142,9 +141,9 @@ ms.locfileid: "62831607"
   
 4.  Na página **Script** , selecione a linguagem de programação desejada. Em seguida, disponibilize as duas variáveis de pacote para o script:  
   
-    1.  Para `ReadOnlyVariables`, selecione `ProfileConnectionName`.  
+    1.  Para `ReadOnlyVariables` , selecione `ProfileConnectionName` .  
   
-    2.  Para **ReadWriteVariables**, selecione `AddressLine2NullRatio`.  
+    2.  Para **ReadWriteVariables**, selecione `AddressLine2NullRatio` .  
   
 5.  Selecione **Editar Script** para abrir o ambiente de desenvolvimento de script.  
   

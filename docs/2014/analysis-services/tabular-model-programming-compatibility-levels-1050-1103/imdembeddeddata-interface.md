@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 331f8c33f7748e6591acd6d6ecda7a03ef7d8137
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757783"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940107"
 ---
 # <a name="imdembedded-interface"></a>Interface IMDEmbedded
   A interface IMDEmbedded é uma interface pública usada para gerenciar um banco de dados do PowerPivot inserido ou um banco de dados modelo de tabela. A interface herda da interface `IPersistStream`. A interface permite as seguintes operações:  
@@ -39,7 +38,7 @@ ms.locfileid: "62757783"
 -   Salvar o banco de dados local ou em processo para o fluxo inserido no documento contêiner. Herdado de `IPersistStream`.  
   
 ## <a name="reference"></a>Referência  
- A referência a seguir documenta `IMDEmbedded` a interface como apresentada no arquivo de cabeçalho **Msmd. h** .  
+ A referência a seguir documenta a `IMDEmbedded` interface como apresentada no arquivo de cabeçalho **Msmd. h** .  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Arquivo de origem: PXOEmbeddedData.idl  
   
@@ -88,7 +87,7 @@ HRESULT GetStreamIdentifier (
  *out_pbstrStreamId*  
  Especifica o local do identificador de fluxo.  
   
-#### <a name="return-value"></a>Valor retornado  
+#### <a name="return-value"></a>Valor Retornado  
  `S_OK`  
  O identificador de fluxo foi retornado com êxito.  
   
@@ -132,7 +131,7 @@ HRESULT SetContainerURL (
  *in_bstrURL*  
  Especifica a URL para o documento contêiner.  
   
-#### <a name="return-value"></a>Valor retornado  
+#### <a name="return-value"></a>Valor Retornado  
  `S_OK`  
  A URL do contêiner foi definida com êxito.  
   
@@ -162,7 +161,7 @@ HRESULT SetHosted (
  *in_ftHosted*  
  TRUE se o chamador estiver hospedado em um aplicativo de serviço (como o IIS).  
   
-#### <a name="return-value"></a>Valor retornado  
+#### <a name="return-value"></a>Valor Retornado  
  `S_OK`  
  O sinalizador foi definido com êxito.  
   
@@ -192,7 +191,7 @@ HRESULT SetTempDirPath (
  *in_bstrPath*  
  O caminho usado pelo aplicativo de host para arquivos temporários.  
   
-#### <a name="return-value"></a>Valor retornado  
+#### <a name="return-value"></a>Valor Retornado  
  `S_OK`  
  O diretório de arquivos temporários foi definido com êxito.  
   
@@ -219,7 +218,7 @@ HRESULT Cancel ( void )
 #### <a name="parameters"></a>Parâmetros  
  Nenhum.  
   
-#### <a name="return-value"></a>Valor retornado  
+#### <a name="return-value"></a>Valor Retornado  
  `S_OK`  
  A operação foi cancelada com êxito.  
   
@@ -251,7 +250,7 @@ HRESULT GetSizeMax (
  *in_bstrPath*  
  O tamanho estimado (em bytes) da imagem de banco de dados inserida.  
   
-#### <a name="return-value"></a>Valor retornado  
+#### <a name="return-value"></a>Valor Retornado  
  `S_OK`  
  O tamanho foi obtido com êxito.  
   
@@ -268,7 +267,7 @@ HRESULT IsDirty ( void )
  Verifica se o banco de dados inserido foi alterado após ser salvo pela última vez. Herdado de `IPersistStream`.  
   
 #### <a name="parameters"></a>Parâmetros  
- none  
+ nenhum  
   
 #### <a name="return-values"></a>Valor(es) de retorno  
  `S_OK`  

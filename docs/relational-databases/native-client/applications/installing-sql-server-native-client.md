@@ -1,5 +1,6 @@
 ---
 title: Instalando
+description: O SQL Server Native Client 11,0 é instalado com o SQL Server 2016. Saiba onde os componentes estão instalados. Também há um programa de instalação redistribuível.
 ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77d5bcf0d1000b0ceee182ba043f81b4c1221ae8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6ecaaa2abcc65c24519a1d078bb5792b4cd8173
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965166"
 ---
 # <a name="installing-sql-server-native-client"></a>Instalando o SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ Você também pode obter sqlncli.msi na página da Web do SQL Server 2012 Featur
   
  As versões para x64 e Itanium de sqlncli.msi também instalam a versão de 32 bits do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Se o aplicativo foi projetado para uma plataforma diferente daquela em que foi desenvolvido, você poderá baixar as versões do sqlncli.msi para x64, Itanium e x86 do Centro de Download da Microsoft.  
   
- Quando você invoca o sqlncli.msi, só os componentes cliente são instalados por padrão. Os componentes do cliente são arquivos que dão suporte à execução de um aplicativo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que foi desenvolvido usando o Native Client. Para instalar também os componentes SDK, especifique `ADDLOCAL=All` na linha de comando. Por exemplo:  
+ Quando você invoca o sqlncli.msi, só os componentes cliente são instalados por padrão. Os componentes do cliente são arquivos que dão suporte à execução de um aplicativo que foi desenvolvido usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Para instalar também os componentes SDK, especifique `ADDLOCAL=All` na linha de comando. Por exemplo:  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
@@ -63,7 +64,7 @@ Você também pode obter sqlncli.msi na página da Web do SQL Server 2012 Featur
  Se você usar a opção /passive, /qn, /qb, or /qr com msiexec, também deverá especificar IACCEPTSQLNCLILICENSETERMS=YES, para indicar explicitamente que aceitou os termos da licença do usuário final. Essa opção deve ser especificada totalmente em letras maiúsculas.  
   
 ## <a name="uninstalling-sql-server-native-client"></a>Desinstalando o SQL Server Native Client  
- Como os aplicativos como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o servidor e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as ferramentas dependem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do cliente nativo, é importante não desinstalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o cliente nativo até que todos os aplicativos dependentes sejam desinstalados. Para os usuários do provedor com um aviso de que seu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplicativo depende do Native Client, use a opção de instalação APPGUID em seu MSI, da seguinte maneira:  
+ Como os aplicativos como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o servidor e as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ferramentas dependem do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente nativo, é importante não desinstalar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente nativo até que todos os aplicativos dependentes sejam desinstalados. Para os usuários do provedor com um aviso de que seu aplicativo depende do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, use a opção de instalação APPGUID em seu MSI, da seguinte maneira:  
   
  `msiexec /i sqlncli.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

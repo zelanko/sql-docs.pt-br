@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767638"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965286"
 ---
 # <a name="step-4-adding-package-configurations"></a>Etapa 4: Adicionar configurações de pacote
   Nessa tarefa, você adicionará uma configuração a cada pacote. As configurações atualizam os valores das propriedades e dos objetos do pacote em tempo de execução.  
@@ -42,12 +41,12 @@ ms.locfileid: "62767638"
   
 5.  Na página inicial do assistente de configuração de pacotes, clique em **Avançar**.  
   
-6.  Na página Selecionar tipo de configuração, selecione **arquivo de configuração XML** na **lista tipo de configuração** , selecione a opção o local de **configuração está armazenado em uma variável** de `DataTransfer,` ambiente e digite ou selecione a variável de ambiente **DataTransfer** na lista.  
+6.  Na página Selecionar tipo de configuração, selecione **arquivo de configuração XML** na lista **tipo de configuração** , selecione a opção o local de **configuração está armazenado em uma variável de ambiente** e digite `DataTransfer,` ou selecione a variável de ambiente **DataTransfer** na lista.  
   
     > [!NOTE]  
     >  Para disponibilizar a variável de ambiente na lista, talvez você precise reiniciar o computador após a adição da variável. Se você não quiser reiniciar o computador, poderá digitar o nome da variável de ambiente.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página Concluindo o Assistente, digite **DataTransfer EV Configuration** na caixa **Nome da Configuração** , revise o conteúdo da configuração no painel **Visualização** e clique em **Concluir**.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62767638"
   
 10. Em Gerenciadores de Conexões, expanda NewCustomers e marque a caixa de seleção **Cadeia de Conexão** .  
   
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 12. Na página Concluindo o Assistente, digite **DataTransfer Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
@@ -93,12 +92,12 @@ ms.locfileid: "62767638"
   
 5.  Na página inicial do assistente de configuração de pacotes, clique em **Avançar**.  
   
-6.  Na página Selecionar tipo de configuração, selecione **arquivo de configuração XML** na **lista tipo de configuração** , selecione a opção o local de **configuração está armazenado em uma variável de ambiente** , digite `LoadXMLData` ou selecione a `LoadXMLData` variável de ambiente na lista.  
+6.  Na página Selecionar tipo de configuração, selecione **arquivo de configuração XML** na lista **tipo de configuração** , selecione a opção o local de **configuração está armazenado em uma variável de ambiente** , digite `LoadXMLData` ou selecione a `LoadXMLData` variável de ambiente na lista.  
   
     > [!NOTE]  
     >  Para disponibilizar a variável de ambiente na lista, talvez você precise reiniciar o computador após a adição da variável.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página Concluindo o Assistente, digite **LoadXMLData EV Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "62767638"
   
 9. Na página Selecionar Propriedades a Serem Exportadas, expanda LoadXMLData, Executáveis, Carregar Dados XML e Propriedades e marque as caixas de seleção **[XMLSource].[XMLData]** e **[XMLSource].[XMLSchemaDefinition]** .  
   
-10. Clique em **Avançar**.  
+10. Clique em **Próximo**.  
   
 11. Na página Concluindo o Assistente, digite **LoadXMLData Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   

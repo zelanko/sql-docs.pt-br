@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c577b06866db12ecd4ccc4b28fbf36e3314f76d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000931"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>Classificar várias colunas em consultas (Visual Database Tools)
   Você pode especificar a ordem em que deseja utilizar as colunas para classificar os dados utilizando a coluna **Ordem de Classificação** no [painel Critérios](visual-database-tools.md).  

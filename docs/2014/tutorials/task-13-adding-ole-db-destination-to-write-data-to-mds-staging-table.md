@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb39e9d50d135adfedcf307cda2ad703e302eda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65476994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061136"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarefa 13: Adicionando o destino OLE DB para gravar dados na tabela de preparo do MDS
   Agora que você adicionou valores **importType** e **BatchTag** a todos os registros, você está pronto para enviá-los para o MDS para preparo. Nesta tarefa, você usa o destino OLE DB para gravar os dados em **STG. supplier_Leaf** tabela de preparo.  

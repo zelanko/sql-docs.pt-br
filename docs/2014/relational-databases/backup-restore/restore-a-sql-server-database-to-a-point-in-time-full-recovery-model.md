@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c71ff6e75cbbf27042c1eac70b1f97076290865
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921061"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957176"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar um banco de dados do SQL Server até um ponto determinado (modelo de recuperação completa)
   Este tópico descreve como restaurar um banco de dados em um determinado ponto no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Este tópico é relevante apenas para os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o modelo de recuperação completa ou bulk-logged.  
@@ -132,9 +131,9 @@ ms.locfileid: "62921061"
   
  **Sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] básica**  
   
- Restaurar *database_name* de log de <backup_device> com STOPAT ** = *`time`*,** Recovery...  
+ Restaurar *database_name* de log de <backup_device> com STOPAT ** = *`time`* ,** Recovery...  
   
- O ponto de recuperação é a última confirmação de transação que ocorreu em ou `datetime` antes do valor especificado por *tempo*.  
+ O ponto de recuperação é a última confirmação de transação que ocorreu em ou antes do `datetime` valor especificado por *tempo*.  
   
  Para restaurar apenas as modificações feitas antes de um momento determinado, especifique WITH STOPAT **=** *hora* para cada backup restaurado. Isso garante que você não ultrapassará o tempo de destino.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62921061"
   
 3.  Restaurar o último backup de banco de dados diferencial e, se houver, sem recuperar o banco de dados (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Aplique cada backup de log de transações na mesma sequência em que eles foram criados, especificando a hora em que você pretende interromper a restauração do log (Restore Database *database_name* de <backup_device> com STOPAT**=*`time`*,** Recovery).  
+4.  Aplique cada backup de log de transações na mesma sequência em que eles foram criados, especificando a hora em que você pretende interromper a restauração do log (Restore Database *database_name* de <backup_device> com STOPAT** = *`time`* ,** Recovery).  
   
     > [!NOTE]  
     >  As opções RECOVERY e STOPAT. Se o backup de log de transações não contiver o tempo solicitado (por exemplo, se o tempo especificado estiver além do tempo coberto pelo log de transações), um aviso será gerado e o banco de dados permanecerá sem-recuperação.  
@@ -193,7 +192,7 @@ GO
 -   [Recuperar para um número de sequência de log &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;do conjunto de backup &#40;Transact-SQL](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [conjunto de backup &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38c92e397c971f6e9976bb857c63410fa60b7e85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ba066136493c2a429b1193d9846f4183f781846
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956476"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>Backup e restauração do SQL Server no serviço de Armazenamento de Blobs
   Este tópico apresenta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups e restaurando do [serviço de armazenamento de BLOBs do Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Ele também fornece um resumo dos benefícios de usar o serviço blob do Azure para armazenar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups.  
@@ -27,9 +26,9 @@ ms.locfileid: "75232428"
     > [!NOTE]  
     >  Para SQL Server versões anteriores a SQL Server 2014, você pode usar o suplemento SQL Server a ferramenta backup para Azure para criar backups de modo rápido e fácil para o armazenamento do Azure. Para obter mais informações, consulte [centro de download](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
--   **Permitir que SQL Server gerencie backups no Azure:** Configure SQL Server para gerenciar a estratégia de backup e agendar backups de um único banco de dados ou de vários bancos ou definir padrões no nível da instância. Esse recurso é conhecido como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Para obter mais informações, consulte [SQL Server Backup gerenciado no Azure](sql-server-managed-backup-to-microsoft-azure.md). Esse recurso está disponível no SQL Server 2014 ou posterior.  
+-   **Permitir que SQL Server gerencie backups no Azure:** Configure SQL Server para gerenciar a estratégia de backup e agendar backups de um único banco de dados ou de vários bancos ou definir padrões no nível da instância. Esse recurso é conhecido como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Para obter mais informações, consulte [SQL Server Backup gerenciado no Azure](sql-server-managed-backup-to-microsoft-azure.md). Esse recurso está disponível no SQL Server 2014 ou posterior.  
   
-## <a name="benefits-of-using-the-azure-blob-service-for-ssnoversion-backups"></a>Benefícios de usar o serviço blob do Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para backups  
+## <a name="benefits-of-using-the-azure-blob-service-for-ssnoversion-backups"></a>Benefícios de usar o serviço blob do Azure para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups  
   
 -   Armazenamento externo flexível, confiável e ilimitado: armazenar seus backups no serviço blob do Azure pode ser uma opção conveniente, flexível e fácil de acessar fora do local. Criar o armazenamento externo para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser tão fácil quanto modificar scripts/trabalhos existentes. O armazenamento externo deve estar, normalmente, distante o suficiente do local do banco de dados de produção para evitar um único desastre que possa afetar os locais dos bancos de dados externo e de produção. Ao optar por replicar geograficamente o armazenamento de Blob, você terá uma camada adicional de proteção caso ocorra algum desastre que possa afetar a região inteira. Além disso, os backups estão disponíveis em qualquer lugar e a qualquer momento, e podem ser facilmente acessados para restaurações.  
   
@@ -37,9 +36,9 @@ ms.locfileid: "75232428"
   
 -   Sem sobrecarga de gerenciamento de hardware: não há sobrecarga de gerenciamento de hardware com os serviços do Azure. Serviços Azure gerenciar o hardware e fornecem replicação geográfica para redundância e proteção contra falhas de hardware.  
   
--   Atualmente, para instâncias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de execução em uma máquina virtual do Azure, o backup em serviços de armazenamento de BLOBs do Azure pode ser feito criando discos anexados. No entanto, há um limite para o número de discos que você pode anexar a uma máquina virtual do Azure. O limite é 16 discos para uma instância grande adicional, e menos que isso para instâncias menores. Ao habilitar um backup direto para o armazenamento de BLOBs do Azure, você pode ignorar o limite de 16 discos.  
+-   Atualmente, para instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execução em uma máquina virtual do Azure, o backup em serviços de armazenamento de BLOBs do Azure pode ser feito criando discos anexados. No entanto, há um limite para o número de discos que você pode anexar a uma máquina virtual do Azure. O limite é 16 discos para uma instância grande adicional, e menos que isso para instâncias menores. Ao habilitar um backup direto para o armazenamento de BLOBs do Azure, você pode ignorar o limite de 16 discos.  
   
-     Além disso, o arquivo de backup que agora é armazenado no serviço de armazenamento de BLOBs do Azure está diretamente disponível para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outro em execução em uma máquina virtual do Azure, sem a necessidade de anexar/desanexar banco de dados ou baixar e anexar o VHD.  
+     Além disso, o arquivo de backup que agora é armazenado no serviço de armazenamento de BLOBs do Azure está diretamente disponível para um local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou outro em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execução em uma máquina virtual do Azure, sem a necessidade de anexar/desanexar banco de dados ou baixar e anexar o VHD.  
   
 -   Benefícios do custo: pague apenas pelo serviço utilizado. Pode ser tão econômico quanto uma opção de arquivamento externo e de backup. Consulte a seção [considerações de cobrança do Azure](#Billing) para obter mais informações e links.  
   

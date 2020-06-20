@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e784216116bdb9ab308dff5fa998740b0fa459b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691590"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060579"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Como criar uma assinatura atualizável para uma publicação transacional (Management Studio)
 
@@ -116,7 +115,7 @@ Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do
     * `1` – Use o contexto de segurança do usuário que faz alterações no Assinante quando se conecta ao Publicador. Consulte [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) quanto às restrições relacionadas a esse modo de segurança.
     * `2` – Use um logon de servidor vinculado, existente, definido pelo usuário criado usando [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
-6. No Publicador, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) especificando `@publication`, `@subscriber`, `@destination_db`, um valor de pull para `@subscription_type`, e o mesmo valor especificado na etapa 3 para `@update_mode`.
+6. No Publicador, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) especificando `@publication` , `@subscriber` , `@destination_db` , um valor de pull para `@subscription_type` , e o mesmo valor especificado na etapa 3 para `@update_mode` .
 
 Isto registra a assinatura pull no Publicador. 
 
@@ -190,7 +189,7 @@ Isto registra a assinatura pull no Publicador.
     * (Opcional) Um valor de `0` para `@distributor_security_mode` e as informações de logon do SQL Server para `@distributor_login` e `@distributor_password`, se você precisar usar a Autenticação do SQL Server ao se conectar ao Distribuidor. 
     * Agenda para o trabalho do Distribution Agent para essa assinatura.
 
-5. No Publicador, execute [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) para registrar o Assinante no Publicador, `@publication`especificando `@subscriber`, `@destination_db`,, um valor de pull `@subscription_type`para, e o mesmo valor especificado na etapa 3 `@update_mode`para.
+5. No Publicador, execute [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) para registrar o Assinante no Publicador, especificando `@publication` , `@subscriber` , `@destination_db` , um valor de pull para `@subscription_type` , e o mesmo valor especificado na etapa 3 para `@update_mode` .
 
 Isto registra a assinatura pull no Publicador. 
 
@@ -299,14 +298,14 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>Definir opções de resolução de conflito de atualização na fila (SQL Server Management Studio)
-  Defina as opções de resolução de conflitos para publicações que dão suporte a assinaturas de atualização na fila na página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação – \<Publicação>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+  Defina opções de resolução de conflitos para publicações que dão suporte a assinaturas de atualização enfileiradas na página **Opções de assinatura** da caixa de diálogo ** \<Publication> Propriedades da publicação** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>Para definir opções de resolução de conflito de atualização na fila  
   
-1.  Na página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação – \<Publicação>**, selecione um dos seguintes valores para a opção **Política de resolução de conflitos**:    
+1.  Na página **Opções de assinatura** da caixa de diálogo **Propriedades \<Publication> da publicação –** , selecione um dos seguintes valores para a opção **política de resolução de conflitos** :    
     -   **Mantenha a alteração do Publicador.**    
     -   **Mantenha a alteração do Assinante.**    
-    -   **Reinicialize a assinatura.**    
+    -   **Reinicializar a assinatura**    
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ## <a name="see-also"></a>Consulte Também ##

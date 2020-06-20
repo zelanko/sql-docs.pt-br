@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63a9a974c1487548526d4b40b8c72d2ce86f2136
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b0f0ad049c6b9e77f9888d582ab0cda2f5a5e0f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020923"
 ---
 # <a name="odbc-cursor-library"></a>Biblioteca de cursores ODBC
   Alguns drivers ODBC dão suporte apenas às configurações de cursor padrão; esses drivers também não dão suporte a operações de cursor posicionadas, como **SQLSetPos**. A biblioteca de cursores ODBC é um componente do MDAC (Microsoft Data Access Components) usado para implementar cursores estáticos ou em bloco em um driver que, normalmente, não dá suporte a eles. A biblioteca de cursores também implementa instruções UPDATE e DELETE posicionadas e **SQLSetPos** para os cursores que ele cria.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bda15bcb4d96cc126aa87a986fa667a56730637
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869173"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054228"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
@@ -56,6 +55,6 @@ ms.locfileid: "62869173"
   
 -   Use `sp_changedistpublisher` para alterar o modo de segurança associado ao Publicador original no MSdistpublishers, bem como para especificar um logon e senha a serem usados para a conexão.  
   
--   Especifique o parâmetro de linha de comando *BypassPublisherValidation* na linha de comando do Merge Agent para `sp_get_redirected_publisher` ignorar a validação quando for chamado no distribuidor.  
+-   Especifique o parâmetro de linha de comando *BypassPublisherValidation* na linha de comando do Merge Agent para ignorar a validação quando `sp_get_redirected_publisher` for chamado no distribuidor.  
   
   

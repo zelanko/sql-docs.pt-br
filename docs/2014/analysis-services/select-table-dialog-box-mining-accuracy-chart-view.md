@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5694d3fe-52e8-4fb7-a1f1-22629151b618
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87e6c59cb71abdc5bda32538ead84ec56a4f6c9d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069272"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940847"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>Caixa de diálogo Selecionar Tabela (Exibição do Gráfico de Precisão de Mineração)
   Use a caixa de diálogo **Selecionar Tabela** para selecionar uma tabela a ser utilizada no teste de precisão dos modelos de mineração que a estrutura de mineração selecionada contém.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68fe4bbc199d6555bd490d25f92491100b8bbfcf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875668"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957146"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar um backup de log de transações (SQL Server)
   Este tópico descreve como restaurar um backup de log de transação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -100,7 +99,7 @@ ms.locfileid: "62875668"
     |------------|-----------|  
     |**Restaurar**|Caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.|  
     |**Nome**|Nome do conjunto de backup.|  
-    |**Componente**|O componente de backup: **Database**, **File** ou \<blank> (para logs de transações).|  
+    |**Componente**|Componente de backup: banco de **dados**, **arquivo**ou \<blank> (para logs de transações).|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Data de Início**|A data e hora do início da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Data de Conclusão**|Data e hora de término da operação de backup, apresentadas na configuração regional do cliente.|  
@@ -130,7 +129,7 @@ ms.locfileid: "62875668"
   
         |Cabeçalho|Valor|  
         |------------|-----------|  
-        |\<em branco>|Exibe uma caixa de seleção para selecionar a marca.|  
+        |\<blank>|Exibe uma caixa de seleção para selecionar a marca.|  
         |**Transaction Mark**|Nome da transação marcada especificado pelo usuário quando a transação foi confirmada.|  
         |**Data**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
         |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  
@@ -146,7 +145,7 @@ ms.locfileid: "62875668"
   
          Preserva as configurações de replicação ao restaurar um banco de dados publicado em um servidor diferente daquele onde o banco de dados foi criado.  
   
-         Essa opção está disponível apenas com a opção **deixar o banco de dados pronto para uso revertendo as transações não confirmadas...** (descrito posteriormente), que é equivalente a restaurar `RECOVERY` um backup com a opção.  
+         Essa opção está disponível apenas com a opção **deixar o banco de dados pronto para uso revertendo as transações não confirmadas...** (descrito posteriormente), que é equivalente a restaurar um backup com a `RECOVERY` opção.  
   
          Marcar essa opção é equivalente a usar a `KEEP_REPLICATION` opção em uma [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
   

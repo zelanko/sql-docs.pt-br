@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b839fe4359e083df9c6b4643111b61f5b681914
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63217808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067200"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Contar linhas em uma tabela (Visual Database Tools)
   Você pode contar linhas em uma tabela para determinar:  
@@ -55,7 +54,7 @@ ms.locfileid: "63217808"
   
 2.  Clique com o botão direito do mouse na tela de fundo do painel Diagrama e escolha **Adicionar Grupo por** no menu de atalho. O Designer de Consulta e Exibição adicionará a coluna **Agrupar por** à grade do Painel de Critérios.  
   
-3.  Selecione ** \*(todas as colunas)** no retângulo que representa a tabela ou o objeto estruturado por tabela.  
+3.  Selecione ** \* (todas as colunas)** no retângulo que representa a tabela ou o objeto estruturado por tabela.  
   
      O Designer de Consulta e Exibição preenche automaticamente o termo **Contagem** na coluna **Agrupar por** no painel de critérios e atribui um alias de coluna à coluna que você está resumindo. Para criar um título de coluna mais útil na saída da consulta, consulte [Criar aliases de coluna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   

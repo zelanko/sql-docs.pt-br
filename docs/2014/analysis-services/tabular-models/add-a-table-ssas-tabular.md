@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2727bc11de184f55ac332e11c75a46095af13f4a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939947"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Adicionar uma tabela (SSAS tabular)
   Este tópico descreve como adicionar uma tabela de uma fonte de dados da qual você tem dados previamente importados em seu modelo. Para adicionar uma tabela da mesma fonte de dados, você pode usar a conexão de fonte de dados existente. É recomendado sempre usar uma única conexão ao importar qualquer número de tabelas de uma única fonte de dados.  

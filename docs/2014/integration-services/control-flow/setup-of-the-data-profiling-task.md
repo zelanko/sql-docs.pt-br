@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54422b13b39de1e39f86ad653ecea95cdca02784
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830188"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918253"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuração da tarefa Criação de Perfil de Dados
   Antes de rever um perfil dos dados de origem, a primeira etapa é configurar e executar a tarefa Criação de Perfil de Dados. Você cria esta tarefa dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para configurar a tarefa Criação de Perfil de Dados, use o Editor da Tarefa Criação de Perfil de Dados. Este editor permite selecionar onde produzir os perfis e quais perfis devem ser calculados. Depois de configurar a tarefa, você executa o pacote para calcular os perfis de dados.  
@@ -54,7 +53,7 @@ ms.locfileid: "62830188"
 |Para calcular|Qual ajuda identificar|Use este perfil|  
 |----------------|-------------------------|----------------------|  
 |Todos os comprimentos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa.|**Valores de cadeias de caracteres que não são válidos** – por exemplo, você cria o perfil de uma coluna que deve usar dois caracteres para códigos de estados nos Estados Unidos, mas descobre valores maiores que dois caracteres.|**Distribuição de comprimento de coluna-** Válido para uma coluna com um destes tipos de dados:<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`|  
-|Um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres.<br /><br /> Além disso para localizar expressões regulares que podem ser usadas no futuro para validar valores novos|**Valores de cadeia de caracteres que não são válidos ou não estão no formato correto-** Por exemplo, um perfil de padrão de uma coluna CEP/código postal pode produzir as expressões regulares: \d{5}-\d{4}, \d{5}e \d{9}. Se a saída contém outras expressões regulares, os dados conterão valores inválidos ou que estarão em um formato incorreto.|**Perfil de padrão de coluna-** Válido para uma coluna com um destes tipos de dados:<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`|  
+|Um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres.<br /><br /> Além disso para localizar expressões regulares que podem ser usadas no futuro para validar valores novos|**Valores de cadeia de caracteres que não são válidos ou não estão no formato correto-** Por exemplo, um perfil de padrão de uma coluna CEP/código postal pode produzir as expressões regulares: \d {5} -\d {4} , \d {5} e \d {9} . Se a saída contém outras expressões regulares, os dados conterão valores inválidos ou que estarão em um formato incorreto.|**Perfil de padrão de coluna-** Válido para uma coluna com um destes tipos de dados:<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`|  
 |A porcentagem de valores nulos na coluna selecionada.|**Uma taxa alta inesperada de valores nulos em uma coluna-** Por exemplo, você faz o perfil de uma coluna que deve conter Estados Unidos CEPs, mas descobre um percentual alto inaceitável de códigos postais ausentes.|**Razão nula de coluna-** Válido para uma coluna com estes tipos de dados:<br /><br /> Qualquer tipo de dados. Isso inclui `image`, `text`, `xml`, tipos definidos pelo usuário e tipos de variável.|  
 |Estatísticas como mínimo, máximo, média e desvio padrão para colunas numéricas, além de mínimo e máximo para colunas `datetime`.|**Valores numéricos e datas que não são válidos**– por exemplo, você faz o profile de uma coluna de datas históricas, mas descobre uma data máxima que está no futuro.|**Perfil de estatísticas de coluna-** Válido para uma coluna com um destes tipos de dados:<br /><br /> Tipos de dados numéricos: tipos Integer (exceto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` e `numeric`<br /><br /> Tipos de dados de data e hora: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` e `datetimeoffset`<br />Observação: Para uma coluna que tem um tipo de dados de data e hora, o perfil calcula o mínimo e o máximo apenas.|  
 |Todos os valores distintos na coluna selecionada e a porcentagem de linhas na tabela que cada valor representa. Ou, os valores que representam mais de uma porcentagem especificada na tabela.|**Um número incorreto de valores distintos em uma coluna**; por exemplo, você define como perfil uma coluna que contém estados na Estados Unidos, mas descobre mais de 50 valores distintos.|**Distribuição de valor de coluna-** Válido para uma coluna com um destes tipos de dados:<br /><br /> Tipos de dados numéricos: tipos Integer (exceto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` e `numeric`<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`<br /><br /> Tipos de dados de data e hora: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` e `datetimeoffset`|  
@@ -66,7 +65,7 @@ ms.locfileid: "62830188"
   
  Na página **Solicitação de Perfil** , você especifica também a origem de dados e configura os perfis de dados. Ao configurar a tarefa, pense nas seguintes informações:  
   
--   Para simplificar a configuração e facilitar a descoberta de características de dados desconhecidos, você pode usar o curinga, **(\*)**, no lugar de um nome de coluna individual. Se você usar este curinga, a tarefa criará o perfil de todas as colunas que tiverem um tipo de dados apropriado, o que por sua vez poderá tornar o processamento mais lento.  
+-   Para simplificar a configuração e facilitar a descoberta de características de dados desconhecidos, você pode usar o curinga, **( \* )**, no lugar de um nome de coluna individual. Se você usar este curinga, a tarefa criará o perfil de todas as colunas que tiverem um tipo de dados apropriado, o que por sua vez poderá tornar o processamento mais lento.  
   
 -   Quando a tabela ou exibição selecionada estiver vazia, a tarefa de Criação de perfis de dados não computará nenhum perfil.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "62830188"
   
 -   Para criar ferramentas personalizadas que trabalhem com informações de qualidade de dados.  
   
- O namespace de destino é identificado no esquema como [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ O namespace de destino é identificado no esquema como [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) .  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Visualizador de perfil de dados](data-profile-viewer.md).  

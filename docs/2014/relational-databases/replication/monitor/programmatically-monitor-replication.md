@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e11f73bf9538fb5ba84f4575631489ef852802c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060791"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitore programaticamente a replicação
   O Replication Monitor é uma ferramenta gráfica que permite monitorar uma topologia de replicação. É possível acessar os mesmos dados de monitoração programaticamente usando o RMO (Replication Management Objects) ou procedimentos armazenados de replicação do [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Esses objetos permitem programar as seguintes tarefas:  
@@ -58,21 +57,21 @@ ms.locfileid: "62667242"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Para monitorar Publicador, publicações e assinatura a partir do Distribuidor  
   
-1.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql). Isso retornará informações para todos os Publicadores que usarem esse Distribuidor. Para limitar o conjunto de resultados a um único Publicador **@publisher**, especifique.  
+1.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql). Isso retornará informações para todos os Publicadores que usarem esse Distribuidor. Para limitar o conjunto de resultados a um único Publicador, especifique **@publisher** .  
   
-2.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). Isso retornará informações para todas as publicações que usarem esse Distribuidor. Para limitar o conjunto de resultados a um único Publicador, publicação ou banco de dados **@publisher**publicado **@publication**, especifique **@publisher_db**, ou, respectivamente.  
+2.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). Isso retornará informações para todas as publicações que usarem esse Distribuidor. Para limitar o conjunto de resultados a um único Publicador, publicação ou banco de dados publicado, especifique **@publisher** , **@publication** ou **@publisher_db** , respectivamente.  
   
-3.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql). Isso retornará informações para todas as assinaturas que usarem esse Distribuidor. Para limitar o conjunto de resultados às assinaturas que pertencem a um único Publicador, publicação ou banco de dados publicado **@publisher**, **@publication**especifique, **@publisher_db**ou, respectivamente.  
+3.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql). Isso retornará informações para todas as assinaturas que usarem esse Distribuidor. Para limitar o conjunto de resultados às assinaturas que pertencem a um único Publicador, publicação ou banco de dados publicado, especifique **@publisher** , **@publication** ou **@publisher_db** , respectivamente.  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>Para monitorar os comandos transacionais que estão esperando para serem aplicados no Assinante.  
   
-1.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql). Isso retornará informações de monitoração para todos os comandos pendentes, de todas as assinaturas que usam esse Distribuidor. Para limitar o conjunto de resultados aos comandos pendentes para as assinaturas que pertencem a um único Publicador, Assinante, publicação ou banco **@publisher**de **@subscriber**dados **@publication**publicado, **@publisher_db**especifique,, ou, respectivamente.  
+1.  No Distribuidor do banco de dados de distribuição, execute [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql). Isso retornará informações de monitoração para todos os comandos pendentes, de todas as assinaturas que usam esse Distribuidor. Para limitar o conjunto de resultados aos comandos pendentes para as assinaturas que pertencem a um único Publicador, Assinante, publicação ou banco de dados publicado, especifique **@publisher** , **@subscriber** , **@publication** ou **@publisher_db** , respectivamente.  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>Para monitorar as alterações de mesclagem a espera de serem carregadas ou baixadas  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Isso retornará um conjunto de resultados que mostra informações sobre as alterações esperando para ser replicadas nos Assinantes. Para limitar o conjunto de resultados às alterações que pertencem a uma única publicação ou artigo, **@publication** especifique **@article**ou, respectivamente.  
+1.  No Publicador do banco de dados de publicação, execute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Isso retornará um conjunto de resultados que mostra informações sobre as alterações esperando para ser replicadas nos Assinantes. Para limitar o conjunto de resultados às alterações que pertencem a uma única publicação ou artigo, especifique **@publication** ou **@article** , respectivamente.  
   
-2.  Em um Assinante, no banco de dados da assinatura, execute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Isso retornará um conjunto de resultados que mostra informações sobre as alterações esperando para ser replicadas no Publicador. Para limitar o conjunto de resultados às alterações que pertencem a uma única publicação ou artigo, **@publication** especifique **@article**ou, respectivamente.  
+2.  Em um Assinante, no banco de dados da assinatura, execute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Isso retornará um conjunto de resultados que mostra informações sobre as alterações esperando para ser replicadas no Publicador. Para limitar o conjunto de resultados às alterações que pertencem a uma única publicação ou artigo, especifique **@publication** ou **@article** , respectivamente.  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>Para monitorar sessões do Merge Agent  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62667242"
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>Para monitorar sessões do Merge Agent para assinatura pull do Assinante  
   
-1.  No Assinante, no banco de dados da assinatura, execute [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Para uma determinada assinatura, especifique **@publisher**, **@publication**e o nome do banco de dados de publicação **@publisher_db**para. Isso retornará informações de monitoração das últimas cinco sessões do Merge Agent para essa assinatura. Observe que o valor de **Session_id** para as sessões que interessarem, no conjunto de resultados.  
+1.  No Assinante, no banco de dados da assinatura, execute [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Para uma determinada assinatura, especifique **@publisher** , **@publication** e o nome do banco de dados de publicação para **@publisher_db** . Isso retornará informações de monitoração das últimas cinco sessões do Merge Agent para essa assinatura. Observe que o valor de **Session_id** para as sessões que interessarem, no conjunto de resultados.  
   
 2.  No Assinante, no banco de dados da assinatura, execute [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql). Especifique um valor de **Session_id** da etapa 1 para **@session_id**. Isso exibirá informações de monitoramento detalhadas sobre a sessão.  
   
@@ -92,13 +91,13 @@ ms.locfileid: "62667242"
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>Para exibir e modificar as métricas de limite do monitor para uma publicação  
   
-1.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). Isso retornará o conjunto de limites de monitoramento, para todas as publicações que usam esse Distribuidor. Para limitar o conjunto de resultados para monitorar os limites para publicações que pertencem a um único Publicador ou banco de dados publicado ou a **@publisher**uma **@publisher_db**única publicação **@publication**, especifique, ou, respectivamente. Observe o valor de **Metric_id** para qualquer limite que deva ser alterado. Para obter mais informações, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+1.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). Isso retornará o conjunto de limites de monitoramento, para todas as publicações que usam esse Distribuidor. Para limitar o conjunto de resultados para monitorar os limites para publicações que pertencem a um único Publicador ou banco de dados publicado ou a uma única publicação, especifique **@publisher** , **@publisher_db** ou **@publication** , respectivamente. Observe o valor de **Metric_id** para qualquer limite que deva ser alterado. Para obter mais informações, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 2.  No Distribuidor, no banco de dados de distribuição, execute [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql). Especifique o seguinte, quando necessário:  
   
     -   O valor **Metric_id** obtido na etapa 1 para **@metric_id**.  
   
-    -   Um novo valor para a métrica de limite de **@value**monitor para.  
+    -   Um novo valor para a métrica de limite de monitor para **@value** .  
   
     -   O valor **1** para **@shouldalert** , para ser registrado um alerta, quando esse limite for atingido, ou o valor **0** , se não for necessário um alerta.  
   

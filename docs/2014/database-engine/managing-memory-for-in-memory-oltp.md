@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f9b638697d59a0a573a9a31c0a5faade23e870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774830"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930787"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Gerenciando memória para OLTP na memória
   As tabelas com otimização de memória requerem a existência de memória suficiente para manter todas as linhas e índices na memória. Como a memória é um recurso finito, é importante compreender e gerenciar o uso de memória no sistema. Os tópicos nessa seção abordam os cenários comuns de uso e gerenciamento de memória.  

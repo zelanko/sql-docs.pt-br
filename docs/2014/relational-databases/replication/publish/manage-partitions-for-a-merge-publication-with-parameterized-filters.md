@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 983b02865c0564919259f896bf09d8bdb0cd969f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060512"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gerenciar partições para uma publicação de mesclagem com filtros com parâmetros
   Este tópico descreve como gerenciar partições para uma publicação de mesclagem com filtros com parâmetros no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). Filtros de linha com parâmetros podem ser usados para gerar partições não sobrepostas. Essas partições podem ser restringidas de forma que só uma assinatura receba uma determinada partição. Nesses casos, um grande número de assinantes resultará em um grande número de partições, que por sua vez, exige um número igual de instantâneos particionados. Para obter mais informações, consulte [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
@@ -47,11 +46,11 @@ ms.locfileid: "74479306"
 -   Quando uma publicação tiver filtros com parâmetros que geram assinaturas com partições não sobrepostas ou se uma assinatura específica estiver perdida e necessitar de nova criação, faça o seguinte: remova a partição que estava com assinatura, recrie a assinatura e, em seguida, recrie a partição. Para obter mais informações, consulte [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md). A replicação gera scripts de criação para as partições de Assinante existentes quando um script de criação de publicação é gerado. Para obter mais informações, consulte [Scripting Replication](../scripting-replication.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Gerencie as partições na página **Partições de dados** da caixa de diálogo **Propriedades da Publicação – \<Publicação>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md). Nessa página você pode: criar e excluir partições, permitir que Assinantes iniciem a geração e entrega de instantâneo, gerar instantâneos para uma ou mais partições e limpar instantâneos.  
+ Gerenciar partições na página **partições de dados** da caixa de diálogo **Propriedades \<Publication> da publicação –** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md). Nessa página você pode: criar e excluir partições, permitir que Assinantes iniciem a geração e entrega de instantâneo, gerar instantâneos para uma ou mais partições e limpar instantâneos.  
   
 #### <a name="to-create-a-partition"></a>Para criar uma partição  
   
-1.  Na página **Partições de Dados** da caixa de diálogo **Propriedades da Publicação – \<Publication>**, clique em **Adicionar**.  
+1.  Na página **partições de dados** da caixa de diálogo **Propriedades \<Publication> da publicação –** , clique em **Adicionar**.  
   
 2.  Na caixa de diálogo **Adicionar Partição de Dados** coloque o valor para **HOST_NAME()** e/ou o valor **SUSER_SNAME()** associado com a partição que você quer criar.  
   
@@ -100,25 +99,25 @@ ms.locfileid: "74479306"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Para exibir informações sobre partições existentes  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Especifique o nome da publicação para ** \@publicação**. Adicional Especifique ** \@SUSER_SNAME** ou ** \@HOST_NAME** para retornar apenas informações com base em um único critério de filtragem.  
+1.  No Publicador do banco de dados de publicação, execute [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Especifique o nome da publicação para ** \@ publicação**. Adicional Especifique ** \@ suser_sname** ou ** \@ HOST_NAME** para retornar apenas informações com base em um único critério de filtragem.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Para definir uma partição nova e gerar um instantâneo particionado novo  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Especifique o nome da publicação para ** \@publicação**e o valor com parâmetros que define a partição para um dos seguintes:  
+1.  No Publicador do banco de dados de publicação, execute [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Especifique o nome da publicação para ** \@ publicação**e o valor com parâmetros que define a partição para um dos seguintes:  
   
-    -   suser_sname-quando o filtro com parâmetros é definido pelo valor retornado por [SUSER_SNAME &#40;&#41;do Transact-SQL ](/sql/t-sql/functions/suser-sname-transact-sql). ** \@**  
+    -   ** \@ SUSER_SNAME** -quando o filtro com parâmetros é definido pelo valor retornado por [SUSER_SNAME &#40;&#41;do Transact-SQL ](/sql/t-sql/functions/suser-sname-transact-sql).  
   
-    -   HOST_NAME-quando o filtro com parâmetros é definido pelo valor retornado por [HOST_NAME &#40;&#41;do Transact-SQL ](/sql/t-sql/functions/host-name-transact-sql). ** \@**  
+    -   ** \@ HOST_NAME** -quando o filtro com parâmetros é definido pelo valor retornado por [HOST_NAME &#40;&#41;do Transact-SQL ](/sql/t-sql/functions/host-name-transact-sql).  
   
 2.  Crie e inicialize o instantâneo com parâmetros para esta partição nova. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>Para excluir uma partição  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Especifique o nome da publicação para ** \@publicação** e o valor com parâmetros que define a partição para um dos seguintes:  
+1.  No Publicador do banco de dados de publicação, execute [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Especifique o nome da publicação para ** \@ publicação** e o valor com parâmetros que define a partição para um dos seguintes:  
   
-    -   suser_sname-quando o filtro com parâmetros é definido pelo valor retornado por [SUSER_SNAME &#40;&#41;do Transact-SQL ](/sql/t-sql/functions/suser-sname-transact-sql). ** \@**  
+    -   ** \@ SUSER_SNAME** -quando o filtro com parâmetros é definido pelo valor retornado por [SUSER_SNAME &#40;&#41;do Transact-SQL ](/sql/t-sql/functions/suser-sname-transact-sql).  
   
-    -   HOST_NAME-quando o filtro com parâmetros é definido pelo valor retornado por [HOST_NAME &#40;&#41;do Transact-SQL ](/sql/t-sql/functions/host-name-transact-sql). ** \@**  
+    -   ** \@ HOST_NAME** -quando o filtro com parâmetros é definido pelo valor retornado por [HOST_NAME &#40;&#41;do Transact-SQL ](/sql/t-sql/functions/host-name-transact-sql).  
   
      Isso também remove o trabalho de instantâneo e qualquer arquivo de instantâneo para a partição.  
   

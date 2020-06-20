@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ff3e97a3a784bc61a20de9c65a4381c81078480
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667179"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060810"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
   
  Ao habilitar um aviso, você especifica um limite. Quando o limite é atingido ou excedido, um aviso é exibido (a menos que um problema com prioridade superior deva ser exibido). Além de exibir de um aviso no Replication Monitor, atingir um limite também pode disparar um alerta. Você pode habilitar avisos para as seguintes condições:  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62667179"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [Usar alertas para eventos do agente de replicação](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Defina as opções na caixa de diálogo ** \<Propriedades** do alerta de alerta do>:  
+3.  Defina as opções na caixa de diálogo ** \<AlertName> Propriedades do alerta** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62667179"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 ##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a>Definir limites e avisos para uma publicação de mesclagem  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62667179"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites.  
   
-3.  Defina as opções na caixa de diálogo ** \<Propriedades** do alerta de alerta do>:  
+3.  Defina as opções na caixa de diálogo ** \<AlertName> Propriedades do alerta** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62667179"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 ##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a>Definir limites e avisos para uma publicação de instantâneo  
   
@@ -149,7 +148,7 @@ ms.locfileid: "62667179"
   
      Essa caixa de diálogo exibe os alertas para todos os tipos de publicação, inclusive alertas que não estão relacionados com o monitoramento de limites. Para obter mais informações, consulte [Usar alertas para eventos do agente de replicação](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Defina as opções na caixa de diálogo ** \<Propriedades** do alerta de alerta do>:  
+3.  Defina as opções na caixa de diálogo ** \<AlertName> Propriedades do alerta** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -159,7 +158,7 @@ ms.locfileid: "62667179"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorando a replicação](../monitoring-replication.md)  

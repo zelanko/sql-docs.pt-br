@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acb124ef949849561a6bca0ba4016b40c1343384
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932837"
 ---
 # <a name="histogram-target"></a>Destino do histograma
   O destino do histograma agrupa ocorrências de um tipo de evento específico com base nos dados do evento. Os agrupamentos de eventos são contados com base em uma coluna de evento ou ação especificada. Você pode usar o destino do histograma para solucionar problemas de desempenho. Ao identificar quais eventos ocorrem mais frequentemente, você pode localizar "pontos de acesso" que indicam uma causa potencial de um problema de desempenho.  
@@ -31,7 +30,7 @@ ms.locfileid: "66064696"
 |slots|Qualquer valor inteiro. Esse valor é opcional.|Um valor especificado pelo usuário que indica o número máximo de agrupamentos a serem retidos. Quando esse valor é atingido, novos eventos que não pertencem aos grupos existentes são ignorados.<br /><br /> Observe que para aprimorar o desempenho, o número de slot é arredondado para a próxima potência de 2.|  
 |filtering_event_name|Qualquer evento presente na sessão de Eventos Estendidos. Esse valor é opcional.|Um valor especificado pelo usuário usado para identificar uma classe de eventos. Apenas instâncias do evento especificado são particionadas. Todos os outros eventos são ignorados.<br /><br /> Se você especificar esse valor, deverá usar o formato: *package_name*.*event_name*, por exemplo, `'sqlserver.checkpoint_end'`. Você pode identificar o nome do pacote usando a seguinte consulta:<br /><br /> Selecione p.name, se. event_name<br />DE sys. dm_xe_session_events se<br />INGRESSAr em sys. dm_xe_packages p<br />EM se_event_package_guid = p. GUID<br />ORDENAr por p.name, se. event_name<br /><br /> <br /><br /> Se você não especificar o valor filtering_event_name, source_type deverá ser definido como 1 (o padrão).|  
 |source_type|O tipo de objeto no qual o bucket é baseado. Esse valor é opcional e, se não for especificado, terá 1 como valor padrão.|Pode ter um dos seguintes valores:<br /><br /> 0 para um evento<br /><br /> 1 para uma ação|  
-|source|Coluna do evento ou nome da ação.|A coluna do evento ou o nome da ação usado como a fonte de dados.<br /><br /> Quando especificar uma coluna de evento para origem, você deverá especificar uma coluna a partir do evento usado para o valor filtering_event_name. Para identificar as colunas potenciais, use a consulta a seguir:<br /><br /> Selecione o nome em sys. dm_xe_object_columns<br />EM que object_name =\<' eventname> '<br />E column_type! = ' ReadOnly '<br /><br /> Quando você especificar uma coluna de evento para origem, não será necessário incluir o nome do pacote no valor da origem.<br /><br /> Quando especificar um nome de ação para origem, você deverá usar uma das ações configuradas para coleta na sessão do evento para a qual esse destino está sendo usado. Para localizar valores potenciais para o nome de ação, você pode consultar a coluna action_name da exibição sys.dm_xe_sesssion_event_actions.<br /><br /> Se estiver usando um nome de ação como a fonte de dados, você deverá especificar o valor de origem usando o formato: *package_name*.*action_name*.|  
+|source|Coluna do evento ou nome da ação.|A coluna do evento ou o nome da ação usado como a fonte de dados.<br /><br /> Quando especificar uma coluna de evento para origem, você deverá especificar uma coluna a partir do evento usado para o valor filtering_event_name. Para identificar as colunas potenciais, use a consulta a seguir:<br /><br /> Selecione o nome em sys. dm_xe_object_columns<br />ONDE object_name = ' \<eventname> '<br />E column_type! = ' ReadOnly '<br /><br /> Quando você especificar uma coluna de evento para origem, não será necessário incluir o nome do pacote no valor da origem.<br /><br /> Quando especificar um nome de ação para origem, você deverá usar uma das ações configuradas para coleta na sessão do evento para a qual esse destino está sendo usado. Para localizar valores potenciais para o nome de ação, você pode consultar a coluna action_name da exibição sys.dm_xe_sesssion_event_actions.<br /><br /> Se estiver usando um nome de ação como a fonte de dados, você deverá especificar o valor de origem usando o formato: *package_name*.*action_name*.|  
   
  O exemplo a seguir demonstra, em um nível alto, como o destino do histograma coleta dados. Neste exemplo, você deseja usar o destino do histograma para contar quantas esperas de cada tipo ocorreram. Para fazer isso, você deve especificar as seguintes opções ao definir o destino do histograma:  
   
@@ -47,8 +46,8 @@ ms.locfileid: "66064696"
 |--------------------------|-------------------------|  
 |wait_info|file_io|  
 |wait_info|file_io|  
-|wait_info|rede|  
-|wait_info|rede|  
+|wait_info|network|  
+|wait_info|network|  
 |wait_info|sleep|  
   
  Os valores de tipo de espera seriam categorizados em três slots, com os valores e as contagens de slot a seguir:  
@@ -56,7 +55,7 @@ ms.locfileid: "66064696"
 |Valor|Contagem de slot|  
 |-----------|----------------|  
 |file_io|2|  
-|rede|2|  
+|network|2|  
 |sleep|1|  
   
  O destino do histograma retém apenas dados de eventos da fonte especificada. Em alguns casos, os dados de eventos podem ser muito grandes para serem retidos completamente; nesse caso, os dados são truncados. Quando os dados de eventos são truncados, o número de bytes é registrado e exibido como saída XML.  

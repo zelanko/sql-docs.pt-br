@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 622b5a02f0b13e9cbf6a78977a07daea93a3f520
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138778"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007578"
 ---
 # <a name="table-element-for-schema-dta"></a>Elemento de tabela para esquema (DTA)
   Especifica a tabela para ajuste.  
@@ -35,7 +34,7 @@ ms.locfileid: "63138778"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |`NumberOfRows`|Opcional. Inteiro que permite simular tabelas de tamanhos diferentes.|  
   
@@ -43,9 +42,9 @@ ms.locfileid: "63138778"
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|**Tipo de dados e comprimento**|**cadeia**de caracteres, entre 1 e 255 caracteres.|  
+|**Comprimento e tipo de dados**|**string**, entre 1 e 255 caracteres.|  
 |**Valor padrão**|Nenhum.|  
-|**C'**|Opcional. Lista tantas tabelas quanto for apropriado para sua carga de trabalho.|  
+|**Ocorrência**|Opcional. Lista tantas tabelas quanto for apropriado para sua carga de trabalho.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

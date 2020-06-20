@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d70b89f20beed9c4bd13aa30ab0bdddda2b97a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 716f9d2d27c7e13d754d1cd31f7c7294af3f3f90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021743"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ignora a configuração de SQL_ATTR_CONNECTION_TIMEOUT.  
