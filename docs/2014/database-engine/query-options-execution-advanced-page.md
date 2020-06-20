@@ -8,16 +8,15 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b6ab8cc3c788e27946ddb68a3c926e8f926ebd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034919"
 ---
 # <a name="query-options-execution-advanced-page"></a>Execução de opções de consulta (Página Avançado)
 
@@ -29,9 +28,9 @@ ms.locfileid: "71199329"
 
 **definir PARSEONLY** Verifica a sintaxe de cada consulta, mas não executa as consultas. Essa opção é desmarcada por padrão.  
 
-**definir CONCAT_NULL_YIELDS_NULL** Quando essa caixa de seleção é marcada, as consultas que concatenam um valor existente `NULL`com um, sempre `NULL` retornam um como resultado. Quando essa caixa de seleção é desmarcada, um valor existente concatenado com um `NULL`retorna o valor existente. Esta opção é selecionada por padrão.
+**definir CONCAT_NULL_YIELDS_NULL** Quando essa caixa de seleção é marcada, as consultas que concatenam um valor existente com um `NULL` , sempre retornam um `NULL` como resultado. Quando essa caixa de seleção é desmarcada, um valor existente concatenado com um `NULL`retorna o valor existente. Essa opção é habilitada por padrão.
 
-**definir ARITHABORT** Quando essa caixa de seleção está marcada, quando `INSERT`uma `DELETE` instrução `UPDATE` , ou encontra um erro aritmético (estouro, divisão por zero ou um erro de domínio) durante a avaliação da expressão, a consulta ou o lote é encerrado. Quando essa caixa de seleção estiver desmarcada, se possível, será fornecido `NULL` para esse valor, a consulta continua e é incluída uma mensagem com o resultado. Consulte os manuais online para uma descrição mais ampla sobre esse comportamento. Esta opção é selecionada por padrão.
+**definir ARITHABORT** Quando essa caixa de seleção está marcada, quando `INSERT` uma `DELETE` instrução, ou `UPDATE` encontra um erro aritmético (estouro, divisão por zero ou um erro de domínio) durante a avaliação da expressão, a consulta ou o lote é encerrado. Quando essa caixa de seleção estiver desmarcada, se possível, será fornecido `NULL` para esse valor, a consulta continua e é incluída uma mensagem com o resultado. Consulte os manuais online para uma descrição mais ampla sobre esse comportamento. Essa opção é habilitada por padrão.
   
 **definir SHOWPLAN_TEXT** Quando essa caixa de seleção é marcada, o plano de consulta é retornado no formulário de texto com cada consulta. Essa opção é desmarcada por padrão.
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc318c3278f7f86aa4946380daffa0652882c0fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060823"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921877"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurar uma saída de erro em um componente de fluxo de dados
   Muitos componentes de fluxo de dados dão suporte a saídas de erro e, dependendo do componente, o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer fornece diferentes modos de configurar uma saída de erro. Além de configurar uma saída de erro, você pode configurar também as colunas de uma saída de erro. Isto inclui a configuração das colunas **ErrorCode** e **ErrorColumn** que são adicionadas pelo componente.  
@@ -82,7 +81,7 @@ ms.locfileid: "66060823"
   
 4.  Clique com o botão direito do mouse no componente cujas colunas de saída de erro você deseja configurar e clique em **Mostrar Editor Avançado**.  
   
-5.  Clique na guia **Propriedades de entrada e saída** e expanda ** \<nome do componente> saída de erro** e expanda colunas de **saída**.  
+5.  Clique na guia **Propriedades de entrada e saída** e expanda ** \<component name> saída de erro** e expanda colunas de **saída**.  
   
 6.  Clique em uma coluna e atualize suas propriedades.  
   

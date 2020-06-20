@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47ca12ee0118e0c2b63da05cf2d508ec0c2f5f92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4106377f2aadfec9173076ece3cf8bf4bc7d183
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066963"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938797"
 ---
 # <a name="model-properties-ssas-tabular"></a>Model Properties (SSAS Tabular)
   Este tópico descreve as propriedades do modelo tabular. Cada projeto de modelo tabular no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tem propriedades modelo que afetam o modo como o modelo que você está criando é criado, como o backup é feito e como o banco de dados de workspace é armazenado. As propriedades do modelo descritas aqui não se aplicam a modelos que já foram implantados.  
   
  Seções neste tópico:  
   
--   [Propriedades de modelo](#bkmk_model_properties)  
+-   [Propriedades do modelo](#bkmk_model_properties)  
   
 -   [Para definir as configurações de propriedade do modelo](#bkmk_conf)  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66066963"
 |**Ordenação**|A ordenação padrão para o computador no qual o Visual Studio está instalado.|O designador de ordenação para o modelo.|  
 |**Nível de compatibilidade**|Opção padrão ou outra selecionada ao criar o projeto.|Aplica-se ao SQL Server 2012 Analysis Services SP1 ou posterior. Especifica os recursos e as configurações disponíveis para este modelo. Para obter mais informações, consulte [nível de compatibilidade &#40;SSAS tabular&#41;](compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |**Backup de dados**|Não fazer backup em disco|Especifica se o backup dos dados do modelo é mantido em um arquivo de backup. Observe que a configuração padrão para essa propriedade pode ser alterada na página modelagem de dados em configurações de Analysis Server na caixa de diálogo ferramentas \ Opções. Essa configuração de propriedade tem as seguintes opções:<br /><br /> **Fazer backup em disco** – Especifica para manter um backup de dados do modelo em disco. Quando o modelo for salvo, os dados também serão salvos no arquivo de backup (ABF). A seleção dessa opção pode tornar o salvamento e os tempos de carregamento do modelo mais lentos.<br /><br /> **Não fazer backup em disco** – Especifica para não manter um backup de dados do modelo em disco. Essa opção minimizará o tempo de salvamento e carregamento do modelo.|  
-|**Modo DirectQuery**|Off|Especifica se este modelo opera em Modo DirectQuery ou não. Para obter mais informações, consulte [Modo DirectQuery &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md).|  
+|**Modo DirectQuery**|Desativado|Especifica se este modelo opera em Modo DirectQuery ou não. Para obter mais informações, consulte [Modo DirectQuery &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md).|  
 |**Nome do Arquivo**|Model.bim|Especifica o nome do arquivo .bim. O nome do arquivo não deve ser alterado.|  
 |**Caminho completo**|Caminho especificado quando o projeto foi criado.|O local do arquivo model.bim. Essa propriedade não pode ser configurada na janela Propriedades.|  
 |**Idioma**|Inglês|O idioma padrão do modelo. O idioma padrão é determinado pelo idioma do Visual Studio. Essa propriedade não pode ser configurada na janela Propriedades.|  
-|**Banco de dados do workspace**|O nome de projeto, seguido por um sublinhado, seguido por um GUID.|O nome do banco de dados de workspace usado por armazenar e editar o modelo de memória temporário para o arquivo model.bim selecionado. Esse banco de dados será exibido na instância do Analysis Services especificada na propriedade de Servidor de Workspace. Essa propriedade não pode ser configurada na janela Propriedades. Para obter mais informações, consulte [Banco de dados do workspace &#40;SSAS tabular&#41;](workspace-database-ssas-tabular.md).|  
+|**Banco de dados espaço de trabalho**|O nome de projeto, seguido por um sublinhado, seguido por um GUID.|O nome do banco de dados de workspace usado por armazenar e editar o modelo de memória temporário para o arquivo model.bim selecionado. Esse banco de dados será exibido na instância do Analysis Services especificada na propriedade de Servidor de Workspace. Essa propriedade não pode ser configurada na janela Propriedades. Para obter mais informações, consulte [Banco de dados do workspace &#40;SSAS tabular&#41;](workspace-database-ssas-tabular.md).|  
 |**Retenção de Workspace**|Descarregar da memória|Especifica como um banco de dados de workspace é retido depois que um modelo é fechado. Um banco de dados de workspace inclui metadados modelo, os dados importados em um modelo e credenciais de representação (criptografadas). Em alguns casos, o banco de dados de workspace pode ser muito grande e consumir uma quantidade significativa de memória. Por padrão, os bancos de dados de workspace são descarregados da memória. Ao alterar essa configuração, é importante considerar os recursos de memória disponíveis, bem como a frequência na qual você planeja trabalhar no modelo. Observe que a configuração padrão para essa propriedade pode ser alterada na página modelagem de dados em configurações de Analysis Server na caixa de diálogo ferramentas \ Opções. Essa configuração de propriedade tem as seguintes opções:<br /><br /> **Manter na memória** - Especifica manter o banco de dados de workspace na memória depois que um modelo é fechado. Essa opção consumirá mais memória. No entanto, ao abrir um modelo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], menos recursos serão consumidos e o banco de dados do workspace será carregado mais rapidamente.<br /><br /> **Descarregar da memória** - Especifica manter banco de dados de workspace em disco, e não mais na memória depois que um modelo é fechado. Essa opção consumirá menos memória. No entanto, ao abrir um modelo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], recursos adicionais serão consumidos e o modelo será carregado mais lentamente do que se o banco de dados de workspace estivesse mantido na memória. Use essa opção quando os recursos de memória forem limitados ou ao trabalhar em um banco de dados de workspace remoto.<br /><br /> **Excluir workspace** - Especifica excluir o banco de dados de workspace da memória e não manter banco de dados de workspace em disco depois que o modelo é fechado. Essa opção consumirá menos memória e espaço de armazenamento, No entanto, ao abrir um modelo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], serão consumidos recursos adicionais e o modelo será carregado mais lentamente do que se o banco de dados de workspace estivesse mantido na memória ou no disco. Use essa opção apenas ao trabalhar ocasionalmente em modelos.|  
 |**Servidor de espaço de trabalho**|localhost|Essa propriedade especifica o servidor fora-de-processo padrão que será usado para hospedar o banco de dados de workspace enquanto o modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Todas as instâncias disponíveis do Analysis Services que executam no computador local são incluídas na caixa de listagem.<br /><br /> Observação: é recomendável especificar sempre um servidor do Analysis Services local como o servidor de workspace. Para bancos de dados de workspaces em um servidor remoto, não há suporte para a importação do PowerPivot, o backup dos dados não pode ser feito localmente e a interface do usuário pode experimentar latência durante consultas.<br /><br /> A configuração padrão para essa propriedade pode ser alterada na página Modelagem de Dados nas configurações do Analysis Server na caixa de diálogo Ferramentas\Opções.|  
   

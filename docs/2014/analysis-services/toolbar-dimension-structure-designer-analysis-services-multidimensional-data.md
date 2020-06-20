@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1770b9ab0284d203f7a5954dd369c5391984c12b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938407"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use a barra de ferramentas para executar operações comuns na página **Estrutura da Dimensão** do **Designer de Dimensão**.  
@@ -32,7 +31,7 @@ ms.locfileid: "66066047"
   
 -   Lista  
   
-     Exibe uma lista de atributos para a dimensão atual. Esse é o padrão.  
+     Exibe uma lista de atributos para a dimensão atual. Este é o padrão.  
   
 -   Árvore  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66066047"
   
      Exibe um diagrama das tabelas e colunas associadas à dimensão atual.  
   
--   Exibição de Árvore  
+-   Modo de exibição de árvore  
   
      Exibe uma árvore que contém tabelas e colunas associadas à dimensão atual.  
   

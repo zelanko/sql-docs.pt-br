@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41a5d4530be6250795e083726df59acbd2f7f7aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890781"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939137"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Modelo de Mineração)
   Use a guia **Modelo de Mineração** da caixa de diálogo **Tarefa Consulta de Mineração de Dados** para especificar a estrutura e o modelo de mineração a serem usados.  
@@ -57,6 +56,6 @@ ms.locfileid: "68890781"
  [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor da tarefa consulta de mineração de dados &#40;guia consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Editor da tarefa consulta de mineração de dados &#40;guia saída&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Designer de Mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

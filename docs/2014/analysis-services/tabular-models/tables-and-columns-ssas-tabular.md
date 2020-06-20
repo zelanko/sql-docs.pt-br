@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58c5529d919861709f382f8cc594608e8c9981b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066505"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938584"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Tabelas e colunas (SSAS tabular)
   Depois de ter adicionado tabelas e os dados em um modelo usando o Assistente de Importação de Tabela, você pode começar a trabalhar com as tabelas adicionando novas colunas de dados, criando relacionamentos entre tabelas, definindo cálculos que estendem os dados e filtrando e classificando dados nas tabelas para facilitar a exibição.  
@@ -28,7 +27,7 @@ ms.locfileid: "66066505"
   
 -   [Tarefas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Benefícios  
  Tabelas, em modelos tabulares, fornecem a estrutura na qual colunas e outros metadados são definidos. As tabelas incluem:  
   
  **Definição da tabela**  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1d420e2dba1dfdb284b0002eca6d8408c4e019e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9e8fbfd4a436e87cee413d95468ccf5dd36b9dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059175"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>Remover instruções que descartam objetos do sistema
   O Supervisor de Atualização detectou instruções que descartam objetos do sistema. Os objetos do sistema, incluindo procedimentos armazenados estendidos, são implantados no banco de dados de **recurso** (mssqlsystemresource) somente leitura e não podem ser descartados. Modifique seus aplicativos para revocar ou negar a permissão EXECUTE em objetos do sistema.  

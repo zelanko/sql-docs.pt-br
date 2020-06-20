@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7f6e8bda35964b03bf171ac62db7ff3119aa6e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938687"
 ---
 # <a name="relationships-ssas-tabular"></a>Relações (SSAS tabular)
   Em modelos tabulares, uma relação é uma conexão entre duas tabelas de dados. A relação estabelece como os dados nas duas tabelas devem ser correlacionados. Por exemplo, podem ser relacionadas às tabelas Customers e Orders para mostrar o nome do cliente associado a cada ordem.  
@@ -43,7 +42,7 @@ ms.locfileid: "66066696"
   
 -   [Tarefas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="what"></a>Benefícios  
+##  <a name="benefits"></a><a name="what"></a> Benefícios  
  Relação é uma conexão entre duas tabelas de dados, baseada em uma ou mais colunas em cada tabela. Para saber por que as relações são úteis, imagine que você acompanhe dados para pedidos de clientes na empresa. Você poderia acompanhar todos os dados em uma única tabela com uma estrutura semelhante à seguinte:  
   
 |CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Produto|Quantidade|  
@@ -98,7 +97,7 @@ ms.locfileid: "66066696"
   
  A tabela a seguir mostra as relações entre as três tabelas:  
   
-|Relação|Tipo|coluna de pesquisa|Coluna|  
+|Relação|Type|coluna de pesquisa|Coluna|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|um-para-um|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|um-para-muitos|Customers.CustomerID|Orders.CustomerID|  
@@ -112,7 +111,7 @@ ms.locfileid: "66066696"
 ### <a name="single-active-relationship-between-tables"></a>Relação ativa única entre tabelas  
  Várias relações podem resultar em dependências ambíguas entre as tabelas. Para criar cálculos exatos, você precisa de um único caminho de uma tabela para a próxima. Por isso, pode haver apenas uma relação ativa entre cada par de tabelas. Por exemplo, no AdventureWorks DW 2012, a tabela, DimDate, contém uma coluna, DateKey, que está relacionada a três colunas diferentes da tabela FactInternetSales: OrderDate, DueDate e ShipDate. Se você tentar importar essas tabelas, a primeira relação será criada com êxito, mas você receberá o seguinte erro em relações sucessivas que envolvam a mesma coluna:  
   
- \*Relação: tabela [coluna 1]-tabela de > [coluna 2]-status: erro-motivo: uma relação não pode ser criada \<entre tabelas tabela 1 \<> e tabela 2>. Só pode existir uma relação direta ou indireta entre duas tabelas.  
+ \*Relação: tabela [coluna 1]-tabela de > [coluna 2]-status: erro-motivo: não é possível criar uma relação entre tabelas \<table 1> e \<table 2> . Só pode existir uma relação direta ou indireta entre duas tabelas.  
   
  Se tiver duas tabelas e várias relações entre elas, você precisará importar várias cópias da tabela que contém a coluna de pesquisa e criar uma relação entre cada par de tabelas.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c2e960333c5ce2cd4d22742faac4deacc6651e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771512"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923900"
 ---
 # <a name="advanced-connection-properties"></a>Propriedades Avançadas de Conexão
   Use a caixa de diálogo **Propriedades Avançadas de Conexão** para adicionar mais parâmetros de conexão à cadeia de conexão.  

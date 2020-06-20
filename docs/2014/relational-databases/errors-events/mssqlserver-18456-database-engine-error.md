@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034965"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
@@ -91,7 +90,7 @@ ms.locfileid: "62869591"
 |Data|Fonte|Mensagem|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|Logon|Erro: 18456, Severidade: 14, Estado: 8.|  
-|2007-12-05 20:12:56.34|Logon|Falha no logon do usuário '<nome_do_usuário>'. [Cliente: \<> de endereço IP]|  
+|2007-12-05 20:12:56.34|Logon|Falha no logon do usuário '<nome_do_usuário>'. [CLIENTE: \<ip address>]|  
   
 > [!NOTE]  
 >  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado usando o modo de Autenticação do Windows e depois alterado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o modo de Autenticação do Windows, o logon **sa** é inicialmente desabilitado. Isso causa o erro de Estado 7: "falha no logon para o usuário ' sa '." Para habilitar o logon **SA** , consulte [alterar o modo de autenticação do servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
