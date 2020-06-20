@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cf96d8118d35fab87e50f1a4237bafcb9b586c2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 848f2427ed5f18ab4bbb64bb29f11b8567063bf8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62666856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063798"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>Considerações de segurança para SQL Server Compact Replication
-  Proteger a conectividade entre uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mecanismo de banco de dados e [!INCLUDE[ssEW](../../../includes/ssew-md.md)] envolve configurar corretamente a segurança para o Microsoft serviços de informações da Internet (IIS) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e o.  
+  Proteger a conectividade entre uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mecanismo de banco de dados e [!INCLUDE[ssEW](../../../includes/ssew-md.md)] envolve configurar corretamente a segurança para o Microsoft serviços de informações da Internet (IIS) e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Segurança de Replicação do SQL Server](view-and-modify-replication-security-settings.md)   

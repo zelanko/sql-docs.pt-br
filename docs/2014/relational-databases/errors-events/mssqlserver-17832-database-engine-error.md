@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 245cf55b5cff4cb203b20557d6944e0d05375a99
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915411"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967796"
 ---
 # <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
@@ -55,7 +54,7 @@ ms.locfileid: "62915411"
   
 1.  No menu **Iniciar** , clique em **Executar**.  
   
-2.  Digite `regedit`e clique em **OK**. (Se a caixa de diálogo **Controle de Conta de Usuário** for exibida, clique em **Continuar**.)  
+2.  Digite `regedit` e clique em **OK**. (Se a caixa de diálogo **Controle de Conta de Usuário** for exibida, clique em **Continuar**.)  
   
 3.  Navegue para **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**.  
   

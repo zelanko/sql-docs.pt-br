@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5088e029e90b4556c1559f8c948e8a8734762749
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704772"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001878"
 ---
 # <a name="monitor-job-activity"></a>Monitorar Atividade do Trabalho
   É possível monitorar a atividade atual de todos os trabalhos definidos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Monitor de Atividade do Trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -62,8 +61,8 @@ ms.locfileid: "62704772"
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir atividade do trabalho](view-job-activity.md)   
- [dbo. sysjobactivity &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
- [dbo. syssessions &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [dbo.sysjobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [dbo.syssessões &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_help_jobactivity](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

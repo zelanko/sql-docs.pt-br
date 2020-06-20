@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241087f5da3c7baa09a34fab8ab1886809ce0d36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289304"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931427"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)
   Este tópico contém informações sobre considerações de conectividade de cliente [!INCLUDE[ssHADR](../includes/sshadr-md.md)] e funcionalidade de failover de aplicativo.  
@@ -118,7 +117,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- Neste exemplo de cadeia de conexão, o cliente está tentando conectar-se a um ouvinte de grupo de disponibilidade denominado `AGListener` na porta 1433 (você também poderá omitir a porta se o ouvinte do grupo de disponibilidade estiver escutando na 1433).  A cadeia de conexão tem `ApplicationIntent` a propriedade definida `ReadOnly`como, tornando-a uma *cadeia de conexão de intenção de leitura*.  Sem essa configuração, o servidor não tentaria um roteamento somente leitura da conexão.  
+ Neste exemplo de cadeia de conexão, o cliente está tentando conectar-se a um ouvinte de grupo de disponibilidade denominado `AGListener` na porta 1433 (você também poderá omitir a porta se o ouvinte do grupo de disponibilidade estiver escutando na 1433).  A cadeia de conexão tem a `ApplicationIntent` propriedade definida como `ReadOnly` , tornando-a uma *cadeia de conexão de intenção de leitura*.  Sem essa configuração, o servidor não tentaria um roteamento somente leitura da conexão.  
   
  O banco de dados primário do grupo de disponibilidade processa a solicitação de roteamento somente leitura de entrada e tenta localizar uma réplica somente leitura online que esteja unida à réplica primária e configurada para roteamento somente leitura.  O cliente recebe informações de conexão do servidor de réplica primária e conecta-se à réplica somente leitura identificada.  
   

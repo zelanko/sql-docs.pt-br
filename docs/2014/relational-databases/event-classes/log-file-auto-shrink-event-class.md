@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eab2902600f26abfc0f714b231fcf1bb684f513b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59bcc5bda489edcd337bba78bd07d55ff0a28806
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029269"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>classe de evento Log File Auto Shrink
   A classe de evento **Log File Auto Shrink** indica que o arquivo de log se reduziu automaticamente. Esse evento não será acionado se o arquivo de log for reduzido devido a uma instrução ALTER DATABASE explícita.  

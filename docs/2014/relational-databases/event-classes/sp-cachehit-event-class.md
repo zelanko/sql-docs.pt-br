@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ffc477b299daeda004cca26d95f3d33e2e5509b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050939"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028461"
 ---
 # <a name="spcachehit-event-class"></a>classe de evento SP:CacheHit
   A classe de evento SP:CacheHit indica que um procedimento armazenado está no cache de plano.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6920920aa603c615cdc5f84a34a93204842052d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995368"
 ---
 # <a name="create-a-multiserver-environment"></a>Criar um ambiente multisservidor
   A administração multisservidor requer a configuração de um servidor mestre (MSX) e de um ou mais servidores de destino (TSX). Os trabalhos a serem processados em todos os servidores de destino são definidos primeiramente no servidor mestre e depois são baixados nos servidores de destino.  
@@ -60,14 +59,14 @@ ms.locfileid: "63192965"
   
 |Descrição|Tópico|  
 |-----------------|-----------|  
-|Descreve como criar um servidor mestre.|[Make a Master Server](make-a-master-server.md)|  
+|Descreve como criar um servidor mestre.|[Criar um servidor mestre](make-a-master-server.md)|  
 |Descreve como criar um servidor de destino.|[Criar um servidor de destino](make-a-target-server.md)|  
 |Descreve como inscrever um servidor de destino em um servidor mestre.|[Inscrever um servidor de destino em um servidor mestre](enlist-a-target-server-to-a-master-server.md)|  
-|Descreve como cancelar a inscrição de um servidor de destino de um servidor mestre.|[Remover um servidor de destino de um servidor mestre](defect-a-target-server-from-a-master-server.md)|  
-|Descreve como cancelar a inscrição de vários servidores de destino de um servidor mestre.|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
+|Descreve como cancelar a inscrição de um servidor de destino de um servidor mestre.|[Defect a Target Server from a Master Server](defect-a-target-server-from-a-master-server.md)|  
+|Descreve como cancelar a inscrição de vários servidores de destino de um servidor mestre.|[Remover vários servidores de destino de um servidor mestre](defect-multiple-target-servers-from-a-master-server.md)|  
 |Descreve como verificar o status de um servidor de destino.|[&#41;&#40;Transact-SQL de sp_help_targetserver](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [&#41;&#40;Transact-SQL de sp_help_targetservergroup](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Solucionar problemas de trabalhos multisservidor que usam proxies](troubleshoot-multiserver-jobs-that-use-proxies.md)  
+ [Solucionar problemas de trabalhos com multisservidor que usam proxies](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

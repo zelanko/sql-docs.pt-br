@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d00367c0ae8cc0541c4bd9dbec2c508010bb90
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8207e899c98d788ea0cbd618231597b22a6c0793
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703899"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063454"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Gerar scripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece dois mecanismos para gerar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você pode criar scripts para vários objetos usando o **Assistente para gerar e publicar scripts.** É possível gerar um script para objetos individuais ou para vários objetos usando o menu **Gerar script como** no **Pesquisador de Objetos**.  
@@ -42,7 +41,7 @@ ms.locfileid: "82703899"
   
 3.  Expanda a categoria do objeto. Por exemplo, expanda o nó **Tabelas** ou **Exibições** .  
   
-4.  Clique com o botão direito do mouse no objeto, aponte para **Script \<object type> como**, por exemplo, aponte para **Tabela de Script como**.  
+4.  Clique com o botão direito do mouse no objeto, aponte para **script \<object type> como**, por exemplo, apontar para **script de tabela como**.  
   
 5.  Aponte para o tipo de script, como **Criar para** ou **Alterar para**.  
   
@@ -57,11 +56,11 @@ ms.locfileid: "82703899"
   
 2.  Expanda **Bancos de Dados**e o banco de dados que contém os objetos dos quais será gerado um script.  
   
-3.  Clique com o botão direito do mouse no primeiro objeto do qual será gerado o script, aponte para **Script \<object type> como** e, nas seleções **Salvar como**, escolha **Nova janela do Editor de Consultas** como o destino de saída.  
+3.  Clique com o botão direito do mouse no primeiro objeto a ser inserido no script, aponte para **script \<object type> como**e, nas seleções **salvar como** , escolha **nova janela do editor de consultas** como o destino de saída.  
   
 4.  Navegue até o segundo objeto do qual deseja gerar script.  
   
-5.  Clique com o botão direito do mouse no objeto, aponte para **Script \<object type> como** e, nas seleções **Salvar como**, escolha **Área de Transferência** como o destino de saída.  
+5.  Clique com o botão direito do mouse no objeto, aponte para **script \<object type> como**e, nas seleções **salvar como** , escolha **área de transferência** como o destino de saída.  
   
 6.  Na janela Editor de Consultas aberta para o primeiro objeto, cole o script para o segundo objeto da área de transferência.  
   
@@ -82,6 +81,6 @@ ms.locfileid: "82703899"
   
 6.  Clique em Ctrl + botão esquerdo do mouse no segundo objeto do qual você deseja gerar um script.  
   
-7.  Clique com o botão direito do mouse em um dos objetos selecionados e selecione **Script \<object type> como**.  
+7.  Clique com o botão direito do mouse em um dos objetos selecionados e selecione **script \<object type> como**.  
   
   

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371a2ba0b88266e076cf4e3e438fbe5b0216cf1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951706"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Implantar pacotes usando o utilitário de implantação
   Quando você cria um utilitário de implantação para instalar pacotes de um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um computador diferente daquele em que o utilitário de implantação foi criado, é necessário primeiro copiar a pasta de implantação no computador de destino.  
   
  O caminho da pasta de implantação está especificado na propriedade DeploymentOutputPath do projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para o qual foi criado o utilitário de implantação. O caminho padrão é bin\Deployment, relativo ao projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Criar um utilitário de implantação](../../2014/integration-services/create-a-deployment-utility.md).  
   
- É possível usar o Assistente de Instalação de Pacotes para instalar os pacotes. Para iniciar o assistente, clique duas vezes no arquivo do utilitário de implantação depois de ter copiado a pasta de implantação no servidor. Esse arquivo é chamado \<project name>.SSISDeploymentManifest e pode ser encontrado na pasta de implantação do computador de destino.  
+ É possível usar o Assistente de Instalação de Pacotes para instalar os pacotes. Para iniciar o assistente, clique duas vezes no arquivo do utilitário de implantação depois de ter copiado a pasta de implantação no servidor. Esse arquivo é nomeado \<project name> . SSISDeploymentManifest e pode ser encontrado na pasta de implantação no computador de destino.  
   
 > [!NOTE]  
 >  Dependendo da versão do pacote que está sendo implantado, você poderá encontrar um erro se tiver diferentes versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instaladas lado a lado. Esse erro pode ocorrer porque a extensão do nome de arquivo .SSISDeploymentManifest é a mesma para todas as versões do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Clicar duas vezes no arquivo chama o instalador (dtsinstall.exe) da versão instalada mais recentemente do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], que talvez não seja a mesma versão do arquivo de utilitário de implantação. Para resolver esse problema, execute a versão correta de dtsinstall.exe na linha de comando e forneça o caminho do arquivo de utilitário de implantação.  
@@ -50,7 +49,7 @@ ms.locfileid: "66059618"
   
 1.  Abra a pasta de implantação no computador de destino.  
   
-2.  Clique duas vezes no arquivo de manifesto, \<project name>.SSISDeploymentManifest, para iniciar o Assistente de Instalação de Pacotes.  
+2.  Clique duas vezes no arquivo de manifesto, \<project name> . SSISDeploymentManifest, para iniciar o assistente de instalação de pacotes.  
   
 3.  Na página **Implantar Pacotes SSIS** , selecione a opção **Implantação no SQL Server** .  
   

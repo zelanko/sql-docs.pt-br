@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86c29f696c93789cb3815cf14587690c2edb5f6b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774553"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931317"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Alterar funções entre servidores de envio de log primários e secundários (SQL Server)
   Depois de fazer failover em uma configuração de log de envio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um servidor secundário, você pode configurar seu banco de dados secundário para agir como um banco de dados primário. Então, você poderá trocar os bancos de dados primários e secundários como necessário.  
@@ -78,7 +77,7 @@ ms.locfileid: "62774553"
 3.  Habilite o trabalho de backup de envio de logs no servidor secundário (o novo servidor primário) e os trabalhos de cópia e restauração no servidor primário (o novo servidor secundário).  
   
 > [!IMPORTANT]  
->  Ao alterar um banco de dados secundário para um banco de dados primário, para oferecer uma experiência consistente aos usuários e aplicativos, você poderá ter de recriar alguns ou todos os metadados do banco de dados, como logons e trabalhos, na nova instância de servidor primário. Para obter mais informações, consulte [gerenciar metadados ao disponibilizar um banco de dados em outra instância de servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+>  Ao alterar um banco de dados secundário para um banco de dados primário, para oferecer uma experiência consistente aos usuários e aplicativos, você poderá ter de recriar alguns ou todos os metadados do banco de dados, como logons e trabalhos, na nova instância de servidor primário. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   

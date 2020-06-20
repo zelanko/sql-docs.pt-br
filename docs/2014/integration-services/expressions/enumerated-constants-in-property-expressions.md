@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b691367b8cfbe00c1e383fa3a2fd18e2d545be8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898894"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967416"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
   Se as expressões de propriedade incluírem valores de uma lista de membros de enumerador, a expressão deverá usar o valor numérico do membro de enumerador em vez do nome amigável do membro. Por exemplo, se uma expressão definir a propriedade `LoggingMode`, use o valor numérico 2 em vez do nome amigável Desabilitada.  
   
  Este tópico relaciona apenas os valores numéricos equivalentes a nomes amigáveis de enumeradores cujos membros são usados normalmente em expressões de propriedade. O modelo de objeto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui muitos enumeradores adicionais que podem ser usados quando você programa o modelo de objeto para criar pacotes programaticamente ou codifica elementos personalizados de pacote como tarefas e componentes de fluxo de dados.  
   
- Além das propriedades personalizadas para pacotes e objetos de pacote, a janela Propriedades do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclui um conjunto de propriedades disponíveis para pacotes, tarefas e os contêineres Loop Foreach, Loop For e Sequência. As propriedades comuns que são definidas por valores de enumeradores-`ForceExecutionResult`, `LoggingMode`, `IsolationLevel`e `Transaction Option`-são listadas na seção Propriedades comuns.  
+ Além das propriedades personalizadas para pacotes e objetos de pacote, a janela Propriedades do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclui um conjunto de propriedades disponíveis para pacotes, tarefas e os contêineres Loop Foreach, Loop For e Sequência. As propriedades comuns que são definidas por valores de enumeradores- `ForceExecutionResult` , `LoggingMode` , `IsolationLevel` e `Transaction Option` -são listadas na seção Propriedades comuns.  
   
  As seções a seguir fornecem informações sobre constantes enumeradas:  
   
@@ -118,7 +117,7 @@ ms.locfileid: "62898894"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Enumerador Nodelist Foreach  
- `SourceDocumentType`, `InnerXPathStringSourceType`e **OuterXPathStringSourceType** propriedades – definidas usando valores da `SourceType` enumeração.  
+ `SourceDocumentType`, `InnerXPathStringSourceType` e **OuterXPathStringSourceType** propriedades – definidas usando valores da `SourceType` enumeração.  
   
 |Nome amigável em SourceType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -373,7 +372,7 @@ ms.locfileid: "62898894"
 |DirectInput|1|  
 |Variável|2|  
   
- `ActionAtEvent` Propriedade do Inspetor de eventos do WMI – definida usando valores da `ActionAtEvent` enumeração.  
+ Propriedade do Inspetor de eventos `ActionAtEvent` do WMI – definida usando valores da `ActionAtEvent` enumeração.  
   
 |Nome amigável em ActionAtEvent|Valor numérico|  
 |------------------------------------|-------------------|  
@@ -423,7 +422,7 @@ ms.locfileid: "62898894"
 |Diff|4|  
 |Patch|5|  
   
- `SourceType`Propriedades `SecondOperandType`, e `XPathSourceType` -define usando valores da `DTSXMLSourceType` enumeração.  
+ `SourceType``SecondOperandType`Propriedades, e `XPathSourceType` -define usando valores da `DTSXMLSourceType` enumeração.  
   
 |Nome amigável em DTSXMLSourceType|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -532,7 +531,7 @@ ms.locfileid: "62898894"
 |Arquivos|1|  
 |Log|2|  
   
- `BackupDevice`Propriedade-definido usando valores da enumeração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Smo (Management Objects `DeviceType` ).  
+ `BackupDevice`Propriedade-definido usando valores da enumeração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Smo (Management Objects) `DeviceType` .  
   
 |Nome amigável em DeviceType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -560,7 +559,7 @@ ms.locfileid: "62898894"
 |Ano|3|  
   
 ### <a name="update-statistics-task"></a>Tarefa Atualizar Estatísticas  
- `UpdateType`Propriedade-definido usando valores da enumeração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Smo (Management Objects `StatisticsTarget` ).  
+ `UpdateType`Propriedade-definido usando valores da enumeração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Smo (Management Objects) `StatisticsTarget` .  
   
 |Nome amigável em StatisticsTarget|Valor numérico|  
 |---------------------------------------|-------------------|  
@@ -580,7 +579,7 @@ ms.locfileid: "62898894"
 |Falha|1|  
 |Completion|2|  
   
- `IsolationLevel`Propriedade-definida pela enumeração de `IsolationLevel` .NET Framework. Para obter mais informações, consulte a Biblioteca de Classes do .NET Framework em [Biblioteca MSDN](https://go.microsoft.com/fwlink?LinkId=17313).  
+ `IsolationLevel`Propriedade-definida pela enumeração de .NET Framework `IsolationLevel` . Para obter mais informações, consulte a Biblioteca de Classes do .NET Framework em [Biblioteca MSDN](https://go.microsoft.com/fwlink?LinkId=17313).  
   
  `LoggingMode`Propriedade-definido usando valores da `DTSLoggingMode` enumeração.  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73a4c6fc0795fde7a9b8e7378fd0a88447ff5cd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059276"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966930"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Habilitar o log de pacote no SQL Server Data Tools
   Este procedimento descreve como adicionar registros a um pacote, configurar os registros no nível do pacote e salvar a configuração dos registros em um arquivo XML. Você só pode adicionar os registros no nível do pacote, mas o pacote não precisa executar os registros para habilitar os registros nos contêineres incluídos no pacote.  
@@ -35,7 +34,7 @@ ms.locfileid: "66059276"
   
 3.  Selecione um provedor de log na lista **Tipo de provedor** e clique em **Adicionar**.  
   
-4.  Na coluna **Configuração**, selecione um gerenciador de conexões ou clique em **\<New connection>** para criar um novo gerenciador de conexões do tipo apropriado para o provedor de logs. Dependendo do provedor selecionado, use um dos seguintes gerenciadores de conexões:  
+4.  Na coluna **configuração** , selecione um Gerenciador de conexões ou clique **\<New connection>** para criar um novo Gerenciador de conexões do tipo apropriado para o provedor de log. Dependendo do provedor selecionado, use um dos seguintes gerenciadores de conexões:  
   
     -   Para arquivos de texto, use um gerenciador de conexões de Arquivo. Para obter mais informações, consulte [File Connection Manager](connection-manager/file-connection-manager.md)  
   
@@ -69,6 +68,6 @@ ms.locfileid: "66059276"
   
 ## <a name="see-also"></a>Consulte Também  
  [Log de&#41; Integration Services &#40;SSIS](performance/integration-services-ssis-logging.md)   
- [Registro em Log do Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
+ [Registro em Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md)  
   
   

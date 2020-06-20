@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: eae8ad534ba452acd7f65e4faf66dfcf4bc73791
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5b64aee371a41bc0d58ec4a52a1a1526bc13388
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002292"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Propriedade Dependencies (classe SqlService)
   Obtém uma lista de serviços que são dependentes do serviço referenciado.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SqlService](sqlservice-class.md) que representa o serviço.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

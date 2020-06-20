@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51ad82519e8afd5e4a871046465e0cafec2f783e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3be1cf08e3e3ac2278bfbf249c3310b179a9cf6c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932237"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Instalando atualizações no prompt de comando
   Teste e modifique os scripts de instalação para atender às necessidades da sua organização.  
@@ -23,9 +22,9 @@ ms.locfileid: "62774976"
 ## <a name="sample-syntax-for-installation"></a>Sintaxe de exemplo da instalação  
  O nome do pacote de atualização pode variar e incluir um componente de processador, edição e idioma. Aplique uma atualização em um prompt de comando substituindo <nome_do_pacote> pelo nome do seu pacote de atualização:  
   
--   Atualize uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e todos os componentes compartilhados, como o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Ferramentas de Gerenciamento: você pode especificar a instância usando o parâmetro InstanceName ou o parâmetro InstanceID. Para atualizar uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique o parâmetro InstanceID<package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance ou <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>.  
+-   Atualize uma única instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e todos os componentes compartilhados, como o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Ferramentas de Gerenciamento: você pode especificar a instância usando o parâmetro InstanceName ou o parâmetro InstanceID. Para atualizar uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você deve especificar o parâmetro InstanceID<package_name # C1.exe/QS/IAcceptSQLServerLicenseTerms/Action = Patch/InstanceName = MyInstance ou <package_name # C3.exe/QS/IAcceptSQLServerLicenseTerms/Action = Patch/InstanceId = \<Instance ID> .  
   
--   A instalação pode integrar as últimas atualizações de produto com a instalação principal, para que ela e as atualizações aplicáveis sejam instaladas ao mesmo tempo. Prepare uma instalação da instância do mecanismo de banco de dados para incluir a atualização do produto: setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<path, local em que a atualização foi baixada> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine.  
+-   A instalação pode integrar as últimas atualizações de produto com a instalação principal, para que ela e as atualizações aplicáveis sejam instaladas ao mesmo tempo. Você pode preparar uma instalação da instância do mecanismo de banco de dados para incluir a atualização do produto: setup.exe/q/IAcceptSQLServerLicenseTerms/ACTION = PrepareImage/UpdateEnabled = true/UpdateEnabled = true/UpdateSource =/InstanceId =/Features = \<path where the update is downloaded> \<Instance ID> SQLEngine.  
   
 -   Atualize apenas os componentes compartilhados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e as Ferramentas de Gerenciamento: <nome_do_pacote>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62774976"
 |**/UpdateEnabled**|Especifica se a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve descobrir e incluir atualizações de produto. Os valores válidos são True e False ou 1 e 0. Por padrão, a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluirá as atualizações localizadas.|  
 |**/IAcceptSQLServerLicenseTerms**|Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.|  
   
- <sup>1</sup> você não pode especificar esse parâmetro para aplicar uma atualização a uma instância preparada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Em vez disso, é necessário especificar o parâmetro /instanceID.  
+ <sup>1</sup> você não pode especificar esse parâmetro para aplicar uma atualização a uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Em vez disso, é necessário especificar o parâmetro /instanceID.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral da instalação de manutenção do SQL Server](../../sql-server/install/overview-of-sql-server-servicing-installation.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 551a810d12d698124e1e9d0f78fcb0b37a113d6d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b680086f76e0c1a1e8c8cfc2f4ef82099957b3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055912"
 ---
 # <a name="multithreaded-applications"></a>Aplicativos multi-threaded
   O driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é um driver multi-threaded. Criar um aplicativo multi-threaded é uma alternativa ao uso de chamadas assíncronas para processar várias chamadas de ODBC. Um thread pode fazer uma chamada de ODBC síncrona e outros threads podem ser processados enquanto o primeiro thread está bloqueado esperando a resposta à sua chamada. Esse modelo é mais eficiente que fazer chamadas assíncronas, pois elimina sobrecarga, como tráfego de rede e a realização repetida de testes de chamadas a funções ODBC para SQL_STILL_EXECUTING.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 51f33f3b-6b7f-41bf-a620-97fd5189e633
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5f361679d7e2e57024f0ac6859dbc3b0aac32a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f41313457a468a243af4b7542a9b4aa675157d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065793"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938277"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>Traduções (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Traduções** do Designer de Cubo para criar e modificar perspectivas do cubo selecionado.  
@@ -25,7 +24,7 @@ ms.locfileid: "66065793"
  A guia **Conversões** contém os seguintes painéis:  
   
 ## <a name="panes"></a>Painéis  
- **Barra**  
+ **Barra de ferramentas**  
  Use a barra de ferramentas para executar ações comuns na guia. Para obter mais informações sobre esse painel, consulte a [barra de ferramentas &#40;guia Traduções, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Detalhes de Conversão**  

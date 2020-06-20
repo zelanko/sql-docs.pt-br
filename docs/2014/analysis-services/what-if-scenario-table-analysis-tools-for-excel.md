@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4df5a5c5-1983-4009-a7c5-cd340649fd2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49b642d60da57192bc0c6bf842a16b0d12d529d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed1fe8447064bf224ea3f0e0a576d4e73fb07203
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938107"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Cenário E-Se (Ferramentas de Análise de Tabela para Excel)
   ![Botão Cenário E-Se em Ferramentas de Análise de Tabela](media/tat-whatif.gif "Botão Cenário E-Se em Ferramentas de Análise de Tabela")

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf0c153168c513c98f8b9ac58984cb88ae1811da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058809"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967126"
 ---
 # <a name="file-system-task-editor-general-page"></a>Editor da Tarefa Sistema de Arquivos (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Sistema de Arquivos** para configurar a operação de sistema de arquivos que a tarefa executa.  
@@ -29,7 +28,7 @@ ms.locfileid: "66058809"
  Você deve especificar um gerenciador de conexões de origem e destino, definindo as propriedades SourceConnection e DestinationConnection. Você pode fornecer os nomes dos gerenciadores de conexões de Arquivo que apontam para os arquivos que a tarefa usa como origem ou destino ou, se os caminhos dos arquivos estiverem armazenados em variáveis, fornecer os nomes das variáveis. Antes de usar variáveis para armazenar os caminhos de arquivo, defina as opções IsSourcePathVariable, para a conexão de origem, e IsDestinationPatheVariable, para a conexão de destino, como **True**. Em seguida, opte por utilizar as variáveis do sistema ou definidas pelo usuário existentes, ou então, crie novas variáveis. Na caixa de diálogo **Adicionar Variável** , é possível configurar e especificar o escopo das variáveis. O escopo deve ser a tarefa Sistema de Arquivos ou um contêiner pai. Para obter mais informações, consulte [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md) e [usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md).  
   
 > [!NOTE]  
->  Para substituir `SourceConnection` as variáveis selecionadas para as propriedades e `DestinationConnection` , insira uma expressão para as propriedades de **origem** e de **destino** . Insira expressões na página **Expressões** do **Editor da Tarefa Sistema de Arquivos**. Por exemplo, para definir o caminho dos arquivos que a tarefa usa como um destino, você pode querer usar a variável A sob determinadas condições e usar a variável B sob outras condições.  
+>  Para substituir as variáveis selecionadas para as `SourceConnection` Propriedades e `DestinationConnection` , insira uma expressão para as propriedades de **origem** e de **destino** . Insira expressões na página **Expressões** do **Editor da Tarefa Sistema de Arquivos**. Por exemplo, para definir o caminho dos arquivos que a tarefa usa como um destino, você pode querer usar a variável A sob determinadas condições e usar a variável B sob outras condições.  
   
 > [!NOTE]  
 >  A tarefa Sistema de Arquivos funciona em um único arquivo ou diretório. Por isso, essa tarefa não dá suporte a uso de caracteres curingas para executar a mesma operação em vários arquivos ou diretórios. Para fazer com que uma tarefa Sistema de Arquivos repita uma operação em vários arquivos ou diretórios, coloque-a em um contêiner Loop Foreach. Para obter mais informações, consulte [File System Task](control-flow/file-system-task.md).  
@@ -43,7 +42,7 @@ ms.locfileid: "66058809"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**True**|O caminho de destino é armazenado em uma variável. Ao selecionar esse valor, a opção dinâmica **DestinationVariable**será exibida.|  
-|**For**|O caminho de destino é especificado em um gerenciador de conexões de Arquivo. A seleção desse valor exibe a opção dinâmica `DestinationConnection`,.|  
+|**For**|O caminho de destino é especificado em um gerenciador de conexões de Arquivo. A seleção desse valor exibe a opção dinâmica, `DestinationConnection` .|  
   
  **OverwriteDestination**  
  Especifique se a operação pode substituir arquivos no diretório de destino.  
@@ -85,13 +84,13 @@ ms.locfileid: "66058809"
   
 ### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- Selecione o nome da variável na lista ou clique em \< **nova variável...**> para criar uma nova variável.  
+ Selecione o nome da variável na lista ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados:** [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
- Selecione um Gerenciador de conexões de arquivo na lista ou clique \<em **nova conexão...**> para criar um novo Gerenciador de conexões.  
+ Selecione um Gerenciador de conexões de arquivo na lista ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -99,13 +98,13 @@ ms.locfileid: "66058809"
   
 ### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- Selecione o nome da variável na lista ou clique em \< **nova variável...**> para criar uma nova variável.  
+ Selecione o nome da variável na lista ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados:** [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
- Selecione um Gerenciador de conexões de arquivo na lista ou clique \<em **nova conexão...**> para criar um novo Gerenciador de conexões.  
+ Selecione um Gerenciador de conexões de arquivo na lista ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -115,13 +114,13 @@ ms.locfileid: "66058809"
  **Oculto**  
  Indique se o arquivo ou diretório deve ficar visível.  
   
- **ReadOnly**  
+ **ReadOnly (somente-leitura)**  
  Indique se o arquivo é somente leitura.  
   
- **Archive**  
+ **Operação**  
  Indique se o arquivo ou diretório está pronto para ser arquivado.  
   
- **Sistema**  
+ **System**  
  Indique se o arquivo é um arquivo do sistema operacional.  
   
 ### <a name="operation--create-directory"></a>Operação = Criar diretório  

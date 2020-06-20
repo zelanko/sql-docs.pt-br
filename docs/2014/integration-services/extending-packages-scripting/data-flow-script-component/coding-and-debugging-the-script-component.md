@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967336"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codificando e depurando o componente Script
   No [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, o componente Script tem dois modos: modo de design de metadados e modo de design de código. Quando você abre o **Editor de Transformação Scripts**, o componente digita o modo de design de metadados no qual você configura metadados e define propriedades do componente. Depois de definir as propriedades do componente Script e configurar a entrada e as saídas em modo de design de metadados, você pode alternar para o modo de design de código para gravar seu script personalizado. Para obter mais informações sobre o modo de design de metadados e modo de design de código, consulte [Configurando o componente Script no Editor de Componentes de Script](configuring-the-script-component-in-the-script-component-editor.md).
@@ -59,9 +58,9 @@ ms.locfileid: "78176210"
 
     -   Uma classe de coleção `Connections` que contém referências às conexões selecionadas na página Gerenciador de Conexões do Editor de Transformação Scripts.
 
-    -   Uma `Variables` classe de coleção que contém referências às variáveis inseridas nas `ReadOnlyVariable` propriedades `ReadWriteVariables` e na página **script** do editor de **transformação scripts**.
+    -   Uma `Variables` classe de coleção que contém referências às variáveis inseridas nas `ReadOnlyVariable` `ReadWriteVariables` Propriedades e na página **script** do editor de **transformação scripts**.
 
--   O `BufferWrapper` item de projeto contém uma classe que herda <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> de para cada entrada e saída configurada na página **entradas e saídas** do **Editor de transformação scripts**. Cada uma dessas classes contém propriedades de acessador digitadas que correspondem às colunas de entrada e saída configuradas e os buffers de fluxo de dados que contêm as colunas.
+-   O `BufferWrapper` item de projeto contém uma classe que herda de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> para cada entrada e saída configurada na página **entradas e saídas** do **Editor de transformação scripts**. Cada uma dessas classes contém propriedades de acessador digitadas que correspondem às colunas de entrada e saída configuradas e os buffers de fluxo de dados que contêm as colunas.
 
  Para obter mais informações sobre como usar esses objetos, métodos e propriedades, consulte [Compreender o Component Object Model do Script](understanding-the-script-component-object-model.md). Para obter informações sobre como usar os métodos e propriedades dessas classes em um tipo específico de componente Script, consulte a seção [Exemplos adicionais de componente de script](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Os tópicos de exemplo também contêm exemplos de código completos.
 
@@ -170,7 +169,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|
 |variáveis|Use as propriedades nomeadas e digitadas do acessador na classe de coleção `Variables` no item de projeto `ComponentWrapper`, expostas através da propriedade `Variables` da classe `ScriptMain`.<br /><br /> O método `PreExecute` só pode acessar variáveis somente leitura. O método `PostExecute` pode acessar variáveis somente leitura e de leitura/gravação.|
 |conexões|Use as propriedades nomeadas e digitadas do acessador na classe de coleção `Connections` no item de projeto `ComponentWrapper`, expostas através da propriedade `Connections` da classe `ScriptMain`.|
-|Eventos|Gere <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> eventos usando a propriedade da `ScriptMain` classe e os métodos **Fire\<X>** da <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.|
+|Eventos|Gere eventos usando a <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> propriedade da `ScriptMain` classe e os métodos **Fire \<X> ** da <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.|
 |Registro em log|Execute o registro em log usando o método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> da classe `ScriptMain`.|
 
 ## <a name="debugging-the-script-component"></a>Depurando o componente Script

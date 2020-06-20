@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f754abc2e10732c33c011fdaf8fcd06c0175a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923437"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
   Após concluir o fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a próxima tarefa é criar uma função com valor de tabela que recupera os dados de alteração. É preciso criar esta função apenas uma vez antes da primeira carga incremental.  
@@ -108,7 +107,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Entendendo e usando as funções criadas pelo procedimento armazenado  
- Para percorrer sistematicamente a linha do tempo dos dados de alteração capturados, as funções de wrapper *@end_time* geradas esperam que o parâmetro de *@start_time* um intervalo seja o parâmetro para o intervalo subsequente. Quando essa convenção é seguida, as funções de invólucro geradas podem executar as seguintes tarefas:  
+ Para percorrer sistematicamente a linha do tempo dos dados de alteração capturados, as funções de wrapper geradas esperam que o *@end_time* parâmetro de um intervalo seja o *@start_time* parâmetro para o intervalo subsequente. Quando essa convenção é seguida, as funções de invólucro geradas podem executar as seguintes tarefas:  
   
 -   Mapear os valores de data/hora para os valores LSN usados interiormente.  
   
@@ -126,7 +125,7 @@ deallocate #hfunctions
   
 -   O valor de data/hora inicial e o valor de data/hora final do intervalo. Enquanto as funções de invólucro usam valores de data/hora como os pontos finais do intervalo de consulta, as funções de captura de dados de alteração usam dois valores LSN como os pontos finais.  
   
--   O filtro de linha. Para as funções de wrapper e as funções de captura de dados de *@row_filter_option* alteração, o parâmetro é o mesmo. Para obter mais informações, consulte [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
+-   O filtro de linha. Para as funções de wrapper e as funções de captura de dados de alteração, o *@row_filter_option* parâmetro é o mesmo. Para obter mais informações, consulte [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) e [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
  O conjunto de resultados retornado pelas funções de invólucro inclui os seguintes dados:  
   
@@ -210,9 +209,9 @@ go
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|LSN associado à transação de confirmação da alteração.<br /><br /> Todas as alterações confirmadas na mesma transação compartilham o mesmo LSN de confirmação. Por exemplo, se uma operação de atualização na tabela de origem modificar duas linhas diferentes, a tabela de alteração conterá quatro linhas (duas com os valores antigos e duas com os valores novos), cada uma com o mesmo valor de **__$start_lsn** .|  
 |**__$seqval**|`binary(10)`|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
-|**_ de $ operação**|`int`|A operação DML (linguagem de manipulação de dados) associada à alteração. Pode ser um dos seguintes:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores anteriores à operação de atualização).<br /><br /> 4 = atualizar (valores posteriores à operação de atualização).|  
+|**_ de $ operação**|`int`|A operação DML (linguagem de manipulação de dados) associada à alteração. Um dos seguintes pode ser feito:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores anteriores à operação de atualização).<br /><br /> 4 = atualizar (valores posteriores à operação de atualização).|  
 |**_ de $ update_mask**|`varbinary(128)`|Uma máscara de bits com base nos ordinais de coluna da tabela de alteração identificando as colunas que foram alteradas. Você poderia examinar este valor se você tivesse que determinar quais colunas foram alteradas.|  
-|**\<colunas da tabela de origem capturadas>**|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada originalmente na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
+|**\<captured source table columns>**|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada originalmente na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
   
  Para obter mais informações, veja [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   

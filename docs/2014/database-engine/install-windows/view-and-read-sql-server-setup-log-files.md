@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14750517c0423a24c442cb38c09806dab7ad0a26
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931577"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Exibir e ler arquivos de log da Instalação do SQL Server
-  Cada execução da instalação cria arquivos de log com uma nova pasta de log com carimbo de data/hora em\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% ProgramFiles% \120\Setup Bootstrap\Log\\. O formato de nome da pasta com carimbo de data/hora é AAAAMMDD_hhmmss. Quando a Instalação é executada em um modo autônomo, os logs são criados em % temp%\sqlsetup*.log. Todos os arquivos da pasta de logs são arquivados no arquivo Log\*.cab em sua respectiva pasta de log.  
+  Cada execução da instalação cria arquivos de log com uma nova pasta de log com carimbo de data/hora em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\ . O formato de nome da pasta com carimbo de data/hora é AAAAMMDD_hhmmss. Quando a Instalação é executada em um modo autônomo, os logs são criados em % temp%\sqlsetup*.log. Todos os arquivos da pasta de logs são arquivados no arquivo Log\*.cab em sua respectiva pasta de log.  
   
  Uma solicitação de Instalação típica passa por três fases de execução:  
   
@@ -77,8 +76,8 @@ ms.locfileid: "62774318"
   
 -   Local do arquivo de relatório de regras  
   
-### <a name="location"></a>Local  
- Ele está localizado em% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\Bootstrap\Log.  
+### <a name="location"></a>Location  
+ Ele está localizado em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\ .  
   
  Para localizar erros no arquivo de texto resumido, pesquise o arquivo usando as palavras-chave "error" ou "failed".  
   
@@ -87,32 +86,32 @@ ms.locfileid: "62774318"
 ### <a name="overview"></a>Visão geral  
  O arquivo de base summary_engine é semelhante ao arquivo de resumo e é gerado durante o fluxo de trabalho principal.  
   
-### <a name="location"></a>Local  
- Ele está localizado em% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\ Bootstrap\Log<YYYYMMDD_HHMM \\>.  
+### <a name="location"></a>Location  
+ Ele está localizado em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ .  
   
 ## <a name="summary_engine-base_yyyymmdd_hhmmss_componentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
 ### <a name="overview"></a>Visão geral  
  O arquivo de log resumido de atualização do componente é semelhante ao arquivo de resumo e é gerado durante o fluxo de trabalho de atualização de componente.  
   
-### <a name="location"></a>Local  
- Ele está localizado em% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\ Bootstrap\Log<YYYYMMDD_HHMM \\>.  
+### <a name="location"></a>Location  
+ Ele está localizado em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ .  
   
-## <a name="summary_engine-base_versionnumbermmdd_hhmmss_globalrulestxt"></a>Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
+## <a name="summary_engine-base_versionnumbermmdd_hhmmss_globalrulestxt"></a>Base_ de Summary_engine \<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
   
 ### <a name="overview"></a>Visão geral  
  O arquivo de log resumido de regras globais é semelhante ao arquivo de resumo gerado durante o fluxo de trabalho de regras globais.  
   
-### <a name="location"></a>Local  
- Ele está localizado em% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\ Bootstrap\Log<YYYYMMDD_HHMM \\>.  
+### <a name="location"></a>Location  
+ Ele está localizado em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ .  
   
 ## <a name="detailtxt"></a>Detail.txt  
   
 ### <a name="overview"></a>Visão geral  
  O arquivo Detail.txt é gerado para o fluxo de trabalho principal, como instalação ou atualização, e fornece os detalhes da execução. Os logs do arquivo são gerados com base na hora em que cada ação para a instalação foi invocada, e mostram a ordem na qual as ações foram executadas e suas dependências.  
   
-### <a name="location"></a>Local  
- Ele está localizado em% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup  
+### <a name="location"></a>Location  
+ Ele está localizado em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup  
   
  Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
   
@@ -123,16 +122,16 @@ ms.locfileid: "62774318"
 ### <a name="overview"></a>Visão geral  
  O arquivo Detail_ComponentUpdate.txt é gerado para o fluxo de trabalho de atualização de componente e é semelhante ao Detail.txt.  
   
-### <a name="location"></a>Local  
- Ele está localizado em% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\ Bootstrap\Log<YYYYMMDD_HHMM \\>.  
+### <a name="location"></a>Location  
+ Ele está localizado em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ .  
   
 ## <a name="detail_globalrulestxt"></a>Detail_GlobalRules.txt  
   
 ### <a name="overview"></a>Visão geral  
  O arquivo Detail_GlobalRules.txt é gerado para a execução de regras globais e é semelhante ao Detail.txt.  
   
-### <a name="location"></a>Local  
- Ele está localizado em% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\ Bootstrap\Log<YYYYMMDD_HHMM \\>.  
+### <a name="location"></a>Location  
+ Ele está localizado em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ .  
   
 ## <a name="msi-log-files"></a>Arquivos de log MSI  
   
@@ -141,14 +140,14 @@ ms.locfileid: "62774318"
   
  Tipos de arquivos de log MSI:  
   
--   \<Recurso>_\<Arquitetura>\_\<Interação>.log  
+-   \<Feature>_ \<Architecture> \_ \<Interaction> . log  
   
--   \<Recurso>_\<Arquitetura>\_\<Idioma>\_\<Interação>.log  
+-   \<Feature>_ \<Architecture> \_ \<Language> \_ \<Interaction> . log  
   
--   \<Recurso>_\<Arquitetura>\_\<Interação>\_\<Fluxo de trabalho>.log  
+-   \<Feature>_ \<Architecture> \_ \<Interaction> \_ \<workflow> . log  
   
-### <a name="location"></a>Local  
- Os arquivos de log do MSI estão localizados em%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ProgramFiles\\ % \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM\>><Name. log.  
+### <a name="location"></a>Location  
+ Os arquivos de log do MSI estão localizados em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\<name \> . log.  
   
  No final do arquivo, há um resumo da execução, que inclui o status de êxito ou falha e propriedades. Para localizar o erro no arquivo MSI, pesquise "value 3"; os erros geralmente são encontrados próximos à cadeia de caracteres.  
   
@@ -157,16 +156,16 @@ ms.locfileid: "62774318"
 ### <a name="overview"></a>Visão geral  
  O arquivo de configuração contém as configurações de entrada que são fornecidas durante instalação. Pode ser usado para reiniciar a instalação sem ser necessário inserir as configurações manualmente. Entretanto, as senhas das contas, o PID e alguns parâmetros não são salvos no arquivo de configuração. As configurações podem ser adicionadas ao arquivo ou fornecidas por meio da linha de comando ou da interface do usuário de Instalação. Para obter mais informações, consulte [instalar SQL Server 2014 usando um arquivo de configuração](install-sql-server-using-a-configuration-file.md).  
   
-### <a name="location"></a>Local  
- Ele está localizado em% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\ Bootstrap\Log<YYYYMMDD_HHMM \\>.  
+### <a name="location"></a>Location  
+ Ele está localizado em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ .  
   
 ## <a name="systemconfigurationcheck_reporthtm"></a>SystemConfigurationCheck_Report.htm  
   
 ### <a name="overview"></a>Visão geral  
  O relatório de verificação da configuração do sistema contém uma breve descrição de cada regra executada, bem como o status de execução.  
   
-### <a name="location"></a>Local  
- Ele está localizado em% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\ Bootstrap\Log<YYYYMMDD_HHMM \\>.  
+### <a name="location"></a>Location  
+ Ele está localizado em% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre a instalação](../../sql-server/install/installation-how-to-topics.md)   
