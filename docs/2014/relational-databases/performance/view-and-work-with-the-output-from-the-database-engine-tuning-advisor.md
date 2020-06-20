@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd2e8af6e1768ef1872f2888d2a74850edbde23c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069062"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados
   Quando o Orientador de Otimização do Mecanismo de Banco de Dados ajusta os bancos de dados, cria resumos, recomendações, relatórios e logs de ajuste. Você pode usar a saída do log de ajuste para solucionar problemas das sessões de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar os resumos, as recomendações e os relatórios para determinar se deseja implementar recomendações de ajuste ou continuar ajustando até obter as melhorias de desempenho de consulta necessárias para a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação. Para obter informações sobre como usar o Database Tuning Advisor para criar cargas de trabalho ou ajustar um banco de dados, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
@@ -163,17 +162,17 @@ ms.locfileid: "68811020"
   
 2.  Copie e cole a [Amostra de arquivo de entrada XML com a configuração especificada pelo usuário &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) no editor XML ou em um editor de texto. Use este exemplo para criar um arquivo de entrada XML para sua sessão de ajuste. Para obter informações sobre como executar esta tarefa, consulte a seção "Criar arquivos de entrada XML" em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
   
-3.  Edite os elementos de `TuningOptions` e `Configuration` no exemplo de arquivo de entrada XML. No elemento de `TuningOptions`, especifique quais estruturas de design físicas deseja que o Orientador de Otimização do Mecanismo de Banco de Dados considere durante a sessão de ajuste. No elemento de `Configuration`, especifique as estruturas de design físicas que correspondem à configuração hipotética de estruturas de design de bancos de dados físicos que devem ser analisadas pelo Orientador de Otimização do Mecanismo de Banco de Dados. Para obter informações sobre quais atributos e elementos filho você pode usar com `TuningOptions` o e `Configuration` os elementos pai, consulte [referência de arquivo de entrada XML &#40;Orientador de otimização do mecanismo de banco de dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Edite os elementos de `TuningOptions` e `Configuration` no exemplo de arquivo de entrada XML. No elemento de `TuningOptions`, especifique quais estruturas de design físicas deseja que o Orientador de Otimização do Mecanismo de Banco de Dados considere durante a sessão de ajuste. No elemento de `Configuration`, especifique as estruturas de design físicas que correspondem à configuração hipotética de estruturas de design de bancos de dados físicos que devem ser analisadas pelo Orientador de Otimização do Mecanismo de Banco de Dados. Para obter informações sobre quais atributos e elementos filho você pode usar com o `TuningOptions` e os `Configuration` elementos pai, consulte [referência de arquivo de entrada XML &#40;Orientador de otimização do mecanismo de banco de dados&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Salve o arquivo de entrada com uma extensão **.xml** .  
   
-5.  Valide o arquivo de entrada XML que você salvou no passo 4 em relação ao esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Esse esquema é instalado no seguinte local quando você instala [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o:  
+5.  Valide o arquivo de entrada XML que você salvou no passo 4 em relação ao esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Esse esquema é instalado no seguinte local quando você instala o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     O esquema XML de Orientador de Otimização do Mecanismo de Banco de Dados também está disponível online [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta)em.  
+     O esquema XML de Orientador de Otimização do Mecanismo de Banco de Dados também está disponível online em [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) .  
   
 6.  Depois de criar uma carga de trabalho e um arquivo de entrada XML, você estará pronto para enviar o arquivo de entrada ao utilitário de linha de comando **dta** para análise. Verifique se foi especificado um nome do arquivo de saída XML para o argumento do utilitário **- ox** . Isso cria um arquivo de saída XML com uma configuração recomendada especificada no elemento de `Configuration`. Se quiser executar o Orientador de Otimização do Mecanismo de Banco de Dados novamente para verificar outra configuração hipotética baseada na saída, você poderá copiar e colar o conteúdo dos elementos `Configuration` do arquivo de saída em um arquivo de entrada XML novo ou no original. Para obter informações sobre como usar um arquivo de entrada XML com o utilitário **dta** , consulte a seção “Ajustar um banco de dados usando o utilitário dta" em [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
   
@@ -250,7 +249,7 @@ ms.locfileid: "68811020"
  A coluna **Definição** contém a definição da partição recomendada ou índice na forma de um hiperlink. Essa coluna, em geral, é muito estreita para exibir a definição inteira. Clique no hiperlink para exibir uma caixa de diálogo que contém a definição completa e o botão **Copiar na área de transferência** .  
   
 #### <a name="partition-recommendations"></a>Recomendações de Partição  
- **Nome do banco de dados**  
+ **Database Name**  
  Banco de dados que contém os objetos recomendados a serem modificados.  
   
  **Recomendação**  
@@ -269,7 +268,7 @@ ms.locfileid: "68811020"
  A definição do **Destino da Recomendação**. Clique na coluna para abrir a caixa de diálogo Visualização de script SQL com um script para a ação recomendada.  
   
 ##### <a name="index-recommendations"></a>Recomendações de Índice  
- **Nome do banco de dados**  
+ **Database Name**  
  Banco de dados que contém os objetos recomendados a serem modificados.  
   
  **Object Name**  
@@ -308,10 +307,10 @@ ms.locfileid: "68811020"
  **Agendar para mais tarde**  
  Gera um script para as recomendações e salva as ações como um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- **Date**  
+ **Data**  
  Especifica a data em que você quer executar o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a fim de aplicar as recomendações.  
   
- **Momento**  
+ **Hora**  
  Especifica a hora em que você quer executar o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a fim de aplicar as recomendações.  
   
 ### <a name="reports-tab-options"></a>Opções da guia Relatórios  
@@ -320,10 +319,10 @@ ms.locfileid: "68811020"
  **Resumo do Ajuste**  
  Exibe um resumo das recomendações do Orientador de Otimização do Mecanismo de Banco de Dados.  
   
- **Date**  
+ **Data**  
  Data em que o Orientador de Otimização do Mecanismo de Banco de Dados cria o relatório.  
   
- **Momento**  
+ **Hora**  
  Hora em que o Orientador de Otimização do Mecanismo de Banco de Dados cria o relatório.  
   
  **Servidor**  
@@ -388,6 +387,6 @@ ms.locfileid: "68811020"
   
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md)   
- [utilitário dta](../../tools/dta/dta-utility.md)  
+ [Utilitário dta](../../tools/dta/dta-utility.md)  
   
   

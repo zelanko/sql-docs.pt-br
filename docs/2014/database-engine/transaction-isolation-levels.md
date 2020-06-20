@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee0ba17dc999c9076ca4622d47db28b8200b851
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637783"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928147"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Níveis de isolamento da transação em tabelas com otimização de memória
 
@@ -39,7 +38,7 @@ ms.locfileid: "73637783"
   
 -   Use explicitamente uma dica de nível de isolamento mais alto para o acesso à tabela com otimização de memória (por exemplo, WITH (SNAPSHOT)).  
   
--   Especifique a opção set `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, que definirá o nível de isolamento de tabelas com otimização de memória para SNAPSHOT (como se você tivesse incluído dicas WITH(SNAPSHOT) em cada tabela com otimização de memória). Para obter mais informações `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`sobre o, consulte [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Especifique a opção set `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, que definirá o nível de isolamento de tabelas com otimização de memória para SNAPSHOT (como se você tivesse incluído dicas WITH(SNAPSHOT) em cada tabela com otimização de memória). Para obter mais informações sobre o `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` , consulte [Opções ALTER DATABASE SET &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  Como alternativa, se o nível de isolamento da sessão é READ COMMITTED, você pode usar transações de confirmação automática.  
   

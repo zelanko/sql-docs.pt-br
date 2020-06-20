@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 541d6d27dc5dbc31dad98840e7ed6654f48a8dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6af7c52741b85a2733b93c2b1ed8c03a14dd6343
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175385"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928175"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Transparent Data Encryption com o Banco de Dados SQL do Azure
   A Transparent Data Encryption do [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] (visualização) ajuda a proteger contra a ameaça de atividade mal-intencionada executando criptografia e descriptografia em tempo real do banco de dados, backups associados e arquivos de log de transações em repouso sem exigir alterações no aplicativo.
@@ -50,7 +49,7 @@ ms.locfileid: "78175385"
 
 ##  <a name="sign-up-for-the-preview-of-tde-and-enable-tde-on-a-database"></a><a name="Preview"></a>Inscreva-se para a visualização do TDE e habilite o TDE em um banco de dados
 
-1.  Visite o portal do Azure [https://portal.azure.com](https://portal.azure.com) em e entre com sua conta de administrador ou colaborador do Azure.
+1.  Visite o portal do Azure em [https://portal.azure.com](https://portal.azure.com) e entre com sua conta de administrador ou colaborador do Azure.
 
 2.  Na faixa esquerda, clique em **PROCURAR** e em **Bancos de dados SQL**.
 
@@ -68,9 +67,9 @@ ms.locfileid: "78175385"
 
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")
 
-     Você também pode monitorar o progresso da criptografia conectando [!INCLUDE[ssSDS](../includes/sssds-md.md)] usando uma ferramenta de consulta como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como um usuário de banco de dados com a permissão **EXIBIR ESTADO DO BANCO DE DADOS** . Consulte a `encryption_state` coluna da exibição [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
+     Você também pode monitorar o progresso da criptografia conectando [!INCLUDE[ssSDS](../includes/sssds-md.md)] usando uma ferramenta de consulta como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como um usuário de banco de dados com a permissão **EXIBIR ESTADO DO BANCO DE DADOS** . Consulte a `encryption_state` coluna da exibição [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
-##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Habilitando TDE [!INCLUDE[ssSDS](../includes/sssds-md.md)] no usando TRANSACT-SQL
+##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Habilitando TDE no [!INCLUDE[ssSDS](../includes/sssds-md.md)] usando Transact-SQL
  Nas etapas a seguir, suponha que você já se inscreveu para a visualização.
 
 ###  <a name="TsqlProcedure"></a>
@@ -90,7 +89,7 @@ ms.locfileid: "78175385"
     GO
     ```
 
-3.  Para monitorar o progresso da criptografia no [!INCLUDE[ssSDS](../includes/sssds-md.md)], os usuários de banco de dados com a permissão **View Database State** podem consultar a `encryption_state` coluna da exibição [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
+3.  Para monitorar o progresso da criptografia no [!INCLUDE[ssSDS](../includes/sssds-md.md)] , os usuários de banco de dados com a permissão **View Database State** podem consultar a `encryption_state` coluna da exibição [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>Habilitando a TDE no banco de dados SQL usando PowerShell
  Usando o Azure PowerShell, você pode executar o seguinte comando para ligar/desligar a TDE. Você precisa se conectar a sua conta na janela de PS antes de executar o comando. Nas etapas a seguir, suponha que você já se inscreveu para a visualização. Para obter informações adicionais sobre o PowerShell, consulte [Como instalar e configurar o Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).
@@ -116,7 +115,7 @@ ms.locfileid: "78175385"
 
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>Para desabilitar a TDE usando o Portal do Azure
 
-1.  Visite o portal do Azure [https://portal.azure.com](https://portal.azure.com) em e entre com sua conta de administrador ou colaborador do Azure.
+1.  Visite o portal do Azure em [https://portal.azure.com](https://portal.azure.com) e entre com sua conta de administrador ou colaborador do Azure.
 
 2.  Na faixa esquerda, clique em **PROCURAR** e em **Bancos de dados SQL**.
 
@@ -128,7 +127,7 @@ ms.locfileid: "78175385"
 
 6.  Na folha **VISUALIZAÇÃO da Transparent Data Encryption** , mova o botão **Criptografia de dados** para **Desligado**e, em seguida, clique em **Salvar** (na parte superior da página) para aplicar a configuração. O **Status de criptografia** aproximará o progresso de descriptografia de dados transparente.
 
-     Você também pode monitorar o progresso da descriptografia conectando-se ao [!INCLUDE[ssSDS](../includes/sssds-md.md)] usando uma ferramenta de consulta como [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] como um usuário de banco de dados com a permissão **EXIBIR ESTADO DE BANCO DE DADOS** . Consulte a `encryption_state` coluna da exibição [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).
+     Você também pode monitorar o progresso da descriptografia conectando-se ao [!INCLUDE[ssSDS](../includes/sssds-md.md)] usando uma ferramenta de consulta como [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] como um usuário de banco de dados com a permissão **EXIBIR ESTADO DE BANCO DE DADOS** . Consulte a `encryption_state` coluna da exibição [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).
 
 #### <a name="to-disable-tde-by-using-transact-sql"></a>Para desabilitar a TDE usando Transact-SQL
 
@@ -142,7 +141,7 @@ ms.locfileid: "78175385"
     GO
     ```
 
-3.  Para monitorar o progresso da criptografia no [!INCLUDE[ssSDS](../includes/sssds-md.md)], os usuários de banco de dados com a permissão **View Database State** podem consultar a `encryption_state` coluna da exibição [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
+3.  Para monitorar o progresso da criptografia no [!INCLUDE[ssSDS](../includes/sssds-md.md)] , os usuários de banco de dados com a permissão **View Database State** podem consultar a `encryption_state` coluna da exibição [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
 ##  <a name="working-with-tde-protected-databases-on-sssds"></a><a name="Working"></a>Trabalhando com bancos de dados protegidos por TDE em[!INCLUDE[ssSDS](../includes/sssds-md.md)]
  Não é necessário descriptografar bancos de dados para operações no Azure. As configurações de TDE no banco de dados de origem ou banco de dados primário são herdadas de forma transparente no destino. Isso inclui operações envolvendo:

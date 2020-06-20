@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d2815db225d75e724ee579bd1e1eaf858577d283
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bade51f683c6ec76049e56e3a921f572eefd7acd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039197"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream e BD OLE
   Esta seção contém quatro exemplos que mostram como usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB com o recurso filestream:  
