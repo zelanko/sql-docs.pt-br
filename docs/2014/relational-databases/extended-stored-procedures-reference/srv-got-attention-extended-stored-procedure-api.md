@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b2b13668c9402d947937b4cc7aeb581c253d6a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f808fcd368f73c33d7bf9e7cd5f3dda26a8211cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127296"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050768"
 ---
 # <a name="srv_got_attention-extended-stored-procedure-api"></a>srv_got_attention (API do procedimento armazenado estendido)
     
@@ -49,7 +48,7 @@ srvproc
  *srvproc*  
  Ponteiro que identifica uma conexão de banco de dados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  TRUE se a conexão for interrompida ou se o lote for anulado. FALSE se a conexão ou o lote estiverem ativos.  
   
 ## <a name="remarks"></a>Comentários  

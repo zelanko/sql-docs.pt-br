@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 023700b1922946cc1234468aeb0551785067666c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bf6051fe8c86728c2ebf0a0b2bc34fabb98edb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050966"
 ---
 # <a name="localdbstoptracing-function"></a>Função LocalDBStopTracing
   Desabilita o rastreamento de chamadas de API para todas as instâncias LocalDB do SQL Server Express de propriedade do usuário atual do Windows.  

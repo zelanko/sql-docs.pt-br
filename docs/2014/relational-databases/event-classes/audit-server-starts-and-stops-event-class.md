@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ddb55af-c77b-4d07-b803-a97320c0804e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7d63d930836858614bb3486afb3c8dff8e21ac29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b81217ffbb3d36c4f9a1cbc9b851ced19694000
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030883"
 ---
 # <a name="audit-server-starts-and-stops-event-class"></a>Classe de evento Audit Server Starts and Stops
   A classe de evento **Audit Server Starts and Stops** ocorre quando o estado do serviço [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é modificado.  

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 501c7931d651498fea49749be38af374c02424ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010777"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Propriedades do distribuidor Replicação do SQL Server
 Este tópico discute as propriedades encontradas nas páginas **geral**, **editores**e banco de **dados de distribuição** na janela **Propriedades do distribuidor** . 
@@ -50,7 +49,7 @@ Este tópico discute as propriedades encontradas nas páginas **geral**, **edito
   A página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor** permite habilitar Publicadores a usarem esse Distribuidor. Você também pode definir propriedades associadas a esses Publicadores. Esteja ciente de que habilitar um Publicador a usar esse servidor como seu Distribuidor remoto não faz daquele servidor um Publicador. Você deve se conectar ao Publicador, configurá-lo para publicação e escolher esse servidor como o Distribuidor. Você pode configurar o Publicador e escolher um Distribuidor pelo Assistente para Nova Publicação.  
   
 ### <a name="options"></a>Opções  
- **Publicadores**  
+ **Publicado**  
  Selecione os servidores que têm permissão para usar esse Distribuidor. Clique no botão **(...)** próximo ao Publicador para exibir e definir propriedades adicionais.  
   
  **Adicionar**  
@@ -90,7 +89,7 @@ Este tópico discute as propriedades encontradas nas páginas **geral**, **edito
 -   O agente se conecta ao Publicador usando as credenciais especificadas na caixa de diálogo **Propriedades do Publicador** , disponível na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor** .    
 -   O agente se conecta ao Assinante usando as credenciais especificadas para o Agente de Distribuição no Assistente para Nova Assinatura.  
   
- Para obter mais informações, \\consulte [Replication Agent Security Model](security/replication-agent-security-model.md). 
+ Para obter mais informações, consulte \\ [Replication Agent Security Model](security/replication-agent-security-model.md). 
 
   
 ## <a name="see-also"></a>Consulte Também  

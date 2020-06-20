@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 53b96a33e4fc369c486dcdf19ed34279898eee57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e72618b10da49f8f79d3679a1ced5eefd6d6b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012548"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053157"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Classe de evento Audit Schema Object Management
   A classe de evento **Audit Schema Object Management** ocorre quando objetos de servidor são criados, alterados ou removidos.  

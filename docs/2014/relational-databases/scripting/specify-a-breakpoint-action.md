@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a85363b4971055b020314492db429b72447b6490
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 36b0f97ab4c6f36f5fc3f95e3eed3418ee0d88b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049007"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar uma ação de ponto de interrupção
   Uma ação de ponto de interrupção **Quando Atingido** especifica uma tarefa personalizada que o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] executa para um ponto de interrupção. Se a contagem de ocorrências especificada for atingida, e qualquer condição de ponto de interrupção especificada for atendida, o depurador executará a ação especificada para o ponto de interrupção.  
@@ -34,7 +33,7 @@ ms.locfileid: "82718602"
   
     1.  $ADDRESS retorna o nome do procedimento armazenado ou a função definida pelo usuário onde o ponto de interrupção foi definido. Se o ponto de interrupção for definido na janela do editor, $ADDRESS retornará o nome do arquivo de script que está sendo editado. $ADDRESS e $FUNCTION retornam as mesmas informações no depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-    2.  $CALLER retorna o nome da unidade do código [!INCLUDE[tsql](../../includes/tsql-md.md)] que chamou um procedimento armazenado ou uma função. Se o ponto de interrupção estiver na janela do editor, $CALLER retornará \<Nenhum chamador disponível>. Se o ponto de interrupção estiver em um procedimento armazenado ou se a função definida pelo usuário foi chamada do código na janela do editor, $CALLER retornará o nome do arquivo que está sendo editado. Se o ponto de interrupção estiver em um procedimento armazenado ou a função definida pelo usuário tiver sido chamada de outro procedimento armazenado ou função, $CALLER retornará o nome do procedimento ou da função de chamada.  
+    2.  $CALLER retorna o nome da unidade do código [!INCLUDE[tsql](../../includes/tsql-md.md)] que chamou um procedimento armazenado ou uma função. Se o ponto de interrupção estiver na janela do editor, $CALLER retornará \<No caller available> . Se o ponto de interrupção estiver em um procedimento armazenado ou se a função definida pelo usuário foi chamada do código na janela do editor, $CALLER retornará o nome do arquivo que está sendo editado. Se o ponto de interrupção estiver em um procedimento armazenado ou a função definida pelo usuário tiver sido chamada de outro procedimento armazenado ou função, $CALLER retornará o nome do procedimento ou da função de chamada.  
   
     3.  $CALLSTACK retornará a pilha de chamada de funções na cadeia que chamou o procedimento armazenado ou a função definida pelo usuário atual. Se o ponto de interrupção estiver na janela do editor, $CALLSTACK retornará o nome do arquivo de script que está sendo editado.  
   

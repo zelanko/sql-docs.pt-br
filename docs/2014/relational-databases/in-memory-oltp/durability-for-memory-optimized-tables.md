@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d48d671b23d7b7b17557e7829d6f2522c375acd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175939"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050216"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fornece a durabilidade completa para tabelas com otimização de memória. Quando uma transação que modificou uma tabela com otimização de memória é confirmada, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (como faz em tabelas baseadas em disco), garante que as alterações sejam permanentes (sobreviverão uma reinicialização do banco de dados), contanto que o armazenamento subjacente esteja disponível. Há dois principais componentes de durabilidade: log de transações e persistência das alterações de dados para armazenamento em disco.
@@ -52,7 +51,7 @@ ms.locfileid: "78175939"
 
  Operação de mesclagem a operação mescla um ou mais pares de arquivos Delta e de dados e cria um novo par de arquivos Delta e de dados.
 
- Durante a recuperação de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] falha quando o é reiniciado ou o banco de dados é colocado online novamente, o dado com otimização de memória é populado usando os pares de arquivos Delta e de dados. O arquivo delta atua como um filtro para as linhas excluídas ao ler as linhas do arquivo de dados correspondente. Como cada par de arquivos delta e de dados é independente, esses arquivos são carregados paralelamente para reduzir o tempo necessário para popular os dados na memória. Depois que os dados forem carregados na memória, o mecanismo OLTP na memória aplicará os registros de log de transações ativos ainda não cobertos pelos arquivos de ponto de verificação para que os dados com otimização de memória sejam concluídos.
+ Durante a recuperação de falha quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o é reiniciado ou o banco de dados é colocado online novamente, o dado com otimização de memória é populado usando os pares de arquivos Delta e de dados. O arquivo delta atua como um filtro para as linhas excluídas ao ler as linhas do arquivo de dados correspondente. Como cada par de arquivos delta e de dados é independente, esses arquivos são carregados paralelamente para reduzir o tempo necessário para popular os dados na memória. Depois que os dados forem carregados na memória, o mecanismo OLTP na memória aplicará os registros de log de transações ativos ainda não cobertos pelos arquivos de ponto de verificação para que os dados com otimização de memória sejam concluídos.
 
  Durante a operação de restauração, os arquivos de ponto de verificação OLTP na memória são criados a partir do backup de banco de dados e um ou mais backups de log de transações são aplicados. Assim como na recuperação de pane, o mecanismo OLTP na memória carrega os dados na memória paralelamente para minimizar o impacto no tempo de recuperação.
 

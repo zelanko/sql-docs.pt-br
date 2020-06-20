@@ -38,13 +38,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbf9af4b5af3043c6ca8fa2cba01ebe43019fb41
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68418877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952723"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
   Este tópico descreve como habilitar e configurar o Database Mail usando o Assistente para Configuração do Database Mail e cria um script de Configuração do Database Mail usando modelos.  
@@ -129,7 +128,7 @@ ms.locfileid: "68418877"
  Digite o endereço de email que será usado em respostas a mensagens de email enviadas por esta conta. O email de resposta é opcional. Por exemplo, respostas a uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ir para o administrador de banco de dados, danw@Adventure-Works.com.  
   
  **Nome do servidor**  
- Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Normalmente, isso está em um formato semelhante `smtp.` a *<your_company>* `.com`. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
+ Digite o nome ou o endereço IP do servidor SMTP que a conta usa para enviar email. Normalmente, isso está em um formato semelhante a `smtp.` *<your_company>* `.com` . Para obter mais ajuda sobre isso, consulte o administrador de mail.  
   
  **Número da porta**  
  Digite o número da porta do servidor SMTP para a conta. A maioria dos servidores SMTP usa a porta 25.  
@@ -170,13 +169,13 @@ ms.locfileid: "68418877"
  Exiba ou atualize a descrição da conta. A descrição é opcional.  
   
  **Endereço de email**  
- Exiba ou atualize o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do agente de Microsoft SQL Server pode enviar email do endereço **SqlAgent@Adventure-Works.com**.  
+ Exiba ou atualize o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do agente de Microsoft SQL Server pode enviar email do endereço **SqlAgent@Adventure-Works.com** .  
   
  **Nome de exibição**  
  Exiba ou atualize o nome a ser exibido em mensagens de email enviadas desta conta. O nome para exibição é opcional. Este é o nome exibido em mensagens enviadas desta conta. Por exemplo, uma conta do SQL Server Agent pode exibir o nome **SQL Server Agent Automated Mailer** em mensagens de email.  
   
  **Email de resposta**  
- Exiba ou atualize o endereço de email que será usado em respostas a mensagens de email enviadas desta conta. O email de resposta é opcional. Por exemplo, as respostas a uma conta do SQL Server Agent podem ir para o administrador do **danw@Adventure-Works.com**banco de dados,.  
+ Exiba ou atualize o endereço de email que será usado em respostas a mensagens de email enviadas desta conta. O email de resposta é opcional. Por exemplo, as respostas a uma conta do SQL Server Agent podem ir para o administrador do banco de dados, **danw@Adventure-Works.com** .  
   
  **Nome do servidor**  
  Exibe ou atualiza o nome do servidor SMTP que a conta usa para enviar email. Geralmente, está em um formato semelhante a **smtp.<your_company>.com**. Para obter mais ajuda sobre isso, consulte o administrador de mail.  
@@ -224,7 +223,7 @@ ms.locfileid: "68418877"
  **Adicionar**  
  Adiciona uma conta ao perfil.  
   
- **Remover**  
+ **Removerr**  
  Remove a conta selecionada do perfil.  
   
  **Mover para Cima**  
@@ -255,7 +254,7 @@ ms.locfileid: "68418877"
  **Adicionar**  
  Adiciona uma conta ao perfil.  
   
- **Remover**  
+ **Removerr**  
  Remove a conta selecionada do perfil.  
   
  **Mover para Cima**  
@@ -316,13 +315,13 @@ ms.locfileid: "68418877"
   
  Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro. Somente um perfil pode ser marcado como o perfil padrão.  
   
- **Pública**  
+ **Público**  
  Selecione essa opção para tornar público o perfil especificado.  
   
  **Nome do Perfil**  
  Exibe o nome do perfil.  
   
- **Perfil Padrão**  
+ **Perfil padrão**  
  Selecione essa opção para transformar o perfil especificado em perfil padrão.  
   
  **Mostrar somente os perfis públicos existentes**  
@@ -396,7 +395,7 @@ ms.locfileid: "68418877"
 ###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a> Send Test E-Mail Page  
  Use a página **Enviar Email de Teste de**_<instance_name>_ para enviar uma mensagem de email usando o perfil especificado do Database Mail. Só os membros da função de servidor fixa **sysadmin** podem enviar email de teste usando essa página.  
   
- **Perfil de Database Mail**  
+ **Perfil do Database Mail**  
  Selecione um perfil da lista do Database Mail. Esse é um campo obrigatório. Se nenhum perfil for mostrado, não há nenhum perfil ou você não tem permissão para um perfil. Use o **Assistente para Configuração do Database Mail** para criar e configurar perfis. Se nenhum perfil for listado, use o Assistente para Configuração do Database Mail para criar um perfil para seu uso.  
   
  **Para**  
@@ -405,7 +404,7 @@ ms.locfileid: "68418877"
  **Assunto**  
  A linha de assunto para o email de teste. Altere o assunto padrão para identificar melhor seu email para solucionar problemas.  
   
- **Conteúdo**  
+ **Corpo**  
  O corpo do email de teste. Altere o assunto padrão para identificar melhor seu email para solucionar problemas.  
   
  A caixa de diálogo **Email de Teste do Database Mail** confirma que o Database Mail tentou enviar a mensagem de teste e fornece a **mailitem_id** para a mensagem de teste de email. Confirme com o destinatário para determinar se o email foi recebido. Geralmente, o email é recebido dentro de poucos minutos, mas o email pode ser atrasado por um desempenho lento da rede, por uma lista de pendências de mensagens no servidor de email ou caso o servidor esteja temporariamente indisponível. Use **mailitem_id** para solucionar problemas.  

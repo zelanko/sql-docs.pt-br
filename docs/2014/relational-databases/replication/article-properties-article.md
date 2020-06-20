@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c9c597c672a1889827f3994c1df9ea65ec4c54a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721778"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049539"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
   A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
@@ -45,7 +44,7 @@ ms.locfileid: "62721778"
  Determina se tipos de dados definidos pelo usuário devem ou não ser convertidos em tipos de dados base ao criar objetos no Assinante. Os tipos de dados definidos pelo usuário incluem os tipos CLR introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Especifique um valor **True** se você for replicar esses tipos de dados para versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; isso assegura que eles possam ser tratados apropriadamente no Assinante.  
   
  **Criar esquemas no Assinante**  
- O[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou esquemas, que são definidos usando a instrução CREATE SCHEMA. Um esquema é o proprietário de um objeto; é usado em um nome de várias partes, como \<Database>.\<Schema>.\<Object>. Se houver objetos no banco de dados de propriedade de esquemas diferentes de DBO, a replicação pode criar esses esquemas no Assinante para que os objetos publicados sejam criados.  
+ O[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou esquemas, que são definidos usando a instrução CREATE SCHEMA. Um esquema é o proprietário de um objeto; Ele é usado em um nome de várias partes, como \<Database> . \<Schema> . \<Object> . Se você tiver objetos no banco de dados de propriedade de esquemas diferentes de DBO, a replicação poderá criar esses esquemas no Assinante, para que os objetos publicados possam ser criados.  
   
  Se você replicar dados para versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62721778"
  Se você selecionar o resolvedor padrão, os conflitos serão resolvidos com base na prioridade atribuída a cada Assinante ou na primeira alteração gravada no Publicador, dependendo do tipo de assinatura usado. Para obter mais informações, consulte [Detectar e resolver conflitos de replicação de mesclagem](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Usar um resolvedor personalizado (registrado no Distribuidor)**  
- Se você escolher usar um resolvedor de artigo (um fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um que você gravou), deve selecionar um resolvedor na caixa de listagem. Para obter mais informações, consulte [Replicação de mesclagem avançada – detecção e resolução de conflito](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Se você escolher usar um resolvedor de artigo (um fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um que você gravou), deve selecionar um resolvedor na caixa de listagem. Para obter mais informações, consulte [detecção e resolução de conflitos de replicação de mesclagem avançada](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Se o resolvedor requerer uma entrada, especifique-a na caixa de texto **Insira as informações necessárias para o desenvolvedor** . Para obter mais informações sobre entrada requerida por resolvedores personalizados [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consulte [Resolvedores Microsoft baseados em COM](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   

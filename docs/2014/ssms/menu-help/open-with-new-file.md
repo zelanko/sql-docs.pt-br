@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 170a6a85c0d4b3e969bd87356b562e4b96ded47f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048732"
 ---
 # <a name="open-with-new-file"></a>Abrir com (Novo Arquivo)
   Você pode abrir um documento em um ou mais editores clicando em **Abrir** no menu **Arquivo** e, depois, clicando em **Arquivo**. Na caixa de diálogo **Abrir Arquivo** , selecione o arquivo, clique na seta **Abrir** e, depois, clique em **Abrir Com**. Na caixa de diálogo **Abrir Com** , na lista **Selecionar um programa para abrir** , clique no programa preferido e, depois, clique em **Abrir**.  

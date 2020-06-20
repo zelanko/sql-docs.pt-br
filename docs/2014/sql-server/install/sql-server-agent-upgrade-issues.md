@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac234a757510af5ebfac261ea6d3e7e57d2f426f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036243"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>Problemas de atualização do SQL Server Agent
   Os tópicos a seguir descrevem os problemas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem afetar a atualização. Esses tópicos indicam ações que você pode fazer para ajudar reduzir os efeitos destas alterações em seu ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

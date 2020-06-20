@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5d8fd967b70b0b3470ceee0c6a6311499ed4696
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966346"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>Editor da Tarefa FTP (página Transferência de Arquivos)
   Use a página **Transferência de Arquivos** da caixa de diálogo **Editor da Tarefa FTP** para configurar a operação FTP executada pela tarefa.  
@@ -67,13 +66,13 @@ ms.locfileid: "66058441"
   
 ### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...**> para criar uma variável definida pelo usuário.  
+ Selecione uma variável definida pelo usuário existente ou clique \<**New variable...**> para criar uma variável definida pelo usuário.  
   
  **Tópicos relacionados:** [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), Adicionar variável  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Selecione um Gerenciador de conexões de FTP existente ou \<clique em **nova conexão...**> para criar um Gerenciador de conexões.  
+ Selecione um Gerenciador de conexões de FTP existente ou clique em \<**New connection...**> para criar um Gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de Conexões de FTP](connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexões de FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
@@ -81,13 +80,13 @@ ms.locfileid: "66058441"
   
 ### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Selecione uma variável definida pelo usuário existente ou clique em \<**Nova variável...**> para criar uma variável.  
+ Selecione uma variável definida pelo usuário existente ou clique \<**New variable...**> para criar uma variável.  
   
  **Tópicos relacionados:** [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), Adicionar variável  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Selecione um Gerenciador de conexões de arquivo existente ou \<clique em **nova conexão...**> para criar um Gerenciador de conexões.  
+ Selecione um Gerenciador de conexões de arquivo existente ou clique em \<**New connection...**> para criar um Gerenciador de conexões.  
   
  **Tópicos relacionados:**[Gerenciador de Conexões de Arquivos Simples](connection-manager/file-connection-manager.md), [Editor do Gerenciador de Conexões de Arquivos Simples](../../2014/integration-services/file-connection-manager-editor.md)  
   

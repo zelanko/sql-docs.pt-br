@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81ddf552e71bdd0b83c8082c2bd84450f6088e5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954656"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Invocando funções de agregação CLR definidas pelo usuário
   Em instruções SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)], você pode invocar agregações CLR (Common Language Runtime) definidas pelo usuário de acordo com todas as regras que se aplicam às funções de agregação do sistema.  
@@ -34,7 +33,7 @@ ms.locfileid: "62919600"
   
 -   As agregações definidas pelo usuário devem ser chamadas usando um nome de duas partes na forma de *schema_name. udagg_name*.  
   
--   O tipo de argumento da agregação definida pelo usuário deve corresponder ou ser implicitamente conversível para o *input_type* da agregação, conforme definido `CREATE AGGREGATE` na instrução.  
+-   O tipo de argumento da agregação definida pelo usuário deve corresponder ou ser implicitamente conversível para o *input_type* da agregação, conforme definido na `CREATE AGGREGATE` instrução.  
   
 -   O tipo de retorno da agregação definida pelo usuário deve corresponder ao *return_type* na `CREATE AGGREGATE` instrução.  
   
@@ -196,7 +195,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Depois de compilar o código em **MyAgg. dll**, você pode registrar a agregação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no da seguinte maneira:  
+ Depois de compilar o código em **MyAgg.dll**, você pode registrar a agregação no da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguinte maneira:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

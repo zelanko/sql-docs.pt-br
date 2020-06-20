@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59ab03f1c869f37ea92b3be1fe0fc30d86284a03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953171"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
   Importar um arquivo DAC (aplicativo da camada de dados) – um arquivo .bacpac – para criar uma cópia do banco de dados original, com os dados, em uma nova instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. As operações de importação-exportação podem ser combinadas para migrar um DAC ou banco de dados entre instâncias ou para criar um backup lógico, como criar uma cópia no local de um banco de dados implantado no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -124,7 +123,7 @@ ms.locfileid: "75232226"
   
 -   **Nome do novo banco de dados** – forneça um nome para o banco de dados importado.  
   
--   **Edição do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** -especificar [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obter mais informações sobre edições do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte este site do [Banco de dados SQL](https://www.windowsazure.com/home/tour/database/) .  
+-   **Edição do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** -Especifique [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obter mais informações sobre edições do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte este site do [Banco de dados SQL](https://www.windowsazure.com/home/tour/database/) .  
   
 -   **Tamanho máximo do banco de dados (GB)** – use o menu suspenso para especificar o tamanho máximo do seu banco de dados.  
   
@@ -138,7 +137,7 @@ ms.locfileid: "75232226"
 ###  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use esta página para analisar a origem especificada e as configurações de destino para a operação. Para concluir a operação de importação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de importação e sair do assistente, clique em **Cancelar**.  
   
-###  <a name="progress-page"></a><a name="Progress"></a>Página progresso  
+###  <a name="progress-page"></a><a name="Progress"></a> Página Progresso  
  Esta página exibe a barra de progresso que indica o status da operação. Para exibir o status detalhado, clique na opção **Exibir detalhes** .  
   
  Para continuar, clique em **Avançar**.  

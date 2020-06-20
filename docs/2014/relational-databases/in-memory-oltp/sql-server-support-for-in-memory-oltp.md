@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4525df0-a186-44e5-bba6-5d8123a0f965
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 470b3edf0435099b2a9fd17b14ac299299274a71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbefa22294623cb5539f8c2146478e5c23c462ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63181247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049938"
 ---
 # <a name="sql-server-support-for-in-memory-oltp"></a>Suporte ao SQL Server para OLTP na memória
   Esta seção aborda a sintaxe nova e atualizada, e os recursos que oferecem suporte a tabelas com otimização de memória.  

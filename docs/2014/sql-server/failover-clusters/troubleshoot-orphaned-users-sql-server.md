@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5df714d818949b921ff2236e50d58913eab0e0db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062559"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Solução de problemas de usuários órfãos (SQL Server)
-  Para fazer logon em uma instância do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma entidade deve ter um logon válido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse logon é usado no processo de autenticação que verifica se a entidade tem permissão para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons em uma instância de servidor são visíveis na exibição de catálogo **Sys. server_principals** e na exibição de compatibilidade **Sys. syslogins** .  
+  Para fazer logon em uma instância do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma entidade deve ter um logon válido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse logon é usado no processo de autenticação que verifica se a entidade tem permissão para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons em uma instância de servidor são visíveis na exibição de catálogo **sys. server_principals** e na exibição de compatibilidade de **logons dosys.sys** .  
   
  Os logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acessam bancos de dados individuais usando um usuário do banco de dados mapeado para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Há duas exceções a essa regra:  
   
@@ -58,7 +57,7 @@ GO;
  A saída lista os usuários e os SIDs (identificadores de segurança) correspondentes no banco de dados atual que não estão vinculados a um logon de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [sp_change_users_login &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
 > [!NOTE]  
->  **sp_change_users_login** não pode ser usado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com logons criados no Windows.  
+>  **sp_change_users_login** não pode ser usado com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons criados no Windows.  
   
 ## <a name="to-resolve-an-orphaned-user"></a>Para resolver um usuário órfão  
  Para resolver um usuário órfão, use o seguinte procedimento:  
@@ -88,7 +87,7 @@ GO;
     >  Somente logons com a permissão ALTER ANY LOGIN podem alterar a senha do logon de outro usuário. Porém, somente membros da função **sysadmin** podem modificar senhas de membros da função **sysadmin** .  
   
     > [!NOTE]  
-    >  **sp_password** não pode ser usada [!INCLUDE[msCoName](../../includes/msconame-md.md)] para contas do Windows. Usuários que se conectam a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela da conta de rede do Windows são autenticados pelo Windows; portanto, suas senhas só podem ser alteradas no Windows.  
+    >  **sp_password** não pode ser usada para [!INCLUDE[msCoName](../../includes/msconame-md.md)] contas do Windows. Usuários que se conectam a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela da conta de rede do Windows são autenticados pelo Windows; portanto, suas senhas só podem ser alteradas no Windows.  
   
      Para obter mais informações, consulte [sp_password &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
   
@@ -99,7 +98,7 @@ GO;
  [&#41;&#40;Transact-SQL de sp_addlogin](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_grantlogin](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_password](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
- [sys. sysusers &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
- [sys. syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
+ [sys.sysusuários &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
+ [sys.syslogons &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

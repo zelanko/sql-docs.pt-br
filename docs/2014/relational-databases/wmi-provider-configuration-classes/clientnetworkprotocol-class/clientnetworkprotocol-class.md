@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 899844cc59345b94eb0a2383ef09975024f8f4b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62693519"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062730"
 ---
 # <a name="clientnetworkprotocol-class"></a>Classe ClientNetworkProtocol
-  A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) representa os protocolos de rede instalados em uma instância de cliente que permite a comunicação [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com uma instância do em uma rede.  
+  A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) representa os protocolos de rede instalados em uma instância de cliente que permite a comunicação com uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma rede.  
   
  Com a [classe ClientNetworkProtocol](clientnetworkprotocol-class.md), você pode executar as seguintes tarefas:  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 892dd145ea19c40bada704387a4b2408e84d9522
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b16491b9a3729ad4df71c7ddceaee6db21777ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718939"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049946"
 ---
 # <a name="simulating-an-exists-clause-in-a-natively-compiled-stored-procedure"></a>Simulando a cláusula EXISTS em um procedimento armazenado compilado de modo nativo
   Os procedimentos armazenados nativamente compilados não oferecem suporte à cláusula `EXISTS`, mas há uma solução alternativa:  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768019"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965646"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Escolher um destino (Assistente de Importação e Exportação do SQL Server)
   Use a página **escolher um destino** para especificar o destino dos dados que você deseja copiar.  
@@ -28,7 +27,7 @@ ms.locfileid: "62768019"
   
 ## <a name="static-options"></a>Opções estáticas  
  **Destino**  
- Escolha o provedor de dados que corresponde ao formato de armazenamento do destino. Pode haver mais de um provedor disponível para sua fonte de dados. Por exemplo, com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, você [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar o Native Client, o .NET Framework provedor de dados para SQL Server ou o provedor de OLE DB da Microsoft para SQL Server.  
+ Escolha o provedor de dados que corresponde ao formato de armazenamento do destino. Pode haver mais de um provedor disponível para sua fonte de dados. Por exemplo, com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, você pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Native Client, o .NET Framework Provedor de Dados para SQL Server ou o provedor de OLE DB da Microsoft para SQL Server.  
   
 > [!NOTE]  
 >  Para salvar dados em um destino ODBC, selecione o Provedor de dados do .NET Framework para ODBC.  
@@ -42,7 +41,7 @@ ms.locfileid: "62768019"
  **Nome do servidor**  
  Digite o nome do servidor que receberá os dados ou escolha um servidor da lista.  
   
- **Usar autenticação do Windows**  
+ **Usar Autenticação do Windows**  
  Especifique se o pacote deve usar a Autenticação do Microsoft Windows para fazer login no banco de dados. A Autenticação do Windows é recomendada para obter melhor segurança.  
   
  **Usar autenticação SQL Server**  
@@ -55,7 +54,7 @@ ms.locfileid: "62768019"
  Forneça uma senha para estabelecer conexão de banco de dados quando estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Backup de banco de dados**  
- Selecione a partir da lista de bancos de dados na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou crie um novo, clicando em **novo**.  
+ Selecione a partir da lista de bancos de dados na instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou crie um novo, clicando em **novo**.  
   
  **Atualizar**  
  Restaure a lista de bancos de dados disponíveis clicando em **Atualizar**.  
@@ -70,7 +69,7 @@ ms.locfileid: "62768019"
  **Procurar**  
  Localize um arquivo usando a caixa de diálogo **Abrir**.  
   
- **Localidade**  
+ **Local**  
  Especifique a ID de localidade (LCID) que define as ordens de classificação de caracteres e a formatação de data e hora.  
   
  **Unicode**  
@@ -79,7 +78,7 @@ ms.locfileid: "62768019"
  **Página de código**  
  Especifique a página de códigos da linguagem que deseja usar.  
   
- **Ao**  
+ **Formatar**  
  Indique se será usada formatação delimitada, de largura fixa ou irregular à direita.  
   
 |Valor|Descrição|  
@@ -97,10 +96,10 @@ ms.locfileid: "62768019"
 ### <a name="destination--microsoft-excel"></a>Destino = Microsoft Excel  
   
 > [!NOTE]  
->  Selecione **Microsoft Excel** somente se você quiser se conectar a uma fonte de dados que usa o Excel 2003 ou anterior. Para se conectar a uma fonte de dados que usa o Excel 2007, selecione **Microsoft Office 12,0 acesso mecanismo de banco de dados provedor de OLE DB**, clique em **Propriedades**e, em seguida, na guia **tudo** da caixa de diálogo Propriedades do link `Excel 12.0`de **dados** , para **Propriedades estendidas**, digite.  
+>  Selecione **Microsoft Excel** somente se você quiser se conectar a uma fonte de dados que usa o Excel 2003 ou anterior. Para se conectar a uma fonte de dados que usa o Excel 2007, selecione **Microsoft Office 12,0 acesso mecanismo de banco de dados provedor de OLE DB**, clique em **Propriedades**e, em seguida, na guia **tudo** da caixa de diálogo Propriedades do **link de dados** , para **Propriedades estendidas**, digite `Excel 12.0` .  
   
  **Caminho de arquivo do Excel**  
- Especifique o caminho e o nome do arquivo para a pasta de trabalho na qual armazenar os dados (por exemplo \\, C:\MyData.xls, \Sales\Database\Northwind.xls). Ou clique em **procurar** para localizar uma pasta de trabalho.  
+ Especifique o caminho e o nome do arquivo para a pasta de trabalho na qual armazenar os dados (por exemplo, C:\MyData.xls, \\\Sales\Database\Northwind.xls). Ou clique em **procurar** para localizar uma pasta de trabalho.  
   
  **Procurar**  
  Localize uma pasta de trabalho do Excel usando a caixa de diálogo **abrir** .  
@@ -117,7 +116,7 @@ ms.locfileid: "62768019"
 >  Selecione **Microsoft Access** somente se você quiser se conectar a um banco de dados que usa o Access 2003 ou anterior. Para se conectar a um banco de dados que usa o Access 2007, selecione **Microsoft Office mecanismo de banco de dados o provedor de OLE DB de acesso 12,0**.  
   
  **Nome do arquivo**  
- Especifique o caminho e o nome de arquivo para o arquivo de banco de dados no qual deseja armazená-los \\(por exemplo, C:\MyData.mdb, \Sales\Database\Northwind.mdb). Ou clique em **procurar** para localizar um arquivo de banco de dados.  
+ Especifique o caminho e o nome de arquivo para o arquivo de banco de dados no qual deseja armazená-los (por exemplo, C:\MyData.mdb, \\ \Sales\Database\Northwind.mdb). Ou clique em **procurar** para localizar um arquivo de banco de dados.  
   
  **Procurar**  
  Navegue até o arquivo de banco de dados usando a caixa de diálogo **abrir** .  

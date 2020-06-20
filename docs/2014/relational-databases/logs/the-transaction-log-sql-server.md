@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025ef22e6dee1fcfaa1225a4709fa01b6c326b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049746"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
   Todo banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e as modificações de banco de dados feitas por cada transação. O log de transações deve ser truncado regularmente para impedir o preenchimento. No entanto, alguns fatores podem atrasar o truncamento de log e, portanto, o monitoramento do tamanho do log é importante. Algumas operações podem ser registradas em log minimamente para reduzir o impacto no tamanho do log de transações.  
@@ -118,7 +117,7 @@ ms.locfileid: "79289404"
   
 -   Atualizações parciais em tipos de dados de valor grande, usando a cláusula .WRITE na instrução [UPDATE](/sql/t-sql/queries/update-transact-sql) ao inserir ou anexar novos dados. Observe que o log mínimo não é usado quando valores existentes estão sendo atualizados. Para obter mais informações sobre tipos de dados de valor grandes, consulte [Tipos de dados &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
--   Instruções [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) e [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) ao inserir ou acrescentar novos dados nas colunas de tipo `text`de `ntext`dados, `image` e. Observe que o log mínimo não é usado quando valores existentes estão sendo atualizados.  
+-   Instruções [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) e [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) ao inserir ou acrescentar novos dados nas colunas de `text` tipo de `ntext` dados, e `image` . Observe que o log mínimo não é usado quando valores existentes estão sendo atualizados.  
   
     > [!NOTE]  
     >  As instruções WRITETEXT e UPDATETEXT são preteridas, portanto evite usá-las em novos aplicativos.  
@@ -155,7 +154,7 @@ ms.locfileid: "79289404"
 ## <a name="see-also"></a>Consulte Também  
  [Controlar a durabilidade da transação](control-transaction-durability.md)   
  [Pré-requisitos para log mínimo na importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Backup e restauração de bancos de dados SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Pontos de verificação de banco de dados &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Exibir ou alterar as propriedades de um banco de dados](../databases/view-or-change-the-properties-of-a-database.md)   
  [Modelos de recuperação &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  

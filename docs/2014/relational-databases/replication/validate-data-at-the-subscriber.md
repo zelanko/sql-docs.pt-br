@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d09750c0cb81d64f5921ae2064b2e75edb6ca96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047577"
 ---
 # <a name="validate-replicated-data"></a>Validar os dados replicados
   Este tópico descreve como validar os dados no Assinante no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -65,7 +64,7 @@ Considere os seguintes problemas ao validar dados:
 -   Como as somas de verificação e as somas de verificações binárias podem requerer recursos extensos do processador ao validar conjuntos de dados muito grandes, você deverá agendar a validação quando houver um mínimo de atividade nos servidores usados na replicação.    
 -   A replicação somente valida tabelas; não realizando a validação se os artigos somente esquema (como os procedimentos armazenados) são os mesmos no Publicador e no Assinante.    
 -   A soma de verificação binária pode ser usada com qualquer tabela publicada. A soma de verificação não pode validar as tabelas com filtros de colunas ou estruturas de tabelas lógicas nas quais os deslocamentos são diferentes (por causa das instruções ALTER TABLE que cancelam ou adicionam colunas).    
--   A validação de replicação `checksum` usa as funções e **BINARY_CHECKSUM** . Para informações sobre seu comportamento, consulte [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) e [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
+-   A validação de replicação usa as `checksum` funções e **BINARY_CHECKSUM** . Para informações sobre seu comportamento, consulte [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) e [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
   
 -   A validação com o uso de soma de verificação binária ou soma de verificação pode reportar incorretamente uma falha se os tipos de dados forem diferentes no Assinante e no Publicador. Isso poderá acontecer se você fizer o seguinte:    
     -   Definir explicitamente opções de esquema para mapear tipos de dados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -112,7 +111,7 @@ Considere os seguintes problemas ao validar dados:
 
 #### <a name="all-articles"></a>Todos os artigos
   
-1.  No Publicador do banco de dados de publicação, execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Especifique ** \@a publicação** e um dos seguintes valores para ** \@rowcount_only**:    
+1.  No Publicador do banco de dados de publicação, execute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Especifique a ** \@ publicação** e um dos seguintes valores para ** \@ rowcount_only**:    
     -   **1** - apenas verifica número de linhas (o padrão)    
     -   **2** - número de linhas e soma de verificação binária.  
   
@@ -124,7 +123,7 @@ Considere os seguintes problemas ao validar dados:
   
 #### <a name="single-article"></a>Artigo único 
   
-1.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique ** \@a publicação**, o nome do artigo para ** \@o artigo**e um dos seguintes valores para ** \@rowcount_only**:    
+1.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique a ** \@ publicação**, o nome do artigo para o ** \@ artigo**e um dos seguintes valores para ** \@ rowcount_only**:    
     -   **1** - apenas verifica número de linhas (o padrão)    
     -   **2** -RowCount e soma de verificação binária.  
   
@@ -137,9 +136,9 @@ Considere os seguintes problemas ao validar dados:
 #### <a name="single-subscriber"></a>Assinante único
   
 1.  No Publicador do banco de dados de publicação, abra uma transação explícita usando [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).    
-2.  No Publicador no banco de dados de publicação, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Especifique a publicação para ** \@publicação**, o nome do assinante para ** \@assinante**e o nome do banco de dados de assinatura para ** \@destination_db**.    
+2.  No Publicador no banco de dados de publicação, execute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Especifique a publicação para ** \@ publicação**, o nome do assinante para ** \@ assinante**e o nome do banco de dados de assinatura para ** \@ destination_db**.    
 3.  (Opcional) Repita a etapa 2 para cada assinatura que é validada.    
-4.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique ** \@a publicação**, o nome do artigo para ** \@o artigo**e um dos seguintes valores para ** \@rowcount_only**:    
+4.  No Publicador no banco de dados de publicação, execute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique a ** \@ publicação**, o nome do artigo para o ** \@ artigo**e um dos seguintes valores para ** \@ rowcount_only**:    
     -   **1** - apenas verifica número de linhas (o padrão)    
     -   **2** -RowCount e soma de verificação binária.  
   
@@ -187,7 +186,7 @@ Considere os seguintes problemas ao validar dados:
 
 ### <a name="using-transact-sql-t-sql"></a>Usar o Transact-SQL (T-SQL)
 
-1.  No Publicador no banco de dados de publicação, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Especifique ** \@a publicação**, o nome do assinante para ** \@o assinante**, o nome do banco de dados de assinatura para ** \@subscriber_db**e um dos valores a seguir para ** \@o nível**:   
+1.  No Publicador no banco de dados de publicação, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Especifique a ** \@ publicação**, o nome do assinante para o ** \@ assinante**, o nome do banco de dados de assinatura para ** \@ subscriber_db**e um dos valores a seguir para o ** \@ nível**:   
     -   **1** - apenas validação de número de linhas.    
     -   **3** - validação de soma de verificação binária de número de linhas.  
   
@@ -218,7 +217,7 @@ Considere os seguintes problemas ao validar dados:
 
 ### <a name="using-transact-sql-t-sql"></a>Usar o Transact-SQL (T-SQL)
 
-1.  No Publicador do banco de dados de publicação, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Especifique ** \@a publicação** e um dos seguintes valores para ** \@o nível**:    
+1.  No Publicador do banco de dados de publicação, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Especifique a ** \@ publicação** e um dos seguintes valores para o ** \@ nível**:    
     -   **1** - apenas validação de número de linhas.    
     -   **3** - validação de soma de verificação binária de número de linhas.  
   

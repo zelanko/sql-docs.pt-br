@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35970f3a78cad4a17fcfdcfb2d7b9aa91c9dd6e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062428"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar uma instância existente do SQL Server (Instalação)
   Este artigo descreve como desinstalar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Seguindo as etapas deste tópico, você também prepara o sistema para que seja possível reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,7 +41,7 @@ ms.locfileid: "62990187"
   
 ### <a name="before-you-uninstall"></a>Antes da desinstalação  
   
-1.  **Faça backup dos seus dados.** Embora essa não seja uma etapa necessária, pode haver bancos de dados que você queira salvar em seu estado atual. Você também pode desejar salvar alterações que foram feitas nos bancos de dados do sistema. Se qualquer situação for verdadeira, certifique-se de fazer backup dos dados antes de desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como alternativa, salve uma cópia de todos os dados e arquivos de log em uma pasta que não seja a pasta do MSSQL. A pasta do MSSQL é excluída durante a desinstalação.  
+1.  **Faça backup dos dados.** Embora essa não seja uma etapa necessária, pode haver bancos de dados que você queira salvar em seu estado atual. Você também pode desejar salvar alterações que foram feitas nos bancos de dados do sistema. Se qualquer situação for verdadeira, certifique-se de fazer backup dos dados antes de desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como alternativa, salve uma cópia de todos os dados e arquivos de log em uma pasta que não seja a pasta do MSSQL. A pasta do MSSQL é excluída durante a desinstalação.  
   
      Os arquivos que você deve salvar incluem os arquivos de banco de dados a seguir:  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62990187"
   
 1.  Para começar o processo de desinstalação, vá para o **Painel de Controle** e clique em **Programa e Recursos**.  
   
-2.  Clique ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** com o botão direito do mouse e selecione **desinstalar**. Clique em **Remover**. Isso inicia o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+2.  Clique com o botão direito do mouse **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** e selecione **desinstalar**. Clique em **Remover**. Isso inicia o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      As Regras de Suporte à Instalação são executadas para verificar a configuração do computador. Para continuar, clique em **Avançar**.  
   

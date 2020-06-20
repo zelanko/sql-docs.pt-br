@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d83c2aa530fa0c0f6bff515ce4ed669fcef7dae3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee48107177cef7a38daf0e7b0080c08db23b2367
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068974"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>Intensidade da criptografia de chaves assimétricas
   Esta regra verifica se chaves assimétricas foram criadas usando 1024 bits ou uma criptografia mais forte.  

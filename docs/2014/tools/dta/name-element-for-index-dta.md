@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbf267591ccd85b31bd8436a773e2337e292d0b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72db4beceba50cac053e3d3a6fcadafa3cf28663
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62866211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011506"
 ---
 # <a name="name-element-for-index-dta"></a>Elemento de nome para índice (DTA)
   Especifica um nome para um índice na configuração especificada pelo usuário.  
@@ -35,7 +34,7 @@ ms.locfileid: "62866211"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  

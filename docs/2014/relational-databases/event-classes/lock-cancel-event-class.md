@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96a6f55c5006eb050eed1c7cf296e3a96747348b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052928"
 ---
 # <a name="lockcancel-event-class"></a>Classe de evento Lock:Cancel
   A classe de evento **Lock:Cancel** indica aquela aquisição de um bloqueio em um recurso cancelado; por exemplo, devido ao cancelamento de uma consulta.  
@@ -33,8 +32,8 @@ ms.locfileid: "63023493"
 |**ClientProcessID**|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |**DatabaseID**|`int`|ID do banco de dados no qual foi adquirido o bloqueio. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|`nvarchar`|Nome do banco de dados no qual foi realizada a tentativa de aquisição do bloqueio.|35|Sim|  
-|**Permanência**|`bigint`|Tempo (em microssegundos) entre a hora em que a solicitação de bloqueio foi emitida e a hora em que o bloqueio foi cancelado.|13|Sim|  
-|**Final**|`datetime`|Horário em que o evento foi encerrado.|15|Sim|  
+|**Duration**|`bigint`|Tempo (em microssegundos) entre a hora em que a solicitação de bloqueio foi emitida e a hora em que o bloqueio foi cancelado.|13|Sim|  
+|**EndTime**|`datetime`|Horário em que o evento foi encerrado.|15|Sim|  
 |**EventClass**|`int`|Tipo de evento = 26.|27|Não|  
 |**EventSequence**|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
 |**GroupID**|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  

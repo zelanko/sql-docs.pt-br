@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 93ee8fcb-d11c-49fa-8fac-51ed31a8f008
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c81892d6b83cef87a27a836d9691779a841104a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b6cea7ab63351fad25f0205a614e364328171a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095057"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036821"
 ---
 # <a name="upgrading-will-cause-full-text-search-to-use-instance-level-not-global-word-breakers-and-filters-by-default"></a>Atualização fará com que a Pesquisa de Texto Completo use separadores de palavras e filtros em nível de instância, e não globais, por padrão
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite os registro em nível de instância de novos separadores de palavras e filtros.  
   
 ## <a name="component"></a>Componente  
- Pesquisa de Texto Completo  
+ Pesquisa de texto completo  
   
 ## <a name="description"></a>Descrição  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o registro de novos separadores de palavras e filtros em nível de instância. Esse registro em nível de instância fornece isolamento funcional e de segurança entre instâncias.  

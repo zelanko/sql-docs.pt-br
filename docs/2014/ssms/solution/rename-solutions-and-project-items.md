@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b6643499ac9df8bcfcb663baa5e9c0e5db19045e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 844951dbb220f317a086bd9fbc7638dae028deab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035575"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058308"
 ---
 # <a name="rename-solutions-and-project-items"></a>Renomear soluções e itens de projeto
   Você pode renomear uma solução e seus itens de projeto no Gerenciador de Soluções.  

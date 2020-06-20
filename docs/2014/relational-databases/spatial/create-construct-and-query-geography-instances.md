@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d744457cc517a6172cca96b27eae1f456deca24e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014303"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016072"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Criar, construir e consultar instâncias de geografia
   O tipo de dados espacial de geografia, `geography`, representa dados em um sistema de coordenadas de terra redonda. Este tipo é implementado como um tipo de dados CLR (Common Language Runtime) .NET no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O tipo de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` armazena dados elipsoidais (globo terrestre), como as coordenadas de latitude e longitude de GPS.  
@@ -103,7 +102,7 @@ ms.locfileid: "66014303"
  [STGeomCollFromWKB &#40;tipo de dados geography&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (tipo de dados geography)  
   
 ###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> Construindo uma instância de geografia de entrada de texto GML  
- O `geography` tipo de dados fornece um método que gera `geography` uma instância de GML, uma representação XML de `geography` uma instância. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um subconjunto de GML.  
+ O `geography` tipo de dados fornece um método que gera uma `geography` instância de GML, uma representação XML de uma `geography` instância. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um subconjunto de GML.  
   
  Para obter mais informações sobre Geography Markup Language, veja a Especificação do OGC: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
@@ -128,10 +127,10 @@ ms.locfileid: "66014303"
  [AsGml &#40;tipo de dados geography&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> Consultando as propriedades e comportamentos de instâncias de geografia  
- Todas `geography` as instâncias têm várias propriedades que podem ser recuperadas por meio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métodos que o fornece. Os tópicos a seguir definem as propriedades e comportamentos de tipos de geografia e os métodos de consulta de cada um.  
+ Todas as `geography` instâncias têm várias propriedades que podem ser recuperadas por meio de métodos que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece. Os tópicos a seguir definem as propriedades e comportamentos de tipos de geografia e os métodos de consulta de cada um.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Informações de validade, tipo de instância e GeometryCollection  
- Depois que `geography` uma instância é construída, você pode usar os métodos a seguir para retornar o tipo de instância ou, se `GeometryCollection` for uma instância, retornar `geography` uma instância específica.  
+ Depois `geography` que uma instância é construída, você pode usar os métodos a seguir para retornar o tipo de instância ou, se for uma `GeometryCollection` instância, retornar uma `geography` instância específica.  
   
  **Para retornar o tipo de instância de uma geografia**  
  [STGeometryType &#40;tipo de dados geography&#41;](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
@@ -146,7 +145,7 @@ ms.locfileid: "66014303"
  [STGeometryN &#40;tipo de dados geography&#41;](/sql/t-sql/spatial-geography/stgeometryn-geography-data-type)STGeometryN (tipo de dados geography)  
   
 ###  <a name="number-of-points"></a><a name="number"></a> Número de pontos  
- Todas as instâncias `geography` não vazias são compostas de *pontos*. Esses pontos representam as coordenadas de latitude e longitude da terra nas quais as instâncias de `geography` são obtidas. O tipo de dados `geography` fornece vários métodos internos de consulta de pontos de uma instância.  
+ Todas as instâncias não vazias `geography` são compostas de *pontos*. Esses pontos representam as coordenadas de latitude e longitude da terra nas quais as instâncias de `geography` são obtidas. O tipo de dados `geography` fornece vários métodos internos de consulta de pontos de uma instância.  
   
  **Para retornar o número de pontos que compõem uma instância**  
  [STNumPoints &#40;tipo de dados geography&#41;](/sql/t-sql/spatial-geography/stnumpoints-geography-data-type)  
@@ -161,7 +160,7 @@ ms.locfileid: "66014303"
  [STEndpoint &#40;tipo de dados geography&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimensão  
- Uma instância `geography` não vazia pode ser zero, uni ou bidimensional. Instâncias com dimensões `geography` zero, como `Point` e `MultiPoint`, não têm comprimento ou área. Objetos unidimensionais, como `LineString, CircularString`, `CompoundCurve` e `MultiLineString`, têm comprimento. Instâncias bidimensionais, como `Polygon, CurvePolygon`, e `MultiPolygon`têm área e comprimento. Instâncias vazias relatam uma dimensão de -1 e uma `GeometryCollection` relata a dimensão máxima de seu conteúdo.  
+ Uma instância `geography` não vazia pode ser zero, uni ou bidimensional. Instâncias com dimensões zero `geography` , como `Point` e `MultiPoint` , não têm comprimento ou área. Objetos unidimensionais, como `LineString, CircularString`, `CompoundCurve` e `MultiLineString`, têm comprimento. Instâncias bidimensionais, como `Polygon, CurvePolygon` , e `MultiPolygon` têm área e comprimento. Instâncias vazias relatam uma dimensão de -1 e uma `GeometryCollection` relata a dimensão máxima de seu conteúdo.  
   
  **Para retornar a dimensão de uma instância**  
  [STDimension &#40;tipo de dados geography&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  

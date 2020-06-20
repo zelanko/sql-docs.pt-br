@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6379ddae6d14424d8705441e5a174fc7cb513b28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064132"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Propriedades de TCP-IP (guia endereços IP)
   Use a caixa de diálogo **Propriedades do TCP/IP (Guia Endereços IP)** para configurar as opções do protocolo TCP/IP de um endereço IP específico. Somente as **Portas TCP Dinâmicas** e a **Porta TCP** podem ser configuradas para todos os endereços de uma só vez com a seleção de **IP Tudo**.  
   
- As alterações entram em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vigor quando o é reiniciado. Para obter informações sobre como iniciar e parar o serviço do SQL Server Browser, consulte Como: Iniciar e parar o serviço SQL Server Browser nos Manuais Online.  
+ As alterações entram em vigor quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é reiniciado. Para obter informações sobre como iniciar e parar o serviço do SQL Server Browser, consulte Como: Iniciar e parar o serviço SQL Server Browser nos Manuais Online.  
   
 ## <a name="static-vs-dynamic-ports"></a>Portas estáticas vs. Portas dinâmicas  
  A instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta as conexões de entrada na porta 1433. A porta pode ser alterada por razões de segurança ou por causa do requisito de um aplicativo cliente. Por padrão, instâncias nomeadas (inclusive do SQL Server Express) são configuradas para escutar em portas dinâmicas. Para configurar uma porta estática, deixe a caixa **Portas TCP Dinâmicas** em branco e forneça um número de porta disponível na caixa **Porta TCP** . Para obter mais informações sobre como abrir portas no firewall, consulte Configurando o firewall do Windows para permitir o acesso do SQL Server nos Manuais Online.  

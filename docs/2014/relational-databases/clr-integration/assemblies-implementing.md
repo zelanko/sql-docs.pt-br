@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cb3818ed644eede3cf4f2c256a0dcb94ec58c3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874466"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954076"
 ---
 # <a name="implementing-assemblies"></a>Implementando assemblies
   Este tópico fornece informações sobre as seguintes áreas para ajudá-lo a implementar e trabalhar com assemblies no banco de dados:  
@@ -31,7 +30,7 @@ ms.locfileid: "62874466"
 -   Gerenciando versões de assembly  
   
 ## <a name="creating-assemblies"></a>Criando Assemblies  
- Os assemblies são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando o Assembly Assisted Editor. Além disso, a implantação de um projeto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] SQL Server no registra um assembly no banco de dados que foi especificado para o projeto. Para obter mais informações, consulte [Deploying CLR Database Objects](deploying-clr-database-objects.md).  
+ Os assemblies são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY ou no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando o Assembly Assisted Editor. Além disso, a implantação de um projeto SQL Server no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] registra um assembly no banco de dados que foi especificado para o projeto. Para obter mais informações, consulte [Deploying CLR Database Objects](deploying-clr-database-objects.md).  
   
  **Para criar um assembly usando o Transact-SQL**  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62874466"
   
 -   [Excluir Objetos](../../ssms/object/delete-objects.md)  
   
- Por padrão, todos os assemblies que são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão desabilitados para execução. Você pode usar a opção **CLR Enabled** do procedimento armazenado do sistema **sp_configure** para desabilitar ou habilitar a execução de todos os assemblies que são carregados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no. Desabilitar a execução de assemblies impede que funções CLR (Common Language Runtime), procedimentos armazenados, gatilhos, agregações e tipos definidos pelo usuário sejam executados e interrompe os que estão sendo executados no momento. A desabilitação da execução do assembly não desabilita a capacidade de criar, alterar ou descartar assemblies. Para obter mais informações, consulte [opção de configuração de servidor CLR Enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
+ Por padrão, todos os assemblies que são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão desabilitados para execução. Você pode usar a opção **CLR Enabled** do procedimento armazenado do sistema **sp_configure** para desabilitar ou habilitar a execução de todos os assemblies que são carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Desabilitar a execução de assemblies impede que funções CLR (Common Language Runtime), procedimentos armazenados, gatilhos, agregações e tipos definidos pelo usuário sejam executados e interrompe os que estão sendo executados no momento. A desabilitação da execução do assembly não desabilita a capacidade de criar, alterar ou descartar assemblies. Para obter mais informações, consulte [opção de configuração de servidor CLR Enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
  **Para desabilitar e habilitar a execução de assemblies**  
   

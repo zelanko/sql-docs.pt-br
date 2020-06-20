@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcf6ba52977e1bdbea02a7b5ac0a097bc1fe0b02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011469"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>Fechar uma janela de rastreamento (SQL Server Profiler)
   Este tópico descreve como fechar a janela de rastreamentos que estão em execução ou de rastreamentos salvos que estão sendo exibidos, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "63316200"
 >  Se o rastreamento estiver em execução, fechar sua janela irá interrompê-lo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelos e permissões de SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões do SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

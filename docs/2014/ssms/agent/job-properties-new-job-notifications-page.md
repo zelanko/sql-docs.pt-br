@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10cee6f0d5bf62178c71d25b8eb5682c22bbbe3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8fafac7faaf98fd8cf9bd3b0bf772dc77324bae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062276"
 ---
 # <a name="job-properties-new-job-notifications-page"></a>Propriedades do Trabalho: Novo Trabalho (página Notificações)
-  Use esta página para definir ações para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent executar quando o trabalho for concluído.  
+  Use esta página para definir ações para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executar quando o trabalho for concluído.  
   
 ## <a name="options"></a>Opções  
  **Mensagens**  

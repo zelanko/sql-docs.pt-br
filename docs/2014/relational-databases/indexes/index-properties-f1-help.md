@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 390a63d21dc72e052017f2d30b061d71de863bc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049902"
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
   As seções neste tópico referem-se a várias propriedades de índice que estão disponíveis usando caixas de diálogo do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -93,7 +92,7 @@ ms.locfileid: "63161908"
  Exibe se a coluna que participa da chave de índice permite armazenar valores NULL na tabela ou coluna de exibição.  
   
  **Adicionar**  
- Adiciona uma coluna à chave de índice. Selecione colunas de tabela na caixa de diálogo **Selecionar Colunas de** *\<nome da tabela>* exibida ao clicar em **Adicionar**. No caso de um índice espacial, depois que você seleciona uma coluna, este botão fica esmaecido.  
+ Adiciona uma coluna à chave de índice. Selecione colunas da tabela na caixa de diálogo **selecionar colunas de** , *\<table name>* que aparece quando você clica em **Adicionar**. No caso de um índice espacial, depois que você seleciona uma coluna, este botão fica esmaecido.  
   
  **Remover**  
  Remove a coluna selecionada da participação na chave de índice.  
@@ -180,7 +179,7 @@ ms.locfileid: "63161908"
 ### <a name="bounding-box"></a>Caixa delimitadora  
  A *caixa delimitadora* é o perímetro da grade de alto nível de um plano geométrico. Os parâmetros da caixa delimitadora só existem no mosaico de grade geométrica. Esses parâmetros ficarão indisponíveis se o **Esquema de Mosaico** for **Grade geográfica**.  
   
- O painel exibe as **coordenadas*`X-min`*(*`Y-min`*,)** e ***`X-max`*(*`Y-max`*,)** da caixa delimitadora. Não há valores de coordenada padrão. Portanto, ao criar um novo índice espacial em uma `geometry` coluna de tipo, será necessário especificar os valores de coordenada.  
+ O painel exibe as coordenadas **( *`X-min`* , *`Y-min`* )** e **( *`X-max`* , *`Y-max`* )** da caixa delimitadora. Não há valores de coordenada padrão. Portanto, ao criar um novo índice espacial em uma `geometry` coluna de tipo, será necessário especificar os valores de coordenada.  
   
  `X-min`  
  A coordenada X do canto inferior esquerdo da caixa delimitadora.  

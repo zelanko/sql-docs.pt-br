@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5aa061f51d63085cc55e59aca7d7e4d69e1a2e27
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1febb66305e331d8eecf1211b6ea8c6937ef8752
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018261"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Associação e transferência de dados de parâmetros com valor de tabela e valores de coluna
   Parâmetros com valor de tabela, como outros parâmetros, devem ser associados antes de serem passados para o servidor. O aplicativo associa parâmetros com valor de tabela da mesma forma que associa outros parâmetros: usando SQLBindParameter ou chamadas equivalentes a SQLSetDescField ou SQLSetDescRec. O tipo de dados do servidor para um parâmetro com valor de tabela é SQL_SS_TABLE. O tipo C pode ser especificado como SQL_C_DEFAULT ou SQL_C_BINARY.  
   
  No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior, só existe suporte para parâmetros com valor de tabela de entrada. Portanto, qualquer tentativa de definir SQL_DESC_PARAMETER_TYPE como um valor diferente de SQL_PARAM_INPUT retornará SQL_ERROR com SQLSTATE = HY105 e a mensagem "Tipo de parâmetro inválido".  
   
- Valores padrão podem ser atribuídos a colunas inteiras de parâmetros com valor de tabela usando o atributo SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Os valores de coluna de parâmetro com valor de tabela individual, no entanto, não podem ser atribuídos a valores padrão usando SQL_DEFAULT_PARAM em *StrLen_or_IndPtr* com SQLBindParameter. Os parâmetros com valor de tabela como um todo não podem ser definidos como um valor padrão usando SQL_DEFAULT_PARAM em *StrLen_or_IndPtr* com SQLBindParameter. Se essas regras não forem seguidas, SQLExecute ou SQLExecDirect retornará SQL_ERROR. Um registro de diagnóstico será gerado com SQLSTATE = 07S01 e a mensagem "uso inválido do parâmetro padrão para \< o parâmetro p>", em que \< p> é o ORDINAL do TVP na instrução de consulta.  
+ Valores padrão podem ser atribuídos a colunas inteiras de parâmetros com valor de tabela usando o atributo SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Os valores de coluna de parâmetro com valor de tabela individual, no entanto, não podem ser atribuídos a valores padrão usando SQL_DEFAULT_PARAM em *StrLen_or_IndPtr* com SQLBindParameter. Os parâmetros com valor de tabela como um todo não podem ser definidos como um valor padrão usando SQL_DEFAULT_PARAM em *StrLen_or_IndPtr* com SQLBindParameter. Se essas regras não forem seguidas, SQLExecute ou SQLExecDirect retornará SQL_ERROR. Um registro de diagnóstico será gerado com SQLSTATE = 07S01 e a mensagem "uso inválido do parâmetro padrão para \<p> o parâmetro", em que \<p> é o ORDINAL do TVP na instrução de consulta.  
   
  Depois de associar o parâmetro com valor de tabela, o aplicativo deverá, então, associar cada coluna de parâmetros com valor de tabela. Para fazer isso, o aplicativo primeiro chama SQLSetStmtAttr para definir SQL_SOPT_SS_PARAM_FOCUS para o ordinal de um parâmetro com valor de tabela. Em seguida, o aplicativo associa as colunas do parâmetro com valor de tabela por meio de chamadas para as seguintes rotinas: SQLBindParameter, SQLSetDescRec e SQLSetDescField. A definição de SQL_SOPT_SS_PARAM_FOCUS como 0 restaura o efeito usual de SQLBindParameter, SQLSetDescRec e SQLSetDescField em operando em parâmetros de nível superior regulares.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "82698735"
   
 3.  Chama SQLSetStmtAttr para definir SQL_SOPT_SS_PARAM_FOCUS como 0. Isso deve ser feito antes de SQLExecute ou SQLExecDirect ser chamado. Caso contrário, SQL_ERROR será retornado e um registro de diagnóstico será gerado com SQLSTATE=HY024 e a mensagem "Valor de atributo inválido, SQL_SOPT_SS_PARAM_FOCUS (deve ser zero em tempo de execução)".  
   
-4.  Define *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR como SQL_DEFAULT_PARAM para um parâmetro com valor de tabela sem linhas ou o número de linhas a serem transferidas na próxima chamada de SQLExecute ou SQLExecDirect se o parâmetro com valor de tabela tiver linhas. Não é possível definir *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR como SQL_NULL_DATA para um parâmetro com valor de tabela, pois os parâmetros com valor de tabela não são anuláveis (embora colunas constituintes de parâmetro com valor de tabela possam ser anuláveis). Se isso for definido como um valor inválido, SQLExecute ou SQLExecDirect retornará SQL_ERROR, e um registro de diagnóstico será gerado com SQLSTATE = HY090 e a mensagem "cadeia de caracteres ou comprimento de buffer inválido para o parâmetro \< p>", em que p é o número do parâmetro.  
+4.  Define *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR como SQL_DEFAULT_PARAM para um parâmetro com valor de tabela sem linhas ou o número de linhas a serem transferidas na próxima chamada de SQLExecute ou SQLExecDirect se o parâmetro com valor de tabela tiver linhas. Não é possível definir *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR como SQL_NULL_DATA para um parâmetro com valor de tabela, pois os parâmetros com valor de tabela não são anuláveis (embora colunas constituintes de parâmetro com valor de tabela possam ser anuláveis). Se isso for definido como um valor inválido, SQLExecute ou SQLExecDirect retornará SQL_ERROR, e um registro de diagnóstico será gerado com SQLSTATE = HY090 e a mensagem "cadeia de caracteres ou comprimento do buffer inválido para o parâmetro \<p> ", em que p é o número do parâmetro.  
   
 5.  Chama SQLExecute ou SQLExecDirect.  
   

@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f52afcfdaa7de33d83d64a049f9a350f0463b4c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062352"
 ---
 # <a name="using-reports"></a>Usando relatórios
   Um relatório único é gerado para cada componente e, se necessário, para cada instância analisada pelo Assistente para Análise do Supervisor de Atualização em um servidor. O relatório fornece detalhes sobre problemas conhecidos que podem afetar uma atualização. Ele também fornece links para informações e ações sugeridas para resolver os problemas identificados.  
@@ -77,7 +76,7 @@ ms.locfileid: "66091226"
  É possível expandir um problema para exibir informações adicionais, um link para informações detalhadas sobre como solucionar o problema e um link para exibir detalhes do problema. Ao clicar no link para acessar informações detalhadas do problema, o tópico da Ajuda com informações sobre o problema e instruções para solucioná-lo é exibido. Depois de corrigir um problema, ou de gerenciar seus itens de ação, você pode marcar problemas como concluídos marcando a caixa de seleção **este problema foi resolvido** . Se você quiser remover os problemas resolvidos da lista de problemas de atualização, clique em **Atualizar**. O problema não é exibido novamente até que você execute o assistente de análise do supervisor de atualização no mesmo componente ou aplique o filtro **problemas resolvidos** da opção **Filtrar por** .  
   
 ## <a name="report-files"></a>Arquivos de relatório  
- O assistente de análise do supervisor de atualização cria relatórios no\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório meus documentos upgrade Advisor\110\Reports e cria um subdiretório para cada servidor que você analisa. Os arquivos de relatório estão no formato XML e seguem uma convenção de nomenclatura específica. Quando você inicia o Visualizador de Relatórios do Supervisor de Atualização, os arquivos de relatório do diretório padrão são exibidos. Se você copiar arquivos de relatório para essa pasta, eles deverão seguir a mesma convenção de nomenclatura ou o visualizador de relatórios não irá exibi-los automaticamente.  
+ O assistente de análise do supervisor de atualização cria relatórios no diretório meus documentos \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upgrade Advisor\110\Reports e cria um subdiretório para cada servidor que você analisa. Os arquivos de relatório estão no formato XML e seguem uma convenção de nomenclatura específica. Quando você inicia o Visualizador de Relatórios do Supervisor de Atualização, os arquivos de relatório do diretório padrão são exibidos. Se você copiar arquivos de relatório para essa pasta, eles deverão seguir a mesma convenção de nomenclatura ou o visualizador de relatórios não irá exibi-los automaticamente.  
   
  Se você quiser compartilhar a informações com outras pessoas, poderá enviar-lhes o relatório XML. Se preferir usar outro aplicativo, basta exportar o relatório para um arquivo CSV que pode ser usado para criar uma planilha, um arquivo de texto ou uma mensagem de email.  
   

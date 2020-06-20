@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8843dac310d1e023fe7ce63eded02c9e1bed3731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010882"
 ---
 # <a name="disable-publishing-and-distribution"></a>Desabilitar publicação e distribuição
   Este tópico descreve como desabilitar a publicação e a distribuição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects).  
@@ -87,7 +86,7 @@ ms.locfileid: "73882372"
 7.  No Distribuidor, execute [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) para remover a designação Distribuidor do servidor.  
   
     > [!NOTE]  
-    >  Se todos os objetos de publicação e distribuição não forem descartados antes que você execute [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) e [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), estes procedimentos retornarão com um erro. Para descartar todos os objetos relacionados à replicação quando um Publicador ou distribuidor ** \@** é Descartado, o parâmetro no_checks deve ser definido como **1**. Se um Publicador ou distribuidor estiver offline ou inacessível, o ** \@parâmetro ignore_distributor** poderá ser definido como **1** para que eles possam ser descartados; no entanto, qualquer objeto de publicação e de distribuição deixado para trás deve ser removido manualmente.  
+    >  Se todos os objetos de publicação e distribuição não forem descartados antes que você execute [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) e [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), estes procedimentos retornarão com um erro. Para descartar todos os objetos relacionados à replicação quando um Publicador ou distribuidor é Descartado, o parâmetro ** \@ no_checks** deve ser definido como **1**. Se um Publicador ou distribuidor estiver offline ou inacessível, o parâmetro ** \@ ignore_distributor** poderá ser definido como **1** para que eles possam ser descartados; no entanto, qualquer objeto de publicação e de distribuição deixado para trás deve ser removido manualmente.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Este script de exemplo remove objetos de replicação do banco de dados de assinatura.  

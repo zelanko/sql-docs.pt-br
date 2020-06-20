@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966756"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Editor da Tarefa Executar SQL (página Mapeamento de Parâmetros)
   Use a página **Mapeamento de Parâmetros** da caixa de diálogo **Editor da Tarefa Executar SQL** para mapear as variáveis para os parâmetros na instrução SQL.  
@@ -27,15 +26,15 @@ ms.locfileid: "66059037"
  Para saber mais sobre essa tarefa, consulte [Tarefa Executar SQL](control-flow/execute-sql-task.md) e [Parâmetros e códigos de retorno na Tarefa Executar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 ## <a name="options"></a>Opções  
- **Nome da Variável**  
- Depois de adicionar um mapeamento de parâmetros clicando em **Adicionar**, selecione uma variável de sistema ou definida pelo usuário na lista ou clique em \<**Nova variável...**> para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**.  
+ **Nome da variável**  
+ Depois de adicionar um mapeamento de parâmetro clicando em **Adicionar**, selecione um sistema ou uma variável definida pelo usuário na lista ou clique \<**New variable...**> para adicionar uma nova variável usando a caixa de diálogo **Adicionar variável** .  
   
  **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
  **Direção**  
  Selecione a direção do parâmetro. Mapeie cada variável para um parâmetro de entrada, parâmetro de saída ou um código de retorno.  
   
- **Tipo de dados**  
+ **Tipo de Dados**  
  Selecione o tipo de dados do parâmetro. A lista de tipos de dados disponíveis é específica para o provedor selecionado no gerenciador de conexões usado pela tarefa.  
   
  **Nome do parâmetro**  
@@ -53,7 +52,7 @@ ms.locfileid: "66059037"
  **Adicionar**  
  Clique para adicionar um mapeamento de parâmetros.  
   
- **Remover**  
+ **Removerr**  
  Selecione um mapeamento de parâmetros na lista e clique em **Remover**.  
   
 ## <a name="see-also"></a>Consulte Também  
