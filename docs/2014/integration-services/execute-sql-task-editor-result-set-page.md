@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966746"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Editor da Tarefa Executar SQL (página Conjunto de Resultados)
   Use a página **Conjunto de Resultados** da caixa de diálogo **Editor da Tarefa Executar SQL** para mapear o resultado da instrução SQL para variáveis novas ou já existentes. As opções dessa caixa de diálogo serão desabilitadas se o **ResultSet** na página Geral for definido como **Nenhum**.  
@@ -36,13 +35,13 @@ ms.locfileid: "66058973"
   
  **Tópicos Relacionados**: [Conjuntos de resultados na tarefa Executar SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
- **Nome da Variável**  
- Mapeie o conjunto de resultados para uma variável selecionando uma variável ou clique em \<**Nova variável...**> para adicionar uma nova variável usando a caixa de diálogo **Adicionar Variável**.  
+ **Nome da variável**  
+ Mapeie o conjunto de resultados para uma variável selecionando uma variável ou clique \<**New variable...**> para adicionar uma nova variável usando a caixa de diálogo **Adicionar variável** .  
   
  **Adicionar**  
  Clique para adicionar um mapeamento de conjunto de resultados.  
   
- **Remover**  
+ **Removerr**  
  Selecione um mapeamento de conjunto de resultados na lista e clique em **Remover**.  
   
 ## <a name="see-also"></a>Consulte Também  

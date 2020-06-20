@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e442ad28f64de8bd293fa95a604207e9bdc13107
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058544"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966391"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Colunas Para Cada Item
   Use a caixa de diálogo **Colunas Para Cada Item** para definir as colunas nos itens que o enumerador de Cada Item enumera.  
@@ -28,13 +27,13 @@ ms.locfileid: "66058544"
  **Coluna**  
  Lista as colunas.  
   
- **Tipo de dados**  
+ **Tipo de Dados**  
  Selecione o tipo de dados.  
   
  **Adicionar**  
  Adicione uma nova coluna.  
   
- **Remover**  
+ **Removerr**  
  Selecione uma coluna e clique em **Remover**.  
   
 ## <a name="see-also"></a>Consulte Também  

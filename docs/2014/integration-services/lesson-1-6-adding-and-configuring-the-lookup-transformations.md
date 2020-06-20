@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53e12d2be6cc4829fd9fc983ca5a24e2057da4e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891544"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966136"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Etapa 6: Adicionar e configurar a transformação Pesquisa
   Depois de configurar a fonte de Arquivo Simples para extrair dados do arquivo de origem, a próxima tarefa será definir as transformações Pesquisa necessárias para obter os valores de **CurrencyKey** e **DateKey**. Uma transformação Pesquisa executa uma pesquisa ao unir dados na entrada coluna para uma coluna especificada em um conjunto de dados referenciado. O conjunto de dados de referência pode ser uma tabela existente ou visualização, uma nova tabela ou o resultado de uma instrução SQL. Neste tutorial, a transformação Pesquisa usa um gerenciador de conexões OLE DB para conectar-se ao banco de dados que contém os dados que é a fonte do conjunto de dados de referência.  
@@ -94,7 +93,7 @@ ms.locfileid: "62891544"
   
 9. Clique com o botão direito do mouse na transformação Chave de Moeda de Pesquisa e clique em **Propriedades**.  
   
-10. `LocaleID` No janela Propriedades, verifique se a propriedade está definida como **Inglês (Estados Unidos)** e se a propriedade **defaultcodepage** está definida como **1252**.  
+10. No janela Propriedades, verifique se a `LocaleID` propriedade está definida como **inglês (Estados Unidos)** e se a propriedade **DefaultCodePage** está definida como **1252**.  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Para adicionar e configurar a transformação Pesquisa de Chave de Data  
   
@@ -128,7 +127,7 @@ ms.locfileid: "62891544"
   
 11. Clique com o botão direito do mouse na transformação Chave de Data de Pesquisa e clique em **Propriedades**.  
   
-12. `LocaleID` No janela Propriedades, verifique se a propriedade está definida como **Inglês (Estados Unidos)** e se a propriedade **defaultcodepage** está definida como **1252**.  
+12. No janela Propriedades, verifique se a `LocaleID` propriedade está definida como **inglês (Estados Unidos)** e se a propriedade **DefaultCodePage** está definida como **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 7: Adicionar e configurar o destino OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  

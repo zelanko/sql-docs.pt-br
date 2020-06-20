@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6076b28e932ac03d211ab6ba1a84fe6c832f72ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059194"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966846"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Editor de Destino do Excel (página Saída de Erro)
   Use a página **Avançado** da caixa de diálogo **Editor de Destinos do Excel** para especificar opções de tratamento de erro.  
@@ -27,7 +26,7 @@ ms.locfileid: "66059194"
  Para obter mais informações sobre destinos do Excel, consulte [Excel Destination](data-flow/excel-destination.md).  
   
 ## <a name="options"></a>Opções  
- **Entrada ou Saída**  
+ **Entrada ou saída**  
  Exibe o nome da fonte de dados.  
   
  **Coluna**  

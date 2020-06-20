@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef3d6fe660b563ceb8f86b2d3cce123447de5366
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042539"
 ---
 # <a name="install-sql-server-management-tools"></a>Instalar Ferramentas de Gerenciamento do SQL Server
   As ferramentas de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluem os seguintes componentes:  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 061daaa3b44c151a1f77b075bef66ef90570af98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176334"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966486"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Desenvolvendo um componente de fluxo de dados personalizado
   A tarefa de fluxo de dados consiste em componentes que se conectam a uma variedade de fontes de dados e, em seguida, transformam e roteiam esses dados em alta velocidade. O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um modelo de objeto extensível que permite que os desenvolvedores criem origens, transformações e destinos personalizados que você pode usar no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e em pacotes implantados. Esta seção contém tópicos com orientações para desenvolvimento de componentes de fluxo de dados personalizados.
@@ -37,7 +36,7 @@ ms.locfileid: "78176334"
 
  [Plano de execução e alocação de buffer](execution-plan-and-buffer-allocation.md) Descreve o plano de execução de fluxo de dados e a alocação de buffers de dados.
 
- [Trabalhando com tipos de dados no fluxo de dados](working-with-data-types-in-the-data-flow.md) Explica como o fluxo de dados [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] mapeia tipos de dados para .NET Framework tipos de dados gerenciados.
+ [Trabalhando com tipos de dados no fluxo de dados](working-with-data-types-in-the-data-flow.md) Explica como o fluxo de dados mapeia [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tipos de dados para .NET Framework tipos de dados gerenciados.
 
  [Validando um componente de fluxo de dados](validating-a-data-flow-component.md) Explica os métodos usados para validar a configuração do componente e reconfigurar os metadados do componente.
 
@@ -62,14 +61,14 @@ ms.locfileid: "78176334"
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design>Contém as classes e interfaces usadas para criar a interface do usuário para componentes de fluxo de dados.
 
- [Integration Services referência de erro e mensagem](../../integration-services-error-and-message-reference.md) Lista os códigos [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] de erro predefinidos com seus nomes simbólicos e descrições.
+ [Integration Services referência de erro e mensagem](../../integration-services-error-and-message-reference.md) Lista os códigos de erro predefinidos [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] com seus nomes simbólicos e descrições.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
 ### <a name="information-common-to-all-custom-objects"></a>Informações comuns a todos os objetos personalizados
  Para obter informações comuns a todos os tipos de objetos personalizados que você pode criar no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consulte os tópicos a seguir:
 
- [Desenvolvendo objetos personalizados para Integration Services](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) Descreve as etapas básicas na implementação de todos os tipos de objetos [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]personalizados para o.
+ [Desenvolvendo objetos personalizados para Integration Services](../../extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) Descreve as etapas básicas na implementação de todos os tipos de objetos personalizados para o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
  [Persistência de objetos personalizados](../../extending-packages-custom-objects/persisting-custom-objects.md) Descreve a persistência personalizada e explica quando é necessário.
 

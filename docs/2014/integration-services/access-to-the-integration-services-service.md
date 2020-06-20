@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1088aafc-14c5-4e7d-9930-606a24c3049b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e3654be0afe51be6566a09897a2656dd53c77696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad5bc2dbecd153192d7a2a3115d83ecfa1cb765c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062242"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926497"
 ---
 # <a name="access-to-the-integration-services-service"></a>Acesso ao serviço Integration Services
   Os níveis de proteção do pacote podem limitar quem tem permissão para editar e executar um pacote. É necessário ter proteção adicional para limitar quem pode exibir a lista de pacotes que estão sendo executados em um servidor e quem pode interromper a execução de pacotes no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

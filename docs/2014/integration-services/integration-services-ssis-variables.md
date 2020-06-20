@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892263"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966176"
 ---
 # <a name="integration-services-ssis-variables"></a>Variáveis do SSIS (Integration Services)
   As variáveis armazenam valores que um pacote [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e seus contêineres, tarefas e manipuladores de eventos podem usar em tempo de execução. Os scripts na tarefa Script e o componente de Script também podem usar variáveis. As restrições de precedência que colocam em sequência tarefas e contêineres em um fluxo de trabalho podem usar variáveis quando suas definições de restrições incluem expressões.  
@@ -86,7 +85,7 @@ ms.locfileid: "62892263"
  Especifica a descrição da variável.  
   
  EvaluateAsExpression  
- Quando a propriedade é definida como `True`, a expressão fornecida é usada para definir o valor da variável.  
+ Quando a propriedade é definida como `True` , a expressão fornecida é usada para definir o valor da variável.  
   
  Expression  
  Especifica a expressão que é atribuída à variável.  
@@ -114,17 +113,17 @@ ms.locfileid: "62892263"
  IncludeInDebugDump  
  Indique se o valor da variável está incluído nos arquivos de despejo de depuração.  
   
- Para variáveis definidas pelo usuário e variáveis de sistema, o valor padrão para **InclueInDebugDump** a opção InclueInDebugDump `true`é.  
+ Para variáveis definidas pelo usuário e variáveis de sistema, o valor padrão para a opção **InclueInDebugDump** é `true` .  
   
- No entanto, para variáveis definidas pelo usuário, o sistema redefine a opção `false` **IncludeInDebugDump** como quando as seguintes condições são atendidas:  
+ No entanto, para variáveis definidas pelo usuário, o sistema redefine a opção **IncludeInDebugDump** como `false` quando as seguintes condições são atendidas:  
   
--   Se a propriedade da variável **EvaluateAsExpression** for definida `true`como, o sistema redefinirá a opção `false` **IncludeInDebugDump** como.  
+-   Se a propriedade da variável **EvaluateAsExpression** for definida como `true` , o sistema redefinirá a opção **IncludeInDebugDump** como `false` .  
   
-     Para incluir o texto da expressão como o valor da variável nos arquivos de despejo de depuração, defina **IncludeInDebugDump** a opção IncludeInDebugDump `true`como.  
+     Para incluir o texto da expressão como o valor da variável nos arquivos de despejo de depuração, defina a opção **IncludeInDebugDump** como `true` .  
   
--   Se o tipo de dados variable for alterado para uma cadeia de caracteres, o sistema **IncludeInDebugDump** redefinirá `false`a opção IncludeInDebugDump como.  
+-   Se o tipo de dados variable for alterado para uma cadeia de caracteres, o sistema redefinirá a opção **IncludeInDebugDump** como `false` .  
   
- Quando o sistema redefine a opção **IncludeInDebugDump** como `false`, isso pode substituir o valor selecionado pelo usuário.  
+ Quando o sistema redefine a opção **IncludeInDebugDump** como `false` , isso pode substituir o valor selecionado pelo usuário.  
   
  Valor  
  O valor de uma variável definida pelo usuário pode ser literal ou uma expressão. Uma variável inclui opções para definir o valor da variável e o tipo de dados do valor. As duas propriedades devem ser compatíveis: por exemplo, o uso de um valor de cadeia de caracteres com um tipo de dados inteiro não é válido.  

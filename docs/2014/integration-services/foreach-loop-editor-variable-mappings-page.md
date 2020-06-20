@@ -11,24 +11,23 @@ f1_keywords:
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 396c43f0b7adaf9d2a9dcd6124194aa82a9f8cc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058530"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966376"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Editor de Loop Foreach (página Mapeamentos de Variáveis)
   Use a página **Mapeamentos de Variáveis** da caixa de diálogo **Editor de Loop Foreach** para mapear variáveis para o valor da coleção. O valor da variável é atualizado com os valores da coleção em cada iteração do loop.  
   
  Para saber mais sobre como usar o contêiner do Loop Foreach em um pacote de Serviços de Integração, consulte [Contêiner do Loop Foreach](control-flow/foreach-loop-container.md) . Para saber mais sobre como configurá-lo, consulte [Configurar um contêiner do Loop Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutorial de criação de um pacote ETL simples inclui uma lição que ensina a adicionar e configurar um loop foreach.  
+ O tutorial de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] criação de um pacote ETL simples inclui uma lição que ensina a adicionar e configurar um loop foreach.  
   
 ## <a name="options"></a>Opções  
  **Variável**  
- Selecione uma variável existente ou clique em \< **nova variável...**> para criar uma nova variável.  
+ Selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
 > [!NOTE]  
 >  Depois que você mapeia uma variável, uma nova linha é adicionada automaticamente à lista **Variável**.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb2a248ea8fa0205f1db11df0589ab2b3da0ab9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940177"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Designer de Modelos Tabulares (SSAS tabular)
   O designer de modelos de tabela faz parte do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]integrado ao Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 ou posterior, com modelos de tipo de projeto adicionais especificamente para desenvolver soluções profissionais de modelo de tabela.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067833"
   
 -   [Integração com o Visual Studio](#bkmk_vsint)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Benefícios  
  Quando você instala o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], novos modelos de projeto para criar modelos de tabela são adicionados aos tipos de projeto disponíveis. Depois de criar um novo projeto de modelo tabular com o uso de um dos modelos, você pode começar a criar modelos usando as ferramentas e os assistentes de designer de modelo tabular.  
   
  Além dos novos modelos e ferramentas para criar soluções profissionais multidimensionais de modelo tabular, o ambiente de desenvolvimento do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] fornece recursos de desenvolvimento, depuração e ciclo de vida de projeto que garantem a criação das mais avançadas soluções de BI para sua organização. Para obter mais informações sobre o [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], consulte o [Guia de Introdução ao Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  

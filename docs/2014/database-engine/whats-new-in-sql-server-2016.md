@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae3b565f858c383775b4fcccfac236c316fcfa4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927392"
 ---
 # <a name="what39s-new-database-engine"></a>O que&#39;s New (Mecanismo de Banco de Dados)
   Esta versão mais recente do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] apresenta novos recursos e aprimoramentos que aumentam o poder e a produtividade de arquitetos, desenvolvedores e administradores que criam, desenvolvem e mantêm sistemas de armazenamento de dados. Estas são as áreas nas quais o [!INCLUDE[ssDE](../includes/ssde-md.md)] foi aprimorado.  
@@ -30,11 +29,11 @@ ms.locfileid: "70176072"
  
   
 ###  <a name="sql-server-data-files-in-azure"></a><a name="DataFiles"></a>SQL Server arquivos de dados no Azure  
- [SQL Server arquivos de dados no Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) habilita o suporte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nativo para arquivos de banco de dado armazenados como BLOBs do Azure. Esse recurso permite que você crie um banco de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dados em execução no local ou em uma máquina virtual no Azure com um local de armazenamento dedicado para seus dados no armazenamento de BLOBs do Azure.  
+ [SQL Server arquivos de dados no Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) habilita o suporte nativo para arquivos de banco de dado [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazenados como BLOBs do Azure. Esse recurso permite que você crie um banco de dados em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] execução no local ou em uma máquina virtual no Azure com um local de armazenamento dedicado para seus dados no armazenamento de BLOBs do Azure.  
   
   
 ###  <a name="host-a-sql-server-database-in-an-azure-virtual-machine"></a><a name="AzureVM"></a>Hospedar um banco de dados SQL Server em uma máquina virtual do Azure  
- Use o assistente para [implantar um banco de dados SQL Server em uma máquina virtual do Azure](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) para hospedar um banco [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de dados de uma instância do em uma máquina virtual do Azure.  
+ Use o assistente para [implantar um banco de dados SQL Server em uma máquina virtual do Azure](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) para hospedar um banco de dados de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em uma máquina virtual do Azure.  
   
   
 ###  <a name="backup-and-restore-enhancements"></a><a name="Backup"></a>Aprimoramentos de backup e restauração  
@@ -42,11 +41,11 @@ ms.locfileid: "70176072"
   
 -   **Backup do SQL Server para URL**  
   
-     O backup do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para URL foi introduzido no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 com suporte somente pelo [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell e SMO. No [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] , você pode [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usar o para fazer backup ou restaurar do serviço de armazenamento de BLOBs do Azure. A nova opção está disponível tanto para a tarefa de backup como para os planos de manutenção. Para obter mais informações, consulte [usando a tarefa de backup no SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup para URL usando o assistente de plano de manutenção](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)e [restaurando do armazenamento do Azure usando o SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+     O backup do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para URL foi introduzido no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 com suporte somente pelo [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell e SMO. No [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] , você pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para fazer backup ou restaurar do serviço de armazenamento de BLOBs do Azure. A nova opção está disponível tanto para a tarefa de backup como para os planos de manutenção. Para obter mais informações, consulte [usando a tarefa de backup no SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup para URL usando o assistente de plano de manutenção](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)e [restaurando do armazenamento do Azure usando o SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
 -   **SQL Server Backup gerenciado para o Azure**  
   
-     Inserido no backup do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para URL, o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] é um serviço que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece para gerenciar e agendar os backups de banco de dados e log. Nesta versão, só há suporte para backup no armazenamento do Azure. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pode ser configurado no banco de dados e no nível de instância permitindo um controle granular no nível do banco de dados e na automação no nível de instância. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]pode ser configurado em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instâncias em execução no local e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em instâncias em execução em máquinas virtuais do Azure. É recomendável para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instâncias em execução em máquinas virtuais do Azure. Para obter mais informações, consulte [SQL Server Backup gerenciado para o Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Inserido no backup do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para URL, o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] é um serviço que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece para gerenciar e agendar os backups de banco de dados e log. Nesta versão, só há suporte para backup no armazenamento do Azure. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pode ser configurado no banco de dados e no nível de instância permitindo um controle granular no nível do banco de dados e na automação no nível de instância. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]pode ser configurado em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instâncias em execução no local e em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instâncias em execução em máquinas virtuais do Azure. É recomendável para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instâncias em execução em máquinas virtuais do Azure. Para obter mais informações, consulte [SQL Server Backup gerenciado para o Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 -   **Criptografia para backups**  
   
@@ -139,7 +138,7 @@ ms.locfileid: "70176072"
 ##  <a name="system-view-enhancements"></a><a name="SystemTable"></a>Aprimoramentos de exibição do sistema  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
- [Sys. xml_indexes &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) tem três novas colunas: `xml_index_type`, `xml_index_type_description`e `path_id`.  
+ [sys.xml_indexes &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) tem três novas colunas: `xml_index_type` , `xml_index_type_description` e `path_id` .  
   
 ### <a name="sysdm_exec_query_profiles"></a>sys.dm_exec_query_profiles  
  [Sys. dm_exec_query_profiles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) monitora o progresso da consulta em tempo real enquanto uma consulta está em execução.  
@@ -148,7 +147,7 @@ ms.locfileid: "70176072"
  [Sys. column_store_row_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) fornece informações de índice columnstore clusterizado por segmento para ajudar o administrador a tomar decisões de gerenciamento do sistema.  
   
 ### <a name="sysdatabases"></a>sys.databases  
- [Sys. databases &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) tem três novas colunas: `is_auto_create_stats_incremental_on`, `is_query_store_on`e `resource_pool_id`.  
+ [Sys. databases &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) tem três novas colunas: `is_auto_create_stats_incremental_on` , `is_query_store_on` e `resource_pool_id` .  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>Aprimoramentos de exibição do sistema para OLTP em Memória  
  Para obter informações sobre os aprimoramentos de exibição do sistema para dar suporte ao OLTP na memória, consulte [exibições do sistema, procedimentos armazenados, DMVs e tipos de espera para OLTP na memória](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
@@ -157,7 +156,7 @@ ms.locfileid: "70176072"
 ##  <a name="security-enhancements"></a><a name="Security"></a>Aprimoramentos de segurança  
   
 ### <a name="connect-any-database-permission"></a>Permissão CONNECT ANY DATABASE  
- Uma nova permissão de nível de servidor. Conceda **CONNECT ANY DATABASE** a um logon que deve se conectar a todos os bancos de dados que existem atualmente e a quaisquer novos bancos de dados que possam ser criados no futuro. Não concede nenhuma permissão em qualquer banco de dados além da conexão. Combine com **selecionar todos os protegíveis** de usuário `VIEW SERVER STATE` ou para permitir que um processo de auditoria exiba todos os dados ou todos os Estados de banco [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]de dado na instância do.  
+ Uma nova permissão de nível de servidor. Conceda **CONNECT ANY DATABASE** a um logon que deve se conectar a todos os bancos de dados que existem atualmente e a quaisquer novos bancos de dados que possam ser criados no futuro. Não concede nenhuma permissão em qualquer banco de dados além da conexão. Combine com **selecionar todos os protegíveis de usuário** ou `VIEW SERVER STATE` para permitir que um processo de auditoria exiba todos os dados ou todos os Estados de banco de dado na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ### <a name="impersonate-any-login-permission"></a>Permissão IMPERSONATE ANY LOGIN  
  Uma nova permissão de nível de servidor. Quando concedida, permite que um processo de camada intermediária represente a conta de clientes que se conecta a ela, uma vez que ela se conecta aos bancos de dados. Quando negada, um logon com altos privilégios pode ser impedido de representar outros logons. Por exemplo, um logon com a permissão **CONTROL SERVER** pode ser impedido de representar outros logons.  
@@ -168,11 +167,11 @@ ms.locfileid: "70176072"
   
 ##  <a name="deployment-enhancements"></a><a name="Deployment"></a>Aprimoramentos de implantação  
 ### <a name="azure-vm"></a>VM do Azure
-[Implantar um banco de dados SQL Server em uma máquina Virtual Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) permite a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implantação de um banco de dados em uma VM do Azure.  
+[Implantar um banco de dados SQL Server em uma máquina Virtual Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) permite a implantação de um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] banco de dados em uma VM do Azure.  
 
 ### <a name="refs"></a>ReFS
 Agora há suporte para a implantação de bancos de dados em ReFS.   
   
 ## <a name="see-also"></a>Consulte Também  
- [Recursos compatíveis com as edições do SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ [Recursos com suporte nas edições do SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
    

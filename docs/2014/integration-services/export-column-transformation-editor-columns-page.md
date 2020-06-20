@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2460e3a86c83dbd6b206bf173ac2c2691ecee685
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966726"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor de Transformação Exportar Colunas (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Exportar Editor de Transformação Colunas** para especificar as colunas no fluxo de dados a serem extraídas para arquivos. Você pode especificar se a transformação Exportar Coluna acrescenta dados a um arquivo ou substitui um arquivo existente.  

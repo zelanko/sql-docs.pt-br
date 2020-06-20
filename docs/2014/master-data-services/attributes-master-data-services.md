@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 88f1f0909e667db38c3b9b5d13bf11a2262b405b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 430c4075a01777020ae2edc7014e94cf03e9d034
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972186"
 ---
 # <a name="attributes-master-data-services"></a>Atributos (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , atributos são objetos contidos em entidades. Os valores de atributos descrevem os membros da entidade. Um atributo pode ser usado para descrever um membro folha, um membro consolidado ou uma coleção.  

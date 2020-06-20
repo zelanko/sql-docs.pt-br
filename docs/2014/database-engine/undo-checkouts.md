@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00662ef396ff114e4b77d70aa2f60863e8f94bd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773392"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927839"
 ---
 # <a name="undo-checkouts"></a>Desfazer check-outs
   Você pode usar o comando **Desfazer check-out** para cancelar um check-out existente. Isso é particularmente útil quando você tiver modificado e salvado um arquivo, e depois precisar reverter as alterações.  
@@ -51,7 +50,7 @@ ms.locfileid: "62773392"
      **Classificar**  
      Classifica a ordem das colunas exibidas.  
   
-     **Exibição de Árvore**  
+     **Exibição de árvore**  
      Exibe a pasta e hierarquia de item para itens que você está revertendo o check-out.  
   
      **Desfazer check-out**  
