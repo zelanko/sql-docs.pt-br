@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9a57c95226a9b277cfb718b40b5d0525b1f8eb3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997753"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurar e gerenciar filtros para pesquisa
   A indexação de documentos em uma coluna de tipo de dados `varbinary`, `varbinary(max)`, `image` ou `xml` requer processamento extra. Esse processamento deve ser realizado por um filtro. O filtro extrai as informações textuais do documento (removendo a formatação). Em seguida, o filtro envia o texto para o componente separador de palavras do idioma associado à coluna da tabela.  
   
  Um determinado filtro é específico a um determinado tipo de documento (.doc, .pdf, .xls, .xml e assim por diante). Estes filtros implementam a interface IFilter. Para obter mais informações sobre estes tipos de documento, veja a exibição de catálogo [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
- É possível armazenar documentos binários em uma única coluna `varbinary(max)` ou `image`. Para cada documento, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] escolhe o filtro correto com base na extensão de arquivo. Como a extensão de arquivo não é visível quando o arquivo é armazenado em `varbinary(max)` uma `image` coluna ou, a extensão de arquivo (. doc,. xls,. pdf e assim por diante) deve ser armazenada em uma coluna separada na tabela, chamada de coluna de tipo. Essa coluna de tipo pode ser do tipo de dados com base em quaisquer caracteres e contém a extensão do arquivo de documento, como .doc para um documento do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word. Na tabela de **documentos** em [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], a coluna de **documento** é do `varbinary(max)`tipo e a coluna de tipo, **FileExtension**, é do `nvarchar(8)`tipo.  
+ É possível armazenar documentos binários em uma única coluna `varbinary(max)` ou `image`. Para cada documento, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] escolhe o filtro correto com base na extensão de arquivo. Como a extensão de arquivo não é visível quando o arquivo é armazenado em `varbinary(max)` uma `image` coluna ou, a extensão de arquivo (. doc,. xls,. pdf e assim por diante) deve ser armazenada em uma coluna separada na tabela, chamada de coluna de tipo. Essa coluna de tipo pode ser do tipo de dados com base em quaisquer caracteres e contém a extensão do arquivo de documento, como .doc para um documento do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word. Na tabela de **documentos** em [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] , a coluna de **documento** é do tipo `varbinary(max)` e a coluna de tipo, **FileExtension**, é do tipo `nvarchar(8)` .  
   
 > [!NOTE]  
 >  É possível que um filtro consiga processar objetos incorporados ao objeto pai, dependendo da sua implementação. No entanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não configura filtros para seguir links para outros objetos.  
@@ -44,6 +43,6 @@ EXEC sp_help_fulltext_system_components 'filter';
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
- [Compatibilidade do FILESTREAM com outros recursos do SQL Server](../blob/filestream-compatibility-with-other-sql-server-features.md)  
+ [Compatibilidade de FILESTREAM com outros recursos de SQL Server](../blob/filestream-compatibility-with-other-sql-server-features.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ae69c24138749fa1f3718c94147cd1db12abd1d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966716"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Exportar Editor de Transformação Colunas (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo do **Editor de Transformação Exportar Colunas** para especificar como manipular os erros.  

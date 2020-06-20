@@ -2,7 +2,6 @@
 title: O que há de novo
 description: Veja o que há de novo no Microsoft Analytics Platform System, um dispositivo local de expansão que hospeda o MPP SQL Server data warehouse paralela.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: faf3bd1f487fb5c850759fdde3ddecd32bdd3b1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039832"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de expansão
 Veja o que há de novo nas atualizações de dispositivo mais recentes para Microsoft Analytics Platform System (APS). O APS é um dispositivo local de expansão que hospeda o MPP SQL Server paralelo data warehouse. 
@@ -155,14 +154,14 @@ O APS 2016 é um pré-requisito para atualizar para o AU7. Estes são os novos r
 O APS AU7 cria e atualiza estatísticas automaticamente, por padrão. Para atualizar as configurações de estatísticas, os administradores podem usar um novo item de menu de switch de recursos no [Configuration Manager](appliance-configuration.md#CMTasks). A [opção de recurso](appliance-feature-switch.md) controla a criação automática, a atualização automática e o comportamento de atualização assíncrona de estatísticas. Você também pode atualizar as configurações de estatísticas com a instrução [ALTER DATABASE (Parallel Data warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) .
 
 ### <a name="t-sql"></a>T-SQL
-Agora @var há suporte para Select. Para obter mais informações, consulte [selecionar variável local](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
+@varAgora há suporte para Select. Para obter mais informações, consulte [selecionar variável local](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
 O HASH de dicas de consulta e o grupo de pedidos agora têm suporte. Para obter mais informações, consulte [Hints (Transact-SQL)-Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>Opção de recurso
 O APS AU7 introduz a opção de recurso no [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled e DmsProcessStopMessageTimeoutInSeconds agora são opções configuráveis que podem ser alteradas por administradores.
 
-### <a name="known-issues"></a>Problemas conhecidos
+### <a name="known-issues"></a>Problemas Conhecidos
 Com o software APS AU7, é fornecida uma atualização de BIOS da Intel que corrige um problema descrito como *ataques de canal lateral de execução especulativa*. Os ataques visam explorar o que é chamado de *vulnerabilidades Spectre e Meltdown*. Embora sejam empacotados junto com o APS, a atualização do BIOS é instalada manualmente e não como parte da instalação do software APS AU7.
 
 A Microsoft aconselha todos os clientes a instalarem o BIOS atualizado. A Microsoft mediu o efeito de KVAS (sombra de endereço virtual) de kernel, KPTI (indireção de tabela de página de kernel) e IBP (mitigação de previsão de ramificação indireta) em várias cargas de trabalho do SQL em vários ambientes. As medidas encontraram uma degradação significativa em algumas cargas de trabalho. Com base nos resultados, a recomendação é que você teste o efeito de desempenho da habilitação da atualização do BIOS antes de implantá-las em um ambiente de produção. Consulte as diretrizes de SQL Server [aqui](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).

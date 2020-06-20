@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72f15886e7105dde8d0e15dd0598a7474ed7e39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038127"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Adicionar e remover artigos de publicações existentes
   Depois que uma publicação é criada, é possível adicionar e descartar artigos. Os artigos podem ser adicionados a qualquer hora, mas as ações necessárias para descartar artigos dependem do tipo de replicação e de quando o artigo é descartado.  
@@ -33,7 +32,7 @@ ms.locfileid: "73882334"
  Adicionar um artigo envolve: adicionar o artigo à publicação; criar um novo instantâneo para a publicação; sincronizar a assinatura para aplicar o esquema e os dados para o novo artigo.  
   
 > [!NOTE]
->  Se você adicionar um artigo a uma publicação de mesclagem e um artigo existente depender do novo artigo, deverá especificar uma ordem de processamento para ambos os artigos ** \@** usando o parâmetro processing_order de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Quando você adiciona a função à publicação: especifique um valor de **1** para o ** \@parâmetro processing_order** de **sp_addmergearticle**; e especifique um valor de **2** para o ** \@parâmetro processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o ** \@artigo**do parâmetro. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. É possível usar números diferentes para cada artigo, desde que o número para a função seja menor que o número para a tabela.  
+>  Se você adicionar um artigo a uma publicação de mesclagem e um artigo existente depender do novo artigo, deverá especificar uma ordem de processamento para ambos os artigos usando o parâmetro ** \@ processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Quando você adiciona a função à publicação: especifique um valor de **1** para o parâmetro ** \@ processing_order** de **sp_addmergearticle**; e especifique um valor de **2** para o parâmetro ** \@ processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o ** \@ artigo**do parâmetro. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. É possível usar números diferentes para cada artigo, desde que o número para a função seja menor que o número para a tabela.  
   
 1.  Adicione um ou mais artigos com um dos métodos seguintes:  
   
@@ -56,7 +55,7 @@ ms.locfileid: "73882334"
 ## <a name="dropping-articles"></a>descartando artigos  
  Os artigos podem ser descartados de uma publicação a qualquer hora, mas é necessário levar em conta os seguintes comportamentos:  
   
--   Descartar um artigo de uma publicação não remove o objeto do banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use DROP \<Objeto> para remover esses objetos, se necessário. Ao remover um artigo relacionado a outros artigos publicados por meio de restrições de chave estrangeira, recomendamos remover manualmente a tabela no Assinante ou usando uma execução de script sob demanda: especifique o script que inclua as instruções DROP \<Objeto> apropriadas. Para obter mais informações, consulte [Executar scripts durante a sincronização &#40;Programação do Transact-SQL de Replicação&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   Descartar um artigo de uma publicação não remove o objeto do banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use DROP \<Object> para remover esses objetos, se necessário. Quando você remove um artigo relacionado a outros artigos publicados por meio de restrições Foreign Key, recomendamos que você remova a tabela no Assinante manualmente ou usando a execução de script sob demanda: especifique um script que inclua as instruções DROP apropriadas \<Object> . Para obter mais informações, consulte [Executar scripts durante a sincronização &#40;Programação do Transact-SQL de Replicação&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
 -   Para publicações de mesclagem com nível de compatibilidade 90RTM ou superior, os artigos podem ser descartados a qualquer hora, porém um novo instantâneo é requerido. Adicionalmente:  
   

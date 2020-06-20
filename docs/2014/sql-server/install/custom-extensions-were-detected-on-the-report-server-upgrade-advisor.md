@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2149e0434c13ccc9e284385999cf94c98fb937fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952595"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059374"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Extensões personalizadas foram detectadas no servidor de relatório (Supervisor de Atualização)
   O Supervisor de Atualização detectou configurações de extensão personalizada nos arquivos de configuração, o que indica que sua instalação tem uma ou mais extensões personalizadas para processamento de dados, entrega, renderização, segurança ou autenticação. A atualização moverá os parâmetros de configuração de extensão com o servidor de relatório atualizado. No entanto, se houver extensões personalizadas instaladas na pasta existente do servidor de relatório, os arquivos de assembly dessas extensões personalizadas não serão movidos para a nova pasta de instalação durante o processo de atualização. Concluída a atualização, mova os arquivos de assembly para a nova pasta de instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "71952595"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descrição  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma arquitetura extensível que permite aos desenvolvedores criar extensões personalizadas para processamento de dados, entrega, renderização, segurança e autenticação.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]fornece uma arquitetura extensível que permite aos desenvolvedores criar extensões personalizadas para processamento de dados, entrega, renderização, segurança e autenticação.  
   
  Se forem usados extensões ou assemblies personalizados na instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], será possível usar a Instalação para fazer uma atualização, mas talvez seja necessário mover as extensões para o novo local de instalação ao final da atualização ou executar as etapas anteriores à atualização.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "71952595"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Etapas pós-atualização para extensões de processamento de dados ou de entrega personalizadas  
   
-1.  Mova os arquivos de extensão para a nova pasta de programa do servidor de relatório. Por padrão, a pasta de programa do servidor de relatório está em \Program Files\Microsoft SQL Server \ MSRS10_50. \< *instance_name*> servidor \report.  
+1.  Mova os arquivos de extensão para a nova pasta de programa do servidor de relatório. Por padrão, a pasta de programa do servidor de relatório está em \Program Files\Microsoft SQL Server \ MSRS10_50. \<*instance_name*> servidor \report.  
   
  Para obter mais informações, consulte "Implantando uma extensão de processamento de dados" e "Implementando uma extensão de entrega" nos Manuais Online do SQL Server.  
   

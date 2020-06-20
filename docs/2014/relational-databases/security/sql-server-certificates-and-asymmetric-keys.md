@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8af2d92b31fee4f220b4c950fb6b7bd9c519885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037812"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados e chaves assimétricas do SQL Server
    A PKI (Public Key Cryptography) é um formulário de mensagem secreto no qual um usuário cria uma chave *pública* e uma chave *privada*. A chave privada é mantida em segredo, enquanto que a chave pública pode ser distribuída a outros. Embora as chaves estejam matematicamente relacionadas, a chave privada não pode ser obtida facilmente usando a chave pública. A chave pública é usada para criptografar dados e a chave privada é usada para descriptografar dados. Uma mensagem que é criptografada usando a chave pública só pode ser descriptografada usando a chave privada correta. Como há duas chaves diferentes, essas chaves são *assimétricas*.  
@@ -67,7 +66,7 @@ ms.locfileid: "75244508"
 |||  
 |-|-|  
 |Ferramenta|Finalidade|  
-|[MakeCert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Cria certificados|  
+|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Cria certificados|  
 |[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Cria nomes seguros para chaves simétricas.|  
   
 ## <a name="related-tasks"></a>Related Tasks  
@@ -78,6 +77,6 @@ ms.locfileid: "75244508"
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. Certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
+ [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
  [TDE &#40;Transparent Data Encryption&#41;](encryption/transparent-data-encryption.md)  
   

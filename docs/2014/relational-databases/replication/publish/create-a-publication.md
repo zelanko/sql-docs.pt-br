@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14d8b3f1a998b18ae0153c1771fa11afd925da9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038069"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   Este tópico descreve como criar uma publicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou RMO (Replication Management Objects).  
@@ -45,13 +44,13 @@ ms.locfileid: "73882329"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
--   Os nomes de publicação e de artigo não podem incluir nenhum dos seguintes caracteres: % , \* , [ , ] , | , : , " , ? , ', \,/, \< , >. Se os objetos do banco de dados incluírem algum desses caracteres e você desejar replicá-los, será necessário especificar um nome de artigo que seja diferente do nome do objeto na caixa de diálogo **Propriedades do Artigo – \<Artigo>** , disponível na página **Artigos** no assistente.  
+-   Os nomes de publicação e de artigo não podem incluir nenhum dos seguintes caracteres: % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Se os objetos no banco de dados incluírem qualquer um desses caracteres e você quiser replicá-los, você deverá especificar um nome de artigo diferente do nome do objeto na caixa de diálogo **Propriedades do artigo – \<Article> ** que está disponível na página **artigos** do assistente.  
   
 ###  <a name="security"></a><a name="Security"></a> Segurança  
  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Crie publicações e defina artigos com o Assistente para Nova Publicação. Após a criação de uma publicação, exiba e modifique as propriedades da publicação na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter informações sobre como criar uma publicação de um banco de dados Oracle, consulte [Criar uma publicação de um banco de dados Oracle](create-a-publication-from-an-oracle-database.md).  
+ Crie publicações e defina artigos com o Assistente para Nova Publicação. Depois que uma publicação é criada, exiba e modifique as propriedades da publicação na caixa de diálogo **Propriedades \<Publication> da publicação** . Para obter informações sobre como criar uma publicação de um banco de dados Oracle, consulte [Criar uma publicação de um banco de dados Oracle](create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>Para criar uma publicação e definir artigos  
   
@@ -110,7 +109,7 @@ ms.locfileid: "73882329"
   
     -   Se o conjunto de resultados estiver vazio, crie um trabalho do Log Reader Agent. No Publicador, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique as credenciais do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows com as quais o agente é executado em **\@job_name** e **\@password**. Se o agente pretender usar a Autenticação do SQL Server ao se conectar ao Publicador, você também precisará especificar um valor igual a **0** em **\@publisher_security_mode** e as informações de logon do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em **\@publisher_login** e **\@publisher_password**. Passe para a etapa 3.  
   
-3.  No Publicador, execute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique um nome de publicação para ** \@publicação**e, para o ** \@parâmetro repl_freq** , especifique um valor de `snapshot` para uma publicação de instantâneo ou um valor `continuous` de para uma publicação transacional. Especifique quaisquer outras opções de publicação. Isso define a publicação.  
+3.  No Publicador, execute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique um nome de publicação para ** \@ publicação**e, para o parâmetro ** \@ repl_freq** , especifique um valor de `snapshot` para uma publicação de instantâneo ou um valor de `continuous` para uma publicação transacional. Especifique quaisquer outras opções de publicação. Isso define a publicação.  
   
     > [!NOTE]  
     >  Os nomes de publicação não podem incluir nenhum dos caracteres a seguir:  
@@ -211,7 +210,7 @@ ms.locfileid: "73882329"
   
 2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> para o banco de dados de publicação; defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1 e chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> retornar `false`, verifique se o banco de dados existe.  
   
-3.  Se <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> a propriedade `false`for, defina- `true`a como e <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>chame.  
+3.  Se <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> a propriedade for `false` , defina-a como `true` e chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
 4.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> e defina as propriedades a seguir para esse objeto:  
   

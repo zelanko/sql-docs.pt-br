@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5a1b4986efe0047d210410b848f1174fdb9ea1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005738"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Caixas de diálogo Criar Nova Política ou Abrir Política, página Descrição
   Use esta caixa de diálogo para adicionar uma descrição e informações a uma política do Gerenciamento Baseado em Políticas.  

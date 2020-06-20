@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6f072f8d748b24489ab68f971abd4872edffdf6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966786"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
   Use a página **Processo** da caixa de diálogo **Editor da Tarefa Executar Processo** , para configurar as opções que executam o processo. As opções incluem o executável a ser utilizado, seu local, argumentos do prompt de comando e as variáveis que fornecem entrada e capturam a saída.  
@@ -40,15 +39,15 @@ ms.locfileid: "66059026"
  Digite o caminho da pasta que contém o executável ou clique no botão procurar **(...)** e localize a pasta.  
   
  **StandardInputVariable**  
- Selecione uma variável para fornecer a entrada para o processo ou clique em \< **nova variável...**> para criar uma nova variável:  
+ Selecione uma variável para fornecer a entrada para o processo ou clique \<**New variable...**> para criar uma nova variável:  
   
  **Tópicos relacionados:**  [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- Selecione uma variável para capturar a saída do processo ou clique em \< **nova variável...**> para criar uma nova variável.  
+ Selecione uma variável para capturar a saída do processo ou clique \<**New variable...**> para criar uma nova variável.  
   
  **StandardErrorVariable**  
- Selecione uma variável para capturar a saída de erro do processador ou clique em \< **nova variável...**> para criar uma nova variável.  
+ Selecione uma variável para capturar a saída de erro do processador ou clique \<**New variable...**> para criar uma nova variável.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Indique se a tarefa deve falhar caso o código de saída do processo seja diferente do valor especificado em **SuccessValue**.  

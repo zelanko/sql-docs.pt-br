@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646204e2c40c09ac0fac9259f5acc43c7f422894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006652"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarefa 2: Mapeando colunas do Excel para domínios do DQS
     
 1.  Na página **Mapear** , selecione **Arquivo do Excel** em **Fonte de Dados**.  
   
-2.  Clique em **procurar**, selecione **suppliers. xlsx**e clique em **abrir**.  
+2.  Clique em **procurar**, selecione **Suppliers.xlsx**e clique em **abrir**.  
   
 3.  Selecione **IncomingSuppliers $** para a **planilha**.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "65484700"
     |Linha de Endereço|Linha de Endereço|  
     |City|City|  
     |Estado|Estado|  
-    |País (clique na barra de ferramentas **(adicionar um mapeamento de coluna)** para adicionar uma linha)|País/Região|  
+    |País (clique na barra de ferramentas **(adicionar um mapeamento de coluna)** para adicionar uma linha)|País|  
     |Zip Code|Zip|  
   
      ![Mapeamentos de colunas do Excel para Domínios](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "Mapeamentos de colunas do Excel para Domínios")  

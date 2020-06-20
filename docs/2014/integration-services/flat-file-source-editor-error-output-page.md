@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2008ec0db5612b7ceb95fe9a8bbf970e19a31a91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058625"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966406"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>Editor de Fonte de Arquivo Simples (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Fonte de Arquivo Simples** para selecionar opções de tratamento de erros e definir propriedades nas colunas de saída de erros.\  

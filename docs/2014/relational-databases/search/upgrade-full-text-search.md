@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2bdf0bdee452101bbafb8108426faf6604e7626
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016505"
 ---
 # <a name="upgrade-full-text-search"></a>Atualizar pesquisa de texto completo
   A atualização da pesquisa de texto completo para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] é feita durante a instalação e quando os arquivos de banco de dados e os catálogos de texto completo da versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são anexados, restaurados ou copiados por meio do Assistente para Copiar Banco de Dados.  
@@ -55,7 +54,7 @@ ms.locfileid: "66010959"
  No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], cada índice de texto completo reside em um catálogo de texto completo que pertence a um grupo de arquivos, tem um caminho físico e é tratado como um arquivo de banco de dados. No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores, um catálogo de texto completo é um objeto lógico ou virtual que contém um grupo de índices de texto completo. Por isso, um novo catálogo de texto completo não é tratado como um arquivo de banco de dados com um caminho físico. No entanto, durante a atualização de qualquer catálogo de texto completo que contém arquivos de dados, é criado um novo grupo de arquivos no mesmo disco. Isso mantém o antigo comportamento de E/S do disco após a atualização. Qualquer índice de texto completo desse catálogo será colocado no novo grupo de arquivos se existir o caminho raiz. Se o caminho do antigo catálogo de texto completo for inválido, a atualização manterá o índice de texto completo no mesmo grupo de arquivos que a tabela base ou, no caso de uma tabela particionada, no grupo de arquivos primário.  
   
 > [!NOTE]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] As instruções DDL que especificam catálogos de texto completo continuam a funcionar corretamente.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]As [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções DDL que especificam catálogos de texto completo continuam a funcionar corretamente.  
   
 ##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a>Opções de atualização de texto completo  
  Na atualização de uma instância de servidor para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a interface do usuário permite escolher uma das opções de atualização de texto completo a seguir.  
@@ -70,7 +69,7 @@ ms.locfileid: "66010959"
   
  Para obter informações sobre o impacto da importação do índice de texto completo, consulte "Considerações sobre como escolher uma opção de atualização de texto completo", mais adiante neste tópico.  
   
- Recriar  
+ Recompilar  
  Os catálogos de texto completo são recompilados usando-se os separadores de palavras novos e aprimorados. A recompilação de índices pode demorar um pouco, e uma quantidade significativa de memória e CPU pode ser necessária após a atualização.  
   
  Redefinir  
@@ -150,7 +149,7 @@ ms.locfileid: "66010959"
   
  Para obter mais informações sobre como fazer o backup e a restauração de catálogos de texto completo do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [Fazer backup e restaurar índices e catálogos de texto completo](https://go.microsoft.com/fwlink/?LinkId=121052) e [Restauração por etapas e índices de texto completo](https://go.microsoft.com/fwlink/?LinkId=121053)nos Manuais Online do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- Quando o banco de dados for restaurado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], um novo arquivo de banco de dados será criado para o catálogo de texto completo. O nome padrão desse arquivo é ftrow_*catalog-name*.ndf. Por exemplo, se o *catalog-name* for `cat1`, o nome padrão do arquivo de banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Mas se o nome padrão já estiver sendo usado no diretório de destino, o novo arquivo de banco de dados `ftrow_`será nomeado *Catalog-Name*`{`*GUID*`}.ndf`, em que *GUID* é o identificador global exclusivo do novo arquivo.  
+ Quando o banco de dados for restaurado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], um novo arquivo de banco de dados será criado para o catálogo de texto completo. O nome padrão desse arquivo é ftrow_*catalog-name*.ndf. Por exemplo, se o *catalog-name* for `cat1`, o nome padrão do arquivo de banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Mas se o nome padrão já estiver sendo usado no diretório de destino, o novo arquivo de banco de dados será nomeado `ftrow_` *Catalog-Name* `{` *GUID* `}.ndf` , em que *GUID* é o identificador global exclusivo do novo arquivo.  
   
  Depois que os catálogos foram importados, o **sys.database_files** e **sys.master_file**s são atualizadas para remover as entradas do catálogo e a coluna **path** em **sys.fulltext_catalogs** é definida como NULL.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "66010959"
   
 -   O arquivo de banco de dados, `ftdb1.mdf`, é movido para `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  
   
--   O arquivo de log `ftdb1_log.ldf`,, é movido para um diretório de log na unidade de disco de log, *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`.  
+-   O arquivo de log, `ftdb1_log.ldf` , é movido para um diretório de log na unidade de disco de log, *log_drive* `:\` *log_directory* `\ftdb1_log.ldf` .  
   
 -   Os arquivos de catálogo que correspondem ao catálogo `sysft_cat90` são movidos para `C:\temp`. Depois de importados, os índices de texto completo são colocados automaticamente em um arquivo de banco de dados (C:\ftrow_sysft_cat90.ndf), e o diretório C:\temp é excluído.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cef1d05182edd02c9b0cdb0e6237c09473041dde
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966423"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Editor de Fonte de Arquivo Simples (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Fonte de Arquivo Simples** para selecionar o gerenciador de conexões que a fonte do arquivo simples usará. A fonte de Arquivo Simples lê dados de um arquivo de texto, que pode estar em formato de largura delimitada, fixa ou mista.  
@@ -42,7 +41,7 @@ ms.locfileid: "66058687"
  **Reter valores nulos da origem como valores nulos no fluxo de dados**  
  Especifique se os valores nulos devem ser mantidos na extração dos dados. O valor padrão dessa propriedade é **false**. Quando o valor é f`alse`, a fonte de Arquivo Simples substitui valores nulos dos dados de fonte por valores padrão apropriados para cada coluna, como cadeias de caracteres vazias, no caso de colunas de cadeia de caracteres, e zero, no caso de colunas numéricas.  
   
- **Visualizar**  
+ **Visualização**  
  Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A visualização pode exibir até 200 linhas.  
   
 ## <a name="see-also"></a>Consulte Também  

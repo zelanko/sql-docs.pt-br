@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e48610bb0bbb40a5a8385468e355cbca40420fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058572"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966380"
 ---
 # <a name="for-loop-editor"></a>Editor do Loop For
   Use a página **Loop For** da caixa de diálogo **Editor do Loop For** para configurar um loop que repita um fluxo de trabalho até que uma condição especificada seja avaliada como falsa.  

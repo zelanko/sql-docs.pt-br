@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3f3fb5f308195a5e0b2ecd58e50a4c1c6da25fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625921"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068802"
 ---
 # <a name="add-or-edit-join"></a>Adicionar ou Editar Junção
   As caixas de diálogo **Adicionar Junção** e **Editar Junção** permitem adicionar e editar filtros de junção para publicações de mesclagem.  
@@ -45,7 +44,7 @@ ms.locfileid: "62625921"
   
     -   Se você estiver adicionando uma nova junção, selecione **Usar o construtor para criar a instrução** ou **Gravar a instrução de junção manualmente**. Se você começar a gravar a junção manualmente, não poderá usar o construtor.  
   
-         Se você selecionar para usar o construtor, use as colunas na grade (**Conjunção**, **Coluna da Tabela Filtrada**, **Operador**e **Coluna da Tabela Unida**) para criar uma instrução de junção. Cada coluna na grade contém uma caixa de listagem suspensa, permitindo que você selecione duas colunas e um operador ( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **like**). Os resultados são exibidos na área de texto **Visualizar** . Se a junção envolver mais de um par de colunas, selecione uma conjunção (**AND** ou **OR**) na coluna **Conjunção** e insira mais duas colunas e outro operador.  
+         Se você selecionar para usar o construtor, use as colunas na grade (**Conjunção**, **Coluna da Tabela Filtrada**, **Operador**e **Coluna da Tabela Unida**) para criar uma instrução de junção. Cada coluna na grade contém uma caixa de listagem suspensa, permitindo que você selecione duas colunas e um operador (,,,, **=** **<>** **<=** **\<**, **>=** **>** , **como**). Os resultados são exibidos na área de texto **Visualizar** . Se a junção envolver mais de um par de colunas, selecione uma conjunção (**AND** ou **OR**) na coluna **Conjunção** e insira mais duas colunas e outro operador.  
   
          Se você selecionar para gravar a instrução manualmente, grave a instrução de junção na área de texto **Instrução de Junção** . Use a caixa de listagem **Colunas da Tabela Filtrada** e **Colunas da Tabela Unida** para arrastar e soltar colunas na área de texto **Instrução de Junção** .  
   

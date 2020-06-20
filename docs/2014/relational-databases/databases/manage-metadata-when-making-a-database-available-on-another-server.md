@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5087a925ac163281f4326a5f952c11ce2953c6dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965937"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor (SQL Server)
   Este tópico é pertinente nas seguintes situações:  
@@ -354,8 +353,8 @@ ms.locfileid: "76929912"
   
 ## <a name="see-also"></a>Consulte Também  
  [Bancos de dados independentes](contained-databases.md)   
- [Copiar bancos de dados para outros servidores](copy-databases-to-other-servers.md)   
- [SQL Server desanexar e anexar &#40;de banco de dados&#41;](database-detach-and-attach-sql-server.md)   
+ [Copiar bancos de dados em outros servidores](copy-databases-to-other-servers.md)   
+ [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [Fazer failover para um &#40;secundário de envio de logs SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [A troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Configurar um banco de dados espelho criptografado](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   

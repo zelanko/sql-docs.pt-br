@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871533"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965826"
 ---
 # <a name="move-system-databases"></a>Mover bancos de dados do sistema
   Este tópico descreve como mover bancos de dados do sistema no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mover bancos de dados do sistema pode ser útil nas seguintes situações:  
@@ -50,7 +49,7 @@ ms.locfileid: "62871533"
 > [!IMPORTANT]  
 >  Se você mover um banco de dados do sistema e, posteriormente, recriar o banco de dados mestre, será necessário mover o banco de dados do sistema novamente porque a operação de recriação instala todos os bancos de dados do sistema em seus locais padrão.  
   
-##  <a name="in-this-topic"></a><a name="Intro"></a> **Neste tópico**  
+##  <a name="in-this-topic"></a><a name="Intro"></a>**Neste tópico**  
   
 -   [Realocação planejada e procedimento de manutenção de disco agendado](#Planned)  
   
@@ -194,7 +193,7 @@ ms.locfileid: "62871533"
     ```  
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Movendo o banco de dados de recursos  
- O local do banco de dados de \<recursos é *unidade*>: \Program Files\Microsoft\<SQL Server\MSSQL versão>. \< *instance_name*> \MSSQL\Binn\\. O banco de dados não pode ser movido.  
+ O local do banco de dados de recursos é \<*drive*> : \Program Files\Microsoft SQL Server\MSSQL \<version> . \<*instance_name*> \MSSQL\Binn \\ . O banco de dados não pode ser movido.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a>Acompanhamento: depois de mover todos os bancos de dados do sistema  
  Se você moveu todos os bancos de dados do sistema para uma nova unidade ou volume ou para outro servidor com uma letra de unidade diferente, faça as atualizações a seguir.  
@@ -209,7 +208,7 @@ ms.locfileid: "62871533"
   
 2.  Clique com o botão direito do mouse em **Logs de Erros** e clique em **Configurar**.  
   
-3.  Na caixa de diálogo **Configurar Logs de Erros do SQL Server Agent** , especifique o novo local do arquivo SQLAGENT.OUT. O local padrão é C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log\\.  
+3.  Na caixa de diálogo **Configurar Logs de Erros do SQL Server Agent** , especifique o novo local do arquivo SQLAGENT.OUT. O local padrão é C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log \\ .  
   
 #### <a name="change-the-database-default-location"></a>Altere o local padrão do banco de dados  
   
@@ -273,6 +272,6 @@ ms.locfileid: "62871533"
  [Mover arquivos de banco de dados](move-database-files.md)   
  [Iniciar, parar, pausar, retomar, reiniciar o Mecanismo de Banco de Dados, SQL Server Agent ou SQL Server Browser serviço](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Recriar bancos de dados do sistema](system-databases.md)  
+ [Recompilar bancos de dados do sistema](system-databases.md)  
   
   

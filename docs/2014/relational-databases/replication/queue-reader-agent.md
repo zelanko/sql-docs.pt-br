@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7f07c9be82be63d01d563499a80e049e572a4150
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c896e11be6a1258a23220f77532e02ea756a58a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63262055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004859"
 ---
 # <a name="queue-reader-agent"></a>Queue Reader Agent
   A caixa de diálogo **Queue Reader Agent** exibe informações detalhadas sobre o Queue Reader Agent, incluindo status, histórico, mensagens informativas e qualquer mensagem de erro.  

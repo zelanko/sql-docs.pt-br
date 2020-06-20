@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9341cb3647db9e8e7061b1418b169c4ac4d158d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3357e9c6d52d6bd2668d8464362ebff567033ca8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769622"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966686"
 ---
 # <a name="-add-ssis"></a>+ (Adição) (SSIS)
   Soma duas expressões numéricas.  

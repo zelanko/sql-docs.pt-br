@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e287ae5f70ebe325e207d7c1fe593b60a1223f44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95936887916554f4fd5e18bdff890b7598d32cca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052627"
 ---
 # <a name="scanstopped-event-class"></a>Classe de evento Scan:Stopped
   A classe de evento Scan:Stopped ocorre quando uma verificação de tabela ou do índice para.  

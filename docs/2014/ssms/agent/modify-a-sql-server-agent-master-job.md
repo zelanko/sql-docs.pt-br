@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 087dd85d21eb42dce62803d704d2c3de9de61a02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62653869"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062163"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>Modificar um trabalho mestre do SQL Server Agent
   Os tópicos a seguir descrevem como modificar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho mestre do Agent.  

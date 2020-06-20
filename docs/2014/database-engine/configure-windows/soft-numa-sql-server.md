@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ae4bcd90b17228283859e2dd1a2897406e8ea95f
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 731ddbf67450c917387df7e104d138c0b35df2d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924770"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934838"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurar o SQL Server para usar o NUMA de software (SQL Server)
 Processadores modernos têm vários núcleos múltiplos por soquete. Cada soquete é representado, em geral, como um único nó NUMA. O mecanismo de banco de dados do SQL Server particiona diversas estruturas internas e particiona threads de serviço para cada nó NUMA. Com processadores que contêm 10 ou mais núcleos por soquete, o uso de software NUMA (soft-NUMA) para dividir os nós NUMA de hardware geralmente aumenta a escalabilidade e o desempenho.   
@@ -84,7 +83,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para
   
      No exemplo a seguir, suponha que você tem um servidor DL580 G9, com 18 núcleos por soquete (em 4 soquetes) e cada soquete está em seu próprio grupo K. Uma configuração de soft-numa que você poderia criar seria algo semelhante ao mostrado a seguir. (6 núcleos por nó, 3 nós por grupo, 4 grupos).  
   
-    |Exemplo para um servidor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] com vários Grupos K|Tipo|Nome do valor|os dados de Valor|  
+    |Exemplo para um servidor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] com vários Grupos K|Type|Nome do valor|os dados de Valor|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Agrupar|0|  
@@ -113,7 +112,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para
   
      Exemplos adicionais:  
   
-    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Tipo|Nome do valor|os dados de Valor|  
+    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Type|Nome do valor|os dados de Valor|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Agrupar|0|  
@@ -125,7 +124,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para
     > [!TIP]  
     >  Para especificar as CPUs 60 a 63, use um valor QWORD de F000000000000000 ou um valor BINARY de 1111000000000000000000000000000000000000000000000000000000000000.  
   
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Tipo|Nome do valor|os dados de Valor|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Type|Nome do valor|os dados de Valor|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|Agrupar|0|  
@@ -134,7 +133,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|Agrupar|0|  
   
-    |SQL Server 2008 R2|Tipo|Nome do valor|os dados de Valor|  
+    |SQL Server 2008 R2|Type|Nome do valor|os dados de Valor|  
     |------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|Agrupar|0|  
@@ -143,13 +142,13 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|Agrupar|0|  
   
-    |SQL Server 2008|Tipo|Nome do valor|os dados de Valor|  
+    |SQL Server 2008|Type|Nome do valor|os dados de Valor|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-    |SQL Server 2005|Tipo|Nome do valor|os dados de Valor|  
+    |SQL Server 2005|Type|Nome do valor|os dados de Valor|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
@@ -157,7 +156,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para
   
 ## <a name="see-also"></a>Consulte Também  
  [Mapear portas TCP IP para nós NUMA &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
- [Opção de configuração de servidor affinity mask](affinity-mask-server-configuration-option.md)   
+ [Opção affinity mask de configuração de servidor](affinity-mask-server-configuration-option.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

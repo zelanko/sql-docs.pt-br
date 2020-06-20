@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1bdea3453c38303dc6aaa6989f905db243d0be90
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e96267a04c12c1a27684009d6cb206415a9b7a1f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998836"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs e objetos OLE
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe a interface **ISequentialStream** para dar suporte ao acesso de consumidor aos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados **ntext**, **Text**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** e XML como BLOBs (objetos binários grandes). O método **Read** em **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  

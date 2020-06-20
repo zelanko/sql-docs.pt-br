@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33ff37caca04f46edd6ad92d0686713829bb270
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196432"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061514"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
   Este tópico descreve como criar uma exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O primeiro índice criado em uma exibição deve ser um índice clusterizado exclusivo. Depois que o índice clusterizado exclusivo for criado, você poderá criar mais índices não clusterizados. Criar um índice clusterizado exclusivo em uma exibição melhora o desempenho da consulta porque a exibição é armazenada no banco de dados da mesma forma que uma tabela com um índice clusterizado é armazenada. O otimizador de consulta pode usar exibições indexadas para acelerar a execução da consulta. A exibição não precisa estar referenciada na consulta para o otimizador considerá-la para uma substituição.  
@@ -55,7 +54,7 @@ ms.locfileid: "68196432"
   
 -   A exibição indexada for usada pelo otimizador de consulta para produzir o plano de consulta.  
   
-    |Opções Set|Valor obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
+    |Opções Set|Valor necessário|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ATIVADO|ATIVADO|ATIVADO|OFF|  
     |ANSI_PADDING|ATIVADO|ATIVADO|ATIVADO|OFF|  
@@ -115,8 +114,8 @@ ms.locfileid: "68196432"
     |-|-|-|  
     |COUNT|Funções ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET, AND OPENXML)|junções OUTER (LEFT, RIGHT ou FULL)|  
     |Tabela derivada (definida especificando uma instrução SELECT na cláusula FROM)|Autojunções|Especificando colunas usando SELECT \* ou SELECT *table_name*.*|  
-    |DISTINTO|STDEV, STDEVP, VAR, VARP ou AVG|CTE (expressão de tabela comum)|  
-    |`float`\*`XML` `filestream` colunas,,,, ou `text` `ntext` `image`|Subconsulta|Cláusula OVER, que inclui funções de classificação ou de janela de agregação|  
+    |DISTINCT|STDEV, STDEVP, VAR, VARP ou AVG|CTE (expressão de tabela comum)|  
+    |`float`\*colunas,,,, `text` `ntext` `image` `XML` ou `filestream`|Subconsulta|Cláusula OVER, que inclui funções de classificação ou de janela de agregação|  
     |Predicados de texto completo (CONTAIN, FREETEXT).|Função SUM que referencia uma expressão que permite valor nulo|ORDER BY|  
     |Função de agregação CLR definida pelo usuário|INÍCIO|Operadores CUBE, ROLLUP ou GROUPING SETS|  
     |MIN, MAX|Operadores UNION, EXZip CodeT ou INTERSECT|TABLESAMPLE|  
@@ -124,7 +123,7 @@ ms.locfileid: "68196432"
     |Conjuntos de colunas esparsas|Funções embutidas ou com valor de tabela de várias instruções|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*A exibição indexada pode `float` conter colunas; no entanto, essas colunas não podem ser incluídas na chave de índice clusterizado.  
+     \*A exibição indexada pode conter `float` colunas; no entanto, essas colunas não podem ser incluídas na chave de índice clusterizado.  
   
 -   Se GROUP BY estiver presente, a definição VIEW deverá conter COUNT_BIG(*) e não deverá conter HAVING. Essas restrições GROUP BY são aplicáveis apenas à definição de exibição indexada. Uma consulta pode usar uma exibição indexada em seu plano de execução mesmo que não satisfaça essas restrições GROUP BY.  
   

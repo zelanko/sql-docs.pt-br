@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 849f1a549a45b9c7e640b536e3f6ebe93a9c1b40
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054427"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>Instalar o Distributed Replay a partir do prompt de comando
   A instalação de uma nova instância do Distributed Replay no prompt de comando permite especificar os recursos a serem instalados e como eles devem ser configurados. A instalação do prompt de comando dá suporte à instalação, reparo, atualização e desinstalação dos componentes do Distributed Replay. Quando a instalação é feita via prompt de comando, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao modo silencioso completo usando o parâmetro /Q.  
@@ -41,11 +40,11 @@ ms.locfileid: "63149744"
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Opcional**|Conta de serviço para o serviço do controlador do Distributed Replay Utility.|Verifica a conta e a senha|  
 |/CTLRSVCPASSWORD<br /><br /> **Opcional**|Senha da conta de serviço do controlador do Distributed Replay Controller.|Verifica a conta e a senha|  
-|/CTLRSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicialização do serviço do controlador do Distributed Replay.|Automática<br /><br /> Desabilitado<br /><br /> Manual|  
-|/CTLRUSERS<br /><br /> **Opcional**|Especifique os usuários que têm permissões para o serviço do Distributed Replay Controller.|Conjunto de cadeias de contas de usuário que usam " " (espaço) para delimitador<br /><br /> **Importante**: quando você configura o serviço do controlador Distributed Replay, é possível especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:<br /><br /> Conta de usuário do domínio<br /><br /> Conta de usuário local criada pelo usuário<br /><br /> Administrador<br /><br /> Conta virtual e MSA (Conta de Serviço Gerenciada)<br /><br /> Serviços de rede, serviços locais e sistema<br /><br /> <br /><br /> Não são aceitas contas de grupo (local ou domínio) e outras contas internas (como Todos).|  
+|/CTLRSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicialização do serviço do controlador do Distributed Replay.|Automático<br /><br /> Desabilitado<br /><br /> Manual|  
+|/CTLRUSERS<br /><br /> **Opcional**|Especifique os usuários que têm permissões para o serviço do Distributed Replay Controller.|Conjunto de cadeias de contas de usuário que usam " " (espaço) para delimitador<br /><br /> **Importante**: Quando você configura o serviço do controlador Distributed Replay, é possível especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:<br /><br /> Conta de usuário do domínio<br /><br /> Conta de usuário local criada pelo usuário<br /><br /> Administrador<br /><br /> Conta virtual e MSA (Conta de Serviço Gerenciada)<br /><br /> Serviços de rede, serviços locais e sistema<br /><br /> <br /><br /> Não são aceitas contas de grupo (local ou domínio) e outras contas internas (como Todos).|  
 |/CLTSVCACCOUNT<br /><br /> **Opcional**|Conta de serviço para o serviço do cliente do Distributed Replay.|Verifica a conta e a senha|  
 |/CLTSVCPASSWORD<br /><br /> **Opcional**|Senha da conta de serviço do cliente Distributed Replay.|Verifica a conta e a senha|  
-|/CLTSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicialização do serviço do cliente Distributed Replay.|Automática<br /><br /> Desabilitado<br /><br /> Manual|  
+|/CLTSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicialização do serviço do cliente Distributed Replay.|Automático<br /><br /> Desabilitado<br /><br /> Manual|  
 |/CLTCTLRNAME<br /><br /> **Opcional**|O nome do computador com o qual o cliente se comunica para o serviço do controlador do Distributed Replay.||  
 |/CLTWORKINGDIR<br /><br /> **Opcional**|O diretório de trabalho para o serviço do cliente do Distributed Replay.|Caminho válido|  
 |/CLTRESULTDIR<br /><br /> **Opcional**|O diretório de resultado para o serviço do cliente do Distributed Replay.|Caminho válido|  
