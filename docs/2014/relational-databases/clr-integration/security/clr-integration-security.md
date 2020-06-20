@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeec8c832061756a818c9d2438df3046a29c1160
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970574"
 ---
 # <a name="clr-integration-security"></a>Segurança da integração CLR
   O modelo de segurança do [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) gerencia e protege o acesso entre diferentes tipos de objetos CLR e não CLR em execução na [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] instrução ou outro objeto CLR em execução no servidor. As chamadas entre objetos conhecidas como links. Os tipos de verificações de segurança realizados nesses objetos dependem dos tipos de links envolvidos.  
   
  O modelo de segurança de integração do CLR tem as seguintes metas:  
   
--   Por padrão, a execução de código de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]usuário gerenciado no. Realizar operações que podem comprometem a eficiência do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ser protegido por meio de permissões de alto nível apropriadas.  
+-   Por padrão, a execução de código de usuário gerenciado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Realizar operações que podem comprometem a eficiência do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ser protegido por meio de permissões de alto nível apropriadas.  
   
 -   O código de usuário gerenciado não deve ter acesso não autorizado a dados de usuário ou outro código de usuário no banco de dados. O código definido pelo usuário deve ser executado no contexto de segurança da sessão do usuário que o invocou e com os privilégios corretos para o contexto de segurança.  
   

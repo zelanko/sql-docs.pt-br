@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bb3f627cd4d4a3428d81cb89906be273d7c1a586
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 774e7e689dab8b329ec11d2c2c2a7286592c8bdb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82715564"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046723"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Caracteres inválidos e regras de escape
   Este tópico descreve como caracteres XML inválidos são tratados pela cláusula FOR XML e lista as regras de escape para caracteres inválidos em nomes XML.  

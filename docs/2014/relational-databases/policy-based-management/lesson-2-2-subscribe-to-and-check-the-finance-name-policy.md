@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0c859bdd982fa7de586c9230754c571eb750944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090694"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061614"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Assinar e verificar a política Nome Financeiro
   Nesta tarefa, você configurará o banco de dados Finanças para assinar a categoria de políticas Finanças. Então, você testará a política Nome de Finanças.  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Para assinar a categoria de políticas Finanças  
   
-1.  No Pesquisador de objetos, expanda **bancos de dados**, `Finance`clique com o botão direito do mouse, aponte para **políticas**e clique em **categorias**.  
+1.  No Pesquisador de objetos, expanda **bancos de dados**, clique com o botão direito do mouse `Finance` , aponte para **políticas**e clique em **categorias**.  
   
 2.  Marque a caixa de seleção **assinada** da `Finance` categoria.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66090694"
 ## <a name="summary"></a>Resumo  
  Este tutorial mostrou como criar condições do Gerenciamento Baseado em Políticas, políticas e grupos de políticas e como aplicar filtros e verificar a compatibilidade de destinos de Gerenciamento Baseado em Políticas.  
   
-## <a name="next"></a>Próximo  
+## <a name="next"></a>Avançar  
  Este tutorial está concluído. Para retornar ao início, clique em [Tutorial: Administrando servidores com o Gerenciamento Baseado em Políticas](tutorial-administering-servers-by-using-policy-based-management.md).  
   
  Para obter uma lista de tutoriais, consulte os [tutoriais para SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  

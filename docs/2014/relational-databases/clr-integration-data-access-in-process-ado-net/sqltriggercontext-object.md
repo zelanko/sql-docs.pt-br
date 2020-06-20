@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df384324ba16aac03a4c889cf4f3959c23374510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7eae3d290a70bedee0ed9badf9e6d0503caa2bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955006"
 ---
 # <a name="sqltriggercontext-object"></a>Objeto SqlTriggerContext
   A classe `SqlTriggerContext` fornece informações de contexto sobre o gatilho. Essas informações contextuais incluem o tipo de ação que causou o acionamento do gatilho, as colunas que foram modificadas em uma operação UPDATE, e, no caso de um gatilho DDL (data definition language), uma estrutura XML `EventData` que descreve a operação de gatilho. Para obter mais informações e exemplos de como usar a `SqlTriggerContext` classe, consulte [gatilhos CLR](../../database-engine/dev-guide/clr-triggers.md).  

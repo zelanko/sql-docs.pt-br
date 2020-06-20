@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d400faa496740182a1407f89e095ebaccf884b3a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ffbcbf5a294973f26aa01b9dfc503e027663bb19
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705471"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020285"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamento de tipos de data e hora aprimorados com versões anteriores do SQL Server (ODBC)
   Este tópico descreve o comportamento esperado quando um aplicativo cliente que usa recursos aprimorados de data e hora se comunica com uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e quando um aplicativo cliente que usa o Microsoft Data Access Components, o Windows Data Access Components ou uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envia comandos para um servidor que oferece suporte a recursos aprimorados de data e hora.  

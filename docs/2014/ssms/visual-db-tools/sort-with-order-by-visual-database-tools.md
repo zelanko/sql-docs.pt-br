@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30a2fca3dd0f2fcc6f22f2330c37fb8e333d9994
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa97ae157e55ab3925155a03ed52ac90642b5c1e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058091"
 ---
 # <a name="sort-with-order-by-visual-database-tools"></a>Classificar com ORDER BY (Visual Database Tools)
   Você pode classificar resultados de consulta por uma ou mais das colunas nas linhas retornadas usando uma cláusula ORDER BY. Você pode definir uma cláusula ORDER BY escolhendo opções no painel Detalhes de Critérios.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3427d8ab5956d4f95a42876b21ee309677f933
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211383"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062298"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Propriedades do trabalho e novo trabalho (página Geral)
   Use esta página para exibir e modificar as propriedades gerais de um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do Agent.  
@@ -38,13 +37,13 @@ ms.locfileid: "68211383"
  **Descrição**  
  Altera a descrição do trabalho.  
   
- **Habilitada**  
+ **Enabled**  
  Habilita o trabalho. Quando o trabalho não está habilitado, ele não é executado em resposta a uma agenda ou a um alerta, embora você ainda possa iniciar o trabalho usando o procedimento armazenado **sp_start_job** .  
   
- **Fonte**  
+ **Origem**  
  Exibe o servidor mestre para o trabalho. Só disponível na página **Propriedades do Trabalho** – Geral.  
   
- **Criação**  
+ **Criado**  
  Exibe a data e hora em que o trabalho foi criado. Só disponível na página **Propriedades do Trabalho** – Geral.  
   
  **Última modificação**  

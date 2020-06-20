@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0657a4b1ab266a1721cf889095ff17f30782f8e7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abb598df3d6048acb45fbfdee17d1671bd7ead43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021299"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Gerenciando tamanhos de lote para cópia em massa
   A principal finalidade de um lote em operações de cópia em massa é definir o escopo de uma transação. Se o tamanho de um lote não for definido, as funções de cópia em massa irão considerar uma cópia em massa inteira como uma única transação. Se o tamanho do lote for definido, cada lote constituirá uma transação que será confirmada quando o lote terminar.  

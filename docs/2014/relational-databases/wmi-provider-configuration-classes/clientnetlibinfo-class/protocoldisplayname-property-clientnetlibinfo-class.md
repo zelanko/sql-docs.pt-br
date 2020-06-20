@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 33113482d021b1f0aa105ccb039f8076cf6a6549
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81dc37daded9c368cf0d9cadb6b42b13731155c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191145"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062741"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>Propriedade ProtocolDisplayName (classe ClientNetLibInfo)
   Obtém ou define o nome usado para exibir o protocolo.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe ClientNetLibInfo](clientnetlibinfo-class.md) que representa informações sobre a biblioteca de rede de cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

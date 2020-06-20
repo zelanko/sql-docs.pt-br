@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec730fdd8f5dd8e00a3493b5ec96a80a3397fad9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184313"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058118"
 ---
 # <a name="create-queries-visual-database-tools"></a>Criar consultas (Visual Database Tools)
   As consultas permitem que você recupere dados das tabelas e exibições em seu banco de dados. Você cria e trabalha com consultas no **Designer de Consulta e Exibição**, que é composto por quatro painéis: o [Painel de Diagrama](visual-database-tools.md), o [Painel SQL](sql-pane-visual-database-tools.md), o [Painel de Critérios](criteria-pane-visual-database-tools.md)e o [Painel de Resultados](results-pane-visual-database-tools.md).  

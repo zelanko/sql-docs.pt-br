@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d44d8d8bdda5f8c15fffe8f3aaf0eaf2d099e81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040887"
 ---
 # <a name="create-custom-templates"></a>Criar modelos personalizados
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é fornecido com modelos para várias tarefas comuns, mas o poder real dos modelos está na capacidade de criar um modelo personalizado para um script complexo que deve ser criado com frequência. Nesta prática, você criará um script simples com poucos parâmetros, mas modelos também são úteis para scripts longos e repetitivos.  
@@ -67,7 +66,7 @@ ms.locfileid: "62805572"
   
 10. No Editor de Consultas, digite **EXECUTE dbo.WorkOrdersForBlade**e pressione F5 para executar a consulta. Confirme se o painel **Resultados** retorna uma lista dos pedidos de trabalho nas folhas.  
   
-11. Edite o script de modelo (o script na etapa 7), substituindo a folha nome do produto pelo `nvarchar(50)`parâmetro <strong> *<* PRODUCT_NAME</strong>,, <strong>nome*>*</strong>, em quatro locais.  
+11. Edite o script de modelo (o script na etapa 7), substituindo a folha nome do produto pelo parâmetro <strong> *<* PRODUCT_NAME</strong>, `nvarchar(50)` , <strong> *>* nome</strong>, em quatro locais.  
   
     > [!NOTE]  
     >  Parâmetros requerem três elementos: o nome do parâmetro que você deseja substituir, o tipo de dados do parâmetro e um valor padrão do parâmetro.  
@@ -103,7 +102,7 @@ ms.locfileid: "62805572"
   
 3.  No menu **Consulta** , clique em **Especificar Valores para Parâmetros de Modelo**.  
   
-4.  Na caixa de diálogo **Substituir parâmetros do modelo** , para `product_name` o valor, **digite freewheel** (substituindo o conteúdo padrão) e clique em **OK** para fechar a caixa de diálogo **Substituir parâmetros do modelo** e modificar o script no editor de consultas.  
+4.  Na caixa de diálogo **Substituir parâmetros do modelo** , para o `product_name` valor, digite **freewheel** (substituindo o conteúdo padrão) e clique em **OK** para fechar a caixa de diálogo **Substituir parâmetros do modelo** e modificar o script no editor de consultas.  
   
 5.  Pressione F5 para executar a consulta, criando o procedimento.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c0ccfb05b7b9eb6244e6d403c8975c3af1358a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 189667ecd2756ebf0026a22d981f9bb0ddd347c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250654"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056978"
 ---
 # <a name="reinitialize-subscriptions"></a>Reinicializar as assinaturas
   Reinicializar uma assinatura envolve aplicar um novo instantâneo de um ou mais artigos a um ou mais Assinantes: a replicação transacional e de instantâneo permitem que artigos individuais sejam reinicializados, e a replicação de mesclagem requer que todos os artigos sejam reinicializados. Os nós em uma topologia de replicação transacional ponto a ponto não podem ser reinicializados. Se for necessário assegurar que um nó tenha uma nova cópia dos dados, restaure o backup no nó. A reinicialização ocorre por um ou mais motivos:  

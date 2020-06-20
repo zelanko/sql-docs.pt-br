@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f7930cd63150b385cd84f48e1bb1c4fdaa9ec0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010346"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955736"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opções de armazenamento de Blobs (SQL Server)
   Discute e compara as opções disponíveis para armazenar arquivos e documentos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -40,10 +39,10 @@ ms.locfileid: "66010346"
 ##  <a name="filestream"></a><a name="Filestream"></a> FILESTREAM  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já inclui o recurso de FILESTREAM, que fornece armazenamento eficiente, gerenciamento e streaming de dados não estruturados armazenados como arquivos no sistema de arquivos. Entretanto, uma solução FILESTREAM exige a programação personalizada e não satisfaz o requisito de compatibilidade total de aplicativos do Windows, descrito anteriormente.  
   
-##  <a name="filetables"></a><a name="FileTables"></a>FileTables  
+##  <a name="filetables"></a><a name="FileTables"></a> Tabelas de arquivos  
  O recurso FileTable se baseia nos recursos de FILESTREAM existentes para permitir que os clientes corporativos armazenem dados de arquivos não estruturados e hierarquias de diretório em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , atendendo aos requisitos de acesso não transacional e compatibilidade de aplicativos do Windows para obter dados baseados em arquivos.  
   
-##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a>Comparando FILESTREAM e Filetable  
+##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> Comparando FILESTREAM e FileTable  
   
 |Recurso|Servidor de arquivos e solução de banco de dados|Solução FILESTREAM|Solução FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 611417e3b88a174e1be2e838f7a323959a53d595
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057796"
 ---
 # <a name="configuration-element-dta"></a>Elemento de configuração (DTA)
   Determina uma configuração especificada pelo usuário, que consiste em estruturas existentes e hipotéticas de design físico do Orientador de Otimização do Mecanismo de Banco de Dados, para análise, quando uma carga de trabalho é analisada.  
@@ -40,7 +39,7 @@ ms.locfileid: "63150144"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo de configuração|DESCRIÇÃO|  
+|Atributo de configuração|Descrição|  
 |-----------------------------|-----------------|  
 |`SpecificationMode`|Opcional. Especifica se o Orientador de Otimização do Mecanismo de Banco de Dados deve analisar a configuração especificada em relação à configuração existente atual ou como configuração totalmente nova e autônoma. Use um tipo de dados de **cadeia de caracteres** para especificar esse atributo com um dos seguintes valores permitidos:<br /><br /> `Relative`: <br />                  Avalia a configuração especificada em relação à configuração existente atual das estruturas de design físicas (índices, exibições indexadas, particionamento) do banco de dados que está sendo ajustado. Por exemplo: <br />`<Configuration SpecificationMode="Relative">`<br /><br /> `Absolute`: <br />                  Avalia a configuração especificada como uma configuração autônoma. Quando Absolute é especificado, o Orientador de Otimização do Mecanismo de Banco de Dados não considera a configuração existente. Por exemplo:<br />`<Configuration SpecificationMode="Absolute">`|  
   
@@ -48,9 +47,9 @@ ms.locfileid: "63150144"
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|**Tipo de dados e comprimento**|Nenhum.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**C'**|Opcional. Pode ser usado uma vez para cada elemento `DTAInput`.|  
+|**Ocorrência**|Opcional. Pode ser usado uma vez para cada elemento `DTAInput`.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

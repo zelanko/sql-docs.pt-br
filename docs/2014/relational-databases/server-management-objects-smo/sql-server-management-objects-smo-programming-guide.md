@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4dfa741f79b0a6dec95250edd9f7eb8cee4afb1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 863e3fc90f750f91611a6fa75655783c7802ec23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055181"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guia de Programação do SQL Server Management Objects (SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O SMO (Management Objects) é uma coleção de objetos projetados para a programação de todos os [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aspectos do gerenciamento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects (RMO) é uma coleção de objetos que encapsula o gerenciamento de replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O SMO (Management Objects) é uma coleção de objetos projetados para a programação de todos os aspectos do gerenciamento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects (RMO) é uma coleção de objetos que encapsula o gerenciamento de replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Tópico|Descrição|  
 |-----------|-----------------|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5e5bb88f57d471a199d925039d551a1f206e511b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d1be9f993b9400d51f3f129d48a85bd92d99b2c2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702738"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054901"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Consulta FOR XML comparada com consulta FOR XML aninhada
   Este tópico compara uma consulta FOR XML de nível único com uma consulta FOR XML aninhada. Um dos benefícios do uso de consultas FOR XML aninhadas é que é possível especificar uma combinação de XML centrado em atributo e em elemento para resultados da consulta. O exemplo demonstra isso.  

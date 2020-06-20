@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d98cff84b93a13daec7be86dbc24b5fe9556f76c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b876cd75778d1da9c9a46f65f39b915ebee0552
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061352"
 ---
 # <a name="removecertificate-method-sinstance-class"></a>Método RemoveCertificate (classe SInstance)
   Remove o certificado de segurança atual da instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -38,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SInstance](sinstance-class.md) que representa as configurações de servidor em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

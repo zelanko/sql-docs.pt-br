@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5736b6e4e88d103c29d0d027327a9f3f46d0cfdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 097ff09a47a3b730ebcdc1362c3697c4ae31a06d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056766"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>Método SetStringValue (classe ServerNetworkProtocolProperty)
   Define o valor da cadeia de caracteres da propriedade referenciada.  
@@ -40,7 +39,7 @@ StrValue
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [classe ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) que representa um atributo do protocolo de rede na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Parâmetros  

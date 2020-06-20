@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4c17d756297fc0916f9f9b3c7fa49b38c5d0f33
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3c290c659b7a023818051d3556b24fd011d8b372
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697616"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998748"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Ler uma coluna FILESTREAM para o arquivo usando IBCPSession (OLE DB)
   Este exemplo lê uma coluna filestream para um arquivo que usa a interface IBCPSession e grava um arquivo de formato.  

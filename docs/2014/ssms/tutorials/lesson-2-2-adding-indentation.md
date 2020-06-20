@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9dce05c1-c52f-455d-8b8d-6f303e242760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fe1685bf1f56b2b2e7a0feac31ba3a601b0e51b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63222943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041042"
 ---
 # <a name="adding-indentation"></a>Adicionando recuo
   O Editor de Consultas permite o recuo de grandes seções de código em uma única etapa, além de também possibilitar a alteração da quantidade de recuo.  

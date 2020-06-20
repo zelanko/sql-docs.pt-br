@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: eefa464ae8cb694001d40c5ad9090f7f4efbd8e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 833c83868230c2ac05514db666bd4cab629d9588
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175875"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023571"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Criar um ponto de controle do Utilitário do SQL Server (Utilitário do SQL Server)
   Uma empresa pode ter vários Utilitários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerenciar várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativos da camada de dados. Cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem apenas um UCP (ponto de controle do utilitário). Você deve criar um novo UCP para cada Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e cada aplicativo da camada de dados é membro somente de um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e é gerenciada por um único UCP.

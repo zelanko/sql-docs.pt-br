@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 39f76bc7-94e6-4dbc-bfa5-d56f4430bb26
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2ba357fc3910779573ffa36f3070b55c08ced8ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ffea6cf93eb1e9e5f137c4151e0f0d9e4d2ca4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045747"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Topologias de implantação para recursos de BI do SQL Server no SharePoint
   Este tópico descreve as topologias comuns para instalar recursos de Business Intelligence do SQL Server no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] em ambientes do SharePoint 2010 e do SharePoint 2013. Por exemplo, instalações de único servidor e de três níveis.  
@@ -53,7 +52,7 @@ ms.locfileid: "81388722"
 ##  <a name="sharepoint-2013-example-deployment-topologies"></a><a name="bkmk_example_deployments_2013"></a>Topologias de implantação de exemplo do SharePoint 2013  
  A opção de instalação **PowerPivot para SharePoint** do SQL Server não tem nenhuma dependência do SharePoint. Ela não usa o modelo de objeto ou as interfaces do SharePoint para dar suporte à integração. Portanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode ser instalado em qualquer computador que esteja executando o Windows Server 2008 R2 ou uma versão posterior. Ele pode ser, mas não precisa ser um servidor de aplicativos em um farm do SharePoint. Uma das etapas de configuração é apontar os Serviços do Excel para o servidor que executa o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para o balanceamento de carga e tolerância a falhas, é recomendável instalar e registrar vários servidores do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executados no modo do SharePoint.  
   
- O modo do SharePoint requer o SharePoint Server 2013 e utiliza a arquitetura do aplicativo de serviço do SharePoint. ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **  
+ O ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint** requer o SharePoint Server 2013 e utiliza a arquitetura do aplicativo de serviço do SharePoint.  
   
  As seções a seguir ilustram topologias comuns de implantação:  
   
@@ -68,11 +67,11 @@ ms.locfileid: "81388722"
 |**2**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Aplicativo de serviço. O nome padrão é **Aplicativo de Serviço PowerPivot Padrão**.|  
 |**Beta**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |**quatro**|Instale o suplemento de serviços de relatórios para SharePoint da mídia de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou do feature pack do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
-|**05**|Execute o próprio **PowerPivot. msi** para instalar provedores de dados, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a ferramenta de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuração, a galeria e a atualização de dados de agendamento.|  
+|**05**|Execute o **spPowerPivot.msi** para instalar provedores de dados, a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ferramenta de configuração, a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galeria e a atualização de dados de agendamento.|  
 |**152**|Servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em modo SharePoint. Defina as **Configurações de Modelo de Dados** do Aplicativo de Serviços do Excel para usar este servidor.|  
 |**7**|Conteúdo, configuração e bancos de dados de aplicativo de serviço do SharePoint.|  
   
- ![As configurações do SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") [enviam comentários e informações de contato por meio do Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![As configurações do SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") [enviam comentários e informações de contato por meio do Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) ( https://connect.microsoft.com/SQLServer/Feedback) .  
   
 ###  <a name="powerpivot-for-sharepoint-2013-single-server-deployment"></a><a name="bkmk_powerpivot_sharepoint2013_1server"></a>Implantação de servidor único PowerPivot para SharePoint 2013  
  Uma implantação de servidor único é útil para finalidades de teste, mas não é recomendável para implantações de produção.  
@@ -91,9 +90,9 @@ ms.locfileid: "81388722"
 ###  <a name="powerpivot-for-sharepoint-2013-two-server-deployment"></a><a name="bkmk_powerpivot_sharepoint2013_2server"></a>Implantação do PowerPivot para SharePoint Server 2013 2  
  Na implantação de dois servidores a seguir, o Mecanismo de Banco de Dados do SQL Server e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no modo do SharePoint são executados em um servidor separado do SharePoint. Para o SharePoint 2013, o pacote do instalador do [!INCLUDE[ssGeminiLongvnext](../../includes/ssgeminilongvnext-md.md)] (**spPowerPivot.msi**) é instalado no servidor do SharePoint.  
   
- [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)]estende o SharePoint Server 2013 para adicionar processamento de atualização de dados do servidor, provedores [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de dados, galeria e suporte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de gerenciamento para pastas de trabalho e pastas de trabalho do Excel com modelos de dados avançados.  
+ [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)]estende o SharePoint Server 2013 para adicionar processamento de atualização de dados do servidor, provedores de dados, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galeria e suporte de gerenciamento para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pastas de trabalho e pastas de trabalho do Excel com modelos de dados avançados.  
   
- O pacote do instalador está disponível como parte do feature pack do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . O Feature Pack pode ser baixado do centro [!INCLUDE[msCoName](../../includes/msconame-md.md)] de download no [microsoft® SQL Server® 2014 PowerPivot® para Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
+ O pacote do instalador está disponível como parte do feature pack do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . O Feature Pack pode ser baixado do [!INCLUDE[msCoName](../../includes/msconame-md.md)] centro de download no [microsoft® SQL Server® 2014 PowerPivot® para Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK " <https://go.microsoft.com/fwlink/?LinkID=296473> " \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473> ).  
   
  ![Implantação de servidor de modo 2 do SSAS PowerPivot](../../analysis-services/media/as-powerpivot-mode-2server-deployment.gif "Implantação de servidor de modo 2 do SSAS PowerPivot")  
   
@@ -133,7 +132,7 @@ ms.locfileid: "81388722"
 |**152**|Servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em modo SharePoint. Defina as **Configurações de Modelo de Dados** do Aplicativo de Serviços do Excel para usar este servidor.|  
   
 ###  <a name="powerpivot-for-sharepoint-2013-and-reporting-services-two-server-deployment"></a><a name="bkmk_powerpivot_ssrs_sharepoint2013_2server"></a>PowerPivot para SharePoint 2013 e Reporting Services a implantação de dois servidores  
- Na implantação de dois servidores a seguir, o Mecanismo de Banco de Dados do SQL Server e o Analysis Services que estão sendo executados no modo do SharePoint são executados em um servidor separado do SharePoint. O pacote do instalador do PowerPivot para SharePoint 2013 **(PowerPivot. msi)** deve ser executado no servidor do SharePoint.  
+ Na implantação de dois servidores a seguir, o Mecanismo de Banco de Dados do SQL Server e o Analysis Services que estão sendo executados no modo do SharePoint são executados em um servidor separado do SharePoint. O pacote do instalador do PowerPivot para SharePoint 2013 **(spPowerPivot.msi)** deve ser executado no servidor do SharePoint.  
   
  ![Implantação de servidor de modo 2 do SSAS e do SSRS SharePoint](../../../2014/sql-server/install/media/as-and-rs-2server-deployment.gif "Implantação de servidor de modo 2 do SSAS e do SSRS SharePoint")  
   

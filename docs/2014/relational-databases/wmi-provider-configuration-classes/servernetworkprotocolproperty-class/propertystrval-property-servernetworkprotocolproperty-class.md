@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 51174d44a8a2f8a536ff35525a27810185c13a4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a5edda8dfaff449fd85130565d6aaa85938b7b9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689798"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062656"
 ---
 # <a name="propertystrval-property-servernetworkprotocolproperty-class"></a>Propriedade PropertyStrVal (classe ServerNetworkProtocolProperty)
   Obtém o valor da cadeia de caracteres da propriedade referenciada.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [classe ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) que representa um atributo do protocolo de rede na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

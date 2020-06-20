@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beb3492409f24acb881f5461e554fd8a392dc361
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040479"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabalhar com dados no painel de resultados (Visual Database Tools)
   Depois que você executa ou exibe uma consulta, os resultados são mostrados no painel Resultados. Em seguida, você pode trabalhar com esses resultados. Por exemplo, você pode adicionar e excluir linhas, inserir ou alterar dados e navegar facilmente por grandes conjuntos de resultados.  
@@ -115,9 +114,9 @@ ms.locfileid: "63313767"
 ### <a name="what-can-not-be-represented-fully"></a>O que não pode ser totalmente representado  
  O que é retornado do banco de dados para o painel Resultados é em grande parte controlado pelo provedor da fonte de dados em uso. O painel Resultados não pode traduzir sempre os dados de todos os sistemas de gerenciamento de banco de dados. A seguir, alguns casos onde isso ocorre.  
   
--   Os tipos de dados binários, muitas vezes, não são úteis para pessoas que trabalham no painel Resultados, além de gastar muito tempo para serem baixados. Portanto, eles são representados por * \<dados binários>* ou *nulos*.  
+-   Os tipos de dados binários, muitas vezes, não são úteis para pessoas que trabalham no painel Resultados, além de gastar muito tempo para serem baixados. Por isso, são representados por *\<Binary data>* ou *Null*.  
   
--   A precisão e a escala nem sempre podem ser preservadas. Por exemplo, o painel Resultados dá suporte à precisão de 27. Se os dados forem de um tipo de dados com uma precisão maior, os dados poderão ser truncados ou poderão ser representados por * \<não conseguir ler os dados>*.  
+-   A precisão e a escala nem sempre podem ser preservadas. Por exemplo, o painel Resultados dá suporte à precisão de 27. Se os dados forem de um tipo de maior precisão, eles poderão ficar truncados ou poderão ser representados por *\<Unable to read data>* .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

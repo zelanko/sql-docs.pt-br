@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d276c4d879aeca6c019b00b9f57251db6b2bcb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023547"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
   Inscreva uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente para monitorar o desempenho e a configuração como uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O UCP (ponto de controle de utilitário) coleta informações de configuração e de desempenho de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada 15 minutos. Estas informações são armazenadas no UMDW (data warehouse de gerenciamento do utilitário) no UCP; o nome de arquivo UMDW é sysutility_mdw. Dados de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são comparados a políticas para ajudar a identificar gargalos no uso de recursos e oportunidades de consolidação.  
@@ -169,7 +168,7 @@ ms.locfileid: "72798076"
 >   
 >  Ocorreu uma exceção ao executar uma instrução ou um lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informações adicionais:  não foi possível obter informações sobre o grupo/usuário do Windows NT ‘\<NomeDeDomínio\NomeDeConta>', código de erro 0x5. (Microsoft SQL Server, Erro: 15404)  
+>  Informações adicionais: não foi possível obter informações sobre o grupo/usuário ' ' do Windows NT \<DomainName\AccountName> , código de erro 0x5. (Microsoft SQL Server, Erro: 15404)  
 >   
 >  Para obter mais informações sobre como solucionar essa falha, veja [Solucionar problemas do Utilitário do SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   

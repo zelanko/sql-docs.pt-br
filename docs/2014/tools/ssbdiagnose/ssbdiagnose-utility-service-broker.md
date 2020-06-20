@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8efc581eebd7d8fa7fa265abb54168af78b57ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211001"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057652"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitário ssbdiagnose (Service Broker)
   O utilitário **ssbdiagnose** relata problemas em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou na configuração de serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . É possível fazer verificações de configuração para dois serviços ou um único serviço. Os problemas são reportados na janela de prompt de comando como texto legível ou XML formatado que pode ser redirecionado para um arquivo ou outro programa.  
@@ -183,21 +182,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Um identificador exclusivo que identifica um ponto de extremidade de conversa em um aplicativo. Os identificadores de conversa são exclusivos para um ponto de extremidade de uma conversa; os pontos de extremidade iniciador e de destino têm identificadores de conversa separados.  
   
- Os identificadores de conversa são retornados aos *@dialog_handle* aplicativos pelo parâmetro da instrução **BEGIN DIALOG** e a `conversation_handle` coluna no conjunto de resultados de uma instrução **Receive** .  
+ Os identificadores de conversa são retornados aos aplicativos pelo *@dialog_handle* parâmetro da instrução **BEGIN DIALOG** e a `conversation_handle` coluna no conjunto de resultados de uma instrução **Receive** .  
   
- Os identificadores de conversa são `conversation_handle` relatados na coluna das exibições de catálogo **Sys. transmission_queue** e **Sys. conversation_endpoints** .  
+ Os identificadores de conversa são relatados na `conversation_handle` coluna das exibições de catálogo **sys. transmission_queue** e **Sys. conversation_endpoints** .  
   
  *conversation_group_id*  
  O identificador exclusivo que identifica um grupo de conversa.  
   
- As IDs do grupo de conversa são retornadas *@conversation_group_id* aos aplicativos pelo parâmetro da instrução **Get Conversation Group** e da `conversation_group_id` coluna no conjunto de resultados de uma instrução **Receive** .  
+ As IDs do grupo de conversa são retornadas aos aplicativos pelo *@conversation_group_id* parâmetro da instrução **Get Conversation Group** e da `conversation_group_id` coluna no conjunto de resultados de uma instrução **Receive** .  
   
- As IDs do grupo de conversa são `conversation_group_id` relatadas nas colunas das exibições de catálogo **Sys. conversation_groups** e **Sys. conversation_endpoints** .  
+ As IDs do grupo de conversa são relatadas nas `conversation_group_id` colunas das exibições de catálogo **sys. conversation_groups** e **Sys. conversation_endpoints** .  
   
  *conversation_id*  
  O identificador exclusivo que identifica uma conversa. As IDs de conversa são iguais para os pontos de extremidade iniciador e de destino de uma conversa.  
   
- As IDs de conversa são relatadas na `conversation_id` coluna da exibição de catálogo **Sys. conversation_endpoints** .  
+ As IDs de conversa são relatadas na `conversation_id` coluna da exibição de catálogo **sys. conversation_endpoints** .  
   
  **-TIMEOUT** *timeout_interval*  
  Especifica o número de segundos para a execução de um relatório **RUNTIME** . Se **-TIMEOUT** não for especificado, o relatório de runtime será executado indefinidamente. **-TIMEOUT** é usado somente em relatórios de **RUNTIME** , não relatórios de **CONFIGURATION** . Use ctrl + C para sair de **ssbdiagnose** if **-TIMEOUT** não foi especificado ou para encerrar um relatório de runtime antes de o intervalo **-** limite expirar. *timeout_interval* deve ser um número entre 1 e 2.147.483.647.  
@@ -243,7 +242,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  Especifica a instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contém os serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] a serem analisados.  
   
- Especifica *server_name* para conexão com a instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] naquele servidor. Especifique *server_name***\\***instance_name* para se conectar a uma instância nomeada do [!INCLUDE[ssDE](../../includes/ssde-md.md)] nesse servidor. Se **-S** não for especificado, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDSERVER. Se SQLCMDSERVER também não for definido, **ssbdiagnose** se conectará à instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no computador local.  
+ Especifica *server_name* para conexão com a instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] naquele servidor. Especifique *server_name ***\\*** instance_name* para se conectar a uma instância nomeada do [!INCLUDE[ssDE](../../includes/ssde-md.md)] nesse servidor. Se **-S** não for especificado, **ssbdiagnose** usará o valor da variável de ambiente SQLCMDSERVER. Se SQLCMDSERVER também não for definido, **ssbdiagnose** se conectará à instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)] no computador local.  
   
  **-d** *database_name*  
  Especifica o banco de dados que contém os serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)] a serem analisados. Se o banco de dados não existir, uma mensagem de erro será gerada. Se **-d** não for especificado, o padrão será o banco de dados especificado na propriedade default-database para o seu logon.  

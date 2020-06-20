@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b22251188f4b175c24610833aa1b74bdb0badb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055245"
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O SMO (Management Objects) são objetos criados para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gerenciamento programático do. Você pode usar os SMO para compilar aplicativos de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja um aplicativo extenso e abrangente para o gerenciamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver vezes em que um aplicativo SMO funcione melhor.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O SMO (Management Objects) são objetos criados para o gerenciamento programático do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Você pode usar os SMO para compilar aplicativos de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados. Embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja um aplicativo extenso e abrangente para o gerenciamento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pode haver vezes em que um aplicativo SMO funcione melhor.  
   
  Por exemplo, pode ser necessário simplificar os aplicativos de usuário que controlam as tarefas de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atender as necessidades dos novos usuários e reduzir custos de treinamento. Pode ser necessário criar bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizados ou criar um aplicativo para criar e monitorar a eficiência de índices. Um aplicativo de SMO também pode ser usado para incluir hardware ou software de terceiros de modo homogêneo no aplicativo de gerenciamento de banco de dados.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "63131800"
   
  A execução de captura permite capturar os lotes do [!INCLUDE[tsql](../../includes/tsql-md.md)] que seriam executados normalmente. Dessa forma, o programador de SMO pode adiar o script, armazená-lo para execução posterior ou fornecer uma visualização para o usuário final. Por exemplo, uma instrução `create database`, um `create table` e `create index` podem ser enviadas em um lote e ser executadas como três etapas sequenciais. Essa funcionalidade é controlada pelo usuário com o objeto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
   
- **Provedor WMI**  
+ **Provedor de WMI**  
   
  Os objetos do Provedor WMI são quebrados pelo SMO. Isso fornece ao programador de SMO um modelo de objeto simples que é muito similar a classes de SMO, sem a necessidade de compreender o modelo de programação representado pelo namespace e os detalhes do Provedor WMI do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Provedor WMI permite configurar serviços, aliases e bibliotecas de rede do servidor e do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

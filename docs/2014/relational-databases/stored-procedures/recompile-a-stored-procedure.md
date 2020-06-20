@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a9bc0e1d4baecb7f4c66b83b57081ed3131123d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062774"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompilar um procedimento armazenado
-  Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três maneiras de fazer isso: `WITH RECOMPILE` opção na definição do procedimento ou quando o procedimento é chamado, a `RECOMPILE` dica de consulta em instruções individuais ou usando o procedimento armazenado `sp_recompile` do sistema. Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
+  Este tópico descreve como recompilar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Há três maneiras de fazer isso: `WITH RECOMPILE` opção na definição do procedimento ou quando o procedimento é chamado, a `RECOMPILE` dica de consulta em instruções individuais ou usando o `sp_recompile` procedimento armazenado do sistema. Este tópico descreve como usar a opção WITH RECOMPILE ao criar uma definição de procedimento e executar um procedimento existente. Também descreve como usar o procedimento armazenado do sistema sp_recompile para recompilar um procedimento existente.  
   
  **Neste tópico**  
   

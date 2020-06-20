@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d94f79ec-9f8f-4c06-b62b-3ed22a0f8971
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41f2efdf74dc528731f686e7aef4e35264e94803
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040947"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>Outros modos de exibir a janela de código
   A janela de código pode ser configurada para exibir múltiplas janelas de código de vários modos.  

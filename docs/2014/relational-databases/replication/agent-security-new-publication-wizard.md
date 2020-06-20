@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 555aa4e49887000354e5d31ff5d039a5f0ac75eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 388554360003fe31bc1d7d93063832b6d265e359
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63259154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055712"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Segurança do Agente (Assistente para Nova Publicação)
   A página **Segurança do Agente** permite especificar as contas nas quais os seguintes agentes executam e fazem conexões com computadores em uma topologia de replicação:  
@@ -45,7 +44,7 @@ ms.locfileid: "63259154"
 >  Há um Agente de Leitor de Log para cada banco de dados publicado que usa a replicação transacional. Se uma publicação transacional já existir no banco de dados, as configurações de segurança serão somente leitura. Você pode alterar as configurações na caixa de diálogo **Propriedades de Publicação** , mas as alterações afetam todas as publicações transacionais no banco de dados.  
   
  **Queue Reader Agent**  
- Exibido para todas as publicações transacionais que permitem assinaturas atualizáveis. Clique em **Configurações de Segurança** para especificar configurações de segurança na caixa de diálogo **Segurança do Agente de Leitor de Fila** . O trabalho Agente de Leitor de Fila é criado quando o assistente é concluído; ele não depende da criação de nenhuma assinatura de atualização enfileirada. Se você não planeja criar assinaturas de atualização enfileirada, pode desabilitar o trabalho. Clique com o botão direito do mouse no trabalho (nomeado no formato: *[\<Publisher>].\<integer>* .) na pasta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Trabalhos**do Agent** e clique em **Desabilitar**.  
+ Exibido para todas as publicações transacionais que permitem assinaturas atualizáveis. Clique em **Configurações de Segurança** para especificar configurações de segurança na caixa de diálogo **Segurança do Agente de Leitor de Fila** . O trabalho Agente de Leitor de Fila é criado quando o assistente é concluído; ele não depende da criação de nenhuma assinatura de atualização enfileirada. Se você não planeja criar assinaturas de atualização enfileirada, pode desabilitar o trabalho. Clique com o botão direito do mouse no trabalho (chamado no formato: *[ \<Publisher> ] \<integer> .*.) na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pasta **trabalhos** do agente e clique em **desabilitar**.  
   
  Clique em **Ajuda** na caixa de diálogo **Segurança do Agente de Leitor de Fila** para obter mais informações sobre as permissões requeridas para contas usadas pelo Agente de Leitor de Fila.  
   

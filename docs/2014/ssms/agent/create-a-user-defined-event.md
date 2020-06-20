@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5625e65b1da45e05002b540774f441f2deabd3f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2323dc4da3d1a8a67dad41ea189877ade25eff0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63260945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041331"
 ---
 # <a name="create-a-user-defined-event"></a>Criar um evento definido pelo usuário
   Você pode criar eventos definidos pelo usuário caso deseje monitorar eventos diferentes daqueles predefinidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também pode atribuir um nível de severidade a cada evento definido pelo usuário.  

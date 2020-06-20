@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9624749eff8b455c7071d395ec91c96aeae9d32a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cd3efb1740b4919dedc3c5b8703ddd6ad92aeb5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998533"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Suporte a conjunto de linhas de esquema (OLE DB)
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo também dá suporte ao retorno de informações de esquema de um servidor vinculado ao processar [!INCLUDE[tsql](../../../includes/tsql-md.md)] consultas distribuídas.  

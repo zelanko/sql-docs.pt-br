@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 952730f09deeede360dff5e2bd83f8cdc8a20a67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024057"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Tarefa de Backup de Banco de Dados (Plano de Manutenção)
   Use a caixa de diálogo **Tarefa Fazer Backup de Banco de Dados** para adicionar uma tarefa de backup ao plano de manutenção. O backup do banco de dados é importante no caso de falha do sistema ou hardware (ou erros do usuário) que levem o banco de dados a ser danificado de alguma forma, exigindo assim que uma cópia de backup seja restaurada. Essa tarefa lhe permite executar arquivos completos, diferenciais, e grupos de arquivos e backups de log de transações.  

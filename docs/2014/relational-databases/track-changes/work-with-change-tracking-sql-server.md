@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdb8205a789894caf8c8e2d3c3f491751757bab6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270220"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047102"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabalhar com o controle de alterações (SQL Server)
   Os aplicativos que usam o controle de alterações devem ser capazes de obter as alterações controladas, aplicá-las a outro repositório de dados e atualizar o banco de dados de origem. Este tópico descreve como executar essas tarefas e também a função que o controle de alterações desempenha quando ocorre um failover e um banco de dados precisa ser restaurado de um backup.  

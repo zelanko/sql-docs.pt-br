@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72e81e6d34a386c04d18f050fb8010a3bcf6b7a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832209"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919255"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor da tarefa Criação de Perfil de Dados (página Geral)
   Use a página **Geral** do **Editor da Tarefa Criação de Perfil de Dados** para configurar as seguintes opções:  
@@ -58,9 +57,9 @@ ms.locfileid: "62832209"
  **Destino**  
  Especifique qual gerenciador de conexões do Arquivo ou variável de pacote contém a saída do perfil de dados:  
   
--   Se a opção **DestinationType** for definida como **FileConnection**, a opção **Destino** exibirá os gerenciadores de conexões do Arquivo disponíveis. Selecione um desses gerenciadores de conexões ou selecione \<Nova conexão de arquivo> para criar um novo gerenciador de conexões de arquivo.  
+-   Se a opção **DestinationType** for definida como **FileConnection**, a opção **Destino** exibirá os gerenciadores de conexões do Arquivo disponíveis. Selecione um desses gerenciadores de conexões ou selecione \<New File connection> para criar um novo Gerenciador de conexões de arquivos.  
   
--   Se a opção **DestinationType** for definida como **Variável**, a opção **Destino** exibirá as variáveis de pacote disponíveis na lista **Destino** . Selecione uma dessas variáveis ou selecione \<Nova Variável> para criar uma nova variável.  
+-   Se a opção **DestinationType** for definida como **Variável**, a opção **Destino** exibirá as variáveis de pacote disponíveis na lista **Destino** . Selecione uma dessas variáveis ou selecione \<New Variable> para criar uma nova variável.  
   
  **OverwriteDestination**  
  Especifique se deseja substituir o arquivo de saída, se este já existir. O valor padrão é **Falso**. O valor desta propriedade é usado somente quando a opção DestinationType for definida como FileConnection. Quando a opção DestinationType é definida como Variável, a tarefa sempre substitui o valor anterior da variável.  
@@ -76,7 +75,7 @@ ms.locfileid: "62832209"
  Abra o Visualizador de Perfil de Dados. O visualizador de Perfil de Dados autônomo exibe a saída de perfil de dados da tarefa Criação de Perfil de Dados. A saída do perfil de dados pode ser exibida após a execução da tarefa Criação de Perfil de Dados no pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e a computação de perfis de dados.  
   
 > [!NOTE]  
->  Você também pode abrir o Visualizador de Perfil de Dados executando o DataProfileViewer.exe na pasta, *\<unidade>* :\Arquivos de Programas (x86) | Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn.  
+>  Você também pode abrir o Visualizador de Perfil de Dados executando o DataProfileViewer.exe na pasta, *\<drive>* : \Program Files (x86) | Arquivos de Programas\microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](single-table-quick-profile-form-data-profiling-task.md)   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6da74e3a-4388-4907-81cb-987389bae467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea6c92a75d09164fdb8cd8dd6398ca20fd722027
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 43b37ae16638e461e37edaead83cd9ceedc1c86d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022662"
 ---
 # <a name="sqlconnect"></a>SQLConnect
   Quando uma conexão é aberta, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define SQL_COPT_SS_MUTUALLY_AUTHENTICATED e SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD como o método de autenticação usado para abrir a conexão. Para obter mais informações sobre SPNs, consulte [nomes de entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;&#41;ODBC ](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  

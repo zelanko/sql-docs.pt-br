@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 388b13ad4c381c89eeaeae2f61778161830ea895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150454"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040464"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>Propriedades TCP-IP (guia protocolos)
   Use a caixa de diálogo **Propriedades do TCP/IP** para configurar as opções do protocolo TCP/IP. Clique em **TCP/IP** no painel esquerdo, para mostrar configurações individuais de endereço IP no painel de detalhes.  

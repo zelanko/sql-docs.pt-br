@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ea0abd8387b638ce7d51f0fb2f40424adce10187
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa34f8acf54619b3c7154741b4b07640b1683689
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267449"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057670"
 ---
 # <a name="sql-server-profiler-f1-help"></a>Ajuda de F1 do SQL Server Profiler
   O Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma ferramenta que captura eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um servidor. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema.  

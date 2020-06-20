@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 834c5950a8f8b0ddf8854d06c6fb1073a264fc22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779151"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932877"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória
   Em vários cenários, você deve especificar o nível de isolamento da transação. O isolamento da transação para tabelas com otimização de memória difere das tabelas baseadas em disco.  
@@ -56,7 +55,7 @@ ms.locfileid: "62779151"
   
  A garantia fornecida pelo nível de isolamento SNAPSHOT (o nível inferior de isolamento com suporte para tabelas com otimização de memória) inclui as garantias de READ COMMITTED. Cada instrução da transação lê a mesma versão consistente do banco de dados. Não somente todas as linhas são lidas pela transação confirmada no banco de dados, como também todas as operações de leitura veem o conjunto de alterações feito pelo mesmo conjunto de transações.  
   
- **Diretriz**: se apenas a garantia de isolamento de leitura confirmada for necessária, use o isolamento de instantâneo com procedimentos armazenados compilados nativamente e para acessar [!INCLUDE[tsql](../includes/tsql-md.md)]tabelas com otimização de memória por meio de interpretado.  
+ **Diretriz**: se apenas a garantia de isolamento de leitura confirmada for necessária, use o isolamento de instantâneo com procedimentos armazenados compilados nativamente e para acessar tabelas com otimização de memória por meio de interpretado [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  Para transações de confirmação automática, o nível de isolamento READ COMMITTED é mapeado implicitamente para SNAPSHOT nas tabelas com otimização de memória. Portanto, se a configuração de sessão TRANSACTION ISOLATION LEVEL for definida como READ COMMITTED, não será necessário especificar o nível de isolamento através de uma dica de tabela ao acessar tabelas com otimização de memória.  
   
@@ -123,7 +122,7 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>Dicas de bloqueio de tabela  
- Dicas de bloqueio ([dicas de tabela &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table)), como HOLDLOCK e xlock, podem ser usadas com tabelas baseadas em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disco para ter mais bloqueios do que o necessário para o nível de isolamento especificado.  
+ Dicas de bloqueio ([dicas de tabela &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table)), como HOLDLOCK e xlock, podem ser usadas com tabelas baseadas em disco para ter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mais bloqueios do que o necessário para o nível de isolamento especificado.  
   
  As tabelas com otimização de memória não usam bloqueios. Os níveis de isolamento superiores, como REPEATABLE READ e SERIALIZABLE, podem ser usados para declarar as garantias desejadas.  
   

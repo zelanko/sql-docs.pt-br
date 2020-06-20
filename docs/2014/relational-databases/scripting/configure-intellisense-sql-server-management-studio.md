@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e5d123cad9cbc67930786a54fd257ab82e29af39
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 305796d2c3293f64874e77d14592fd7b67554a2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056846"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Configurar o IntelliSense (SQL Server Management Studio)
   A maioria da opções [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense é ativada por padrão. Você pode desativar a uma opção IntelliSense e no lugar dela invocar por meio de um comando de menu ou combinação de teclas.  

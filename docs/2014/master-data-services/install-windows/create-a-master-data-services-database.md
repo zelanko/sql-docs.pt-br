@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1707de1934ff6265268e40a3ab2a805629134e3d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d888d3cccabca8618df361e458c7bc706536ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482940"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971327"
 ---
 # <a name="create-a-master-data-services-database"></a>Criar um banco de dados do Master Data Services
   Crie um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] quando precisar de um novo banco de dados para oferecer suporte ao aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] e ao serviço Web do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
@@ -26,7 +25,7 @@ ms.locfileid: "65482940"
   
 ### <a name="to-create-a-master-data-services-database"></a>Para criar um banco de dados do Master Data Services  
   
-1.  Abra o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  No painel esquerdo, clique em **Configuração do Banco de Dados**.  
   
