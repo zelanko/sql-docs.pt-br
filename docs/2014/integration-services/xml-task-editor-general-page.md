@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa0f92cc3275810b73d1dbe661a1f8473c7234df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26055dde636d299a2a58fdfe0bdbd3fdfbdab012
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054274"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972346"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   Use o **nó Geral** da caixa de diálogo **Editor da Tarefa XML** para especificar o tipo de operação e configurar a operação.  
@@ -32,10 +31,10 @@ ms.locfileid: "66054274"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Validar**|Valida o documento XML com base em um esquema de definição de tipo de documento (DTD) ou definição de esquema XML (XSD). Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **Validar**.|  
+|**Verifica**|Valida o documento XML com base em um esquema de definição de tipo de documento (DTD) ou definição de esquema XML (XSD). Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **Validar**.|  
 |**XSLT**|Executa transformações de XSL em documentos XML. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **XSLT**.|  
 |**XPATH**|Executa consultas e avaliações de XPath. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **XPATH**.|  
-|**Mescle**|Mescla dois documentos XML. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **Mesclar**.|  
+|**Mesclar**|Mescla dois documentos XML. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **Mesclar**.|  
 |**Diff**|Compara dois documentos XML. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **Diff**.|  
 |**Patch**|Aplica a saída da operação Diff para criar um documento novo. Selecionar esta opção faz com que sejam exibidas as opções dinâmicas na seção **Patch**.|  
   
@@ -48,14 +47,14 @@ ms.locfileid: "66054274"
 |**Conexão do Arquivo**|Selecione um arquivo que contém o documento XML.|  
 |**Variável**|Defina a origem como uma variável que contém o documento XML.|  
   
- **Fonte**  
+ **Origem**  
  Se a **Origem** for definida como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(...)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
- Se **Origem** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se a **fonte** estiver definida como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **Origem** for definida como **Variável**, selecione uma variável existente ou clique em **\<Nova variável...>** para criar uma nova variável.  
+ Se a **fonte** estiver definida como **variável**, selecione uma variável existente ou clique **\<New variable...>** para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
@@ -71,7 +70,7 @@ ms.locfileid: "66054274"
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Selecione um Gerenciador de conexões de arquivo existente ou \<clique em **nova conexão...**> para criar um novo Gerenciador de conexões.  
+ Selecione um Gerenciador de conexões de arquivo existente ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -112,11 +111,11 @@ ms.locfileid: "66054274"
  **SecondOperand**  
  Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem**.  
   
- Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **SecondOperandType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **XPathStringSourceType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **XPathStringSourceType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
@@ -130,11 +129,11 @@ ms.locfileid: "66054274"
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Se **DestinationType** está definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **destinationType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **DestinationType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **destinationType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
@@ -158,11 +157,11 @@ ms.locfileid: "66054274"
  **SecondOperand**  
  Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem**.  
   
- Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **SecondOperandType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **XPathStringSourceType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **XPathStringSourceType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
@@ -176,11 +175,11 @@ ms.locfileid: "66054274"
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Se **DestinationType** está definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **destinationType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **DestinationType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **destinationType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
@@ -204,11 +203,11 @@ ms.locfileid: "66054274"
  **SecondOperand**  
  Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML utilizando a caixa de diálogo **Editor de Origem**.  
   
- Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **SecondOperandType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **XPathStringSourceType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **XPathStringSourceType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
@@ -220,9 +219,9 @@ ms.locfileid: "66054274"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Avaliação**|Retorna os resultados de uma função XPath.|  
+|**Período**|Retorna os resultados de uma função XPath.|  
 |**Lista de nós**|Retorna os nós selecionados como um fragmento XML.|  
-|**Valores**|Retorna o valor do texto interno de todos os nós selecionados, concatenados em uma cadeia de caracteres.|  
+|**Os**|Retorna o valor do texto interno de todos os nós selecionados, concatenados em uma cadeia de caracteres.|  
   
 ### <a name="operationtype--merge"></a>OperationType = Mesclar  
  Especifique as opções para a operação Mesclar.  
@@ -239,11 +238,11 @@ ms.locfileid: "66054274"
  **XPathStringSource**  
  Se **XPathStringSourceType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
- Se **XPathStringSourceType** for definido com **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **XPathStringSourceType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **XPathStringSourceType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **XPathStringSourceType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
@@ -256,11 +255,11 @@ ms.locfileid: "66054274"
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Se **DestinationType** está definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **destinationType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **DestinationType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **destinationType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
@@ -284,11 +283,11 @@ ms.locfileid: "66054274"
  **SecondOperand**  
  Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
- Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **SecondOperandType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **SecondOperandType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **SecondOperandType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
@@ -301,7 +300,7 @@ ms.locfileid: "66054274"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Automático**|Deixe a tarefa XML determinar se o algoritmo rápido ou preciso deve ser usado.|  
-|**Rápido**|Use um algoritmo Diff rápido, porém menos preciso.|  
+|**Rápida**|Use um algoritmo Diff rápido, porém menos preciso.|  
 |**Preciso**|Use um algoritmo Diff preciso.|  
   
  **Opções de Diff**  
@@ -331,11 +330,11 @@ ms.locfileid: "66054274"
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Se **DestinationType** está definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **destinationType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **DestinationType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **destinationType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
@@ -359,11 +358,11 @@ ms.locfileid: "66054274"
  **SecondOperand**  
  Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
- Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **SecondOperandType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **SecondOperandType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **SecondOperandType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
@@ -377,11 +376,11 @@ ms.locfileid: "66054274"
  Especifique se o arquivo ou a variável de destino deve ser substituída.  
   
  **Destino**  
- Se **DestinationType** está definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **destinationType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **DestinationType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **destinationType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md).  
   
@@ -405,11 +404,11 @@ ms.locfileid: "66054274"
  **SecondOperand**  
  Se **SecondOperandType** for definido como **Entrada direta**, forneça o código XML ou clique no botão de reticências **(…)** e forneça o XML usando a caixa de diálogo **Editor de Origem de Documento**.  
   
- Se **SecondOperandType** for definido como **Conexão do arquivo**, selecione um gerenciador de conexões de arquivos ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
+ Se **SecondOperandType** estiver definido como **conexão de arquivo**, selecione um Gerenciador de conexões de arquivo ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Se a **SecondOperandType** for definida como **Variável**, selecione uma variável existente ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Se **SecondOperandType** for definido como **variável**, selecione uma variável existente ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados**: [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   

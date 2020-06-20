@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965692"
 ---
 # <a name="implementation-of-child-packages"></a>Implementação de pacotes filho
   Quando você implementa balanceamento de carga usando o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], os pacotes filho são instalados em outros servidores para aproveitar a CPU disponível ou o tempo do servidor. Para criar e executar os pacotes filho são necessárias as seguintes etapas:  
@@ -51,7 +50,7 @@ ms.locfileid: "66058186"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Depurar os trabalhos do SQL Server Agent e os pacotes filho  
  Você pode testar os trabalhos do SQL Server Agent e seus pacotes filho usando um dos seguintes métodos:  
   
--   Executando cada pacote filho no Designer SSIS, clicando em **depurar** / **Iniciar sem depuração**.  
+-   Executando cada pacote filho no Designer SSIS, clicando em **depurar**  /  **Iniciar sem depuração**.  
   
 -   Executar o trabalho individual do SQL Server Agent no computador remoto usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]para garantir que o pacote seja executado.  
   

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88de17e8c487d9a965f2e236edac064dc2fe4c7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996515"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Criar, modificar e remover índices espaciais
-  Um índice espacial pode executar determinadas operações com mais eficiência em uma coluna do `geometry` tipo `geography` de dados ou (uma *coluna espacial*). Mais de um índice espacial pode ser especificado em uma coluna espacial. Por exemplo, isto é útil para indexar diferentes parâmetros de mosaico em uma única coluna.  
+  Um índice espacial pode executar determinadas operações com mais eficiência em uma coluna do `geometry` `geography` tipo de dados ou (uma *coluna espacial*). Mais de um índice espacial pode ser especificado em uma coluna espacial. Por exemplo, isto é útil para indexar diferentes parâmetros de mosaico em uma única coluna.  
   
  Há várias restrições na criação de índices espaciais. Para obter mais informações, consulte [Restrições em índices espaciais](#restrictions) neste tópico.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66014268"
   
 7.  Para especificar a coluna espacial que você deseja indexar, clique em **Adicionar**.  
   
-8.  Na caixa de diálogo **selecionar colunas do nome da** * \<tabela>* , selecione uma coluna do `geometry` tipo `geography` ou marcando a caixa de seleção correspondente. Todas as outras colunas espaciais se tornam não editáveis. Para selecionar uma coluna espacial diferente, primeiro desmarque a coluna selecionada no momento. Quando terminar, clique em **OK**.  
+8.  Na caixa de diálogo **selecionar colunas de** *\<table name>* , selecione uma coluna do tipo `geometry` ou `geography` marcando a caixa de seleção correspondente. Todas as outras colunas espaciais se tornam não editáveis. Para selecionar uma coluna espacial diferente, primeiro desmarque a coluna selecionada no momento. Quando terminar, clique em **OK**.  
   
 9. Verifique a seleção da coluna na grade **Colunas de chave de índice** .  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66014268"
   
 11. Na página **Espacial** , especifique os valores que você deseja usar para as propriedades espaciais do índice.  
   
-     Ao criar um índice em uma `geometry` coluna de tipo, você deve especificar as coordenadas ***`X-min`*(,*`Y-min`*)** e ***`X-max`*(,*`Y-max`*)** da caixa delimitadora. Para um índice em uma `geography` coluna de tipo, os campos de caixa delimitadora se tornam somente leitura depois que você especifica o esquema de mosaico de **grade geográfica** , porque o mosaico de grade de geografia não usa uma caixa delimitadora.  
+     Ao criar um índice em uma `geometry` coluna de tipo, você deve especificar as coordenadas **( *`X-min`* , *`Y-min`* )** e **( *`X-max`* , *`Y-max`* )** da caixa delimitadora. Para um índice em uma `geography` coluna de tipo, os campos de caixa delimitadora se tornam somente leitura depois que você especifica o esquema de mosaico de **grade geográfica** , porque o mosaico de grade de geografia não usa uma caixa delimitadora.  
   
      Opcionalmente, é possível especificar valores não padrão para o campo **Células por Objeto** e para a densidade da grade em qualquer nível do esquema de mosaico. O número padrão de células por objeto é 16 para o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou 8 para o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou versão superior, e a densidade padrão da grade é **Média** para o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

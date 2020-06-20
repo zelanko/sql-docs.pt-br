@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950984"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor da Tarefa Fila de Mensagens (página Receber)
   Use a página **Receber** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa Fila de Mensagens para receber mensagens do MSMQ (Serviço de Enfileiramento de Mensagens) [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -52,7 +51,7 @@ ms.locfileid: "66057669"
  **SaveFileAs**  
  Digite o caminho do arquivo a ser usado ou clique no botão de reticências **(...)** e, em seguida, localize o arquivo.  
   
- **Gravado**  
+ **Overwrite**  
  Indique se os dados em um arquivo existente devem ser substituídos quando o conteúdo de uma mensagem de arquivo de dados é salvo. O padrão é `False`.  
   
  **Filter**  
@@ -85,7 +84,7 @@ ms.locfileid: "66057669"
 |**Do pacote**|A mensagem recebe somente mensagens do pacote especificado. Selecionar este valor faz com que seja exibida a opção dinâmica **Identifier**.|  
   
  **Variável**  
- Digite o nome da variável ou clique em \<**Nova variável...**> e configure uma variável nova.  
+ Digite o nome da variável ou clique em \<**New variable...**> e, em seguida, configure uma nova variável.  
   
  **Tópicos relacionados:** [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
@@ -107,7 +106,7 @@ ms.locfileid: "66057669"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Nenhum**|As mensagens não são comparadas.|  
+|**Nenhuma**|As mensagens não são comparadas.|  
 |**Correspondência exata**|As mensagens devem corresponder exatamente à cadeia de caracteres na opção **CompareString** .|  
 |**Ignora maiúsculas e minúsculas**|A mensagem deve corresponder à cadeia de caracteres da opção **CompareString** , mas a comparação não diferencia maiúsculas e minúsculas.|  
 |**Contendo**|A mensagem deve conter a cadeia de caracteres na opção **CompareString** .|  
@@ -121,7 +120,7 @@ ms.locfileid: "66057669"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Nenhum**|As mensagens não são comparadas.|  
+|**Nenhuma**|As mensagens não são comparadas.|  
 |**Correspondência exata**|A mensagem deve corresponder exatamente à cadeia de caracteres na opção **CompareString** .|  
 |**Ignora maiúsculas e minúsculas**|A mensagem deve corresponder à cadeia de caracteres da opção **CompareString** , mas a comparação não diferencia maiúsculas e minúsculas.|  
 |**Contendo**|A mensagem deve conter a cadeia de caracteres na opção **CompareString** .|  
@@ -130,7 +129,7 @@ ms.locfileid: "66057669"
  A menos que a opção **Comparar** esteja definida como **Nenhum**, forneça a cadeia de caracteres com a qual a mensagem é comparada.  
   
  **Variável**  
- Digite o nome da variável para manter a mensagem recebida ou clique em \<**Nova variável...**> e configure uma variável nova.  
+ Digite o nome da variável para armazenar a mensagem recebida ou clique em \<**New variable...**> e, em seguida, configure uma nova variável.  
   
  **Tópicos relacionados:** [Adicionar variável](../../2014/integration-services/add-variable.md)  
   

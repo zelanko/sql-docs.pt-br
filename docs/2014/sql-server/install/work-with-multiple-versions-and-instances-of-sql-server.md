@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec56d95cdd0550fb15d6a28eca683a8136ffdd6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76c0ec3da8661db4b7d132d27f5759d1d3571774
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041698"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Trabalhar com várias versões e instâncias do SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no mesmo computador. Você também pode atualizar versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador em que versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já estejam instaladas. Para ver os cenários de atualização com suporte, confira [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
@@ -70,7 +69,7 @@ ms.locfileid: "63205320"
   
  Exemplos: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
- Para obter mais informações [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre a instalação compacta, consulte [instalar SQL Server 2014 no assistente de instalação &#40;&#41;de ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)instalação. Para obter mais informações sobre como desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, veja [Desinstalar uma instância existente do SQL Server &#40;Instalação&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
+ Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a instalação compacta, consulte [instalar SQL Server 2014 no assistente de instalação &#40;&#41;de ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)instalação. Para obter mais informações sobre como desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, veja [Desinstalar uma instância existente do SQL Server &#40;Instalação&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   
 ## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>Usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lado a lado com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Você pode instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador que já está executando instâncias de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se já existir uma instância padrão no computador, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser instalado como uma instância nomeada.  

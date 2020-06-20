@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3eee1449ec42285d5a95ac33d91f439dcd131ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002492"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
   Bem-vindo ao tutorial de Introdução com SQL Server Backup e restauração com o serviço de armazenamento de BLOBs do Azure. Este tutorial ajudará você a compreender como gravar backups e executar restaurações no serviço de Armazenamento de Blobs do Azure.  
@@ -23,7 +22,7 @@ ms.locfileid: "70176119"
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  Este tutorial mostra como criar uma conta de armazenamento do Windows, um contêiner de blob, criando credenciais para acessar a conta de armazenamento, gravando um backup no serviço de blob e executando uma restauração simples. Este tutorial é dividido em quatro lições:  
   
- [Lição 1: Criar objetos de Armazenamento do Microsoft Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [Lição 1: criar objetos de armazenamento do Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  Nesta lição, você criará uma conta de armazenamento do Azure e um contêiner de blobs.  
   
  [Lição 2: Criar uma credencial do SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
@@ -49,8 +48,8 @@ ms.locfileid: "70176119"
 ### <a name="additional-reading"></a>Leitura adicional  
  Estas são algumas leituras que podem ajudar a compreender os conceitos e as práticas recomendadas ao usar o serviço de armazenamento de Blobs do Azure para backups do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-1.  [Backup e restauração do SQL Server no serviço de Armazenamento de Blobs](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+1.  [Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-2.  [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+2.  [Solução de problemas e melhores práticas de backup do SQL Server para URL](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

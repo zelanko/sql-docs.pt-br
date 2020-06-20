@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a273f23d0b5f9bf21f20bc17427c7a2dc3f82ae8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871263"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965810"
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
   Os bancos de dados do sistema devem ser recriados para corrigir problemas de corrupção nos bancos de dados do sistema [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md) ou [resource](resource-database.md), ou para modificar a ordenação em nível de servidor padrão. Este tópico fornece instruções passo a passo para recriar bancos de dados do sistema no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -105,8 +104,8 @@ ms.locfileid: "62871263"
     |/ACTION=REBUILDDATABASE|Especifica que Instalação recria os bancos de dados do sistema.|  
     |/INSTANCENAME =*InstanceName*|É o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para a instância padrão, digite MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS =*contas*|Especifica os grupos ou contas individuais do Windows a serem adicionados à função de servidor fixa `sysadmin`. Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser**. Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, insira `NT AUTHORITY\SYSTEM`.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` conta. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> Observação de ** \* segurança \* \* ** A `sa` conta é uma conta bem conhecida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e geralmente é direcionada por usuários mal-intencionados. É muito importante que você use uma senha forte para o logon `sa`.<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Especifica uma nova ordenação no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, a ordenação atual do servidor é usada.<br /><br /> ** \* Importante \* \* ** A alteração do agrupamento no nível de servidor não altera o agrupamento de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão a nova ordenação.<br /><br /> Para obter mais informações, veja [Definir ou alterar a ordenação do servidor](../collations/set-or-change-the-server-collation.md).|  
+    |[ /SAPWD=*StrongPassword* ]|Especifica a senha da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` conta. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> Observação de segurança a conta é ** \* uma conta bem conhecida \* e geralmente é direcionada por usuários mal-intencionados. \* \* ** `sa` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] É muito importante que você use uma senha forte para o logon `sa`.<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
+    |[ /SQLCOLLATION=*CollationName* ]|Especifica uma nova ordenação no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, a ordenação atual do servidor é usada.<br /><br /> Importante a alteração do agrupamento no nível do servidor não altera o agrupamento de bancos de dados de usuário existentes. ** \* \* \* \* ** Por padrão, todos os bancos de dados do usuário criados recentemente usarão a nova ordenação.<br /><br /> Para obter mais informações, veja [Definir ou alterar a ordenação do servidor](../collations/set-or-change-the-server-collation.md).|  
   
 3.  Quando a Instalação tiver concluído a recriação dos bancos de dados do sistema, ela retornará ao prompt de comando sem mensagens. Examine o arquivo de log Summary.txt para verificar se o processo foi concluído com êxito. Esse arquivo está localizado em C:\Arquivos de Programas\Microsoft SQL Server\120\Setup Bootstrap\Logs.  
   
@@ -147,10 +146,10 @@ ms.locfileid: "62871263"
 6.  Na página **Pronto para Reparar** , clique em **Reparar**. A página Concluído indica que a operação foi concluída.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a>Criar um novo banco de dados msdb  
- Se o `msdb` banco de dados estiver danificado e você não tiver um backup do `msdb` banco de dados, você poderá criar `msdb` um novo usando o script **instmsdb** .  
+ Se o `msdb` banco de dados estiver danificado e você não tiver um backup do `msdb` banco de dados, você poderá criar um novo `msdb` usando o script **instmsdb** .  
   
 > [!WARNING]  
->  A recriação `msdb` do banco de dados usando o script **instmsdb** eliminará todas as `msdb` informações armazenadas em como trabalhos, alertas, operadores, planos de manutenção, histórico de backup, configurações de gerenciamento baseado em políticas, Database Mail, data warehouse de desempenho, etc.  
+>  A recriação do `msdb` banco de dados usando o script **instmsdb** eliminará todas as informações armazenadas em como `msdb` trabalhos, alertas, operadores, planos de manutenção, histórico de backup, configurações de gerenciamento baseado em políticas, Database Mail, data warehouse de desempenho, etc.  
   
 1.  Pare todos os serviços que estejam se conectando ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], inclusive o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], e todos os aplicativos que estejam usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um repositório de dados.  
   
@@ -158,15 +157,15 @@ ms.locfileid: "62871263"
   
      Para obter mais informações, consulte [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, SQL Server Agent ou SQL Server Browser serviço](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Em outra janela de linha de comando, `msdb` desanexe o banco de dados executando o comando a seguir, substituindo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] * \<ServerName>* pela instância de:`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  Em outra janela de linha de comando, desanexe o `msdb` banco de dados executando o seguinte comando, substituindo *\<servername>* pela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  Usando o Windows Explorer, renomeie os arquivos de banco de `msdb` dados. Por padrão, eles estão na subpasta DATA da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4.  Usando o Windows Explorer, renomeie os `msdb` arquivos de banco de dados. Por padrão, eles estão na subpasta DATA da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 5.  Usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, pare e reinicie o serviço [!INCLUDE[ssDE](../../includes/ssde-md.md)] normalmente.  
   
 6.  Em uma janela de linha de comando, conecte-se a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e execute o comando: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     Substitua * \<ServerName>* pela instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use o caminho do sistema de arquivo da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Substituir *\<servername>* pela instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Use o caminho do sistema de arquivo da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 7.  Usando o Bloco de Notas do Windows, abra o arquivo **instmsdb.out** e verifique se há erros na saída.  
   

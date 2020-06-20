@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c922fb612faca72e9f9381990dc777301185cb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0527336a5d6774b1c7114d523d0847b3d10d6a3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176576"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965116"
 ---
 # <a name="multiple-transactions"></a>Transações múltiplas
   É possível que um pacote inclua transações não relacionadas em um pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . A qualquer hora que um contêiner no meio de uma hierarquia de contêineres aninhada não oferecer suporte a transações, os contêineres acima ou abaixo da mesma na hierarquia começa a separar as transações, se elas estiverem configuradas para oferecem suporte às transações. As transações confirmam ou revertem na ordem da tarefa interna na hierarquia de contêineres aninhados para o pacote. Entretanto, depois que a transação interna é confirmada, ela não será revertida se uma transação externa for anulada.

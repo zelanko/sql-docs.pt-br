@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aac86ed6438197bc788f08cf9bc618608a65475f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faeb664a99b0d47406b7fb3a42f5834acd135323
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480368"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937447"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Abrir projetos do Integration Services no cliente Data Quality
   O [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] permite a você executar um projeto de limpeza no modo de lote. No entanto, às vezes talvez você queira examinar os resultados da limpeza em um pacote do Integration Services semelhante ao modo como é possível examinar os resultados da limpeza na guia **Gerenciar e Exibir Resultados** de uma atividade de limpeza em um projeto de qualidade de dados no DQS. O DQS permite que você abra projetos do Integration Services no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] da mesma forma que faria com qualquer outro projeto de qualidade de dados na tela **Abrir projeto** e proporciona uma experiência de limpeza interativa dos resultados da consulta em um projeto do Integration Services.  
@@ -42,11 +41,11 @@ ms.locfileid: "65480368"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Na tela [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] inicial, clique em **Abrir projeto de qualidade de dados**. A tela **Abrir projeto** é aberta.  
+2.  Na [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] tela inicial, clique em **Abrir projeto de qualidade de dados**. A tela **Abrir projeto** é aberta.  
   
 3.  Na tela **Abrir projeto** , você pode identificar um projeto do Integration Services de uma destas formas:  
   
-    1.  **Nome do Projeto**: os projetos do Integration Services são listados com a seguinte terminologia de nomenclatura: "Package.DQS Cleansing_*\<DATE>**\<TIME>*_{GUID}". Sempre que você executa com êxito o mesmo pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], um novo projeto é listado na tela **Abrir projeto** .  
+    1.  **Nome do projeto**: Integration Services projetos são listados usando a seguinte terminologia de nomenclatura: "Package. DQS Cleansing_ *\<DATE>**\<TIME>* _ {GUID}". Sempre que você executa com êxito o mesmo pacote no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], um novo projeto é listado na tela **Abrir projeto** .  
   
     2.  **Tipo de Projeto**: os projetos do Integration Services têm **SSIS** como o tipo de projeto na tela **Abrir projeto** .  
   

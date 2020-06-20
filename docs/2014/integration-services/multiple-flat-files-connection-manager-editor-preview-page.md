@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae113a84c55c17c3ba4827fb9368435200a6f190
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f16df0120e58b987009f0e8e674901e27bbfbe43
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057493"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965126"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Visualização)
   Use a página **Visualização** da caixa de diálogo **Editor do Gerenciador de Conexões de Vários Arquivos Simples** para ver o conteúdo do primeiro arquivo de origem selecionado, dividido em colunas conforme definido por você.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2656c53dd151825cd10e54e5b63e5ac0a2cee1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937137"
 ---
 # <a name="availability-database-is-suspended"></a>O banco de dados de disponibilidade está suspenso
     
@@ -29,7 +28,7 @@ ms.locfileid: "62815761"
 |-|-|  
 |**Nome da Política**|Estado de Suspensão do Banco de Dados de Disponibilidade|  
 |**Problema**|O banco de dados de disponibilidade está suspenso.|  
-|**Categoria**|**Alerta**|  
+|**Categoria**|**Aviso**|  
 |**Particular**|Banco de dados de disponibilidade|  
   
 ## <a name="description"></a>Descrição  
