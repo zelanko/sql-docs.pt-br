@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7ad456034902c2d3793100e93e370453348a1451
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e6b2080053231f9a5326f35d47ab598c2c5f35d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176526"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923607"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o change data capture oferece uma solução efetiva para o desafio de executar de forma eficiente as cargas incrementais de tabelas de origem para data marts e data warehouses.

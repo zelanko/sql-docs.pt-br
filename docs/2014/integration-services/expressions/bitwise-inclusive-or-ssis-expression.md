@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3f7a092b8ad649285417ee7961ac891b90b87674
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7424c52583ebe5f2a886eba19c33c0749cf9f88
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967486"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (OR inclusivo de bit a bit) (Expressão SSIS)
   Executa uma operação OR de bit a bit de dois valores de inteiro. Compara cada bit de seu primeiro operando com o bit correspondente de seu segundo operando. Se qualquer bit for 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente é definido como zero (0).  

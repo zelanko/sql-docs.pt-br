@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d047d1c584e176f5446361dd29821eb4ff18aa74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c43adda4865adbf93b83f928d3f490caca30dfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922927"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Como trabalhar com os serviços CDC
   Este procedimento descreve como usar o Console de Configuração do Serviço CDC para preparar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para trabalhar com os Serviços Oracle CDC e criar um novo serviço CDC.  

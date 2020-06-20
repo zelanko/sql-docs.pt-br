@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca6d56440b06d285cbb90f8d92325d59a452c16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188223"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008566"
 ---
 # <a name="manage-events"></a>Gerenciar eventos
   É possível encaminhar a um instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas as mensagens de evento que atendam ou excedam um nível de severidade de erro específico. A isso chamamos *encaminhamento de evento*. O servidor de encaminhamento é um servidor dedicado que também pode ser um servidor mestre. Você pode usar o encaminhamento de eventos para centralizar o gerenciamento de alertas para um grupo de servidores, reduzindo, assim, a carga de trabalho em servidores de intensa utilização.  
@@ -46,7 +45,7 @@ ms.locfileid: "63188223"
   
 -   **Ponto de falha único**. Se o servidor de gerenciamento de alertas ficar offline, nenhum alerta será emitido para qualquer evento no grupo gerenciado de servidores.  
   
--   **Carga de servidor**. A manipulação de alertas para os eventos encaminhados provocam um aumento na carga de processamento no servidor de gerenciamento de alertas.  
+-   **Carga do servidor**. A manipulação de alertas para os eventos encaminhados provocam um aumento na carga de processamento no servidor de gerenciamento de alertas.  
   
 ## <a name="guidelines-for-using-an-alerts-management-server"></a>Diretrizes para usar um servidor de gerenciamento de alertas  
  Ao configurar um servidor de gerenciamento de alertas, siga estas diretrizes:  
@@ -88,6 +87,6 @@ ms.locfileid: "63188223"
 >  Uma vez que um trabalho pode emitir um evento, tenha cuidado para não criar um loop recursivo alerta-trabalho.  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+ [sys.sysmensagens &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

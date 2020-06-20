@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcca4bfbf68bb74b8d0c61c0f434e1b0958d58da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063131"
 ---
 # <a name="handling-smo-events"></a>Manipulando eventos SMO
   Há tipos de eventos de servidor que podem ser assinados usando um manipulador de eventos e o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
@@ -37,7 +36,7 @@ ms.locfileid: "63191922"
   
  Uma classe de manipulador de eventos deve ser escrita para manipular eventos. A classe do manipulador de eventos pode conter mais de uma função de manipulador de eventos e deve ser instalada para os eventos a serem manipulados. As funções do manipulador de eventos recebem informações sobre o evento do parâmetro *ServerEventNotificatificationArgs* que pode ser usado para relatar informações sobre o evento.  
   
- Os tipos de eventos de servidor e banco de dados que podem ser manipulados <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> são listados na <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe e na classe.  
+ Os tipos de eventos de servidor e banco de dados que podem ser manipulados são listados na <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classe e na <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> classe.  
   
 ## <a name="example"></a>Exemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

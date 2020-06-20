@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 922454c7bc04a211d6f54754d48331fdfdffeb07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dd1ad533b6327786195908452701161a94f9592
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967200"
 ---
 # <a name="using-variables-in-the-script-component"></a>Usando variáveis no componente Script
   As variáveis armazenam valores que um pacote e seus contêineres, tarefas e manipuladores de eventos podem usar em tempo de execução. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services-ssis-variables.md).  
   
- Você pode disponibilizar as variáveis existentes para acesso somente leitura ou de leitura/gravação por seu script personalizado, inserindo listas delimitadas por vírgulas `ReadOnlyVariables` de `ReadWriteVariables` variáveis nos campos e na página **script** do **Editor de transformação scripts**. Lembre-se de que os nomes de variáveis diferenciam maiúsculas de minúsculas. Use a propriedade `Value` para ler e gravar em variáveis individuais. O componente Script trata qualquer bloqueio necessário em segundo plano, à medida que seu script manipula as variáveis em tempo de execução.  
+ Você pode disponibilizar as variáveis existentes para acesso somente leitura ou de leitura/gravação por seu script personalizado, inserindo listas delimitadas por vírgulas de variáveis nos `ReadOnlyVariables` `ReadWriteVariables` campos e na página **script** do **Editor de transformação scripts**. Lembre-se de que os nomes de variáveis diferenciam maiúsculas de minúsculas. Use a propriedade `Value` para ler e gravar em variáveis individuais. O componente Script trata qualquer bloqueio necessário em segundo plano, à medida que seu script manipula as variáveis em tempo de execução.  
   
 > [!IMPORTANT]  
 >  A coleção de `ReadWriteVariables` está disponível somente no método `PostExecute` para maximizar o desempenho e minimizar o risco de conflitos de bloqueio. Portanto, não será possível incrementar diretamente o valor de uma variável de pacote ao processar cada linha de dados. Em vez disso, incremente o valor de uma variável local e defina o valor da variável do pacote como o valor da variável local no método `PostExecute` depois de todos os dados terem sido processados. Você também pode usar a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> para funcionar nesta limitação, conforme descrito posteriormente neste tópico. Entretanto, gravar diretamente em uma variável de pacote, à medida que cada linha for processada, afetará negativamente o desempenho e aumentará o risco de conflitos de bloqueio.  

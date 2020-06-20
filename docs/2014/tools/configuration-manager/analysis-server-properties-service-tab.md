@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4f083aafd2dc8718bb79798d43483c66b3520b0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f092e8522f2b9e712a57f3a22f7c4ec1115128c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62666734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008303"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Propriedades do Analysis Server (guia Serviço)
   Este serviço é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ele deve estar sendo executado para que o [!INCLUDE[ssAS](../../includes/ssas-md.md)] funcione corretamente. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d1aadd84d42f797026323023b0cf5be27d01d693
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9030b4f538e997fff3f90c95dee12fca506f523c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030462"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Classe de evento Broker:Message Undeliverable
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Message Undeliverable** quando o Service Broker não pode reter uma mensagem recebida que deveria ter sido entregue a um serviço nessa instância. Para mensagens que deveriam ter sido encaminhadas, veja [Classe de evento Broker:Forwarded Message Dropped](broker-forwarded-message-dropped-event-class.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "62663961"
 |**EventClass**|`int`|O tipo de classe de evento capturado. Sempre **160** para **Broker:MessageUndeliverable**.|27|Não|  
 |**EventSequence**|`int`|Número de sequência para esse evento.|51|Não|  
 |**EventSubClass**|`nvarchar`|Indica se a mensagem sem possibilidade de entrega era uma mensagem sequenciada. Um de dois valores:<br /><br /> **Mensagem Sequenciada**. A mensagem sem possibilidade de entrega era uma mensagem sequenciada.<br /><br /> **Mensagem Não Sequenciada**. A mensagem sem possibilidade de entrega não era uma mensagem sequenciada.|21|Sim|  
-|**GUID**|`uniqueidentifier`|A ID da conversa a que pertence a mensagem sem possibilidade de entrega. Esse identificador é transmitido como parte da mensagem e é compartilhado por ambos os lados da conversa.|54|Não|  
+|**VOLUME**|`uniqueidentifier`|A ID da conversa a que pertence a mensagem sem possibilidade de entrega. Esse identificador é transmitido como parte da mensagem e é compartilhado por ambos os lados da conversa.|54|Não|  
 |**HostName**|`nvarchar`|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IntegerData**|`int`|O número de fragmento da mensagem sem possibilidade de entrega.|25|Não|  
 |**IntegerData2**|`int`|O número de fragmento de mensagem que a mensagem sem possibilidade de entrega estava reconhecendo.|55|Não|  

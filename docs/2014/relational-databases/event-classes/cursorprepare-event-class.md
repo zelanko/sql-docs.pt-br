@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee6325c134070f60fa578709d2247c85dc3d5173
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95752a97c95db61765c634ecbf2b26aeb0e26125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030036"
 ---
 # <a name="cursorprepare-event-class"></a>classe de evento CursorPrepare
   A classe de evento **CursorPrepare** descreve os eventos de preparação do cursor que acontecem nos cursores da API (interface de programação de aplicativos). Os eventos de preparação do cursor ocorrem quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila uma instrução SELECT associada a um cursor em um plano de execução, mas não cria o cursor.  

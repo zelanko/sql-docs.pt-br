@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56963bff1b17cc3cb1fd7f2c26bce452f238b1f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827137"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915767"
 ---
 # <a name="error-handling-in-data"></a>Tratamento de erros em dados
   Quando um componente de fluxo de dados aplica uma transformação aos dados da coluna, extrai dados de fontes ou carrega dados nos destinos, podem ocorrer erros. Frequentemente, os erros ocorrem por causa de valores de dados inesperados. Por exemplo, uma conversão de dados falha porque uma coluna contém uma cadeia de caracteres em vez de um número, uma inserção em uma coluna de banco de dados falha porque os dados são uma data e a coluna tem um tipo de dados numéricos, ou uma expressão não é avaliada porque o valor de uma coluna é zero, resultando em uma operação matemática que não é válida.  

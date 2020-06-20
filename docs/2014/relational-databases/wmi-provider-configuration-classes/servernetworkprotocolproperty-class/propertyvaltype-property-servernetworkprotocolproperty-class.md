@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4a69cb8f0817c086537381a87b96dfb237b8d59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be6c42fbaa36080ec8144d95abb045a3b4328057
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002498"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>Propriedade PropertyValType (classe ServerNetworkProtocolProperty)
   Obtém o tipo de dados do valor armazenado na propriedade referenciada.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [classe ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) que representa um atributo do protocolo de rede na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

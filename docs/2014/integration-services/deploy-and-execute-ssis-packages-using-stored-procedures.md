@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4efe24c58d22738e0e7b38ca68f37ce29603f2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251319"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951786"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Implantar e executar pacotes SSIS usando procedimentos armazenados
   Quando configura um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para usar o modelo de implantação de projeto, você pode usar procedimentos armazenados no catálogo do [!INCLUDE[ssIS](../includes/ssis-md.md)] para implantar o projeto e executar os pacotes. Para obter informações sobre o modelo de implantação de projeto, consulte [Implantação de projetos e pacotes](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -36,9 +35,9 @@ ms.locfileid: "72251319"
   
 1.  Chame [catalog.deploy_project &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) para implantar o projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote para o servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Para recuperar o conteúdo binário do arquivo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de implantação do projeto, para o * \@parâmetro project_stream* , use uma instrução SELECT com a função OPENROWSET e o provedor de conjunto de linhas em massa. O conjuntos de linhas BULK permite a você ler dados de um arquivo. O argumento SINGLE_BLOB do provedor de conjuntos de linhas BULK retorna o conteúdo do arquivo de dados como uma única linha, um conjunto de linhas de coluna única do tipo varbinary(max). Para obter mais informações, consulte [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Para recuperar o conteúdo binário do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] arquivo de implantação do projeto, para o parâmetro * \@ project_stream* , use uma instrução SELECT com a função OPENROWSET e o provedor de conjunto de linhas em massa. O conjuntos de linhas BULK permite a você ler dados de um arquivo. O argumento SINGLE_BLOB do provedor de conjuntos de linhas BULK retorna o conteúdo do arquivo de dados como uma única linha, um conjunto de linhas de coluna única do tipo varbinary(max). Para obter mais informações, consulte [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     No exemplo a seguir, o projeto SSISPackages_ProjectDeployment é implantado na pasta Pacotes SSIS no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Os dados binários são lidos do arquivo de projeto (SSISPackage_ProjectDeployment. ispac) e armazenados no parâmetro * \@ProjectBinary* do tipo varbinary (max). O * \@* valor do parâmetro ProjectBinary é atribuído ao parâmetro * \@project_stream* .  
+     No exemplo a seguir, o projeto SSISPackages_ProjectDeployment é implantado na pasta Pacotes SSIS no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Os dados binários são lidos do arquivo de projeto (SSISPackage_ProjectDeployment. ispac) e armazenados no parâmetro * \@ ProjectBinary* do tipo varbinary (max). O valor do parâmetro * \@ ProjectBinary* é atribuído ao parâmetro * \@ project_stream* .  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c65fe8a302afd15bc406e0785407865c928797fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938517"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Entendendo DAX em modelos de tabela (SSAS tabular)
   DAX é a linguagem de fórmula usada para criar cálculos personalizados no [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para pastas de trabalho do Microsoft Excel e projetos de modelo de tabela do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . As fórmulas DAX incluem funções, operadores e valores para executar cálculos avançados em dados em tabelas e colunas.  
@@ -70,7 +69,7 @@ ms.locfileid: "67284924"
   
  Para obter mais informações, consulte [Colunas calculadas &#40;SSAS de Tabela&#41;](ssas-calculated-columns.md).  
   
-### <a name="measures"></a>medidas  
+### <a name="measures"></a>Medidas  
  Medidas são fórmulas dinâmicas onde os resultados são alterados dependendo de contexto. As medidas são usadas em formatos de relatório que dão suporte a combinação e filtragem de dados de modelo usando vários atributos, como um relatório do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ou uma Tabela Dinâmica ou um Gráfico Dinâmico do Excel. Em projetos de modelo de tabela, as medidas são definidas pelo autor do modelo usando a grade de medida (e a barra de fórmulas) no designer de modelos no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Uma fórmula em uma medida pode usar funções de agregação padrão automaticamente criadas pelo recurso AutoSoma, como COUNT ou SUM ou você pode definir sua própria fórmula usando o DAX. Quando você define uma fórmula para uma medida na barra de fórmulas, um recurso de Dica de ferramenta mostra uma visualização rápida do que os resultados seriam para o total no contexto atual, mas, do contrário, os resultados não são produzidos imediatamente em qualquer lugar. Outros detalhes de medida também aparecem no painel **Propriedades** .  
@@ -101,11 +100,11 @@ ms.locfileid: "67284924"
 |------------------------|----------------------|-----------------|  
 |Número Inteiro|Um valor inteiro de 64 bits (oito bytes) <sup>1, 2</sup>|Números sem casas decimais. Inteiros podem ser números positivos ou negativos, mas devem ser números inteiros entre -9.223.372.036.854.775.808 (-2^63) e 9.223.372.036.854.775.807 (2^63-1).|  
 |Número Decimal|Um número real de 64 bits (oito bytes) <sup>1, 2</sup>|Números reais são números que podem ter casas decimais. Os números reais abrangem uma grande variedade de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Zero<br /><br /> Valores positivos de 2,23E -308 a 1,79E + 308<br /><br /> No entanto, o número de dígitos significativos está limitado a 17 dígitos decimais.|  
-|Boolean|Boolean|Um valor True ou False.|  
+|Booliano|Booliano|Um valor True ou False.|  
 |Texto|String|Uma cadeia de caracteres de dados de caractere Unicode. Podem ser cadeias de caracteres, números ou datas representados em um formato de texto.|  
-|Data|Data/hora|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
-|Currency|Currency|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
-|N/D|Em branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
+|Data|Date/time|Datas e horas em uma representação de data-hora aceita.<br /><br /> As datas válidas são todas as datas depois de 1º de março de 1900.|  
+|Moeda|Moeda|O tipo de dados de moeda permite valores entre -922.337.203.685.477,5808 e 922.337.203.685.477,5807 com quatro dígitos decimais de precisão fixa.|  
+|N/D|Em Branco|Um espaço em branco é um tipo de dados no DAX que representa e substitui nulos SQL. É possível criar um espaço em branco usando a função BLANK e testar se há espaços em branco usando a função lógica, ISBLANK.|  
   
  Os modelos de tabela também incluem o tipo de dados como a entrada ou a saída para muitas funções DAX. Por exemplo, a função FILTER usa uma tabela como entrada e gera outra tabela que contém apenas as linhas que atendam às condições do filtro. Ao combinar funções de tabela com funções de agregação, você pode executar cálculos complexos em conjuntos de dados definidos de forma dinâmica.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "67284924"
   
  Para obter informações detalhadas sobre tipos de dados em modelos de tabela e conversões implícitas e explícitas de tipos de dados no DAX, consulte [Tipos de dados com suporte &#40;SSAS tabular&#41;](data-types-supported-ssas-tabular.md).  
   
-##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a> Operadores DAX  
+##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a>Operadores DAX  
  A linguagem DAX usa quatro tipos diferentes de operadores de cálculo em fórmulas:  
   
 -   Operadores de comparação para comparar valores e retornar um valor TRUE\FALSE lógico.  
@@ -227,7 +226,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Uma função informativa verifica a célula ou linha fornecida como um argumento e indica se o valor corresponde ao tipo esperado. Por exemplo, a função ISERROR retorna TRUE quando o valor referenciado contém um erro. Para obter mais informações, consulte [funções de informações &#40;&#41;Dax ](/dax/information-functions-dax).  
   
 ### <a name="logical-functions"></a>Funções lógicas  
- As funções lógicas agem sobre uma expressão para retornar informações sobre os valores da expressão. Por exemplo, a função TRUE permite saber se uma expressão que você está avaliando retorna um valor TRUE. Para obter mais informações, consulte [funções lógicas &#40;&#41;Dax ](/dax/logical-functions-dax).  
+ As funções lógicas agem sobre uma expressão para retornar informações sobre os valores da expressão. Por exemplo, a função TRUE permite que você saiba se uma expressão que está sendo avaliada retorna um valor TRUE. Para obter mais informações, consulte [funções lógicas &#40;&#41;Dax ](/dax/logical-functions-dax).  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>Funções matemáticas e trigonométricas  
  As funções matemáticas em DAX são muito semelhantes às funções matemáticas e trigonométricas do Excel. Existem algumas pequenas diferenças nos tipos de dados numéricos usados por funções DAX. Para obter mais informações, consulte [funções matemáticas e trigonométricas &#40;&#41;Dax ](/dax/math-and-trig-functions-dax).  
@@ -239,7 +238,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  As funções de texto na DAX são bem semelhantes às suas correspondentes no Excel. Você pode retornar parte de uma cadeia de caracteres, pesquisar texto em uma cadeia de caracteres ou concatenar valores de cadeia de caracteres. A DAX também fornece funções para controlar os formatos de datas, horas e números. Para obter mais informações, consulte [funções de texto &#40;DAX&#41;](/dax/text-functions-dax).  
   
 ### <a name="time-intelligence-functions"></a>Funções de inteligência de tempo  
- As funções de inteligência de tempo fornecidas na DAX permitem criar cálculos que usam o conhecimento interno sobre calendários e datas. Usando intervalos de hora e data em combinação com agregações ou cálculos, você pode criar comparações significativas em períodos de tempo comparáveis para vendas, inventário, e assim por diante. Para obter mais informações, consulte [funções de inteligência de tempo &#40;&#41;Dax ](/dax/time-intelligence-functions-dax).  
+ As funções de inteligência de tempo fornecidas na DAX permitem criar cálculos que usam o conhecimento interno sobre calendários e datas. Usando intervalos de data e hora em combinação com agregações ou cálculos, você pode criar comparações significativas em períodos de tempo comparáveis para vendas, estoque etc. Para obter mais informações, consulte [funções de inteligência de tempo &#40;&#41;Dax ](/dax/time-intelligence-functions-dax).  
   
 ###  <a name="table-valued-functions"></a><a name="bkmk_TableFunc"></a>Funções com valor de tabela  
  Existem funções DAX que produzem tabelas, aceitam tabelas como entrada ou ambas as opções. Como uma tabela pode ter uma única coluna, as funções com valor de tabela também aceitam colunas únicas como entradas. É importante compreender como usar essas funções com valor de tabela para usar completamente as fórmulas DAX. O DAX inclui os seguintes tipos de funções com valor de tabela:  

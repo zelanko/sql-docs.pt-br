@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bab311878966087ef9b6c3f05bb3023d02fdeb20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8be1530a24feec56fcba053b784f768667559f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711063"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048578"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>Unir tabelas automaticamente (Visual Database Tools)
   Quando você adiciona duas ou mais tabelas a uma consulta, o [Designer de Consulta e Exibição](visual-database-tools.md) tenta determinar se elas estão relacionadas. Se estiverem, o Designer de Consulta e Exibição unirá automaticamente linhas de junção entre os retângulos que representam as tabelas ou objetos estruturados por tabela.  

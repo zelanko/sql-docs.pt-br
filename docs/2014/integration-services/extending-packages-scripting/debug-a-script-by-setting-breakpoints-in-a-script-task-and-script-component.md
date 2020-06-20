@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a05344f1fc20e575566d0a0fa527ac64b32363f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968390"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Depurar um script definindo pontos de interrupção em uma tarefa Script e um componente Script
   Este procedimento descreve como definir pontos de interrupção nos scripts que são usados na tarefa Script e componente Script.  
   
- Depois que você definir pontos de interrupção no script, a caixa de diálogo **Definir Pontos de Interrupção – \<nome do objeto>** listará os pontos de interrupção, junto com os pontos de interrupção inseridos.  
+ Depois de definir os pontos de interrupção no script, a caixa de diálogo **definir pontos \<object name> ** de interrupção – lista os pontos de interrupção, juntamente com os pontos de interrupção internos.  
   
 > [!IMPORTANT]  
 >  Em determinadas circunstâncias, os pontos de interrupção na tarefa Script e no componente Script são ignorados. Para obter mais informações, consulte a seção **Depurando a tarefa Script** em [codificando e Depurando a tarefa Script](../control-flow/script-task.md) e a seção **Depurando o componente Script** em [codificando e Depurando o componente Script] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  

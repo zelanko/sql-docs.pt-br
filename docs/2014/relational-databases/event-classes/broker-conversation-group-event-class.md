@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23e39e48b8c4c20ab0e847d87b7193179e8d74ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85cb959cfa53491aa4d7d3653f995bcf5fffbdf0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664229"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030552"
 ---
 # <a name="brokerconversation-group-event-class"></a>classe de evento Broker:Conversation Group
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Conversation Group** quando o Service Broker cria um novo grupo de conversa ou descarta um grupo de conversa existente.  
@@ -34,7 +33,7 @@ ms.locfileid: "62664229"
 |**EventClass**|`int`|O tipo de classe de evento capturado. Sempre **136** para **Broker:Conversation Group**.|27|Não|  
 |**EventSequence**|`int`|Número de sequência para esse evento.|51|Não|  
 |**EventSubClass**|`nvarchar`|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> **Criar**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criou um novo grupo de conversa.<br /><br /> **Drop**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] excluiu um grupo de conversa.|21|Sim|  
-|**GUID**|`uniqueidentifier`|O identificador do grupo de conversa que este evento descreve.|54|Não|  
+|**VOLUME**|`uniqueidentifier`|O identificador do grupo de conversa que este evento descreve.|54|Não|  
 |**HostName**|`nvarchar`|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Não|  
 |**LoginSid**|`image`|Número SID (identificação de segurança) do usuário que fez logon. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  

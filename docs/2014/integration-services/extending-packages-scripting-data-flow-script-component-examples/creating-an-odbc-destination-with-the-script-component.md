@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a682c5010887a6aec10d886173d8538cada5963
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968626"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Criando um destino ODBC com o componente Script
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você normalmente salva os dados em um destino ODBC usando um destino [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e o Provedor de Dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para ODBC. Porém, você também pode criar um destino ODBC ad hoc para uso em um único pacote. Para criar esse destino ODBC ad hoc, use o componente Script conforme demonstrado no exemplo seguinte.  

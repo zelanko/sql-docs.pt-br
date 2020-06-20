@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02a7474999dbc644684fc4065343bc87b0aa9635
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892393"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968266"
 ---
 # <a name="developer39s-guide-integration-services"></a>Guia do desenvolvedor&#39;s (Integration Services)
   O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui um modelo de objeto totalmente reescrito, que foi aprimorado com vários recursos que tornam a extensão e a programação mais fáceis, flexíveis e eficientes. Desenvolvedores podem estender e programar quase todos os aspectos de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b4c9a3160224078b908059c3902e66ef59608bac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb11b5c257007872e92d3f0a7eadb3e46b4969cd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872245"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952226"
 ---
 # <a name="attach-a-database"></a>Anexar um banco de dados
   Este tópico descreve como anexar um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Você pode usar este recurso para copiar, mover ou atualizar um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -54,7 +53,7 @@ ms.locfileid: "62872245"
 -   Quando você anexar um banco de dados, se os arquivos MDF e LDF estiverem localizados em diretórios diferentes e um dos caminhos incluir \\\\?\GlobalRoot, a operação falhará.  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
-Recomendamos que você mova bancos de dados usando o procedimento `ALTER DATABASE` de Realocação planejada, em vez de usar desanexar e anexar. Para obter mais informações, veja [Mover bancos de dados de usuário](move-user-databases.md).  
+Recomendamos que você mova bancos de dados usando o `ALTER DATABASE` procedimento de Realocação planejada, em vez de usar desanexar e anexar. Para obter mais informações, veja [Mover bancos de dados de usuário](move-user-databases.md).  
   
 ###  <a name="security"></a><a name="Security"></a> Segurança  
 As permissões de acesso ao arquivo são definidas durante algumas operações de banco de dados, inclusive desanexar ou anexar um banco de dados. Para obter informações sobre permissões de arquivo que são definidas sempre que um banco de dados é desanexado e anexado, consulte [Protegendo dados e arquivos de log](https://technet.microsoft.com/library/ms189128.aspx) nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
@@ -88,7 +87,7 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
      **Local do Arquivo MDF**  
      Exibe o caminho e o nome de arquivo do arquivo MDF selecionado.  
   
-     **Nome do banco de dados**  
+     **Database Name**  
      Exibe o nome do banco de dados.  
   
      **Anexar como**  
@@ -104,12 +103,12 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
     |----------|-----------------|-----------------|  
     |(No icon)|(Nenhum texto)|A operação de anexação não foi iniciada ou pode estar pendente para esse objeto. Esse é o padrão quando a caixa de diálogo é aberta.|  
     |Triângulo verde apontando para a direita|Em andamento|A operação de anexação foi iniciada mas não está completa.|  
-    |Sinal de verificação verde|Êxito|O objeto foi anexado com êxito.|  
+    |Sinal de verificação verde|Sucesso|O objeto foi anexado com êxito.|  
     |Círculo vermelho contendo uma cruz branca|Erro|A operação de anexação encontrou um erro e não foi concluída com êxito.|  
     |Círculo que contém dois quadrantes pretos (à esquerda e à direita) e dois quadrantes brancos (em cima e em baixo)|Parado|A operação de anexação não foi completada com êxito porque o usuário interrompeu a operação.|  
     |Círculo que contém uma seta curvada que aponta para o sentido anti-horário|Revertida|A operação de anexação teve êxito, mas foi revertida devido a um erro ao se anexar outro objeto.|  
   
-     **Mensagem**  
+     **Message**  
      Exibe uma mensagem em branco ou um hiperlink "Arquivo não encontrado"  
   
      **Adicionar**  
@@ -118,8 +117,8 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
      **Remover**  
      Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
   
-     Detalhes do banco de dados **"** *<database_name>* **"**  
-     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **procurar** (**...**).  
+     **"** *<nome_do_banco_de_dados>* **" detalhes do banco de dados**  
+     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** ( **...** ).  
   
     > [!NOTE]  
     > Se um arquivo não existir, a coluna **Mensagem** exibe "Não encontrado." Se um arquivo de log não for encontrado, ele existe em outro diretório ou foi excluído. Você precisa atualizar o caminho do arquivo na grade **detalhes do banco de dados** para indicar o local correto ou remover o arquivo de log da grade. Se um arquivo de dados .ndf não for encontrado, você precisará atualizar seu caminho na grade a fim de indicar o local correto.  
@@ -134,7 +133,7 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
      Exibe o caminho para o arquivo de banco de dados selecionado. O caminho pode ser editado manualmente.  
   
      **Mensagem**  
-     Exibe uma mensagem em branco ou um hiperlink "**arquivo não encontrado**".  
+     Exibe uma mensagem em branco ou um hiperlink “**Arquivo não encontrado**”.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
@@ -158,8 +157,8 @@ Requer permissão `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABAS
     > [!NOTE]  
     > Se desejar, você poderá usar o procedimento armazenado [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql) ou [sp_attach_single_file_db](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql) . No entanto, esses procedimentos armazenados estendidos são removidos de uma versão futura do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Recomendamos que você use criar banco de dados... PARA anexar em vez disso.  
   
-##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Acompanhamento: depois de atualizar um banco de dados do SQL Server  
- após você atualiza um banco de dados usando o método Attach, o banco de dados fica disponível imediatamente e é atualizado automaticamente. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Observe também que, quando a opção de atualização for definida como **importar**, se um catálogo de texto completo não estiver disponível, os índices de texto completo associados serão recriados.  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Acompanhamento: Depois de atualizar um banco de dados do SQL Server  
+ após você atualiza um banco de dados usando o método Attach, o banco de dados fica disponível imediatamente e é atualizado automaticamente. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados.  
   
 Se o nível de compatibilidade de um banco de dados de usuário for 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade for 90 ou inferior antes da atualização, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   

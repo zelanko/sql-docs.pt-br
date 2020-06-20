@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894780"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968446"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabalhando com arquivos do Excel com a tarefa Script
   O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece o gerenciador de conexões do Excel, a origem do Excel e o destino do Excel para trabalhar com dados armazenados em planilhas no formato de arquivo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. As técnicas descritas neste tópico utilizam a tarefa Script para obter informações sobre bancos de dados (arquivos de pasta de trabalho) e tabelas (planilhas e intervalos nomeados) do Excel disponíveis. Esses exemplos podem ser facilmente modificados para funcionar com quaisquer das outras fontes de dados com base em arquivo suportadas pelo Provedor OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -79,7 +78,7 @@ ms.locfileid: "62894780"
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
   
-1.  Adicione uma nova tarefa Script ao pacote e altere seu nome para `ExcelFileExists`.  
+1.  Adicione uma nova tarefa Script ao pacote e altere seu nome para `ExcelFileExists` .  
   
 2.  No **Editor da Tarefa Script**, na guia **Script**, clique em **ReadOnlyVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
@@ -149,7 +148,7 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
   
-1.  Adicione uma nova tarefa Script ao pacote e altere seu nome para `ExcelTableExists`.  
+1.  Adicione uma nova tarefa Script ao pacote e altere seu nome para `ExcelTableExists` .  
   
 2.  No **Editor da Tarefa Script**, na guia **Script**, clique em **ReadOnlyVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
@@ -157,7 +156,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Clique no botão de reticências (**...**) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis** , selecione as `ExcelTable` variáveis e `ExcelFile` .  
+    -   Clique no botão de reticências (**...**) ao lado do campo de propriedade e, na caixa de diálogo **Selecionar variáveis** , selecione as `ExcelTable` `ExcelFile` variáveis e.  
   
 3.  Clique em **ReadWriteVariables** e insira o valor da propriedade usando um dos seguintes métodos:  
   
