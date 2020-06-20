@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b9fa3f54b7b16b1fd397bfe80c95d08e39289eb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921347"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Conectar-se a um servidor remoto do Integration Services (serviço SSIS)
     
@@ -36,7 +35,7 @@ ms.locfileid: "66060421"
   
 #### <a name="to-connect-to-integration-services-on-a-remote-server"></a>Para se conectar ao Integration Services em um servidor remoto  
   
-1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Selecione **Arquivo**, **Conectar Pesquisador de Objetos** para exibir a caixa de diálogo **Conectar ao Servidor** .  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66060421"
  Se você estiver trabalhando em uma conta local do Windows em um computador cliente, só poderá se conectar ao serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um computador remoto se houver uma conta local com o mesmo nome e senha e os direitos apropriados no computador remoto.  
   
 ## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>Por padrão, o serviço SSIS não oferece suporte para delegação  
-Por padrão, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o serviço não oferece suporte à delegação de credenciais ou às vezes chamado de salto duplo. Nesse cenário, você está trabalhando em um computador cliente, o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está em execução em um segundo computador e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução em um terceiro computador. Primeiro, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] passa com sucesso as credenciais do computador cliente para o segundo computador no qual o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está em execução. Em seguida, no entanto, o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não pode delegar suas credenciais do segundo computador para o terceiro computador no qual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução.
+Por padrão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o serviço não oferece suporte à delegação de credenciais ou às vezes chamado de salto duplo. Nesse cenário, você está trabalhando em um computador cliente, o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está em execução em um segundo computador e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução em um terceiro computador. Primeiro, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] passa com sucesso as credenciais do computador cliente para o segundo computador no qual o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está em execução. Em seguida, no entanto, o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não pode delegar suas credenciais do segundo computador para o terceiro computador no qual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está em execução.
 
 Você pode habilitar a delegação de credenciais concedendo o direito **Confiar neste usuário para delegação a qualquer serviço (apenas Kerberos)** para a conta de serviço do SQL Server, que inicia o serviço do Integration Services (ISServerExec.exe) como um processo filho. Antes de conceder esse direito, considere se ele atende aos requisitos de segurança de sua organização.
 

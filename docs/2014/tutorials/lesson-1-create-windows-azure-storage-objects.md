@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f580b1b7c6cb1127ac9feecf5e767c467e710bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176109"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039966"
 ---
 # <a name="lesson-1-create-azure-storage-objects"></a>Lição 1: Criar objetos de Armazenamento do Microsoft Azure
   Para que você possa criar backups do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no armazenamento em nuvem, primeiro crie uma conta de armazenamento e, depois, um contêiner de blob. A lição 1 orienta você pelas etapas de fazer logon na Portal de Gerenciamento do Azure, criando uma conta de armazenamento e um contêiner de BLOB.  

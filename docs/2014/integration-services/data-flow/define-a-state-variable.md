@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827561"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915986"
 ---
 # <a name="define-a-state-variable"></a>Definir uma variável de estado
   Este procedimento descreve como definir uma variável de pacote onde o estado CDC é armazenado.  
@@ -37,7 +36,7 @@ ms.locfileid: "62827561"
 |`<ir-start>`|Este é o LSN de uma alteração imediatamente antes de a carga inicial ter sido iniciada.|  
 |`<ir-end>`|Este é o LSN de uma alteração imediatamente depois de a carga inicial ter sido terminada.|  
 |`TS`|Isso marca o carimbo de data/hora para a última atualização do estado CDC.|  
-|**\<carimbo de data/hora>**|Essa é uma representação decimal da propriedade System.DateTime.UtcNow de 64 bits.|  
+|**\<timestamp>**|Essa é uma representação decimal da propriedade System.DateTime.UtcNow de 64 bits.|  
 |`ER`|Isso aparece quando a última operação falhou e inclui uma descrição breve da causa do erro. Se esse componente estiver presente, ela será sempre o último.|  
 |`<short-error-text>`|Essa é a descrição curta do erro.|  
   

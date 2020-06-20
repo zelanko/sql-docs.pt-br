@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0dbc88c186e5f8f92c943c3e0d766ab6d8846941
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ce586582a21bdcf9eb534449760a9a209c60dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971196"
 ---
 # <a name="model-deployment-options-master-data-services"></a>Opções de implantação de modelo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], quando você implantar um arquivo de pacote de modelo, deverá decidir se deve implantar um modelo novo ou clonado ou atualizar um modelo clonado anteriormente.  
   
-## <a name="workflows"></a>Fluxos de Trabalho  
+## <a name="workflows"></a>Fluxos de trabalho  
  Ao trabalhar com pacotes de modelo, há dois fluxos de trabalho primários.  
   
 -   Crie um pacote de um modelo em um ambiente de teste e implante um clone do modelo para um ambiente de produção. Com o tempo, implante atualizações do ambiente de teste no ambiente de produção.  
@@ -36,7 +35,7 @@ ms.locfileid: "65479020"
 |------------|-----------------|-----------|  
 |Novo|Crie um novo modelo com um nome exclusivo. São criados novos identificadores para todos os objetos de modelo.|Se você criar um novo modelo com novos identificadores, não poderá usar ferramentas de implantação de modelo para aplicar atualizações posteriormente ao modelo. Ao usar o assistente no aplicativo Web para implantar um pacote de modelo, você tem a opção de só criar um novo modelo se um modelo com o mesmo nome ou ID já existir.|  
 |Clone|Crie um novo modelo que seja um clone exato do modelo no pacote. Isso só funcionará se o modelo não existir (por nome ou identificador) no ambiente de destino. Use "clonar" quando você quiser ter o mesmo modelo em vários ambientes e atualizar o modelo clonado com o tempo.|Esse é o comportamento padrão do assistente no aplicativo Web. Se um modelo com o mesmo nome ou a ID já existir, você será solicitado a criar um novo modelo.|  
-|Atualizar|Atualize um modelo existente com o modelo no pacote. Os identificadores devem ser iguais nos dois modelos. Usado para atualizar um modelo que você clonou antes.|Você só pode atualizar modelos que foram clonados previamente. (Os nomes e IDs devem corresponder.)|  
+|Atualização|Atualize um modelo existente com o modelo no pacote. Os identificadores devem ser iguais nos dois modelos. Usado para atualizar um modelo que você clonou antes.|Você só pode atualizar modelos que foram clonados previamente. (Os nomes e IDs devem corresponder.)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Implantar um pacote de implantação de modelo usando o MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   

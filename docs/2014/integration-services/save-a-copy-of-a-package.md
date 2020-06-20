@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4725d05e41ae6335ceae19c46c2c36af14dbcf8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056273"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964376"
 ---
 # <a name="save-a-copy-of-a-package"></a>Salvar uma cópia de um pacote
   Este procedimento descreve como salvar uma cópia de um pacote no sistema de arquivos, no armazenamento do pacote ou no banco de dados **msdb** no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ao especificar um local para salvar a cópia do pacote, também é possível atualizar o nome do pacote.  
@@ -37,7 +36,7 @@ ms.locfileid: "66056273"
   
 1.  No Gerenciador de Soluções, clique duas vezes no pacote do qual você quer salvar uma cópia.  
   
-2.  No menu **Arquivo**, clique em **Salvar Cópia do \<arquivo de pacote> Como**.  
+2.  No menu **arquivo** , clique em **salvar cópia de \<package file> como**.  
   
 3.  Na caixa de diálogo **Salvar Cópia do Pacote** , selecione um local de pacote na lista **Local dos pacotes** .  
   

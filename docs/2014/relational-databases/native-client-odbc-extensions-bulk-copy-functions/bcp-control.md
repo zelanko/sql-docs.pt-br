@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: adadafc3a7dcf23de9bceefaee6f5622e0f86705
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9006d6810d03cce7cb996b500449a7a4f864bb96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019711"
 ---
 # <a name="bcp_control"></a>bcp_control
   Altera as configurações padrão de vários parâmetros de controle para uma cópia em massa entre um arquivo e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

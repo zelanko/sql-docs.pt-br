@@ -1,5 +1,6 @@
 ---
 title: Arquivos de cabeçalho e biblioteca
+description: Saiba como usar o cabeçalho de SQL Server Native Client e os arquivos de biblioteca para desenvolver um aplicativo. Copie os arquivos necessários para o ambiente de desenvolvimento.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +23,17 @@ ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e4b7c27ed32beaa1139300fdb83c4fb79583df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56a17cf83d4d303f786907d9313f134664f12178
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388462"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949421"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Usando os arquivos de biblioteca e de cabeçalho do SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Os arquivos de biblioteca e de cabeçalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client são instalados com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando você for desenvolver um aplicativo, é importante copiar e instalar todos os arquivos necessários para o desenvolvimento no seu ambiente de desenvolvimento. Para obter mais informações sobre como instalar e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] redistribuir o cliente nativo, consulte [instalando o SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+  Os arquivos de biblioteca e de cabeçalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client são instalados com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando você for desenvolver um aplicativo, é importante copiar e instalar todos os arquivos necessários para o desenvolvimento no seu ambiente de desenvolvimento. Para obter mais informações sobre como instalar e redistribuir o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente nativo, consulte [instalando o SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
  Os arquivos de biblioteca e de cabeçalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client são instalados no seguinte local:  
   

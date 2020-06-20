@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbc29fa2ebaaf2bbc9e577b5bd303e8a0dd0ec4c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815399"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937017"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Alterar o contexto do cluster HADR da instância de servidor (SQL Server)
   Este tópico descreve como alternar o contexto do cluster HADR de uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../../includes/tsql-md.md)] no [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] e em versões posteriores. O *contexto do cluster HADR* determina qual cluster do WSFC (Clustering de Failover de Windows Server) gerencia os metadados das réplicas de disponibilidade hospedadas pela instância de servidor.  
@@ -75,7 +74,7 @@ ms.locfileid: "62815399"
   
      Requer a permissão CONTROL SERVER.  
   
--   **SQL Server conta de serviço**  
+-   **Conta de serviço do SQL Server**  
   
      A conta do serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da instância de servidor deve ter:  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62815399"
   
 2.  Use a cláusula SET HADR CLUSTER CONTEXT da instrução [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) , da seguinte forma:  
   
-     ALTERAR o contexto **=** do cluster HADR do conjunto de configurações do servidor { **'*`windows_cluster`*'** | LOCAL  
+     ALTERAR o contexto do CLUSTER HADR do conjunto de configurações do servidor **=** { **' *`windows_cluster`* '** | LOCAL  
   
      onde:  
   

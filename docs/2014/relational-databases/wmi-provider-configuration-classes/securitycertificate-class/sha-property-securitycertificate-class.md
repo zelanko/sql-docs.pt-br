@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: af3ecc685ab9b6bc9e608d9d9ecec4aefb5d53d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 749796421e4be6b42e404eb051535b3bbea74a01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059980"
 ---
 # <a name="sha-property-securitycertificate-class"></a>Propriedade SHA (classe SecurityCertificate)
   Obtém o atributo de impressão digital de SHA do certificado de segurança.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto [SecurityCertificate Class] SecurityCertificate-class.md) que representa um certificado de segurança.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

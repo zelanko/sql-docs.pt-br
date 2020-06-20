@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814038"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936544"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Há suporte para a replicação, a CDC (captura de dados de alteração) e o CT (controle de alterações) no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece alta disponibilidade e recursos adicionais de recuperação de banco de dados.  
@@ -109,7 +108,7 @@ ms.locfileid: "62814038"
     ```  
   
     > [!NOTE]  
-    >  Você deve criar os trabalhos em todos os destinos de failover possíveis antes do failover e marcá-los como desabilitados até que a réplica de disponibilidade em um host se torne a nova réplica primária. Os trabalhos de CDC em execução no banco de dados primário antigo também devem ser desabilitados quando o banco de dados local se torna um banco de dados secundário. Para desabilitar e habilitar trabalhos, use a *@enabled* opção de [Sp_update_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Para obter mais informações sobre como criar trabalhos de CDC, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
+    >  Você deve criar os trabalhos em todos os destinos de failover possíveis antes do failover e marcá-los como desabilitados até que a réplica de disponibilidade em um host se torne a nova réplica primária. Os trabalhos de CDC em execução no banco de dados primário antigo também devem ser desabilitados quando o banco de dados local se torna um banco de dados secundário. Para desabilitar e habilitar trabalhos, use a *@enabled* opção de [sp_update_job &#40;&#41;TRANSACT-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Para obter mais informações sobre como criar trabalhos de CDC, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
   
 -   **Adicionando funções de CDC a uma réplica de banco de dados primário AlwaysOn**  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62814038"
   
      O nome do ouvinte do grupo de disponibilidade ou o nome de nó explícito pode ser usado para localizar a réplica secundária. Se o nome do ouvinte do grupo de disponibilidade for usado, o acesso será direcionado a qualquer réplica secundária adequada.  
   
-     Quando `sp_addlinkedserver` é usado para criar um servidor vinculado para acessar o secundário, o *@datasrc* parâmetro é usado para o nome do ouvinte do grupo de disponibilidade ou o nome do *@provstr* servidor explícito, e o parâmetro é usado para especificar a intenção somente leitura.  
+     Quando `sp_addlinkedserver` é usado para criar um servidor vinculado para acessar o secundário, o *@datasrc* parâmetro é usado para o nome do ouvinte do grupo de disponibilidade ou o nome do servidor explícito, e o *@provstr* parâmetro é usado para especificar a intenção somente leitura.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -204,17 +203,17 @@ ms.locfileid: "62814038"
   
 |||||  
 |-|-|-|-|  
-||**Editor**|**Distribuidor** <sup>3</sup>|**Subscriber**|  
+||**Publicador**|**Distribuidor** <sup>3</sup>|**Assinante**|  
 |**Transacional**|Sim<sup>1</sup>|Não|Sim<sup>2</sup>|  
 |**P2P**|Não|Não|Não|  
-|**Mescle**|Sim|Não|Sim<sup>2</sup>|  
+|**Mesclar**|Sim|Não|Sim<sup>2</sup>|  
 |**Instantâneo**|Sim|Não|Sim<sup>2</sup>|  
   
  <sup>1</sup> não inclui suporte para replicação transacional bidirecional e recíproca.  
   
  <sup>2</sup> o failover para o banco de dados de réplica é um procedimento manual. O failover automático não é fornecido.  
   
- <sup>3</sup> o banco de dados do distribuidor não tem suporte [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para uso com o ou o espelhamento de banco de dados.  
+ <sup>3</sup> o banco de dados do distribuidor não tem suporte para uso com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou o espelhamento de banco de dados.  
   
 ### <a name="considerations"></a>Considerações  
   
@@ -241,7 +240,7 @@ ms.locfileid: "62814038"
   
 -   [Trabalhar com dados de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **Controle de alterações**  
+ **Change tracking**  
   
 -   [Habilitar e desabilitar o controle de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8ecb517174c8cd8189ad2f7382c774df3545620
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed7cdc549b3521d3efddc831455136775378cd52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62864943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915666"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extrair dados por meio da origem ODBC
   Este procedimento descreve como extrair dados usando uma fonte ODBC. Para adicionar e configurar uma origem ODBC, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados.  

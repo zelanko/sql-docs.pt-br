@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07a7bb9026984ed830d0b146438d958739463109
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 87f06021e5a2f9e10f6b60836fe3889aab3e9f65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019810"
 ---
 # <a name="bcp_bind"></a>bcp_bind
   Associa dados de uma variável de programa a uma coluna de tabela para cópia em massa no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -168,7 +167,7 @@ bcp_bind(hdbc, szName, 0,
   
 -   0xFFFFFFFFFFFFFFFE é tratado como um valor de prefixo especial usado para enviar dados em partes para o servidor de forma eficiente. O formato dos dados com este prefixo especial é:  
   
--   <SPECIAL_PREFIX> \< 0 ou mais partes de dados> <ZERO_CHUNK> em que:  
+-   <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> em que:  
   
 -   SPECIAL_PREFIX é 0xFFFFFFFFFFFFFFFE  
   

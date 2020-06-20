@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94834ef4be77aed897707d011799f2b9f877e41c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f4e96f2a7fe017aadaeb71ed05f546dabfa6540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053306"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Classe de evento Audit Database Principal Impersonation
-  A classe de evento **Audit Database Principal Impersonation** ocorre quando acontece uma representação no escopo do banco de dados, como EXECUTE AS \<*user*> ou SETUSER.  
+  A classe de evento **Audit Database principal Impersonation** ocorre quando uma representação ocorre dentro do escopo do banco de dados, como execute as \<*user*> ou SETUSER.  
   
 ## <a name="audit-database-principal-impersonation-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Database Principal Impersonation  
   

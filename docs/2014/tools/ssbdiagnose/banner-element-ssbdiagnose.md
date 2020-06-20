@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db804d25ce3129ebb177b021a64f5a63d0620940
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186873"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006792"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
   Identifica qual utilitário gerou o arquivo XML de saída **ssbdiagnose** .  
@@ -46,9 +45,9 @@ ms.locfileid: "63186873"
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|**Tipo de dados e comprimento**|Nenhum.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**C'**|Ocorre uma vez por arquivo XML de saída **ssbdiagnose** .|  
+|**Ocorrência**|Ocorre uma vez por arquivo XML de saída **ssbdiagnose** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

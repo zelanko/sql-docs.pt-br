@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b2adc326ef2e0bb593b0532a51a9a677821ae0e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf4bea14cafe771f4fe20e640601ea37adfe97fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921598"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>Configurar o log por meio de um arquivo de configuração salvo
   Este procedimento descreve como configurar o registro em log de novos contêineres em um pacote carregando um arquivo de configuração de registro em log salvo anteriormente.  
@@ -52,6 +51,6 @@ ms.locfileid: "66060603"
 9. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Registro em Log do Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
+ [Registro em Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md)  
   
   

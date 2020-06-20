@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0fb7d422687d0bc956937b30bae261b28edb3931
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad89a668a36afa10bbf7b0e35a01226141b0c316
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936447"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>Algumas réplicas de disponibilidade não estão sincronizando dados
     
@@ -29,7 +28,7 @@ ms.locfileid: "62788249"
 |-|-|  
 |**Nome da Política**|Estado de Sincronização de Dados de Réplicas de Disponibilidade|  
 |**Problema**|Algumas réplicas de disponibilidade não estão sincronizando dados.|  
-|**Categoria**|**Alerta**|  
+|**Categoria**|**Aviso**|  
 |**Particular**|grupo de disponibilidade|  
   
 ## <a name="description"></a>Descrição  

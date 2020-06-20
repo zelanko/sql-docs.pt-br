@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 53a89baa1fc13759bd24d6c12190bce509f6dfce
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a71f4e646f91636c42e4bbe7b72e5050e4d87c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019325"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode permite especificar o formato de coluna em uma operação de cópia em massa, definindo todos os atributos de coluna em uma única chamada de função.  
@@ -79,10 +78,10 @@ cbRow
   
 |Propriedade|Descrição|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção-c no BCP. EXE e para bcp_setcolfmt com a `BCP_FMT_TYPE` propriedade definida como `SQLCHARACTER` .|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção-w no BCP. EXE e bcp_setcolfmt com `BCP_FMT_TYPE` a propriedade definida como `SQLNCHAR` .|  
-|BCP_OUT_NATIVE_TEXT_MODE|Especifica tipos nativos para tipos de não caracteres e Unicode para tipos de caracteres.<br /><br /> Corresponde à opção-N no BCP. EXE e bcp_setcolfmt com `BCP_FMT_TYPE` a propriedade definida como `SQLNCHAR` se o tipo de coluna for uma cadeia de caracteres (padrão se não for uma cadeia de caracteres).|  
-|BCP_OUT_NATIVE_MODE|Especifica tipos de bancos de dados nativos.<br /><br /> Corresponde à opção-n no BCP. EXE e bcp_setcolfmt com `BCP_FMT_TYPE` a propriedade definida como o padrão.|  
+|BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção-c em BCP.EXE e a bcp_setcolfmt com a `BCP_FMT_TYPE` propriedade definida como `SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção-w em BCP.EXE e bcp_setcolfmt com a `BCP_FMT_TYPE` propriedade definida como `SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Especifica tipos nativos para tipos de não caracteres e Unicode para tipos de caracteres.<br /><br /> Corresponde à opção-N em BCP.EXE e bcp_setcolfmt com a `BCP_FMT_TYPE` propriedade definida como `SQLNCHAR` se o tipo de coluna for uma cadeia de caracteres (padrão se não for uma cadeia de caracteres).|  
+|BCP_OUT_NATIVE_MODE|Especifica tipos de bancos de dados nativos.<br /><br /> Corresponde à opção-n em BCP.EXE e bcp_setcolfmt com `BCP_FMT_TYPE` a propriedade definida como o padrão.|  
   
  Você não deve usar bcp_setbulkmode com uma sequência de chamadas de função que inclua bcp_setcolfmt, bcp_control e bcp_readfmt. Por exemplo, você não deve chamar bcp_control (BCPTEXTFILE) e bcp_setbulkmode.  
   

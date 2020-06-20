@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 239a8ae3d25a27f318b67d662a9da8c59e74ab76
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478881"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971126"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Sobrepondo permissões de usuário e grupo (Serviços de Dados Mestre)
   As permissões de um usuário são baseadas em:  

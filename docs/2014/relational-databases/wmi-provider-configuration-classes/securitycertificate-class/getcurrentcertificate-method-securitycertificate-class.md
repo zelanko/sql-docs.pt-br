@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e027ece4576907b9543c7fc6eb9cbe161b3c4323
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b79e57afac4509401acc69892eb1665ec73bf84
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060037"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>Método GetCurrentCertificate (classe SecurityCertificate)
   Obtém o certificado de segurança atual.  
@@ -40,7 +39,7 @@ SHA , SQLInstance
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SecurityCertificate](securitycertificate-class.md) que representa um certificado de segurança.  
   
 #### <a name="parameters"></a>Parâmetros  

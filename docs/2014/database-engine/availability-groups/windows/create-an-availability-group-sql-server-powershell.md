@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8085fa23357c5901ed350e81410ae4d38a3005dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be84fd9d747ac2b6699c2e1008836c49ead1b059
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228804"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936927"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Criar um Grupo de disponibilidade (SQL Server PowerShell)
   Esse tópico descreve como usar os cmdlets do PowerShell para criar e configurar um grupo de disponibilidade AlwaysOn usando o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
@@ -51,7 +50,7 @@ ms.locfileid: "75228804"
 |Preparar os banco de dados secundários|`Backup-SqlDatabase` e `Restore-SqlDatabase`|Crie backups na instância de servidor que hospeda a réplica primária.<br /><br /> Restaure backups em cada instância de servidor que hospeda uma réplica secundária, usando o parâmetro de restauração `NoRecovery`. Se os caminhos dos arquivos forem diferentes nos computadores que hospedam a réplica primária e a réplica secundária de destino, use também o parâmetro de restauração `RelocateFile`.|  
 |Iniciar a sincronização de dados unindo cada banco de dados secundário ao grupo de disponibilidade|`Add-SqlAvailabilityDatabase`|Execute em cada instância de servidor que hospeda uma réplica secundária.|  
   
- **<sup>*</sup>** Para executar uma determinada tarefa, altere o diretório`cd`() para a instância ou instâncias de servidor indicadas.  
+ **<sup>*</sup>** Para executar uma determinada tarefa, altere o diretório ( `cd` ) para a instância ou instâncias de servidor indicadas.  
   
 ###  <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a><a name="PsProviderLinks"></a>Para configurar e usar o provedor de SQL Server PowerShell  
   
@@ -225,7 +224,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Explica**  
+-   **Vídeos:**  
   
      [Microsoft SQL Server codinome "Denali" Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

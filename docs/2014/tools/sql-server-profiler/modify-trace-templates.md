@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a26d0a70f65b6ff60dcf42ffb98e67dc0d2b52d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035033"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040307"
 ---
 # <a name="modify-trace-templates"></a>Modificar modelos de rastreamento
   Você pode modificar os modelos salvos em um arquivo no computador local em que é executado o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Você também pode modificar modelos derivados desses arquivos. Ao modificar modelos existentes, edite as propriedades do modelo, como classes de evento e colunas de dados, na mesma ordem em que essas propriedades foram definidas originalmente, na guia **Seleção de Eventos** da caixa de diálogo **Propriedades do Rastreamento** . As classes de evento e colunas de dados podem ser adicionadas ou removidas e os filtros podem ser alterados. Depois que o modelo é modificado, um modelo específico ao usuário é criado, mantendo-se intacto o modelo do sistema original. Para obter mais informações, veja [Salvar rastreamentos e modelos de rastreamento](save-traces-and-trace-templates.md).  

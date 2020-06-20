@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bea9948691adc57ab6498f88687946400cb6548
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007157"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
   O utilitário **SQLdiag** é um utilitário de coleta de diagnósticos para fins gerais que pode ser executado como um aplicativo do console ou um serviço. É possível usar o **SQLdiag** para coletar logs e arquivos de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e de outros tipos de servidores, e usá-lo para monitorar os servidores ao longo do tempo ou para solucionar problemas específicos com seus servidores. O**SQLdiag** foi criado para agilizar e simplificar a coleta de informações de diagnóstico para os Serviços de Atendimento ao Cliente da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -358,9 +357,9 @@ SQLDIAG START /A Instance1
  Execute várias instâncias do **SQLdiag** no mesmo computador especificando **/a**_SQLdiag_application_name_ na linha de comando. Isso é útil para coletar conjuntos diferentes de diagnósticos simultaneamente da mesma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Por exemplo, você pode configurar uma instância nomeada do **SQLdiag** para executar continuamente coletas de dados leves. Então, se algum problema ocorrer no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você poderá executar a instância padrão do **SQLdiag** para coletar o diagnóstico desse problema ou para reunir um conjunto de diagnósticos que os Serviços de Atendimento ao Cliente da [!INCLUDE[msCoName](../includes/msconame-md.md)] solicitaram a você a fim de diagnosticar um problema.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Coletando dados de diagnóstico de instâncias do SQL Server clusterizado  
- O**SQLdiag** oferece suporte à coleta de dados de diagnóstico de instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clusterizadas. Para reunir diagnósticos de instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clusterizadas, verifique se **"."** está especificado no atributo **name** do elemento **\<Machine>** no arquivo de configuração SQLDiag.Xml e não especifique o argumento **/G** na linha de comando. Por padrão, **"."** é especificado para o atributo **name** no arquivo de configuração e o argumento **/G** é desativado. Normalmente, você não precisa editar o arquivo de configuração ou alterar a linha de comando ao coletar a partir de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clusterizada.  
+ O**SQLdiag** oferece suporte à coleta de dados de diagnóstico de instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clusterizadas. Para coletar diagnósticos de instâncias clusterizadas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , verifique se **"."** está especificado para o atributo **Name** do **\<Machine>** elemento no arquivo de configuração SQLDiag.Xml e não especifique o argumento **/g** na linha de comando. Por padrão, **"."** é especificado para o atributo **name** no arquivo de configuração e o argumento **/G** é desativado. Normalmente, você não precisa editar o arquivo de configuração ou alterar a linha de comando ao coletar a partir de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clusterizada.  
   
- Quando **"."** está especificado como o nome da máquina, o **SQLdiag** detecta que está sendo executado em um cluster e recupera simultaneamente informações de diagnóstico de todas as instâncias virtuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instaladas no cluster. Se você quiser coletar informações de diagnóstico de apenas uma instância virtual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que está sendo executada em um computador, especifique essa [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] virtual para o atributo **name** do elemento **\<Machine>** no SQLDiag.Xml.  
+ Quando **"."** está especificado como o nome da máquina, o **SQLdiag** detecta que está sendo executado em um cluster e recupera simultaneamente informações de diagnóstico de todas as instâncias virtuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instaladas no cluster. Se você quiser coletar informações de diagnóstico de apenas uma instância virtual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que está sendo executada em um computador, especifique esse virtual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o atributo **Name** do **\<Machine>** elemento em SQLDiag.Xml.  
   
 > [!NOTE]  
 >  Para coletar informações de rastreamento do [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] de instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clusterizadas, os compartilhamentos administrativos (ADMIN$) devem estar habilitados no cluster.  

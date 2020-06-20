@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cf820e3f5a3f4a2ca9db28510b867c5dbc8f3c4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb8cd4b29b7d3502fb4bca9db1434c66da305159
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833800"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920918"
 ---
 # <a name="file-connection-manager"></a>Gerenciador de conexões de arquivos
   Um gerenciador de conexões de Arquivo permite que um pacote faça referência a um arquivo ou pasta existente ou crie um arquivo ou pasta em tempo de execução. Por exemplo, você pode fazer referência a um arquivo do Excel. Alguns componentes em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usam as informações nos arquivos para executar seu trabalho. Por exemplo, uma tarefa Executar SQL pode fazer referência a um arquivo que contém as instruções SQL que a tarefa executa. Outros componentes executam operações em arquivos. Por exemplo, a tarefa Sistema de Arquivos pode fazer referência a um arquivo para copiá-lo para um novo local.  

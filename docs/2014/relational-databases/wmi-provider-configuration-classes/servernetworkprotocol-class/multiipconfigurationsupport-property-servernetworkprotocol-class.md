@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a6813371e7641af1369f94f875ca0d9f96ad3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80401a607c9155451a869082162affcca401ebca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470053"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059912"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>Propriedade MultiIpConfigurationSupport (classe ServerNetworkProtocol)
   Obtém uma propriedade booliana que especifica se vários endereços IP têm suporte de um protocolo de rede do servidor.  
@@ -37,8 +36,8 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
- Um objeto de [Propriedade ProtocolName (classe ServerNetworkProtocol)](servernetworkprotocol-class.md) que representa o protocolo de rede usado pela instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]do.  
+ *object*  
+ Um objeto de [Propriedade ProtocolName (classe ServerNetworkProtocol)](servernetworkprotocol-class.md) que representa o protocolo de rede usado pela instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor booliano que especifica se vários endereços IP têm suporte do protocolo de rede do servidor: `true` se vários endereços IP tiverem suporte do protocolo de rede do servidor ou `false` se vários endereços IP não tiverem suporte do protocolo de rede do servidor.  

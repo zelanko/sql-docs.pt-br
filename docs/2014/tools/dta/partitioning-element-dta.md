@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49f49b514edbeac06d5a7af9008ba4209be2978d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040345"
 ---
 # <a name="partitioning-element-dta"></a>Elemento de particionamento (DTA)
   Contém o esquema de particionamento que você gostaria que o Database Engine Tuning Advisor usasse durante a análise.  
@@ -36,7 +35,7 @@ ms.locfileid: "62657231"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, nenhum tamanho máximo.|  
 |**Valores permitidos**|**NONE**<br /> Sem particionamento<br /><br /> **FULL**<br /> Particionamento completo (Aprimora o desempenho.)<br /><br /> **ALIGNED**<br /> Somente o particionamento alinhado (Aprimora a capacidade de gerenciamento máxima).<br /><br /> Use apenas um desses valores com este elemento.<br /><br /> **ALIGNED** significa que na recomendação gerada pelo Database Engine Tuning Advisor cada índice proposto é particionado exatamente do mesmo modo da tabela subjacente para a qual o índice está definido. Índices não clusterizados em uma exibição indexada são alinhados com a exibição indexada.|  

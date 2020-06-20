@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 06e593c676c206f863bdb110be5c93e5003b4e13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad79983f570beb4c789379b2b48682b358c34e1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484095"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937367"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS
   Há muitos tipos de dados no SQL Server e no SSIS (SQL Server Integration Services), mas somente quatro tipos de dados para domínios do DQS: Data, Decimal, Inteiro e Cadeia de Caracteres. Nem todos os SQL Server e tipos de dados do SSIS têm suporte no DQS. Você poderá mapear sua fonte de dados para um domínio DQS para realizar atividades de qualidade de dados somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Este tópico fornece informações sobre os tipos de dados do SQL Server e do SSIS que têm suporte e estão disponíveis para mapear para cada um dos quatro tipos de dados de domínio no DQS.  
@@ -28,7 +27,7 @@ ms.locfileid: "65484095"
   
 |Tipo de dados de domínio DQS|Tipo de dados do SQL Server com suporte|  
 |--------------------------|------------------------------------|  
-|Data|date|  
+|Data|data|  
 |Decimal|decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> numeric<br /><br /> real<br /><br /> SMALLMONEY|  
 |Integer|BIGINT<br /><br /> INT<br /><br /> SMALLINT<br /><br /> TINYINT|  
 |String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  

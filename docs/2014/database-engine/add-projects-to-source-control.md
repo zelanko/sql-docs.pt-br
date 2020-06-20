@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fd4616b2-a564-4a66-ac53-d1f5cba213c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de32cbecdf132f1c881ab9fe5637af3a5c6cd400
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937347"
 ---
 # <a name="add-projects-to-source-control"></a>Adicionar projetos ao controle do código-fonte
   As soluções do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] podem hospedar vários projetos de script. Como você adiciona um projeto ao controle do código-fonte depende do fato de a solução a que o projeto pertence estar sob controle do código-fonte. Se a solução estiver sob controle do código-fonte, fazer check-in da solução adicionará automaticamente o projeto ao controle do código-fonte. Para obter mais informações sobre como fazer check-in de soluções, consulte [check in Files](../../2014/database-engine/check-in-files.md).  

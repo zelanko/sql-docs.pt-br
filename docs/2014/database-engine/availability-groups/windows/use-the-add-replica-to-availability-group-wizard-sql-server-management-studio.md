@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4d75372cd2388e88fcb3d3ce95975bdefa54c5c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813269"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936262"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade (SQL Server Management Studio)
   Use o Assistente para Adicionar Réplica ao Grupo de Disponibilidade para ajudá-lo a adicionar uma nova réplica secundária a um grupo de disponibilidade AlwaysOn existente.  
@@ -85,9 +84,9 @@ ms.locfileid: "62813269"
     |**Pontos de extremidade**|Use esta guia para verificar o ponto de extremidade de espelhamento de banco de dados existente, se houver, para cada nova réplica secundária. Se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows, o assistente tentará criar o ponto de extremidade automaticamente. **Observação:**  Se alguma instância de servidor estiver sendo executada sob uma conta de usuário que não seja de domínio, você precisará fazer uma alteração manual na instância do servidor antes de prosseguir no assistente. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.|  
     |**Preferências de backup**|Use esta guia para especificar sua preferência de backup para o grupo de disponibilidade como um todo, se você deseja modificar a configuração atual, e para especificar suas prioridades de backup para as réplicas de disponibilidade individuais.|  
   
-6.  Na página **Selecionar Sincronização de Dados Inicial** , escolha como você deseja que seus novos bancos de dados secundários sejam criados e unidos ao grupo de disponibilidade. Escolha uma das seguintes opções:  
+6.  Na página **Selecionar Sincronização de Dados Inicial** , escolha como você deseja que seus novos bancos de dados secundários sejam criados e unidos ao grupo de disponibilidade. Selecione uma das seguintes opções:  
   
-    -   **Completo**  
+    -   **Full**  
   
          Selecione esta opção se seu ambiente atender aos requisitos para iniciar automaticamente a sincronização de dados inicial (para obter mais informações, veja [Pré-requisitos, restrições e recomendações](#Prerequisites), anteriormente neste tópico).  
   

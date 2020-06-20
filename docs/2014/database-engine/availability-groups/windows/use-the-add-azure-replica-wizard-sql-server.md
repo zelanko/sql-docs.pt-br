@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95cb279c939298256a623d67e3db8f979f65c40f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936257"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Use o Assistente para Adicionar Réplica do Azure (SQL Server)
   Use o assistente para adicionar réplica do Azure para ajudá-lo a criar uma nova VM do Azure em ti híbrida e configurá-la como uma réplica secundária para um grupo de disponibilidade AlwaysOn novo ou existente.  

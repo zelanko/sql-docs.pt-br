@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95f1e2cec530ee65dce60ceea1679281a9d3ba5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91a781d957eb2f5a81d323fc3c65c93e34945c12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783003"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936987"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurar backup em réplicas de disponibilidade (SQL Server)
   Este tópico descreve como configurar o backup em réplicas secundárias de um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -116,7 +115,7 @@ ms.locfileid: "72783003"
   
 2.  Opcionalmente, configure a prioridade de backup de cada réplica de disponibilidade que você está adicionando ou modificando. Esta prioridade é usada pela instância de servidor que hospeda a réplica primária para decidir qual réplica deve atender uma solicitação de backup automatizado em um banco de dados no grupo de disponibilidade (a réplica com prioridade mais alta é escolhida). Essa prioridade pode ser qualquer número entre 0 e 100, inclusive. Uma prioridade de 0 indica que a réplica não deve ser considerada como candidata para atender solicitações de backup.  A configuração padrão é 50.  
   
-     Ao adicionar uma réplica de disponibilidade a um grupo de disponibilidade, use o cmdlet `New-SqlAvailabilityReplica`. Ao modificar uma réplica de disponibilidade existente, use o cmdlet `Set-SqlAvailabilityReplica`. Em ambos os casos, especifique `BackupPriority`o parâmetro *n* , em que *n* é um valor de 0 a 100.  
+     Ao adicionar uma réplica de disponibilidade a um grupo de disponibilidade, use o cmdlet `New-SqlAvailabilityReplica`. Ao modificar uma réplica de disponibilidade existente, use o cmdlet `Set-SqlAvailabilityReplica`. Em ambos os casos, especifique o `BackupPriority` parâmetro *n* , em que *n* é um valor de 0 a 100.  
   
      Por exemplo, o comando a seguir define a prioridade de backup da réplica de disponibilidade `MyReplica` como `60`.  
   

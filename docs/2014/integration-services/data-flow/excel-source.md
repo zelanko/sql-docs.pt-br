@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37eb17ccaa418a6d81ef4caa461af50e505a8747
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ffedc7e90a31a33e05fc5b4bfe0b97c55be6a2a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087146"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915779"
 ---
 # <a name="excel-source"></a>Origem do Excel
   A origem do Excel extrai dados de planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -51,7 +50,7 @@ ms.locfileid: "82087146"
   
 -   **Fontes de dados**. A fonte de dados em uma pasta de trabalho do Excel pode ser uma planilha de trabalho, à qual o sinal $ deve ser anexado (por exemplo, Planilha1$), ou um intervalo nomeado (por exemplo, MeuIntervalo). Em uma instrução SQL, o nome de uma planilha de trabalho deve ser delimitado (por exemplo, [Planilha1$]) para evitar um erro de sintaxe causado pelo sinal $. O Construtor de Consultas adiciona automaticamente esses delimitadores. Quando você especifica uma planilha de trabalho ou um intervalo, o driver lê o bloco contínuo de células começando com a primeira célula não vazia no canto superior esquerdo da planilha de trabalho ou do intervalo. Dessa forma, você não pode ter linhas vazias nos dados de origem ou uma linha vazia entre o título ou as linhas de cabeçalho e de dados.  
   
--   **Valores ausentes**. O driver do Excel lê um determinado número de linhas (por padrão, 8 linhas) na fonte especificada para determinar o tipo de dados de cada coluna. Quando uma coluna parece conter tipos de dados mistos, especialmente dados numéricos combinados com dados de texto, o driver decide em favor do tipo de dados majoritário e retorna valores nulos para as células que contêm dados de outro tipo. (Em uma ligação, o tipo numérico vence.) A maioria das opções de formatação de células na planilha de trabalho do Excel não parece afetar a determinação desse tipo de dados. Você pode modificar esse comportamento de driver do Excel especificando Modo de Importação. Para especificar o modo de importação `IMEX=1` , adicione ao valor de propriedades estendidas na cadeia de conexão do Gerenciador de conexões do Excel na janela **Propriedades** . Para obter mais informações, consulte [PRB: valores do Excel retornados como NULOS usando DAO OpenRecordset](https://support.microsoft.com/kb/194124).  
+-   **Valores ausentes**. O driver do Excel lê um determinado número de linhas (por padrão, 8 linhas) na fonte especificada para determinar o tipo de dados de cada coluna. Quando uma coluna parece conter tipos de dados mistos, especialmente dados numéricos combinados com dados de texto, o driver decide em favor do tipo de dados majoritário e retorna valores nulos para as células que contêm dados de outro tipo. (Em uma ligação, o tipo numérico vence.) A maioria das opções de formatação de células na planilha de trabalho do Excel não parece afetar a determinação desse tipo de dados. Você pode modificar esse comportamento de driver do Excel especificando Modo de Importação. Para especificar o modo de importação, adicione `IMEX=1` ao valor de propriedades estendidas na cadeia de conexão do Gerenciador de conexões do Excel na janela **Propriedades** . Para obter mais informações, consulte [PRB: valores do Excel retornados como NULOS usando DAO OpenRecordset](https://support.microsoft.com/kb/194124).  
   
 -   **Texto truncado**. Quando o driver determina que uma coluna do Excel contém dados de texto, ele seleciona o tipo de dados (cadeia ou memorando) com base no valor mais longo que ele obtém. Se o driver não descobre nenhum valor maior que 255 caracteres nas linhas que ele verifica, ele trata a coluna como uma coluna de cadeia de 255 caracteres, não como uma coluna de memorando. Assim, valores com mais de 255 caracteres podem estar truncados. Para importar dados de uma coluna de memorando sem que haja truncamento, você deve certificar-se de que essa coluna, em pelo menos uma das linhas de amostra, contenha um valor com mais 255 caracteres ou deve aumentar o número de linhas de amostra pelo driver para incluir esse tipo de linha. Você pode aumentar o número de linhas de amostra aumentando o valor de **TypeGuessRows** na chave do Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Para obter mais informações, consulte [PRB: a transferência de dados da fonte Jet 4.0 OLEDB falha com erro](https://support.microsoft.com/kb/281517).  
   

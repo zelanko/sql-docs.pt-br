@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060593"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921597"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>caixa de diálogo Configurar Logs do SSIS
   Use a caixa de diálogo **Configurar Logs de SSIS** para definir as opções do log para um pacote.  
@@ -72,8 +71,8 @@ ms.locfileid: "66060593"
  **Descrição**  
  O campo de descrição é editável. Clique e modifique a descrição padrão do log.  
   
- **Configuração**  
- Selecione um Gerenciador de conexões existente na lista ou clique em \< **nova conexão...**> para criar um novo Gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
+ **Configuration**  
+ Selecione um Gerenciador de conexões existente na lista ou clique em \<**New connection...**> para criar um novo Gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
   
  Tópicos relacionados: [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md) , [Gerenciador de Conexões de Arquivos](connection-manager/file-connection-manager.md)  
   
@@ -95,7 +94,7 @@ ms.locfileid: "66060593"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Ele**|O nome do computador no qual o evento de log ocorreu.|  
+|**Computador**|O nome do computador no qual o evento de log ocorreu.|  
 |**Operador**|O nome de usuário da pessoa que iniciou o pacote.|  
 |**SourceName**|O nome do pacote, contêiner ou tarefa no qual o evento de log ocorreu.|  
 |**SourceID**|O Identificador Global Exclusivo (GUID) do pacote, contêiner ou tarefa no qual o evento de log ocorreu.|  
