@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb4558d092daffc4a043d05b53a2d669f9cd66f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966096"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Etapa 9: Testar o pacote de tutorial da Lição 1
   Nesta lição, você executou as seguintes tarefas:  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4489dd45616c1f2f8240f53e6a3bb0c59f459580
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e928c72fa3bf372646ecac79bbc6ad33d4a0f2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057275"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965056"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>Referência da interface do usuário do Gerenciador de Conexões ODBC
   Use a caixa de diálogo **Configurar Gerenciador de Conexões ODBC** para adicionar uma conexão com uma fonte de dados ODBC.  

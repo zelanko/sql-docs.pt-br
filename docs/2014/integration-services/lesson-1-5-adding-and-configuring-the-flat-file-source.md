@@ -9,30 +9,29 @@ ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 795285a6aaceb3e74e80f5cad71d54c72c756ae2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966146"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Etapa 5: Adicionar e configurar a fonte de arquivo simples
   Nesta tarefa, você irá adicionar e configurar uma fonte de arquivo simples ao seu pacote. Uma fonte de arquivo simples é um componente de fluxo de dados que usa metadados definidos por um gerenciador de conexões de arquivo simples para especificar o formato e a estrutura dos dados que serão extraídos do arquivo simples por um processo de transformação. Uma fonte de arquivo simples pode ser configurada para extrair dados de uma única fonte de arquivo simples usando a definição de formato de arquivo fornecida pelo gerenciador de conexões do arquivo simples.  
   
- Para este tutorial, você configurará a fonte de arquivo simples para `Sample Flat File Source Data` usar o Gerenciador de conexões que você criou anteriormente.  
+ Para este tutorial, você configurará a fonte de arquivo simples para usar o `Sample Flat File Source Data` Gerenciador de conexões que você criou anteriormente.  
   
 ### <a name="to-add-a-flat-file-source-component"></a>Para adicionar um componente Fonte de Arquivo Simples  
   
-1.  Abra o designer de **fluxo de dados** clicando duas vezes na tarefa `Extract Sample Currency Data` fluxo de dados ou clicando na **guia fluxo de dados**.  
+1.  Abra o designer de **fluxo de dados** clicando duas vezes na tarefa fluxo de dados `Extract Sample Currency Data` ou clicando na **guia fluxo de dados**.  
   
 2.  Na **Caixa de Ferramentas do SSIS**, expanda **Outras Fontes**e arraste uma **Fonte de Arquivo Simples** até a superfície de design da guia **Fluxo de Dados** .  
   
-3.  Na superfície de design do **fluxo de dados** , clique com o botão direito do mouse na **fonte de arquivo simples**recém-adicionada, clique em `Extract Sample Currency Data` **renomear**e altere o nome para.  
+3.  Na superfície de design do **fluxo de dados** , clique com o botão direito do mouse na **fonte de arquivo simples**recém-adicionada, clique em **renomear**e altere o nome para `Extract Sample Currency Data` .  
   
 4.  Clique duas vezes na Fonte de Arquivo Simples para abrir a caixa de diálogo Editor da Fonte de Arquivo Simples.  
   
-5.  Na caixa **Gerenciador de conexões de arquivo simples** , `Sample Flat File Source Data`selecione.  
+5.  Na caixa **Gerenciador de conexões de arquivo simples** , selecione `Sample Flat File Source Data` .  
   
 6.  Clique em **Colunas** e verifique se os nomes das colunas estão corretos.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62891534"
   
 8.  Clique com o botão direito do mouse na fonte de Arquivo Simples e clique em **Propriedades**.  
   
-9. No janela Propriedades, verifique se a `LocaleID` Propriedade está definida como **Inglês (Estados Unidos)**.  
+9. No janela Propriedades, verifique se a `LocaleID` propriedade está definida como **inglês (Estados Unidos)**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 6: Adicionar e configurar a transformação Pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  

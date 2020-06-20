@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e0520c28d78b8036072b70de2d8f83a1a8c72da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b0b2e21176a050f98a284d3fb0627d6ce19e67b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62628771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998055"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Assinatura, Histórico do Distribuidor para o Assinante (assinatura de instantâneo)
   A guia **Histórico do Distribuidor para o Assinante** exibe informações detalhadas sobre o Distribution Agent, incluindo status, histórico, mensagens informativas e qualquer mensagem de erro.  
@@ -39,13 +38,13 @@ ms.locfileid: "62628771"
   
 -   Executando  
   
- **Start Time**  
+ **Hora de início**  
  A hora de início da sessão.  
   
  **Hora de término**  
  A hora de término da sessão. Se o agente não parou, esse campo estará vazio.  
   
- **Permanência**  
+ **Duration**  
  A quantidade de tempo que o Distribution Agent está em execução nessa sessão. O tempo representa o tempo decorrido, se o agente estiver sendo executado no momento, e o tempo total da sessão, se a sessão do agente tiver terminado.  
   
  **Mensagem de erro**  

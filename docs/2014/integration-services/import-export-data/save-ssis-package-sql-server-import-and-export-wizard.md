@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f74d9089bf6c2a87edaeaee80c95757982f6c2a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966197"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salvar Pacote SSIS (Assistente de Importação e Exportação do SQL Server)
-  Use a página **salvar pacote SSIS** para nomear, descrever e salvar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pacote Integration Services[!INCLUDE[ssIS](../../includes/ssis-md.md)]() no banco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` de dados ou em um arquivo que tenha a extensão. dtsx.  
+  Use a página **salvar pacote SSIS** para nomear, descrever e salvar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pacote Integration Services ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` banco de dados ou em um arquivo que tenha a extensão. dtsx.  
   
 > [!NOTE]  
->  No [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], a opção para salvar o pacote criado pelo assistente não está disponível.  
+>  No [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , a opção para salvar o pacote criado pelo assistente não está disponível.  
   
  Para obter mais informações sobre este assistente, consulte [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções de inicialização do assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o assistente de importação e exportação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62892745"
  **Nome do servidor**  
  Depois de selecionar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], digite ou selecione o nome do servidor de destino.  
   
- **Usar autenticação do Windows**  
+ **Usar Autenticação do Windows**  
  Depois de selecionar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique se deseja se conectar ao servidor usando a Autenticação Integrada do Windows. Esse é o método de autenticação preferido.  
   
  **Usar autenticação SQL Server**  

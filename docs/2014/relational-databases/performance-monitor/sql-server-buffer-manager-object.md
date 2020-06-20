@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc473447934b6274e0d202f6240634fb00d90491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998176"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, objeto Buffer Manager
   O objeto **Gerenciador de Buffer** fornece contadores para monitorar como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa:  
@@ -67,6 +66,6 @@ ms.locfileid: "63250759"
  [SQL Server, objeto de cache de plano](sql-server-plan-cache-object.md)   
  [Monitorar o uso de recursos &#40;o monitor do sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [sys. dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
- [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)  
+ [Extensão do pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   

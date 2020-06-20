@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe802796b129ff9bdb50e5dea13e1fe98beee269
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882351"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061579"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
   Após considerar as dicas para o de desempenho geral descritas em [Aprimorando o Desempenho Geral da Replicação](enhance-general-replication-performance.md), considere essas áreas adicionais específicas da replicação transacional.  
@@ -80,7 +79,7 @@ ms.locfileid: "73882351"
   
      O parâmetro **-SubscriptionStreams** pode melhorar muito a taxa de transferência de replicação agregada. Ele permite várias conexões a um Assinante para aplicar lotes de alterações em paralelo, mantendo presentes, ao mesmo tempo, várias características transacionais, quando for usar um thread único. Se uma das conexões falhar na execução ou na confirmação, todas as conexões abortarão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha. Antes de concluir a fase de repetição pode haver inconsistências transacionais temporárias no Assinante. Depois que os lotes com falha são confirmados com êxito, o Assinante é levado de volta a um estado de consistência transacional.  
   
-     Um valor para esse parâmetro de agente pode ser especificado usando o ** \@SubscriptionStreams** de [sp_addsubscription &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
+     Um valor para esse parâmetro de agente pode ser especificado usando o ** \@ subscriptionstreams** de [sp_addsubscription &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
 -   Aumente o valor do parâmetro **-ReadBatchSize** para o Agente de Leitor de Log.  
   

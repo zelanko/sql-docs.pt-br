@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df2bbf5c6031781494695f95116441fde34bf4f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211584"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013667"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Usando o WQL com o Provedor WMI para eventos de servidor
   Os aplicativos de gerenciamento acessam eventos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o Provedor WMI para eventos de servidor emitindo instruções WQL. O WQL é um subconjunto simplificado da linguagem SQL, com algumas extensões específicas do WMI. Ao usar o WQL, um aplicativo recupera um tipo de evento em uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um banco de dados ou um objeto de banco de dados (o único objeto com suporte no momento é o de fila). O provedor WMI para eventos de servidor traduz a consulta em uma notificação de evento que é criada no banco de dados de destino para notificações de eventos no escopo do banco de dados ou no escopo do objeto, ou no banco de dados **mestre** para notificações de eventos no escopo do servidor.  
@@ -72,7 +71,7 @@ WHERE where_condition
  Especifica que todas as propriedades associadas com um evento são consultadas.  
   
  *event_type*  
- É qualquer evento no qual uma notificação de eventos pode ser criada. Para obter uma lista de eventos disponíveis, consulte [provedor WMI para classes e propriedades de eventos de servidor](https://technet.microsoft.com/library/ms186449.aspx). Observe que os nomes de *tipo de evento* correspondem ao mesmo *event_type* | *event_group* que podem ser especificados quando você cria manualmente uma notificação de evento usando criar notificação de eventos. Os exemplos de *tipo de evento* incluem CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS e TRC_DATABASE.  
+ É qualquer evento no qual uma notificação de eventos pode ser criada. Para obter uma lista de eventos disponíveis, consulte [provedor WMI para classes e propriedades de eventos de servidor](https://technet.microsoft.com/library/ms186449.aspx). Observe que os nomes de *tipo de evento* correspondem ao mesmo *event_type*  |  *event_group* que podem ser especificados quando você cria manualmente uma notificação de evento usando criar notificação de eventos. Os exemplos de *tipo de evento* incluem CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS e TRC_DATABASE.  
   
 > [!NOTE]  
 >  Certos procedimentos armazenados do sistema que executam operações similares a DDL também podem acionar notificações de eventos. Teste as notificações de eventos para determinar suas respostas aos procedimentos armazenados que são executados. Por exemplo, a instrução CREATE TYPE e **sp_addtype** procedimento armazenado acionarão uma notificação de evento que é criada em um evento CREATE_TYPE. No entanto, o procedimento armazenado **sp_rename** não aciona nenhuma notificação de evento. Para obter mais informações, consulte[eventos DDL](../triggers/ddl-events.md).  
@@ -91,7 +90,7 @@ WHERE where_condition
   
  O Provedor WMI para eventos de servidor usa um algoritmo ascendente, o primeiro que for válido (first fit), a fim de gerar o escopo mais restrito possível para a EVENT NOTIFICATION subjacente. O algoritmo tenta minimizar a atividade interna no servidor e o tráfego de rede entre a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o processo do host WMI. O provedor examina a *event_type* especificada na cláusula From e as condições na cláusula WHERE e tenta registrar a notificação de evento subjacente com o escopo mais estreito possível. Se o provedor não puder registrar com o escopo mais restrito, ele tentará registrar com escopos sucessivamente superiores, até que um registro finalmente tenha êxito. Se o escopo mais alto (o nível de servidor) for atingido e falhar, um erro será retornado ao consumidor.  
   
- Por exemplo, se DatabaseName =**'** AdventureWorks **'** for especificado na cláusula WHERE, o provedor tentará registrar uma notificação de evento no banco [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de dados. Se o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existir e o cliente que fez a chamada tiver as permissões necessárias para criar uma notificação de eventos em [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], o registro terá êxito. Caso contrário, será feita uma tentativa de registrar a notificação de eventos no nível de servidor. O registro terá êxito se o cliente WMI tiver as permissões necessárias. Porém, neste cenário, os eventos não são retornados ao cliente até que o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tenha sido criado.  
+ Por exemplo, se DatabaseName =**'** AdventureWorks **'** for especificado na cláusula WHERE, o provedor tentará registrar uma notificação de evento no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados. Se o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existir e o cliente que fez a chamada tiver as permissões necessárias para criar uma notificação de eventos em [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], o registro terá êxito. Caso contrário, será feita uma tentativa de registrar a notificação de eventos no nível de servidor. O registro terá êxito se o cliente WMI tiver as permissões necessárias. Porém, neste cenário, os eventos não são retornados ao cliente até que o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tenha sido criado.  
   
  O *where_condition* também pode atuar como um filtro para limitar ainda mais a consulta a um banco de dados, esquema ou objeto específico. Por exemplo, considere a seguinte consulta WQL:  
   
@@ -105,7 +104,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  Se uma expressão composta, como `DatabaseName='AW1'` OR `DatabaseName='AW2'`, for especificada, será feita uma tentativa de registrar uma única notificação de eventos no escopo do servidor, em vez de duas notificações de eventos separadas. O registro terá êxito se o cliente que fez a chamada tiver as permissões.  
   
- Se `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` forem todos especificados na `WHERE` cláusula, será feita uma tentativa de registrar a notificação de eventos diretamente no objeto `Z` no esquema `X`. O registro terá êxito se o cliente tiver as permissões. Observe que, no momento, os eventos de nível de objeto têm suporte apenas em filas e somente para o QUEUE_ACTIVATION *event_type*.  
+ Se `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` forem todos especificados na `WHERE` cláusula, será feita uma tentativa de registrar a notificação de eventos diretamente no objeto `Z` no esquema `X` . O registro terá êxito se o cliente tiver as permissões. Observe que, no momento, os eventos de nível de objeto têm suporte apenas em filas e somente para o QUEUE_ACTIVATION *event_type*.  
   
  Observe que nem todos os eventos podem ser consultados em qualquer escopo específico. Por exemplo, uma consulta WQL em um evento de rastreamento, como Lock_Deadlock, ou um grupo de eventos de rastreamento, como TRC_LOCKS, podem ser registrado apenas no nível de servidor. De forma semelhante, o evento CREATE_ENDPOINT e o grupo de eventos DDL_ENDPOINT_EVENTS também podem ser registrados apenas no nível de servidor. Para obter mais informações sobre o escopo apropriado para o registro de eventos, consulte [criando notificações de eventos](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Uma tentativa de registrar uma consulta WQL cujo *event_type* só pode ser registrado no nível do servidor sempre é feita no nível do servidor. O registro terá êxito se o cliente WMI tiver as permissões. Caso contrário, será retornado um erro ao cliente. Entretanto, em alguns casos, você ainda pode usar a cláusula WHERE como um filtro para eventos em nível de servidor com base nas propriedades que correspondem ao evento. Por exemplo, vários eventos de rastreamento têm uma propriedade `DatabaseName` que pode ser usada na cláusula WHERE como um filtro.  
   

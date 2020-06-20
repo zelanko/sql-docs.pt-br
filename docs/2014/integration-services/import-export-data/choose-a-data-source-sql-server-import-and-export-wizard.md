@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966257"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server)
   Use a página **escolher uma fonte de dados** para especificar a origem dos dados que você deseja copiar.  
@@ -28,7 +27,7 @@ ms.locfileid: "62893591"
   
 ## <a name="options"></a>Opções  
  **Fonte de Dados**  
- Escolha o provedor de dados que corresponde ao formato de armazenamento da origem. Pode haver mais de um provedor disponível para sua fonte de dados. Por exemplo, com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, você [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar o Native Client, o .NET Framework provedor de dados para SQL Server ou o provedor de OLE DB da Microsoft para SQL Server.  
+ Escolha o provedor de dados que corresponde ao formato de armazenamento da origem. Pode haver mais de um provedor disponível para sua fonte de dados. Por exemplo, com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o, você pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Native Client, o .NET Framework Provedor de Dados para SQL Server ou o provedor de OLE DB da Microsoft para SQL Server.  
   
  A propriedade **fonte de dados** tem um número variável de opções, que dependem dos provedores instalados no computador. As tabelas a seguir listam as opções de alguns destinos usados com mais frequência. Para outros provedores, consulte a documentação específica do provedor.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62893591"
  **Nome do servidor**  
  Digite o nome do servidor que contém os dados ou escolha um servidor da lista.  
   
- **Usar autenticação do Windows**  
+ **Usar Autenticação do Windows**  
  Especifique se o pacote deve usar a Autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para fazer login no banco de dados. A Autenticação do Windows é recomendada para obter melhor segurança.  
   
  **Usar autenticação SQL Server**  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3b1be3f11e3a53ad291ff774cc72468af0d66ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894760"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966201"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Salvar e Executar Pacote (Assistente de Importação e Exportação do SQL Server)
   Use a caixa de diálogo **salvar e executar pacote** para executar o pacote imediatamente, salve-o para execução posterior ou ambos.  
@@ -37,10 +36,10 @@ ms.locfileid: "62894760"
  Salve o pacote para executá-lo posteriormente, com a opção de executá-lo imediatamente.  
   
 > [!NOTE]  
->  No [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], a opção para salvar o pacote criado pelo assistente não está disponível.  
+>  No [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , a opção para salvar o pacote criado pelo assistente não está disponível.  
   
  **SQL Server**  
- Selecione esta opção para salvar o pacote no banco [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` de dados.  
+ Selecione esta opção para salvar o pacote no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` banco de dados.  
   
 > [!NOTE]  
 >  Essa opção só estará disponível se você tiver selecionado a opção **salvar pacote SSIS** .  

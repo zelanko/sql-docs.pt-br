@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cca2f9e1ff6069a608beb1df1880b37e15f4e869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871103"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965786"
 ---
 # <a name="resource-database"></a>Banco de dados de recursos
   O banco de dados Recurso é um banco de dados somente leitura que contém todos os objetos de sistema inclusos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos do sistema como sys.objects, são fisicamente persistentes no banco de dados Resource, mas aparecem logicamente no esquema sys de cada banco de dados. O banco de dados Recurso não contém dados de usuário ou metadados de usuário.  
@@ -28,7 +27,7 @@ ms.locfileid: "62871103"
  O banco de dados Recurso torna a atualização para uma nova versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um procedimento mais fácil e mais rápido. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a atualização exigia remover e criar objetos do sistema. Como o arquivo de banco de dados Recurso contém todos os objetos de sistema, agora, uma atualização é obtida simplesmente pela cópia do único arquivo de banco de dados Recurso no servidor local.  
   
 ## <a name="physical-properties-of-resource"></a>Propriedades físicas de Resource  
- Os nomes dos arquivos físicos do banco de dados do Recurso são mssqlsystemresource.mdf e mssqlsystemresource.ldf. Esses arquivos estão localizados em \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\ e não devem ser movidos. Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um e apenas um arquivo mssqlsystemresource.mdf associado, e as instâncias não compartilham esse arquivo.  
+ Os nomes dos arquivos físicos do banco de dados do Recurso são mssqlsystemresource.mdf e mssqlsystemresource.ldf. Esses arquivos estão localizados em \<*drive*> : \Program Files\Microsoft SQL Server\MSSQL \<version> . \<*instance_name*> \MSSQL\Binn\ e não deve ser movido. Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem um e apenas um arquivo mssqlsystemresource.mdf associado, e as instâncias não compartilham esse arquivo.  
   
 > [!WARNING]  
 >  Atualizações e service packs às vezes fornecem um novo banco de dados recurso que é instalado na pasta BINN. Alterar o local do banco de dados do recurso não é suportado nem recomendado.  

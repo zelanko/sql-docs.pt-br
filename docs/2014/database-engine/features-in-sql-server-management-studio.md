@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e75504b9-7968-4e3b-8411-fd79fe09021e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 790e02374fe209576c963c5f1e9c6e63e8e2d16b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd2d11c35f46d3cd60cb2180eca40fe45f41105a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779780"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933037"
 ---
 # <a name="features-in-sql-server-management-studio"></a>Recursos do SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] inclui os seguintes recursos gerais:  

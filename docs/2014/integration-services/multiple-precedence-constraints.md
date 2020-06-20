@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0b75b96f30d2fe7f104e8f59aa03d7de6202e6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61939b09b4a4365c09089df2b52026e96f9427ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057409"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965146"
 ---
 # <a name="multiple-precedence-constraints"></a>Várias restrições de precedência
   Uma restrição de precedência conecta dois executáveis: duas tarefas, dois contêineres, ou um de cada. Eles são conhecidos como o executável de precedência e o executável restrito. Um executável restrito pode ter múltiplas restrições de precedência. Para obter informações, consulte [Restrições de precedência](control-flow/precedence-constraints.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "66057409"
 ## <a name="logicaland-property"></a>Propriedade LogicalAnd  
  Se uma tarefa ou contêiner tiver múltiplas restrições, a propriedade `LogicalAnd` especificará se uma restrição de precedência é avaliada isoladamente ou junto com outras restrições.  
   
- Você pode definir a `LogicalAnd` propriedade usando o **Editor de restrição de precedência** no [!INCLUDE[ssIS](../includes/ssis-md.md)] designer ou na janela Propriedades [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] que o fornece.  
+ Você pode definir a `LogicalAnd` propriedade usando o **Editor de restrição de precedência** no [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ou na janela Propriedades que o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fornece.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Definir as propriedades de uma restrição de precedência](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  

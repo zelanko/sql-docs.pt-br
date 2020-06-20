@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7150ca05e536214d43d4992ed1e7f79138ac2be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916842"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965686"
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
    O banco de dados do sistema **tempdb** é um recurso global disponível para todos os usuários conectados à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é usado para manter o seguinte:  
@@ -33,7 +32,7 @@ ms.locfileid: "62916842"
   
 -   As versões de linhas geradas por meio de transações de modificação de dados para recursos como: operações de índice on-line, vários conjuntos de resultados ativos (MARS) e gatilhos AFTER.  
   
- As operações em **tempdb** são registradas minimamente. Isso permite que transações sejam revertidas. o **tempdb** é recriado sempre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado, de modo que o sistema sempre comece com uma cópia limpa do banco de dados. As tabelas temporárias e procedimentos armazenados são descartados automaticamente ou desconectados e nenhuma conexão fica ativa quando o sistema é desligado. Portanto, nunca há nada em **tempdb** a ser salvo de uma sessão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra. As operações de backup e restauração não são permitidas em **tempdb**.  
+ As operações em **tempdb** são registradas minimamente. Isso permite que transações sejam revertidas. o **tempdb** é recriado sempre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é iniciado, de modo que o sistema sempre comece com uma cópia limpa do banco de dados. As tabelas temporárias e procedimentos armazenados são descartados automaticamente ou desconectados e nenhuma conexão fica ativa quando o sistema é desligado. Portanto, nunca há nada em **tempdb** a ser salvo de uma sessão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra. As operações de backup e restauração não são permitidas em **tempdb**.  
   
 ## <a name="physical-properties-of-tempdb"></a>Propriedades físicas de tempdb  
  A tabela a seguir lista os valores iniciais de configuração dos dados **tempdb** e dos arquivos de log. Os tamanhos desses arquivos podem variar um pouco em diferentes edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,7 +42,7 @@ ms.locfileid: "62916842"
 |Dados primários|tempdev|tempdb.mdf|Crescimento automático em 10% até que o disco esteja cheio|  
 |Log|templog|templog.ldf|Aumento automático de 10 por cento até um máximo de 2 terabytes.|  
   
- O tamanho de **tempdb** pode afetar o desempenho de um sistema. Por exemplo, se o tamanho do **tempdb** for muito pequeno, o processamento do sistema poderá ser muito ocupado com o crescimento automático do banco de dados para dar suporte ao seu requisito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de carga de trabalho toda vez que você iniciar. Você pode evitar essa sobrecarga aumentando o tamanho de **tempdb**.  
+ O tamanho de **tempdb** pode afetar o desempenho de um sistema. Por exemplo, se o tamanho do **tempdb** for muito pequeno, o processamento do sistema poderá ser muito ocupado com o crescimento automático do banco de dados para dar suporte ao seu requisito de carga de trabalho toda vez que você iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Você pode evitar essa sobrecarga aumentando o tamanho de **tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Melhorias de desempenho em tempdb  
  Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **tempdb** o desempenho é aprimorado dos seguintes modos:  

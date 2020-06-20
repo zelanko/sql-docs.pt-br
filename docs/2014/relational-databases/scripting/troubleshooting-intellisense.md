@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eb7fa5b5b4f12e37ba698c7f912abc2146366ac4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9f4eb3c9d7ad23dc414db71dfe12912f8e89a082
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997917"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>Solucionando problemas do IntelliSense (SQL Server Management Studio)
   Em certos casos, o funcionamento das opções do IntelliSense podem não ser o esperado:  

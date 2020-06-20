@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b514820ad64cbf17df209cbda552e4c5182b75fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012729"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997775"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Escolher um idioma ao criar um índice de texto completo
   Ao criar um índice de texto completo, você precisa especificar um idioma no nível de coluna para a coluna indexada. O [separador de palavras e os lematizadores](configure-and-manage-word-breakers-and-stemmers-for-search.md) do idioma especificado serão usados por consultas de texto completo na coluna. Há algumas coisas a considerar ao escolher o idioma da coluna ao criar um índice de texto completo. Essas considerações estão relacionadas a como seu texto é transformado em token e, depois, indexado pelo Mecanismo de Texto Completo.  
@@ -49,7 +48,7 @@ ms.locfileid: "66012729"
   
 -   Segurança  
   
-     Os novos separadores de palavras são habilitados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] por padrão em graças aos aprimoramentos de segurança nos componentes lingüísticos. É altamente recomendável que componentes externos, como separadores de palavras e filtros, sejam assinados para melhorar a segurança geral e a robustez do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível configurar a pesquisa de texto completo para verificar se esses componentes estão assinados, da seguinte forma:  
+     Os novos separadores de palavras são habilitados por padrão em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] graças aos aprimoramentos de segurança nos componentes lingüísticos. É altamente recomendável que componentes externos, como separadores de palavras e filtros, sejam assinados para melhorar a segurança geral e a robustez do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. É possível configurar a pesquisa de texto completo para verificar se esses componentes estão assinados, da seguinte forma:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +60,7 @@ ms.locfileid: "66012729"
   
 -   Cobertura de uma lista extensa de idiomas e separadores de palavras que estão são incluídos no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prontos para uso e habilitados por padrão.  
   
- Para obter uma lista dos idiomas para os [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quais o inclui um separador de palavras e lematizadores, consulte [sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Para obter uma lista dos idiomas para os quais o inclui um separador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] palavras e lematizadores, consulte [sys. Fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   

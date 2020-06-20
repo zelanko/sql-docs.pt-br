@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 780fde57-3970-4063-a634-04879b6ef141
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34139ed065fd2108d57be612837c0586f56197e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c43195853b18f735e3416668656ee83d2ff9e4f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053111"
 ---
 # <a name="audit-server-object-take-ownership-event-class"></a>Classe de evento Audit Server Object Take Ownership
   A classe de evento **Audit Server Object Take Ownership** ocorre quando o proprietário é alterado para objetos no escopo do servidor.  

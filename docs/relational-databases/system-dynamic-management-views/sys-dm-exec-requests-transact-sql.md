@@ -20,29 +20,29 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941072"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retorna informações sobre cada solicitação que está sendo executada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no. Para obter mais informações sobre solicitações, consulte o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md).
+Retorna informações sobre cada solicitação que está sendo executada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre solicitações, consulte o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md).
    
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID da sessão a que esta solicitação está relacionada. Não permite valor nulo.|  
 |request_id|**int**|ID da solicitação. Exclusiva no contexto da sessão. Não permite valor nulo.|  
 |start_time|**datetime**|Carimbo de data e hora em que a solicitação chegou. Não permite valor nulo.|  
-|status|**nvarchar(30)**|Status da solicitação. Pode ser um dos seguintes:<br /><br /> Tela de fundo<br />Executando<br />Executável<br />Hibernando<br />Suspenso<br /><br /> Não permite valor nulo.|  
-|command|**nvarchar(32)**|Identifica o tipo atual de comando que está sendo processado. Os tipos de comando comuns incluem:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete (excluir)<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> O texto da solicitação pode ser recuperado usando sys.dm_exec_sql_text com o sql_handle correspondente para a solicitação. Os processos de sistema internos definem o comando com base no tipo de tarefa que eles executam. As tarefas podem incluir o seguinte:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Não permite valor nulo.|  
+|status|**nvarchar(30)**|Status da solicitação. Pode ser um dos seguintes:<br /><br /> Segundo plano<br />Executando<br />Executável<br />Hibernando<br />Suspenso<br /><br /> Não permite valor nulo.|  
+|.|**nvarchar(32)**|Identifica o tipo atual de comando que está sendo processado. Os tipos de comando comuns incluem:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete (excluir)<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> O texto da solicitação pode ser recuperado usando sys.dm_exec_sql_text com o sql_handle correspondente para a solicitação. Os processos de sistema internos definem o comando com base no tipo de tarefa que eles executam. As tarefas podem incluir o seguinte:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Não permite valor nulo.|  
 |sql_handle|**varbinary(64)**|É um token que identifica exclusivamente o lote ou o procedimento armazenado do qual a consulta faz parte. Permite valor nulo.| 
-|statement_start_offset|**int**|Indica, em bytes, começando com 0, a posição inicial da instrução atualmente em execução para o lote ou objeto persistente em execução no momento. Pode ser usado junto com o `sql_handle`, o `statement_end_offset`e a `sys.dm_exec_sql_text` função de gerenciamento dinâmico para recuperar a instrução atualmente em execução para a solicitação. Permite valor nulo.|  
-|statement_end_offset|**int**|Indica, em bytes, começando com 0, a posição final da instrução atualmente em execução para o lote ou objeto persistente em execução no momento. Pode ser usado junto com o `sql_handle`, o `statement_start_offset`e a `sys.dm_exec_sql_text` função de gerenciamento dinâmico para recuperar a instrução atualmente em execução para a solicitação. Permite valor nulo.|  
+|statement_start_offset|**int**|Indica, em bytes, começando com 0, a posição inicial da instrução atualmente em execução para o lote ou objeto persistente em execução no momento. Pode ser usado junto com o `sql_handle` , o `statement_end_offset` e a `sys.dm_exec_sql_text` função de gerenciamento dinâmico para recuperar a instrução atualmente em execução para a solicitação. Permite valor nulo.|  
+|statement_end_offset|**int**|Indica, em bytes, começando com 0, a posição final da instrução atualmente em execução para o lote ou objeto persistente em execução no momento. Pode ser usado junto com o `sql_handle` , o `statement_start_offset` e a `sys.dm_exec_sql_text` função de gerenciamento dinâmico para recuperar a instrução atualmente em execução para a solicitação. Permite valor nulo.|  
 |plan_handle|**varbinary(64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote em execução no momento. Permite valor nulo.|  
 |database_id|**smallint**|ID do banco de dados no qual a solicitação está em execução. Não permite valor nulo.|  
 |user_id|**int**|ID do usuário que enviou a solicitação. Não permite valor nulo.|  
@@ -101,10 +101,13 @@ Retorna informações sobre cada solicitação que está sendo executada [!INCLU
 ## <a name="remarks"></a>Comentários 
 Para executar código fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, procedimentos armazenados estendidos e consultas distribuídas), um thread deve ser executado fora do controle de um agendador não preventivo. Para fazer isso, um trabalhador muda para o modo preventivo. Os valores de tempo retornados por essa exibição de gerenciamento dinâmico não incluem o tempo gasto no modo preventivo.
 
-Ao executar solicitações paralelas no [modo](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] linha, o atribui um thread de trabalho para coordenar os threads de trabalho responsáveis por concluir tarefas atribuídas a eles. Nesse DMV, apenas o thread do coordenador fica visível para a solicitação. As colunas **leituras**, **gravações** **logical_reads**e **row_count** **não são atualizadas** para o thread do coordenador. As colunas **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**e **granted_query_memory** são **atualizadas somente** para o thread do coordenador. Para saber mais, confira o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md).
+Ao executar solicitações paralelas no [modo de linha](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o atribui um thread de trabalho para coordenar os threads de trabalho responsáveis por concluir tarefas atribuídas a eles. Nesse DMV, apenas o thread do coordenador fica visível para a solicitação. As colunas **leituras**, **gravações** **logical_reads**e **row_count** **não são atualizadas** para o thread do coordenador. As colunas **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**e **granted_query_memory** são **atualizadas somente** para o thread do coordenador. Para saber mais, confira o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Permissões
-Se o usuário tiver `VIEW SERVER STATE` permissão no servidor, o usuário verá todas as sessões em execução na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; caso contrário, o usuário verá apenas a sessão atual. `VIEW SERVER STATE`Não pode ser concedido no banco de dados `sys.dm_exec_requests` SQL do Azure, portanto, está sempre limitado à conexão atual.
+Se o usuário tiver a `VIEW SERVER STATE` permissão no servidor, o usuário verá todas as sessões em execução na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; caso contrário, o usuário verá apenas a sessão atual. `VIEW SERVER STATE`Não pode ser concedido no banco de dados SQL do Azure, portanto, `sys.dm_exec_requests` está sempre limitado à conexão atual.
+
+Em cenários Always on, se a réplica secundária estiver definida como **somente intenção de leitura**, a conexão com o secundário deverá especificar sua intenção de aplicativo nos parâmetros da cadeia de conexão adicionando `applicationintent=readonly` . Caso contrário, a verificação de acesso `sys.dm_exec_requests` não passará para bancos de dados no grupo de disponibilidade, mesmo que a `VIEW SERVER STATE` permissão esteja presente.
+
   
 ## <a name="examples"></a>Exemplos  
   
@@ -126,14 +129,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Localizando todos os bloqueios que estão sendo mantidos por um lote em execução
 
-O exemplo a seguir consulta **Sys. dm_exec_requests** para localizar o lote interessante e copiar `transaction_id` seu da saída.
+O exemplo a seguir consulta **Sys. dm_exec_requests** para localizar o lote interessante e copiar seu `transaction_id` da saída.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-Em seguida, para localizar informações de bloqueio, use `transaction_id` o copiado com a função de sistema **Sys. dm_tran_locks**.  
+Em seguida, para localizar informações de bloqueio, use o copiado `transaction_id` com a função de sistema **sys. dm_tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

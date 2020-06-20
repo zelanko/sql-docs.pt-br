@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fae9ca930bd8741a1332b61c8272f2133590483e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717192"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013543"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML digitado com XML não digitado
   É possível criar variáveis, parâmetros e colunas do tipo `xml`. Opcionalmente, é possível associar uma coleção de esquemas XML com uma variável, parâmetro ou coluna de tipo `xml`. Nesse caso, a `xml` instância de tipo de dados é *chamada tipada*. Caso contrário, a instância XML é chamada *sem-tipo*.  

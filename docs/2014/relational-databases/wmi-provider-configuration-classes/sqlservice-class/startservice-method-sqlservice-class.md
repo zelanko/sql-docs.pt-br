@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d0a425bda3d32f19aca5be09dbb8ba4b7b6ac899
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b57f3479bc0c6c377fe4fff6458b7bc2d902b86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013648"
 ---
 # <a name="startservice-method-sqlservice-class"></a>Método StartService (classe SqlService)
   Tenta colocar o serviço em seu estado iniciado.  
@@ -38,14 +37,14 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SqlService](sqlservice-class.md) que representa o serviço.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32 que especifica um dos seguintes estados de inicialização.  
   
  0  
- Sucesso. A solicitação foi aceita.  
+ Êxito. A solicitação foi aceita.  
   
  1  
  Sem suporte. A solicitação não terá suporte.  

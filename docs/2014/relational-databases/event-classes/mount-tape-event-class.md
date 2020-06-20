@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8298df4bfd0eaa91cf788fedbffe4e9b2a1389de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023454"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052874"
 ---
 # <a name="mount-tape-event-class"></a>classe de evento Mount Tape
   A classe de evento Mount Tape ocorre quando uma solicitação de montagem de fita é recebida. Use essa classe de evento para monitorar solicitações de montagem de fita e o seu êxito ou falha.  
@@ -40,7 +39,7 @@ ms.locfileid: "63023454"
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
-|LoginName|`nvarchar`|Nome do logon do usuário (logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de segurança do ou as [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciais de logon do Windows na forma de nome\\de*usuário*do domínio).|11|Sim|  
+|LoginName|`nvarchar`|Nome do logon do usuário ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon de segurança do ou as [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciais de logon do Windows na forma de nome de \\ *usuário*do domínio).|11|Sim|  
 |NTDomainName|`nvarchar`|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|`nvarchar`|Nome do usuário do Windows.|6|Sim|  
 |ServerName|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  

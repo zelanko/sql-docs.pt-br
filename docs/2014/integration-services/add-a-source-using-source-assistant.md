@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce970f4e944fbc4d940d1021a48600be9cd47967
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062135"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926297"
 ---
 # <a name="add-a-source-using-source-assistant"></a>Adicionar uma origem com o Assistente de Origem
   Este tópico fornece etapas para adicionar uma nova origem por meio do Assistente de Origem e também lista as opções que estão disponíveis na caixa de diálogo **Adicionar Nova Origem** que você verá ao arrastar-soltar o Assistente de Origem para o Designer SSIS.  
@@ -28,10 +27,10 @@ ms.locfileid: "66062135"
   
 3.  Selecione o tipo do destino na lista **Tipos**.  
   
-4.  Selecione um Gerenciador de conexões existente na lista **gerenciadores de conexões** ou selecione ** \<novo>** para criar um novo Gerenciador de conexões.  
+4.  Selecione um Gerenciador de conexões existente na lista **gerenciadores de conexões** ou selecione **\<New>** para criar um novo Gerenciador de conexões.  
   
 5.  Se você selecionar um gerenciador de conexões existente, clique em **OK** para fechar a caixa de diálogo **Adicionar Novo Destino**. Você deve ver o destino e os gerenciadores de conexões adicionados ao fluxo de dados.  
   
-6.  Se você clicar em ** \<novo>** para criar um novo Gerenciador de conexões, você deverá ver uma caixa de diálogo **Gerenciador de conexões** , que permite especificar parâmetros para a conexão. Depois de concluir a criação do novo gerenciador de conexões, você verá o destino e o gerenciador de conexões no Designer SSIS.  
+6.  Se você clicar **\<New>** para criar um novo Gerenciador de conexões, deverá ver uma caixa de diálogo **Gerenciador de conexões** , que permite especificar parâmetros para a conexão. Depois de concluir a criação do novo gerenciador de conexões, você verá o destino e o gerenciador de conexões no Designer SSIS.  
   
   
