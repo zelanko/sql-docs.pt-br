@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b126aeb8ccd24932706b8798ebfe7088308918e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807439"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934337"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Espelhamento e replicação de banco de dados (SQL Server)
   O espelhamento do banco de dados pode ser usado junto com a replicação para aprimorar a disponibilidade ao banco de dados de publicação. O espelhamento do banco de dados compreende duas cópias de um único banco de dados que geralmente reside em computadores diferentes. Em determinado momento, apenas uma cópia do banco de dados está atualmente disponível aos clientes. Essa cópia é conhecida como o banco de dados principal. As atualizações realizadas pelos clientes no banco de dados principal são aplicadas à outra cópia do banco de dados, conhecida como banco de dados espelho. O espelhamento envolve a aplicação do log de transações de cada inserção, atualização ou exclusão efetuada no banco de dados principal, para o banco de dados espelho.  
@@ -133,7 +132,7 @@ ms.locfileid: "62807439"
   
 -   Ao usar os procedimentos armazenados ou RMO (Replication Management Objects) para gerenciar a replicação no espelho, nos casos em que você especifica o nome do Publicador, especifique o nome da instância na qual o banco de dados foi habilitado para a replicação. Para determinar o nome apropriado, use a função [publishingservername](/sql/t-sql/functions/replication-functions-publishingservername).  
   
-     Quando um banco de dados de publicação é espelhado, os metadados de replicação armazenados no banco de dados espelhado são idênticos aos metadados armazenados no banco de dados principal. Portanto, para os bancos de dados de publicação habilitados para replicação no principal, o nome da instância do Publicador armazenado nas tabelas do sistema no espelho será o nome do principal, não do espelho. Isso afetará a configuração e a manutenção da replicação, em caso de failover do banco de dados de publicação no espelho. Por exemplo, se você estiver configurando a replicação com procedimentos armazenados no espelho após um failover e quiser adicionar uma assinatura pull a um banco de dados de publicação que foi habilitado no principal, você deverá especificar o nome da entidade de segurança em vez do **@publisher** nome do espelho para o parâmetro de **sp_addpullsubscription** ou **sp_addmergepullsubscription**.  
+     Quando um banco de dados de publicação é espelhado, os metadados de replicação armazenados no banco de dados espelhado são idênticos aos metadados armazenados no banco de dados principal. Portanto, para os bancos de dados de publicação habilitados para replicação no principal, o nome da instância do Publicador armazenado nas tabelas do sistema no espelho será o nome do principal, não do espelho. Isso afetará a configuração e a manutenção da replicação, em caso de failover do banco de dados de publicação no espelho. Por exemplo, se você estiver configurando a replicação com procedimentos armazenados no espelho após um failover e quiser adicionar uma assinatura pull a um banco de dados de publicação que foi habilitado no principal, você deverá especificar o nome da entidade de segurança em vez do nome do espelho para o **@publisher** parâmetro de **sp_addpullsubscription** ou **sp_addmergepullsubscription**.  
   
      Se você habilitar um banco de dados de publicação no espelho após o failover para o espelho, o nome da instância do Publicador armazenado em tabelas do sistema será o nome do espelho; Nesse caso, você usaria o nome do espelho para o **@publisher** parâmetro.  
   

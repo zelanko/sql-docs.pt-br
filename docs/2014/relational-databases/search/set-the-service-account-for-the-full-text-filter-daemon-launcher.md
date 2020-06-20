@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1114ed9e206c49a5993028e180ed70bbb7bf1747
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010944"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003765"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo
   Este tópico descreve como definir a conta do serviço Iniciador do Daemon de Filtro de Texto Completo do SQL (MSSQLFDLauncher) usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. O serviço Iniciador do Daemon do Filtro de Texto Completo do SQL é usado pela pesquisa de texto completo ssNoVersion para iniciar o processo do host do daemon de filtro, que manipula a filtragem da pesquisa de texto completo e a quebra de palavras. Esse serviço deve estar em execução para usar a pesquisa de texto completo.  
@@ -32,7 +31,7 @@ ms.locfileid: "66010944"
   
 1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-2.  Em **SQL Server Configuration Manager**, clique em **serviços SQL Server**, clique com o botão direito do mouse em ***`instance name`* iniciador do daemon de filtro de texto completo do SQL ()** e clique em **Propriedades**.  
+2.  Em **SQL Server Configuration Manager**, clique em **serviços SQL Server**, clique com o botão direito do mouse em **iniciador do daemon de filtro de texto completo do SQL ( *`instance name`* )** e clique em **Propriedades**.  
   
 3.  Clique na guia **Fazer Logon** da caixa de diálogo e selecione ou digite a conta em que será executado cada processo criado pelo serviço Iniciador do Daemon de Filtro de Texto Completo do SQL.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e53b659fdd5d572d4f76e9a1979e6639ea33d060
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960166"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressões de consultas e nomes de recursos uniformes
   Os modelos SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) e os snap-ins do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilizam dois tipos de cadeia de caracteres de expressão semelhantes às expressões XPath. As expressões de consulta são cadeias de caracteres que especificam um conjunto de critérios para enumerar um ou mais objetos em uma hierarquia de modelo de objetos. Um URN (Uniform Resource Name) é um tipo específico de cadeia de caracteres de expressão de consulta que identifica exclusivamente um único objeto.  
@@ -63,7 +62,7 @@ ms.locfileid: "72782759"
  Por exemplo, especifique o Servidor para a classe **ServerCollection** , o Banco de dados para a classe **DatabaseCollection** .  
   
  \@*PropertyName*  
- Especifica o nome de uma das propriedades da classe associada ao objeto especificado em *Objeto*. O nome da propriedade deve ser prefixado com o caractere \@. Por exemplo, especifique \@IsAnsiNull para a propriedade de classe de **banco de dados** **IsAnsiNull**.  
+ Especifica o nome de uma das propriedades da classe associada ao objeto especificado em *Objeto*. O nome da propriedade deve ser prefixado com o caractere \@. Por exemplo, especifique \@ IsAnsiNull para a propriedade de classe de **banco de dados** **IsAnsiNull**.  
   
  \@*BooleanPropertyName*= true ()  
  Enumera todos os objetos em que a propriedade booliana especificada está definida como TRUE.  
@@ -95,7 +94,7 @@ ms.locfileid: "72782759"
  is_null(\@*PropertyName*)  
  Enumera todos os objetos em que a propriedade especificada tenha um valor NULL.  
   
- not(\<*PropertyExpression*>)  
+ Não ( \<*PropertyExpression*> )  
  Nega o valor de avaliação de *PropertyExpression*, enumerando todos os objetos que não correspondem à condição especificada em *PropertyExpression*. Por exemplo, not(contains(\@Name, 'xyz')) enumera todos os objetos que não têm a cadeia de caracteres xyz em seus nomes.  
   
 ## <a name="remarks"></a>Comentários  
@@ -103,7 +102,7 @@ ms.locfileid: "72782759"
   
  As expressões de consulta devem iniciar com uma referência absoluta ao objeto Servidor. Não são permitidas expressões relativas com uma / à esquerda. A sequência de objetos especificados em uma expressão de consulta deve seguir a hierarquia dos objetos de coleção do modelo de objetos associado. Por exemplo, uma expressão de consulta que faz referência a objetos no namespace Microsoft.SqlServer.Management.Smo deve começar com um nó Servidor, seguido por um nó Banco de Dados e assim por diante.  
   
- Se uma * \<>FilterExpression* não for especificada para um objeto, todos os objetos desse nó serão enumerados.  
+ Se um *\<FilterExpression>* não for especificado para um objeto, todos os objetos desse nó serão enumerados.  
   
 ## <a name="uniform-resource-names-urn"></a>URN (Uniform Resource Names)  
  URNs são um subconjunto de expressões de consulta. Cada URN forma uma referência totalmente qualificada a um único objeto. Um URN típico usa a propriedade Nome para identificar um único objeto em cada nó. Por exemplo, este URN faz referência a uma coluna específica:  

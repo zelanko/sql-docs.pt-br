@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7242f9fda74288a2b7354ac0550ff4966e05c555
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058776"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>Funções definidas pelo usuário não são permitidas no system_function_schema
   O supervisor de atualização detectou funções definidas pelo usuário que são de Propriedade do usuário não documentado **system_function_schema**. Você não pode criar uma função de sistema definida pelo usuário especificando esse usuário. O nome de usuário **system_function_schema** não existe e a ID de usuário que está associada a esse nome (UID = 4) é reservada para o esquema **Sys** e é restrita somente ao uso interno.  
@@ -39,9 +38,9 @@ ms.locfileid: "66091328"
   
  Essas alterações têm o seguinte efeito em funções de sistema definidas pelo usuário:  
   
--   Instruções DDL (linguagem de definição de dados) que fazem referência a **system_function_schema** falharão. Por exemplo, a instrução `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... Não terá sucesso.  
+-   Instruções DDL (linguagem de definição de dados) que fazem referência a **system_function_schema** falharão. Por exemplo, a instrução `CREATE FUNCTION system` _ `function` \_ `schema.fn` \_ `MySystemFunction` ... Não terá sucesso.  
   
--   Depois de atualizar para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o, os objetos existentes que pertencem a **system_function_schema** estão contidos apenas no esquema **Sys** do banco de dados **mestre** . Como os objetos do sistema não podem ser modificados, essas funções nunca podem ser alteradas ou removidas do banco de dados **mestre** . Além disso, essas funções não podem ser invocadas a partir de outros bancos de dados pela especificação apenas de um nome de função de uma parte.  
+-   Depois de atualizar para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , os objetos existentes que pertencem a **system_function_schema** estão contidos apenas no esquema **Sys** do banco de dados **mestre** . Como os objetos do sistema não podem ser modificados, essas funções nunca podem ser alteradas ou removidas do banco de dados **mestre** . Além disso, essas funções não podem ser invocadas a partir de outros bancos de dados pela especificação apenas de um nome de função de uma parte.  
   
 ## <a name="corrective-action"></a>Ação corretiva  
  Antes da atualização, faça o seguinte:  

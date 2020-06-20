@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52ef61a8d0e9954556d182630ad5afa874ae584
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996989"
 ---
 # <a name="installing-smo"></a>Instalando o SMO
   Se desejar desenvolver um aplicativo que use o SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects), você deve selecionar o SDK de Ferramentas de Cliente ao instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar o SDK de Ferramentas de Cliente sem instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instale os Objetos de Gerenciamento Compartilhado do pacote de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se desejar garantir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects seja instalado em um computador que executará seu aplicativo, você poderá usar o .msi dos Objetos de Gerenciamento Compartilhado do pacote de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2772c8d6470f9ad6eb5e8b7cadb6dedd136bd48b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bd4855390e95d949ab769d6567d6f106959dcde
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050835"
 ---
 # <a name="unloading-an-extended-stored-procedure-dll"></a>Descarregando uma DLL de procedimento armazenado estendido
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carrega uma DLL de procedimento armazenado estendido assim que uma chamada é feita para uma das funções da dll. A DLL permanece carregada até o servidor ser desligado ou até o administrador do sistema usar a instrução DBCC para descarregá-la. Por exemplo, esse comando descarrega o **xp_hello. dll**, permitindo que o administrador do sistema Copie uma versão mais recente desse arquivo para o diretório sem desligar o servidor:  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]carrega uma DLL de procedimento armazenado estendido assim que uma chamada é feita para uma das funções da dll. A DLL permanece carregada até o servidor ser desligado ou até o administrador do sistema usar a instrução DBCC para descarregá-la. Por exemplo, esse comando descarrega o **xp_hello.dll**, permitindo que o administrador do sistema Copie uma versão mais recente desse arquivo para o diretório sem desligar o servidor:  
   
 ```  
 DBCC xp_hello(FREE)  

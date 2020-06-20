@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b57ca40b08718cda5095249991e0d424e6593a24
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783117"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959886"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Fazer backup de um log de transações (SQL Server)
   Este tópico descreve como fazer backup de um log de transações no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
@@ -74,7 +73,7 @@ ms.locfileid: "72783117"
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Backup**. A caixa de diálogo **Backup do Banco de Dados** é exibida.  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
   
 4.  Na caixa de listagem **Banco de Dados** , verifique o nome do banco de dados. Você pode, como opção, selecionar um banco de dados diferente da lista.  
   
@@ -82,34 +81,34 @@ ms.locfileid: "72783117"
   
 6.  Na caixa de listagem **Tipo de Backup** , selecione **Log de Transações**.  
   
-7.  Opcionalmente, você pode selecionar **Copiar Somente Backup** para criar um backup somente cópia.  Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+7.  Opcionalmente, você pode selecionar **Copiar Somente Backup** para criar um backup somente cópia. Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Backups somente cópia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
     > [!NOTE]  
     >  Quando a opção **Diferencial** está selecionada, você não pode criar um backup somente cópia.  
   
-8.  Aceite o nome padrão do conjunto de backup sugerido na caixa de texto **Nome** ou insira outro nome.  
+8.  Aceite o nome do conjunto de backup padrão sugerido na caixa de texto **Nome** ou digite um nome diferente para o conjunto de backup.  
   
-9. Como opção, na caixa de texto **Descrição**, insira uma descrição do conjunto de backup.  
+9. Opcionalmente, na caixa de texto **Descrição** , digite uma descrição do conjunto de backup.  
   
 10. Especifique quando o conjunto de backup irá expirar:  
   
-    -   Para que o conjunto de backup expire após um determinado número de dias, clique em **Depois** (a opção padrão) e insira o número de dias depois da criação após os quais o conjunto irá expirar. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.  
+    -   Para que o conjunto de backup expire depois de um número específico de dias, clique em **Depois** (a opção padrão) e digite quantos dias depois da criação do conjunto ele deve expirar. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.  
   
-         O valor padrão é definido na opção **retenção de mídia de backup padrão (em dias)** da caixa de diálogo **Propriedades do servidor** (página**configurações do banco de dados** ). Para acessar essa caixa de diálogo, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos, selecione propriedades e a página **Configurações do Banco de Dados** .  
+         O valor padrão é definido na opção **Retenção de mídia de backup padrão (em dias)** da caixa de diálogo **Propriedades do Servidor** (página**Configurações do Banco de Dados** ). Para acessar essa caixa de diálogo, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos, selecione propriedades e a página **Configurações do Banco de Dados** .  
   
-    -   Para que o conjunto de backup expire em uma data específica, clique em **Em** e insira a data de expiração do conjunto.  
+    -   Para que o conjunto de backup expire em uma data específica, clique no campo **Em**e digite a data de expiração do conjunto.  
   
 11. Escolha o tipo do destino de backup clicando em **Disco**, **URL** ou **Fita**. Para selecionar os caminhos de até 64 unidades de disco ou fita que contêm um único conjunto de mídia, clique em **Adicionar**. Os caminhos selecionados são exibidos na caixa de listagem **Backup** .  
   
      Para remover um destino de backup, selecione-o e clique em **Remover**. Para exibir o conteúdo de um destino de backup, selecione-o e clique em **Conteúdo**.  
   
-12. Para exibir ou selecionar as opções avançadas, clique em **Opções** no painel **Selecionar uma página**.  
+12. Para exibir ou selecionar as opções avançadas, clique em **Opções** no painel **Selecionar uma página** .  
   
-13. Selecione uma opção de **Substituir Mídia** clicando em um das seguintes:  
+13. Selecione uma opção **Substituir Mídia** , com um clique em uma das opções a seguir:  
   
     -   **Fazer backup no conjunto de mídias existente**  
   
-         Para esta opção, clique em **Acrescentar ao conjunto de backup existente** ou em **Substituir todos os conjuntos de backup existentes**. Para obter mais informações, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+         Para essa opção, clique em **Anexar ao conjunto de backup existente** ou **Substituir todos os conjuntos de backup existentes**. Para obter mais informações, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
          Opcionalmente, selecione **Verificar nome do conjunto de mídias e validade do conjunto de backup** para que a operação de backup verifique a data e a hora em que o conjunto de mídias e de backup expiram.  
   
@@ -119,13 +118,13 @@ ms.locfileid: "72783117"
   
     -   **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes**  
   
-         Para esta opção, insira um nome na caixa de texto **Nome do novo conjunto de mídias** e, opcionalmente, descreva o conjunto de mídias na caixa de texto **Descrição do novo conjunto de mídias**. Para obter mais informações, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+         Para essa opção, digite um nome na caixa de texto **Nome do novo conjunto de mídias** e, opcionalmente, descreva o conjunto de mídias na caixa de texto **Descrição do novo conjunto de mídias** . Para obter mais informações, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
 14. Na seção **Confiabilidade** , como opção, marque:  
   
     -   **Verificar backup quando concluído**  
   
-    -   **Executar soma de verificação antes de gravar na mídia** e, opcionalmente, **Continuar em caso de erro de soma de verificação**. Para obter informações sobre somas de verificação, veja [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
+    -   **Executar soma de verificação antes de gravar na mídia**e, como opção, **Continuar com erro da soma de verificação**. Para obter informações sobre somas de verificação, veja [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
 15. Na seção **Log de transações** :  
   
@@ -137,7 +136,7 @@ ms.locfileid: "72783117"
   
 16. Se o backup estiver sendo feito em uma unidade de fita (conforme especificado na seção **Destino** da página **Geral** ), a opção **Descarregar a fita após o backup** estará ativa. Clicar nessa opção ativa a opção **Rebobinar a fita antes de descarregar** .  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](backup-compression-sql-server.md). Por padrão, se um backup é compactado ou não depende do valor da opção de configuração do servidor **Padrão de Compactação de Backup**. No entanto, independentemente do padrão atual do nível de servidor, é possível compactar um backup selecionando **Compactar backup** e impedir a compactação selecionando **Não compactar o backup**.  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e posteriores dão suporte para [compactação de backup](backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
   
      **Para exibir o padrão de compactação de backup atual**  
   
@@ -165,7 +164,7 @@ ms.locfileid: "72783117"
   
     -   O dispositivo de backup em que o backup de log de transações será gravado.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemplo (Transact-SQL)  
   
 > [!IMPORTANT]  
 >  Este exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , que usa o modelo de recuperação simples. Para permitir backups de log, antes de fazer um backup de banco de dados completo, o banco de dados foi definido para usar o modelo de recuperação completa. Para obter mais informações, veja [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md).  

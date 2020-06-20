@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0b3689c843fbbe7ad845a45aca6bb962f8f0c75e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61115113b3f710b9853f66e4437783755b886d64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013809"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>Método SetStartMode (classe SqlService)
   Modifica o modo de início da instância do serviço.  
@@ -40,7 +39,7 @@ StartMode
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SqlService](sqlservice-class.md) que representa o serviço.  
   
 #### <a name="parameters"></a>Parâmetros  

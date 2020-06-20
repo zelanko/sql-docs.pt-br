@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16377c286a870c311486f5c128b5eddc058f07f7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059463"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966996"
 ---
 # <a name="development-of-an-integration-services-project"></a>Implantação de um projeto do Integration Services
   Você adiciona pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a projetos. Para criar e trabalhar com projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você deve instalar o ambiente do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para obter mais informações, consulte [Instalar o Integration Services](install-windows/install-integration-services.md).  

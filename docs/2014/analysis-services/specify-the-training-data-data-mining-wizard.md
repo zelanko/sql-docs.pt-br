@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c17dd78c42427027ebbac181b4f42edff082439e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940257"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Especificar os dados de treinamento (Assistente de Mineração de Dados)
   Use a página **Especificar os Dados de Treinamento** para identificar quais as colunas a incluir na estrutura de mineração. Você pode selecionar colunas a serem incluídas na estrutura mesmo se não usá-las em todos os modelos. Por exemplo, para detalhar até as colunas a partir do modelo de mineração, você pode incluí-las na estrutura, mas não no modelo.  
@@ -33,7 +32,7 @@ ms.locfileid: "66068072"
  **Tabelas/Colunas**  
  Exibe as tabelas e colunas que você selecionou na página anterior do assistente.  
   
- **\<>caixa de seleção**  
+ **\<check box>**  
  Selecione as colunas a serem incluídas na estrutura de mineração.  
   
  Se sua fonte de dados incluir tabelas aninhadas ou várias exibições, expanda a lista de colunas para exibir as tabelas aninhadas.  

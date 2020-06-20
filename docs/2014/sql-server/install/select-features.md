@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0badc544-c187-40f9-b0cc-14d6ebec345e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c9ebe68f92a652e8f713ca73dedce6b54443c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79d2b8bfe6f8abd6aca243bddd6d29c3475bb179
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058906"
 ---
 # <a name="select-features"></a>Selecionar Recursos
   Use a página Seleção de Recursos para selecionar componentes e recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualização.  

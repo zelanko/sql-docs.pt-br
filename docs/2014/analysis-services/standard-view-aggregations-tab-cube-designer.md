@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a5fa76e11cf7d04c5fa2068cf8ea8ea40939f0e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068062"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940247"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>Exibição padrão (guia Agregações, Designer de Cubo)
   Use a **Exibição Padrão** do designer de agregação para exibir agregações. Você também pode criar e modificar designs de agregações nessa exibição usando o **Assistente de Desing de Agregação** ou o **Assistente de Otimização com Base no Uso**.  

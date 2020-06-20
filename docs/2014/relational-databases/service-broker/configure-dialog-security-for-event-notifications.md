@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d83bfe63c3a9b24c2be8d08916dd2384c59edc93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996555"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurar segurança de caixa de diálogo para notificações de evento
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser configurada para notificações de eventos que enviam mensagens a um agente de serviços em um servidor remoto. A segurança de diálogo deve ser configurada manualmente, de acordo com o modelo de segurança total de diálogo do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . O modelo de segurança total habilita criptografia e decodificação de mensagens enviadas para e de servidores remotos. Embora as notificações de eventos sejam enviadas em uma única direção, outras mensagens, como erros, também são retornadas para a direção oposta.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45d02cbb57459a4c1c11330446021c32dc897353
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919627"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953784"
 ---
 # <a name="dropping-an-assembly"></a>Descartando um assembly
   Os assemblies registrados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando a instrução CREATE ASSEMBLY podem ser excluídos ou descartados quando a funcionalidade que fornecem deixa de ser necessária. O descarte de um assembly remove o mesmo e todos os seus arquivos associados como, por exemplo, arquivos de depuração, do banco de dados. Para descartar um assembly, use a instrução DROP ASSEMBLY com a seguinte sintaxe:  
@@ -43,7 +42,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Funções, procedimentos armazenados ou gatilhos que usam variáveis ou parâmetros da UDT, criadas no banco de dados com a cláusula WITH SCHEMABINDING.  
   
 ### <a name="finding-udt-dependencies"></a>Localizando dependências do UDT  
- Você deve descartar todos os objetos dependentes primeiro e, em seguida, executar a instrução DROP TYPE. A consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir localiza todas as colunas e parâmetros que usam um UDT no banco de dados **AdventureWorks** .  
+ Você deve descartar todos os objetos dependentes primeiro e, em seguida, executar a instrução DROP TYPE. A consulta a seguir [!INCLUDE[tsql](../../../includes/tsql-md.md)] localiza todas as colunas e parâmetros que usam um UDT no banco de dados **AdventureWorks** .  
   
 ```  
 USE Adventureworks;  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a4e91d05bf851d425bf61dba0037cee8c48eb5ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c206dfb30cd3ac2db3ec95f3b6c07bcef8b09f6a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004573"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Assinatura, Histórico do Publicador para o Distribuidor (assinatura transacional)
   A guia **Histórico do Publicador para o Distribuidor** exibe informações detalhadas sobre o Log Reader Agent, incluindo status, histórico, mensagens informativas e qualquer mensagem de erro.  
@@ -39,13 +38,13 @@ ms.locfileid: "62626771"
   
 -   Executando  
   
- **Start Time**  
+ **Hora de início**  
  A hora de início da sessão.  
   
  **Hora de término**  
  A hora de término da sessão. Se o agente não parou, esse campo estará vazio.  
   
- **Permanência**  
+ **Duration**  
  A quantidade de tempo que o Log Reader Agent está em execução nessa sessão. O tempo representa o tempo decorrido, se o agente estiver sendo executado no momento, e o tempo total da sessão, se a sessão do agente tiver terminado.  
   
  **Mensagem de erro**  

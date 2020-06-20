@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ecaffb9e40024eca7cbeac77f4b50058e5440cee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c034bd13e212b9b39bfd348353d59e23fc748079
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870605"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968146"
 ---
 # <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
     
@@ -39,7 +38,7 @@ ms.locfileid: "62870605"
  Especifique um valor não NULL para o parâmetro ou altere o tipo para um que permita um valor NULL para o parâmetro.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [Guias de plano](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

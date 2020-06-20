@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 77571ccd-bdba-4e07-af55-465509dc6a33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ca6d787616821532b30af0fe3591f79d6dbea6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067846"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940157"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Caixa de diálogo Propriedades de Tabela (SSAS - Tabela)
   Use a caixa de diálogo **Propriedades da Tabela** em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para exibir as propriedades de uma tabela em um banco de dados modelo de tabela. Todas as propriedades são somente leitura.  

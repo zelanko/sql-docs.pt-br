@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a1f7718c984c564d8ef000adeb9605768e6a70d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a29f273a584f3e60c6cf6458751965158cf8704
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62795515"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939997"
 ---
 # <a name="partition-representation-tabular"></a>Representação de partição (tabular)
   Para fins operacionais, uma tabela pode ser dividida em subconjuntos diferentes de linhas que, quando combinados formam a tabela; cada um desses subconjuntos é uma partição da tabela.  

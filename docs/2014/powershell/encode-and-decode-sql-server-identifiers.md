@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5663ff72d643cb1488bbf2b2866e2cdd94a0f56f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960516"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificar e decodificar identificadores do SQL Server
   Os identificadores delimitados do SQL Server às vezes contêm caracteres sem suporte em caminhos do Windows PowerShell. Esses caracteres podem ser especificados codificando seus valores hexadecimais.  
@@ -25,7 +24,7 @@ ms.locfileid: "72797774"
 2.  **Para processar caracteres especiais:**  [Codificando um Identificador](#EncodeIdent), [Decodificando um Identificador](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
- Os caracteres que não têm suporte nos nomes de caminho do Windows PowerShell podem ser representados, ou codificados, como o caractere "%" seguido pelo valor hexadecimal para o padrão de bit que representa o**%** caractere, como em "XX". A codificação sempre pode ser usada para manipular caracteres não suportados em caminhos do Windows PowerShell.  
+ Os caracteres que não têm suporte nos nomes de caminho do Windows PowerShell podem ser representados, ou codificados, como o caractere "%" seguido pelo valor hexadecimal para o padrão de bit que representa o caractere, como em " **%** XX". A codificação sempre pode ser usada para manipular caracteres não suportados em caminhos do Windows PowerShell.  
   
  O cmdlet **Encode-SqlName** usa um identificador do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como entrada. Ele produz uma cadeia de caracteres com todos os caracteres não suportados pela linguagem Windows PowerShell codificada com "%xx". O cmdlet **Decode-SqlName** usa um identificador codificado do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como entrada e retorna o identificador original.  
   

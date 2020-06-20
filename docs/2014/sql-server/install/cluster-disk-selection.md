@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 156c17d7dae5c4de07033a96f2e936448d8d02ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f53d6d3f623254d2b17996be7fd5b8235dca223
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096500"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037115"
 ---
 # <a name="cluster-disk-selection"></a>Seleção de Disco de Cluster
   Use a página **Seleção de Disco de Cluster** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fim de selecionar o recurso de disco de cluster compartilhado do cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O disco de cluster é o local onde os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são colocados.  
   
- Um disco de cluster compartilhado não é um requisito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para instalações de cluster. Um servidor de arquivos SMB é um armazenamento com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] suporte para instalações de cluster de failover e pode ser especificado usando a página **mecanismo de banco de dados-data diretórios** antes de concluir a instalação.  
+ Um disco de cluster compartilhado não é um requisito para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalações de cluster. Um servidor de arquivos SMB é um armazenamento com suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalações de cluster de failover e pode ser especificado usando a página **mecanismo de banco de dados-data diretórios** antes de concluir a instalação.  
   
 > [!WARNING]  
 >  Se você selecionou Analysis Services para ser instalado, especifique um disco de cluster compartilhado.  

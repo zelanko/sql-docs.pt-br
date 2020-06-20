@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ba5e4e5dd6d9a6541a98e0cb30229d7335bac24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786679"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936072"
 ---
 # <a name="browse-for-servers-network-servers"></a>Procurar servidores (Servidores de Rede)
   Se você está se conectando a um componente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e não sabe o nome exato da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], clique em **Procurar mais** na caixa **Nome do servidor** para abrir a caixa de diálogo **Procurar Servidores**.  
@@ -34,6 +33,6 @@ ms.locfileid: "62786679"
   
 ## <a name="options"></a>Opções  
  **Selecione uma instância do SQL Server na rede para sua conexão**  
- Designe o servidor ao qual você deseja se conectar clicando na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exibida na árvore. Você pode mostrar ou ocultar partes do modo de exibição de árvore clicando nos nós marcados com um **+** símbolo **-** ou.  
+ Designe o servidor ao qual você deseja se conectar clicando na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exibida na árvore. Você pode mostrar ou ocultar partes do modo de exibição de árvore clicando nos nós marcados com um **+** **-** símbolo ou.  
   
   

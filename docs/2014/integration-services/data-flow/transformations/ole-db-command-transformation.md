@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71e8a21d4e83a37e647ff3bb27aaae14cd62c5a8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770382"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939377"
 ---
 # <a name="ole-db-command-transformation"></a>transformação Comando OLE DB
   A transformação Comando OLE DB executa uma instrução SQL para cada linha do fluxo de dados. Por exemplo, você pode executar uma instrução SQL que insira, atualize ou exclua linhas em uma tabela de banco de dados.  

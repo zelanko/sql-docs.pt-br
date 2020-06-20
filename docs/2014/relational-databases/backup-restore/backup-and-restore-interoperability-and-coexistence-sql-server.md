@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd78e5f1e85510ec7a14548280a616a9b32aec55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922431"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959432"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e restauração: interoperabilidade e coexistência (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e restauração: Interoperabilidade e coexistência (SQL Server)
   Este tópico descreve considerações de backup e restauração para vários recursos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Estes recursos incluem: restauração de arquivo e inicialização de banco de dados; restauração online e índices desabilitados; espelhamento de banco de dados; restauração por etapas e índices de texto completo.  
   
  **Neste tópico:**  
@@ -48,7 +47,7 @@ ms.locfileid: "62922431"
   
  Se um problema for encontrado durante a inicialização do banco de dados, a recuperação falhará, e o banco de dados será marcado como SUSPECT. Se o problema puder ser isolado a um arquivo ou arquivos, o administrador do banco de dados poderá colocar os arquivos offline e tentar reinicializar o banco de dados. Para colocar um arquivo offline, você pode usar a seguinte instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
   
- ALTER DATABASE *database_name* modificar arquivo (nome **= '*`filename`*'**, offline)  
+ ALTER DATABASE *database_name* modificar arquivo (nome **= ' *`filename`* '**, offline)  
   
  Se a inicialização tiver êxito, qualquer grupo de arquivos que contiver um arquivo offline permanecerá offline.  
   

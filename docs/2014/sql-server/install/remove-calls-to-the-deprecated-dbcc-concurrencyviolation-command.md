@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cc9f6ff-de36-4e94-bd04-59f5c45c4911
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0110d4bc138ad0da953eb83d3c81ec265d2fd3ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cde04ebfc2ea9996d1c9ed233123e5b66f6e81fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065207"
 ---
 # <a name="remove-calls-to-the-deprecated-dbcc-concurrencyviolation-command"></a>Remover chamadas ao comando obsoleto DBCC CONCURRENCYVIOLATION
   O Supervisor de Atualização detectou o uso do comando DBCC CONCURRENCYVIOLATION. Este comando não está mais disponível. A execução desse comando retorna o erro 2526.  

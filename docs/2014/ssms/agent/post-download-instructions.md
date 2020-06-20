@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb9a0b20947892510f09790b0592bee58b350d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473045"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067664"
 ---
 # <a name="post-download-instructions"></a>Instruções Pós-Download
   Use essa página para especificar instruções de download para um servidor de destino.  

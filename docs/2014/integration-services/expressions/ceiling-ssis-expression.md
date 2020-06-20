@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a8306fa98194fbf314796b199fea98ddd53cb1fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39afaf8f6ef32eb9f86e13e80b0a9f8aded35b1b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967456"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (Expressão SSIS)
   Retorna o menor inteiro que é maior que ou igual a uma expressão numérica.  

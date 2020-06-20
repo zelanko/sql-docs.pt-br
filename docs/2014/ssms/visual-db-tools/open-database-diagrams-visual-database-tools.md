@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a31181e3a0e109857e3cea1bc375b683cd3f7f7e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63254473"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066128"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Abrir diagramas de banco de dados (Visual Database Tools)
   Você pode abrir diagramas de banco de dados para exibir ou editar a estrutura do diagrama.  

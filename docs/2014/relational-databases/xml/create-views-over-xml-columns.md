@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d0e4798caf545c84f97cd05075d455980083bf4d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d2c4a0cd87d42db9e17097932b6530936a2b83eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059474"
 ---
 # <a name="create-views-over-xml-columns"></a>Criar exibições sobre colunas XML
   É possível usar uma coluna de tipo `xml` para criar exibições. O exemplo a seguir cria uma exibição na qual o valor de uma coluna de tipo `xml` é recuperada usando o método `value()` do tipo de dados `xml`.  

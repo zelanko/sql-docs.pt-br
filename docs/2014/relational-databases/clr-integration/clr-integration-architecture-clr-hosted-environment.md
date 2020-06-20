@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11eae15e50c26c4abde212ef273d6ede63ffe30d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953859"
 ---
 # <a name="clr-hosted-environment"></a>Ambiente hospedado de CLR
   O CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework é um ambiente que executa várias linguagens de programação modernas, incluindo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. O CLR tem memória com coleta de lixo, threading preemptivo, serviços de metadados (reflexão de tipo), capacidade de verificação de código e segurança de acesso ao código. Ele usa metadados para localizar e carregar classes, distribuir as instâncias na memória, resolver invocações de métodos, gerar código nativo, impor a segurança e definir limites de contexto em tempo de execução.  

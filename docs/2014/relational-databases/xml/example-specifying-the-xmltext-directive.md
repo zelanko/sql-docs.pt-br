@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b76d727657530cfd872b04535f9413f86ff32b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 541e214399a0f91c63c5cf053f5a99dafe9fb837
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013342"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Exemplo: Especificando a diretiva XMLTEXT
   Este exemplo ilustra como dados na coluna de estouro são resolvidos usando a diretiva `XMLTEXT` em uma instrução `SELECT` no modo EXPLICIT.  

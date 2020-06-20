@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afeb7605c544ee1442a7f7ace91cdd91ad97db95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013880"
 ---
 # <a name="sqlservice-class"></a>Classe SqlService
   A [classe SqlService](sqlservice-class.md) representa uma instância de um serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

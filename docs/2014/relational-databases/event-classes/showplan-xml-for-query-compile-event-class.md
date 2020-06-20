@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 61ae582c2b35f96ccb21d16b19b0191017e05366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02286370df292a0464bfbd3bfa2749e4ec60ac5c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052005"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>classe de eventos Showplan XML For Query Compile
   A classe de evento Showplan XML For Query Compile ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila uma instrução SQL. Inclua essa classe de evento para identificar os operadores de Showplan no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

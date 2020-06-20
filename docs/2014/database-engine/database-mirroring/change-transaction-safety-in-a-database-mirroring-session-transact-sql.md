@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8bc9d0fb639770d33507c29a6ec67f60bd0434a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934390"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Alterar a segurança da transação em uma sessão de espelhamento de banco de dados (Transact-SQL)
   A segurança da transação é o atributo que controla o modo de operação da sessão. Em qualquer momento, porém, o proprietário do banco de dados pode alterar a segurança da transação. Por padrão, o nível de segurança da transação é definido como FULL (modo de operação síncrono).  
@@ -34,7 +33,7 @@ ms.locfileid: "62754924"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     em que * \<Database>* é o nome do banco de dados espelhado.  
+     em que *\<database>* é o nome do banco de dados espelhado.  
   
 ### <a name="to-turn-off-transaction-safety"></a>Para desativar a segurança da transação  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62754924"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     em que * \<o banco de dados>* é o banco de dados espelhado.  
+     em que *\<database>* é o banco de dados espelhado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   

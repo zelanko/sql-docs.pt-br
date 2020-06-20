@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20be558522d0f5df2aa4f5bcd0557626cff0e64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833609"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920607"
 ---
 # <a name="multiple-files-connection-manager"></a>Gerenciador de conexões de vários arquivos
   Um gerenciador de conexões de Vários Arquivos permite que um pacote faça referência a arquivos e pastas existentes ou crie arquivos e pastas em tempo de execução.  
@@ -59,7 +58,7 @@ ms.locfileid: "62833609"
   
  \<*path*>|\<*path*>  
   
- Você também pode especificar vários arquivos ou pastas usando caracteres curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor `ConnectionString` da propriedade pode ser definido como C\\: *. txt.  
+ Você também pode especificar vários arquivos ou pastas usando caracteres curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor da `ConnectionString` propriedade pode ser definido como C: \\ *. txt.  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
