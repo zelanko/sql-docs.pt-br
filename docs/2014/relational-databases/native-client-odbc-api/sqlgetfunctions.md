@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6aca17d997632312164c7b308b09009c0f037875
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 452f6920c8945097424e8387b5a8c356837b3160
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706017"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022161"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
   A interface do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client obedece aos três níveis de conformidade definidos para ODBC (ISO, Open Group e ODBC nível 2). **SQLGetFunctions** informa que é dado suporte a todas as funções ODBC para o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

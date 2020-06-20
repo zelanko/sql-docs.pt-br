@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d933475231913edeccbc5206afb675916a765302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1375b87ea54dfb050b297c32053f34457f8b2947
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054214"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972086"
 ---
 # <a name="change-a-model-name-master-data-services"></a>Alterar um nome de modelo (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o nome de um modelo.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55300150e64060cc06594fc4b8847fdb5132151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313016"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001082"
 ---
 # <a name="print-dialog-box"></a>Caixa de diálogo Imprimir
   Você pode especificar como deseja imprimir um documento selecionando opções na caixa de diálogo **Imprimir** .  
@@ -39,7 +38,7 @@ ms.locfileid: "63313016"
  Inclui todas as informações adicionais sobre a impressora selecionada.  
   
  **Propriedades**  
- Clique para abrir a caixa de diálogo \<*propriedades de nome da impressora*>.  
+ Clique para abrir a \<*printer name properties*> caixa de diálogo.  
   
  **Imprimir em arquivo**  
  Imprime o documento em um arquivo, em vez de imprimi-lo em uma impressora.  

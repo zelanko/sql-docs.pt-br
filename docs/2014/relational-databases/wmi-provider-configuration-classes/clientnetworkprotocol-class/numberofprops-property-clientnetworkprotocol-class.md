@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba39d21df3ab77f32f1c15fbe9e55316a25089
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192030"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060091"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>Propriedade NumberOfProps (classe ClientNetworkProtocol)
   Obtém o número de propriedades do protocolo de rede do cliente especificado pelo [Método SetOrderValue (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md).  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) que representa o protocolo de rede usado pelo cliente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

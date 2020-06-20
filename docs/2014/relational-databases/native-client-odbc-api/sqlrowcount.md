@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: adc8dbc8083ec1de98951db618dabad8a145d7d6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 410023d960bad6dde1060a509cc1bf46f67d77cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702179"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021705"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   Quando as matrizes de valores de parâmetro são associadas à execução da instrução, o `SQLRowCount` retorna SQL_ERROR se qualquer linha de valores de parâmetro gera uma condição de erro na execução da instrução. Nenhum valor é retornado pelo argumento *RowCountPtr* da função.  

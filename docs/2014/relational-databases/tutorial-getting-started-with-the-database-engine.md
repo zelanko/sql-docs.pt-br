@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaa1fb21c026d064c2b14db73aadc2b82e9c15d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996059"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: introdução ao Mecanismo de Banco de Dados
   Bem-vindo ao Guia de Introdução com o tutorial [!INCLUDE[ssDE](../includes/ssde-md.md)] . Este tutorial é dirigido a usuários não familiarizados com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e que instalaram o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Este tutorial resumido ajuda você a começar a usar o [!INCLUDE[ssDE](../includes/ssde-md.md)].  

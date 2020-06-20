@@ -1,5 +1,6 @@
 ---
 title: SPNs (nomes da entidade de serviço) no cliente ODBC
+description: Saiba mais sobre atributos e funções ODBC que dão suporte a SPNs (nomes de entidade de serviço) em aplicativos cliente.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3f83b227a6f67c5700ff07a0cd9dbc78065adf9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77db02433bfc67f348a5fbac6c195e76bbd1d69a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950259"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>SPNs (Nomes da Entidade de Serviço) em conexões de cliente (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

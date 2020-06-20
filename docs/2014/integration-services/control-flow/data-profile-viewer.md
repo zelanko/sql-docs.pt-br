@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3bcd42d1ca3c502f8dd04475356ce0f13d0b7c5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832355"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919307"
 ---
 # <a name="data-profile-viewer"></a>Visualizador de Perfil de Dados
   Exibir e analisar os perfis de dados são a próxima etapa no processo de criação de perfil de dados. Esses perfis podem ser exibidos depois que você executar a tarefa Criação de Perfil de Dados dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e computá-los. Para obter mais informações sobre como configurar e executar a tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](data-profiling-task.md).  
@@ -31,7 +30,7 @@ ms.locfileid: "62832355"
   
 -   Clique com o botão direito do mouse na tarefa **Criação de Perfil de Dados** no Designer de [!INCLUDE[ssIS](../../includes/ssis-md.md)] e clique em **Editar**. Clique em **Abrir o Visualizador de Perfil** na página **Geral** de **Editor da Tarefa Criação de Perfil de Dados**.  
   
--   Na pasta *\<unidade>* :\Arquivos de Programas (x86) | Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn, execute o DataProfileViewer.exe.  
+-   Na pasta, *\<drive>* : \Program Files (x86) | Arquivos de Programas\microsoft SQL Server\110\DTS\Binn, execute DataProfileViewer.exe.  
   
  O visualizador usa vários painéis para exibir os perfis solicitados e os resultados computados, com detalhes e capacidade de busca opcionais:  
   

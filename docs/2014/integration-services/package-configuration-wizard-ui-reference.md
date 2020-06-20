@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8179e5caddbd104fdf35598b7ea25e0f32fd9e84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964906"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Referência da interface do usuário do Assistente de Configuração de Pacotes
   Use o **Assistente de Configuração de Pacotes** para criar configurações que atualizem as propriedades de um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e seus respectivos objetos em tempo de execução. Esse assistente é executado quando você adiciona uma nova configuração ou modifica uma existente na caixa de diálogo **Organizador de Configurações do Pacote** . Para abrir a caixa de diálogo **Organizador de Configurações do Pacote** , selecione **Configurações de Pacote** no menu **SSIS** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para obter mais informações, consulte [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md).  
@@ -88,7 +87,7 @@ ms.locfileid: "66056943"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Entrada do registro**|Digite a chave do Registro que contém as informações de configuração. O formato é \<registry key>.<br /><br /> A chave do Registro já deve existir em HKEY_CURRENT_USER e deve ter um valor chamado Value (valor). O valor pode ser um DWORD ou uma cadeia de caracteres.<br /><br /> Se desejar usar uma chave do Registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave.|  
+|**Entrada do registro**|Digite a chave do Registro que contém as informações de configuração. O formato é \<registry key>.<br /><br /> A chave do Registro já deve existir em HKEY_CURRENT_USER e deve ter um valor chamado Value (valor). O valor pode ser um DWORD ou uma cadeia de caracteres.<br /><br /> Se você quiser usar uma chave do registro que não esteja na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave.|  
   
  **O local de configuração é armazenado em uma variável de ambiente**  
  Use para especificar a variável de ambiente na qual deseja armazenar a configuração.  
@@ -149,7 +148,7 @@ ms.locfileid: "66056943"
  **Nome da configuração**  
  Digite o nome da configuração.  
   
- **Visualizar**  
+ **Visualização**  
  Exiba as definições usadas pelo assistente para criar a configuração.  
   
  **Concluir**  

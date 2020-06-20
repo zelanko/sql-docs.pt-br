@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d9b4a0e07f32e074ff7e8875c263615bcebc12d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ffd1d2529dd13e42689bcf168c972d757fb5499
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874874"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956536"
 ---
 # <a name="select-backup-destination"></a>Selecionar destino do backup
   Use a caixa de diálogo **Selecionar Destino do Backup** para selecionar um dispositivo como seu destino de backup. Um destino de backup pode ser tanto um disco quanto um dispositivo de backup lógico.  
@@ -48,7 +47,7 @@ ms.locfileid: "62874874"
   
 |||  
 |-|-|  
-|**Unidade de fita**|Escolha esta opção para selecionar uma unidade de fita como destino de backup da lista de unidades de fita conectadas fisicamente ao computador que está executando a instância do servidor.<br /><br /> Observação: dispositivos de backup em fita em computadores remotos não são destinos de backup válidos.|  
+|**Unidade de fita**|Escolha esta opção para selecionar uma unidade de fita como destino de backup da lista de unidades de fita conectadas fisicamente ao computador que está executando a instância do servidor.<br /><br /> Observação: Dispositivos de backup em fita em computadores remotos não são destinos de backup válidos.|  
 |**Dispositivo de backup**|Escolha esta opção para selecionar um dispositivo de backup lógico existente. Esses dispositivos de backup lógicos correspondem a unidades de fita conectadas fisicamente ao computador que está executando a instância do servidor.<br /><br /> Observação: para obter informações sobre como criar um dispositivo de backup em fita, consulte [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
   
 ## <a name="see-also"></a>Consulte Também  

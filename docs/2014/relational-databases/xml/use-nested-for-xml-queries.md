@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6abc209e200be39fe79209d89cfb6f3a492e0e6a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 60c4198697f8d19c9b2e5bc1b415e0787861d40a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702367"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061224"
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML aninhadas
   O `xml` tipo de dados e a [diretiva Type em consultas for XML](type-directive-in-for-xml-queries.md) habilitam o XML RETORNADO pelas consultas for XML a serem processadas no servidor, bem como no cliente.  

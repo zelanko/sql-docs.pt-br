@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c84e6c6d9e35526f51f010ab27bbc9d46f83d508
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ef1bec93a1e0ce04c40f4333fa3450118da08df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717554"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060105"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Usando o Carregamento em Massa de SQLXML no ambiente .NET
   Este tópico explica como a funcionalidade de Carregamento em Massa de XML pode ser usada no ambiente .NET. Para obter informações detalhadas sobre o carregamento em massa de XML, consulte [executando o carregamento em massa de dados XML &#40;SQLXML 4,0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
@@ -113,7 +112,7 @@ ms.locfileid: "82717554"
   
 6.  No menu **projeto** , selecione **Adicionar referência**.  
   
-7.  Na guia **com** , selecione **biblioteca de tipos Microsoft SQLXML carregamento em massa 4,0** (xblkld4. dll) e clique em **OK**. Você verá o assembly **Interop. SQLXMLBULKLOADLib** criado no projeto.  
+7.  Na guia **com** , selecione **biblioteca de tipos do Microsoft SQLXML carregamento em massa 4,0** (xblkld4.dll) e clique em **OK**. Você verá o assembly **Interop. SQLXMLBULKLOADLib** criado no projeto.  
   
 8.  Substitua o método Main() pelo código a seguir. Atualize a propriedade **ConnectionString** e o caminho do arquivo para o esquema e os arquivos de dados.  
   

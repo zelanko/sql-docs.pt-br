@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d41879b84d98f72e570b00a61341a53d2e6187a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046451"
 ---
 # <a name="accept-license-terms"></a>Aceitar termos de licença
   Use a página **Aceitar Termos de Licença** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aceitar os termos da licença desta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,13 +45,13 @@ ms.locfileid: "66096837"
   
  As informações sobre o uso de recursos são enviadas para a [!INCLUDE[msCoName](../../includes/msconame-md.md)], onde são armazenadas com acesso limitado.  
   
- Para desabilitar o relatório do CEIP após a conclusão da instalação, use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta relatório de erro e uso** no menu **ferramentas de configuração** .  
+ Para desabilitar o relatório do CEIP após a conclusão da instalação, use a ferramenta ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatório de erro e uso** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] menu **ferramentas de configuração** .  
   
  Para ações de Instalação como instalação, atualização, reparo, e assim por diante, as informações são coletadas e carregadas somente durante a execução do programa de instalação  
   
  Para todos os outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , as informações são coletadas uma vez por dia para todas as instâncias habilitadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, a hora de coleta é meia-noite para minimizar a carga no servidor. Se quiser alterar a hora de coleta, poderá editar manualmente a chave do registro que controla isso. Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem sua própria chave do Registro:  
   
- \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKLM\Software\\\MSSQL12.[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<InstanceId> \cpe\timeofreporting  
+ HKLM\Software \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. \<INSTANCEID> \CPE\TimeofReporting  
   
  O valor dessa chave do Registro contém a hora de coleta como o número de minutos a partir de 00h:00 (meia-noite) para executar. Por exemplo, um valor igual a 60 executará a coleta à 1:00 a.m. e um valor igual a 1200 executará a coleta às 8:00 p.m., e assim por diante.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66096837"
   
  Se você habilitar Relatório de Erros e um erro fatal ocorrer, poderá ver uma resposta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no log de eventos do Windows que apontará para um artigo específico na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- Para desabilitar os recursos de relatório de erro ou de uso para todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de seus componentes, depois de finalizar a Instalação, vá para a caixa de diálogo **Configurações do Relatório de Erro e Uso** e desmarque a caixa de seleção **Uso de Recursos**. Se o **relatório de erros** estiver habilitado para vários [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]os [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]componentes compartilhados,, e), você poderá desabilitar o relatório de erros para cada instância de um componente individual, bem como para os componentes compartilhados listados como **outros**.  
+ Para desabilitar os recursos de relatório de erro ou de uso para todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de seus componentes, depois de finalizar a Instalação, vá para a caixa de diálogo **Configurações do Relatório de Erro e Uso** e desmarque a caixa de seleção **Uso de Recursos**. Se o **relatório de erros** estiver habilitado para vários componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (os [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] componentes compartilhados,, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e), você poderá desabilitar o relatório de erros para cada instância de um componente individual, bem como para os componentes compartilhados listados como **outros**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre os termos de licença do SQL Server](../../../2014/getting-started/about-the-sql-server-license-terms.md)  

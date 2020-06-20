@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ddf153da7af2906fe7167c8cb2b77d9100d1154f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f540f39176ec638cdc9236b315e306ecebfdcb1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064914"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933067"
 ---
 # <a name="event-counter-target"></a>Destino de contador de eventos
   O destino do contador de eventos conta todos os eventos ocorridos durante uma sessão de Eventos Estendidos. Com o uso do destino do contador de eventos, é possível obter informações sobre as características da carga de trabalho, sem adicionar a sobrecarga da coleção de eventos. Esse destino não tem nenhum parâmetro personalizável.  

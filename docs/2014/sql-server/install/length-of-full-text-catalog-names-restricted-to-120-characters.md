@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 50633373-83f6-4ed9-99b9-71f92479a14f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5cce05426fdff2aacf40612738ad80b07d9ec0e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa9b06fa6fe4acd79782c19a8814357721e59c24
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094057"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045210"
 ---
 # <a name="length-of-full-text-catalog-names-restricted-to-120-characters"></a>Comprimento dos nomes de catálogo de texto completo restrito a 120 caracteres
   O comprimento dos nomes de catálogo de texto completo está restrito a 120 caracteres em vez de 128 caracteres como nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

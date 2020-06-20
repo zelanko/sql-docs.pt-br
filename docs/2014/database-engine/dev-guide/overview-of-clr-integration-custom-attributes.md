@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43db9f034a759e9c041f5cc6ab95baa5af4d7353
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781101"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933450"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Visão geral dos atributos personalizados da integração CLR
   O CLR (common language runtime) do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] permite o uso de palavras-chave descritivas, denominadas atributos. Esses atributos fornecem informações adicionais para vários elementos, como métodos e classes. Os atributos são salvos no assembly com os metadados do objeto e podem ser usados para descrever seu código para outras ferramentas de desenvolvimento ou para afetar o comportamento do runtime dentro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quando você registrar uma rotina de CLR com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será gerado um conjunto de propriedades sobre a rotina. Essas propriedades de rotina determinam os recursos da rotina, incluindo sua possibilidade de ser indexada. Por exemplo, a definição da propriedade `DataAccess` como `DataAccessKind.Read` permite que você acesse dados de tabelas do usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de uma função CLR. O exemplo a seguir mostra um caso simples no qual `DataAccess` a propriedade é definida para facilitar o acesso a dados de uma tabela de usuário **Table1**.  
+ Quando você registrar uma rotina de CLR com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será gerado um conjunto de propriedades sobre a rotina. Essas propriedades de rotina determinam os recursos da rotina, incluindo sua possibilidade de ser indexada. Por exemplo, a definição da propriedade `DataAccess` como `DataAccessKind.Read` permite que você acesse dados de tabelas do usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de uma função CLR. O exemplo a seguir mostra um caso simples no qual a `DataAccess` propriedade é definida para facilitar o acesso a dados de uma tabela de usuário **Table1**.  
   
 ```csharp  
 using System;  

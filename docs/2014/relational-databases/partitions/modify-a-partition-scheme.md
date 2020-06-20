@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d57984228e23143d2061df6bf447f978f9bd3c46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060907"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar um esquema de partição
   Você pode Modificar um esquema de partição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ao designar um grupo de arquivos para manter a partição seguinte que será adicionada à tabela particionada usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Isso é feito ao atribuir a propriedade NEXT USED a um grupo de arquivos. Você pode atribuir a propriedade NEXT USED a um grupo de arquivos vazio ou para um que já mantenha uma partição. Em outras palavras, um grupo de arquivos pode manter mais de uma partição.  

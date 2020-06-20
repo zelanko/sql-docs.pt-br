@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a20782e83422e6d8f7b6a550f23e57c6339b1a24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66068022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940197"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Sugerir colunas relacionadas (Assistente de Mineração de Dados)
   Use a página **Sugerir Colunas Relacionadas** para exibir as recomendações do recurso **Sugerir** , que você selecionou na página anterior do assistente. Colunas de entrada serão pré-selecionadas com base em sua associação à coluna **Previsível** selecionada. Se você aceitar as alterações nesta caixa de diálogo, elas se refletirão na página **Especificar os Dados de Treinamento** .  

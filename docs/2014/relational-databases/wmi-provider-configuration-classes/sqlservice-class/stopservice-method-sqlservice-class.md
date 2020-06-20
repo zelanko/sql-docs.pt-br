@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 56356fbf40939694a46f08c1cef5edc99049835e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 534db69b9c5474638ef5e893847f7d6b9bbb645d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911667"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061315"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>Método StoptService (classe SqlService)
   Tenta colocar o serviço no estado de interrompido.  
@@ -38,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SqlService](sqlservice-class.md) que representa o serviço.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

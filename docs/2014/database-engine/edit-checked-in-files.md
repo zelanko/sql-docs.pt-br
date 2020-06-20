@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 560cd19f-ab22-4273-b00c-149993a630e6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2dbe1aad203dfdc83e438d5b7f4ed19c15038c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933107"
 ---
 # <a name="edit-checked-in-files"></a>Editar arquivos com check-in
-  Você normalmente deve fazer o check-out de arquivos com controle do código-fonte antes de poder editá-los. No entanto, você [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pode configurar o para que você possa modificar os arquivos que não fez check-out. Ao fazer isso, suas alterações são mantidas na memória até que você salve os arquivos. Você será solicitado a fazer check–out do arquivo no controle do código-fonte.  
+  Você normalmente deve fazer o check-out de arquivos com controle do código-fonte antes de poder editá-los. No entanto, você pode configurar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para que você possa modificar os arquivos que não fez check-out. Ao fazer isso, suas alterações são mantidas na memória até que você salve os arquivos. Você será solicitado a fazer check–out do arquivo no controle do código-fonte.  
   
  Se você trabalhar em equipe, não se recomenda permitir o check-in de arquivos a menos que seu provedor de controle do código-fonte ofereça suporte a check-outs de versão local e de servidor. A maioria dos provedores não dá suporte a check-outs de versões locais. Se seu provedor não oferecer suporte a check-outs de versões locais e você editar um arquivo com check-in, será necessário mesclar as versões da memória e do servidor manualmente para que o arquivo possa ser submetido a check-in. Não há suporte para mesclagens automáticas e auxiliadas por provedor nesta situação.  
   

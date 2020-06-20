@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0f55065d3c62d87b51af83a411e2ba302fcf0528
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac4f773ac783515a0eaea1684d70866f159e1372
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481296"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937457"
 ---
 # <a name="open-a-knowledge-base"></a>Abrir uma base de dados de conhecimento
   Este tópico descreve como abrir uma base de dados de conhecimento existente no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepará-la para o gerenciamento de domínio, a descoberta de conhecimento ou a adição de uma política de correspondência.  
@@ -77,7 +76,7 @@ ms.locfileid: "65481296"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Estado de uma base de dados de conhecimento  
  O campo Estado indica em qual estágio de uma atividade a base de dados de conhecimento está. Se você abrir a base de dados de conhecimento, ela será aberta nesse estágio.  
   
--   >vazio: o campo Estado estará vazio para uma base de dados de conhecimento se a base de dados de conhecimento tiver sido publicada clicando em **publicar** na atividade gerenciamento de domínio e clicando em **Sim – publicar a base de dados de conhecimento e sair**. ** \< **  
+-   **\<Empty>**: O campo Estado estará vazio para uma base de dados de conhecimento se a base de dados de conhecimento tiver sido publicada clicando em **publicar** na atividade gerenciamento de domínio e clicando em **Sim – publicar a base de dados de conhecimento e sair**.  
   
 -   **Em trabalho**: o trabalho na base de dados de conhecimento foi salvo clicando em **publicar** na atividade gerenciamento de domínio e clicando em **não-salvar o trabalho na base de dados de conhecimento e sair**.  
   

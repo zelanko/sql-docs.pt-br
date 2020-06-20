@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d149016dabd0239bd76eadc8655b6752afd916d9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933947"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Configurar contas de logon para espelhamento de banco de dados ou para grupos de disponibilidade AlwaysOn (SQL Server)
   Para que duas instâncias de servidor se conectem ao [ponto de extremidade de espelhamento de banco de dados](the-database-mirroring-endpoint-sql-server.md) entre si, é necessário acesso mútuo entre as conta de logon de cada instância. Além disso, cada conta de logon exige a permissão de conexão com o ponto de extremidade do Espelhamento de Banco de Dados da outra instância.  

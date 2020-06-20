@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d374e5c8-ed35-43bf-8dd6-c37e38d9b5f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9345a02d446d8a4b7b82e9652444a08f68641f87
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f51f031bec05715e0345507278113f4f16179a77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022348"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
   No modo de confirmação manual, chamar **SQLFreeHandle** em um identificador de instrução com uma transação aberta causará uma reversão das alterações pendentes do banco de dados. Chamar **SQLFreeHandle** em um identificador de instrução sempre fechará quaisquer cursores abertos e descartará resultados pendentes, liberando todos os recursos associados ao identificador de instrução.  

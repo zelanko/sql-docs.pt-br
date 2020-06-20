@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14b729156409fcf57b39c4bdefce95d3aa3eafcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637747"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933537"
 ---
 # <a name="in-process-data-access-sample"></a>Exemplo de acesso a dados em processo
   O exemplo `InProcessDataAccess` contém diversas funções simples que demonstram vários recursos do provedor de acesso a dados em processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR.  
@@ -355,7 +354,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) testa o exemplo, exercitando os procedimentos armazenados e a função definida neste exemplo.  
+ O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] ( `test.sql` ) testa o exemplo, exercitando os procedimentos armazenados e a função definida neste exemplo.  
   
 ```  
 USE AdventureWorks;  

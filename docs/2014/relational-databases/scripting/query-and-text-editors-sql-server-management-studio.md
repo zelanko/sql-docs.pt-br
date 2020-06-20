@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c3e064358b58844726daa6499dc6c2ed0eeedd1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b6d7e62118f4fe3a01bca158d9dce13d9e7bfb52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009663"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de Consultas e de Texto (SQL Server Management Studio)
   Você pode usar um dos editores do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para editar e testar interativamente um script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou para editar um arquivo de texto XML ou sem-formatação. Cada editor tem o suporte de um serviço específico de linguagem que colore palavras-chave e verifica a sintaxe e os erros no uso. O Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] inclui um depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] que você pode usar para ajudar a corrigir problemas em código [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -97,7 +96,7 @@ ms.locfileid: "82703790"
  **Estatísticas do cliente**  
  Exibe informações sobre a execução da consulta agrupada em categorias. Quando a opção **Incluir Estatísticas do Cliente** é selecionada no menu **Consulta** , uma janela **Estatísticas do Cliente** é exibida na execução da consulta. São listadas estatísticas de execuções de consulta sucessivas junto com os valores médios. Selecione **Redefinir Estatísticas do Cliente** no menu **Consulta** para redefinir a média.  
   
- **Trechos de código**  
+ **Snippets de código**  
  Os modelos que você pode usar como ponto de partida ao adicionar instruções ao Editor de Consultas do Mecanismo de Banco de Dados. Você pode inserir os snippets predefinidos fornecidos com o SQL Server ou adicionar seus próprios snippets.  
   
  **Modo SQLCMD**  

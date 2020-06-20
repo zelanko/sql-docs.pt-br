@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48790cae2251bdad7d958f1adee38235edb20abb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678990"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067460"
 ---
 # <a name="advanced-save-options"></a>Opções Avançadas de Salvamento
-  Use essa caixa de diálogo selecionar um esquema de codificação de linguagem e para especificar os caracteres a serem inseridos no final de cada linha. Para acessar a caixa de diálogo **Opções avançadas de salvamento** , no menu **arquivo** , clique em **salvar** \<nome da consulta>**. SQL como** para abrir a caixa de diálogo **salvar arquivo como** , clique na seta para baixo no botão **salvar** e, em seguida, clique em **salvar com codificação**.  
+  Use essa caixa de diálogo selecionar um esquema de codificação de linguagem e para especificar os caracteres a serem inseridos no final de cada linha. Para acessar a caixa de diálogo **Opções Avançadas de Salvamento** no menu **Arquivo**, clique em **Salvar** \<query name> **.sql Como** para abrir a caixa de diálogo **Salvar Arquivo Como**, clique na seta para baixo no botão **Salvar** e, em seguida, clique em **Salvar com Codificação**.  
   
 ## <a name="options"></a>Opções  
  **Codificação**  

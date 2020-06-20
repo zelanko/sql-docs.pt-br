@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d569373f80a2f5488e8612cc30da264d283cd7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007649"
 ---
 # <a name="server-element-for-configuration-dta"></a>Elemento de servidor para configuração (DTA)
   Contém as informações de identificação para o servidor onde você quer que o Orientador de Otimização do Mecanismo de Banco de Dados avalie uma configuração hipotética (especificada pelo elemento `Configuration` ).  
@@ -36,7 +35,7 @@ ms.locfileid: "63283682"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

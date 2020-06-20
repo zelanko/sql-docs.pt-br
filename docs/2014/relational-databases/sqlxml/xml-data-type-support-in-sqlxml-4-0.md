@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7c7338500b68c157d5b555e29cf3a88bea3513c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702809"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009285"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Suporte ao tipo de dados xml no SQLXML 4.0
   A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do, o oferece suporte a dados tipados XML usando o `xml` tipo de dados. Este tópico fornece informações sobre como o SQLXML 4.0 reconhece instâncias do tipo de dados `xml` e implementa o suporte para elas.  
@@ -34,7 +33,7 @@ ms.locfileid: "82702809"
   
 ## <a name="guidelines-and-limitations"></a>Diretrizes e limitações  
   
--   ** \< xsd: qualquer>** não pode ser mapeada para uma coluna, incluindo um `xml` tipo de dados. O suporte no SQLXML para este cenário é fornecido pela anotação `sql:overflow-field`. Outra solução alternativa é mapear um campo de tipo de dados `xml` como um elemento de `xsd:anyType`. Essa solução alternativa é demonstrada no exemplo "Mapeando um elemento XML para uma coluna de tipo de dados XML" mencionado na tabela acima.  
+-   **\<xsd:any>** Não pode ser mapeado para uma coluna, incluindo um `xml` tipo de dados. O suporte no SQLXML para este cenário é fornecido pela anotação `sql:overflow-field`. Outra solução alternativa é mapear um campo de tipo de dados `xml` como um elemento de `xsd:anyType`. Essa solução alternativa é demonstrada no exemplo "Mapeando um elemento XML para uma coluna de tipo de dados XML" mencionado na tabela acima.  
   
 -   Não há suporte para a consulta XPath no conteúdo das colunas de tipo de dados `xml`.  
   

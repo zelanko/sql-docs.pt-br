@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 654d4adbd2e4baa97b16e83261089d8d78289af6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22f900a0b203e652bbc9cc6e9638711d138756c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007922"
 ---
 # <a name="viewing-the-windows-application-log"></a>Exibindo o log do aplicativo do Windows
   Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é configurado para usar o log do aplicativo do Microsoft Windows, cada sessão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grava novos eventos nesse log. Ao contrário do log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não é criado um novo log de aplicativos cada vez que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]é iniciada.  

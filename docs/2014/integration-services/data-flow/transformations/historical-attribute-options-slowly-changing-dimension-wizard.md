@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 315d6a4e4bb0d9b28f6f921e0a254fec6e11fdae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e8ffdb50fb68d10d138c30ccfb077563d360523
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900122"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939497"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Opções de Atributo Histórico (Assistente para Dimensões de Alteração Lenta)
   Use a caixa de diálogo **Opções de Atributo Histórico** para mostrar atributos históricos por datas de início e de término ou para registrar atributos históricos em uma coluna criada especialmente para este propósito.  

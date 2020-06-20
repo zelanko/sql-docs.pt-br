@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 205ee5d7c316c9a81e82edc0b2b6d132ed5c0ae1
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: eb4d968af6c550d19fbb8934b5d76a1bd63cb8da
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858673"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933007"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Propriedades do catálogo de texto completo (página Tabelas e Exibições)
   Usa essa página de caixa de diálogo para exibir ou modificar as tabelas e exibições atribuídas ao catálogo de texto completo.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 967e2db04a4cf03aa826d5b9f8c3cb1d07417689
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2bbbbcec3f5e5df5bb5d8629329aae6d43599eb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021653"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   Este tópico discute a funcionalidade do SQLSetDescRec que é específica para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -33,7 +32,7 @@ ms.locfileid: "82702172"
 |*Subtipo*|Ignored|Para registros de tipo SQL_DATETIME ou SQL_INTERVAL, defina como SQL_DESC_DATETIME_INTERVAL_CODE.|  
 |*Comprimento*|SQL_DESC_OCTET_LENGTH|O comprimento do nome do tipo de parâmetro com valor de tabela. Isso poderá ser SQL_NTS se o nome do tipo terminar com caractere nulo ou zero se o nome do tipo de parâmetro com valor de tabela não for necessário.|  
 |*Precisão*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
-|*Dimensionar*|SQL_DESC_SCALE|Não utilizado. O parâmetro deve ser zero.|  
+|*Escala*|SQL_DESC_SCALE|Não utilizado. O parâmetro deve ser zero.|  
 |*DataPtr*|SQL_DESC_DATA_PTR em APD|SQL_CA_SS_TYPE_NAME<br /><br /> O parâmetro é opcional para chamadas de procedimento armazenado e NULL poderá ser especificado se ele não for necessário. Esse parâmetro deve ser especificado para instruções SQL que não sejam chamadas de procedimento.<br /><br /> *DataPtr* também serve como um valor exclusivo que o aplicativo pode usar para identificar esse parâmetro com valor de tabela quando a associação de linha variável é usada.|  
 |*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> Para um parâmetro com valor de tabela, trata-se do número de linhas de transferência ou SQL_DATA_AT_EXEC. Esse é um ponteiro para um valor que contém o número de linhas a serem transferidas com SQLExecDirect.|  
 |*IndicatorPtr*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
@@ -43,11 +42,11 @@ ms.locfileid: "82702172"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>Suporte de SQLSetDescRec a recursos aprimorados de data e hora  
  Os valores permitidos para tipos de data/hora são os seguintes:  
   
-||*Tipo*|*Subtipo*|*Comprimento*|*Precisão*|*Dimensionar*|  
+||*Tipo*|*Subtipo*|*Comprimento*|*Precisão*|*Escala*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|data|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  

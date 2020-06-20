@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4685dc65c860776143f25f4299a62427adfcb31f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939877"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a um banco de dados de modelo de tabela (SSAS)
   Após criar um modelo de tabela e implantá-lo em um servidor de modo de tabela do Analysis Services, você precisará definir permissões que o disponibilizem para aplicativos cliente. Este tópico explica como conceder permissões e como conectar-se a um banco de dados de aplicativos cliente.  
@@ -81,11 +80,11 @@ ms.locfileid: "66067654"
   
 2.  Selecione **Do Analysis Services**.  
   
-3.  Em **Nome de Servidor**, especifique a instância do Analysis Services que hospeda o banco de dados. O nome do servidor costuma ser o nome do computador que executa o software do servidor. Se o servidor foi instalado como uma instância nomeada, você deve especificar o nome neste formato: \<servername>\\<InstanceName\>.  
+3.  Em **Nome de Servidor**, especifique a instância do Analysis Services que hospeda o banco de dados. O nome do servidor costuma ser o nome do computador que executa o software do servidor. Se o servidor foi instalado como uma instância nomeada, você deve especificar o nome neste formato: \<servername> \\<InstanceName \> .  
   
      A instância de servidor deve ser configurada para a implantação autônoma de tabela e a instância de servidor deve ter uma regra de entrada que permita o acesso a ela. Para mais informações, consulte [Determinar o modo de servidor de uma instância do Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) e [Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-4.  Para fazer logon em credenciais, escolha **Usar Autenticação do Windows** se você tem permissões de leitura para o banco de dados. Caso contrário, escolha **Use as seguintes credenciais de usuário do Windows**e insira o nome de usuário e senha de uma conta do Windows que tenha permissões de banco de dados. Clique em **Avançar**.  
+4.  Para fazer logon em credenciais, escolha **Usar Autenticação do Windows** se você tem permissões de leitura para o banco de dados. Caso contrário, escolha **Use as seguintes credenciais de usuário do Windows**e insira o nome de usuário e senha de uma conta do Windows que tenha permissões de banco de dados. Clique em **Próximo**.  
   
 5.  Selecione o banco de dados. Uma seleção válida mostrará um único cubo **Modelo** para o banco de dados. Clique em **Avançar** e clique em **Concluir**.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66067654"
   
  Na importação de dados, este erro do Microsoft Excel ocorre quando você tenta usar o Assistente para se conectar a um banco de dados de modelo de tabela em um servidor remoto do Analysis Services, e você não tem permissões suficientes. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   
- **Ocorreu um erro durante uma tentativa de estabelecer uma conexão com a fonte de dados externa. Falha ao atualizar as seguintes conexões: \<nome do modelo> área restrita**  
+ **Ocorreu um erro durante uma tentativa de estabelecer uma conexão com a fonte de dados externa. Falha ao atualizar as seguintes conexões: \<model name> sandbox**  
   
  No SharePoint, este erro do Microsoft Excel ocorre quando você tenta a interação de dados, como a filtragem de dados, em uma Tabela Dinâmica que usa dados modelo. O erro ocorre porque você não tem permissões suficientes no servidor remoto do Analysis Services. Para resolver este erro, você deve ter direitos de acesso de usuário no banco de dados. Consulte as instruções apresentadas antes neste tópico para conceder acesso do usuário aos dados.  
   

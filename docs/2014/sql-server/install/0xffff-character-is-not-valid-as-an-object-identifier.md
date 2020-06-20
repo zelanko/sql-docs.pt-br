@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b2c9c8cf-9194-45e0-be6b-2d5ec52e8153
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35c7c65bc312cd20c057b5e2603e7a8f77ce8c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4594c1cca0fc183100d927842cc2b533694bf90e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096916"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046162"
 ---
 # <a name="0xffff-character-is-not-valid-as-an-object-identifier"></a>Caractere 0xFFFF não é válido como um identificador de objeto
   O Supervisor de Atualização detectou o caractere 0xFFFF em um identificador de objeto. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, objetos como bancos de dados, tabelas e colunas que contêm esse caractere em seus identificadores não podem ser referenciados ou renomeados quando o modo de compatibilidade do banco de dados estiver definido como 90 ou posterior. Quando você faz a atualização para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], os bancos de dados mantêm seus modos de compatibilidade. Antes de você alterar o modo de compatibilidade do banco de dados para 90 ou posterior, renomeie o objeto que contém o caractere 0xFFFF.  

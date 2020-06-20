@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33ea59dfce0dc29080d08792b662c5fd8293f56f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000975"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Classificar e agrupar resultados da consulta (Visual Database Tools)
   Você pode criar um resultado de consulta no qual cada linha de resultado corresponda a um grupo inteiro de linhas dos dados originais.  

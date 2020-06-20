@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d6c2dbfb1254260f5c92df5f1da33ba26e368aa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09836db1f510ac77635924c51e5341686627d54d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995962"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Propriedade Properties (classe ClientNetworkProtocol)
   Obtém as propriedades associadas com o protocolo de rede do cliente atual especificado pela opção [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
@@ -37,11 +36,11 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) que representa o protocolo de rede usado pelo cliente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
- Uma matriz de objetos da [classe ClientNetworkProtocolProperty](../clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representam as propriedades com suporte pelo protocolo de rede do cliente atual que é `OrderValue` referenciado pela propriedade.  
+ Uma matriz de objetos da [classe ClientNetworkProtocolProperty](../clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representam as propriedades com suporte pelo protocolo de rede do cliente atual que é referenciado pela `OrderValue` propriedade.  
   
 ## <a name="remarks"></a>Comentários  
   

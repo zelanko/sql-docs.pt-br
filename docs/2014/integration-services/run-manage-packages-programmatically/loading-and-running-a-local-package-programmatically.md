@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08a644f9de2f406ecb0abfaa30bf1c9e646213f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766888"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964494"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Carregando e executando um pacote local programaticamente
   É possível executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] conforme necessário ou em horários predeterminados por meio dos métodos descritos em [Executando pacotes](../packages/run-integration-services-ssis-packages.md). Entretanto, bastam algumas linhas de código para executar um pacote de um aplicativo personalizado, como, por exemplo, um aplicativo Windows Forms, um aplicativo do console, um formulário/serviço da Web ASP.NET ou um serviço do Windows.  
@@ -59,7 +58,7 @@ ms.locfileid: "62766888"
   
 2.  No menu **Projeto**, clique em **Adicionar Referência** e adicione uma referência a **Microsoft.SqlServer.ManagedDTS.dll**. Clique em **OK**.  
   
-3.  Use a instrução `Imports` Visual Basic ou a instrução `using` C# para importar o namespace **Microsoft. SqlServer. Dts. Runtime** .  
+3.  Use a `Imports` instrução Visual Basic ou a `using` instrução C# para importar o namespace **Microsoft. SqlServer. Dts. Runtime** .  
   
 4.  Adicione o código a seguir na rotina principal. O aplicativo de console completo deve ter a aparência do exemplo a seguir.  
   

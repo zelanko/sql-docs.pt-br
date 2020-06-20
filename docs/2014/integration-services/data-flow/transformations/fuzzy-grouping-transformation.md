@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 989e4b1b538144a1ead50cc3e28c64e0ae6e32c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900555"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939547"
 ---
 # <a name="fuzzy-grouping-transformation"></a>transformação Agrupamento Difuso
   A transformação Agrupamento Difuso executa tarefas de limpeza de dados identificando linhas de dados que provavelmente sejam duplicatas e selecionando uma linha canônica de dados a ser usada na padronização dos dados.  
@@ -69,7 +68,7 @@ ms.locfileid: "62900555"
  Essa transformação tem uma entrada e uma saída. Não dá suporte a uma saída de erro.  
   
 ## <a name="row-comparison"></a>Comparação de linhas  
- Quando você configura a transformação Agrupamento Difuso, é possível especificar o algoritmo de comparação que a transformação usa para comparar linhas na entrada de transformação. Se você definir a propriedade exaustiva como `true`, a transformação compara cada linha na entrada para todas as demais linhas na entrada. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na entrada seja pequeno. Para evitar problemas de desempenho, é aconselhável definir a propriedade exaustiva como `true` somente durante o desenvolvimento do pacote.  
+ Quando você configura a transformação Agrupamento Difuso, é possível especificar o algoritmo de comparação que a transformação usa para comparar linhas na entrada de transformação. Se você definir a propriedade exaustiva como `true` , a transformação compara cada linha na entrada para todas as demais linhas na entrada. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na entrada seja pequeno. Para evitar problemas de desempenho, é aconselhável definir a propriedade exaustiva como `true` somente durante o desenvolvimento do pacote.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tabelas e índices temporários  
  No tempo de execução, a transformação Agrupamento Difuso cria objetos temporários, como tabelas e índices, potencialmente de tamanho significante, no banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que a transformação seja conectada. O tamanho das tabelas e índices é proporcional ao número de linhas na entrada de transformação e o número de tokens criados pela transformação Agrupamento Difuso.  

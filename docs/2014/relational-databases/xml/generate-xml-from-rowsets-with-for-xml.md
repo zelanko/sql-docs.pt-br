@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7024369f579f818e56250f1aac48c2d1834ea26
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 890c22e5ed4bd1414ba9454da293de0ddf6f595c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82715380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046685"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Gerar XML de conjuntos de linhas com FOR XML
   Você pode gerar uma `xml` instância de tipo de dados por meio de um conjunto de linhas usando for XML com a nova diretiva de **tipo** .  

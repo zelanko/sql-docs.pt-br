@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89f962ead45c4c0670cd5adfb5da0be9373c4097
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: edd9853a68fd86481e32cfa9dee69b0be8b577a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858931"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930898"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalhes de instâncias gerenciadas (Utilitário do SQL Server)
   As informações da exibição Instâncias Gerenciadas do Gerenciador do Utilitário fornecem dados de utilização para instâncias individuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , para um computador, para arquivos de banco de dados e arquivos de log e no nível de volumes de armazenamento. Você também pode exibir detalhes de propriedades de instâncias gerenciadas individuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

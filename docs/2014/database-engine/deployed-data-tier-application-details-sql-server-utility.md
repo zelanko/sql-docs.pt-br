@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c66359dde77a8dcaceca26304df9ac5b32d5339b
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 40d0ad53de3589f5dc23e587427f001dbdb808b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858679"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933817"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalhes do aplicativo da camada de dados implantado (Utilitário do SQL Server)
   As informações da exibição Aplicativos da Camada de Dados Implantados do Gerenciador do Utilitário fornecem dados de utilização para aplicativos da camada de dados individuais, o histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de aplicativo da camada de dados para utilização da CPU e para arquivos de log e arquivos de dados do banco de dados. Você também pode exibir detalhes de propriedades de aplicativos da camada de dados individuais.  
@@ -78,7 +77,7 @@ ms.locfileid: "83858679"
   
 -   Confiável: (True ou False)  
   
--   Collation  
+-   Ordenação  
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
@@ -155,7 +154,7 @@ ms.locfileid: "83858679"
   
 -   Confiável: (True ou False)  
   
--   Collation  
+-   Ordenação  
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   

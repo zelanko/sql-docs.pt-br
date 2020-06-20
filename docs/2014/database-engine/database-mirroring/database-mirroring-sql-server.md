@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1221b1ff86b96490fb09a5785978dcc16ac40b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934287"
 ---
 # <a name="database-mirroring-sql-server"></a>Espelhamento de banco de dados (SQL Server)
     
@@ -194,9 +193,9 @@ ms.locfileid: "62807873"
   
 |Instância de servidor|Sessão para banco de dados A|Sessão para banco de dados B|Sessão para banco de dados C|Sessão para banco de dados D|  
 |---------------------|----------------------------|----------------------------|----------------------------|----------------------------|  
-|`SSInstance_1`|Witness (testemunha)|Parceiro|Parceiro|Parceiro|  
-|`SSInstance_2`|Parceiro|Witness (testemunha)|Parceiro|Parceiro|  
-|`SSInstance_3`|Parceiro|Parceiro|Witness (testemunha)|Witness (testemunha)|  
+|`SSInstance_1`|Witness (testemunha)|Partner (parceiro)|Partner (parceiro)|Partner (parceiro)|  
+|`SSInstance_2`|Partner (parceiro)|Witness (testemunha)|Partner (parceiro)|Partner (parceiro)|  
+|`SSInstance_3`|Partner (parceiro)|Partner (parceiro)|Witness (testemunha)|Witness (testemunha)|  
   
  A figura a seguir ilustra duas instâncias de servidor que estão participando como parceiros de duas sessões de espelhamento. Uma sessão destina-se a um banco de dados chamado **Db_1**e a outra, a um banco de dados chamado **Db_2**.  
   
@@ -211,7 +210,7 @@ ms.locfileid: "62807873"
 > [!NOTE]  
 >  Como os bancos de dados espelhados são independentes, eles não podem realizar failover em grupo.  
   
-###  <a name="client-connections"></a><a name="ClientConnections"></a>Conexões de cliente  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> Conexões cliente  
  O suporte à conexão de cliente para sessões de espelhamento de banco de dados é fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a>Impacto de pausar uma sessão no log de transações principal  
@@ -229,11 +228,11 @@ ms.locfileid: "62807873"
   
 -   [Catálogos de texto completo](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
--   [Instantâneos de banco de dados](../../relational-databases/databases/database-snapshots-sql-server.md)  
+-   [Instantâneos do banco de dados](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
 -   [Replicação](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="in-this-section"></a><a name="InThisSection"></a>Nesta seção  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Nesta seção  
  [Pré-requisitos, restrições e recomendações para espelhamento de banco de dados](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Descreve os pré-requisitos e as recomendações para configuração do espelhamento de banco de dados.  
   
@@ -270,7 +269,7 @@ ms.locfileid: "62807873"
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 ### <a name="configuration-tasks"></a>Tarefas de configuração  
- **Usando SQL Server Management Studio**  
+ **Como usar o SQL Server Management Studio.**  
   
 -   [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   

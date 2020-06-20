@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45430eea18d533855e00021f5fda46d80ac0e0c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054834"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972646"
 ---
 # <a name="unpivot-transformation-editor"></a>Editor de Transformação Não Dinâmica
   Use a caixa de diálogo **Editor de Transformação Não Dinâmica** para selecionar as colunas que serão dinamizadas em linhas, e para especificar as colunas de dados e a nova coluna de saída de valor dinâmico.  
