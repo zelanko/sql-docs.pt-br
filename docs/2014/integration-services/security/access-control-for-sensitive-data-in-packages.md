@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b47690162b2418469dcb3f866a7c002981b80a75
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766769"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964096"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controle de acesso de dados confidenciais em pacotes
   Para proteger os dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você pode definir um nível de proteção que ajude a proteger apenas dados confidenciais ou todos os dados no pacote. Além disso, você pode criptografar esses dados com uma senha ou uma chave de usuário ou contar com o banco de dados para criptografar os dados. Além disso, o nível de proteção usado para um pacote não é necessariamente estático, mas altera todo o ciclo de vida do pacote. Defina sempre um nível de proteção durante um desenvolvimento e outro assim que implantar o pacote.  
@@ -64,7 +63,7 @@ ms.locfileid: "62766769"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Definição do nível de proteção e o catálogo SSISDB  
  O catálogo SSISDB usa o nível de proteção `ServerStorage`. Quando você implantar um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o catálogo criptografará automaticamente os dados do pacote e os valores confidenciais. O catálogo também descriptografa automaticamente os dados quando você recupera-os.  
   
- Se você exportar o projeto (arquivo .ispac) do servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o sistema de arquivos, o sistema automaticamente alterará o nível de proteção para `EncryptSensitiveWithUserKey`. Se você importar o projeto usando o **Assistente de Integration Services importação** de projeto [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]no, a propriedade **ProtectionLevel** na janela **Propriedades** mostrará um valor `EncryptSensitiveWithUserKey`de.  
+ Se você exportar o projeto (arquivo .ispac) do servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o sistema de arquivos, o sistema automaticamente alterará o nível de proteção para `EncryptSensitiveWithUserKey`. Se você importar o projeto usando o **Assistente de Integration Services importação de projeto** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , a propriedade **ProtectionLevel** na janela **Propriedades** mostrará um valor de `EncryptSensitiveWithUserKey` .  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Configuração do nível de proteção com base no ciclo de vida do pacote  
  Você define o nível de proteção de um pacote do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando o desenvolve pela primeira vez no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Posteriormente, quando o pacote for implantado, importado ou exportado do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ou copiado do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Armazenamento de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou o sistema de arquivos, você poderá atualizar o nível de proteção do pacote. Por exemplo, se você criar e salvar pacotes no computador com uma das opções de nível de proteção de chave de usuário, provavelmente precisará alterar o nível de proteção ao fornecer o pacote a outros usuários; caso contrário eles não poderão abrir o pacote.  

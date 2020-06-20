@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76f6ecec446536191e8be4b05547ba5fd44c9d8d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040535"
 ---
 # <a name="creating-views-and-stored-procedures"></a>criando exibições e procedimentos armazenados
    Agora que a Marina pode acessar o banco de dados **TestData**, talvez convenha criar alguns objetos de banco de dados, como uma exibição e um procedimento armazenado, e conceder a Mary acesso a eles. Uma exibição é uma instrução SELECT armazenada e um procedimento armazenado é uma ou mais instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas como um lote.  

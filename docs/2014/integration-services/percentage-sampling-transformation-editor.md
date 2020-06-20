@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0366ecb08281a28d43bc98639bf4b11e60aea402
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1734dd95a0744e08e57bcdff3a80f882b926c2ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056717"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964687"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>Editor de Transformação Amostragem Percentual
   Use a caixa de diálogo **Editor de Transformação Amostragem Percentual** para dividir parte de uma entrada em uma amostra, usando uma porcentagem de linhas especificada. Essa transformação divide a entrada em duas saídas separadas.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 052e685615f654ad333ba441bb0c5cf5773a758b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 349dad1ebe3132ca8270997ddd77d2232a40adfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63017157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053192"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Classe de evento Audit Schema Object Access
   A classe de evento **Audit Schema Object Access** ocorre quando uma permissão de objeto (como SELECT) é usada.  

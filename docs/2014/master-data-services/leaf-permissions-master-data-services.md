@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf091886adb0a7fe484b2b62f44eb51b6c58d8bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479177"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971266"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permissões de folha (Serviços de Dados Mestre)
   Permissões de folha se aplicam aos valores de atributos para todos os membros folha de uma entidade.  
@@ -38,7 +37,7 @@ ms.locfileid: "65479177"
 |----------------|-----------------|  
 |**Somente leitura**|Os membros folha são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.<br /><br /> Se existem membros consolidados, os nomes e os códigos são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.|  
 |**Atualização**|Os membros de folha são exibidos e o usuário pode adicionar, remover ou alterá-los.<br /><br /> Se existem membros consolidados, os nomes e os códigos são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.|  
-|**Negar**|Os membros de folha da entidade não são exibidos.|  
+|**Deny**|Os membros de folha da entidade não são exibidos.|  
   
 ## <a name="attribute-permissions"></a>Permissões de atributo  
  As permissões de atributo se aplicam aos valores de atributo da entidade específica. Os usuários apenas com permissões de atributo não podem adicionar ou remover membros.  
@@ -47,7 +46,7 @@ ms.locfileid: "65479177"
 |----------------|-----------------|  
 |**Somente leitura**|O atributo é exibido, mas o usuário não pode alterar valores de atributo.|  
 |**Atualização**|O atributo é exibido e o usuário pode alterar valores de atributo.|  
-|**Negar**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
+|**Deny**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
   
 ### <a name="example"></a>Exemplo  
  Para a entidade Product, atribua a permissão **Atualizar** ao atributo Subcategory. Negue permissão a todos os demais atributos.  

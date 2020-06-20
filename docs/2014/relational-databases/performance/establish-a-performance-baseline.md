@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4b382545e9f7e5af1607d67539f2ae9f29cfdce3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cb85ae8ad370b816c6240b58aabd247c7593c16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150887"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066827"
 ---
 # <a name="establish-a-performance-baseline"></a>Estabelecer uma linha de base de desempenho
   Para determinar se o sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está com desempenho ótimo, meça o desempenho a intervalos regulares, mesmo quando não houver problemas, para estabelecer uma linha de base para o desempenho do servidor. Compare cada novo de conjuntos de medidas com os anteriores.  

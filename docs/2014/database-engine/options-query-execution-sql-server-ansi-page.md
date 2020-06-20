@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49727ad5168bbd5438a57ae161f669482e412cae
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 198505c5d14b9fda510d4635dbaa3d3d49483ddf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856801"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930134"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Opções (página execução da consulta-SQL Server-ANSI)
   Juntas, essas opções SET padrão ANSI (ISO) definem o ambiente de processamento de consulta enquanto durar a consulta do usuário, a execução de um gatilho, ou um procedimento armazenado. Porém, essas opções SET não incluem todas as opções exigidas pelo padrão ISO. Use esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o executará as consultas usando todas ou uma parte das configurações especificadas no padrão ISO. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para alterar as opções das consultas atuais, clique em **Opções de consulta** no menu **consulta** ou clique com o botão direito do mouse na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] janela de consulta e selecione **Opções de consulta**. Na caixa de diálogo **Opções de Consulta** , em **Execução**, clique em **ANSI**.  

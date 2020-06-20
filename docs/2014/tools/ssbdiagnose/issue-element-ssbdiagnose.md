@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f182c7974eaf26cca2b666fcf9740dee675830
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63285766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006772"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
   Reporta um problema que foi encontrado pelo utilitário **ssbdiagnose** . O arquivo de saída XML de **ssbdiagnose** tem um elemento Issue por problema reportado.  
@@ -40,7 +39,7 @@ ms.locfileid: "63285766"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |`type`|Identifica qual categoria de problema o elemento Issue está reportando:<br /><br /> **"Diagnóstico"** reporta um problema de configuração encontrado durante a análise da configuração de um [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **"Problema"** reporta um problema que impediu o **ssbdiagnose** de concluir sua análise. Corrija o problema e execute o **ssbdiagnose**novamente.<br /><br /> **"Evento"** reporta um evento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encontrado quando você executa uma verificação de **-RUNTIME** . Os eventos só serão reportados se **-SHOWEVENTS** for especificado.|  
 |`code`|Identifica o número de erro da mensagem.|  
@@ -52,9 +51,9 @@ ms.locfileid: "63285766"
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|**Tipo de dados e comprimento**|`string`, tamanho é ilimitado.|  
+|**Comprimento e tipo de dados**|`string`, tamanho é ilimitado.|  
 |**Valor**|Retorna o texto da mensagem de erro.|  
-|**C'**|Uma vez por erro reportado.|  
+|**Ocorrência**|Uma vez por erro reportado.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

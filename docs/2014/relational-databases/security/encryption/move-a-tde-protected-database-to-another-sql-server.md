@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b03b4d9ecf31e9953fd3e22cec5c51bbacc0c25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060296"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
   Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de log e de dados. A criptografia usa uma chave de criptografia de banco de dados (DEK), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados `master` do servidor ou uma chave assimétrica protegida por um módulo EKM.  
@@ -47,7 +46,7 @@ ms.locfileid: "74957160"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
--   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou a chave assimétrica deve ser instalado `master` no banco de dados do servidor de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , para que o possa acessar os arquivos de banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md).  
+-   Ao mover um banco de dados protegido por TDE, é necessário também mover o certificado ou a chave assimétrica que é usada para abrir a DEK. O certificado ou a chave assimétrica deve ser instalado no `master` banco de dados do servidor de destino, para que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o possa acessar os arquivos de banco de dados. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md).  
   
 -   Você deve reter cópias do arquivo de certificado e do arquivo de chave privada para poder recuperar o certificado. A senha da chave privada não precisa ser igual à senha da chave mestra do banco de dados.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "74957160"
   
 -   Requer `CONTROL DATABASE` permissão no `master` banco de dados para criar a chave mestra do banco de dados.  
   
--   Exige `CREATE CERTIFICATE` a permissão no `master` banco de dados para criar o certificado que protege o DEK.  
+-   Exige a `CREATE CERTIFICATE` permissão no `master` banco de dados para criar o certificado que protege o DEK.  
   
 -   Requer a permissão `CONTROL DATABASE` no banco de dados criptografado e a permissão `VIEW DEFINITION` na chave assimétrica ou no certificado usado para criptografar a chave de criptografia do banco de dados.  
   
@@ -67,9 +66,9 @@ ms.locfileid: "74957160"
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Usando o SQL Server Management Studio  
   
-1.  Crie uma chave mestra de banco de dados e `master` um certificado no banco de dados. Para obter mais informações, veja **Usando o Transact-SQL** abaixo.  
+1.  Crie uma chave mestra de banco de dados e um certificado no `master` banco de dados. Para obter mais informações, veja **Usando o Transact-SQL** abaixo.  
   
-2.  Crie um backup do certificado do servidor no banco `master` de dados. Para obter mais informações, veja **Usando o Transact-SQL** abaixo.  
+2.  Crie um backup do certificado do servidor no `master` banco de dados. Para obter mais informações, veja **Usando o Transact-SQL** abaixo.  
   
 3.  No Pesquisador de Objetos, clique com o botão direito do mouse na pasta **Bancos de Dados** e selecione **Novo Banco de Dados**.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "74957160"
   
      As opções a seguir estão disponíveis na caixa de diálogo **Gerenciar Criptografia de Banco de Dados** .  
   
-     **Algoritmo de Criptografia**  
+     **Algoritmo de criptografia**  
      Exibe ou define o algoritmo para uso na criptografia de banco de dados. `AES128` é o algoritmo padrão. Este campo não pode ficar em branco. Para obter mais informações sobre algoritmos de criptografia, consulte [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
   
      **Usar certificado de servidor**  
@@ -168,7 +167,7 @@ ms.locfileid: "74957160"
      **Bancos de dados a serem desanexados**  
      Lista os bancos de dados a serem desanexados  
   
-     **Nome do banco de dados**  
+     **Database Name**  
      Exibe o nome do banco de dados a ser desanexado.  
   
      **Cancelar Conexões**  
@@ -177,7 +176,7 @@ ms.locfileid: "74957160"
     > [!NOTE]  
     >  Você não pode desanexar um banco de dados com conexões ativas.  
   
-     **Atualizar estatísticas**  
+     **Atualizar Estatísticas**  
      Por padrão, a operação desanexar retém qualquer estatística de otimização desatualizada ao desanexar o banco de dados; para atualizar as estatísticas de otimização existentes, clique nesta caixa de seleção.  
   
      **Manter Catálogos de Texto Completo**  
@@ -186,7 +185,7 @@ ms.locfileid: "74957160"
      **Status**  
      Exibe um dos seguintes estados: **Pronto** ou **Não pronto**.  
   
-     **Mensagem**  
+     **Message**  
      A coluna **Mensagem** pode exibir informações sobre o banco de dados, da seguinte forma:  
   
     -   Quando um banco de dados estiver envolvido com replicação, o **Status** será **Não pronto** e a coluna **Mensagem** exibirá **Banco de Dados replicado**.  
@@ -205,7 +204,7 @@ ms.locfileid: "74957160"
   
 6.  Recrie o certificado do servidor usando o arquivo de backup de certificado do servidor original. Para obter mais informações, veja **Usando o Transact-SQL** abaixo.  
   
-7.  No Pesquisador de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]objetos no, clique com o botão direito do mouse na pasta **bancos de dados** e selecione **anexar...**.  
+7.  No Pesquisador de objetos no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , clique com o botão direito do mouse na pasta **bancos de dados** e selecione **anexar...**.  
   
 8.  Na caixa de diálogo **Anexar Bancos de Dados** , em **Bancos de dados a serem anexados**, clique em **Adicionar**.  
   
@@ -222,7 +221,7 @@ ms.locfileid: "74957160"
      **Local do Arquivo MDF**  
      Exibe o caminho e o nome de arquivo do arquivo MDF selecionado.  
   
-     **Nome do banco de dados**  
+     **Database Name**  
      Exibe o nome do banco de dados.  
   
      **Anexar como**  
@@ -238,12 +237,12 @@ ms.locfileid: "74957160"
     |----------|-----------------|-----------------|  
     |(No icon)|(Nenhum texto)|A operação de anexação não foi iniciada ou pode estar pendente para esse objeto. Esse é o padrão quando a caixa de diálogo é aberta.|  
     |Triângulo verde apontando para a direita|Em andamento|A operação de anexação foi iniciada mas não está completa.|  
-    |Sinal de verificação verde|Êxito|O objeto foi anexado com êxito.|  
+    |Sinal de verificação verde|Sucesso|O objeto foi anexado com êxito.|  
     |Círculo vermelho contendo uma cruz branca|Erro|A operação de anexação encontrou um erro e não foi concluída com êxito.|  
     |Círculo que contém dois quadrantes pretos (à esquerda e à direita) e dois quadrantes brancos (em cima e em baixo)|Parado|A operação de anexação não foi completada com êxito porque o usuário interrompeu a operação.|  
     |Círculo que contém uma seta curvada que aponta para o sentido anti-horário|Revertida|A operação de anexação teve êxito, mas foi revertida devido a um erro ao se anexar outro objeto.|  
   
-     **Mensagem**  
+     **Message**  
      Exibe uma mensagem em branco ou um hiperlink "Arquivo não encontrado"  
   
      **Adicionar**  
@@ -252,8 +251,8 @@ ms.locfileid: "74957160"
      **Remover**  
      Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
   
-     Detalhes do banco de dados **"** _<database_name>_ **"**  
-     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **procurar** (**...**).  
+     **"** _<nome_do_banco_de_dados>_ **" detalhes do banco de dados**  
+     Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** ( **...** ).  
   
     > [!NOTE]  
     >  Se um arquivo não existir, a coluna **Mensagem** exibe "Não encontrado." Se um arquivo de log não for encontrado, ele existe em outro diretório ou foi excluído. Você precisa atualizar o caminho do arquivo na grade **detalhes do banco de dados** para indicar o local correto ou remover o arquivo de log da grade. Se um arquivo de dados .ndf não for encontrado, você precisará atualizar seu caminho na grade a fim de indicar o local correto.  
@@ -268,7 +267,7 @@ ms.locfileid: "74957160"
      Exibe o caminho para o arquivo de banco de dados selecionado. O caminho pode ser editado manualmente.  
   
      **Mensagem**  
-     Exibe uma mensagem em branco ou um hiperlink "**arquivo não encontrado**".  
+     Exibe uma mensagem em branco ou um hiperlink “**Arquivo não encontrado**”.  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Usando o Transact-SQL  
   

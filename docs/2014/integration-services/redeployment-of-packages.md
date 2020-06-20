@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 14edf3c34278ce89686a390c5b69662753ae653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33eb116ec2824af31eae236a8efd4038a9cbbb68
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056474"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964576"
 ---
 # <a name="redeployment-of-packages"></a>Reimplantação de pacotes
   Após a implantação de um projeto, talvez seja necessário atualizar ou estender a funcionalidade de pacotes e reimplantar o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém os pacotes atualizados. Como parte do processo de reimplantação dos pacotes, você deve revisar as propriedades de configuração incluídas no utilitário de implantação. Por exemplo, você pode desejar não permitir mudanças de configuração depois que o pacote for reimplantado.  

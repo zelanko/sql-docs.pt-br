@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 840011d1797c7ef9482af31ffc8b3ec3a6419b8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060882"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921967"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Para configurar um contêiner Loop Foreach
   Este procedimento descreve como configurar um contêiner Loop Foreach, incluindo expressões de propriedade nos níveis de enumerador e contêiner.  
@@ -72,7 +71,7 @@ ms.locfileid: "66060882"
   
 7.  Opcionalmente, clique em **Mapeamentos de Variáveis** para mapear propriedades de objeto do valor da coleção e execute um dos procedimentos a seguir:  
   
-    1.  Na lista **variáveis** , selecione uma variável ou clique em ** \<nova variável>** para criar uma nova variável.  
+    1.  Na lista **variáveis** , selecione uma variável ou clique **\<New Variable>** para criar uma nova variável.  
   
     2.  Se você adicionar uma variável nova, defina as propriedades da variável na caixa de diálogo **Adicionar Variável** e clique em **OK**.  
   

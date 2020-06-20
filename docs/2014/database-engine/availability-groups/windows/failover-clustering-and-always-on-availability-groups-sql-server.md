@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68a24366ff96c7e6f4784a5fa989f45ed136e74e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791993"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936828"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)
   O [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a solução de alta disponibilidade e recuperação de desastre incorporada no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], requer o WSFC (Windows Server Failover Clustering). Além disso, embora o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não seja dependente do clustering de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você pode usar uma FCI (instância de clustering de failover) para hospedar uma réplica de disponibilidade para um grupo de disponibilidade. É importante saber a função de cada tecnologia de clustering e quais considerações precisam ser observadas ao criar o ambiente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
@@ -76,7 +75,7 @@ ms.locfileid: "62791993"
  **As configurações de política de failover do grupo de disponibilidade se aplicam a todas as réplicas, sejam elas armazenadas em uma instância autônoma ou em uma instância FCI.  
   
 > [!NOTE]  
->  Para obter mais informações sobre o **número de nós** no clustering de Failover e **grupos de disponibilidade AlwaysOn** para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]edições diferentes do, consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obter mais informações sobre o **número de nós** no clustering de Failover e **grupos de disponibilidade AlwaysOn** para edições diferentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Considerações para hospedar uma réplica de disponibilidade em uma FCI  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 472ca5cf27f7e7ea2b18daa961c19faadcf2251f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043043"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retornar dados de um procedimento armazenado
   Há duas formas de retornar conjuntos de resultados ou dados de um procedimento para um programa de chamada: parâmetros de saída e códigos de retorno. Este tópico fornece informações sobre as duas abordagens.  
@@ -71,7 +70,7 @@ GO
  Quando você especifica OUTPUT para um parâmetro ao chamar um procedimento e esse parâmetro não é definido com OUTPUT na definição de procedimento, uma mensagem de erro é exibida. Entretanto, é possível executar um procedimento com parâmetros de saída e não especificar OUTPUT ao executar o procedimento. Uma mensagem de erro é exibida, mas não se pode usar valor de saída no programa de chamada.  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>Usando o tipo de dados de cursor em parâmetros OUTPUT  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]os procedimentos podem usar `cursor` o tipo de dados somente para parâmetros de saída. Se o `cursor` tipo de dados for especificado para um parâmetro, as palavras-chave Variable e output deverão ser especificadas para esse parâmetro na definição do procedimento. Um parâmetro pode ser especificado como somente saída, mas se a palavra-chave VARYing for especificada na declaração de parâmetro, o `cursor` tipo de dados deverá ser e a palavra-chave output também deverá ser especificada.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]os procedimentos podem usar o `cursor` tipo de dados somente para parâmetros de saída. Se o `cursor` tipo de dados for especificado para um parâmetro, as palavras-chave Variable e output deverão ser especificadas para esse parâmetro na definição do procedimento. Um parâmetro pode ser especificado como somente saída, mas se a palavra-chave VARYing for especificada na declaração de parâmetro, o tipo de dados deverá ser `cursor` e a palavra-chave output também deverá ser especificada.  
   
 > [!NOTE]  
 >  O tipo de dados `cursor` não pode ser associado a variáveis de aplicativos por meio de APIs de banco de dados, como OLE DB, ODBC, ADO e DB-Library. Como os parâmetros OUTPUT devem ser associados antes de um aplicativo executar um procedimento, os procedimentos com parâmetros OUTPUT `cursor` não podem ser chamados das APIs do banco de dados. Esses procedimentos podem ser chamados de lotes, procedimentos ou gatilhos do [!INCLUDE[tsql](../../../includes/tsql-md.md)] apenas quando a variável OUTPUT de `cursor` é atribuída a uma variável [!INCLUDE[tsql](../../../includes/tsql-md.md)]`cursor` local.  
@@ -104,7 +103,7 @@ GO
     >  O estado fechado só tem importância no momento do retorno. Por exemplo, é válido fechar um cursor durante o procedimento, reabrindo-o no procedimento posteriormente, e retornar o conjunto de resultados desse cursor para o lote, procedimento ou gatilho de chamada.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Exemplos de parâmetros de saída de cursor  
- No exemplo a seguir, é criado um procedimento que especificou um parâmetro de `@currency`saída`cursor` , _ `cursor` usando o tipo de dados. O procedimento é chamado em um lote.  
+ No exemplo a seguir, é criado um procedimento que especificou um parâmetro de saída, `@currency` _ `cursor` usando o `cursor` tipo de dados. O procedimento é chamado em um lote.  
   
  Primeiro, crie o procedimento que declara e, então, abra um cursor na tabela Moeda.  
   
@@ -145,7 +144,7 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>Retornando dados usando um código de retorno  
- Um procedimento pode retornar um valor inteiro chamado de código de retorno para indicar o status de execução de um procedimento. Especifique o código de retorno de um procedimento usando a instrução RETURN. Assim como em parâmetros OUTPUT, você deve salvar o código de retorno em uma variável quando o procedimento é executado para usar o valor de código de retorno no programa de chamada. Por exemplo, a variável `@result` de atribuição do tipo `int` de dados é usada para armazenar o código de retorno `my_proc`do procedimento, como:  
+ Um procedimento pode retornar um valor inteiro chamado de código de retorno para indicar o status de execução de um procedimento. Especifique o código de retorno de um procedimento usando a instrução RETURN. Assim como em parâmetros OUTPUT, você deve salvar o código de retorno em uma variável quando o procedimento é executado para usar o valor de código de retorno no programa de chamada. Por exemplo, a variável `@result` de atribuição do tipo de dados `int` é usada para armazenar o código de retorno do procedimento `my_proc` , como:  
   
 ```  
 DECLARE @result int;  
@@ -256,7 +255,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [PRINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
- [DEFINIR @local_variable &#40;&#41;TRANSACT-SQL](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
+ [DEFINIR @local_variable &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
  [Cursores](../cursors.md)   
  [RETORNAR &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/return-transact-sql)   
  [@@ERROR &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)  

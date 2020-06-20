@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6fb96a845f7d5bf97b14fe10f1e19849f0344984
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 874f59097a7f8b9bb575eb50318b60804e388f39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060122"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Criando atributos de tipo ID, IDREF e IDREFS válidos usando sql:prefix (SQLXML 4.0)
   Um atributo pode ser especificado como um atributo de tipo ID. Atributos especificados como IDREF ou IDREFS poderão, então, ser usados para fazer referência aos atributos de tipo ID, permitindo vínculos entre documentos.  
@@ -52,9 +51,9 @@ ms.locfileid: "82703625"
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>a. Especificando os tipos ID e IDREFS  
- No esquema a seguir, o elemento ** \<>do cliente** consiste no elemento filho ** \< Order>** . O elemento ** \< Order>** também tem um elemento filho, o ** \< OrderDetail>** elemento.  
+ No esquema a seguir, o **\<Customer>** elemento consiste no **\<Order>** elemento filho. O **\<Order>** elemento também tem um elemento filho, o **\<OrderDetail>** elemento.  
   
- O atributo **OrderIDList** de ** \<>do cliente** é um atributo de tipo IDREFS que se refere ao atributo **OrderID** do elemento ** \< Order>** .  
+ O atributo **OrderIDList** de **\<Customer>** é um atributo de tipo IDREFS que se refere ao atributo **OrderID** do **\<Order>** elemento.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2473de13e19a5c46c8844573cd051be4a09c940d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957181"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060281"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurar a chave mestra de serviço
   Este tópico descreve como restaurar a chave mestra de serviço no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5696b55252a6053b7501eee08dfbe4365678a26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f45a99b149feb0c0609aac88660ad7e62ca425f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916016"
 ---
 # <a name="data-viewer"></a>Visualizador de Dados
   Se um caminho for configurado para usar um visualizador de dados, o Visualizador de Dados exibirá o buffer de dados por buffer à medida que os dados se movimentarem entre dois componentes de fluxo de dados.  

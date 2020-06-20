@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19a95cfa5c6780fbdf71ae58bd141aa9aa351efa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920785"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956162"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL)
   Por padrão, a compactação de backup aumenta consideravelmente o uso de CPU, e o consumo adicional da CPU por parte do processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar um backup compactado de baixa prioridade em uma sessão cujo uso de CPU seja limitado pelo[Administrador de Recursos](../resource-governor/resource-governor.md) quando houver contenção de CPU. Este tópico apresenta um cenário que classifica as sessões de um usuário específico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeando-as para um grupo de carga de trabalho do Administrador de Recursos que limita o uso de CPU em casos como esse.  
@@ -259,7 +258,7 @@ GO
  [&#91;Início&#93;](#Top)  
   
 ##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> Compactando backups usando uma sessão com CPU limitada  
- Para criar um backup compactado em uma sessão com uma CPU máxima limitada, faça logon como o usuário especificado na função de classificação. No comando backup, especifique com COMPACTação ([!INCLUDE[tsql](../../includes/tsql-md.md)]) ou selecione **Compactar backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Para criar um backup de banco de dados compactado, consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
+ Para criar um backup compactado em uma sessão com uma CPU máxima limitada, faça logon como o usuário especificado na função de classificação. No comando backup, especifique com COMPACTação ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) ou selecione **Compactar backup** ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ). Para criar um backup de banco de dados compactado, consulte [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Exemplo C: Criando um backup compactado (Transact-SQL)  
  O exemplo de [BACKUP](/sql/t-sql/statements/backup-transact-sql) a seguir cria um backup completo compactado do banco de dados [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] em um arquivo de backup recém-formatado, `Z:\SQLServerBackups\AdvWorksData.bak`.  

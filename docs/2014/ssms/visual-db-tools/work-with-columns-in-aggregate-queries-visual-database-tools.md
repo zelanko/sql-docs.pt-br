@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c105b6084badabe52b2c92fcbde27e67d63852b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040552"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Trabalhar com colunas em consultas de agregação (Visual Database Tools)
   Quando você cria consultas de agregação, o [Designer de Consulta e Exibição](visual-database-tools.md) faz determinadas suposições para poder criar uma consulta válida. Por exemplo, se você estiver criando uma consulta de agregação e marcar uma coluna de dados para saída, o Designer de Consulta e Exibição fará com que a coluna automaticamente faça parte da cláusula GROUP BY para que você não tente exibir inadvertidamente o conteúdo de uma linha individual em um resumo.  

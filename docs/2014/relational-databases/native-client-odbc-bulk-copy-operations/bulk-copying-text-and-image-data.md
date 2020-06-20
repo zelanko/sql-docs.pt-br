@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 03d77ce1a4526cee78431def0251329111433aac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9240fd0eb8c32ed39613824ea5a07764e277160c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705822"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021259"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Copiando em massa dados de texto e imagem
   Os valores de **texto**grande, **ntext**e **Image** são copiados em massa usando a função [bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) . Você codifica [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para a coluna **Text**, **ntext**ou **Image** com um ponteiro *pData* definido como NULL, indicando que os dados serão fornecidos com **bcp_moretext**. É importante especificar o comprimento exato dos dados fornecidos para cada coluna **Text**, **ntext**ou **Image** em cada linha copiada em massa. Se o comprimento dos dados de uma coluna for diferente do comprimento da coluna especificado em [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), use [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) para definir o comprimento como o valor adequado. Um [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) envia todos os dados que não são de**texto**, não**ntextos**e não de**imagem** ; em seguida, você chama **bcp_moretext** para enviar os dados **Text**, **ntext**ou **Image** em unidades separadas. As funções de cópia em massa determinam que todos os dados foram enviados para a coluna **Text**, **ntext**ou **Image** atual quando a soma dos comprimentos de dados enviados por meio de **bcp_moretext** é igual ao comprimento especificado no **bcp_collen** ou **bcp_bind**mais recente.  

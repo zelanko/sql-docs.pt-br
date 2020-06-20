@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2b43873acb67cb4ca9aae80ab267f3d01522114
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63306524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040793"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>Criar aliases de tabelas (Visual Database Tools)
   Os aliases podem facilitar o trabalho com nomes de tabela. Usar aliases é útil quando:  

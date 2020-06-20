@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0437cceb328682f539ad86669b75e7e0ae1a170b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042628"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Instalar o Reporting Services SharePoint Mode para SharePoint 2013
   Os procedimentos deste tópico conduzirão você pela instalação de servidor único do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint. As etapas incluem a execução do assistente de instalação do SQL Server, bem como as tarefas de configuração que usam a Administração Central do SharePoint. O tópico também pode ser usado para procedimentos individuais para atualizar uma instalação existente, por exemplo, para criar um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; **Observação:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o modo do **SharePoint não oferece** suporte a multilocação do SharePoint Server.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; **Observação:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o modo do **not** SharePoint não oferece suporte a multilocação do SharePoint Server.|  
   
  Para obter informações sobre como adicionar mais servidores [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a um farm existente, consulte o seguinte.  
   
@@ -74,11 +73,11 @@ ms.locfileid: "79289614"
   
  **Instalação e registro do serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :**  
   
--   A conta atual durante a instalação (conhecida como a conta de ' instalação ') do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint precisa ter direitos administrativos no computador local. Se você estiver instalando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o após a instalação do SharePoint e a conta de ' instalação ' também for um membro do grupo Administradores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] farm do SharePoint, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a instalação registrará o serviço para você. Se você instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o antes de o SharePoint ser instalado ou a conta de ' instalação ' não for um membro do grupo Administradores de farm, registre o serviço manualmente. Consulte a seção [Etapa 2: Registre e inicie o serviço SharePoint do Reporting Services](#bkmk_install_SSRS_sharedservice).  
+-   A conta atual durante a instalação (conhecida como a conta de ' instalação ') do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint precisa ter direitos administrativos no computador local. Se você estiver instalando o após a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint e a conta de ' instalação ' também for um membro do grupo Administradores de farm do SharePoint, a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalação registrará o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serviço para você. Se você instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] antes de o SharePoint ser instalado ou a conta de ' instalação ' não for um membro do grupo Administradores de farm, registre o serviço manualmente. Consulte a seção [Etapa 2: Registre e inicie o serviço SharePoint do Reporting Services](#bkmk_install_SSRS_sharedservice).  
   
  **Criando aplicativos de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  
   
--   Após a instalação e o registro do serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , crie um ou mais aplicativos de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A "conta de serviço do farm do SharePoint" precisa ser temporariamente um membro do grupo de administradores local para que o aplicativo de serviço do Reporting Services possa ser criado. Para obter mais informações sobre as permissões de conta do SharePoint 2013, consulte [permissões de conta e configurações de segurança no SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx).  
+-   Após a instalação e o registro do serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , crie um ou mais aplicativos de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A "conta de serviço do farm do SharePoint" precisa ser temporariamente um membro do grupo de administradores local para que o aplicativo de serviço do Reporting Services possa ser criado. Para obter mais informações sobre as permissões de conta do SharePoint 2013, consulte [permissões de conta e configurações de segurança no SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx) ( https://technet.microsoft.com/library/cc678863.aspx) .  
   
      É prática recomendada de segurança que as contas de administrador do farm do SharePoint também não sejam contas locais de administrador do sistema operacional. Se você adicionar uma conta de administrador do farm ao grupo de administradores local como parte do processo de instalação, é recomendável remover a conta do grupo de administradores local depois que a instalação for concluída.  
   
@@ -103,11 +102,11 @@ ms.locfileid: "79289614"
   
 7.  Se você vir a página **chave do produto (Product Key)**, digite sua chave ou aceite o padrão da edição "Enterprise Evaluation".  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 8.  Se você vir a página Termos de Licença, revise e aceite os termos da licença. A Microsoft agradece se você clicar e concordar em enviar os dados de uso de recursos para ajudar a aprimorar os recursos de produto e o suporte.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 9. Se você vir a página **Função de instalação** , selecione **Instalação de recurso do SQL Server**  
   
@@ -125,7 +124,7 @@ ms.locfileid: "79289614"
   
     -   Se você ainda não tiver uma instância do SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)], também poderá selecionar **Serviços do Mecanismo de Banco de Dados** e **Ferramentas de Gerenciamento Completas** para um ambiente completo.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
      ![Seleção de recurso SSRS para o modo SharePoint](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "Seleção de recurso SSRS para o modo SharePoint")  
   
@@ -139,7 +138,7 @@ ms.locfileid: "79289614"
   
 14. Se você vir a página **Configuração do Servidor** , digite as credenciais apropriadas. Se você usar os recursos de alerta de dados ou de assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , será necessário alterar o **Tipo de Inicialização** do SQL Server Agent para **Automática**. Você pode não ver a página de **Configuração do Servidor** , dependendo do que já esteja instalado no computador.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 15. Se você selecionou os serviços do Mecanismo de Banco de Dados, a página **Configuração do Mecanismo de Banco de Dados** será exibida. Adicione contas apropriadas à lista de Administradores SQL e clique em **Avançar**.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "79289614"
   
 17. Ajude a Microsoft a aperfeiçoar os recursos e os serviços do SQL Server clicando na caixa de seleção para enviar relatórios de erros na página **Relatórios de Erros** .  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 18. Revise os avisos e clique em **Avançar** na página **Regras de Configuração da Instalação** .  
   
@@ -251,7 +250,7 @@ ms.locfileid: "79289614"
   
 11. O processo para criar um aplicativo de serviço poderá demorar vários minutos para ser concluído. Quando for concluído, você verá uma mensagem de confirmação e um link para uma página **Provisionar Assinaturas e Alertas** . Conclua a etapa de provisionamento se quiser usar os recursos de assinaturas ou alertas de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Provisionar assinaturas e alertas para aplicativos de serviço do SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Conteúdo relacionado ao PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") Para obter informações sobre como usar o PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para criar um aplicativo de serviço, consulte:  
+ ![Conteúdo relacionado ao PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") Para obter informações sobre como usar o PowerShell para criar um [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicativo de serviço, consulte:  
   
 -   Confira a seguinte seção [Script do Windows PowerShell para as etapas 1 a 4](#bkmk_full_script).  
   
@@ -266,7 +265,7 @@ ms.locfileid: "79289614"
   
 1.  As etapas a seguir pressupõem que o site do SharePoint esteja configurado para **versão da experiência**2013.  
   
-     Abra o navegador para o site do SharePoint desejado. Por exemplo, http://\<servername>/sites/bi  
+     Abra o navegador para o site do SharePoint desejado. Por exemplo, http:// \<servername> /sites/bi  
   
 2.  Clique em **configurações**![configurações do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint").  
   
@@ -297,7 +296,7 @@ ms.locfileid: "79289614"
   
 -   Atualize o parâmetro **-DatabaseServer** para o aplicativo de serviço. Esse parâmetro é a instância do mecanismo de banco de dados  
   
--   Atualize o parâmetro **-URL** do site em que você deseja habilitar [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] o recurso.  
+-   Atualize o parâmetro **-URL** do site em que você deseja [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] habilitar o recurso.  
   
  **Para usar o script:**  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a37bafc9bac2601e3914455f431c639bce385f48
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a028ed31ff2f4936d5d7bd45ba7809467939718b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019895"
 ---
 # <a name="bcp_batch"></a>bcp_batch
   Confirma todas as linhas copiadas em massa anteriormente de variáveis de programa e enviadas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por [bcp_sendrow](bcp-sendrow.md).  

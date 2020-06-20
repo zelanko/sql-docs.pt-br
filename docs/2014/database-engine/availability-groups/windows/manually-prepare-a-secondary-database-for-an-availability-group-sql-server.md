@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3da3f7332bdabce65785b2844157dd4639389254
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797646"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936737"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparar um banco de dados secundário manualmente para um grupo de disponibilidade (SQL Server)
   Este tópico descreve como preparar um banco de dados secundário para um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. A preparação de um banco de dados secundário exige duas etapas: (1) restaurar um backup recente do banco de dados primário e os backups de log subsequentes em cada instância do servidor que hospede a réplica secundária, usando RESTORE WITH NORECOVERY e (2) unir o banco de dados restaurado ao grupo de disponibilidade.  
@@ -195,7 +194,7 @@ ms.locfileid: "72797646"
         > [!IMPORTANT]  
         >  Se os nomes dos caminhos dos bancos de dados primário e secundário forem diferentes, não será possível adicionar um arquivo. Isso acontece porque, ao receber o log para a operação de adição de arquivo, a instância do servidor da réplica secundária tenta colocar o novo arquivo no mesmo caminho usado pelo banco de dados primário.  
   
-         Por exemplo, o comando a seguir restaura um backup de um banco de dados primário que reside no diretório de dados da instância padrão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. A operação Restore Database deve mover o banco de dados para o diretório data de uma [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instância remota de named (*AlwaysOn1*), que hospeda a réplica secundária em outro nó de cluster. Lá, os arquivos de dados e de log são restaurados para *c:\Arquivos de PROGRAMAS\MICROSOFT SQL Server\MSSQL12. Diretório ALWAYSON1\MSSQL\DATA* O operação de restauração usa WITH NORECOVERY, para deixar o banco de dados secundário no banco de dados de restauração.  
+         Por exemplo, o comando a seguir restaura um backup de um banco de dados primário que reside no diretório de dados da instância padrão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. A operação Restore Database deve mover o banco de dados para o diretório data de uma instância remota de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] named (*AlwaysOn1*), que hospeda a réplica secundária em outro nó de cluster. Lá, os arquivos de dados e de log são restaurados para *c:\Arquivos de PROGRAMAS\MICROSOFT SQL Server\MSSQL12. Diretório ALWAYSON1\MSSQL\DATA* O operação de restauração usa WITH NORECOVERY, para deixar o banco de dados secundário no banco de dados de restauração.  
   
         ```sql
         RESTORE DATABASE MyDB1  
@@ -282,6 +281,6 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Argumentos de restauração &#40;&#41;Transact-SQL](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [Argumentos de RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Solucionar problemas de uma operação de adição de arquivo com falha &#40;Grupos de Disponibilidade AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

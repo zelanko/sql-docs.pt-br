@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e76d95b99ed2578cdfc9ff5ab9a752b644d82067
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6dfbd32eb7ad3a78ce1d579f31e998532d3baf2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63000636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053239"
 ---
 # <a name="audit-login-event-class"></a>Classe de evento Audit Login
   A classe de evento **Audit Login** indica que um usuário fez logon com êxito no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os eventos nesta classe são disparados por novas conexões ou por conexões reutilizadas de um pool de conexões.  

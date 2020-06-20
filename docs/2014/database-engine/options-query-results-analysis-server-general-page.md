@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: caef9e71dedb4b974f05e1e7fbca861ec51f3585
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 599b73a97e55204a808aa4e35a085cc5be9f785c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856508"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930082"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>Opções (página resultados da consulta-Analysis Server-geral)
   Use esta página para determinar o comportamento padrão da janela de resultado de consultas para as consultas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para exibir essas configurações, selecione **Opções** no menu **Ferramentas** . Dentro da pasta **Resultados da Consulta** expanda a subpasta **Analysis Server** e, depois, escolha **Geral**.  

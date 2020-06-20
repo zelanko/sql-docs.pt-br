@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 206ba778a5c131ac4f9260ed37de63b29de86820
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5abe414a83a118fdc078f637384699280a08b995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007180"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>Salvar resultados de rastreamento em um arquivo (SQL Server Profiler)
   Este tópico descreve como salvar resultados de rastreamento em um arquivo, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0ba141e3f04eaf1b6edfc1a2427ed75793bceb3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006784"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>Elemento DiagnosticInformation (ssbdiagnose)
   O elemento **DiagnosticInformation** contém todos os elementos que reportam as informações de diagnóstico encontradas pelo utilitário. **DiagnosticInformation** é o elemento raiz de um arquivo de saída XML **ssbdiagnostic** .  
@@ -35,7 +34,7 @@ ms.locfileid: "63186906"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |`None`|N/D|  
   
@@ -43,9 +42,9 @@ ms.locfileid: "63186906"
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|**Tipo de dados e comprimento**|Nenhum.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**C'**|Uma vez por arquivo de saída XML **ssbdiagnose** .|  
+|**Ocorrência**|Uma vez por arquivo de saída XML **ssbdiagnose** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

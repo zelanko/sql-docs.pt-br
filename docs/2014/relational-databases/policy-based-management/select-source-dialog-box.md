@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc666567edb0c09896953de58a5f98bef166fbd4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066731"
 ---
 # <a name="select-source-dialog-box"></a>Caixa de diálogo Selecionar Origem
   Use esta caixa de diálogo para selecionar a origem das políticas a serem executadas. Para selecionar um ou mais arquivos XML que contêm políticas, selecione **Arquivos**. Para executar as políticas que são encontradas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selecione **Servidor**.  

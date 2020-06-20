@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf5fbc6c3a01b39079c8f63a2998490025c85e8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066927"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, objeto Cache de planos
   O objeto **Plan Cache** fornece contadores para monitorar como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a memória para armazenar objetos, como procedimentos armazenados e instruções e gatilhos [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc e preparados. Diversas instâncias do objeto **Plan Cache** podem ser monitoradas ao mesmo tempo, com cada instância representando um tipo de plano diferente para monitorar.  
@@ -28,7 +27,7 @@ ms.locfileid: "68210810"
 |Contadores SQL Server Plan Cache|DESCRIÇÃO|  
 |------------------------------------|-----------------|  
 |**Taxa de Acertos do Cache**|Taxa entre acertos e pesquisas do cache.|  
-|**Contagens de Objeto do Cache**|Número de objetos do cache no cache.|  
+|**Contagens de objetos de cache**|Número de objetos do cache no cache.|  
 |**Páginas do Cache**|Número de páginas de 8 quilobytes (KB) usado por objetos do cache.|  
 |**Objetos do cache em uso**|Número de objetos do cache em uso.|  
   

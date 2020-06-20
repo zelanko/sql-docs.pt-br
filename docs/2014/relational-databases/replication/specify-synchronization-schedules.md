@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d752817f7d620b2c6e5fdc5eeb2178c50c42040
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066581"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar agendas de sincronização
   Este tópico descreve como especificar agendas de sincronização no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). Quando criar uma assinatura, você pode definir uma agenda de sincronização que controla quando o agente de replicação para a assinatura executará. Se você não especificar os parâmetros de programação, a assinatura usará a agenda padrão.  
@@ -48,13 +47,13 @@ ms.locfileid: "62630803"
 |-----------|--------------|  
 |Merge Agent para assinaturas pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
 |Merge Agent para assinaturas push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
-|Distribution Agent para assinaturas push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>** <sup>1</sup>|  
-|Distribution Agent para assinaturas pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|  
+|Distribution Agent para assinaturas push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**<sup>1</sup>|  
+|Distribution Agent para assinaturas pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**<sup>2</sup>|  
 |Distribution Agent para assinaturas push para Assinantes não SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> Em assinaturas push para publicações Oracle, é **\<Publisher>-\<Publisher**> em vez de **\<Publisher>-\<PublicationDatabase>**  
+ <sup>1</sup> para assinaturas push para publicações Oracle, é * * \<Publisher> - \<Publisher**> em vez de**\<Publisher>-\<PublicationDatabase>**  
   
- <sup>2</sup> Para assinaturas pull para publicações Oracle, é **\<Publisher>-\<DistributionDatabase**> em vez de **\<Publisher>-\<PublicationDatabase>**  
+ <sup>2</sup> para assinaturas pull para publicações Oracle, é * * \<Publisher> - \<DistributionDatabase**> em vez de**\<Publisher>-\<PublicationDatabase>**  
   
 #### <a name="to-specify-synchronization-schedules"></a>Para especificar agendas de sincronização  
   
@@ -64,9 +63,9 @@ ms.locfileid: "62630803"
   
     -   **Executar somente sob demanda**  
   
-    -   **\<Definir Agendamento...>**  
+    -   **\<Define Schedule...>**  
   
-2.  Se você selecionar **\<Definir Agendamento...>** , especifique uma agenda na caixa de diálogo **Propriedades da Agenda de Trabalho** e clique em **OK**.  
+2.  Se você selecionar **\<Define Schedule...>** , especifique um agendamento na caixa de diálogo **Propriedades da agenda de trabalho** e clique em **OK**.  
   
 3.  Conclua o assistente.  
   
@@ -78,9 +77,9 @@ ms.locfileid: "62630803"
   
 3.  Clique com o botão direito do mouse em uma assinatura e clique em **Exibir Detalhes**.  
   
-4.  Na janela **assinatura \< assinatura>** , clique em **ação**e, em seguida, clique em ** \<AgentName> Propriedades do trabalho**.  
+4.  Na janela **assinatura \< SubscriptionName> ** , clique em **ação**e, em seguida, clique em ** \<AgentName> Propriedades do trabalho**.  
   
-5.  Na página **Agendas** da caixa de diálogo **Propriedades do Trabalho – \<JobName>** , clique em **Editar.**  
+5.  Na página **agendas** da caixa de diálogo **Propriedades \<JobName> do trabalho –** , clique em **Editar.**  
   
 6.  Na caixa de diálogo **Propriedades da Agenda de Trabalho** , selecione um valor da lista suspensa **Tipo de Agenda** :  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62630803"
   
 3.  Clique com o botão direito do mouse no trabalho para o Distribution Agent ou Merge Agent associado à assinatura e, então, clique em **Propriedades**.  
   
-4.  Na página **Agendas** da caixa de diálogo **Propriedades do Trabalho – \<JobName>** , clique em **Editar.**  
+4.  Na página **agendas** da caixa de diálogo **Propriedades \<JobName> do trabalho –** , clique em **Editar.**  
   
 5.  Na caixa de diálogo **Propriedades da Agenda de Trabalho** , selecione um valor da lista suspensa **Tipo de Agenda** :  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62630803"
   
 3.  Clique com o botão direito do mouse no trabalho para o Distribution Agent ou Merge Agent associado à assinatura e, então, clique em **Propriedades**.  
   
-4.  Na página **Agendas** da caixa de diálogo **Propriedades do Trabalho – \<JobName>** , clique em **Editar.**  
+4.  Na página **agendas** da caixa de diálogo **Propriedades \<JobName> do trabalho –** , clique em **Editar.**  
   
 5.  Na caixa de diálogo **Propriedades da Agenda de Trabalho** , selecione um valor da lista suspensa **Tipo de Agenda** :  
   
@@ -167,25 +166,25 @@ ms.locfileid: "62630803"
   
 1.  Crie uma assinatura pull nova para uma publicação transacional. Para obter mais informações, consulte [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-2.  No Assinante, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**e as [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciais do Windows sob as quais o agente de distribuição no assinante é **@job_name** executado **@password**para e. Especifique os parâmetros de sincronização, detalhados acima, que definem a agenda para o trabalho do Distribution Agent que sincroniza a assinatura.  
+2.  No Assinante, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Especifique **@publisher** , **@publisher_db** , e **@publication** as [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciais do Windows sob as quais o agente de distribuição no assinante é executado para **@job_name** e **@password** . Especifique os parâmetros de sincronização, detalhados acima, que definem a agenda para o trabalho do Distribution Agent que sincroniza a assinatura.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>Para definir a agenda de sincronização para uma assinatura push em uma publicação transacional  
   
 1.  Crie uma assinatura push nova para uma publicação transacional. Para obter mais informações, consulte [Create a Push Subscription](create-a-push-subscription.md).  
   
-2.  No Assinante, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Especifique **@subscriber**, **@subscriber_db**, **@publication**e as credenciais do Windows sob as quais o agente de distribuição no assinante é **@job_name** executado **@password**para e. Especifique os parâmetros de sincronização, detalhados acima, que definem a agenda para o trabalho do Distribution Agent que sincroniza a assinatura.  
+2.  No Assinante, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Especifique **@subscriber** , **@subscriber_db** , e **@publication** as credenciais do Windows sob as quais o agente de distribuição no assinante é executado para **@job_name** e **@password** . Especifique os parâmetros de sincronização, detalhados acima, que definem a agenda para o trabalho do Distribution Agent que sincroniza a assinatura.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>Para definir a agenda de sincronização para uma assinatura pull em uma publicação de mesclagem  
   
 1.  Crie uma assinatura pull nova para uma publicação de mesclagem. Para obter mais informações, consulte [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-2.  No Assinante, execute o [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**e as credenciais do Windows sob as quais o agente de mesclagem no assinante é **@job_name** executado **@password**para e. Especifique os parâmetros de sincronização, detalhados acima, que definem a agenda para o trabalho do Agente de Mesclagem que sincroniza a assinatura.  
+2.  No Assinante, execute o [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Especifique **@publisher** , **@publisher_db** , e **@publication** as credenciais do Windows sob as quais o agente de mesclagem no assinante é executado para **@job_name** e **@password** . Especifique os parâmetros de sincronização, detalhados acima, que definem a agenda para o trabalho do Agente de Mesclagem que sincroniza a assinatura.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>Para definir a agenda de sincronização para uma assinatura push em uma publicação de mesclagem  
   
 1.  Crie uma assinatura push nova para uma publicação de mesclagem. Para obter mais informações, consulte [Create a Push Subscription](create-a-push-subscription.md).  
   
-2.  No Assinante, execute o [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Especifique **@subscriber**, **@subscriber_db**, **@publication**e as credenciais do Windows sob as quais o agente de mesclagem no assinante é **@job_name** executado **@password**para e. Especifique os parâmetros de sincronização, detalhados acima, que definem a agenda para o trabalho do Agente de Mesclagem que sincroniza a assinatura.  
+2.  No Assinante, execute o [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Especifique **@subscriber** , **@subscriber_db** , e **@publication** as credenciais do Windows sob as quais o agente de mesclagem no assinante é executado para **@job_name** e **@password** . Especifique os parâmetros de sincronização, detalhados acima, que definem a agenda para o trabalho do Agente de Mesclagem que sincroniza a assinatura.  
   
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  A replicação usa o SQL Server Agent para agendar trabalhos para atividades que ocorrem periodicamente, como geração de instantâneo e sincronização de assinatura. Use programaticamente os RMO (Replication Management Objects) para especificar agendamentos de trabalhos de agente de replicação.  
@@ -317,7 +316,7 @@ ms.locfileid: "62630803"
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> para criar a assinatura.  
   
-###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemplo (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>Exemplo (RMO)  
  Esse exemplo cria uma assinatura push para uma publicação de mesclagem e especifica o agendamento em que a assinatura é sincronizada.  
   
  [!code-csharp[HowTo#rmo_CreateMergePushSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepushsub)]  
@@ -325,7 +324,7 @@ ms.locfileid: "62630803"
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [Práticas recomendadas de segurança de replicação](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
  [Sincronizar uma assinatura push](synchronize-a-push-subscription.md)   
  [Sincronizar uma assinatura pull](synchronize-a-pull-subscription.md)   

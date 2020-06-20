@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6918a099e00b1de9e773320b5c6c0e4089859e02
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956310"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
   Este tópico apresenta os conceitos, os requisitos e os componentes necessários para usar o serviço de armazenamento de BLOBs do Azure como um destino de backup. A funcionalidade de backup e restauração tem o mesmo efeito de DISK ou TAPE, com algumas diferenças. As diferenças, todas as exceções notáveis e alguns exemplos de código são incluídos neste tópico.  
@@ -47,7 +46,7 @@ ms.locfileid: "79289224"
 -   Ao criar um contêiner para o serviço de armazenamento de BLOBs do Azure, recomendamos que você defina o acesso como **particular**. A definição do acesso como privado restringe o acesso a usuários ou contas capazes de fornecer as informações necessárias para realizar a autenticação na conta do Azure.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]requer que o nome da conta do Azure e a autenticação de chave [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de acesso sejam armazenados em uma credencial. Essas informações são usadas para autenticar a conta do Azure quando ele executa operações de backup ou restauração.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]requer que o nome da conta do Azure e a autenticação de chave de acesso sejam armazenados em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credencial. Essas informações são usadas para autenticar a conta do Azure quando ele executa operações de backup ou restauração.  
   
 -   A conta de usuário usada para emitir os comandos BACKUP ou RESTORE deve estar na função de banco de dados **operador db_backup** com as permissões **Alterar qualquer credencial** .  
   
@@ -63,7 +62,7 @@ ms.locfileid: "79289224"
   
  **Contêiner:** Um contêiner fornece um agrupamento de um conjunto de BLOBs e pode armazenar um número ilimitado de BLOBs. Para gravar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup no serviço blob do Azure, você deve ter pelo menos o contêiner raiz criado.  
   
- **Blob:** Um arquivo de qualquer tipo e tamanho. Há dois tipos de BLOBs que podem ser armazenados no serviço de armazenamento de BLOBs do Azure: blobs de bloco e de página. O backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa Blobs de página. Os BLOBs são endereçáveis usando o seguinte formato de URL\<: conta de armazenamento https://\<>. blob.Core.Windows.NET/\<contêiner>/blob>  
+ **Blob:** Um arquivo de qualquer tipo e tamanho. Há dois tipos de BLOBs que podem ser armazenados no serviço de armazenamento de BLOBs do Azure: blobs de bloco e de página. O backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa Blobs de página. Os BLOBs são endereçáveis usando o seguinte formato de URL: https:// \<storage account> . blob.Core.Windows.net/\<container>/\<blob>  
   
  ![Armazenamento de Blobs do Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Armazenamento do Blobs do Azure")  
   
@@ -77,9 +76,9 @@ ms.locfileid: "79289224"
 > [!WARNING]  
 >  Se você optar por copiar e carregar um arquivo de backup para o serviço de armazenamento de BLOBs do Azure, use o blob de páginas como sua opção de armazenamento. Não há suporte para restaurações de Blobs de bloco. A RESTAURAÇÃO de um blob de bloco falhará.  
   
- Aqui está um exemplo de valor de URL: http [s]\<: contêiner//ACCOUNTNAME.blob.Core.Windows.NET/\<>/filename. bak>. O HTTPS não é obrigatório, mas é recomendado.  
+ Aqui está um exemplo de valor de URL: http [s]://ACCOUNTNAME.Blob.core.windows.net/ \<CONTAINER> / \<FILENAME.bak> . O HTTPS não é obrigatório, mas é recomendado.  
   
- **Credencial:** Uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.  Aqui, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os processos de backup e restauração usam a credencial para autenticar o serviço de armazenamento de BLOBs do Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre como exibir, copiar ou gerar novamente as **access keys**da conta de armazenamento, consulte [Chaves de acesso da conta de armazenamento](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+ **Credencial:** Uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.  Aqui, os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processos de backup e restauração usam a credencial para autenticar o serviço de armazenamento de BLOBs do Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre como exibir, copiar ou gerar novamente as **access keys**da conta de armazenamento, consulte [Chaves de acesso da conta de armazenamento](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
  Para obter instruções passo a passo sobre como criar uma credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte o exemplo [Create a Credential](#credential) mais adiante neste tópico.  
   

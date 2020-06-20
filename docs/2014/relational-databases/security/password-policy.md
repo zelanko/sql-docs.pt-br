@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 902c46b4609a32139450843414a3c4d97b52fcf7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187972"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060213"
 ---
 # <a name="password-policy"></a>Política de senha
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar os mecanismos de política de senha do Windows. A política de senha se aplica a um logon que usa a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a um usuário de banco de dados independente com senha.  
