@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 828d299e47ecf582918ce5524e3b6c2bc2925d90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 991940b819e3d72fcb7b94eb031b0e40b7102667
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939527"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificar linhas de dados semelhantes por meio da transformação Agrupamento Difuso
   Para adicionar e configurar uma transformação Agrupamento Difuso, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd6af62200b5d640c67321165eae941986e18892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c58fc8d77bccb072d0999d2e6e0c4f545712f522
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069346"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940897"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>Selecionar chave de tabela aninhada (Assistente para Adicionar Nova Tabela Aninhada)
   Use a página **Selecionar Chave de Tabela Aninhada** para selecionar o atributo que será a chave da tabela aninhada.  

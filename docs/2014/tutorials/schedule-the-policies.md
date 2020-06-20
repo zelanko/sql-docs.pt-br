@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59417a54-55f1-4468-ba41-368aa852c2d4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b098f7929f762992f55995836dc03f95001e33d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033498"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063942"
 ---
 # <a name="schedule-the-policies"></a>Agendar as políticas
   Nesta tarefa, você agendará as políticas de práticas recomendadas que você importou na tarefa anterior.  

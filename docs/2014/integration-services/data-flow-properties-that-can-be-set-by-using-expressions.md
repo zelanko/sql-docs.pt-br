@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d23037bc09b735fc28e52eabb1852d1af303d15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059937"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916936"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriedades de fluxo de dados que podem ser definidas usando expressões
   Os valores de certas propriedades dos objetos de fluxo de dados podem ser especificados usando expressões de propriedades disponíveis no contêiner da tarefa de Fluxo de Dados.  
@@ -35,7 +34,7 @@ ms.locfileid: "66059937"
   
  Para especificar uma expressão de propriedade para uma das propriedades de objetos de fluxo de dados listadas nesse tópico, exiba a janela **Propriedades** para a tarefa de Fluxo de Dados selecionando a tarefa de Fluxo de Dados na superfície **Fluxo de Controle** do designer, ou selecionando a guia **Fluxo de Dados** do designer sem selecionar nenhum componente individual ou caminho. Selecione a propriedade **Expressões** e clique nas reticências (...) para exibir a caixa de diálogo **Editor de Expressões de Propriedades** . Abra a lista suspensa **Propriedade** para selecionar uma propriedade e digite uma expressão na caixa de texto **Expressão** ou clique nas reticências (...) para exibir a caixa de diálogo **Construtor de Expressões** .  
   
- A lista **Propriedade** exibe as propriedades disponíveis para apenas esses objetos de fluxo de dados já colocados na superfície **Fluxo de Dados** do designer. Portanto, não é possível usar a lista **Propriedade** para exibir todas as possíveis propriedades de objetos de fluxo de dados que aceitam expressões de propriedades. Por exemplo, se você colocou uma origem do ADO NET na superfície do designer, a lista de **Propriedades** conterá uma entrada `[ADO NET Source].[SqlCommand]` para a propriedade. A lista também exibe muitas propriedades da própria tarefa de Fluxo de Dados.  
+ A lista **Propriedade** exibe as propriedades disponíveis para apenas esses objetos de fluxo de dados já colocados na superfície **Fluxo de Dados** do designer. Portanto, não é possível usar a lista **Propriedade** para exibir todas as possíveis propriedades de objetos de fluxo de dados que aceitam expressões de propriedades. Por exemplo, se você colocou uma origem do ADO NET na superfície do designer, a lista de **Propriedades** conterá uma entrada para a `[ADO NET Source].[SqlCommand]` propriedade. A lista também exibe muitas propriedades da própria tarefa de Fluxo de Dados.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>Propriedades de objetos de fluxo de dados que aceitam expressões de propriedade  
  Os valores das propriedades na lista a seguir podem ser especificados usando expressões de propriedades.  

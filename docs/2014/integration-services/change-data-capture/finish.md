@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b196aaa30934e4206886b8b6290e402b6c28fce5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246528596017d8b3434eeb194ce8de832ca4538e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771312"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923212"
 ---
 # <a name="finish"></a>Concluir
   A página **Fim** resume o processo do assistente. Clique em **Fim** para fechar o assistente e gerar todas as tabelas que você definiu no assistente Criar Instância CDC.  

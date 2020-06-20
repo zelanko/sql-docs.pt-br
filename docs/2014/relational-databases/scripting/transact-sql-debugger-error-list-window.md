@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b4ee09b1cd960a58dbf26ecc1b1cc898af4fad96
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: e204585892fd71ff807361c75e703afcc6208d98
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857838"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063350"
 ---
 # <a name="error-list-window-management-studio"></a>Janela Lista de Erros (Management Studio)
   A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Lista de Erros**do** exibe os erros de sintaxe e semântica gerados no código IntelliSense do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

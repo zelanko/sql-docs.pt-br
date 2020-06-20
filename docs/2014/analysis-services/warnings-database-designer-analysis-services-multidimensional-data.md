@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 113f644d9f1da48790e7c8d59d34e6b143a1175a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938117"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Avisos (Designer de Banco de Dados) (Analysis Services - Dados multidimensionais)
   Use a guia **Avisos** para exibir e ignorar regras globalmente e para exibir e reabilitar instâncias específicas de avisos ignorados. A guia **Avisos** exibe duas grades: **Regras de Aviso de Design** e **Avisos Ignorados**.  
@@ -36,7 +35,7 @@ ms.locfileid: "66065434"
  **Descrição**  
  Exibe o nome da regra. As regras são agrupadas por categoria.  
   
- **Porta**  
+ **Importância**  
  Exibe a importância atribuída à regra.  
   
  **Comentários**  
@@ -56,7 +55,7 @@ ms.locfileid: "66065434"
  **Descrição**  
  Exibe o nome da regra.  
   
- **Porta**  
+ **Importância**  
  Exibe a importância atribuída à regra.  
   
  **Comentários**  

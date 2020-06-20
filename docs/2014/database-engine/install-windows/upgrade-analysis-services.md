@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc839659d289eeccfe2e7893f054699e34b1fc0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889190"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932037"
 ---
 # <a name="upgrade-analysis-services"></a>Atualizar o Analysis Services
-  Use a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações detalhadas sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como atualizar o no modo do SharePoint, consulte [Atualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md). Para obter mais informações sobre como atualizar uma instância existente do SQL Server, consulte [atualizar para o SQL Server 2014 usando o assistente de instalação &#40;&#41;de instalação ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Use a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações detalhadas sobre como atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo do SharePoint, consulte [Atualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md). Para obter mais informações sobre como atualizar uma instância existente do SQL Server, consulte [atualizar para o SQL Server 2014 usando o assistente de instalação &#40;&#41;de instalação ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Problemas de atualização conhecidos  
  Antes de atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], revise o seguinte:  
@@ -55,14 +54,14 @@ ms.locfileid: "68889190"
 ## <a name="upgrading-analysis-services"></a>Atualizando o Analysis Services  
  Você pode escolher entre várias abordagens para atualizar o servidor e os dados:  
   
--   Uma **atualização** in-loco substitui os arquivos de programas existentes por arquivos [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de programas. Os bancos de dados permanecem no mesmo local. As pastas de programa são atualizadas para refletir o novo nome.  
+-   Uma **atualização** in-loco substitui os arquivos de programas existentes por [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] arquivos de programas. Os bancos de dados permanecem no mesmo local. As pastas de programa são atualizadas para refletir o novo nome.  
   
--   Uma **atualização lado a lado** é uma nova instalação do no mesmo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] computador que tem uma instância existente do Analysis Services. Você pode mover bancos de dados para a nova instância no mesmo computador e, em seguida, desinstalar a versão antiga se você não for mais usá-la.  
+-   Uma **atualização lado a lado** é uma nova instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no mesmo computador que tem uma instância existente do Analysis Services. Você pode mover bancos de dados para a nova instância no mesmo computador e, em seguida, desinstalar a versão antiga se você não for mais usá-la.  
   
 -   Você também pode instalar o Analysis Services em novo hardware e, em seguida, migrar os bancos de dados existentes para aquele servidor.  
   
 ## <a name="in-place-upgrade"></a>Atualização in-loco  
- Você pode atualizar uma instância existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o e, como parte do processo de atualização, migrar automaticamente os bancos de dados existentes da instância antiga para a nova instância do. Como os metadados e os dados binários são incompatíveis entre as duas versões, você reterá os dados depois de atualizar e não precisará migrar os dados manualmente.  
+ Você pode atualizar uma instância existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e, como parte do processo de atualização, migrar automaticamente os bancos de dados existentes da instância antiga para a nova instância do. Como os metadados e os dados binários são incompatíveis entre as duas versões, você reterá os dados depois de atualizar e não precisará migrar os dados manualmente.  
   
  Para atualizar uma instância existente, execute a Instalação e especifique o nome da instância existente como o nome da nova instância.  
   

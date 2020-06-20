@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2046229ded8ec429d12c54939d7432e478aaf3ba
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 34b15b956f3361b13e42745688025e0d30279ca9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048958"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Principais considerações de segurança do SQLXML
   A seguir, encontram-se diretrizes de segurança para o uso do SQLXML para acessar dados.  

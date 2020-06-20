@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f4387b3311c4b2157ba202890c2a190e83e7ad5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058749"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967096"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** para selecionar um arquivo e formato de dados. Uma conexão de arquivos simples habilita um pacote a conectar-se com um arquivo de texto.  
@@ -39,7 +38,7 @@ ms.locfileid: "66058749"
  **Procurar**  
  Localize o nome do arquivo a ser usado na conexão de arquivos simples.  
   
- **Localidade**  
+ **Local**  
  Especifique a localidade para fornecer informações de idioma específicas para solicitações e formatos de data e hora.  
   
  **Unicode**  
@@ -48,7 +47,7 @@ ms.locfileid: "66058749"
  **Página de código**  
  Especifique a página de código do texto não Unicode.  
   
- **Ao**  
+ **Formatar**  
  Indique se o arquivo usa formatação delimitada, de largura fixa ou irregular à direita.  
   
 |Valor|Descrição|  
@@ -69,9 +68,9 @@ ms.locfileid: "66058749"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
-|**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
+|**CD**|A linha do cabeçalho é delimitada por um retorno de carro.|  
 |**{LF}**|A linha do cabeçalho é delimitada por um avanço de linha.|  
-|**Ponto-e-vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
+|**Ponto e vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|A linha do cabeçalho é delimitada por dois-pontos.|  
 |**Pontos{,}**|A linha do cabeçalho é delimitada por uma vírgula.|  
 |**Tabulação {t}**|A linha do cabeçalho é delimitada por uma tabulação.|  

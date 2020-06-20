@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d2153e92f87e87ef152542a1934b9cdfd596fef9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07e2e67c1c30302c6d3e758f76805e92e509f6c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002865"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Especificando funções de conversão explícitas em consultas XPath (SQLXML 4.0)
   Os seguintes exemplos mostram como funções de conversão explícitas são especificadas em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado para exemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -30,7 +29,7 @@ ms.locfileid: "82717758"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>a. Use a função de conversão explícita number()  
  A função `number()` converte um argumento em um número.  
   
- Supondo que o valor de **ContactID** seja não numérico, a consulta a seguir converte **ContactID** em um número e o compara com o valor 4. Em seguida, a consulta retorna todos os elementos filho de ** \<>de funcionários** do nó de contexto com o atributo **ContactID** que tem um valor numérico de 4:  
+ Supondo que o valor de **ContactID** seja não numérico, a consulta a seguir converte **ContactID** em um número e o compara com o valor 4. Em seguida, a consulta retorna todos os **\<Employee>** elementos filho do nó de contexto com o atributo **ContactID** que tem um valor numérico de 4:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -79,7 +78,7 @@ ms.locfileid: "82717758"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Use a função de conversão explícita string()  
  A função `string()` converte um argumento em uma cadeia de caracteres.  
   
- A consulta a seguir converte **ContactID** em uma cadeia de caracteres e a compara com o valor de cadeia de caracteres "4". A consulta retorna todos os elementos de ** \<>do funcionário** do nó de contexto com um **ContactID** com um valor de cadeia de caracteres de "4":  
+ A consulta a seguir converte **ContactID** em uma cadeia de caracteres e a compara com o valor de cadeia de caracteres "4". A consulta retorna todos os **\<Employee>** elementos filho do nó de contexto com um **ContactID** com um valor de cadeia de caracteres de "4":  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

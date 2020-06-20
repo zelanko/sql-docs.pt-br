@@ -1,5 +1,6 @@
 ---
 title: Usando criptografia sem validação | Microsoft Docs
+description: Saiba como o provedor de SQL Server Native Client OLE DB e o driver ODBC dão suporte à criptografia sem validação e recomendações para quando usá-lo.
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e0a2f1a5c17ff5dcbf48b414517e15129570cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2416612b189c9ced09ed2eadef87c1a85649b9df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303183"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948666"
 ---
 # <a name="using-encryption-without-validation"></a>Usando criptografia sem validação
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

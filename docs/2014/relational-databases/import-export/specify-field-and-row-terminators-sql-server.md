@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 548beeae68f5585c5cf2ba56b67027532ab43b71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011852"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026592"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
   Para campos de dados de caracteres, caracteres de terminação opcionais permitem marcar o término de cada campo em um arquivo de dados com um *terminador de campo* e o término de cada linha com um *terminador de linha*. Os caracteres terminadores são um modo de indicar aos programas que leem o arquivo de dados onde um campo ou uma linha termina, e onde outro campo ou outra linha começa.  
@@ -56,7 +55,7 @@ ms.locfileid: "66011852"
 >  Quando você usa **bcp** de forma interativa e especifica \n (nova linha) como terminador de linha, o **bcp** automaticamente o prefixa com um caractere \r (retorno de carro), o que resulta em um terminador de linha \r\n.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>Especificando terminadores para exportação em massa  
- Quando você exporta `char` ou `nchar` dados em massa e deseja usar um terminador não padrão, deve especificar o terminador para o comando **bcp** . Você pode especificar terminadores em qualquer uma das seguintes formas:  
+ Quando você exporta `char` ou dados em massa `nchar` e deseja usar um terminador não padrão, deve especificar o terminador para o comando **bcp** . Você pode especificar terminadores em qualquer uma das seguintes formas:  
   
 -   Com um arquivo de formato que especifica o terminador campo por campo.  
   
@@ -127,8 +126,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualificador|Descrição|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **= '*`field_terminator`*'**|Especifica o terminador de campo a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \t (caractere de tabulação).|  
-    |Objectterminador **=*`row_terminator`*' '**|Especifica o terminador de linha a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \n (caractere de nova linha).|  
+    |FIELDTERMINATOR **= ' *`field_terminator`* '**|Especifica o terminador de campo a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \t (caractere de tabulação).|  
+    |Objectterminador **= ' *`row_terminator`* '**|Especifica o terminador de linha a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \n (caractere de nova linha).|  
   
      Para obter mais informações, veja [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -169,7 +168,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |Opção|Atributo|  
 |------------|---------------|  
-|DataFileType **= '`char`'**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
+|DataFileType **= ' `char` '**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
 |FIELDTERMINATOR **='** `,` **'**|Especifica uma vírgula (`,`) como terminador de campo.|  
 |ROWTERMINATOR **='** `\n` **'**|Especifica o terminador de linha como um caractere de nova linha.|  
   

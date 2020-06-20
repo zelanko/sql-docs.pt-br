@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6d845874a2fd221163953b0aeb2b8d32516e14b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a562af56807b2598c18b32952bc1ffd053ed8741
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62955885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064351"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>Ajuda F1 para conexões de servidor (SQL Server Management Studio)
   Essa seção contém a Ajuda F1 para as páginas da caixa de diálogo **Conectar ao Servidor** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

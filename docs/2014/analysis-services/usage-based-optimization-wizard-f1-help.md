@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea3aedff3f7bfa931b900bdeab59495a35853ae1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938235"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Ajuda F1 do Assistente de Otimização com Base no Uso
-  O Assistente de Otimização com Base no Uso tem saída semelhante ao Assistente de Design de Agregação e é usado para criar agregações para uma partição. No entanto o Assistente de Otimização com Base no Uso cria agregações com base em padrões específicos de uso de consultas registradas no log de consultas para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . As agregações fornecem melhorias de desempenho [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ao permitir que o recupere totais previamente calculados diretamente do armazenamento de cubo em vez de ter que recalcular os dados de uma fonte de dados subjacente para cada consulta.  
+  O Assistente de Otimização com Base no Uso tem saída semelhante ao Assistente de Design de Agregação e é usado para criar agregações para uma partição. No entanto o Assistente de Otimização com Base no Uso cria agregações com base em padrões específicos de uso de consultas registradas no log de consultas para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . As agregações fornecem melhorias de desempenho ao permitir que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o recupere totais previamente calculados diretamente do armazenamento de cubo em vez de ter que recalcular os dados de uma fonte de dados subjacente para cada consulta.  
   
- Para abrir o assistente de otimização com base no uso [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]de dentro do, abra o designer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de cubo para um projeto do e clique na guia **agregações** . Clique no botão de **otimização baseado em uso** na barra de ferramentas.  
+ Para abrir o assistente de otimização com base no uso de dentro do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , abra o designer de cubo para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto do e clique na guia **agregações** . Clique no botão de **otimização baseado em uso** na barra de ferramentas.  
   
  Para abrir o Assistente de Otimização com Base no Uso de dentro do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], conecte-se a um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e abra a pasta **Cubos** . Selecione um cubo, abra a pasta **Grupos de Medidas** e expanda o grupo de medidas que você deseja modificar. Clique com o botão direito do mouse na pasta **Partições** e selecione **Otimização com Base no Uso**.  
   

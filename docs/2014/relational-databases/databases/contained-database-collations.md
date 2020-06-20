@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5c51426bd68a4e1bd69aa4f81d097e7af3fe6f5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872050"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952076"
 ---
 # <a name="contained-database-collations"></a>Ordenações de banco de dados independentes
   Várias propriedades afetam a ordem de classificação e a semântica de igualdade dos dados textuais, incluindo diferenciação de maiúsculas e minúsculas, distinção de acentos e o idioma base em uso. Essas qualidades são demonstradas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela escolha da ordenação dos dados. Para obter uma discussão mais detalhada sobre as ordenações, consulte [Suporte a ordenações e a Unicode](../collations/collation-and-unicode-support.md).  
@@ -58,7 +57,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Isso parece relativamente simples, mas vários problemas ocorrem. Como o agrupamento de uma coluna depende do banco de dados no qual a tabela é criada, os problemas surgem com o uso de tabelas temporárias que `tempdb`são armazenadas no. O agrupamento `tempdb` geralmente corresponde ao agrupamento para a instância, que não precisa corresponder ao agrupamento de banco de dados.  
+ Isso parece relativamente simples, mas vários problemas ocorrem. Como o agrupamento de uma coluna depende do banco de dados no qual a tabela é criada, os problemas surgem com o uso de tabelas temporárias que são armazenadas no `tempdb` . O agrupamento `tempdb` geralmente corresponde ao agrupamento para a instância, que não precisa corresponder ao agrupamento de banco de dados.  
   
 ### <a name="example-2"></a>Exemplo 2  
  Por exemplo, considere o banco de dados (chinês) acima quando usado em uma instância com uma ordenação **Latin1_General**:  
@@ -111,14 +110,14 @@ AS BEGIN
 END;  
 ```  
   
- Essa é uma função bastante peculiar. Em um agrupamento com diferenciação de maiúsculas e minúsculas, o @i na cláusula @I Return não pode ser associado a nem a @??. Em uma ordenação Latin1_General sem diferenciação de maiúsculas e minúsculas, @i é associado a @I e a função retorna 1. Mas, em um agrupamento turco que não diferencia maiúsculas de minúsculas, @i é associado a @??, e a função retorna 2. Isso pode causar confusão em um banco de dados que se move entre instâncias com ordenações diferentes.  
+ Essa é uma função bastante peculiar. Em um agrupamento com diferenciação de maiúsculas e minúsculas, o @i na cláusula return não pode ser associado a @I nem a @??. Em uma ordenação Latin1_General sem diferenciação de maiúsculas e minúsculas, @i é associado a @I e a função retorna 1. Mas, em um agrupamento turco que não diferencia maiúsculas de minúsculas, é @i associado a @??, e a função retorna 2. Isso pode causar confusão em um banco de dados que se move entre instâncias com ordenações diferentes.  
   
 ## <a name="contained-databases"></a>Bancos de dados independentes  
  Como um objetivo de design dos bancos de dados independentes é torná-los dependentes, a dependência da instância e das ordenações `tempdb` deve ser removida. Para isso, os bancos de dados independentes apresentam o conceito de ordenação de catálogo. A ordenação de catálogo é usada para metadados de sistema e objetos transitórios. Os detalhes são fornecidos abaixo.  
   
  Em um banco de dados independente, a ordenação de catálogo **Latin1_General_100_CI_AS_WS_KS_SC**. Essa ordenação é a mesma para todos os bancos de dados independentes em todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não pode ser alterada.  
   
- A ordenação de banco de dados é mantida, mas é usada somente como a ordenação padrão para dados de usuário. Por padrão, o agrupamento de banco de dados é igual ao agrupamento de banco de dados modelo, mas pode ser alterado `CREATE` pelo `ALTER DATABASE` usuário por meio de um comando ou, como com bancos de dados não independentes.  
+ A ordenação de banco de dados é mantida, mas é usada somente como a ordenação padrão para dados de usuário. Por padrão, o agrupamento de banco de dados é igual ao agrupamento de banco de dados modelo, mas pode ser alterado pelo usuário por meio de um `CREATE` comando ou, `ALTER DATABASE` como com bancos de dados não independentes.  
   
  Uma nova palavra-chave, `CATALOG_DEFAULT`, está disponível na cláusula `COLLATE`. Ela é usada como um atalho para a ordenação atual de metadados em bancos de dados contidos e não contidos. Isso significa que, em um banco de dados não contido, `CATALOG_DEFAULT` retornará a ordenação de banco de dados atual, pois os metadados são agrupados na ordenação de banco de dados. Em um banco de dados contido, esses valores podem ser diferentes, pois o usuário pode alterar a ordenação do banco de dados para que ele não corresponda à ordenação de catálogo.  
   

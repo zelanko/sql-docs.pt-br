@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 351a5a4aa6bc1655b8da5fced3e51385dd498bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027098"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dados hierárquicos (SQL Server)
-  O tipo de `hierarchyid` dados interno torna mais fácil armazenar e consultar dados hierárquicos. `hierarchyid`é otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
+  O `hierarchyid` tipo de dados interno torna mais fácil armazenar e consultar dados hierárquicos. `hierarchyid`é otimizado para representar árvores, que são o tipo mais comum de dados hierárquicos.  
   
  Os dados hierárquicos são definidos como um conjunto de itens de dados mutuamente relacionados por relações hierárquicas. As relações hierárquicas existem onde um item de dados é o pai de outro item. Exemplos dos dados hierárquicos que geralmente são armazenados em bancos de dados incluem o seguinte:  
   
@@ -122,7 +121,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Um documento XML é uma árvore e, portanto, uma instância de tipo de dados XML única pode representar uma hierarquia completa. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Quando um índice XML é criado, `hierarchyid` os valores são usados internamente para representar a posição na hierarquia.  
+ Um documento XML é uma árvore e, portanto, uma instância de tipo de dados XML única pode representar uma hierarquia completa. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Quando um índice XML é criado, `hierarchyid` os valores são usados internamente para representar a posição na hierarquia.  
   
  Usar um tipo de dados XML pode ser vantajoso quando todos os seguintes itens forem verdadeiros:  
   
@@ -319,7 +318,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Exemplo utilizando uma transação serializável  
- O tipo de dados **Org_BreadthFirst** assegura que a determinação de **@last_child** use uma busca de intervalo. Além de outros casos de erro, um aplicativo pode querer verificar, uma violação de chave duplicada após a inserção indica uma tentativa de adicionar vários funcionários com a mesma ID e **@last_child** , portanto, deve ser recomputado. O código a seguir usa uma transação serializável e um índice de primeira amplitude para computar o valor do novo nó:  
+ O tipo de dados **Org_BreadthFirst** assegura que a determinação de **@last_child** use uma busca de intervalo. Além de outros casos de erro, um aplicativo pode querer verificar, uma violação de chave duplicada após a inserção indica uma tentativa de adicionar vários funcionários com a mesma ID e, portanto, **@last_child** deve ser recomputado. O código a seguir usa uma transação serializável e um índice de primeira amplitude para computar o valor do novo nó:  
   
 ```  
 CREATE TABLE Org_T2  
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Movendo subárvores  
- Outra operação comum é mover subárvores. O procedimento a seguir usa a subárvore de **@oldMgr** e a torna **@oldMgr**(incluindo) uma **@newMgr**subárvore de.  
+ Outra operação comum é mover subárvores. O procedimento a seguir usa a subárvore de **@oldMgr** e a torna (incluindo **@oldMgr** ) uma subárvore de **@newMgr** .  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

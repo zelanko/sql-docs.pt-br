@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1de6e214-5efa-4efa-9336-edbe2310cfbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e98a7c30869428f4cc31428f35eaf6c6f86e97c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff9f2c372d6857257fa71e771f6eabe50eaf8fb9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069327"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940837"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>Selecionar Partições a Modificar (Assistente de Otimização com Base no Uso)
   Use a página **Selecionar Partições a Serem Modificadas** para selecionar as partições para as quais você deseja criar agregações.  
@@ -31,7 +30,7 @@ ms.locfileid: "66069327"
  **Nome da Partição**  
  Exibe o nome da partição.  
   
- **Fonte**  
+ **Origem**  
  Exibe a tabela ou consulta usada para fornecer dados de origem para a partição.  
   
  **Designs de agregação**  

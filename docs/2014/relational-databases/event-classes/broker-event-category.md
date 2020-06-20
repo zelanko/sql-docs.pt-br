@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9918aca57caaef0dc460e810f5ed5ca2d1106ac3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23f839416e3404bfdf0a7e61d1b1e8dbbb90ec95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030426"
 ---
 # <a name="broker-event-category"></a>Categoria de evento Broker
   A categoria de evento **Broker** contém eventos gerais do Service Broker.  

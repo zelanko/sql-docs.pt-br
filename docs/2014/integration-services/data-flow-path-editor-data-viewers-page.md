@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 39d263d85b8956da4366134393d48405ebe104ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33d0d6ec4e462b38079c43bbb47e30feb4d34ed8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917056"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>Editor de Caminho do Fluxo de Dados (página Visualizadores de Dados)
   Use a página **Visualizadores de Dados** da caixa de diálogo **Editor de Caminho de Fluxo de Dados** para gerenciar os visualizadores de dados que estão anexados ao caminho.  
@@ -37,7 +36,7 @@ ms.locfileid: "66060076"
  **Delete (excluir)**  
  Clique para excluir o visualizador de dados selecionado.  
   
- **Configurar**  
+ **Configure**  
  Clique para configurar um visualizador de dados selecionado, usando a caixa de diálogo **Configurar Visualizador de Dados** .  
   
 ## <a name="see-also"></a>Consulte Também  
