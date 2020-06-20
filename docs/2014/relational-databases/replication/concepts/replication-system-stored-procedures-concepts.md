@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50536e5b6816c84dff26c9c9f99c46d02272b7de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721938"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064654"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   Em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o acesso programático a toda a funcionalidade configurável pelo usuário em uma topologia de replicação é fornecido por procedimentos armazenados do sistema. Embora os procedimentos armazenados possam ser executados individualmente por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou do utilitário de linha de comando sqlcmd, pode ser útil gravar arquivos de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] que possam ser executados para a criação de uma sequência lógica de tarefas de replicação.  
@@ -127,7 +126,7 @@ GO
  Uma vez criado, um script de replicação pode ser executado de uma das seguintes formas:  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Criando um arquivo de consulta SQL no SQL Server Management Studio  
- Um arquivo de script de replicação [!INCLUDE[tsql](../../../includes/tsql-md.md)] pode ser criado como um arquivo SQL Query em um projeto do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Após a gravação do script, pode ser feita uma conexão ao banco de dados para que esse arquivo de consulta e o script possam ser executados. Para obter mais informações sobre como criar [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]o, consulte [editores de consulta e de texto &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
+ Um arquivo de script de replicação [!INCLUDE[tsql](../../../includes/tsql-md.md)] pode ser criado como um arquivo SQL Query em um projeto do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Após a gravação do script, pode ser feita uma conexão ao banco de dados para que esse arquivo de consulta e o script possam ser executados. Para obter mais informações sobre como criar [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , consulte [editores de consulta e de texto &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
   
  Para usar um script que inclua variáveis de script, o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] deve ser executado em modo **sqlcmd**. Em modo **sqlcmd**, o Editor de Consultas aceita sintaxe adicional específica do **sqlcmd**, como `:setvar`, usado para um valor de uma variável. Para obter mais informações sobre o modo **sqlcmd**, consulte [Editar scripts SQLCMD com o Editor de Consultas](../../scripting/edit-sqlcmd-scripts-with-query-editor.md). No script a seguir, `:setvar` é usado para fornecer um valor para a variável `$(DistPubServer)`.  
   

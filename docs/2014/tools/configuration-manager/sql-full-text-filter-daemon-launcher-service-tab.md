@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f5129771e5d487075ad2223317047fbbb3c09fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4204ca3de6f3a3a7192a386eb8a6371bd6057698
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211169"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057894"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Iniciador do Daemon de Filtro de Texto Completo do SQL (guia Serviço)
   A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o serviço do Iniciador do Daemon de Filtro de Texto Completo do SQL (Iniciador FDHOST) é usado pelo texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este serviço deverá estar em execução se você usar a pesquisa de texto completo. Para obter informações sobre os processos do host do daemon de filtro, consulte "Arquitetura da pesquisa de texto completo" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

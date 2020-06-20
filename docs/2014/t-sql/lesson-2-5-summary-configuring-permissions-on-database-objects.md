@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb6265513d467f352b0ae890dd3f119a7f5fffb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054606"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>resumo: configurando permissões em objetos de banco de dados
   Logons permitem que os usuários se conectem ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Usuários são logons que podem acessar um banco de dados específico. Use uma instrução GRANT para fornecer permissão de leitura e acesso a usuários, e alterar os dados.  

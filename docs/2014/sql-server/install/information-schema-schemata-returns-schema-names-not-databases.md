@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4337b643-910d-47d7-bea8-f4052066b9a2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0e3683ee043785ec6adc349ac52301280c7bc2b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb2a34a59bf6257c188210fc7bf2aeacb70f6b7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094725"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054798"
 ---
 # <a name="information_schemaschemata-returns-schema-names-in-a-database-not-databases-in-an-instance"></a>INFORMATION_SCHEMA.SCHEMATA retorna nomes de esquemas em um banco de dados, e não bancos de dados em uma instância
   O Supervisor de Atualização detectou instruções que referenciam a exibição INFORMATION_SCHEMA.SCHEMATA. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa exibição retornava todos os bancos de dados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, a exibição retorna todos os esquemas em um banco de dados.  
@@ -29,7 +28,7 @@ ms.locfileid: "66094725"
  Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a exibição INFORMATION_SCHEMA.SCHEMATA retornava todos os bancos de dados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Agora, a exibição retorna todos os esquemas em um banco de dados, o que obedece ao padrão do SQL.  
   
 ## <a name="corrective-action"></a>Ação corretiva  
- Modifique seu aplicativo para fazer referência à exibição de catálogo **Sys. databases** para retornar todos os bancos de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]uma instância do.  
+ Modifique seu aplicativo para fazer referência à exibição de catálogo **Sys. databases** para retornar todos os bancos de dados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

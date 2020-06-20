@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eafa0dc2be5ee9ceffd86185399168589fdd8b1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd8d9242b688592870b568db0df27b20f6040d63
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010596"
 ---
 # <a name="filter-table-rows"></a>Filtrar Linhas da Tabela
   A página **Filtrar Linhas da Tabela** permite:  
@@ -72,7 +71,7 @@ ms.locfileid: "62721224"
  **Localizar Tabela**  
  Mescle publicações apenas com filtros de junção. Clique em **Localizar Tabela** para localizar uma tabela em uma árvore de filtro complexa. Em um banco de dados com relações complexas, pode haver junção de uma tabela com várias tabelas e, portanto, ela pode aparecer em mais de um lugar na árvore de filtro.  
   
- A tabela real só aparece em um lugar na árvore; em outros lugares a tabela é representada por um atalho. Um atalho para uma tabela é somente uma referência à tabela; ele não mostra os nós filhos da tabela. Um nó de atalho é marcado com uma seta de atalho e expandir esse nó mostra o texto **Clique em localizar tabela para ver a tabela \<tablename>** .  
+ A tabela real só aparece em um lugar na árvore; em outros lugares a tabela é representada por um atalho. Um atalho para uma tabela é somente uma referência à tabela; ele não mostra os nós filhos da tabela. Um nó de atalho é marcado com uma seta de atalho e expandir esse nó mostra o texto **clique em localizar tabela para ver \<tablename> a tabela **.  
   
  Selecione um nó de atalho no painel e clique em **Localizar Tabela**. O painel é expandido e a tabela é destacada. Se você clicar em **Localizar Tabela** sem um nó de atalho selecionado, uma caixa de diálogo **Localizar Tabela** será ativada.  
   

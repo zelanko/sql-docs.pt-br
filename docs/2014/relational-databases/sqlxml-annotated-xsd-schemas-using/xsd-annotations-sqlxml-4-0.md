@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7fa444ebbf33c48a243703a19d1f296ce91816e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d693217a264388f39fa18859c47b9e7aabdd45aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703461"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003220"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>Anotações XSD (SQLXML 4.0)
   A tabela a seguir lista as anotações XSD introduzidas no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e as compara com as anotações XDR introduzidas no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "82703461"
 |`sql:guid`|Permite especificar se será usado um valor de GUID gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o valor fornecido pelo updategram daquela coluna.|[Usando as anotações sql:identity e sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)|Sem suporte|  
 |`sql:hide`|Oculta o elemento ou atributo especificado no esquema do documento XML resultante.|[Ocultando elementos e atributos usando sql:hide](hiding-elements-and-attributes-by-using-sql-hide.md)|Sem suporte|  
 |`sql:identity`|Pode ser especificado em qualquer nó que mapeia para uma coluna de banco de dados do tipo IDENTITY. O valor especificado para esta anotação define o modo como é atualizada a coluna do tipo IDENTITY correspondente no banco de dados.|[Usando as anotações sql:identity e sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)|Sem suporte|  
-|`sql:inverse`|Instrui a lógica updategram a inverter sua interpretação da relação pai-filho que foi especificada usando ** \< SQL: relationship>**.|[Especificando o atributo SQL: inverso em SQL: relationship &#40;SQLXML 4,0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|Sem suporte|  
+|`sql:inverse`|Instrui a lógica updategram a inverter sua interpretação da relação pai-filho que foi especificada usando **\<sql:relationship>** .|[Especificando o atributo SQL: inverso em SQL: relationship &#40;SQLXML 4,0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|Sem suporte|  
 |`sql:is-constant`|Cria um elemento XML que não é mapeado para nenhuma tabela. O elemento aparece na saída da consulta.|[Criando elementos constantes usando SQL: is-constant &#40;SQLXML 4,0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|Idêntico|  
 |`sql:key-fields`|Permite a especificação de coluna(s) que identifica(m) exclusivamente as linhas em uma tabela.|[Identificando colunas de chave usando SQL: campos de chave &#40;SQLXML 4,0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|Idêntico|  
 |`sql:limit-field`<br /><br /> `sql:limit-value`|Permite limitar os valores retornados com base em um valor limitador.|[Filtrando valores usando SQL: limit-field e SQL: limit-value &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)|Idêntico|  

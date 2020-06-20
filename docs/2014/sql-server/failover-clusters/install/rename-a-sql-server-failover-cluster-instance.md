@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96bd1cc82f73fd78bd16d0d3fe2f2015fabe4995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63125991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062595"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renomear uma instância do cluster de failover do SQL Server
   Quando uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fizer parte de um cluster de failover, o processo de renomeação do servidor virtual diferirá da renomeação de uma instância autônoma. Para obter mais informações, consulte [Renomear um computador que hospeda uma instância autônoma do SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -63,15 +62,15 @@ ms.locfileid: "63125991"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Considerações adicionais depois da operação de renomeação  
  Depois de renomearmos o nome de rede do cluster de failover, precisamos verificar e executar as instruções a seguir para habilitar todos os cenários no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Depois de alterar o nome de rede de [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] uma instância de cluster de failover usando a ferramenta Administrador de cluster do Windows, a atualização futura ou a operação de desinstalação poderá falhar. Para resolver esse problema, atualize a [entrada do registro](https://go.microsoft.com/fwlink/?LinkId=244002) **ClusterName** seguindo as instruções na seção de resolução destehttps://go.microsoft.com/fwlink/?LinkId=244002)(.  
+ ** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] :** Depois de alterar o nome de rede de uma [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] instância de cluster de failover usando a ferramenta Administrador de cluster do Windows, a atualização futura ou a operação de desinstalação poderá falhar. Para resolver esse problema, atualize a [entrada do registro](https://go.microsoft.com/fwlink/?LinkId=244002) **ClusterName** seguindo as instruções na seção de resolução deste ( https://go.microsoft.com/fwlink/?LinkId=244002) .  
   
- Serviço do agente: ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** Verifique e execute as ações adicionais abaixo para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o serviço do Agent:  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Serviço do agente:** Verifique e execute as ações adicionais abaixo para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Serviço do agente:  
   
 -   Corrija as configurações do Registro se o SQL Agent estiver configurado para encaminhamento de evento. Para obter mais informações, consulte [Designar um servidor de encaminhamento de eventos &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
 -   Corrija o servidor mestre (MSX) e os nomes de instância de servidores de destino (TSX) quando os nomes dos computadores e da rede de cluster forem renomeados. Para obter mais informações, consulte estes tópicos:  
   
-    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Remover vários servidores de destino de um servidor mestre](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Criar um ambiente multisservidor](../../../ssms/agent/create-a-multiserver-environment.md)  
   

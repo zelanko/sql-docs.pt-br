@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 09e535057fcf573dfa189b7e5fdc0e0df06e5d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f669a1f7132aa0f588fd89fb9747a7dc9017fcf1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049435"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>Carregar dados em massa em tabelas em uma publicação de mesclagem (Programação Transact-SQL de replicação)
   Quando os dados são carregados em tabelas com o comando [bcp Utility](../../tools/bcp-utility.md) ou [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) , por padrão, os gatilhos da replicação de mesclagem que mantêm dados de rastreamento na tabela de sistema [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql) não são acionados. Você pode forçar os gatilhos de replicação de mesclagem para serem acionados enquanto os dados forem carregados ou, você pode inserir os metadados de replicação gerados programaticamente após a operação de cópia em massa usando os procedimentos armazenados de replicação.  
@@ -34,6 +33,6 @@ ms.locfileid: "62721758"
   
     -   Execute a cópia em massa usando a opção FIRE_TRIGGERS.  
   
-    -   No banco de dados no qual os dados foram inseridos, execute [sp_addtabletocontents &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql). Especifique o nome da tabela para **@table_name**a qual os dados foram inseridos.  
+    -   No banco de dados no qual os dados foram inseridos, execute [sp_addtabletocontents &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql). Especifique o nome da tabela para a qual os dados foram inseridos **@table_name** .  
   
   

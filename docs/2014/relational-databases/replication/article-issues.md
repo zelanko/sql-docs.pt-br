@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9093ac313f0b72671e647461318793c21f476c75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af77616211b98ce64bc8adbe9c85bae98641febc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049517"
 ---
 # <a name="article-issues"></a>Problemas do Artigo
   A página **Problemas do Artigo** lista condições que foram localizadas para artigos e qualquer alteração requerida como resultado dessa alteração. A tabela seguinte lista os possíveis problemas e as ações requeridas para garantir que a replicação e os aplicativos existentes funcionem corretamente.  

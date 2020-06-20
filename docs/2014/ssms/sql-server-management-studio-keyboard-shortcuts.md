@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f960b871591785c81bcef84ce1b9cbacd4ba99f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062027"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Atalhos de teclado do SQL Server Management Studio
   O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usuários dois esquemas de teclado. Por padrão, ele usa o esquema do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] com atalhos de teclado baseados no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. O [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também oferece um esquema de teclado semelhante ao esquema padrão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para alterar o esquema de teclado ou adicionar outros atalhos de teclado, no menu **Ferramentas** , clique em **Opções**. Selecione o esquema de teclado desejado no **Ambiente**, página **Teclado** .  

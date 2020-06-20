@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f3b4c94ef1c4690af2a333fcdbdef88b475219e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023758"
 ---
 # <a name="toolbox-component-f1-help"></a>Ajuda de F1 do componente Caixa de Ferramentas
 
 A **Caixa de Ferramentas** exibe uma série de itens a serem usados em projetos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode abrir a **Caixa de Ferramentas** no menu **Exibir** e encaixar esta janela como desejar. Enquanto estiver encaixada, a **Caixa de Ferramentas** poderá ser fixada como aberta ou definida como **Ocultar Automaticamente** quando não estiver sendo usada.  
   
-Os ícones da **caixa de ferramentas** podem ser arrastados e descartados ou copiados e colados [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]em editores de código ou em superfícies de exibição de design no.  
+Os ícones da **caixa de ferramentas** podem ser arrastados e descartados ou copiados e colados em editores de código ou em superfícies de exibição de design no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="using-the-toolbox"></a>Usando a Caixa de Ferramentas  
  A Caixa de Ferramentas é um controle de árvore deslizante com comportamento parecido com o do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer, mas sem linhas de grade ou de conexão. Vários segmentos da **Caixa de Ferramentas** (chamados de "guias") podem ser expandidos ao mesmo tempo e toda a árvore rola dentro da janela da **Caixa de Ferramentas** . Para expandir qualquer guia da **Caixa de Ferramentas**, clique no sinal de mais ( **+** ) próximo ao seu nome. Para recolher uma guia expandida, clique no sinal de menos ( **-** ) próximo a seu nome.  

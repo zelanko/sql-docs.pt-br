@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d9a2f9cf4d404f4ef577e446d0c4284ef7024742
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db0946374c6e0e3960ab19bfdd109c2fdc1eb6ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176387"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966506"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Métodos de tempo de design de um componente de fluxo de dados
   Antes da execução, diz-se que a tarefa de fluxo de dados está em um estado de tempo de design, quando sofre alterações incrementais. As alterações podem incluir a adição ou remoção de componentes, a adição ou remoção dos objetos do caminho que conectam componentes e as alterações nos metadados dos componentes. Quando ocorrem alterações em metadados, o componente pode monitorar e reagir às alterações. Por exemplo, um componente pode desabilitar certas alterações ou fazer alterações adicionais em resposta a uma alteração. Em tempo de design, o designer interage com um componente através da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> em tempo de design.
@@ -80,7 +79,7 @@ Dim myCustomProperty As IDTSCustomProperty100
 myCustomProperty.ExpressionType = DTSCustomPropertyExpressionType.CPET_NOTIFY
 ```
 
- Você pode limitar os usuários a selecionar um valor de propriedade personalizada de uma enumeração usando <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> a propriedade, conforme mostrado no exemplo a seguir, que pressupõe que você definiu uma enumeração pública `MyValidValues`chamada.
+ Você pode limitar os usuários a selecionar um valor de propriedade personalizada de uma enumeração usando a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> propriedade, conforme mostrado no exemplo a seguir, que pressupõe que você definiu uma enumeração pública chamada `MyValidValues` .
 
 ```csharp
 IDTSCustomProperty100 customProperty = outputColumn.CustomPropertyCollection.New();

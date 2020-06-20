@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9f45aebe59892704e49a2a6d1cd45e5af4ae471
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 297ffc9ac195d76063aa9eb131daca18cd4793d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011170"
 ---
 # <a name="using-database-mirroring"></a>Usando o espelhamento de banco de dados
     

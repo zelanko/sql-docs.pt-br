@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2aab5732a667dfe9e26a89048991900148077df3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176127"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965396"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Manipuladores de eventos do SSIS (Integration Services)
   Em tempo de execução, os executáveis (pacotes e contêineres Loop Foreach, Loop For, de Sequência e de host da tarefa) geram eventos. Por exemplo, um evento OnError será gerado quando acontecer um erro. Você pode criar manipuladores de eventos personalizados para esses eventos a fim de estender a funcionalidade do pacote e fazer com que os pacotes sejam mais fáceis de administrar em tempo de execução. Os manipuladores de eventos podem executar tarefas como:
@@ -83,7 +82,7 @@ ms.locfileid: "78176127"
 |**OnProgress**|Manipulador de eventos do evento **OnProgress** . Esse evento é gerado por um executável quando um progresso mensurável é feito pelo executável.|
 |**OnQueryCancel**|Manipulador de eventos do evento **OnQueryCancel** . Esse evento é gerado por um executável para determinar se deve parar de ser executado.|
 |**OnTaskFailed**|Manipulador de eventos do evento **OnTaskFailed** . Esse evento é gerado por uma tarefa quando ela falha.|
-|**OnVariableValueChanged**|Manipulador de eventos do evento **OnVariableValueChanged** . Esse evento é gerado por um executável quando o valor de uma variável é alterado. O evento é gerado pelo executável no qual a variável está definida. Esse evento não será gerado se você definir a propriedade **RaiseChangeEvent** para a variável como `False`. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).|
+|**OnVariableValueChanged**|Manipulador de eventos do evento **OnVariableValueChanged** . Esse evento é gerado por um executável quando o valor de uma variável é alterado. O evento é gerado pelo executável no qual a variável está definida. Esse evento não será gerado se você definir a propriedade **RaiseChangeEvent** para a variável como `False` . Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).|
 |**OnWarning**|Manipulador de eventos do evento **OnWarning** . Esse evento é gerado por um executável quando ocorre um aviso.|
 
 ## <a name="configuration-of-an-event-handler"></a>Configuração de um manipulador de eventos

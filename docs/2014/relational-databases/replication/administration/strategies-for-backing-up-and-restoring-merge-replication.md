@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d91ae9fc1bbb404e63abaa2b5037164460d01a25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063808"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estratégias para fazer backup e restaurar a replicação de mesclagem
   Para replicação de mesclagem, faça backup dos seguintes bancos de dados regularmente:  
@@ -56,7 +55,7 @@ ms.locfileid: "62688915"
 > [!IMPORTANT]  
 >  Sincronizar um banco de dados de publicação com um banco de dados de assinatura pode resultar em tabelas publicadas restauradas a um point-in-time, que é mais recente que o point-in-time de outras tabelas não publicadas, que foram restaurados a partir do backup.  
   
- Se você sincronizar com um assinante que está executando uma versão [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do anterior [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ao, a assinatura não poderá ser anônima; Ele deve ser uma assinatura de cliente ou uma assinatura de servidor (conhecida como assinaturas locais e assinaturas globais em versões anteriores).  
+ Se você sincronizar com um assinante que está executando uma versão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , a assinatura não poderá ser anônima; ela deve ser uma assinatura de cliente ou uma assinatura de servidor (conhecida como assinaturas locais e assinaturas globais em versões anteriores).  
   
  Para sincronizar uma assinatura, consulte [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
@@ -89,7 +88,7 @@ ms.locfileid: "62688915"
  Quando um banco de dados assina os dados de um Publicador e, por sua vez, publica os mesmos dados em outros bancos de dados de assinatura, isso é chamado de banco de dados de republicação. Ao restaurar um banco de dados de republicação, siga as diretrizes descritas em "Fazendo backup e restaurando um banco de dados de publicação" e "Fazendo backup e restaurando um banco de dados de assinatura" neste tópico.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Backup e restauração de bancos de dados SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Fazer backup e restaurar bancos de dados replicados](back-up-and-restore-replicated-databases.md)  
   
   

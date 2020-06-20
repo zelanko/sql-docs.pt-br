@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac134bbd4c65da4700990b69b09134230e98903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023832"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar o Assistente de Plano de Manutenção
   Este tópico descreve como criar um plano de manutenção de um único servidor ou multisservidor usando o Assistente de Plano de Manutenção no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Assistente de Plano de Manutenção cria um plano de manutenção que pode ser executado regularmente pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Isso permite executar várias tarefas de administração de banco de dados, incluindo backups, verificações de integridade de banco de dados ou atualizações de estatísticas de banco de dados em intervalos especificados.  
@@ -138,7 +137,7 @@ ms.locfileid: "79289164"
   
         7.  Clique em **OK**.  
   
-    6.  Clique em **Avançar**.  
+    6.  Clique em **Próximo**.  
   
 6.  Na página **Selecionar Servidores de Destino** , selecione os servidores nos quais você deseja executar o plano de manutenção. Essa página só é visível em instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão configuradas como servidores mestre.  
   
@@ -283,7 +282,7 @@ ms.locfileid: "79289164"
      **Somente estatísticas do índice**  
      Só atualiza estatísticas do índice. Usa a opção `WITH INDEX` .  
   
-     **Tipo de exame**  
+     **Tipo de verificação**  
      Tipo de exame usado para coletar estatísticas atualizadas.  
   
      **Verificação completa**  
@@ -373,7 +372,7 @@ ms.locfileid: "79289164"
      Especifique o nome do contêiner de Armazenamento do Microsoft Azure  
   
      **Prefixo da URL:**  
-     Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. Recomendamos que você não edite as informações nesse campo, a menos que esteja usando um domínio que use um formato diferente da ** \<conta de armazenamento>. blob.Core.Windows.net**.  
+     Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. Recomendamos que você não edite as informações nesse campo, a menos que esteja usando um domínio que use um formato diferente de ** \<storage account> . blob.Core.Windows.net**.  
   
      Caixa**Extensão do arquivo de backup**  
      Especifique a extensão a ser usada para os arquivos de backup. O padrão é .bak.  
@@ -404,7 +403,7 @@ ms.locfileid: "79289164"
     |||  
     |-|-|  
     |**Usar a configuração padrão do servidor**|Clique para usar o padrão do nível de servidor. Esse padrão é definido pela opção de configuração do servidor **padrão de compactação de backup** . Para obter informações sobre como exibir a configuração atual dessa opção, consulte [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-    |**Compactar backup**|Clique em compactar backup, independentemente do padrão do nível do servidor.<br /><br /> ** \* Importante \* \* ** Por padrão, a compactação aumenta significativamente o uso da CPU, e a CPU adicional consumida pelo processo de compactação pode afetar negativamente as operações simultâneas. Portanto, convém criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo Administrador de Recursos. Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+    |**Compactar backup**|Clique em compactar backup, independentemente do padrão do nível do servidor.<br /><br /> Importante por padrão, a compactação aumenta significativamente o uso da CPU e a CPU adicional consumida pelo processo de compactação pode afetar negativamente as operações simultâneas. ** \* \* \* \* ** Portanto, convém criar backups compactados de baixa prioridade em uma sessão cujo uso da CPU é limitado pelo Administrador de Recursos. Para obter mais informações, consulte [Usar o Resource Governor para limitar o uso de CPU por meio de compactação de backup &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Não compactar o backup**|Clique em criar um backup não compactado, independentemente do padrão do nível do servidor.|  
   
 2.  Na página **Definir Tarefa de Backup de Banco de Dados (Diferencial)** , selecione o banco de dados ou os bancos de dados dos quais deve ser executado um backup parcial. Consulte lista de definições na etapa 16 acima para obter mais informações sobre as opções disponíveis nessa página. Esta tarefa usa a instrução `BACKUP DATABASE ... WITH DIFFERENTIAL`. Para obter mais informações, veja [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  Ao terminar, clique em **Avançar**.  
@@ -494,7 +493,7 @@ ms.locfileid: "79289164"
      **Mensagem**  
      Fornece qualquer mensagem de aviso ou erro retornada pelo processo.  
   
-     **Relatório**  
+     **Report**  
      Cria um relatório contendo os resultados do Assistente para Criar Partição. As opções são **Exibir Relatório**, **Salvar Relatório no Arquivo**, **Copiar Relatório na Área de Transferência**e **Enviar Relatório como Email**.  
   
      **Exibir Relatório**  

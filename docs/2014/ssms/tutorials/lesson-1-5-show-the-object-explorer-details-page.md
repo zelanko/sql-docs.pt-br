@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff847756d8717184654d8d08c84222dc9e99b9ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63282027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058303"
 ---
 # <a name="show-the-object-explorer-details-page"></a>Exibir a página Detalhes do Pesquisador de Objetos
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode exibir um relatório para cada objeto selecionado no Pesquisador de Objetos. Esse relatório, denominado página Detalhes do Pesquisador de Objetos, é criado pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e aberto na janela de documentos.  

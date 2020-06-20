@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603b5e6b929259dc8b1408c0c2a1afab383446e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055518"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
   As informações contidas em índices de texto completo são usadas pelo Mecanismo de Texto Completo para compilar consultas de texto completo que podem procurar determinadas palavras ou combinações de palavras rapidamente em uma tabela. Um índice de texto completo armazena informações sobre palavras importantes e sua localização em uma ou mais colunas de uma tabela de banco de dados. Um índice de texto completo consiste em um tipo especial de índice funcional com base em token que é criado e mantido pelo Mecanismo de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O processo de criação de um índice de texto completo é diferente da criação de outros tipos de índices. Em vez de criar uma estrutura de árvore B com base em um valor armazenado em uma linha específica, o Mecanismo de Texto Completo cria uma estrutura de índice compactada, empilhada e invertida com base em tokens individuais do texto que está sendo indexado.  O tamanho de um índice de texto completo é limitado apenas pelos recursos de memória disponíveis do computador no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada.  
@@ -51,7 +50,7 @@ ms.locfileid: "66011553"
   
  Para este exemplo, assumiremos que um índice de texto completo foi criado na coluna **Title** .  
   
-|DocumentID|Título|  
+|DocumentID|Title|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -86,7 +85,7 @@ ms.locfileid: "66011553"
   
  A coluna **ColId** contém um valor que corresponde a uma coluna específica indexada com texto completo.  
   
- A `DocId` coluna contém valores para um inteiro de oito bytes que mapeia para um valor de chave de texto completo específico em uma tabela indexada de texto completo. Esse mapeamento é necessário quando a chave de texto completo não é um tipo de dados integer. Nesses casos, os mapeamentos entre valores de chave de texto completo `DocId` e valores são mantidos em uma tabela separada chamada de tabela de mapeamento DocId. Para examinar esses mapeamentos, use o procedimento armazenado do sistema [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Para atender a um critério de pesquisa, os valores de DocId da tabela acima precisam ser unidos à tabela de mapeamento DocId para recuperar linhas da tabela base que está sendo consultada. Se o valor da chave de texto completo da tabela base for do tipo inteiro, o valor funcionará diretamente como DocId, e nenhum mapeamento será necessário. Por isso, o uso de valores de chave de texto completo pode ajudar a otimizar consultas de texto completo.  
+ A `DocId` coluna contém valores para um inteiro de oito bytes que mapeia para um valor de chave de texto completo específico em uma tabela indexada de texto completo. Esse mapeamento é necessário quando a chave de texto completo não é um tipo de dados integer. Nesses casos, os mapeamentos entre valores de chave de texto completo e `DocId` valores são mantidos em uma tabela separada chamada de tabela de mapeamento DocId. Para examinar esses mapeamentos, use o procedimento armazenado do sistema [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Para atender a um critério de pesquisa, os valores de DocId da tabela acima precisam ser unidos à tabela de mapeamento DocId para recuperar linhas da tabela base que está sendo consultada. Se o valor da chave de texto completo da tabela base for do tipo inteiro, o valor funcionará diretamente como DocId, e nenhum mapeamento será necessário. Por isso, o uso de valores de chave de texto completo pode ajudar a otimizar consultas de texto completo.  
   
  A coluna **Occurrence** contém um valor inteiro. Para cada valor de DocId, há uma lista de valores de ocorrência que correspondem aos deslocamentos relativos de palavras de uma palavra-chave específica dentro de DocId. Os valores de ocorrência são úteis para definir as correspondências de frase ou de proximidade, por exemplo, as frases têm valores de ocorrência numericamente adjacentes. Eles também são úteis para calcular pontuações de relevância; por exemplo, o número de ocorrências de uma palavra-chave em DocId pode ser usado na pontuação.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "66011553"
 ##  <a name="full-text-index-fragments"></a><a name="fragments"></a>Fragmentos de índice de texto completo  
  O índice de texto completo lógico normalmente é dividido entre várias tabelas internas. Cada tabela interna é chamada de fragmento de índice de texto completo. Alguns desses fragmentos podem conter dados mais novos do que outros. Por exemplo, se um usuário atualiza a linha a seguir cujo DocId é 3 e a tabela tem controle de alterações automático, é criado um novo fragmento.  
   
-|DocumentID|Título|  
+|DocumentID|Title|  
 |----------------|-----------|  
 |3|Refletor traseiro|  
   

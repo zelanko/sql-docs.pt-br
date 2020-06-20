@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac0f613a023261c79b3a5ee11458ecdbda86998d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024738"
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
   A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode exibir arquivos de log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância local ou remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando a instância de destino for offline ou não inicia.  
@@ -50,9 +49,9 @@ ms.locfileid: "63144592"
   
 -   Acesso de leitura ao namespace WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Por padrão, todos usuários têm acesso de leitura por meio da permissão Habilitar Conta. Para obter mais informações, consulte o procedimento "Para verificar permissões de WMI" posteriormente nesta seção.  
   
--   Permissão de leitura para a pasta que contém os arquivos de logs de erros. Por padrão, os arquivos de logs de erros estão localizados no caminho a seguir (em que \<*Drive>* representa a unidade na qual você instalou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permissão de leitura para a pasta que contém os arquivos de logs de erros. Por padrão, os arquivos de log de erros estão localizados no caminho a seguir (em que \<*Drive> * representa a unidade em que você instalou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
-     **\<Unidade>: \Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\LOG**  
+     **\<Drive>: \Arquivos de Programas\microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\Log**  
   
  Para verificar as configurações de segurança do namespace WMI, você pode usar o snap-in Controle WMI.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "63144592"
   
     -   Clique em **Iniciar**, digite `wmimgmt.msc` na caixa **Iniciar Pesquisa** e pressione ENTER.  
   
-    -   Clique em **Iniciar**, **executar**, digite `wmimgmt.msc`e pressione Enter.  
+    -   Clique em **Iniciar**, **executar**, digite `wmimgmt.msc` e pressione Enter.  
   
 2.  Por padrão, o snap-in Controle WMI gerencia o computador local.  
   

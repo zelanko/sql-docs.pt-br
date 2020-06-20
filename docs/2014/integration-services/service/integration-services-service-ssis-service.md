@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7eb8f74e271b9d5c19cedab4fd25069eb5a0e2b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5818be0e514c37bace0cac7e0ac69cb7dc7d2ef5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766678"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963525"
 ---
 # <a name="integration-services-service-ssis-service"></a>Serviço do Integration Services (Serviço SSIS)
   Os tópicos desta seção discutem o serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , um serviço do Windows para gerenciamento de pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Este serviço não é exigido para criar, salvar e executar pacotes do Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] dá suporte ao serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para compatibilidade com versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- A partir [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o armazena objetos, configurações e dados operacionais no `SSISDB` Database para projetos que você implantou no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor usando o modelo de implantação de projeto. O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que é uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , hospeda o banco de dados. Para obter mais informações sobre o banco de dados, consulte [Catálogo do SSIS](../catalog/ssis-catalog.md). Para obter mais informações sobre implantação de projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Implantar projetos no servidor do Integration Services](../deploy-projects-to-integration-services-server.md).  
+ A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena objetos, configurações e dados operacionais no `SSISDB` Database para projetos que você implantou no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor usando o modelo de implantação de projeto. O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que é uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , hospeda o banco de dados. Para obter mais informações sobre o banco de dados, consulte [Catálogo do SSIS](../catalog/ssis-catalog.md). Para obter mais informações sobre implantação de projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Implantar projetos no servidor do Integration Services](../deploy-projects-to-integration-services-server.md).  
   
 ## <a name="management-capabilities"></a>Recursos de gerenciamento  
  O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é um serviço Windows para gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está disponível apenas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

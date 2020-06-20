@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20d50565b9687f18af95e820be90d16ab643de28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058485"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966356"
 ---
 # <a name="ftp-connection-manager-editor"></a>Editor do Gerenciador de Conexões FTP
   Use a caixa de diálogo **Editor do Gerenciador de Conexões FTP** para especificar as propriedades de conexão com um servidor FTP.  

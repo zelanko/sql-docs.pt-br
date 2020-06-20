@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bb7396f-cbb2-4f88-b82b-543287ed4172
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 479b0d562ffb78bc0003ca320eea0a85ab172430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c76a3058283a098357701a44de48efff917acd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010947"
 ---
 # <a name="connect-to-server-oracle-connection-properties"></a>Conectar ao Servidor (Oracle), Propriedades da Conexão
   Use a guia **Propriedades de Conexão** da caixa de diálogo **Conectar ao Servidor** para especificar uma opção de publicação **Gateway** ou **Completa**. Depois que um Publicador é identificado, essa opção não pode ser alterada sem descartar e reconfigurar o Publicador. Para obter mais informações, consulte [Configure an Oracle Publisher](non-sql/configure-an-oracle-publisher.md) (Configurar um publicador do Oracle).  

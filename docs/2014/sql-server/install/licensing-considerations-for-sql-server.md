@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 20f624c2-0036-4f44-a2a8-a041af0a0966
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 714dcdef73a48d80166b1888bc67e13e66303a44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5e8717db0cad9ee6465b0b92ab44e308536b062
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045076"
 ---
 # <a name="licensing-considerations-for-sql-server"></a>Considerações sobre licenciamento do SQL Server
   Para obter mais informações sobre opções de licenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , acesse [este site do Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  

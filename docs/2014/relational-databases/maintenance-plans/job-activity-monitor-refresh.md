@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44490a19763f69a4ed88d15aacdfba853db8c040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f290825f8a776c954ef802b184f7600aea5dc9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62856475"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024361"
 ---
 # <a name="job-activity-monitor-refresh"></a>Atualizar Monitor de Atividade do Trabalho
   Use a caixa de diálogo **Atualizar Configurações** para configurar com que frequência o Monitor de Atividade do Trabalho obtém informações novas sobre a atividade de servidor. O Monitor de Atividade do Trabalho deve executar consultas no servidor monitorado para obter informações para a grade do Monitor de Atividade do Trabalho. Quando o intervalo de atualização automática for definido como menos de 30 segundos, o tempo usado para executar essas consultas poderá afetar o desempenho do servidor.  

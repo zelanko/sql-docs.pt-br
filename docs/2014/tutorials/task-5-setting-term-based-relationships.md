@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f10c82ef5e0b63e0b81b630ed0340545c876661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064742"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>Tarefa 5: Definindo relações baseadas em termos
   Nesta tarefa, você define algumas relações baseadas em termos para valores para o domínio **nome do fornecedor** . Uma relação baseada em termos permite que você faça uma correção em um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, **Inc.** pode ser corrigido para **incorporado**. O DQS usa essas relações nos processos de descoberta de conhecimento, limpeza ou correspondência. Consulte [criar relações baseadas em termos](https://msdn.microsoft.com/library/hh510404.aspx) para obter mais detalhes.  

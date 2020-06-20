@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: df13432a0b5f835690dd6371fd935198d7798b40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9541179125655bf173dd2080df57e2b5b0cde5ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023293"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>Remover uma instância do SQL Server do Utilitário do SQL Server
   Use as etapas a seguir para remover uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este procedimento remove a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da exibição de lista do UCP e a coleta de dados do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é interrompida. A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é desinstalada.  
@@ -57,7 +56,7 @@ $ManagedInstance = $Utility.ManagedInstances[$ServerInstanceName];
 $ManagedInstance.Remove($InstanceConnection);  
 ```  
   
-É importante fazer referência ao nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância exatamente como armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em uma instância com diferenciação de maiúsculas e minúsculas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve especificar o nome da instância usando exatamente as maiúsculas e minúsculas, conforme retornado por @@SERVERNAME. 
+É importante fazer referência ao nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância exatamente como armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Em uma instância com diferenciação de maiúsculas e minúsculas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve especificar o nome da instância usando exatamente as maiúsculas e minúsculas, conforme retornado por @@SERVERNAME. 
 
 Para obter o nome de instância para a instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute esta consulta na instância gerenciada:  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb7cd9d51015a4a26cc50608b012542255a880
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876697"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958973"
 ---
 # <a name="backup-timeline"></a>Linha do tempo de backup
   Use a caixa de diálogo **Linha do Tempo de Backup** para localizar e especificar backups para restaurar um banco de dados em um ponto específico. Acesse a caixa de diálogo **Linha do Tempo de Backup** clicando em **Linha do Tempo** no painel **Restaurar Banco de dados (Página Geral)** . Esta caixa de diálogo permite exibir uma linha do tempo das operações de restauração executadas no banco de dados.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96229c151957cd0b0bf91c248b4d96a294864181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23f7df8267e4eba6adfde28f833f13d5e84a1efb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63251106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017243"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Objeto Métodos de Acesso
   O objeto **Access Methods** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar como são acessados os dados lógicos dentro do banco de dados. O acesso físico às páginas do banco de dados no disco é monitorado usando os contadores do **Gerenciador de Buffer** . Monitorar os métodos usados para acessar os dados armazenados no banco de dados pode ajudá-lo a determinar se o desempenho da consulta pode ser melhorado, adicionando ou modificando índices, adicionando ou movendo partições, adicionando arquivos ou grupos de arquivo, desfragmentando índices ou regravando consultas. Os contadores dos **Métodos de Acesso** também podem ser usados para monitorar a quantidade de dados, índices e espaço livre dentro do banco de dados, indicando assim o volume e a fragmentação de dados para cada instância do servidor. A fragmentação excessiva do índice pode prejudicar o desempenho.  

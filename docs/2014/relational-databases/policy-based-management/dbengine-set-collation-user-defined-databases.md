@@ -8,13 +8,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f0ef68b1e36ca96af1a817aa8880f2e82ee4ac50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74d274a35dddd0c782b170fc41d7610904b7487c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705156"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064670"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Definir a ordenação de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo
 Consulte [definir o agrupamento de bancos de dados definidos pelo usuário para corresponder aos dos bancos de dados mestre e modelo](../../database-engine/set-collation-user-defined-databases-match-master-model-databases.md).

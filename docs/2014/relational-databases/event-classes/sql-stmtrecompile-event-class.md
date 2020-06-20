@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec5f055f8ca86efc350436458ba0145efb0419a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061230"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028117"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>classe de evento SQL:StmtRecompile
   A classe de evento SQL:StmtRecompile indica recompilações em nível de instrução causadas por todos os tipos de lotes: procedimentos armazenados, gatilhos lotes ad hoc e consultas. Consultas podem ser submetidas usando-se sp_executesql, SQL dinâmico, métodos Preparar, métodos Executar ou interfaces semelhantes. A classe de evento SQL:StmtRecompile deve ser usada, em vez da classe de evento SP:Recompile.  
@@ -28,7 +27,7 @@ ms.locfileid: "63061230"
   
 |Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
+|ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo.|9|Sim|  
 |DatabaseID|`int`|ID do banco de dados em que o procedimento armazenado está sendo executado. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|`nvarchar`|Nome do banco de dados no qual o procedimento armazenado está sendo executado.|35|Sim|  

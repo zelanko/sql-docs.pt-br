@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 29a8ee59db4cade8cc3ddf649b54d4c2c47e87ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021315"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Convertendo de cópia em massa DB-Library em ODBC
   A conversão de um programa de cópia em massa de biblioteca de banco de BD para ODBC é fácil porque as funções de cópia em massa com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client são semelhantes às funções de cópia em massa da biblioteca de banco de BD, com as seguintes exceções:  

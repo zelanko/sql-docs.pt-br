@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c00f2128bb4c54064511ffff9e8929c9faf4d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811033"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049840"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
   Este tópico descreve como reorganizar ou recompilar índice fragmentado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mantém os índices automaticamente sempre que são realizadas operações de entrada, atualização ou exclusão nos dados subjacentes. No decorrer do tempo, essas modificações podem fazer com que as informações do índice sejam dispersadas pelo banco de dados (fragmentadas). A fragmentação ocorre quando os índices têm páginas nas quais a ordem lógica, com base no valor de chave, não corresponde à ordem física do arquivo de dados. Índices com fragmentação pesada podem degradar o desempenho da consulta e causar lentidão de resposta do aplicativo.  
@@ -175,7 +174,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
      **Páginas**  
      O número total de páginas de dados.  
   
-     **Partition ID**  
+     **Identificação da Partição**  
      A ID da partição da árvore b que contém o índice.  
   
      **Linhas fantasmas de versão**  
@@ -237,7 +236,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
   
 7.  Marque a caixa de seleção **Compactar dados de coluna de objeto grande** para especificar que todas as páginas que contêm dados de objeto grande (LOB) também sejam compactadas.  
   
-8.  Clique em **OK**  
+8.  Clique em **OK.**  
   
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>Para reorganizar todos os índices de uma tabela  
   
@@ -253,7 +252,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
   
 6.  Marque a caixa de seleção **Compactar dados de coluna de objeto grande** para especificar que todas as páginas que contêm dados de objeto grande (LOB) também sejam compactadas.  
   
-7.  Clique em **OK**  
+7.  Clique em **OK.**  
   
 #### <a name="to-rebuild-an-index"></a>Para recriar um índice  
   
@@ -271,7 +270,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
   
 7.  Marque a caixa de seleção **Compactar dados de coluna de objeto grande** para especificar que todas as páginas que contêm dados de objeto grande (LOB) também sejam compactadas.  
   
-8.  Clique em **OK**  
+8.  Clique em **OK.**  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedureReorg"></a> Usando o Transact-SQL  
   

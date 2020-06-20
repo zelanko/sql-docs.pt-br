@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fa86683367b35522b45d87a652c6d9d65d1c15ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 142f4cbb0101a4e8885aea41fa7713c189b4eef9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135432"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056652"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>Método SetValue (classe ServerSettingsGeneralFlag)
   Define todos os valores do sinalizador referenciado.  
@@ -40,7 +39,7 @@ Value
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe ServerSettingsGeneralFlag](serversettingsgeneralflag-class.md) que representa um sinalizador geral para as configurações de servidor.  
   
 #### <a name="parameters"></a>Parâmetros  

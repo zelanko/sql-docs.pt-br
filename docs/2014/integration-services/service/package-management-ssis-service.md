@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ca2e8dd516b995dcf3d2e48b1ed14209677d41f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963439"
 ---
 # <a name="package-management-ssis-service"></a>Gerenciamento de pacotes (serviço SSIS)
   O gerenciamento de pacotes envolve tarefas, inclusive as seguintes:  

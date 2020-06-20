@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d899d0585eda7c9cd2b12147732b23c01872128b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042816"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Criar um Banco de Dados de Servidor de Relatório (Gerenciador de Configurações do SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]O **modo nativo** usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dois bancos de dados relacionais para armazenar objetos e metadados do servidor de relatório. Um banco de dados é usado para armazenamento primário e o segundo armazena dados temporários. Os bancos de dados são criados juntamente e associados por nome. Com uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os bancos de dados são nomeados como `reportserver` e `reportservertempdb`. Coletivamente, os dois bancos de dados são referidos como o "banco de dados do servidor de relatório" ou "catálogo do servidor de relatório".  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]O **modo nativo** usa dois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados relacionais para armazenar objetos e metadados do servidor de relatório. Um banco de dados é usado para armazenamento primário e o segundo armazena dados temporários. Os bancos de dados são criados juntamente e associados por nome. Com uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os bancos de dados são nomeados como `reportserver` e `reportservertempdb`. Coletivamente, os dois bancos de dados são referidos como o "banco de dados do servidor de relatório" ou "catálogo do servidor de relatório".  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Modo do SharePoint** inclui um terceiro banco de dados que é usado para metadados de alertas de dados. Os três bancos de dados são criados para cada aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e os nomes de bancos de dados por padrão incluem uma interface gráfica de usuário que representa o aplicativo de serviço. A seguir são apresentados nomes de exemplo dos três bancos de dados do modo do SharePoint:  
   

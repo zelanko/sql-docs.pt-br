@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eaff1c5ac8ae5a804f546fc5e551dcb62e2fda7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059414"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966901"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Caixa de diálogo Editor de Transformação de Limpeza DQS
   Use a caixa de diálogo **Editor de Transformação de Limpeza DQS** para corrigir os dados usando Data Quality Services (DQS). Para obter mais informações, consulte [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "66059414"
  Selecione uma base de dados de conhecimento do DQS para a fonte de dados conectada. Para obter mais informações sobre a base de dados de conhecimento do DQS, consulte [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Criptografar conexão**  
- Especifique se deseja criptografar a conexão, a fim de criptografar a transferência de dados entre o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]servidor DQS e o.  
+ Especifique se deseja criptografar a conexão, a fim de criptografar a transferência de dados entre o servidor DQS e o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  **Domínios disponíveis**  
  Liste os domínios disponíveis para a base de conhecimento selecionada. Há dois tipos de domínios: domínios únicos e domínios compostos que contêm dois ou mais domínios únicos.  
@@ -68,7 +67,7 @@ ms.locfileid: "66059414"
   
  Os valores válidos são os seguintes:  
   
--   **Falha no Componente**, que indica que houve falha na transformação e os dados de entrada não são inseridos no banco de dados do Data Quality Services. Este é o valor padrão.  
+-   **Falha no Componente**, que indica que houve falha na transformação e os dados de entrada não são inseridos no banco de dados do Data Quality Services. Esse é o valor padrão.  
   
 -   **Redirecionar Linha**, que indica que os dados de entrada não estão inseridos no banco de dados do Data Quality Services e são redirecionados para a saída do erro.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66059414"
  **Coluna de Entrada**  
  Lista uma coluna de entrada que você selecionou na área **Colunas de Entrada Disponíveis** .  
   
- **Controlador**  
+ **Domínio**  
  Selecione um domínio para mapear para a coluna de entrada.  
   
  **Alias de origem**  
@@ -104,7 +103,7 @@ ms.locfileid: "66059414"
  **Confiança**  
  Indique se é preciso incluir o nível de confiança para os dados corrigidos. O nível de confiança indica a extensão de certeza do DQS para a correção ou sugestão. Para obter mais informações sobre níveis de confiança, consulte [Limpeza de dados](../../2014/data-quality-services/data-cleansing.md).  
   
- **Motivo**  
+ **Falha**  
  Indique se é preciso incluir a razão para a correção de dados.  
   
  **Dados acrescentados**  

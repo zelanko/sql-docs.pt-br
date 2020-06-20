@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cb2026f0e6720f98f2a2af96da6058e1ce06ba61
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cdf3fa4dfd62016c7f260369f9ebcbdf52863ac5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002851"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores relacionais em consultas XPath (SQLXML 4.0)
   Os seguintes exemplos mostram como operadores relacionais são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado para exemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -28,13 +27,13 @@ ms.locfileid: "82717747"
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-specify-relational-operator"></a>a. Especifique operador relacional  
- Essa consulta XPath retorna os elementos filho do elemento de ** \<>do cliente** , em que o valor do atributo **CustomerID** é "1" e onde qualquer ** \< ordem filho>** elementos contêm um ** \< OrderDetail>** filho com um atributo **OrderQty** com um valor maior que 3:  
+ Essa consulta XPath retorna os elementos filho do **\<Customer>** elemento em que o valor do atributo **CustomerID** é "1" e onde os **\<Order>** elementos filho contêm um **\<OrderDetail>** filho com um atributo **OrderQty** com um valor maior que 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- O predicado especificado nos colchetes filtra os elementos de ** \<>do cliente** . Somente os elementos de ** \<>do cliente** que têm pelo menos um ** \< OrderDetail>** neto com um valor de atributo OrderQty maior que 3 são retornados.  
+ O predicado especificado nos colchetes filtra os **\<Customer>** elementos. Somente os **\<Customer>** elementos que têm pelo menos um **\<OrderDetail>** neto com um valor de atributo OrderQty maior que 3 são retornados.  
   
  O eixo `child` é o padrão. Assim, a consulta pode ser especificada como:  
   
@@ -79,7 +78,7 @@ ms.locfileid: "82717747"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
- Essa consulta retorna todos os elementos de ** \<>de ordem** dos filhos do nó de contexto que têm um valor de atributo **vendedorid** inferior a 270:  
+ Essa consulta retorna todos os **\<Order>** elementos filho do nó de contexto que têm um valor de atributo **vendedorid** menor que 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

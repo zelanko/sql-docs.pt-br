@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 205e4ae3d6f89f10a933bf357d1eeda458852584
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055029"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restrições exclusivas e restrições de verificação
   Restrições UNIQUE e CHECK são dois tipos de restrições que podem ser usadas para impor a integridade de dados em tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esses são objetos de banco de dados importantes.  
@@ -51,7 +50,7 @@ ms.locfileid: "68196672"
 >  Restrições que incluem conversão de tipo de dados implícita ou explícita podem causar falhas em certas operações. Por exemplo, tais restrições definidas em tabelas que são fontes de opção de partição podem causar falha na operação ALTER TABLE...SWITCH. Evite a conversão de tipo de dados em definições de restrição.  
   
 ### <a name="limitations-of-check-constraints"></a>Limitações de restrições CHECK  
- As restrições CHECK rejeitam valores avaliados como FALSE. Porque valores nulos avaliam a UNKNOWN, a sua presença em expressões pode anular uma restrição. Por exemplo, suponha que você coloque uma restrição em `int` uma coluna **MyColumn** especificando que **MyColumn** pode conter apenas o valor 10 (**MyColumn = 10**). Se você inserir o valor NULL em **MyColumn**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserirá NULL e não retornará um erro.  
+ As restrições CHECK rejeitam valores avaliados como FALSE. Porque valores nulos avaliam a UNKNOWN, a sua presença em expressões pode anular uma restrição. Por exemplo, suponha que você coloque uma restrição em uma `int` coluna **MyColumn** especificando que **MyColumn** pode conter apenas o valor 10 (**MyColumn = 10**). Se você inserir o valor NULL em **MyColumn**, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserirá NULL e não retornará um erro.  
   
  Uma restrição CHECK retorna TRUE quando a condição que está verificando não é FALSE para qualquer linha na tabela. Uma restrição CHECK funciona no nível de linha. Se a tabela acabou de ser criada e não tiver nenhuma linha, qualquer restrição CHECK nesta tabela é considerada válida. Esta situação pode produzir resultados inesperados, como no exemplo seguinte.  
   

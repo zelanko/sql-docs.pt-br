@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 2cab5279-86fd-482d-a690-de24bbc25299
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a716a54ed882be1f3c8d51bd66036dbdbe53d70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056569"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lição 1: Navegação básica no SQL Server Management Studio
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é uma ferramenta poderosa e flexível. Porém, novos usuários do Microsoft Visual Studio podem ter dificuldade para encontrar o modo mais rápido de acessar o recurso correto. Esta lição mostra a você como as janelas trabalham em conjunto para apresentar uma superfície de design que torna seu trabalho mais fácil. Ao final desta lição, você saberá como eliminar janelas não desejadas, como exibir janelas rapidamente com as informações necessárias e como configurar a superfície padrão para oferecer suporte a tarefas executadas com mais frequência.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]é uma ferramenta poderosa e flexível. Porém, novos usuários do Microsoft Visual Studio podem ter dificuldade para encontrar o modo mais rápido de acessar o recurso correto. Esta lição mostra a você como as janelas trabalham em conjunto para apresentar uma superfície de design que torna seu trabalho mais fácil. Ao final desta lição, você saberá como eliminar janelas não desejadas, como exibir janelas rapidamente com as informações necessárias e como configurar a superfície padrão para oferecer suporte a tarefas executadas com mais frequência.  
   
  Eis os tópicos desta lição:  
   
@@ -41,6 +40,6 @@ ms.locfileid: "63151510"
 -   Resumo  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Iniciar o SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+ [Iniciar SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   

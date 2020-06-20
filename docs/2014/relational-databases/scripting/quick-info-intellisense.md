@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29eae1af8b741a3243d2966cedc45a38d620df58
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f173c57438301702a8e51acf4531c655fde0cc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009640"
 ---
 # <a name="quick-info-intellisense"></a>Informações rápidas (IntelliSense)
   A opção [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **Informações Rápidas** exibe a declaração completa de qualquer identificador em seu código. Quando você move o ponteiro do mouse sobre um identificador, sua declaração é exibida em uma janela pop-up amarela. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], as **Informações Rápidas** estão disponíveis nos Editores do Mecanismo de Banco de Dados e de Consulta XML.  

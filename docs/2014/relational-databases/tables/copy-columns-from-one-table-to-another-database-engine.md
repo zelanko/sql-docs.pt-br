@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37b98bf0910cbbb4c2a1d7fe01f11d52703ec88c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736349"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047289"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar colunas de uma tabela em outra (Mecanismo de Banco de Dados)
   Este tópico descreve como copiar colunas de uma tabela para outra, copiando apenas a definição da coluna ou a definição e os dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  

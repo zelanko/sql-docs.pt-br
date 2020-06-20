@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75950f1848d39162afd5725477de56077b3a2523
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244655"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058496"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>Criar um servidor de gerenciamento central e um grupo de servidores (SQL Server Management Studio)
   Este tópico descreve como designar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como servidor central de gerenciamento no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os servidores de gerenciamento central armazenam uma lista de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é organizada em um ou mais grupos de servidores de gerenciamento Central. As ações executadas com um grupo de servidores de gerenciamento central afetarão todos os servidores do grupo. Isso inclui a conexão a servidores usando o Pesquisador de Objetos e a execução de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e de políticas de Gerenciamento Baseado em Política em vários servidores ao mesmo tempo.  

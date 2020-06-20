@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cc1ee935e19c4f44dc1c350355edd08371ea6485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb0e43d01057296b73547d6a8256bd4140c5a736
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056740"
 ---
 # <a name="serversettings-class"></a>Classe ServerSettings
-  A [classe ServerSettings] ServerSettings-class.md) representa as configurações de servidor em uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]instância do.  
+  A [classe ServerSettings] ServerSettings-class.md) representa as configurações de servidor em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  A [classe ServerSettings] ServerSettings-class.md) permite que você execute as seguintes tarefas:  
   

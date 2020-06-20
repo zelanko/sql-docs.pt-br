@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3094bd57-5cf4-4860-bf51-fadd1b309f94
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 71b050e49440764d355d4658607600c135741f50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad925c543cefaf7aed5a0ef355029312b3de7140
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65476747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064796"
 ---
 # <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Tarefa 11: Adicionando a Transformação Divisão Condicional para filtrar duplicatas
   Nesta tarefa, você adiciona a Transformação Divisão Condicional ao fluxo de dados. Essa transformação ajuda o ajuda a filtrar duplicatas do conjunto de registros de entrada. A transformação Grupo Difuso agrupa os registros que considera correspondências e escolhe um dos registros como registro dinâmico. Todos os registros em um grupo têm o mesmo valor _key_out. O registro dinâmico no grupo tem o valor _key_in igual ao valor _key_out. Os outros registros no grupo têm valores diferentes para _key_in e _key_out. Assim, quando você filtrar usando a condição _key_in==_key_out, receberá apenas a linha dinâmica no grupo.  

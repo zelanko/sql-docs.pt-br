@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 972c23b318855f2ac575c4905455c22ddbc02b16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061871"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Combinar condições quando AND tem precedência (Visual Database Tools)
   Para combinar condições com AND, você adiciona a coluna duas vezes à consulta – uma vez para cada condição. Para combinar condições com OR, você coloca a primeira na coluna Filtro e as condições adicionais em uma coluna **Ou...** .  

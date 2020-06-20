@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e8bcae5ab64fff47528c30a67c13fd1c859ea4e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e596af3c46849313d813ce2d7f1dab2a7425c090
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702035"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020898"
 ---
 # <a name="using-server-cursors"></a>Usando cursores de servidor
   Se um aplicativo ODBC definir qualquer um dos atributos de cursor do ODBC para qualquer coisa diferente dos padrões, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client solicitará que o servidor implemente um cursor do servidor de API do mesmo tipo. O uso de cursores de servidor de API libera memória no cliente e pode reduzir significativamente o tráfego de rede entre o cliente e o servidor.  

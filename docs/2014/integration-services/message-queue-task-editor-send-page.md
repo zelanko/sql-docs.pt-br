@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed0d210668b64ff6f6fcc8c94a713743e2f9bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951046"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Editor da Tarefa Fila de Mensagens (página Enviar)
   Use a página **Enviar** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa de Fila de Mensagens para enviar mensagens de um pacote do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

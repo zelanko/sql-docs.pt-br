@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768018"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965576"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Executar o Assistente de Importação e Exportação do SQL Server
   O Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o método mais simples para criar pacotes básicos e copiar dados entre fontes de dados. Para obter mais informações sobre o assistente, consulte [SQL Server assistente de importação e exportação](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)do.  
@@ -33,15 +32,15 @@ ms.locfileid: "62768018"
   
      -ou-  
   
-     No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique com o botão direito do mouse na pasta **pacotes SSIS** e clique em **SSISImport e exportar assistente**.  
+     No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , clique com o botão direito do mouse na pasta **pacotes SSIS** e clique em **SSISImport e exportar assistente**.  
   
      -ou-  
   
-     No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], no menu **projeto** , clique em **SSISImport e exportar assistente**.  
+     No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , no menu **projeto** , clique em **SSISImport e exportar assistente**.  
   
      -ou-  
   
-     No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao tipo de servidor, expanda bancos de dados, clique com o botão direito do mouse em um banco de dados, aponte para **tarefas**e, em seguida, clique em **Import data** ou **Export data**.  
+     No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo de servidor, expanda bancos de dados, clique com o botão direito do mouse em um banco de dados, aponte para **tarefas**e, em seguida, clique em **Import data** ou **Export data**.  
   
      -ou-  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62768018"
      Se o assistente for iniciado a partir de um projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], não será possível executar o pacote a partir do assistente. Em vez disso, o pacote será adicionado ao projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir do qual você iniciou o assistente. Você poderá então executar o pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
     > [!NOTE]  
-    >  No [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], a opção para salvar o pacote criado pelo assistente não está disponível.  
+    >  No [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , a opção para salvar o pacote criado pelo assistente não está disponível.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Assistente de importação e exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b61d8b7436ab8766ad4009de46370d3914001ae
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b1a0b6fdce858175fa4d59e5cefaf1e3760d24f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708480"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056462"
 ---
 # <a name="setting-large-data"></a>Definindo dados grandes
   Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo, você pode definir dados de blob passando um ponteiro para um objeto de armazenamento do consumidor.  

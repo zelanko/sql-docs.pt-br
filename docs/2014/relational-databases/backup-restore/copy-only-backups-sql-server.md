@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc74d7b1bba2a0163ac9edefb5d465c54ef6296c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958836"
 ---
 # <a name="copy-only-backups-sql-server"></a>Backups somente cópia (SQL Server)
   Um *backup somente cópia* é um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não depende da sequência de backups convencionais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Geralmente, um backup altera o banco de dados e afeta a forma de restauração dos backups posteriores. Contudo, ocasionalmente, é útil fazer um backup para uma finalidade especial sem afetar o backup global e os procedimentos de restauração do banco de dados. Backups de cópia servem para essa finalidade.  
@@ -34,7 +33,7 @@ ms.locfileid: "72798012"
   
 -   Backups de log somente cópia (só modelo de recuperação completa e modelo de recuperação bulk-logged)  
   
-     Um backup de log somente cópia preserva o ponto de arquivo de log existente e, portanto, não afeta a sequência de backups de log regulares. Backups de log somente cópia em geral são desnecessários. Em vez disso, você pode criar um novo backup de log de rotina (usando WITH NORECOVERY) e usar esse backup com qualquer backup de log anterior necessário para a sequência de restauração. No entanto, um backup de log somente cópia pode ser útil às vezes para executar uma restauração online. Para obter um exemplo disso, veja [Exemplo: restauração online de um arquivo leitura/gravação &#40;Modelo de recuperação completa&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md).  
+     Um backup de log somente cópia preserva o ponto de arquivo de log existente e, portanto, não afeta a sequência de backups de log regulares. Backups de log somente cópia em geral são desnecessários. Em vez disso, você pode criar um novo backup de log de rotina (usando WITH NORECOVERY) e usar esse backup com qualquer backup de log anterior necessário para a sequência de restauração. No entanto, um backup de log somente cópia pode ser útil às vezes para executar uma restauração online. Para um exemplo disso, consulte [Exemplo: Restauração online de um arquivo de leitura/gravação #40;Modelo de recuperação completa&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md).  
   
      O log de transações nunca é truncado após um backup somente cópia.  
   
@@ -52,14 +51,14 @@ ms.locfileid: "72798012"
   
 -   Para um backup completo somente cópia:  
   
-     *Database_name* de banco de \<dados*>* de backup para backup_device... COM COPY_ONLY...  
+     *Database_name* de banco de dados de backup para \<backup_device*> *... COM COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY não tem nenhum efeito quando é especificado com a opção DIFFERENTIAL.  
   
 -   Para um backup de log somente cópia:  
   
-     *Database_name* de log de *\<* backup*>* para backup_device... COM COPY_ONLY...  
+     *Database_name* de log de backup para *\<*backup_device*>* ... COM COPY_ONLY...  
   
 ###  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell  
   

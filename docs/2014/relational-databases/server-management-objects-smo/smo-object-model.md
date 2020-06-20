@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 637c60fd6d7ba53087a145135d7152066983b644
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c973e381a6cc7de44a0072d012147271eaa609ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130627"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055205"
 ---
 # <a name="smo-object-model"></a>Modelo de objeto SMO
   O modelo de objeto SMO é composto de uma hierarquia de objetos. O objeto <xref:Microsoft.SqlServer.Management.Smo.Server> é o objeto de nível superior e todos os objetos de classe de instância residem sob o objeto <xref:Microsoft.SqlServer.Management.Smo.Server>.  

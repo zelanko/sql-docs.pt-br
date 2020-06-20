@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 188a0409fbad3f12283adacafbfcb5f176650b72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876207"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958646"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transações adiadas (SQL Server)
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, uma transação corrompida poderá ser adiada se os dados necessários na reversão (desfazer) estiverem offline durante a inicialização do banco de dados. Uma *transação adiada* é uma transação que não está confirmada no término da fase de roll forward e que encontrou um erro que impede a reversão. Como a transação não pode ser revertida, é adiada.  
@@ -84,7 +83,7 @@ ms.locfileid: "62876207"
   
          Para obter informações sobre o modo de emergência, consulte [Database States](../databases/database-states.md).  
   
-    -   Em seguida, repare o banco de dados usando a opção DBCC REPAIR_ALLOW_DATA_LOSS em uma das seguintes instruções DBCC: [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)ou [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
+    -   Em seguida, repare o banco de dados usando a opção DBCC REPAIR_ALLOW_DATA_LOSS em uma das seguintes instruções DBCC: [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql) ou [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
   
          Quando a DBCC encontra a página corrompida, anula sua alocação e repara qualquer erro relacionado. Essa abordagem permite que o banco de dados seja colocado novamente online, em um estado fisicamente consistente. Porém, dados adicionais também podem ser perdidos; portanto essa abordagem deve ser usada como último recurso.  
   

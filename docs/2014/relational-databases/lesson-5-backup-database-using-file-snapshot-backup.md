@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7686f6ee0a5cbce01fb69d36d645ff9787276ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024927"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lição 6: Migrar um banco de dados de um computador de origem no local para um computador de destino no Azure
   Esta lição pressupõe que você já tem outra SQL Server, que pode residir em outro computador local ou em uma máquina virtual no Azure. Para obter informações sobre como criar uma máquina virtual SQL Server no Azure, consulte [Provisionando uma máquina virtual SQL Server no Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Depois de provisionar uma máquina virtual SQL Server no Azure, verifique se você pode se conectar a uma instância do SQL Server nessa máquina virtual por meio de SQL Server Management Studio em outro computador.  
@@ -136,9 +135,9 @@ ms.locfileid: "75231803"
   
 5.  Na caixa de diálogo **anexar bancos** de dados, para especificar o banco de dados a ser anexado, clique em **Adicionar**. Na janela da caixa de diálogo **Localizar arquivos de banco de dados** :  
   
-     Para local do arquivo de dados do banco `https://teststorageaccnt.blob.core.windows.net/testcontainer/`de dado, digite:.  
+     Para local do arquivo de dados do banco de dado, digite: `https://teststorageaccnt.blob.core.windows.net/testcontainer/` .  
   
-     Para nome do arquivo, digite `TestDB1Data.mdf`:.  
+     Para nome do arquivo, digite: `TestDB1Data.mdf` .  
   
 6.  Clique em **OK**.  
   
