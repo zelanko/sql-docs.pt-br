@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0a648902b97a8224b9032c24ee8c7715a4030777
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 28df67dad52bcd11a18fc5deb42a6725700dde5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000387"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065944"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lição 3: Configurando a distribuição
   Nesta lição você configurará a distribuição no Publicador e definirá as permissões necessárias nos bancos de dados de publicação e distribuição. Se você já tiver configurado o Distribuidor, antes de começar a lição será necessário desabilitar primeiramente a publicação e a distribuição. Não faça isto se for preciso manter uma topologia de replicação existente.  
@@ -35,11 +34,11 @@ ms.locfileid: "83000387"
   
      O Assistente para Configuração de Distribuição é iniciado.  
   
-3.  Na página **distribuidor** , selecione **'**_ \< ServerName>_ **' atuará como seu próprio distribuidor; SQL Server criará um banco de dados de distribuição e um log**e, em seguida, clique em **Avançar**.  
+3.  Na página **distribuidor** , selecione **'** _\<ServerName>_ **' atuará como seu próprio distribuidor; SQL Server criará um banco de dados de distribuição e um log**e, em seguida, clique em **Avançar**.  
   
-4.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver sendo executado, na página inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent**, selecione **Sim** para configurar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente. Clique em **Avançar**.  
+4.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver sendo executado, na página inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent**, selecione **Sim** para configurar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para iniciar automaticamente. Clique em **Próximo**.  
   
-5.  Insira **\\\\** \< _Machine_Name>_ **\repldata** na caixa de texto **pasta de instantâneo** , em que \< *Machine_Name>* é o nome do Publicador e clique em **Avançar**.  
+5.  Insira **\\\\** \<_Machine_Name> _**\repldata** na caixa de texto **pasta de instantâneo** , em que \<*Machine_Name> * é o nome do Publicador e clique em **Avançar**.  
   
 6.  Aceite os valores padrão das páginas restantes do assistente.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "83000387"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda **segurança**, clique com o botão direito do mouse em **logons**e selecione **novo logon**.  
   
-2.  Na página **Geral**, clique em **Pesquisar**, insira \<_Machine_Name>_**\repl_snapshot** na caixa **Inserir o nome do objeto a ser selecionado**, em que \<*Machine_Name>* é o nome do servidor do Publicador local. Em seguida, clique em **Verificar Nomes** e em **OK**.  
+2.  Na página **geral** , clique em **Pesquisar**, insira \<_Machine_Name> _**\ repl_snapshot** na caixa **Inserir o nome do objeto a ser selecionado** , em que \<*Machine_Name> * é o nome do servidor do Publicador local, clique em **verificar nomes**e em **OK**.  
   
 3.  Na página **mapeamento de usuário** , na lista **Usuários mapeados para este logon** , selecione a **distribuição** e os [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] bancos de dados.  
   

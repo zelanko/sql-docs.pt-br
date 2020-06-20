@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5751cadb999ee3a2c9d8260bee7a6197047d312
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6cee1b600d85b9e606a86774ac7881a1e86641ed
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706856"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952982"
 ---
 # <a name="developer39s-guide-database-engine"></a>Guia do desenvolvedor&#39;s (Mecanismo de Banco de Dados)
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um excelente conjunto ferramentas para desenvolver, administrar e controlar aplicativos de banco de dados.  

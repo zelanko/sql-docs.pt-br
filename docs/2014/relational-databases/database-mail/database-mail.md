@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97a5a459fafd80956a2b8d31c27b86169c6fa850
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917957"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952426"
 ---
 # <a name="database-mail"></a>Database Mail
   Database Mail é uma solução empresarial para envio de mensagens de email do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Com o Database Mail, seus aplicativos de banco de dados podem enviar mensagens de email a usuários. As mensagens podem conter resultados de consulta e incluir, também, arquivos de qualquer recurso de sua rede.  
@@ -63,7 +62,7 @@ ms.locfileid: "62917957"
   
 -   O Database Mail é executado na conta de serviço do mecanismo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para anexar um arquivo de uma pasta a um email, a conta de mecanismo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter permissões para acessar a pasta com o arquivo.  
   
-### <a name="supportability"></a>Capacidade de suporte  
+### <a name="supportability"></a>Suporte  
   
 -   Configuração integrada. O Database Mail mantém as informações das contas de email no [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)].  
   

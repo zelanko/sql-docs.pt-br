@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 005b75381cbe3725e9b500240f97bca02713780f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ed5d719a845996215fffc18af64401779f848cd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717367"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059592"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Adicionar namespaces a consultas com WITH XMLNAMESPACES
   [WITH XMLNAMESPACES (Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) fornece suporte a URI de namespace da seguinte maneira:  

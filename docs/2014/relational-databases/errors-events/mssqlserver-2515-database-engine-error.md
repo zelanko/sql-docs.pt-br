@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e531a2d916cfc464c18aab931c268197fbf5982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33aebb89b831d414d06954bf15f245e851f1abdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915013"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034519"
 ---
 # <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
     
@@ -61,7 +60,7 @@ ms.locfileid: "62915013"
  A execução de REPAIR invalidará o bitmap diferencial. Não será possível executar um backup diferencial até que seja feito um backup total do banco de dados. O backup total do banco de dados provê uma base para a recriação do bitmap diferencial.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar um &#40;de backup de banco de dados completo SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
+ [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
  [MSSQLSERVER_2516](mssqlserver-2516-database-engine-error.md)  
   
   

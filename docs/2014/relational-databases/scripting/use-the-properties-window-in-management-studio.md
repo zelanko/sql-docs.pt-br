@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9c5b4f6b7c54b7bde76d61dc55b1b10f805dd87
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 208aadd4f082e92987a5f7dfce4668a7b1cf51c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997805"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Usar a janela Propriedades no Management Studio
   A janela Propriedades descreve o estado de um item no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como uma conexão ou um operador de plano de execução, e informações sobre objetos de banco de dados, como tabelas, exibições e designers.  

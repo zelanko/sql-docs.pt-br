@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b1dcc6e8a696d6a30be3d38bf30b653f24cac28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63280666"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040857"
 ---
 # <a name="use-the-toolbox"></a>Usar a Caixa de Ferramentas
   Você pode selecionar e arrastar itens, texto e controles da Caixa de Ferramentas sobre formulários, páginas e designers, e arrastar itens dessas fontes para a Caixa de Ferramentas para uso posterior. Por exemplo, no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] você pode arrastar uma tarefa para um Plano de Manutenção.  

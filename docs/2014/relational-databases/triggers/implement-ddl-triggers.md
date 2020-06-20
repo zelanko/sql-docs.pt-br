@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a32b4b17974dfbd761ee56a16ec7f8f74e7d4b76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 110e69aca31df75d4b4d7a732de5c58556bd3e24
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698500"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014490"
 ---
 # <a name="implement-ddl-triggers"></a>Implementar gatilhos DDL
   Este tópico fornece informações para ajudá-lo a criar gatilhos DDL, modificar gatilhos DDL e desabilitar ou cancelar gatilhos DDL.  

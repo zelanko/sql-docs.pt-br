@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1986e21af8d9c6334d8ff9b5a374d46d6c25dda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187832"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013676"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Propriedade StartMode (classe SqlService)
   Obtém o modo de início do serviço.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SqlService](sqlservice-class.md) que representa o serviço.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
@@ -51,7 +50,7 @@ object
  Sistema  
  Valor = 1. Serviço iniciado pelo método `IoInitSystem`. Esta opção só é válida para serviços de driver.  
   
- Automática  
+ Automático  
  Valor = 2. Serviço a ser iniciado automaticamente pelo gerenciador de controle de serviço durante a inicialização do sistema.  
   
  Manual  

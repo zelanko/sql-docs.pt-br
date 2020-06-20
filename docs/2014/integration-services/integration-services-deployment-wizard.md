@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 727eb2b745a732049d6eb4a5e2f1808f076167d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058005"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968300"
 ---
 # <a name="integration-services-deployment-wizard"></a>Assistente de Implantação do Integration Services
   O Assistente de Implantação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] implanta projetos no catálogo SSISDB em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando o modelo de implantação de projeto.  
   
- Para iniciar o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] assistente de implantação em um projeto aberto [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]no, selecione **implantar** no menu **projeto** . Para iniciar o assistente no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda o nó **Integration Services catálogos** > **SSISDB** no Pesquisador de objetos, clique com o botão direito do mouse na pasta **projetos** e clique em **implantar projeto**.  
+ Para iniciar o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Assistente de implantação em um projeto aberto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , selecione **implantar** no menu **projeto** . Para iniciar o assistente no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , expanda o nó **Integration Services catálogos**  >  **SSISDB** no Pesquisador de objetos, clique com o botão direito do mouse na pasta **projetos** e clique em **implantar projeto**.  
   
  O assistente prossegue nas quatro etapas a seguir. Clique em **Avançar** para ir para a próxima etapa ou **anterior** para retornar à etapa anterior.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66058005"
 4.  **Implantar/resultados** – implanta o projeto e exibe os resultados.  
   
 ## <a name="select-source"></a>Selecionar fonte  
- Para implantar um arquivo de implantação de projeto que você criou, selecione **arquivo de implantação do projeto** e insira o caminho para o arquivo. ispac ou clique em **procurar** para localizá-lo na pasta do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projeto. Para implantar um projeto residente no catálogo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , selecione **Catálogo do Integration Services**e insira o nome do servidor e o caminho para o projeto no catálogo.  
+ Para implantar um arquivo de implantação de projeto que você criou, selecione **arquivo de implantação do projeto** e insira o caminho para o arquivo. ispac ou clique em **procurar** para localizá-lo na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pasta do projeto. Para implantar um projeto residente no catálogo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , selecione **Catálogo do Integration Services**e insira o nome do servidor e o caminho para o projeto no catálogo.  
   
  Se você iniciar o assistente no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], então por padrão o assistente selecionará o projeto aberto como a origem e ignorará esta etapa. Para retornar a esta etapa e selecionar uma fonte diferente, clique em **anterior** ou clique em **selecionar origem** no painel esquerdo.  
   

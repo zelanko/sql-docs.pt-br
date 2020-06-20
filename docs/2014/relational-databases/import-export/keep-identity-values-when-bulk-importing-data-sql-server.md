@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07f6714f27f60afda91134034509ff439d92f071
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011912"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050478"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Manter valores de identidade ao importar dados em massa (SQL Server)
-  Os arquivos de dados que contêm valores de identidade podem ser importados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em massa para uma instância do. Por padrão, os valores da coluna de identidade do arquivo de dados que é importado são ignorados e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui valores exclusivos automaticamente. Os valores exclusivos são baseados nos valores de semente e incremento que são especificados durante a criação da tabela.  
+  Os arquivos de dados que contêm valores de identidade podem ser importados em massa para uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, os valores da coluna de identidade do arquivo de dados que é importado são ignorados e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui valores exclusivos automaticamente. Os valores exclusivos são baseados nos valores de semente e incremento que são especificados durante a criação da tabela.  
   
  Se o arquivo de dados não contiver valores para a coluna de identificador na tabela, use um arquivo de formato para especificar que a coluna de identificador na tabela deve ser ignorada durante a importação dos dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui automaticamente valores exclusivos para a coluna.  
   
@@ -73,13 +72,13 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
   
  Para obter mais informações sobre como criar um arquivo de formato, consulte [Criar um arquivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
-### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Usando bcp e mantendo valores de identidade  
+### <a name="a-using-bcp-and-keeping-identity-values"></a>a. Usando bcp e mantendo valores de identidade  
  O exemplo a seguir demonstra como manter valores de identidade ao usar o `bcp` para realizar a importação em massa dos dados. O comando `bcp` usa o arquivo de formato `myDepartment-f-n-x.Xml` e contém as seguintes opções:  
   
 |Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**-E**|Especifica que o valor ou valores de identidade no arquivo de dados serão usados para a coluna de identidade.|  
-|**-T**|Especifica que o `bcp` utilitário se conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao com uma conexão confiável.|  
+|**-T**|Especifica que o `bcp` utilitário se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão confiável.|  
   
  No prompt de comando do Windows, digite:  
   

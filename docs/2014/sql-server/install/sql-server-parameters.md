@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96d06ac85b37ef5d91a49381f97f81ee7a2d87e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011826"
 ---
 # <a name="sql-server-parameters"></a>Parâmetros do SQL Server
   Nesta página, é possível definir os parâmetros que o analisador usará para análise do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. É possível analisar um, vários ou todos os bancos de dados, analisar arquivos de rastreamento criados usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e analisar arquivos em lote do SQL.  

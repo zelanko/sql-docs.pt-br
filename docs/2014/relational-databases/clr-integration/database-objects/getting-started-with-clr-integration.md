@@ -24,19 +24,18 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d48e3c9a2c25dda9dae893cc8e61ff30be4314
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874117"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970606"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introdução à integração CLR
-  Este tópico fornece uma visão geral dos namespaces e das bibliotecas necessárias para compilar objetos de banco [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] de dados usando a integração com o .NET Framework Common Language Runtime (CLR). O tópico também mostra como escrever, compilar e executar um procedimento armazenado CLR simples escrito no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+  Este tópico fornece uma visão geral dos namespaces e das bibliotecas necessárias para compilar objetos de banco de dados usando a [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] integração com o .NET Framework Common Language Runtime (CLR). O tópico também mostra como escrever, compilar e executar um procedimento armazenado CLR simples escrito no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Namespaces obrigatórios  
- A [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]partir do. A funcionalidade de integração CLR é exposta em um assembly chamado system.data.dll, que faz parte do .NET Framework. Esse assembly pode ser localizado no GAC (cache de assembly global), bem como no diretório do .NET Framework. Normalmente uma referência a esse assembly é adicionada automaticamente por ferramentas de linha de comando e pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, por isso não é necessário adicioná-lo manualmente.  
+ A partir do [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] . A funcionalidade de integração CLR é exposta em um assembly chamado system.data.dll, que faz parte do .NET Framework. Esse assembly pode ser localizado no GAC (cache de assembly global), bem como no diretório do .NET Framework. Normalmente uma referência a esse assembly é adicionada automaticamente por ferramentas de linha de comando e pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, por isso não é necessário adicioná-lo manualmente.  
   
  O assembly system.data.dll contém os namespaces a seguir, que são necessários para compilar objetos de banco de dados de CLR:  
   
@@ -119,7 +118,7 @@ vbc /target:library helloworld.vb
  Esses comandos iniciam o compilador do Visual C# ou do Visual Basic que usa a opção /target para especificar a compilação de uma DLL da biblioteca.  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>Carregando e executando o procedimento armazenado "Hello World" no SQL Server  
- Depois que o procedimento de exemplo for compilado com êxito, você poderá testá [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] -lo no e criar uma nova consulta, conectando-se a um banco de dados de teste adequado (por exemplo, o banco de dados de exemplo AdventureWorks).  
+ Depois que o procedimento de exemplo for compilado com êxito, você poderá testá-lo no [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] e criar uma nova consulta, conectando-se a um banco de dados de teste adequado (por exemplo, o banco de dados de exemplo AdventureWorks).  
   
  A capacidade de executar código CLR (Common Language Runtime) é definida, por padrão, como OFF no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O código CLR pode ser habilitado usando o procedimento armazenado do sistema **sp_configure** . Para obter mais informações, consulte [Enabling CLR Integration](../clr-integration-enabling.md).  
   

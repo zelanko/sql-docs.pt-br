@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f1d3eb7-2baa-4215-b040-0b41e3d10740
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d567ccb528d881057829eb4b1071410e37e944fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 35cf0c246ab778b46a2ceaa2b6ff6fad02d0b670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035332"
 ---
 # <a name="task-3-optional-reviewing-the-subscription-views"></a>Tarefa 3 (Opcional): Examinando exibições de assinatura
   Nesta tarefa, você confirmará que as exibições SQL foram criadas usando o SQL Server Management Studio.

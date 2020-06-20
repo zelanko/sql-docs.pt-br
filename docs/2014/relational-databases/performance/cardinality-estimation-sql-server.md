@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa56127f649d71bfcc8825322f8bf729175d41df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066042"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
   A lógica de estimativa de cardinalidade, chamada de avaliador de cardinalidade, foi reformulada no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para melhorar a qualidade dos planos de consulta e, consequentemente, melhorar o desempenho de consulta. O novo avaliador de cardinalidade incorpora as suposições e os algoritmos que funcionam bem em OLTP moderno e em cargas de trabalho de data warehouse. Ele se baseia na pesquisa detalhada da estimativa de cardinalidade em cargas de trabalho modernas, bem como em nosso aprendizado nos últimos 15 anos de aperfeiçoamento do avaliador de cardinalidade do SQL Server. Os comentários dos clientes mostram que, apesar de a maioria das consultas se beneficiarem da alteração ou permanecerem inalteradas, poucas mostram regressões em comparação ao avaliador de cardinalidade anterior.  
@@ -67,15 +66,15 @@ SELECT item, category, amount FROM dbo.Sales AS s WHERE Date = '2013-12-19';
  Esse comportamento foi alterado. Agora, mesmo se as estatísticas não foram atualizadas para os dados mais recentes em ordem crescente, adicionados desde a última atualização das estatísticas, o novo avaliador de cardinalidade suporá que os valores existem e usará a cardinalidade média para cada valor na coluna como a estimativa de cardinalidade.  
   
 ### <a name="example-b-new-cardinality-estimates-assume-filtered-predicates-on-the-same-table-have-some-correlation"></a>Exemplo B. As novas estimativas de cardinalidade consideram que predicados filtrados na mesma tabela têm alguma correlação  
- Para este exemplo, suponha que a tabela Cars tem 1000 linhas, Make tem 200 correspondências para 'Honda”, Model tem 50 correspondências para 'Civic', e que todos os carros Civic são Honda. Consequentemente, 20% dos valores na coluna Make são 'Honda', 5% dos valores na coluna Model são 'Civic', e o número real de carros Civic da Honda é 50. As estimativas de cardinalidade anteriores consideram que os valores nas colunas Make e Model são independentes. As estimativas anteriores do otimizador de consulta são 10 Honda cívicos (. 05 \* * .20 1000 linhas = 10 linhas).  
+ Para este exemplo, suponha que a tabela Cars tem 1000 linhas, Make tem 200 correspondências para 'Honda”, Model tem 50 correspondências para 'Civic', e que todos os carros Civic são Honda. Consequentemente, 20% dos valores na coluna Make são 'Honda', 5% dos valores na coluna Model são 'Civic', e o número real de carros Civic da Honda é 50. As estimativas de cardinalidade anteriores consideram que os valores nas colunas Make e Model são independentes. As estimativas anteriores do otimizador de consulta são 10 Honda cívicos (. 05 * .20 \* 1000 linhas = 10 linhas).  
   
 ```  
 SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civic';  
 ```  
   
- Esse comportamento foi alterado. Agora, as novas estimativas de cardinalidade supõem que as colunas Make e Model têm *alguma* correlação. O otimizador de consulta calcula uma cardinalidade superior, adicionando um componente exponencial à equação de avaliação. O otimizador de consulta agora estima que 22,36 linhas (0,05 * SQRT (. 20 \* ) 1000 linhas = 22,36 linhas) correspondem ao predicado. Para este cenário e a distribuição de dados específica, o valor de 22,36 linhas está mais próximo de 50 linhas reais que a consulta retornará.  
+ Esse comportamento foi alterado. Agora, as novas estimativas de cardinalidade supõem que as colunas Make e Model têm *alguma* correlação. O otimizador de consulta calcula uma cardinalidade superior, adicionando um componente exponencial à equação de avaliação. O otimizador de consulta agora estima que 22,36 linhas (0,05 * SQRT (. 20) \* 1000 linhas = 22,36 linhas) correspondem ao predicado. Para este cenário e a distribuição de dados específica, o valor de 22,36 linhas está mais próximo de 50 linhas reais que a consulta retornará.  
   
- Observe que a nova lógica do avaliador de cardinalidade classifica as seletividades de predicado e aumenta o expoente. Por exemplo, se o predicado seletividades fosse 0,05, .20 e 0,25, a estimativa de cardinalidade seria (. 05 * SQRT (. 20) \* SQRT (sqrt (. 25))).  
+ Observe que a nova lógica do avaliador de cardinalidade classifica as seletividades de predicado e aumenta o expoente. Por exemplo, se o predicado seletividades fosse 0,05, .20 e 0,25, a estimativa de cardinalidade seria (. 05 * SQRT (. 20) \* sqrt (sqrt (. 25))).  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>Exemplo C. As novas estimativas de cardinalidade supõem que predicados filtrados em tabelas diferentes são independentes  
  Para este exemplo, o avaliador de cardinalidade anterior considera que os filtros de predicado s.type e r.date estão correlacionados. No entanto, os resultados de testes em cargas de trabalho modernas mostraram que os filtros de predicado em colunas em tabelas diferentes não costumam estar correlacionados.  

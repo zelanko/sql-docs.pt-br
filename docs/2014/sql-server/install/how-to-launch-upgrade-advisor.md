@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42fc062ce36687b15cc649b1527fdb7710644ac2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094912"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059258"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>Como fazer: Para iniciar o Supervisor de Atualização
   O Supervisor de Atualização fornece um console central que pode ser usado para iniciar o Assistente para Análise do Supervisor de Atualização e o Visualizador de Relatórios do Supervisor de Atualização. Este tópico descreve como iniciar o Supervisor de Atualização.  
   
 ### <a name="to-launch-upgrade-advisor"></a>Para iniciar o Supervisor de Atualização  
   
--   Para iniciar o supervisor de atualização, clique em **Iniciar**, **todos os programas**, clique **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** em e em ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supervisor de atualização**.  
+-   Para iniciar o supervisor de atualização, clique em **Iniciar**, **todos os programas**, clique em **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** e em ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supervisor de atualização**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Executando o supervisor de atualização &#40;a interface do usuário&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   

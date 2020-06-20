@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9167f4ec0f62c34ddf6bae5838b36dcf4bdb6967
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 307a2a73d0f51c17aabd1e09cd32375688a39660
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63010714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035697"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Consultar com parâmetros (Visual Database Tools)
   Em muitas instâncias, é útil criar uma consulta que pode ser reutilizada muitas vezes nos aplicativos com uma entrada diferente a cada vez. Nesta seção você encontrará informações sobre como criar consultas de parâmetros para usos gerais.  

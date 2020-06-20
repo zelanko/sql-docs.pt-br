@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 80647fc0091d2d2c632b164737abe89d7203b4b3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f323dda790946565bc0dbd63c9e1f9d17ac7494b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039090"
 ---
 # <a name="using-irowgetcolumns"></a>Usando IRow::GetColumns
   A implementação de **IRow** permite o acesso sequencial somente de encaminhamento às colunas. Acesse todas as colunas da linha com uma única chamada a **IRow::GetColumns** ou chame **IRow::GetColumns** várias vezes sempre que você acessar várias colunas na linha.  

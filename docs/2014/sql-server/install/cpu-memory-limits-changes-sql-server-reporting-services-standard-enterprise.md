@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd553715-2b95-4119-8f58-d01de388d9ab
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4d8e18215c6078026b617e079879da1eadbca612
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd889344f5b0bc72320ff8467ebd6ecc654872f8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036919"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-reporting-services-standard-and-enterprise"></a>Alterações nos limites de CPU e de memória para o SQL Server Reporting Services Standard e Enterprise
   O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services edição Standard e Enterprise oferece suporte a no máximo 64 gigabytes de memória do sistema.  
@@ -26,7 +25,7 @@ ms.locfileid: "66095960"
 ### <a name="description"></a>Descrição  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services edição Standard e Enterprise oferece suporte a no máximo 64 gigabytes de memória do sistema. Talvez seja necessário reconfigurar os parâmetros atuais do sistema para alinhá-los aos novos limites.  
   
- Para obter mais informações sobre limites de memória e CPU para outras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]edições do, consulte [computar limites de capacidade por edição do SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)e [memória com suporte nas edições do SQL Server](https://go.microsoft.com/fwlink/?LinkId=212633).  
+ Para obter mais informações sobre limites de memória e CPU para outras edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [computar limites de capacidade por edição do SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)e [memória com suporte nas edições do SQL Server](https://go.microsoft.com/fwlink/?LinkId=212633).  
   
 ## <a name="corrective-action"></a>Ação corretiva  
  Talvez seja necessário reconfigurar os parâmetros atuais do sistema para alinhá-los aos novos limites de CPU e memória. Para obter mais informações, consulte [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)e [Opções de configuração do servidor de memória do servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  

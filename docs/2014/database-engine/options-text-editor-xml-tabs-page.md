@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01721e60e2f70462d606586225ab98329dad7daa
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 43f97832e4afc7565c472d3da58127ea679d85c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929600"
 ---
 # <a name="options-text-editorxmltabs-page"></a>Opções (página Editor de Texto/XML/Guias)
   Essa caixa de diálogo permite alterar o comportamento de tabulação do Editor de XML, que é usado para editar documentos XML. Para exibir essas configurações, clique em **Opções** no menu **Ferramentas** , expanda a pasta **Editor de Texto** , expanda a subpasta **XML** e, então, clique em **Tabulações**.  
@@ -26,7 +25,7 @@ ms.locfileid: "83000601"
  As opções do Editor de XML também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Ao usar as caixas de diálogo **Todos os Idiomas** para definir diferentes opções para os outros editores do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como o DMX ou MDX, você deverá redefinir as opções do Editor de XML usando essa caixa de diálogo.  
   
 ## <a name="indenting"></a>Recuo  
- **Nenhum**  
+ **Nenhuma**  
  Quando essa opção estiver selecionada, a nova linha criada ao se pressionar ENTER não ficará recuada. O cursor é colocado na primeira coluna da nova linha.  
   
  **Bloquear**  

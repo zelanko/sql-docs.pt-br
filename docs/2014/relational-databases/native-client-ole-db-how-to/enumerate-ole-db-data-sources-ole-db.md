@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: af78863e9f839ef0c2449c932310670093005de2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ee2df484a2e2c1b9327c23826136609884025f5f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039278"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerar fontes de dados OLE DB (OLE DB)
   Este exemplo mostra como usar o objeto enumerador para listar as fontes de dados disponíveis.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b586b736-344b-4e42-83ee-96f66ad433a5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ddb7ae175cb7a95e777806e9fdd3d469a55f4fa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930450"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Novo registro ou editar registro de servidor (guia Geral) (SSIS)
   Use esta guia para especificar opções ao registrar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

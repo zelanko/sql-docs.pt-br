@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01f0f192dbf931d5ad80c594b376973ee2db3f31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 554469d77ef7561711b8245e7bb736b6bcb0a58b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011523"
 ---
 # <a name="name-element-for-database-dta"></a>Elemento de nome para o banco de dados (DTA)
   Especifica o nome de um banco de dados que você deseja ajustar.  
@@ -35,7 +34,7 @@ ms.locfileid: "63297505"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  

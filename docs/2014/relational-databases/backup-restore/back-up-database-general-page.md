@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c315c827e1c8b206b2098009510bf6468bd7d74
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155082"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959626"
 ---
 # <a name="back-up-database-general-page"></a>Backup do banco de dados (página Geral)
   Use a página **Geral** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar as configurações de uma operação de backup de banco de dados.  
@@ -25,7 +24,7 @@ ms.locfileid: "70155082"
  Para obter mais informações sobre os conceitos básicos de backup, veja [Visão geral de Backup &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Ao especificar uma tarefa de backup usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você pode gerar o script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondente clicando no botão **Script** e, em seguida, selecionando um destino para o script.  
+>  Ao especificar uma tarefa de backup usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], é possível gerar o script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondente clicando no botão **Script** e selecionando um destino para o script.  
   
  **Para usar o SQL Server Management Studio para criar um backup**  
   
@@ -38,7 +37,7 @@ ms.locfileid: "70155082"
   
  **Para criar um backup parcial**  
   
--   Para um backup parcial, use a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]BACKUP[ do ](/sql/t-sql/statements/backup-transact-sql) com a opção PARTIAL.  
+-   Para um backup parcial, use a instrução [BACKUP](/sql/t-sql/statements/backup-transact-sql) do [!INCLUDE[tsql](../../includes/tsql-md.md)] com a opção PARTIAL.  
   
 ## <a name="options"></a>Opções  
   
@@ -88,7 +87,7 @@ ms.locfileid: "70155082"
 |||  
 |-|-|  
 |**Disco**|Faz o backup em disco. Pode ser um arquivo de sistema ou um dispositivo de backup lógico baseado em disco criado para o banco de dados. Os discos atualmente selecionados são exibidos na lista **Backup em** . Você pode selecionar até 64 dispositivos de disco para a operação de backup.|  
-|**Fita**|Faz o backup em fita. Pode ser uma unidade de fita local ou um dispositivo de backup lógico baseado em fita criado para o banco de dados. As fitas atualmente selecionadas são exibidas na lista **Backup em** . O número máximo é 64. Se não houver nenhum dispositivo de fita anexado ao servidor, essa opção será desativada. As fitas selecionadas são incluídas na lista **Backup em** .<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**Fita**|Faz o backup em fita. Pode ser uma unidade de fita local ou um dispositivo de backup lógico baseado em fita criado para o banco de dados. As fitas atualmente selecionadas são exibidas na lista **Backup em** . O número máximo é 64. Se não houver nenhum dispositivo de fita anexado ao servidor, essa opção será desativada. As fitas selecionadas são incluídas na lista **Backup em** .<br /><br /> Observação: O suporte a dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |**URL**|Faz backup no armazenamento de BLOBs do Azure.|  
   
  O próximo conjunto de opções exibido depende do tipo de destino selecionado. Se você selecionar Disco ou Fita, as opções a seguir são exibidas.  
@@ -117,11 +116,11 @@ ms.locfileid: "70155082"
  Especifique o nome do contêiner de Armazenamento do Microsoft Azure  
   
  **Prefixo da URL:**  
- Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. Recomendamos que você não edite as informações nesse campo, a menos que esteja usando um domínio que use um formato diferente da ** \<conta de armazenamento>. blob.Core.Windows.net**.  
+ Gerado automaticamente com base nas informações da conta de armazenamento armazenadas na Credencial do SQL e o nome do contêiner de armazenamento do Azure que você especificou. Recomendamos que você não edite as informações nesse campo, a menos que esteja usando um domínio que use um formato diferente de ** \<storage account> . blob.Core.Windows.net**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [Fazer backup de arquivos e grupos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
+ [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Definir um dispositivo de backup lógico para um arquivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
  [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [Modelos de recuperação &#40;SQL Server&#41;](recovery-models-sql-server.md)  

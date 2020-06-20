@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e2d10ab64bfeed5cbc0e42242ae123a56b51aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920832"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953536"
 ---
 # <a name="deploying-clr-database-objects"></a>Implantando objetos de banco de dados CLR
   Implantação é o processo pelo qual você distribui um aplicativo concluído ou módulo a ser instalado e executado em outro computador. Usando o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, é possível desenvolver objetos de banco de dados do CLR (Common Language Runtime) e implantá-los em um servidor de teste. Os objetos de banco de dados gerenciados também podem ser compilados com os arquivos de redistribuição do [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework, e não o Visual Studio. Quando compilados, os assemblies que contêm os objetos de banco de dados do CLR podem ser implantados em um servidor de teste que usa o Visual Studio ou as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Observe que o Visual Studio .NET 2003 não pode ser usado na programação de integração ou no desenvolvimento do CLR. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece o .NET Framework pré-instalado, e o Visual Studio .NET 2003 não pode usar os assemblies do .NET Framework 2.0.  
@@ -39,7 +38,7 @@ ms.locfileid: "62920832"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Para implantar o assembly que usa o Visual Studio  
   
-1.  Crie o projeto selecionando **Compilar** \<nome do projeto> no menu **Compilar** .  
+1.  Crie o projeto selecionando **Compilar** \<project name> no menu **Compilar** .  
   
 2.  Resolva todos os erros de compilação e avisos antes de implantar o assembly no servidor de teste.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62920832"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Para obter mais informações sobre como criar os diferentes tipos de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]banco de dados gerenciado no, consulte [funções CLR](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)definidas pelo usuário, [agregações CLR definidas pelo](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)usuário, [tipos CLR definidos pelo usuário](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimentos armazenados CLR](../../database-engine/dev-guide/clr-stored-procedures.md)e [gatilhos CLR](../../database-engine/dev-guide/clr-triggers.md).  
+ Para obter mais informações sobre como criar os diferentes tipos de objetos de banco de dados gerenciado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consulte [funções CLR](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)definidas pelo usuário, [agregações CLR definidas pelo](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)usuário, [tipos CLR definidos pelo usuário](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimentos armazenados CLR](../../database-engine/dev-guide/clr-stored-procedures.md)e [gatilhos CLR](../../database-engine/dev-guide/clr-triggers.md).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Implantando o assembly em servidores de produção  
  Uma vez testados e verificados no servidor de teste, os objetos de banco de dados do CLR podem ser distribuídos para servidores de produção. Para obter mais informações sobre como depurar objetos de banco de dados gerenciado, consulte [DEBUGGING CLR Database Objects](debugging-clr-database-objects.md).  
@@ -86,15 +85,15 @@ ms.locfileid: "62920832"
   
 1.  Abra o [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] e se conecte à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em que o assembly gerenciado ou o objeto de banco de dados a ser implantado é registrado.  
   
-2.  No Pesquisador de **objetos**, expanda as árvores ** \<nome do servidor>** e **bancos de dados** . Clique com o botão direito do mouse no banco de dados em que o objeto de banco de dados gerenciado está registrado, selecione **tarefas**e, em seguida, selecione **gerar scripts**. O Assistente de Script é aberto.  
+2.  No Pesquisador de **objetos**, expanda as **\<server name>** árvores e **bancos de dados** . Clique com o botão direito do mouse no banco de dados em que o objeto de banco de dados gerenciado está registrado, selecione **tarefas**e, em seguida, selecione **gerar scripts**. O Assistente de Script é aberto.  
   
 3.  Selecione o banco de dados na caixa de listagem e clique em **Avançar**.  
   
 4.  No painel **escolher opções de script** , clique em **Avançar**ou altere as opções e clique em **Avançar**.  
   
-5.  No painel **escolher tipos de objeto** , escolha o tipo de objeto de banco de dados a ser implantado. Clique em **Avançar**.  
+5.  No painel **escolher tipos de objeto** , escolha o tipo de objeto de banco de dados a ser implantado. Clique em **Próximo**.  
   
-6.  Para cada tipo de objeto selecionado no painel **escolher tipos de objetos** , um painel ** \<escolher tipo>** é apresentado. Nesse painel, é possível escolher uma dentre todas as instâncias do tipo de objeto de banco de dados registrado no banco de dados especificado. Selecione um ou mais objetos e clique em **Avançar**.  
+6.  Para cada tipo de objeto selecionado no painel **escolher tipos de objeto** , um painel **escolher \<type> ** é apresentado. Nesse painel, é possível escolher uma dentre todas as instâncias do tipo de objeto de banco de dados registrado no banco de dados especificado. Selecione um ou mais objetos e clique em **Avançar**.  
   
 7.  O painel **Opções de saída** aparece quando todos os tipos de objeto de banco de dados desejados foram selecionados. Selecione **script para arquivo** e especifique um caminho de arquivo para o script. Selecione **Avançar**. Examine suas seleções e clique em **concluir**. O script de implantação é salvo no caminho do arquivo especificado.  
   

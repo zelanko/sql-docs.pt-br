@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e647ed8d563bb922ee083d7a10a57429148e954a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782717"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953082"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
-  Use o **Assistente para registrar o aplicativo da camada de dados** ou um script do Windows PowerShell para criar uma definição de DAC (aplicativo da camada de dados) que descreva os objetos em um banco de dado existente e `msdb` Registre a definição de DAC no banco de dados do sistema (**mestre** no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
+  Use o **Assistente para registrar o aplicativo da camada de dados** ou um script do Windows PowerShell para criar uma definição de DAC (aplicativo da camada de dados) que descreva os objetos em um banco de dado existente e registre a definição de DAC no banco de dados do `msdb` sistema (**mestre** no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ).  
   
 -   **Antes de começar:**  [Limitações e Restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
   
@@ -78,11 +77,11 @@ ms.locfileid: "72782717"
   
  **Nome do aplicativo.** – Uma cadeia de caracteres que especifica o nome usado para identificar a definição do DAC, o campo foi populado com o nome do banco de dados.  
   
- **Versão.** - Um valor numérico que identifica a versão do DAC. A versão do DAC é usada no Visual Studio para identificar a versão do DAC em que os desenvolvedores estão trabalhando. Ao implantar um DAC, a versão é armazenada no banco `msdb` de dados e, posteriormente, pode ser exibida no nó aplicativos da camada [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de **dados** no.  
+ **Versão.** - Um valor numérico que identifica a versão do DAC. A versão do DAC é usada no Visual Studio para identificar a versão do DAC em que os desenvolvedores estão trabalhando. Ao implantar um DAC, a versão é armazenada no `msdb` banco de dados e, posteriormente, pode ser exibida no nó **aplicativos da camada de dados** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **Ndescrição.** - Opcional. Texto que explica a finalidade do DAC. Ao implantar um DAC, a descrição é armazenada no banco `msdb` de dados e, posteriormente, pode ser exibida no nó **aplicativos da camada data** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ **Ndescrição.** - Opcional. Texto que explica a finalidade do DAC. Ao implantar um DAC, a descrição é armazenada no `msdb` banco de dados e, posteriormente, pode ser exibida no nó **aplicativos da camada data** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
- Anterior – retorna para a página **introdução** . ** \< **  
+ ** \< Anterior** – retorna para a página **introdução** .  
   
  **Avançar >** - Verifica se um DAC pode ser compilado por meio dos objetos do banco de dados e exibe os resultados na página de **Validação e Resumo**.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "72782717"
 ### <a name="retrieving-objects"></a>Recuperando objetos  
  **Recuperando os objetos de banco de dados e de servidor.** - Exibe uma barra de progresso enquanto o assistente recupera todos os objetos necessários do banco de dados e da instância do Mecanismo de Banco de Dados.  
   
- Anterior – retorna para a página **definir propriedades** para alterar suas entradas. ** \< **  
+ ** \< Anterior** – retorna para a página **definir propriedades** para alterar suas entradas.  
   
  **Avançar >** - Registra o DAC e exibe os resultados na página **Registrar o DAC**.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "72782717"
 ### <a name="validating-objects"></a>Validando objetos  
  **Verificando**  _SchemaName_ **.** _Objectname_ **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. _Esquema_**.** _Objectname_ identificar qual objeto está sendo verificado no momento.  
   
- Anterior – retorna para a página **definir propriedades** para alterar suas entradas. ** \< **  
+ ** \< Anterior** – retorna para a página **definir propriedades** para alterar suas entradas.  
   
  **Avançar >** - Registra o DAC e exibe os resultados na página **Registrar o DAC**.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "72782717"
   
  **Salvar Relatório** - Selecione esse botão para salvar uma cópia do relatório de validação em um arquivo HTML. A pasta padrão é **SQL Server Gerenciamento Studio\DAC Packages** na pasta Documentos da conta do Windows.  
   
- Anterior – retorna para a página **definir propriedades** para alterar suas entradas. ** \< **  
+ ** \< Anterior** – retorna para a página **definir propriedades** para alterar suas entradas.  
   
  **Avançar >** - Registra o DAC e exibe os resultados na página **Registrar o DAC**.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "72782717"
   
  **Registrando o DAC** - Relata o êxito ou a falha de cada ação realizada para registrar o DAC. Analise as informações para determinar o êxito ou falha de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Selecione o link para exibir um relatório do erro para aquela ação.  
   
- **Salvar Relatório** - Selecione esse botão para salvar o relatório de registro em um arquivo HTML. O arquivo relata o status de cada ação, inclusive todos os erros gerados por qualquer uma das ações. A pasta padrão é **SQL Server Gerenciamento Studio\DAC Packages** na pasta Documentos da conta do Windows. O nome de arquivo está no formato \<DACPackageName>_RegisterDACReport_yyyymmdd.html, em que \<*DACPackageName*> é o nome do pacote que está sendo implantado, *yyyy* = ano atual, *mm* = mês atual e *dd* = dia atual.  
+ **Salvar Relatório** - Selecione esse botão para salvar o relatório de registro em um arquivo HTML. O arquivo relata o status de cada ação, inclusive todos os erros gerados por qualquer uma das ações. A pasta padrão é **SQL Server Gerenciamento Studio\DAC Packages** na pasta Documentos da conta do Windows. O nome do arquivo está no formato \<DACPackageName>_RegisterDACReport_yyyymmdd.html, em que \<*DACPackageName*> é o nome do pacote que está sendo implantado, *yyyy* = o ano atual, *mm* = o mês atual e *DD* = o dia atual.  
   
  **Concluir** – Encerra o assistente.  
   

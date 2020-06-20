@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058216"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968316"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementar uma política de assinatura por meio da configuração de um valor do Registro
   Você pode usar um valor opcional do Registro para gerenciar uma política da organização para carregar pacotes assinados ou não assinados. Se você usar o valor do Registro, será preciso criar esse valor em cada computador em que os pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] serão executados e no qual deseja aplicar a política. Depois que o valor do Registro tiver sido definido, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verificará as assinaturas antes de carregar pacotes.  
@@ -48,7 +47,7 @@ ms.locfileid: "66058216"
   
 1.  No menu **Iniciar**, clique em **Executar**.  
   
-2.  Na caixa de diálogo Executar, digite `Regedit`e clique em **OK**.  
+2.  Na caixa de diálogo Executar, digite `Regedit` e clique em **OK**.  
   
 3.  Localize a chave do Registro, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66058216"
   
 5.  Atualize o nome do valor novo para `BlockedSignatureStates`.  
   
-6.  Clique `BlockedSignatureStates` com o botão direito do mouse e clique em **Modificar**.  
+6.  Clique com o botão direito do mouse `BlockedSignatureStates` e clique em **Modificar**.  
   
 7.  Na caixa de diálogo **Editar valor DWORD** , digite o valor 0, 1, 2 ou 3.  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2c858d0fa8579aff288efd7026ab4b65035bad8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c081ee21b3471656e368bfd31058c95e6aa7428b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050722"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (API de procedimento armazenado estendido)
     

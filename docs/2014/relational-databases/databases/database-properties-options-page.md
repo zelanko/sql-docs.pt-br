@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e856e820719054ad1f01fe0e0306aa278d62ec2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970136"
 ---
 # <a name="database-properties-options-page"></a>Propriedades do banco de dados (página Opções)
   Use esta página para exibir ou modificar opções para o banco de dados selecionado. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -38,7 +37,7 @@ ms.locfileid: "62917077"
 > [!IMPORTANT]  
 >  Habilitar delegados de bancos de dados parcialmente independentes controla o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os proprietários do banco de dados. Para obter mais informações, consulte [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md).  
   
-## <a name="automatic"></a>Automática  
+## <a name="automatic"></a>Automático  
  **Fechamento Automático**  
  Especifique se o banco de dados é fechado corretamente e libera recursos depois da saída do último usuário. Os valores possíveis são `True` e `False`. Quando `True`, o banco de dados é desligado corretamente e seus recursos são liberados depois do logoff do último usuário.  
   
@@ -55,11 +54,11 @@ ms.locfileid: "62917077"
  Especifique se o banco de dados atualiza estatísticas de otimização desatualizadas automaticamente. Os valores possíveis são `True` e `False`. Quando `True`, quaisquer estatísticas desatualizadas exigidas pela consulta para otimização são criadas automaticamente durante a otimização. Para obter mais informações, veja [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
  **Atualização Automática de Estatísticas de Forma Assíncrona**  
- Quando `True`, as consultas que iniciam uma atualização automática de Estatísticas desatualizadas não aguardarão que as estatísticas sejam atualizadas antes da compilação. Consultas subsequentes usarão as estatísticas atualizadas quando elas estiverem disponíveis.  
+ Quando `True` , as consultas que iniciam uma atualização automática de Estatísticas desatualizadas não aguardarão que as estatísticas sejam atualizadas antes da compilação. Consultas subsequentes usarão as estatísticas atualizadas quando elas estiverem disponíveis.  
   
- Quando `False`, as consultas que iniciam uma atualização automática de Estatísticas desatualizadas, esperam até que as estatísticas atualizadas possam ser usadas no plano de otimização de consulta.  
+ Quando `False` , as consultas que iniciam uma atualização automática de Estatísticas desatualizadas, esperam até que as estatísticas atualizadas possam ser usadas no plano de otimização de consulta.  
   
- Definir essa opção como `True` não tem efeito, a menos que as **Estatísticas de atualização automática** também sejam definidas como `True`.  
+ Definir essa opção como `True` não tem efeito, a menos que as **Estatísticas de atualização automática** também sejam definidas como `True` .  
   
 ## <a name="containment"></a>Contenção  
  Nos bancos de dados independentes, algumas configurações geralmente definidas no nível de servidor podem ser configuradas no nível de banco de dados.  
@@ -86,7 +85,7 @@ ms.locfileid: "62917077"
  Especifique se os cursores são fechados após a confirmação da transação que abre o cursor. Os valores possíveis são `True` e `False`. Quando `True`, quaisquer cursores abertos quando uma transação for confirmada ou revertida serão fechados. Quando `False`, tais cursores permanecerão abertos quando uma transação for confirmada. Quando `False`, reverter uma transação fechará quaisquer cursores, exceto os definidos como INSENSITIVE ou STATIC. Para obter mais informações, veja [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql).  
   
  **Cursor Padrão**  
- Especifique o comportamento padrão do cursor. Quando `True`, as declarações de cursor definem o padrão como LOCAL. Quando `False`, [!INCLUDE[tsql](../../includes/tsql-md.md)] cursores são padronizados como globais.  
+ Especifique o comportamento padrão do cursor. Quando `True`, as declarações de cursor definem o padrão como LOCAL. Quando `False` , [!INCLUDE[tsql](../../includes/tsql-md.md)] cursores são padronizados como globais.  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nome do Diretório FILESTREAM**  
@@ -100,30 +99,30 @@ ms.locfileid: "62917077"
  Permita valores nulos para todos os tipos de dados ou colunas definidos pelo usuário que não estejam explicitamente definidos como `NOT NULL` durante uma instrução `CREATE TABLE` ou `ALTER TABLE` (o estado padrão). Para obter mais informações, veja [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) e [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
   
  **ANSI NULLS Habilitado**  
- Especifique o comportamento dos operadores de comparação Igual a (`=`) e Diferente de (`<>`) quando usados com valores nulos. Os valores possíveis `True` são (on) `False` e (off). Quando `True`, todas as comparações com um valor nulo são avaliadas como UNKNOWN. Quando `False`, as comparações de valores não-Unicode para um valor nulo `True` são avaliadas se ambos os valores forem nulos. Para obter mais informações, consulte [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
+ Especifique o comportamento dos operadores de comparação Igual a (`=`) e Diferente de (`<>`) quando usados com valores nulos. Os valores possíveis são `True` (on) e `False` (off). Quando `True`, todas as comparações com um valor nulo são avaliadas como UNKNOWN. Quando `False` , as comparações de valores não-Unicode para um valor nulo `True` são avaliadas se ambos os valores forem nulos. Para obter mais informações, veja [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
   
  **Preenchimento ANSI Habilitado**  
- Especifique se preenchimento ANSI está ativado ou desativado. Os valores permitidos `True` são (on) `False` e (off). Para obter mais informações, veja [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
+ Especifique se preenchimento ANSI está ativado ou desativado. Os valores permitidos são `True` (on) e `False` (off). Para obter mais informações, veja [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
  **Avisos ANSI Habilitados**  
- Especifique comportamento padrão ISO para várias condições de erro. Quando `True`, uma mensagem de aviso será gerada se valores nulos aparecerem em funções de agregação (como Sum, AVG, Max, min, Desv, DESVPADP, var, VARP ou Count). Quando `False`, nenhum aviso é emitido. Para obter mais informações, veja [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
+ Especifique comportamento padrão ISO para várias condições de erro. Quando `True` , uma mensagem de aviso será gerada se valores nulos aparecerem em funções de agregação (como Sum, AVG, Max, min, Desv, DESVPADP, var, VARP ou Count). Quando `False` , nenhum aviso é emitido. Para obter mais informações, veja [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
   
  **Anular Aritmética Habilitada**  
  Especifique se a opção de banco de dados de anulação de aritmética está habilitada ou não. Os valores possíveis são `True` e `False`. Quando `True`, um estouro ou erro de divisão por zero causa o encerramento da consulta ou lote. Se o erro ocorrer em uma transação, a transação será revertida. Quando `False`, uma mensagem de aviso será exibida, mas a consulta, lote ou transação continuará como se nenhum erro tivesse ocorrido. Para obter mais informações, veja [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).  
   
  **Concatenar Nulo Produz Nulo**  
- Especifique o comportamento quando valores nulos são concatenados. Quando o valor da propriedade `True`é `string` , + NULL retorna NULL. Quando `False`, o resultado é `string`. Para obter mais informações, veja [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
+ Especifique o comportamento quando valores nulos são concatenados. Quando o valor da propriedade é `True` , `string` + NULL retorna NULL. Quando `False` , o resultado é `string` . Para obter mais informações, veja [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
   
  **Encadeamento de Propriedades de Bancos de Dados**  
- Esse valor somente leitura indica se o encadeamento de propriedades de bancos de dados foi habilitado. Quando `True`, o banco de dados pode ser a origem ou o destino de uma cadeia de propriedade de banco de dados. Use a instrução ALTER DATABASE para definir essa propriedade.  
+ Esse valor somente leitura indica se o encadeamento de propriedades de bancos de dados foi habilitado. Quando `True` , o banco de dados pode ser a origem ou o destino de uma cadeia de propriedade de banco de dados. Use a instrução ALTER DATABASE para definir essa propriedade.  
   
  **Otimização de Correlação de Data Habilitada**  
- Quando `True`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o mantém as estatísticas de correlação entre as duas tabelas no banco de dados que são vinculadas por uma `datetime` restrição FOREIGN KEY e têm colunas.  
+ Quando `True` , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o mantém as estatísticas de correlação entre as duas tabelas no banco de dados que são vinculadas por uma restrição FOREIGN KEY e têm `datetime` colunas.  
   
- Quando `False`, as estatísticas de correlação não são mantidas.  
+ Quando `False` , as estatísticas de correlação não são mantidas.  
   
  **Anular Arredondamento Numérico**  
- Especifique como o banco de dados trata erros de arredondamento. Os valores possíveis são `True` e `False`. Quando `True`, um erro é gerado quando ocorre perda de precisão em uma expressão. Quando `False`, as perdas de precisão não geram mensagens de erro e o resultado é arredondado para a precisão da coluna ou variável que armazena o resultado. Para obter mais informações, veja [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
+ Especifique como o banco de dados trata erros de arredondamento. Os valores possíveis são `True` e `False`. Quando `True`, um erro é gerado quando ocorre perda de precisão em uma expressão. Quando `False` , as perdas de precisão não geram mensagens de erro e o resultado é arredondado para a precisão da coluna ou variável que armazena o resultado. Para obter mais informações, veja [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
   
  **Parametrização**  
  Quando definidas como **SIMPLE**, as consultas são parametrizadas com base no comportamento padrão do banco de dados. Quando **forçada**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas as consultas no banco de dados.  
@@ -132,16 +131,16 @@ ms.locfileid: "62917077"
  Especifique se palavras-chave do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser usadas como identificadores (um nome de variável ou objeto) se estiverem incluídas entre aspas. Os valores possíveis são `True` e `False`. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
  **Gatilhos Recursivos Habilitados**  
- Especifique se gatilhos podem ser acionados por outros gatilhos. Os valores possíveis são `True` e `False`. Quando definido como `True`, isso habilita o acionamento recursivo de gatilhos. Quando definido como `False`, somente a recursão direta é impedida. Para desabilitar a recursão indireta, defina a opção de servidor nested triggers como 0 usando sp_configure. Para obter mais informações, consulte [Criar gatilhos aninhados](../triggers/create-nested-triggers.md).  
+ Especifique se gatilhos podem ser acionados por outros gatilhos. Os valores possíveis são `True` e `False`. Quando definido como `True` , isso habilita o acionamento recursivo de gatilhos. Quando definido como `False` , somente a recursão direta é impedida. Para desabilitar a recursão indireta, defina a opção de servidor nested triggers como 0 usando sp_configure. Para obter mais informações, consulte [Criar gatilhos aninhados](../triggers/create-nested-triggers.md).  
   
  `Trustworthy`  
- Ao exibir `True`, essa opção somente leitura indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o acesso a recursos fora do banco de dados sob um contexto de representação estabelecido no banco de dados. Contextos de representação podem ser estabelecidos dentro do banco de dados usando a instrução de usuário EXECUTE AS ou a cláusula EXECUTE AS em módulos do banco de dados.  
+ Ao exibir `True` , essa opção somente leitura indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o acesso a recursos fora do banco de dados sob um contexto de representação estabelecido no banco de dados. Contextos de representação podem ser estabelecidos dentro do banco de dados usando a instrução de usuário EXECUTE AS ou a cláusula EXECUTE AS em módulos do banco de dados.  
   
  Para ter acesso, o proprietário do banco de dados também precisa ter a permissão AUTHENTICATE SERVER no nível do servidor.  
   
  Essa propriedade também permite criação e execução de assemblies de acesso inseguros e externos dentro do banco de dados. Além disso, para configurar essa propriedade como `True`, o proprietário do banco de dados deve ter a permissão EXTERNAL ACCESS ASSEMBLY ou UNSAFE ASSEMBLY no nível do servidor.  
   
- Por padrão, todos os bancos de dados de usuário e todos os bancos de dados do sistema (com exceção do **msdb**) têm essa `False`propriedade definida como. O valor não pode ser alterado para os bancos de dados **modelo** e **tempdb** .  
+ Por padrão, todos os bancos de dados de usuário e todos os bancos de dados do sistema (com exceção do **msdb**) têm essa propriedade definida como `False` . O valor não pode ser alterado para os bancos de dados **modelo** e **tempdb** .  
   
  TRUSTWORTHY é definido como `False` sempre que um banco de dados está conectado ao servidor.  
   
@@ -150,7 +149,7 @@ ms.locfileid: "62917077"
  Para definir essa propriedade, use a instrução ALTER DATABASE.  
   
  **Formato de Armazenamento VarDecimal Habilitado**  
- Essa opção é somente leitura a partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores, todos os bancos de dados são habilitados para o formato de armazenamento vardecimal. Essa opção usa [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
+ Essa opção é somente leitura a partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] do e versões posteriores, todos os bancos de dados são habilitados para o formato de armazenamento vardecimal. Essa opção usa [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
 ## <a name="recovery"></a>Recuperação  
  **Verificação de Página**  
@@ -182,7 +181,7 @@ ms.locfileid: "62917077"
      Apenas membros das funções db_owner, dbcreator ou sysadmin podem usar o banco de dados.  
   
  **Criptografia Habilitada**  
- Quando `True`, esse banco de dados é habilitado para criptografia de banco de dados. Uma Chave de Criptografia do Banco de Dados é necessária para criptografia. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../security/encryption/transparent-data-encryption.md).  
+ Quando `True` , esse banco de dados é habilitado para criptografia de banco de dados. Uma Chave de Criptografia do Banco de Dados é necessária para criptografia. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../security/encryption/transparent-data-encryption.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   

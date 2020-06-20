@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 675d15f2d2c20ecb18b03cd5fa85684befeddff0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a403aa28660252b78cc2c5c0c76f248e2fd1105
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067898"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939977"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Soluções de modelo tabular (SSAS tabular)
   Os tópicos nesta seção fornecem informações sobre como criar modelos de tabela usando o designer de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

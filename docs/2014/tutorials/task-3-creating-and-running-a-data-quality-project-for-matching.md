@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8de716da5a7f845f68bd50fa09b04594bf883ad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035411"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarefa 3: Criando e executando um projeto de qualidade de dados para correspondência
   Nesta tarefa, você criará um Projeto do Data Quality para a atividade de correspondência e executará o processo de correspondência nos dados de fornecedor limpos para remover as duplicatas nos dados.
@@ -30,11 +29,11 @@ ms.locfileid: "78171765"
 
      ![Projeto de Qualidade de Novos Dados - Correspondência selecionada](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "Projeto de Qualidade de Novos Dados - Correspondência selecionada")
 
-5.  Clique em **Avançar**.
+5.  Clique em **Próximo**.
 
 6.  Na página **Mapear** , selecione **Arquivo do Excel** em **Fonte de Dados**.
 
-7.  Clique em **procurar** e selecione **lista de fornecedores limpos. xls**, que é o arquivo de saída da atividade de limpeza.
+7.  Clique em **procurar** e selecione **fornecedor limpo List.xls**, que é o arquivo de saída da atividade de limpeza.
 
 8.  Mapeie a coluna de origem **CódigoDoFornecedor** para o domínio da **ID** do fornecedor, a coluna **nome do fornecedor** para **nome do fornecedor** domínio e a coluna **ContactEmailAddress** para contatar o domínio de **email** .
 

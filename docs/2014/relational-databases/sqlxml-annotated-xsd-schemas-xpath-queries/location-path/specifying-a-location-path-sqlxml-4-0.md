@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d769bbb8c1d3890f80c89c32e7ddfc913dd517a8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 01e1a7f897bae25c6cf483e822a6572528e44913
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015255"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificando um caminho para o local (SQLXML 4.0)
   São especificadas consultas XPath no formato de uma expressão. Há vários tipos de expressões. Um caminho de local é uma expressão que seleciona um conjunto de nós relativos ao nó de contexto. O resultado de avaliar um caminho de local é um conjunto de nós.  
@@ -35,7 +34,7 @@ ms.locfileid: "82703108"
   
 -   **Caminho de local relativo**  
   
-     Um caminho de local relativo inicia no nó de contexto no documento. Um caminho de local consiste em uma sequência de uma ou mais etapas de local separada por uma barra (/). Cada etapa seleciona um conjunto de nós relativo ao nó de contexto. A sequência inicial de etapas seleciona um conjunto de nós relativo a um nó de contexto. Cada nó nesse conjunto é usado como um nó de contexto para a etapa seguinte. São unidos os conjuntos de nós identificados por esta etapa. Por exemplo, **Child:: ordem/filho:: OrderDetail** seleciona o elemento de ** \<>de OrderDetail** dos filhos do elemento ** \< Order>** do nó de contexto.  
+     Um caminho de local relativo inicia no nó de contexto no documento. Um caminho de local consiste em uma sequência de uma ou mais etapas de local separada por uma barra (/). Cada etapa seleciona um conjunto de nós relativo ao nó de contexto. A sequência inicial de etapas seleciona um conjunto de nós relativo a um nó de contexto. Cada nó nesse conjunto é usado como um nó de contexto para a etapa seguinte. São unidos os conjuntos de nós identificados por esta etapa. Por exemplo, **Child:: pedido/filho:: OrderDetail** seleciona o **\<OrderDetail>** elemento filho do **\<Order>** elemento filho do nó de contexto.  
   
     > [!NOTE]  
     >  Na implementação de XPath do SQLXML 4.0, todas as consultas XPath começam no contexto raiz, mesmo que o XPath não seja explicitamente absoluto. Por exemplo, uma consulta XPath que comece com "Customer" é tratada como "/Customer". No cliente de consulta XPath **[pedido]**, o cliente começa no contexto raiz, mas a ordem começa no contexto do cliente. Para obter mais informações, consulte [introdução ao uso de consultas XPath &#40;SQLXML 4,0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
@@ -49,15 +48,15 @@ ms.locfileid: "82703108"
   
 -   **Teste de nó**  
   
-     Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Todos os eixos (`child`, `parent`, `attribute` e `self`) têm um tipo de nó principal. Para o `attribute` eixo, o tipo de nó principal é ** \<>de atributo **. Para os `parent` `child` eixos,, e `self` , o tipo de nó principal é ** \<>de elemento **.  
+     Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Todos os eixos (`child`, `parent`, `attribute` e `self`) têm um tipo de nó principal. Para o `attribute` eixo, o tipo de nó principal é **\<attribute>** . Para os `parent` `child` eixos,, e `self` , o tipo de nó principal é **\<element>** .  
   
-     Por exemplo, se o caminho do local especificar **Child:: Customer**, os filhos do elemento ** \<>do cliente** do nó de contexto serão selecionados. Como o `child` eixo tem ** \<>de elemento** como o tipo de nó principal, o teste de nó, Customer, será true se Customer for um ** \< elemento>** node.  
+     Por exemplo, se o caminho do local especificar **Child:: Customer**, os **\<Customer>** filhos do elemento do nó de contexto serão selecionados. Como o `child` eixo tem **\<element>** como o tipo de nó principal, o teste de nó, Customer, será verdadeiro se o cliente for um **\<element>** nó.  
   
 -   **Predicados da seleção (zero ou mais)**  
   
      Um predicado filtra um conjunto de nós em relação a um eixo. A especificação de predicados de seleção em uma expressão XPath é semelhante à especificação de uma cláusula WHERE em uma instrução SELECT. O predicado é especificado entre colchetes. A aplicação do teste especificado nos predicados de seleção filtra os nós retornados pelo teste de nó. Para cada nó no conjunto de nós a ser filtrado, a expressão de predicado é avaliada com esse nó como o nó de contexto, com o número de nós no conjunto de nós como o tamanho do contexto. Se a expressão de predicado for avaliada como TRUE para esse nó, o nó será incluído no conjunto de nós resultante.  
   
-     A sintaxe de uma etapa de local é o nome do eixo e o teste de nó separados por dois-pontos duplos (::), seguidos por zero ou mais expressões entre colchetes. Por exemplo, a expressão XPath (caminho do local) **Child:: Customer [ @CustomerID = ' ALFKI ']** seleciona todos os elementos filho do ** \< cliente>** do nó de contexto. Em seguida, o teste no predicado é aplicado ao conjunto de nós, que retorna somente os nós do elemento de ** \<>do cliente** com o valor de atributo ' ALFKI ' para seu atributo **CustomerID** .  
+     A sintaxe de uma etapa de local é o nome do eixo e o teste de nó separados por dois-pontos duplos (::), seguidos por zero ou mais expressões entre colchetes. Por exemplo, a expressão XPath (caminho do local) **Child:: Customer [ @CustomerID = ' ALFKI ']** seleciona todos os **\<Customer>** elementos filho do nó de contexto. Em seguida, o teste no predicado é aplicado ao conjunto de nós, que retorna apenas os **\<Customer>** nós de elemento com o valor de atributo ' ALFKI ' para seu atributo **CustomerID** .  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Especificando um eixo &#40;SQLXML 4,0&#41;](specifying-an-axis-sqlxml-4-0.md)  

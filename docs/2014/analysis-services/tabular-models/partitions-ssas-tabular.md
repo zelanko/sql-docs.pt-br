@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c40ce510c86ab72ab0c35d60c8080dcf2f250f91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066897"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938807"
 ---
 # <a name="partitions-ssas-tabular"></a>Partições (SSAS tabular)
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As partições criadas usando a caixa de diálogo Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante a criação do modelo aplicam-se ao banco de dados de workspace modelo. Quando o modelo é implantado, as partições definidas para o banco de dados de workspace modelo são duplicadas no banco de dados modelo implantado. Você ainda pode criar e gerenciar partições para um banco de dados modelo implantado usando a caixa de diálogo Partições no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  As informações fornecidas neste tópico descrevem partições criadas durante a criação modelo usando a caixa de diálogo Gerenciador de Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter informações sobre como criar e gerenciar partições para um modelo implantado, consulte [Criar e gerenciar partições de modelos tabulares &#40;SSAS de Tabela&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "66066897"
   
 -   [Tarefas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Benefícios  
  Partições, em modelos tabulares, dividem uma tabela em objetos de partição lógicos. Cada partição pode ser processada independentemente de outras partições. Por exemplo, uma tabela pode incluir determinados conjuntos de linha que contêm dados que raramente são alterados, mas outros conjuntos de linha têm dados que são alterados frequentemente. Nestes casos, não há necessidade de processar todos os dados quando você realmente só deseja processar uma parte deles. As partições permitem que você divida porções de dados que você deseja processar com frequência dos dados que podem ser processados com menos frequência.  
   
  O design de modelo eficaz utiliza partições para eliminar processamento desnecessário e carga de processador subsequente em servidores do Analysis Services, enquanto, ao mesmo tempo, faz certos dados que são processados e atualizados com bastante frequência refletirem os dados mais recentes de fontes de dados. O modo como você implementa e utiliza partições durante a criação de modelo pode ser muito diferente de como partições são implementadas e utilizadas para modelos implantados. Mantenha em mente que, durante a fase de criação modelo, você pode estar trabalhando com somente um subconjunto dos dados que estarão, no final das contas, em seu modelo implantado.  

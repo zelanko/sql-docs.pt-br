@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef15fccda450ccb94264f73289b77fce74789acc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873615"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970476"
 ---
 # <a name="data-collector-security"></a>Segurança do coletor de dados
   O coletor de dados usa o modelo de segurança baseado em função implementado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Esse modelo permite que o administrador do banco de dados execute várias tarefas de coletor de dados em um contexto de segurança que tem apenas as permissões exigidas para executar a tarefa. Essa abordagem também é usada para operações que envolvem tabelas internas que só podem ser acessadas usando um procedimento armazenado ou exibição. Nenhuma permissão é concedida a tabelas internas. Em vez disso, as permissões são verificadas no usuário do procedimento armazenado ou na exibição usada para acessar a tabela.  
@@ -48,7 +47,7 @@ ms.locfileid: "62873615"
   
  Essas funções são armazenadas no banco de dados msdb. Por padrão, nenhum usuário é membro dessas funções de banco de dados. A associação do usuário a elas deve ser explicitamente concedida.  
   
- Os usuários que são membros da `sysadmin` função de servidor fixa têm acesso completo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a objetos de agente e exibições do coletor de dados. Porém, eles precisam ser adicionados explicitamente à funções de coletor de dados.  
+ Os usuários que são membros da `sysadmin` função de servidor fixa têm acesso completo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de agente e exibições do coletor de dados. Porém, eles precisam ser adicionados explicitamente à funções de coletor de dados.  
   
 > [!IMPORTANT]  
 >  Os membros das funções db_ssisadmin e dc_admin podem elevar seus privilégios para sysadmin. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e os pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança sysadmin do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégios ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros sysadmin às funções db_ssisadmin e dc_admin.  
@@ -69,7 +68,7 @@ ms.locfileid: "62873615"
 -   **SQLAgentUserRole**. Essa função é necessária para criar agendas e executar tarefas.  
   
     > [!NOTE]  
-    >  Os proxies criados para o coletor de dados devem conceder `dc_admin` acesso ao para criá-los e usá-los em qualquer etapa de trabalho que exija um proxy.  
+    >  Os proxies criados para o coletor de dados devem conceder acesso ao `dc_admin` para criá-los e usá-los em qualquer etapa de trabalho que exija um proxy.  
   
 -   **dc_operator**. Os membros `dc_admin` herdam as permissões dadas a **dc_operator**.  
   

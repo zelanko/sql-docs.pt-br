@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b5ec7fcb999c6c81de199aaf3676677edbdd41d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e85d91578e5c3f4b47f56eeb86aa738e37e8f59b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066822"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938757"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Propriedades de relatório de Power View (SSAS tabular)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] oferece relatórios ad hoc intuitivos para usuários comerciais, tais como analistas de dados, tomadores de decisões de negócios e operadores de informações. Eles podem criar e interagir facilmente com exibição de dados de modelos tabulares com base em pastas de trabalho PowerPivot publicadas em uma Galeria do PowerPivot ou modelos de tabela criados usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e, em seguida, implantados em instâncias do Analysis Services do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] é um aplicativo do Silverlight baseado no navegador, iniciado no SharePoint Server 2010 ou posterior.  

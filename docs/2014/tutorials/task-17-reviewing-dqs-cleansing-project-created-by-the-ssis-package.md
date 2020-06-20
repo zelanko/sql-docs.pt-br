@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc6cc258-72f5-4593-8edb-9f5bc66de9db
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d60355e28327d7953d0782782e3ec55950314fe5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067089"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Tarefa 17: Examinando o projeto de limpeza do DQS criado pelo pacote SSIS
   Nesta tarefa, você abrirá o projeto do DQS criado pelo pacote do SSIS no Cliente DQS, analisará os resultados do processo de limpeza e, se desejar, executará a limpeza interativa e exportará os resultados.  
@@ -40,13 +39,13 @@ ms.locfileid: "65484708"
   
 9. Na lista de projetos, selecione o projeto criado pelo componente Limpeza do DQS do SSIS. O nome do projeto deve estar no formato: **CleanseAndCurate. Cleanse Supplier Data. GUID (em cor vermelha)**. Talvez seja necessário classificar a lista com base na coluna **data de criação** e procurar o registro mais recente.  
   
-10. Clique em **Avançar**.  
+10. Clique em **Próximo**.  
   
 11. A página **gerenciar e exibir resultados** deve ser familiar a você da limpeza interativa que você fez anteriormente neste tutorial.  
   
 12. Revise os resultados da limpeza. Você também pode executar a limpeza interativa e exportar resultados para um arquivo do Excel ou para um banco de dados na página seguinte.  
   
-13. Clique em **Avançar**. Nessa página **Exportar** , você pode exportar os resultados para um arquivo do Excel, um arquivo CSV ou um banco de dados SQL.  
+13. Clique em **Próximo**. Nessa página **Exportar** , você pode exportar os resultados para um arquivo do Excel, um arquivo CSV ou um banco de dados SQL.  
   
 14. Clique em **concluir** para concluir a atividade.  
   
@@ -55,6 +54,6 @@ ms.locfileid: "65484708"
 16. Observe que o valor do campo **IsActive** para o projeto é **encerrado** agora.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Final](../../2014/tutorials/conclusion.md)  
+ [Conclusão](../../2014/tutorials/conclusion.md)  
   
   

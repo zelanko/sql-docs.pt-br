@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6fcb8be3b7803402d6e20510d95f293107b66540
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 3efc3dc8b42fc08969cc1afb85d4e629f6759e10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000806"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930267"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Opções (página Execução da consulta/SQL Server/Avançado)
   Várias opções estão disponíveis usando o comando SET. Use essa página para especificar uma opção **set** para executar consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Editor de Consultas do SQL Server. Elas não têm nenhum efeito em outros editores de códigos. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para alterar as opções para as consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou no menu de atalho da janela de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Em **Execução**, clique em **Avançado**. Para obter informações sobre cada um, consulte os Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: facc534177113bd93e56e50fca3ae14c3e6b2cfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014386"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar as tabelas inseridas e excluídas
   As instruções de gatilho DML usam duas tabelas especiais: a tabela excluída e as tabelas inseridas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e gerencia automaticamente essas tabelas. É possível usar essas tabelas temporárias, residentes na memória, para testar os efeitos de algumas modificações de dados e para definir critérios para ações de gatilhos DML. Você não pode modificar diretamente os dados nas tabelas nem executar operações DDL (linguagem de definição de dados) nas tabelas, como CREATE INDEX.  
@@ -74,7 +73,7 @@ ms.locfileid: "62524372"
   
  Quando uma instrução INSERT, UPDATE ou DELETE faz referência a uma exibição que tenha um gatilho INSTEAD OF, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] chama o gatilho em vez de tomar qualquer ação direta contra qualquer tabela. O gatilho deve usar as informações apresentadas nas tabelas inseridas e excluídas para construir as instruções necessárias para implementar a ação solicitada nas tabelas base, mesmo quando o formato das informações nas tabelas inseridas e excluídas construído para a exibição for diferente do formato dos dados nas tabelas base.  
   
- O formato das tabelas inseridas e excluídas passadas para o gatilho INSTEAD OF definido em uma exibição corresponde à lista de seleção da instrução SELECT definida para exibição. Por exemplo:  
+ O formato das tabelas inseridas e excluídas passadas para o gatilho INSTEAD OF definido em uma exibição corresponde à lista de seleção da instrução SELECT definida para exibição. Por exemplo:   
   
 ```  
 USE AdventureWorks2012;  

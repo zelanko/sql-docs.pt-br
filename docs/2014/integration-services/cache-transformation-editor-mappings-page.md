@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56e4197bf4e4be1ca695778920ba8abe03bf4f7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061181"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924607"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Editor da Transformação Cache (página Mapeamentos)
   Use a página **Mapeamentos** do **Editor da Transformação Cache** para mapear as colunas de entrada na Transformação Cache para as colunas de destino no Gerenciador de conexões de cache.  
