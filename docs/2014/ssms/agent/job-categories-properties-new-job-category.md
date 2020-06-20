@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1db38c3381939ecb0842dd3e7c265d49ba6c46d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936978"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062256"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>Propriedades de categorias de trabalho e nova categoria de trabalho
   Lista os trabalhos em uma ou em todas as categorias de trabalho e permite que você adicione uma nova categoria de trabalho.  

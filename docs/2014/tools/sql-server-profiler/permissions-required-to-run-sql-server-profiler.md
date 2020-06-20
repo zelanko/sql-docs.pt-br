@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6155f01b055f123277222a8c3a9359f907ca18cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e73ffe2e127299db9a9e37e48f089aab2cccca52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054357"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Permissões necessárias para executar o SQL Server Profiler
   Por padrão, executar o [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] requer as mesmas permissões de usuário que os procedimentos armazenados Transact-SQL utilizados para criar rastreamentos. Para executar o [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], os usuários devem dispor da permissão ALTER TRACE. Para obter mais informações, veja [Permissões GRANT do servidor &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql).

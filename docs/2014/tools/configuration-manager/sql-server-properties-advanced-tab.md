@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6200171311f200c0939f93b436c77e729291fa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054434"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propriedades do SQL Server (guia Avançado)
   As propriedades a seguir aparecem por padrão na guia **Avançado** . Se as propriedades personalizadas estiverem definidas, elas também aparecerão nessa guia com seus valores.  

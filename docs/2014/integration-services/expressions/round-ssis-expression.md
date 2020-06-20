@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bfb82476d42bf471853a66b3c93736952d876071
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7208c660957b04890c0b88e8b7d1618a90b743b6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897325"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966586"
 ---
 # <a name="round-ssis-expression"></a>ROUND (Expressão SSIS)
   Retorna uma expressão numérica arredondada ao comprimento ou precisão especificados. O parâmetro de comprimento deve ser avaliado como um inteiro.  

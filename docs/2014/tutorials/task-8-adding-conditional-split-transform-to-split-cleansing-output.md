@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57e8738edf77dae56454baba9ffc1b193146b110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006343"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Tarefa 8: Adicionando a Transformação Divisão Condicional para dividir a saída da limpeza
   Nesta transformação, você adiciona uma Transformação Divisão Condicional ao fluxo de dados. A transformação Divisão Condicional pode rotear linhas para saídas diferentes com base no conteúdo dos dados. Para este tutorial, você usa a coluna saída de **status do registro** da transformação limpeza DQS. Apenas os registros corretos ou corrigidos serão carregados no servidor MDS neste tutorial. Portanto, você verifica se o **status do registro** está **correto** ou **corrigido**e combina os registros antes de carregar os registros para o MDS.  

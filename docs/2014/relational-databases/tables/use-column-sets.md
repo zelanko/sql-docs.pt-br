@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cb496137c3986b78a55862e434c153d354a42ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055018"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
   As tabelas que usam colunas esparsas podem designar um conjunto de colunas para retornar todas as colunas esparsas na tabela. Um conjunto de colunas é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. Um conjunto de colunas é como uma coluna calculada em que o conjunto de colunas não é fisicamente armazenado na tabela. Um conjunto de colunas difere de uma coluna calculada em que o conjunto de colunas é diretamente atualizável.  
@@ -139,7 +138,7 @@ GO
 ## <a name="examples"></a>Exemplos  
  Nos exemplos a seguir, uma tabela de documento contém o conjunto comum de colunas `DocID` e `Title`. O grupo de Produção quer uma coluna `ProductionSpecification` e `ProductionLocation` para todos os documentos da produção. O grupo Marketing quer uma coluna `MarketingSurveyGroup` para os documentos de marketing.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Criando uma tabela que possui um conjunto de colunas  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>a. Criando uma tabela que possui um conjunto de colunas  
  O exemplo a seguir cria a tabela que usa colunas esparsas e inclui o conjunto de colunas `SpecialPurposeColumns`. O exemplo insere duas linhas na tabela e, depois, seleciona dados da tabela.  
   
 > [!NOTE]  

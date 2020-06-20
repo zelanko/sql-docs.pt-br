@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e8481c1cce3e43287c04678ddae10ac1b0703af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d1599e7f762cc35c91389e170abcc32b559c2a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062052"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Arquivos que gerenciam soluções e projetos
   Este tópico descreve os tipos de arquivos específicos para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por padrão, todas as soluções e seus projetos são criados em \Meus Documentos\SQL Server Management Studio Projects.  

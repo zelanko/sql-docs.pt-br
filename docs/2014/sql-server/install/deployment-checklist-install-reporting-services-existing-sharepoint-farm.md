@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e7a66be0d4e002643ffe1c72ce8c44aa50f61c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d92406e6bffec0acc2db19b30c5a8ca83834b59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054872"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Lista de verificação de implantação: instalar o Reporting Services em um farm existente do SharePoint
   Os servidores de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint podem ser instalados em um novo farm do SharePoint ou em um farm existente do SharePoint. Este tópico descreve os cenários possíveis e as práticas recomendadas para a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um farm existente do SharePoint.  
@@ -28,7 +27,7 @@ ms.locfileid: "71952620"
 |Crie ou identifique as contas usadas em uma implantação de servidor de relatório. Você deve ter uma conta de serviço para o serviço de Servidor de Relatório e credenciais para conectar-se ao banco de dados de servidor de relatório||  
 |Decida sobre uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar o banco de dados do servidor de relatório. Você pode usar uma instância local ou remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você deve escolher uma instância que esteja em um computador que tenha a capacidade de memória para acomodar seus relatórios.||  
 |(Opcional) Localize o nome do servidor SMTP ou o gateway que fornece serviço de email à sua organização, se desejar usar email do servidor de relatório em assinaturas|[Configurar um servidor de relatório para entrega de email &#40;Configuration Manager SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
-|Observação: se você estiver atualizando um computador de uma versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP anterior e tiver feito alterações personalizadas nos arquivos de configuração, será necessário fazer as mesmas alterações nos arquivos de configuração, seguindo a atualização para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]o. Os arquivos afetados são **Web. config** e **Client. config**.||  
+|Observação: se você estiver atualizando um computador de uma versão CTP anterior [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e tiver feito alterações personalizadas nos arquivos de configuração, será necessário fazer as mesmas alterações nos arquivos de configuração, seguindo a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Os arquivos afetados são **web.config** e **client.config**.||  
   
 ## <a name="installation-scenarios"></a>Cenários de instalação  
  A tabela a seguir descreve os cenários possíveis durante a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um farm existente do SharePoint. O modo local permite que os relatórios sejam renderizados localmente a partir da biblioteca de documentos do SharePoint, sem integração com um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint é necessário, mas um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não é. Para obter mais informações sobre o modo local, consulte modo [local versus os relatórios do modo conectado no Visualizador de relatórios &#40;Reporting Services no modo do sharepoint&#41;](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) e [onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  

@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055058"
 ---
 # <a name="table-properties"></a>Propriedades da tabela
   Este tópico descreve as propriedades de tabela que são exibidas na caixa de diálogo Propriedades da Tabela no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como exibir essas propriedades, veja [Exibir a definição da tabela](view-the-table-definition.md).  
@@ -81,7 +80,7 @@ ms.locfileid: "68196716"
  Impede o escalonamento de bloqueios na maioria dos casos. Os bloqueios em nível de tabela não são totalmente desautorizados. Por exemplo, quando você está verificando uma tabela que não tem nenhum índice clusterizado no nível de isolamento serializável, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve usar um bloqueio de tabela para proteger a integridade dos dados.  
   
  **A tabela é replicada**  
- Indica quando a tabela é replicada em outro banco de dados usando a replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os valores possíveis são `True` ou `False`.  
+ Indica quando a tabela é replicada em outro banco de dados usando a replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os possíveis valores são `True` ou `False`.  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a>Página de Controle de Alterações  
  **Controle de alterações**  
@@ -141,7 +140,7 @@ ms.locfileid: "68196716"
   
 ### <a name="general"></a>Geral  
  **O formato de armazenamento VarDecimal está habilitado**  
- Quando `True`, esse valor somente leitura indica que `decimal` os tipos `numeric` de dados e são armazenados usando o formato de armazenamento vardecimal. Para alterar essa opção, use a `vardecimal storage format` opção de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). O formato de armazenamento vardecimal foi preterido. Em vez disso, use compactação ROW.  
+ Quando `True` , esse valor somente leitura indica que `decimal` `numeric` os tipos de dados e são armazenados usando o formato de armazenamento vardecimal. Para alterar essa opção, use a `vardecimal storage format` opção de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). O formato de armazenamento vardecimal foi preterido. Em vez disso, use compactação ROW.  
   
  **Espaço do índice**  
  A quantidade de espaço em megabytes que os índices ocupam na tabela. Este valor não inclui o uso do espaço de índice XML para a tabela. Se os índices XML pertencerem à tabela, use [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) .  
@@ -161,7 +160,7 @@ ms.locfileid: "68196716"
  **Esquema de partição**  
  Nome do esquema de partição se a tabela estiver particionada. Se a tabela não for particionada, o campo fica em branco.  
   
- **Número de partições**  
+ **Número of partições**  
  O número de partições da tabela.  
   
  **Esquema de partição FILESTREAM**  

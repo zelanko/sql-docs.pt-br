@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e476880103a69ae016c6720f36e26ef884db6f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055400"
 ---
 # <a name="create-a-login"></a>Crie um logon
   Este tópico descreve como criar um logon no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Um logon é a identidade da pessoa ou do processo que está se conectando a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -36,7 +35,7 @@ ms.locfileid: "63012024"
   
 -   **Antes de começar:**  
   
-     [Informações](#Background)  
+     [Tela de fundo](#Background)  
   
      [Segurança](#Security)  
   
@@ -216,7 +215,7 @@ ms.locfileid: "63012024"
  **Com Concessão**  
  Reflete o estado da opção WITH GRANT para a permissão listada. Essa caixa é somente leitura. Para aplicar essa permissão, use a instrução [GRANT](/sql/t-sql/statements/grant-transact-sql) .  
   
- **Negar**  
+ **Deny**  
  Selecione para negar essa permissão ao logon. Desmarque para revogar essa permissão.  
   
 ### <a name="status"></a>Status  
@@ -237,7 +236,7 @@ ms.locfileid: "63012024"
  Selecione esta opção para habilitar ou desabilitar o logon. Esta opção usa a instrução ALTER LOGON com a opção ENABLE ou DISABLE.  
   
  **Autenticação do SQL Server**  
- O logon da caixa de seleção **está bloqueado** só estará disponível se o logon selecionado se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conectar usando a autenticação e o logon tiver sido bloqueado. Essa configuração é somente leitura. Para desbloquear um logon bloqueado, execute ALTER LOGIN com a opção UNLOCK.  
+ O logon da caixa de seleção **está bloqueado** só estará disponível se o logon selecionado se conectar usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a autenticação e o logon tiver sido bloqueado. Essa configuração é somente leitura. Para desbloquear um logon bloqueado, execute ALTER LOGIN com a opção UNLOCK.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

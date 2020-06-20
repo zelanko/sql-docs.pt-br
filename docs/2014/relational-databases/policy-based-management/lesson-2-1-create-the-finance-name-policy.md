@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 184865166da659ae00308eb1192e832989949da6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792910"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061632"
 ---
 # <a name="create-the-finance-name-policy"></a>Criar a política Nome Financeiro
   Nessa tarefa, você criará um banco de dados chamado Finance e uma condição que exige que todas as tabelas comecem com as letras **fintbl**. Em seguida, você criará uma política e uma categoria de políticas para impor um padrão de nomenclatura para as tabelas no banco de dados Finanças.  
@@ -39,7 +38,7 @@ ms.locfileid: "67792910"
   
 3.  Na lista **Faceta** , selecione **Nome com Diversas Partes**.  
   
-4.  Na área **expressão** , na caixa **campo** , selecione ** \@nome**; na caixa **operador** , selecione **like**; e na caixa **valor** , digite **' fintbl% '** para forçar todos os nomes de tabela a começar com as letras **fintbl**.  
+4.  Na área **expressão** , na caixa **campo** , selecione ** \@ nome**; na caixa **operador** , selecione **like**; e na caixa **valor** , digite **' fintbl% '** para forçar todos os nomes de tabela a começar com as letras **fintbl**.  
   
 5.  Na página **Descrição** , digite **Os nomes da tabela de Finanças deve começar com fintbl**e, em seguida, clique em **OK** para criar a condição.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "67792910"
   
 6.  Na caixa de diálogo **Criar Nova Condição** , na caixa **Nome** , digite **Banco de Dados de Finanças**.  
   
-7.  Na caixa **expressão** , conclua a expressão para incluir ** \@Name = ' Finance '** e clique em **OK** para fechar a página condição.  
+7.  Na caixa **expressão** , conclua a expressão para incluir ** \@ name = ' Finance '** e clique em **OK** para fechar a página condição.  
   
     > [!NOTE]  
     >  Você poderia ter a guia fora da caixa **Valor** para habilitar o botão **OK** .  
@@ -74,7 +73,7 @@ ms.locfileid: "67792910"
   
 1.  Em Pesquisador de Objetos, expanda **Gerenciamento**, clique com o botão direito do mouse em **Gerenciamento de Política**e clique em **Gerenciar Categorias**.  
   
-2.  Na caixa de diálogo **gerenciar categorias de política** , em **nome**, `Finance` digite na caixa em branco e desmarque autorizar **assinaturas de banco de dados**. A opção**Autorizar Assinaturas de Banco de Dados** forçará todos os bancos de dados na instância a assinarem as políticas que pertencem a esta categoria de política. Para esta lição, somente o banco de dados Finanças deve assinar a política Nome Financeiro.  
+2.  Na caixa de diálogo **gerenciar categorias de política** , em **nome**, digite `Finance` na caixa em branco e desmarque autorizar assinaturas de banco de **dados**. A opção**Autorizar Assinaturas de Banco de Dados** forçará todos os bancos de dados na instância a assinarem as políticas que pertencem a esta categoria de política. Para esta lição, somente o banco de dados Finanças deve assinar a política Nome Financeiro.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

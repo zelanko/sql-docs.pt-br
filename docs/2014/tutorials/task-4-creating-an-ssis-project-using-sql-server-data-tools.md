@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bcf16dc7d63e6a4acca6c30871666d1ffe996192
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 935409eeb7724f4c9807aecc8ec69c4cba0735a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006495"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tarefa 4: Criando um projeto SSIS usando o SQL Server Data Tools
   Nesta tarefa, você cria um projeto do SSIS usando **SQL Server Data Tools** para automatizar a limpeza e a correspondência de dados do fornecedor.
