@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b20ab1851d02e493035414dd4682fc5330296b19
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 088068bd4ddd70879efa606b22b186eb4839eaf6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929614"
 ---
 # <a name="query-options-execution-ansi-page"></a>Execução de Opções de Consulta (página ANSI)
   Use esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o executará as consultas usando todas ou uma parte das configurações especificadas no padrão ISO (ANSI).  

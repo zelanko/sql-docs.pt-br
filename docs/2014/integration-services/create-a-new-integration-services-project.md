@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e677162d88fd1f724b53e0d1838eefd16d1a87af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060222"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917366"
 ---
 # <a name="create-a-new-integration-services-project"></a>Criar um novo projeto do Integration Services
   Este procedimento cria um novo projeto e uma nova solução do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ### <a name="to-create-a-new-integration-services-project"></a>Para criar um novo projeto Integration Services  
   
-1.  Abra o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  No menu **Arquivo** , aponte para **Novo**e clique em **Projeto**.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917355"
 ---
 # <a name="create-a-deployment-utility"></a>Criar um utilitário de implantação
   A primeira etapa da implantação de pacotes é a criação de um utilitário de implantação para um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O utilitário de implantação é uma pasta que contém os arquivos necessários para a implantação dos pacotes em um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um servidor diferente. O utilitário de implantação é criado no computador no qual o projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é armazenado.  
@@ -35,7 +34,7 @@ ms.locfileid: "66060226"
 |CreateDeploymentUtility|Um valor que especifica se um utilitário de implantação do pacote é criado quando o projeto é compilado. Essa propriedade deve ser `True` para criar um utilitário de implantação.|  
 |DeploymentOutputPath|O local, relativo ao projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , do utilitário de implantação.|  
   
- Quando você cria um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], um arquivo de manifesto, \<project name>.SSISDeploymentManifest.xml, é criado e adicionado, junto com cópias dos pacotes de projeto e dependências do pacote, à pasta bin\Deployment do projeto ou ao local especificado na propriedade DeploymentOutputPath. O arquivo de manifesto lista os pacotes, as configurações de pacote e os diversos arquivos do projeto.  
+ Quando você cria um [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projeto, um arquivo de manifesto, \<project name>.SSISDeploymentManifest.xml, é criado e adicionado, juntamente com cópias dos pacotes de projeto e dependências de pacote, para a pasta bin\Deployment no projeto ou para o local especificado na propriedade DeploymentOutputPath. O arquivo de manifesto lista os pacotes, as configurações de pacote e os diversos arquivos do projeto.  
   
  O conteúdo da pasta de implantação é atualizado toda vez que você compila o projeto. Isso significa que qualquer arquivo salvo nessa pasta que não for copiado novamente na pasta pelo processo de compilação será excluído. Por exemplo, serão excluídos arquivos de configuração do pacote salvos nas pastas de implantação.  
   
@@ -45,9 +44,9 @@ ms.locfileid: "66060226"
   
 2.  Clique com o botão direito do mouse no projeto e clique em **Propriedades**.  
   
-3.  Na caixa de diálogo ** \<nome do projeto> páginas de propriedades** , clique em **Utilitário de implantação**.  
+3.  Na caixa de diálogo ** \<project name> páginas de propriedades** , clique em **Utilitário de implantação**.  
   
-4.  Para atualizar as configurações do pacote quando os pacotes são implantados, defina **AllowConfigurationChanges** como `True`.  
+4.  Para atualizar as configurações do pacote quando os pacotes são implantados, defina **AllowConfigurationChanges** como `True` .  
   
 5.  Defina `CreateDeploymentUtility` como `True`.  
   

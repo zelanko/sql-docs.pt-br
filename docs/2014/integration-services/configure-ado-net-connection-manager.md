@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 978f50d5b12088271d5cf89ba4513b95f175fdc2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060834"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921817"
 ---
 # <a name="configure-adonet-connection-manager"></a>Configurar Gerenciador de Conexões ADO.NET
   Use a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET** para adicionar uma conexão a uma fonte de dados que pode ser acessada usando um provedor de dados .NET Framework, como o provedor de SqlClient. O gerenciador de conexões pode usar uma conexão existente ou você pode criar uma nova.  

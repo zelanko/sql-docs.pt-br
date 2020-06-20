@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 091def94-6c9c-4afc-92dc-4c2f4c2cafa0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd8d4122dca96d49fa3351375f545d32273646c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8342d4d76ebba1faf68936d41c9b41fea73bbfa7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060479"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921377"
 ---
 # <a name="confirm-delete-page"></a>Página Confirmar Exclusão
   Use a página **Confirmar Exclusão** para indicar se o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] exibirá uma mensagem de confirmação quando você excluir certos componentes.  

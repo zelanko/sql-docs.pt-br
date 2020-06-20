@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 733827ecace64ef86b54831f63fd8c2889203919
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2846918b515bba16d12d48cd7058cf25863bf569
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478961"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971176"
 ---
 # <a name="model-permissions-master-data-services"></a>Permissões de modelo (Master Data Services)
   As permissões de modelo se aplicam a todas as entidades, hierarquias derivadas, hierarquias explícitas e coleções existentes dentro do modelo. As permissões atribuídas ao modelo podem ser substituídas para qualquer objeto individual.  
@@ -30,7 +29,7 @@ ms.locfileid: "65478961"
 |----------------|-----------------|  
 |**Somente leitura**|No **Explorer**, o modelo é exibido, mas o usuário não pode adicionar ou remover membros e não pode atualizar valores de atributo, associações de hierarquia ou associações de coleção.|  
 |**Atualização**|No **Explorer**, o modelo é exibido e o usuário pode adicionar e remover membros, pode atualizar valores de atributo, associações de hierarquia e associações de coleção.|  
-|**Negar**|O modelo não é exibido.|  
+|**Deny**|O modelo não é exibido.|  
   
  Quando você atribui permissão a um modelo, o usuário obtém acesso a todas as versões do modelo. Não é possível atribuir permissão a uma versão individual.  
   

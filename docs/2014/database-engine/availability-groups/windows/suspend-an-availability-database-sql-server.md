@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49afe868a509f84160fc1ad154135e8e67f6900a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797956"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936387"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender um banco de dados de disponibilidade (SQL Server)
   Você pode suspender um banco de dados de disponibilidade no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Observe que um comando para suspender precisa ser emitido na instância do servidor que hospeda o banco de dados para ser suspenso ou retomado.  
@@ -31,7 +30,7 @@ ms.locfileid: "72797956"
   
 |Banco de dados suspenso|Efeito do comando de suspensão|  
 |------------------------|-------------------------------|  
-|Banco de dados secundário|Somente o banco de dados secundário local é suspenso e seu estado de sincronização torna-se NOT SYNCHRONIZING. Outros bancos de dados secundários não são afetados. O banco de dados suspenso para de receber e aplicar dados (registros de log) e começa ficar desatualizado em relação ao banco de dados primário. Conexões existentes nas secundários legíveis permanecem utilizáveis. Novas conexões para o banco de dados suspenso na secundário legível não serão permitidas até que o movimento de dados seja continuado.<br /><br /> O banco de dados primário permanece disponível. Se você suspender cada um dos bancos de dados secundários correspondentes, o banco de dados primário será executado exposto.<br /><br /> ** \* Importante \* \* ** Enquanto um banco de dados secundário é suspenso, a fila de envio do banco de dados primário correspondente acumulará os registros de log de transação não enviados. As conexões para a réplica secundária retornam dados que estavam disponíveis no momento em que o movimento de dados foi suspenso.|  
+|Banco de dados secundário|Somente o banco de dados secundário local é suspenso e seu estado de sincronização torna-se NOT SYNCHRONIZING. Outros bancos de dados secundários não são afetados. O banco de dados suspenso para de receber e aplicar dados (registros de log) e começa ficar desatualizado em relação ao banco de dados primário. Conexões existentes nas secundários legíveis permanecem utilizáveis. Novas conexões para o banco de dados suspenso na secundário legível não serão permitidas até que o movimento de dados seja continuado.<br /><br /> O banco de dados primário permanece disponível. Se você suspender cada um dos bancos de dados secundários correspondentes, o banco de dados primário será executado exposto.<br /><br /> Importante enquanto um banco de dados secundário é suspenso, a fila de envio do banco de dados primário correspondente acumulará os registros de log de transação não enviados. ** \* \* \* \* ** As conexões para a réplica secundária retornam dados que estavam disponíveis no momento em que o movimento de dados foi suspenso.|  
 |Banco de dados primário|O banco de dados primário para o movimento de dados para todos os bancos de dados secundários conectados. O banco de dados primário continua sendo executado em um modo exposto. O banco de dados primário permanece disponível para clientes, e as conexões existentes em um banco de dados secundário legível permanecem utilizáveis e novas conexões podem ser feitas.|  
   
 > [!NOTE]  

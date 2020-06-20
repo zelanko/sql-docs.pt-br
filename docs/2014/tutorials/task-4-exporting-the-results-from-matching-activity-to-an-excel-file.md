@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4ed1d29af328a162eafadb1ce7a160c262bdcba3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd85a523804232deff14f2e1da5485229f943dd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999657"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarefa 4: Exportando os resultados da atividade de correspondência para um arquivo do Excel
   Nesta tarefa, você exportará os resultados da atividade de correspondência para um arquivo do Excel.
@@ -26,7 +25,7 @@ ms.locfileid: "78177244"
 
 3.  Clique em **procurar** e navegue até a pasta onde você deseja armazenar o arquivo de saída.
 
-4.  Digite **cleaned e MATCHED suppliers. xls** para o nome e clique em **abrir**.
+4.  Digite **limpo e com correspondência Suppliers.xls** para o nome e clique em **abrir**.
 
 5.  Confirme se o **registro dinâmico** está selecionado para a **regra sobrevivência**. Quando você selecionar essa opção, o registro dinâmico de cada cluster será escolhido como a saída de um cluster. As outras opções para a Regra de Sobrevivência são:
 
@@ -44,7 +43,7 @@ ms.locfileid: "78177244"
 
 8.  Clique em **concluir** para concluir a atividade de correspondência.
 
-9. Abra o arquivo **supplied e MATCHED Vendors. xlsx** e confirme se você não vê duplicatas (CódigoDoFornecedor).
+9. Abra o arquivo de **Suppliers.xlsxlimpo e correspondido** e confirme se você não vê duplicatas (CódigoDoFornecedor).
 
  Agora, você tem dados de fornecedor que foram limpos e correspondidos para remover duplicatas.
 

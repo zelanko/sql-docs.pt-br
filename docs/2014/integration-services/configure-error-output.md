@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f61748b3a1a691a943deec67fcbcfba4ece682b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921567"
 ---
 # <a name="configure-error-output"></a>Configurar Saída de Erro
   Use a caixa de diálogo **Configurar Saída de Erro** para configurar opções de tratamento de erros em transformações de fluxo de dados com suporte a saída de erros.  
@@ -25,7 +24,7 @@ ms.locfileid: "66060642"
  Para saber mais sobre como trabalhar com saídas de erro, consulte [Tratamento de erros em dados](data-flow/error-handling-in-data.md).  
   
 ## <a name="options"></a>Opções  
- **Entrada ou Saída**  
+ **Entrada ou saída**  
  Visualize o nome da saída.  
   
  **Coluna**  

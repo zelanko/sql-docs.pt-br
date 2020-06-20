@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aba02928ead04c3ad4ab1027f86e367b7bb787d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066778"
 ---
 # <a name="start-system-monitor-windows"></a>Iniciar o Monitor do Sistema (Windows)
   Use o Monitor do Sistema para monitorar a utilização de recursos do sistema. Colete e visualize dados de desempenho em tempo real, na forma de contadores, referentes a recursos de servidor, como uso de processador e memória, e a vários recursos do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como bloqueios e transações.  

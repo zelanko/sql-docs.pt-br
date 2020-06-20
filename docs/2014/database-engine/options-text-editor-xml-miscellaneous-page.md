@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 51ad78c95881daacebcb3f2b7999a299cd4ebd7d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2e91eb8e0704b7c07fac285986a0827e4d79b160
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000586"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929588"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opções (página Editor de texto – XML – Diversos)
 
@@ -44,4 +43,4 @@ A caixa de diálogo **Opções** permite alteração das configurações de pree
   
 ## <a name="caching"></a>Cache  
  **Esquemas**  
- Especifica o local do cache de esquema. O botão Procurar (...) abre o local d cache de esquema atual em uma janela nova. O local padrão é * \< Management Studio diretório de instalação>* \Xml\Schemas.  
+ Especifica o local do cache de esquema. O botão Procurar (...) abre o local d cache de esquema atual em uma janela nova. O local padrão é *\<Management Studio install directory>* \Xml\Schemas.  

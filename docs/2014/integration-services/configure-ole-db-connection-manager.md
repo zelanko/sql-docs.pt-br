@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 999ae60465bd459abb1d4a68c35520b33c6410fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060546"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921515"
 ---
 # <a name="configure-ole-db-connection-manager"></a>Configurar Gerenciador de Conexões OLE DB
   Use a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** para adicionar uma conexão a uma fonte de dados, seja ela uma nova conexão ou a cópia de uma conexão existente.  

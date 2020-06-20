@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57a494af168a8f5572bafe93f8fb47b22a954a19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936897"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Criar um grupo de disponibilidade (Transact-SQL)
   Este tópico descreve como usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] para criar e configurar um grupo de disponibilidade em instâncias de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] no qual o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é habilitado. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  
@@ -101,7 +100,7 @@ ms.locfileid: "75228787"
         GO  
         ```  
   
-    2.  O exemplo de código a seguir cria um backup completo de banco de dados de *MyDb1* e *MyDb2*. Este exemplo de código usa um compartilhamento de backup \\ \\ *fictício,*\\o arquivos de arquivos de arquivos de*backup.*  
+    2.  O exemplo de código a seguir cria um backup completo de banco de dados de *MyDb1* e *MyDb2*. Este exemplo de código usa um compartilhamento de backup fictício, o arquivos de arquivos de arquivos de backup \\ \\ *FILESERVER* \\ *SQLbackups*.  
   
         ```sql
         -- Backup sample databases:  

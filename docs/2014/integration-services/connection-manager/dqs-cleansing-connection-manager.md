@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12b2d4d449e46b167f99b0c8e10edb3975fcd129
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e574fab210a5e7cdb760f6394209db36c24e97d5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920907"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Gerenciador de Conexões de Limpeza DQS
   Um gerenciador de conexões de Limpeza DQS permite que um pacote se conecte a um servidor [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] . A transformação de Limpeza DQS usa o gerenciador de conexões de Limpeza DQS.  

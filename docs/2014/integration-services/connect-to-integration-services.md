@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f355527002ed6d3637a3d1d895eb776c620c971d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77c9d58a08e234840c4ee2a7afe2ae5e22e8ae0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060365"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921233"
 ---
 # <a name="connect-to-integration-services"></a>Conectar-se ao Integration Services
   Antes de você se conectar ao serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o administrador deve conceder a você acesso para o serviço. Para obter mais informações, consulte [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md).  
   
 ### <a name="to-open-connect-to-integration-services-service"></a>Para abrir a conexão ao serviço do Integration Services  
   
-1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Clique em **Pesquisador de Objetos** no menu **Exibir** .  
   

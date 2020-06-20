@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 452d3ac4dae2164fa0fa172528ae398ea91fed31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c938624a3ed39fe2d41f21a21af5231aa76a8c17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936972"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>Configurar a política de failover flexível para controlar condições de failover automático (grupos de disponibilidade AlwaysOn)
   Este tópico descreve como configurar a política de failover flexível para um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Uma política de failover flexível fornece o controle granular das condições que causam um failover automático para um grupo de disponibilidade. Ao alterar as condições de falha que disparam um failover automático e a frequência de verificações de integridade, você pode aumentar ou diminuir a probabilidade de um failover automático para oferecer suporte ao seu SLA para alta disponibilidade.  
@@ -55,7 +54,7 @@ ms.locfileid: "72797745"
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária.  
   
-2.  Para um novo grupo de disponibilidade, use a instrução [Criar grupo](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] de disponibilidade. Se você estiver modificando um grupo de disponibilidade existente, use a instrução [ALTER Availability Group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+2.  Para um novo grupo de disponibilidade, use a instrução [Criar grupo de disponibilidade](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Se você estiver modificando um grupo de disponibilidade existente, use a instrução [ALTER Availability Group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
     -   Para definir o nível de condição de failover, use a opção FAILURE_CONDITION_LEVEL = *n* , em que *n* é um número inteiro de 1 a 5.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "72797745"
   
 2.  Ao adicionar uma réplica de disponibilidade a um grupo de disponibilidade, use o cmdlet `New-SqlAvailabilityGroup`. Ao modificar uma réplica de disponibilidade existente, use o cmdlet `Set-SqlAvailabilityGroup`.  
   
-    -   Para definir o nível de condição de failover, `FailureConditionLevel`use o parâmetro *Level* , em que, *Level* é um dos seguintes valores:  
+    -   Para definir o nível de condição de failover, use o `FailureConditionLevel` parâmetro *Level* , em que, *Level* é um dos seguintes valores:  
   
         |Valor|Nível|Automático é o failover iniciado em caso de...|  
         |-----------|-----------|-------------------------------------------|  
@@ -113,7 +112,7 @@ ms.locfileid: "72797745"
          -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Para definir o limite de tempo limite da verificação de `HealthCheckTimeout`integridade, use o parâmetro *n* , em que *n* é um inteiro de 15000 milissegundos (15 segundos) a 4294967295 milissegundos. O valor padrão é 30000 milissegundos (30 segundos).  
+    -   Para definir o limite de tempo limite da verificação de integridade, use o `HealthCheckTimeout` parâmetro *n* , em que *n* é um inteiro de 15000 milissegundos (15 segundos) a 4294967295 milissegundos. O valor padrão é 30000 milissegundos (30 segundos).  
   
          Por exemplo, o comando a seguir altera o tempo limite de verificação de integridade de um grupo de disponibilidade existente, `AG1`, para 120.000 milissegundos (dois minutos).  
   

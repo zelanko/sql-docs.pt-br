@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d743341d7d1d6cae23165c7c1e4b1ddb15779927
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921837"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurar pontos de verificação para reinicializar um pacote com falha
   Você pode configurar os pacotes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para reiniciá-los a partir de um ponto de falha em vez de executar novamente todo o pacote, selecionando as propriedades que se aplicam aos pontos de verificação.  
@@ -34,7 +33,7 @@ ms.locfileid: "66060766"
   
 4.  Clique com o botão direito do mouse em qualquer lugar da tela de fundo da superfície de design do fluxo de controle e clique em **Propriedades**.  
   
-5.  Defina a Propriedade SaveCheckpoints como `True`.  
+5.  Defina a Propriedade SaveCheckpoints como `True` .  
   
 6.  Digite o nome do arquivo de ponto de verificação na propriedade CheckpointFileName.  
   

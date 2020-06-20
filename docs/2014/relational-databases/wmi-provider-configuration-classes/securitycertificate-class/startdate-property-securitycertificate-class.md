@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 893e72d73062dc78ddbe33deb9b66941c30fb2a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 690a594187cae0ea359fb2244ab7fc71adfab71b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059969"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>Propriedade StartDate (classe SecurityCertificate)
   Obtém a data em que o certificado de segurança começa a ter efeito.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto [SecurityCertificate Class] SecurityCertificate-class.md) que representa um certificado de segurança.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2989f9a017f2a864b85087d6a7fc638edf11b066
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 199a3f073e0844489d4e4bbe10e6fb87cd92b48f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053402"
 ---
 # <a name="audit-change-audit-event-class"></a>Classe de evento Audit Change Audit
   A classe de evento **Audit Change Audit** ocorre sempre que uma modificação de rastreamento de auditoria é feita.  

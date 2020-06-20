@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c0f364b15053e589d87b715d124bae48a87461e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039871"
 ---
 # <a name="lesson-1-create-azure-storage-account-and-container"></a>Lição 1: Criar um contêiner e uma conta de Armazenamento do Microsoft Azure
   Antes de poder começar a armazenar SQL Server arquivos de dados no armazenamento do Azure, você deve primeiro criar uma conta de armazenamento do Azure e um contêiner de BLOB e uma assinatura de acesso compartilhado. A lição 1 orienta você pelas etapas de fazer logon na Portal de Gerenciamento do Azure, criar uma conta de armazenamento, um contêiner de BLOB e uma assinatura de acesso compartilhado.  

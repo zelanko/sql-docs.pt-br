@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7287091ddd64ef9df1c63706a2f562feed4a5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999670"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tarefa 5: Criando um atributo baseado em domínio no Excel
   Nesta tarefa, você converte o atributo de **estado** da entidade **Supplier** como um **atributo baseado em domínio**. Depois de configurar o atributo de estado para ser um baseado em domínio e publicá-lo no MDS, uma nova entidade chamada **State** será criada no servidor MDS com todos os valores na coluna e o atributo **State** da entidade **Supplier** será populado com valores da entidade **State** . Agora, o modelo **suppliers** deve ter duas entidades: **Supplier** e **State** , em que o atributo **State** da entidade **Supplier** é um atributo baseado em domínio que depende da entidade **State** .  
   
-1.  Alterne para a janela do **Excel** com **fornecedores limpos e correspondidos. xlsx** abrir.  
+1.  Alternar para a janela do **Excel** que foi **limpa e correspondente Suppliers.xlsx** aberto.  
   
 2.  Clique no botão **Atualizar** na faixa de faixas para obter as atualizações mais recentes do MDS. Você deverá ver os mais dois registros se tiver executado a **tarefa 4**opcional.  
   

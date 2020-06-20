@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8c2ac713aaf490575447d9816cfc238b0399555
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289244"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971036"
 ---
 # <a name="system-settings-master-data-services"></a>Configurações do sistema (Master Data Services)
   Para todos os aplicativos Web e serviços Web associados a um banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , você pode definir configurações do sistema.  
@@ -107,7 +106,7 @@ ms.locfileid: "79289244"
 |**Intervalo de emails de notificação**|**NotificationInterval**|A frequência, em segundos, de envio de emails de notificação. O valor padrão é **120** segundos (2 minutos).|  
 |**Número de notificações em um único email**|**NotificationsPerEmail**|O número máximo de problemas de validação que serão listados em um único email de notificação. Problemas adicionais, caso existam, não serão incluídos no email, mas estarão disponíveis no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Formato de email padrão**|**EmailFormat**|O formato de todas as notificações por email. O valor padrão é **HTML** or **1**. A configuração de banco de dados **2** indica **Texto**.<br /><br /> Observação: você pode substituir isso por um usuário individual no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], alterando e salvando o **Formato de email** na guia **Geral** do usuário.|  
-|**Expressão regular para endereço de email**|**EmailRegExPattern**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Na área funcional **permissões de usuário e grupo** , a expressão regular usada para validar o endereço de email inserido na guia **geral** de um usuário. Para obter mais informações sobre expressões regulares, consulte [elementos de linguagem de expressão regular](https://go.microsoft.com/fwlink/?LinkId=164401) na biblioteca MSDN.|  
+|**Expressão regular para endereço de email**|**EmailRegExPattern**|Na [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] área funcional **permissões de usuário e grupo** , a expressão regular usada para validar o endereço de email inserido na guia **geral** de um usuário. Para obter mais informações sobre expressões regulares, consulte [elementos de linguagem de expressão regular](https://go.microsoft.com/fwlink/?LinkId=164401) na biblioteca MSDN.|  
 |**Conta de Database Mail**|**EmailProfilePrincipalAccount**|Exibe a conta do Database Mail a ser usada ao enviar notificações por email. O perfil padrão é **mds_email_user**.|  
 |**Perfil de Database Mail**|**DatabaseMailProfile**|O perfil do Database Mail a ser usado ao enviar notificações por email. O valor padrão é vazio.|  
 ||**ValidationIssueHTML**|No formato HTML, o texto do email que os usuários obtêm quando há falha na validação de uma regra de negócios.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0341d9ba11cd66fdbfb72a05521028098c56c400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701937"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019436"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   Retorna o nome do tipo SQL para um token do tipo BCP especificado.  
@@ -69,21 +68,21 @@ fIsMaxType
 |`SQLDATETIME`|Você pode usar o|**datetime**|  
 |`SQLBITN`|Você pode usar o|**bit-null**|  
 |`SQLBIT`|Você pode usar o|**bit**|  
-|`SQLBIGCHAR`|No|**char**|  
-|`SQLCHARACTER`|No|**char**|  
-|`SQLBIGVARCHAR`|No|**varchar**|  
-|`SQLVARCHAR`|No|**varchar**|  
+|`SQLBIGCHAR`|Não|**char**|  
+|`SQLCHARACTER`|Não|**char**|  
+|`SQLBIGVARCHAR`|Não|**varchar**|  
+|`SQLVARCHAR`|Não|**varchar**|  
 |`SQLTEXT`|Você pode usar o|**text**|  
-|`SQLBIGBINARY`|No|**binary**|  
-|`SQLBINARY`|No|**Binário**|  
-|`SQLBIGVARBINARY`|No|**Varbinary**|  
-|`SQLVARBINARY`|No|**Varbinary**|  
+|`SQLBIGBINARY`|Não|**binary**|  
+|`SQLBINARY`|Não|**Binary**|  
+|`SQLBIGVARBINARY`|Não|**Varbinary**|  
+|`SQLVARBINARY`|Não|**Varbinary**|  
 |`SQLIMAGE`|Você pode usar o|**Imagem**|  
 |`SQLINTN`|Você pode usar o|**int-null**|  
 |`SQLDATETIMN`|Você pode usar o|**datetime-null**|  
 |`SQLMONEYN`|Você pode usar o|**money-null**|  
 |`SQLFLTN`|Você pode usar o|**float-null**|  
-|`SQLAOPSUM`|Você pode usar o|**Quantia**|  
+|`SQLAOPSUM`|Você pode usar o|**SUM**|  
 |`SQLAOPAVG`|Você pode usar o|**Média**|  
 |`SQLAOPCNT`|Você pode usar o|**Count**|  
 |`SQLAOPMIN`|Você pode usar o|**Min**|  
@@ -92,22 +91,22 @@ fIsMaxType
 |`SQLMONEY4`|Você pode usar o|**Smallmoney**|  
 |`SQLFLT4`|Você pode usar o|**Foto**|  
 |`SQLUNIQUEID`|Você pode usar o|**uniqueidentifier**|  
-|`SQLNCHAR`|No|**Nchar**|  
-|`SQLNVARCHAR`|No|**Nvarchar**|  
+|`SQLNCHAR`|Não|**Nchar**|  
+|`SQLNVARCHAR`|Não|**Nvarchar**|  
 |`SQLNTEXT`|Você pode usar o|**Ntext**|  
 |`SQLVARIANT`|Você pode usar o|**sql_variant**|  
 |`SQLINT8`|Você pode usar o|**Bigint**|  
-|`SQLCHARACTER`|Yes|**varchar(max)**|  
-|`SQLBIGCHAR`|Yes|**varchar(max)**|  
-|`SQLBIGVARCHAR`|Yes|**varchar(max)**|  
-|`SQLVARCHAR`|Yes|**varchar(max)**|  
-|`SQLBINARY`|Yes|**varbinary(max)**|  
-|`SQLBIGBINARY`|Yes|**varbinary(max)**|  
-|`SQLBIGVARBINARY`|Yes|**varbinary(max)**|  
-|`SQLVARBINARY`|Yes|**varbinary(max)**|  
-|`SQLNCHAR`|Yes|**nvarchar(max)**|  
-|`SQLNVARCHAR`|Yes|**nvarchar(max)**|  
-|`SQLXML`|Yes|**XML**|  
+|`SQLCHARACTER`|Sim|**varchar(max)**|  
+|`SQLBIGCHAR`|Sim|**varchar(max)**|  
+|`SQLBIGVARCHAR`|Sim|**varchar(max)**|  
+|`SQLVARCHAR`|Sim|**varchar(max)**|  
+|`SQLBINARY`|Sim|**varbinary(max)**|  
+|`SQLBIGBINARY`|Sim|**varbinary(max)**|  
+|`SQLBIGVARBINARY`|Sim|**varbinary(max)**|  
+|`SQLVARBINARY`|Sim|**varbinary(max)**|  
+|`SQLNCHAR`|Sim|**nvarchar(max)**|  
+|`SQLNVARCHAR`|Sim|**nvarchar(max)**|  
+|`SQLXML`|Sim|**Xml**|  
 |`SQLUDT`|Você pode usar o|**UDT**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Suporte de bcp_gettypename a recursos aprimorados de data e hora  
