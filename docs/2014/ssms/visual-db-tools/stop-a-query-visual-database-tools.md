@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f76a48481066ff30bbd5a825d477d0e6309abaca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03b6023bc432b21472df62e96f9d50739e2251a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000729"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>Parar uma consulta (Visual Database Tools)
   Quando você observar que uma consulta está excessivamente lenta ou que não retorna os resultados esperados, poderá pará-la se ela ainda não tiver terminado.  

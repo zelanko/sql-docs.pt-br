@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f9202483bcb2cf8e06b6e0d14834753cc666b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63185408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000385"
 ---
 # <a name="database-element-for-workload-dta"></a>Elemento de banco de dados para carga de trabalho (DTA)
   Especifica o banco de dados em que se encontra a tabela de rastreamento da carga de trabalho.  
@@ -36,7 +35,7 @@ ms.locfileid: "63185408"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
@@ -53,7 +52,7 @@ ms.locfileid: "63185408"
  Esse elemento tem o nome **DatabaseDetailsTypecomplexType** no Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Não confunda este elemento do `Database` com aquele cujo pai raiz é o elemento `Configuration`. (Consulte [Elemento Database para Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md).)  
   
 ## <a name="example"></a>Exemplo  
- Para obter um exemplo de uso `Database` desse elemento, consulte o exemplo de código no [elemento de carga de trabalho &#40;DTA&#41;](workload-element-dta.md).  
+ Para obter um exemplo de uso desse `Database` elemento, consulte o exemplo de código no [elemento de carga de trabalho &#40;DTA&#41;](workload-element-dta.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

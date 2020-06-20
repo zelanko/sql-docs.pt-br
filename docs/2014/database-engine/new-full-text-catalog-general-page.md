@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2bb0825175ac10c3dcf2dfbd4d5d28bb3dc884ba
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 96b1b41093344d8a2436f18b932495328e8e459a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858630"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930482"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Catálogo de texto completo novo (Página Geral)
   Use essa caixa de diálogo para criar um novo catálogo de texto completo.  

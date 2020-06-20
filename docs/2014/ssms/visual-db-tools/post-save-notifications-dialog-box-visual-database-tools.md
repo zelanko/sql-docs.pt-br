@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b33b83338f1886a464d1831146db683008779799
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033468"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001070"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Caixa de diálogo Notificações Pós-salvamento (Visual Database Tools)
   Essa caixa de diálogo aparece quando ocorrem erros durante tentativa de salvar alterações em tabela. Essa caixa de diálogo lista os objetos salvos com êxito no banco de dados, os objetos que não foram salvos e os erros encontrados.  

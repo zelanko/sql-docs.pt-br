@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849524"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929087"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configurar o backup gerenciado do SQL Server para Azure para grupos de disponibilidade
   Este tópico é um tutorial sobre como configurar o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para bancos de dados que fazem parte dos Grupos de Disponibilidade AlwaysOn.  
@@ -29,7 +28,7 @@ ms.locfileid: "82849524"
 -   Largura de banda de rede: isso se aplica a implementações em que as réplicas estão localizadas em locais físicos diferentes, como em uma nuvem híbrida ou em diferentes regiões do Azure em uma configuração somente em nuvem. A largura de banda de rede pode afetar a latência dos secundários e se os secundários forem definidos como replicação síncrona, então isso poderá causar aumento de log no primário. Se os secundários forem definidos para replicação síncrona, não poderão prosseguir devido à latência de rede, o que poderá resultar em perda de dados no caso de um failover na réplica secundária.  
   
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>Configurando o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para bancos de dados de disponibilidade.  
- **Permissões**  
+ **Permissões:**  
   
 -   Requer associação na função de banco de dados **db_backupoperator** , com permissões **ALTER ANY Credential** e `EXECUTE` permissões em **sp_delete_backuphistory**procedimento armazenado.  
   
