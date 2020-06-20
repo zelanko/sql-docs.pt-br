@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bae6a0354fc7d24471aa7cb7877fe066421d8b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934407"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
   Para se conectar a uma sessão de espelhamento de banco de dados, um cliente pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou o .NET Framework Data Provider para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando configurados para um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esses provedores de acesso de dados dão suporte completo ao espelhamento de banco de dados. Para obter informações sobre as considerações de programação para usar um banco de dados espelho, consulte [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Além disso, a instância de servidor principal atual deve estar disponível e o logon do cliente deve ter sido criado na instância de servidor. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). As conexões de cliente com uma sessão de espelhamento de banco de dados não envolvem a instância de servidor testemunha, se essa existir.  
@@ -85,11 +84,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Atributo de servidor  
  A cadeia de conexão deve conter um atributo `Server` que forneça o nome do parceiro inicial que deverá identificar a instância do servidor principal atual.  
   
- A maneira mais simples de identificar a instância do servidor é especificando seu nome, *<server_name>*[**\\** _<SQL_Server_instance_name>_]. Por exemplo:  
+ A maneira mais simples de identificar a instância do servidor é especificando seu nome, *<server_name>*[ **\\** _<SQL_Server_instance_name>_]. Por exemplo:  
   
  `Server=Partner_A;`  
   
- ou o  
+ ou  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -98,7 +97,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Uma consulta com o SQL Server Browser será necessária se a cadeia de conexão especificar o nome da instância nomeada, e não a porta.  
   
- Para especificar o endereço IP e a porta, `Server` o atributo usa o seguinte formulário `Server=` , *<ip_address>* `,` * \<>de porta *, por exemplo:  
+ Para especificar o endereço IP e a porta, o `Server` atributo usa o seguinte formulário, `Server=` *<ip_address>* `,` *\<port>* , por exemplo:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +117,7 @@ Server=123.34.45.56,4724;
 >  Essa cadeia de caracterse omite informações de autenticação.  
   
 > [!IMPORTANT]  
->  O agrupamento do prefixo de protocolo `Server` com o`Server=tcp:`atributo (*\<ServerName>*) é incompatível com o atributo **Network** e a especificação do protocolo em ambos os locais provavelmente resultará em um erro. Portanto, é recomendável que uma cadeia de conexão especifique o protocolo usando o atributo **Network** e especifique apenas o nome do `Server` servidor no`"Network=dbmssocn; Server=`atributo (*\<ServerName>* `"`).  
+>  O agrupamento do prefixo de protocolo com o `Server` atributo ( `Server=tcp:` *\<servername>* ) é incompatível com o atributo **Network** , e a especificação do protocolo em ambos os locais provavelmente resultará em um erro. Portanto, é recomendável que uma cadeia de conexão especifique o protocolo usando o atributo **Network** e especifique apenas o nome do servidor no `Server` atributo ( `"Network=dbmssocn; Server=` *\<servername>* `"` ).  
   
 #### <a name="failover-partner-attribute"></a>Atributo de parceiro de failover  
  Além do nome do parceiro inicial, o cliente pode especificar também o nome do parceiro de failover, que deve identificar a instância do servidor espelho atual. O parceiro de failover é especificado por uma das palavras-chave para o atributo do parceiro de failover. A palavra-chave desse atributo depende da API em uso. A tabela a seguir lista estas palavras-chave:  
@@ -129,7 +128,7 @@ Server=123.34.45.56,4724;
 |Driver ODBC|`Failover_Partner`|  
 |ADO ( ActiveX Data Object)|`Failover Partner`|  
   
- A maneira mais simples de identificar a instância do servidor é por seu nome do sistema, *<server_name>*[**\\** _<SQL_Server_instance_name>_].  
+ A maneira mais simples de identificar a instância do servidor é por seu nome do sistema, *<server_name>*[ **\\** _<SQL_Server_instance_name>_].  
   
  Alternativamente, o endereço IP e número da porta podem ser fornecidos no atributo `Failover Partner`. Se a tentativa de conexão inicial falhar durante a primeira conexão com o banco de dados, a tentativa para se conectar ao parceiro de failover não precisará depender do DNS e do SQL Server Browser. Quando uma conexão é estabelecida, o nome do parceiro de failover será sobrescrito com o nome do parceiro de failover, assim, se um failover acontecer, as conexões redirecionadas necessitarão do DNS e do SQL Server Browser.  
   
@@ -166,7 +165,7 @@ Server=123.34.45.56,4724;
   
  O tempo de retentar é calculado usando a seguinte fórmula:  
   
- **=** _RetryTime_ _PreviousRetryTime_ **+ (** 0, 8 **&#42;** _LoginTimeout_**)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0, 8 **&#42;** _LoginTimeout_**)**  
   
  Onde *PreviousRetryTime* é inicialmente 0.  
   
@@ -237,7 +236,7 @@ Server=123.34.45.56,4724;
 |Configuração|Servidor principal|Servidor espelho|Comportamento ao tentar conexão especificando Partner_A e Partner_B|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |Configuração de espelhamento original.|Partner_A|Partner_B|O Partner_A é armazenado em cache como o nome do parceiro inicial. O cliente tem sucesso na conexão com o Partner_A. O cliente baixa o nome do servidor espelho, Partner_B, e o coloca em cache, ignorando o nome do parceiro de failover fornecido pelo cliente.|  
-|O Partner_A experimenta um problema de hardware e ocorre failover (desconectando clientes).|Partner_B|none|O Partner_A ainda está no cache como o nome do parceiro inicial, mas o nome do parceiro de failover fornecido pelo cliente, Partner_B, permite que o cliente faça conexão com o servidor principal atual.|  
+|O Partner_A experimenta um problema de hardware e ocorre failover (desconectando clientes).|Partner_B|nenhum|O Partner_A ainda está no cache como o nome do parceiro inicial, mas o nome do parceiro de failover fornecido pelo cliente, Partner_B, permite que o cliente faça conexão com o servidor principal atual.|  
 |O administrador do banco de dados interrompe o espelhamento (desconectando os clientes), substitui Partner_A por Partner_C e reinicializa o espelhamento.|Partner_B|Partner_C|O cliente tenta se conectar com o Partner_A e não consegue; então o cliente tenta o Partner_B (o servidor principal atual) e tem sucesso. O provedor de acesso de dados carrega o nome do servidor espelho atual, Partner_C, e o coloca em cache como o nome do parceiro de failover atual.|  
 |O failover do serviço é enviado manualmente para o Partner_C (desconectando os clientes).|Partner_C|Partner_B|O cliente tenta conexão com o Partner_A inicialmente, e depois com o Partner_B. Os dois nomes falham, e finalmente o tempo limite da solicitação de conexão se esgota e falha.|  
   

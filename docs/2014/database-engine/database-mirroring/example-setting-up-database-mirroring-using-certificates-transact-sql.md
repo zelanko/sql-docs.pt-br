@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea87e2de984107c5a0fda6eb2629ee5cfd197841
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806747"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934179"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemplo: Configurando espelhamento de banco de dados usando certificados (Transact-SQL)
   Este exemplo mostra todos os estágios necessários para criar uma sessão de espelhamento de banco de dados com uma autenticação baseada em certificado. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que você possa garantir que sua rede está segura, recomendamos o uso de criptografia para conexões de espelhamento de banco de dados.  
@@ -257,7 +256,7 @@ ms.locfileid: "62806747"
     ```  
   
     > [!NOTE]  
-    >  Se você pretende executar em modo de alta segurança com failover automático, deixe a segurança da transação definida como completa (a configuração padrão) e adicione a testemunha assim que possível após a execução da segunda instrução SET Partner **'*`partner_server`*'** . Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
+    >  Se você pretende executar em modo de alta segurança com failover automático, deixe a segurança da transação definida como completa (a configuração padrão) e adicione a testemunha assim que possível após a execução da segunda instrução SET Partner **' *`partner_server`* '** . Observe que a testemunha deve ser configurada primeiro para conexões de saída e de entrada.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   

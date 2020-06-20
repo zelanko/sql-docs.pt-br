@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaabe8df0521838bec85a724caab705c27475c0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030318"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Agente: Classe de evento Remote Message Ack
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Remote Message Ack** quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia ou recebe uma confirmação de mensagem.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d914595c5c62016efca26dece908ee28b7010706
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487625"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940007"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modelagem de tabela (Tutorial do Adventure Works)
   Este tutorial fornece lições sobre como criar um modelo de tabela do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services usando o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -58,7 +57,7 @@ ms.locfileid: "81487625"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Banco de dados de exemplo AdventureWorksDW Este banco de dados de exemplo inclui os dados necessários para concluir este tutorial. Para baixar o banco de dados de [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)exemplo, consulte.  
+-   Banco de dados de exemplo AdventureWorksDW Este banco de dados de exemplo inclui os dados necessários para concluir este tutorial. Para baixar o banco de dados de exemplo, consulte [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) .  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 ou posterior (para uso com o recurso Analisar no Excel na lição 11)  
   

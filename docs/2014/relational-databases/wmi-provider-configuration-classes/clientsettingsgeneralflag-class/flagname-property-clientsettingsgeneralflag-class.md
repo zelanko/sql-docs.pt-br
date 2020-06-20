@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2186cd3718241aa9d145de99da9e59360b0a6418
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 249bb4024b993ff2494d994e6ead1259191e59fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065582"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>Propriedade FlagName (classe ClientSettingsGeneralFlag)
   Obtém o nome do sinalizador.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) que representa um sinalizador geral para as configurações de servidor.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

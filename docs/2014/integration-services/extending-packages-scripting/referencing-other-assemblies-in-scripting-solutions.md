@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7981bc5ca49ccba465340790789e4a22ce355b51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 39aceaeadd6941ef74069449f6c95854effc3967
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176155"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968386"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Referenciando outros assemblies em soluções de script
   A biblioteca de classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece ao desenvolvedor de scripts um conjunto avançado de ferramentas para implementar uma funcionalidade personalizada em pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A tarefa Script e o componente Script também podem usar assemblies gerenciados personalizados.

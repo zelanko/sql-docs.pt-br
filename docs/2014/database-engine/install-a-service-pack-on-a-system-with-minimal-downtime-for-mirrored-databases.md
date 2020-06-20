@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e878d31ec926f8b2cc460854f422b4d01d32d414
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932780"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar um service pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados
   Este tópico descreve como minimizar o tempo de inatividade para bancos de dados espelhados ao instalar service packs e hotfixes. Esse processo envolve atualizar sequencialmente as instâncias do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que estão participando do espelhamento de banco de dados. Essa forma de atualização, que é conhecida como *atualização sem interrupção*, reduz o tempo de inatividade para apenas um único failover. Observe que, para sessões em modo de alto desempenho, nas quais o servidor espelho está geograficamente distante do servidor principal, uma atualização sem interrupção pode ser inadequada.  
@@ -125,7 +124,7 @@ ms.locfileid: "62779590"
   
     -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: altere a opção **Modo de operação** para **Alto desempenho (assíncrono)** usando a [página Espelhamento](../relational-databases/databases/database-properties-mirroring-page.md) da caixa de diálogo **Propriedades do Banco de Dados** .  
   
-    -   Em [!INCLUDE[tsql](../includes/tsql-md.md)]: use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) para definir a segurança da transação como off.  
+    -   Em [!INCLUDE[tsql](../includes/tsql-md.md)] : use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) para definir a segurança da transação como off.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Para retornar a testemunha a uma sessão de espelhamento  
   

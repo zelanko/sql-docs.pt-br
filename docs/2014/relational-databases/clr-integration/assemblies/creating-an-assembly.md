@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 995c3a621e6de5d1b878f28c7c0fffaae3311bd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232302"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953851"
 ---
 # <a name="creating-an-assembly"></a>Criando um assembly
-  Os objetos de banco de dados gerenciado, como os procedimentos armazenados ou gatilhos, são compilados e implantados em unidades chamadas de assembly. Os assemblies DLL gerenciados devem ser [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] registrados no antes da funcionalidade que o assembly fornece pode ser usado. Para registrar um assembly em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], use a instrução CREATE ASSEMBLY. Este tópico trata sobre como registrar um assembly em um banco de dados usando a instrução CREATE ASSEMBLY e como especificar as configurações de segurança do assembly.  
+  Os objetos de banco de dados gerenciado, como os procedimentos armazenados ou gatilhos, são compilados e implantados em unidades chamadas de assembly. Os assemblies DLL gerenciados devem ser registrados no [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] antes da funcionalidade que o assembly fornece pode ser usado. Para registrar um assembly em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], use a instrução CREATE ASSEMBLY. Este tópico trata sobre como registrar um assembly em um banco de dados usando a instrução CREATE ASSEMBLY e como especificar as configurações de segurança do assembly.  
   
 ## <a name="the-create-assembly-statement"></a>A instrução CREATE ASSEMBLY  
  A instrução CREATE ASSEMBLY é usada para criar um assembly em um banco de dados. Veja um exemplo:  
@@ -39,7 +38,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não permite o registro de versões diferentes de um assembly com nome, cultura e chave pública iguais.  
   
- É possível criar assemblies que referenciem outros. Quando um assembly é criado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o também cria os assemblies referenciados pelo assembly de nível raiz, se os assemblies referenciados ainda não estiverem criados no banco de dados.  
+ É possível criar assemblies que referenciem outros. Quando um assembly é criado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o também cria os assemblies referenciados pelo assembly de nível raiz, se os assemblies referenciados ainda não estiverem criados no banco de dados.  
   
  Os usuários de banco de dados ou as funções de usuário obtêm permissões para criar, e assim ter propriedade sobre, os assemblies em um banco de dados. Para criar assemblies, a função ou o usuário de banco de dados deve ter a permissão CREATE ASSEMBLY.  
   
@@ -78,13 +77,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  O assembly é assinado com nome forte ou com Authenticode usando um certificado. Esse nome forte (ou certificado) é criado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como uma chave assimétrica (ou certificado) e tem um logon correspondente com a permissão `EXTERNAL ACCESS ASSEMBLY` (para assemblies de acesso externo) ou a permissão `UNSAFE ASSEMBLY` (para assemblies não seguros).  
   
-2.  O proprietário do banco de dados ( `EXTERNAL ACCESS ASSEMBLY` dbo) `EXTERNAL ACCESS` tem a permissão `UNSAFE ASSEMBLY` (para `UNSAFE` assemblies) ou (para assemblies) e o banco de dados tem a `ON`propriedade de banco de [dados TRUSTWORTHY](../../security/trustworthy-database-property.md) definida como.  
+2.  O proprietário do banco de dados (DBO) tem `EXTERNAL ACCESS ASSEMBLY` `EXTERNAL ACCESS` a permissão (para assemblies) ou `UNSAFE ASSEMBLY` (para `UNSAFE` assemblies) e o banco de dados tem a [propriedade de banco de dados TRUSTWORTHY](../../security/trustworthy-database-property.md) definida como `ON` .  
   
  As duas condições listadas acima também são verificadas na hora do carregamento do assembly (que inclui a execução). Pelo menos um das condições precisa ser cumprida para carregar o assembly.  
   
- É recomendável que a [propriedade de banco](../../security/trustworthy-database-property.md) de dados TRUSTWORTHY em um banco `ON` de dados não seja definida somente para executar Common Language Runtime (CLR) no processo do servidor. Em vez disso, recomendamos que seja criada uma chave assimétrica do arquivo de assembly no banco de dados mestre. É necessário criar um logon mapeado para essa chave assimétrica o qual precisa receber a concessão de uma permissão `EXTERNAL ACCESS ASSEMBLY` ou `UNSAFE ASSEMBLY`.  
+ É recomendável que a [propriedade de banco](../../security/trustworthy-database-property.md) de dados TRUSTWORTHY em um banco de dados não seja definida somente para `ON` executar Common Language Runtime (CLR) no processo do servidor. Em vez disso, recomendamos que seja criada uma chave assimétrica do arquivo de assembly no banco de dados mestre. É necessário criar um logon mapeado para essa chave assimétrica o qual precisa receber a concessão de uma permissão `EXTERNAL ACCESS ASSEMBLY` ou `UNSAFE ASSEMBLY`.  
   
- As instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE assembly.  
+ As instruções a seguir [!INCLUDE[tsql](../../../includes/tsql-md.md)] antes de executar a instrução CREATE assembly.  
   
 ```  
 USE master;   
@@ -107,7 +106,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- As instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE assembly.  
+ As instruções a seguir [!INCLUDE[tsql](../../../includes/tsql-md.md)] antes de executar a instrução CREATE assembly.  
   
 ```  
 USE master;   

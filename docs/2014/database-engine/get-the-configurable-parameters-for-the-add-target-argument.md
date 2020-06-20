@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08454543-c5c8-4ca3-9af9-f1d82264471c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a66a4e77b3858b769aef287e68cac18b8b8514ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30644bc30c0bd8c4ccbc17c616c6f24bf9455dc8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064798"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932903"
 ---
 # <a name="get-the-configurable-parameters-for-the-add-target-argument"></a>Obter os parâmetros configuráveis para o argumento ADD TARGET
   A realização desta tarefa envolve o uso do Editor de Consulta no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "66064798"
   
 -   parameter_type  
   
--   necessárias  
+-   exigido  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Antes de criar uma sessão de Eventos Estendidos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , é proveitoso descobrir quais parâmetros podem ser definidos para o uso do argumento ADD TARGET em CREAT EVENT SESSION ou ALTER EVENT SESSION.  

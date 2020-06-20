@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 12ba4a2d03e98d5f2dac79917e23a93c0a24cdb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5ebc7284b6d51f17bcddde24a0934827466e02c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481215"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960546"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Página Configuração da Web (Gerenciador de Configuração do Master Data Services)
   Use a página **Configuração da Web** para criar um novo site ou aplicativo Web. Depois de selecionar um aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , você poderá especificar o banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] do aplicativo e habilitar o Data Quality Services.  

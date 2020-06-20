@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1849029e6654fcd629499cceeff9957e5389370f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702568"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065551"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.
@@ -38,7 +37,7 @@ ms.locfileid: "82702568"
  Para escrever consultas em um documento XML usando OPENXML, você deve primeiro chamar `sp_xml_preparedocument` . Isso analisa o documento XML e retorna um identificador ao documento analisado pronto para consumo. O documento analisado é uma representação da árvore DOM (Document Object Model) de vários nós no documento XML. O identificador do documento é passado para OPENXML. Em seguida, o OPENXML fornece uma exibição do conjunto de linhas do documento, baseado nos parâmetros passados para ele.
 
 > [!NOTE]
->  `sp_xml_preparedocument`usa uma versão atualizada por SQL do analisador MSXML, Msxmlsql. dll. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.
+>  `sp_xml_preparedocument`usa uma versão atualizada por SQL do analisador MSXML, Msxmlsql.dll. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.
 
  A representação interna de um documento XML deve ser removida da memória chamando o procedimento armazenado do sistema **sp_xml_removedocument** para liberar a memória.
 

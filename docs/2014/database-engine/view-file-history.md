@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e766b8fbea0aa1e7e1e804474cd8dfa9be92832
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773292"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927537"
 ---
 # <a name="view-file-history"></a>Exibir o histórico de arquivos
   Você pode usar o comando **history** para exibir um histórico de versão para arquivos de origem controlada. Esse histórico inclui a data e hora de quando o arquivo foi adicionado ou foi feito check-in no controle do código-fonte.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c8f3f5c10a4b9f78ed77d643b34297336581f43f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996219"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Executando um diagrama de atualização usando OLE DB (SQLXML 4.0)
   Este tópico fornece uma amostra funcional do usingOLE DB para executar um updategram.  
@@ -58,7 +57,7 @@ ms.locfileid: "82717504"
 </Schema>  
 ```  
   
- A consulta retorna todos os elementos do funcionário. Com o mapeamento padrão, o elemento ** \< Person. Contact>** é mapeado para a tabela Person. Contact no banco de dados AdventureWorks.  
+ A consulta retorna todos os elementos do funcionário. Com o mapeamento padrão, o **\<Person.Contact>** elemento é mapeado para a tabela Person. Contact no banco de dados AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Para definir XML como um comando e recuperar resultados como um documento XML  
   

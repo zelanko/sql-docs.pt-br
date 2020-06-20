@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e34f46200f12861183c4da27863f47f19974dbf1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030737"
 ---
 # <a name="auto-stats-event-class"></a>Classe de evento Auto Stats
   A classe de evento **Auto Stats** indica que ocorreu uma atualização automática de estatísticas de índice e coluna.  
@@ -32,8 +31,8 @@ ms.locfileid: "63012368"
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |**DatabaseID**|**int**|O identificador do banco de dados especificado pela instrução USE *database* ou o banco de dados padrão se nenhuma instrução USE *database* tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|**Permanência**|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
-|**Final**|**datetime**|Horário em que o evento foi encerrado.|15|Sim|  
+|**Duration**|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
+|**EndTime**|**datetime**|Horário em que o evento foi encerrado.|15|Sim|  
 |**Erro**|**int**|Número de erro de um determinado evento. Geralmente é o número do erro armazenado na exibição de catálogo **sys.messages** .|31|Sim|  
 |**EventClass**|**int**|Tipo de evento = 58.|27|Não|  
 |**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bf9d2d4332721f8c0e61e9838f11a40cbfe2850
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184312"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058141"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Criar junções externas (Visual Database Tools)
   Por padrão, o [Designer de Consulta e Exibição](visual-database-tools.md) cria uma junção interna entre tabelas. As junções internas eliminam as linhas que não correspondem a uma linha da outra tabela. Entretanto, as junções externas retornam todas as linhas de pelo menos uma das tabelas ou exibições mencionadas na cláusula FROM, contanto que essas linhas atendam algum critério de pesquisa WHERE ou HAVING. Se você quiser incluir linhas de dados no conjunto de resultados que não tenha uma correspondência na tabela unida, será possível criar uma junção externa.  
@@ -29,7 +28,7 @@ ms.locfileid: "63184312"
   
 1.  Crie a junção, automática ou manualmente. Para obter detalhes, consulte [Unir tabelas automaticamente &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) ou [Unir tabelas manualmente &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
-2.  Selecione a linha de junção no painel Diagrama e, em seguida, no menu **Designer de consultas** , escolha **selecionar todas \<as linhas de TableName>**, selecionando o comando que inclui a tabela cujas linhas extras você deseja incluir.  
+2.  Selecione a linha de junção no painel Diagrama e, depois, no menu **Designer de Consultas**, escolha **Selecionar Todas as Linhas de \<tablename>** , selecionando o comando que inclui a tabela com as linhas extras que você deseja incluir.  
   
     -   Escolha a primeira tabela para criar uma junção externa esquerda.  
   

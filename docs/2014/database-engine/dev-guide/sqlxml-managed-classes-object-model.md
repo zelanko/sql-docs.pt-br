@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1726cba5-a294-4a8b-a5c6-e9d325066000
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1f49961a48c096cf01fbf7f09de0d76ac9fd4bfe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcf0a6eebeb3e57e5ef1cadcff7d01872878104c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781803"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933297"
 ---
 # <a name="sqlxml-managed-classes-object-model"></a>Modelo do objeto de classes gerenciadas do SQLXML
   Esta seção documenta o modelo de objeto de classes gerenciadas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML.  

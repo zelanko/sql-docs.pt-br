@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b190471ffa985c0f76bc44ce46acea0cd73a7ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63301726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064358"
 ---
 # <a name="operator-properties-history-page"></a>Propriedades do operador (página Histórico)
   Use esta página para exibir a data, a hora e o tipo das notificações mais recentes enviadas ao operador.  

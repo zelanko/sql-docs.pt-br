@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 53d9bfbb7418a3bc6727ccc7160a5364bac39f58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1dd43839a8eded3dc4f359fe182a069a0f99b194
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768772"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969056"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (Expressão SSIS)
   Retorna uma expressão character depois de remover espaços em branco à direita.  

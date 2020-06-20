@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3068ac7a3094605bb809ac84c63766b64fda486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196668"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002903"
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
   Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos às custas de maior sobrecarga para recuperar valores não nulos. Considere o uso de colunas esparsas quando o espaço salvo for pelo menos de 20 a 40 por cento. As colunas esparsas e os conjuntos de colunas são definidos usando as instruções [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) ou [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -166,7 +165,7 @@ ms.locfileid: "68196668"
   
      A replicação de mesclagem não oferece suporte a colunas esparsas ou conjuntos de colunas.  
   
--   controle de alterações  
+-   Change tracking  
   
      O controle de alterações oferece suporte a colunas esparsas e conjuntos de colunas. Quando um conjunto de colunas é atualizado em uma tabela, o controle de alterações trata isso como uma atualização em toda a linha. Nenhum controle de alteração detalhado é fornecido para obter o conjunto exato de colunas esparsas atualizadas pela operação de atualização de conjunto de colunas. Se as colunas esparsas forem atualizadas explicitamente por uma instrução DML, o controle de alterações funcionará de forma comum e poderá identificar o conjunto exato das colunas alteradas.  
   

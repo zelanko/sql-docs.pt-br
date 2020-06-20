@@ -8,21 +8,20 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b90fdbd9a0bc80dfc6a82416d0193b2951fe13ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996398"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon` é uma superfície topologicamente fechada definida por um anel delimitador exterior e zero ou mais anéis interiores  
   
 > [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos de recursos espaciais [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]introduzidos no `CurvePolygon` , incluindo o subtipo, baixe o White Paper, [novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obter uma descrição detalhada e exemplos de recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , incluindo o `CurvePolygon` subtipo, baixe o White Paper, [novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
- Os critérios a seguir definem atributos `CurvePolygon` de uma instância do:  
+ Os critérios a seguir definem atributos de uma `CurvePolygon` instância do:  
   
 -   O limite da instância `CurvePolygon` é definido pelo anel exterior e por todos os anéis interiores.  
   

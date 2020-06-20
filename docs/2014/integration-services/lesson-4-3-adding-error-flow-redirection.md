@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891398"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968234"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Etapa 3: Adicionar redirecionamento de fluxo de erro
   Conforme mostrado na tarefa anterior, a transformação Pesquisa de Códigos de Moeda não pode gerar uma correspondência quando a transformação tenta processar o arquivo simples de amostra corrompido que produziu um erro. Como a transformação usa as configurações padrão da saída de erro, qualquer erro faz a transformação falhar. Quando a transformação falha, o resto do pacote também falha.  
@@ -48,9 +47,9 @@ ms.locfileid: "62891398"
   
 8.  Na página **Entradas e Saídas** , expanda **Saída 0**, clique em **Colunas de Saída**e clique em **Adicionar Coluna**.  
   
-9. Na `Name` Propriedade, digite **ErrorDescription** e defina a `DataType` Propriedade como cadeia de **caracteres Unicode [DT_WSTR]**.  
+9. Na `Name` propriedade, digite **ErrorDescription** e defina a `DataType` propriedade como cadeia de **caracteres Unicode [DT_WSTR]**.  
   
-10. Na página **script** , verifique se a `LocaleID` Propriedade está definida como **Inglês (Estados Unidos.**  
+10. Na página **script** , verifique se a `LocaleID` propriedade está definida como **Inglês (Estados Unidos.**  
   
 11. Clique em **Editar Script** para abrir o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA (Tools for Applications). No método `Input0_ProcessInputRow`, digite ou cole o código a seguir.  
   

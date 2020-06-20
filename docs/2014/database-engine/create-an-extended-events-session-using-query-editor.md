@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648370ecdd2938b6fb425955dc02da8960f884c2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934527"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Criar uma sessão de Eventos Estendidos usando o Editor de Consultas
   Você pode criar uma sessão de Eventos Estendidos usando o Editor de Consulta ou pode criar uma sessão no Pesquisador de Objetos. No Pesquisador de objetos, os eventos estendidos fornecem duas interfaces de usuário que você pode usar para criar, modificar e exibir dados de sessão de evento-um assistente que orienta você pelo processo de criação de sessão de evento e uma nova interface de usuário de sessão que fornece opções de configuração mais avançadas. Você pode criar sessões de Eventos Estendidos para diagnosticar rastreamento de SQL Server que permite resolver problemas como os seguintes:  

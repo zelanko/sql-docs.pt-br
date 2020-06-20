@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 710112cfd4ab902c4c92a87602f6e362f3078d93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664081"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030529"
 ---
 # <a name="brokercorrupted-message-event-class"></a>classe de evento Broker:Corrupted Message
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um evento **Broker:Corrupted Message** quando o Service Broker recebe uma mensagem corrompida.  

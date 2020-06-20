@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 16c6597171eef10da67ad497e4303b3716298e6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940117"
 ---
 # <a name="csdlbi-concepts"></a>Conceitos da CSDLBI
   A CSDLBI (Linguagem de Definição de Esquema Conceitual com anotações de BI) baseia-se na Estrutura de Dados de Entidade, que é uma abstração para representar dados de modo a permitir que conjuntos de dados discrepantes sejam acessados, consultados ou exportados de modo programático. A CSDLBI é usada para representar modelos de dados criados com o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], pois ele oferece suporte a aplicativos e relatórios avançados orientados a dados.  
@@ -123,7 +122,7 @@ ms.locfileid: "79525437"
 ## <a name="additions-to-support-multidimensional-models"></a>Adições para oferecer suporte aos modelos multidimensionais  
  A versão 1.0 das anotações da CSDLBI oferecia suporte apenas a modelos de tabela. Na versão 1.1, foi adicionado suporte para modelos multidimensionais (cubos OLAP) criados usando ferramentas tradicionais de desenvolvimento de BI. Portanto, agora você pode emitir uma solicitação XML para um modelo multidimensional e receber uma definição CSDLBI do modelo, para uso em relatórios.  
   
- **Cubos:** Um banco [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de dados tabular SQL Server pode conter apenas um modo. Em contraposição, cada banco de dados multidimensional pode conter vários cubos e cada banco de dados é associado a um cubo padrão. Desse modo, ao emitir uma solicitação XML em um servidor multidimensional, é necessário especificar o cubo. Caso contrário, o XML do cubo padrão será retornado.  
+ **Cubos:** Um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados tabular SQL Server pode conter apenas um modo. Em contraposição, cada banco de dados multidimensional pode conter vários cubos e cada banco de dados é associado a um cubo padrão. Desse modo, ao emitir uma solicitação XML em um servidor multidimensional, é necessário especificar o cubo. Caso contrário, o XML do cubo padrão será retornado.  
   
  De qualquer forma, a representação de um cubo é muito semelhante a de um banco de dados modelo de tabela. O nome do cubo e o cubo correspondem ao nome do banco de dados de tabela e ao identificador do banco de dados.  
   

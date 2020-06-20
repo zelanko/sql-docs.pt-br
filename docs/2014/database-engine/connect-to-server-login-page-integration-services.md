@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f6ead7090e0ffc3efaa3fbf979d4012d2a43388
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808717"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934617"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>Conectar-se ao Servidor (página Logon) Integration Services
-  Use essa guia para exibir ou especificar as opções a seguir ao se [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]conectar ao.  
+  Use essa guia para exibir ou especificar as opções a seguir ao se conectar ao [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ## <a name="options"></a>Opções  
  **Tipo de servidor**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808717"
  Selecione o servidor ao qual conectar-se. Por padrão, é exibida a instância de servidor usada na última conexão.  
   
 > [!NOTE]  
->  Não use * \<ServerName>* \\ * \<InstanceName>*, porque [!INCLUDE[ssIS](../includes/ssis-md.md)] o não oferece suporte a várias instâncias em um computador.  
+>  Não use *\<servername>* \\ *\<instancename>* , porque [!INCLUDE[ssIS](../includes/ssis-md.md)] o não oferece suporte a várias instâncias em um computador.  
   
  **Autenticação**  
  Somente a Autenticação do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows está disponível para o [!INCLUDE[ssIS](../includes/ssis-md.md)]. Windows permite que um usuário conecte-se por meio de uma conta de usuário do Windows.  
