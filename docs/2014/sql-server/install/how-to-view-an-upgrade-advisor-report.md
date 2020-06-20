@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cbe8746faeba10fa023aa51e7d91a6fb074776e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042438"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Como fazer: Para exibir um relatório do Supervisor de Atualização
   O Supervisor de Atualização cria relatórios para cada componente que você seleciona para analisar. Este tópico descreve como exibir esses relatórios na página inicial do Supervisor de Atualização.  
@@ -53,7 +52,7 @@ ms.locfileid: "66094801"
   
     -   **Importância**, que indica quão importante é corrigir o problema.  
   
-    -   **Quando corrigir**, o que indica se você deve (ou deve) corrigir o problema antes ou depois de atualizar [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]para o, antes ou depois de migrar o aplicativo ou os dados, ou a qualquer momento.  
+    -   **Quando corrigir**, o que indica se você deve (ou deve) corrigir o problema antes ou depois de atualizar para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o, antes ou depois de migrar o aplicativo ou os dados, ou a qualquer momento.  
   
     -   Uma descrição breve do problema.  
   

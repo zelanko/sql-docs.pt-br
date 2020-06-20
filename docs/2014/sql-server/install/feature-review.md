@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 8e258ac763d8c5e057f8dcdb6f740aacb4fef1c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042644"
 ---
 # <a name="feature-review"></a>Revisão dos recursos
   A página Revisão de Recurso é uma lista somente leitura de recursos que foram preparados e serão configurados e concluídos no final da etapa de imagem completa. A lista de recursos é selecionada durante a etapa de preparação da imagem e não pode ser modificada durante a etapa de imagem completa. Além dos recursos exibidos, uma instância preparada inclui também o Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Gravador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

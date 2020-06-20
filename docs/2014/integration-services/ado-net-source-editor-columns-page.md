@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44781385a12f880e71e635d2d5e6f76809923453
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061698"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925817"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor de Origem ADO NET (Página Colunas)
   Use a página **Colunas** da caixa de diálogo do **Editor de Origem ADO NET** para mapear uma coluna de saída em cada coluna externa (origem).  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69956f6a24ec6f373343cebb4e60fa4ad9fea320
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c485317d1343958f9c430b73d858130097d44d75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62740457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007310"
 ---
 # <a name="replay-traces"></a>Repetir rastreamentos
   Reprodução é a capacidade para reproduzir a atividade que foi capturada em um rastreamento. Ao criar ou editar um rastreamento, você pode salvá-lo em um arquivo para reproduzi-lo posteriormente. Você pode usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para reproduzir a atividade de rastreamento de um único computador. Para cargas de trabalho grandes, use o Distributed Replay Utility para reproduzir dados de rastreamento de vários computadores.  
@@ -39,7 +38,7 @@ ms.locfileid: "62740457"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Requisitos para reprodução](replay-requirements.md)|Descreve os eventos que devem ser incluídos na definição de um rastreamento para que ele possa ser reproduzido com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Opções de repetição &#40;SQL Server Profiler&#41;](replay-options-sql-server-profiler.md)|Descreve as opções que podem ser definidas na caixa de diálogo **Configuração de Reprodução** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  

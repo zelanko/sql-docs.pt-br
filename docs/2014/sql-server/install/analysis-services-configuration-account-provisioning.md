@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 033c1ec1b0ad478e525f3ea9e8f172c5e5e31eef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 109b5d9ddddf2b78c0bb8947cfa876d233f804ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042708"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Configuração do Analysis Services - Provisionamento de conta
   Use esta página para definir o modo de servidor e para conceder permissões administrativas a usuários ou serviços que requerem acesso irrestrito ao [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A Instalação não adiciona automaticamente o Grupo local do Windows BUILTIN\Administradores à função de administrador de servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da instância que está sendo instalada. Para adicionar o grupo Administradores local à função de administrador do servidor, é necessário especificar explicitamente esse grupo.  
   
- Se você estiver instalando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], conceda permissões administrativas aos administradores de farms do SharePoint ou aos administradores de serviços responsáveis por uma implantação do servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]. Para obter mais informações [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] sobre requisitos de conta de serviço e instalação, consulte [instalar SQL Server recursos de BI com o SharePoint &#40;PowerPivot e Reporting Services&#41;](../../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md).  
+ Se você estiver instalando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], conceda permissões administrativas aos administradores de farms do SharePoint ou aos administradores de serviços responsáveis por uma implantação do servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]. Para obter mais informações sobre [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] requisitos de conta de serviço e instalação, consulte [instalar SQL Server recursos de BI com o SharePoint &#40;PowerPivot e Reporting Services&#41;](../../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md).  
   
 ## <a name="options"></a>Opções  
  **Modo de servidor** - o modo de servidor especifica o tipo de bancos de dados do Analysis Services que podem ser implantados no servidor. Os modos de servidor são determinados durante a Instalação e não podem ser modificados posteriormente. Cada modo é mutuamente exclusivo, o que significa que você precisará de duas instâncias do Analysis Services, cada uma configurada para um modo diferente, para oferecer suporte às soluções de modelo OLAP e de tabela.  

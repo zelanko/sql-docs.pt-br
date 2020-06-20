@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1c3caf606e8cbf551d7b865b30996ae0f16450a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b2e02de3cb4a4c7be9615b328b8ec0703cab690
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480724"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937777"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Recursos e tarefas do Data Quality Services
   Localize informações necessárias a qualquer um, administrador de Data Quality Services ou administrador do SQL Server, para preparar e executar um projeto de qualidade de dados.  

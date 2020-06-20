@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c912d4417842bc332262549cc604b97eaa50a44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cde55936feb7a18bd7f9a0330721016fcffe7184
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767084"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964800"
 ---
 # <a name="package-deployment-ssis"></a>Implantação de pacotes (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui ferramentas e assistentes que simplificam a implantação de pacotes do computador de desenvolvimento para o servidor de produção ou para outros computadores.  

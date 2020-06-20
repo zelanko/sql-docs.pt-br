@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bf00ecd74b64b3910ba19365920baf914f86939c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 67a932996ccbf52f5ab21fd6aa62381184ebc510
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021813"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   Uma tabela pode ter uma coluna ou colunas que podem servir como identificadores de linha exclusivos, e tabelas criadas sem uma restrição de chave primária retornam um conjunto de resultados vazio para SQLPrimaryKeys. A função ODBC [SQLSpecialColumns](sqlspecialcolumns.md) relata candidatos de identificador de linha para tabelas sem chaves primárias.  

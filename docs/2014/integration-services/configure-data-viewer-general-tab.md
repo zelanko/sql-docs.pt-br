@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24bd24e4247fb739441f041c38907580ba157629
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060665"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921747"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configurar Visualizador de Dados (guia Geral)
   Um visualizador de dados exibe os dados conforme eles migram pelo caminho que conecta dois componentes de fluxo de dados durante uma execução de pacote.  

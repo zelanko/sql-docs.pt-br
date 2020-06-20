@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7fb9e3cc9d500184e637284c4cfb8c65c48b43c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df41f9ae623053a61691076f9c96247f7a41564f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481143"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938007"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpar dados em um domínio composto
   Este tópico fornece informações sobre como limpar domínios compostos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Um domínio composto consiste em dois ou mais domínios únicos, e é mapeado para um campo de dados que consiste em vários termos relacionados. Os domínios individuais em um domínio composto devem ter uma área comum de conhecimento. Para obter informações detalhadas sobre domínios compostos, consulte [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "65481143"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Quando você testa a regra de domínio cruzado *Then* definitiva, **Valor é igual a**, a caixa de diálogo **Testar Regra de Domínio Composto** contém uma nova coluna, **Corrigir para**, que exibe os dados corretos. Em um projeto de qualidade de dados de limpeza, essa regra de domínio cruzado definitiva altera os dados com 100% de confiança e a coluna **Motivo** exibe a seguinte mensagem: Corrigido pela regra ‘*\<Nome da regra de domínio cruzado>*’. Para obter mais informações sobre regras de domínio cruzado, consulte [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Quando você testa a regra de domínio cruzado *Then* definitiva, **Valor é igual a**, a caixa de diálogo **Testar Regra de Domínio Composto** contém uma nova coluna, **Corrigir para**, que exibe os dados corretos. Em um projeto de qualidade de dados de limpeza, essa regra de domínio cruzado definitiva altera os dados com 100% de confiança e a coluna **motivo** exibe a seguinte mensagem: corrigida pela regra ' *\<Cross-Domain Rule Name>* '. Para obter mais informações sobre regras de domínio cruzado, consulte [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  A regra do domínio cruzado definitiva não funcionará para domínios compostos que estão anexados ao serviço de dados de referência.  

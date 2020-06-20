@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eba957ad1b5b9648bdc6676cd33a33afedc8c158
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706348"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022887"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   Você pode usar `SQLColAttribute` para recuperar um atributo de uma coluna de conjunto de resultados para instruções ODBC preparadas ou executadas. Chamar as `SQLColAttribute` instruções preparadas causa uma ida e volta para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client recebe dados de coluna do conjunto de resultados como parte da execução da instrução, portanto, chamar `SQLColAttribute` após a conclusão de **SQLExecute** ou **SQLExecDirect** não envolve um ida e volta do servidor.  
@@ -27,7 +26,7 @@ ms.locfileid: "82706348"
 > [!NOTE]  
 >  Os atributos do identificador de coluna ODBC não estão disponíveis em todos os conjuntos de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Identificador de campo|Description|  
+|Identificador de campo|Descrição|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
@@ -76,7 +75,7 @@ ms.locfileid: "82706348"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu campos de descritor específicos de driver para fornecer informações adicionais para indicar o nome da coleção de esquemas XML, o nome do esquema e o nome do catálogo, respectivamente. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|O nome do catálogo em que é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do catálogo, essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME do IRD, que é um campo de leitura-gravação.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|O nome do esquema no qual é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do esquema, essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME do IRD, que é um campo de leitura-gravação.|  
@@ -84,7 +83,7 @@ ms.locfileid: "82706348"
   
  Além disso, o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu campos de descritor específicos de driver para fornecer informações adicionais para uma coluna de UDT (tipo definido pelo usuário) de um conjunto de resultados ou um parâmetro de UDT de um procedimento armazenado ou consulta parametrizada. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
-|Nome da coluna|Tipo|Description|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|O nome do catálogo que contém o UDT.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|O nome do esquema que contém o UDT.|  

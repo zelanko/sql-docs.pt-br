@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0af4510e50a1cb8bcf87ac9a9ceacb1ee3c4affc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921947"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurar um Firewall do Windows para acesso ao serviço SSIS
     

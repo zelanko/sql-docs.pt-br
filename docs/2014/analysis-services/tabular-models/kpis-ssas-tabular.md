@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfbc4825908f409392f7dcca67749cbe08a407c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066997"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938829"
 ---
 # <a name="kpis-ssas-tabular"></a>KPIs (SSAS tabular)
   Um *KPI* (indicador chave de desempenho), em um modelo de tabela, é usado para medir o desempenho de um valor, definido por uma medida *Base* , em relação a um valor de *Destino* , também definido por uma medida ou por um valor absoluto. Este tópico oferece aos autores de modelo de tabela uma compreensão básica de KPIs em um modelo de tabela.  
@@ -30,7 +29,7 @@ ms.locfileid: "66066997"
   
 -   [Tarefas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Benefícios  
  Na terminologia empresarial, um KPI (indicador chave de desempenho) é uma medida quantificável para medir os objetivos empresariais. Um KPI é avaliado, frequentemente, ao longo do tempo. Por exemplo, o departamento de vendas de uma organização pode usar um KPI para medir lucro bruto mensal em relação ao lucro bruto projetado. O departamento de contabilidade pode medir as despesas mensais em relação à receita para avaliar custos, e um departamento de recursos humanos pode medir a rotatividade de funcionários trimestral. Cada um é um exemplo de KPI. Os executivos frequentemente usam KPIs agrupados em um scorecard empresarial para obter um resumo histórico rápido e preciso do sucesso da empresa ou para identificar tendências.  
   
  Um KPI em um modelo de tabela inclui:  

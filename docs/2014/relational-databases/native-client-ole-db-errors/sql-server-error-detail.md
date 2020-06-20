@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3d8c392312f98140f2a75becb175fab26c4e590
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4c03cf62dd274f9bcca213d33fb8969b26c9d980
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043523"
 ---
 # <a name="sql-server-error-detail"></a>Detalhes de erros do SQL Server
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo define a interface de erro específica do provedor [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md). A interface retorna mais detalhes sobre um erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é valiosa em caso de falha na execução de comandos ou em operações do conjunto de linhas.  

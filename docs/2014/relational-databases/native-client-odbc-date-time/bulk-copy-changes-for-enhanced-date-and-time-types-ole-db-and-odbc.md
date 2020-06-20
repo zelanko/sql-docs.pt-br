@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 73b901a60a6dd634857b72a67f7f2a2490483cff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705530"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020439"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Alterações de cópia em massa para tipos de data e hora aprimorados (OLE DB e ODBC)
   Este tópico descreve os aprimoramentos de data/hora para oferecer suporte à funcionalidade de cópia em massa. As informações deste tópico são válidas para OLE DB e ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -26,7 +25,7 @@ ms.locfileid: "82705530"
 ## <a name="format-files"></a>Arquivos de formato  
  Ao criar arquivos de formato interativamente, a tabela a seguir descreve a entrada usada para especificar os tipos de data/hora e os nomes de tipo de dados do arquivo de host correspondentes.  
   
-|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta ao aviso: "Insira o tipo de armazenamento de arquivos do campo <field_name> [\<default>]:"|  
+|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta ao prompt: "Insira o tipo de armazenamento de arquivo do campo <field_name> [ \<default> ]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -71,7 +70,7 @@ ms.locfileid: "82705530"
 |-----------------------|---------------------------|  
 |DATETIME|8|  
 |smalldatetime|4|  
-|data|3|  
+|date|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  

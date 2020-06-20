@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c236eabd3fa3766849a239d1f40d3c4fed93addf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eca69d431275229d1fb06c85c842f0257f7ef0e3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480986"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937957"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>Configurar valores de limite para limpeza e correspondência
   Este tópico descreve como configurar valores de limite que serão usados durante a limpeza auxiliada por computador e as atividades correspondentes no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -49,6 +48,6 @@ ms.locfileid: "65480986"
   
 5.  Para especificar um valor de limite para a atividade de correspondência, especifique um valor na caixa **Pontuação mínima de registro** na área **Correspondência** . Esse valor significa a pontuação mínima para um registro a ser considerado como uma correspondência para outro registro. O valor padrão é 80%.  
   
-6.  Clique em **Fechar**.  
+6.  Clique em **fechar**  
   
   

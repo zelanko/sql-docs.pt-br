@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061217"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924637"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Editor da Tarefa Inserção em Massa (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para especificar a origem e o destino da operação de inserção em massa e o formato a ser usado.  
@@ -28,23 +27,23 @@ ms.locfileid: "66061217"
   
 ## <a name="options"></a>Opções  
  **Conexão**  
- Selecione um OLE DB Gerenciador de conexões na lista ou clique em \< **nova conexão...**> para criar uma nova conexão.  
+ Selecione um OLE DB Gerenciador de conexões na lista ou clique \<**New connection...**> para criar uma nova conexão.  
   
  **Tópicos relacionados:** [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md), [Configurar Gerenciador de Conexões OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **Tabela de Destino**  
  Digite o nome da tabela ou exibição de destino ou selecione uma tabela ou exibição na lista.  
   
- **Ao**  
+ **Formatar**  
  Selecione a fonte do formato para a inserção em massa. As opções dessa propriedade são listadas na tabela a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Usar Arquivo**|Selecione um arquivo que contém a especificação de formato. Selecionar esta opção faz com que seja exibida a opção dinâmica **Arquivo de Formato**.|  
-|**Especificar**|Especifique o formato. A seleção dessa opção exibe as opções `RowDelimiter` dinâmicas `ColumnDelimiter`e.|  
+|**Especificar**|Especifique o formato. A seleção dessa opção exibe as opções dinâmicas `RowDelimiter` e `ColumnDelimiter` .|  
   
  **Arquivo**  
- Selecione um Gerenciador de conexões de arquivo simples na lista ou clique em \< **nova conexão...**> para criar uma nova conexão.  
+ Selecione um Gerenciador de conexões de arquivo simples na lista ou clique \<**New connection...**> para criar uma nova conexão.  
   
  O local do arquivo está relacionado ao Mecanismo de Banco de Dados do SQL Server especificado no gerenciador de conexões para esta tarefa. O arquivo de texto deve ser acessível pelo Mecanismo de Banco de Dados do SQL Server em um disco rígido local no servidor, por um compartilhamento ou unidade mapeada para o SQL Server. O arquivo não pode ser acessado pelo Runtime do SSIS.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "66061217"
 ## <a name="format-dynamic-options"></a>Opções Dinâmicas de Formato  
   
 ### <a name="format--use-file"></a>Formato = Usar Arquivo  
- **Arquivo de Formato**  
+ **FormatFile**  
  Digite o caminho do arquivo de formato ou clique no botão de reticências **(...)** para localizar o arquivo de formato.  
   
 ### <a name="format--specify"></a>Formato = Especificar  

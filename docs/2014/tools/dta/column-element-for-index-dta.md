@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23e6a3225dc8ddd3049f59986924c1fbb71c173b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149845"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007710"
 ---
 # <a name="column-element-for-index-dta"></a>Elemento de coluna para índice (DTA)
   Especifica as colunas onde o índice é criado para uma configuração especificada pelo usuário.  
@@ -47,9 +46,9 @@ ms.locfileid: "63149845"
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|**Tipo de dados e comprimento**|Nenhum.|  
+|**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**C'**|Pode especificar até 1024 colunas para o elemento `Index`.|  
+|**Ocorrência**|Pode especificar até 1024 colunas para o elemento `Index`.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

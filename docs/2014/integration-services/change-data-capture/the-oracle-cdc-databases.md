@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f99e6a65a699bae09df61f1de8a1a7c1ee88c52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289264"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922317"
 ---
 # <a name="the-oracle-cdc-databases"></a>Os bancos de dados Oracle CDC
   Uma Instância do Oracle CDC está associada a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo mesmo nome na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Este banco de dados é chamado de banco de dados Oracle CDC (ou banco de dados CDC).  
@@ -45,7 +44,7 @@ ms.locfileid: "79289264"
  Quando um banco de dados CDC é criado e as tabelas de origem de CDC são configuradas, o proprietário do banco de dados CDC pode conceder permissão SELECT de tabelas de espelho e pode definir funções associadas do SQL Server CDC para controlar quem acessa os dados de alteração.  
   
 ## <a name="mirror-tables"></a>Tabelas de espelho  
- Para cada tabela capturada, \<nome-do-esquema>.\<nome-da-tabela>, no banco de dados de origem do Oracle, uma tabela vazia semelhante é criada no Banco de Dados CDC, com o mesmo esquema e nome de tabela. As tabelas de origem do Oracle com o nome de esquema `cdc` (sem diferenciação de maiúsculas e minúsculas) não podem ser capturadas porque o esquema `cdc` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é reservado para o SQL Server CDC.  
+ Para cada tabela capturada, \<schema-name> . \<table-name> no banco de dados de origem Oracle, uma tabela vazia semelhante é criada no banco de dados CDC, com o mesmo esquema e nome de tabela. As tabelas de origem do Oracle com o nome de esquema `cdc` (sem diferenciação de maiúsculas e minúsculas) não podem ser capturadas porque o esquema `cdc` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é reservado para o SQL Server CDC.  
   
  As tabelas de espelho estão vazias; não há dados armazenados nelas. Elas são usadas para habilitar a infraestrutura padrão do SQL Server CDC que é usada pela instância do Oracle CDC. Para impedir que os dados sejam inseridos ou atualizados nas tabelas de espelho, todas as operações UPDATE, DELETE e INSERT são negadas para PUBLIC. Isso garante que elas não sejam modificadas.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "79289264"
 ###  <a name="change-tables-_ct"></a><a name="bkmk_change_tables_ct"></a> Tabelas de alteração (_CT)  
  As tabelas de alteração são criadas a partir das tabelas de espelho. Elas contêm os dados de alteração que são capturados do banco de dados Oracle. As tabelas são nomeadas de acordo com a convenção a seguir:  
   
- **[cdc].[\<instância-de-captura>_CT]**  
+ **[CDC]. [ \<capture-instance> _CT]**  
   
  Quando a captura é habilitada inicialmente para tabela `<schema-name>.<table-name>`, o nome de instância de captura padrão é `<schema-name>_<table-name>`. Por exemplo, o nome de instância de captura padrão para a tabela Oracle HR.EMPLOYEES é HR_EMPLOYEES e a tabela de alteração associada é [cdc]. [HR_EMPLOYEES_CT].  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 989b2992407c4a3825d42106d848598a723a41c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c971edc9b641846068313f47ca410715ec552014
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024307"
 ---
 # <a name="maintenance-plan-servers"></a>Plano de manutenção (Servidores)
   Use a caixa de diálogo **Servidores** para selecionar os servidores em que você quer executar o plano de manutenção.  

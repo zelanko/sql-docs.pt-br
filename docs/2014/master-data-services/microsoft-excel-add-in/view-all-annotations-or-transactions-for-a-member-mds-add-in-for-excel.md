@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8de36a4d7929ddba4fcb2a7e046ee81db8d08520
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b78d41895c6e2f12f167bd9567f4a9105d7a1a5c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482706"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971216"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Exibir todas as anotações ou transações de um membro (suplemento MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], exiba anotações (comentários) e transações de linhas de dados (membros) quando quiser verificar as atualizações dos dados com o passar do tempo.  

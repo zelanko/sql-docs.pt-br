@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e794185a-0a77-480a-9aea-d09f8760a6b8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dbf5686d4a947cb8629675368c59c8039c93835e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b5557b86eb52416d77b46301be3601848079d2e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952500"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042491"
 ---
 # <a name="iis-backward-compatibility-components-were-not-detected-upgrade-advisor"></a>Componentes compatíveis com versões anteriores do IIS não detectados (Supervisor de Atualização)
   O Supervisor de Atualização não detecta componentes e configurações IIS que fornecem informações usadas pela Instalação para criar novas URLs do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "71952500"
 ## <a name="corrective-action"></a>Ação corretiva  
  Após a conclusão da atualização, use a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para definir as URLs do servidor de relatório ou do Gerenciador de Relatórios. Use o Gerenciador do IIS para remover os diretórios virtuais que não são mais necessários.  
   
- Para obter mais informações, consulte [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) nos manuais online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Para obter mais informações, consulte [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online do.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Problemas de atualização do Reporting Services &#40;o supervisor de atualização&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d6c372a9b1f9af9e5948732e3bfb9384362f545
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774248"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930920"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>Exibir o relatório de envio de logs (SQL Server Management Studio)
   Este tópico explica como exibir o relatório de Status de Envio do Log de Transações no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode executar um relatório de status em um servidor monitor, servidor primário ou servidor secundário. Para ver as informações mais completas sobre sua configuração de envio de logs, exiba o relatório na instância do servidor monitor.  
@@ -32,7 +31,7 @@ ms.locfileid: "62774248"
 |Função|Informações exibidas|  
 |----------|---------------------------|  
 |Monitoramento|O nome e status de todos os servidores primários e servidores secundários que usam essa instância de servidor como servidor monitor.|  
-|Primária|Para cada banco de dados primário, o status e nome da instância de servidor atual (como o servidor primário), junto com o nome de banco de dados primário. O relatório exibe o status do trabalho de backup (que é armazenado localmente no servidor primário).<br /><br /> O relatório também contém uma linha para cada um dos servidores secundários correspondentes. Se a configuração usar um servidor monitor e o procedimento armazenado puder conectar-se ao monitor, essas linhas exibirão o status da cópia e o status de restauração do backup de log mais recente.|  
+|Primário|Para cada banco de dados primário, o status e nome da instância de servidor atual (como o servidor primário), junto com o nome de banco de dados primário. O relatório exibe o status do trabalho de backup (que é armazenado localmente no servidor primário).<br /><br /> O relatório também contém uma linha para cada um dos servidores secundários correspondentes. Se a configuração usar um servidor monitor e o procedimento armazenado puder conectar-se ao monitor, essas linhas exibirão o status da cópia e o status de restauração do backup de log mais recente.|  
 |Secundário|Para cada banco de dados secundário, o status e nome da instância de servidor atual (como o servidor secundário), junto com o nome de banco de dados secundário.<br /><br /> O relatório exibe o status da cópia e trabalhos de restauração no servidor secundário.<br /><br /> O relatório também contém uma linha para o servidor primário correspondente. Se a configuração usar um servidor monitor e o procedimento armazenado puder conectar-se ao monitor, essa linha exibirá o status do backup de log mais recente.|  
   
  As informações exibidas dependerão de a instância de servidor ser um servidor monitor, servidor primário ou servidor secundário. Se as informações não estiverem disponíveis, as células correspondentes ficarão esmaecidas.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df6ab109451fbe7cf8df1b7c615f68a6cbad02f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771082"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922187"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Funções do usuário para o serviço Change Data Capture para Oracle da Attunity
   Esta seção descreve as funções de usuário para o Serviço Change Data Capture para Oracle da Attunity. As funções descritas são funções de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , funções do Windows ou funções de banco de dados Oracle.  
@@ -139,7 +138,7 @@ ms.locfileid: "62771082"
   
  A lista a seguir descreve os privilégios necessários que devem ser concedidos ao usuário de mineração de logs:  
   
--   SELECT em \<qualquer-tabela-capturada>  
+-   Selecione ativado\<any-captured-table>  
   
 -   SELECT ANY TRANSACTION  
   

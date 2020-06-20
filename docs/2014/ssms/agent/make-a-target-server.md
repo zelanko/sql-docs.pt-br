@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd60a19234d186bb0912978589fa60fd8e8a8c22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008658"
 ---
 # <a name="make-a-target-server"></a>Criar um servidor de destino
   Este tópico descreve como criar um servidor de destino no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou SQL Server Management Objects (SMO).  
@@ -48,7 +47,7 @@ ms.locfileid: "72798191"
 ###  <a name="security"></a><a name="Security"></a> Segurança  
  Trabalhos distribuídos que possuem etapas associadas a um proxy são executados no contexto da conta proxy no servidor de destino. Certifique-se de que as seguintes condições sejam atendidas, ou as etapas de trabalho associadas a um proxy não serão baixadas do servidor mestre para o destino:  
   
--   A subchave do registro do servidor mestre **\\\<HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) é definida como 1 (true). Por padrão, essa subchave encontra-se definida como 0 (falso).  
+-   A subchave do registro do servidor mestre **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ < *instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) é definida como 1 (true). Por padrão, essa subchave encontra-se definida como 0 (falso).  
   
 -   Existe uma conta proxy no servidor de destino com o mesmo nome da conta proxy do servidor mestre sob a qual a etapa de trabalho é executada.  
   

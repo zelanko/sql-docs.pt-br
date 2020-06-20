@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 668fc8f9478c66ea7564d99c455ac43dc905de4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62640332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023433"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Mover um UCP de uma instância do SQL Server para outra (Utilitário do SQL Server)
   Este tópico descreve como usar as etapas a seguir para mover um UCP (ponto de controle do utilitário) de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para outra no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "62640332"
   
 3.  Remova todas as instâncias gerenciadas do UCP antigo. Para obter mais informações, veja [Remover uma instância do SQL Server do Utilitário do SQL Server](remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
-4.  Faça backup do data warehouse de gerenciamento do utilitário (UMDW) do UCP antigo. O nome de arquivo é Sysutility_mdw_\<GUID>_DATA e a localização padrão do banco de dados é \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, em que \<System drive> geralmente é a unidade C:\. Para obter mais informações, veja [Copiar bancos de dados com Backup e Restauração](../databases/copy-databases-with-backup-and-restore.md).  
+4.  Faça backup do data warehouse de gerenciamento do utilitário (UMDW) do UCP antigo. O nome do arquivo é Sysutility_mdw_ \<GUID> _DATA e o local padrão do banco de dados é \<System drive> : \program Files\Microsoft SQL Server \ MSSQL10_50. <UCP_Name> \MSSQL\Data \\ , em que \<System drive> normalmente é a C:\ Dirigir. Para obter mais informações, veja [Copiar bancos de dados com Backup e Restauração](../databases/copy-databases-with-backup-and-restore.md).  
   
 5.  Restaure o backup do UMDW no novo UCP. Para obter mais informações, veja [Copiar bancos de dados com Backup e Restauração](../databases/copy-databases-with-backup-and-restore.md).  
   

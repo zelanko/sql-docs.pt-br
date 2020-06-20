@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de6ee4b3ba52dec87d71bb97707a8cd8f748d854
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971766"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Criar uma exibição de assinatura (Master Data Services)
   Crie uma exibição de assinatura quando desejar criar uma exibição dos dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dado para uso por sistemas de assinatura.  
@@ -53,7 +52,7 @@ ms.locfileid: "65479943"
   
 9. Se você escolheu **Níveis Explícitos** ou **Níveis Derivados** da lista **Formato** , digite o número de níveis na hierarquia para incluir na exibição.  
   
-10. Clique em **Salvar**.  
+10. Clique em **Save** (Salvar).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exportando dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   

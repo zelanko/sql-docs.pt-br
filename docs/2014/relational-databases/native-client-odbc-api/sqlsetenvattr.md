@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 113c4508489e0f1dad8d134db7f86fc42371b456
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f0dbd4d01de9ca769c46a93f810f0149f5b86981
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702155"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021602"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
   A [referência do programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) define como os drivers de ODBC devem interpretar as especificações de atributos de **SQLSetEnvAttr** de aplicativos criados para a API do ODBC 2.*x* ou do ODBC 3.*x* . O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client obedece a essas regras.  

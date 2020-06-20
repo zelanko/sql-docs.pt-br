@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cf25fef91834e237f5cbaac26350220840830bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009137"
 ---
 # <a name="modify-user-defined-functions"></a>Modificar funções definidas pelo usuário
   Você pode modificar funções definidas pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. A modificação das funções definidas pelo usuário, como descrito abaixo, não alterará as permissões das funções, nem afetará as funções dependentes, os procedimentos armazenados ou os gatilhos.  

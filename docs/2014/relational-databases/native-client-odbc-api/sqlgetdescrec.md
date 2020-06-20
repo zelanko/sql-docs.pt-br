@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f3a2bbebc947d0c245e00c39fca2d4e69fbb5666
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 432dfc5f41d5333bf9e6cb9111464e1dcb01f579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022307"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
   Este tópico discute a funcionalidade do SQLGetDescRec que é específica para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -48,7 +47,7 @@ ms.locfileid: "82706031"
 |-|---------------|------------------|-----------------|--------------------|----------------|  
 |DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|data|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ea97a56ad10fd0545e9a550defcf673f05542c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964776"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar pacotes por meio de pontos de verificação
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode reinicializar pacotes que falharam a partir do ponto de falha, em vez de executar novamente todo o pacote. Se um pacote estiver configurado para usar pontos de verificação, serão gravadas informações sobre a execução do pacote em um arquivo de ponto de verificação. Quando o pacote com falha é executado novamente, o arquivo do ponto de verificação é usado para reiniciar o pacote a partir do ponto de falha. Se o pacote for executado com êxito, o arquivo de ponto de verificação é excluído e recriado na próxima vez que o pacote for executado.  
@@ -59,7 +58,7 @@ ms.locfileid: "62767028"
 |CheckpointUsage|Especifica se pontos de verificação são usados.|  
 |SaveCheckpoints|Indica se o pacote salva os pontos de verificação. Esta propriedade deve ser definida como Verdadeiro para reinicializar um pacote a partir de um ponto de falha.|  
   
- Além disso, você deve definir a Propriedade FailPackageOnFailure `true` como para todos os contêineres no pacote que você deseja identificar como pontos de reinicialização.  
+ Além disso, você deve definir a Propriedade FailPackageOnFailure como `true` para todos os contêineres no pacote que você deseja identificar como pontos de reinicialização.  
   
  É possível usar a propriedade ForceExecutionResult para testar o uso de pontos de verificação em um pacote. Ao definir ForceExecutionResult de uma tarefa ou contêiner como Falha, você pode imitar uma falha em tempo real. Ao executar novamente o pacote, a tarefa e os contêineres que falharam serão executados de novo.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62767028"
 |`IfExists`|Especifica que o arquivo de ponto de verificação é usado, se existir. Se o arquivo de ponto de verificação existir, o pacote reiniciará a partir do ponto da falha de execução anterior; caso contrário, será executado desde o início do fluxo de trabalho do pacote.|  
   
 > [!NOTE]  
->  A opção **/CheckPointing on on** de dtexec é equivalente a definir a `SaveCheckpoints` Propriedade do pacote como `True`e a `CheckpointUsage` Propriedade como Always. Para saber mais, veja [dtexec Utility](dtexec-utility.md).  
+>  A opção **/CheckPointing on on** de dtexec é equivalente a definir a `SaveCheckpoints` Propriedade do pacote como `True` e a `CheckpointUsage` propriedade como Always. Para saber mais, veja [dtexec Utility](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Protegendo arquivos de ponto de verificação  
  A proteção em nível de pacote não inclui proteção a arquivos de ponto de verificação; você deve proteger esses arquivos separadamente. Dados de ponto de verificação podem ser armazenados somente no sistema arquivos e você deve usar uma ACL (lista de controle de acesso) do sistema operacional para proteger o local ou a pasta onde armazena o arquivo. É importante proteger os arquivos de ponto de verificação, pois eles contém informações sobre o estado do pacote, incluindo os valores atuais de variáveis. Por exemplo, uma variável pode conter um conjunto de registros com muitas linhas de dados particulares como números de telefone. Para obter mais informações, consulte [Acesso aos arquivos usados por pacotes](../access-to-files-used-by-packages.md).  

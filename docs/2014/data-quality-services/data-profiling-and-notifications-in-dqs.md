@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 53fbe246db44b8aaa1dfda1e79d543f063919ede
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6c6a8643f3e0a09abba424498c258ae4bb91d37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480806"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937837"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Perfil de dados e notificações no DQS
   A criação do perfil de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) é o processo de analisar os dados em uma fonte de dados existente e exibir estatísticas sobre os dados nas atividades do DQS. Isso fornece a você medições automatizadas da qualidade dos dados. A criação de perfil do DQS está integrada ao gerenciamento de conhecimento do DQS e aos projetos de qualidade de dados. É dinâmica e ajustável. A criação de perfil tem dois objetivos principais: primeiro, orientá-lo durante os processos de qualidade de dados e dar suporte às suas decisões e, segundo, avaliar a efetividade dos processos. A criação de perfil do DQS tem os seguintes benefícios:  

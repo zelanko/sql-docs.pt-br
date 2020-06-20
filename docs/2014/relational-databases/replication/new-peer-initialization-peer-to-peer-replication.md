@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51e5ec3832d497f342c4fc3132a75261f6c3c154
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef3f20d6757b056abe925e087e81e07ad6358696
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060654"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>Inicialização de Novo Computador Par (replicação ponto a ponto)
   Use a página **Inicialização de Novo Computador Par** para especificar como os bancos de dados do mesmo nível foram inicializados. (Os pares devem ser inicializados antes de você concluir este assistente.) Os pares são inicializados manualmente ou usando a funcionalidade **inicializar com backup** que é fornecida pela replicação transacional. (A replicação transacional ponto a ponto não dá suporte à inicialização de pares usando um instantâneo.) Se diferentes pares tiverem que ser inicializados usando métodos diferentes, você deverá adicionar os pares separadamente executando o assistente várias vezes.  
@@ -39,10 +38,10 @@ ms.locfileid: "63022684"
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Desabilitado|  
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Nenhum|Desabilitado|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Desabilitado|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Nenhum|Habilitada|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Nenhum|habilitado|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Nenhum|habilitado|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|habilitado|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Nenhum|Habilitada|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Nenhum|habilitado|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Administrar uma topologia ponto a ponto &#40;Programação Transact-SQL de replicação&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

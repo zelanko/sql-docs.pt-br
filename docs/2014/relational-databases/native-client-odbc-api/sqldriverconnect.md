@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5f5ef42a9d04a4d1ae72382f44fdf01b62fc6b14
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 40691dfb381883b59155607fb56f4933820e3e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022639"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
   O driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define atributos de conexão que substituem ou aprimoram palavras-chave de cadeia de conexão. Várias palavras-chave de cadeia de conexão têm valores padrão especificados pelo driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

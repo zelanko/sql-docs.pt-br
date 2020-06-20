@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b3670192308efdb2bc9d1e74f5ace1d15406e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042239"
 ---
 # <a name="installation-prerequisites"></a>Pré-requisitos da instalação
   Para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja instalado com êxito, os componentes de software a seguir são necessários no computador de instalação. Eles serão instalados pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  

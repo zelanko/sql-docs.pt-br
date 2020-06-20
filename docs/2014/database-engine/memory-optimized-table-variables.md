@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f78615e20ac194f6d11d4aa2f31610ff6bb963
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774401"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930817"
 ---
 # <a name="memory-optimized-table-variables"></a>Variáveis de tabela com otimização de memória
   Além das tabelas com otimização de memória (para acesso eficiente a dados) e dos procedimentos armazenados compilados nativamente (para processamento eficiente de consulta e execução de lógica de negócios), o [!INCLUDE[hek_2](../includes/hek-2-md.md)] apresenta um terceiro tipo de objeto: o tipo de tabela com otimização de memória. Uma variável de tabela criada usando um tipo de tabela com otimização de memória é uma variável de tabela com otimização de memória.  

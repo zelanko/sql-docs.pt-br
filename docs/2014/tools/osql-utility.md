@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95782afe0de8567781316e3478d04a090f968ed5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63017187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007548"
 ---
 # <a name="osql-utility"></a>Utilitário osql
   O utilitário **osql** permite inserir instruções [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimentos de sistema e arquivos de script. Esse utilitário usa o ODBC para comunicar-se com o servidor.  
@@ -93,8 +92,8 @@ C:\>osql
  **-E**  
  Usa uma conexão confiável em vez de pedir uma senha.  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a qual se conectar. Especifica *server_name* para a conexão com a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Especifique _server_name_**\\**_instance_name_ para se conectar a uma instância nomeada [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do nesse servidor. Se nenhum servidor for especificado, o **osql** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é obrigatória quando o **osql** é executado de um computador remoto na rede.  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a qual se conectar. Especifica *server_name* para a conexão com a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Especifique _server_name_ **\\** _instance_name_ para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Se nenhum servidor for especificado, o **osql** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é obrigatória quando o **osql** é executado de um computador remoto na rede.  
   
  **-H** _wksta_name_  
  É um nome de estação de trabalho. O nome de estação de trabalho é armazenado em **sysprocesses.hostname** e exibido por **sp_who**. Se essa opção não for especificada, o nome do computador atual será presumido.  
@@ -112,7 +111,7 @@ C:\>osql
  Especifica o número de linhas a imprimir entre cabeçalhos de coluna. O padrão é imprimir títulos uma vez para cada conjunto de resultados de consulta. Use -1 para especificar que nenhum cabeçalho será impresso. Se -1 for usado, não deverá haver nenhum espaço entre o parâmetro e a configuração ( **-h-1**, não **-h -1**).  
   
  **-s** _col_separator_  
- Especifica o caractere do separador de colunas que, por padrão, é um espaço em branco. Para usar caracteres que têm significado especial para o sistema operacional (por exemplo, |; & \< >), coloque o caractere entre aspas duplas (").  
+ Especifica o caractere do separador de colunas que, por padrão, é um espaço em branco. Para usar caracteres que têm significado especial para o sistema operacional (por exemplo, |; & \< > ), coloque o caractere entre aspas duplas (").  
   
  **-w** _column_width_  
  Permite ao usuário definir a largura da tela de saída. O padrão é 80 caracteres. Quando uma linha de saída alcança sua largura de tela máxima, ela é quebrada em várias linhas.  
@@ -194,7 +193,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Comentários  
  O utilitário **osql** é iniciado diretamente do sistema operacional com as opções que diferenciam maiúsculas de minúsculas listadas aqui. Depois que o **osql**é iniciado, ele aceita instruções SQL e as envia interativamente ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os resultados são formatados e exibidos na tela (**stdout**). Use QUIT ou EXIT para sair do **osql**.  
   
- Se você não especificar um nome de usuário ao iniciar o **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o verificará as variáveis de ambiente e as usará, por exemplo, **OSQLUSER =*`user`*()** ou **OSQLSERVER = (*`server`*)**. Se nenhuma variável de ambiente for definida, o nome de usuário da estação de trabalho será usado. Se você não especificar um servidor, o nome da estação de trabalho será usado.  
+ Se você não especificar um nome de usuário ao iniciar o **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o verificará as variáveis de ambiente e as usará, por exemplo, **OSQLUSER = ( *`user`* )** ou **OSQLSERVER = ( *`server`* )**. Se nenhuma variável de ambiente for definida, o nome de usuário da estação de trabalho será usado. Se você não especificar um servidor, o nome da estação de trabalho será usado.  
   
  Se as opções **-U** ou **-P** não forem usadas, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tentará conectar usando o Modo de Autenticação do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. A autenticação baseia-se na conta do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows do usuário que está executando o **osql**.  
   
@@ -294,7 +293,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Executa o lote e então sai imediatamente e não retorna valor algum.  
   
--   SAIR **(*`query`*)**  
+-   SAIR **( *`query`* )**  
   
 > [!NOTE]  
 >  Executa o lote, incluindo a consulta, e sai depois de retornar os resultados da consulta.  
@@ -325,7 +324,7 @@ RAISERROR(50001, 10, 127)
      Erro de conversão ao selecionar valor de retorno.  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>Exibindo Tipos de Dados money e smallmoney  
- **o osql** exibe `money` os `smallmoney` tipos de dados e com duas casas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] decimais, embora armazene o valor internamente com quatro casas decimais. Considere o exemplo:  
+ o **osql** exibe os `money` tipos de dados e `smallmoney` com duas casas decimais, embora [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazene o valor internamente com quatro casas decimais. Considere o exemplo:  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

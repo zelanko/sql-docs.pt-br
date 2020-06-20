@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53ddc509c4f44677a2504b791502d530c2104bf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890164"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964866"
 ---
 # <a name="dtexec-utility"></a>Utilitário dtexec
-  O `dtexec` utilitário de prompt de comando é usado para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e executar pacotes do. O utilitário `dtexec` fornece acesso a toda a configuração e recursos de execução de pacotes, como parâmetros, conexões, propriedades, variáveis, logs e indicadores de progresso. O `dtexec` utilitário permite que você carregue pacotes dessas fontes: o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor, um arquivo de projeto. ispac, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um banco de [!INCLUDE[ssIS](../../includes/ssis-md.md)] dados, o repositório de pacotes e o sistema de arquivos.  
+  O `dtexec` Utilitário de prompt de comando é usado para configurar e executar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes do. O utilitário `dtexec` fornece acesso a toda a configuração e recursos de execução de pacotes, como parâmetros, conexões, propriedades, variáveis, logs e indicadores de progresso. O `dtexec` utilitário permite que você carregue pacotes dessas fontes: o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor, um arquivo de projeto. ispac, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados, o [!INCLUDE[ssIS](../../includes/ssis-md.md)] repositório de pacotes e o sistema de arquivos.  
   
 > [!NOTE]  
->  Ao usar a versão do utilitário `dtexec` fornecida com o [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] para executar um pacote do [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou do [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] atualiza temporariamente o pacote para o [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. No entanto, você não pode usar o utilitário `dtexec` para salvar essas alterações atualizadas. Para obter mais informações sobre como atualizar um pacote permanentemente para [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]o, consulte [atualizar pacotes de Integration Services](../install-windows/upgrade-integration-services-packages.md).  
+>  Ao usar a versão do utilitário `dtexec` fornecida com o [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] para executar um pacote do [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou do [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] atualiza temporariamente o pacote para o [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. No entanto, você não pode usar o utilitário `dtexec` para salvar essas alterações atualizadas. Para obter mais informações sobre como atualizar um pacote permanentemente para o [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] , consulte [atualizar pacotes de Integration Services](../install-windows/upgrade-integration-services-packages.md).  
   
  Este tópico inclui as seções a seguir:  
   
@@ -41,14 +40,14 @@ ms.locfileid: "62890164"
   
 -   [Sintaxe](#syntax)  
   
--   [Parameters](#parameter)  
+-   [Parâmetros](#parameter)  
   
 -   [Comentários](#remark)  
   
 -   [Exemplos](#example)  
   
 ##  <a name="integration-services-server-and-project-file"></a><a name="server"></a>Integration Services servidor e arquivo de projeto  
- Quando você usa `dtexec` o para executar pacotes no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor, `dtexec` o chama o [catálogo. create_execution &#40;banco de dados Ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database), [Catalog. set_execution_parameter_value &#40;banco de dados Ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) e [Catalog. start_execution &#40;banco de dados ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) procedimentos armazenados para criar uma execução, definir valores de parâmetro e iniciar a execução. Todos os logs de execução podem ser consultados do servidor nas exibições relacionadas ou usando relatórios padrão disponíveis no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para saber mais sobre os relatórios, consulte [Relatórios do servidor do Integration Services](../reports-for-the-integration-services-server.md).  
+ Quando você usa `dtexec` o para executar pacotes no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor, `dtexec` o chama o [catálogo. Create_execution &#40;banco de dados ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database), [Catalog. set_execution_parameter_value &#40;banco de dados ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) e [catalog. start_execution &#40;banco de dados ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) procedimentos armazenados para criar uma execução, definir valores de parâmetro e iniciar a execução. Todos os logs de execução podem ser consultados do servidor nas exibições relacionadas ou usando relatórios padrão disponíveis no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para saber mais sobre os relatórios, consulte [Relatórios do servidor do Integration Services](../reports-for-the-integration-services-server.md).  
   
  Veja a seguir um exemplo de execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -58,35 +57,35 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Quando você usar `dtexec` para executar um pacote do arquivo de projeto .ispac, as opções relacionadas são: /Proj[ect] e /Pack[age] que são usadas para especificar o caminho de projeto e nome de fluxo de pacote. Quando você converte um projeto ao modelo de implantação de projeto executando o **Assistente de Conversão de Projeto do Integration Services** do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o assistente gera um arquivo de projeto .ispac. Para obter mais informações, consulte [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md).  
   
- Você pode usar `dtexec` o com ferramentas de agendamento de terceiros para agendar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ Você pode usar o `dtexec` com ferramentas de agendamento de terceiros para agendar pacotes que são implantados no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor do.  
   
 ##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a>Considerações de instalação em computadores de 64 bits  
  Em um computador de 64 bits, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala a versão de 64 bits do utilitário `dtexec` (dtexec.exe). Se for necessário executar certos pacotes no modo de 32 bits, você deverá instalar a versão de 32 bits do utilitário `dtexec`. Para instalar a versão de 32 bits do utilitário `dtexec`, você deve selecionar Ferramentas de Cliente ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] durante a instalação.  
   
- Por padrão, um computador de 64 bits que tem as versões de 64 e de 32 bits de um prompt de comando do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instaladas executará a versão de 32 bits no prompt de comando. A versão de 32 bits é executada porque o caminho do diretório da versão de 32 bits aparece na variável de ambiente PATH antes do caminho do diretório da versão de 64 bits. (Normalmente, o caminho do diretório de 32 bits é * \<a unidade>*: \Program Files (x86) \Microsoft SQL Server\110\DTS\Binn, enquanto o caminho do diretório de 64 bits é * \<a unidade>*: \Program Files\Microsoft SQL Server\110\DTS\Binn.)  
+ Por padrão, um computador de 64 bits que tem as versões de 64 e de 32 bits de um prompt de comando do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instaladas executará a versão de 32 bits no prompt de comando. A versão de 32 bits é executada porque o caminho do diretório da versão de 32 bits aparece na variável de ambiente PATH antes do caminho do diretório da versão de 64 bits. (Normalmente, o caminho do diretório de 32 bits é *\<drive>* : \Program Files (x86) \Microsoft SQL Server\110\DTS\Binn, enquanto o caminho do diretório de 64 bits é *\<drive>* : \Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > [!NOTE]  
 >  Se você usar o SQL Server Agent para executar o utilitário, o SQL Server Agent usará automaticamente a versão de 64 bits do utilitário. O SQL Server Agent usa o Registro, não a variável de ambiente PATH, para localizar o executável correto do utilitário.  
   
  Para garantir que a versão de 64 bits do utilitário no prompt de comando seja executada, execute uma das seguintes ações:  
   
--   Abra uma janela de prompt de comando, altere para o diretório que contém a versão de 64 bits do utilitário (*\<unidade>*: \Program Files\Microsoft SQL Server\110\DTS\Binn) e, em seguida, execute o utilitário a partir desse local.  
+-   Abra uma janela de prompt de comando, altere para o diretório que contém a versão de 64 bits do utilitário ( *\<drive>* : \Program Files\Microsoft SQL Server\110\DTS\Binn) e, em seguida, execute o utilitário desse local.  
   
--   No prompt de comando, execute o utilitário inserindo o caminho completo (*\<unidade>*: \Program Files\Microsoft SQL Server\110\DTS\Binn) na versão de 64 bits do utilitário.  
+-   No prompt de comando, execute o utilitário inserindo o caminho completo ( *\<drive>* : \Program Files\Microsoft SQL Server\110\DTS\Binn) na versão de 64 bits do utilitário.  
   
--   Altere permanentemente a ordem dos caminhos na variável de ambiente Path colocando o caminho de 64 bits (*\<unidade>*: \Program Files\Microsoft SQL Server\110\DTS\Binn) antes do caminho de 32 bits (*\<unidade>*: \ Arquivos de programas (x86) \Microsoft SQL Server\110\DTS\Binn) na variável.  
+-   Altere permanentemente a ordem dos caminhos na variável de ambiente PATH colocando o caminho de 64 bits ( *\<drive>* : \Program Files\Microsoft SQL Server\110\DTS\Binn) antes do caminho de 32 bits ( *\<drive>* : \ Arquivos de programas (x86) \Microsoft SQL Server\110\DTS\Binn) na variável.  
   
 ##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a>Considerações sobre computadores com instalações lado a lado  
  Quando o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] é instalado em um computador com o [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] instalado, várias versões do utilitário `dtexec` são instaladas.  
   
- Para garantir que você execute a versão correta do utilitário, no prompt de comando, execute o utilitário inserindo o caminho completo (*\<unidade>*: \Program Files\Microsoft SQL Server\\<versão\>\DTS\Binn).  
+ Para garantir que você execute a versão correta do utilitário, no prompt de comando, execute o utilitário digitando o caminho completo ( *\<drive>* : \Program Files\Microsoft SQL Server \\<versão \> \DTS\Binn).  
   
 ##  <a name="phases-of-execution"></a><a name="phases"></a>Fases de execução  
  O utilitário passa por quatro fases à medida que é executado. As fases são as seguintes:  
   
 1.  Fase de fornecimento de comando: O prompt de comando lê a lista de opções e argumentos que foram especificados. Todas as fases subsequentes serão ignoradas se uma opção **/?** ou **/HELP** for encontrada.  
   
-2.  Fase de carregamento do pacote: o pacote especificado `/SQL`pela opção, **/File**ou `/DTS` é carregado.  
+2.  Fase de carregamento do pacote: o pacote especificado pela `/SQL` opção, **/File**ou `/DTS` é carregado.  
   
 3.  Fase de configuração: As opções são configuradas nesta ordem:  
   
@@ -140,7 +139,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a opção **xp_cmdshell** é desabilitada por padrão em novas instalações. A opção pode ser habilitada com a execução do procedimento armazenado de sistema **sp_configure** . Para obter mais informações, veja [Opção de configuração de servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a opção **xp_cmdshell** é desabilitada por padrão em novas instalações. A opção pode ser habilitada com a execução do procedimento armazenado de sistema **sp_configure** . Para obter mais informações, veja [Opção de configuração de servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 ##  <a name="syntax"></a><a name="syntax"></a>Sintaxe  
   
@@ -152,20 +151,20 @@ dtexec /option [value] [/option [value]]...
   
 -   **/?** [*option_name*]: opcional. Exibe as opções de prompt de comando ou a ajuda para o *option_name* especificado e fecha o utilitário.  
   
-     Se você especificar um argumento *option_name* , `dtexec` o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciará os manuais online e exibirá o tópico utilitário dtexec.  
+     Se você especificar um argumento *option_name* , `dtexec` o iniciará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os manuais online e exibirá o tópico utilitário dtexec.  
   
 -   **/CA [llerInfo]**:   
                   Opcional. Especifica informações adicionais para uma execução de pacote. Quando você executa um pacote usando o SQL Server Agent, o agente define este argumento para indicar que a execução de pacote é chamada pelo SQL Server Agent. Este parâmetro é ignorado quando o utilitário `dtexec` é executado da linha de comando.  
   
 -   **/CheckF[ile]** _filespec_:   
-                  Opcional. Define a `CheckpointFileName` Propriedade no pacote como o caminho e o arquivo especificados em *filespec*. Esse arquivo é usado quando o pacote é reiniciado. Se esta opção for especificada e nenhum valor for fornecido para o nome de arquivo, o `CheckpointFileName` do pacote será definido como uma cadeia de caracteres vazia. Se esta opção não for especificada, os valores no pacote serão retidos.  
+                  Opcional. Define a `CheckpointFileName` propriedade no pacote como o caminho e o arquivo especificados em *filespec*. Esse arquivo é usado quando o pacote é reiniciado. Se esta opção for especificada e nenhum valor for fornecido para o nome de arquivo, o `CheckpointFileName` do pacote será definido como uma cadeia de caracteres vazia. Se esta opção não for especificada, os valores no pacote serão retidos.  
   
 -   **/CheckP [ointing]** _{on\off}_:   
                   Opcional. Define um valor que determina se o pacote usará pontos de verificação durante sua execução. O valor **on** especifica que pacotes com falha devem ser executados novamente. Quando o pacote com falha é executado novamente, o mecanismo de tempo de execução usa o arquivo de ponto de verificação para reiniciar o pacote a partir do ponto de falha.  
   
      O valor padrão será “on”, se a opção estiver declarada sem um valor. A execução do pacote falhará se o valor for definido como “on” e não for possível encontrar o arquivo de ponto de verificação. Se essa opção não for especificada, o conjunto de valores no pacote será retido. Para saber mais, confira [Restart Packages by Using Checkpoints](restart-packages-by-using-checkpoints.md).  
   
-     A opção **/CheckPointing on on** de dtexec é equivalente a definir a `SaveCheckpoints` Propriedade do pacote como true e a `CheckpointUsage` Propriedade como Always.  
+     A opção **/CheckPointing on on** de dtexec é equivalente a definir a `SaveCheckpoints` Propriedade do pacote como true e a `CheckpointUsage` propriedade como Always.  
   
 -   **/Com[mandFile]** _filespec_:   
                   (Opcional). Especifica as opções de comando que são executados com `dtexec`. O arquivo especificado em *filespec* está aberto e as opções do arquivo são lidas até o EOF ser localizado no arquivo. *filespec* é um arquivo de texto. O argumento *filespec* especifica o nome de arquivo e caminho do arquivo de comando a ser associado à execução do pacote.  
@@ -184,7 +183,7 @@ dtexec /option [value] [/option [value]]...
 -   **/Cons [oleLog]** [[*displayoptions*]; [ *list_options*; *src_name_or_guid*] ...]: Opcional. Exibe as entradas de log especificadas ao console durante a execução do pacote. Se esta opção for omitida, nenhuma entrada de log será mostrada no console. Se a opção for especificada sem parâmetros que limitem a exibição, toda entrada de log será exibida. Para limitar as entradas exibidas no console, você pode especificar as colunas a exibir, usando o parâmetro *displayoptions* , e limitar os tipos de entrada de log, usando o parâmetro *list_options* .  
   
     > [!NOTE]  
-    >  Quando você executa um pacote no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor usando o parâmetro, `/ISSERVER` a saída do console é limitada e a maioria das opções de **/cons [oleLog]** não é aplicável. Todos os logs de execução podem ser consultados do servidor nas exibições relacionadas ou usando relatórios padrão disponíveis no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para saber mais sobre os relatórios, consulte [Relatórios do servidor do Integration Services](../reports-for-the-integration-services-server.md).  
+    >  Quando você executa um pacote no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor usando o `/ISSERVER` parâmetro, a saída do console é limitada e a maioria das opções de **/cons [oleLog]** não é aplicável. Todos os logs de execução podem ser consultados do servidor nas exibições relacionadas ou usando relatórios padrão disponíveis no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para saber mais sobre os relatórios, consulte [Relatórios do servidor do Integration Services](../reports-for-the-integration-services-server.md).  
   
      Os valores de *displayoptions* são os seguintes:  
   
@@ -240,12 +239,12 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     Por padrão, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o armazena os arquivos de despejo de depuração na pasta * \<>*: \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     Por padrão, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o armazena os arquivos de despejo de depuração na pasta *\<drive>* : \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > [!NOTE]  
     >  Os arquivos de despejo de depuração podem conter informações confidenciais. Use uma ACL (lista de controle de acesso) para restringir o acesso aos arquivos ou copie os arquivos em uma pasta que tenha acesso restrito. Por exemplo, antes de enviar os arquivos de depuração para o serviço de suporte da Microsoft, recomendamos que você remova todas as informações confidenciais.  
   
-     Para aplicar essa opção a todos os pacotes que `dtexec` o utilitário executa, adicione um valor de REG_SZ **DumpOnCodes** à chave do registro HKEY_LOCAL_MACHINE \software\microsoft\microsoft do SQL server\110\ssis\setup\dtspath.. O valor dos dados em **DumpOnCodes** especifica os códigos de erro que dispararão o sistema para criar arquivos de despejo de depuração. Vários códigos de erro devem ser separados por um ponto e vírgula (;).  
+     Para aplicar essa opção a todos os pacotes que o `dtexec` utilitário executa, adicione um valor de REG_SZ **DumpOnCodes** à chave do registro HKEY_LOCAL_MACHINE \Software\microsoft\microsoft do SQL server\110\ssis\setup\dtspath.. O valor dos dados em **DumpOnCodes** especifica os códigos de erro que dispararão o sistema para criar arquivos de despejo de depuração. Vários códigos de erro devem ser separados por um ponto e vírgula (;).  
   
      Se um valor **DumpOnCodes** for adicionado à chave do Registro, e a opção **/Dump** for usada, o sistema criará arquivos de despejo de depuração com base nessas duas configurações.  
   
@@ -254,16 +253,16 @@ dtexec /option [value] [/option [value]]...
 -   **/DumpOnError ser usada**:   
                   Opcional. Cria os arquivos de despejo de depuração,. mdmp e. tmp, quando ocorre algum erro enquanto o pacote está em execução.  
   
-     Por padrão, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazena os arquivos de despejo de depuração na pasta *\<drive>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     Por padrão, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o armazena os arquivos de despejo de depuração na pasta *\<drive>* : \Program Files\Microsoft SQL server\110\shared\errordumps. Folder.  
   
     > [!NOTE]  
     >  Os arquivos de despejo de depuração podem conter informações confidenciais. Use uma ACL (lista de controle de acesso) para restringir o acesso aos arquivos ou copie os arquivos em uma pasta que tenha acesso restrito. Por exemplo, antes de enviar os arquivos de depuração para o serviço de suporte da Microsoft, recomendamos que você remova todas as informações confidenciais.  
   
-     Para aplicar essa opção a todos os pacotes que `dtexec` o utilitário executa, adicione um valor de REG_DWORD **DumpOnError** à chave do registro HKEY_LOCAL_MACHINE \software\microsoft\microsoft do SQL server\110\ssis\setup\dtspath.. O valor do valor REG_DWORD **DumpOnError** determina se a opção **/DumpOnError ser usada** precisa ser usada com o `dtexec` utilitário:  
+     Para aplicar essa opção a todos os pacotes que o `dtexec` utilitário executa, adicione um valor de REG_DWORD **DumpOnError** à chave do registro HKEY_LOCAL_MACHINE \Software\microsoft\microsoft do SQL server\110\ssis\setup\dtspath.. O valor do valor REG_DWORD **DumpOnError** determina se a opção **/DumpOnError ser usada** precisa ser usada com o `dtexec` utilitário:  
   
-    -   Um valor de dados diferente de zero indica que o sistema criará arquivos de despejo de depuração quando ocorrer algum erro, independentemente de você **/DumpOnError** usar a opção/DumpOnError ser usada `dtexec` com o utilitário.  
+    -   Um valor de dados diferente de zero indica que o sistema criará arquivos de despejo de depuração quando ocorrer algum erro, independentemente de você usar a opção **/DumpOnError ser usada** com o `dtexec` utilitário.  
   
-    -   Um valor de dados zero indica que o sistema não criará os arquivos de despejo de depuração, **/DumpOnError** a menos que você `dtexec` use a opção/DumpOnError ser usada com o utilitário.  
+    -   Um valor de dados zero indica que o sistema não criará os arquivos de despejo de depuração, a menos que você use a opção **/DumpOnError ser usada** com o `dtexec` utilitário.  
   
      Para obter mais informações sobre os arquivos de despejo de depuração, consulte [Generating Dump Files for Package Execution](../troubleshooting/generating-dump-files-for-package-execution.md).  
   
@@ -283,7 +282,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/H [** ] [*option_name*]: opcional. Exibe a ajuda das opções ou do *option_name* especificado e, em seguida, fecha o utilitário.  
   
-     Se você especificar um argumento *option_name* , `dtexec` o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciará os manuais online e exibirá o tópico utilitário dtexec.  
+     Se você especificar um argumento *option_name* , `dtexec` o iniciará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os manuais online e exibirá o tópico utilitário dtexec.  
   
 -   `/ISServer`*PackagePath*:  
                   Opcional. Executa um pacote que é implantado no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O argumento *PackagePath* especifica o caminho completo e o nome do arquivo do pacote implantado no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se o caminho ou o nome de arquivo especificado no argumento *PackagePath* contiver um espaço, você deverá colocar o argumento *PackagePath* entre aspas.  
@@ -415,7 +414,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Set** [$Sensitive::]*PropertyPath; valor*: opcional. Substitui a configuração de um parâmetro, variável, propriedade, contêiner, provedor de log, enumerador Foreach ou conexão dentro de um pacote. Quando essa opção é usada, **/Set** altera o argumento *propertyPath* para o valor especificado. É possível especificar várias opções **/Set** .  
   
-     Além de usar a opção **/set** com a opção **/f [ile]** , você também pode usar a opção **/set** com a `/ISServer` opção ou a `/Project` opção. Quando você usa **/set** com `/Project`, **/set** define valores de parâmetro. Quando você usa **/set** com `/ISServer`, **/set** define as substituições de propriedade. Além disso, ao usar **/set** com `/ISServer`, você pode usar o prefixo opcional $Sensitive para indicar que a propriedade deve ser tratada como confidencial no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor.  
+     Além de usar a opção **/set** com a opção **/f [ile]** , você também pode usar a opção **/set** com a opção `/ISServer` ou a `/Project` opção. Quando você usa **/set** com `/Project` , **/set** define valores de parâmetro. Quando você usa **/set** com `/ISServer` , **/set** define as substituições de propriedade. Além disso, ao usar **/set** com `/ISServer` , você pode usar o prefixo opcional $Sensitive para indicar que a propriedade deve ser tratada como confidencial no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor.  
   
      Você pode determinar o valor de *propertyPath* executando o Assistente de Configuração de Pacotes. Os caminhos dos itens selecionados por você são exibidos na página final **Concluindo o Assistente** e podem ser copiados e colados. Se usou o assistente apenas com esse fim, você poderá cancelá-lo depois de copiar os caminhos.  
   
@@ -461,7 +460,7 @@ dtexec /option [value] [/option [value]]...
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
 -   **/VA [lidate]**:  
-                  Opcional. Interrompe a execução do pacote depois da fase de validação, sem executar realmente o pacote. Durante a validação, o uso **/WarnAsError** da opção/warnaserror `dtexec` faz com que o trate um aviso como um erro; Portanto, o pacote falhará se ocorrer um aviso durante a validação.  
+                  Opcional. Interrompe a execução do pacote depois da fase de validação, sem executar realmente o pacote. Durante a validação, o uso da opção **/warnaserror** faz com que o `dtexec` trate um aviso como um erro; portanto, o pacote falhará se ocorrer um aviso durante a validação.  
   
 -   **/VerifyB [uild]** _principal_[*; secundária*[*; Build*]]: opcional. Verifica o número da compilação de um pacote contra os números de compilação especificados durante a fase de verificação no *major*, *minor*e nos argumentos *build* . Se uma ocorrer um erro de correspondência, o pacote não será executado.  
   
@@ -483,7 +482,7 @@ dtexec /option [value] [/option [value]]...
     >  Quando configurado para verificar a assinatura do pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] apenas verifica se a assinatura digital está presente, se é válida e se provém de uma origem confiável. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não verifica se o pacote foi alterado.  
   
     > [!NOTE]  
-    >  O valor opcional do registro **BlockedSignatureStates** pode especificar uma configuração mais restritiva do que a opção de assinatura digital definida [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] no ou na `dtexec` linha de comando. Nesta situação, a configuração de Registro mais restritiva substitui as outras configurações.  
+    >  O valor opcional do registro **BlockedSignatureStates** pode especificar uma configuração mais restritiva do que a opção de assinatura digital definida no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ou na `dtexec` linha de comando. Nesta situação, a configuração de Registro mais restritiva substitui as outras configurações.  
   
 -   **/VerifyV [ersionID]** _VersionId_: opcional. Verifica o GUID de versão do pacote a ser executado, comparando-o ao valor especificado no argumento *version_id* durante a fase de validação do pacote.  
   
@@ -514,7 +513,7 @@ dtexec /option [value] [/option [value]]...
 -   As opções **/Set** e **/ConfigFile** são processadas na ordem em que são encontradas.  
   
 ##  <a name="examples"></a><a name="example"></a> Exemplos  
- Os exemplos a seguir demonstram como usar `dtexec` o utilitário de prompt de comando para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] configurar e executar pacotes.  
+ Os exemplos a seguir demonstram como usar o `dtexec` Utilitário de prompt de comando para configurar e executar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes.  
   
  **Executando pacotes**  
   

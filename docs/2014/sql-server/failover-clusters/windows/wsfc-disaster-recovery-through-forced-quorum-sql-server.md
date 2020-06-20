@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2c9399472c6e67c9e2121a008f9283ba05943da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63224624"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045917"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Recuperação de desastres WSFC por meio de quorum forçado (SQL Server)
   A falha de quorum normalmente é causada por um desastre sistêmico ou uma falha de comunicações persistente que envolve vários nós no cluster WSFC.  A intervenção manual é necessária para a recuperação de uma falha de quorum.  
