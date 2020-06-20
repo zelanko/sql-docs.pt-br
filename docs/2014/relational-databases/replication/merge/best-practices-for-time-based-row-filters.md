@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ccaafe71d4137fd4b31eec412c1e35595861bdd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "68210713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049401"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Práticas recomendadas para filtros de linha baseados em tempo
   Usuários de aplicativos requerem frequentemente um subconjunto de dados baseados no tempo de uma tabela. Por exemplo, um vendedor pode requisitar dados de pedidos da semana passada ou um organizador de eventos pode requisitar dados para os eventos da semana seguinte. Em muitos casos, os aplicativos usam consultas que contêm a função `GETDATE()` para realizar isso. Considere a seguinte instrução de filtro de linha:  
@@ -26,7 +25,7 @@ ms.locfileid: "68210713"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Com um filtro desse tipo, é normalmente presumido que duas coisas sempre ocorram quando o Merge Agent é executado: as linhas que satisfazem esse filtro são replicadas aos Assinantes; e linhas que não mais satisfazem esse filtro, são limpas nos Assinantes. (Para obter mais informações sobre filtragem `HOST_NAME()`com o, consulte [filtros de linha com parâmetros](parameterized-filters-parameterized-row-filters.md).) No entanto, a replicação de mesclagem só Replica e limpa os dados que foram alterados desde a última sincronização, independentemente de como você define um filtro de linha para esses dados.  
+ Com um filtro desse tipo, é normalmente presumido que duas coisas sempre ocorram quando o Merge Agent é executado: as linhas que satisfazem esse filtro são replicadas aos Assinantes; e linhas que não mais satisfazem esse filtro, são limpas nos Assinantes. (Para obter mais informações sobre filtragem com o `HOST_NAME()` , consulte [filtros de linha com parâmetros](parameterized-filters-parameterized-row-filters.md).) No entanto, a replicação de mesclagem só Replica e limpa os dados que foram alterados desde a última sincronização, independentemente de como você define um filtro de linha para esses dados.  
   
  Para a replicação de mesclagem processar uma linha, os dados na linha devem satisfazer o filtro de linha e devem ter sido alterados desde a última sincronização. No caso da tabela **SalesOrderHeader** , é inserido **OrderDate** quando uma linha é inserida. As linhas são replicadas ao Assinante como esperado porque a inserção é uma alteração de dados. Entretanto, se houver linhas no Assinante que não mais satisfazem o filtro (são para pedidos anteriores a sete dias), elas não serão removidas do Assinante a menos que tenham sido atualizadas por algum outro motivo.  
   

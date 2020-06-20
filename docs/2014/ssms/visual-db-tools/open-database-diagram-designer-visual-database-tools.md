@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a4fb2a6fc58d008dc0c69824282f5ac35b2bb6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14e3bdd491d30b2afe8ac943a36dc9b6f8964d30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63254739"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064929"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Abrir Designer do Diagrama de Banco de Dados (Visual Database Tools)
   O Designer do Diagrama de Banco de Dados é uma ferramenta visual que permite projetar e visualizar um banco de dados ao qual se está conectado. Ao criar um banco de dados, você pode usar o Designer de Banco de Dados para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições. Para visualizar um banco de dados, você pode criar um ou mais diagramas que ilustrem todas ou parte das tabelas, colunas, chaves e relações.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcc2ddcb8c8fbf33c51fb82d1b1c2fd8308bd28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064841"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tarefa 1: Definindo uma política de correspondência
   Nesta tarefa, você criará uma política de correspondência com uma regra nela. A regra terá um pré-requisito: **ID do fornecedor**, o que significa que as IDs do fornecedor devem corresponder antes de usar os outros domínios na regra. A regra usa dois outros domínios: **nome do fornecedor** com o valor de **similaridade** definido como **70%** e **email de contato** com o valor de **similaridade** definido como **30%**.  
@@ -26,7 +25,7 @@ ms.locfileid: "65481311"
   
 2.  Na página **mapa** , selecione **arquivo do Excel** para **fonte de dados**.  
   
-3.  Clique em **procurar**, verifique se o filtro está definido como **pasta de trabalho do Excel**e selecione o arquivo **. xls da lista de fornecedores limpos** que você exportou depois de executar a atividade de limpeza.  
+3.  Clique em **procurar**, verifique se o filtro está definido como **pasta de trabalho do Excel**e selecione **fornecedor limpo List.xls** arquivo que você exportou depois de executar a atividade de limpeza.  
   
     > [!NOTE]  
     >  No final dessa atividade, você não poderá exportar os resultados, pois ela é centralizada basicamente na definição de uma política de correspondência. Você criará um Projeto de Qualidade de Dados para a atividade de correspondência e o executará para remover as duplicatas da lista de fornecedores usando essa política de correspondência na próxima lição.  

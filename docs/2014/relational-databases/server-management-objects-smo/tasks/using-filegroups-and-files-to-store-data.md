@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 270df8181fe42f48619736ba858dc0c16d9e30c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d32daf928392d94fd4d62def6b667892abf0b686
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003449"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Usando grupos de arquivos e arquivos para armazenar dados
   Arquivos de dados são usados para armazenar arquivos de bancos de dados. Os arquivos de dados são subdivididos em grupos de arquivos. O objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> que referencia um objeto <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>. Cada objeto <xref:Microsoft.SqlServer.Management.Smo.FileGroup> nessa coleção tem uma propriedade <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A>. Essa propriedade se refere a uma coleção <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> que contém todos os arquivos de dados pertencentes ao banco de dados. Um grupo de arquivos é usado especialmente para agrupar arquivos que são usados para armazenar um objeto de banco de dados. Um dos motivos que leva à difusão de um objeto de banco de dados por vários arquivos é que isso pode melhorar o desempenho, especialmente quando os arquivos são armazenados em unidades de disco diferentes.  

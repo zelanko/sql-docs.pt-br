@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2b4a5094f8bac1e3972b4d0b2daa7a0da9fa3629
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eecf9714a97577ff490b642cee5b9c380333e40b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022512"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
   **SQLFetchScroll** retorna um conjunto de linhas de dados para o aplicativo. O tamanho do conjunto de linhas é definido com [SQLSetStmtAttr](sqlsetstmtattr.md). O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dá suporte a todas as instruções de busca definidas (por exemplo, SQL_FETCH_RELATIVE) com as seguintes limitações:  

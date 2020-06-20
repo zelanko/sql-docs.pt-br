@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd0b8c5e1957a6cf803fbb741d6b9bad5bbb9613
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d354ea5104a58884866d5be3f06b64b29597b23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049484"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Alterações de quebra na replicação do SQL Server
   Este tópico descreve alterações de quebra na replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

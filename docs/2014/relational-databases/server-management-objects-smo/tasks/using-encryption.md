@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea79d34a5c0e8f8d51ce38db799f88c8aa981dd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781844"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003580"
 ---
 # <a name="using-encryption"></a>Usando a criptografia
   No SMO, a chave mestra do serviço é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey>. Isso é referenciado pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Server>. Ela pode ser regenerada através do método <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A>.  

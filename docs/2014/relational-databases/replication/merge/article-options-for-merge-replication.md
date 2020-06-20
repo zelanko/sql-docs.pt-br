@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7033db55df0dd9b25c3dee5accdd4259842a571b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 216baab358f151b3e963a4b87f7dbc194a5a2e92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62999617"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049422"
 ---
 # <a name="article-options-for-merge-replication"></a>Opções de artigo para replicação de mesclagem
   Há muitas opções para a mesclagem de artigos de tabela que lhe possibilitam personalizar o comportamento de replicação para as necessidades de seus aplicativos. Usando a replicação de mesclagem, você pode fazer o seguinte:  

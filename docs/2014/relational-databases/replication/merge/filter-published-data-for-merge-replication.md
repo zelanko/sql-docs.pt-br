@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 463a9385f4622f85cd1cbd5666517464be3cffd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad9ad45a64f57a6bef8255373180ea943af9893f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250471"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049367"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Filtrar dados publicados para replicação de mesclagem
   Além dos filtros de linhas estáticas e filtros de colunas que você pode definir com outros tipos de replicação, a replicação de mesclagem oferece filtros de linhas com parâmetros e filtros de junção Para mais informações sobre filtros de linha estáticos e filtros de coluna, consulte [Filtrar dados publicados](../publish/filter-published-data.md).  

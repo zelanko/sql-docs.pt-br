@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6ee2ac48e03d7436f2671faa8f4883b10210a380
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18fb9760cf866473525b7da750923c8faad0713f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048948"
 ---
 # <a name="for-xml-security-considerations-sqlxml-40"></a>Considerações de segurança de FOR XML (SQLXML 4.0)
   O modo FOR XML AUTO gera uma hierarquia de XML na qual os nomes de elemento mapeiam para nomes de tabela e nomes de atributo mapeiam para nomes de coluna. Dessa forma, a tabela e as informações de coluna do banco de dados são expostas. Você pode ocultar as informações do banco de dados quando usar modo AUTO (formatação no lado de servidor) especificando aliases de coluna e da tabela na consulta. Esses aliases são retornados no documento XML resultante como nomes de elemento e atributos.  

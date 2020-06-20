@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f5e5d90a24aed8a717edb2f1c4efe4a2fd5e07
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fb3e72250e9fcc389b42db3e614671e414487e66
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020450"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Suporte a tipos de dados para aprimoramentos de data e hora do ODBC
   Este tópico fornece informações sobre tipos de ODBC com suporte a tipos de dados de data e hora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

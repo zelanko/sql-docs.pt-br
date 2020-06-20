@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c26ffa3421cca7ec2359bb94eabcec9921a57391
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273543"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064626"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologias para sincronização da Web
   Escolha uma opção entre uma variedade de topologias de replicação de sincronização da Web do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os modos comuns para configurar a sincronização da Web incluem:  

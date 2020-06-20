@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 535ae5f92fea0222468ed64f567154495e329a61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3754afbc5d8f0f67dac61e785a4626c8ced4c2e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995302"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
-  Este tópico descreve como formatar endereços de pager para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas de agente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o.  
+  Este tópico descreve como formatar endereços de pager para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas de agente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o ou o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Neste tópico**  
   

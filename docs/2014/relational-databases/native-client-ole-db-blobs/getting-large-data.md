@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bd6af4f85fb8a39f2206bf6c3b9f3099a4af0b2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8b54e8abc817c35b120966b551d8b01a546052a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708565"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049673"
 ---
 # <a name="getting-large-data"></a>Obtendo dados grandes
   Em geral, os consumidores devem isolar o código que cria um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de armazenamento de provedor de OLE DB de cliente nativo de outro código que manipula dados não referenciados por meio de um ponteiro de interface **ISequentialStream** .  

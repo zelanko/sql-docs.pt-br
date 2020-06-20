@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 790dd7e9199f511f434585c6b6741d0e09ab7d59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 712fa38f411eba1b237e43a3c2917bb40f622c17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065004"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Tarefas de administração automatizadas (SQL Server Agent)
   O Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite automatizar tarefas administrativas. Para automatizar a administração, você define tarefas administrativas previsíveis e especifica as condições sob as quais cada tarefa ocorre. O uso da administração automatizada para tratar tarefas e eventos de rotina libera tempo para executar outras funções administrativas.  

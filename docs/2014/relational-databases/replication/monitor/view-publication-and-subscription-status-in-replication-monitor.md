@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b8d48b9a21d810f60b071c17dd89ad51c9e489a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62666916"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049389"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Exibir o status da publicação e da assinatura no Replication Monitor
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor exibe informações de status para publicações e assinaturas:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas:  
   
 -   O status de uma publicação é determinado pelo status de prioridade mais alta de suas assinaturas. Por exemplo, se uma assinatura para uma publicação tiver um erro e outra tiver um problema de desempenho, será exibido um status de erro para a publicação.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62666916"
 |Erro|![Ícone da interface do usuário: erro](../media/repl-icon-error.gif "Ícone da interface do usuário: erro")|  
 |Desempenho crítico|![Ícone da interface do usuário: aviso](../media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|  
 |Tentando novamente comando com falha|![Ícone de interface do usuário: repetição do agente de replicação](../media/repl-icon-retry.gif "Ícone de interface do usuário: repetição do agente de replicação")|  
-|OK|none|  
+|OK|nenhum|  
   
 ## <a name="subscription-status-values"></a>Valores de status da assinatura  
  As tabelas abaixo mostram os valores de status da assinatura e seus ícones correspondentes em ordem de prioridade. É possível que uma assinatura possua dois estados ao mesmo tempo como **Expirando em breve/Expirado** e **Tentando novamente comando com falha**; é exibido o status com maior prioridade.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f38b504943dafd97c39ef66cd1ab903cafe18dd6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc9d7c85a72c34cee1ef7af8cb4b4f25f918a3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706431"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024022"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tarefa Recriar Índice (Plano de Manutenção)
   Use a caixa de diálogo **Tarefa Recompilar Índice** para recriar os índices nas tabelas do banco de dados com um novo fator de preenchimento. O fator de preenchimento determina a quantidade de espaço vazio em cada página no índice, para acomodar futuras expansões. À medida que os dados são adicionados à tabela, o espaço livre é todo preenchido porque o fator de preenchimento não é mantido. Reorganizando dados e páginas de índice, é possível restabelecer o espaço livre.  

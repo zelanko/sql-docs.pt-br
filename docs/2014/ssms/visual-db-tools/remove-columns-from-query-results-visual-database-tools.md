@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90d502ad2cdb4c67d5d4f23f262b56cb17ea7519
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253509"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064901"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Remover colunas de resultados da consulta (Visual Database Tools)
   Se você usar uma coluna em uma consulta Selecionar, mas não desejar exibi-la no conjunto de resultados (ou seja, você não a quer na lista de seleção da consulta), remova-a da saída. Após remover a coluna da saída da consulta, você ainda poderá usá-la em critérios de pesquisa ou como um campo de classificação.  

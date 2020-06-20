@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 92349482-ea22-4a6a-8484-e9c6566794fa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 912d4b0a6f6a7565d62cb3f81f14ee4c99234974
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a4e0e8b31a65f28ce83e0d114231bdedd7a35a4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705935"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021972"
 ---
 # <a name="sqlparamdata"></a>SQLParamData
   Quando SQLParamData retorna o *ValuePtrPtr* associado a um parâmetro com valor de tabela, o aplicativo deve chamar SQLPutData com *StrLen_or_Ind*. Se *StrLen_Or_Ind* tiver um valor maior que 0, significará que o aplicativo está pronto para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client coletar dados de parâmetro para a próxima linha de parâmetro com valor de tabela. Se *StrLen_Or_Ind* tiver um valor 0, significará que não há mais linhas de dados para o parâmetro com valor de tabela. Para obter mais informações, consulte [associação e transferência de dados de parâmetros com valor de tabela e valores de coluna](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  

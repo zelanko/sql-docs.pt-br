@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68b7f660675c8eca1b090d4ced08e770f1a7d22d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1e7ce6db35817fdfc9bb4169a69e5f959b40f268
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719102"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050145"
 ---
 # <a name="implementing-an-outer-join"></a>Implementando uma junção externa
   A junção externa não tem suporte em procedimentos armazenados compilados nativamente. O exemplo a seguir mostra uma maneira de implementar a funcionalidade de uma junção externa esquerda em um procedimento armazenado compilado nativamente.  

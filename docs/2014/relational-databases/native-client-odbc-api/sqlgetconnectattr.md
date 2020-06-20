@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9f6f6ee0d881f470f1251c99f17212f1648b85c4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f82a0fb71103e811b36280f9722c160791023e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022365"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define atributos de conexão específicos de driver. Alguns dos atributos estão disponíveis para `SQLGetConnectAttr` o, e a função é usada para relatar suas configurações atuais. Os valores informados em relação a esses atributos não são garantidos até que uma conexão seja estabelecida ou o atributo seja definido usando [SQLSetConnectAttr](sqlsetconnectattr.md).  

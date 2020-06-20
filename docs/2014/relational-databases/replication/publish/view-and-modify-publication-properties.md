@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 89b969bc3e285bbdc633a2b39d237968b216069a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005228"
 ---
 # <a name="view-and-modify-publication-properties"></a>Visualizar e modificar as propriedades da publicação
   Este tópico descreve como exibir e modificar propriedades de publicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -55,9 +54,9 @@ ms.locfileid: "68941061"
 -   Depois que uma publicação é criada, algumas alterações de propriedade requerem um novo instantâneo. Se uma publicação tiver assinaturas, algumas alterações também exigirão que todas as assinaturas sejam reiniciadas. Para obter mais informações, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md) e [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Exibir e modificar propriedades de publicação na caixa de diálogo **Propriedades de Publicação – \<Publicação >** , que está disponível em [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e o Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+ Exiba e modifique as propriedades da publicação na caixa de diálogo **Propriedades da publicação – \<Publication> ** que está disponível no e no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
- A caixa de diálogo **Propriedades da Publicação – \<Publicação>** inclui as seguintes páginas:  
+ A caixa de diálogo **Propriedades da publicação – \<Publication> ** inclui as seguintes páginas:  
   
 -   A página **Geral** inclui o nome e descrição da publicação, o nome do banco de dados, o tipo da publicação, e as configurações para expiração da assinatura.  
   
