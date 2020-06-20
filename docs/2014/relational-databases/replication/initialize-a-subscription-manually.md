@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4eaeb50da9e4b71a08ec78614ae62ea33e3dc0d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721654"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065994"
 ---
 # <a name="initialize-a-subscription-manually"></a>Inicializar uma assinatura manualmente
   Este tópico descreve como inicializar uma assinatura manualmente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Embora o instantâneo inicial seja normalmente usado para inicializar uma assinatura, as assinaturas para publicações podem ser inicializadas sem o uso de um instantâneo, desde que o esquema e os dados iniciais já estejam presentes no assinante.  
@@ -48,7 +47,7 @@ ms.locfileid: "62721654"
   
 1.  Certifique-se que o esquema e dados existam no banco de dados da assinatura. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  No Publicador do banco de dados da publicação, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber**, o nome do banco de dados no Assinante que contém o dado **@destination_db**publicado para, um valor de **@subscription_type** **pull** para e um valor de **suporte de replicação somente** para **@sync_type**. Para obter mais informações, consulte [Create a Pull Subscription](create-a-pull-subscription.md).  
+2.  No Publicador do banco de dados da publicação, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication** , **@subscriber** , o nome do banco de dados no Assinante que contém o dado publicado para **@destination_db** , um valor de **pull** para **@subscription_type** e um valor de **suporte de replicação somente** para **@sync_type** . Para obter mais informações, consulte [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 3.  No Assinante, execute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Para atualizar assinaturas, consulte [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62721654"
   
 1.  Certifique-se que o esquema e dados existam no banco de dados da assinatura. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  No Publicador do banco de dados da publicação, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique o nome do banco de dados no Assinante que contém o dado **@destination_db**publicado para, um valor de **@subscription_type** **Push** para e um valor de **suporte de replicação somente** para **@sync_type**. Para atualizar assinaturas, consulte [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  No Publicador do banco de dados da publicação, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique o nome do banco de dados no Assinante que contém o dado publicado para **@destination_db** , um valor de **Push** para **@subscription_type** e um valor de **suporte de replicação somente** para **@sync_type** . Para atualizar assinaturas, consulte [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  No Publicador do banco de dados de publicação, execute [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Para obter mais informações, consulte [Create a Push Subscription](create-a-push-subscription.md).  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62721654"
   
 1.  Certifique-se que o esquema e dados existam no banco de dados da assinatura. Isso pode ser feito restaurando um backup do banco de dados de publicação no Assinante.  
   
-2.  No Publicador, execute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique **@publication**, **@subscriber**, **@subscriber_db**e um valor de **pull** para **@subscription_type**. Isso registra a assinatura pull.  
+2.  No Publicador, execute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique **@publication** , **@subscriber** , e **@subscriber_db** um valor de **pull** para **@subscription_type** . Isso registra a assinatura pull.  
   
 3.  No Assinante, no banco de dados que contém os dados publicados, execute [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Especifique o valor **none** para **@sync_type**.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62721654"
   
 1.  Certifique-se que o esquema e dados existam no banco de dados da assinatura. Isso pode ser feito restaurando um backup do banco de dados de publicação no Assinante.  
   
-2.  No Publicador, no banco de dados da publicação, execute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique o nome do banco de dados no Assinante que contém o dado **@subscriber_db**publicado para, um valor de **@subscription_type** **Push** para e um valor **none** de None **@sync_type**para.  
+2.  No Publicador, no banco de dados da publicação, execute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique o nome do banco de dados no Assinante que contém o dado publicado para **@subscriber_db** , um valor de **Push** para **@subscription_type** e um valor de **None** para **@sync_type** .  
   
 3.  No Publicador, no banco de dados da publicação, execute [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Para obter mais informações, consulte [Create a Push Subscription](create-a-push-subscription.md).  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e829bc3bc7216532bd76f083335f126166347f4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b86fb120d8263ae48bb9a4e874e4cf0d012bf7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050213"
 ---
 # <a name="cross-database-queries"></a>Consultas de bancos de dados
   No [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], as tabelas com otimização de memória não oferecem suporte a transações envolvendo todos os bancos de dados. Você não pode acessar outro banco de dados da mesma transação ou na mesma consulta que também acesse uma tabela com otimização de memória. Você não pode copiar facilmente dados de uma tabela em um banco de dados, para uma tabela com otimização de memória em outro banco de dados.  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59eafff14c6a0cc7752817a31648b64bd5edc907
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ce439e81cf87e97b4afe6e25a201e1ab0cb2a458
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059468"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>O elemento &lt;xsd:redefine&gt;
-  O elemento **redefine** do W3C XSD fornece suporte para redefinição de componentes de esquema. No entanto, o suporte para essa diretiva é potencialmente dispendioso para o desempenho e também requer que a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revalidação de todas as instâncias do `xml` tipo de dados associadas ao esquema redefinido. Portanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esse elemento. Esquemas XML que incluem o elemento **\<xsd:redefine>** são rejeitados pelo servidor.  
+  O elemento **redefine** do W3C XSD fornece suporte para redefinição de componentes de esquema. No entanto, o suporte para essa diretiva é potencialmente dispendioso para o desempenho e também requer que a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revalidação de todas as instâncias do `xml` tipo de dados associadas ao esquema redefinido. Portanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esse elemento. Os esquemas XML que incluem o **\<xsd:redefine>** elemento são rejeitados pelo servidor.  
   
  Para atualizar um esquema ou seus componentes, é possível fazer o seguinte:  
   

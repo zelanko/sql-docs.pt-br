@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43ea31523da2dfa8b387f68ce4f7c7f07868dd6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970871"
 ---
 # <a name="load-files-into-filetables"></a>Carregar arquivos em FileTables
   Descreve como carregar ou migrar arquivos para FileTables.  
@@ -44,7 +43,7 @@ ms.locfileid: "66010006"
 ###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a>Exemplo: migrar arquivos do sistema de arquivos para uma Filetable  
  Neste cenário, seus arquivos são armazenados no sistema de arquivos, e você tem uma tabela de metadados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém ponteiros para os arquivos. Você deseja mover os arquivos para uma FileTable e, em seguida, substituir o caminho UNC original de cada arquivo dos metadados pelo caminho UNC da FileTable. A função [GetPathLocator & #40. O Transact-SQL e 41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) ajuda você a atingir esse objetivo.  
   
- Para este exemplo, suponha que exista uma tabela de banco de `PhotoMetadata`dados existente,, que contém informações sobre fotografias. Esta tabela tem um coluna `UNCPath` do tipo `varchar`(512) que contém o caminho UNC real para um arquivo .jpg.  
+ Para este exemplo, suponha que exista uma tabela de banco de dados existente, `PhotoMetadata` , que contém informações sobre fotografias. Esta tabela tem um coluna `UNCPath` do tipo `varchar`(512) que contém o caminho UNC real para um arquivo .jpg.  
   
  Para migrar os arquivos de imagem do sistema de arquivos para uma FileTable, você deve fazer o seguinte:  
   
@@ -124,7 +123,7 @@ UPDATE PhotoMetadata
  Para carregar os arquivos em massa em uma FileTable sem a sobrecarga de impor as restrições definidas pelo sistema, você pode desabilitar temporariamente as restrições. Para obter mais informações, consulte [Gerenciar FileTables](manage-filetables.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Acessar filetables com o Transact-SQL](access-filetables-with-transact-sql.md)   
+ [Acessar FileTables com Transact-SQL](access-filetables-with-transact-sql.md)   
  [Acessar FileTables com APIs de entrada e saída de arquivo](access-filetables-with-file-input-output-apis.md)  
   
   

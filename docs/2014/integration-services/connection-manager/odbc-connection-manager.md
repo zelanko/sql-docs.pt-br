@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f7642cd5f2245cbe5056ff09ec35477c0a6619c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920493"
 ---
 # <a name="odbc-connection-manager"></a>gerenciador de conexões ODBC
   Um gerenciador de conexões ODBC permite que um pacote se conecte com vários sistemas de gerenciamento de banco de dados que usam a especificação ODBC (Conectividade Aberta de Banco de Dados).  
   
- Quando você adiciona uma conexão ODBC a um pacote e define as propriedades do Gerenciador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] conexões, o cria um Gerenciador de conexões e adiciona o `Connections` Gerenciador de conexões à coleção do pacote. No tempo de execução, o gerenciador de conexões é resolvido como uma conexão física ODBC.  
+ Quando você adiciona uma conexão ODBC a um pacote e define as propriedades do Gerenciador de conexões, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o cria um Gerenciador de conexões e adiciona o Gerenciador de conexões à `Connections` coleção do pacote. No tempo de execução, o gerenciador de conexões é resolvido como uma conexão física ODBC.  
   
  A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `ODBC`.  
   

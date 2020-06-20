@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23141b6d377333837e3416978d67424352075e75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137605"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050822"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>Referência do programador de procedimentos armazenados estendidos&#39;s
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
- A [!INCLUDE[msCoName](../../includes/msconame-md.md)] API de procedimento armazenado estendido, anteriormente parte do Open Data Services, fornece uma API (interface de programação de aplicativo) baseada [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em servidor para estender a funcionalidade. A API consiste nas funções e macros C e C++ usadas para criar aplicativos.  
+ A [!INCLUDE[msCoName](../../includes/msconame-md.md)] API de procedimento armazenado estendido, anteriormente parte do Open Data Services, fornece uma API (interface de programação de aplicativo) baseada em servidor para estender a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funcionalidade. A API consiste nas funções e macros C e C++ usadas para criar aplicativos.  
   
  Com o surgimento de tecnologias mais novas e mais avançadas, como a integração CLR, a necessidade de procedimentos armazenados estendidos foi amplamente substituída.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "63137605"
   
 |||  
 |-|-|  
-|[Tipos de Dados](srv-pfield-extended-stored-procedure-api.md)|  
+|[Tipos de dados](srv-pfield-extended-stored-procedure-api.md)|  
 |[srv_alloc](srv-alloc-extended-stored-procedure-api.md)||  
 |[srv_convert](srv-pfieldex-extended-stored-procedure-api.md)|  
 |[srv_describe](srv-rpcdb-extended-stored-procedure-api.md)|  

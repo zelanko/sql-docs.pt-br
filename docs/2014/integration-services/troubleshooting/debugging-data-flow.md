@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc99e29d95aa08ce9363ca1fa6971d7602824868
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766189"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972749"
 ---
 # <a name="debugging-data-flow"></a>Depurando fluxo de dados
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e o Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluem recursos e ferramentas que você pode usar para solucionar problemas de fluxos de dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 52ca90b38975c8db762ec0937b265a91b03c5cb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b330e63d802d0801f4473bb1a1422c5bf79c35e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054378"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972406"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor do Detector de Eventos do WMI (página Opções do WMI)
   Use a página **Opções do WMI** da caixa de diálogo **Editor do Detector de Eventos do WMI** para especificar a origem da consulta WQL (Instrumentação de Gerenciamento do Windows Query Language) e como a tarefa do Detector de Eventos do WMI responde aos eventos do WMI (Microsoft Windows Instrumentation).  
@@ -28,7 +27,7 @@ ms.locfileid: "66054378"
   
 ## <a name="static-options"></a>Opções estáticas  
  **WMIConnectionName**  
- Selecione um Gerenciador de conexões WMI na lista ou clique em \< **nova conexão WMI...**> para criar um novo Gerenciador de conexões.  
+ Selecione um Gerenciador de conexões WMI na lista ou clique \<**New WMI Connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de Conexões WMI](connection-manager/wmi-connection-manager.md), [Editor do Gerenciador de Conexões WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
@@ -67,13 +66,13 @@ ms.locfileid: "66054378"
   
 ### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Conexão do arquivo  
  **WQLQuerySource**  
- Selecione um Gerenciador de conexões de arquivo na lista ou clique \<em **nova conexão...**> para criar um novo Gerenciador de conexões.  
+ Selecione um Gerenciador de conexões de arquivo na lista ou clique \<**New connection...**> para criar um novo Gerenciador de conexões.  
   
  **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysource--variable"></a>WQLQuerySource = Variável  
  **WQLQuerySource**  
- Selecione uma variável na lista ou clique em \< **nova variável...**> para criar uma nova variável.  
+ Selecione uma variável na lista ou clique \<**New variable...**> para criar uma nova variável.  
   
  **Tópicos relacionados:** [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   

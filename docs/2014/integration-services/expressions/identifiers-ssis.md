@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d9b0bd0a971f94c4eeba91dd4b009d57ccb47c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898854"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969337"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   Em expressões, identificadores são colunas e variáveis, que estão disponíveis para a operação. Expressões podem usar identificadores regulares e qualificados.  
@@ -114,7 +113,7 @@ ms.locfileid: "62898854"
   
  Se o valor de **Count** no namespace **User** for 10 e o valor de **Count** em **MyNamespace** for 2, a expressão será avaliada como `true` porque o avaliador de expressão reconhece duas variáveis diferentes.  
   
- Se os nomes de variável não forem exclusivos, nenhum erro acontecerá. Em vez disso, o avaliador de expressão utiliza somente uma instância e retorna um resultado incorreto. Por exemplo, a expressão a seguir foi destinada a comparar os valores (10 e 2) para duas variáveis de **contagem** separadas, mas `false` a expressão é avaliada como o avaliador de expressão usa a mesma instância da variável **Count** duas vezes.  
+ Se os nomes de variável não forem exclusivos, nenhum erro acontecerá. Em vez disso, o avaliador de expressão utiliza somente uma instância e retorna um resultado incorreto. Por exemplo, a expressão a seguir foi destinada a comparar os valores (10 e 2) para duas variáveis de **contagem** separadas, mas a expressão é avaliada como `false` o avaliador de expressão usa a mesma instância da variável **Count** duas vezes.  
   
 ```  
 @Count > @Count  

@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b788c94a1f27cced3e57b8f7941eb92edd61a2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9caf64a88652323e710385f177852ee8e2b25146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065520"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pré-processar um esquema para mesclar esquemas incluídos
   O elemento **include** do W3C XSD dá suporte à modularidade de esquema na qual um esquema XML pode ser particionado em mais de um arquivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Atualmente, não dá suporte a esse elemento. Esquemas XML que incluem esse elemento serão rejeitados pelo servidor.  
   
- Como uma solução, os esquemas XML que incluem a diretiva \<xsd:include> podem ser pré-processados para copiar e mesclar o conteúdo dos esquemas incluídos em um único esquema para upload no servidor. O código C# a seguir pode ser usado para pré-processamento. Os comentários na parte anterior do código fornecem informações sobre como usar isso.  
+ Como uma solução, os esquemas XML que incluem a \<xsd:include> diretiva podem ser pré-processados para copiar e mesclar o conteúdo de quaisquer esquemas incluídos em um único esquema para carregar no servidor. O código C# a seguir pode ser usado para pré-processamento. Os comentários na parte anterior do código fornecem informações sobre como usar isso.  
   
 ```  
 // XSD Schema Include Normalizer  

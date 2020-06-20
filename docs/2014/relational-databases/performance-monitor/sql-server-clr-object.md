@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f2e939e27263f52dc3a6ac607bc59cd8db6c1806
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b25fd15062d8584e0f72e113ddca150377e7b40c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066115"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, objeto CLR
   O objeto **SQLServer:CLR** fornece contadores para monitorar a execução do CLR (Common Language Runtime) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

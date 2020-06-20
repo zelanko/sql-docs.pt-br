@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a89818eac194ff6d980fcfc801014584ee1f724
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055078"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972846"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Editor da Tarefa Transferir Mensagens de Erro (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Mensagens de Erro** para nomear e descrever a tarefa Transferir Mensagens de Erro. A tarefa Transferir Mensagens de Erro transfere uma ou mais mensagens de erro do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] definidas pelo usuário entre instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações sobre essa tarefa, consulte [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 314dfaee23854524884edd0fe67fe1f45ec89b2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670503"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925267"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Fazer backup, restaurar e mover o catálogo do SSIS
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] inclui o banco de dados SSISDB. Você consulta exibições no banco de dados SSISDB para inspecionar objetos, configurações e dados operacionais que são armazenados no catálogo do **SSISDB** . Este tópico fornece instruções para fazer backup do banco de dados e restaurá-lo.  
@@ -48,7 +47,7 @@ ms.locfileid: "68670503"
   
 5.  Se você estiver restaurando o banco de dados SSISDB para uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] na qual o catálogo do SSISDB nunca foi criado, gere o script CREATE PROCEDURE para sp_ssis_startup, fazendo o seguinte. Para obter mais informações, consulte [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
-    1.  No Pesquisador de objetos, expanda o nó **bancos de dados** e expanda os bancos de **dados** > do sistema nó de**procedimentos armazenados** de**programação** > **mestre** > .  
+    1.  No Pesquisador de objetos, expanda o nó **bancos de dados** e expanda os bancos de **dados do sistema**  >  nó de**master**  >  **Programmability**  >  **procedimentos armazenados** de programação mestre.  
   
     2.  Clique com o botão direito do mouse em **dbo.sp_ssis_startup**e clique em **Script de Procedimento Armazenado como** > **CREATE To** > **Nova Janela do Editor de Consultas**.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "68670503"
   
     1.  No Pesquisador de Objetos, expanda o nó **SQL Server Agent** e, em seguida, expanda o nó **Trabalhos** .  
   
-    2.  Clique com o botão direito do mouse em trabalho de manutenção do servidor SSIS e clique em **trabalho de script como** > **criar para a** > **nova janela do editor de consultas**.  
+    2.  Clique com o botão direito do mouse em trabalho de manutenção do servidor SSIS e clique em **trabalho de script como**  >  **criar para a**  >  **nova janela do editor de consultas**.  
   
 ### <a name="to-restore-the-ssis-database"></a>Para restaurar o banco de dados SSIS  
   

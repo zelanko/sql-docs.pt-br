@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0aec4e5fb367f5fe9bf8fca5ed056269930cf2db
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970082"
 ---
 # <a name="database-states"></a>Estados de banco de dados
   Um banco de dados sempre está em um estado específico. Por exemplo, esses estados incluem ONLINE, OFFLINE ou SUSPECT. Para verificar o estado atual de um banco de dados, selecione a coluna **state_desc** na exibição de catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) ou a propriedade **Status** da função [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) .  

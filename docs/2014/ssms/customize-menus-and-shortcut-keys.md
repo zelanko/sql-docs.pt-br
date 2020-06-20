@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e9900def3d9e464888e43f608b939a343c7a955
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058647"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar menus e teclas de atalho
-  Um acelerador de teclado permite selecionar um comando de menu ou botão pressionando ALT+ *\<letra única>* . Por exemplo, para abrir o menu **Editar** , pressione ALT+E. Você pode reorganizar e modificar os botões da barra de ferramentas, menus e comandos de menu usando a caixa de diálogo **Personalizar** . São fornecidas instruções para alterar as configurações usando o mouse e usando apenas o teclado.  
+   Um acelerador de teclado permite selecionar um comando de menu ou botão pressionando ALT+*\<single letter>*. Por exemplo, para abrir o menu **Editar** , pressione ALT+E. Você pode reorganizar e modificar os botões da barra de ferramentas, menus e comandos de menu usando a caixa de diálogo **Personalizar** . São fornecidas instruções para alterar as configurações usando o mouse e usando apenas o teclado.  
   
  Podem ser criados aceleradores de teclado para procedimentos armazenados usando a tecla Ctrl na página **Teclado** da caixa de diálogo **Ferramentas**/**Opções** .  
   

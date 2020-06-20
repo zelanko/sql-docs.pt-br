@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad85e4c70e5185de83a8d3e259e397c5673ac9aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067502"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939827"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Criar e Gerenciar hierarquias (SSAS tabular)
   As hierarquias podem ser criadas e gerenciadas no designer modelo em Exibição de Diagrama. Par exibir o designer de modelos na Exibição de Diagrama no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique no menu **Model** , aponte para **Exibição de Modelo**e clique em **Exibição de Diagrama**.  

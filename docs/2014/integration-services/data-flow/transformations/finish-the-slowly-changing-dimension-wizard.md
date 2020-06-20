@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fca94c601dff429458fbde9d1614b078004f4d5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25e68290102d545f0ccb4bbc019616671f7602a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770362"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939548"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>Conclua o Assistente para Dimensões de Alteração Lenta
   Use a caixa de diálogo **Conclua o Assistente para Dimensões de Alteração Lenta** para verificar as escolhas antes que o assistente crie o suporte para dimensões de alteração lenta.  

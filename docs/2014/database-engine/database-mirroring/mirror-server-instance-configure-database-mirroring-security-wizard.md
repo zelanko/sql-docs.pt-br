@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 83a92633a4c466e72c8cc2de0cc1c220e88e01bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 889e62af592d8d23f2aca0d752f1c7f535df883a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755162"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934125"
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Instância de servidor espelho (Assistente para Configurar Segurança de Espelhamento de Banco de Dados)
   Use esta página para especificar informações sobre a instância de servidor com o banco de dados espelho.  

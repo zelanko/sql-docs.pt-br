@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5e74eba3479bdc722fdd45c99eb78592d6e8007
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcebff1c8621e2699137163e89bef87c22c67865
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092348"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036672"
 ---
 # <a name="select-instance"></a>Selecionar Instância
   Use a página Selecionar Instância do Assistente para Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar a instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] que você gostaria de atualizar para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

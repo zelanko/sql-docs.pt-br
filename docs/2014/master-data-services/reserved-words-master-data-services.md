@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd1e5bcee01992607cf9bffca1a72dd99bd75fbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960576"
 ---
 # <a name="reserved-words-master-data-services"></a>Palavras reservadas (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], quando você cria objetos ou membros de modelo, algumas palavras não podem ser usadas. Usar essas palavras pode causar erros.  
@@ -28,7 +27,7 @@ ms.locfileid: "65482571"
   
 -   [Modelos](#models)  
   
--   [Entities](#entities)  
+-   [Entidades](#entities)  
   
 -   [Hierarquias explícitas](#exhierarchies)  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65482571"
   
 -   **ID**  
   
--   **Auto-completar**  
+-   **Código**  
   
 -   **Nome**  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 70f328da53f2d346fe58f3416b0a3a0c331eb74c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e9aadd12735b24584f4197607e812139bb497f7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479978"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971916"
 ---
 # <a name="copy-a-version-master-data-services"></a>Copiar uma versão (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], copie uma versão do modelo para criar uma nova versão dele.  

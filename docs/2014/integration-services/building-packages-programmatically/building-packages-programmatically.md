@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d69416b36969e564b611d1b1274367b6ce5cb86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924967"
 ---
 # <a name="building-packages-programmatically"></a>Compilando pacotes programaticamente
   Se precisar criar pacotes dinamicamente ou gerenciar e executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fora do ambiente de desenvolvimento, você poderá manipular pacotes programaticamente. Nessa abordagem, você tem uma série de opções:
@@ -63,7 +62,7 @@ ms.locfileid: "78176551"
  [Salvando um pacote programaticamente](../building-packages-programmatically/saving-a-package-programmatically.md) Descreve como salvar um pacote programaticamente.
 
 ## <a name="reference"></a>Referência
- [Integration Services referência de erro e mensagem](../integration-services-error-and-message-reference.md) Lista os códigos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de erro predefinidos com seus nomes simbólicos e descrições.
+ [Integration Services referência de erro e mensagem](../integration-services-error-and-message-reference.md) Lista os códigos de erro predefinidos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] com seus nomes simbólicos e descrições.
 
 ## <a name="related-sections"></a>Seções relacionadas
  [Estendendo pacotes com scripts](../extending-packages-scripting/extending-packages-with-scripting.md) Discute como estender o fluxo de controle usando a tarefa Script e como estender o fluxo de dados usando o componente Script.

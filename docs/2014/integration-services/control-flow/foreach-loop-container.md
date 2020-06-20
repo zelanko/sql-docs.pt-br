@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be0fcbb238dfc73664569fec6753de49e4f0270d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918936"
 ---
 # <a name="foreach-loop-container"></a>Contêiner Loop Foreach
   O contêiner Loop Foreach define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **Foreach** em linguagens de programação. Em um pacote, o looping é habilitado por um enumerador Foreach.  O contêiner Loop Foreach repete o fluxo de controle para cada membro de um enumerador especificado.  
@@ -53,7 +52,7 @@ ms.locfileid: "62831567"
   
  ![Um contêiner Loop Foreach que enumera uma pasta](../media/ssis-foreachloop.gif "Um contêiner Loop Foreach que enumera uma pasta")  
   
- Você pode usar uma combinação de variáveis e expressões de propriedade para atualizar a propriedade do objeto de pacote com o valor de coleção do enumerador. Primeiro você mapeia o valor de coleção para uma variável definida pelo usuário e, depois, implementa uma expressão na propriedade que usa a variável. Por exemplo, o valor da coleção do enumerador de arquivo foreach é mapeado para uma `MyFile` variável chamada e a variável é usada na expressão de propriedade da propriedade Subject de uma tarefa Enviar email. Quando o pacote é executado, a propriedade Subject é atualizada com o nome de um arquivo cada vez que o loop é repetido. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).  
+ Você pode usar uma combinação de variáveis e expressões de propriedade para atualizar a propriedade do objeto de pacote com o valor de coleção do enumerador. Primeiro você mapeia o valor de coleção para uma variável definida pelo usuário e, depois, implementa uma expressão na propriedade que usa a variável. Por exemplo, o valor da coleção do enumerador de arquivo foreach é mapeado para uma variável chamada `MyFile` e a variável é usada na expressão de propriedade da propriedade Subject de uma tarefa Enviar email. Quando o pacote é executado, a propriedade Subject é atualizada com o nome de um arquivo cada vez que o loop é repetido. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../expressions/use-property-expressions-in-packages.md).  
   
  Variáveis mapeadas para o valor de coleção do enumerador também podem ser usadas em expressões e scripts.  
   

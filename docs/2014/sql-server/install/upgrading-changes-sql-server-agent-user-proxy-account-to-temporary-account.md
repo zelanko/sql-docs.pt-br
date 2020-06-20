@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd2d08c3-4e56-4034-8b68-0c78df8b5471
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a82cbcc9ef1ab57279b44cc83509cb1efad855ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bca80580a50f2acebed1b6fbea2dec1f6458dbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058869"
 ---
 # <a name="upgrading-will-change-the-sql-server-agent-user-proxy-account-to-the-temporary-upgradedproxyaccount"></a>Atualização mudará a Conta Proxy do Usuário do SQL Server Agent para o UpgradedProxyAccount temporário
   Planos de manutenção de banco de dados que têm envio de log habilitado não serão ativados após a atualização.  

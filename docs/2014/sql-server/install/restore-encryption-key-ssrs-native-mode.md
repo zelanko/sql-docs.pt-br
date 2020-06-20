@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e26b3d124d01d2163eade48656de44ca03784bb1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058957"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Restaurar chave de criptografia (modo nativo do SSRS)
   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa uma chave de criptografia para proteger dados confidenciais armazenados no banco de dados do servidor de relatório. Para assegurar-se de que tenha acesso contínuo aos dados criptografados, é importante criar um backup da chave da criptografia, caso seja necessário restaurá-la posteriormente devido a alterações na conta de serviço ou como parte de uma migração planejada. Este tópico é uma visão geral de como usar o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para restaurar chaves.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
  Para restaurar a chave, você deve ter salvo anteriormente uma cópia de backup da chave para um arquivo protegido por senha. Durante a restauração da chave, o servidor de relatório substituirá uma chave existente pela chave localizada no arquivo protegido por senha. A chave que está dentro do arquivo deve ser idêntica à chave usada para criptografar e descriptografar os dados.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "71952031"
  Para abrir a caixa de diálogo Restaurar Chave de Criptografia, clique em **Chaves de Criptografia** no painel de navegação do Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **Restaurar**. Essa caixa de diálogo também é exibida quando você atualiza a conta de serviço usando a página Conta de Serviço no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações sobre  
   
 ## <a name="options"></a>Opções  
- **Localização do arquivo**  
+ **Local do arquivo**  
  Selecione o arquivo protegido por senha que contém uma cópia da chave simétrica. A extensão padrão do arquivo é .snk.  
   
  **Senha**  

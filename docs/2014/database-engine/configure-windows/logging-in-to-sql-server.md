@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 908a90bee1ac484358a10fc8d17812a15c4b177a
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 8f791e68c49dfe9a1d1ce3598207b45b8ad63752
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886391"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935227"
 ---
 # <a name="logging-in-to-sql-server"></a>Fazendo o logon no SQL Server
   Você pode fazer logon em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando qualquer uma das ferramentas de administração gráficas ou em um prompt de comando.  

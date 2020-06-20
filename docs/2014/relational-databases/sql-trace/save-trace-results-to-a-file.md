@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 644fc812bbb4863c336ff2f53f5b2d67ee0a4d5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996427"
 ---
 # <a name="save-trace-results-to-a-file"></a>Salvar resultados de rastreamento em um arquivo
   Você pode salvar os resultados de rastreamentos em um arquivo. Um arquivo de rastreamento é um arquivo no qual são gravados os resultados de um rastreamento. Um arquivo de rastreamento pode estar localizado em um diretório local (como C:\\*foldername*\\*filename.trc*) ou em um diretório de rede (como \\\computername\sharename\filename.trc).  
@@ -34,7 +33,7 @@ ms.locfileid: "63136446"
   
 -   Efetuar otimização de consultas  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]salva os resultados de rastreamento em um arquivo quando um caminho e um nome de arquivo **@tracefile** são especificados para o argumento do procedimento armazenado **sp_trace_create**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]salva os resultados de rastreamento em um arquivo quando um caminho e um nome de arquivo são especificados para o **@tracefile** argumento do procedimento armazenado **sp_trace_create**.  
   
 > [!NOTE]  
 >  Se for especificado um caminho para que o procedimento armazenado **sp_trace_create** para salvar o arquivo de rastreamento, o diretório deverá estar acessível ao servidor. Esteja ciente, ainda, de que, se for especificado um diretório local para **sp_trace_create**, terá de ser um diretório local no computador do servidor.  

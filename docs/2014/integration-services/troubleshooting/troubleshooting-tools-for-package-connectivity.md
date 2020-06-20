@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2dbeca0a1f49484061c894b33b9022a63cede712
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766159"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972677"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>Solucionando problemas de conectividade de pacotes de ferramentas
   O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém recursos e ferramentas que você pode usar para solucionar problemas de conectividade entre pacotes e fontes de dados das quais os pacotes extraem e carregam dados.  

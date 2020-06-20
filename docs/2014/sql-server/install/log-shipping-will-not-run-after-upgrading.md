@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6727cb7d-ac01-4972-a730-dbb7cdc29705
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 952a47eaa2028819908ef7e93326c31a289a0cc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2af60743cb2cbf9bf455397fe052c4e81f5a06d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093979"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036628"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>Envio de log não executará após a atualização
   O Supervisor de Atualização detectou que você está usando envio de logs. O envio de log do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] não é compatível como o envio de log do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e não pode ser atualizado diretamente. Depois da atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], reconfigure o envio de log usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou procedimentos armazenados.  

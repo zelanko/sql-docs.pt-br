@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1a6beb1c6996e6e12f16c4555fd9dfcab97617d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064845"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933041"
 ---
 # <a name="event-pairing-target"></a>Destino de emparelhamento de evento
   O destino de emparelhamento de eventos efetua a correspondência entre dois eventos por meio de uma ou mais colunas de dados presentes em cada evento. Muitos eventos vêm em pares, por exemplo, aquisições de bloqueio e liberações de bloqueio. Após o emparelhamento de uma sequência de eventos, ambos são descartados. O descarte de conjuntos correspondidos facilita a detecção de aquisições de bloqueios que não foram liberados.  
@@ -43,7 +42,7 @@ ms.locfileid: "66064845"
   
  Todos os dados associados a um evento são capturados e armazenados para emparelhamento futuro. Além disso, dados adicionados por ações também são coletados. Os dados de evento coletados são armazenados na memória e, portanto, têm um limite finito. Esse limite é baseado na capacidade e na atividade do sistema. Em vez de usar a quantidade máxima de memória a ser usada como um parâmetro, a quantidade de memória usada terá como base os recursos disponíveis do sistema. Quando esses não estiverem disponíveis, os eventos não emparelhados que foram retidos serão cancelados. Se um evento não tiver sido emparelhado e for cancelado, o evento correspondente aparecerá como um evento não emparelhado.  
   
- O destino de emparelhamento serializa eventos não emparelhados em um formato XML. Esse formato não se adapta a nenhum esquema. O formato contém apenas dois tipos de elementos. O ** \<elemento>não emparelhado** é a raiz, seguido por um. elemento de>de evento para cada evento não emparelhado que está sendo rastreado no momento. ** \<** O ** \<elemento>do evento** contém um atributo que contém o nome do evento não emparelhado.  
+ O destino de emparelhamento serializa eventos não emparelhados em um formato XML. Esse formato não se adapta a nenhum esquema. O formato contém apenas dois tipos de elementos. O **\<unpaired>** elemento é a raiz, seguido por um. **\<event>** elemento para cada evento não emparelhado que está sendo rastreado no momento. O **\<event>** elemento contém um atributo que contém o nome do evento não emparelhado.  
   
 ## <a name="adding-the-target-to-a-session"></a>Adicionando o destino a uma sessão  
  Para adicionar o destino de correspondência de par a uma sessão de Eventos Estendidos, você deve incluir a instrução a seguir ao criar ou alterar uma sessão de evento:  

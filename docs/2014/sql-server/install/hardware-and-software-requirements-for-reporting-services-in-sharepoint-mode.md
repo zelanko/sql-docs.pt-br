@@ -9,17 +9,16 @@ ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1f95544de8f0362b8981a175f1c65de1798a1eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245630"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059321"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Requisitos de hardware e software para o Reporting Services no modo do SharePoint
 
-  Este tópico descreve os pré-requisitos, os requisitos de hardware e as considerações [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de instalação para execução no modo do SharePoint. Como o modo SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requer um servidor do SharePoint, a maioria dos requisitos são baseados no ambiente do SharePoint. Para servidores de relatório no modo nativo, o seu hardware deve atender aos requisitos mínimos de hardware e software para executar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, consulte [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
+  Este tópico descreve os pré-requisitos, os requisitos de hardware e as considerações de instalação para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] execução no modo do SharePoint. Como o modo SharePoint do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requer um servidor do SharePoint, a maioria dos requisitos são baseados no ambiente do SharePoint. Para servidores de relatório no modo nativo, o seu hardware deve atender aos requisitos mínimos de hardware e software para executar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, consulte [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   [Pré-requisitos](#bkmk_prereq)  
   
@@ -27,7 +26,7 @@ ms.locfileid: "75245630"
   
 -   [Requisitos do Power View](#bkmk_powerview)  
   
--   [Mais Informações](#bkmk_more_information)  
+-   [Mais informações](#bkmk_more_information)  
   
 ##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Pré-requisitos  
   
@@ -61,13 +60,13 @@ ms.locfileid: "75245630"
   
 -   A instância do servidor de relatório não pode usar o SQL Server Express Edition para seu banco de dados. No entanto, a instância do SQL Server Express Edition instalada pelo produto ou tecnologia do SharePoint pode existir lado a lado com outras edições do Mecanismo de Banco de Dados.  
   
-##  <a name="sscrescent-requirements"></a><a name="bkmk_powerview"></a>[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Requisitos do
+##  <a name="sscrescent-requirements"></a><a name="bkmk_powerview"></a>[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Requisitos do
 
  Analise a [documentação do Power View](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) mais atualizada em Office.Microsoft.com. O [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] é um recurso do Microsoft Excel 2013 e faz parte do suplemento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services para Microsoft SharePoint Server 2010 e 2013 Enterprise Editions.  
   
 ##  <a name="more-information"></a><a name="bkmk_more_information"></a> Mais informações
 
- Para obter informações sobre as alterações do SharePoint, consulte [alterações do sharepoint 2010 para o sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
+ Para obter informações sobre as alterações do SharePoint, consulte [alterações do sharepoint 2010 para o sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) ( https://technet.microsoft.com/library/ff607742(office.15).aspx) .  
   
  [Notas de versão do SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   

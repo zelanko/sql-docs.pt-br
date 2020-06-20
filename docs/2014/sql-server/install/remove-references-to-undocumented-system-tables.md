@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45c38038ee3d3214e4303c0ddbe0110be926c37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093153"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059196"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Remover referências a tabelas do sistema não documentadas
   Muitas tabelas do sistema que não foram documentadas em versões anteriores foram alteradas ou deixaram de existir. Portanto, utilizar essas tabelas após a atualização pode causar erros. O Supervisor de Atualização procura referências a nomes de tabelas do sistema, portanto ele reportará referências a qualquer tabela do usuário que contenha o mesmo nome de uma tabela do sistema.  
@@ -80,7 +79,7 @@ ms.locfileid: "66093153"
 ## <a name="corrective-action"></a>Ação corretiva  
  Modifique seus aplicativos de acordo com a tabela a seguir:  
   
-|Em vez de|Uso|  
+|Em vez de|Use|  
 |----------------|---------|  
 |**sysfulltextnotify**|Propriedade**TableFulltextPendingChanges** da função OBJECTPROPERTYEX.|  
 |**syslocks**|Exibição de gerenciamento dinâmico**sys.dm_tran_locks** , sp_lock ou exibição de compatibilidade **sys.syslockinfo** .|  

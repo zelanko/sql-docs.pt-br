@@ -9,34 +9,33 @@ ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a12c6dd3b0691d62f5509a363311b1deb1584078
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054269"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972286"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Adicionar, Atualizar e Excluir Dados (Master Data Services)
   Você pode adicionar dados e fazer alterações de dados a um modelo em [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], em massa.  
   
  **Pré-requisitos**  
   
--   Você deve ter permissão para inserir dados nas tabelas stg.\<name>_Leaf, stg.\<name>_Consolidated, stg.\<name>_Relationship no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Você deve ter permissão para inserir dados no STG. \<name> _Leaf, o STG. \<name> _Consolidated, STG. \<name> _Relationship tabela no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados.  
   
--   Você deve ter permissões para executar o procedimento armazenado stg.udp_\<name>_Leaf, stg.udp\_\<name>_Consolidated ou stg.udp\_\<name>_Relationship no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Você deve ter permissões para executar o STG. udp_ \<name> _Leaf, STG. udp \_ \<name> _Consolidated ou o procedimento armazenado stg. UDP \_ \<name> _Relationship no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados.  
   
 -   O modelo não deve ter um status de **Confirmado**.  
   
- **Para adicionar, atualizar e excluir dados no banco de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] dado**  
+ **Para adicionar, atualizar e excluir dados no banco de dado [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
   
 1.  Prepare os membros para importação na tabela de preparo adequada no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , incluindo fornecer valores para os campos requisitados. Para obter uma visão geral das tabelas de preparo, consulte [importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
-    -   Para membros folha, a tabela é stg.\<name>_Leaf, em que \<name> refere-se à entidade correspondente. Para obter informações sobre os campos obrigatórios, consulte [Tabela de preparo de membros folha &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+    -   Para membros folha, a tabela é STG. \<name> _Leaf, em que \<name> refere-se à entidade correspondente. Para obter informações sobre os campos obrigatórios, consulte [Tabela de preparo de membros folha &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
-    -   Para membros consolidados, a tabela é stg.\<name>_Consolidated. Para obter informações sobre os campos obrigatórios, consulte [Tabela de preparo de membros consolidados &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
+    -   Para membros consolidados, a tabela é STG. \<name> _Consolidated. Para obter informações sobre os campos obrigatórios, consulte [Tabela de preparo de membros consolidados &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-    -   Para mover o local dos membros em hierarquias explícitas, a tabela é stg.\<name>_Relationship. Para obter informações sobre os campos obrigatórios, consulte [Tabela de preparo de relações &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
+    -   Para mover o local de membros em hierarquias explícitas, a tabela é STG. \<name> _Relationship. Para obter informações sobre os campos obrigatórios, consulte [Tabela de preparo de relações &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
   
          Para obter uma visão geral sobre como mover membros em hierarquias explícitas, consulte [importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85b1f5eccc96e4ba1685a6e8d2ec8a5c428e2c8c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807248"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934307"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Espelhamento de banco de dados: interoperabilidade e coexistência (SQL Server)
   O espelhamento de banco de dados pode ser usado com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -27,7 +26,7 @@ ms.locfileid: "62807248"
   
 -   [Change data capture (e controle de alterações)](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
--   [Instantâneos de banco de dados](../../relational-databases/databases/database-snapshots-sql-server.md)  
+-   [Instantâneos do banco de dados](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
 -   [Catálogos de texto completo](database-mirroring-and-full-text-catalogs-sql-server.md)  
   

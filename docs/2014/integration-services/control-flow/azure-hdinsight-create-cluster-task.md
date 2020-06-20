@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79a49a7029e404e370987e73527ff199e2fd0e34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028632"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919950"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Tarefa Criar Cluster do Azure HDInsight
 A **Tarefa Criar Cluster do Azure HDInsight** permite que um pacote do SSIS crie um cluster do Azure HDInsight na assinatura e grupo de recursos do Azure especificados.
@@ -38,7 +37,7 @@ A tabela a seguir fornece uma descrição para os campos nessa caixa de diálogo
 |AzureStorageConnection|Selecione um Gerenciador de conexão de armazenamento do Azure existente ou crie um novo, relacionado a uma conta de armazenamento do Azure, que será associado com o cluster HDInsight.|
 |SubscriptionId|Especifique a ID da assinatura na qual o cluster HDInsight será criado.|
 |ResourceGroup|Especifique o grupo de recursos do Azure no qual o cluster HDInsight será criado.|
-|Local|Especifique o local do cluster HDInsight. O cluster deve ser criado no mesmo local que a conta de Armazenamento do Azure especificada.|  
+|Location|Especifique o local do cluster HDInsight. O cluster deve ser criado no mesmo local que a conta de Armazenamento do Azure especificada.|  
 |ClusterName|Especifique um nome para o cluster HDInsight que será criado.|  
 |clusterSize|Especifique o número de nós a serem criados no cluster.|  
 |BlobContainer|Especifique o nome do contêiner de armazenamento padrão a ser associado ao cluster HDInsight.|  

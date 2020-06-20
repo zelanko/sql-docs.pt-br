@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 02a788c5675a763d7285c9986eef94f3621e6a9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0a460abdab356b4ec20678c2e549605792271fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478816"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960786"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Validando dados (Suplemento do MDS para Excel)
   No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], quando você publica dados, ocorrem dois tipos de validação:  
@@ -38,7 +37,7 @@ ms.locfileid: "65478816"
 |------------|-----------------|  
 |Erro|Um ou mais valores na linha validação falharam na validação em relação a regras de negócio definidas por um administrador do MDS.|  
 |Não Validado|Os valores na linha ainda não foram validados em relação a regras de negócio.|  
-|Êxito|Todos os valores na linha passaram na validação quanto a regras de negócio.|  
+|Sucesso|Todos os valores na linha passaram na validação quanto a regras de negócio.|  
   
 ## <a name="input-statuses"></a>Status de Entrada  
  No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os status de entrada a seguir são possíveis  

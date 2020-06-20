@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b894d7b554dffcb0941ddf38182519cf85a84c2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934954"
 ---
 # <a name="server-properties-connections-page"></a>Propriedades do servidor (página Conexões)
   Use esta página para exibir ou modificar suas opções de conexão.  

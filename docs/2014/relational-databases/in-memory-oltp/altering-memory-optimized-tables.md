@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e6e28e6d1bb923fb226e7df7964853685f23178b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050383"
 ---
 # <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
   Não há suporte para as operações de ALTER nas tabelas com otimização de memória. Isso inclui operações como alteração do bucket_count, adição ou remoção de um índice, e adição ou remoção de uma coluna. Este tópico fornece diretrizes sobre como atualizar tabelas com otimização de memória.  
@@ -223,7 +222,7 @@ Write-Host ""
   
  O script de PowerShell a seguir executa as alterações do esquema que foram incluídas em script no exemplo anterior. Esse script é considerado argumento de uma tabela, além de executar os scripts de alteração do esquema que foram gerados para essa tabela e os procedimentos armazenados associados.  
   
- Uso: execute_schema_change. ps1 *server_name * * db_name `schema_name` table_name*  
+ Uso: execute_schema_change.ps1 *server_name * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  
