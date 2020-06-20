@@ -1,5 +1,6 @@
 ---
 title: SQLSetConnectAttr | Microsoft Docs
+description: Saiba mais sobre os atributos de conexão no SQLSetConnectAttr, incluindo quando eles são definidos e valores possíveis no driver ODBC SQL Server Native Client.
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17a63a481837894addbd8b626fac015025314099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3008664916a8863a00dd36772e4b83cf27e845d5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301914"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967727"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -42,37 +43,37 @@ ms.locfileid: "81301914"
   
 |Atributo do SQL Server|Defina antes ou depois da conexão com o servidor|  
 |--------------------------|----------------------------------------------|  
-|SQL_COPT_SS_ANSI_NPW|Antes de|  
-|SQL_COPT_SS_APPLICATION_INTENT|Antes de|  
-|SQL_COPT_SS_ATTACHDBFILENAME|Antes de|  
-|SQL_COPT_SS_BCP|Antes de|  
-|SQL_COPT_SS_BROWSE_CONNECT|Antes de|  
-|SQL_COPT_SS_BROWSE_SERVER|Antes de|  
-|SQL_COPT_SS_CONCAT_NULL|Antes de|  
-|SQL_COPT_SS_CONNECTION_DEAD|After (após)|  
-|SQL_COPT_SS_ENCRYPT|Antes de|  
-|SQL_COPT_SS_ENLIST_IN_DTC|After (após)|  
-|SQL_COPT_SS_ENLIST_IN_XA|After (após)|  
-|SQL_COPT_SS_FALLBACK_CONNECT|Antes de|  
-|SQL_COPT_SS_FAILOVER_PARTNER|Antes de|  
-|SQL_COPT_SS_INTEGRATED_SECURITY|Antes de|  
-|SQL_COPT_SS_MARS_ENABLED|Antes de|  
-|SQL_COPT_SS_MULTISUBNET_FAILOVER|Antes de|  
-|SQL_COPT_SS_OLDPWD|Antes de|  
-|SQL_COPT_SS_PERF_DATA|After (após)|  
-|SQL_COPT_SS_PERF_DATA_LOG|After (após)|  
-|SQL_COPT_SS_PERF_DATA_LOG_NOW|After (após)|  
-|SQL_COPT_SS_PERF_QUERY|After (após)|  
-|SQL_COPT_SS_PERF_QUERY_INTERVAL|After (após)|  
-|SQL_COPT_SS_PERF_QUERY_LOG|After (após)|  
-|SQL_COPT_SS_PRESERVE_CURSORS|Antes de|  
+|SQL_COPT_SS_ANSI_NPW|Antes|  
+|SQL_COPT_SS_APPLICATION_INTENT|Antes|  
+|SQL_COPT_SS_ATTACHDBFILENAME|Antes|  
+|SQL_COPT_SS_BCP|Antes|  
+|SQL_COPT_SS_BROWSE_CONNECT|Antes|  
+|SQL_COPT_SS_BROWSE_SERVER|Antes|  
+|SQL_COPT_SS_CONCAT_NULL|Antes|  
+|SQL_COPT_SS_CONNECTION_DEAD|Depois|  
+|SQL_COPT_SS_ENCRYPT|Antes|  
+|SQL_COPT_SS_ENLIST_IN_DTC|Depois|  
+|SQL_COPT_SS_ENLIST_IN_XA|Depois|  
+|SQL_COPT_SS_FALLBACK_CONNECT|Antes|  
+|SQL_COPT_SS_FAILOVER_PARTNER|Antes|  
+|SQL_COPT_SS_INTEGRATED_SECURITY|Antes|  
+|SQL_COPT_SS_MARS_ENABLED|Antes|  
+|SQL_COPT_SS_MULTISUBNET_FAILOVER|Antes|  
+|SQL_COPT_SS_OLDPWD|Antes|  
+|SQL_COPT_SS_PERF_DATA|Depois|  
+|SQL_COPT_SS_PERF_DATA_LOG|Depois|  
+|SQL_COPT_SS_PERF_DATA_LOG_NOW|Depois|  
+|SQL_COPT_SS_PERF_QUERY|Depois|  
+|SQL_COPT_SS_PERF_QUERY_INTERVAL|Depois|  
+|SQL_COPT_SS_PERF_QUERY_LOG|Depois|  
+|SQL_COPT_SS_PRESERVE_CURSORS|Antes|  
 |SQL_COPT_SS_QUOTED_IDENT|Você pode usar o|  
 |SQL_COPT_SS_TRANSLATE|Você pode usar o|  
-|SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|Antes de|  
+|SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|Antes|  
 |SQL_COPT_SS_TXN_ISOLATION|Você pode usar o|  
 |SQL_COPT_SS_USE_PROC_FOR_PREP|Você pode usar o|  
 |SQL_COPT_SS_USER_DATA|Você pode usar o|  
-|SQL_COPT_SS_WARN_ON_CP_ERROR|Antes de|  
+|SQL_COPT_SS_WARN_ON_CP_ERROR|Antes|  
   
  O uso de um atributo da conexão e do comando equivalente de [!INCLUDE[tsql](../../includes/tsql-md.md)] para a mesma sessão, banco de dados ou estado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerar um comportamento inesperado. Por exemplo,  
   
@@ -102,7 +103,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- O padrão é **ReadWrite**. Para obter mais informações [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre o suporte nativo do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cliente para AGS, consulte [suporte de SQL Server Native Client para alta disponibilidade e recuperação de desastre](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ O padrão é **ReadWrite**. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporte nativo do cliente para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AGS, consulte [suporte de SQL Server Native Client para alta disponibilidade e recuperação de desastre](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
 
 <a name="sqlcoptssattachdbfilename"></a>
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
@@ -136,7 +137,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|computername|**SQLBrowseConnect** retorna uma lista de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. As barras invertidas\\\\duplas () não devem ser usadas para o nome do servidor (por \\exemplo, em vez de \MyServer, meuservidor deve ser usado).|  
+|computername|**SQLBrowseConnect** retorna uma lista de instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador especificado. As barras invertidas duplas ( \\ \\ ) não devem ser usadas para o nome do servidor (por exemplo, em vez de \\ \MyServer, meuservidor deve ser usado).|  
 |NULO|Padrão. **SQLBrowseConnect** retorna informações para todos os servidores no domínio.|  
 
 <a name="sqlcoptssconcatnull"></a>
@@ -157,7 +158,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |Valor|Descrição|  
 |-----------|-----------------|  
 |SQL_EN_ON|A conexão será criptografada.|  
-|SQL_EN_OFF|A conexão não será criptografada. Esse é o padrão.|  
+|SQL_EN_OFF|A conexão não será criptografada. Este é o padrão.|  
 
 <a name="sqlcoptssenlistindtc"></a>
 ## <a name="sql_copt_ss_enlist_in_dtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  
@@ -211,7 +212,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
- Para obter mais informações [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre o suporte nativo do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] cliente para AGS, consulte [suporte de SQL Server Native Client para alta disponibilidade e recuperação de desastre](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporte nativo do cliente para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AGS, consulte [suporte de SQL Server Native Client para alta disponibilidade e recuperação de desastre](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -286,7 +287,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
 <a name="sqlcoptsstranslate"></a>
 ## <a name="sql_copt_ss_translate"></a>SQL_COPT_SS_TRANSLATE  
- SQL_COPT_SS_TRANSLATE faz o driver traduzir caracteres entre as páginas de código de cliente e de servidor à medida que os dados de MBCS são trocados. O atributo afeta apenas os dados armazenados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nas colunas **Char**, **varchar**e **Text** .  
+ SQL_COPT_SS_TRANSLATE faz o driver traduzir caracteres entre as páginas de código de cliente e de servidor à medida que os dados de MBCS são trocados. O atributo afeta apenas os dados armazenados nas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **colunas char**, **varchar**e **Text** .  
   
 |Valor|Descrição|  
 |-----------|-----------------|  

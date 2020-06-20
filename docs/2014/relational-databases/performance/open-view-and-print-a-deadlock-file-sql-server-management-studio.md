@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08bacd7a99e45e10163216c69057b167088441ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063912"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>Abrir, exibir e imprimir um arquivo de deadlock (SQL Server Management Studio)
   Quando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] gera um deadlock, é possível capturar e salvar as informações de deadlock em um arquivo. Após salvar o arquivo de deadlock, você pode abri-lo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para exibição ou impressão.  
   
 ### <a name="to-open-and-view-a-deadlock-file"></a>Para abrir e exibir um arquivo de deadlock  
   
-1.  No menu **arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aponte para **abrir**e clique em **arquivo**.  
+1.  No menu **arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , aponte para **abrir**e clique em **arquivo**.  
   
 2.  Na caixa de diálogo **Abrir Arquivo** , selecione o tipo de arquivo .xdl na caixa **Arquivos do tipo** . Assim, você terá uma lista filtrada, contendo apenas arquivos de deadlock.  
   

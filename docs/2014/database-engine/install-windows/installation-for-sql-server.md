@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dafb1e971b85adfee2ecb3579ac20b83906b9dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228408"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932367"
 ---
 # <a name="installation-for-sql-server-2014"></a>Instalação para SQL Server 2014
  ## <a name="download-sql-server-2014-express"></a>[Baixar o SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -45,7 +44,7 @@ ms.locfileid: "75228408"
   
 -   Componentes de conectividade  
   
- Você pode instalar cada componente individualmente ou selecionar uma combinação dos componentes listados acima. Para fazer a melhor escolha entre as edições e os componentes disponíveis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no, consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está disponível em edições de 32 e 64 bits.
+ Você pode instalar cada componente individualmente ou selecionar uma combinação dos componentes listados acima. Para fazer a melhor escolha entre as edições e os componentes disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está disponível em edições de 32 e 64 bits.
  
  **Experimente:**  
   

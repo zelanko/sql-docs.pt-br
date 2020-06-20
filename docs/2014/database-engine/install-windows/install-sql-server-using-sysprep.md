@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d35b8f27dc0ef6a1deb40bd86ed193973c2c40b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775299"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932486"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Instalar o SQL Server 2014 usando SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser acessadas por meio da Central de Instalação. A página **Avançado** da **Central de Instalação** tem duas opções: **Preparação de imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Conclusão de imagem de uma instância autônoma preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . As seções [Preparar](#prepare) e [Concluir](#complete) descrevem o processo de instalação em detalhes. Para obter mais informações, consulte [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "62775299"
 ## <a name="prerequisites"></a>Prerequisites  
  Antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], examine os tópicos em [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
- Para obter mais informações [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre edições e os requisitos de hardware e software, consulte [requisitos de hardware e software para a instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edições e os requisitos de hardware e software, consulte [requisitos de hardware e software para a instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 > [!IMPORTANT]  
 >  As ações a seguir não têm suporte no SysPrep do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -115,7 +114,7 @@ ms.locfileid: "62775299"
   
      A página **Preparar Tipo de Imagem** é exibida apenas quando há uma instância preparada não configurada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador. Você pode querer preparar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou adicionar os recursos do sys prep a uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na máquina. Para obter mais informações sobre como acrescentar recursos a uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consulte [Adicionar recursos a uma instância preparada](#AddFeatures).  
   
-8.  Na página **termos de licença** , leia o contrato de licença e marque a caixa de seleção para aceitar os termos e condições de licença. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+8.  Na página **Termos de Licença** , leia o contrato de licença e marque a caixa de seleção para aceitar os termos e as condições da licença. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 9. Na página **seleção de recursos** , selecione os componentes para a instalação:  
   
@@ -131,15 +130,15 @@ ms.locfileid: "62775299"
   
 11. Na página Configuração da Instância, especifique a ID da instância. Clique em **Próximo** para continuar.  
   
-     **ID da instância** – a ID da instância é usada para identificar diretórios de instalação e chaves do registro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para sua instância do. Esse é o caso para instâncias padrão e instâncias nomeadas. Se a instância preparada for concluída como instância padrão durante a etapa Concluir, o nome da instância será sobrescrito como MSSQLSERVER. A ID da Instância permanecerá a mesma especificada.  
+     **ID da instância** – a ID da instância é usada para identificar diretórios de instalação e chaves do registro para sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esse é o caso para instâncias padrão e instâncias nomeadas. Se a instância preparada for concluída como instância padrão durante a etapa Concluir, o nome da instância será sobrescrito como MSSQLSERVER. A ID da Instância permanecerá a mesma especificada.  
   
-     **Diretório raiz da instância** – por padrão, o diretório raiz da [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]instância é. Para especificar um diretório raiz não padrão, use o campo fornecido ou clique em **Procurar** para localizar uma pasta de instalação. O diretório especificado na etapa de preparação será usado durante a configuração na etapa Concluir.  
+     **Diretório raiz da instância** – por padrão, o diretório raiz da instância é [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] . Para especificar um diretório raiz não padrão, use o campo fornecido ou clique em **Procurar** para localizar uma pasta de instalação. O diretório especificado na etapa de preparação será usado durante a configuração na etapa Concluir.  
   
      Todos os service packs e atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão aplicados a cada componente de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instâncias instaladas** – a grade mostra as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instâncias do que estão no computador em que a instalação está sendo executada.  
+     **Instâncias instaladas** – a grade mostra as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador em que a instalação está sendo executada.  
   
-12. A página **requisitos de espaço em disco** calcula o espaço em disco necessário para os recursos que você especificar. Em seguida, ele compara o espaço necessário com o espaço em disco disponível.  
+12. A página **Requisitos de Espaço em Disco** calcula o espaço em disco necessário para os recursos especificados. Em seguida, ele compara o espaço necessário com o espaço em disco disponível.  
   
 13. O Verificador de Configuração do Sistema executará as regras de preparação de imagem para validar a configuração do computador com os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**.  
   
@@ -167,7 +166,7 @@ ms.locfileid: "62775299"
   
 5.  Na página **Chave do Produto (Product Key)** , selecione um botão de opção para indicar se você está instalando uma edição gratuita do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou uma versão de produção do produto que tem uma chave de PID. Para obter mais informações, consulte [edições e componentes do SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md). Se você estiver instalando a edição Evaluation, o período de avaliação de 180 dias iniciará quando você concluir esta etapa.  
   
-6.  Na página **termos de licença** , leia o contrato de licença e marque a caixa de seleção para aceitar os termos e condições de licença. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+6.  Na página **Termos de Licença** , leia o contrato de licença e marque a caixa de seleção para aceitar os termos e as condições da licença. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 7.  Na página **Selecione uma Instância Preparada** , selecione a instância preparada que você deseja concluir na caixa suspensa. Selecione a instância não configurada na lista **ID da Instância** .  
   
@@ -180,7 +179,7 @@ ms.locfileid: "62775299"
   
 9. Na página Configuração da Instância, especifique o nome da instância para a instância preparada. Esse será o nome da instância depois que você concluir a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clique em **Próximo** para continuar.  
   
-     **ID da instância** – a ID da instância é usada para identificar diretórios de instalação e chaves do registro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para sua instância do. Esse é o caso para instâncias padrão e instâncias nomeadas. Se a instância preparada for concluída como instância padrão durante a etapa Concluir, o nome da instância será sobrescrito como MSSQLSERVER. A ID da Instância permanecerá a mesma especificada durante a etapa de preparação.  
+     **ID da instância** – a ID da instância é usada para identificar diretórios de instalação e chaves do registro para sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esse é o caso para instâncias padrão e instâncias nomeadas. Se a instância preparada for concluída como instância padrão durante a etapa Concluir, o nome da instância será sobrescrito como MSSQLSERVER. A ID da Instância permanecerá a mesma especificada durante a etapa de preparação.  
   
      **Diretório raiz da instância** -o diretório especificado na etapa de preparação será usado e não poderá ser modificado nesta etapa.  
   
@@ -190,7 +189,7 @@ ms.locfileid: "62775299"
   
 10. O fluxo de trabalho do restante deste tópico depende dos recursos que foram selecionados durante a etapa de preparação. Talvez você não veja todas as páginas, dependendo das seleções.  
   
-11. Na página **configuração do servidor** – contas de serviço, especifique contas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon para serviços. Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação.  
+11. Na página **configuração do servidor** – contas de serviço, especifique contas de logon para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviços. Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação.  
   
      Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](../../sql-server/install/server-configuration-service-accounts.md) e [Configurar contas de serviço e permissões do Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -200,7 +199,7 @@ ms.locfileid: "62775299"
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
-12. Use a guia **configuração do servidor – agrupamento** para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o. Para obter mais informações, consulte [Configuração do SQL Server – Ordenação](../../sql-server/install/server-configuration-collation.md).  
+12. Use a guia **configuração do servidor – agrupamento** para especificar agrupamentos não padrão para o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações, consulte [Configuração do SQL Server – Ordenação](../../sql-server/install/server-configuration-collation.md).  
   
 13. Use a página Configuração – Provisionamento de Conta do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para especificar o seguinte:  
   
@@ -223,7 +222,7 @@ ms.locfileid: "62775299"
   
 16. Use a página Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar o tipo de instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a ser criada. Para obter mais informações sobre os modos de configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Opções de configuração do Reporting Services &#40;SSRS&#41;](../../sql-server/install/reporting-services-configuration-options-ssrs.md).  
   
-17. Na página **relatório de erros** , especifique as informações que você deseja enviar para [!INCLUDE[msCoName](../../includes/msconame-md.md)] que o ajude a melhorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o. Por padrão, as opções de relatório de erros estão habilitadas.  
+17. Na página **relatório de erros** , especifique as informações que você deseja enviar para [!INCLUDE[msCoName](../../includes/msconame-md.md)] que o ajude a melhorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, as opções de relatório de erros estão habilitadas.  
   
 18. Na página **Regras de Conclusão de Imagem** , o Verificador de Configuração do Sistema executará as regras de conclusão de imagem para validar a configuração do computador com as configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você especificou. Você pode exibir os detalhes na tela clicando em **Mostrar Detalhes**ou como um relatório HTML clicando em **Exibir relatório detalhado**.  
   
@@ -315,7 +314,7 @@ ms.locfileid: "62775299"
   
 10. Repita as etapas de 1 a 9 até que todos os componentes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tenham sido removidos.  
   
-##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a>Modificando ou desinstalando uma instância concluída [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do.  
+##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a>Modificando ou desinstalando uma instância concluída do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  O processo para adicionar ou remover recursos ou desinstalar uma instância concluída de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é semelhante ao processo para uma instância instalada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte estes tópicos:  
   
 -   [Adicione recursos a uma instância do SQL Server 2014 &#40;instalação&#41;](add-features-to-an-instance-of-sql-server-setup.md)  

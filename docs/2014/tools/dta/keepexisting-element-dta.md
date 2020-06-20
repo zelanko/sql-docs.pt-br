@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcfa71becfda386031d6267e2b7f97f1eac5b731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048352"
 ---
 # <a name="keepexisting-element-dta"></a>Elemento KeepExisting (DTA)
   Especifica as estruturas físicas de design (índices, exibições indexadas ou particionamento) que o Orientador de Otimização do Mecanismo de Banco de Dados deve reter ao gerar sua recomendação.  
@@ -36,7 +35,7 @@ ms.locfileid: "62735628"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`string`O limite de tamanho é aplicado pelo servidor.|  
 |**Valores permitidos**|**NONE**<br /> Não existe nenhuma estrutura.<br /><br /> **ALL**<br /> Todas as estruturas existentes.<br /><br /> **ALIGNED**<br /> Todas as estruturas alinhadas por partição.<br /><br /> **CL_IDX**<br /> Todos os índices clusterizados em tabelas<br /><br /> **IDX**<br /> Todos os índices clusterizados e não cluster em tabelas<br /><br /> Use apenas um desses valores com este elemento.|  

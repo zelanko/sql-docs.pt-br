@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fe555d94eb8e00cddd147c2424d0cf60e1d47b34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7c0209ef46013b7d9f6550b77c1c8e138456887
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923866"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Aplicar as alterações no destino
   No fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executa uma carga incremental de dados de alteração, a terceira e a última tarefa servem para aplicar as alterações no seu destino. Você precisará de um componente para aplicar inserções, um para aplicar atualizações e um para aplicar exclusões.  

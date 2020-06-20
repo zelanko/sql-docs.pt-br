@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d0ab03b5152b0fe3f12de5e31b091b49d86cd4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048360"
 ---
 # <a name="viewing-tuning-recommendations"></a>Exibindo recomendações de ajuste
-   Essa tarefa usa a sessão de ajuste que você criou em [Ajustando uma carga de trabalho](lesson-1-1-tuning-a-workload.md). Depois de ajustar o banco [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de dados usando o script MyScript. [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL, [!INCLUDE[ssDE](../../includes/ssde-md.md)] o Orientador de otimização exibirá seus resultados na guia **recomendações** . A tarefa a seguir apresenta a guia **recomendações** da [!INCLUDE[ssDE](../../includes/ssde-md.md)] GUI (interface gráfica do usuário) do Orientador de otimização e orienta você a explorar as informações que ele fornece sobre os resultados da sessão de ajuste.  
+   Essa tarefa usa a sessão de ajuste que você criou em [Ajustando uma carga de trabalho](lesson-1-1-tuning-a-workload.md). Depois de ajustar o [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados usando o script MyScript. SQL [!INCLUDE[tsql](../../includes/tsql-md.md)] , [!INCLUDE[ssDE](../../includes/ssde-md.md)] o Orientador de otimização exibirá seus resultados na guia **recomendações** . A tarefa a seguir apresenta a guia **recomendações** da [!INCLUDE[ssDE](../../includes/ssde-md.md)] GUI (interface gráfica do usuário) do Orientador de otimização e orienta você a explorar as informações que ele fornece sobre os resultados da sessão de ajuste.  
   
 ### <a name="view-tuning-recommendations"></a>Exibir recomendações de ajuste  
   
 1.  Iniciar o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Consulte [Iniciando o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md). Verifique se você está conectado à mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada na prática [Ajustando uma carga de trabalho](lesson-1-1-tuning-a-workload.md).  
   
-2.  Clique duas vezes em **MySession** no painel **Monitor de Sessão** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]O Orientador de otimização carrega as informações de sessão de sua sessão de **Recommendations** ajuste anterior e exibe a [!INCLUDE[ssDE](../../includes/ssde-md.md)] guia recomendações. Observe que o Orientador de otimização não fez nenhuma **recomendação de partição** porque você aceitou todos os padrões de opção de ajuste e **nenhum particionamento** foi selecionado na guia **Opções de ajuste** .  
+2.  Clique duas vezes em **MySession** no painel **Monitor de Sessão** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]O Orientador de otimização carrega as informações de sessão de sua sessão de ajuste anterior e exibe a guia **recomendações** . Observe que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] Orientador de otimização não fez nenhuma **recomendação de partição** porque você aceitou todos os padrões de opção de ajuste e **nenhum particionamento** foi selecionado na guia **Opções de ajuste** .  
   
 3.  Na guia **Recomendações** , use a barra de rolagem na parte inferior da página da guia para exibir todas as colunas de **Recomendações de Índice** . Cada linha representa um objeto de banco de dados (índices ou exibições indexadas) que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomenda que sejam descartadas ou criadas. Role a tela até a coluna mais à direita e clique em **Definição**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibe uma janela **Visualização de Script SQL** , na qual você pode exibir o script [!INCLUDE[tsql](../../includes/tsql-md.md)] que cria ou descarta o objeto de banco de dados nessa linha. Clique em **Fechar** para fechar a janela de visualização.  
   
@@ -44,12 +43,12 @@ ms.locfileid: "66110174"
   
 7.  No menu **Ações** , clique em **Avaliar Recomendações**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria uma nova sessão de ajuste em que você pode avaliar um subconjunto das recomendações originais em MySession.  
   
-8.  Digite `EvaluateMySession` para o nome da nova **sessão**e clique no botão **iniciar análise** na barra de ferramentas. Você pode repetir os passos 2 e 3 para esta nova sessão de ajuste a fim de exibir suas recomendações.  
+8.  Digite `EvaluateMySession` para o **nome**da nova sessão e clique no botão **iniciar análise** na barra de ferramentas. Você pode repetir os passos 2 e 3 para esta nova sessão de ajuste a fim de exibir suas recomendações.  
   
 ## <a name="summary"></a>Resumo  
  Você exibiu o conteúdo da guia **Recomendações** para a sessão de ajuste MySession e avaliou um subconjunto de recomendações na nova sessão de ajuste EvaluateMySession.  
   
- A avaliação de um subconjunto de recomendações de ajuste poderá ser necessária se você descobrir que deve alterar as opções de ajuste depois de executar uma sessão. Por exemplo, se você pedir ao Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para considerar exibições indexadas quando você especificar as opções de ajuste para uma sessão, mas depois que a recomendação for gerada você decidir não usar as exibições indexadas. Em seguida, você pode usar a opção **avaliar recomendações** no menu **ações** para [!INCLUDE[ssDE](../../includes/ssde-md.md)] que o Orientador de otimização reavalie a sessão sem considerar as exibições indexadas. Quando você usa a opção **Avaliar Recomendações** , as recomendações geradas previamente são aplicadas hipoteticamente ao design físico atual para chegar ao design físico para a segunda sessão de ajuste.  
+ A avaliação de um subconjunto de recomendações de ajuste poderá ser necessária se você descobrir que deve alterar as opções de ajuste depois de executar uma sessão. Por exemplo, se você pedir ao Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para considerar exibições indexadas quando você especificar as opções de ajuste para uma sessão, mas depois que a recomendação for gerada você decidir não usar as exibições indexadas. Em seguida, você pode usar a opção **avaliar recomendações** no menu **ações** para que o Orientador de [!INCLUDE[ssDE](../../includes/ssde-md.md)] otimização reavalie a sessão sem considerar as exibições indexadas. Quando você usa a opção **Avaliar Recomendações** , as recomendações geradas previamente são aplicadas hipoteticamente ao design físico atual para chegar ao design físico para a segunda sessão de ajuste.  
   
  Poderão ser exibidas mais informações sobre resultados de ajuste na guia **Relatórios** , que é descrita na próxima tarefa desta lição.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7d2c37e38386f7e46c1b8a0800d45dfc0b9b0dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058703"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967074"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Editor de Destino de Arquivo Simples (página Gerenciador de Conexões)
   Use a página do **Gerenciador de Conexões** da caixa de diálogo do **Editor de Destino de Arquivo Simples** para selecionar a conexão de arquivo simples do destino e especificar se irá substituir ou anexar ao arquivo de destino existente. O destino de arquivo simples grava dados em um arquivo de texto. Esse arquivo de texto pode ser em formato delimitado, de largura fixa, de largura fixa com delimitador de linha ou em formato irregular à direita.  
@@ -40,10 +39,10 @@ ms.locfileid: "66058703"
  **Substituir dados no arquivo**  
  Indique se irá substituir um arquivo existente ou acrescentar dados a ele.  
   
- **Verga**  
+ **Cabeçalho**  
  Digite um bloco de texto a ser inserido no arquivo antes que qualquer dado seja gravado. Use esta opção para incluir informações adicionais, como cabeçalhos de coluna.  
   
- **Visualizar**  
+ **Visualização**  
  Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A visualização pode exibir até 200 linhas.  
   
 ## <a name="see-also"></a>Consulte Também  

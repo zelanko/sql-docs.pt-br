@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 90e7ee3b8c0ac9c77c4ef863367ff46467a35277
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f503bc368c35e03e458d1e74064314fbf208eb39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705383"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057144"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Caixas de diálogo Criar Nova Política ou Abrir política, Página geral
   Use esta caixa de diálogo para criar uma nova política ou modificar uma política existente do Gerenciamento Baseado em Políticas. Use as áreas **Em relação aos destinos** e **Restrição de servidor** como um filtro para limitar as políticas a um subconjunto de todos os destinos possíveis. Com relação às condições a serem usadas como filtros de destino, elas devem ser definidas em uma faceta física e não devem conter funções e nem operador LIKE. Quando o sistema computar o objeto definido para uma política, por padrão os objetos do sistema serão excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, consulte [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  

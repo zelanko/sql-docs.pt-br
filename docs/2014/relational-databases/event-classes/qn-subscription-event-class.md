@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fda0f61806c1fa2be33b1a231e877758c4c67ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cebcb693fc6f876c74f375c16de9ad3f09bbe9bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650511"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028902"
 ---
 # <a name="qnsubscription-event-class"></a>Classe de evento QN:Subscription
   O evento QN:Subscription fornece informações sobre assinaturas de notificação.  
@@ -34,7 +33,7 @@ ms.locfileid: "62650511"
 |DatabaseName|`nvarchar`|O nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |EventClass|`int`|Tipo de evento = 199.|27|Não|  
 |EventSequence|`int`|Número de sequência para esse evento.|51|Não|  
-|EventSubClass|`nvarchar`|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> Assinatura registrada: indica quando a assinatura de notificação da consulta é registrada com êxito no banco de dados.<br /><br /> Rebobinação de assinatura: indica [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando o recebe uma solicitação de assinatura que corresponde exatamente a uma assinatura existente. Nesse caso, [!INCLUDE[ssDE](../../includes/ssde-md.md)] define o valor do tempo-limite da assinatura existente para o tempo-limite especificado na nova solicitação de assinatura.<br /><br /> Assinatura acionada: indica quando uma assinatura de notificação produz uma mensagem de notificação.<br /><br /> Falha ao acionar com erro do agente: indica quando uma mensagem de notificação [!INCLUDE[ssSB](../../includes/sssb-md.md)] falha devido a um erro.<br /><br /> Falha ao acionar sem erro do agente: indica quando uma mensagem de notificação falha, mas [!INCLUDE[ssSB](../../includes/sssb-md.md)] não devido a um erro.<br /><br /> Erro de agente interceptado: indica [!INCLUDE[ssSB](../../includes/sssb-md.md)] que foi entregue um erro na conversa que a notificação de consulta usa.<br /><br /> Tentativa de exclusão de assinatura: indica [!INCLUDE[ssDE](../../includes/ssde-md.md)] que a tentativa de excluir uma assinatura expirada para liberar recursos.<br /><br /> Falha na exclusão da assinatura: indica que a tentativa de excluir uma assinatura expirada falhou. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] irá reagendar automaticamente a assinatura para exclusão, a fim de liberar recursos.<br /><br /> Assinatura destruída: indica que a [!INCLUDE[ssDE](../../includes/ssde-md.md)] assinatura expirada foi excluída com êxito|21|Sim|  
+|EventSubClass|`nvarchar`|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> Assinatura registrada: indica quando a assinatura de notificação da consulta é registrada com êxito no banco de dados.<br /><br /> Rebobinação de assinatura: indica quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] recebe uma solicitação de assinatura que corresponde exatamente a uma assinatura existente. Nesse caso, [!INCLUDE[ssDE](../../includes/ssde-md.md)] define o valor do tempo-limite da assinatura existente para o tempo-limite especificado na nova solicitação de assinatura.<br /><br /> Assinatura acionada: indica quando uma assinatura de notificação produz uma mensagem de notificação.<br /><br /> Falha ao acionar com erro do agente: indica quando uma mensagem de notificação falha devido a um [!INCLUDE[ssSB](../../includes/sssb-md.md)] erro.<br /><br /> Falha ao acionar sem erro do agente: indica quando uma mensagem de notificação falha, mas não devido a um [!INCLUDE[ssSB](../../includes/sssb-md.md)] erro.<br /><br /> Erro de agente interceptado: indica que foi [!INCLUDE[ssSB](../../includes/sssb-md.md)] entregue um erro na conversa que a notificação de consulta usa.<br /><br /> Tentativa de exclusão de assinatura: indica que a [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentativa de excluir uma assinatura expirada para liberar recursos.<br /><br /> Falha na exclusão da assinatura: indica que a tentativa de excluir uma assinatura expirada falhou. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] irá reagendar automaticamente a assinatura para exclusão, a fim de liberar recursos.<br /><br /> Assinatura destruída: indica que a [!INCLUDE[ssDE](../../includes/ssde-md.md)] assinatura expirada foi excluída com êxito|21|Sim|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|Não|  

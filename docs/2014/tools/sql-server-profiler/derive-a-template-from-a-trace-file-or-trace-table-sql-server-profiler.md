@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 305817b7-4d23-49fb-9e6c-4d34359877bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1982d7941fd42eeac8a2d6eaa0bb78260c24317
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c36ff25c87dd834862d28b9fcdceecfbd38e59f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064004"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>Derivar um modelo a partir de um arquivo ou tabela de rastreamento (SQL Server Profiler)
   Este tópico descreve como criar um modelo de rastreamento a partir de um arquivo ou tabela de rastreamento existente, usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

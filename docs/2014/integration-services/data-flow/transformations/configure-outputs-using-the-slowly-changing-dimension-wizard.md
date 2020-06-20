@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 65f57b330a2b007f8f02df4404597d91fb143fcd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67ae47197636af037f3eb9e648a2d8ce6c4a63a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939675"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar saídas por meio do Assistente para Dimensões de Alteração Lenta
   O Assistente para Dimensões de Alteração Lenta funciona como o editor da transformação Dimensão de Alteração Lenta. Criar e configurar o fluxo de dados para alterar dados de dimensão lentamente pode ser uma tarefa complexa. O Assistente para Dimensões de Alteração Lenta oferece o método mais simples para criar o fluxo de dados para as saídas da transformação Dimensão de Alteração Lenta, guiando você pelas etapas de mapeamento de colunas, selecionando colunas de chave de negócio, definindo atributos de alteração de coluna e configurando o suporte para membros de dimensão deduzidos.

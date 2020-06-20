@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9128f73dc8fec388ae111781b9beeb52bbab138b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058816"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967146"
 ---
 # <a name="file-connection-manager-editor"></a>Editor do Gerenciador de Conexões de Arquivos
   Use a caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos** para especificar as propriedades usadas para conectar a um arquivo ou pasta.  

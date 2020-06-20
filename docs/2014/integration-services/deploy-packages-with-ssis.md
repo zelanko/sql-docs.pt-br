@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f30221e3afb898834fcc13476760499fd3a5f9e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176446"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951826"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Tutorial do SSIS: Como implantar pacotes
   O [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece ferramentas que facilitam a implantação de pacotes em outro computador. As ferramentas de implantação também gerenciam qualquer dependência, como configurações e arquivos que o pacote precisa. Neste tutorial, você aprenderá a usar essas ferramentas para instalar pacotes e suas dependências em um computador de destino.
@@ -46,7 +45,7 @@ ms.locfileid: "78176446"
  A melhor maneira de se familiarizar com as novas ferramentas, controles e recursos disponíveis no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é usá-las. Este tutorial guia você através das etapas para criar um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionar pacotes e outros arquivos necessários ao projeto. Após a conclusão do projeto, você criará um grupo de implantação, copiará o grupo para o computador de destino e instalará os pacotes no computador de destino.
 
 ## <a name="requirements"></a>Requisitos
- Este tutorial destina-se a usuários que já estão familiarizados com operações fundamentais do sistema de arquivos, mas que têm exposição limitada aos novos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]recursos disponíveis no. Para entender melhor os [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] conceitos básicos que você colocará para usar neste tutorial, talvez seja útil primeiro concluir os seguintes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutoriais: [Execute o assistente de SQL Server importação e exportação](import-export-data/start-the-sql-server-import-and-export-wizard.md) e o tutorial do [SSIS: Criando um pacote ETL simples](../integration-services/ssis-how-to-create-an-etl-package.md).
+ Este tutorial destina-se a usuários que já estão familiarizados com operações fundamentais do sistema de arquivos, mas que têm exposição limitada aos novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para entender melhor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] os conceitos básicos que você colocará para usar neste tutorial, talvez seja útil primeiro concluir os seguintes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutoriais: [Execute o assistente de SQL Server importação e exportação](import-export-data/start-the-sql-server-import-and-export-wizard.md) e o [tutorial do SSIS: Criando um pacote ETL simples](../integration-services/ssis-how-to-create-an-etl-package.md).
 
  **Computador de origem** O computador no qual você criará o pacote de implantação deve ter os seguintes componentes instalados:
 
@@ -68,7 +67,7 @@ ms.locfileid: "78176446"
 
 -   Você deve ter permissão para criar e remover tabelas do AdventureWorks e executar pacotes no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
--   Você deve ter permissão de leitura e gravação na tabela sysssispackages no banco de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dados do sistema msdb.
+-   Você deve ter permissão de leitura e gravação na tabela sysssispackages no banco de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dados do sistema msdb.
 
  Se você planeja implantar pacotes no mesmo computador em que criará o grupo de implantação, esse computador deverá atender aos requisitos dos computadores de origem e de destino.
 

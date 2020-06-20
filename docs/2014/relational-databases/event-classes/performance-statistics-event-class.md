@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fc22c4af9980eb5c1c365c0ce2d0e2f6c8462e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028996"
 ---
 # <a name="performance-statistics-event-class"></a>classe de evento Performance Statistics
   A classe de evento Performance Statistics pode ser usada para monitorar o desempenho de consultas, procedimentos armazenados e gatilhos que são executados. Cada uma das seis subclasses de evento indica um evento no tempo de vida de consultas, procedimentos armazenados e gatilhos no sistema. Usando a combinação dessas subclasses de evento e as exibições de gerenciamento dinâmico sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associadas, você pode reconstituir o histórico de desempenho de qualquer consulta, procedimento armazenado ou gatilho específico.  

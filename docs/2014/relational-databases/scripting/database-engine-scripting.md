@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 48f749da0acc21e990954a1198d868c0786d2a72
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ae905ba881e2337660d47306ce0ed84fdac35d8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703977"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056861"
 ---
 # <a name="database-engine-scripting"></a>Geração de scripts do mecanismo de banco de dados
   O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oferece suporte ao ambiente de script do [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell para gerenciar instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e os objetos nas instâncias. Também é possível criar e executar consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contêm [!INCLUDE[tsql](../../includes/tsql-md.md)] e XQuery em ambientes muito semelhantes aos ambientes de script.  

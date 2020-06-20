@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 61b6f366843b326a8983c27c3d5ee945604756f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa42e1125629ddef24e4815a2b1ed89283912832
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940067"
 ---
 # <a name="querying-a-tabular-model"></a>Consultando um modelo de tabela
   Como um desenvolvedor, consultar um modelo de tabela significa recuperar dados do banco de dados de tabela; para atingir esta meta, você tem duas opções: usar consultas de tabela no DAX, ou usar o MDX e recuperar os dados como provenientes de um cubo. Entretanto, dependendo do modo subjacente de seu modelo de tabela, você pode ficar restrito a usar apenas consultas de tabela DAX; o modo DirectQuery requer o uso de consultas de tabela DAX.  

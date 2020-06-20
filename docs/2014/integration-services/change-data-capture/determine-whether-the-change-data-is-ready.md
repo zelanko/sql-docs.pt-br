@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96a59d4b9088dd2281efaa85f97e229d12223e0b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771412"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923407"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar se os dados de alteração estão prontos
   No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a segunda tarefa serve para garantir que os dados de alteração para o intervalo selecionado estejam prontos. Esta etapa é necessária, pois o processo de captura assíncrono pode ainda não ter processado todas as alterações até o ponto de extremidade selecionado.  

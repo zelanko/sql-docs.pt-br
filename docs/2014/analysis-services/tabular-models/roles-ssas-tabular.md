@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdcf47e483c3a52879c66838a657b51d65bff8f8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938694"
 ---
 # <a name="roles-ssas-tabular"></a>Funções (SSAS tabular)
   Funções, em modelos tabulares, definem permissões de membro para um modelo. Cada função contém membros, por nome de usuário do Windows ou grupo do Windows, e permissões (leitura, processo, administrador). Membros da função podem executar ações no modelo conforme definido pela permissão de função. As funções definidas com permissões de leitura também podem fornecer segurança adicional no nível de linha usando filtros no nível de linha.  
@@ -40,7 +39,7 @@ ms.locfileid: "67284848"
 -   [Tarefas relacionadas](#bkmk_rt)  
   
 ##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>Noções básicas sobre funções  
- As funções são usadas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no para gerenciar a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] segurança dos dados do e do. Existem dois tipos de funções no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ As funções são usadas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para gerenciar a segurança dos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dados do e do. Existem dois tipos de funções no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 -   A função do servidor, uma função fixa que fornece acesso de administrador a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -67,7 +66,7 @@ ms.locfileid: "67284848"
 |Nenhum|Os membros não podem fazer modificações ao esquema de banco de dados modelo e não podem consultar dados.|Filtros de linha não são aplicáveis. Os dados não são visíveis a usuários nesta função|  
 |Ler|Os membros têm permissão de consultar dados (com base em filtros de linha), mas não podem ver o banco de dados modelo no SSMS, não podem fazer nenhuma alteração ao esquema de banco de dados modelo e o usuário não pode processar o modelo.|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha são visíveis a usuários.|  
 |Leitura e processo|Os membros têm permissão de consultar dados (com base em filtros em nível de linha) e executar operações de processo por meio de um script ou pacote que contém um comando de processo, mas não pode fazer nenhuma alteração ao banco de dados. Não pode exibir o banco de dados modelo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha possam ser consultados.|  
-|Processo|Os membros podem executar operações de processo por meio de um script ou pacote que contém um comando de processo. Não pode modificar o esquema de banco de dados modelo. Não é possível consultar dados. Não pode consultar o banco de dados modelo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Filtros de linha não são aplicáveis. Nenhum dado pode ser consultado nesta função|  
+|Processar|Os membros podem executar operações de processo por meio de um script ou pacote que contém um comando de processo. Não pode modificar o esquema de banco de dados modelo. Não é possível consultar dados. Não pode consultar o banco de dados modelo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Filtros de linha não são aplicáveis. Nenhum dado pode ser consultado nesta função|  
 |Administrador|Os membros podem fazer modificações ao esquema modelo e consultar todos os dados no designer de modelo, no cliente de relatório e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Filtros de linha não são aplicáveis. Todos os dados podem ser consultados nesta função.|  
   
 ##  <a name="row-filters"></a><a name="bkmk_rowfliters"></a>Filtros de linha  
@@ -83,7 +82,7 @@ ms.locfileid: "67284848"
 |-----------|--------------------|  
 |Região|= Região [País] = "USA"|  
 |ProductCategory|= ProductCategory [Name] = "Bicicletas"|  
-|Transações|=Transactions[Year]=2008|  
+|Transactions|=Transactions[Year]=2008|  
   
  O efeito líquido destas permissões na tabela de Transações é que os membros terão permissão de consultar as linhas de dados quando o cliente estiver nos EUA, e a categoria de produto for bicicletas e o ano for 2008. Os usuários não poderiam consultar nenhuma transação fora dos EUA ou nenhuma transação que não fosse bicicletas nem em 2008, a menos que fossem membros de outra função que concede estas permissões.  
   
@@ -120,13 +119,13 @@ ms.locfileid: "67284848"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|1|Corporate|  
+|1|Corporativo|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
-|4|Manufatura|  
+|4|Produção|  
 |5|Garantia de qualidade|  
 |6|Pesquisa e desenvolvimento|  
-|7|Sales and Marketing|  
+|7|Vendas e marketing|  
   
 ##  <a name="testing-roles"></a><a name="bkmk_testroles"></a>Testando funções  
  Ao criar um projeto de modelo, você pode usar o recurso Analisar no Excel para testar a eficácia das funções que você definiu. No menu **Modelo** no designer de modelo, quando você clica em **Analisar no Excel**, antes de o Excel abrir, a caixa de diálogo **Escolher Credenciais e Perspectiva** é aberta. Nesta caixa de diálogo, você pode especificar o nome de usuário atual, um nome de usuário diferente, uma função e uma perspectiva que você usará para se conectar ao modelo de workspace como uma fonte de dados. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS de Tabela&#41;](analyze-in-excel-ssas-tabular.md).  

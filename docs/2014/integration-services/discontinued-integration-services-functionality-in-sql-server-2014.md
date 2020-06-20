@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 5ee40ceb-37b9-47a9-b90d-ce1de74b10f7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 915cb42726d27526342870ca39abd7012166270a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49c4618c7d985c28497a5e8a30f7865dedd10351
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059379"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966946"
 ---
 # <a name="discontinued-integration-services-functionality-in-sql-server-2014"></a>Funcionalidade descontinuada do Integration Services no SQL Server 2014
-  Este tópico descreve [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] os recursos que não estão mais disponíveis na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Este tópico descreve [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] os recursos que não estão mais disponíveis na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Não há recursos descontinuados do Integration Services no SQL Server 2014.  
   

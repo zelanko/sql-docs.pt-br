@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057638"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967036"
 ---
 # <a name="msmq-connection-manager-editor"></a>Editor do Gerenciador de Conexões MSMQ
   Use a caixa de diálogo **Gerenciador de Conexões MSMQ** para especificar o caminho do Serviço de Enfileiramento de Mensagens (também conhecido como MSMQ).  
@@ -41,8 +40,8 @@ ms.locfileid: "66057638"
   
 |Tipo de fila|Exemplo de caminho|  
 |----------------|-----------------|  
-|Público|\<nome do computador>\\<nome da fila\>|  
-|Particular|\<nome do computador>\Private$\\<nome da fila\>|  
+|Público|\<computer name>\\Nome da fila de<\>|  
+|Particular|\<computer name>Nome da fila do \Bytes privados $ \\<\>|  
   
  Você pode usar um "." para representar o computador local.  
   

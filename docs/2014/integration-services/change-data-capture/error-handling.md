@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923237"
 ---
 # <a name="error-handling"></a>Tratamento de erros
   Uma Instância do Oracle CDC mina as alterações de um único banco de dados de origem do Oracle (um cluster do Oracle RAC é considerado um banco de dados único) e grava as alterações confirmadas em tabelas de alteração em um banco de dados do CDC na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -48,14 +47,14 @@ ms.locfileid: "62835640"
 ## <a name="error-handling"></a>Tratamento de erros  
  Esta seção descreve como o Serviço Oracle CDC trata erros.  
   
-### <a name="logging"></a>Registrando em log  
+### <a name="logging"></a>Registro em log  
  O Serviço Oracle CDC cria informações de erro em um dos locais a seguir.  
   
 -   O log de eventos do Windows, que é usado para registrar erros e indicar os eventos de ciclo de vida do Serviço Oracle CDC (iniciando, parando, (re) conexão com a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ).  
   
 -   A tabela MSXDBCDC.dbo.xdbcdc_trace, que é usada para registros gerais e rastreamento pelo processo principal do Serviço Oracle CDC.  
   
--   A tabela \<cdc-database>.cdc.xdbcdc_trace, que é usada para registros gerais e rastreamento pelas Instâncias Oracle CDC. Isto significa que os erros relacionados a uma Instância Oracle CDC específica são registrados em uma tabela de rastreamento daquela instância.  
+-   A \<cdc-database> tabela. CDC. xdbcdc_trace, que é usada para registro em log e rastreamento geral por instâncias do Oracle CDC. Isto significa que os erros relacionados a uma Instância Oracle CDC específica são registrados em uma tabela de rastreamento daquela instância.  
   
  As informações são registradas em log pelo serviço Oracle CDC quando o serviço:  
   

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2773c2b837aa9344e2e8427c6f960fa098fa2408
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f513e8216bf5d8be269a7178601c368f6e597df1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067606"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939879"
 ---
 # <a name="column-properties-ssas-tabular"></a>Propriedades da Coluna (SSAS Tabular)
   Este tópico descreve as propriedades de coluna do modelo tabular.  
   
  Seções neste tópico:  
   
--   [Propriedades de coluna](#bkmk_properties)  
+-   [Propriedades da coluna](#bkmk_properties)  
   
 -   [Para definir as configurações de propriedade de coluna](#bkmk_config_prop)  
   
@@ -34,11 +33,11 @@ ms.locfileid: "66067606"
 |Propriedade|Configuração padrão|Descrição|  
 |--------------|---------------------|-----------------|  
 |**Nome da coluna**||O nome da coluna conforme é armazenada no modelo e como é exibida em uma lista de campo do cliente de relatório.|  
-|**Formato de dados**|Automaticamente determinado durante a importação.|Especifica o formato de exibição a ser usado para obter os dados nesta coluna. Depois que você definir um formato de dados, poderá definir as propriedades que são específicas a cada formato. Por exemplo, se você escolher o formato **Moedas** , poderá definir o número de casas decimais visíveis, escolher o separador de milhares e escolher o símbolo de moeda. Essa propriedade oferece as seguintes opções:<br /><br /> **Geral**<br /><br /> **Número Decimal**<br /><br /> **Número inteiro**<br /><br /> **Currency**<br /><br /> **Percentual**<br /><br /> **Científico**<br /><br /> Se os valores de coluna contiverem imagens, consulte **Imagem Representativa**.|  
-|**Tipo de dados**|Automaticamente determinado durante a importação.|Especifica o tipo de dados para todos os valores na coluna.|  
+|**Formato de dados**|Automaticamente determinado durante a importação.|Especifica o formato de exibição a ser usado para obter os dados nesta coluna. Depois que você definir um formato de dados, poderá definir as propriedades que são específicas a cada formato. Por exemplo, se você escolher o formato **Moedas** , poderá definir o número de casas decimais visíveis, escolher o separador de milhares e escolher o símbolo de moeda. Essa propriedade oferece as seguintes opções:<br /><br /> **Geral**<br /><br /> **Número Decimal**<br /><br /> **Número inteiro**<br /><br /> **Currency**<br /><br /> **Porcentagem**<br /><br /> **Científico**<br /><br /> Se os valores de coluna contiverem imagens, consulte **Imagem Representativa**.|  
+|**Tipo de Dados**|Automaticamente determinado durante a importação.|Especifica o tipo de dados para todos os valores na coluna.|  
 |**Descrição**||Uma descrição de texto para a coluna.<br /><br /> Em alguns clientes de relatório, se um usuário final colocar o cursor sobre esta coluna na lista de campos, a descrição aparecerá como uma dica de ferramenta.|  
 |**Oculto**|Falso|Especifica se a coluna é ocultada das listas de campo de cliente de relatório.<br /><br /> Defina esta propriedade como **True** para ocultar esta coluna no vídeo. Por exemplo, as colunas que contêm identificadores ou chaves não são geralmente úteis para o usuário final.<br /><br /> Se você ocultar uma coluna do cliente de relatório, o campo não será suprimido nos dados de modelo. O campo ainda está visível se você criar uma consulta baseada no modelo. Uma coluna oculta ainda pode ser usada para agrupar ou classificar.<br /><br /> A propriedade **Oculta** não fornece nenhuma forma de proteção de dados. Para proteger os dados, use filtros de linha em Funções. Para obter mais informações, consulte [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md).|  
-|**Sort By Column**||Especifica outra coluna para classificar os valores nesta coluna. Uma relação deve existir entre as duas colunas.<br /><br /> Este valor deve ser o nome de uma coluna existente. Você não pode especificar uma fórmula ou medida.|  
+|**Classificar por coluna**||Especifica outra coluna para classificar os valores nesta coluna. Uma relação deve existir entre as duas colunas.<br /><br /> Este valor deve ser o nome de uma coluna existente. Você não pode especificar uma fórmula ou medida.|  
   
  **Propriedades de relatório**  
   

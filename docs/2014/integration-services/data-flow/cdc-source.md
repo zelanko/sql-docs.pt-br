@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3452e504072188ea5f4bacf3fa6f10002335fb4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828124"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916616"
 ---
 # <a name="cdc-source"></a>Origem CDC
   A origem CDC lê um intervalo de dados de alteração de tabelas de alteração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e entrega o downstream de alterações a outros SSIS componentes.  
@@ -38,7 +37,7 @@ ms.locfileid: "62828124"
   
 -   O nome da variável de pacote do estado CDC com base no qual o intervalo de Processamento CDC é determinado. A origem CDC não modifica essa variável.  
   
- Os dados retornados pela Origem CDC são iguais aos retornados pelas funções do CDC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**cdc.fn_cdc_get_all_changes_\<capture-instance-name>** ou **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (quando disponível). A única adição opcional é a coluna, **__$initial_processing** , que indica se o intervalo de processamento atual pode se sobrepor a uma carga inicial da tabela. Para obter mais informações sobre o processamento inicial, consulte [CDC Control Task](../control-flow/cdc-control-task.md).  
+ Os dados retornados pela origem CDC são iguais aos retornados pelas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funções CDC **cdc. \<capture-instance-name> fn_cdc_get_all_changes_** ou **CDC. fn_cdc_get_net_changes_ \<capture-instance-name> ** (quando disponível). A única adição opcional é a coluna, **__$initial_processing** , que indica se o intervalo de processamento atual pode se sobrepor a uma carga inicial da tabela. Para obter mais informações sobre o processamento inicial, consulte [CDC Control Task](../control-flow/cdc-control-task.md).  
   
  A origem CDC tem uma saída regular e uma saída de erro.  
   
@@ -75,20 +74,20 @@ use <cdc-enabled-database-name>
   
  onde:  
   
--   \<cdc-enabled-database-name> é o nome do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém as tabelas de alterações.  
+-   \<cdc-enabled-database-name>é o nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados que contém as tabelas de alteração.  
   
--   \<value-from-state-cs> é o valor que aparece na variável de estado CDC como CS/\<value-from-state-cs>/ (CS significa Current-processing-range-Start, início atual do intervalo de processamento).  
+-   \<value-from-state-cs>é o valor que aparece na variável de estado CDC como CS/ \<value-from-state-cs> /(CS significa Current-Processing-intervalo-Start).  
   
--   \<value-from-state-ce> é o valor que aparece na variável de estado CDC, como em CE/\<value-from-state-cs>/ (CE significa Current-processing-range-End).  
+-   \<value-from-state-ce>é o valor que aparece na variável de estado CDC como CE/ \<value-from-state-cs> /(CE significa Current-Processing-Range-end).  
   
--   \<mode> corresponde aos modos de processamento CDC. Os modos de processamento têm um dos seguintes valores: **Tudo**, **Tudo com Valores Antigos**, **Rede**, **Rede com Máscara de Atualização**, **Rede com Mesclagem**.  
+-   \<mode>são os modos de processamento CDC. Os modos de processamento têm um dos seguintes valores: **Tudo**, **Tudo com Valores Antigos**, **Rede**, **Rede com Máscara de Atualização**, **Rede com Mesclagem**.  
   
  Este script ajuda a isolar problemas reproduzindo-os no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], onde é fácil reproduzir e identificar erros.  
   
 #### <a name="sql-server-error-message"></a>Mensagem de erro do SQL Server  
  A mensagem seguinte poderá ser retornada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Um número insuficiente de argumentos foram fornecidos ao procedimento ou função cdc.fn_cdc_get_net_changes_\<..>.**  
+ **Um número insuficiente de argumentos foi fornecido para o procedimento ou a função cdc. fn_cdc_get_net_changes_ \<..> .**  
   
  Esse erro não indica que um argumento está faltando. Significa que os valores de LSN de início ou fim na variável de estado CDC são inválidos.  
   

@@ -1,5 +1,6 @@
 ---
 title: Executando operações de cópia em massa (ODBC) | Microsoft Docs
+description: Saiba como o driver ODBC SQL Server Native Client dá suporte a funções de biblioteca de banco de informações que executam SQL Server operações de cópia em massa.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58c355c437d325e2a0db228f8ed4af83956fecf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 45e7ac1eb4497c055f5dfdce1057541b42f4015b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785048"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967699"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Executando operações de cópia em massa (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "73785048"
      Deve estar presente no tempo de execução. O sqlncli11.dll é distribuído com o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 > [!NOTE]  
->  A função ODBC **SQLBulkOperations** não tem nenhuma relação com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as funções de cópia em massa. Os aplicativos devem usar as funções de cópia em massa específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar operações de cópia em massa.  
+>  A função ODBC **SQLBulkOperations** não tem nenhuma relação com as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funções de cópia em massa. Os aplicativos devem usar as funções de cópia em massa específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar operações de cópia em massa.  
   
 ## <a name="minimally-logging-bulk-copies"></a>Cópias em massa com registro mínimo  
  Com o modelo de Recuperação Completa, todas as operações de inserção de linha executadas pelo carregamento em massa são totalmente registradas no log de transações. Em grandes carregamentos de dados, isso pode preencher o log de transações rapidamente. Em determinadas condições, é possível fazer um registro mínimo. O registro mínimo reduz a possibilidade de uma operação de carregamento em massa preencher o espaço do log, além de ser mais eficiente que o registro completo.  
@@ -50,7 +51,7 @@ ms.locfileid: "73785048"
  Para obter informações sobre como usar o registro em log mínimo, consulte [pré-requisitos para log mínimo em importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 ## <a name="remarks"></a>Comentários  
- Ao usar o bcp.exe no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, você pode obter erros em situações onde não havia erros antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Isto se deve ao fato de, nas versões posteriores, o bcp.exe não executar mais a conversão implícita de tipo de dados. Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o bcp.exe convertia dados numéricos em um tipo de dados money, se a tabela de destino tivesse um tipo de dados money. Porém, nessa situação, o bcp.exe simplesmente truncava os campos extras. A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]do, se os tipos de dados não corresponderem entre o arquivo e a tabela de destino, o bcp. exe gerará um erro se houver dados que precisem ser truncados para se ajustarem à tabela de destino. Para resolver este erro, corrija os dados para que correspondam ao tipo de dados de destino. Opcionalmente, use o bcp.exe de uma versão anterior ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Ao usar o bcp.exe no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, você pode obter erros em situações onde não havia erros antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Isto se deve ao fato de, nas versões posteriores, o bcp.exe não executar mais a conversão implícita de tipo de dados. Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o bcp.exe convertia dados numéricos em um tipo de dados money, se a tabela de destino tivesse um tipo de dados money. Porém, nessa situação, o bcp.exe simplesmente truncava os campos extras. A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , se os tipos de dados não corresponderem entre o arquivo e a tabela de destino, bcp.exe gerará um erro se houver dados que teriam de ser truncados para se ajustarem à tabela de destino. Para resolver este erro, corrija os dados para que correspondam ao tipo de dados de destino. Opcionalmente, use o bcp.exe de uma versão anterior ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

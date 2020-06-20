@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e953cf4c8b3001b199523a747f934283e60473b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827952"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916246"
 ---
 # <a name="create-infosource"></a>Criar InfoSource
   Use a caixa de diálogo **Criar InfoSource** para criar um novo InfoSource. Para criar o novo InfoSource, use a caixa de diálogo **Criar InfoSource para os Dados da Transação** ou **Criar InfoSource para Dados Mestres** .  

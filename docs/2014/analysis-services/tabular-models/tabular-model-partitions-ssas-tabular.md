@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 653ec9a81d8c066a32e66b156f5e42fc41169782
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066392"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938557"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Partições de modelo tabular (SSAS tabular)
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de outras partições. As partições definidas para um modelo durante a criação de modelo são duplicadas em um modelo implantado. Uma vez implantado, você pode gerenciar essas partições e pode criar novas partições usando a caixa de diálogo **Partições** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou usando um script. As informações fornecidas neste tópico descrevem partições em um banco de dados modelo tabular implantado. Para obter mais informações sobre como criar e gerenciar partições durante a criação de um modelo, consulte [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "66066392"
   
 -   [Tarefas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Benefícios  
  O design de modelo eficaz utiliza partições para eliminar processamento desnecessário e carga de processador subsequente em servidores do Analysis Services, enquanto, ao mesmo tempo, faz certos dados que são processados e atualizados com bastante frequência refletirem os dados mais recentes de fontes de dados.  
   
  Por exemplo, um modelo de tabela pode ter uma tabela de Vendas que inclui dados de vendas durante o ano fiscal de 2011 atual e cada um dos anos fiscais anteriores. A tabela de vendas do modelo tem as três partições a seguir:  
@@ -57,7 +56,7 @@ ms.locfileid: "66066392"
 |Permissão|Ações|  
 |----------------|-------------|  
 |Administrador|Ler, processar, criar, copiar, mesclar, excluir|  
-|Processo|Leitura e processo|  
+|Processar|Leitura e processo|  
 |Somente leitura|Ler|  
   
  Para saber mais sobre como criar funções durante a criação do modelo usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md). Para saber mais sobre como gerenciar os membros de função para funções de modelo de tabela implantadas usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Funções de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-roles-ssas-tabular.md).  

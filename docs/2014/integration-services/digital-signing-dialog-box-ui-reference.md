@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f89d495aa8826250c04f3e0cfe5979d5f202ac8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059445"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966986"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Assinatura Digital
   Use a caixa de diálogo **Assinatura Digital** para assinar um pacote com uma assinatura digital ou remover a assinatura. A caixa de diálogo **Assinatura Digital** está disponível na opção **Assinatura Digital** do menu **SSIS** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "66059445"
  **Assine**  
  Clique para abrir a caixa de diálogo **Selecionar Certificado** e selecione o certificado a ser usado.  
   
- **Remover**  
+ **Removerr**  
  Clique para remover a assinatura digital.  
   
 ## <a name="see-also"></a>Consulte Também  

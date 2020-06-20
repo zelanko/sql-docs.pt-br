@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40a617dd1beff24f8f072f5d139bec7c1ca65f33
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063701"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Opções de Validação de Assinatura (assinaturas transacionais)
   Use a caixa de diálogo **Opções de validação de assinatura** para especificar se a validação deve usar apenas uma contagem de linhas ou uma contagem de linhas e uma soma de verificação binária.  

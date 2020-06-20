@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ed4b8789de70a5a2ebba82779dfc5e7001fcf1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900631"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939647"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Criar e implantar um cache para a Transformação Pesquisa
   Você pode criar e implementar um arquivo de cache (.caw) para uma transformação Pesquisa. O conjunto de dados de referência é armazenado no arquivo de cache.  
@@ -86,7 +85,7 @@ ms.locfileid: "62900631"
   
 4.  Configure o projeto para criar um utilitário de implantação e, em seguida, crie o projeto. Para obter mais informações, consulte [Criar um utilitário de implantação](../../create-a-deployment-utility.md).  
   
-     Um arquivo de manifesto, \<*nome do projeto*>.SSISDeploymentManifest.xml é criado e lista os arquivos diversos no projeto, os pacotes e as configurações de pacote.  
+     Um arquivo de manifesto, \<*project name*>.SSISDeploymentManifest.xml, é criado e lista os arquivos diversos no projeto, os pacotes e as configurações do pacote.  
   
 5.  Implemente os pacotes no sistema de arquivos Para obter mais informações, consulte [Implantar pacotes por meio do utilitário de implantação](../../deploy-packages-by-using-the-deployment-utility.md).  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 98a8476ef317a0ddfa6f7fc27c0c9572ed12817a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d64e63a2269e1ef965871ccf18a9c4303e0c2a51
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770168"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939217"
 ---
 # <a name="unpivot-transformation"></a>Transformação Não Dinâmica
   A transformação não dinâmica transforma um conjunto de dados não normalizado em uma versão mais normalizada, expandindo valores de várias colunas de um único registro em vários registros, com os mesmos valores em uma única coluna. Por exemplo, um conjunto de dados que lista nomes de clientes tem uma linha para cada cliente, com os produtos e a quantidade comprada mostrados em colunas da linha. Depois que a transformação não dinâmica normaliza o conjunto de dados, este contém uma linha diferente para cada produto que o cliente comprou.  

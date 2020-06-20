@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6ee99e02d9c3c5e78d00abd3e8d9f5673ee4d22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924047"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Editor de Origem CDC (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem CDC** para selecionar o gerenciador de conexões do ADO.NET para o banco de dados do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] do qual a origem CDC lê as linhas de alteração (o banco de dados CDC). Quando o banco de dados CDC é selecionado, você precisa selecionar uma tabela capturada no banco de dados.  
@@ -46,7 +45,7 @@ ms.locfileid: "66061059"
  **Capturar instância**  
  Selecione ou digite o nome da instância de captura CDC com a tabela CDC que deve ser lida.  
   
- Uma tabela de origem capturada pode ter uma ou duas instâncias capturadas para tratar diretamente a transição da definição de tabela por meio de alterações de esquema. Se mais de uma instância de captura for definida para a tabela de origem que está sendo capturada, selecione a instância de captura que você deseja usar aqui. O nome padrão da instância de captura para uma tabela [esquema].[tabela] é \<esquema>_\<tabela>, mas os nomes reais da instância de captura em uso podem ser diferentes. A tabela real da qual é lida é a tabela CDC **CDC.\<>_CT da instância de captura**.  
+ Uma tabela de origem capturada pode ter uma ou duas instâncias capturadas para tratar diretamente a transição da definição de tabela por meio de alterações de esquema. Se mais de uma instância de captura for definida para a tabela de origem que está sendo capturada, selecione a instância de captura que você deseja usar aqui. O nome da instância de captura padrão para uma tabela [esquema]. [Table] é \<schema> _ \<table> , mas os nomes reais da instância de captura em uso podem ser diferentes. A tabela real da qual é lida é a tabela CDC **CDC. \<capture-instance> _CT**.  
   
  **Modo de processamento CDC**  
  Selecione o modo de processamento que melhor trata suas necessidades de processamento. As opções possíveis são:  
@@ -57,7 +56,7 @@ ms.locfileid: "66061059"
   
 -   **Líquido**: retorna somente uma linha de alteração por linha de origem modificada no intervalo de processamento CDC atual. Se uma linha de origem tiver sido atualizada várias vezes, a alteração combinada será gerada (por exemplo, insert+update é gerado como uma única atualização e update+delete é gerado como uma única exclusão). Ao trabalhar em modo de processamento de alteração Líquido, é possível dividir as alterações para saídas Excluir, Inserir e Atualizar, e tratá-las em paralelo porque a única linha de origem aparece em mais de uma saída.  
   
--   **Líquido com máscara atualizada**: este modo é semelhante ao modo Líquido normal, mas também adiciona colunas boolianas com o nome padrão **__$\<nome-da-coluna>\__Changed**, que indica as colunas alteradas na linha de alteração atual.  
+-   **Net com máscara de atualização**: esse modo é semelhante ao modo NET normal, mas também adiciona colunas booleanas com o padrão de nome **_ $ \<column-name> \_ _Changed** que indicam colunas alteradas na linha de alteração atual.  
   
 -   **Líquido com mesclagem**: este modo é semelhante ao modo Líquido normal, mas com operações de inserção e atualização mescladas em uma única operação de mesclagem (UPSERT).  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 481d036e9ccae092438aa0f90a6443ff29f3a067
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676897"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063782"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
   A replicação restringe as ações específicas que um usuário pode executar, baseada nas funções que o logon do usuário é mapeado. A replicação concede determinadas permissões para os membros da função de servidor fixa **sysadmin** , função de banco de dados fixa, **db_owner** e os logons na PAL (Publication Access List).  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bf476175245000ba63e058ca333953d07276076
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029429"
 ---
 # <a name="lockescalation-event-class"></a>Classe de evento Lock:Escalation
   A classe de evento **Lock:Escalation** indica que um bloqueio mais refinado foi convertido em um bloqueio mais rústico; por exemplo, um bloqueio de linha que é convertido em um bloqueio de objeto. A classe de evento do escalonamento é ID de evento 60.  

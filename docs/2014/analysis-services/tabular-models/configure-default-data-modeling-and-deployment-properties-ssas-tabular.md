@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1246119b72890bc80125034c8ee23bcd0c221b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99d1e2e6f4e4bca69b093aeb9c259db59d503083
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067588"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939857"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurar propriedades padrão de implantação e modelagem de dados (SSAS tabular)
   Este tópico descreve como definir as configurações de propriedade padrão de nível de compatibilidade, implantação e banco de dados de workspace, que podem ser predefinidas para cada novo projeto de modelo de tabela criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois que um novo projeto é criado, essas propriedades ainda podem ser alteradas dependendo dos requisitos específicos.  

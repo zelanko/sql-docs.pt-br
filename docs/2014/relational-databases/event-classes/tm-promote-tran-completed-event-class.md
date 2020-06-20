@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 029b077b034d7b022ea1e27832624df86decb547
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2d3e18b29cef517ef97f6720080b2fdf34ff1d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061290"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028073"
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>classe de evento TM: Promote Tran Completed
   A classe de evento TM: Promote Tran Completed indica que foi concluída uma solicitação PROMOTE TRANSACTION. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
@@ -48,7 +47,7 @@ ms.locfileid: "63061290"
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|`int`|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|`datetime`|Hora de início do evento, se disponível.|14|Sim|  
-|Êxito|`int`|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|23|Sim|  
+|Sucesso|`int`|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|23|Sim|  
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|`bigint`|Token que descreve a transação atual.|50|Sim|  
   

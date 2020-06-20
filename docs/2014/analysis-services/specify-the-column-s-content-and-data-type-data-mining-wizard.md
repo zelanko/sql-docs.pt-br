@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9f220f8908e92eaa861f64b0f896f78547b950e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068159"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940267"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Especificar o tipo de conteúdo e de dados da coluna&#39;s (Assistente de mineração de dados)
   Use a página **Especificar o Tipo de Conteúdo e de Dados da Coluna** para modificar a coluna e os tipos de conteúdo que já foram definidos pelo assistente. O assistente usa os tipos de dados das colunas de origem e os recursos do algoritmo selecionado para determinar os tipos de dados e de conteúdo padrão de cada coluna.  
@@ -31,7 +30,7 @@ ms.locfileid: "66068159"
  **Tipo de conteúdo**  
  O tipo de conteúdo que é atribuído a cada coluna. Clique dentro de uma célula para alterar o tipo de conteúdo. Para obter mais informações sobre tipos de conteúdo, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](data-mining/content-types-data-mining.md).  
   
- **Tipo de dados**  
+ **Tipo de Dados**  
  Os tipos de dados que são atribuídos a cada coluna. Clique dentro de uma célula para alterar o tipo de dados. Para obter mais informações sobre tipos de conteúdo, consulte [Tipos de dados &#40;Mineração de dados&#41;](data-mining/data-types-data-mining.md).  
   
  **Detect**  

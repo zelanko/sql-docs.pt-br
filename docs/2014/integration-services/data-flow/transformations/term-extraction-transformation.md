@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1655b50f84fae99249b2170d92a49459a143d5b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939257"
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
   A transformação Extração de Termo extrai termos de texto em uma coluna de entrada de transformação e grava os termos em uma coluna de saída de transformação. A transformação trabalha apenas com texto em inglês e usa seu próprio dicionário de inglês e informações linguísticas sobre o inglês.  
@@ -44,7 +43,7 @@ ms.locfileid: "62899927"
   
  A transformação Extração de Termos gera uma contagem para cada termo que extrai. A contagem pode ser um valor de TFIDF ou a frequência bruta, significando o número de vezes que o termo normalizado aparece na entrada. Nesse caso, a contagem é representada por um número real que é maior do que 0. Por exemplo, a pontuação de TFIDF poderia ter o valor 0,5, e a frequência seria um valor como 1,0 ou 2,0.  
   
- A saída da transformação Extração de Termos inclui apenas duas colunas. Uma coluna contém os termos extraídos e a outra coluna contém a pontuação. Os nomes padrão das colunas são **Term** e `Score`. Como a coluna de texto na entrada pode conter múltiplos termos, a saída da transformação Extração de Termos geralmente tem mais linhas que a entrada.  
+ A saída da transformação Extração de Termos inclui apenas duas colunas. Uma coluna contém os termos extraídos e a outra coluna contém a pontuação. Os nomes padrão das colunas são **Term** e `Score` . Como a coluna de texto na entrada pode conter múltiplos termos, a saída da transformação Extração de Termos geralmente tem mais linhas que a entrada.  
   
  Se os termos extraídos forem gravados em uma tabela, eles podem ser usados por outra transformação de pesquisa como a Pesquisa de Termos, Pesquisa Difusa e transformações de Pesquisa.  
   
@@ -146,7 +145,7 @@ ms.locfileid: "62899927"
   
 -   Combinações de números, sinais de pontuação e caracteres alfabéticos. Por exemplo, *A23B#99* retorna o termo *A23B*.  
   
--   Os caracteres, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
+-   Os caracteres,%, @, &, $, #, \* ,:,;,., **,** ,!,?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "e".  
   
     > [!NOTE]  
     >  Acrônimos que contêm um ou mais pontos (.) não são separados em várias sentenças.  

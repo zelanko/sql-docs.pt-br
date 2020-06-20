@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f409e978bf977d48fbfc3a9ec56d5ebfe2b545ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064092"
 ---
 # <a name="workload-element-dta"></a>Elemento de carga de trabalho (DTA)
   Especifica a carga de trabalho a ser usada em uma sessão de ajuste.  
@@ -36,7 +35,7 @@ ms.locfileid: "62678714"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

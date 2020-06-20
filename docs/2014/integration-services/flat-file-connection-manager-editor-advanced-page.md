@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0e6e85161ea95a9494bbaf91338b4ddc559ecbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058786"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967116"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Avançado)
   Use a página **Avançado** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** para definir propriedades que especificam como o Integration Services lê e grava dados em arquivos simples. Você pode alterar os nomes das colunas no arquivo simples e definir propriedades que incluem tipo de dados e delimitadores em cada coluna no arquivo.  

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea2d05c2862445737ea544fdab9c4ca8fc5e6c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08c0856df10c2b70dc58ab1b52b0b7a4a1041e1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938737"
 ---
 # <a name="process-database-table-or-partition"></a>Processar banco de dados, tabela ou partição
-  As tarefas neste tópico descrevem como processar um banco de dados de modelo tabular, uma tabela ou partições manualmente usando a caixa de diálogo ** \<processar objeto>** no. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+  As tarefas neste tópico descrevem como processar um banco de dados de modelo tabular, uma tabela ou partições manualmente usando a caixa de diálogo **processar \<object> ** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  Para obter mais informações sobre o processamento de modelos de tabela, veja [Processar dados &#40;SSAS de Tabela&#41;](../process-data-ssas-tabular.md).  
   

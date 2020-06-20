@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d991ee94e04be0ea72450b8e3e4649c339d1c2a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15521c2be7ddaad50431691088c233a7ddf946ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900199"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939397"
 ---
 # <a name="row-count-transformation"></a>Transformação Contagem de Linhas
   A transformação Contagem de Linhas conta as linhas quando passam por um fluxo de dados e armazena a contagem final em uma variável.  

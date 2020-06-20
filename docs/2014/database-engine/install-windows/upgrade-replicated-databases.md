@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 326a94820876b40128428aac58e47c650ce122b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775310"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931837"
 ---
 # <a name="upgrade-replicated-databases"></a>Atualizar bancos de dados replicados
   O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] suporta a atualização de bancos de dados replicados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não é necessário interromper a atividade de outros nós durante a atualização de um nó. Verifique se você está em conformidade com as regras que dizem respeito às versões suportadas em uma topologia:  

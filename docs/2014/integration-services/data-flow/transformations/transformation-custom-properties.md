@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939247"
 ---
 # <a name="transformation-custom-properties"></a>Propriedades personalizadas da transformação
   Além das propriedades comuns à maioria dos objetos de fluxo de dados no modelo de objeto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], muitos objetos de fluxo de dados têm propriedades personalizadas específicas ao objeto. Essas propriedades personalizadas estão disponíveis somente em tempo de execução e não constam da Documentação de Referência de Programação Gerenciada do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -128,7 +127,7 @@ ms.locfileid: "62770662"
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ConnectionManager|String|Especifica o nome do gerenciador de conexões.|  
-|ValidateExternalMetadata|Boolean|Indica se a transformação Cache é validada usando fontes de dados externas no momento de design. Se a propriedade for definida como `False`, a validação das fontes de dados externas acontecerá em tempo de execução.<br /><br /> O valor padrão é `True`.|  
+|ValidateExternalMetadata|Boolean|Indica se a transformação Cache é validada usando fontes de dados externas no momento de design. Se a propriedade for definida como `False`, a validação das fontes de dados externas acontecerá em tempo de execução.<br /><br /> O valor padrão é `True` .|  
 |AvailableInputColumns|String|Lista as colunas de entrada disponíveis.|  
 |InputColumns|String|Lista das colunas de entrada selecionadas.|  
 |CacheColumnName|String|Especifica o nome da coluna mapeada para uma coluna de entrada selecionada.<br /><br /> É necessário que o nome da coluna na propriedade CacheColumnName corresponda ao nome da coluna correspondente listada na página **Colunas** do **Editor do Gerenciador de Conexões do Cache**.<br /><br /> Para obter mais informações, consulte [Cache Connection Manager Editor](../../cache-connection-manager-editor.md).|  
@@ -260,7 +259,7 @@ ms.locfileid: "62770662"
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
-|Delimitadores|String|Os delimitadores de token usados pela transformação. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto-e-vírgula (;), dois-pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), barra vertical ou pipe (&#124;), número (#), asterisco (*), circunflexo (^) e porcentagem (%).|  
+|Delimitadores|String|Os delimitadores de token usados pela transformação. Os delimitadores padrão incluem os seguintes caracteres: espaço (), vírgula (,), ponto final (.), ponto-e-vírgula (;), dois-pontos (:), hífen (-), aspas duplas retas ("), aspas simples ('), e comercial (&), barra (/), barra invertida ( \\ ), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parênteses de abertura ((), parênteses de fechamento ()), menor que ( \<), greater than (> ), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), pipe (&#124;), sinal numérico (#), asterisco (*), circunflexo (^) e porcentagem (%).|  
 |Exhaustive|Boolean|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de `True` destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é `False`.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação Agrupamento Difuso**, mas pode ser definida por meio do **Editor Avançado**.|  
 |MaxMemoryUsage|Integer|A quantidade máxima de memória para uso pela transformação. O valor padrão dessa propriedade é **0**, que ativa o uso de memória dinâmica.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação Agrupamento Difuso**, mas pode ser definida por meio do **Editor Avançado**.|  
 |MinSimilarity|Double|O limite de semelhança usado pela transformação para identificar duplicatas, expresso como um valor entre 0 e 1.  O valor padrão dessa propriedade é 0.8.|  
@@ -294,7 +293,7 @@ ms.locfileid: "62770662"
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Especifica se uma cópia da tabela de referência deve ser feita para a criação do índice de pesquisa difusa e pesquisas subsequentes. O valor padrão dessa propriedade é `True`.|  
-|Delimitadores|String|Os delimitadores usados pela transformação para criar tokens de valores de coluna. Os delimitadores padrão incluem os seguintes caracteres: espaço ( ), vírgula (,), ponto final (.), ponto e vírgula (;), dois pontos (:), hífen (-), aspas ("), apóstrofo ('), E comercial (&), barra (/), barra invertida (\\), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parêntese de abertura ((), parêntese de fechamento ()), menor que (\<), maior que (>), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), pipe (&#124;). sinal de número (#), asterisco (*), acento circunflexo (^) e porcentagem (%).|  
+|Delimitadores|String|Os delimitadores usados pela transformação para criar tokens de valores de coluna. Os delimitadores padrão incluem os seguintes caracteres: Space (), vírgula (,), period (.) ponto-e-vírgula (;), dois-pontos (:) hífen (-), aspas duplas ("), aspas retas simples ('), e comercial (&), barra (/), barra invertida ( \\ ), arroba (@), ponto de exclamação (!), ponto de interrogação (?), parênteses de abertura ((), parênteses de fechamento ()), menor que ( \<), greater than (> ), colchete de abertura ([), colchete de fechamento (]), chave de abertura ({), chave de fechamento (}), pipe (&#124;). sinal de número (#), asterisco (*), acento circunflexo (^) e porcentagem (%).|  
 |DropExistingMatchIndex|Boolean|Um valor que especifica se o índice de correspondência especificado em MatchIndexName é excluído quando MatchIndexOptions não é definido como ReuseExistingIndex. O valor padrão para essa propriedade é `True`.|  
 |Exhaustive|Boolean|Um valor que especifica se cada registro de entrada é comparado a todos os outros registros de entrada. O valor de `True` destina-se especialmente a propósitos de depuração. O valor padrão dessa propriedade é `False`.<br /><br /> Observação: Esta propriedade não está disponível no **Editor de Transformação Pesquisa Difusa**, mas pode ser definida por meio do **Editor Avançado**.|  
 |MatchIndexName|String|O nome do índice de correspondência. O índice de correspondência é a tabela na qual a transformação cria e salva o índice usado. Se o índice de correspondência for reutilizado, MatchIndexName especificará o índice a ser reutilizado. MatchIndexName deve ser um nome de identificador válido do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, se o nome contiver espaços, deverá ser colocado entre colchetes.|  
@@ -319,7 +318,7 @@ ms.locfileid: "62770662"
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Pesquisa Difusa. Todas as propriedades são de leitura/gravação.  
   
 > [!NOTE]  
->  Para colunas de saída que contêm valores de passagem das colunas de entrada correspondentes, CopyFromReferenceColumn está vazio e SourceInputColumnLineageID `LineageID` contém a da coluna de entrada correspondente. Em colunas de saída que contêm resultados de pesquisa, CopyFromReferenceColumn contém o nome da coluna de pesquisa e SourceInputColumnLineageID fica vazio.  
+>  Para colunas de saída que contêm valores de passagem das colunas de entrada correspondentes, CopyFromReferenceColumn está vazio e SourceInputColumnLineageID contém a `LineageID` da coluna de entrada correspondente. Em colunas de saída que contêm resultados de pesquisa, CopyFromReferenceColumn contém o nome da coluna de pesquisa e SourceInputColumnLineageID fica vazio.  
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
@@ -422,7 +421,7 @@ ms.locfileid: "62770662"
   
 |Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|Selecionado|Boolean|Designa a saída para a qual as linhas de amostra são direcionadas. Na saída selecionada, selecionado é definido como `True`e, na saída não selecionada, selecionado é definido como. `False`|  
+|Selecionado|Boolean|Designa a saída para a qual as linhas de amostra são direcionadas. Na saída selecionada, selecionado é definido como `True` e, na saída não selecionada, selecionado é definido como `False` .|  
   
  A entrada, as colunas de entrada e as colunas de saída da transformação Amostragem Percentual não têm nenhuma propriedade personalizada.  
   
@@ -477,7 +476,7 @@ ms.locfileid: "62770662"
   
 |Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|Selecionado|Boolean|Designa a saída para a qual as linhas de amostra são direcionadas. Na saída selecionada, selecionado é definido como `True`e, na saída não selecionada, selecionado é definido como. `False`|  
+|Selecionada|Boolean|Designa a saída para a qual as linhas de amostra são direcionadas. Na saída selecionada, selecionado é definido como `True` e, na saída não selecionada, selecionado é definido como `False` .|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Amostragem de Linhas. Todas as propriedades são de leitura/gravação.  
   

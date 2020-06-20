@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8a03920b20adadc19072f184a0629885d4a3fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067457"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939797"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Criar e gerenciar partições no banco de dados de workspace (SSAS tabular)
   As partições dividem uma tabela em partes lógicas. Cada partição pode ser processada (Atualizada) independentemente de ou em paralelo com outras partições. As partições podem melhorar a escalabilidade e a gerenciabilidade de bancos de dados grandes. Por padrão, cada tabela tem uma partição que inclui todas as colunas. As tarefas neste tópico descrevem como criar e gerenciar partições no banco de dados de espaço de trabalho modelo usando a caixa de diálogo **Gerenciador de partições** no[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  

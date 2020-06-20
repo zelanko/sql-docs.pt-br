@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49ddbbbff88ca0ae33caf4230954df710f29365
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e781e1ed4e632b11bff6f559392d829ec57bed94
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62665318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029552"
 ---
 # <a name="lockacquired-event-class"></a>Classe de evento Lock:Acquired
   A classe de evento Lock:Acquired indica que foi obtida a aquisição de um bloqueio em um recurso, como página de dados.  
@@ -30,7 +29,7 @@ ms.locfileid: "62665318"
   
 |Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
+|ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BigintData1|`bigint`|ID da partição se o recurso de bloqueio for particionado.|52|Sim|  
 |BinaryData|`image`|Identificador de recurso bloqueado.|2|Sim|  
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
@@ -58,7 +57,7 @@ ms.locfileid: "62665318"
 |StartTime|`datetime`|Hora de início do evento, se disponível.|14|Sim|  
 |TextData|`ntext`|Valor de texto dependente do tipo de bloqueio adquirido. Este é o mesmo valor que a coluna do resource_description em sys.dm_tran_locks.|1|Sim|  
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Sim|  
-|Tipo|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sim|  
+|Type|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Classe de evento Lock: Releaseed](lock-released-event-class.md)   
