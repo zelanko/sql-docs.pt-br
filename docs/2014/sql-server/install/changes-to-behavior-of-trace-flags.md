@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d739df96-2659-4383-8e10-194657632526
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 447e6d4d35fa77f71f1a7a1b90a5a782e0ccebcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11d71e8401f6b870aaeb3f64f4145b509e3a3fe0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096616"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065391"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>Alterações no comportamento de sinalizadores de rastreamento
   Sinalizadores de rastreamento globais definidos por uma sessão afetam outras sessões imediatamente. Alguns sinalizadores de rastreamento do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] não existem no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -26,11 +25,11 @@ ms.locfileid: "66096616"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrição  
- Recomendamos que você desabilite todos os sinalizadores de rastreamento antes de atualizar. Os sinalizadores de rastreamento que modificam os modos de disponibilidade ou recuperação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] do banco de dados podem impedir que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o atualize com êxito sua instância do. Você poderá habilitar os sinalizadores de rastreamento depois de verificar se eles são necessários e continuam válidos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se precisar habilitar novamente esses sinalizadores de rastreamento, será necessário fazer testes adicionais em sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Recomendamos que você desabilite todos os sinalizadores de rastreamento antes de atualizar. Os sinalizadores de rastreamento que modificam os modos de disponibilidade ou recuperação do banco de dados podem impedir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] atualize com êxito sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Você poderá habilitar os sinalizadores de rastreamento depois de verificar se eles são necessários e continuam válidos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Se precisar habilitar novamente esses sinalizadores de rastreamento, será necessário fazer testes adicionais em sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece suporte a sinalizadores de rastreamento no nível de sessão e globais. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], os sinalizadores de rastreamento podem ser especificados tanto como locais quanto como globais usando o argumento adicional (-1) no comando DBCC TRACEON. Se esse argumento não for especificado, o valor padrão será local.  
   
- Além disso, [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]no, um sinalizador de rastreamento definido na sessão a não tem efeito automaticamente em uma sessão B já existente. Em vez disso, esse sinalizador de rastreamento entra em vigor somente após a primeira vez que qualquer sinalizador de rastreamento é definido na sessão B. Esse comportamento não é determinístico no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e é determinístico no e [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] em versões posteriores, em que os sinalizadores de rastreamento globais definidos na sessão A são definidos imediatamente em outras sessões simultâneas.  
+ Além disso, no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] , um sinalizador de rastreamento definido na sessão a não tem efeito automaticamente em uma sessão B já existente. Em vez disso, esse sinalizador de rastreamento entra em vigor somente após a primeira vez que qualquer sinalizador de rastreamento é definido na sessão B. Esse comportamento não é determinístico no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e é determinístico no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, em que os sinalizadores de rastreamento globais definidos na sessão A são definidos imediatamente em outras sessões simultâneas.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

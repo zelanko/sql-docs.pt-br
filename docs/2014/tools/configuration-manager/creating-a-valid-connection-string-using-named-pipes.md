@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 784ef2ec305629756e0c43e1726b70c04c6194b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011653"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Criando uma cadeia de conexão válida usando pipes nomeados
   A menos que seja alterado pelo usuário, quando a instância padrão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta no protocolo de pipes nomeados, ela é usada `\\.\pipe\sql\query` como o nome do pipe. O ponto indica que o computador é local, `pipe` indica que a conexão é um pipe nomeado e `sql\query` é o nome do pipe. Para conectar ao pipe padrão, o alias deve ter `\\<computer_name>\pipe\sql\query` como nome do pipe. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiver sido configurado para escutar em um pipe diferente, o nome do pipe deverá usar esse pipe. Por exemplo, se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver usando `\\.\pipe\unit\app` como o pipe, o alias deverá usar `\\<computer_name>\pipe\unit\app` como o nome do pipe.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8da8743840c604e08cd8c17666e03f2de76c11cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62938578"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065853"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizador de Conflitos de Replicação da Microsoft (replicação de mesclagem)
   O Visualizador de Conflitos de Replicação permite exibir qualquer conflito ocorrido durante a sincronização de replicação. Os conflitos ocorrem quando os mesmos dados são modificados em dois servidores separados, por exemplo, no Publicador e no Assinante, ou em dois Assinantes diferentes. A replicação resolve conflitos automaticamente usando o resolvedor de conflitos que você selecionou quando o artigo foi criado. No entanto, o Visualizador de Conflitos de Replicação permite escolher uma resolução diferente para o conflito quando necessário. Podem ocorrer os seguintes conflitos:  
@@ -55,13 +54,13 @@ ms.locfileid: "62938578"
  **Aplicar ou Remover Filtro**  
  Clique para aplicar ou remover um filtro definido na caixa de diálogo **Definir Filtros** .  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Clique para selecionar todos os conflitos listados na grade.  
   
  **Selecionar nenhum**  
  Clique para desmarcar a seleção de todos os conflitos listados na grade.  
   
- **Remover**  
+ **Removerr**  
  Clique para remover conflitos selecionados do visualizador e seus metadados associados das tabelas do sistema de replicação. Equivalente a clicar no botão Enviar Vencedor (sem fazer qualquer alteração nos dados) para cada conflito selecionado.  
   
  **Mostrar todas as colunas**  

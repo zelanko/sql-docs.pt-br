@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7086db16eab9935624546965652834313a467db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175355"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927817"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Usando índices columnstore clusterizados
   Tarefas para usar índices columnstore clusterizados no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -24,7 +23,7 @@ ms.locfileid: "78175355"
 
  Para obter informações sobre índices columnstore clusterizados, consulte [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).
 
-## <a name="contents"></a>Conteúdo
+## <a name="contents"></a>Sumário
 
 -   [Criar um índice columnstore clusterizado](#create)
 

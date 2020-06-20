@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b33f4a2d85f2613b238c9bd9b2e59415784b2a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc2bf8c781df287bf499f4a6d10bdd572c4129ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051335"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>classe de evento TM: Save Tran Starting
   A classe de evento TM: SaveTran Starting indica que uma solicitação SAVE TRANSACTION está sendo iniciada. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  

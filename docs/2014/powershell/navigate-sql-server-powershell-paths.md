@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797806"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960286"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar em caminhos do SQL Server PowerShell
   O provedor do [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell expõe o conjunto de objetos em uma instância do SQL Server em uma estrutura semelhante a um caminho de arquivo. Você pode usar cmdlets do Windows PowerShell para navegar até o caminho do provedor e criar unidades personalizadas para encurtar o caminho que você tem que digitar.  
@@ -28,11 +27,11 @@ ms.locfileid: "72797806"
 |cmdlet|Alias canônico|Alias de cmd|Alias de shell do UNIX|Descrição|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Obtém o nó atual.|  
-|`Set-Location`|**SL**|**cd, chdir**|**cd, chdir**|Altera o nó atual.|  
+|`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Altera o nó atual.|  
 |**Get-ChildItem**|**gci**|**dir**|**ls**|Lista os objetos armazenados no nó atual.|  
 |**Get-Item**|**gi**|||Retorna as propriedades do item atual.|  
-|**Renomear-item**|**rni**|**RN**|**ren**|Renomeia um objeto.|  
-|**Remover item**|**ri**|**del, rd**|**rm, rmdir**|Remove um objeto.|  
+|**Rename-Item**|**rni**|**RN**|**ren**|Renomeia um objeto.|  
+|**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|Remove um objeto.|  
   
 > [!IMPORTANT]  
 >  Alguns identificadores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (nomes de objeto) contêm caracteres não suportados pelos nomes de caminho do Windows PowerShell. Para obter mais informações sobre como usar os nomes que contêm esses caracteres, consulte [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
@@ -43,8 +42,8 @@ ms.locfileid: "72797806"
 |Local do caminho|Resultados de Get-ChildItem|  
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Retorna o nome do computador local. Se você usou o SMO ou o WMI para se conectar às instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] em outros computadores, esses computadores também estarão listados.|  
-|SqlServer: \ SQL\\*ComputerName*|A lista de instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] no computador.|  
-|SqlServer: \ SQL\\*ComputerName*\\*InstanceName*|A lista de tipos de objeto de nível superior na instância, como Pontos de Extremidade, Certificados e Bancos de Dados.|  
+|SQLSERVER: \ SQL \\ *ComputerName*|A lista de instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] no computador.|  
+|SqlServer: \ SQL \\ *ComputerName* \\ *InstanceName*|A lista de tipos de objeto de nível superior na instância, como Pontos de Extremidade, Certificados e Bancos de Dados.|  
 |Nó da classe de objeto, como Bancos de Dados|A lista de objetos desse tipo, como a lista de bancos de dados: master, model, AdventureWorks20008R2.|  
 |Nó do nome de objeto, como AdventureWorks2012|A lista de tipos de objeto contida no objeto. Por exemplo, um banco de dados poderia listar tipos de objeto, como tabelas e exibições.|  
   

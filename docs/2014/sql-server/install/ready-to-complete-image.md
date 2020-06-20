@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71bae511-956d-4f23-bfa8-bfcc563b3e11
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 52407fbcdfd1f784128cf4c374ad18cc0255197b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4cfb7af78d9cfb3663e844d8d91036bd40e5dfa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065236"
 ---
 # <a name="ready-to-complete-image"></a>Pronto para Concluir Imagem
   A página **Pronto para Imagem Completa** fornece um resumo dos parâmetros de configuração que se aplicam à configuração da instância preparada.  

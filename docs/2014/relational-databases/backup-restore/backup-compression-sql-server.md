@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: af3e8d9184b12a726361643c563402242c6b04cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3291a858d8ef037e7cca92eb2e6abb19aec4da8e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959426"
 ---
 # <a name="backup-compression-sql-server"></a>Compactação de backup (SQL Server)
   Este tópico descreve a compactação dos backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluindo restrições, compensação de desempenho de backups compactados, a configuração da compactação de backup e a taxa de compactação.  
   
 > [!NOTE]  
->  Para obter informações sobre quais [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] edições do dão suporte à compactação de backup, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Todas as edições do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior podem restaurar um backup compactado.  
+>  Para obter informações sobre quais edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dão suporte à compactação de backup, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Todas as edições do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior podem restaurar um backup compactado.  
   
   
 ##  <a name="benefits"></a><a name="Benefits"></a> Benefícios  

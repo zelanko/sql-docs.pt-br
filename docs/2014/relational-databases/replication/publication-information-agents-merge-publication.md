@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 46a2e9e332899c8d48fb762e153a926c99bb9e61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44e6f331c2f2aa4bb49db2adc495ec0d5fe178e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021762"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065738"
 ---
 # <a name="publication-information-agents-merge-publication"></a>Informações da Publicação, Agentes (publicação de mesclagem)
   A guia **Agentes** exibe informações resumidas sobre o Snapshot Agent para a publicação selecionada.  

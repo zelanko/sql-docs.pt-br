@@ -13,16 +13,15 @@ f1_keywords:
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77d6bd0494baeefa7fedf41580a9b488b6197b11
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62509958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066226"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>Caixa de diálogo Escolher Nome (Visual Database Tools)
-  Essa caixa de diálogo será exibida quando você escolher ** \<salvar TableName**>, **Salvar \<>de diagramaname **ou **Salvar \<ViewName>** no menu **arquivo** .  
+  Essa caixa de diálogo aparece quando você escolhe * * \<TableName**> Salvar **, \<DiagramName> salvar **ou **Salvar \<ViewName> ** no menu **arquivo** .  
   
  **Digite um nome para a tabela, o diagrama ou para a exibição.**  
  Fornece uma caixa de texto onde você pode digitar um nome para a tabela, o diagrama ou a exibição.  

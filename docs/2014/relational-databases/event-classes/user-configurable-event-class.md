@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a166889694e6d4348587ca65f238f9a817f36f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62724824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051385"
 ---
 # <a name="user-configurable-event-class"></a>classe de evento User-Configurable
   Use a categoria de evento User-Configurable para monitorar eventos definidos pelo usuário. Crie classes de evento definidas pelo usuário para monitorar eventos que não podem ser monitorados pelas classes de eventos fornecidas pelo sistema em outras categorias de evento. Por exemplo, um evento definido pelo usuário pode ser criado para monitorar o progresso do aplicativo que você está testando. À medida que o aplicativo é executado, ele pode gerar eventos em pontos predefinidos, permitindo que você determine o ponto de execução atual no seu aplicativo.  

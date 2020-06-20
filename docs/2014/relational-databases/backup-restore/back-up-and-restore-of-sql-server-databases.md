@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec2104219d98ed3cb97bfbb8993a3c28d45841c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959766"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Fazer backup e restaurar bancos de dados do SQL Server
   Este tópico descreve os benefícios do backup dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bancos de dados, as condições de backup e restauração básicas, apresenta estratégias de backup e restauração para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e considerações de segurança sobre backup e restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,7 +37,7 @@ ms.locfileid: "70176029"
   
 
   
-##  <a name="benefits"></a><a name="Benefits"></a>Benefícios  
+##  <a name="benefits"></a><a name="Benefits"></a> Benefícios  
   
 -   O backup dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a execução de procedimentos de restauração de teste nos backups e o armazenamento de cópias de backups em um local externo seguro evita a perda de dados potencialmente catastrófica.  
   
@@ -201,7 +200,7 @@ ms.locfileid: "70176029"
 > [!NOTE]  
 >  Para backups parciais ou somente cópia, use a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) com a opção PARTIAL ou COPY_ONLY, respectivamente.  
   
- **Usando SQL Server Management Studio**  
+ **Como usar o SQL Server Management Studio.**  
   
 -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -224,7 +223,7 @@ ms.locfileid: "70176029"
 
   
 ### <a name="restoring-data-backups"></a>Restaurando backups de dados  
- **Usando SQL Server Management Studio**  
+ **Como usar o SQL Server Management Studio.**  
   
 -   [Restaurar um backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -249,7 +248,7 @@ ms.locfileid: "70176029"
 
   
 ### <a name="restoring-transaction-logs-full-recovery-model"></a>Restaurando logs de transações (modelo de recuperação completa)  
- **Usando SQL Server Management Studio**  
+ **Como usar o SQL Server Management Studio.**  
   
 -   [Restaurar um banco de dados para uma transação marcada &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   

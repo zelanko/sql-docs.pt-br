@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56b9f9ba9cc6e11ea82b822ae10b31710c8617b2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917660"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952786"
 ---
 # <a name="database-features"></a>Recursos de banco de dados
   Esta seção contém os recursos e as tarefas associadas a bancos de dados, objetos de banco de dados, tipos de dados e os mecanismos usados para trabalhar com dados ou gerenciá-los.  

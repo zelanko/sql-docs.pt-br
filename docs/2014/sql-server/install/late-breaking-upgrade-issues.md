@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64205466-6d37-49d2-bac2-d3368c1210a1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 22cd26b7e389cb71408c1b3df87d48aa62244f9b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 786b78ce90e276d8bdb1c0641b507257416935b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094045"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036602"
 ---
 # <a name="late-breaking-upgrade-issues"></a>Problemas detectados recentemente que podem interromper a instalação
   A lógica de detecção pode ter sido melhorada ou alterada depois da conclusão da documentação. Caso tenha acessado este tópico a partir do Visualizador de Relatórios do Supervisor de Atualização ou se quiser verificar os itens recentes que podem interromper a atualização, verifique o arquivo Leiame instalado com o Supervisor de Atualização para obter mais informações.   

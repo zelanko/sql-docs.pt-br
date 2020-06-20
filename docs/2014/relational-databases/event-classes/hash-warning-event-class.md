@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c26b06e61a6f9fcad52dab0d042b299f993342e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052947"
 ---
 # <a name="hash-warning-event-class"></a>Classe de evento Hash Warning
   A classe de evento Hash Warning pode ser usada para monitorar quando uma recursão de hash ou cessação de hashing (esgotamento de hash) ocorreu durante a operação de hashing.  
@@ -61,7 +60,7 @@ ms.locfileid: "62662340"
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IntegerData|`int`|Nível de recursão (somente recursão de hash).|25|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
-|LoginName|`nvarchar`|Nome do logon do usuário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (logon de segurança do ou as credenciais de logon do Windows na forma de * \<domínio>\\<nome\>de usuário*).|11|Sim|  
+|LoginName|`nvarchar`|Nome do logon do usuário ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon de segurança do ou as credenciais de logon do Windows na forma de * \<DOMAIN> \\<nome \> de usuário*).|11|Sim|  
 |LoginSid|`image`|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo sys.server_principals. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |NTDomainName|`nvarchar`|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|`nvarchar`|Nome do usuário do Windows.|6|Sim|  
