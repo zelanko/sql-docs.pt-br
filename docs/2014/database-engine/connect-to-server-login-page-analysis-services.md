@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: fb012bc8-5105-438a-afcc-74264ebae035
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dc5d248339fb84ee8db079615fa910ccd8cbc4f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934622"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>Conectar ao Servidor (página Logon) Analysis Services
-  Use essa guia para exibir ou especificar as opções a seguir ao se [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]conectar ao.  
+  Use essa guia para exibir ou especificar as opções a seguir ao se conectar ao [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="options"></a>Opções  
  **Tipo de servidor**  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efd231a1aa4d2b348bcfe887bd05825fcd40c90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952130"
 ---
 # <a name="contained-databases"></a>Bancos de dados independentes
   Um*banco de dados independente* é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ajuda o usuário a isolar seu banco de dados da instância de 4 maneiras.  
@@ -76,7 +75,7 @@ ms.locfileid: "62917562"
   
      Usuários de banco de dados independente com senhas são autenticados pelo banco de dados.  
   
--   **entidades de segurança do Windows**  
+-   **Entidades de segurança do Windows**  
   
      Usuários autorizados do Windows e membros de grupos autorizados do Windows podem conectar-se diretamente ao banco de dados e não precisam de logons no banco de dados **mestre** . O banco de dados confia na autenticação pelo Windows.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "62917562"
 ### <a name="database-administration"></a>Administração de banco de dados  
  Manter as configurações de banco de dados no banco de dados, e não no banco de dados mestre, permite que o proprietário de cada banco de dados tenha mais controle sobre seu banco de dados, sem conceder a eles a permissão **sysadmin** .  
   
-##  <a name="limitations"></a><a name="Limitations"></a>Limitações  
+##  <a name="limitations"></a><a name="Limitations"></a> Limitações  
  Bancos de dados parcialmente independentes não permitem os recursos a seguir.  
   
 -   Os bancos de dados parcialmente independentes não podem usar replicação, Change Data Capture ou controle de alterações.  

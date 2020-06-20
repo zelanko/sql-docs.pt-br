@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52fc203075b06485c89fe4d2d3149472c57719f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933400"
 ---
 # <a name="program-exception-message-box"></a>Programar caixa de mensagem de exceção
   Você pode usar a caixa de mensagem de exceção nos aplicativos para proporcionar um controle mais significativo da experiência em mensagens do que a oferecida pela classe <xref:System.Windows.Forms.MessageBox>. Para obter mais informações, consulte a [programação da caixa de mensagem de exceção](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Consulte mais informações sobre como obter e implantar o .dll da caixa de mensagem de exceção em [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "62780687"
   
 1.  Adicione uma referência em seu projeto de código gerenciado ao assembly Microsoft.ExceptionMessageBox.dll.  
   
-2.  Adicional Adicione uma `using` diretiva (C#) `Imports` ou[!INCLUDE[msCoName](../../includes/msconame-md.md)] (Visual Basic .net) para usar o <xref:Microsoft.SqlServer.MessageBox> namespace.  
+2.  Adicional Adicione uma `using` diretiva (C#) ou `Imports` ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net) para usar o <xref:Microsoft.SqlServer.MessageBox> namespace.  
   
 3.  Crie um bloco try-catch para tratar da exceção antecipada.  
   
@@ -47,13 +46,13 @@ ms.locfileid: "62780687"
   
 6.  Chame o método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Passe a janela pai à qual pertence a caixa de mensagem de exceção.  
   
-7.  Adicional Observe o valor da enumeração <xref:System.Windows.Forms.DialogResult> retornada se você precisar determinar em qual botão o usuário clicou.  
+7.  Adicional Observe o valor da <xref:System.Windows.Forms.DialogResult> enumeração retornada se você precisar determinar em qual botão o usuário clicou.  
   
 #### <a name="to-display-the-exception-message-box-without-an-exception"></a>Para exibir a caixa de mensagem de exceção sem uma exceção  
   
 1.  Adicione uma referência em seu projeto de código gerenciado ao assembly Microsoft.ExceptionMessageBox.dll.  
   
-2.  Adicional Adicione uma `using` diretiva (C#) `Imports` ou (Visual Basic .net) para usar o <xref:Microsoft.SqlServer.MessageBox> namespace.  
+2.  Adicional Adicione uma `using` diretiva (C#) ou `Imports` (Visual Basic .net) para usar o <xref:Microsoft.SqlServer.MessageBox> namespace.  
   
 3.  Criar uma instância da classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>. Passe o texto da mensagem como um valor <xref:System.String>.  
   
@@ -77,11 +76,11 @@ ms.locfileid: "62780687"
   
 1.  Adicione uma referência em seu projeto de código gerenciado ao assembly Microsoft.ExceptionMessageBox.dll.  
   
-2.  Adicional Adicione uma `using` diretiva (C#) `Imports` ou (Visual Basic .net) para usar o <xref:Microsoft.SqlServer.MessageBox> namespace.  
+2.  Adicional Adicione uma `using` diretiva (C#) ou `Imports` (Visual Basic .net) para usar o <xref:Microsoft.SqlServer.MessageBox> namespace.  
   
 3.  Crie uma instância da classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> de uma destas duas maneiras:  
   
-    -   Passe o <xref:System.Exception> objeto manipulado por `try` - `catch` um bloco.  
+    -   Passe o <xref:System.Exception> objeto manipulado por um `try` - `catch` bloco.  
   
     -   Passe o texto da mensagem como um valor <xref:System.String>.  
   
@@ -111,11 +110,11 @@ ms.locfileid: "62780687"
   
 1.  Adicione uma referência em seu projeto de código gerenciado ao assembly Microsoft.ExceptionMessageBox.dll.  
   
-2.  Adicional Adicione uma `using` diretiva (C#) `Imports` ou (Visual Basic .net) para usar o <xref:Microsoft.SqlServer.MessageBox> namespace.  
+2.  Adicional Adicione uma `using` diretiva (C#) ou `Imports` (Visual Basic .net) para usar o <xref:Microsoft.SqlServer.MessageBox> namespace.  
   
 3.  Crie uma instância da classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> de uma destas duas maneiras:  
   
-    -   Passe o <xref:System.Exception> objeto manipulado por `try` - `catch` um bloco.  
+    -   Passe o <xref:System.Exception> objeto manipulado por um `try` - `catch` bloco.  
   
     -   Passe o texto da mensagem como um valor <xref:System.String>.  
   

@@ -41,16 +41,15 @@ helpviewer_keywords:
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 085f8ae1699e6a7bc1ceecb31075dff83d2b79ea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175732"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970037"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implantar um banco de dados do SQL Server em uma máquina virtual do Microsoft Azure
-  Use o assistente **para implantar um banco de dados SQL Server em uma VM do Azure** para implantar um banco de [!INCLUDE[ssDE](../../includes/ssde-md.md)] dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância do para em uma VM (máquina virtual) do Azure. O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
+  Use o assistente **para implantar um banco de dados SQL Server em uma VM do Azure** para implantar um banco de dados de uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma VM (máquina virtual) do Azure. O assistente utiliza uma operação de backup completo de banco de dados, de modo que sempre copia o esquema de banco de dados completo e os dados de um banco de dados de usuário do SQL Server. O assistente também faz toda a configuração da VM do Azure para você, de modo que nenhuma configuração prévia de VM é necessária.  
   
  Você não pode usar o assistente para backups diferenciais porque o assistente não substituirá um banco de dados existente que tenha o mesmo nome. Para substituir um banco de dados existente na VM, você deverá primeiro remover o banco de dados existente ou alterar o nome dele. Se houver um conflito de nomeação entre o nome do banco de dados de uma operação de implantação em curso e um banco de dados existente na VM, o assistente sugerirá um nome de banco de dados anexado para que o banco de dados em curso permita que você conclua a operação.  
   
@@ -148,19 +147,19 @@ ms.locfileid: "70175732"
   
         -   <OtherSettings  
   
-            -   TraceLevel="Debug" \<!-- Logging level -->  
+            -   TraceLevel = "depurar"\<!-- Logging level -->  
   
-            -   BackupPath="\\\\[server name]\\[volume]\\" \<!!-- O caminho usado para o último backup. Usado como o padrão no assistente. -->  
+            -   BackupPath = " \\ \\ [nome do servidor] \\ [volume] \\ "\<!-- The last used path for backup. Used as default in the wizard. -->  
   
-            -   CleanupDisabled = false/> \<o assistente de!--não excluirá arquivos intermediários e objetos do Azure (VM, cs, SA). -->  
+            -   CleanupDisabled = false/>\<!-- Wizard will not delete intermediate files and Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<! -- As informações de perfil de publicação usadas pela última vez. -->  
+        -   <PublishProfile\<!-- The last used publish profile information. -->  
   
-            -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- O certificado para uso no assistente. -->  
+            -   Certificado = "12A34B567890123ABCD4EF567A8"\<!-- The certificate for use in the wizard. -->  
   
-            -   Subscription="1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx" \<!-- A assinatura para uso no assistente. -->  
+            -   Subscription = "1a2b34c5-67d8-90ef-AB12-xxxxxxxxxxxxx"\<!-- The subscription for use in the wizard. -->  
   
-            -   Name="My Subscription" \<!-- O nome da assinatura. -->  
+            -   Nome = "minha assinatura"\<!-- The name of the subscription. -->  
   
             -   Publisher="" />  
   
@@ -200,7 +199,7 @@ ms.locfileid: "70175732"
   
  **Opções**  
   
--   Clique em **conectar...** e especifique os detalhes da conexão para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância do que hospeda o banco de dados a ser implantado.  
+-   Clique em **conectar...** e especifique os detalhes da conexão para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados a ser implantado.  
   
 -   Use a lista suspensa **Selecionar Banco de Dados** para especificar o banco de dados a ser implantado.  
   

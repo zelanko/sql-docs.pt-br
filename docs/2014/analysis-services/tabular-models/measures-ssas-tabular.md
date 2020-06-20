@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c42809ab5057d4234b992ec81db0b6571c3e68c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938817"
 ---
 # <a name="measures-ssas-tabular"></a>Medidas (SSAS tabular)
   Em modelos de tabela, uma medida é um cálculo criado usando uma fórmula DAX para uso em um cliente de relatório. As medidas são avaliadas com base em campos, filtros e usuários de segmentações de dados selecionados no aplicativo cliente de relatório.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067006"
   
 -   [Tarefas relacionadas](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Benefícios  
  As medidas podem se basear em funções de agregação padrão, como AVERAGE, COUNT ou SUM, ou é possível definir sua própria fórmula usando-se o DAX. Além da fórmula, cada medida tem propriedades, definidas pelo tipo de dados de medida, como Nome, Detalhe da Tabela, Formato e Casas Decimais.  
   
  Quando as medidas foram definidas em um modelo, os usuários podem acrescentá-los a um relatório ou Tabela Dinâmica. Dependendo das perspectivas e das funções, as medidas aparecem na Lista de Campos com a tabela associada, e estão disponíveis para todos os usuários do modelo. As medidas são geralmente criadas na tabela de fatos; no entanto, as medidas podem ser independentes da tabela com a qual estão associadas.  
@@ -59,7 +58,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |Câmeras e filmadoras|$620,623,675.75|  
 |Computadores|$392,999,044.59|  
 |Tv e Vídeo|$946,989,702.51|  
-|**Grand Total**|**$4,691,673,731.53**|  
+|**Grande Total**|**$4,691,673,731.53**|  
   
 ##  <a name="defining-measures-by-using-the-measure-grid"></a><a name="bkmk_def_mg"></a>Definindo medidas usando a grade de medida  
  As medidas são criadas em tempo de design usando a grade de medida no designer de modelo. Cada tabela tem uma grade de medida. Por padrão, a grade de medida é exibida abaixo de cada tabela no designer de modelos. Você também pode escolher não exibir a grade de medida para uma tabela específica. Para alternar a exibição da grade de medida de uma tabela, clique no menu **tabela** e, em seguida, clique em **Mostrar grade de medida**.  
@@ -84,8 +83,8 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |Propriedade|Configuração padrão|Descrição|  
 |--------------|---------------------|-----------------|  
-|**Descrição**|Em branco|Descrição da medida. A descrição não aparecerá com a medida em um cliente de relatório.|  
-|**Ao**|Automaticamente determinado do tipo de dados da coluna referenciado na expressão de fórmula.|Formato da medida. Por exemplo, moeda ou percentual.|  
+|**Descrição**|Em Branco|Descrição da medida. A descrição não aparecerá com a medida em um cliente de relatório.|  
+|**Formatar**|Automaticamente determinado do tipo de dados da coluna referenciado na expressão de fórmula.|Formato da medida. Por exemplo, moeda ou percentual.|  
 |**Fórmula**|A fórmula inserida na barra de fórmula quando a medida foi criada.|A fórmula da medida.|  
 |**Nome da Medida**|Se AutoSoma for usado, o nome da medida precederá o nome da coluna seguido por dois-pontos. Se uma fórmula personalizada for inserida, digite um nome seguido por dois-pontos e digite a fórmula.|O nome da medida conforme é exibida em uma Lista de Campo do cliente de relatório.|  
   

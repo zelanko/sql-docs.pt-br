@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d26a7cef-1a60-4c95-b9df-f8b4fec59f9b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84d04729e2f4c00c5d127a706727567c44855cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e2bf5095ac1e6b67f6c6f3f87444879913916e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012179"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>Somente usuários sysadmin podem gravar arquivos de log da etapa de trabalho no sistema de arquivos
   O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] grava, opcionalmente, um log para cada etapa de trabalho.  
@@ -28,7 +27,7 @@ ms.locfileid: "66093680"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>Descrição  
- No [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent pode gravar logs no sistema de arquivos para trabalhos que pertencem a membros da função de servidor fixa **sysadmin** . Se o proprietário do trabalho não for um membro da função **sysadmin** e se a conta proxy estiver habilitada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Agent poderá gravar logs no sistema de arquivos usando as credenciais da conta proxy.  
+ No [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode gravar logs no sistema de arquivos para trabalhos que pertencem a membros da função de servidor fixa **sysadmin** . Se o proprietário do trabalho não for um membro da função **sysadmin** e se a conta proxy estiver habilitada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent poderá gravar logs no sistema de arquivos usando as credenciais da conta proxy.  
   
  Após a atualização, os trabalhos que pertencem a usuários que não são membros da função de servidor fixa **sysadmin** não podem mais gravar logs no sistema de arquivos. Em vez disso, esses usuários podem selecionar a opção para gravar seus logs em uma tabela no banco de dados **msdb** . Os membros da função **sysadmin** ainda podem gravar arquivos de log no sistema de arquivos.  
   

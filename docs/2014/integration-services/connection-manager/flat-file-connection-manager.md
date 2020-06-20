@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46c1ea54ba178fba73a1bfb2cc8ee296ca2b0d0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833804"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920854"
 ---
 # <a name="flat-file-connection-manager"></a>Gerenciador de conexões de arquivos simples
   Um gerenciador de conexões de Arquivos Simples permite que um pacote acesse dados em um arquivo simples. Por exemplo, a origem e o destino dos Arquivos Simples podem usar gerenciadores de conexões de Arquivos Simples para extrair e carregar dados.  
@@ -35,13 +34,13 @@ ms.locfileid: "62833804"
  Se você atualizar os comprimentos da coluna no gerenciador de conexões de arquivos simples após adicionar e configurar a fonte de arquivo simples que utiliza o gerenciador de conexões, não será necessário redimensionar manualmente as colunas de saída na origem do arquivo simples. Quando você abre a caixa de diálogo **Origem de Arquivo Simples** , a origem de arquivo simples fornece uma opção para sincronizar os metadados da coluna.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Configuração do gerenciador de conexões de arquivo simples  
- Quando você adiciona um Gerenciador de conexões de arquivo simples a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacote, o cria um Gerenciador de conexões que será resolvido para uma conexão de arquivo simples em tempo de execução, define as propriedades de conexão de arquivo simples e adiciona `Connections` o Gerenciador de conexões de arquivo simples à coleção do pacote.  
+ Quando você adiciona um Gerenciador de conexões de arquivo simples a um pacote, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o cria um Gerenciador de conexões que será resolvido para uma conexão de arquivo simples em tempo de execução, define as propriedades de conexão de arquivo simples e adiciona o Gerenciador de conexões de arquivo simples à `Connections` coleção do pacote.  
   
  A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `FLATFILE`.  
   
  Por padrão, o gerenciador de conexões de arquivos simples sempre verifica se há um delimitador de linha em dados sem aspas e inicia uma nova linha quando um delimitador de linha é localizado. Isso permite que o gerenciador de conexões analise corretamente arquivos com linhas que não têm campos de coluna.  
   
- Em alguns casos, desabilitar esse recurso pode melhorar o desempenho do pacote. Você pode desabilitar esse recurso definindo a propriedade do Gerenciador de conexões de arquivo **AlwaysCheckForRowDelimiters**simples, AlwaysCheckForRowDelimiters `False`, para.  
+ Em alguns casos, desabilitar esse recurso pode melhorar o desempenho do pacote. Você pode desabilitar esse recurso definindo a propriedade do Gerenciador de conexões de arquivo simples, **AlwaysCheckForRowDelimiters**, para `False` .  
   
  Você pode configurar um gerenciador de conexões de arquivos simples dos seguintes modos:  
   

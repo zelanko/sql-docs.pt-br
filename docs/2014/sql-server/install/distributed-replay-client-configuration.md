@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72336f2f012ad6f2da03440f431d2fe5be294b07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012707"
 ---
 # <a name="distributed-replay-client-configuration"></a>Configuração do Distributed Replay Client
   Use a página **Configuração do Distributed Replay Client** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar os usuários aos quais você deseja conceder permissões administrativas para o serviço Distributed Replay Client.  
@@ -24,7 +23,7 @@ ms.locfileid: "66095483"
   
 ## <a name="options"></a>Opções  
  **Nome do Controlador**  
- Esse é um parâmetro opcional, e o valor padrão é \< *em branco*>.  
+ Esse é um parâmetro opcional, e o valor padrão é \<*blank*> .  
   
  Digite o nome do controlador com o qual o computador cliente se comunicará para o serviço Distributed Replay Client. Observe o seguinte:  
   
@@ -37,11 +36,11 @@ ms.locfileid: "66095483"
  **Diretório de trabalho**  
  Especifique o diretório de trabalho para o serviço Distributed Replay Client.  
   
- O diretório de trabalho padrão \<é a *letra da unidade*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Program Files \DReplayClient\WorkingDir.  
+ O diretório de trabalho padrão é \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ .  
   
  **Diretório de Resultado**  
  Especifique o diretório de resultado para o serviço Distributed Replay Client.  
   
- O diretório de resultado padrão \<é a *letra da unidade*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Program Files \DReplayClient\ResultDir.  
+ O diretório de resultado padrão é \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ .  
   
   

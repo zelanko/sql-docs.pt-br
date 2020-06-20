@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e455dd25c2b5d4ffa28bd2bdc28ff679861f1f1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011412"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Lição 2: Adicionando uma referência da Web
   Descoberta de serviço Web é o processo pelo qual um cliente localiza um serviço Web e obtém a descrição desse serviço. O processo de descoberta de serviço Web no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] envolve questionar um site que segue um algoritmo predeterminado. O objetivo do processo é localizar a descrição do serviço, que é um documento XML que usa linguagem WSDL.  
@@ -32,7 +31,7 @@ ms.locfileid: "63316005"
   
 3.  Na caixa de diálogo **configurações de referência de serviço** , clique em **Adicionar referência Web**.  
   
-4.  Na caixa **URL** da caixa de diálogo **Adicionar referência Web** , digite a URL para obter a descrição de serviço do serviço Web servidor de relatórios, como http://localhost/reportserver/reportservice2010.asmx. Em seguida, clique no botão **ir** para recuperar informações sobre o serviço Web.  
+4.  Na caixa **URL** da caixa de diálogo **Adicionar referência Web** , digite a URL para obter a descrição de serviço do serviço Web servidor de relatórios, como http://localhost/reportserver/reportservice2010.asmx . Em seguida, clique no botão **ir** para recuperar informações sobre o serviço Web.  
   
      \- ou –  
   

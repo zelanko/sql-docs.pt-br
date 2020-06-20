@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dc9824efb3f962d97f786835fa2367be18b55f7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ce4035bd0f953058a1e868709275e2f5d0b025a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065917"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lição 2: Criando uma assinatura na publicação transacional
   Nessa lição, você criará uma assinatura usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta lição exige que você tenha concluído a lição anterior, [Lição 1: Publicando dados usando a replicação transacional](lesson-1-publishing-data-using-transactional-replication.md).  
@@ -36,11 +35,11 @@ ms.locfileid: "83000407"
   
 5.  Na página Assinantes, se o nome da instância do Assinante não estiver exibido, clique em **Adicionar Assinante**, clique em **Adicionar Assinante de SQL Server**, digite o nome da instância do Assinante na caixa de diálogo **Conectar ao Servidor** e em seguida clique em **Conectar**.  
   
-6.  Na página assinantes, selecione o nome da instância do servidor do assinante e selecione ** \< novo banco de dados>** em **banco de dados de assinatura**.  
+6.  Na página assinantes, selecione o nome da instância do servidor do assinante e selecione **\<New Database>** em **banco de dados de assinatura**.  
   
 7.  Na caixa de diálogo **Novo Banco de Dados** , digite **ProductReplica** na caixa **Nome do Banco de Dados** , clique em **OK**e clique em **Avançar**.  
   
-8.  Na caixa de diálogo **agente de distribuição segurança** , clique no botão de reticências (**...**), digite \< _Machine_Name>_ **\ repl_distribution** na caixa **conta de processo** , digite a senha dessa conta, clique em **OK**e em **Avançar**.  
+8.  Na caixa de diálogo **agente de distribuição segurança** , clique no botão de reticências (**...**), insira \<_Machine_Name> _**\ repl_distribution** na caixa **conta de processo** , digite a senha dessa conta, clique em **OK**e em **Avançar**.  
   
 9. Clique em **Concluir** para aceitar os valores padrão nas páginas remanescentes e concluir o assistente.  
   

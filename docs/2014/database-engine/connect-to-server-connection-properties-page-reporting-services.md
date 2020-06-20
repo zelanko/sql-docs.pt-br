@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c24027a73cc36ea0cae4915b93d9968adf3e70b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808657"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934637"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Conectar ao Servidor (página Propriedades da Conexão) Reporting Services
   Use essa guia para exibir ou especificar opções ao se conectar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou registrar [!INCLUDE[ssRS](../includes/ssrs.md)] em **servidores registrados**. **Conectar** e **Opções** são exibidas apenas nessa caixa de diálogo durante a conexão. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssRS](../includes/ssrs.md)].  

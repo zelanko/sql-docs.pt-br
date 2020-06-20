@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03afd5bdafe30a8684165fef5febae49f210f042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067956"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940207"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurar propriedades de relatório para relatórios do Power View
   Nesta lição suplementar, você definirá as propriedades de relatório para o projeto Modelo de Vendas pela Internet do Adventure Works. As propriedades de relatório facilitam para os usuários finais o trabalho de selecionar e exibir dados de modelo no Power View. Você também definirá as propriedades para ocultarem determinadas colunas e tabelas, e criará novos dados para usar em gráficos.  
@@ -94,7 +93,7 @@ ms.locfileid: "66067956"
   
      **Customer Alternate Id**  
   
-     **Nome**  
+     **First Name**  
   
      **Sobrenome**  
   
@@ -170,8 +169,8 @@ ms.locfileid: "66067956"
     |Day Of Week|Hidden|True|  
     |Day of Month|Hidden|True|  
     |Day of Year|Hidden|True|  
-    |Month Name|Sort By Column|Month|  
-    |Month|Hidden|True|  
+    |Month Name|Sort By Column|Mês|  
+    |Mês|Hidden|True|  
     |Month Calendar|Hidden|True|  
     |Fiscal Quarter|Hidden|True|  
     |Fiscal Year|Hidden|True|  
@@ -184,7 +183,7 @@ ms.locfileid: "66067956"
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
-     **Remessa**  
+     **Produto**  
   
     |Coluna|Propriedade|Valor|  
     |------------|--------------|-----------|  

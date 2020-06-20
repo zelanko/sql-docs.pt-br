@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be4ed45f-fde3-466c-9869-49bd3ddb505e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85d085472a8d904efb2b33b942ba9f0a67326fed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c72fa90426440c1be84318a15cf0d761ef16aca8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067246"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939699"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>Excluir uma tabela (SSAS tabular)
   No designer de modelo, você pode excluir tabelas em seu banco de dados de workspace modelo que você não precisa mais. A exclusão de uma tabela não afeta os dados de origem originais, somente os dados que você importou e com os quais estava trabalhando. Não é possível desfazer a exclusão de uma tabela.  

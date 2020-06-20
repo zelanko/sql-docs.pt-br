@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a39b3395a26fdbe3c235f429f312f4d6b3aff512
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ffa99b2271697302e9cfa284bd814ccc923e46d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065927"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lição 2: Criando uma assinatura na publicação de mesclagem
   Nesta lição, você criará uma assinatura usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Em seguida, definirá permissões no banco de dados da assinatura e gerará manualmente o instantâneo de dados filtrados para a nova assinatura. Esta lição exige que você tenha concluído a lição anterior, [Lição 1: Publicando dados usando a replicação de mesclagem](lesson-1-publishing-data-using-merge-replication.md).  
@@ -36,11 +35,11 @@ ms.locfileid: "83000436"
   
 5.  Na página Local do Agente de Mesclagem, clique em **Executar cada agente em seu Assinante**e em **Avançar**.  
   
-6.  Na página assinantes, selecione o nome da instância do servidor do assinante e, em **banco de dados de assinatura**, selecione ** \< novo banco de dados>** na lista.  
+6.  Na página Assinantes, selecione o nome da instância do servidor Assinante e, em **Banco de Dados de Assinatura**, selecione **\<New Database>** na lista.  
   
 7.  Na caixa de diálogo **Novo Banco de Dados** , insira **SalesOrdersReplica** na caixa **Nome do banco de dados** , clique em **OK**e em **Avançar**.  
   
-8.  Na página segurança do Agente de Mesclagem, clique no botão de reticências (**...**), digite \< _Machine_Name>_ **\ repl_merge** na caixa **conta de processo** , forneça a senha dessa conta, clique em **OK**, em **Avançar**e em **Avançar** novamente.  
+8.  Na página segurança do Agente de Mesclagem, clique no botão de reticências (**...**), insira \<_Machine_Name> _**\ repl_merge** na caixa **conta de processo** , forneça a senha dessa conta, clique em **OK**, em **Avançar**e em **Avançar** novamente.  
   
 9. Na página Inicializar Assinaturas, selecione **Na primeira sincronização** na lista **Inicializar Quando** , clique em **Avançar**e em **Avançar** novamente.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000436"
   
 1.  Conecte-se ao Assinante no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Bancos de Dados**, **SalesOrdersReplica**e **Segurança**, clique com o botão direito do mouse em **Usuários**e selecione **Novo Usuário**.  
   
-2.  Na página **geral** , digite \< _Machine_Name>_ **\ repl_merge** na caixa **nome de usuário** , clique no botão de reticências (**...**), clique em **procurar**, selecione \< _Machine_Name>_ **\ repl_merge**, clique em **OK**, em **verificar nomes**e em **OK**.  
+2.  Na página **geral** , digite \<_Machine_Name> _ **\ repl_merge** na caixa **nome de usuário** , clique no botão de reticências (**...**), clique em **procurar**, \<_Machine_Name> selecione _ **\ repl_merge**, clique em **OK**, em **verificar nomes**e em **OK**.  
   
 3.  Em **Associação à função do banco de dados**, selecione **db_owner**e clique em **OK** para criar o usuário.  
   

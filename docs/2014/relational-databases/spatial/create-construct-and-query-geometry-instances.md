@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 539f3f8bb1d9a1c277d6317cc571cf8bcb281833
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996578"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Criar, construir e consultar instâncias de geometria
   O tipo de dados espaciais planares, `geometry`, representa dados em um sistema de coordenadas euclidiano (plano). Este tipo é implementado como um tipo de dados CLR (Common Language Runtime) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -129,7 +128,7 @@ ms.locfileid: "66014306"
   
   
 ###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> Construindo uma instância de geometria de entrada de texto GML  
- O `geometry` tipo de dados fornece um método que gera `geometry` uma instância de GML, uma representação XML de objetos geométricos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um subconjunto de GML.  
+ O `geometry` tipo de dados fornece um método que gera uma `geometry` instância de GML, uma representação XML de objetos geométricos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um subconjunto de GML.  
   
  **Para construir qualquer tipo de instância de geometria de entrada GML**  
  [GeomFromGml &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +155,7 @@ ms.locfileid: "66014306"
   
   
 ##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> Consultando as propriedades e comportamentos de instâncias de geometria  
- Todas `geometry` as instâncias têm várias propriedades que podem ser recuperadas por meio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métodos que o fornece. Os tópicos a seguir definem propriedades e comportamentos de tipos de geometria e os métodos de consulta de cada um.  
+ Todas as `geometry` instâncias têm várias propriedades que podem ser recuperadas por meio de métodos que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece. Os tópicos a seguir definem propriedades e comportamentos de tipos de geometria e os métodos de consulta de cada um.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Informações de validade, tipo de instância e GeometryCollection  
  Quando uma instância de `geometry` é construída, é possível usar os seguintes métodos para determinar se ela está bem formada, para retornar o tipo da instância ou, se ela for uma instância de coleção, retornar uma instância de `geometry` específica.  
@@ -182,7 +181,7 @@ ms.locfileid: "66014306"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> Número de pontos  
- Todas as instâncias `geometry` não vazias são compostas de *pontos*. Esses pontos representam as coordenadas X e Y do plano no qual as geometrias são obtidas. `geometry` fornece vários métodos internos de consulta de pontos de uma instância.  
+ Todas as instâncias não vazias `geometry` são compostas de *pontos*. Esses pontos representam as coordenadas X e Y do plano no qual as geometrias são obtidas. `geometry` fornece vários métodos internos de consulta de pontos de uma instância.  
   
  **Para retornar o número de pontos que compõem uma instância**  
  [STNumPoints &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -233,7 +232,7 @@ ms.locfileid: "66014306"
   
   
 ###  <a name="simple"></a><a name="simple"></a> Simple (simples)  
- Para que `geometry` uma das instâncias seja *simples*, ela deve atender a esses dois requisitos:  
+ Para que uma `geometry` das instâncias seja *simples*, ela deve atender a esses dois requisitos:  
   
 -   Não deve haver interseção de nenhuma figura da instância consigo mesma, exceto em seus pontos de extremidade.  
   

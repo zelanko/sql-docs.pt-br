@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1dfa6926d86fce5006e458b3738a28a8b5f467d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bc8faa8fbd897a9bbb3a51c1042d48e84ff977
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058767"
 ---
 # <a name="sql-server-agent-error-log"></a>Log de erros do SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent cria um log de erros que registra avisos e erros por padrão. Os seguintes avisos e erros são exibidos no log:  
   
--   Mensagens de aviso que fornecem informações sobre possíveis problemas, como "o \< *job_name* de trabalho> foi excluído enquanto estava em execução".  
+-   Mensagens de aviso que fornecem informações sobre possíveis problemas, como "o trabalho \<*job_name*> foi excluído enquanto estava em execução".  
   
 -   Mensagens de erro que normalmente requerem intervenção de um administrador de sistema, como "Não é possível iniciar a sessão de email". As mensagens de erro podem ser enviadas a um usuário ou computador específico por meio de **net send**.  
   

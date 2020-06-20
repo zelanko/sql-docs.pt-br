@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 384234072c312fca2c91da8ab4e6ac09eb0f79fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011588"
 ---
 # <a name="review-the-replay-results"></a>Revisar os resultados da reprodução
   Depois que o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay concluir uma reprodução distribuída, a atividade de reprodução de cada cliente poderá ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir** . Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -56,7 +55,7 @@ ms.locfileid: "63149703"
 ## <a name="column-descriptions-for-result-trace"></a>Descrições de coluna para rastreamento de resultado  
  A tabela a seguir descreve as colunas dos dados de rastreamento de resultado.  
   
-|Nome da coluna de dados|Tipo de Dados|DESCRIÇÃO|ID da coluna|  
+|Nome da coluna de dados|Tipo de Dados|Descrição|ID da coluna|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|`nvarchar`|O nome da classe de evento.|1|  
 |EventSequence|`bigint`|Para erros de provedor, e erros e avisos internos, esta é a sequência de eventos de captura que corresponde ao erro ou aviso.<br /><br /> Para todas as outras classes de eventos, esta é a sequência do evento nos dados de rastreamento originais.|2|  
@@ -71,15 +70,15 @@ ms.locfileid: "63149703"
 |ConnectionID|`int`|A ID da conexão de captura do evento.|11|  
 |ReplaySPID|`int`|A ID da sessão de reprodução do evento.|12|  
 |DatabaseName|`nvarchar`|O nome do banco de dados no qual a instrução do usuário está sendo executada.|13|  
-|LoginName|`nvarchar`|O nome de logon do usuário. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Isso pode ser um logon de segurança ou as credenciais de logon do Microsoft Windows, no formato *domain_name*\\*user_name*.|14|  
+|LoginName|`nvarchar`|O nome de logon do usuário. Pode ser um logon de segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou as credenciais de logon do Microsoft Windows no formato *nome_do_domínio*\\*nome_do_usuário*.|14|  
 |CaptureHostName|`nvarchar`|O nome do computador no qual o serviço cliente está sendo executado durante a captura.|15|  
 |ReplayHostName|`nvarchar`|O nome do computador em que o aplicativo cliente está sendo executado durante a reprodução.|16|  
 |ApplicationName|`nvarchar`|O nome do aplicativo cliente que criou a conexão com a conexão com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durante a captura.|17|  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Requisitos de Distributed Replay](distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40;utilitário de Distributed Replay&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurar o Distributed Replay](configure-distributed-replay.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61a49ccb89343984b29018f293656fd2a9137b37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770212"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939187"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Tutorial: Usando o OData Source [SSIS]
   Este tutorial orienta você pelo processo de extrair a coleção **Funcionários** do serviço **Northwind** OData de amostra (http://services.odata.org/V3/Northwind/Northwind.svc/) e, em seguida, carregue-o para um arquivo simples.  
@@ -44,7 +43,7 @@ ms.locfileid: "62770212"
   
 5.  Clique em **Novo...** para adicionar um novo Gerenciador de Conexões OData.  
   
-6.  Insira a URL do serviço OData para **Local do documento de serviço**. Essa pode ser a URL do documento do serviço ou para um feed ou a uma entidade específica. Para fins deste tutorial, digite [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Insira a URL do serviço OData para **Local do documento de serviço**. Essa pode ser a URL do documento do serviço ou para um feed ou a uma entidade específica. Para fins deste tutorial, digite [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/) .  
   
 7.  Verifique se a **Autenticação do Windows** está selecionada como **autenticação** a ser usada para acessar o serviço OData. A**Autenticação do Windows** está selecionada por padrão. Para usar a autenticação básica, selecione **Usar este nome de usuário e senha**.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62770212"
   
 10. Na lista suspensa **Coleção** , selecione **Employees**.  
   
-11. Insira as opções de consulta adicionais do OData ou filtros para **Opções de Consulta**. Ex. $orderby=CompanyName&$top=100. Para este tutorial, insira **$top=5**.  
+11. Insira as opções de consulta adicionais do OData ou filtros para **Opções de Consulta**. Ex.: $orderby=CompanyName&$top=100. Para este tutorial, insira **$top=5**.  
   
 12. Clique em **Visualizar** para visualizar os dados.  
   

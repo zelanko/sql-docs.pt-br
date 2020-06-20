@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2439b19c4550d07b8d50a0bed6d72b603b1601a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1302f8bcd6a427d5225f6936b0adf158d0ed6ee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745785"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050553"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (API de procedimento armazenado estendido)
     
@@ -55,7 +54,7 @@ user_type
  *srvproc*  
  É um ponteiro para a estrutura SRV_PROC que atua como identificador de uma conexão de cliente específica. A estrutura contém informações que a biblioteca de APIs de procedimento armazenado estendido usa para gerenciar a comunicação e os dados entre o aplicativo e o cliente.  
   
- *pilha*  
+ *column*  
  Indica qual coluna deve ser definida. As colunas são numeradas a partir de 1.  
   
  *user_type*  
@@ -65,7 +64,7 @@ user_type
  SUCCEED ou FAIL. Retornará FAIL se a coluna não existir.  
   
 ## <a name="remarks"></a>Comentários  
- Uma coluna tem dois tipos de dados: seu tipo de dados real e seu tipo de dados definido pelo usuário. O tipo de dados definido pelo usuário é usado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo para armazenar o tipo de dados real definido pelo usuário da coluna, se houver, e informações de descrição de coluna, como a nulidade e a capacidade de atualização, para a coluna.  
+ Uma coluna tem dois tipos de dados: seu tipo de dados real e seu tipo de dados definido pelo usuário. O tipo de dados definido pelo usuário é usado pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar o tipo de dados real definido pelo usuário da coluna, se houver, e informações de descrição de coluna, como a nulidade e a capacidade de atualização, para a coluna.  
   
  A função **srv_setutype** pode ser chamada a qualquer momento em que *column* tenha sido definido com **srv_describe** e antes que a última linha tenha sido enviada.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 701928a722e14cf3eb5c1e678a1dd764597f46ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b0bddf426a7cedaa8f11620355427143bcaa47b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783093"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959583"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Usar o PowerShell para fazer backup de vários bancos de dados no serviço de Armazenamento de Blobs
   Este tópico fornece scripts de exemplo que podem ser usados para automatizar backups no serviço do Armazenamento do Blobs do Azure usando os cmdlets do PowerShell.  

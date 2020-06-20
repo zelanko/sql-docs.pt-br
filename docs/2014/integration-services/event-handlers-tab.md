@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bd7e159a148b134d744481a76ac910af572c0c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969406"
 ---
 # <a name="event-handlers-tab"></a>Guia Manipuladores de Eventos
   Use a guia **Manipuladores de Eventos** do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] para criar um fluxo de controle em um pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Um manipulador de eventos é executado em resposta a um evento criado pelo pacote ou por uma tarefa ou contêiner no pacote.  
@@ -32,7 +31,7 @@ ms.locfileid: "66059291"
  **Delete (excluir)**  
  Selecione um manipulador de eventos e remova-o do pacote, clicando em **Excluir**.  
   
- **Clique aqui para criar um \<nome de manipulador de eventos> para \<o nome executável executável>**  
+ **Clique aqui para criar um \<event handler name> para o executável\<executable name>**  
  Clique para criar o manipulador de eventos.  
   
  Crie o fluxo de controle arrastando os objetos gráficos que representam as tarefas e os contêiners [!INCLUDE[ssIS](../includes/ssis-md.md)] da **Caixa de Ferramentas** para a superfície de design da guia **Manipuladores de Eventos** e, em seguida, conectando os objetos usando as restrições de precedência para definir a sequência na qual eles serão executados.  

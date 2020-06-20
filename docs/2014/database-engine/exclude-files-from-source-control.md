@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7dcb6514-db5c-49eb-8b5a-2c766ce39aa7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fb3c5ccb4fcaad062236eec6d04f995557dc2b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933083"
 ---
 # <a name="exclude-files-from-source-control"></a>Excluir arquivos do controle do código-fonte
   Se a solução na qual você está trabalhando contiver arquivos que não exigem serviços de controle do código-fonte, você poderá usar o comando **excluir do controle do código-fonte** para excluir o arquivo do controle do código-fonte. Quando você faz isso, o arquivo permanece no banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, mas já não é feito o check-in ou check-out com o projeto.  
@@ -29,7 +28,7 @@ ms.locfileid: "62779896"
   
 1.  No Gerenciador de Soluções, selecione o arquivo que irá excluir.  
   
-2.  No menu **arquivo** , aponte para **controle do código-fonte**e clique em **excluir** * \<nome do arquivo>* **do controle do código-fonte**.  
+2.  No menu **arquivo** , aponte para **controle do código-fonte**e clique em **excluir** *\<file name>* **do controle do código-fonte**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Noções básicas do controle do código-fonte](../../2014/database-engine/source-control-basics.md)   

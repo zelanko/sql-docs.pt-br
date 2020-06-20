@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e3cc931-6237-41dd-bf0d-0c03f4d8fff2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46de12faa52fae61e1f11758f40e1ec8242faca1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011864"
 ---
 # <a name="replace-usage-of-the-xp_sqlagent_proxy_account-extended-stored-procedure-with-new-stored-procedures"></a>Substituir a utilização do procedimento armazenado estendido xp_sqlagent_proxy_account por novos procedimentos armazenados
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent oferece suporte a vários proxies. Você define esses proxies usando um novo conjunto de procedimentos armazenados. Para obter mais informações sobre os novos procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte os seguintes tópicos dos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -45,7 +44,7 @@ ms.locfileid: "66092754"
 -   ‘sp_update_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])’  
   
 > [!NOTE]  
->  Depois de atualizar para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o, todas as instruções que usam o procedimento armazenado estendido **xp_sqlagent_proxy_account** não funcionarão. Use **sp_xp_cmdshell_proxy_account** em vez de **xp_sqlagent_proxy_account** para definir o proxy para **xp_cmdshell**.  
+>  Depois de atualizar para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o, todas as instruções que usam o procedimento armazenado estendido **xp_sqlagent_proxy_account** não funcionarão. Use **sp_xp_cmdshell_proxy_account** em vez de **xp_sqlagent_proxy_account** para definir o proxy para **xp_cmdshell**.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  

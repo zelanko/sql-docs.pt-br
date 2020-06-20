@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3088333fbfd4babd209df07f8880c838ce626d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755516"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934317"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows (Transact-SQL)
     
@@ -44,7 +43,7 @@ ms.locfileid: "62755516"
     > [!NOTE]  
     >  A forma de autenticação usada para o espelhamento de banco de dados por uma instância do servidor é uma propriedade do ponto de extremidade de espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para o espelhamento de banco de dados: autenticação do Windows ou autenticação com certificado. Para obter mais informações, consulte [segurança de transporte para espelhamento de banco de dados e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
-     Em cada servidor parceiro, assegure que existe um ponto de extremidade de espelhamento de banco de dados. Independentemente do número de sessões de espelhamento a dar suporte, a instância do servidor só pode ter um ponto de extremidade de espelhamento de banco de dados. Se você pretende usar essa instância de servidor exclusivamente para parceiros em sessões de espelhamento de banco de dados, você pode atribuir a função de parceiro ao**=** ponto de extremidade (parceiro de função). Se você também pretende usar essa instância do servidor exclusivamente para testemunhas em sessões de espelhamento de banco de dados, você poderá definir o papel de parceiro ao ponto de extremidade como ALL.  
+     Em cada servidor parceiro, assegure que existe um ponto de extremidade de espelhamento de banco de dados. Independentemente do número de sessões de espelhamento a dar suporte, a instância do servidor só pode ter um ponto de extremidade de espelhamento de banco de dados. Se você pretende usar essa instância de servidor exclusivamente para parceiros em sessões de espelhamento de banco de dados, você pode atribuir a função de parceiro ao ponto de extremidade (parceiro de função **=** ). Se você também pretende usar essa instância do servidor exclusivamente para testemunhas em sessões de espelhamento de banco de dados, você poderá definir o papel de parceiro ao ponto de extremidade como ALL.  
   
      Para executar uma instrução SET PARTNER, o STATE dos pontos de extremidade de ambos os parceiros deve ser definido como STARTED.  
   
@@ -63,15 +62,15 @@ ms.locfileid: "62755516"
   
 4.  Para definir o servidor principal como parceiro no banco de dados espelho, conecte-se ao servidor espelho e emita a seguinte instrução:  
   
-     ALTER DATABASE *<database_name>* definir<**=** do parceiro _server_network_address_>  
+     ALTER DATABASE *<database_name>* definir<do parceiro **=** _server_network_address_>  
   
      em que *<database_name>* é o nome do banco de dados a ser espelhado (esse nome é o mesmo em ambos os parceiros) e *<server_network_address>* é o endereço de rede de servidor do servidor principal.  
   
      A sintaxe para um endereço de rede do servidor é a seguinte:  
   
-     TCP<strong>://</strong>\<*sistema->de endereços * <strong>:</strong>\<*porta>*  
+     TCP<strong>://</strong> \<*system-address> *<strong>:</strong> \<*port> *  
   
-     em que \<*system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e \<*port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md).  
+     em que \<*system-address> * é uma cadeia de caracteres que identifica inequivocamente o sistema de computador de destino e \<*port> * é o número da porta usado pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md).  
   
      Por exemplo, na instância do servidor espelho, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor principal original. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER1 – o nome de sistema do parceiro – e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7022:  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62755516"
   
 5.  Para definir o servidor espelho como parceiro no banco de dados principal, conecte-se ao servidor principal e emita a seguinte instrução:  
   
-     ALTER DATABASE *<database_name>* definir<**=** do parceiro _server_network_address_>  
+     ALTER DATABASE *<database_name>* definir<do parceiro **=** _server_network_address_>  
   
      Para obter mais informações, consulte a etapa 4.  
   
