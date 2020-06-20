@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e37ed20eb1babf85df0bea191ea3c302e7968f6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9c9abee95a8d2ce52a3f9f25b5e629aad0bfed1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017419"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Políticas de suporte do SQL Server Native Client
   Este tópico aborda como vários componentes de acesso a dados podem ser usados com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
@@ -26,7 +25,7 @@ ms.locfileid: "82704429"
 ## <a name="supported-operating-system-versions"></a>Versões do sistema operacional compatíveis  
  A tabela a seguir lista os sistemas operacionais que oferecem suporte ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-|Versão do SQL Server Native Client|Sistemas operacionais com suporte|  
+|Versão do SQL Server Native Client|Sistemas operacionais compatíveis|  
 |--------------------------------------|---------------------------------|  
 |SQL Server Native Client (SQL Server 2005)|-Microsoft Windows 2000 Service Pack 4 ou posterior<br />-Microsoft Windows Server 2003 ou posterior<br />-Microsoft Windows XP Service Pack 1 ou posterior<br />-Microsoft Windows Vista (requer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 ou posterior)<br />-Microsoft Windows Server 2008 (requer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 ou posterior)|  
 |SQL Server Native Client 10,0 ( [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] )|-Microsoft Windows Server 2003 Service Pack 2 ou posterior<br />-Microsoft Windows XP Service Pack 2 ou posterior<br />-Microsoft Windows Vista<br />-Microsoft Windows Server 2008|  

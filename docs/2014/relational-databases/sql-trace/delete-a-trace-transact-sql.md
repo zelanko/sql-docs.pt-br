@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57d80824ab0dde301a0b96239636cf0f79ca032c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3551cff36ef6e2c2e9cc6a4d9b7056ae44cb950
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068298"
 ---
 # <a name="delete-a-trace-transact-sql"></a>Excluir um rastreamento (Transact-SQL)
   Este tópico descreve como usar procedimentos armazenados para excluir um rastreamento.  

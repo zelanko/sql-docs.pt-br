@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fd4a8bfbde0a728370cb7980bb5a0add809be0f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966056"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>Etapa 1: Copiar o pacote da Lição 1
   Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição 1. Se você não completou a lição 1, poderá adicionar o pacote completo da lição 1 incluído com o tutorial do projeto e, então, copiar esse pacote. Você usará essa cópia nova durante toda a Lição 2.  
@@ -36,9 +35,9 @@ ms.locfileid: "62891669"
   
 6.  Clique com o botão direito do mouse em qualquer lugar da tela de fundo da superfície de design **Fluxo de Controle** e clique em **Propriedades**.  
   
-7.  Na janela Propriedades, atualize a `Name` propriedade para. `Lesson 2`  
+7.  Na janela Propriedades, atualize a `Name` propriedade para `Lesson 2` .  
   
-8.  Clique na caixa da propriedade **ID** , clique na seta suspensa e, em seguida, clique em ** \<gerar nova ID>**.  
+8.  Clique na caixa da propriedade **ID** , clique na seta suspensa e clique em **\<Generate New ID>**.  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>Para adicionar o pacote concluído da Lição 1  
   

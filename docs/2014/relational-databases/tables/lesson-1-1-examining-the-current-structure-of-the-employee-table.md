@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5561d0f2398a0a1adc12ae30a7cd7527fdd5d45
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068096"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Examinando a estrutura atual da tabela Employee
-   O banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] contém uma tabela **Employee** no esquema **HumanResources**. Para evitar alterar a tabela original, este passo cria uma cópia da tabela **Employee** nomeada **EmployeeDemo**. Para simplificar o exemplo, você copia só cinco colunas da tabela original. Em seguida, você consulta a tabela **HumanResources. EmployeeDemo** para examinar como os dados são estruturados em uma tabela sem `hierarchyid` usar o tipo de dados.  
+   O banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] contém uma tabela **Employee** no esquema **HumanResources**. Para evitar alterar a tabela original, este passo cria uma cópia da tabela **Employee** nomeada **EmployeeDemo**. Para simplificar o exemplo, você copia só cinco colunas da tabela original. Em seguida, você consulta a tabela **HumanResources. EmployeeDemo** para examinar como os dados são estruturados em uma tabela sem usar o `hierarchyid` tipo de dados.  
   
 ### <a name="to-copy-the-employee-table"></a>Para copiar a tabela Employee  
   

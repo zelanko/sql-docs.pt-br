@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2dd44bd25dcf4c3c77ab099e97efff7177c829e3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5cef9a4894ba4d78d7d78963b6f56f25324e785b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696595"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018248"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Buscar linhas em um conjunto de resultados (OLE DB)
   Este exemplo mostra como buscar linhas em um conjunto de resultados. Este exemplo não tem suporte em IA64.  

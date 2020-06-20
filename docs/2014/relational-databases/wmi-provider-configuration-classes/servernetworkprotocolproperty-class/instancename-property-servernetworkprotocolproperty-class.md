@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8bf094914e087379ac72f23afcbf034a8248b30e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2d09d85e7b041e2899d69556bcccd2a2aa8ea9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059757"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>Propriedade InstanceName (classe ServerNetworkProtocolProperty)
   Obtém o nome de uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na qual o protocolo de rede do servidor está instalado.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [classe ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) que representa um atributo do protocolo de rede na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

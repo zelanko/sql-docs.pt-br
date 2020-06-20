@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a367d5ee7def19ffdfd40e24860ebf95f642fae9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 01dc4298855fd3418029164dea3ed089185da934
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018418"
 ---
 # <a name="executing-statements-odbc"></a>Executando instruções (ODBC)
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client oferece várias maneiras de executar instruções SQL em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados:  

@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 808c8516b3ed9e95ea4c724736461cb00923a7fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011913"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016242"
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
   *Entidades* são entidades que podem solicitar recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Como outros componentes do modelo de autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , as entidades podem ser organizadas em uma hierarquia. O escopo de influência de uma entidade depende do escopo de sua definição: Windows, servidor, banco de dados e, se a entidade é indivisível ou uma coleção. Um logon do Windows é um exemplo de um principal indivisível, enquanto um Grupo do Windows é um exemplo de um principal que é uma coleção. Todas as entidades têm um SID (identificador de segurança).  
@@ -44,7 +43,7 @@ ms.locfileid: "63011913"
   
 -   Logon local do Windows  
   
- **SQL Server**-**level** **Entidades** de nível de SQL Server  
+ **SQL Server** - **level** **entidades** de nível  
   
 -   Logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63011913"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>O Usuário convidado  
- Cada banco de dados inclui um **convidado**. As permissões concedidas ao usuário **convidado** são herdadas pelos usuários que têm acesso ao banco de dados, mas que não têm uma conta de usuário no banco de dados. O usuário **convidado** não pode ser removido, mas pode ser desabilitado por meio da revogação de `CONNECT` sua permissão. A `CONNECT` permissão pode ser revogada executando `REVOKE CONNECT FROM GUEST` em qualquer banco de dados que não seja o mestre ou o tempdb.  
+ Cada banco de dados inclui um **convidado**. As permissões concedidas ao usuário **convidado** são herdadas pelos usuários que têm acesso ao banco de dados, mas que não têm uma conta de usuário no banco de dados. O usuário **convidado** não pode ser removido, mas pode ser desabilitado por meio da revogação de sua `CONNECT` permissão. A `CONNECT` permissão pode ser revogada executando `REVOKE CONNECT FROM GUEST` em qualquer banco de dados que não seja o mestre ou o tempdb.  
   
 ## <a name="client-and-database-server"></a>Servidor de banco de dados e cliente  
  Por definição, um cliente e um servidor de banco de dados são entidades de segurança e podem ser protegidos. Essas entidades podem ser autenticadas mutuamente antes que uma conexão de rede segura seja estabelecida. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]dá suporte ao protocolo de autenticação [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) , que define como os clientes interagem com um serviço de autenticação de rede.  

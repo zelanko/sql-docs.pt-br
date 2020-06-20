@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdf3b71d985a60fed5080ec97462a43e79c4ca22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054312"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lição 3: Correspondendo dados para remover duplicatas da lista de fornecedores
   Você prepara a base de dados de conhecimento para executar uma atividade de correspondência criando uma política de correspondência na base de dados de conhecimento. Pode haver apenas uma política de correspondência em uma base de dados de conhecimento. Uma política de correspondência consiste em uma ou mais regras de correspondência. Uma regra identifica os domínios envolvidos no processo de correspondência e especifica o peso que cada valor de domínio tem na avaliação de correspondência. Você especifica na regra se os valores do domínio precisam ser uma correspondência exata ou se podem ser semelhantes, e com que grau de semelhança. Você também especifica se a correspondência de domínio é um pré-requisito para o processo de correspondência. Você pode testar cada regra separadamente e testar toda a política em relação aos dados de exemplo. O processo de teste exibe registros cujas pontuações de correspondência são maiores que o limite **mínimo de Pontuação de registro** especificado na configuração do DQS em um cluster (grupo). Você poderá continuar ajustando as regras na política até ficar satisfeito.  

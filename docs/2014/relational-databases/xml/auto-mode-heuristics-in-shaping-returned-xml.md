@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a831468c51243aa8cb5f8676823712e9e4b6e621
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 54e556ae83db6b59410ae56a5d65e06e0bbac807
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059572"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Heurística de modo AUTO na formação do XML retornado
   O modo AUTO determina a forma do  XML retornado com base na consulta. Para determinar como os elementos devem ser aninhados, a heurística do modo AUTO compara valores da coluna em linhas adjacentes. São comparadas colunas de todos os tipos, menos **ntext**, **text**, **image**e **xml**. São comparadas colunas do tipo **(n)varchar(max)** e **varbinary(max)** .  
@@ -42,7 +41,7 @@ T1.Id  T1.Name  T2.Id
 1       Nancy     4  
 ```  
   
- A heurística do modo AUTO compara todos os valores da tabela T1 e as colunas Name e Id. Uma vez que as primeiras duas linhas têm os mesmos valores para as colunas Id e Nome, um elemento \<T1> com dois elementos filho \<T2> é adicionado ao resultado.  
+ A heurística do modo AUTO compara todos os valores da tabela T1 e as colunas Name e Id. Como as duas primeiras linhas têm os mesmos valores para as colunas ID e Name, um \<T1> elemento com dois \<T2> elementos filho é adicionado no resultado.  
   
  O XML retornado é o seguinte:  
   

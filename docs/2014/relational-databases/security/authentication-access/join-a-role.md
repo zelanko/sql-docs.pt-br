@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58e8c071672c8c3afba8d6c424488899dcf76be7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016382"
 ---
 # <a name="join-a-role"></a>unir uma função
   Este tópico descreve como atribuir funções a logons e usuários de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Use funções em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para gerenciar permissões de maneira eficiente. Atribua permissões a funções e adicione e remova usuários e logons de funções. Com o uso de funções, as permissões não precisam ser mantidas individualmente para cada usuário.  
@@ -62,7 +61,7 @@ ms.locfileid: "63011343"
 ###  <a name="security"></a><a name="Security"></a> Segurança  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
- Requer `ALTER ANY ROLE` a permissão no banco de `ALTER` dados, a permissão na função ou a associação em **db_securityadmin**.  
+ Requer `ALTER ANY ROLE` a permissão no banco de dados, `ALTER` a permissão na função ou a associação em **db_securityadmin**.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b33680ea08c130a01a944878609f57d8aba9e3e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63655ab7c78885f56279ade23a952f75c2b6aba7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017618"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Criando aplicativos com o SQL Server Native Client
   Durante o desenvolvimento de um aplicativo que usa a biblioteca do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, surgem vários problemas. Os tópicos desta seção abordam muitos desses problemas, inclusive a atualização do MDAC para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, o uso dos arquivos de cabeçalho e biblioteca do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, além de uma visão geral das várias cadeias de caracteres de conexão que podem ser usadas com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  

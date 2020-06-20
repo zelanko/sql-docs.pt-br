@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47d030435515cc621fe223f461e3da645e9dbebf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058163"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965671"
 ---
 # <a name="implementation-of-the-parent-package"></a>Implementação do pacote pai
   Após o balanceamento de carga de pacotes SSIS em vários servidores, a etapa seguinte será criar o pacote pai após os pacotes filho terem sido criados e implantados e os trabalhos do SQL Server Agent remotos criados para executá-los. O pacote pai conterá muitas tarefas Executar Trabalho do SQL Server Agent, sendo cada tarefa responsável por chamar um trabalho diferente do SQL Server Agent que executa um dos pacotes filho. As tarefas Executar Trabalho do SQL Server Agent no pacote pai executam em turnos os vários trabalhos do SQL Server Agent. Cada tarefa no pacote pai contém informações, por exemplo, como se conectar ao servidor remoto e qual trabalho deve ser executado nesse servidor. Para obter mais informações, consulte [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md).  

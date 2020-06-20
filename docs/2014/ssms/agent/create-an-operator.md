@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfe07042f9a4b8ac595ada8b86e7bad131032700
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067788"
 ---
 # <a name="create-an-operator"></a>Create an Operator
-  Este tópico descreve como configurar um usuário para receber notificações sobre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalhos do Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
+  Este tópico descreve como configurar um usuário para receber notificações sobre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalhos do Agent no usando o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Neste tópico**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "63136425"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
--   As opções pager e **net send** serão removidas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Agent em uma versão futura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
+-   As opções pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
 -   Observe que o SQL Server Agent deve ser configurado para usar o Database Mail a fim de enviar notificações por pager ou email a operadores. Para obter mais informações, consulte [Atribuir alertas a um operador](assign-alerts-to-an-operator.md).  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63136425"
      **Nome**  
      Altera o nome do operador.  
   
-     **Habilitada**  
+     **Enabled**  
      Habilita o operador. Quando não estiver habilitado, nenhuma notificação será enviada ao operador.  
   
      **Nome de email**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da790644cbd29bc38a89899e02d50aac58228a0e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965508"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Importar Pacote
   Use a caixa de diálogo **Importar Pacote** , disponível no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para importar um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e para definir ou modificar o nível de proteção do pacote.  
@@ -30,7 +29,7 @@ ms.locfileid: "66058077"
   
  **SQL Server**  
   
- **Sistema de arquivos**  
+ **Sistema de Arquivos**  
   
  **Armazenamento de Pacotes SSIS**  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 108256e1d8a3638da5cd676a0ee57894b3ee874c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767938"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966196"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar mapeamento de tipo de dados (Assistente de Importação e Exportação do SQL Server)
   Use a página **examinar mapeamento de tipo de dados** para examinar informações detalhadas sobre conversões de tipo de dados que o assistente precisa executar para tornar os dados de origem compatíveis com o destino. As informações incluem dicas visuais para fazer distinção entre conversões que se espera sejam bem sucedidas de conversões que podem causar erros ou truncamentos. Para cada conversão, é possível decidir se deseja aceitar a conversão sugerida pelo assistente, além de especificar como manipular qualquer eventual erro.  
@@ -35,7 +34,7 @@ ms.locfileid: "62767938"
 |Coluna|Descrição|  
 |------------|-----------------|  
 |Ícone da fonte|Indica a probabilidade de sucesso para as conversões de tipo de dados:<br /><br /> Um ícone de sinal de verificação, verde, indica que o assistente espera que todas as conversões de tipo de dados da tabela sejam bem sucedidas.<br /><br /> Um ícone de advertência, amarelo, indica que você deveria revisar as conversões individuais que o assistente executará. Para revisar essas conversões, selecione a tabela e revise as conversões das colunas individuais na lista **Mapeamento de tipo de dados** .<br /><br /> Um ícone de erro, vermelho, indica que o assistente não pode executar algumas das conversões da tabela de maneira segura.|  
-|**Fonte**|Exibe o nome da tabela de origem.|  
+|**Origem**|Exibe o nome da tabela de origem.|  
 |Ícone de destino|Indica se o destino já existe ou será criado pelo assistente:<br /><br /> Um ícone de tabela indica que o destino é uma tabela existente.<br /><br /> Um ícone de tabela com um clarão de sol indica que o destino é uma tabela nova que será criada pelo assistente.|  
 |**Destino**|Exibe o nome da tabela de destino.|  
   

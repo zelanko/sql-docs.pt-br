@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1d552efa888b24e0a1c83464c7947343b132b1c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871691"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965837"
 ---
 # <a name="msdb-database"></a>Banco de dados msdb
   O banco de dados **msdb** é usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para agendar alertas e trabalhos e por outros recursos, como o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[ssSB](../../includes/sssb-md.md)] e o Database Mail.  

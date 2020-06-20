@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3cd2e8af1630fed8dd996a951e904bef0266b300
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07fe58cee4046b78bdca0a748ea4d0c6a82dfebf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702979"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014918"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de dados XPath (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e XSD (esquema XML) têm tipos de dados muito diferentes. Por exemplo, o XPath não tem tipos de dados de data ou inteiros, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o XSD têm muitos. O XSD usa precisão de nanossegundos para valores de tempo, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa precisão de no máximo 1/300 segundo. Consequentemente, o mapeamento de um tipo de dados para outro nem sempre é possível. Para obter mais informações sobre mapeamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tipos de dados para tipos de dados XSD, consulte [coerção de tipo de dados e a anotação sql: DataType &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -46,7 +45,7 @@ ms.locfileid: "82702979"
   
 -   Operadores boolianos (e, ou)  
   
--   Operadores relacionais ( \< , >, \< =, >=)  
+-   Operadores relacionais ( \<, > , \<=, > =)  
   
 -   Operadores de igualdade (=, !=)  
   
@@ -92,7 +91,7 @@ ms.locfileid: "82702979"
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|número|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/D (não há nenhum tipo de dados no XPath equivalente ao tipo de dados XDR fixed14.4)|CONVERT(money, EmployeeID)|  
-|data|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  As conversões de data e hora são projetadas para funcionar independentemente de o valor ser armazenado no banco de dados do usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` tipo ou um `string` . Observe que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` tipo de dados não usa `timezone` e tem uma precisão menor do que o `time` tipo de dados XML. Para incluir o tipo de dados `timezone` ou precisão adicional, armazene os dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um tipo `string`.  
@@ -150,7 +149,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Executar várias conversões de tipo de dados em uma consulta do XPath  
  Considere esta consulta do XPath especificada com base em um esquema XSD anotado: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- Essa consulta XPath retorna todos os elementos de ** \<>OrderDetail** que atendem ao predicado `@UnitPrice * @OrderQty > 98` . Se o **PreçoUnitário** for anotado com um `fixed14.4` tipo de dados no esquema anotado, esse predicado será equivalente à expressão SQL:  
+ Essa consulta XPath retorna todos os **\<OrderDetail>** elementos que atendem ao predicado `@UnitPrice * @OrderQty > 98` . Se o **PreçoUnitário** for anotado com um `fixed14.4` tipo de dados no esquema anotado, esse predicado será equivalente à expressão SQL:  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
