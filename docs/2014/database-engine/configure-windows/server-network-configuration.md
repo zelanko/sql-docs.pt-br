@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e71992a5bacfe895dd5f7a038e210d21c35c2884
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809470"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934977"
 ---
 # <a name="server-network-configuration"></a>Configuração de rede do servidor
   Tarefas de configuração de rede do servidor incluem habilitação de protocolos, modificação de porta ou pipe usado por um protocolo, criptografia de configuração, configuração do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exposição ou ocultação do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na rede e registro do Nome do Principal do Servidor. Na maioria das vezes, não é necessário alterar a configuração de rede do servidor. Só reconfigure os protocolos de rede do servidor se houver requisitos de rede especiais.  
@@ -39,7 +38,7 @@ ms.locfileid: "62809470"
  Quando configurado para portas dinâmicas, a porta usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderá ser alterada sempre que o programa for iniciado. Ao conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por um firewall, é necessário abrir a porta usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configure o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar uma porta específica, assim você pode configurar o firewall para permitir a comunicação com o servidor. Para obter mais informações, veja [Configurar um servidor para escuta em uma porta TCP específica &#40;SQL Server Configuration Manager&#41;](configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Alterando um pipe nomeado  
- É possível configurar o protocolo de pipe nomeado para escutar em um pipe nomeado designado. Por padrão, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escuta no pipe \\\\.\pipe\sql\query da instância padrão e \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query de uma instância nomeada. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode escutar somente em um pipe nomeado, mas, se desejar, é possível alterar o pipe para outro nome. O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda os clientes a identificar o pipe no momento da conexão. Para obter mais informações, veja [Como configurar um servidor para escuta em um pipe alternativo &#40;SQL Server Configuration Manager&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ É possível configurar o protocolo de pipe nomeado para escutar em um pipe nomeado designado. Por padrão, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escuta no pipe \\ \\ .\pipe\sql\query para a instância padrão e \\ \\ .\pipe\MSSQL $ *\<instancename>* \sql\query para uma instância nomeada. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode escutar somente em um pipe nomeado, mas, se desejar, é possível alterar o pipe para outro nome. O serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda os clientes a identificar o pipe no momento da conexão. Para obter mais informações, veja [Como configurar um servidor para escuta em um pipe alternativo &#40;SQL Server Configuration Manager&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Forçar criptografia  
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode ser configurado para exigir criptografia ao comunicar-se com aplicativos cliente. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](enable-encrypted-connections-to-the-database-engine.md).  

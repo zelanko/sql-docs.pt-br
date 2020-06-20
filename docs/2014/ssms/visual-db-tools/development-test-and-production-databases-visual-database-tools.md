@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13ec879395358536485fb0d80e7ab1a2a19d4823
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98ac88aec42b53012e0f57233a089bddbd3c8cae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316473"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035709"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Bancos de dados de desenvolvimento, teste e produção (Visual Database Tools)
   Se você tiver dois bancos de dados com estruturas idênticas, poderá fazer alterações em um banco de dados e propagá-las para o outro. Por exemplo, se você tiver um banco de dados de desenvolvimento pessoal e um banco de dados de teste para todo o grupo, poderá modificar o banco de dados de desenvolvimento e depois propagar essas alterações para o banco de dados de teste.  

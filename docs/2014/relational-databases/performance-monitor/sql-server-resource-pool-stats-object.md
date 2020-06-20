@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c2ca8360e752146dac13e9cc6a3737ac2373cc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066099"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, objeto de estatísticas do pool de recursos
   O objeto SQLServer:Estatísticas de Pool de Recursos contém contadores de desempenho que fornecem informações sobre as estatísticas de pool de recursos do Administrador de Recursos.  
@@ -43,11 +42,11 @@ ms.locfileid: "63183024"
 |Meta de memória (KB)|A meta de quantidade, em kilobytes (KB), de memória que o pool de recursos está tentando obter com base nas configurações do pool de recursos e no estado do servidor.|  
 |E/S de leitura do disco/s|Número de operações de leitura do disco no último segundo.|  
 |Leitura E/S de disco limitada/s|Número de operações de leitura limitadas no último segundo.|  
-|Bytes Lidos no Disco/s |Número de bytes lidos do disco no último segundo.|  
+|Bytes Lidos no Disco/s|Número de bytes lidos do disco no último segundo.|  
 |Média de E/S de leitura de disco (ms)|Tempo médio, em milissegundos, de uma operação de leitura do disco.|  
 |E/S de gravação em disco/s|Número de operações de gravação no disco no último segundo.|  
 |Gravação E/S de disco limitada/s|Número de operações de gravação limitadas no último segundo.|  
-| Bytes Gravados no Disco/s|Número de bytes gravados no disco no último segundo.|  
+|Bytes Gravados no Disco/s|Número de bytes gravados no disco no último segundo.|  
 |Média de E/S de gravação em disco (ms)|Tempo médio, em milissegundos, de uma operação de gravação no disco.|  
   
 ## <a name="see-also"></a>Consulte Também  

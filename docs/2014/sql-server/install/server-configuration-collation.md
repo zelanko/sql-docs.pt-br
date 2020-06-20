@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d06735590d23da6e91151202dd421639ea433b97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036588"
 ---
 # <a name="server-configuration---collation"></a>Configuração do SQL Server – ordenação
   Na página Configuração do Servidor - Ordenação do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode modificar as configurações de ordenação usadas pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] e pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fins de classificação. Selecione a opção para corresponder as configurações de ordenação de instalações diferentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de outro computador.  
@@ -36,7 +35,7 @@ ms.locfileid: "66092286"
   
  Para obter mais informações, veja [Configurações de ordenação na Instalação](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Para obter mais informações sobre uma tabela de localidades de Sistema do Windows e as ordenações padrão correspondentes usadas pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Configurações de ordenação na Instalação](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
  Se possível, use uma ordenação exclusiva para sua organização. Dessa forma, não será preciso especificar explicitamente a ordenação para cada banco de dados, coluna, expressão ou identificador. Se você precisar trabalhar com várias ordenações e configurações de página de códigos diferentes, codifique suas consultas para considerar as regras da precedência de ordenação. Para obter mais informações, confira o tópico [Precedência de ordenação &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql) nos Manuais Online.  

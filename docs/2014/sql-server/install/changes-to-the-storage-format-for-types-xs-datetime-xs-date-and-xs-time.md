@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aacaaf8fc69f4b18154e5a4df9a3662fb9ae0650
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037161"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Alterações no formato de armazenamento para os tipos xs:dateTime, xs:date e xs:time
   A regra XMLDATETIME identifica se os bancos de dados contêm ou não dados XML digitados que se tornarão inválidos após a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "66096615"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrição  
- O formato de armazenamento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no para tipos xs: DateTime, xs: Date e xs: time foi alterado para dar suporte a valores com ou sem informações de fuso horário e para permitir a preservação do fuso horário.  
+ O formato de armazenamento no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para tipos xs: DateTime, xs: Date e xs: time foi alterado para dar suporte a valores com ou sem informações de fuso horário e para permitir a preservação do fuso horário.  
   
  Em uma Coleção de Esquemas XML que referencia um ou mais tipos, os índices XML em todas as colunas que são associados à coleção serão desabilitados depois da atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Você poderá consultá-los usando SELECT e/ou XQUERIES, mas o índice XML não será usado. Se um valor de ano negativo for encontrado, ocorrerá um erro de runtime.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0592a7635b0208624ab511af4ef68382548090c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059399"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar o modo EXPLICIT com FOR XML
   Conforme descrito no tópico [Construindo XML usando FOR XML](../xml/for-xml-sql-server.md), os modos RAW e AUTO não fornecem muito controle sobre a forma do XML gerado de um resultado da consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  Uma descrição das partes do formato é fornecida a seguir.  
   
  *ElementName*  
- É o identificador genérico resultante do elemento. Por exemplo, se **Customers** for especificado como *ElementName*, o elemento \<Customers> será gerado.  
+ É o identificador genérico resultante do elemento. Por exemplo, se **os clientes** forem especificados como *ElementName*, o \<Customers> elemento será gerado.  
   
  *TagNumber*  
  É um valor de marca exclusivo atribuído a um elemento. Esse valor, com a ajuda das duas colunas de metadados, **Tag** e **Parent**, determina o aninhamento dos elementos no XML resultante.  

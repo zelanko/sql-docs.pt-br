@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40bdbcd98e70ae8ea318ba8ca0243f11107bd61b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919533"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954921"
 ---
 # <a name="using-systemtransactions"></a>Usando System.Transactions
   O `System.Transactions` fornece uma estrutura de transação que é totalmente integrada com o ADO.NET e a integração CLR (Common Language Runtime) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma classe `System.Transactions.TransactionScope` torna um bloco de código transacional inscrevendo implicitamente conexões em uma transação distribuída. Chame o método `Complete` no final do bloco de código marcado pelo `TransactionScope`. O método `Dispose` será invocado quando a execução do programa deixar um bloco de código, fazendo a transação ser descontinuada se o método `Complete` não for chamado. Se tiver sido lançada uma exceção que faz o código deixar o escopo, a transação será considerada descontinuada.  

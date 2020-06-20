@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9f62c0dea02ee4c6f9bccda0dfaf7e7932c1dab7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f44db9053ad18c3a6902a30aaab4f81610c5a8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511929"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050825"
 ---
 # <a name="querying-extended-stored-procedures-installed-in-sql-server"></a>Consultando procedimentos armazenados estendidos no SQL Server
     

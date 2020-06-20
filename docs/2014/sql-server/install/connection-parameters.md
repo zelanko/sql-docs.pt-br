@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca5d6ed8f1e8a92d22bd32e39c8afe946a0fcfee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27eb69dfd2c41710a47861e0992486267f692a3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095974"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036928"
 ---
 # <a name="connection-parameters"></a>Parâmetros de conexão
   Para analisar certos tipos de servidor, como o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], você deve selecionar uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é selecionada automaticamente. Você pode alterar essa seleção, mas pode selecionar somente uma instância de cada vez para análise pelo Supervisor de Atualização. Se você incluiu um tipo de servidor que requer autenticação, deve indicar o modo de autenticação e as credenciais.  

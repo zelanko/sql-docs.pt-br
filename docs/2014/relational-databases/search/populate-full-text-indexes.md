@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ab93a3514fa260c8c3836da85c767da3c3051a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004059"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
   A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
@@ -104,7 +103,7 @@ ms.locfileid: "66011175"
 > [!NOTE]  
 >  Os exemplos desta seção usam a tabela `Production.Document` ou `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` .  
   
-### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>A. Criando um índice de texto completo sem executar uma população completa  
+### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>a. Criando um índice de texto completo sem executar uma população completa  
  O exemplo a seguir cria um índice de texto completo na tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` . Este exemplo usa WITH CHANGE_TRACKING OFF, NO POPULATION para atrasar a população completa inicial.  
   
 ```  
@@ -211,7 +210,7 @@ GO
 ##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>Solucionando problemas de erros em uma população de texto completo (rastreamento)  
  Quando um erro ocorrer durante um rastreamento, o recurso de registro de rastreamento de pesquisa de texto completo cria e mantém um log de rastreamento, que é um texto sem-formatação. Cada log de rastreamento corresponde a um catálogo de texto completo específico. Por padrão, os logs de rastreamento para uma determinada instância, neste caso, a primeira instância, estão localizados na pasta %Arquivos de programas%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG. O arquivo de log de rastreamento segue o seguinte esquema de nomeação:  
   
- SQLFT\<databaseid>\<FullTextCatalogID>. LOG [\<n>]  
+ SQLFT \<DatabaseID> \<FullTextCatalogID> . LOG [ \<n> ]  
   
  <`DatabaseID`>  
  A ID de um banco de dados. <`dbid`> é um número de cinco dígitos com zeros à esquerda.  

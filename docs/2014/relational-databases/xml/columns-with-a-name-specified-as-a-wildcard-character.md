@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 262fd4ec636b147db0cb9de9e8b520f064e710af
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d0e1da6b7506e81cad50237cd54e8c67d39942c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717291"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059521"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>Colunas com um nome especificado como um caractere curinga
   Se o nome da coluna especificado for um caractere curinga (\*), o conteúdo dessa coluna será inserido como se não houvesse nenhum nome de coluna especificado. Se essa coluna não for do tipo `xml`, o conteúdo da coluna será inserido como um nó de texto, conforme mostrado no exemplo a seguir:  

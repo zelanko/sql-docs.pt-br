@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f4fbbef-2696-4911-903b-63f6d9e4484a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b377ac0b9baacdab6461a0e62174538902939bd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e55af3dca0c55c2babd09bc6cfc48ed0ddf3ad7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059171"
 ---
 # <a name="remove-statements-that-modify-column-level-permissions-on-system-objects"></a>Remover instruções que modificam permissões em nível de coluna nos objetos do sistema
   O Supervisor de Atualização detectou permissões em nível de coluna não padrão nos objetos do sistema. Essas alterações de permissão não serão mantidas quando você fizer a atualização. Além disso, não há mais suporte para permissões em nível de coluna nos objetos do sistema em versões posteriores. Remova as instruções que definem permissões em nível de coluna nos objetos do sistema dos seus aplicativos.  

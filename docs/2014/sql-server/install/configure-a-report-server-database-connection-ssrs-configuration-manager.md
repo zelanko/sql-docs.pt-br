@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8224b3d38d3a4fdcaf4eaa70e9a87a87d2e2258c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952631"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036966"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)
   Cada instância do servidor de relatório requer uma conexão com o banco de dados do servidor de relatório que armazena relatórios, modelos de relatório, fontes de dados compartilhadas, recursos e metadados gerenciados pelo servidor. A conexão inicial poderá ser criada durante uma instalação do servidor de relatório se você estiver instalando a configuração padrão. Na maioria dos casos, você usará a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar a conexão depois que Instalação for concluída. É possível modificar a conexão a qualquer momento para alterar o tipo de conta ou redefinir as credenciais. Para obter instruções passo a passo sobre como criar o banco de dados e configurar a conexão, consulte [Criar um banco de dados do servidor de relatório no modo nativo &#40;SSRS Gerenciador de Configurações&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -42,7 +41,7 @@ ms.locfileid: "71952631"
   
  O banco de dados do servidor de relatório é um componente interno, acessado somente pelo servidor de relatório. As credenciais e as informações de conexão especificadas para o banco de dados do servidor de relatório são usadas exclusivamente pelo servidor de relatório. Os usuários que solicitam relatórios não precisam de permissões de bancos de dados ou de um logon de banco de dados para o banco de dados do servidor de relatório.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]usa `System.Data.SqlClient` o para se conectar [!INCLUDE[ssDE](../../includes/ssde-md.md)] ao que hospeda o banco de dados do servidor de relatório. Caso esteja usando uma instância local do [!INCLUDE[ssDE](../../includes/ssde-md.md)], o servidor de relatório estabelecerá a conexão usando memória compartilhada. Se você estiver usando um servidor de banco de dados remoto para o banco de dados do servidor de relatório, talvez precise habilitar conexões remotas, dependendo da edição que estiver usando. Se estiver usando a Enterprise Edition, as conexões remotas serão habilitadas para TCP/IP por padrão.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]usa o `System.Data.SqlClient` para se conectar ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda o banco de dados do servidor de relatório. Caso esteja usando uma instância local do [!INCLUDE[ssDE](../../includes/ssde-md.md)], o servidor de relatório estabelecerá a conexão usando memória compartilhada. Se você estiver usando um servidor de banco de dados remoto para o banco de dados do servidor de relatório, talvez precise habilitar conexões remotas, dependendo da edição que estiver usando. Se estiver usando a Enterprise Edition, as conexões remotas serão habilitadas para TCP/IP por padrão.  
   
  Para verificar se a instância aceita conexões remotas, clique em **Iniciar**, clique em **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], clique em **Ferramentas de Configuração**, clique em **SQL Server Configuration Manager**e verifique se o protocolo TCP/IP está habilitado para cada serviço.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "71952631"
 ### <a name="storing-database-connection-information"></a>Armazenando informações de conexão do banco de dados  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena e criptografa as informações de conexão nas seguintes configurações do RSreportserver.config. Você deve usar a ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou o utilitário rsconfig para criar valores criptografados para essas configurações.  
   
- Nem todos os valores são definidos para todo tipo de conexão. Se você configurar a conexão usando os valores padrão (ou seja, usando as contas de serviço para estabelecer a conexão), `LogonUser` <>, `LogonDomain` <> e <`LogonCred`> estarão vazias, da seguinte maneira:  
+ Nem todos os valores são definidos para todo tipo de conexão. Se você configurar a conexão usando os valores padrão (ou seja, usando as contas de serviço para estabelecer a conexão), <`LogonUser`>, <`LogonDomain`> e <`LogonCred`> estarão vazias, da seguinte maneira:  
   
 ```  
 <Dsn></Dsn>  

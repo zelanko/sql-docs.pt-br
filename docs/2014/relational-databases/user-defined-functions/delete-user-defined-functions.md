@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5f6b2b306c4fe8db08b088d9607cfb19ab0f25e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066388"
 ---
 # <a name="delete-user-defined-functions"></a>Excluir funções definidas pelo usuário
   Você pode excluir (remover) funções definidas pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]  

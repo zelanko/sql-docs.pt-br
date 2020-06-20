@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3e14f82e855cc29f83859d85dfdaaf85a1bda37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261983"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005097"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>Propriedades do Publicador Replicação do SQL Server
   Esta seção contém informações sobre as propriedades do Publicador disponíveis no distribuidor e no Publicador. 
@@ -61,7 +60,7 @@ ms.locfileid: "63261983"
  **Transacional**  
  Marque essa caixa de seleção para permitir que usuários na função de banco de dados fixa **db_owner** criem publicações de instantâneo ou transacionais no banco de dados. 
   
- **Mescle**  
+ **Mesclar**  
  Marque essa caixa de seleção para permitir que usuários na função de banco de dados fixa **db_owner** criem publicações de mesclagem no banco de dados.  
 
 ## <a name="subscribers"></a>Publicadores

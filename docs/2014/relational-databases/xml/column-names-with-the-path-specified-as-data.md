@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d13c36df4d24aedd180cfdaf6187a1c25f5164bf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45e48e7addad583ef6a9b9efb8163f592f5c33bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059534"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>Nomes de colunas com o caminho especificado como data()
   Se o caminho especificado como nome da coluna for "data()", o valor será tratado com um valor atômico no XML gerado. Um caractere de espaço será adicionado ao XML se o próximo item na serialização também for um valor atômico. Isso é útil quando você está criando elemento de tipo lista e valores de atributos. A consulta a seguir recupera a ID e o nome do modelo do produto e a lista de produtos naquele modelo do produto.  

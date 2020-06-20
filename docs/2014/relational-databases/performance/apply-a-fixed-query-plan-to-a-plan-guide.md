@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0afa2d8770589ed82890cf5b54e99916f9eb1d00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 318955c4d0550e311873d8b4a6f79f72e04ac8af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066071"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>Aplicar um plano de consulta fixo a um guia de plano
   É possível aplicar um plano de consulta fixo a um guia de plano do tipo OBJECT ou SQL. Os guias de plano que se aplicam a um plano de consulta fixo são úteis quando se conhece um plano de execução existente que é melhor do que aquele selecionado pelo otimizador para uma consulta específica.  

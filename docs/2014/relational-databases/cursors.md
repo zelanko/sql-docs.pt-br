@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 055482a8cf64527f58ed983b449121a99960f566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970526"
 ---
 # <a name="cursors"></a>Cursores
   As operações em um ato de banco de dados relacional em um conjunto completo de linhas. Por exemplo, o conjunto de linhas retornado por uma instrução SELECT consiste de todas as linhas que satisfazem as condições na cláusula WHERE da instrução. Este conjunto completo de linhas retornado pela instrução é conhecido como conjunto de resultados. Aplicativos, especialmente aplicativos online interativos, não podem sempre trabalhar efetivamente com todo o conjunto de resultados como uma unidade. Esses aplicativos precisam de um mecanismo para trabalhar com uma linha ou um bloco pequeno de linhas de cada vez. Os cursores são uma extensão dos conjuntos de resultados que proveem esse mecanismo.  

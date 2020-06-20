@@ -21,19 +21,18 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa9596629ed8b4877b1793fa0c56956c52989499
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874444"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954526"
 ---
 # <a name="defining-udt-tables-and-columns"></a>Definindo tabelas e colunas UDT
-  Depois que o assembly que contém a definição de UDT (tipo definido pelo usuário) tiver sido [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrado em um banco de dados, ele poderá ser usado em uma definição de coluna.  
+  Depois que o assembly que contém a definição de UDT (tipo definido pelo usuário) tiver sido registrado em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados, ele poderá ser usado em uma definição de coluna.  
   
 ## <a name="creating-tables-with-udts"></a>Criando tabelas com UDTs  
- Não há nenhuma sintaxe especial para criar uma coluna UDT em uma tabela. Você pode usar o nome do UDT em uma definição de coluna como se ele fosse um dos tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intrínsecos. A instrução CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir cria uma tabela chamada **Points**, com uma coluna chamada **ID,** que é definida `int` como uma coluna de identidade e a chave primária da tabela. A segunda coluna é nome **PointValue**, com um tipo de dados de **Point**. O nome do esquema usado neste exemplo é **dbo**. Observe que você precisa ter as permissões necessárias para especificar um nome de esquema. Se você omitir o nome do esquema, será usado o esquema padrão do usuário de banco de dados.  
+ Não há nenhuma sintaxe especial para criar uma coluna UDT em uma tabela. Você pode usar o nome do UDT em uma definição de coluna como se ele fosse um dos tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intrínsecos. A instrução CREATE TABLE a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] cria uma tabela chamada **Points**, com uma coluna chamada **ID,** que é definida como uma `int` coluna de identidade e a chave primária da tabela. A segunda coluna é nome **PointValue**, com um tipo de dados de **Point**. O nome do esquema usado neste exemplo é **dbo**. Observe que você precisa ter as permissões necessárias para especificar um nome de esquema. Se você omitir o nome do esquema, será usado o esquema padrão do usuário de banco de dados.  
   
 ```  
 CREATE TABLE dbo.Points   

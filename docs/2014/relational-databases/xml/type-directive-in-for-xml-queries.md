@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cddce90718ef5edfcf161ddc6cc52b617825a2e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059440"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Diretiva TYPE em consultas FOR XML
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o suporte para o [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql) permite solicitar opcionalmente que o resultado de uma consulta for XML seja retornado como `xml` tipo de dados, ESPECIFICANDO a diretiva Type. Isso permite processar o resultado de uma consulta FOR XML no servidor. Por exemplo, você pode especificar um XQuery em relação a ele, atribuir o resultado a uma `xml` variável de tipo ou gravar [consultas for XML aninhadas](use-nested-for-xml-queries.md).  

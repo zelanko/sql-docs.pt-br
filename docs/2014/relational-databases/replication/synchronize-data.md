@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcd0ff19b892beb9bb46f428f857d465f55fbcb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745487"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004412"
 ---
 # <a name="synchronize-data"></a>Sincronizar dados
   Sincronizando dados se refere ao processo de alterações de dados e esquemas sendo propagadas entre o Publicador e os Assinantes após o instantâneo inicial ter sido aplicado ao Assinante. A sincronização pode acontecer:  
