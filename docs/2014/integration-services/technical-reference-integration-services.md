@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1cd70c38c03e0a60cfe5060f15e2ecc6655e72a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055277"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962356"
 ---
 # <a name="technical-reference-integration-services"></a>Referência técnica (Integration Services)
-  Encontre as ferramentas, os idiomas e a documentação de referência [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]programação para o no.  
+  Encontre as ferramentas, os idiomas e a documentação de referência de programação para o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
  ![Ícone de pasta de arquivos pequena](media/filefolder-small.gif "Pequeno ícone de pasta de arquivos") **alterar serviço e designer de captura de dados**  
  [Serviço Change Data Capture para Oracle da Attunity](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  

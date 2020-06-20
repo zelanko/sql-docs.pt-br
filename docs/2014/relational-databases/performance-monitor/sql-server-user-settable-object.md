@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ac802569356979f3a01da4c204a80272c2be43a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0d079c1ad9810f86935777159d0ff2e855c6df3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038617"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, objeto User Settable
   O objeto **User Settable** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite criar instâncias de contador personalizadas. Use instâncias de contador personalizadas para monitorar aspectos do servidor que escapam aos contadores existentes, como componentes exclusivos de seu banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pedidos de clientes registrados em log ou o estoque de produtos).  
@@ -61,7 +60,7 @@ AS
 GO  
 ```  
   
- A função @@CONNECTIONS retorna o número de conexões ou tentativas de conexão desde o início de uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse valor é passado ao procedimento armazenado **sp_user_counter1** como parâmetro.  
+ A função @[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna o número de conexões ou tentativas de conexão desde o início de uma instância de @CONNECTIONS. Esse valor é passado ao procedimento armazenado **sp_user_counter1** como parâmetro.  
   
 > [!IMPORTANT]  
 >  Torne as consultas definidas nos procedimentos armazenados de contador do usuário o mais simples possível. Consultas que consomem muita memória e realizam operações substanciais de classificação ou hash ou grandes quantidades de E/S são de execução dispendiosa e podem influir no desempenho.  

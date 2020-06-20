@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f67c88be66be069a48d008ba6889a81dfda8ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061111"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarefa 4 (Opcional): Combinando, correspondendo e publicando o novo conjunto de dados
   Com o tempo, você desejará adicionar mais dados ao repositório do MDS. Antes de adicionar dados, pode ser útil comparar os novos dados com os dados que já são gerenciados no MDS, para garantir que você não esteja adicionando dados duplicados ou imprecisos. No Suplemento Master Data Services para Excel, você pode combinar dados de duas planilhas e comparar esses dados para identificar e remover duplicatas antes de publicar os dados no MDS. O recurso de correspondência do Suplemento MDS do Excel usa a funcionalidade correspondente do DQS para identificar correspondências nos dados. Nesta tarefa, você combinará dados de duas planilhas em uma e executará a atividade de correspondência para identificar e remover duplicatas antes de publicar no MDS. Consulte [correspondência de qualidade de dados nos tópicos suplemento MDS para Excel](https://msdn.microsoft.com/library/hh548681.aspx) e [combinar dados](https://msdn.microsoft.com/library/hh548680.aspx) para obter mais detalhes.  
@@ -38,7 +37,7 @@ ms.locfileid: "65489278"
   
 7.  Clique em **Planilha2** na parte inferior para alternar para a guia **Planilha2** . Se você não vir a **Planilha2**, adicione uma nova planilha.  
   
-8.  Abra o arquivo **suppliers. xls** (o arquivo de entrada original que está incluído nos arquivos do tutorial) e copie todas as (três) linhas da planilha **CombineAndCleanse** para **Planilha2**.  
+8.  Abra **Suppliers.xls** arquivo (o arquivo de entrada original que está incluído nos arquivos do tutorial) e copie todas as (três) linhas da planilha **CombineAndCleanse** para **Planilha2**.  
   
 9. Volte para a planilha de **fornecedores** no **livro 1-Microsoft Excel** (não o Excel de lista de fornecedores com **limpeza e correspondência** ) que está conectado ao **MDS**.  
   

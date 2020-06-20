@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44843764b7eed26bfd424ee61f2534aae42b9a73
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843091"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928967"
 ---
 # <a name="solution-explorer-source-control"></a>Controle do código-fonte do Gerenciador de Soluções
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Gerenciador de soluções pode ser integrado a um sistema de controle do código-fonte separado. Quando uma solução ou projeto é integrado em um sistema de controle do código-fonte, você pode controlar o acesso ao arquivo e a versão para os scripts e consultas em seus projetos.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Gerenciador de soluções pode ser integrado a um sistema de controle do código-fonte separado. Quando uma solução ou projeto é integrado em um sistema de controle do código-fonte, você pode controlar o acesso ao arquivo e a versão para os scripts e consultas em seus projetos.  
   
 ## <a name="solution-and-project-source-control"></a>Solução e projeto no controle do código-fonte  
   

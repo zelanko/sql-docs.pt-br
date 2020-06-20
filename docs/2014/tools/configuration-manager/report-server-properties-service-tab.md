@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06e8d38be6f1e8e1ef816f5fa38c66d74a69987a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62506768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054511"
 ---
 # <a name="report-server-properties-service-tab"></a>Propriedades do servidor de relatório (guia Serviço)
   Este é o serviço Servidor de Relatório do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  

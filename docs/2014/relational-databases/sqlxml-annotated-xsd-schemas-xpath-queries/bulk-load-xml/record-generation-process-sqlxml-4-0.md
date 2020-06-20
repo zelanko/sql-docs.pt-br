@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6ea8755c5882e7678e835a2a8a8e727f66ac0f1b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 405a8b4790b68dc0fab0fde6c1b90e32bd0f268d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703357"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068187"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Registrar processo de geração (SQLXML 4.0)
   O Carregamento em massa XML processa os dados de entrada XML e prepara os registros para as tabelas apropriadas no Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A lógica no Carregamento em massa XML determina quando gerar um novo registro, quais valores de elemento filho ou de atributo copiar nos campos do registro e quando o registro está completo e pronto para ser enviado ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para inserção.  
@@ -76,7 +75,7 @@ ms.locfileid: "82703357"
 </xsd:schema>  
 ```  
   
- O esquema especifica um elemento de ** \<>do cliente** com os atributos **CustomerID** e **CompanyName** . A `sql:relation` anotação mapeia o elemento de ** \<>do cliente** para a tabela Customers.  
+ O esquema especifica um **\<Customer>** elemento com os atributos **CustomerID** e **CompanyName** . A `sql:relation` anotação mapeia o **\<Customer>** elemento para a tabela Customers.  
   
  Considere este fragmento de um documento XML:  
   
@@ -88,13 +87,13 @@ ms.locfileid: "82703357"
   
  Quando um Carregamento em massa XML é fornecido com o esquema descrito nos parágrafos anteriores e os dados XML são fornecidos como entrada, ele processa os nós (elementos e atributos) nos dados de origem, conforme indicado a seguir:  
   
--   A marca de início do primeiro elemento de ** \<>do cliente** traz esse elemento no escopo. Este nó é mapeado para a tabela Customers. Portanto, o Carregamento em massa XML gera um registro para a tabela Customers.  
+-   A marca de início do primeiro **\<Customer>** elemento traz esse elemento no escopo. Este nó é mapeado para a tabela Customers. Portanto, o Carregamento em massa XML gera um registro para a tabela Customers.  
   
--   No esquema, todos os atributos do elemento ** \<>do cliente** são mapeados para as colunas da tabela Customers. À medida que esses atributos entram no escopo, o Carregamento em massa XML copia seus valores para o registro do cliente que já foi gerado pelo escopo pai.  
+-   No esquema, todos os atributos do **\<Customer>** elemento são mapeados para as colunas da tabela Customers. À medida que esses atributos entram no escopo, o Carregamento em massa XML copia seus valores para o registro do cliente que já foi gerado pelo escopo pai.  
   
--   Quando o carregamento em massa de XML atinge a marca de fim para o elemento de ** \<>do cliente** , o elemento sai do escopo. Isto faz o Carregamento em massa XML considerar o registro completo e enviá-lo ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Quando o carregamento em massa de XML atinge a marca de fim do **\<Customer>** elemento, o elemento sai do escopo. Isto faz o Carregamento em massa XML considerar o registro completo e enviá-lo ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- O carregamento em massa de XML segue esse processo para cada elemento de ** \<>do cliente** subsequente.  
+ O carregamento em massa de XML segue esse processo para cada **\<Customer>** elemento subsequente.  
   
 > [!IMPORTANT]  
 >  Nesse modelo, como um registro é inserido quando uma marca final é atingida (ou o nó fica fora do escopo), você deve definir todos os dados que estão associados ao registro dentro do escopo do nó.  
@@ -146,19 +145,19 @@ ms.locfileid: "82703357"
   
  Os dados XML de exemplo e as etapas para criar um exemplo de funcionamento são dados a seguir.  
   
--   Quando um ** \< cliente>** nó de elemento no arquivo de dados XML entra no escopo, o carregamento em massa de XML gera um registro para a tabela Cust. Em seguida, o carregamento em massa de XML copia os valores de coluna necessários (CustomerID, CompanyName e City) do ** \< CustomerID>**, ** \< CompanyName>** e a ** \< cidade>** elementos filho, pois esses elementos entram no escopo.  
+-   Quando um **\<Customer>** nó de elemento no arquivo de dados XML entra no escopo, o carregamento em massa de XML gera um registro para a tabela Cust. Em seguida, o carregamento em massa de XML copia os valores de coluna necessários (CustomerID, CompanyName e City) de **\<CustomerID>** , **\<CompanyName>** e os **\<City>** elementos filho como esses elementos entram no escopo.  
   
--   Quando uma ** \< ordem>** nó de elemento entra no escopo, o carregamento em massa de XML gera um registro para a tabela CustOrder. O carregamento em massa de XML copia o valor do atributo **OrderID** para esse registro. O valor necessário para a coluna CustomerID é obtido a partir do ** \< CustomerID>** elemento filho do elemento ** \< Customer>** . O carregamento em massa de XML usa as informações especificadas em `<sql:relationship>` para obter o valor de chave estrangeira CustomerID para esse registro, a menos que o atributo **CustomerID** tenha sido especificado no elemento ** \< Order>** . A regra geral é que, se o elemento filho especifica explicitamente um valor para o atributo de chave estrangeira, o Carregamento em massa XML usará esse valor e não obterá o valor do elemento pai usando o `<sql:relationship>` especificado. Como essa ** \< ordem>** nó de elemento sai do escopo, o carregamento em massa de XML envia o registro para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, processa todos os nós de elemento de ** \< ordem subsequente>** da mesma maneira.  
+-   Quando um **\<Order>** nó de elemento entra no escopo, o carregamento em massa de XML gera um registro para a tabela CustOrder. O carregamento em massa de XML copia o valor do atributo **OrderID** para esse registro. O valor necessário para a coluna CustomerID é obtido do **\<CustomerID>** elemento filho do **\<Customer>** elemento. O carregamento em massa de XML usa as informações especificadas em `<sql:relationship>` para obter o valor de chave estrangeira CustomerID para esse registro, a menos que o atributo **CustomerID** tenha sido especificado no **\<Order>** elemento. A regra geral é que, se o elemento filho especifica explicitamente um valor para o atributo de chave estrangeira, o Carregamento em massa XML usará esse valor e não obterá o valor do elemento pai usando o `<sql:relationship>` especificado. Como esse **\<Order>** nó de elemento sai do escopo, o carregamento em massa de XML envia o registro para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, processa todos os nós de elementos subsequentes da **\<Order>** mesma maneira.  
   
--   Finalmente, o nó do elemento ** \<>do cliente** sai do escopo. Nesse instante, o Carregamento em massa XML envia o registro do cliente ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Carregamento em massa XML segue este processo para todos os clientes subsequentes no fluxo de dados XML.  
+-   Por fim, o **\<Customer>** nó do elemento sai do escopo. Nesse instante, o Carregamento em massa XML envia o registro do cliente ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Carregamento em massa XML segue este processo para todos os clientes subsequentes no fluxo de dados XML.  
   
  Existem duas observações sobre o esquema de mapeamento:  
   
--   Quando o esquema satisfizer a regra de "contenção" (por exemplo, todos os dados associados ao cliente e a ordem são definidos dentro do escopo dos nós do ** \< cliente>** e do ** \< pedido>** do elemento), o carregamento em massa é bem sucedido.  
+-   Quando o esquema satisfizer a regra de "contenção" (por exemplo, todos os dados associados ao cliente e a ordem são definidos dentro do escopo dos **\<Customer>** nós associados e do **\<Order>** elemento), o carregamento em massa é bem sucedido.  
   
--   Ao descrever o elemento ** \<>do cliente** , seus elementos filho são especificados na ordem apropriada. Nesse caso, o elemento filho ** \<>CustomerID** é especificado antes da ** \< ordem>** elemento filho. Isso significa que, no arquivo de dados XML de entrada, o valor do elemento ** \< CustomerID>** está disponível como o valor de chave estrangeira quando o elemento ** \< Order>** entra no escopo. Os atributos de chave são especificados primeiro; esta é a “regra de ordenação de chaves".  
+-   Ao descrever o **\<Customer>** elemento, seus elementos filho são especificados na ordem apropriada. Nesse caso, o **\<CustomerID>** elemento filho é especificado antes do **\<Order>** elemento filho. Isso significa que, no arquivo de dados XML de entrada, o **\<CustomerID>** valor do elemento está disponível como o valor da chave estrangeira quando o **\<Order>** elemento entra no escopo. Os atributos de chave são especificados primeiro; esta é a “regra de ordenação de chaves".  
   
-     Se você especificar o ** \< CustomerID>** elemento filho após a ** \< ordem>** elemento filho, o valor não estará disponível quando o elemento ** \< Order>** entrar no escopo. Quando a marca de fim de ** \<>/Order** é então lida, o registro para a tabela CustOrder é considerado concluído e é inserido na tabela CustOrder com um valor nulo para a coluna CustomerID, que não é o resultado desejado.  
+     Se você especificar o **\<CustomerID>** elemento filho após o **\<Order>** elemento filho, o valor não estará disponível quando o **\<Order>** elemento entrar no escopo. Quando a **\</Order>** marca de fim é lida, o registro para a tabela CustOrder é considerado concluído e é inserido na tabela CustOrder com um valor nulo para a coluna CustomerID, que não é o resultado desejado.  
   
 #### <a name="to-create-a-working-sample"></a>Para criar um exemplo de funcionamento  
   
@@ -218,7 +217,7 @@ ms.locfileid: "82703357"
 ## <a name="exceptions-to-the-record-generation-rule"></a>Exceções à regra de geração de registros  
  O Carregamento em massa XML não gera um registro para um nó quando ele entra no escopo, se esse nó for do tipo IDREF ou IDREFS. Você deve ter certeza de que há uma descrição completa do registro em algum lugar do esquema. As anotações `dt:type="nmtokens"` são ignoradas da mesma maneira que o tipo IDREFS é ignorado.  
   
- Por exemplo, considere o seguinte esquema XSD que descreve os elementos de ** \<>do cliente** e de ** \< ordem>** . O elemento ** \<>do cliente** inclui um atributo **OrderList** do tipo IDREFS. A marca `<sql:relationship>` especifica a relação um-para-muitos entre o cliente e lista de pedidos.  
+ Por exemplo, considere o seguinte esquema XSD que descreve **\<Customer>** os **\<Order>** elementos e. O **\<Customer>** elemento inclui um atributo **OrderList** do tipo IDREFS. A marca `<sql:relationship>` especifica a relação um-para-muitos entre o cliente e lista de pedidos.  
   
  Este é o esquema:  
   
@@ -259,9 +258,9 @@ ms.locfileid: "82703357"
 </xsd:schema>  
 ```  
   
- Como o carregamento em massa ignora os nós do tipo IDREFS, não há nenhuma geração de registro quando o nó de atributo **OrderList** entra no escopo. Portanto, se você quiser que os registros de ordem sejam adicionados à tabela Orders, deve descrever esses pedidos ordens em algum lugar no esquema. Nesse esquema, a especificação do elemento ** \< Order>** garante que o carregamento em massa de XML adicione os registros de pedidos à tabela Orders. O elemento ** \< Order>** descreve todos os atributos necessários para preencher o registro da tabela CustOrder.  
+ Como o carregamento em massa ignora os nós do tipo IDREFS, não há nenhuma geração de registro quando o nó de atributo **OrderList** entra no escopo. Portanto, se você quiser que os registros de ordem sejam adicionados à tabela Orders, deve descrever esses pedidos ordens em algum lugar no esquema. Nesse esquema, a especificação do **\<Order>** elemento garante que o carregamento em massa de XML adicione os registros de pedidos à tabela Orders. O **\<Order>** elemento descreve todos os atributos necessários para preencher o registro para a tabela CustOrder.  
   
- Você deve garantir que os valores **CustomerID** e **OrderID** no elemento ** \<>do cliente** correspondam aos valores no elemento ** \< Order>** . Você é responsável por manter a integridade referencial.  
+ Você deve garantir que os valores **CustomerID** e **OrderID** no **\<Customer>** elemento correspondam aos valores no **\<Order>** elemento. Você é responsável por manter a integridade referencial.  
   
 #### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   

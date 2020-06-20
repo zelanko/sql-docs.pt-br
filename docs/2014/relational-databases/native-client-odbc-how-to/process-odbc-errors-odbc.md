@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e87e5e2c1acdc11619b8cc1ed67dcf1542e1d8d5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0b700e41eef8bf3cb2f856a2dd68aa3a96a06e7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82713255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039729"
 ---
 # <a name="process-odbc-errors-odbc"></a>Processar erros ODBC (ODBC)
   É possível usar duas chamadas de função ODBC para recuperar mensagens ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Para obter informações relacionadas ao ODBC principal nos campos de diagnóstico **SQLState**, **pfNative** e **ErrorMessage**, chame [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) até ele retornar SQL_NO_DATA. Para cada registro de diagnóstico, é possível chamar [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) a fim de recuperar campos individuais. Todos os campos específicos do driver devem ser recuperados usando `SQLGetDiagField`.  

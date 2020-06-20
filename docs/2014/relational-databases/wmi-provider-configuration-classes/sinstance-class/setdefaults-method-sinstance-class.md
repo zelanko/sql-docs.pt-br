@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ad13821341291a91a989297f29e1459a40de5afe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e1d3b9a65af98f5843cc765a406cfa5ada203a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061340"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Método SetDefaults (classe SInstance)
   Define todos os valores padrão para a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com a opção de substituir os dados existentes.  
@@ -40,7 +39,7 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto de [classe SInstance](sinstance-class.md) que representa uma instância de servidor.  
   
 #### <a name="parameters"></a>Parâmetros  

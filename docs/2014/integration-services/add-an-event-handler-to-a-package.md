@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b20ebca153e9aa1eead2e288831a26c40e2dbd5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926277"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Adicionar um manipulador de eventos a um pacote
   No momento da execução, contêineres e tarefas elevam os eventos. Você pode criar manipuladores de eventos personalizados que respondam a esses eventos, executando um fluxo de trabalho quando o evento for gerado. Por exemplo, você pode criar um manipulador de eventos que envia uma mensagem de e-mail quando uma tarefa falha.  
@@ -56,6 +55,6 @@ ms.locfileid: "66062025"
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
- [Registro em Log do Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
+ [Registro em Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md)  
   
   

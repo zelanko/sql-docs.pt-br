@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ccf245df181f2b74438d5170507fdf0d4c26e1fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067618"
 ---
 # <a name="proxy-editor-and--add-principal"></a>Editor de proxy e Adicionar entidade de segurança
-  Use esta página para conceder acesso de entidades de segurança de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servidor a uma conta proxy do Agent.  
+  Use esta página para conceder acesso de entidades de segurança de servidor a uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta proxy do Agent.  
   
 ## <a name="options"></a>Opções  
  **Tipo de entidade**  

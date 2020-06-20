@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fa9321cffd3b6b5edb7ac90fac67867804637b6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010367"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955846"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitar conflitos com operações de banco de dados em aplicativos de FILESTREAM
   Os aplicativos que usam SqlOpenFilestream() para abrir identificadores de arquivo do Win32 para ler ou gravar dados BLOB FILESTREAM podem apresentar erros de conflito com instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] gerenciadas em uma transação em comum. Isso inclui consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] ou MARS cuja execução demora muito tempo para ser concluída. Os aplicativos devem ser criados cautelosamente para evitar esses tipos de conflitos.  
@@ -38,7 +37,7 @@ ms.locfileid: "66010367"
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e o acesso de FILESTREAM do Win32 podem causar conflitos.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. Abrindo um BLOB FILESTREAM para acesso de gravação  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>a. Abrindo um BLOB FILESTREAM para acesso de gravação  
  O exemplo a seguir mostra o efeito de abrir um arquivo para acesso apenas de gravação.  
   
 ```  
@@ -141,7 +140,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Acessar dados FILESTREAM com OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
+ [Acessar dados do FILESTREAM com OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
  [Usando MARS &#40;Multiple Active Result Sets&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)  
   
   

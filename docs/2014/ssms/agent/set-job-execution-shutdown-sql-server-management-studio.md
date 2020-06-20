@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca9343fe8a6f9e89ba9f26dbbbb12dd7362aff91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1200a7cbd0f6b59e43af81f5414f9946801e093
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067562"
 ---
 # <a name="set-job-execution-shutdown-sql-server-management-studio"></a>Set Job Execution Shutdown (SQL Server Management Studio)
-  Este tópico descreve como definir o tempo que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent aguardará até que os trabalhos em execução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sejam concluídos antes [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]próprio agente seja concluído no usando o.  
+  Este tópico descreve como definir o tempo que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent aguardará até que os trabalhos em execução sejam concluídos antes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] próprio agente seja concluído no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  **Neste tópico**  
   

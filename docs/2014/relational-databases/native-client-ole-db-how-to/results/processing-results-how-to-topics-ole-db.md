@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: beef30273e7d3ad3b0273c10ebbb3d589b7187a7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4c4aab04b1fbeaf9d0875a22c3e3e713c698a9b9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696513"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018127"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Tópicos de instrução sobre processamento de resultados (OLE DB)
   O processamento de resultados em um aplicativo OLE DB envolve primeiro a determinação das características do conjunto de resultados e depois a recuperação dos dados em variáveis do programa. Caso o comando execute um procedimento armazenado, você também deve saber como processar códigos de retorno e parâmetros de saída dos procedimentos armazenados.  

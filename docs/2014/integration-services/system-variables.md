@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d13feb3a13cb96ec3cf0a3006b807740944434b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62927215"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962366"
 ---
 # <a name="system-variables"></a>Variáveis do sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece um conjunto de variáveis de sistema que armazena informações sobre o pacote em execução e seus objetos. Essas variáveis podem ser usadas em expressões e expressões de propriedade para personalizar pacotes, contêineres, tarefas e manipuladores de eventos.  
@@ -41,7 +40,7 @@ ms.locfileid: "62927215"
 |`ExecutionInstanceGUID`|String|O identificador exclusivo da instância de execução de um pacote.|  
 |`FailedConfigurations`|String|Os nomes das configurações de pacote que falharam.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|Indica se as configurações de pacote são ignoradas ao carregar o pacote.|  
-|**InteractiveMode**|Boolean|Indica se o pacote é executado em modo interativo. Se um pacote estiver sendo executado no [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, essa propriedade será definida como `True`. Se um pacote estiver em execução usando o utilitário de prompt de comando **dtexec** , a propriedade `False`será definida como.|  
+|**InteractiveMode**|Boolean|Indica se o pacote é executado em modo interativo. Se um pacote estiver sendo executado no [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, essa propriedade será definida como `True`. Se um pacote estiver em execução usando o utilitário de prompt de comando **dtexec** , a propriedade será definida como `False` .|  
 |`LocaleId`|Int32|A localidade que o pacote usa.|  
 |**MachineName**|String|O nome do computador no qual o pacote está sendo executado.|  
 |**OfflineMode**|Boolean|Indica se o pacote está no modo offline. O modo offline não obtém conexões com fontes de dados.|  

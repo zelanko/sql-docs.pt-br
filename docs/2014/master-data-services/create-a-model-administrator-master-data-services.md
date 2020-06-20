@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d4a9e07006444cf85a6d453e6dc8e2956d55e78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78964365"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971816"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Criar um administrador de modelo (Master Data Services)
-  No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um administrador de modelo quando desejar que um grupo ou usuário tenha a permissão **Atualizar** para todos os objetos em um ou mais modelos.  
+  No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , crie um administrador de modelo quando desejar que um grupo ou usuário tenha a permissão **Atualizar** para todos os objetos em um ou mais modelos.  
   
 > [!TIP]  
 >  Para simplificar a administração, crie um grupo local ou do Windows e configure-o como um administrador de modelo. Isso lhe permitirá adicionar e remover usuários do grupo sem acessar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "78964365"
   
 9. Conclua as etapas 7 e 8 para cada modelo do qual o grupo ou usuário deverá ser administrador.  
   
-10. Clique em **Salvar**.  
+10. Clique em **Save** (Salvar).  
   
 ## <a name="remarks"></a>Comentários  
  Não atribua qualquer outra permissão a objetos de modelo ou membros de hierarquia. Se você fizer isso, o usuário não será mais um administrador e não poderá exibir o modelo em nenhuma área funcional que não seja o **Explorer**.  

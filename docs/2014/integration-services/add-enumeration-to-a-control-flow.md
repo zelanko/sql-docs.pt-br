@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff127798f7c36340a85fa72cebfdc9a012c0676
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061905"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926097"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Adicionar enumeração a um fluxo de controle
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui o contêiner do Loop Foreach, um elemento de fluxo de controle que torna simples a inclusão de um constructo de loop que enumera arquivos e objetos no fluxo de controle de um pacote. Para obter mais informações, consulte [Contêiner Loop Foreach](control-flow/foreach-loop-container.md).  

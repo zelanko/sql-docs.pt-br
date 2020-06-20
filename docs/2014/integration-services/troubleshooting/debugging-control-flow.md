@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1795af295d8a7d77a71fbdfdfc9a433ed39b58f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972739"
 ---
 # <a name="debugging-control-flow"></a>Depurando o fluxo de controle
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluem recursos e ferramentas que você pode usar para solucionar problemas do fluxo de controle em um pacote [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50877c8abf0ba77f55f36297486dfdb3abeb7658
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714554"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067637"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Propriedades da Conta Proxy (guia Referências)
-  Esta página somente leitura lista as etapas de trabalho que fazem referência [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uma conta proxy do Agent.  
+  Esta página somente leitura lista as etapas de trabalho que fazem referência a uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta proxy do Agent.  
   
 ## <a name="options"></a>Opções  
  **Nome do trabalho**  

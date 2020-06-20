@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 669600644ec7983b08a278784aa3644ce3948489
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e41f247c34c1b40bedfdf6924a45afe5f63735b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703290"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015775"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>Cache de XSL (SQLXML 4.0)
   O armazenamento em cache de folhas de estilo XSL melhora o desempenho. Em sua primeira execução, uma folha de estilo XSL permanecerá na memória se o cache de XSL for definido como ON; isto melhora o desempenho para processamento subsequente. A configuração padrão é ON.  

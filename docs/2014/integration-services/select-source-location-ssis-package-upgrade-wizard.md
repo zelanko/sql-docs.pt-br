@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90cb7110a6b4e9372fe5397ba050f91535a58f94
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055938"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963666"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>Selecionar Local de Origem (Assistente de Atualização de Pacotes SSIS)
   Use a página **Selecionar Local de Origem** para especificar a origem a partir da qual os pacotes serão atualizados.  
@@ -35,7 +34,7 @@ ms.locfileid: "66055938"
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**Sistema de arquivos**|Indica que os pacotes a serem atualizados estão em uma pasta no computador local.<br /><br /> Para que o assistente faça backup dos pacotes originais antes de atualizá-los, esses pacotes devem ser armazenados no sistema de arquivos. Para obter mais informações, consulte o tópico de instruções.|  
+|**Sistema de Arquivos**|Indica que os pacotes a serem atualizados estão em uma pasta no computador local.<br /><br /> Para que o assistente faça backup dos pacotes originais antes de atualizá-los, esses pacotes devem ser armazenados no sistema de arquivos. Para obter mais informações, consulte o tópico de instruções.|  
 |**Armazenamento de Pacotes SSIS**|Indica que os pacotes a serem atualizados estão no armazenamento de pacotes. O repositório de pacotes consiste no conjunto de pastas do sistema de arquivos gerenciado pelo serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](service/package-management-ssis-service.md).<br /><br /> Selecione esse valor para exibir as opções dinâmicas de **Origem do pacote** correspondentes.|  
 |**Microsoft SQL Server**|Indica que os pacotes a serem atualizados são de uma instância existente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Selecione esse valor para exibir as opções dinâmicas de **Origem do pacote** correspondentes.|  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66055938"
  **Servidor**  
  Digite o nome do servidor que tem os pacotes a serem atualizados ou selecione esse servidor na lista.  
   
- **Usar a autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Selecione para usar a Autenticação do Windows para estabelecer conexão com o servidor.  
   
  **Usar Autenticação do SQL Server**  

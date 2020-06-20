@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43a83d0b20bbcdb0b95dd727a51d59353f7675bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d69196824600d3281663b461465419f16001b8ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052890"
 ---
 # <a name="missing-column-statistics-event-class"></a>Classe de evento Missing Column Statistics
   A classe de evento Missing Column Statistics indica que as estatísticas de coluna que podiam ter sido úteis para o otimizador, não estão disponíveis.  

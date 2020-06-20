@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16a86fa9098efcd6f4d8d46917df175667414dd9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054493"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972486"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Exibir metadados do caminho no Editor de Caminho do Fluxo de Dados
   Os caminhos conectam dois componentes de fluxos de dados. Antes de você poder exibir os metadados do caminho, o fluxo de dados deve conter pelo menos dois componentes do fluxo de dados conectados. Para obter mais informações, consulte [Adicionar ou excluir um componente em um fluxo de dados](data-flow/add-or-delete-a-component-in-a-data-flow.md) e [Conectar componentes em um fluxo de dados](data-flow/connect-components-in-a-data-flow.md).  

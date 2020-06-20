@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef99d711a772a075f568a83f5d56fcecaaa598f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110057"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068044"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Preenchendo uma tabela hierárquica utilizando métodos hierárquicos
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tem oito funcionários que trabalham no departamento de Marketing. A hierarquia dos funcionários é assim:  
@@ -64,7 +63,7 @@ ms.locfileid: "66110057"
   
 ### <a name="to-insert-a-subordinate-employee"></a>Para inserir um funcionário subordinado  
   
-1.  **Sara** é subordinada a **Davi**. Para inserir o nó **de Sariya** , você deve criar um valor de **OrgNode** apropriado do `hierarchyid`tipo de dados. O código a seguir cria uma variável do tipo de dados `hierarchyid` e a popula com o valor OrgNode de raiz da tabela. Em seguida, usa essa variável com o método [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) para inserir a linha que é um nó subordinado. `GetDescendant` usa dois argumentos. Analise as seguintes opções para os valores de argumento:  
+1.  **Sara** é subordinada a **Davi**. Para inserir o nó **de Sariya** , você deve criar um valor de **OrgNode** apropriado do tipo de dados `hierarchyid` . O código a seguir cria uma variável do tipo de dados `hierarchyid` e a popula com o valor OrgNode de raiz da tabela. Em seguida, usa essa variável com o método [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) para inserir a linha que é um nó subordinado. `GetDescendant` usa dois argumentos. Analise as seguintes opções para os valores de argumento:  
   
     -   Se o pai for o NULL, o `GetDescendant` retornará NULL.  
   

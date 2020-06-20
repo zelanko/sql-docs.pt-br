@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 016ea0dd6e5352a0b45147a5ea4cea3764abb305
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd5686299751d6ae10b9407deee36b8aeea31468
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015768"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Aplicando um XSL Transformation (provedor SQLXMLOLEDB)
   Neste exemplo de aplicativo ADO, uma consulta SQL é executada e uma transformação em XSL é aplicada ao resultado. Definir a propriedade ClientSideXML como true impõe o processamento do conjunto de linhas no lado do cliente. O dialeto do comando é definido como {5d531cb2-e6ed-11d2-b252-00c04f681b71}, porque a consulta SQL é especificada em um modelo e esse dialeto precisa ser especificado ao executar um modelo. A propriedade XSL especifica o arquivo XSL a ser usado para aplicar a transformação. O valor da propriedade caminho base é usado para pesquisar o arquivo XSL. Se você especificar um caminho no valor da propriedade XSL, o caminho será relativo ao caminho especificado na propriedade caminho base.  

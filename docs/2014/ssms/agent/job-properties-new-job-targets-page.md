@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f47054e2f0260db272ad25cbed549fd14df8c8e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7da2e71078badde3bb0bbd1bab0ecc64e3bf875
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695443"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062215"
 ---
 # <a name="job-properties-new-job-targets-page"></a>Propriedades do Trabalho: Novo Trabalho (página Destinos)
   Use essa página para gerenciar os servidores de destino para o trabalho.  
