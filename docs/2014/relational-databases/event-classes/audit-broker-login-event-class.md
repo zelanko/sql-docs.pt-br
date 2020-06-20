@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 200ef467f5c1fc64e4d5056cb60fc442ec998f77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053384"
 ---
 # <a name="audit-broker-login-event-class"></a>Classe de evento Audit Broker Login
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um evento **Audit Broker Login** para informar mensagens de auditoria relacionadas à segurança de transporte do Agente de Serviços.  

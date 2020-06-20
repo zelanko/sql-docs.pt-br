@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abc9560ae39f94380a6adde48ceb4ae10788db5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040240"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   O [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] é uma interface avançada para criar e gerenciar rastreamentos, e analisar e reproduzir resultados de rastreamento. Os eventos são salvos em um arquivo de rastreamento que posteriormente pode ser analisado ou utilizado para reproduzir uma série específica de etapas na tentativa de diagnosticar um problema.  
@@ -67,7 +66,7 @@ ms.locfileid: "68211049"
 > [!NOTE]  
 >  Ao trabalhar com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], é útil compreender o Rastreamento do SQL. Para obter mais informações, consulte [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
   
- **Circunstância**  
+ **Evento**  
  Um evento é uma ação gerada dentro de uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. São exemplos:  
   
 -   Conexões, falhas e desconexões de logon.  
@@ -145,7 +144,7 @@ ms.locfileid: "68211049"
 |Descreve como filtrar eventos com base na hora de término do evento.|[Filtrar eventos com base na hora de término do evento &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-end-time-sql-server-profiler.md)|  
 |Descreve como filtrar IDs de processo do servidor de filtro (SPIDs) em um rastreamento.|[Filtrar SPIDs &#40;IDs de processo de servidor&#41; em um rastreamento &#40;SQL Server Profiler&#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
 |Descreve como pausar um rastreamento.|[Pausar um rastreamento &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)|  
-|Descreve como interromper um rastreamento.|[Parar um rastreamento &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)|  
+|Descreve como interromper um rastreamento.|[Interromper um rastreamento &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)|  
 |Descreve como executar um rastreamento depois que ele tiver sido pausado ou interrompido.|[Executar um rastreamento que foi pausado ou interrompido &#40;SQL Server Profiler&#41;](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)|  
 |Descreve como limpar uma janela de rastreamento.|[Limpar uma janela de rastreamento &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)|  
 |Descreve como fechar uma janela de rastreamento.|[Fechar uma janela de rastreamento &#40;SQL Server Profiler&#41;](close-a-trace-window-sql-server-profiler.md)|  
@@ -164,7 +163,7 @@ ms.locfileid: "68211049"
 |Descreve como definir opções de rastreamento globais.|[Definir opções de rastreamento globais &#40;SQL Server Profiler&#41;](set-global-trace-options-sql-server-profiler.md)|  
 |Descreve como localizar um valor ou uma coluna de dados durante um rastreamento.|[Localizar um valor ou coluna de dados durante um rastreamento &#40;SQL Server Profiler&#41;](find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |Descreve como derivar um modelo a partir de um rastreamento em execução.|[Derivar um modelo de um rastreamento em execução &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
-|Descreve como derivar um modelo a partir de um arquivo de rastreamento ou uma tabela de rastreamento.|[Derivar um modelo de um arquivo ou de uma tabela de rastreamento &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)|  
+|Descreve como derivar um modelo a partir de um arquivo de rastreamento ou uma tabela de rastreamento.|[Derivar um modelo de um arquivo ou uma tabela de rastreamento &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)|  
 |Descreve como criar um script Transact-SQL para executar um rastreamento.|[Criar um script Transact-SQL para executar um rastreamento &#40;SQL Server Profiler&#41;](create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
 |Descreve como exportar um modelo de rastreamento.|[Exportar um modelo de rastreamento &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)|  
 |Descreve como importar um modelo de rastreamento.|[Importar um modelo de rastreamento &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)|  
@@ -179,7 +178,7 @@ ms.locfileid: "68211049"
 |Descreve como analisar deadlocks com o SQL Server Profiler.|[Analisar deadlocks com o SQL Server Profiler](analyze-deadlocks-with-sql-server-profiler.md)|  
 |Descreve como analisar consultas com resultados de SHOWPLAN no SQL Server Profiler.|[Analisar consultas com resultados do Plano de Execução no SQL Server Profiler](analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
 |Descreve como filtrar rastreamentos com o SQL Server Profiler.|[Filtrar rastreamentos com o SQL Server Profiler](filter-traces-with-sql-server-profiler.md)|  
-|Descreve como usar os recursos de reprodução do SQL Server Profiler.|[Repetir rastreamentos](replay-traces.md)|  
+|Descreve como usar os recursos de reprodução do SQL Server Profiler.|[Reproduzir rastreamentos](replay-traces.md)|  
 |Lista os tópicos de ajuda sensível a contexto do SQL Server Profiler.|[Ajuda de F1 do SQL Server Profiler](sql-server-profiler-f1-help.md)|  
 |Lista os procedimentos armazenados do sistema que são usados pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar o desempenho e a atividade.|[Procedimentos armazenados do SQL Server Profiler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)|  
   

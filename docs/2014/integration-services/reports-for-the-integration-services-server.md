@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056439"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964586"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Relatórios do servidor do Integration Services
   Na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], os relatórios padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ajudar a monitorar projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , que foram implantados no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Esses relatórios ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas na execução do pacote.  
@@ -71,7 +70,7 @@ ms.locfileid: "66056439"
  O **Relatório Todas as Validações** exibe um resumo de todas as execuções do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que foram efetuadas no servidor. O resumo exibe informações para cada validação, como status, hora de início e hora de término. Cada entrada resumida inclui um link a mensagens geradas durante validação. Como no Painel do Integration Services, você pode aplicar um filtro à tabela para reduzir as informações exibidas.  
   
 ## <a name="custom-reports"></a>Relatórios personalizados  
- Você pode adicionar um relatório personalizado (arquivo .rdl) ao nó do catálogo do **SSISDB** no nó **Catálogos do Integration Services** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Antes de adicionar o relatório, confirme que você está usando uma convenção de nomenclatura de três partes para qualificar completamente os objetos que você referencia, por exemplo, uma tabela de origem. Caso contrário, o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exibirá um erro. A convenção de nomenclatura é \<database>.\<owner>.\<object>. Um exemplo seria SSISDB.internal.executions.  
+ Você pode adicionar um relatório personalizado (arquivo .rdl) ao nó do catálogo do **SSISDB** no nó **Catálogos do Integration Services** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Antes de adicionar o relatório, confirme que você está usando uma convenção de nomenclatura de três partes para qualificar completamente os objetos que você referencia, por exemplo, uma tabela de origem. Caso contrário, o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exibirá um erro. A Convenção de nomenclatura é \<database> . \<owner> . \<object> . Um exemplo seria SSISDB.internal.executions.  
   
 > [!NOTE]  
 >  Quando você adicionar relatórios personalizados ao nó do **SSISDB** , no nó **Bancos de Dados** , o prefixo do SSISDB não será necessário.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd7c505701a4edb1f66ca516d06179b2eb1a222d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920678"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956226"
 ---
 # <a name="tail-log-backups-sql-server"></a>Backups da parte final do log (SQL Server)
   Este tópico é relevante apenas para o backup e a restauração dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão usando modelos de recuperação completa ou bulk-logged.  
@@ -37,7 +36,7 @@ ms.locfileid: "62920678"
 ##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> Cenários que exigem um backup da parte final do log  
  É recomendável fazer um backup da parte final do log nos seguintes cenários:  
   
--   Se o banco de dados estiver online e você planeja realizar uma operação de restauração nele, comece fazendo backup da parte final do log. Para evitar um erro para um banco de dados online, você deve usar o... Com a opção NORECOVERY da instrução [backup](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   Se o banco de dados estiver online e você planeja realizar uma operação de restauração nele, comece fazendo backup da parte final do log. Para evitar um erro para um banco de dados online, você deve usar o... COM a opção NORECOVERY da instrução [backup](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   Se um banco de dados estiver offline e não puder ser iniciado, e você precisar restaurar o banco de dados, primeiro faça backup da parte final do log. Como nenhuma transação pode ocorrer nesse momento, o uso de WITH NORECOVERY é opcional.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62920678"
   
 |Opção BACKUP LOG|Comentários|  
 |-----------------------|--------------|  
-|NORECOVERY|Use NORECOVERY sempre que pretender continuar com uma operação de restauração no banco de dados. NORECOVERY coloca o banco de dados no estado de restauração. Isso garante que o banco de dados não seja alterado depois do backup da parte final do log.  O log é truncado, a menos que a opção NO_TRUNCATE ou COPY_ONLY também seja especificada.<br /><br /> ** \* Importante \* \* ** Recomendamos que você evite usar NO_TRUNCATE, exceto quando o banco de dados estiver danificado.|  
+|NORECOVERY|Use NORECOVERY sempre que pretender continuar com uma operação de restauração no banco de dados. NORECOVERY coloca o banco de dados no estado de restauração. Isso garante que o banco de dados não seja alterado depois do backup da parte final do log.  O log é truncado, a menos que a opção NO_TRUNCATE ou COPY_ONLY também seja especificada.<br /><br /> Importante é recomendável evitar o uso de NO_TRUNCATE, exceto quando o banco de dados estiver danificado. ** \* \* \* \* **|  
 |CONTINUE_AFTER_ERROR|Use CONTINUE_AFTER_ERROR somente se estiver fazendo backup da parte final de um banco de dados danificado.<br /><br /> Observação: quando você usa fazer backup da parte final do log em um banco de dados danificado, alguns dos metadados normalmente capturados em backups de log podem estar indisponíveis. Para obter mais informações, consulte [Backups da parte final do log com backup incompleto de metadados](#IncompleteMetadata) posteriormente neste tópico.|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a>Backups da parte final do log com metadados de backup incompletos  
@@ -63,7 +62,7 @@ ms.locfileid: "62920678"
   
 -   **filegroup_id**  
   
--   **type**  
+-   **tipo**  
   
 -   **type_desc**  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62920678"
 ## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Backup e restauração de bancos de dados SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Backups somente cópia &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
  [Backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  

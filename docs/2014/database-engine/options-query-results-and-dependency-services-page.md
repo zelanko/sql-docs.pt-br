@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d19228fdf17788e9118367a6f0f0eb3be90cb72a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481200"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930127"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Opções (página Resultados da consulta e Serviços de Dependência)
-  Use esta página para especificar o servidor a ser conectado para Serviços de Dependência. Os Serviços de Dependência permitem extrair informações sobre dependências entre objetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazenados em diferentes servidores. Você exibe dependências de objeto usando a caixa de diálogo **dependências de objeto** no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+  Use esta página para especificar o servidor a ser conectado para Serviços de Dependência. Os Serviços de Dependência permitem extrair informações sobre dependências entre objetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] armazenados em diferentes servidores. Você exibe dependências de objeto usando a caixa de diálogo **dependências de objeto** no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
  **O que você deseja fazer?**  
   
@@ -30,7 +29,7 @@ ms.locfileid: "65481200"
   
 ##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>Abrir a caixa de diálogo Opções (página resultados da consulta/serviços de dependência)  
   
-1.  No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], clique em **Opções** no menu **ferramentas** .  
+1.  No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , clique em **Opções** no menu **ferramentas** .  
   
 2.  Expanda **Resultados da Consulta** e clique em **Serviços de Dependência**.  
   

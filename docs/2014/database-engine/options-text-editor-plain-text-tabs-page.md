@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 558eb7a55f2838200e1ed13062cb1e0345de4fcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000684"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929797"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Text Editor - Plain Text - Tabs Page)
   Use essa caixa de diálogo para alterar o comportamento de tabulação do Editor de Texto, que é usado para editar um documento não associado a um idioma de desenvolvimento específico. Para exibir essas configurações, clique em **Opções** no menu **Ferramentas** , expanda a pasta **Editor de Texto**, expanda **Texto Sem-formatação**e, então, clique em **Tabulações**.  
@@ -26,7 +25,7 @@ ms.locfileid: "83000684"
  As opções do Editor de Texto sem Formatação também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Ao usar as caixas de diálogo **Todos os Idiomas** para definir diferentes opções para os outros editores do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como o DMX ou MDX, você deverá redefinir as opções do Editor de Texto sem Formatação usando essa caixa de diálogo.  
   
 ## <a name="indenting"></a>Recuo  
- **Nenhum**  
+ **Nenhuma**  
  Não recue a nova linha criada ao pressionar ENTER. O cursor é colocado na primeira coluna da nova linha.  
   
  **Bloquear**  

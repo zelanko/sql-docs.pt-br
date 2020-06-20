@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73f5cdd35404617be9563c33574b09f825a2c7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe5e58be9d28cc1eae5913e3bfe40eeed6129c3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007543"
 ---
 # <a name="testserver-element-dta"></a>Elemento TestServer (DTA)
   Especifica o servidor de teste para ser usado ao ajustar um servidor de produção.  
@@ -36,7 +35,7 @@ ms.locfileid: "63138698"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  

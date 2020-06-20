@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42a6051305f1c8999e7cba5e4cb51a7945f1f5c7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889827"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964676"
 ---
 # <a name="performance-counters"></a>Contadores de desempenho
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala um conjunto de contadores de desempenho que podem ser usados para monitorar o desempenho do mecanismo de fluxo de dados. Por exemplo, é possível observar o contador "Buffers em spool" para determinar se os buffers de dados estão sendo gravados temporariamente no disco durante a execução de um pacote. Essa troca reduz o desempenho e indica que o computador não tem memória suficiente.  
@@ -31,7 +30,7 @@ ms.locfileid: "62889827"
   
  A tabela a seguir descreve os contadores de desempenho.  
   
-|Contador de desempenho|DESCRIÇÃO|  
+|Contador de desempenho|Descrição|  
 |-------------------------|-----------------|  
 |Bytes de BLOB lidos|O número de bytes dos dados de BLOB (objetos binários grandes) que o mecanismo de fluxo de dados leu em todas as fontes.|  
 |Bytes de BLOB gravados|O número de bytes de dados de BLOB que o mecanismo de fluxo de dados gravou em todos os destinos.|  

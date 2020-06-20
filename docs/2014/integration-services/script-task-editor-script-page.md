@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9e9aef856276508ef557d465c20210e16f3073
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964186"
 ---
 # <a name="script-task-editor-script-page"></a>Editor da Tarefa Script (página Script)
   Use a página **Script** da caixa de diálogo **Editor da Tarefa Script** para definir propriedades de script e especificar variáveis que podem ser acessados pelo script.  
@@ -37,8 +36,8 @@ ms.locfileid: "66056185"
   
  Para definir a linguagem de criação de scripts padrão para a tarefa Script, use a opção **Idiomas de script** na página **Geral** da caixa de diálogo **Opções** . Para obter mais informações, consulte [General Page](general-page-of-integration-services-designers-options.md).  
   
- **Ponto**  
- Especifique o método a ser chamado pelo runtime do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como ponto de entrada no código da tarefa Script. O método especificado deve estar na classe ScriptMain do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projeto do VSTA (Tools for Applications), a classe ScriptMain é a classe padrão gerada pelos modelos de script.  
+ **EntryPoint**  
+ Especifique o método a ser chamado pelo runtime do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como ponto de entrada no código da tarefa Script. O método especificado deve estar na classe ScriptMain do projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA (Tools for Applications), a classe ScriptMain é a classe padrão gerada pelos modelos de script.  
   
  Caso altere o nome do método no projeto do VSTA, será preciso alterar o valor da propriedade **EntryPoint** .  
   

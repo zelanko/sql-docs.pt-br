@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d46820f3542e562f43fc4ae4c4d4ee1f91fcdf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956406"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Práticas recomendadas e solução de problemas de backup do SQL Server para URL
   Este tópico inclui melhores práticas e dicas de solução de problemas para backup e restaurações do SQL Server no serviço de Blobs do Azure.  
   
  Para obter mais informações sobre como usar o serviço de Armazenamento de Blobs do Azure para operações de backup ou restauração do SQL Server, confira:  
   
--   [Backup e restauração do SQL Server no serviço de Armazenamento de Blobs](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 -   [Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
@@ -77,7 +76,7 @@ ms.locfileid: "70175968"
   
     -   Defina o sinalizador de rastreamento 3051 para ativar o registro em um log de erros específico com o seguinte formato:  
   
-         BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log em que \<action> é um dentre:  
+         BackupToUrl- \<instname> - \<dbname> -Action- \<PID> . log, onde \<action> é um de:  
   
         -   `DB`  
   
@@ -94,11 +93,11 @@ ms.locfileid: "70175968"
 -   Ao fazer a restauração em um backup compactado, você verá o seguinte erro:  
   
     -   **A SqlException 3284 ocorreu. Severidade: 16 Estados: 5**  
-        **A marca de mensagem do dispositivohttps://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' ' não está alinhada. Emita novamente a instrução RESTORE com o mesmo tamanho de bloco usado para criar o conjunto de backup: ' 65536 ' é semelhante a um valor possível.**  
+        **A marca de mensagem do dispositivo ' https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' não está alinhada. Emita novamente a instrução RESTORE com o mesmo tamanho de bloco usado para criar o conjunto de backup: ' 65536 ' é semelhante a um valor possível.**  
   
          Para corrigir esse erro, emita novamente a instrução `BACKUP` com `BLOCKSIZE = 65536` especificada.  
   
--   Erro durante o backup devido a blobs que têm a concessão ativa neles: a atividade de backup com falha pode resultar em blobs com concessões ativas.  
+-   Erro durante o backup devido a blobs que têm concessão ativa: A atividade de backup com falha pode resultar em blobs com concessões ativas.  
   
      Se houver uma nova tentativa de uso de uma instrução de backup, a operação de backup pode falhar com um erro semelhante ao seguinte:  
   
@@ -117,7 +116,7 @@ ms.locfileid: "70175968"
   
  Os servidores proxy podem ter configurações que limitam o número de conexões por minuto. O processo de Backup para URL é multi-threaded e, portanto, pode ir além desse limite. Se isso acontecer, o servidor proxy elimina a conexão. Para resolver esse problema, altere as configurações de proxy para que o SQL Server não use o proxy.   A seguir estão alguns exemplos dos tipos ou mensagens de erro que você pode ver no log de erros:  
   
--   Falha ao gravarhttp://storageaccount.blob.core.windows.net/container/BackupAzurefile.bakem "": o backup para a URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: não é possível ler dados da conexão de transporte: a conexão foi fechada.  
+-   Falha ao gravar em " http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak ": o backup para a URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: não é possível ler dados da conexão de transporte: a conexão foi fechada.  
   
 -   Ocorreu um erro de E/S não recuperável no arquivo “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:” Não foi possível coletar o erro do ponto de extremidade remoto.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "70175968"
   
      BACKUP DATABASE está sendo encerrado de forma anormal.  
   
--   BackupIoRequest:: ReportIoError: falha de gravação no dispositivo dehttp://storageaccount.blob.core.windows.net/container/BackupAzurefile.bakbackup ' '. Erro de sistema operacional: a opção Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: não é possível ler dados da conexão de transporte: a conexão foi fechada.  
+-   BackupIoRequest:: ReportIoError: falha de gravação no dispositivo de backup ' http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '. Erro de sistema operacional: a opção Backup para URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: não é possível ler dados da conexão de transporte: a conexão foi fechada.  
   
  Se você ativar o log detalhado usando o sinalizador de rastreamento 3051, também poderá ver a seguinte mensagem nos logs:  
   
@@ -133,7 +132,7 @@ ms.locfileid: "70175968"
   
  **Configurações de proxy padrão não escolhidas:**  
   
- Às vezes, as configurações padrão não são selecionadas, causando erros de autenticação de proxy como a mostrada abaixo:*ocorreu um erro de e/s não recuperável no arquivohttp://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:"" o backup para a URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: o servidor remoto retornou um erro: (407) autenticação de* **proxy necessária**.  
+ Às vezes, as configurações padrão não são selecionadas, causando erros de autenticação de proxy como a mostrada abaixo:*ocorreu um erro de e/s não recuperável no arquivo " http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " o backup para a URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: o servidor remoto retornou um erro: (407) autenticação de* **proxy necessária**.  
   
  Para resolver esse problema, crie um arquivo de configuração que permite que o processo de Backup para URL use as configurações de proxy padrão usando as seguintes etapas:  
   
@@ -151,9 +150,9 @@ ms.locfileid: "70175968"
   
     ```  
   
-2.  Coloque o arquivo de configuração na pasta Binn da instância do SQL Server. Por exemplo, se o meu SQL Server estiver instalado na unidade C do computador, coloque o arquivo de configuração aqui: *c:\Arquivos de PROGRAMAS\MICROSOFT SQL\< Server\MSSQL12. InstanceName> \MSSQL\Binn*.  
+2.  Coloque o arquivo de configuração na pasta Binn da instância do SQL Server. Por exemplo, se o meu SQL Server estiver instalado na unidade C do computador, coloque o arquivo de configuração aqui: *c:\Arquivos de PROGRAMAS\MICROSOFT SQL Server\MSSQL12. \<InstanceName> \MSSQL\Binn*.  
   
-## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Solução de problemas SQL Server Backup gerenciado para o Azure  
+## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Solucionar problemas de backup gerenciado do SQL Server para Azure  
  Como o backup gerenciado do SQL Server é criado com base no Backup para URL, as dicas de solução de problemas descritas nas seções anteriores aplicam-se a bancos de dados ou instâncias que usam o Backup Gerenciado do SQL Server.  Informações sobre solução de problemas SQL Server Backup gerenciado para o Azure são descritas em detalhes em [solução de problemas SQL Server Backup gerenciado para o Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889686"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964706"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar o log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
@@ -52,7 +51,7 @@ ms.locfileid: "62889686"
     > [!NOTE]  
     >  Não é possível usar o provedor de log [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] em um pacote executado no modo de 64 bits.  
   
--   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de log, que grava entradas de log `sysssislog` na tabela em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um banco de dados.  
+-   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de log, que grava entradas de log `sysssislog` na tabela em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados.  
   
 -   O provedor de log de Eventos do Windows, que grava entradas no log de Aplicativo do log de Eventos do Windows no computador local.  
   

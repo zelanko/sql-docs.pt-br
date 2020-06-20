@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2421ceaff8b2f54c1371f44e80b4a1774b64f829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150639"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066795"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
   Este tópico descreve como iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter informações sobre como exibir e trabalhar com os resultados depois que você ajustar um banco de dados, veja [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md).  
@@ -175,7 +174,7 @@ ms.locfileid: "63150639"
   
 2.  Crie uma carga de trabalho. Para obter mais informações, consulte [Criar uma carga de trabalho](#Create) anteriormente neste tópico.  
   
-3.  Inicie o Orientador de Otimização do Mecanismo de Banco de Dados e faça logon em uma instância [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Para obter mais informações, consulte [Iniciar o Orientador de Otimização do Mecanismo de Banco de Dados](#Start) anteriormente neste tópico.  
+3.  Inicie o Orientador de Otimização do Mecanismo de Banco de Dados e faça logon em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Iniciar o Orientador de Otimização do Mecanismo de Banco de Dados](#Start) anteriormente neste tópico.  
   
 4.  Na guia **Geral** , digite um nome em **Nome da sessão** para criar uma nova sessão de ajuste.  
   
@@ -298,7 +297,7 @@ ms.locfileid: "63150639"
 ##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a>Criar um arquivo de entrada XML  
  Se você for um desenvolvedor de XML experiente, poderá criar arquivos formatados em XML que podem ser usados pelo Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para ajustar cargas de trabalho. Para criar estes arquivos XML, use suas ferramentas de XML favoritas para editar um arquivo de exemplo ou gerar uma instância do esquema XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- O [!INCLUDE[ssDE](../../includes/ssde-md.md)] esquema XML do Orientador de otimização está [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponível em sua instalação no seguinte local:  
+ O [!INCLUDE[ssDE](../../includes/ssde-md.md)] esquema XML do Orientador de otimização está disponível em sua [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação no seguinte local:  
   
  C:\Arquivos de Programas\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -367,7 +366,7 @@ database_name.owner_name.table_name
  **Cache de Planos**  
  Especifique o cache de planos como uma carga de trabalho. Fazendo isso, você poderá evitar a criação de uma carga de trabalho manualmente. O Orientador de Otimização do Mecanismo de Banco de Dados seleciona os primeiros 1.000 eventos a serem usados para análise.  
   
- **XML**  
+ **Xml**  
  Só será exibido se você importar uma consulta de carga de trabalho do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Para importar uma consulta de carga de trabalho do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
@@ -454,7 +453,7 @@ database_name.owner_name.table_name
  **Avaliar a utilização apenas dos PDS existentes**  
  Avalie a efetividade dos índices atuais mas não recomende índices adicionais nem exibições indexadas.  
   
- **Nenhum particionamento**  
+ **Sem particionamento**  
  Não recomende particionamento.  
   
  **Particionamento completo**  
@@ -499,14 +498,14 @@ database_name.owner_name.table_name
  **Status**  
  Exibe o status da etapa de ação.  
   
- **Mensagem**  
+ **Message**  
  Contém mensagem retornada pelas etapas de ação.  
   
  **Log de Ajuste**  
  Contém informações relativas a esta sessão de ajuste. Para imprimir esse log, clique com o botão direito do mouse no log e clique em **Imprimir**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e trabalhar com a saída da Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md)   
- [utilitário dta](../../tools/dta/dta-utility.md)  
+ [Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md)   
+ [Utilitário dta](../../tools/dta/dta-utility.md)  
   
   

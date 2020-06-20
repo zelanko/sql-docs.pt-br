@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 31216e5a6670ff29c0d7e7ab4f1ee31cc5af0564
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9c4cc389a0c2421a996e8d9a3498552e0119e401
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020095"
 ---
 # <a name="handling-errors-and-messages"></a>Tratando de erros e mensagens
   Quando um aplicativo chama uma função ODBC, o driver executa a função e retorna informações de diagnóstico de duas formas: um código de retorno indica o êxito ou a falha geral de uma função ODBC, e registros de diagnóstico fornecem informações detalhadas sobre a função. Os registros de diagnóstico incluem um registro de cabeçalho e registros de status. Pelo menos um registro de diagnóstico, o registro de cabeçalho, será retornado, mesmo que a função tenha êxito.  

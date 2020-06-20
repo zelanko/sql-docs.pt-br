@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6d72b7f8cbb4aead7dfb87eb44fb5d943672433
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056145"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964126"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Caixa de diálogo Restrições de Esquemas
   Use a caixa de diálogo **Restrições de Esquemas** para definir as restrições de esquema a aplicar ao Enumerador de Conjunto de Linhas de Esquemas ADO.NET Foreach.  

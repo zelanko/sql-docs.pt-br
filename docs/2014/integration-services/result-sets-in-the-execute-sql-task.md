@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056424"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964566"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Conjuntos de resultados na tarefa Executar SQL
   Em um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , se um conjunto de resultados será retornado à tarefa Executar SQL dependerá do tipo de comando SQL usado pela tarefa. Por exemplo, uma instrução SELECT normalmente retorna um conjunto de resultados, mas uma instrução INSERT não.  
@@ -51,15 +50,15 @@ ms.locfileid: "66056424"
   
  Se o tipo de conjunto resultante for **Linha simples**, você poderá associar uma coluna no resultado de retorno a uma variável usando o nome da coluna como o nome do conjunto de resultados ou pode usar a posição ordinal da coluna na lista de colunas como o nome do conjunto de resultados. Por exemplo, o nome do conjunto de resultados da consulta `SELECT Color FROM Production.Product WHERE ProductID = ?` pode ser **Color** ou **0**. Se a consulta retornar várias colunas e você quiser acessar os valores em todas elas, associe cada coluna a uma variável diferente. Se você mapear as colunas para variáveis usando números como nomes do conjunto de resultados, os números refletirão a ordem em que as colunas aparecerão na lista de colunas da consulta. Por exemplo, na consulta `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, você usa 0 para a coluna **Color** e 1 para a coluna **ListPrice** . A capacidade de usar um nome de coluna como o nome do conjunto de resultados depende do provedor que a tarefa está configurada para usar. Nem todos os provedores tornam os nomes das colunas disponíveis.  
   
- Algumas consultas que retornam um único valor podem não incluir nomes de colunas. Por exemplo, a instrução `SELECT COUNT (*) FROM Production.Product` não retorna nenhum nome de coluna. Você pode acessar o resultado de retorno usando a posição ordinal, 0, como o nome do resultado. Para acessar o resultado de retorno por nome de coluna, a consulta deve incluir uma cláusula AS \<nome do alias> para fornecer um nome de coluna. A instrução `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`fornece a coluna **CountOfProduct** . Você pode acessar a coluna de resultado de retorno que usa o nome de coluna **CountOfProduct** ou a posição ordinal 0.  
+ Algumas consultas que retornam um único valor podem não incluir nomes de colunas. Por exemplo, a instrução `SELECT COUNT (*) FROM Production.Product` não retorna nenhum nome de coluna. Você pode acessar o resultado de retorno usando a posição ordinal, 0, como o nome do resultado. Para acessar o resultado de retorno pelo nome da coluna, a consulta deve incluir uma \<alias name> cláusula as para fornecer um nome de coluna. A instrução `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`fornece a coluna **CountOfProduct** . Você pode acessar a coluna de resultado de retorno que usa o nome de coluna **CountOfProduct** ou a posição ordinal 0.  
   
  Se o tipo de conjunto de resultados for **Conjunto de resultados completo** ou **XML**, será necessário usar 0 como o nome de conjunto de resultados.  
   
- Quando você mapeia uma variável para um conjunto de resultados com o tipo de conjunto de resultados **Linha simples** , a variável deve ter um tipo de dados compatível com o tipo de dados da coluna que o conjunto de resultados contém. Por exemplo, um conjunto de resultados que contém uma coluna com um tipo de dados `String` não pode ser mapeado para uma variável com um tipo de dados numérico. Quando você define a propriedade **TypeConversionMode** como `Allowed`, a tarefa Executar SQL tentará converter o parâmetro de saída e os resultados da consulta no tipo de dados da variável à qual os resultados são atribuídos.  
+ Quando você mapeia uma variável para um conjunto de resultados com o tipo de conjunto de resultados **Linha simples** , a variável deve ter um tipo de dados compatível com o tipo de dados da coluna que o conjunto de resultados contém. Por exemplo, um conjunto de resultados que contém uma coluna com um tipo de dados `String` não pode ser mapeado para uma variável com um tipo de dados numérico. Quando você define a propriedade **TypeConversionMode** como `Allowed` , a tarefa Executar SQL tentará converter o parâmetro de saída e os resultados da consulta no tipo de dados da variável à qual os resultados são atribuídos.  
   
  Um conjunto de resultados XML somente pode ser mapeado para uma variável com o tipo de dados `String` ou `Object`. Se a variável tiver o tipo de dados `String`, a tarefa Executar SQL retorna uma cadeia de caracteres e a fonte XML pode consumir os dados XML. Se a variável tiver o tipo de dados `Object`, a tarefa Executar SQL retornará um objeto do Modelo de Objeto de Documento (DOM).  
   
- Um **conjunto de resultados completo** deve ser mapeado para uma variável `Object` do tipo de dados. O resultado de retorno é um objeto de conjunto de linhas. Você pode usar um contêiner do Loop Foreach para extrair os valores de linha da tabela que são armazenados na variável Object em variáveis ​​de pacote e usar uma Tarefa Script para gravar os dados armazenados em variáveis ​​de pacotes em um arquivo. Para uma demonstração de como fazer isso usando um contêiner de Loop Foreach e uma Tarefa Script, confira a amostra CodePlex, [Executar conjuntos de resultados e parâmetros SQL](https://go.microsoft.com/fwlink/?LinkId=157863), no msftisprodsamples.codeplex.com.  
+ Um **conjunto de resultados completo** deve ser mapeado para uma variável do `Object` tipo de dados. O resultado de retorno é um objeto de conjunto de linhas. Você pode usar um contêiner do Loop Foreach para extrair os valores de linha da tabela que são armazenados na variável Object em variáveis ​​de pacote e usar uma Tarefa Script para gravar os dados armazenados em variáveis ​​de pacotes em um arquivo. Para uma demonstração de como fazer isso usando um contêiner de Loop Foreach e uma Tarefa Script, confira a amostra CodePlex, [Executar conjuntos de resultados e parâmetros SQL](https://go.microsoft.com/fwlink/?LinkId=157863), no msftisprodsamples.codeplex.com.  
   
  A tabela a seguir resume os tipos de dados de variáveis que podem ser mapeadas para conjuntos de resultados.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66056424"
 |Linha simples|Qualquer tipo compatível com a coluna de tipo no conjunto de resultados.|Não aplicável|  
 |Conjunto de resultados completo|`Object`|Se a tarefa usar um gerenciador de conexões nativo, incluindo os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será `Recordset` ADO.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)], o objeto retornado será um `System.Data.DataSet`.<br /><br /> Você pode usar uma tarefa Script para acessar o objeto `System.Data.DataSet` , conforme mostrado no exemplo a seguir.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|Se a tarefa usar um gerenciador de conexões nativo, inclusive os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será `MSXML6.IXMLDOMDocument`.<br /><br /> Se a tarefa usar um Gerenciador de conexões gerenciado, como o [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexões, o objeto retornado será `System.Xml.XmlDocument`um.|  
+|XML|`Object`|Se a tarefa usar um gerenciador de conexões nativo, inclusive os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será `MSXML6.IXMLDOMDocument`.<br /><br /> Se a tarefa usar um Gerenciador de conexões gerenciado, como o [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexões, o objeto retornado será um `System.Xml.XmlDocument` .|  
   
  A variável pode ser definida no escopo da tarefa Executar SQL ou do pacote. Se a variável tiver escopo de pacote, o conjunto de resultados estará disponível para outras tarefas e contêineres no pacote e para qualquer pacote executado pelas tarefas Executar pacote ou Executar Pacotes do DTS 2000.  
   

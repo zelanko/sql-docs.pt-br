@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ca7eb5b4883edf9ab718c731049da4c3be44324
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d83154a1453dce3b4d338c6823a3e1d1b714114
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835794"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923440"
 ---
 # <a name="connect-to-oracle"></a>Conectar-se ao Oracle
   Quando você adiciona ou edita as tabelas usadas na instância de CDC pela primeira vez, você deverá se conectar ao banco de dados Oracle. Você deve inserir as credenciais de um usuário Oracle que pode acessar o esquema das tabelas a ser capturado. Insira o seguinte nesta caixa de diálogo:  

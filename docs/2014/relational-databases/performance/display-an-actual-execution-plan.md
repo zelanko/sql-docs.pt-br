@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9403e6e2cf1c341780a06bbdff1c5f38685dd34a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f384e2d2752b7601fbb46b8ee7f7b56a2615651c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150976"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066875"
 ---
 # <a name="display-an-actual-execution-plan"></a>Exibir um plano de execução real
   Este tópico descreve como gerar planos de execução gráfica reais usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quando planos de execução reais são gerados, as consultas ou lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] são executados. O plano de execução gerado exibe o plano de execução de consulta real que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usa para executar as consultas.  
@@ -29,7 +28,7 @@ ms.locfileid: "63150976"
   
 ### <a name="to-include-an-execution-plan-for-a-query-during-execution"></a>Para incluir um plano de execução para uma consulta durante a execução  
   
-1.  Na barra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de ferramentas, clique em **mecanismo de banco de dados consulta**. Você também pode abrir uma consulta existente e exibir o plano de execução estimado clicando no botão de barra de ferramentas **Abrir Arquivo** e localizando a consulta existente.  
+1.  Na [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] barra de ferramentas, clique em **mecanismo de banco de dados consulta**. Você também pode abrir uma consulta existente e exibir o plano de execução estimado clicando no botão de barra de ferramentas **Abrir Arquivo** e localizando a consulta existente.  
   
 2.  Insira a consulta para a qual você deseja exibir o plano de execução real.  
   

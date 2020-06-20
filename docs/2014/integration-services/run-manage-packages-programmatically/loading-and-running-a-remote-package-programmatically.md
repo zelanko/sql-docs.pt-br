@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0b0340c33f5a53ba75cb42fa16e08b8b45f92da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889617"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964489"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Carregando e executando um pacote remoto programaticamente
   Para executar pacotes remotos de um computador local que não tenha o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instalado, inicie-os de forma que eles sejam executados no computador remoto em que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está instalado. Para isso, o computador local deve usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, um serviço Web ou um componente remoto para iniciar os pacotes no computador remoto. Se você tentar iniciar os pacotes remotos diretamente do computador local, eles serão carregados e tentarão executar do computador local. Se o computador local não tiver o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instalado, os pacotes não serão executados.  
@@ -36,7 +35,7 @@ ms.locfileid: "62889617"
   
 -   [Usar um serviço Web ou componente remoto para executar o pacote remoto de forma programática](#service)  
   
- Quase todos os métodos que são usados neste tópico para carregar e salvar pacotes requerem uma referência ao assembly `Microsoft.SqlServer.ManagedDTS`. A exceção é a abordagem ADO.NET demonstrada neste tópico para executar o procedimento armazenado **sp_start_job** , que requer apenas uma referência a `System.Data`. Depois que você acrescentar a referência ao assembly `Microsoft.SqlServer.ManagedDTS` em um projeto novo, importe o namespace <xref:Microsoft.SqlServer.Dts.Runtime> com uma instrução `using` ou `Imports`.  
+ Quase todos os métodos que são usados neste tópico para carregar e salvar pacotes requerem uma referência ao assembly `Microsoft.SqlServer.ManagedDTS`. A exceção é a abordagem ADO.NET demonstrada neste tópico para executar o procedimento armazenado **sp_start_job** , que requer apenas uma referência a `System.Data` . Depois que você acrescentar a referência ao assembly `Microsoft.SqlServer.ManagedDTS` em um projeto novo, importe o namespace <xref:Microsoft.SqlServer.Dts.Runtime> com uma instrução `using` ou `Imports`.  
   
 ###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> Usando o SQL Server Agent para executar um pacote remoto de forma programática no servidor  
  O exemplo do código seguinte demonstra como usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent programaticamente para executar um pacote remoto no servidor. O exemplo de código chama o procedimento armazenado do sistema, **sp_start_job**, que inicia um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. O trabalho que o procedimento lança é chamado `RunSSISPackage`, e esse trabalho está no computador remoto. O trabalho `RunSSISPackage` executa o pacote no computador remoto.  
@@ -164,7 +163,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  Abra o Visual Studio e crie um projeto de serviço Web na linguagem de programação de sua preferência. O código de exemplo usa o nome LaunchSSISPackageService para o projeto.  
   
-2.  Adicione uma referência a `Microsoft.SqlServer.ManagedDTS` e adicione uma `Imports` instrução `using` ou ao arquivo de código para o namespace **Microsoft. SqlServer. Dts. Runtime** .  
+2.  Adicione uma referência a `Microsoft.SqlServer.ManagedDTS` e adicione uma `Imports` `using` instrução ou ao arquivo de código para o namespace **Microsoft. SqlServer. Dts. Runtime** .  
   
 3.  Cole o código de exemplo para o método LaunchPackage do serviço Web na classe. (O exemplo mostra os conteúdos inteiros da janela de código).  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12e61f909d7961851983212cd61b709f8a781c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284996"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971289"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Área funcional Gerenciamento de Integração (Master Data Manager)
   Na área funcional Gerenciamento de Integração, os administradores podem importar dados de tabelas de preparo e criar exibições de assinatura a serem usadas para sistemas de assinatura. Para obter mais informações sobre administradores, consulte [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  

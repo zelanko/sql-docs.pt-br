@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3122ddb64d9f86bd70e5b444bd7bd7fce44956de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971164"
 ---
 # <a name="data-import-master-data-services"></a>Importação de dados (Master Data Services)
   Depois de criar um modelo para seus dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode começar a adicionar dados e fazer alterações nos dados, no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   Você usa as tabelas de preparo do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , procedimentos armazenados e o Master Data Manager.
 
- Você também pode usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], para adicionar dados ao repositório do MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dado). Para obter mais informações, consulte [Publishing Data &#40;Suplemento MDS para Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).
+ Você também pode usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] , para adicionar dados ao repositório do MDS ( [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dado). Para obter mais informações, consulte [Publishing Data &#40;Suplemento MDS para Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).
 
  Ao adicionar e atualizar dados, você pode realizar os procedimentos a seguir.
 
@@ -83,11 +82,11 @@ ms.locfileid: "78175976"
 
  O [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclui os seguintes tipos de procedimentos de preparo armazenados.
 
--   stg.udp_\<name>_Leaf
+-   STG. udp_ \<name> _Leaf
 
--   stg.udp_\<name>_Consolidated
+-   STG. udp_ \<name> _Consolidated
 
--   stg.udp_\<name>_Relationship
+-   STG. udp_ \<name> _Relationship
 
  Para cada entidade no modelo, há três procedimentos armazenados que correspondem ao membro folha, membros consolidados e tabelas de preparo de relação.  A imagem a seguir mostra as tabelas de procedimentos de preparo armazenado para as entidades de moeda, cliente e produto.
 

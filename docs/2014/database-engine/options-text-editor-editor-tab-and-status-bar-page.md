@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b1b79ada7ce4b2f2b256cfc7e7d20b0e7d5f9bc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929873"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opções (página Editor de Texto: Guia Editor e Barra de Status)
   A **página Guia Editor e Barra de Status** permite que você personalize as informações exibidas pelos Editores de Consultas do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Você pode especificar o nível de informações exibido na guia e na barra de status da janela Editor de Consulta e se a barra de status será exibida na parte superior ou parte inferior da janela do editor.  
@@ -34,10 +33,10 @@ ms.locfileid: "83000712"
  **Exibe o tempo de execução**  
  Inclui a hora de execução do script. As configurações são as seguintes:  
   
- **Nenhum**  
+ **Nenhuma**  
  A barra de status não exibe nenhuma informação de hora.  
   
- **Completo**  
+ **End**  
  A barra de status exibe a hora atual enquanto o script está em execução. Quando o script é concluído, o vídeo exibe a hora em que o script foi concluído.  
   
  **Decorrido**  
@@ -67,7 +66,7 @@ ms.locfileid: "83000712"
  **Local de barra de status**  
  Especifica o local da barra de status. As configurações são as seguintes:  
   
- **Início**  
+ **Parte superior**  
  A barra de status aparece na parte superior do Editor de Consultas.  
   
  **Menor**  

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb374c8af950973d61ad99dc6d3ef896dcc21939
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060495"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921497"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Configurando o serviço Integration Services (serviço SSIS)
     
 > [!IMPORTANT]  
 >  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
- O serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] depende de um arquivo de configuração para suas configurações. Por padrão, o nome desse arquivo de configuração é MsDtsSrvr. ini. xml e o arquivo está localizado na pasta,%ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
+ O serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] depende de um arquivo de configuração para suas configurações. Por padrão, o nome desse arquivo de configuração é MsDtsSrvr.ini.xml e o arquivo está localizado na pasta,%ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
   
  Normalmente, você não tem que fazer alterações neste arquivo de configuração, nem no local padrão dele. Porém, será necessário modificar o arquivo de configuração se seus pacotes estiverem armazenados em uma instância nomeada ou remota do [!INCLUDE[ssDE](../includes/ssde-md.md)]ou em várias instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Além disso, se você mover o arquivo de configuração para um local que não o padrão, será necessário modificar a chave do Registro que especifica o local do arquivo.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66060495"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>Modificação do local do arquivo de configuração  
-A chave do registro **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\ServiceConfigFile** especifica o local e o nome do arquivo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] configuração que o serviço usa. O valor padrão da chave do registro é **C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. Você pode atualizar o valor da chave do Registro para usar um nome e local diferentes para o arquivo de configuração. Observe que o número de versão no caminho (120 para SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) varia dependendo da versão do SQL Server. 
+A chave do registro **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\ServiceConfigFile** especifica o local e o nome do arquivo de configuração que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] serviço usa. O valor padrão da chave do registro é **C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. Você pode atualizar o valor da chave do Registro para usar um nome e local diferentes para o arquivo de configuração. Observe que o número de versão no caminho (120 para SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] ) varia dependendo da versão do SQL Server. 
   
   
 > [!CAUTION]  

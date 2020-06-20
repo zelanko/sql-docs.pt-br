@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e68809c7551e3c6711fadd9973c472dcb4e90307
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 121d80cf0230be01cf81c09249d2797bb7ce5ae6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270617"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040801"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>Criar subconsultas (Visual Database Tools)
   Você pode usar os resultados de uma consulta como entrada para outra. Pode usar os resultados de uma subconsulta como uma instrução que usa a função IN( ), o operador EXISTS ou a cláusula FROM.  
