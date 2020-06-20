@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cacffbae4f2b31349b04d159c9756609d2d9c1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783046"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997003"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Fazendo backup e restaurando bancos de dados e logs de transações
-  No SMO, as classes <xref:Microsoft.SqlServer.Management.Smo.Backup> e <xref:Microsoft.SqlServer.Management.Smo.Restore> são classes de utilitário que fornecem as ferramentas para a execução de tarefas específicas de backup e restauração. Um <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa uma tarefa de backup específica que é necessária em vez [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um objeto na instância do servidor.  
+  No SMO, as classes <xref:Microsoft.SqlServer.Management.Smo.Backup> e <xref:Microsoft.SqlServer.Management.Smo.Restore> são classes de utilitário que fornecem as ferramentas para a execução de tarefas específicas de backup e restauração. Um <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa uma tarefa de backup específica que é necessária em vez de um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objeto na instância do servidor.  
   
  Em caso de perda ou dano de dados, o backup deve ser restaurado, parcial ou totalmente. A restauração parcial usa a coleção <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> para segmentar os dados a serem restaurados. Se o backup for de um log de transações, os dados poderão ser restaurados até um momento determinado através da propriedade <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Restore>. Os dados também podem ser validados usando o método <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. O procedimento de backup recomendado é verificar a integridade do backup executando uma operação de restauração e verificando os dados no banco de dados regularmente.  
   

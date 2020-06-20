@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f03b9a202c3c49f147368460518a579f28dc850
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004677"
 ---
 # <a name="secure-the-subscriber"></a>Proteger o Assinante
   Agentes de mesclagem e agentes de distribuição que conectam ao assinante. Essas conexões podem ser feitas no contexto de um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou de um logon do Windows. É importante fornecer um logon adequado para cada um desses agentes e seguir o princípio de conceder o mínimo possível de direitos, e, também proteger o armazenamento de todas as senhas. Para obter informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -53,7 +52,7 @@ ms.locfileid: "62960805"
  Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](../publish/create-an-updatable-subscription-to-a-transactional-publication.md) e [Exibir e modificar as configurações de segurança de replicação](view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões para exibições no banco de dados de publicação que são nomeadas no formato **syncobj_** _\<HexadecimalNumber>_ para a conta configurada em cada Assinante.  
+>  A conta especificada para a conexão só deve receber permissão para inserir, atualizar e excluir dados nas exibições criadas pela replicação no banco de dados de publicação; nenhuma permissão adicional será dada. Conceda permissões em exibições no banco de dados de publicação que são nomeadas no formulário **syncobj_** _\<HexadecimalNumber>_ à conta configurada em cada Assinante.  
   
 ## <a name="queued-updating-subscriptions"></a>Assinaturas de atualização em fila  
  Quando você configurar assinatura de atualização em fila, há duas áreas a considerar relacionadas a segurança:  

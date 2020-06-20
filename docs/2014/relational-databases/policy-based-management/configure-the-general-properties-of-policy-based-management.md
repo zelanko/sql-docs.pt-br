@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2efb37fafa29bcb043dedbcfa8719d0092b1c77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068936"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>Configurar as propriedades gerais do gerenciamento baseado em políticas
   Este tópico descreve como configurar as propriedades para o Gerenciamento Baseado em Políticas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -55,7 +54,7 @@ ms.locfileid: "63162399"
   
      As opções a seguir estão disponíveis na caixa de diálogo **Propriedades de Gerenciamento de Política** .  
   
-     **Habilitada**  
+     **Enabled**  
      Especifica se o Gerenciamento Baseado em Políticas está habilitado.  
   
      **HistoryRetentionInDays**  

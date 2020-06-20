@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cfb769db0de0e962c52d042e19134b849b3c1c3d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8388fb704bf13f44d025e6e32a1450d537f61832
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011353"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004347"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Localizar frases chave em documentos com pesquisa semântica
   Descreve como localizar as frases chave em documentos ou colunas de texto configuradas para indexação semântica estatística.  

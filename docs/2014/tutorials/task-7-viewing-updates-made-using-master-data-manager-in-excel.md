@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d705a02df8e133b5deb8242b1120a6ddd9f9cac9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcc46c9ca565f162a2ab8b4273f3b314790f6db4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177214"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006417"
 ---
 # <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Tarefa 7: Exibindo as atualizações feitas usando o Master Data Manager no Excel.
   Nesta tarefa, você verificará se os dados atualizados do MDS no Excel são exibidos.

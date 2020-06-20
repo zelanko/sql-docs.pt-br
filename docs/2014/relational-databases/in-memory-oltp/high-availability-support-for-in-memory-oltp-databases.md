@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0214b2ec0fbc712873d4c39732425a78ef31653
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050191"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Suporte de alta disponibilidade para bancos de dados OLTP na memória
   Os bancos de dados que contêm tabelas com otimização de memória, com ou sem procedimentos armazenados compilados nativos, são totalmente compatíveis com Grupos de Disponibilidade AlwaysOn.  Não nenhuma diferença na configuração e no suporte para bancos de dados que contenham objetos do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] em comparação com aqueles sem,  

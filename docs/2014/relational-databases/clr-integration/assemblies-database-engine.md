@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ebd47e354b77a57768a396b2c5d5dd8e3c570d2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920777"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954213"
 ---
 # <a name="assemblies-database-engine"></a>Assemblies (Mecanismo de Banco de Dados)
   Os tópicos desta seção fornecem informações para ajudá-lo a entender, projetar e implementar assemblies.  
   
- Os assemblies são arquivos DLL usados em uma instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do para implantar funções, procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário que são escritos em uma das linguagens de código gerenciado hospedadas pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), em [!INCLUDE[tsql](../../../includes/tsql-md.md)]vez de em.  
+ Os assemblies são arquivos DLL usados em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para implantar funções, procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário que são escritos em uma das linguagens de código gerenciado hospedadas pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), em vez de em [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
  Um assembly no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é um objeto que faz referência a um módulo de aplicativo gerenciado (arquivo .dll) criado em CLR do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Um assembly contém metadados de classe e código gerenciado. Carregar um assembly para uma instância do SQL Server é a primeira etapa da criação de qualquer um dos objetos de banco de dados a seguir:  
   

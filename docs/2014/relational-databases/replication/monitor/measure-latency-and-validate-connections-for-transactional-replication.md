@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ba1e5eddfdcffa5fbefdea323f110ba9d15ca8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005816"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
   Este tópico descreve como medir a latência e validar conexões para replicação transacional no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o Replication Monitor, [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou RMO (Replication Management Objects). A replicação transacional fornece o recurso do token de rastreamento, que proporciona um meio adequado para medir a latência em topologias de replicação transacional e validar as conexões entre o Publicador, o Distribuidor e os Assinantes. Um token (uma quantidade pequena de dados) é gravado no log de transações do banco de dados de publicação, marcado como se fosse uma transação replicada comum e enviado pelo sistema, permitindo um cálculo de:  
@@ -55,15 +54,15 @@ ms.locfileid: "62667811"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Os tokens de rastreamento também são úteis para confirmar um sistema, o que implica em parar todas as atividades e verificar que todos os nós tenham recebido todas as alterações pendentes. Para obter mais informações, consulte [Como confirmar uma topologia de replicação &#40;Programação Transact-SQL de replicação&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Para usar tokens de rastreamento, você deve usar determinadas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versões do:  
+ Para usar tokens de rastreamento, você deve usar determinadas versões do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   O distribuidor deve ser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior.  
   
 -   O Publicador deve ser [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior, ou ser um Editor Oracle.  
   
--   Para assinaturas push, as estatísticas de token de rastreamento são coletadas do Publicador, distribuidor e assinantes se o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assinante for 7,0 ou posterior.  
+-   Para assinaturas push, as estatísticas de token de rastreamento são coletadas do Publicador, distribuidor e assinantes se o assinante for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 ou posterior.  
   
--   Para as assinaturas pull, as estatísticas dos tokens de rastreamento são coletadas dos Assinantes somente se o Assinante for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior. Se o assinante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for 7,0 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]ou, as estatísticas serão coletadas somente do Publicador e do distribuidor.  
+-   Para as assinaturas pull, as estatísticas dos tokens de rastreamento são coletadas dos Assinantes somente se o Assinante for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou posterior. Se o assinante for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] , as estatísticas serão coletadas somente do Publicador e do distribuidor.  
   
  Há vários outros itens e restrições que devem ser considerados:  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62667811"
   
 2.  (Opcional) No Publicador do banco de dados de publicação, execute [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Verifique se a assinatura existe e se o status é ativo.  
   
-3.  No Publicador do banco de dados de publicação, execute [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql), especificando **@publication**. Observe o valor do parâmetro **@tracer_token_id** de saída.  
+3.  No Publicador do banco de dados de publicação, execute [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql), especificando **@publication**. Observe o valor do **@tracer_token_id** parâmetro de saída.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Para determinar a latência e validar as conexões para uma publicação transacional  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62667811"
   
 2.  No Publicador do banco de dados de publicação, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql), especificando **@publication** e a ID de rastreamento a ser excluída da etapa 2 para **@tracer_id**.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Esse exemplo publica um registro dos tokens de rastreamento, e usa o ID retornado do token de rastreamento publicado, para exibir as informações da latência.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  

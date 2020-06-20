@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f1a649addeb0642ba5fc799aeff48e50044677a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004833"
 ---
 # <a name="secure-the-distributor"></a>Proteger o distribuidor
   Os agentes de replicação a seguir se conectam ao Distribuidor: o Agente de Leitor de Log, Agente de Instantâneo, Agente de Leitor de Fila, Agente de Distribuição e Agente de Mesclagem. É importante fornecer um logon adequado para cada um desses agentes e seguir o princípio de conceder o mínimo possível de direitos necessários e de proteger também o armazenamento de todas as senhas:  

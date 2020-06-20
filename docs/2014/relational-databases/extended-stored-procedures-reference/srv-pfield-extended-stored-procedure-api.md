@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b9168d73f2104bafd8efef0e0560911f56f5a68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050677"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimento armazenado estendido)
     

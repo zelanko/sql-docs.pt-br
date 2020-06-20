@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9da9bc9dbef30b1ad2743e9dbab4ae541538c689
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050932"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051998"
 ---
 # <a name="sort-warnings-event-class"></a>classe de evento Sort Warnings
   A classe de evento Sort Warnings indica as operações de classificação que não cabem na memória. Isso não inclui operações de classificação envolvendo a criação de índices, somente operações de classificação em uma consulta (como uma cláusula ORDER BY usada em uma instrução SELECT).  

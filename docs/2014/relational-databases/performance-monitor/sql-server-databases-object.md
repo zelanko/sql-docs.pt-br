@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f4f46bd388476934226e41d371c85fa13b94d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066088"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objeto Databases
   O objeto **SQLServer:Databases** no SQL Server fornece contadores para monitorar a taxa de transferência de operações de cópia em massa, backup e restauração, e atividades de log de transações. Ele monitora as transações e o log de transações para determinar quanta atividade de usuário está ocorrendo no banco de dados e o quanto o log de transações está ficando completo. A quantidade de atividade de usuário pode determinar o desempenho do banco de dados e pode afetar o tamanho de log, o bloqueio e a replicação. O monitoramento da atividade de log de baixo nível para medir a atividade de usuário e uso de recursos pode ajudá-lo a identificar gargalos no desempenho.  
@@ -42,7 +41,7 @@ ms.locfileid: "63250649"
 |**Log Cache Reads/sec**|Faz leituras efetuadas por segundo pelo cache do gerenciador de log.|  
 |**Log File(s) Size (KB)**|Tamanho cumulativo (em kilobytes) de todos os arquivos de log de transações do banco de dados.|  
 |**Log File(s) Used Size (KB)**|Tamanho cumulativo usado de todos os arquivos de log do banco de dados.|  
-|**Tempo de Espera de Liberação de Log**|Tempo de espera total (em milissegundos) para liberar o log. Em um banco de dados secundário AlwaysOn, esse valor indica o tempo de espera para a intensificação de registros de log em disco.|  
+|**Tempo de espera de liberação de log**|Tempo de espera total (em milissegundos) para liberar o log. Em um banco de dados secundário AlwaysOn, esse valor indica o tempo de espera para a intensificação de registros de log em disco.|  
 |**Esperas de Liberação de Log/s**|Número de confirmações por segundo aguardando liberação do log.|  
 |**Tempo de Gravação de Liberação de Log (ms)**|O tempo em milissegundos para execução de gravações de liberações de log que foram concluídas no último segundo.|  
 |**Liberações de Log/s**|Número de liberações de log por segundo.|  
@@ -52,13 +51,13 @@ ms.locfileid: "63250649"
 |**Leituras de Disco do Pool de Logs/s**|O número de leituras de disco que o pool de log emitiu para buscar blocos de log.|  
 |**Solicitações do Pool de Logs/s**|O número de solicitações do bloco de log processadas pelo pool de log.|  
 |**Truncamentos de Log**|O número de vezes que o log de transações foi reduzido.|  
-|**Percent Log Used**|Porcentagem de espaço no log que está em uso.|  
+|**Percentual de log usado**|Porcentagem de espaço no log que está em uso.|  
 |**Transações de repl. Pending**|Número de transações no log de transações do banco de dados de publicação marcado para replicação, mas ainda não enviadas ao banco de dados de distribuição.|  
 |**Taxa de repl. trans.**|Número de transações por segundo de leitura do log de transações do banco de dados de publicação enviadas ao banco de dados de distribuição.|  
 |**Shrink Data Movement Bytes/sec**|Quantidade de dados movidos por segundo por operações de encolhimento automático ou de instruções DBCC SHRINKDATABASE ou DBCC SHRINKFILE.|  
 |**Transações acompanhadas/s**|O número de transações confirmadas registradas na tabela de confirmação do banco de dados.|  
 |**Transações/s**|Número de transações iniciadas para o banco de dados por segundo.<br /><br /> **Transações/s** não conta transações somente XTP (transações iniciadas por um procedimento armazenado compilado de modo nativo).|  
-|**Write Transactions/sec**|Número de transações gravadas e confirmadas ao banco de dados, no último segundo.|  
+|**Transações de gravação/s**|Número de transações gravadas e confirmadas ao banco de dados, no último segundo.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;o monitor do sistema&#41;](monitor-resource-usage-system-monitor.md)   

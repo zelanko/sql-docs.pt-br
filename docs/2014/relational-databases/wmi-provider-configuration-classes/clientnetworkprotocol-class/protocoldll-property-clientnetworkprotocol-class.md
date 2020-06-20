@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8558fde82245a02e04c34008eb124219354c4352
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb008003b05b00e342795d51afee2b4491a71260
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192096"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065621"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>Propriedade ProtocolDLL (classe ClientNetworkProtocol)
   Obtém o nome do arquivo .dll exigido pelo protocolo de rede especificado pela opção [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) que representa o protocolo de rede usado pelo cliente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

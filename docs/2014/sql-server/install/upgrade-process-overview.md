@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f77ffbab-a195-4124-acce-9c538f7ca9ce
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fb4bfb2073427d0f48b3d4a7ac7b7ab496299030
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc4da63dd1baba8ffd599dc751744a3e0d9377ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058903"
 ---
 # <a name="upgrade-process-overview"></a>Visão geral do processo de atualização
   Este tópico fornece informações sobre as práticas recomendadas do Supervisor de Atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e um resumo dos processos recomendados para a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

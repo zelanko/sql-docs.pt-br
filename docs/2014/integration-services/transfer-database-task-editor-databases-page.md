@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962064"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor da Tarefa Transferir Banco de Dados (página Bancos de Dados)
   Use a página **Bancos de Dados** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** para especificar as propriedades para os bancos de dado de origem e de destino envolvidos na tarefa Transferir Banco de Dados. A tarefa Transferir Banco de Dados copia ou move um bancos de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre duas instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essa tarefa também pode ser usada para copiar um banco de dados dentro do mesmo servidor. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Banco de Dados](control-flow/transfer-database-task.md).  
   
 ## <a name="options"></a>Opções  
  **SourceConnection**  
- Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de origem.  
+ Selecione um Gerenciador de conexões SMO na lista ou clique **\<New connection...>** para criar uma nova conexão com o servidor de origem.  
   
  **DestinationConnection**  
- Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de destino.  
+ Selecione um Gerenciador de conexões SMO na lista ou clique **\<New connection...>** para criar uma nova conexão com o servidor de destino.  
   
  **DestinationDatabaseName**  
  Especifique o nome do banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no servidor de destino.  

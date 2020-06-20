@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 75c3bda5d15e3930fcdeba9ca73d70128fd90336
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e2f39ea7b911f2ca83767dcfbfd82947acd4f52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059008"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Problemas de atualização do Reporting Services (supervisor de atualização)
-  Os tópicos a seguir descrevem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] os problemas que podem afetar a atualização [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]para o. Eles descrevem ações que podem ser tomadas para diminuir o efeito dessas alterações em seu ambiente.  
+  Os tópicos a seguir descrevem os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] problemas que podem afetar a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Eles descrevem ações que podem ser tomadas para diminuir o efeito dessas alterações em seu ambiente.  
   
  O Supervisor de Atualização analisa uma instalação do servidor de relatório. Se apenas componentes cliente estiverem instalados (por exemplo, se o Designer de Relatórios for o único componente do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado no computador), nenhum problema será reportado.  
   
  Dependendo de como sua instalação foi configurada, você poderá encontrar outros problemas que não foram reportados pelo Supervisor de Atualização. Esses problemas não impedem que a atualização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tenha êxito, mas podem afetar a maneira como os relatórios e os aplicativos são executados depois que a atualização é concluída. Para obter mais informações sobre esses problemas, consulte "Compatibilidade com versões anteriores do Reporting Services" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Se não for possível usar a Instalação para atualizar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você poderá instalar uma nova instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e migrar a instalação existente para essa nova instância. Para obter mais informações, consulte "atualizar e migrar Reporting Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nos manuais online, [atualizar e migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
+ Se não for possível usar a Instalação para atualizar uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você poderá instalar uma nova instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e migrar a instalação existente para essa nova instância. Para obter mais informações, consulte "atualizar e migrar Reporting Services" nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online, [atualizar e migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
  Os tópicos a seguir descrevem problemas conhecidos reportados pelo Supervisor de Atualização e explicam como modificar a instalação existente para permitir que a atualização ocorra.  
   

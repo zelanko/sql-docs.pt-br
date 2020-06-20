@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96abc6def3f4ab8cdb76b548e7717ae6c030c00f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067019"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
   O objeto SQLServer:Recursos Preteridos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um contador para monitorar recursos designados como preteridos. Em cada caso, o contador fornece uma contagem de uso que lista o número de vezes em que o recurso preterido foi encontrado desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -30,9 +29,9 @@ ms.locfileid: "68206959"
 |Instâncias do contador de Recursos Preteridos do SQL Server|Descrição|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
-|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir por `SELECT column_list FROM` * \<>* `()`function_name. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
+|sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir por `SELECT column_list FROM` *\< function_name>* `()` . Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
 |'\@' e nomes que começam com '\@\@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Foi encontrado um identificador que começava com \@ ou \@\@. Não use \@ nem \@\@ ou nomes que comecem com \@\@ como identificadores. Ocorre uma vez por compilação.|  
-|ADDING TAPE DEVICE|O recurso preterido sp_addumpdevice`tape`' ' foi encontrado. Em vez disso`disk`, use sp_addumpdevice ' '. Ocorre uma vez por uso.|  
+|ADDING TAPE DEVICE|O recurso preterido sp_addumpdevice ' `tape` ' foi encontrado. `disk`Em vez disso, Use sp_addumpdevice ' '. Ocorre uma vez por uso.|  
 |Permissão ALL|Número total de vezes que a sintaxe GRANT ALL, DENY ALL ou REVOKE ALL foi encontrada. Modifique a sintaxe para negar permissões específicas. Ocorre uma vez por consulta.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Número total de horas que a opção TORN_PAGE_DETECTION do recurso preterido de ALTER DATABASE foi usada desde a inicialização da instância de servidor. Em seu lugar, use a sintaxe PAGE_VERIFY. Ocorre uma vez por uso em uma instrução DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|As sintaxes de recurso preterido ALTER LOGIN WITH SET CREDENCIAL ou ALTER LOGIN WITH NO CREDENTIAL foram encontradas. Em seu lugar, use as sintaxes ADD ou DROP CREDENCIAL. Ocorre uma vez por compilação.|  

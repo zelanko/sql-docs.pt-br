@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9610dc1cc729dc555d42c0dfe5eeb117f9cfba18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c72e46f95ec756faa9e103bbb23c4dadca5be36
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065466"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>Edições e componentes do SQL Server 2014
   Os requisitos de instalação variam de acordo com as necessidades do aplicativo. As diferentes edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acomodam desempenho, runtime e requisitos de preço exclusivos para organizações e indivíduos. Os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que você instala dependem também dos seus requisitos específicos. As seções a seguir ajudarão você a entender como fazer a melhor escolha entre as edições e os componentes disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -85,7 +84,7 @@ ms.locfileid: "62806332"
   
 |Componentes de servidor|Descrição|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]inclui o [!INCLUDE[ssDE](../includes/ssde-md.md)], o serviço principal para armazenar, processar e proteger dados, replicação, pesquisa de texto completo, ferramentas para gerenciar dados XML e relacionais e o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) Server.|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]inclui o [!INCLUDE[ssDE](../includes/ssde-md.md)] , o serviço principal para armazenar, processar e proteger dados, replicação, pesquisa de texto completo, ferramentas para gerenciar dados XML e relacionais e o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) Server.|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] inclui as ferramentas para criação e gerenciamento de aplicativos OLAP (processamento analítico online) e de mineração de dados.|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|O[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui componentes de servidor e cliente por criar, gerenciar e implantar relatórios tabulares, de matriz, gráficos e de forma livre. O[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] também é uma plataforma extensível que você pode usar para desenvolver aplicativos de relatório.|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é um conjunto de ferramentas gráficas e objetos programáveis para mover, copiar e transformar dados. Ele também inclui o componente [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|  

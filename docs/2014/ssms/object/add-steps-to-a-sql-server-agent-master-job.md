@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50096ae9f00125406a494f2b19c317ff9cabd3fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067406"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
   Este tópico descreve como adicionar etapas a um trabalho mestre do SQL Server Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  

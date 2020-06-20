@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fddc5820676cb231b6f0cd5f7151e24d8eceaefa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067546"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
-  Ao criar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalhos do Agent, você pode especificar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ação que deve ser tomada se ocorrer uma falha durante a execução do trabalho. Determine a ação a ser tomada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em caso de êxito ou falha de cada etapa de trabalho. Use o procedimento a seguir para configurar a lógica do fluxo de ações da etapa de trabalho, usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Ao criar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalhos do Agent, você pode especificar a ação que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser tomada se ocorrer uma falha durante a execução do trabalho. Determine a ação a ser tomada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em caso de êxito ou falha de cada etapa de trabalho. Use o procedimento a seguir para configurar a lógica do fluxo de ações da etapa de trabalho, usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   **Antes de começar:**  
   

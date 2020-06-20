@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1dc58f006d1e37885418dfb923c6c7cc7563d018
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: a6272fb570b85989f38c8187e29712966862710d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000826"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930462"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Nova Lista de Palavras Irrelevantes de Texto Completo (página Geral)
   Use esta caixa de diálogo para criar uma lista de palavras irrelevantes (stoplist) de texto completo. Uma *lista de palavras irrelevantes* é um conjunto de palavras usadas com frequência, chamadas *palavras irrelevantes*, que são omitidas da indexação de texto completo de tabelas que usam a lista de palavras irrelevantes. Para obter mais informações, veja [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](../relational-databases/search/full-text-search.md).  

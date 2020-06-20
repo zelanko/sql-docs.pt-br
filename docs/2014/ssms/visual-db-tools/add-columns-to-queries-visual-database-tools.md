@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9082377f1599b719f490222d3ddacba4a6622699
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067246"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Adicionar colunas a consultas (Visual Database Tools)
   Para usar uma coluna em uma consulta, você deve adicioná-la à consulta. Você pode adicionar uma coluna para exibi-la na saída da consulta, usá-la para ordenar, pesquisar os conteúdos da coluna, ou para resumir seus conteúdos. Você pode decidir qual das colunas usadas na consulta será incluída no painel de resultados quando a consulta for executada. Para obter mais informações, veja [Remover colunas de resultados da consulta &#40;Visual Database Tools&#41;](visual-database-tools.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "63015697"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>Para adicionar todas as colunas de uma tabela ou objeto avaliado por tabela  
   
--   No **painel Diagrama**, marque a caixa de seleção ao lado de ** \*(todas as colunas)**.  
+-   No **painel Diagrama**, marque a caixa de seleção ao lado de ** \* (todas as colunas)**.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>Para adicionar todas as colunas para todas as tabelas e objetos estruturados por tabela  
   

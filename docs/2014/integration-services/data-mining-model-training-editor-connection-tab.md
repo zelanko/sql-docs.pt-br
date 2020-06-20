@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9109b4dc77dd55e3f0e0500324f0853c915c272
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939157"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Editor de Treinamento de Modelo de Mineração de Dados (guia Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor de Treinamento do Modelo de Mineração de Dados** para selecionar um modelo de mineração para treinar.  

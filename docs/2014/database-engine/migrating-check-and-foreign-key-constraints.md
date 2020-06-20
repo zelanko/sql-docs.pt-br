@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1622e87d971a32dcf478dfb036a504e0959fd76
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930717"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Verificação de migração e restrições Chave Estrangeira
-  As restrições CHECK e Foreign Key não têm suporte [!INCLUDE[hek_2](../includes/hek-2-md.md)] no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]no. Essas construções são geralmente usadas para impor a integridade dos dados lógicos no esquema e podem ser importantes para manter a correção funcional dos aplicativos.  
+  As restrições CHECK e Foreign Key não têm suporte no [!INCLUDE[hek_2](../includes/hek-2-md.md)] no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . Essas construções são geralmente usadas para impor a integridade dos dados lógicos no esquema e podem ser importantes para manter a correção funcional dos aplicativos.  
   
  As verificações de integridade lógica em uma tabela como restrições de verificação e de chave estrangeira exigem processamento adicional em transações e, em geral, devem ser evitadas para aplicativos sensíveis ao desempenho. No entanto, se tais verificações forem cruciais para seu aplicativo, existem duas soluções alternativas.  
   
@@ -99,7 +98,7 @@ GO
   
  Após a conversão em uma tabela com otimização de memória, a definição de [Sales]. [SalesOrderDetail] é o seguinte:  
   
- Observe que ROWGUID não é mais uma ROWGUIDCOL, pois não tem suporte no [!INCLUDE[hek_2](../includes/hek-2-md.md)]. A coluna foi removida. Além disso, LineTotal é uma coluna computada e fora do escopo deste artigo, portanto, ela também foi removida.  
+ Observe que ROWGUID não é mais uma ROWGUIDCOL, pois não tem suporte no [!INCLUDE[hek_2](../includes/hek-2-md.md)] . A coluna foi removida. Além disso, LineTotal é uma coluna computada e fora do escopo deste artigo, portanto, ela também foi removida.  
   
 ```sql  
 USE [AdventureWorks2012]  

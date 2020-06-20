@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d73bf759-58f7-4789-af49-ac8ca94f913d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fe326421861cfd3c38dbf0fb0a6042d05945d022
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbe8a2737eb06d06a197e375e7e55649b8106901
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091605"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011745"
 ---
 # <a name="upgrade-advisor-how-to-topics"></a>Tópicos de informações práticas do Supervisor de Atualização
   Esta seção contém procedimentos comuns para usar o Supervisor de Atualização.  

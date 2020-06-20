@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa2fce50d7f62f134ef96175ed359c86ea84080
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058853"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar o Supervisor de Atualização para preparar para atualizações
   O Supervisor de Atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuda você a se preparar para atualizações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Supervisor de Atualização analisa os componentes instalados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gera um relatório que identifica os problemas a serem corrigidos antes ou depois da atualização.  
@@ -66,15 +65,15 @@ ms.locfileid: "73632733"
   
 -   Windows Installer desde a versão 4.5. Você pode instalar o Windows Installer do [site do Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   Microsoft .NET Framework 4. .NET Framework 4 está disponível na mídia [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do produto e na página de [download do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET Framework 4 está disponível na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mídia do produto e na página de [download do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Para instalar o .NET Framework 4 a partir da mídia do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], localize a raiz da unidade de disco. Clique duas vezes nas pastas \redist e DotNetFrameworks; execute o dotNetFx40_Full_x86_x64.exe (para sistemas operacionais de 32 ou 64 bits).  
   
- Para instalar o Supervisor de Atualização a partir da Web, clique no botão de download na página de download. Você poderá executar a instalação imediatamente ou salvar o arquivo SQLUA.msi para execução posterior. Se você estiver instalando do disco do produto, execute o SQLUA. msi diretamente do disco do produto.  
+ Para instalar o Supervisor de Atualização a partir da Web, clique no botão de download na página de download. Você poderá executar a instalação imediatamente ou salvar o arquivo SQLUA.msi para execução posterior. Se você estiver instalando do disco do produto, execute SQLUA.msi diretamente do disco do produto.  
   
  Depois de instalar o supervisor de atualização, você pode abri-lo no menu **Iniciar** :  
   
--   Clique em **Iniciar**, aponte para **todos os programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]aponte para e clique em ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supervisor de atualização**.  
+-   Clique em **Iniciar**, aponte para **todos os programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] e clique em ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supervisor de atualização**.  
   
  Para obter mais informações, consulte a documentação do Supervisor de Atualização incluída no download do Supervisor de Atualização e nas Notas de Versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

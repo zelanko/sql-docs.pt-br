@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78986e85dd8ee808f5fb621182d903a94bbc5eb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067519"
 ---
 # <a name="stop-a-job"></a>Stop a Job
   Este tópico descreve como interromper um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do Agent. Um trabalho é uma série especificada de ações que o SQL Server Agent executa.  

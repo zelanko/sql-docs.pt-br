@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf04a73d2ecc100ae5e9b41b5807aa25b05ba32a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee61532c806ca52b9e9d08ef6052c4da0c564ad2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023840"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052921"
 ---
 # <a name="lockreleased-event-class"></a>Classe de evento Lock:Released
   A classe de evento Lock:Released indica que um bloqueio em um recurso, como uma página, foi liberado.  
@@ -55,7 +54,7 @@ ms.locfileid: "63023840"
 |StartTime|`datetime`|Hora de início do evento, se disponível.|14|Sim|  
 |TextData|`ntext`|Valor do texto dependente da classe de evento capturada no rastreamento.|1|Sim|  
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Sim|  
-|Tipo|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sim|  
+|Type|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 626b73d3-a257-4b45-82fb-c6299faa0001
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a5375c391b976de111813f55d422a367b3ea874a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b127bedb0dc13c0b8b5a238a8ef104ca9a00bd85
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62519540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051238"
 ---
 # <a name="localdb_error_cannot_create_instance_folder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
     
@@ -27,7 +26,7 @@ ms.locfileid: "62519540"
 |ID do evento|256|  
 |Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
 |Componente|API do runtime de banco de dados local|  
-|Texto da mensagem|Não é possível criar a pasta para a instância do banco de dados local em:%% LOCALAPPDATA%\\ % \ Microsoft\Microsoft\>SQL Server local DB\Instances<nome da instância.|  
+|Texto da mensagem|Não é possível criar a pasta para a instância do banco de dados local em:%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server local DB\Instances \\<nome da instância \> .|  
   
 ## <a name="explanation"></a>Explicação  
  Uma pasta não pode ser criada abaixo de %userprofile%.  

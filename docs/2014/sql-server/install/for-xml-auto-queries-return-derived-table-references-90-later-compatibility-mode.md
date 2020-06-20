@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b42d8fd7694aaa3962d049cb0e9663479778958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 702cb2ca1d437dff03cee09c98d72082500709d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012447"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>Consultas FOR XML AUTO retornam referências de tabela derivada no modo de compatibilidade 90 ou posterior
   Quando o nível de compatibilidade do banco de dados está definido como 90 ou posterior, as consultas FOR XML que executam no modo AUTO retornam referências para aliases de tabela derivada. Quando o nível de compatibilidade está definido como 80, as consultas FOR XML AUTO retornam referências para as tabelas base que definem uma tabela derivada.  

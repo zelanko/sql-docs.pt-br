@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86a9538e81881a3b42b95447f4264200e2fe9d4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065312"
 ---
 # <a name="instance-configuration"></a>Configuração de Instância
   Use a página **Configuração de Instância** do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar se uma instância padrão ou uma instância nomeada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser criada. Se uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é ainda não estiver instalada, uma instância padrão será criada, a menos que você especifique uma instância nomeada.  
@@ -71,7 +70,7 @@ ms.locfileid: "68190966"
   
 -   Não são permitidos espaços inseridos ou outros caracteres especiais em nomes de instância. Os caracteres barra invertida (\\), vírgula (,), dois-pontos (:), ponto-e-vírgula (;), aspas simples ('), E comercial (&), hífen (-) e arroba (@) também não são permitidos.  
   
--   **Somente caracteres que são válidos na página de código atual do Windows podem ser usados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em nomes de instância. Se um caractere Unicode sem suporte for usado, ocorrerá um erro de instalação.**  
+-   **Somente caracteres que são válidos na página de código atual do Windows podem ser usados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomes de instância. Se um caractere Unicode sem suporte for usado, ocorrerá um erro de instalação.**  
   
  **Instâncias e recursos detectados**  
  Exiba uma lista de instâncias e componentes instalados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador em que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada.  

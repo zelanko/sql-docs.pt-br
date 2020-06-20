@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6cd3599ff68fadf6a55af1c57379e9cdd8cc4b5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c183bebe34e37455fbefa214ed0fcfeb55f3aa8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154490"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937977"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurar DQS para usar dados de referência
   Este tópico descreve como configurar o [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para usar dados de referência para limpar seus dados. Você pode usar dados de referência do Azure Marketplace ou de provedores de dados de referência terceirizados online diretos.  
@@ -27,7 +26,7 @@ ms.locfileid: "70154490"
 ## <a name="before-you-begin"></a>Antes de começar  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
- Para usar dados de referência do Marketplace, você deve ter uma chave de conta válida no Marketplace. Para obter informações detalhadas sobre como criar uma chave de conta do Marketplace, consultehttps://go.microsoft.com/fwlink/?LinkId=212936) [criar sua conta](https://go.microsoft.com/fwlink/?LinkId=212936) (. Você também pode criar uma chave de conta do Marketplace no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] clicando em **Configuração** sob **Administração** na tela de início do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] e depois clicando em **Criar uma ID de Conta do DataMarket** na guia **Dados de Referência** .  
+ Para usar dados de referência do Marketplace, você deve ter uma chave de conta válida no Marketplace. Para obter informações detalhadas sobre como criar uma chave de conta do Marketplace, consulte [criar sua conta](https://go.microsoft.com/fwlink/?LinkId=212936) ( https://go.microsoft.com/fwlink/?LinkId=212936) . Você também pode criar uma chave de conta do Marketplace no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] clicando em **Configuração** sob **Administração** na tela de início do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] e depois clicando em **Criar uma ID de Conta do DataMarket** na guia **Dados de Referência** .  
   
 ###  <a name="security"></a><a name="Security"></a> Segurança  
   

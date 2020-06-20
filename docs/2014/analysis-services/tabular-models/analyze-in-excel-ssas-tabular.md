@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 429245f875ce6d13ef3818cf7bae874f72c500ed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067685"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939927"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analisar no Excel (SSAS tabular)
   O recurso Analisar no Excel, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fornece a autores de modelos de tabela um modo de analisar projetos de modelo rapidamente durante o desenvolvimento. O recurso Analisar no Excel abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de workspace modelo e automaticamente adiciona uma Tabela Dinâmica à planilha. Os objetos de banco de dados de workspace (tabelas, colunas e medidas) são incluídos como campos na Lista de campos da Tabela Dinâmica. Os objetos e os dados podem então ser exibidos dentro do contexto do usuário efetivo ou função e perspectiva.  
@@ -28,7 +27,7 @@ ms.locfileid: "66067685"
   
 -   [Tarefas relacionadas](#bkmk_rt)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Benefícios  
  O recurso Analisar no Excel fornece aos autores de modelo a capacidade para testar a eficácia de um projeto de modelo usando o aplicativo comum de análise de dados, Microsoft Excel. Para usar o recurso Analisar no Excel, você deve ter o Microsoft Office 2003 ou superior instalado no mesmo computador que o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  

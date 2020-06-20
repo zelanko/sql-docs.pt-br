@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 005e71195fc294ef7c2590886208d7184ec00474
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066348"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
   O tutorial do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta o ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta uma interface gráfica para configurar, monitorar e administrar as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também permite que você implante, monitore e atualize os componentes de camada de dados usados pelos aplicativos, como bancos de dados e data warehouses. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também fornece editores da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML para editar e depurar scripts.  

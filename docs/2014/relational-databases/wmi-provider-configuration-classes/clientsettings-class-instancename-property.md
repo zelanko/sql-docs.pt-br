@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b559ddf5c33b10375d89138a0ac5580472c4fadf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fe85d19daf34eb5b15c3969ecf503c3bd20e605
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242656"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067914"
 ---
 # <a name="instancename-property-clientsettings-class"></a>Propriedade InstanceName (classe ClientSettings)
   Obtém o nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente.  
@@ -37,7 +36,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto do `ClientSettings` que representa configurações em uma instância de cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

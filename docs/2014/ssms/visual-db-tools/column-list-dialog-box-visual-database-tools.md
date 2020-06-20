@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c7144f35c8f6d7e0dfc9267120b0cbc8d4fbc48
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067221"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Caixa de diálogo Lista de Colunas (Visual Database Tools)
   Ao escrever consultas, pode ser útil exibir a lista de colunas disponíveis nos objetos com valores de tabela selecionados.  

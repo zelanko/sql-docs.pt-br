@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdbc41e4290914ac45a4afe09cc5715395774d80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770332"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939447"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Mesclar dados por meio da transformação Unir Tudo
   Para adicionar e configurar uma transformação Union All, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e duas fontes de dados.  

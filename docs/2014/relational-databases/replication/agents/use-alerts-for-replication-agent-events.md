@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9d945123fae29e8cb629348b41e811f25e0e71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210737"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068768"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar Alertas para eventos do agente de replicação
   O [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proporcionam um modo de monitorar eventos, tais como eventos do agente de replicação, usando alertas. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitora o log do aplicativo do Windows para eventos que são associados com alertas. Se esse evento ocorrer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responderá automaticamente, executando uma tarefa que você definiu e/ou enviando uma mensagem de email ou pager a um operador especificado. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um conjunto de alertas predefinidos para agentes de replicação que você pode configurar para executar uma tarefa e/ou notificar um operador. Para obter mais informações sobre como definir uma tarefa a executar, consulte a seção “Automatizando uma resposta para um alerta” neste tópico.  

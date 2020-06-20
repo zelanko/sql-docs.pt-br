@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 39a89574fffa57174dc141ee12686798b7d7bd5a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1e5b0d0e20fbf4fd55398c130abf6cfff128ebe8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719125"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050905"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Converter um script existente de Rastreamento do SQL em uma sessão de Eventos Estendidos
   Se você tiver um script de Rastreamento do SQL que deseja converter em sessão de Eventos Estendidos, poderá usar os procedimentos deste tópico para criar uma sessão de Eventos Estendidos equivalente. Usando as informações das tabelas de sistema trace_xe_action_map e trace_xe_event_map, você pode coletar as informações que precisa para fazer a conversão.  

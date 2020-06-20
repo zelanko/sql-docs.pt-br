@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4483facba1a1233dda7f3330f432ef8d3f9c2b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767470"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968223"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Etapa 4: Testar o pacote de tutorial da Lição 2
   Com o contêiner Loop Foreach e o gerenciador de conexões de Arquivo Simples agora configurado, o pacote da Lição 2 pode iterar através da coleção de 14 arquivos simples na pasta Dados de Exemplo. Cada vez que um nome de arquivo é encontrado e corresponde aos critérios de nome de arquivo especificado, o contêiner Loop Foreach popula a variável definida pelo usuário com o nome do arquivo. Essa variável, por sua vez, atualiza a propriedade ConnectionString do gerenciador de conexões de Arquivo Simples, e uma conexão é criada para o novo arquivo simples. O contêiner Loop Foreach, então, executa a tarefa de fluxo de dados não modificados em relação aos dados no novo arquivo simples, antes de se conectar ao próximo arquivo na pasta.  
@@ -40,7 +39,7 @@ ms.locfileid: "62767470"
   
 1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Lesson 2.dtsx** e clique em **Executar Pacote**.  
   
-     O pacote será executado. Você pode verificar o status de cada loop na janela de saída ou clicando na guia **progresso** . Por exemplo, você pode ver que 1097 linhas foram adicionadas à tabela de destino do arquivo Currency_VEB. txt.  
+     O pacote será executado. Você pode verificar o status de cada loop na janela de saída ou clicando na guia **progresso** . Por exemplo, você pode ver que 1097 linhas foram adicionadas à tabela de destino do arquivo Currency_VEB.txt.  
   
 2.  Terminada a execução do pacote, no menu **Depurar** , clique em **Parar Depuração**.  
   

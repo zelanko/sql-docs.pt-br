@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ab59a9fcdab29c927cb624dabcdfa71eaae1e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003947"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
   Anteriormente, o conteúdo das propriedades de documento não podia ser diferenciado do conteúdo do corpo do documento. Essa limitação restringia as consultas de texto completo a pesquisas genéricas em documentos inteiros. No entanto, agora você pode configurar um índice de texto completo para dar suporte à pesquisa com escopo de propriedade, como Author e Title, para tipos de documento com suporte em uma coluna de dados binários `varbinary`, `varbinary(max)` (incluindo `FILESTREAM`) ou `image`. Esse formulário de pesquisa é conhecido como *pesquisa de propriedade*.  

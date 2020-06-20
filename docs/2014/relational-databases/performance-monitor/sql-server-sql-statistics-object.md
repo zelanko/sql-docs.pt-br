@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8aba118f93a9a4f38179e8e7c5156eecc24012ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066922"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, objeto SQL Statistics
   O objeto **SQLServer:SQL Statistics** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a compilação e o tipo de solicitações enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A monitoração do número de compilações e recompilações de consultas e do número de lotes recebidos por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma indicação da velocidade com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está processando as consultas do usuário e o grau de eficácia com que o otimizador de consulta está processando as consultas.  

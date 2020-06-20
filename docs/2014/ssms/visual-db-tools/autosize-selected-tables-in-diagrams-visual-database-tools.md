@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1acc36c3e8054d4e3555401bc4ba5f4f62196f83
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297567"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066264"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Dimensionar automaticamente tabelas selecionadas em diagramas (Visual Database Tools)
   Você pode rapidamente encaixar tabelas em seu diagrama para o menor tamanho que exibir todos os campos.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 965a3a7c1bfa9549793690e92760ce39f147e0d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1387b5773ee3521979a3afc18f3417cabc156fe4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067202"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938917"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>Habilitar o modo de design de DirectQuery (SSAS tabular)
   Para criar um modelo no modo DirectQuery, primeiro altere o ambiente de tempo de design para que ele ofereça suporte ao usuário do modo DirectQuery. Quando você faz isso, o designer também executa as seguintes ações:  

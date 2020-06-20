@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff2aaba72e2e5489694d31b35e594622c099acab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997318"
 ---
 # <a name="securables"></a>Protegíveis
   Protegíveis são os recursos cujo acesso é regulado pelo sistema de autorização do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por exemplo, uma tabela é um protegível. Alguns protegíveis podem ser contidos dentro de outros, criando hierarquias aninhadas chamadas "escopos" que podem ser protegidos. Os escopos protegíveis são **servidor**, **banco de dados**e **esquema**.  

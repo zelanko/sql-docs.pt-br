@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c801e6da-0159-4bb0-9144-eb28b5127ff7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73e38c305b9aba5413b41fa27fa13ac4dc73cbe9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091673"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011823"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>Atualizar sintaxe de token em etapas de trabalho do SQL Server Agent
   A sintaxe que usava tokens em etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent foi alterada.  
@@ -27,7 +26,7 @@ ms.locfileid: "66091673"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 ## <a name="description"></a>Descrição  
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent usa parênteses, como $ (Date), em vez de colchetes, como [data].  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent usa parênteses, como $ (Date), em vez de colchetes, como [data].  
   
  Para obter mais informações, consulte "Usando tokens em etapas de trabalho” nos Manuais Online do  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

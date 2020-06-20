@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0b84f87aff9684cc08fc0d91fc5de364f816125a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ae61697e1943aa97658d7651e6a2bd4176f88c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63262153"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005025"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot-publication-sql-server-2005-and-later"></a>Informações do Publicador, Lista de Observação da Assinatura (publicação de instantâneo, SQL Server 2005 e versões posteriores)
    A guia **Lista de Observação da Assinatura** está disponível para os Distribuidores que executam o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores; seu propósito é exibir informações sobre assinaturas de todas as publicações disponíveis no Publicador selecionado. Você pode filtrar a lista de assinaturas para ver erros, avisos e qualquer assinatura de desempenho insatisfatório. Essa guia fornece um único local para o administrador monitorar todas as atividades de replicação em um Publicador: o Replication Monitor exibe todas as assinaturas que exigem atenção, com base no tipo de replicação selecionado e na opção escolhida na caixa de listagem suspensa **Mostrar** . Como os itens mostrados nessa guia são baseados no status atual e no desempenho, as assinaturas serão exibidas nessa página somente se corresponderem à opção da caixa de listagem **Mostrar** naquele momento.  

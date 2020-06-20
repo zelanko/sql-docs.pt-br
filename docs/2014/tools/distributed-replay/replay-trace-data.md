@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5002fea865b93f849c8ce303da6992b378be441
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149886"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011611"
 ---
 # <a name="replay-trace-data"></a>Reproduzir dados de rastreamento
   Você pode iniciar uma reprodução distribuída com o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay depois de preparar os dados de rastreamento de entrada. Para obter mais informações, consulte [Preparar os dados de rastreamento de entrada](prepare-the-input-trace-data.md).  
@@ -31,7 +30,7 @@ ms.locfileid: "63149886"
   
 ### <a name="to-replay-the-trace"></a>Para reproduzir o rastreamento  
   
-1.  **(Opcional) Modifique os parâmetros de configuração da reprodução:** se desejar modificar os parâmetros de configuração da reprodução, como o modo de sequenciamento e vários valores de escala, você deverá modificar o elemento `<ReplayOptions>` do arquivo de configuração da reprodução baseado em XML `DReplay.exe.replay.config`. Você também pode modificar o elemento `<OutputOptions>` para especificar configurações de saída, como, por exemplo, se a contagem de linhas deve ser registrada. Se você modificar o arquivo de configuração de reprodução, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
+1.  **(Opcional) Modificar definições de configuração de reprodução**: se desejar modificar os parâmetros de configuração da reprodução, como o modo de sequenciamento e vários valores de escala, você deverá modificar o elemento `<ReplayOptions>` do arquivo de configuração da reprodução baseado em XML `DReplay.exe.replay.config`. Você também pode modificar o elemento `<OutputOptions>` para especificar configurações de saída, como, por exemplo, se a contagem de linhas deve ser registrada. Se você modificar o arquivo de configuração de reprodução, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
   
     1.  Faça uma cópia do arquivo de configuração de reprodução padrão, `DReplay.exe.replay.config`, e renomeie o novo arquivo. O arquivo de configuração de reprodução padrão está localizado na pasta de instalação da ferramenta de administração.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63149886"
   
      Para obter mais informações sobre o arquivo de configuração de reprodução, consulte [Configurar Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Inicie o estágio de reprodução de eventos**: para iniciar a reprodução distribuída, você deve executar a ferramenta de administração com a opção **replay** . Para obter mais informações, consulte [Opção Replay &#40;ferramenta de administração do Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+2.  **Iniciar a fase de reprodução do evento**: para iniciar a reprodução distribuída, você deve executar a ferramenta de administração com a opção **replay**. Para obter mais informações, consulte [Opção Replay &#40;ferramenta de administração do Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
     1.  Abra o utilitário Prompt de Comando do Windows (`CMD.exe`) e navegue até o local de instalação da ferramenta de administração Distributed Replay (`DReplay.exe`).  
   
@@ -53,7 +52,7 @@ ms.locfileid: "63149886"
   
     5.  (Opcional) Use o parâmetro *target_server* , **-s**, para especificar a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em que os clientes de reprodução distribuída devem reproduzir a carga de trabalho de rastreamento. Esse parâmetro não será necessário se você tiver usado o elemento `<Server>` para especificar o servidor de destino no elemento `<ReplayOptions>` do arquivo de configuração de reprodução.  
   
-    6.  Use o parâmetro *clients* , **-w**, para especificar os clientes de reprodução distribuída que devem participar da reprodução. Liste os nomes dos computadores cliente, separados por vírgulas. Observação: endereços IP não são permitidos.  
+    6.  Use o parâmetro *clients* , **-w**, para especificar os clientes de reprodução distribuída que devem participar da reprodução. Liste os nomes dos computadores cliente, separados por vírgulas. Observação: Endereços IP não são permitidos.  
   
     7.  (Opcional) Use o parâmetro *config_file* , **-c**, para especificar o local do arquivo de configuração de reprodução. Use esse parâmetro para apontar para o novo arquivo de configuração se você tiver modificado uma cópia do arquivo de configuração de reprodução padrão.  
   

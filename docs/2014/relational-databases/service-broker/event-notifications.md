@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d5d7114515179cda973b9685c57b26fa930521
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996673"
 ---
 # <a name="event-notifications"></a>Notificações de eventos
   As notificações de evento enviam informações sobre eventos a um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . As notificações de evento são executadas em resposta a uma variedade de instruções DDL (linguagem de definição de dados) do [!INCLUDE[tsql](../../includes/tsql-md.md)] e eventos de Rastreamento do SQL por meio do envio de informações sobre esses eventos a um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
@@ -59,7 +58,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Gatilhos|Notificações de eventos|  
 |--------------|-------------------------|  
 |Os gatilhos DML respondem a eventos DML (linguagem de manipulação de dados). Gatilhos DDL respondem a eventos de linguagem de definição de dados (DDL).|Notificações de eventos respondem a eventos DDL e a um subconjunto de eventos de Rastreamento do SQL.|  
-|Gatilhos podem executar Transact-SQL ou código gerenciado CLR (Common Language Runtime).|Notificações de eventos não executam código. Em vez disso, `xml` eles enviam mensagens para um serviço de Service Broker.|  
+|Gatilhos podem executar Transact-SQL ou código gerenciado CLR (Common Language Runtime).|Notificações de eventos não executam código. Em vez disso, eles enviam `xml` mensagens para um serviço de Service Broker.|  
 |Gatilhos são processados sincronicamente, dentro do escopo das transações que os acionam.|Notificações de eventos podem ser processadas de forma assíncrona e não são executadas no escopo das transações que as acionam.|  
 |O consumidor de um gatilho encontra-se estreitamente acoplado ao evento que o aciona.|O consumidor de uma notificação de eventos encontra-se desacoplado do evento que o aciona.|  
 |Gatilhos devem ser processados no servidor local.|Notificações de eventos podem ser processadas em um servidor remoto.|  
@@ -67,7 +66,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Os nomes dos gatilhos DML seguem o escopo do esquema. Os nomes dos gatilhos DDL seguem o escopo do banco de dados ou do servidor.|Os nomes das notificações de eventos seguem o escopo do servidor ou do banco de dados. Notificações de eventos em um evento QUEUE_ACTIVATION seguem o escopo de uma fila específica.|  
 |Gatilhos DML são de propriedade do mesmo proprietário das tabelas a que se aplicam.|O proprietário de uma notificação de eventos em uma fila pode ser diferente do proprietário do objeto a que se aplica.|  
 |Gatilhos têm suporte à cláusula EXECUTE AS.|Notificações de eventos não têm suporte à cláusula EXECUTE AS.|  
-|Informações de evento de gatilho DDL podem ser capturadas usando a função EVENTDATA, `xml` que retorna um tipo de dados.|As notificações de `xml` eventos enviam informações de evento para um serviço Service Broker. As informações são formatadas no mesmo esquema da função EVENTDATA.|  
+|Informações de evento de gatilho DDL podem ser capturadas usando a função EVENTDATA, que retorna um `xml` tipo de dados.|As notificações de eventos enviam `xml` informações de evento para um serviço Service Broker. As informações são formatadas no mesmo esquema da função EVENTDATA.|  
 |Metadados sobre gatilhos localizam-se nas exibições de catálogo **sys.triggers** e **sys.server_triggers** .|Os metadados sobre notificações de evento localizam-se nas exibições de catálogo **sys.event_notifications** e **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notificações de evento x Rastreamento do SQL  

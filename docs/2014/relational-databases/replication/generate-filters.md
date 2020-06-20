@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cae79be898c326b395e781db741c87578edfe7ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fad49d5191e093272664527a9964268455b16e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721285"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066004"
 ---
 # <a name="generate-filters"></a>Gerar Filtros
   A caixa de diálogo **Gerar Filtros** permite definir um filtro de linha em uma tabela em uma publicação de mesclagem; a replicação, então, estende automaticamente o filtro para outras tabelas relacionadas por relações de chave estrangeira. Por exemplo, se você definir um filtro em uma tabela de cliente para que contenha apenas dados de clientes franceses, a replicação estenderá esse filtro para que as tabelas de pedidos relacionadas e detalhes do pedidos contenham somente informações relacionadas aos clientes franceses.  

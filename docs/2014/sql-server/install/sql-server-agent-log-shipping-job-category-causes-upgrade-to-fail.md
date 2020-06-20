@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef05ce53-c6ce-42ec-9df8-46c951626424
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7145d846657613b50706ebe75c9832f40f49383e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f5947e8fc8d459388fe35d86c75666e25b5d907
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036129"
 ---
 # <a name="sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail"></a>Categoria do trabalho Envio de Logs do SQL Server Agent causa falha na atualização
   O processo de atualização falhará se uma categoria de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nomeada Envio de Log, existir.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d12456760f32ddbd8cc434d474aebb0e0ecf141
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011832"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050437"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Especificar formatos de dados para compatibilidade usando bcp (SQL Server)
   Este tópico descreve os atributos de formato de dados, os prompts específicos de campo e o armazenamento de dados campo por campo em um arquivo de formato não XML do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` comando. Conhecê-los pode ser útil para exportar dados em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para importação em massa para outro programa, como outro programa de banco de dados. Os formatos de dados padrão (nativo, caractere ou Unicode) na tabela de fonte poderiam ser incompatíveis com o layout de dados esperado por outro programa. Se uma incompatibilidade existir, quando você exportar os dados você deve descrever o layout dos dados.  
@@ -59,7 +58,7 @@ ms.locfileid: "66011832"
      Para campos de dados de caractere, caracteres terminadores opcionais permitem marcar o término de cada campo em um arquivo de dados (usando um *terminador de campo*) e o término de cada linha (usando um *terminador de linha*). Os caracteres terminadores são um modo de indicar aos programas de leitura o arquivo de dados onde um campo ou uma linha termina, e a outra começa. Para obter mais informações, veja [Especificar terminadores de campo e linha &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> Visão geral dos prompts de campo específicos  
- Se um comando `bcp` interativo contiver a opção **in** ou **out** , mas também não contiver a opção de arquivo de formato (**-f**) ou uma opção de formato de dados (**-n**, **-c**, **-w**ou **-n**), cada coluna na tabela de origem ou de destino, o comando solicitará cada um dos atributos anteriores, por sua vez. Em cada prompt, o comando `bcp` fornece um valor padrão baseado no tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da coluna de tabela. Aceitar o valor padrão de todos os prompts gera o mesmo resultado de especificar o formato nativo ( **-n**) na linha de comando. Cada prompt exibe um valor padrão entre colchetes: [*default*]. Pressionando ENTER aceita o padrão exibido. Para especificar um valor diferente do padrão, insira o valor novo no prompt.  
+ Se um `bcp` comando interativo contiver a opção **in** ou **out** , mas também não contiver a opção de arquivo de formato (**-f**) ou uma opção de formato de dados (**-n**, **-c**, **-w**ou **-n**), cada coluna na tabela de origem ou de destino, o comando solicitará cada um dos atributos anteriores, por sua vez. Em cada prompt, o comando `bcp` fornece um valor padrão baseado no tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da coluna de tabela. Aceitar o valor padrão de todos os prompts gera o mesmo resultado de especificar o formato nativo ( **-n**) na linha de comando. Cada prompt exibe um valor padrão entre colchetes: [*default*]. Pressionando ENTER aceita o padrão exibido. Para especificar um valor diferente do padrão, insira o valor novo no prompt.  
   
 ### <a name="example"></a>Exemplo  
  Os exemplos a seguir usam o comando `bcp` para exportar em massa dados da tabela `HumanResources.myTeam` para o arquivo `myTeam.txt` interativamente. Antes de executar o exemplo, é necessário criar essa tabela. Para obter informações sobre a tabela e como criá-la, veja [Tabela de exemplo HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  

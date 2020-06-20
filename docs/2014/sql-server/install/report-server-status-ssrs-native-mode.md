@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c2fb2860fd80b827e48ad72b59192573d16b8a4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059082"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Status do Servidor de Relatórios (modo nativo do SSRS)
   Use esta página para exibir informações sobre a instância do servidor de relatório à qual você está conectado atualmente. Essa é a página inicial para a configuração do servidor de relatórios. Estão disponíveis páginas adicionais para configurar URLs, a conta de serviço, o banco de dados do servidor de relatórios, a entrega de email do servidor de relatórios, a implantação de expansão e chaves de criptografia.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
  Para abrir essa página, inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e conecte-se à instância do servidor de relatórios. Para obter mais informações, consulte [Gerenciador de Configurações do Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
->  O[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool. exe) é instalado com um nível de privilégio de "highestAvailable". Este comportamento ocorre por design. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige a comunicação com APIs do WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Algumas comunicações de WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exigem um nível mais alto ou administrativo de privilégios.  
+>  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool.exe) é instalado com um nível de privilégio de "highestAvailable". Este comportamento ocorre por design. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige a comunicação com APIs do WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Algumas comunicações de WMI do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exigem um nível mais alto ou administrativo de privilégios.  
   
  Se você estabelecer conexão com o servidor de relatórios e todos os links da página estiverem esmaecidos, verifique se o serviço Servidor de Relatórios foi iniciado. O **status do serviço de relatório:** deve ser "iniciado". Você também pode usar o aplicativo de console Serviços em Ferramentas do Administrador para verificar o status do serviço.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "71952464"
 > [!NOTE]  
 >  No SQL Server Express with Advanced Services, a instância padrão é SQLExpress.  
   
- **ID da Instância**  
+ **ID da instância**  
  Corresponde a uma pasta do sistema de arquivos que armazena arquivos de programas para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a qual você estabeleceu conexão. O valor **ID da Instância** é atribuído na Instalação no formato *componente*.*instância*, onde *componente* é um valor que indica um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente e *instância* é o nome da instância. O nome de instância padrão é MSSQLSERVER. Por exemplo, se você instalar instâncias padrão dos componentes [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , os nomes de pastas correspondentes serão os seguintes:  
   
 -   MSSQL12.MSSQLSERVER  
@@ -68,7 +67,7 @@ ms.locfileid: "71952464"
  Inicia o serviço Servidor de Relatórios. O reinício do serviço será necessário depois de algumas alterações na configuração (por exemplo, ao reconfigurar um servidor de relatórios depois da alteração de um nome de computador). Se você reconfigurar as reservas de URL, o serviço será reiniciado automaticamente. O reinício é necessário para obter as alterações.  
   
  **Parar**  
- Para o serviço Servidor de Relatórios. Parar o serviço faz com que o servidor de relatórios pare de funcionar. Para obter mais informações, consulte [Iniciar e parar o serviço servidor](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatório nos manuais online do.  
+ Para o serviço Servidor de Relatórios. Parar o serviço faz com que o servidor de relatórios pare de funcionar. Para obter mais informações, consulte [Iniciar e parar o serviço servidor de relatório](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online do.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Configurações do Reporting Services F1 tópicos de ajuda &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   

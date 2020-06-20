@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af4c8ae7c2ba827e6110602bd21432fec4f74393
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c8610fd3ac9ee92d6e08084c48f14298cb3203f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940187"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Ferramentas de Análise de Tabela para Excel
   As ferramentas de Data Mining na barra de ferramentas de **análise** são a maneira mais fácil de começar a usar o Data Mining. Cada ferramenta analisa automaticamente a distribuição e o tipo de dados, e define os parâmetros para garantir que os resultados sejam válidos. Não é necessário selecionar um algoritmo ou configurar parâmetros complexos.  

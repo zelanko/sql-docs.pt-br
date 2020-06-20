@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43b4fe6f4c3a7eafb0bf38a284c331bcaeaf4d5f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196839"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067947"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relações de chave estrangeira
   Você pode modificar parte da chave estrangeira de uma relação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modificar a chave estrangeira de uma tabela altera as colunas que estão relacionadas às colunas na tabela de chaves primárias.  

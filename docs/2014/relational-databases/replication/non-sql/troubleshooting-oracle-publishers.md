@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4097b2c185b6dde307cd9b295d3b5b32f5797649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021904"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065831"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionando problemas de Publicadores Oracle
   Este tópico lista diversos problemas que poderiam surgir ao configurar e usar um Publicador Oracle.  
@@ -66,9 +65,9 @@ ms.locfileid: "63021904"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>O Publicador Oracle está associado a outro Distribuidor  
  Um Publicador Oracle só pode estar associado a um Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se um Distribuidor diferente estiver associado ao Publicador Oracle, ele deve ser descartado antes que o outro Distribuidor possa ser usado. Se o Distribuidor não for descartado primeiro, você receberá uma das seguintes mensagens de erro:  
   
--   “Instância do servidor Oracle ' \<*OraclePublisherName*>' foi configurado anteriormente para usar '\<*SQLServerDistributorName*>' como Distribuidor. Para começar a usar '\<*NewSQLServerDistributorName*>' como Distribuidor, você deve remover a configuração de replicação atual na instância de servidor Oracle, o que excluirá todas as publicações nessa instância de servidor."  
+-   "A instância do servidor Oracle ' \<*OraclePublisherName*> ' foi configurada anteriormente para usar ' \<*SQLServerDistributorName*> ' como distribuidor. Para começar a usar ' \<*NewSQLServerDistributorName*> ' como seu distribuidor, você deve remover a configuração de replicação atual na instância do servidor Oracle, que excluirá todas as publicações nessa instância do servidor. "  
   
--   “Servidor Oracle '\<*OracleServerName*>' já está definido como publicador '\<*OraclePublisherName*>' no distribuidor '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* '. Remova o publicador ou o sinônimo público ' *\<SynonymName>* ' para recriar.”  
+-   "O servidor Oracle ' \<*OracleServerName*> ' já está definido como Publicador ' \<*OraclePublisherName*> ' no distribuidor ' \<*SQLServerDistributorName*> . *\<DistributionDatabaseName>* '. Descarte o Publicador ou remova o sinônimo público ' *\<SynonymName>* ' para recriar. "  
   
  Quando um Publicador Oracle é descartado, os objetos de replicação no banco de dados Oracle são automaticamente limpos. No entanto, a limpeza manual dos objetos de replicação Oracle é necessária em alguns casos. Para limpar manualmente objetos de replicação Oracle criados por replicação:  
   
@@ -81,7 +80,7 @@ ms.locfileid: "63021904"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>É gerado o erro SQL Server 21663, relativo à falta de uma chave primária  
  Os artigos em publicações transacionais devem ter uma chave primária válida. Se não tiverem uma chave primária válida, você receberá a seguinte mensagem de erro ao tentar adicionar um artigo:  
   
- “Nenhuma chave primária válida foi encontrada para a tabela de origem [\<*TableOwner*>].[\<*TableName*>]”  
+ "Nenhuma chave primária válida foi encontrada para a tabela de origem [ \<*TableOwner*> ]. [ \<*TableName*> ]"  
   
  Para obter informações sobre requisitos para chaves primárias, consulte a seção "Índices e Restrições Exclusivos" no tópico [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md).  
   
@@ -155,7 +154,7 @@ ms.locfileid: "63021904"
   
 2.  Na caixa de diálogo **Executar** , digite **regedit**e, então, clique em **OK**.  
   
-3.  Navegue até HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers.  
+3.  Navegue até HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server \\ *\<InstanceName>* \Providers.  
   
      Incluída em Provedores deve haver uma pasta nomeada OraOLEDB.Oracle. Dentro dessa pasta deve haver o nome do valor DWORD **AllowInProcess**, com valor **1**.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56157ce2c29a95d35198ab44835b50e45d7831a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b521c230d1789b031903aecdf8f42f9be3ffc0b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052829"
 ---
 # <a name="plan-guide-successful-event-class"></a>classe de evento Plan Guide Successful
   A classe de evento Plan Guide Successful indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produziu com êxito um plano de execução para uma consulta ou lote que continha uma guia de plano. O evento dispara quando as seguintes condições forem verdadeiras:  
@@ -42,7 +41,7 @@ ms.locfileid: "62827199"
 |EventSequence|`int`|A sequência de um evento específico dentro da solicitação.|51|Não|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário: 1 = sistema, 0 = usuário.|60|Sim|  
-|LoginName|`nvarchar`|Nome do logon do usuário (logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de segurança do ou as [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciais de logon do Windows na forma de nome\\de*usuário*do domínio).|11|Sim|  
+|LoginName|`nvarchar`|Nome do logon do usuário ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon de segurança do ou as [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciais de logon do Windows na forma de nome de \\ *usuário*do domínio).|11|Sim|  
 |LoginSid|`image`|Número SID (identificação de segurança) do usuário que fez logon. É possível localizar essas informações em [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) ou nas exibições de catálogo [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |NTDomainName|`nvarchar`|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|`nvarchar`|Nome do usuário do Windows.|6|Sim|  

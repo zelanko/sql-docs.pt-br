@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e09323a96a5a2fc282c1595c2606ea7e9b9a6bee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dc0410e7a54674673f64442d8a3cf9476d250033
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059554"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Sintaxe básica da cláusula FOR XML
   O modo FOR XML pode ser RAW, AUTO, EXPLICIT ou PATH. Ele determina a forma do XML resultante.  
@@ -62,7 +61,7 @@ XML
   
 ## <a name="arguments"></a>Argumentos  
  RAW[('*ElementName*')]  
- Pega o resultado da consulta e transforma cada linha no conjunto de resultados em um elemento XML com um identificador genérico, \<row/>, como a marca do elemento. Opcionalmente, é possível especificar um nome para o elemento de linha ao usar esta diretiva. O XML resultante usará o *ElementName* especificado como o elemento de linha gerado para cada linha. Para obter mais informações, consulte [Usar modo RAW com FOR XML](use-raw-mode-with-for-xml.md).  
+ Obtém o resultado da consulta e transforma cada linha no conjunto de resultados em um elemento XML que tem um identificador genérico, \<row /> , como a marca do elemento. Opcionalmente, é possível especificar um nome para o elemento de linha ao usar esta diretiva. O XML resultante usará o *ElementName* especificado como o elemento de linha gerado para cada linha. Para obter mais informações, consulte [Usar modo RAW com FOR XML](use-raw-mode-with-for-xml.md).  
   
  AUTO  
  Retorna os resultados da consulta em uma árvore XML simples e aninhada. Cada tabela na cláusula FROM para a qual pelo menos uma coluna está listada na cláusula SELECT é representada como um elemento XML. As colunas listadas na cláusula SELECT são mapeadas para os atributos apropriados do elemento. Para obter mais informações, consulte [Usar modo AUTO com FOR XML](use-auto-mode-with-for-xml.md).  
@@ -71,7 +70,7 @@ XML
  Especifica que a forma da árvore XML resultante está explicitamente definida. Usando esse modo, as consultas devem ser escritas de uma maneira específica para que informações adicionais sobre o aninhamento desejado sejam especificadas explicitamente. Para obter mais informações, consulte [Usar modo EXPLICIT com FOR XML](use-explicit-mode-with-for-xml.md).  
   
  PATH  
- Fornece um modo mais simples de misturar elementos e atributos e introduzir aninhamento adicional para representar propriedades complexas. É possível usar consultas em modo FOR XML EXPLICIT para construir esse tipo de XML a partir de um conjunto de linhas, mas o modo PATH fornece uma alternativa mais simples para as consultas em modo EXPLICIT que provavelmente são trabalhosas. O modo PATH, juntamente com a capacidade de escrever consultas FOR XML aninhadas e a diretiva TYPE para retornar instâncias do tipo **xml** , permite escrever consultas com menos complexidade. Ele fornece uma alternativa a escrita da maioria das consultas em modo EXPLICIT. Por padrão, o modo PATH gera um wrapper de elemento \<row> para cada linha do conjunto de resultados. Opcionalmente, é possível especificar um nome de elemento. Nesse caso, o nome especificado será usado como o nome do elemento wrapper. Se você fornecer uma cadeia de caracteres vazia (FOR XML PATH ('')), nenhum elemento wrapper será gerado. Para obter mais informações, consulte [Usar modo PATH com FOR XML](use-path-mode-with-for-xml.md).  
+ Fornece um modo mais simples de misturar elementos e atributos e introduzir aninhamento adicional para representar propriedades complexas. É possível usar consultas em modo FOR XML EXPLICIT para construir esse tipo de XML a partir de um conjunto de linhas, mas o modo PATH fornece uma alternativa mais simples para as consultas em modo EXPLICIT que provavelmente são trabalhosas. O modo PATH, juntamente com a capacidade de escrever consultas FOR XML aninhadas e a diretiva TYPE para retornar instâncias do tipo **xml** , permite escrever consultas com menos complexidade. Ele fornece uma alternativa a escrita da maioria das consultas em modo EXPLICIT. Por padrão, o modo PATH gera um \<row> wrapper de elemento para cada linha no conjunto de resultados. Opcionalmente, é possível especificar um nome de elemento. Nesse caso, o nome especificado será usado como o nome do elemento wrapper. Se você fornecer uma cadeia de caracteres vazia (FOR XML PATH ('')), nenhum elemento wrapper será gerado. Para obter mais informações, consulte [Usar modo PATH com FOR XML](use-path-mode-with-for-xml.md).  
   
  XMLDATA  
  Especifica que um esquema XDR (XML-Data Reduced) será retornado. O esquema é pré-anexado ao documento como um esquema embutido. Para obter um exemplo de funcionamento, consulte [Usar modo RAW com FOR XML](use-raw-mode-with-for-xml.md).  

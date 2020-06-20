@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 560822d7cc4df81bb55d0ea9a78eb8f9dfbbeeb5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900196"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939310"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta
   A transformação Dimensão de Alteração Lenta coordena a atualização e a inserção de registros em tabelas de dimensão do data warehouse. Por exemplo, você pode usar essa transformação para configurar as saídas de transformação que inserem e atualizam registros na tabela DimProduct do banco de dados OLAP da [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] com dados da tabela Production.Products no banco de dados OLTP da AdventureWorks.  

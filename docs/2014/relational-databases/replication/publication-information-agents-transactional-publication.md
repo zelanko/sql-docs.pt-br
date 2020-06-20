@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f753d4735994fc6ac5bd356edef59df1e133bb9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065719"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>Informações da Publicação, Agentes (publicação transacional)
   A guia **Agentes** exibe informações resumidas sobre os agentes para a publicação selecionada. Informações sobre o Snapshot Agent e Log Reader Agent são exibida para todas as publicações transacionais. Informações sobre o Queue Reader Agent são exibidas para essas publicações transacionais que estão habilitadas para assinaturas de atualização enfileirada.  
@@ -54,7 +53,7 @@ ms.locfileid: "63021805"
  **Hora da última inicialização**  
  A última vez que o agente foi iniciado.  
   
- **Permanência**  
+ **Duration**  
  O tempo durante o qual o agente foi executado. O tempo representa o tempo decorrido, se o agente estiver sendo executado no momento, e o tempo total, se o agente foi executado anteriormente.  
   
  **Última Ação**  

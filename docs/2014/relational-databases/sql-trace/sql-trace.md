@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82ed0e5dd67738b705b4991b90669198495d497a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63286525"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060262"
 ---
 # <a name="sql-trace"></a>Rastreamento do SQL
   No Rastreamento do SQL, são coletados eventos se estes forem instâncias de classes de evento listadas na definição de rastreamento. Esses eventos podem ser filtrados do rastreamento ou colocados na fila para seus destinos. O destino pode ser um arquivo ou o SMO ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), que pode usar as informações do rastreamento em aplicativos que gerenciam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -34,8 +33,8 @@ ms.locfileid: "63286525"
 ## <a name="sql-trace-terminology"></a>Terminologia do Rastreamento do SQL  
  Os termos a seguir descrevem os conceitos fundamentais do Rastreamento do SQL.  
   
- **Circunstância**  
- A ocorrência de uma ação em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
+ **Evento**  
+ A ocorrência de uma ação em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] .  
   
  **Coluna de dados**  
  Um atributo de um evento.  
@@ -75,20 +74,20 @@ ms.locfileid: "63286525"
 |**ApplicationName** <sup>1</sup>|10|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores transmitidos pelo aplicativo e não com o nome do programa.|  
 |**BigintData1**|52|Valor (tipo de dados `bigint` ) que depende da classe de evento especificada no rastreamento.|  
 |**BigintData2**|53|Valor (tipo de dados `bigint` ) que depende da classe de evento especificada no rastreamento.|  
-|**Binary Data**|2|Valor binário dependente da classe de evento capturada no rastreamento.|  
+|**Dados binários**|2|Valor binário dependente da classe de evento capturada no rastreamento.|  
 |**ClientProcessID** <sup>1</sup>|9|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|  
 |**ColumnPermissions**|44|Indica se uma permissão de coluna foi definida ou não. Você pode analisar o texto da instrução para determinar quais permissões foram aplicadas a quais colunas.|  
-|**CPUs**|18|O tempo de CPU (em milissegundos) usado pelo evento.|  
+|**CPU**|18|O tempo de CPU (em milissegundos) usado pelo evento.|  
 |**ID do banco de dados** <sup>1</sup>|3|A ID do banco de dados especificada pela instrução USE *database_name* ou a ID do banco de dados padrão se nenhuma instrução USE *database_name*tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|  
 |**DatabaseName**|35|O nome do banco de dados no qual a instrução do usuário está sendo executada.|  
 |**Dbusername** <sup>1</sup>|40|Nome de usuário do cliente no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
-|**Permanência**|13|A duração do evento (em microssegundos).<br /><br /> O servidor relata a duração de um evento em microssegundos (um milionésimo de segundo ou 10<sup>-6</sup>segundo) e o tempo de CPU usado pelo evento em milissegundos (um milésimo de segundo ou 10<sup>-3</sup>segundo). A interface gráfica do usuário do [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] exibe a coluna **Duration** em milissegundos, por padrão; porém, quando um rastreamento é salvo em um arquivo ou tabela de banco de dados, o valor da coluna **Duration** é gravado em microssegundos.|  
-|**Final**|15|A hora em que o evento terminou. Essa coluna não é populada para classes de evento que se referem a um evento que está sendo iniciado, como **SQL:BatchStarting** ou **SP:Starting**.|  
+|**Duration**|13|A duração do evento (em microssegundos).<br /><br /> O servidor relata a duração de um evento em microssegundos (um milionésimo de segundo ou 10<sup>-6</sup>segundo) e o tempo de CPU usado pelo evento em milissegundos (um milésimo de segundo ou 10<sup>-3</sup>segundo). A interface gráfica do usuário do [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] exibe a coluna **Duration** em milissegundos, por padrão; porém, quando um rastreamento é salvo em um arquivo ou tabela de banco de dados, o valor da coluna **Duration** é gravado em microssegundos.|  
+|**EndTime**|15|A hora em que o evento terminou. Essa coluna não é populada para classes de evento que se referem a um evento que está sendo iniciado, como **SQL:BatchStarting** ou **SP:Starting**.|  
 |**Erro**|31|O número do erro de um determinado evento. Muitas vezes, é o número de erro armazenado na tabela **sysmessages**.|  
 |**EventClass** <sup>1</sup>|27|O tipo de classe de evento capturado.|  
 |**EventSequence**|51|Número de sequência para esse evento.|  
 |**EventSubClass** <sup>1</sup>|21|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Por exemplo, valores de subclasse de evento para a classe de evento **Execution Warning** representam o tipo de aviso de execução:<br /><br /> **1** = Espera da consulta. A consulta deve esperar por recursos para poder ser executada; por exemplo, memória.<br /><br /> **2** = tempo limite de consulta. A consulta atingiu o tempo limite enquanto aguardava a execução dos recursos necessários. Essa coluna de dados não é populada para todas as classes de evento.|  
-|**GUID**|54|Valor da GUID, que depende da classe de evento especificada no rastreamento.|  
+|**VOLUME**|54|Valor da GUID, que depende da classe de evento especificada no rastreamento.|  
 |**FileName**|36|O nome lógico do arquivo que é modificado.|  
 |**Handle**|33|O inteiro usado por ODBC, OLE DB ou DB-Library para coordenar execução de servidor.|  
 |**Nome do host** <sup>1</sup>|8|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|  
@@ -161,7 +160,7 @@ ms.locfileid: "63286525"
 |Descreve os dois modos de agendar rastreamento no Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Agendar rastreamentos](../sql-trace/schedule-traces.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelos e permissões de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Guia de Programação do SMO &#40;SQL Server Management Objects&#41;](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   
