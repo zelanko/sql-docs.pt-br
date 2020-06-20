@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa7013fddc6b2ce12ad9ad0f9fcb511d93915e05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002855"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados)
   Os parâmetros com valor de tabela são declarados usando tipos de tabela definidos pelo usuário. Você pode usar parâmetros com valor de tabela para enviar várias linhas de dados para uma rotina ou instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] , como um procedimento armazenado ou função, sem criar uma tabela temporária ou muitos parâmetros.  

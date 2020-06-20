@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e29d088b8ea61c0d7fc58b45097f703a67bd1df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62885565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972706"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Solucionando problemas de ferramentas para desenvolvimento de pacotes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui recursos e ferramentas que podem ser usados para solucionar problemas de pacotes enquanto você os estiver desenvolvendo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "62885565"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui os recursos adicionais a seguir para ajudar a evitar erros de validação:  
   
--   **Definir todos os pacotes e todas as conexões para trabalhar offline quando as fontes de dados não estiverem disponíveis**. Você pode habilitar **Trabalhar Offline** no menu **SSIS** . Ao contrário `DelayValidation` da propriedade, a opção **trabalhar offline** está disponível mesmo antes de você abrir um pacote. Você também pode habilitar a opção **Trabalhar Offline** para acelerar as operações no designer e a desabilitar apenas quando você desejar validar seu pacote.  
+-   **Definir todos os pacotes e todas as conexões para trabalhar offline quando as fontes de dados não estiverem disponíveis**. Você pode habilitar **Trabalhar Offline** no menu **SSIS** . Ao contrário da `DelayValidation` propriedade, a opção **trabalhar offline** está disponível mesmo antes de você abrir um pacote. Você também pode habilitar a opção **Trabalhar Offline** para acelerar as operações no designer e a desabilitar apenas quando você desejar validar seu pacote.  
   
 -   **Configure a propriedade DelayValidation em elementos do pacote que não são válidos até o tempo de execução**. Você pode definir `DelayValidation` como `True` em elementos do pacote cujas configurações não são válidas no tempo de design para evitar erros de validação. Por exemplo, você pode ter uma tarefa Fluxo de Dados que usa uma tabela de destino que não existe até que uma tarefa Executar SQL crie a tabela no tempo de execução. A propriedade `DelayValidation` pode ativada no nível do pacote ou no nível das tarefas individuais e contêineres que o pacote inclui. Normalmente, ao implantar o pacote, você deve deixar esta propriedade definida como `True` nos mesmos elementos do pacote, para evitar os mesmos erros de validação no tempo de execução.  
   

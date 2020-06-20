@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2584cb4a6867d4af3b3f6bc1feff167c900a166d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965609"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar Destino Arquivo Simples (Assistente de Importação e Exportação do SQL Server)
   Use a página **Configurar destino de arquivo simples** para especificar opções de formatação para o arquivo simples de destino e para visualizar os resultados antes de continuar.  
@@ -36,9 +35,9 @@ ms.locfileid: "62893027"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|A linha é delimitada por uma combinação de retorno de carro e avanço de linha.|  
-|**{CR}**|A linha é delimitada por um retorno de carro.|  
+|**CD**|A linha é delimitada por um retorno de carro.|  
 |**{LF}**|A linha é delimitada por uma alimentação de linha.|  
-|**Ponto-e-vírgula {;}**|A linha é delimitada por um ponto-e-vírgula.|  
+|**Ponto e vírgula {;}**|A linha é delimitada por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|A linha é delimitada por dois-pontos.|  
 |**Pontos{,}**|A linha é delimitada por uma vírgula.|  
 |**Tabulação {t}**|A linha é delimitada por uma tabulação.|  
@@ -50,15 +49,15 @@ ms.locfileid: "62893027"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
-|**{CR}**|As colunas são delimitadas por um retorno de carro.|  
+|**CD**|As colunas são delimitadas por um retorno de carro.|  
 |**{LF}**|As colunas são delimitadas por uma alimentação de linha.|  
-|**Ponto-e-vírgula {;}**|As colunas são delimitadas por um ponto-e-vírgula.|  
+|**Ponto e vírgula {;}**|As colunas são delimitadas por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|As colunas são delimitadas por dois-pontos.|  
 |**Pontos{,}**|As colunas são delimitadas por uma vírgula.|  
 |**Tabulação {t}**|As colunas são delimitadas por uma tabulação.|  
 |**Barra vertical {&#124;}**|As colunas são delimitadas por uma barra vertical.|  
   
- **Visualizar**  
+ **Visualização**  
  Exibir na caixa de diálogo **Visualizar dados** os resultados das opções de formatação selecionadas para o arquivo simples de destino.  
   
  **Editar transformação**  

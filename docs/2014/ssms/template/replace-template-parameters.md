@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1fa26c1bfec54e4e684bcd7e0967281a6ef3301
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d87b17a110efe118f7796487448e4d3bae30375
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061897"
 ---
 # <a name="replace-template-parameters"></a>Substituir Parâmetros do Modelo
   Modelos contêm parâmetros que podem ser substituídos por valores específicos de implementação cada vez que o modelo é usado. Depois de abrir um modelo em um editor de código, você pode substituir os parâmetros pelos valores relevantes à sua implementação.  

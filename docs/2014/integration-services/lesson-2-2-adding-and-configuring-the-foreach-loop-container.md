@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 761407023130b2bc18c8e1b64d09d9b30155c3b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232470"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966061"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Etapa 2: Adicionar e configurar o contêiner Loop Foreach
   Nessa tarefa, você adicionará a capacidade de executar loop através de uma pasta de arquivos simples e aplicará a mesma transformação Fluxo de Dados usada na Lição 1 para cada um desses arquivos simples. Você faz isto adicionando e configurando um contêiner Loop Foreach ao fluxo de controle.  
@@ -26,7 +25,7 @@ ms.locfileid: "75232470"
   
 -   **Contêiner Loop Foreach:** você mapeará o valor enumerado do contêiner para uma variável de pacote definida pelo usuário. O contêiner usará a variável definida pelo usuário para modificar dinamicamente a propriedade `ConnectionString` do gerenciador de conexões de Arquivo Simples, e conectar-se iterativamente a cada um dos arquivos simples da pasta.  
   
--   **Gerenciador de conexões de arquivos simples:** Você modificará o Gerenciador de conexões criado na lição 1 usando uma variável definida pelo usuário para popular a propriedade do `ConnectionString` Gerenciador de conexões.  
+-   **Gerenciador de conexões de arquivos simples:** Você modificará o Gerenciador de conexões criado na lição 1 usando uma variável definida pelo usuário para popular a propriedade do Gerenciador de conexões `ConnectionString` .  
   
  Os procedimentos nessa tarefa mostram como você pode criar e modificar o contêiner Loop Foreach para usar uma variável definida pelo usuário e adicionar a tarefa de fluxo de dados ao loop. Você aprenderá como modificar o gerenciador de conexões de Arquivo Simples para usar uma variável definida pelo usuário na próxima tarefa.  
   
@@ -43,9 +42,9 @@ ms.locfileid: "75232470"
   
 3.  Clique com o botão direito do mouse no **Contêiner Loop Foreach** recém-adicionado e selecione **Editar**.  
   
-4.  Na caixa de diálogo **Editor de loop foreach** , na **página Geral** , em **nome**, digite `Foreach File in Folder`. Clique em **OK**.  
+4.  Na caixa de diálogo **Editor de loop foreach** , na página **geral** , em **nome**, digite `Foreach File in Folder` . Clique em **OK**.  
   
-5.  Clique com o botão direito do mouse no contêiner Loop Foreach, clique em **Propriedades**e, na janela Propriedades `LocaleID` , verifique se a propriedade está definida como **Inglês (Estados Unidos)**.  
+5.  Clique com o botão direito do mouse no contêiner Loop Foreach, clique em **Propriedades**e, na janela Propriedades, verifique se a `LocaleID` propriedade está definida como **Inglês (Estados Unidos)**.  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Para configurar o enumerador para o contêiner Loop Foreach  
   
@@ -65,7 +64,7 @@ ms.locfileid: "75232470"
   
     2.  Clique na guia **downloads** .  
   
-    3.  Clique no hiperlink "https://msftisprodsamples.codeplex.com/downloads/get/578097" sql2012. Arquivo Integration_Services. Create_Simple_ETL_Tutorial. Sample. zip.  
+    3.  Clique no hiperlink " https://msftisprodsamples.codeplex.com/downloads/get/578097 " SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip arquivo.  
   
 6.  Na caixa **Arquivos**, digite **Currency_\*.txt**.  
   
@@ -73,9 +72,9 @@ ms.locfileid: "75232470"
   
 1.  Clique em **Mapeamentos de Variáveis**.  
   
-2.  Na página **mapeamentos de variáveis** , na coluna **variável** , clique na célula vazia e selecione ** \<nova variável... >**.  
+2.  Na página **mapeamentos de variáveis** , na coluna **variável** , clique na célula vazia e selecione **\<New Variable...>** .  
   
-3.  Na caixa de diálogo **Adicionar variável** , em **nome**, digite `varFileName`.  
+3.  Na caixa de diálogo **Adicionar variável** , em **nome**, digite `varFileName` .  
   
     > [!IMPORTANT]  
     >  Nomes de variáveis fazem diferenciação de maiúsculas e minúsculas.  
@@ -86,7 +85,7 @@ ms.locfileid: "75232470"
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>Para adicionar a tarefa de fluxo de dados ao loop  
   
--   Arraste a tarefa extrair fluxo de dados de **dados de moeda de exemplo** para o contêiner Loop Foreach `Foreach File in Folder`agora renomeado.  
+-   Arraste a tarefa extrair fluxo de dados de **dados de moeda de exemplo** para o contêiner Loop Foreach agora renomeado `Foreach File in Folder` .  
   
 ## <a name="next-lesson-task"></a>Próxima tarefa da lição  
  [Etapa 3: Modificar o gerenciador de conexões de arquivo simples](lesson-2-3-modifying-the-flat-file-connection-manager.md)  

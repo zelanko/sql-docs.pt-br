@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5191da78fc32d72c54fa6da925bd419685b90152
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965656"
 ---
 # <a name="import-an-integration-services-project"></a>Importar um projeto do Integration Services
   Use o **Assistente de Projeto de Importação** do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para criar um projeto de um arquivo de implantação existente (.ispac) ou de um projeto implantado no catálogo do Integration Services. Este recurso é especialmente útil quando você não tiver a cópia original do projeto, mas desejar criar um de um arquivo .ispac ou catálogo SSISDB.  
   
 ### <a name="to-import-a-project"></a>Para importar um projeto  
   
-1.  No [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], clique em **novo** > **projeto** no menu **arquivo** .  
+1.  No [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , clique em **novo**  >  **projeto** no menu **arquivo** .  
   
 2.  Na área **Modelos Instalados** da janela **Novo Projeto** , expanda **Business Intelligence**e clique em **Integration Services**.  
   

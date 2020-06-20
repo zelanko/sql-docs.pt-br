@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36f27bc789a5af9077225e3c507fadf54fb9ddfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055102"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972852"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Editor da Tarefa Transferir Banco de Dados (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** para nomear e descrever a tarefa Transferir Banco de Dados. A tarefa Transferir Banco de Dados copia ou move um bancos de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre duas instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essa tarefa também pode ser usada para copiar um banco de dados dentro do mesmo servidor. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Banco de Dados](control-flow/transfer-database-task.md).  

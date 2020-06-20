@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20d32f3a050e79aef90eb8df302bd7a590cead3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045145"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Lista de verificação de implantação: instalação multisservidor do PowerPivot para SharePoint 2010
-  Esta lista de verificação orienta você pelas etapas para adicionar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o para SharePoint a um farm do SharePoint 2010 de três camadas que você cria desde o início. Um farm em três níveis contém os níveis de banco de dados, aplicativo e Web. A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] adição a essa topologia requer que você execute SQL Server instalação para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instalar na camada de aplicativo. Os arquivos de programa do PowerPivot são adicionados à camada da Web, mas somente como uma tarefa de pós-instalação quando você implanta a solução de aplicativo Web. Embora haja etapas de instalação, não é necessário executar nenhuma etapa de instalação separada na camada da Web nem na camada de dados. A única etapa de instalação que você precisa executar é a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instalação nos servidores de aplicativos.  
+  Esta lista de verificação orienta você pelas etapas para adicionar o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint a um farm do sharepoint 2010 de três camadas que você cria desde o início. Um farm em três níveis contém os níveis de banco de dados, aplicativo e Web. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]A adição a essa topologia requer que você execute SQL Server instalação para instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] na camada de aplicativo. Os arquivos de programa do PowerPivot são adicionados à camada da Web, mas somente como uma tarefa de pós-instalação quando você implanta a solução de aplicativo Web. Embora haja etapas de instalação, não é necessário executar nenhuma etapa de instalação separada na camada da Web nem na camada de dados. A única etapa de instalação que você precisa executar é a instalação [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nos servidores de aplicativos.  
   
 ||  
 |-|  
@@ -102,7 +101,7 @@ ms.locfileid: "71952239"
   
     4.  Em tipo de regra, clique em **personalizado**.  
   
-    5.  Clique em **Avançar**.  
+    5.  Clique em **Próximo**.  
   
     6.  Em programa, na seção serviços, clique em **Personalizar**.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "71952239"
   
     8.  Selecione **SQL Server (MSSQLSERVER)** se você instalou SQL Server como a instância padrão e, em seguida, clique em **OK**.  
   
-    9. Clique em **Avançar**.  
+    9. Clique em **Próximo**.  
   
     10. Em protocolo e portas, aceite as configurações padrão e clique em **Avançar**.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "71952239"
   
  Para verificar a integração do PowerPivot com um site do SharePoint, faça o seguinte:  
   
-1.  Em um navegador, abra o aplicativo Web criado. Se você usou valores padrão, você pode especificar http://\<o nome do seu computador> no endereço da URL.  
+1.  Em um navegador, abra o aplicativo Web criado. Se você usou valores padrão, poderá especificar http:// \<your computer name> no endereço da URL.  
   
 2.  Verifique se os recursos de acesso aos dados e de processamento do PowerPivot estão disponíveis no aplicativo. É possível fazer isso verificando a presença de modelos de biblioteca fornecidos pelo PowerPivot:  
   
@@ -209,9 +208,9 @@ ms.locfileid: "71952239"
   
 5.  Inicie o SQL Server Management Studio no grupo de programas Microsoft SQL Server 2008 R2 no menu Iniciar. Se essa ferramenta não estiver instalada no servidor, será possível passar à última etapa para confirmar a presença de arquivos armazenados em cache.  
   
-6.  Em Tipo de Servidor, selecione **Analysis Services**.  
+6.  Em tipo de servidor, selecione **Analysis Services**.  
   
-7.  Em nome do servidor, digite ** \<Server-Name> \powerpivot**, em que ** \<Server-Name>** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
+7.  Em nome do servidor, digite ** \<server-name> \powerpivot**, em que **\<server-name>** é o nome do computador que tem a instalação do PowerPivot para SharePoint.  
   
 8.  Clique em **Conectar**.  
   

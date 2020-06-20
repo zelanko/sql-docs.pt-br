@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972734"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor da Tarefa Transferir Objetos do SQL Server (página Objetos)
   Use a página **Objetos** da caixa de diálogo **Editor da Tarefa Transferir Objetos do SQL Server** para especificar propriedades para copiar um ou mais objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para outra. Tabelas, exibições, procedimentos armazenados e funções definidas pelo usuário são alguns exemplos de objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que você pode copiar. Para obter mais informações sobre essa tarefa, consulte [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  
@@ -29,13 +28,13 @@ ms.locfileid: "66054873"
   
 ## <a name="static-options"></a>Opções estáticas  
  **SourceConnection**  
- Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de origem.  
+ Selecione um Gerenciador de conexões SMO na lista ou clique **\<New connection...>** para criar uma nova conexão com o servidor de origem.  
   
  **SourceDatabase**  
  Selecione o banco de dados no servidor de origem do qual serão copiados os objetos.  
   
  **DestinationConnection**  
- Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de destino.  
+ Selecione um Gerenciador de conexões SMO na lista ou clique **\<New connection...>** para criar uma nova conexão com o servidor de destino.  
   
  **DestinationDatabase**  
  Selecione o banco de dados no servidor de destino para o qual serão copiados os objetos.  
@@ -55,7 +54,7 @@ ms.locfileid: "66054873"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Substitua**|Os dados no servidor de destino serão substituídos.|  
-|**Anexar**|Os dados copiados do servidor de origem serão anexados aos dados existentes no servidor de destino.|  
+|**Acrescentar**|Os dados copiados do servidor de origem serão anexados aos dados existentes no servidor de destino.|  
   
 > [!NOTE]  
 >  A opção **ExistingData** só ficará disponível quando **CopyData** for definido como **True**.  

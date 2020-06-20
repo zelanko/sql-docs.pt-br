@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfc8e5cf35a7f03f485bc3ff9e94ee70eab2cea2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997075"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Criar um projeto SMO do Visual C# no Visual Studio .NET
   Esta seção descreve como criar um aplicativo de console SMO simples.  
@@ -30,7 +29,7 @@ ms.locfileid: "63131648"
   
 2.  No menu **Arquivo**, clique em **NewProject.** A caixa de diálogo **Novo Projeto** aparecerá.  
   
-3.  Na caixa de diálogo **tipos de projeto** , selecione **Visual C#** e, em seguida, selecione **Windows**. No painel [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] modelos instalados, selecione **aplicativo do Windows**.  
+3.  Na caixa de diálogo **tipos de projeto** , selecione **Visual C#** e, em seguida, selecione **Windows**. No [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] painel modelos instalados, selecione **aplicativo do Windows**.  
   
 4.  Adicional No campo **nome** , digite o nome do novo aplicativo  
   
@@ -38,7 +37,7 @@ ms.locfileid: "63131648"
   
 6.  No menu **Projeto**, selecione **Adicionar Referência**. A caixa de diálogo **Adicionar Referência** é exibida.  
   
-7.  Clique em **procurar**, localize os ASSEMBLIES do Smo [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] na pasta e, em seguida, selecione os arquivos a seguir. Estes são os arquivos mínimos exigidos para criar um aplicativos SMO:  
+7.  Clique em **procurar**, localize os ASSEMBLIES do SMO na [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] pasta e, em seguida, selecione os arquivos a seguir. Estes são os arquivos mínimos exigidos para criar um aplicativos SMO:  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   

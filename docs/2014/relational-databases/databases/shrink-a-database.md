@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246036bfea6dc8431f878165330f7f0571949897
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965736"
 ---
 # <a name="shrink-a-database"></a>Reduzir um banco de dados
   Este tópico descreve como reduzir um banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -65,7 +64,7 @@ ms.locfileid: "62916939"
   
 #### <a name="to-shrink-a-database"></a>Para reduzir um banco de dados  
   
-1.  No Pesquisador de **objetos**, conecte-se a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]uma instância do e expanda essa instância.  
+1.  No Pesquisador de **objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda essa instância.  
   
 2.  Expanda **Bancos de Dados**e clique com o botão direito do mouse no banco de dados que deseja reduzir.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "62916939"
  [Reduzir um arquivo](shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [sys. database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [&#41;DBCC &#40;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
+ [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [&#41;&#40;Transact-SQL de DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [Arquivos e grupos de arquivos do banco de dados](database-files-and-filegroups.md)  
   

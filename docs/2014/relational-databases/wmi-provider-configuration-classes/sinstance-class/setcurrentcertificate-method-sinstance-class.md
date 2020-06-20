@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 66e150656b3d1d71579e04417adbefb3a3fa0025
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d686f22eaafceca708b1f0423c050549d95ac2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061359"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>Método SetCurrentCertificate (classe SInstance)
   Define o certificado de segurança atual.  
@@ -40,7 +39,7 @@ SHA
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SInstance](sinstance-class.md) que representa as configurações de servidor em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Parâmetros  

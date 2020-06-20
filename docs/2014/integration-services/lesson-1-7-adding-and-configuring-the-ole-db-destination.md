@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71e4254312c0dc07d6d8869a2e8b28eb02c36fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767555"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966126"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Etapa 7: Adicionar e configurar o destino OLE DB
   Seu pacote agora extrai dados de uma fonte de arquivo simples e transforma esses dados em um formato compatível com o destino. A próxima tarefa é carregar os dados transformados no destino. Para carregar os dados, você deve adicionar um destino OLE DB ao fluxo de dados. O destino do OLE DB pode usar uma tabela, exibição de banco de dados ou um comando SQL para carregar os dados em uma diversidade de bancos de dados compatíveis com o OLE DB.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767555"
   
 13. Clique com o botão direito do mouse no destino **Destino OLE DB de Exemplo** e clique em **Propriedades**.  
   
-14. No janela Propriedades `LocaleID` , verifique se a propriedade está definida como **Inglês (Estados Unidos)** e se a`DefaultCodePage` Propriedade está definida como **1252**.  
+14. No janela Propriedades, verifique se a `LocaleID` propriedade está definida como **inglês (Estados Unidos)** e se a `DefaultCodePage` propriedade está definida como **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 8: Tornar o pacote da Lição 1 mais fácil de compreender](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

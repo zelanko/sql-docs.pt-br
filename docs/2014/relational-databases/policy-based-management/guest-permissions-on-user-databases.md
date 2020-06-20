@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 325242c6660aa49c9358399b38c92d72e21aaf46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 344c5fd0639876998f1585c32fac5f7599f664e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061654"
 ---
 # <a name="guest-permissions-on-user-databases"></a>Permissões de convidado em bancos de dados de usuários
   Esta regra determina se o usuário convidado tem permissão para acessar o banco de dados. Esta regra só se aplica a bancos de dados de usuários.  

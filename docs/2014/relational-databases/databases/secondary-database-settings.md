@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f407d7578baabc2e0fe155235781b99b02dc1e3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965776"
 ---
 # <a name="secondary-database-settings"></a>Configurações do Banco de Dados Secundário.
   Use essa caixa de diálogo para configurar e modificar as propriedades de um banco de dados secundário na configuração de envio de logs.  

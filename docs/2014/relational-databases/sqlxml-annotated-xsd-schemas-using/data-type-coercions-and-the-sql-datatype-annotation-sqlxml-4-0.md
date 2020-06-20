@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aa2b5830ab0579fe0429357fea3275d4e14d1c47
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61da7fafe60ef31246a436e21a5110c121d094e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996409"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coerções de tipo de dados e a anotação de sql:datatype (SQLXML 4.0)
   Em um esquema XSD, o atributo `xsd:type` especifica o tipo de dados XSD de um elemento ou atributo. Quando um esquema XSD é usado para extrair dados do banco de dados, o tipo de dados especificado é usado para formatar os dados.  

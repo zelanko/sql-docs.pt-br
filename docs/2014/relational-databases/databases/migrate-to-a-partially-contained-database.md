@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6142d46dc0540e5998fa66d463538d1453a17d84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871722"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965896"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
   Este tópico discute como preparar para alterar para o modelo de banco de dados independente parcialmente e, em seguida, fornece as etapas de migração.  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1df8207ebf479d22f1e67191dfdd254fb6403fea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60afafacf337b393ac683c76b7bee5bc502ed118
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63276862"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067352"
 ---
 # <a name="browse-for-objects-object-explorer"></a>Procurar por objetos (Pesquisador de Objetos)
   Exibe uma lista de objetos do tipo selecionado. Selecione um ou mais objetos desta lista marcando a caixa de seleção correspondente. A caixa **Procurar por Objetos** só exibe itens apropriados para a ação e só exibe itens que você tem permissão para exibir.  

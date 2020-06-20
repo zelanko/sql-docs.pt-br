@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 02a34ba1e0f441b665c239d60f6398afa4247102
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71dcb00b3f5525f7059fc54911baed929f763008
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965936"
 ---
 # <a name="increase-the-size-of-a-database"></a>Aumentar o tamanho de um banco de dados
   Este tópico descreve como aumentar o tamanho de um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O banco de dados é expandido ao aumentar o tamanho de um arquivo de dados ou de log existente ou ao adicionar um novo arquivo ao banco de dados.  

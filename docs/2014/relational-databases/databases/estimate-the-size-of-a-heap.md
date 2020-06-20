@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 814175fa78176d14167355bfe188179552c545c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965976"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar o tamanho de um heap
   Você pode usar as seguintes etapas para estimar a quantidade de espaço exigida para armazenar dados em um heap:  
@@ -57,13 +56,13 @@ ms.locfileid: "62916740"
      Os bytes adicionados a ***Max_Var_Size*** servem para acompanhar cada coluna de tamanho variável. Essa fórmula presume que todas as colunas de comprimento variável estão 100% completas. Se você prevê que um percentual menor do espaço de armazenamento da coluna de tamanho variável será usada, poderá ajustar o valor ***Max_Var_Size*** de acordo com esse percentual para obter uma estimativa mais precisa do tamanho geral da tabela.  
   
     > [!NOTE]  
-    >  Você pode combinar as colunas `varchar`, `nvarchar`, `varbinary` ou `sql_variant` que fazem com que a largura total definida da tabela exceda 8.060 bytes. O comprimento de cada uma dessas colunas ainda deve estar dentro do limite de 8.000 bytes para uma `varchar`coluna, `nvarchar,``varbinary`ou. `sql_variant` Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
+    >  Você pode combinar as colunas `varchar`, `nvarchar`, `varbinary` ou `sql_variant` que fazem com que a largura total definida da tabela exceda 8.060 bytes. O comprimento de cada uma dessas colunas ainda deve estar dentro do limite de 8.000 bytes para uma `varchar` coluna, `nvarchar,``varbinary` ou `sql_variant` . Entretanto, as larguras combinadas podem exceder o limite de 8.060 bytes em uma tabela.  
   
      Se não houver colunas de tamanho variável, defina ***Variable_Data_Size*** como 0.  
   
 5.  Calcule o tamanho total da linha:  
   
-     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
+     ***Row_Size***   =  ***Fixed_Data_Size***  +  ***Variable_Data_Size***  +  ***Null_Bitmap*** + 4  
   
      O valor 4 na fórmula é a sobrecarga do cabeçalho da linha de dados.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62916740"
   
 -   Valores de LOB (Objeto Grande)  
   
-     O algoritmo para determinar exatamente quanto espaço será usado para armazenar os tipos `varchar(max)`de dados LOB, `varbinary(max)`, `nvarchar(max)` `text`,, **ntextxml**, e `image` os valores é complexo. É suficiente apenas para adicionar o tamanho médio dos valores de LOB esperados e adicioná-lo ao tamanho do heap.  
+     O algoritmo para determinar exatamente quanto espaço será usado para armazenar os tipos de dados LOB `varchar(max)` ,,,, `varbinary(max)` `nvarchar(max)` `text` **ntextxml**, e `image` os valores é complexo. É suficiente apenas para adicionar o tamanho médio dos valores de LOB esperados e adicioná-lo ao tamanho do heap.  
   
 -   Compactação  
   

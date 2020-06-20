@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0c2caa68-7834-4ea0-bd77-4f3a7c86d634
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 989db1ed792d960b7a0dca22bd82ec8b2f5aa7df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a71b6b18960ee5b457be339e8a98ada505a6dec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966246"
 ---
 # <a name="grant-permissions-to-integration-services-service"></a>Conceder permissões ao serviço Integration Services
   Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por padrão, quando você instalava o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , todos os usuários no grupo Usuários tinham acesso ao serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Quando você instala a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os usuários não têm acesso ao serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Por padrão, o serviço é protegido. Depois que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é instalado, o administrador deve conceder acesso ao serviço.  

@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b163f9e984a3fa9933cdc57150357596f4face8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061747"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Caixa de diálogo Avaliar Políticas, página Seleção de Políticas
   Use esta caixa de diálogo para avaliar políticas do Gerenciamento Baseado em Políticas. Ao selecionar a página **Resultados da Avaliação** , você pode aplicar políticas aos itens em um conjunto de destino que não esteja em conformidade com as políticas.  
   
 ## <a name="options"></a>Opções  
- **Fonte**  
+ **Origem**  
  Especifica a origem das políticas. Para alterar a origem, clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecionar Origem** .  
   
  **Arquivos**  

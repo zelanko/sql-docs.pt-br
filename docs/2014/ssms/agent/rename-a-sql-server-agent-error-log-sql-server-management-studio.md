@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b3405f69ce36b4b46cdb519d281ab910d7220887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f27db2bef0286d4e6d46d94c405599c8ca0e83f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62649913"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062151"
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
-  Este tópico descreve como renomear o arquivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde os erros do Agent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] são gravados no usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o.  
+  Este tópico descreve como renomear o arquivo onde os [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erros do Agent são gravados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  **Neste tópico**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62649913"
   
 -   Ajustar cotas de memória para um processo (SeIncreaseQuotaPrivilege)  
   
- Para obter mais informações sobre as permissões do Windows necessárias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a conta de serviço do Agent, consulte [selecionar uma conta para o serviço de SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Para obter mais informações sobre as permissões do Windows necessárias para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço do Agent, consulte [selecionar uma conta para o serviço de SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   

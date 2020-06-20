@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0b2c2e597ef7069bcc51fb885a2e810871bfbb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8524cdc2c4efb03e2a285c815ca58391045062f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045505"
 ---
 # <a name="backup-encryption-key-ssrs-native-mode"></a>Chave de Criptografia de Backup (modo nativo do SSRS)
   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa uma chave de criptografia para proteger dados confidenciais armazenados no banco de dados do servidor de relatório. Ter um backup dessa chave é essencial para assegurar acesso contínuo a cadeias de conexões criptografadas e credenciais. Você deve ter uma cópia de backup dessa chave caso mova o banco de dados do servidor de relatório para outro computador ou altere o nome de usuário ou a senha da conta de serviço do Servidor de Relatório. Ambas as operações requerem que você restaure a chave de uma cópia de backup previamente criada.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
- Para abrir a caixa de diálogo Chave de Criptografia de Backup, clique em **Chaves de Criptografia** no painel de navegação do Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **Backup**. Essa caixa de diálogo também é exibida quando você atualiza a conta de serviço usando a página Conta de Serviço no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações sobre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o Configuration Manager, consulte [Gerenciador de configurações do Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir a caixa de diálogo Chave de Criptografia de Backup, clique em **Chaves de Criptografia** no painel de navegação do Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **Backup**. Essa caixa de diálogo também é exibida quando você atualiza a conta de serviço usando a página Conta de Serviço no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações sobre o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consulte [Gerenciador de configurações do Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opções  
- **Localização do arquivo**  
+ **Local do arquivo**  
  Especifique um nome de arquivo e um local para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para a chave simétrica. A chave simétrica nunca é armazenada em texto sem-formatação. Você deve digitar uma senha para proteger o arquivo.  
   
  **Senha**  

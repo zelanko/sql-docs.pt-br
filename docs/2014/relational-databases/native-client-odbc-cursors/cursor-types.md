@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5b073ee58c0e29b1d7e6d02d079141838cef237
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6937dbb9ce42cd5631201e0c97be42b211742ada
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705673"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020963"
 ---
 # <a name="cursor-types"></a>Tipos de cursor
   O ODBC define quatro tipos de cursor com suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da Microsoft e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client. Esses cursores variam em sua capacidade de detectar alterações no conjunto de resultados e nos recursos que eles consomem, como memória e espaço em **tempdb**. Um cursor pode detectar alterações nas linhas apenas quando ele tenta buscar essas linhas novamente; não há como a fonte de dados notificar o cursor dessas alterações nas linhas que estão sendo buscadas atualmente. A capacidade de um cursor de detectar alterações que não foram feitas pelo cursor também é influenciada pelo nível de isolamento da transação.  

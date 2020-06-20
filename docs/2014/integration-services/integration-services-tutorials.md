@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 81985b3a16d5ac271a22f0ae62d73b3a518bae94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 479c732b9a4e2492782fd8721580ea71aa3d455e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891828"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966166"
 ---
 # <a name="integration-services-tutorials"></a>Tutoriais do Integration Services
   Esta seção contém tutoriais [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da56673e05c092c965554b76572ac3b0486d2110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210940"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044163"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Realize uma avaliação sob demanda usando o Pesquisador de Objetos
   Nesta tarefa, você usará o Pesquisador de Objetos para realizar uma avaliação sob demanda das políticas de práticas recomendadas para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] em uma única instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -27,7 +26,7 @@ ms.locfileid: "68210940"
  Esta lição baseia-se na versão do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Para executar uma avaliação sob demanda das políticas de práticas recomendadas em relação a instâncias [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]que estão em execução, você deve usar o procedimento no tópico [executar uma avaliação sob demanda usando servidores registrados](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
+>  Para executar uma avaliação sob demanda das políticas de práticas recomendadas em relação a instâncias que estão em execução [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] , você deve usar o procedimento no tópico [executar uma avaliação sob demanda usando servidores registrados](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
   
 ### <a name="to-perform-an-on-demand-evaluation-by-using-object-explorer"></a>Para realizar uma avaliação sob demanda usando o Pesquisador de Objetos  
   
@@ -40,7 +39,7 @@ ms.locfileid: "68210940"
   
 3.  Na caixa de diálogo **avaliar políticas** , ao lado da caixa **origem** , clique no botão de reticências (**...**).  
   
-4.  Na caixa de diálogo **selecionar origem** , você pode selecionar **arquivos** ou **servidor** como a origem dos arquivos de política a serem avaliados. Se você clicar em **servidor**, poderá executar uma avaliação sob demanda de todas as políticas de práticas recomendadas que foram importadas anteriormente para o gerenciamento baseado em políticas em um servidor local ou remoto. Neste tutorial, você clicará em **arquivos**e, em seguida, selecionará os arquivos de política individuais que deseja avaliar. Para fazer isso, execute estas etapas:  
+4.  Na caixa de diálogo **selecionar origem** , você pode selecionar **arquivos** ou **servidor** como a origem dos arquivos de política a serem avaliados. Se você clicar em **servidor**, poderá executar uma avaliação sob demanda de todas as políticas de práticas recomendadas que foram importadas anteriormente para o gerenciamento baseado em políticas em um servidor local ou remoto. Neste tutorial, você clicará em **arquivos**e, em seguida, selecionará os arquivos de política individuais que deseja avaliar. Para fazer isso, siga estas etapas:  
   
     1.  Clique em **arquivos**.  
   

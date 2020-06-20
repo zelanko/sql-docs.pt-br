@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4277aad4c1de0140606575c7ba437408518b3c8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061503"
 ---
 # <a name="get-information-about-a-view"></a>Obter informações sobre uma exibição
   Você pode obter informações sobre a definição ou as propriedades de uma exibição no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Talvez seja necessário observar a definição da exibição para entender como seus dados são derivados das tabelas de origem, ou consultar os dados definidos pela exibição.  

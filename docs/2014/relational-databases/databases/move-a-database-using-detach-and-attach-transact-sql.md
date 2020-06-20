@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 768a70dfe94af6f8d65f7c76fa08d3dff650fe7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917075"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965886"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover um banco de dados utilizando Desanexar e Anexar (Transact-SQL)
   Este tópico descreve como mover um banco de dados desanexado para outro local e anexá-lo novamente à mesma instância de servidor ou a uma instância diferente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. No entanto, recomendamos que você mova os bancos de dados utilizando o procedimento de realocação planejada ALTER DATABASE, em vez de utilizar desanexar e anexar. Para obter mais informações, veja [Mover bancos de dados de usuário](move-user-databases.md).  
@@ -51,7 +50,7 @@ ms.locfileid: "62917075"
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria uma cópia das [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instruções que são executadas em uma janela do editor de consultas que está conectada à instância do servidor à qual está anexada.  
   
-1.  Desanexe [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] as instruções:  
+1.  Desanexe as [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instruções:  
   
     ```  
     USE master;  

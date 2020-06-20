@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8f72c282c540d695b799f0c4a884734db2c491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062116"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens em etapas de trabalho
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent permite usar tokens em scripts de etapas de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] . O uso de tokens para escrever suas etapas de trabalho oferece a mesma flexibilidade fornecida por variáveis ao escrever programas de software. Quando você insere um token em um script de etapa de trabalho, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o substitui em tempo de execução, antes de o trabalho ser executado pelo subsistema [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -34,7 +33,7 @@ ms.locfileid: "68211319"
 ## <a name="understanding-using-tokens"></a>Noções básicas sobre o uso de tokens  
   
 > [!IMPORTANT]  
->  Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Esses tokens são: **a-DBN**, **a-SVR**, **a-Err**, **a-Sev**, **a-msg**. e **WMI (*`property`*)**. Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
+>  Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Esses tokens são: **a-DBN**, **a-SVR**, **a-Err**, **a-Sev**, **a-msg**. e **WMI ( *`property`* )**. Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
 >   
 >  Se tiver que usar esses tokens, garanta, primeiro, que apenas membros dos grupos de segurança confiáveis do Windows, como o grupo Administradores, tenham permissões de gravação no Log de Eventos do computador em que reside o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Depois, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades**e, na página **Sistema de Alerta** , selecione **Substituir tokens de todas as respostas de trabalho aos alertas** para habilitar esses tokens.  
   
@@ -100,12 +99,12 @@ ms.locfileid: "68211319"
   
 |Sintaxe do token|Substituição do token de alerta ativada|Substituição do token de alerta desativada|  
 |------------------|--------------------------------|---------------------------------|  
-|Macro ESCAPE usada|Todos os tokens em trabalhos são substituídos com êxito.|Não são substituídos tokens ativados por alertas. Esses tokens **são a-DBN**, **a-SVR**, **a-Err**, **a-Sev**, **a-msg**e **WMI (*`property`*)**. Outros tokens estáticos são substituídos com êxito.|  
+|Macro ESCAPE usada|Todos os tokens em trabalhos são substituídos com êxito.|Não são substituídos tokens ativados por alertas. Esses tokens **são a-DBN**, **a-SVR**, **a-Err**, **a-Sev**, **a-msg**e **WMI ( *`property`* )**. Outros tokens estáticos são substituídos com êxito.|  
 |Nenhuma macro ESCAPE usada|Todo trabalho contendo tokens falha.|Todo trabalho contendo tokens falha.|  
   
 ## <a name="token-syntax-update-examples"></a>Exemplos de atualização de sintaxe de token  
   
-### <a name="a-using-tokens-in-non-nested-strings"></a>A. Usando tokens em cadeias de caracteres não aninhadas  
+### <a name="a-using-tokens-in-non-nested-strings"></a>a. Usando tokens em cadeias de caracteres não aninhadas  
  O exemplo a seguir mostra como atualizar um script não aninhado simples com a macro de fuga apropriada. Antes de executar o script de atualização, o seguinte script de etapa de trabalho usa um token para imprimir o nome do banco de dados apropriado:  
   
  `PRINT N'Current database name is $(A-DBN)' ;`  

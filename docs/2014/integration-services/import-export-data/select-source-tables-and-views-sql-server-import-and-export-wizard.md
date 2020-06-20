@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aee638291a4aee2c4ea5d60a69fc206af613e15d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892664"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965546"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selecionar tabelas de origem e exibições (Assistente de Importação e Exportação do SQL Server)
   Use a página **selecionar tabelas e exibições de origem** para especificar as tabelas e exibições a serem copiadas da fonte de dados para o destino.  
   
 > [!NOTE]  
->  Não é necessário copiar todas as colunas em uma tabela ao selecionar a opção Cópia de Tabela. Depois de selecionar uma tabela de destino, clique em editar mapeamentos para exibir a caixa de diálogo **mapeamentos de coluna** . Selecione ** \<ignorar>** na coluna **destino** da caixa de diálogo **mapeamentos de coluna** para as colunas que você deseja ignorar.  
+>  Não é necessário copiar todas as colunas em uma tabela ao selecionar a opção Cópia de Tabela. Depois de selecionar uma tabela de destino, clique em editar mapeamentos para exibir a caixa de diálogo **mapeamentos de coluna** . Selecione **\<ignore>** na coluna **destino** da caixa de diálogo **mapeamentos de coluna** para as colunas que você deseja ignorar.  
   
  Para obter mais informações sobre este assistente, consulte [Assistente de Importação e Exportação do SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para saber mais sobre as opções de inicialização do assistente e sobre as permissões necessárias para executar o assistente com êxito, consulte [executar o assistente de importação e exportação do SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -32,7 +31,7 @@ ms.locfileid: "62892664"
 ## <a name="options"></a>Opções  
   
 ### <a name="tables-and-views-list"></a>Lista de tabelas e exibições  
- **Fonte**  
+ **Origem**  
  Usando as caixas de seleção, selecione da lista de tabelas e exibições disponíveis para copiar para o destino. Se uma tabela ou exibição de origem foi selecionada e nenhuma outra ação foi efetuada, o esquema e os dados da origem serão copiados sem qualquer alteração.  
   
  **Destino**  
@@ -43,9 +42,9 @@ ms.locfileid: "62892664"
   
 ### <a name="other-options"></a>Outras opções  
  **Editar mapeamentos**  
- Use a caixa de diálogo **mapeamentos de coluna** para especificar as colunas de destino para receber os dados de origem. Você pode copiar apenas um subconjunto de colunas selecionando \<ignorar> na coluna **destino** da caixa de diálogo **mapeamentos de coluna** para colunas que você deseja ignorar.  
+ Use a caixa de diálogo **mapeamentos de coluna** para especificar as colunas de destino para receber os dados de origem. Você pode copiar apenas um subconjunto de colunas selecionando \<ignore> na coluna **destino** da caixa de diálogo **mapeamentos de coluna** para colunas que você deseja ignorar.  
   
- **Visualizar**  
+ **Visualização**  
  Visualize os dados de origem na caixa de diálogo **Visualizar dados** para verificá-los antes de executar a importação ou exportação. A caixa de diálogo **Visualizar dados** exibe até 200 linhas de dados.  
   
  Após visualizar os dados, é possível alterar as opções selecionadas para a origem e destino de dados. Para fazer essas alterações, na página **Selecionar Tabelas e Exibições de Origem**, clique em **Voltar** para retornar às páginas anteriores nas quais é possível alterar as seleções.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac6c4c3f2ac265c10f012e46b027754eb189f4e5
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5da2cbb9dabef022441ba3927fdb0afc01d04e71
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934437"
 ---
 # <a name="database-engine-cross-instance-features"></a>Recursos entre instâncias do Mecanismo de Banco de Dados
   Esta seção contém as ferramentas e tarefas associadas ao gerenciamento e monitoramento de servidores e instâncias de banco de dados.  

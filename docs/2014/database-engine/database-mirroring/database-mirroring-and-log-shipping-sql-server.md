@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ddc0a4147623753e04b14e60359c397b00a8d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807444"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934367"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Espelhamento de banco de dados e envio de logs (SQL Server)
   Um determinado banco de dados pode ser espelhado ou ter o log enviado; ou ter os dois processos realizados simultaneamente. Para escolher o método a ser usado, considere o seguinte:  

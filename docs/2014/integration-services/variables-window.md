@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 258fdee44c2ab67babfa366f627b7b297c5f1535
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877869"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972556"
 ---
 # <a name="variables-window"></a>Janela Variáveis
   Use a janela **Variáveis** para criar e modificar as variáveis definidas pelo usuário e para exibir as variáveis do sistema.  
@@ -54,7 +53,7 @@ ms.locfileid: "62877869"
   
  Você pode alterar o escopo clicando na variável e, em seguida, clicando em **Mover Variável** na janela **Variáveis** .  
   
- **Tipo de dados**  
+ **Tipo de Dados**  
  Exiba o tipo de dados da variável. Você pode selecionar um tipo de dados na lista para as variáveis definidas pelo usuário.  
   
 > [!NOTE]  
@@ -64,7 +63,7 @@ ms.locfileid: "62877869"
  Exiba o valor da variável. Você pode atualizar o valor da variável para as variáveis definidas pelo usuário. Este valor pode ser literal ou uma expressão e pode ser uma cadeia de caracteres com várias linhas. Para atribuir uma expressão à variável, clique no botão de reticências ao lado da coluna **Expressão** na janela **Variáveis** .  
   
  `Namespace`  
- Exiba o nome do namespace. As variáveis definidas pelo usuário são inicialmente criadas no namespace do **usuário** , mas você pode alterar o nome do namespace `Namespace` no campo. Para exibir esta coluna, clique em **Opções de Grade**.  
+ Exiba o nome do namespace. As variáveis definidas pelo usuário são inicialmente criadas no namespace do **usuário** , mas você pode alterar o nome do namespace no `Namespace` campo. Para exibir esta coluna, clique em **Opções de Grade**.  
   
  **Elevar Evento de Alteração**  
  Indique se precisa gerar um evento `OnVariableValueChanged` quando o valor é alterado. Você pode atualizar o valor para as variáveis do sistema e as definidas pelo usuário. Por padrão, a janela **Variáveis** não lista esta coluna. Para exibir esta coluna, clique em **Opções de Grade**.  
