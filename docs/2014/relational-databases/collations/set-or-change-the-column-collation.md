@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05b8211569b6ce83faaec043e5eb527a60f0ddab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918966"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970548"
 ---
 # <a name="set-or-change-the-column-collation"></a>Definir ou alterar a ordenação de coluna
   É possível substituir a ordenação de banco de dados para dados `char`, `varchar`, `text`, `nchar`, `nvarchar` e `ntext` especificando uma ordenação diferente para uma coluna específica de uma tabela e usando uma das seguintes opções:  
@@ -38,7 +37,7 @@ ms.locfileid: "62918966"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, [Suporte a ordenações e a Unicode](collation-and-unicode-support.md).  
   
--   Usando a `Column.Collation` Propriedade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (Smo).  
+-   Usando a `Column.Collation` propriedade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (Smo).  
   
  Você não pode alterar a ordenação de uma coluna atualmente referenciada por qualquer um dos seguintes:  
   

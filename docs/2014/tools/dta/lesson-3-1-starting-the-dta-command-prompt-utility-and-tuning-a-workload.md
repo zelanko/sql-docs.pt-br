@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b051320d2f797fa55c1d84192a1b6246f437b1ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011569"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Iniciando o utilitário de prompt de comando dta e ajustando uma carga de trabalho
    Essa tarefa descreve a inicialização do utilitário **dta**, a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho usando o prompt de comando. Ele usa a carga de trabalho, MyScript. SQL, que você criou para a prática de Orientador de Otimização do Mecanismo de Banco de Dados a GUI (interface gráfica do usuário) [ajustar uma carga de trabalho](lesson-1-1-tuning-a-workload.md).  

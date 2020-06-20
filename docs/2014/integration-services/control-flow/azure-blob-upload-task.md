@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a39652e37144de604f277e37c81b1bb3e59cb32b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832770"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919962"
 ---
 # <a name="azure-blob-upload-task"></a>Tarefa de Carregamento de Blobs do Azure
   A Tarefa de Carregamento de Blobs do Azure permite que um pacote SSIS carregue arquivos para um armazenamento de blobs do Azure.   

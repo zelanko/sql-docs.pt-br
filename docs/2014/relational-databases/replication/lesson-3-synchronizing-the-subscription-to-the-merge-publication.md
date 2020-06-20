@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 49008384-2c55-4080-a890-9bceb40e4d6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63d8f82d207a985bac34b5c9a9be3273bb84ef7d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 393462c56169e7070601a98cc9144e1996a19847
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065889"
 ---
 # <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>Lição 3: Sincronizando a assinatura com a publicação de mesclagem
   Nesta lição, você iniciará o Merge Agent para inicializar a assinatura, usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também usa este procedimento para sincronizar-se com o Publicador. Esta lição exige que você tenha concluído a lição anterior, [Lição 2: Criando uma assinatura na publicação de mesclagem](lesson-2-creating-a-subscription-to-the-merge-publication.md).  

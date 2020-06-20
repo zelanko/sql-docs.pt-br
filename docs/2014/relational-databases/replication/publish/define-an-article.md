@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65512a212290db4cc9a470402e2ae75175c23cb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d7ff1f5f516d438ed07a203223acf32970a7961
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065771"
 ---
 # <a name="define-an-article"></a>Defina um Artigo
   Este tópico descreve como definir um artigo no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -48,13 +47,13 @@ ms.locfileid: "73882314"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
--   Os nomes de artigos não podem incluir nenhum dos caracteres a seguir: % , * , [ , ] , | , : , " , ? , ', \,/, \< , >. Se algum objeto do banco de dados incluir qualquer um desses caracteres, para replicá-los será necessário especificar um nome de artigo que seja diferente do nome do objeto.  
+-   Os nomes de artigos não podem incluir nenhum dos caracteres a seguir: % , * , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Se algum objeto do banco de dados incluir qualquer um desses caracteres, para replicá-los será necessário especificar um nome de artigo que seja diferente do nome do objeto.  
   
 ##  <a name="security"></a><a name="Security"></a> Segurança  
  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Crie publicações e defina artigos com o Assistente para Nova Publicação. Após a criação de uma publicação, exiba e modifique as propriedades da publicação na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter informações sobre como criar uma publicação de um banco de dados Oracle, consulte [Criar uma publicação de um banco de dados Oracle](create-a-publication-from-an-oracle-database.md).  
+ Crie publicações e defina artigos com o Assistente para Nova Publicação. Depois que uma publicação é criada, exiba e modifique as propriedades da publicação na caixa de diálogo **Propriedades \<Publication> da publicação** . Para obter informações sobre como criar uma publicação de um banco de dados Oracle, consulte [Criar uma publicação de um banco de dados Oracle](create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>Para criar uma publicação e definir artigos  
   
@@ -103,7 +102,7 @@ ms.locfileid: "73882314"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>Para definir um artigo para um instantâneo ou publicação transacional  
   
-1.  No Publicador do banco de dados de publicação, execute [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Especifique o nome da publicação à qual o artigo pertence para ** \@publicação**, um nome para o artigo para ** \@o artigo**, o objeto de banco de dados que está sendo publicado para ** \@source_object**e quaisquer outros parâmetros opcionais. Use ** \@source_owner** para especificar a propriedade do esquema do objeto, se não for **dbo**. Se o artigo não for um artigo de tabela baseada em log, especifique o tipo de artigo para ** \@tipo**; para obter mais informações, consulte [especificar tipos de artigo &#40;Programação Transact-SQL de replicação&#41;](specify-article-types-replication-transact-sql-programming.md).  
+1.  No Publicador do banco de dados de publicação, execute [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Especifique o nome da publicação à qual o artigo pertence para ** \@ publicação**, um nome para o artigo para o ** \@ artigo**, o objeto de banco de dados que está sendo publicado para ** \@ source_object**e quaisquer outros parâmetros opcionais. Use ** \@ source_owner** para especificar a propriedade do esquema do objeto, se não for **dbo**. Se o artigo não for um artigo de tabela baseada em log, especifique o tipo de artigo para ** \@ tipo**; para obter mais informações, consulte [especificar tipos de artigo &#40;Programação Transact-SQL de replicação&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
 2.  Para filtrar linhas horizontalmente em uma tabela ou exibir um artigo, use [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) para definir a cláusula de filtro. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md).  
   
@@ -120,7 +119,7 @@ ms.locfileid: "73882314"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>Para definir um artigo para uma publicação de mesclagem  
   
-1.  No Publicador do banco de dados de publicação, execute o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique o nome da publicação para ** \@publicação**, um nome para o nome do artigo para ** \@o artigo**e o objeto que está sendo publicado para ** \@source_object**. Para filtrar horizontalmente as linhas da tabela, especifique um valor para ** \@subset_filterclause**. Para obter mais informações, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) e [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md). Se o artigo não for um artigo de tabela, especifique o tipo de artigo para ** \@tipo**. Para obter mais informações, consulte [Especificar tipos de artigo &#40;Programação Transact-SQL de replicação&#41;](specify-article-types-replication-transact-sql-programming.md).  
+1.  No Publicador do banco de dados de publicação, execute o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique o nome da publicação para ** \@ publicação**, um nome para o nome do artigo para o ** \@ artigo**e o objeto que está sendo publicado para ** \@ source_object**. Para filtrar horizontalmente as linhas da tabela, especifique um valor para ** \@ subset_filterclause**. Para obter mais informações, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) e [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md). Se o artigo não for um artigo de tabela, especifique o tipo de artigo para ** \@ tipo**. Para obter mais informações, consulte [Especificar tipos de artigo &#40;Programação Transact-SQL de replicação&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
 2.  (Opcional) No Assinante do banco de dados de publicação, execute [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) para definir um filtro de junção entre dois artigos. Para obter mais informações, consulte [Definir e modificar um filtro de junção entre artigos de mesclagem](define-and-modify-a-join-filter-between-merge-articles.md).  
   

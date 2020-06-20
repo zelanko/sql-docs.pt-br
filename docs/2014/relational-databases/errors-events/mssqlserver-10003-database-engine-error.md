@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e2cb199-f077-4d88-8117-1b7550afc696
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f7e5a3b7c5b639b5ded1ea7dfd357a93375781b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2253fc0db73583d3e8f5e5fb97767557ec47d49e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969886"
 ---
 # <a name="mssqlserver_10003"></a>MSSQLSERVER_10003
     
@@ -39,7 +38,7 @@ ms.locfileid: "62916534"
  Reinicie a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se isso não ajudar, reinicie o computador. Se o problema persistir, colete eventos de rastreamento OLE DB usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e forneça esses dados ao suporte do produto do provedor OLE DB.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelos e permissões de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

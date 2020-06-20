@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8e5d87a9d98e4804dd9f2687b5125e55882606c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aed5a76cff9d90b81f02f6af11b6fc437efee14e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035314"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>Tarefa 3: Verificando os dados no Master Data Manager
   Nesta tarefa, você verifica se a entidade **Fornecedor** será criada no **MDS** usando o **Aplicativo Master Data Manager Web**.
 
-1.  Se o **Master Data Manager** estiver aberto, clique em **SQL Server 2012 Master Data Services** na parte superior para navegar até a página inicial. Caso contrário, navegue `http://localhost/MDS` até para iniciar o **Master Data Manager**.
+1.  Se o **Master Data Manager** estiver aberto, clique em **SQL Server 2012 Master Data Services** na parte superior para navegar até a página inicial. Caso contrário, navegue até `http://localhost/MDS` para iniciar o **Master Data Manager**.
 
 2.  Selecione **Fornecedores** em **Modelo**e clique em **Gerenciador**.
 

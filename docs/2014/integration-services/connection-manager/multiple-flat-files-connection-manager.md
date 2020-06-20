@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dcad5e767f16054385f30e95e15bd8a598d9fdd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833697"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920627"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gerenciador de conexões de vários arquivos simples
   Um gerenciador de conexões de Vários Arquivos Simples permite que um pacote acesse dados em vários arquivos simples. Por exemplo, uma fonte de Arquivo Simples pode usar um gerenciador de conexões de Vários Arquivos Simples quando a tarefa Fluxo de Dados está dentro de um contêiner de loop, como o contêiner Loop For. Em cada loop do contêiner, a fonte de Arquivo Simples carrega dados do nome de arquivo seguinte fornecido pelo gerenciador de conexões de Vários Arquivos Simples.  
   
- Quando você adiciona um Gerenciador de conexões de vários arquivos simples a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacote, o cria um Gerenciador de conexões que será resolvido para uma conexão de vários arquivos simples em tempo de execução, define as propriedades no Gerenciador de conexões de vários arquivos simples e adiciona o Gerenciador `Connections` de conexões de vários arquivos simples à coleção do pacote.  
+ Quando você adiciona um Gerenciador de conexões de vários arquivos simples a um pacote, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o cria um Gerenciador de conexões que será resolvido para uma conexão de vários arquivos simples em tempo de execução, define as propriedades no Gerenciador de conexões de vários arquivos simples e adiciona o Gerenciador de conexões de vários arquivos simples à `Connections` coleção do pacote.  
   
  A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `MULTIFLATFILE`.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62833697"
   
  \<*path*>|\<*path*>  
   
- Você também pode especificar vários arquivos usando curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor `ConnectionString` da propriedade pode ser definido como C\\: *. txt.  
+ Você também pode especificar vários arquivos usando curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor da `ConnectionString` propriedade pode ser definido como C: \\ *. txt.  
   
  Se um gerenciador de conexões de Vários Arquivos Simples se referir a vários arquivos, todos os arquivos deverão ter o mesmo formato.  
   

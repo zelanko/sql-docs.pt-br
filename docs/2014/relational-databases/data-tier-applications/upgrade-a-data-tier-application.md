@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 44c4bb7c01f18db6062ad1982fcf5a5f80e4d6b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f5d9d53a6dbaf2c0dee01aaa5a85cf4fde98f27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953039"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Atualizar um aplicativo da camada de dados
   Use o Assistente para Atualizar Aplicativo da Camada de Dados ou um script do Windows PowerShell para alterar o esquema e as propriedades de um DAC (aplicativo da camada de dados) implantado no momento para coincidir com o esquema e as propriedades definidos em uma nova versão do DAC.  
@@ -44,13 +43,13 @@ ms.locfileid: "72797984"
 ###  <a name="choosing-dac-upgrade-options"></a><a name="ChoseDACUpgOptions"></a> Escolhendo Opções de Atualização de DAC  
  Há quatro opções de atualização para uma atualização no local:  
   
--   **Ignorar perda de dados** - `True`se, a atualização continuará mesmo se algumas das operações resultarem na perda de dados. Se `False`, estas operações finalizarão a atualização. Por exemplo, se uma tabela no banco de dados atual não estiver presente no esquema do novo DAC, a tabela será removida se `True` for especificado. A configuração padrão é `True`.  
+-   **Ignorar perda de dados** -se `True` , a atualização continuará mesmo se algumas das operações resultarem na perda de dados. Se `False`, estas operações finalizarão a atualização. Por exemplo, se uma tabela no banco de dados atual não estiver presente no esquema do novo DAC, a tabela será removida se `True` for especificado. A configuração padrão é `True`.  
   
--   **Bloquear em alterações** -se `True`, a atualização será encerrada se o esquema de banco de dados for diferente daquele definido no DAC anterior. Se `False`, a atualização continuará mesmo que sejam detectadas alterações. A configuração padrão é `False`.  
+-   **Bloquear em alterações** -se `True` , a atualização será encerrada se o esquema de banco de dados for diferente daquele definido no DAC anterior. Se `False`, a atualização continuará mesmo que sejam detectadas alterações. A configuração padrão é `False`.  
   
--   **Reversão em** caso de `True`falha-se, a atualização é colocada em uma transação e, se forem encontrados erros, será feita uma tentativa de reversão. Se `False`, todas as alterações serão confirmadas à medida que ocorrerem. Se houver erros, talvez você precise restaurar um backup anterior do banco de dados. A configuração padrão é `False`.  
+-   **Reversão em** caso de falha-se `True` , a atualização é colocada em uma transação e, se forem encontrados erros, será feita uma tentativa de reversão. Se `False`, todas as alterações serão confirmadas à medida que ocorrerem. Se houver erros, talvez você precise restaurar um backup anterior do banco de dados. A configuração padrão é `False`.  
   
--   **Ignorar validação de política** - `True`se a política de seleção de servidor DAC não for avaliada. Se `False`, a política será avaliada e a atualização finalizará se houver um erro de validação. A configuração padrão é `False`.  
+-   **Ignorar validação de política** -se `True` a política de seleção de servidor DAC não for avaliada. Se `False`, a política será avaliada e a atualização finalizará se houver um erro de validação. A configuração padrão é `False`.  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  Só podem ser executados uprades de DAC em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
@@ -124,7 +123,7 @@ ms.locfileid: "72797984"
   
  **Descrição** – Uma caixa somente leitura que exibe a descrição escrita quando o DAC foi criado ou extraído de um banco de dados.  
   
- Anterior – retorna à página **introdução** . ** \< **  
+ ** \< Anterior** – retorna à página **introdução** .  
   
  **Avançar >** – Exibe uma barra de progresso enquanto o assistente confirma se o arquivo selecionado é um pacote de DAC válido.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "72797984"
   
  **Validando o conteúdo do DAC** – A barra de progresso que relata o status atual do processo de validação.  
   
- Anterior – retorna ao estado inicial da página **selecionar pacote** . ** \< **  
+ ** \< Anterior** – retorna ao estado inicial da página **selecionar pacote** .  
   
  **Avançar >** – Segue para a versão final da página **Selecionar Pacote**.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "72797984"
   
  **Ignorar violações de política** – Use esta caixa de seleção para continuar com a atualização se uma ou mais condições de política falharem. Somente selecione essa opção se você tiver certeza de que todas as condições que falharam não impedirão o funcionamento bem-sucedido do DAC.  
   
- Anterior – retorna para a página **selecionar pacote** . ** \< **  
+ ** \< Anterior** – retorna para a página **selecionar pacote** .  
   
  **Avançar >** – Segue para a página **Detectar Alteração**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72797984"
   
  **Salvar Relatório** – Clique no botão para salvar um relatório das alterações que o assistente detectou entre os objetos no banco de dados e suas contrapartes na definição do DAC. Em seguida, você pode examinar o relatório para determinar se precisa executar ações após a conclusão da atualização para incorporar alguns ou todos os objetos listados no relatório para o novo banco de dados.  
   
- Anterior – retorna para a página **selecionar pacote de DAC** . ** \< **  
+ ** \< Anterior** – retorna para a página **selecionar pacote de DAC** .  
   
  **Avançar >** – Segue para a página **Opções**.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "72797984"
   
  **Restaurar Padrões** – Retorna a opção à configuração padrão de false.  
   
- Anterior – retorna para a página **detectar alteração** . ** \< **  
+ ** \< Anterior** – retorna para a página **detectar alteração** .  
   
  **Avançar >** – Segue para a página **Examinar o Plano de Atualização**.  
   
@@ -203,7 +202,7 @@ ms.locfileid: "72797984"
   
  **Restaurar Padrões** – Retorna a opção à configuração padrão de false.  
   
- Anterior – retorna para a página **detectar alteração** . ** \< **  
+ ** \< Anterior** – retorna para a página **detectar alteração** .  
   
  **Avançar >** : continua para a página **Resumo**.  
   
@@ -214,7 +213,7 @@ ms.locfileid: "72797984"
   
  **As configurações a seguir serão usadas para atualizar o DAC.** - Examine as informações exibidas para assegurar que as ações executadas estarão corretas. A janela exibe o DAC selecionado para atualização e o pacote de DAC que contém a nova versão do DAC. A janela também exibe se a versão atual do banco de dados é igual à definição de DAC atual, ou se o banco de dados foi alterado.  
   
- Anterior – retorna para a página **revisar o plano de atualização** . ** \< **  
+ ** \< Anterior** – retorna para a página **revisar o plano de atualização** .  
   
  **Avançar >** – Implanta o DAC e exibe os resultados na página **Atualizar DAC**.  
   

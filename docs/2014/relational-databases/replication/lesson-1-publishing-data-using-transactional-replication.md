@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ff715b51a7fa84a462d1439e78627d648e20472d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000452"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065958"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lição 1: publicando dados que usam replicação transacional
    Nesta lição, você aprenderá a criar uma publicação transacional usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar um subconjunto filtrado da tabela **Produto** no banco de dados de exemplo do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Você também adicionará o logon do SQL Server usado pelo Distribution Agent à PAL (lista de acesso à publicação). Antes de iniciar este tutorial, você deverá ter completado o tutorial anterior, [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md).  
@@ -34,7 +33,7 @@ ms.locfileid: "83000452"
   
 4.  Na página Tipo de Publicação, selecione **Publicação transacional**e clique em **Avançar**.  
   
-5.  Na página Artigos, expanda o nó **Tabelas** , selecione a caixa de seleção **Produto** , expanda **Produto** e desmarque as caixas de seleção **ListPrice** e **StandardCost** . Clique em **Avançar**.  
+5.  Na página Artigos, expanda o nó **Tabelas** , selecione a caixa de seleção **Produto** , expanda **Produto** e desmarque as caixas de seleção **ListPrice** e **StandardCost** . Clique em **Próximo**.  
   
 6.  Na página Filtrar Linhas da Tabela, clique em **Adicionar**.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "83000452"
   
 10. Na página Segurança do Agente, desmarque a caixa de seleção **Usar as configurações de segurança do Agente de Instantâneo** .  
   
-11. Clique em **Configurações de Segurança** do Snapshot Agent, insira \<_Machine_Name>_**\repl_snapshot** na caixa **Conta de processo**, forneça a senha dessa conta e clique em **OK**.  
+11. Clique em **configurações de segurança** para a agente de instantâneo, digite \<_Machine_Name> _**\ repl_snapshot** na caixa **conta de processo** , forneça a senha dessa conta e clique em **OK**.  
   
 12. Repita a etapa anterior para configurar repl_logreader como a conta de processo do Agente de Leitor de Log e clique em **Concluir**.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 177eef6f6280e236106f9ec67684e4a15ef479a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a78ae4969982fbfe5295ee4219855f48ac60793
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959232"
 ---
 # <a name="backup-encryption"></a>Criptografia de backup
   Este tópico fornece uma visão geral das opções de criptografia para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele inclui detalhes do uso, benefícios e práticas recomendadas para criptografia durante o backup.  
@@ -26,20 +25,20 @@ ms.locfileid: "72783077"
   
  Para realizar a criptografia durante o backup, você deve especificar um algoritmo de criptografia, e um criptografador para proteger a chave de criptografia. Estas são as opções de criptografia com suporte:  
   
--   **Algoritmo de criptografia:** os algoritmos de criptografia com suporte são: AES 128, AES 192, AES 256 e DES triplo  
+-   **Algoritmo de criptografia:** os algoritmos de criptografia com suporte são: AES 128, AES 192, AES 256 e Triple DES  
   
--   **Criptografador:** um certificado ou uma chave assimétrica  
+-   **Criptografador:** um certificado ou chave assimétrica  
   
 > [!CAUTION]  
 >  É muito importante fazer backup do certificado ou da chave assimétrica e, preferencialmente, em um local diferente do arquivo de backup usado para criptografar. Sem o certificado ou a chave assimétrica, você não pode restaurar o backup, tornando o arquivo de backup inutilizável.  
   
- **Restaurando o backup criptografado:** a restauração do SQL Server não requer nenhum parâmetro de criptografia a ser especificado durante as restaurações. Requer que o certificado ou a chave assimétrica usada para criptografar o arquivo de backup esteja disponível na instância em que você está fazendo a restauração. A conta de usuário que executa a restauração deve ter as permissões `VIEW DEFINITION` no certificado ou na chave. Se você estiver restaurando o backup criptografado para uma instância diferente, verifique se o certificado está disponível nessa instância.  
+ **Restaurar o backup criptografado:** a restauração do SQL Server não requer que nenhum parâmetro de criptografia seja especificado durante as restaurações. Requer que o certificado ou a chave assimétrica usada para criptografar o arquivo de backup esteja disponível na instância em que você está fazendo a restauração. A conta de usuário que executa a restauração deve ter as permissões `VIEW DEFINITION` no certificado ou na chave. Se você estiver restaurando o backup criptografado para uma instância diferente, verifique se o certificado está disponível nessa instância.  
   
  Se você estiver restaurando um backup de um banco de dados criptografado TDE, o certificado TDE deverá estar disponível na instância para a qual você estiver restaurando.  
   
 ##  <a name="benefits"></a><a name="Benefits"></a> Benefícios  
   
-1.  A criptografia dos backups de banco de dados ajuda a proteger os dados: o SQL Server oferece a opção para criptografar os dados do backup ao criar um backup.  
+1.  Criptografar os backups de banco de dados ajuda a proteger os dados: o SQL Server fornece a opção de criptografar os dados de backup ao criar um backup.  
   
 2.  A criptografia também pode ser usada para bancos de dados criptografados usando a TDE.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "72783077"
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Estes são os pré-requisitos para criptografar um backup:  
   
-1.  **Criar uma chave mestra de banco de dados para o banco de dados mestre:** a chave mestra de banco de dados é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas presentes no banco de dados. Para obter mais informações, consulte [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Criar uma chave mestra do banco de dados para o banco de dados mestre:** A chave mestra de banco de dados é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas presentes no banco de dados. Para obter mais informações, consulte [Chaves de criptografia do SQL Server e banco de dados &#40;Mecanismo de Banco de Dados&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Crie um certificado ou uma chave assimétrica a ser usada na criptografia de backup. Para obter mais informações sobre a criação de um certificado, consulte [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql). Para obter mais informações sobre a criação de uma chave assimétrica, consulte [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
   
@@ -80,7 +79,7 @@ ms.locfileid: "72783077"
 > [!NOTE]  
 >  Não é necessário ter acesso ao certificado TDE para fazer backup ou restaurar um banco de dados protegido.  
   
-##  <a name="backup-encryption-methods"></a><a name="Methods"></a>Métodos de criptografia de backup  
+##  <a name="backup-encryption-methods"></a><a name="Methods"></a> Métodos de criptografia de backup  
  As seções a seguir fornecem uma breve introdução às etapas de criptografia dos dados durante o backup. Para obter um passo a passo completo das diferentes etapas de criptografia de backup usando o Transact-SQL, consulte [Criar um backup criptografado](create-an-encrypted-backup.md).  
   
 ### <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.  
@@ -117,7 +116,7 @@ $encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorTy
 Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
-##  <a name="recommended-practices"></a><a name="RecommendedPractices"></a>Práticas recomendadas  
+##  <a name="recommended-practices"></a><a name="RecommendedPractices"></a> Práticas recomendadas  
  Crie um backup do certificado e das chaves de criptografia em um local que não seja o computador local em que a instância está instalada. Para dar conta de cenários de recuperação de desastre, é recomendável armazenar um backup do certificado ou da chave em um local externo. Você não pode restaurar um backup criptografado sem o certificado usado para criptografar o backup.  
   
  Para restaurar um backup criptografado, o certificado original usado quando o backup foi feito com a impressão digital correspondente deve estar disponível na instância para a qual você está restaurando. Portanto, o certificado não deve ser renovado na expiração nem alterado de forma alguma. A renovação pode resultar na atualização do certificado que está disparando a alteração da impressão digital, tornando o certificado inválido para o arquivo de backup. A conta que executa a restauração deve ter as permissões VIEW DEFINITION no certificado ou na chave assimétrica usada na criptografia durante o backup.  

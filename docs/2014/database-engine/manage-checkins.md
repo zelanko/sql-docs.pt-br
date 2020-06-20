@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 293e60f3-15e3-4258-b73a-8baabe15c760
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a868aafff6d9bd389671544b5f1898e82707d933
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930899"
 ---
 # <a name="manage-checkins"></a>Gerenciar check-ins
   Para fazer alterações em um arquivo controlado por código-fonte disponível para outros usuários, você deve fazer check-in do arquivo. Quando você faz o check-in de um arquivo, a versão criada é copiada no provedor de controle do código-fonte e passa a ser a versão mais recente do arquivo. Em geral, ela fica disponível para os usuários que têm as permissões apropriadas.  

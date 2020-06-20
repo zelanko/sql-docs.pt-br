@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14dce43963b0a531c3c71a1bf0c956fc4f10d5af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937917"
 ---
 # <a name="create-a-domain-rule"></a>Criar uma regra de domínio
   Este tópico descreve como criar uma regra de domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma regra de domínio é uma condição usada para validar, corrigir e padronizar valores de domínio. A regra de domínio deve se repetir em um domínio para que os valores de domínio sejam considerados precisos e em conformidade com os requisitos comerciais. As regras de domínio podem incluir regras de validação usadas para validar valores de domínio, mas não são usadas para corrigir dados em um projeto de qualidade de dados. As regras também incluem regras de padronização que são aplicadas com base nos dados válidos e usadas na correção de dados.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cd81004765b1ba5d15c5929dc661ce1dea04b371
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f164bc5be7929c0bf697f6896b975cdda5a9d5a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065448"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Assistente para Alterar Banco de Dados (modo nativo do SSRS)
   O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece o Assistente para Alterar Banco de Dados que orienta o usuário nas etapas de criação de um novo banco de dados do servidor de relatório ou de seleção de um banco de dados do servidor de relatório existente a ser usado com a instância do servidor de relatório atual.  
@@ -29,14 +28,14 @@ ms.locfileid: "71952659"
   
  Para iniciar o assistente, clique em **Alterar Banco de Dados** na página Banco de Dados do Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter instruções sobre como iniciar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, consulte [Gerenciador de configurações do Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
 ## <a name="options"></a>Opções  
  **Ação**  
  Selecione a tarefa que você deseja executar. Você pode criar um novo banco de dados no modo nativo ou integrado do SharePoint. Se preferir, você pode selecionar um banco de dados existente do servidor de relatório e usá-lo com a instância do servidor de relatório atual.  
   
  **Servidor de banco de dados**  
- Especifique o nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância que hospeda o banco de dados do servidor de relatório. Não é possível usar uma instância nomeada ou padrão em um computador local ou remoto. Se você estiver se conectando a uma instância nomeada, insira o nome do servidor neste \<formato: *Server*>\\<*Instance*>.  
+ Especifique o nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância que hospeda o banco de dados do servidor de relatório. Não é possível usar uma instância nomeada ou padrão em um computador local ou remoto. Se você estiver se conectando a uma instância nomeada, insira o nome do servidor neste formato: \<*server*> \\ < *instância*>.  
   
  Para se conectar à instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , use credenciais com permissão para efetuar logon no servidor e atualizar informações do banco de dados. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa suas credenciais atuais do Windows. Mas, se você não tiver um logon ou permissões de banco de dados, especifique um logon de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não é possível especificar credenciais diferentes do Windows. Para conectar-se como um usuário diferente do Windows, faça logon como esse usuário e inicie o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -45,7 +44,7 @@ ms.locfileid: "71952659"
  **Backup de banco de dados**  
  Especifica o nome do banco de dados do servidor de relatório que armazena dados do servidor. É possível especificar um banco de dados existente ou criar um novo banco de dados.  
   
- As propriedades usadas para criar um novo banco de dados aparecem no Assistente quando você seleciona **Criar novo banco de dados** na página Ações. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cria dois bancos de dados que são associados por nome: um banco de dados para conter dados estáticos e um banco de dados temporário para armazenar dados da sessão e de trabalho. Para obter mais informações, consulte [banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) nos manuais online do. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ As propriedades usadas para criar um novo banco de dados aparecem no Assistente quando você seleciona **Criar novo banco de dados** na página Ações. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cria dois bancos de dados que são associados por nome: um banco de dados para conter dados estáticos e um banco de dados temporário para armazenar dados da sessão e de trabalho. Para obter mais informações, consulte [banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online do.  
   
  Você também pode escolher um banco de dados existente do servidor de relatório. O Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não filtra bancos de dados inválidos. Os bancos de dados válidos têm como base o esquema de banco de dados do servidor de relatório (não é possível selecionar um banco de dados que não tenha as tabelas, exibições ou procedimentos armazenados necessários). Se você escolher um banco de dados que foi criado para uma versão anterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ele será atualizado para o formato atual.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "71952659"
  Se você selecionar outro banco de dados do servidor de relatório, o modo do banco de dados atual será exibido para que você saiba como o banco de dados atual é usado.  
   
  **Credenciais**  
- Especifica a conta pela qual o servidor de relatório se conecta ao banco de dados do servidor de relatório. Os valores válidos incluem a conta de serviço do serviço Web Servidor de Relatório, um logon de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido na instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que está sendo utilizada para hospedar o servidor de relatório ou uma conta do Windows. Se você estiver usando uma conta do Windows, poderá especificar uma conta local (*\<ComputerName>\\<nome de\>usuário*) se o servidor de relatório e o banco de dados estiverem no mesmo computador, ou uma conta de usuário de domínio (*\<domínio \\><nome\>* de usuários) se eles estiverem em computadores diferentes no mesmo domínio.  
+ Especifica a conta pela qual o servidor de relatório se conecta ao banco de dados do servidor de relatório. Os valores válidos incluem a conta de serviço do serviço Web Servidor de Relatório, um logon de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido na instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que está sendo utilizada para hospedar o servidor de relatório ou uma conta do Windows. Se você estiver usando uma conta do Windows, poderá especificar uma conta local (* \<computername> \\<nome \> de usuário*) se o servidor de relatório e o banco de dados estiverem no mesmo computador ou em uma conta de usuário de domínio (* \<domain> \\<nome \> *de usuários) se estiverem em computadores diferentes no mesmo domínio.  
   
  O servidor de relatório criará um logon de banco de dados e atribuirá permissões de banco de dados para a conta especificada.  
   

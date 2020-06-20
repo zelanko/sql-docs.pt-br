@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: de736c48763973b48be41d4d63f5237a10b3fff6
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 92eb3669930407b359b8eeed4d3df2e802bdacdf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930901"
 ---
 # <a name="manage-full-text-indexes"></a>Gerenciar índices de texto completo
      

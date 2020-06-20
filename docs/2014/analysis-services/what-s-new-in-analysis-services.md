@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1458dcf473ffbf7fc9bab13c2c688a4e01954c56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d66589dd4094614d195757a8dcc7c59175c9540
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175525"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938124"
 ---
 # <a name="what39s-new-in-sql-server-2014-analysis-services"></a>O que&#39;s New no SQL Server 2014 Analysis Services
   Com exceção à funcionalidade adicionada com suporte a relatórios de Power View em modelos multidimensionais, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o não é alterado da versão anterior.
 
- Para obter informações sobre [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] outros produtos e tecnologias diferentes nesta versão, consulte What ' [s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).
+ Para obter informações sobre outros [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] produtos e tecnologias diferentes nesta versão, consulte What ' [s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).
 
 ## <a name="updates-to-design-tool-installation"></a>Atualizações da instalação da Ferramenta de Design
  O [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para Business Intelligence (SSDT-BI), anteriormente conhecido como Business Intelligence Development Studio (BIDS), é usado para criar modelos do Analysis Services, relatórios do Reporting Services e pacotes do Integration Services. Você pode baixar o SSDT-BI nos locais a seguir:

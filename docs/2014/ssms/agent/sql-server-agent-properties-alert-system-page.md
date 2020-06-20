@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5e87f5a13c8f156cd7d2788bb9004ec20fcd3eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058728"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propriedades do SQL Server Agent (página Sistema de Alerta)
   Use esta página para exibir e modificar as configurações de mensagens enviadas por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas de agente.  
@@ -36,7 +35,7 @@ ms.locfileid: "63245747"
 >  Após alterar o sistema de email, você deve reiniciar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para que a alteração entre em vigor.  
   
  **Perfil de Email**  
- Define o perfil para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usar. Você também pode selecionar ** \<novo perfil de Database Mail... >** para criar um novo perfil.  
+ Define o perfil para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usar. Você também pode optar **\<new Database Mail profile...>** por criar um novo perfil.  
   
  **Emails por pager**  
  As opções desta seção permitem configurar mensagens de email enviadas para endereços de pager para funcionarem com o seu sistema de paginação.  
@@ -53,7 +52,7 @@ ms.locfileid: "63245747"
  **Pager**  
  Inclui o endereço de email para a mensagem entre o prefixo e o sufixo.  
   
- **Sufixo**  
+ **Suffix**  
  Digite qualquer texto fixo que o seu sistema de pagers solicita no fim da linha **Para** de mensagens enviadas a um pager.  
   
  **Linha Cc**  
@@ -65,7 +64,7 @@ ms.locfileid: "63245747"
  **Pager**  
  Inclui o endereço de email para a mensagem entre o prefixo e o sufixo.  
   
- **Sufixo**  
+ **Suffix**  
  Digite qualquer texto fixo que o seu sistema de pagers solicita no fim da linha **Cc** de mensagens enviadas a um pager.  
   
  **Assunto**  
@@ -74,7 +73,7 @@ ms.locfileid: "63245747"
  **Prefixo**  
  Digite qualquer texto fixo que o seu sistema de pagers solicita no início da linha **Assunto** de mensagens enviadas a um pager.  
   
- **Sufixo**  
+ **Suffix**  
  Digite qualquer texto fixo que o seu sistema de pagers solicita no fim da linha **Assunto** de mensagens enviadas a um pager.  
   
  **Inclua o corpo de email em mensagem de notificação**  

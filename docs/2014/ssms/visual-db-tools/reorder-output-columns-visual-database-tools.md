@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9707ab0e682f831f77c06e7c7e634f3a0ce4c51c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63063062"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035464"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>Reordenar colunas de saída (Visual Database Tools)
   A ordem na qual as colunas de dados são adicionadas a uma consulta Selecionar determina a ordem em que elas aparecerão nos resultados. A primeira coluna que você adicionar à consulta aparecerá na extremidade esquerda dos resultados, a segunda coluna ao lado, e assim por diante.  

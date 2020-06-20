@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c97262ab6b3ee42b070511a813fcb4498b78d60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 861c27e94d3717a4dbeba1fe5f2633c2604ee7c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745815"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050613"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API de procedimento armazenado estendido)
     
@@ -56,7 +55,7 @@ srvproc
   
 |Sinalizador de tempo de execução|Descrição|  
 |--------------------|-----------------|  
-|SRV_NOMETADATA|O cliente solicitou resultados sem informações de metadados. Esse sinalizador só é usado quando o cliente está se comunicando com uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instância do. Um aplicativo de API de procedimento armazenado estendido não pode omitir informações de metadados.|  
+|SRV_NOMETADATA|O cliente solicitou resultados sem informações de metadados. Esse sinalizador só é usado quando o cliente está se comunicando com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um aplicativo de API de procedimento armazenado estendido não pode omitir informações de metadados.|  
 |SRV_RECOMPILE|O cliente solicitou a recompilação do procedimento armazenado remoto antes de executá-lo. Este sinalizador pode não se aplicar a um aplicativo de API de procedimento armazenado estendido.|  
   
 > [!IMPORTANT]  

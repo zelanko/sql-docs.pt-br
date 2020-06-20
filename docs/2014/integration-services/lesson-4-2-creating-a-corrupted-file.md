@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f793f2cadf46d4a5431c01f5a1b1966ffad6fd55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767378"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968196"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Etapa 2: Criar um arquivo corrompido
   Para demonstrar a configuração e o tratamento de erros de transformação, você terá que criar um arquivo simples de amostra que no processamento causa a falha de um componente.  
@@ -34,9 +33,9 @@ ms.locfileid: "62767378"
   
     3.  Clique no arquivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Use o recurso Localizar e substituir do editor de texto para localizar todas as `VEB` instâncias do e substituí `BAD`-las por.  
+2.  Use o recurso Localizar e substituir do editor de texto para localizar todas as instâncias do `VEB` e substituí-las por `BAD` .  
   
-3.  Na mesma pasta que os outros arquivos de dados de exemplo, salve o arquivo modificado `Currency_BAD.txt`como.  
+3.  Na mesma pasta que os outros arquivos de dados de exemplo, salve o arquivo modificado como `Currency_BAD.txt` .  
   
     > [!IMPORTANT]  
     >  Verifique se o `Currency_BAD.txt` está salvo na mesma pasta que os outros arquivos de dados de exemplo.  

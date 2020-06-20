@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66533fb63a76bc92bcb45e7cb8feb058467e6583
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767368"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968182"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Etapa 4: Adicionar um destino de arquivo simples
   A saída de erro da transformação Pesquisa de Códigos de Moeda redireciona para a transformação Script todas as linhas de dados que falharam na operação de pesquisa. Para aprimorar as informações sobre os erros que ocorreram, a transformação Script executa um script que adquire a descrição de erros.  
@@ -36,11 +35,11 @@ ms.locfileid: "62767368"
   
 6.  Na caixa de diálogo **Formato de Arquivo Simples** , verifique se **Delimitado** está selecionado e depois clique em **OK**.  
   
-7.  No **Editor do Gerenciador de conexões de arquivo simples**, na caixa nome do Gerenciador de **conexões** , digite `Error Data`.  
+7.  No **Editor do Gerenciador de conexões de arquivo simples**, na caixa nome do Gerenciador de **conexões** , digite `Error Data` .  
   
 8.  Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples** , clique em **Procurar**e localize a pasta em que o arquivo será armazenado.  
   
-9. Na caixa de diálogo **abrir** , em **nome do arquivo**, `ErrorOutput.txt`digite e, em seguida, clique em **abrir**.  
+9. Na caixa de diálogo **abrir** , em **nome do arquivo**, digite e, em `ErrorOutput.txt` seguida, clique em **abrir**.  
   
 10. Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivo Simples** , verifique se a caixa **Localidade** contém Inglês (Estados Unidos) e **Página de código** contém 1252 (ANSI – Latim I).  
   

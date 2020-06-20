@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40bf92b2a7ca45e7f4033ec6d6aa44c5d99e852a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065995"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938347"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Conversões, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
   Use os botões da barra de ferramentas para executar operações comuns na exibição **Conversões** do **Designer de Dimensão**.  

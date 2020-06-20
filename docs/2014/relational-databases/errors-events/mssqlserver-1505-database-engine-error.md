@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67727734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969520"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
@@ -50,7 +49,7 @@ ms.locfileid: "67727734"
   
  A mensagem de erro 1505 retorna a primeira linha que viola a restrição de exclusividade. Pode haver outras linhas duplicadas na tabela. Para encontrar todas as linhas duplicadas, consulte a tabela especificada e use as cláusulas GROUP BY e HAVING para reportar essas linhas. Por exemplo, a consulta a seguir retorna as linhas da tabela **Employee** que têm nomes e sobrenomes duplicados.  
   
- Selecione LastName, FirstName, Count (\*) de dbo. GRUPO de funcionários por LastName, FirstName com Count\*() > 1;  
+ Selecione LastName, FirstName, Count ( \* ) de dbo. GRUPO de funcionários por LastName, FirstName com Count ( \* ) > 1;  
   
 ## <a name="user-action"></a>Ação do usuário  
  Considere as soluções descritas a seguir.  

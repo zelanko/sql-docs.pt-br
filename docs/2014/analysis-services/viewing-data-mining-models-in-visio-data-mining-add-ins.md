@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe6baff391f108e14a401a0d3b9dcacefa6da406
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065515"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938136"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Exibindo modelos de mineração de dados no Visio (suplementos de mineração de dados)
   As formas do Visio para mineração de dados permitem que você se conecte a um servidor e crie um diagrama representando um modelo de mineração de dados existente. Os diagramas podem ser então personalizados usando controles do Visio, mas você também pode detalhar os dados, expor algumas das estatísticas subjacentes e trabalhar com o modelo subjacente.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e1bdfd447fdf61123615dad329b297490172b191
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a0f77959cfe4492eca6c38951ba2868452d41ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176666"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996328"
 ---
 # <a name="linestring"></a>LineString
   Um `LineString` é um objeto unidimensional que representa uma sequência de pontos e os segmentos de linha que os conectam.

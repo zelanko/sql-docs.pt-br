@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f341d13995cd7a13a06e0ad7b9b380ebd0184f7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4cbab99b4f3fd7ba8a98be902dd4471e76fbaa81
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937927"
 ---
 # <a name="create-a-data-quality-project"></a>Criar um projeto de qualidade de dados
   Este tópico descreve como criar um projeto de qualidade de dados usando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Um projeto de qualidade de dados é usado para executar a atividade de limpeza ou correspondência no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  

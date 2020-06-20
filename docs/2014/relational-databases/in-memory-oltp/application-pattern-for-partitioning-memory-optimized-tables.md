@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3f06127c2e86060c90518bc24dde512e4259668
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 298ba469c565765b524b17a58f464b5a3ee909c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706549"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050392"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Padrão de aplicativo para particionamento de tabelas com otimização de memória
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] dá suporte a um padrão em que um valor limitado de dados ativos é mantido em uma tabela com otimização de memória, enquanto os dados acessados com menos frequência são processados no disco. Geralmente, esse seria um cenário onde os dados são armazenados com base em uma chave `datetime`.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12fdb1a41ec764a0fee0817940f95a3d303777e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811013"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050198"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
   Se você estiver criando uma nova [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabela com otimização de memória ou migrando uma tabela baseada em disco existente para uma tabela com otimização de memória, é importante ter uma estimativa razoável das necessidades de memória de cada tabela para que você possa provisionar o servidor com memória suficiente. Esta seção descreve como estimar a quantidade de memória necessária para manter dados para uma tabela com otimização de memória.  
@@ -119,7 +118,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Definindo o tamanho da matriz de índice de hash**  
   
- O tamanho da matriz de hash é `(bucket_count= <value>)` definido \<por onde o valor> é um valor inteiro maior que zero. Se \<o valor> não for uma potência de 2, o bucket_count real será arredondado para a potência mais próxima de 2.  Em nossa tabela de exemplo, (bucket_count = 5 milhões), como 5 milhões não é uma potência de 2, a contagem de buckets real é arredondada para 8.388.608 (2<sup>23</sup>).  Você deve usar esse número, e não 5.000.000 quando calcular a memória necessária à matriz de hash.  
+ O tamanho da matriz de hash é definido por `(bucket_count= <value>)` , em que \<value> é um valor inteiro maior que zero. Se \<value> não for uma potência de 2, o bucket_count real será arredondado até a potência seguinte mais próxima de 2.  Em nossa tabela de exemplo, (bucket_count = 5 milhões), como 5 milhões não é uma potência de 2, a contagem de buckets real é arredondada para 8.388.608 (2<sup>23</sup>).  Você deve usar esse número, e não 5.000.000 quando calcular a memória necessária à matriz de hash.  
   
  Assim, em nosso exemplo, a memória necessária para cada matriz de hash é:  
   

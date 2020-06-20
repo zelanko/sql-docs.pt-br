@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c5aa031804d2c5f4ad3a3679a6fe1cac96c63b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930647"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar a exibição dos resultados de rastreamento
   Este tópico descreve como modificar a exibição dos resultados do rastreamento de uma sessão de Eventos Estendidos no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] executando as tarefas a seguir.  
@@ -229,7 +228,7 @@ ms.locfileid: "66089436"
   
     -   **Detalhes**. Use esta opção para pesquisar todas as colunas (promovidas e não promovidas) na janela de rastreamento que foram selecionadas antes de abrir a caixa de diálogo **Localizar em eventos estendidos** .  
   
-    -   **Nome da coluna de evento>. \< ** Use esta opção para procurar uma coluna de evento específica na lista suspensa.  
+    -   **\<Event column name>**. Use esta opção para procurar uma coluna de evento específica na lista suspensa.  
   
 5.  Use as opções a seguir para especificar como você quer definir a pesquisa:  
   

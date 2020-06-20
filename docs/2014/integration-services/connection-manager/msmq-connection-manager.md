@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 78377fe5eaf5b9f0639533f17fa7a45cca69a537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a92d6ee495c31e788e7924f00d5469d538155da3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920687"
 ---
 # <a name="msmq-connection-manager"></a>Gerenciador de conexões MSMQ
   Um gerenciador de conexões MSMQ permite que um pacote se conecte a uma fila de mensagens que usa Serviço de enfileiramento de mensagens (também conhecido como MSMQ). A tarefa Fila de Mensagens que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui, utiliza um gerenciador de conexões MSMQ.  
@@ -37,8 +36,8 @@ ms.locfileid: "62833643"
   
 |Tipo de fila|Exemplo de caminho|  
 |----------------|-----------------|  
-|Público|\<nome do computador>\\<nome da fila\>|  
-|Privado|\<nome do computador>\Private$\\<nome da fila\>|  
+|Público|\<computer name>\\Nome da fila de<\>|  
+|Privado|\<computer name>Nome da fila do \Bytes privados $ \\<\>|  
   
  Você pode usar um ponto (.) para representar o computador local.  
   

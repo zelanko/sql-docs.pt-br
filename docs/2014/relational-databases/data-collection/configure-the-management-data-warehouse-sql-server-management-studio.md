@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ef4ddd518343a3076c72ecc41f9b15ddf092dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918813"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970501"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio)
   Este tópico descreve como configurar o data warehouse de gerenciamento para oferecer suporte de armazenamento de dados em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o coletor de dados. Essas instâncias podem estar no mesmo servidor ou em servidores diferentes. Este tópico também fornece descrições da interface do usuário para a caixa de diálogo [Assistente para Configurar Data Warehouse de Gerenciamento](#Wizard) . Para obter informações sobre como configurar um coletor de dados, consulte [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md).  
@@ -93,7 +92,7 @@ ms.locfileid: "62918813"
   
  Especifique um logon marcando a caixa de seleção **Mapear** para o logon.  
   
- **Associação à função de banco de dados para:** *\<nome do data warehouse>*  
+ **Associação de função de banco de dados para:**  *\<data warehouse name>*  
  Selecione a função do data warehouse de gerenciamento para o qual o logon está mapeado marcando a caixa de seleção em uma ou mais da opções a seguir:  
   
 -   **mdw_admin**  

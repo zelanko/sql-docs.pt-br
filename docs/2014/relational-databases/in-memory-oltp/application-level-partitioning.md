@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a22c5d032ca42b64536bb765b037d2cad02a27
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050362"
 ---
 # <a name="application-level-partitioning"></a>Particionamento de nível de aplicativo
   Este exemplo demonstra o particionamento de nível de aplicativo no qual os dados são armazenados em uma tabela com otimização de memória ou então em uma tabela baseada em disco; o pedido cair antes ou após uma data específica define qual dessas duas opções é usada. Todos os pedidos mais recentes ou iguais a *hotDate* estão na tabela com otimização de memória e todos os pedidos antes de *hotDate* estão na tabela baseada em disco. Suponha uma carga de trabalho OLTP extrema com várias transações simultâneas. Essa regra de negócio (ordens recentes em uma tabela com otimização de memória) deve ser imposta mesmo que várias transações simultâneas estejam tentando alterar o *hotDate*.  

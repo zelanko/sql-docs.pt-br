@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93a04281839c4db26cbab16ac166af3cdb7c9a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065655"
 ---
 # <a name="specify-parameters"></a>Especificar parâmetros
   Ao especificar parâmetros de procedimento, programas de chamada podem passar valores para o corpo do procedimento. Esses valores podem ser usados com vários propósitos durante a execução do procedimento. Parâmetros de procedimento também retornam valores ao programa de chamada quando o parâmetro é marcado como um parâmetro OUTPUT.  
@@ -126,7 +125,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Embora seja possível omitir os parâmetros para os quais foram fornecidos padrões, a lista de parâmetros só poderá ser truncada. Por exemplo, se um procedimento tiver cinco parâmetros, o quarto e o quinto parâmetros poderão ser omitidos. No entanto, o quarto parâmetro não pode ser ignorado, desde que o quinto parâmetro seja incluído, a menos que os parâmetros sejam fornecidos no formato ** \@parâmetro =**_valor_.  
+ Embora seja possível omitir os parâmetros para os quais foram fornecidos padrões, a lista de parâmetros só poderá ser truncada. Por exemplo, se um procedimento tiver cinco parâmetros, o quarto e o quinto parâmetros poderão ser omitidos. No entanto, o quarto parâmetro não pode ser ignorado, desde que o quinto parâmetro seja incluído, a menos que os parâmetros sejam fornecidos no formato ** \@ parâmetro =**_valor_.  
   
 ## <a name="specifying-parameter-direction"></a>Especificando a direção do parâmetro  
  A direção de um parâmetro é de entrada, em que um valor é passado para o corpo do procedimento armazenado, ou de saída, em que o procedimento retorna um valor ao programa de chamada. O padrão é um parâmetro de entrada.  
@@ -164,10 +163,10 @@ GO
   
 ```  
   
- Execute `usp_GetList` para retornar uma lista de produtos (bicicletas) da [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] que custam menos que $ 700. Os parâmetros ** \@** de saída cost e ** \@ComparePrices** são usados com linguagem de controle de fluxo para retornar uma mensagem na janela **mensagens** .  
+ Execute `usp_GetList` para retornar uma lista de produtos (bicicletas) da [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] que custam menos que $ 700. Os parâmetros de saída ** \@ cost** e ** \@ ComparePrices** são usados com linguagem de controle de fluxo para retornar uma mensagem na janela **mensagens** .  
   
 > [!NOTE]  
->  A variável OUTPUT deve ser definida durante a criação do procedimento e também durante o uso da variável. O nome de parâmetro e o nome de variável não precisam coincidir. No entanto, o tipo de dados e o posicionamento do parâmetro devem corresponder (a menos que ** \@ListPrice =** _Variable_ seja usado).  
+>  A variável OUTPUT deve ser definida durante a criação do procedimento e também durante o uso da variável. O nome de parâmetro e o nome de variável não precisam coincidir. No entanto, o tipo de dados e o posicionamento do parâmetro devem corresponder (a menos que ** \@ ListPrice =** _Variable_ seja usado).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8afa4b2dfb2b140d67644289e93aa2d96eb1697c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a82a7232559cd8761ae3af66a9accc0bc307552
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066174"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Excluir linhas do painel de Resultados (Visual Database Tools)
   Exclua linhas no painel Resultados para excluir registros do banco de dados. Para excluir todas as linhas, use uma consulta de exclusão. Para obter mais informações, consulte [Criar consultas Exclusão &#40;Visual Database Tools&#41;](visual-database-tools.md). Para remover linhas somente do painel Resultados, altere os critérios da consulta. Para obter mais informações, consulte [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  

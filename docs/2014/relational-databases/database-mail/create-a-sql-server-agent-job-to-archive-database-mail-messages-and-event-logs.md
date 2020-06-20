@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffbfaa1bda561240d64c7548752f0ae18ddddf3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917588"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952566"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos
   Cópias de mensagens do Database Mail e seus anexos são retidos em tabelas **msdb** junto com o log de eventos do Database Mail. Periodicamente, convém reduzir o tamanho das tabelas e arquivar mensagens e eventos que não sejam mais necessários. Os procedimentos a seguir criam um trabalho do SQL Server Agent para automatizar o processo.  
@@ -208,7 +207,7 @@ ms.locfileid: "62917588"
   
 5.  Na área **Frequência** , selecione as opções para executar o trabalho periodicamente; por exemplo, uma vez por mês.  
   
-6.  Na área **frequência diária** , a seleção **ocorre uma vez \<ao>**.  
+6.  Na área **frequência diária** , selecione **ocorre uma vez em \<time> **.  
   
 7.  Verifique se as outras opções estão configuradas a seu gosto e clique em **OK** para salvar a agenda.  
   

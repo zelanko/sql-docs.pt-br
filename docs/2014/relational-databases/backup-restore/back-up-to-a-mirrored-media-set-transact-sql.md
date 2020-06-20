@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5fc43a5d-dfd6-4c53-a4ef-3c8da23ccc81
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 88ea15fabe8e8fd6630d3430417879c7104dff67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 255a3c190139c029f5211dcab9780b6d07d975a4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876918"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959483"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>Fazer backup em um conjunto de mídias espelhado (Transact-SQL)
-  Este tópico descreve como usar a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) para especificar um conjunto de mídias espelhadas ao fazer o backup de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Na instrução BACKUP, especifique o primeiro espelho na cláusula TO. Em seguida, especifique cada espelho em sua própria cláusula MIRROR TO. As cláusulas TO e MIRROR TO devem especificar o mesmo número e tipo de dispositivos de backup.  
+  Este tópico descreve como usar a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] [backup](/sql/t-sql/statements/backup-transact-sql) para especificar um conjunto de mídias espelhadas ao fazer backup de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados do. Na instrução BACKUP, especifique o primeiro espelho na cláusula TO. Em seguida, especifique cada espelho em sua própria cláusula MIRROR TO. As cláusulas TO e MIRROR TO devem especificar o mesmo número e tipo de dispositivos de backup.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria o conjunto de mídias espelhado mostrado na ilustração anterior e faz backup do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] para ambos os espelhos.  
