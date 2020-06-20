@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062227"
 ---
 # <a name="manage-job-steps"></a>Gerenciar etapas de trabalho
   Uma etapa de trabalho é uma ação que o trabalho realiza em um banco de dados ou servidor. Todo trabalho deve ter, pelo menos, uma etapa de trabalho. As etapas de trabalho podem ser:  
@@ -101,7 +100,7 @@ ms.locfileid: "72798224"
   
 -   Um arquivo de script PowerShell existente a ser aberto.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subsistema PowerShell do agente abre uma sessão do PowerShell e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carrega os snap-ins do PowerShell. O script do PowerShell usado como o comando de etapa de trabalho [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode fazer referência ao provedor e aos cmdlets do PowerShell. Para obter mais informações sobre como escrever scripts PowerShell usando os snap-ins de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subsistema PowerShell do agente abre uma sessão do PowerShell e carrega os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-ins do PowerShell. O script do PowerShell usado como o comando de etapa de trabalho pode fazer referência ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor e aos cmdlets do PowerShell. Para obter mais informações sobre como escrever scripts PowerShell usando os snap-ins de PowerShell do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Etapas de trabalho de scripts ActiveX  
   
@@ -199,7 +198,7 @@ Set oServer = nothing
 |||  
 |-|-|  
 |**Descrição**|**Tópico**|  
-|Descreve como criar uma etapa de trabalho com um programa executável.|[Create a CmdExec Job Step](create-a-cmdexec-job-step.md)|  
+|Descreve como criar uma etapa de trabalho com um programa executável.|[Criar uma etapa de trabalho CmdExec](create-a-cmdexec-job-step.md)|  
 |Descreve como redefinir permissões no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configure a User to Create and Manage SQL Server Agent Jobs](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Descreve como criar uma etapa de trabalho do [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
 |Descreve como definir opções para etapas de trabalho Transact-SQL no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
@@ -210,6 +209,6 @@ Set oServer = nothing
 |Descreve como excluir um log de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [dbo. sysjobstepslogs &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Criar trabalhos](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

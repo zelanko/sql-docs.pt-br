@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 23941f8fcf11b874cb459c3a77308534c24ca81f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 48c9e475b380d5f0c7310e33717f261c38acbbd4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000810"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930367"
 ---
 # <a name="new-search-property-list"></a>Nova Lista de Propriedades de Pesquisa
   Use essa caixa de diálogo para criar uma lista de propriedades de pesquisa.  

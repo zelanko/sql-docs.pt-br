@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9725997a5e5f8e40a10ecc6b845068432c4393c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62649685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067392"
 ---
 # <a name="external-tools"></a>Ferramentas Externas
   Use esta caixa de diálogo para adicionar ferramentas externas, como o Gerenciador de Configurações do SQL Server ou o Bloco de Notas, ao menu **Ferramentas** . Adicionar ferramentas externas permite a execução de outros aplicativos facilmente enquanto você trabalha no ambiente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode especificar argumentos e um diretório de trabalho na execução da ferramenta. Além disso, as saídas de algumas ferramentas podem ser exibidas na janela Saída. A caixa de diálogo **Ferramentas Externas** está disponível no menu **Ferramentas** .  
@@ -70,7 +69,7 @@ ms.locfileid: "62649685"
   
 2.  Na caixa **Título** , digite **Gerenciador de Configurações do SQL Server**.  
   
-3.  Na caixa **comando** , digite o caminho para o executável [!INCLUDE[msCoName](../../includes/msconame-md.md)] do console de gerenciamento, como`C:\WINNT\system32\mmc.exe`  
+3.  Na caixa **comando** , digite o caminho para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] executável do console de gerenciamento, como`C:\WINNT\system32\mmc.exe`  
   
 4.  Na caixa **argumentos** , digite o caminho para o arquivo. msc, como`"C:\WINNT\system32\SQLServerManager.msc"`  
   

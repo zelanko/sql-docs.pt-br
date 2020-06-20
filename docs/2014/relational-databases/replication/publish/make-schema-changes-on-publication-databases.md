@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26d3e89fcba41d474ca56637f9e465f17127348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199456"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060543"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Fazer alterações de esquema em bancos de dados de publicação
   A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao se fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Editor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], essa alteração será propagada por padrão para todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -85,11 +84,11 @@ ms.locfileid: "68199456"
   
 #### <a name="adding-columns"></a>Adicionando colunas  
   
--   Para adicionar uma nova coluna a uma tabela e incluir essa coluna em uma publicação existente, execute ALTER TABLE \<Table> ADD \<Column>. Por padrão, a coluna é replicada para todos os Assinantes. A coluna deve permitir valores NULL ou incluir uma restrição padrão. Para obter mais informações sobre como adicionar colunas, consulte a seção “Replicação de mesclagem” neste tópico.  
+-   Para adicionar uma nova coluna a uma tabela e incluir essa coluna em uma publicação existente, execute ALTER TABLE \<Table> Add \<Column> . Por padrão, a coluna é replicada para todos os Assinantes. A coluna deve permitir valores NULL ou incluir uma restrição padrão. Para obter mais informações sobre como adicionar colunas, consulte a seção “Replicação de mesclagem” neste tópico.  
   
--   Para adicionar uma nova coluna a uma tabela sem incluir essa coluna em uma publicação existente, desabilite a replicação de alterações de esquema e, em seguida, execute ALTER TABLE \<Table> ADD \<Column>.  
+-   Para adicionar uma nova coluna a uma tabela e não incluir essa coluna em uma publicação existente, desabilite a replicação de alterações de esquema e, em seguida, execute ALTER TABLE \<Table> Add \<Column> .  
   
--   Para incluir uma coluna existente em uma publicação existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>**.  
+-   Para incluir uma coluna existente em uma publicação existente, use [sp_articlecolumn &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [Sp_mergearticlecolumn &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)ou a caixa de diálogo **Propriedades \<Publication> da publicação** .  
   
      Para obter mais informações, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md). Isso exigirá que as assinaturas sejam reinicializadas.  
   
@@ -97,9 +96,9 @@ ms.locfileid: "68199456"
   
 #### <a name="dropping-columns"></a>Descartando colunas  
   
--   Para remover uma coluna de uma publicação existente e remover a coluna da tabela no Publicador, execute ALTER TABLE \<Table> DROP \<Column>. Por padrão, a coluna é então descartada da tabela em todos os Assinantes.  
+-   Para remover uma coluna de uma publicação existente e descartar a coluna da tabela no Publicador, execute ALTER TABLE \<Table> drop \<Column> . Por padrão, a coluna é então descartada da tabela em todos os Assinantes.  
   
--   Para remover uma coluna de uma publicação existente, mas manter a coluna na tabela no Publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>**.  
+-   Para remover uma coluna de uma publicação existente, mas manter a coluna na tabela no Publicador, use [sp_articlecolumn &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [Sp_mergearticlecolumn &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)ou a caixa de diálogo **Propriedades \<Publication> da publicação** .  
   
      Para obter mais informações, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md). Isso exigirá a geração de um instantâneo novo.  
   

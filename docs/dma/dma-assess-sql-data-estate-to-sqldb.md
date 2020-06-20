@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886183"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054267"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Avaliar a prontidão de um SQL Server banco de dados migrando para o Azure SQL usando o Assistente de Migração de Dados
 
@@ -62,8 +61,8 @@ Um projeto de migrações para Azure é usado para armazenar metadados de descob
     | ------------- | ------------- |
     | Ásia | Sudeste Asiático ou Leste da Ásia |
     | Europa | Sul da Europa ou Europa Ocidental |
-    | Reino Unido | Sul do Reino Unido ou Oeste do Reino Unido |
-    | Estados Unidos | EUA Central ou oeste dos EUA 2 |
+    | United Kingdom | Sul do Reino Unido ou Oeste do Reino Unido |
+    | Estados Unidos | EUA Central ou Oeste dos EUA 2 |
 
     A localização geográfica especificada para o projeto só é usada para armazenar os metadados coletados das VMs locais. Você pode selecionar qualquer região de destino para a migração real.
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d529a8ed50a885aa74969fc0cbb3668fc1e5587b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041422"
 ---
 # <a name="working-with-upgrade-advisor"></a>Trabalhando com o Supervisor de Atualização
   Para ajudar a assegurar que a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] seja bem-sucedida, o Supervisor de Atualização fornece um console central para identificar problemas que devem ser solucionados nas instalações antes da atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

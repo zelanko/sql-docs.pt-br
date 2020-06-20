@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67855ba7841c06181240f220945dda0f4a719629
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472926"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067717"
 ---
 # <a name="pick-schedule-for-job"></a>Selecionar agenda para um trabalho
-  Use esta caixa de diálogo para escolher uma agenda existente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o trabalho do Agent.  
+  Use esta caixa de diálogo para escolher uma agenda existente para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do Agent.  
   
 ## <a name="options"></a>Opções  
  **Agendas disponíveis**  
@@ -31,7 +30,7 @@ ms.locfileid: "62472926"
  **Nome**  
  Exibe o nome da agenda.  
   
- **Habilitada**  
+ **Enabled**  
  Selecionado se a agenda estiver habilitada.  
   
  **Descrição**  

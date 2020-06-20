@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831878"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919190"
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
   A tarefa Criação de Perfil de Dados computa vários perfis ajudam a familiarizar-se com uma fonte de dados e a identificar problemas nos dados que precisam ser corrigidos.  
@@ -82,7 +81,7 @@ ms.locfileid: "62831878"
 |FunctionalDependencyProfile|Colunas do tipo `integer`, do tipo `char` e do tipo `datetime`|  
 |InclusionProfile|Colunas do tipo `integer`, do tipo `char` e do tipo `datetime`|  
   
- \*Na tabela anterior de tipos de dados válidos, os `integer`tipos `char`, `datetime`, e `numeric` incluem os seguintes tipos de dados específicos:  
+ \*Na tabela anterior de tipos de dados válidos, os `integer` tipos,, `char` `datetime` e `numeric` incluem os seguintes tipos de dados específicos:  
   
  Entre os tipos de número inteiro estão `bit`, `tinyint`, `smallint`, `int`e `bigint`.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831878"
   
  Entre os tipos numéricos estão `integer` (exceto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` e `numeric`.  
   
- \*\*`image` `text`os tipos,,, `variant` e não têm suporte para perfis que não sejam o perfil de razão nula de coluna. `XML` `udt`  
+ \*\*`image`os tipos,,, `text` `XML` `udt` e `variant` não têm suporte para perfis que não sejam o perfil de razão nula de coluna.  
   
 ### <a name="valid-tables-and-columns"></a>Tabelas e colunas válidas  
  Se a tabela ou coluna estiver vazia, a Criação de perfis de dados executará as seguintes ações:  

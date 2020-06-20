@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b2ca5eef7905806f551b960d2ec912d1d5a8a09f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858666"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932977"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriedades do Índice de Texto Completo (página Geral)
   **Para exibir ou alterar as propriedades modificáveis de um índice de texto completo**  
@@ -65,7 +64,7 @@ ms.locfileid: "83858666"
  O grupo de arquivos ao qual o índice de texto completo pertence.  
   
  **Lista de palavras irrelevantes de índice de texto completo**  
- A lista de palavras irrelevantes associada ao índice de texto completo no momento. Uma lista de palavras irrelevantes contém [palavras irrelevantes](../relational-databases/search/full-text-search.md). A lista de palavras irrelevantes associada a um índice de texto completo, se houver, é aplicada a consultas de texto completo nesse índice. Você pode remover a lista de palavras irrelevantes do índice selecionando ** \< desativado>** na listagem ou pode selecionar uma diferente lista de palavras irrelevantes; O ** \< sistema>** indica a System STOPLIST.  
+ A lista de palavras irrelevantes associada ao índice de texto completo no momento. Uma lista de palavras irrelevantes contém [palavras irrelevantes](../relational-databases/search/full-text-search.md). A lista de palavras irrelevantes associada a um índice de texto completo, se houver, é aplicada a consultas de texto completo nesse índice. Você pode remover a lista de palavras irrelevantes do índice selecionando-a **\<OFF>** de uma das listas, ou pode selecionar um diferentelist **\<SYSTEM>** . indica a lista de palavras irrelevantes do sistema.  
   
  **Par criar uma lista de palavras irrelevantes (stoplist)**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "83858666"
  **Lista de propriedades de pesquisa**  
  A lista de propriedades de pesquisa associada atualmente o índice de texto completo, se houver algum. Uma lista de propriedades de pesquisa especifica um conjunto de propriedades de documento que são incluídos no índice de texto completo quando ele é preenchido. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- ** \< Off>** indica que atualmente não há nenhuma lista de propriedades de pesquisa associada ao índice. Você pode remover a lista de propriedades de pesquisa atual do índice selecionando ** \< desativado>** na lista ou pode selecionar uma lista de propriedades de pesquisa diferente na lista. Somente as listas de propriedades de pesquisa do banco de dados atual são relacionadas aqui.  
+ **\<Off>** indica que atualmente não há lista de propriedades de pesquisa associada ao índice. Você pode remover a lista de propriedades de pesquisa atual do índice selecionando **\<Off>** na lista ou pode selecionar uma lista de propriedades de pesquisa diferente na lista. Somente as listas de propriedades de pesquisa do banco de dados atual são relacionadas aqui.  
   
 > [!NOTE]  
 >  Você pode associar uma determinada lista de propriedades de pesquisa a mais de um índice de texto completo no mesmo banco de dados.  

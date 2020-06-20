@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8690467f33b53588857747b86771b739f4e406dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63268154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007451"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
   Especifica o comprimento máximo de uma sessão de ajuste em minutos.  
@@ -36,7 +35,7 @@ ms.locfileid: "63268154"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|`unsignedInt`, comprimento ilimitado.|  
 |**Valor padrão**|480 minutos (8 horas).|  
@@ -51,7 +50,7 @@ ms.locfileid: "63268154"
   
 ## <a name="example"></a>Exemplo  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  O exemplo de código a seguir mostra como definir 12 horas como tempo máximo de ajuste:  
   
 ## <a name="code"></a>Código  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf8f57f65281ad0c7ee2b603e5e35d0f22fb6783
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 065bc7ce96371c8172a9f88e150066612960cd3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065514"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000693"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>Trabalhar com layout de diagrama (Visual Database Tools)
   Você pode personalizar o visual de seus diagramas de banco de dados.  

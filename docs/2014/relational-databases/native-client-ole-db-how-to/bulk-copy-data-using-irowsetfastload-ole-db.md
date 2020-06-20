@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8700b20f79fd92965adaa16b7b21affaa087af32
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 50590ebc6635aab6025c1caf6f68e27f8f6da294
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043361"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copiar dados em massa usando IRowsetFastLoad (OLE DB)
   Este exemplo mostra o uso de IRowsetFastLoad para cópia em massa dos registros em uma tabela.  

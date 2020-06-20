@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5256795677f4e8ce4249737d25d3ded1c4cd69c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62792086"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937323"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Adicionar soluções e projetos ao controle do código-fonte
   Ao adicionar uma solução a um controle do código-fonte, ela se torna parte de um arquivo morto de controle de versão dinâmico criado e mantido pelo provedor de controle de código-fonte. Sempre que alguém fizer o check-in de uma nova versão da solução, essa versão se tornará parte do arquivo morto e estará disponível para outros usuários do controle de código-fonte.  

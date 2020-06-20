@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1894b074491af1962d2180337288e188d41b2951
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055072"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriedades da coluna de tabela (SQL Server Management Studio)
   As propriedades aparecem no painel inferior do Criador de Tabelas. A menos que seja indicado o contrário, será possível editar as propriedades na janela Propriedades quando a coluna for selecionada. As **Propriedades de Colunas** podem ser exibidas em categorias ou em ordem alfabética. Muitas propriedades aparecem ou podem ser alteradas apenas para certos tipos de dados.  

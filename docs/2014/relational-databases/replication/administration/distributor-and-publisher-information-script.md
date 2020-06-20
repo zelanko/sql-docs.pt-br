@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4695b53e52c9c63eaacb4f2f32c6bc9f65958213
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060827"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script de informações do Distribuidor e Publicador
   Esse script usa tabelas de sistema e replicação de procedimentos armazenados para responder as perguntas frequentes sobre objetos no Distribuidor e no Publicador. O script pode ser usado assim como é, e pode fornecer também a base para scripts personalizados. O script poderá exigir duas modificações para ser executado em seu ambiente:  
   
 -   Altere a linha `use AdventureWorks2012` para usar o nome de seu banco de dados de publicação.  
   
--   Remova os comentários (`--`) da linha `exec sp_helparticle @publication='<PublicationName>'` e substitua \<PublicationName> pelo nome de uma publicação.  
+-   Remova os comentários ( `--` ) da linha `exec sp_helparticle @publication='<PublicationName>'` e substitua \<PublicationName> pelo nome de uma publicação.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

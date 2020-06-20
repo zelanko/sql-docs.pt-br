@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe92bf5f783bb1b71c1020d0ff808aafa0594b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889230"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937156"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services com grupos de disponibilidade AlwaysOn
   Um grupo de disponibilidade AlwaysOn é uma coleção predefinida de bancos de dados relacionais do SQL Server que faz failover junto quando condições disparam um failover em qualquer um dos bancos de dados, redirecionando solicitações para um banco de dados espelhado em outra instância no mesmo grupo de disponibilidade. Se você estiver usando grupos de disponibilidade como sua solução de alta disponibilidade, poderá usar um banco de dados nesse grupo como uma fonte de dados em uma solução de tabela do Analysis Services ou multidimensional. Todas as operações do Analysis Services a seguir funcionam como esperado ao usar um banco de dados de disponibilidade: processando ou importando dados, consultando dados relacionais diretamente (usando o armazenamento de ROLAP ou o modo DirectQuery), e writeback.  
@@ -55,7 +54,7 @@ ms.locfileid: "68889230"
   
     -   Na lista suspensa **Secundária legível** , selecione **Somente intenção de leitura**.  
   
-    -   Na lista suspensa **Conexões na função primária** , selecione **Permitir todas as conexões**. Esse é o padrão.  
+    -   Na lista suspensa **Conexões na função primária** , selecione **Permitir todas as conexões**. Este é o padrão.  
   
     -   Opcionalmente, na lista suspensa **Modo de disponibilidade** , selecione **Confirmação síncrona**. Esta etapa não é necessária, mas sua definição garante que exista a paridade de dados entre as réplicas primária e secundária.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "68889230"
   
  A fonte de dados é definida agora. Você pode continuar a criar um modelo, começando pela exibição da fonte de dados ou, no caso de modelos de tabela, criando relações. Quando você chega a tal ponto em que dados precisam ser recuperados do banco de dados de disponibilidade (por exemplo, quando você está pronto para processar ou implantar a solução), pode testar a configuração para verificar se dados são acessados da réplica secundária.  
   
-##  <a name="test-the-configuration"></a><a name="bkmk_test"></a> Testar a configuração  
+##  <a name="test-the-configuration"></a><a name="bkmk_test"></a>Testar a configuração  
  Depois que você configurar a réplica secundária e criar uma conexão da fonte de dados no Analysis Services, poderá confirmar esse processamento e comandos de consulta serão redirecionados para a réplica secundária. Você também pode executar um failover manual planejado para verificar seu plano de recuperação para este cenário.  
   
 #### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Etapa 1: confirmar que a conexão da fonte de dados é redirecionada para a réplica secundária  
@@ -217,7 +216,7 @@ ms.locfileid: "68889230"
  Para fazer isso, crie uma fonte de dados adicional em um modelo do Analysis Services para oferece suporte à conexão de leitura/gravação. Ao criar a fonte de dados adicional, use o mesmo nome de ouvinte e banco de dados especificados na conexão somente leitura, mas, em vez de modificar a **Intenção de Aplicativo**, mantenha o padrão que dá suporte a conexões READWRITE. Você pode adicionar um novo fato ou tabelas de dimensão à sua exibição de fonte de dados com base na fonte de dados de leitura/gravação e, depois, habilitar o write-back nas novas tabelas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Políticas AlwaysOn para problemas operacionais com o Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
