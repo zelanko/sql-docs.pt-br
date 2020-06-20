@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01383ffade91cde641018b90be30dc92e644b151
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 03abb1dc601c7b329742f290b9ce62aefd08e7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704075"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056891"
 ---
 # <a name="code-outlining"></a>Estruturação do código
   Você pode usar o recurso de estrutura de tópicos nos editores de consultas do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para ocultar código, de forma seletiva, ao editar consultas. Isso permite exibir com mais facilidade o código em que você está trabalhando, principalmente em arquivos de consulta grandes.
@@ -36,7 +35,7 @@ ms.locfileid: "82704075"
 
  ![Código XML que mostra a estrutura de tópicos](../../database-engine/media/editoutlinexmlfull.gif "Código XML que mostra a estrutura de tópicos")
 
- Quando você clica no sinal de subtração na linha \<InnerTag>, apenas a InnerTag é recolhida, conforme é mostrado na ilustração a seguir.
+ Quando você clica no sinal de menos na \<InnerTag> linha, apenas o InnerTag é recolhido, conforme mostrado na ilustração a seguir.
 
  ![Código XML com nó interno oculto](../../database-engine/media/editoutlinexmlinnercol.gif "Código XML com nó interno oculto")
 
@@ -44,11 +43,11 @@ ms.locfileid: "82704075"
 
  ![Código XML com dica de ferramenta que mostra código oculto](../../database-engine/media/editoutlinexmlmouse.gif "Código XML com dica de ferramenta que mostra código oculto")
 
- Quando você clica no sinal de subtração na linha \<MiddleTag>, tanto a MiddleTag e quanto a InnerTag são recolhidas, como é mostrado na ilustração a seguir.
+ Quando você clica no sinal de menos na \<MiddleTag> linha, MiddleTag e InnerTag são recolhidos, conforme mostrado na ilustração a seguir.
 
  ![Código XML com as marcas interna e central ocultas](../../database-engine/media/editoutlinexmlmiddlecol.gif "Código XML com as marcas interna e central ocultas")
 
- Quando você clica no sinal de menos na linha \<OuterTag>, todas as três linhas são recolhidas, como mostra a ilustração a seguir.
+ Quando você clica no sinal de menos na \<OuterTag> linha, todas as três linhas são recolhidas, conforme mostrado na ilustração a seguir.
 
  ![Código XML que mostra todas as três marcas ocultas](../../database-engine/media/editoutlinexmloutercol.gif "Código XML que mostra todas as três marcas ocultas")
 

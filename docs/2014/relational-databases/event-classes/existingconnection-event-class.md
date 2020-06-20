@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73437390154de5f573a1ae5d68f7d0e7ae8dec37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63023399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029663"
 ---
 # <a name="existingconnection-event-class"></a>classe de evento ExistingConnection
   A classe de evento ExistingConnection indica as propriedades de conexões de usuário existentes quando o rastreamento foi iniciado. O servidor gera um evento ExistingConnection por conexão de usuário existente.  

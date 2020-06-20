@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdf21fd472d0a29172771883537c3c09489a5fe4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001433"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Caixa de diálogo Windows (Ajuda do Gerenciador de Documentos da Microsoft)
   Essa caixa de diálogo permite exibir, fechar e organizar documentos que estão abertos em editores e designers. Você pode exibir essa caixa de diálogo clicando em **Windows** no menu **Janela** .  

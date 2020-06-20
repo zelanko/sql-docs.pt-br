@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9f321d8c048697652055723773c0a9868c5a29b1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e4da8be1b15247101917cf7442211bea9fdb0fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055535"
 ---
 # <a name="complete-word-intellisense"></a>Completar Palavra (IntelliSense)
   A opção [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense Complete Word digita o restante de uma variável, comando ou nome de função quando você já digitou caracteres suficientes para identificar o termo de forma exclusiva.  

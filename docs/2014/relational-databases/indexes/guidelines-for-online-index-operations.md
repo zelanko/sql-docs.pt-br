@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 907fe6a826607fe1cb403ad9b8debe6faf6771fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025418"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
   Quando você executa operações de índice online, as diretrizes seguintes se aplicam:  
   
--   Os índices clusterizados devem ser criados, recriados ou descartados offline quando a tabela subjacente contiver os seguintes tipos de dados LOB `image`(objeto grande) `text`:, **ntext**e.  
+-   Os índices clusterizados devem ser criados, recriados ou descartados offline quando a tabela subjacente contiver os seguintes tipos de dados LOB (objeto grande): `image` , **ntext**e `text` .  
   
 -   Os índices em tabelas temporárias locais, não podem ser criados, recriados ou soltos offline. Esta restrição não se aplica a índices em tabelas temporárias globais.  
   

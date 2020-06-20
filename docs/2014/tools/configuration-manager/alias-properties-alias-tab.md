@@ -1,5 +1,5 @@
 ---
-title: '&lt;Propriedades&gt; do alias (guia alias) | Microsoft Docs'
+title: '&lt;&gt;Propriedades do alias (guia alias) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 559cc01b1fb2de42c061e21762495019e1896670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008350"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Propriedades de &lt;alias&gt; (guia Alias)
-  O alias é um nome alternativo que pode ser usado para fazer uma conexão. Ele encapsula os elementos necessários de uma cadeia de conexão, expondo-os com um nome escolhido pelo usuário. Use a página **Alias** na caixa de diálogo de **\<** Nome do alias **> Propriedades** para exibir ou especificar os elementos da cadeia de conexão de um Alias.  
+  O alias é um nome alternativo que pode ser usado para fazer uma conexão. Ele encapsula os elementos necessários de uma cadeia de conexão, expondo-os com um nome escolhido pelo usuário. Use a página **alias** na caixa de diálogo ** \<**Alias name**> Propriedades** para exibir ou especificar os elementos da cadeia de conexão de um alias.  
   
 ## <a name="options"></a>Opções  
  **Nome do Alias**  

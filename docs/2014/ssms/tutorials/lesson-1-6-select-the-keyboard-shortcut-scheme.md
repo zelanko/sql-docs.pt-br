@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d088740fc6f1f72213c04866713a8579eb126d2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63312559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058292"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>Selecionar o esquema de atalhos de teclado
   Em vez do esquema de teclado padrão do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , você pode configurar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para usar um esquema de teclado compatível com o [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  

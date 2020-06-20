@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e8aaa92f02d1b26e23aad3c9ccffe52cd886ac2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34c6b836f13fe120d50153e642f42d6c8785e7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058266"
 ---
 # <a name="view-project-properties"></a>Exibir propriedades do projeto
   Você pode exibir as propriedades associadas com seus projetos na janela Propriedades.  

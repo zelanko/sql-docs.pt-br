@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b500c2c9a2e725577ac542b738f2ea6a536cfe34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024939"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lição 8: Restaurar um banco de dados no Armazenamento do Microsoft Azure
   Nesta lição, você aprenderá a criar um arquivo de backup localmente e, em seguida, restaurá-lo no armazenamento do Azure. Observe que você pode ter seu banco de dados no local ou em uma máquina virtual no Azure. Para acompanhar esta lição, você não precisará concluir as lições 4, 5, 6 e 7.  
@@ -85,7 +84,7 @@ ms.locfileid: "70175428"
   
 8.  Na seção **restaurar arquivos de banco de dados** como, em campo **restaurar como** , digite o seguinte:  
   
-     Para arquivo de dados, digite `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`:. Para arquivo de log, digite `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`:.  
+     Para arquivo de dados, digite: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf` . Para arquivo de log, digite: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf` .  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   

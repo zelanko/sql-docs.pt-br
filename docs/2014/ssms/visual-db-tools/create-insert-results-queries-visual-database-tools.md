@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5dfd7df8104519cf09ad72ffee3c5214af2a3d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058166"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Criar consultas Inserir Resultados (Visual Database Tools)
   Você pode copiar linhas de uma tabela para outra ou em uma tabela utilizando uma consulta Inserir Resultados. Por exemplo, em uma tabela `titles` , é possível utilizar uma consulta Inserir Resultados para copiar informações sobre todos os títulos de um publicador para uma segunda tabela que você pode disponibilizar para esse publicador. Uma consulta Inserir Resultados é semelhante às Consultas de Criar Tabela, mas copia linhas para uma tabela existente.  
@@ -80,7 +79,7 @@ WHERE (pub_id = '0766')
   
      O Designer de Consulta e Exibição adiciona as colunas escolhidas à coluna **Coluna** do painel Critérios.  
   
-5.  Na coluna **Acrescentar** do painel Critérios, selecione uma coluna de destino na tabela de destino para cada coluna que você está copiando. Escolha *TableName.\* * se você estiver copiando linhas inteiras. As colunas na tabela de destino devem ter os mesmos tipos de dados (ou compatíveis) que as colunas na tabela de origem.  
+5.  Na coluna **Acrescentar** do painel Critérios, selecione uma coluna de destino na tabela de destino para cada coluna que você está copiando. Escolha *TableName. \* * se você estiver copiando linhas inteiras. As colunas na tabela de destino devem ter os mesmos tipos de dados (ou compatíveis) que as colunas na tabela de origem.  
   
 6.  Se você quiser copiar as linhas em uma ordem específica, selecione a ordem de classificação. Para obter detalhes, consulte [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md).  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b880e23bdc191da1f34f2261d7c87a32f03fb42
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964896"
 ---
 # <a name="package-configurations-organizer"></a>Organizador de Configurações do Pacote
   Use a caixa de diálogo **Organizador de Configurações do Pacote** para habilitar configurações de pacote, visualizar uma lista de configurações para o pacote atual e para definir a ordem de preferência para carregar as configurações.  
@@ -59,7 +58,7 @@ ms.locfileid: "66056973"
  **Editar**  
  Edite uma configuração existente executando novamente o Assistente de Configuração do Pacote.  
   
- **Remover**  
+ **Removerr**  
  Selecione uma configuração e depois clique em **Remover**.  
   
  **Setas**  

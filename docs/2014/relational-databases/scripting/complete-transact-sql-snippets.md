@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 573e6450fb34a7e2bff10ca5120263596ffa4f86
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d90c77f72ba8ce80d26503645d9b04d795f5e503
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704030"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055545"
 ---
 # <a name="complete-transact-sql-snippets"></a>Concluir snippets Transact-SQL
   Quando um snippet de código [!INCLUDE[tsql](../../includes/tsql-md.md)] foi inserido em um script, você edita o conteúdo do snippet para compilar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] completa.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf3b0fa3c74591a7919024f555fda2f65d89963d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb509d4b3ba48bbd31b4246e66e024b0be1d49ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025628"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamanho da tabela e da linha em tabelas com otimização de memória
   Uma tabela com otimização de memória consiste em uma coleção de linhas e índices que contêm ponteiros para linhas. Em uma tabela com otimização de memória, as linhas não podem ter mais de 8.060 bytes. Entender o tamanho de uma tabela com otimização de memória ajudará você a saber se o computador tem memória suficiente.  
@@ -117,14 +116,14 @@ Tabela com otimização de memória composta por índices e linhas.
   
  Para um tempo maior que 200, a tabela contém as seguintes linhas:  
   
-|Name|City|  
+|Nome|City|  
 |----------|----------|  
 |John|Pequim|  
 |Jane|Praga|  
   
  Entretanto, qualquer transação ativa com tempo inicial igual a 100 resultará na seguinte versão da tabela:  
   
-|Name|City|  
+|Nome|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Praga|  

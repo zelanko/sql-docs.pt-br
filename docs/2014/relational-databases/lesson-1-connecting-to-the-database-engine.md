@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d296aae78434bcfff1c69770878705ef5f4bd0ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63145475"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025352"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
   Quando você instala o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], as ferramentas instaladas dependem da edição e de suas opções de instalação. Esta lição analisa as principais ferramentas e mostra como conectar e executar uma função básica (autorizar mais usuários).  
@@ -72,7 +71,7 @@ ms.locfileid: "63145475"
   
 2.  Selecione **Mecanismo de Banco de Dados**.  
   
-3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é o *<computer_name ***\\***><* instance_name>, como **ACCTG_SRVR \SQLEXPRESS**.  
+3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é o *<computer_name>***\\***<* instance_name>, como **ACCTG_SRVR \SQLEXPRESS**.  
   
 4.  Clique em **Conectar**.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63145475"
   
      A caixa de diálogo **Logon – Novo** é exibida.  
   
-2.  Na página **geral** , na caixa **nome de logon** , digite um logon do Windows no formato * \<domínio \\><logon\>*.  
+2.  Na página **geral** , na caixa **nome de logon** , digite um logon do Windows no formato * \<domain> \\<logon \> *.  
   
 3.  Na caixa **Banco de dados padrão** , selecione [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , caso esteja disponível. Caso contrário, selecione **mestre**.  
   

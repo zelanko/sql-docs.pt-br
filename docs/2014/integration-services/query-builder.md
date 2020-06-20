@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1880ceffb03389bc87ee8f25d1817a5e4f593566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a393352f7ec0f9384ed2d30b2909c9d9f2c1dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056638"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964616"
 ---
 # <a name="query-builder"></a>Construtor de Consultas
   Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a ser usada na tarefa Executar SQL, na origem e no destino OLE DB e na transformação Pesquisa.  
@@ -43,7 +42,7 @@ ms.locfileid: "66056638"
  As transformações Pesquisa e Pesquisa Difusa também podem usar variáveis com parâmetros e códigos de retorno. As informações sobre a origem OLE DB também se aplicam a estas duas transformações.  
   
 ## <a name="options"></a>Opções  
- **Barra**  
+ **Barra de ferramentas**  
  Use a barra de ferramentas para gerenciar conjuntos de dados, selecionar painéis para exibição e controlar funções de consulta.  
   
 |Valor|Descrição|  
@@ -52,7 +51,7 @@ ms.locfileid: "66056638"
 |**Mostrar/Ocultar Painel Grade**|Exibe ou oculta o painel **Grade** .|  
 |**Painel Mostrar/Ocultar SQL**|Mostra ou oculta o painel **SQL** .|  
 |**Painel Mostrar/Ocultar Resultados**|Exibe ou oculta o painel de **Resultados** .|  
-|**Funcionam**|Executa a consulta. Os resultados são exibidos no painel de Resultados.|  
+|**Executar**|Executa a consulta. Os resultados são exibidos no painel de Resultados.|  
 |**Verificar SQL**|Verifica se a instrução SQL é válida.|  
 |**Classificação crescente**|Classifica as linhas de saída na coluna selecionada no painel Grade em ordem crescente.|  
 |**Classificação decrescente**|Classifica as linhas de saída na coluna selecionada no painel Grade em ordem decrescente.|  
