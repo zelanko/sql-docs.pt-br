@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0d70024e02d4cab2c944105eef3fbff84ee2af9a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a292f7c37f304f6ca3e9f62d4b0b578f0fcab80
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056412"
 ---
 # <a name="commands"></a>Comandos
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe a interface **ICommand** e os objetos de comando, que são descritos nesta seção:  

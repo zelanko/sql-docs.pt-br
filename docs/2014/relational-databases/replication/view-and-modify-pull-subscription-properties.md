@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b847a22d31bbf3ea7540c55339fe27531134125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063714"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Exibir e modificar propriedades de assinatura pull
   Este tópico descreve como exibir e modificar propriedades de assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  
@@ -39,7 +38,7 @@ ms.locfileid: "68198984"
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Exibir as propriedades da assinatura pull no Publicador ou Assinante, na caixa de diálogo **Propriedades de Assinatura – \<Publisher>: \<PublicationDatabase>** , disponível em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Há mais propriedades visíveis no Assinante, e as propriedades podem ser modificadas no Assinante. É igualmente possível exibir propriedades no Publicador, na guia **Todas as Assinaturas** , disponível no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+ Exiba as propriedades da assinatura pull do Publicador ou do Assinante na caixa de diálogo **Propriedades da assinatura- \<Publisher> \<PublicationDatabase> :** , que está disponível no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Há mais propriedades visíveis no Assinante, e as propriedades podem ser modificadas no Assinante. É igualmente possível exibir propriedades no Publicador, na guia **Todas as Assinaturas** , disponível no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Para exibir propriedades de assinatura pull no Publicador do Management Studio  
   
@@ -76,23 +75,23 @@ ms.locfileid: "68198984"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para visualizar as propriedades de uma assinatura pull para um instantâneo ou publicação transacional  
   
-1.  No Assinante, execute [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql). Especifique **@publisher**, **@publisher_db**, e **@publication**. Isso retorna informações sobre a assinatura que é armazenada em tabelas do sistema no Assinante.  
+1.  No Assinante, execute [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql). Especifique **@publisher** , **@publisher_db** , e **@publication** . Isso retorna informações sobre a assinatura que é armazenada em tabelas do sistema no Assinante.  
   
-2.  No Assinante, execute [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**e um dos seguintes valores para **@publication_type**:  
+2.  No Assinante, execute [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Especifique **@publisher** , **@publisher_db** , **@publication** e um dos seguintes valores para **@publication_type** :  
   
     -   **0** - Assinatura pertence à uma publicação transacional.  
   
     -   **1** - Assinatura pertence à uma publicação de instantâneo.  
   
-3.  No Publicador, execute [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Especifique **@publication** e **@subscriber**.  
+3.  No Publicador, execute [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Especifique **@publication** e **@subscriber** .  
   
 4.  No Publicador, execute [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), especificando **@subscriber**. Isso exibe informações sobre o Assinante.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para alterar as propriedades de uma assinatura pull para um instantâneo ou publicação transacional  
   
-1.  No Assinante, execute [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql), especificando **@publisher**, **@publisher_db**, **@publication**, um valor de **0** (transacional) ou **1** (instantâneo) para **@publication_type**, a propriedade de assinatura sendo alterada como **@property**e o novo valor como. **@value**  
+1.  No Assinante, execute [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql), especificando **@publisher** , **@publisher_db** , **@publication** , um valor de **0** (transacional) ou **1** (instantâneo) para **@publication_type** , a propriedade de assinatura sendo alterada como **@property** e o novo valor como **@value** .  
   
-2.  (Opcional) No Assinante, no banco de dados da assinatura, execute [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql). Especifique a ID do trabalho de Agente de Distribuição para **@jobid**e as seguintes propriedades do pacote DTS (Data Transformation Services):  
+2.  (Opcional) No Assinante, no banco de dados da assinatura, execute [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql). Especifique a ID do trabalho de Agente de Distribuição para **@jobid** e as seguintes propriedades do pacote DTS (Data Transformation Services):  
   
     -   **@dts_package_name**  
   
@@ -107,17 +106,17 @@ ms.locfileid: "68198984"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>Para exibir as propriedades de uma assinatura pull para uma publicação de mesclagem  
   
-1.  No Assinante, execute [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql). Especifique **@publisher**, **@publisher_db**, e **@publication**.  
+1.  No Assinante, execute [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql). Especifique **@publisher** , **@publisher_db** , e **@publication** .  
   
-2.  No Assinante, execute [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**e um valor de 2 para **@publication_type**.  
+2.  No Assinante, execute [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Especifique **@publisher** , **@publisher_db** , e **@publication** um valor de 2 para **@publication_type** .  
   
-3.  No Publicador, execute [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) para exibir informações de assinatura. Para retornar informações sobre uma assinatura específica, você deve especificar **@publication**, **@subscriber**e um valor de **pull** para **@subscription_type**.  
+3.  No Publicador, execute [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) para exibir informações de assinatura. Para retornar informações sobre uma assinatura específica, você deve especificar **@publication** , **@subscriber** e um valor de **pull** para **@subscription_type** .  
   
 4.  No Publicador, execute [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), especificando **@subscriber**. Isso exibe informações sobre o Assinante.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>Para alterar as propriedades de uma assinatura pull para uma publicação de mesclagem  
   
-1.  No Assinante, execute [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql). Especifique **@publication**, **@publisher**, **@publisher_db**, a propriedade de assinatura sendo alterada **@property**como e o novo valor como **@value**.  
+1.  No Assinante, execute [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql). Especifique **@publication** , **@publisher** , **@publisher_db** , a propriedade de assinatura sendo alterada como **@property** e o novo valor como **@value** .  
   
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  As classes RMO usadas para exibir ou modificar as propriedades da assinatura pull dependem do tipo de publicação em que a assinatura pull está inscrita.  

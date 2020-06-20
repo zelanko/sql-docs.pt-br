@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7a1e996bff6c68a6211b015033b108cf5f1f9614
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ef1404ae61aebe629d2ecd815ddf8ad2dd3ba0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698223"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056377"
 ---
 # <a name="initialization-and-authorization-properties"></a>Propriedades de inicialização e autorização
   O provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client interpreta as propriedades de inicialização e autorização do OLE DB como segue:  

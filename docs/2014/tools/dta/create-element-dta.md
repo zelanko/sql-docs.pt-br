@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ec9ad9569326e4a9b3e890af4b5f909e36e5c5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cbe1d99a8e38ddc31ebac1ce66d1e549781dd5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149486"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057784"
 ---
 # <a name="create-element-dta"></a>Criar elemento (DTA)
   Contém informações sobre estruturas de índices, estatísticas e de heap em uma configuração especificada pelo usuário.  
@@ -37,7 +36,7 @@ ms.locfileid: "63149486"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

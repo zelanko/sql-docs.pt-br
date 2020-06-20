@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c2da86e24a7582c67daf746180cec2c715ba5be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061753"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925860"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>Editor de Destino ADO NET (Página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino ADO NET** para mapear as colunas de entrada nas colunas de destino.  
@@ -40,7 +39,7 @@ ms.locfileid: "66061753"
  Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis na tabela para as colunas de entrada.  
   
  **Coluna de Entrada**  
- Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando ** \<ignorar>** para excluir colunas da saída.  
+ Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando **\<ignore>** para excluir colunas da saída.  
   
  **Coluna de destino**  
  Visualize cada coluna de destino disponível, esteja ela mapeada ou não.  

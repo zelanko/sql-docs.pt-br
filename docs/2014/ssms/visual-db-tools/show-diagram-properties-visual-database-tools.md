@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b26b05f41b23d1626fe3d9f7704d334bfe650098
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8222686084fc1d87d23edbf18f56e85f1f8aeec9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064311"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Exibir propriedades do diagrama (Visual Database Tools)
   Você pode exibir as propriedades de um diagrama de banco de dados na janela Propriedades.  

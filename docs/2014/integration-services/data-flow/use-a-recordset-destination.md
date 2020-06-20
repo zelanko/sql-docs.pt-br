@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899949"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939207"
 ---
 # <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
   O destino do Conjunto de Registros não salva dados em uma fonte de dados externa. Em vez disso, o destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do tipo de dados `Object`. Depois que o destino do Conjunto de Registros salva os dados, geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. O enumerador ADO Foreach salva o valor de cada coluna da linha atual em uma variável de pacote separada. Em seguida, as tarefas que você configura dentro do contêiner Loop Foreach leem esses valores das variáveis e executam alguma ação com eles.  
@@ -121,7 +120,7 @@ ms.locfileid: "62899949"
   
 5.  Abra o **Editor de Destino do Conjunto de Registros**e defina o destino com as seguintes configurações:  
   
-    1.  Na guia **Propriedades do componente** , para `VariableName` Propriedade, selecione `User::BonusRecordset`.  
+    1.  Na guia **Propriedades do componente** , para `VariableName` propriedade, selecione `User::BonusRecordset` .  
   
     2.  Na guia **Colunas de Entrada** , selecione todas as três colunas disponíveis.  
   
@@ -131,9 +130,9 @@ ms.locfileid: "62899949"
   
 2.  Abra o **Editor de Loop Foreach**e defina o contêiner com as seguintes configurações:  
   
-    1.  Na página **coleção** , para o **enumerador**, selecione **enumerador ADO foreach**e, para variável de origem de `User::BonusRecordset` **objeto ADO**, selecione.  
+    1.  Na página **coleção** , para o **enumerador**, selecione **enumerador ADO foreach**e, para **variável de origem de objeto ADO**, selecione `User::BonusRecordset` .  
   
-    2.  Na página **mapeamentos de variáveis** , mapeie `User::EmailAddress` para o índice 0 `User::FirstName` , para o índice 1 `User::Bonus` e para o índice 2.  
+    2.  Na página **mapeamentos de variáveis** , mapeie `User::EmailAddress` para o índice 0, `User::FirstName` para o índice 1 e `User::Bonus` para o índice 2.  
   
 3.  Na guia **Fluxo de Controle** , dentro do contêiner Loop Foreach, adicione uma tarefa Enviar Email.  
   

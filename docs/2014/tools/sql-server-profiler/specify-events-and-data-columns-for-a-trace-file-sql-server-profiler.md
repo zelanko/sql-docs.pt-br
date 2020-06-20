@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33e11dde29a9f2b016f5f70fa3c12bd728928f93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 283ea523a68a79a7054441c4cc9eb8bf3fdf963e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057654"
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>Especificar eventos e colunas de dados para um arquivo de rastreamento (SQL Server Profiler)
   Este tópico descreve como especificar classes de evento e colunas de dados para rastreamentos usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

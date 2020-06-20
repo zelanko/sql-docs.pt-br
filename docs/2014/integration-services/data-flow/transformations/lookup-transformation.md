@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900217"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939473"
 ---
 # <a name="lookup-transformation"></a>transformação Pesquisa
   A transformação Pesquisa executa pesquisas unindo dados em colunas de entrada com colunas em um conjunto de dados de referência. Você usa a pesquisa para acessar informações adicionais em uma tabela relacionada que tem como base valores de colunas comuns.  
@@ -74,7 +73,7 @@ ms.locfileid: "62900217"
 -   Saída sem-correspondência. A saída sem-correspondência controla as linhas na entrada que não correspondem a pelo menos uma entrada no conjunto de dados de referência. Se você configurar a transformação Pesquisa para tratar as linhas sem entradas correspondentes como erros, as linhas serão redirecionadas à saída de erro. Caso contrário, a transformação redirecionará essas linhas para a saída sem-correspondência.  
   
     > [!NOTE]  
-    >  No [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], a transformação Pesquisa tinha apenas uma saída. Para obter mais informações sobre como executar uma transformação pesquisa que foi criada no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], consulte [Atualizar pesquisa de transformações](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  No [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], a transformação Pesquisa tinha apenas uma saída. Para obter mais informações sobre como executar uma transformação pesquisa que foi criada no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , consulte [Atualizar pesquisa de transformações](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Saída de erro.  
   

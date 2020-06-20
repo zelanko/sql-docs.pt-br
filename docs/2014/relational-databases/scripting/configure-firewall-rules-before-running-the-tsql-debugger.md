@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a5710ab5a74adc34601790c134a4553b8b01604
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 28e5515f5132f5e8b7859da1a11b5466b90c5579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056923"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurar o Depurador Transact-SQL
   As regras do Firewall do Windows devem ser configuradas para habilitar a depuração do [!INCLUDE[tsql](../../includes/tsql-md.md)] quando conectado a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que esteja em execução em outro computador que não o do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,7 +55,7 @@ ms.locfileid: "82704043"
   
     2.  Na caixa de diálogo **Tipo de Regra** , selecione **Programa**e clique em **Avançar**.  
   
-    3.  Na caixa de diálogo **Programa** , selecione **Este caminho de programa:** e insira o caminho completo para sqlservr.exe dessa instância. Por padrão, o sqlservr. exe é instalado em C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, em que *InstanceName* é MSSQLSERVER para a instância padrão e o nome da instância para qualquer instância nomeada.  
+    3.  Na caixa de diálogo **Programa** , selecione **Este caminho de programa:** e insira o caminho completo para sqlservr.exe dessa instância. Por padrão, o sqlservr.exe é instalado em C:\Arquivos de Programas\microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, em que *InstanceName* é MSSQLSERVER para a instância padrão e o nome da instância para qualquer instância nomeada.  
   
     4.  Na caixa de diálogo **Ação** , selecione **Permitir a conexão**e clique em **Avançar**.  
   

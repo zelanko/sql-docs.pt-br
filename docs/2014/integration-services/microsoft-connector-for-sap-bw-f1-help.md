@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 80dfa890b16b27ac00218f9e9e7895411c8ac9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd963b0bcd215dff7211f0073c450565cdec775c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967066"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Ajuda F1 do Microsoft Connector 1.1 for SAP BW
   Esta seção contém os tópicos de Ajuda F1 para os três componentes do [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 para SAP BW. Estes tópicos também estão disponíveis na interface do usuário, pressionando a tecla F1 ou clicando em Ajuda nas páginas e caixas de diálogo do assistente.  
@@ -45,7 +44,7 @@ ms.locfileid: "62890633"
   
 -   [Log de solicitações](data-flow/request-log.md)  
   
--   [Visualizar](data-flow/preview.md)  
+-   [Visualização](data-flow/preview.md)  
   
 ### <a name="sap-bw-destination-f1-help"></a>Ajuda F1 do destino SAP BW  
   

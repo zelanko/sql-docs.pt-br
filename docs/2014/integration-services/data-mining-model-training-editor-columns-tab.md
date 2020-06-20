@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9495343fca6da023dbf54bcf69dff6b9bb3e2b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059889"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939147"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Editor de Treinamento de Modelo de Mineração de Dados (guia Colunas)
   Use a página **Colunas** da caixa de diálogo do **Editor de Treinamento do Modelo de Mineração de Dados** para mapear colunas de entrada para colunas na estrutura de mineração.  

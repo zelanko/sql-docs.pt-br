@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31dd441af6e46784b928006fe45b726f4c59f0c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2272f23511f955b3509d4a9e357100a96f5f8852
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057680"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Definir padrões de exibição de rastreamento (SQL Server Profiler)
   Este tópico descreve como definir opções de ferramentas que especificam tipos, tamanho e estilo da fonte utilizada pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir rastreamentos na janela de rastreamento. Também é possível especificar que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exiba todas as datas e horas com as configurações regionais definidas para seu sistema operacional.  

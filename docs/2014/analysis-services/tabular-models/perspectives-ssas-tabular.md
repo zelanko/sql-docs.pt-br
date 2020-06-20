@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa139c33a3d72b5a628ba6354488b8cef81c0a0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938787"
 ---
 # <a name="perspectives-ssas-tabular"></a>Perspectivas (SSAS tabular)
   As perspectivas, em modelos tabulares, definem subconjuntos visíveis de um modelo que fornece pontos de vista concentrados, específicos à empresa ou específicos ao aplicativo.  
@@ -28,7 +27,7 @@ ms.locfileid: "66066876"
   
 -   [Tarefas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Benefícios  
  Os modelos tabulares podem ser muito complexos para usuários explorarem. Um único modelo pode representar o conteúdo de um data warehouse completo com muitas tabelas, medidas e dimensões. Essa complexidade pode ser difícil para usuários que precisam apenas interagir com uma pequena parte do modelo para satisfazer seus requisitos de Business Intelligence e geração de relatórios.  
   
  Em uma perspectiva, tabelas, colunas e medidas (inclusive KPIs) são definidas como objetos de campo. Você pode selecionar os campos exibíveis para cada perspectiva. Por exemplo, um único modelo pode conter dados de produto, de vendas, financeiros, de funcionários e geográficos. Enquanto um departamento de vendas precisa de dados de produto, vendas, promoções e geografia, não precisa de dados de funcionário e financeiros. De maneira semelhante, um departamento de recursos humanos não precisa de dados sobre promoções de vendas e geografia.  

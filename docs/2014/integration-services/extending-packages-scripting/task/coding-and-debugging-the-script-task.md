@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176166"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967226"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codificando e depurando a tarefa Script
   Depois de configurar a tarefa Script no **Editor da Tarefa Script**, você escreve seu código personalizado no ambiente de desenvolvimento da tarefa Script.
@@ -49,7 +48,7 @@ ms.locfileid: "78176166"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Itens e classes de projeto no projeto da tarefa Script
  Por padrão, o projeto da tarefa Script exibido na janela Explorador de Projeto VSTA contém um único item, `ScriptMain`. O item `ScriptMain`, por sua vez, contém uma única classe, também nomeada `ScriptMain`. Os elementos de código na classe variam de acordo com a linguagem de programação selecionada para a tarefa Script:
 
--   Quando a tarefa Script é configurada [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] para a linguagem de `ScriptMain` programação, a classe tem uma sub-rotina `Main`pública,. A sub-rotina `ScriptMain.Main` é o método que o runtime chama quando você executa sua tarefa Script.
+-   Quando a tarefa Script é configurada para a [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] linguagem de programação, a `ScriptMain` classe tem uma sub-rotina pública, `Main` . A sub-rotina `ScriptMain.Main` é o método que o runtime chama quando você executa sua tarefa Script.
 
      Por padrão, o único código na sub-rotina `Main` de um script novo é a linha `Dts.TaskResult = ScriptResults.Success`. Essa linha informa o runtime em que a tarefa teve êxito em sua operação. A `Dts.TaskResult` propriedade é discutida em [retornando resultados da tarefa Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).
 

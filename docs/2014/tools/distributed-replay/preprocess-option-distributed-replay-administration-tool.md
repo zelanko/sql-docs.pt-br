@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57adcc55cf7b699e5092671fc61eb83278858cb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7f168d45b03473d958e202bd75116f4519d2fc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064119"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opção de pré-processamento (ferramenta de administração Distributed Replay)
-  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração de `DReplay.exe`Distributed Replay,, é uma ferramenta de linha de comando que você pode usar para se comunicar com o Distributed Replay Controller. Este tópico descreve a opção de linha de comando **preprocess** e a sintaxe correspondente.
+  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração de Distributed Replay, `DReplay.exe` , é uma ferramenta de linha de comando que você pode usar para se comunicar com o Distributed Replay Controller. Este tópico descreve a opção de linha de comando **preprocess** e a sintaxe correspondente.
 
  A opção **preprocess** inicia o estágio de pré-processamento. Durante esse estágio, o controlador prepara os dados de rastreamento de entrada para retomada contra o servidor de destino.
 
@@ -32,12 +31,12 @@ ms.locfileid: "78177336"
     -dcontroller_working_dir [-cconfig_file] [-fstatus_interval]
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
  **-m** *Controller* especifica o nome do computador do controlador. Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.
 
  Se o parâmetro **-m** não for especificado, será usado o computador local.
 
- **-i** *input_trace_file* especifica o caminho completo do arquivo de rastreamento de entrada no controlador, como `D:\Mytrace.trc`. O parâmetro **-i** é obrigatório.
+ **-i** *input_trace_file* especifica o caminho completo do arquivo de rastreamento de entrada no controlador, como `D:\Mytrace.trc` . O parâmetro **-i** é obrigatório.
 
  Se houver arquivos de substituição no mesmo diretório, eles serão carregados e usados automaticamente. Os arquivos devem seguir a convenção de nomenclatura de substituição de arquivo, por exemplo: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.
 

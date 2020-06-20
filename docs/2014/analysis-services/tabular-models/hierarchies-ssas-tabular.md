@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 823d35b71fca52b2f1892d6e7dbfc940688f0ae6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938867"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Hierarquias (SSAS tabular)
   Hierarquias, em modelos de tabela, são metadados que definem relações entre duas ou mais colunas em uma tabela. As hierarquias podem parecer separadas de outras colunas em uma lista de campo de cliente de relatório, facilitando para usuários clientes navegarem e incluírem em um relatório.  
@@ -28,7 +27,7 @@ ms.locfileid: "66067077"
   
 -   [Tarefas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Benefícios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Benefícios  
  As tabelas podem incluir dúzias ou até mesmo centenas de colunas com nomes de coluna incomuns em nenhuma ordem aparente. Isto pode levar a uma aparência não ordenada ao reportar listas de campo de cliente, dificultando aos usuários localizarem e incluírem dados em um relatório. As hierarquias podem fornecer uma exibição simples e intuitiva de uma estrutura de dados que, de outra maneira, seria complexa.  
   
  Por exemplo, em uma tabela de Data, você pode criar uma hierarquia de Calendário. O Ano civil é usado como o nível pai mais alto, com Mês, Semana e Dia incluídos como níveis filho (Ano civil->Mês->Semana->Dia). Esta hierarquia mostra uma relação lógica de Ano civil a Dia. Um usuário de cliente pode selecionar Ano Civil de uma Lista de campos para incluir todos os níveis em uma Tabela Dinâmica ou expandir a hierarquia e selecionar somente níveis específicos para serem incluídos na Tabela Dinâmica.  

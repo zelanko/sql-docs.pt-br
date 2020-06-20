@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80d61a4b4742163d999aa2f5d70e70336e680e27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176195"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967241"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Compreendendo o Component Object Model Script
   Conforme discutido em [codificando e Depurando o componente Script] (.. /Extending-Packages-scripting/data-Flow-script-Component/Coding-and-Debugging-The-script-Component.MD, o projeto de componente de script contém três itens de projeto:
@@ -115,27 +114,27 @@ public override void PreExecute()
 
 -   Propriedades de acessador nomeadas, digitadas para cada coluna de entrada selecionada. Essas propriedades são somente leitura ou de leitura/gravação, dependendo do **Tipo de Uso** especificado para a coluna na página **Colunas de Entrada** do **Editor de Transformação Scripts**.
 
--   Uma propriedade **\<coluna>_IsNull** para cada coluna de entrada selecionada. Essa propriedade também é somente leitura ou de leitura/gravação, dependendo do **Tipo de Uso** especificado para a coluna.
+-   Uma propriedade ** \<column> _IsNull** para cada coluna de entrada selecionada. Essa propriedade também é somente leitura ou de leitura/gravação, dependendo do **Tipo de Uso** especificado para a coluna.
 
--   Um método **DirectRowTo\<bufferdesaída>** para cada saída configurada. Você usará esses métodos ao filtrar linhas para uma das várias saídas no mesmo `ExclusionGroup`.
+-   Um **método \<outputbuffer> DirectRowTo** para cada saída configurada. Você usará esses métodos ao filtrar linhas para uma das várias saídas no mesmo `ExclusionGroup`.
 
 -   Uma função `NextRow` para obter a próxima linha de entrada e uma função `EndOfRowset` para determinar se o último buffer de dados foi processado. Em geral, você não precisa dessas funções ao usar os métodos de processamento de entrada implementados na classe base `UserComponent`. A próxima seção fornece mais informações sobre a classe base `UserComponent`.
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece
  O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:
 
--   Uma implementação substituída do método `ProcessInput`. Esse é o método que o mecanismo de fluxo de dados chama em seguida no tempo de execução, depois do método `PreExecute`, e ele pode ser chamado várias vezes. `ProcessInput`transfere o processamento para o método de ** \<>_ProcessInput inputBuffer** . Depois, o método `ProcessInput` verifica se o buffer de entrada chegou ao final e, em caso positivo, chama o método substituível `FinishOutputs` e o método particular `MarkOutputsAsFinished`. O `MarkOutputsAsFinished` método então chama `SetEndOfRowset` o último buffer de saída.
+-   Uma implementação substituída do método `ProcessInput`. Esse é o método que o mecanismo de fluxo de dados chama em seguida no tempo de execução, depois do método `PreExecute`, e ele pode ser chamado várias vezes. `ProcessInput`transfere o processamento para o método ** \<inputbuffer> _ProcessInput** . Depois, o método `ProcessInput` verifica se o buffer de entrada chegou ao final e, em caso positivo, chama o método substituível `FinishOutputs` e o método particular `MarkOutputsAsFinished`. O `MarkOutputsAsFinished` método então chama `SetEndOfRowset` o último buffer de saída.
 
--   Uma implementação substituível do método **\<bufferdeentrada>_ProcessInput**. Essa implementação padrão simplesmente executa um loop em cada linha de entrada e chama **\<inputbuffer>_ProcessInputRow**.
+-   Uma implementação substituível do método ** \<inputbuffer> _ProcessInput** . Essa implementação padrão simplesmente percorre cada linha de entrada e chama ** \<inputbuffer> _ProcessInputRow**.
 
--   Uma implementação substituível do método **\<inputbuffer>_ProcessInputRow**. A implementação padrão é vazia. Esse é o método que, em geral, você substituirá para escrever seu código de processamento de dados personalizado.
+-   Uma implementação substituível do método ** \<inputbuffer> _ProcessInputRow** . A implementação padrão é vazia. Esse é o método que, em geral, você substituirá para escrever seu código de processamento de dados personalizado.
 
 #### <a name="what-your-custom-code-should-do"></a>O que seu código personalizado deve fazer
  Você pode usar os seguintes métodos para processar a entrada na classe `ScriptMain`:
 
--   Substitua o **\<bufferdeentrada>_ProcessInputRow** para processar os dados em cada linha de entrada conforme ela passa.
+-   Substitua ** \<inputbuffer> _ProcessInputRow** para processar os dados em cada linha de entrada conforme ele passa.
 
--   Só substitua o **\<bufferdeentrada>_ProcessInput** se você precisar fazer algo adicional enquanto executa um loop em linhas de entrada. (Por exemplo, você precisa testar para `EndOfRowset` para executar alguma outra ação depois que todas as linhas tiverem sido processadas.) Chame ** \<inputBuffer>_ProcessInputRow** para executar o processamento de linha.
+-   Substitua ** \<inputbuffer> _ProcessInput** somente se você precisar fazer algo adicional durante o loop pelas linhas de entrada. (Por exemplo, você precisa testar para `EndOfRowset` para executar alguma outra ação depois que todas as linhas tiverem sido processadas.) Chame ** \<inputbuffer> _ProcessInputRow** para executar o processamento de linha.
 
 -   Substitua o `FinishOutputs` se precisar fazer algo nas saídas antes de seu fechamento.
 
@@ -149,11 +148,11 @@ public override void PreExecute()
 
 -   Propriedades do acessador nomeado, digitado, somente gravação para cada coluna de saída.
 
--   Uma ** \<coluna** somente gravação>_IsNull propriedade para cada coluna de saída selecionada que você pode usar para definir o valor da coluna `null`como.
+-   Uma propriedade ** \<column> _IsNull** somente gravação para cada coluna de saída selecionada que você pode usar para definir o valor da coluna como `null` .
 
 -   Um método `AddRow` para adicionar uma linha nova vazia ao buffer de saída.
 
--   Um método `SetEndOfRowset` para notificar o mecanismo de fluxo de dados buffers de que dados não são mais esperados. Também há uma função `EndOfRowset` para determinar se o buffer atual é o último buffer de dados. Geralmente, você não precisa dessas funções quando usa os métodos de processamento de entrada implementados `UserComponent` na classe base.
+-   Um método `SetEndOfRowset` para notificar o mecanismo de fluxo de dados buffers de que dados não são mais esperados. Também há uma função `EndOfRowset` para determinar se o buffer atual é o último buffer de dados. Geralmente, você não precisa dessas funções quando usa os métodos de processamento de entrada implementados na `UserComponent` classe base.
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece
  O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:

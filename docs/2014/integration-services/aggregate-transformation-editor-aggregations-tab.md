@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925587"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de Transformação Agregação (guia Agregações)
   Use a guia **Agregações** da caixa de diálogo **Editor de Transformação Agregação** para especificar colunas para agregação e propriedades de agregação. Você pode aplicar diversas agregações. Esta transformação não gera uma saída de erro.  
@@ -47,7 +46,7 @@ ms.locfileid: "66061577"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade Chave de Escala não é usada.|  
-|Baixa|A agregação pode gravar aproximadamente 500.000 chaves.|  
+|Baixo|A agregação pode gravar aproximadamente 500.000 chaves.|  
 |Médio|A agregação pode gravar aproximadamente 5.000.000 de chaves.|  
 |Alta|A agregação pode gravar mais de 25.000.000 de chaves.|  
   
@@ -85,7 +84,7 @@ ms.locfileid: "66061577"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Não Especificado|A propriedade `CountDistinctScale` não é usada.|  
-|Baixa|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
+|Baixo|A agregação pode gravar aproximadamente 500.000 valores de distinção.|  
 |Médio|A agregação pode gravar aproximadamente 5.000.000 valores distintos.|  
 |Alta|A agregação pode gravar mais de 25.000.000 de valores de distinção.|  
   
