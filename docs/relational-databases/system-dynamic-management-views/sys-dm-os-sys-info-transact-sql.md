@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e624323c2794afc38a9d8dcf948db69282af0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55e5892b9183ab2455cee7aa39a34de0d7bb28bf
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827905"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107044"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "82827905"
 |**physical_memory_kb**|**bigint**|**Aplica-se a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Especifica a quantidade total de memória física no computador. Não permite valor nulo.|  
 |**virtual_memory_in_bytes**|**bigint**|**Aplica-se a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Quantidade de memória virtual disponível ao processo em modo de usuário. Isso pode ser usado para determinar se o SQL Server foi iniciado usando um switch de 3 GB.|  
 |**virtual_memory_kb**|**bigint**|**Aplica-se a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Especifica a quantidade de espaço de endereço virtual disponível ao processo em modo de usuário. Não permite valor nulo.|  
-|**bpool_commited**|**int**|**Aplica-se a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Representa a memória confirmada em KB (quilobytes) no gerenciador de memória. Não inclui a memória reservada no gerenciador de memória. Não permite valor nulo.|  
+|**bpool_committed**|**int**|**Aplica-se a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Representa a memória confirmada em KB (quilobytes) no gerenciador de memória. Não inclui a memória reservada no gerenciador de memória. Não permite valor nulo.|  
 |**committed_kb**|**int**|**Aplica-se a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Representa a memória confirmada em KB (quilobytes) no gerenciador de memória. Não inclui a memória reservada no gerenciador de memória. Não permite valor nulo.|  
 |**bpool_commit_target**|**int**|**Aplica-se a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .<br /><br /> Representa a quantidade de memória, em KB (quilobytes), que pode ser consumida pelo gerenciador de memória do SQL Server.|  
 |**committed_target_kb**|**int**|**Aplica-se a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Representa a quantidade de memória, em KB (quilobytes), que pode ser consumida pelo gerenciador de memória do SQL Server. A quantidade de destino é calculada por meio de uma variedade de entradas, como:<br /><br /> -o estado atual do sistema, incluindo sua carga<br /><br /> -a memória solicitada pelos processos atuais<br /><br /> -a quantidade de memória instalada no computador<br /><br /> -parâmetros de configuração<br /><br /> Se **committed_target_kb** for maior que **committed_kb**, o Gerenciador de memória tentará obter memória adicional. Se **committed_target_kb** for menor que **committed_kb**, o Gerenciador de memória tentará reduzir a quantidade de memória confirmada. O **committed_target_kb** sempre inclui memória roubada e reservada. Não permite valor nulo.|  
