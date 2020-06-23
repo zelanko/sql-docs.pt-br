@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77600121"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215483"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Executar Assistente para Experimentos de Banco de Dados em um prompt de comando
 
@@ -34,15 +34,15 @@ Este artigo descreve como capturar um rastreamento no Assistente para Experiment
 
 Para iniciar uma nova captura de carga de trabalho, em um prompt de comando, execute o seguinte comando:
 
-`Deacmd.exe -o StartCapture -h <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
+`Deacmd.exe -o StartCapture -n <Trace FileName> -x <Trace Format> -h <SQLServerInstance> -f <database name> -e <Encrypt Connection> -m <Authetication Mode> -u <user name> -p <password> -l <Location of Output Folder> -d <duration>`
 
 **Exemplo**
 
-`Deacmd.exe -o StartCapture -h localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+`Deacmd.exe -o StartCapture -n sql2008capture -x 0 -h localhost -f adventureworks -e --trust -m 0 -l c:\test  -d 60`
 
 **Opções adicionais**
 
-Ao iniciar uma nova captura de carga de `Deacmd.exe` trabalho com o comando, você pode usar as seguintes opções adicionais:
+Ao iniciar uma nova captura de carga de trabalho com o `Deacmd.exe` comando, você pode usar as seguintes opções adicionais:
 
 | Opção| Descrição |  
 | --- | --- |
@@ -72,11 +72,11 @@ Se você estiver usando Distributed Replay, execute as etapas a seguir.
 
 3. Inicie uma captura de rastreamento no computador de destino que executa SQL Server usando StartReplayCaptureTrace. Sql.
 
-    a.  Em SQL Server Management Studio (SSMS), abra <Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.Sql.
+    a.  Em SQL Server Management Studio (SSMS), abra <Dea_InstallPath \> \Scripts\StartReplayCaptureTrace.Sql.
 
     b.  Execute `Set @durationInMins=0` para que a captura de rastreamento não pare automaticamente após uma hora especificada.
 
-    c.  Para definir o tamanho máximo do arquivo por arquivo de rastreamento `Set @maxfilesize`, execute. O tamanho recomendado é 200 (em MB).
+    c.  Para definir o tamanho máximo do arquivo por arquivo de rastreamento, execute `Set @maxfilesize` . O tamanho recomendado é 200 (em MB).
 
     d.  Edite `@Tracefile` para definir um nome exclusivo para o arquivo de rastreamento.
 
@@ -86,12 +86,12 @@ Se você estiver usando Distributed Replay, execute as etapas a seguir.
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    a.  Para monitorar o status, em um prompt de comando, `DReplay status -f 1`execute.
+    a.  Para monitorar o status, em um prompt de comando, execute `DReplay status -f 1` .
 
-    b.  Para interromper a reprodução, por exemplo, se você observar que a% Pass é menor do que o esperado, em um prompt de `DReplay cancel`comando, execute.
+    b.  Para interromper a reprodução, por exemplo, se você observar que a% Pass é menor do que o esperado, em um prompt de comando, execute `DReplay cancel` .
 
 5. Interrompa a captura de rastreamento na instância de SQL Server de destino.
-6. No SSMS, abra `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`.
+6. No SSMS, abra `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql` .
 7. Edite `@Tracefile` para corresponder ao caminho do arquivo de rastreamento no computador de destino que executa o SQL Server.
 8. Execute o script no computador de destino que executa o SQL Server.
 
@@ -103,11 +103,11 @@ Se você estiver usando a reprodução incompilada, não precisará configurar D
 
 Para iniciar uma nova análise de rastreamento, em um prompt de comando, execute o seguinte comando:
 
-`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <username>`
 
 **Exemplo**
 
-`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
+`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -h localhost -e`
 
 Para exibir os relatórios de análise desses arquivos de rastreamento, você precisa usar a GUI para exibir gráficos e métricas organizadas.  No entanto, o banco de dados de análise é gravado na instância de SQL Server especificada, de modo que você também pode consultar as tabelas de análise geradas diretamente.
 
