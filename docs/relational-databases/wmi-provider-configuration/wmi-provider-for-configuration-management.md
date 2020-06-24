@@ -1,5 +1,6 @@
 ---
 title: Provedor WMI para conceitos de gerenciamento de configuração
+description: Saiba mais sobre o provedor WMI, que é usado com o SQL Server Configuration Manager no console de gerenciamento Microsoft e Microsoft SQL Server Configuration Manager.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1058f1491dbf3b52a30f0bcc9720aab3fb056318
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3919147b2b3d721fa59ee1d7f93f26d0267f5d5f
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659257"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295419"
 ---
 # <a name="wmi-provider-for-configuration-management"></a>Provedor WMI para gerenciamento de configuração
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  O provedor WMI é uma camada publicada que é usada com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-in Configuration Manager para [!INCLUDE[msCoName](../../includes/msconame-md.md)] o console de gerenciamento (MMC) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Configuration Manager. Ele fornece uma forma unificada para fazer a interface com chamadas de API que gerenciam as operações do Registro solicitadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager e fornece controle e manipulação aprimorados sobre os serviços selecionados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  O provedor WMI é uma camada publicada que é usada com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-in Configuration Manager para [!INCLUDE[msCoName](../../includes/msconame-md.md)] o console de gerenciamento (MMC) e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Ele fornece uma forma unificada para fazer a interface com chamadas de API que gerenciam as operações do Registro solicitadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager e fornece controle e manipulação aprimorados sobre os serviços selecionados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  O Provedor WMI do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é uma DLL e um arquivo MOF, que são compilados automaticamente pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor WMI contém um conjunto de classes de objeto usado para controlar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os serviços usando os seguintes métodos:  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor WMI contém um conjunto de classes de objeto usado para controlar os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviços usando os seguintes métodos:  
   
 -   Uma linguagem de script, como VBScript, [!INCLUDE[jsprjscript](../../includes/jsprjscript-md.md)] ou Perl, nos quais é possível inserir o WQL (Windows Query Language).  
   

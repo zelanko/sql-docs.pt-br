@@ -1,5 +1,6 @@
 ---
 title: Acessar o provedor WMI com WQL e scripts
+description: Saiba como acessar os serviços SQL Server e as configurações de rede usando o provedor WMI usando um editor WQL ou ferramenta de consulta ou uma linguagem de script.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 66a0af86e5a9939e9f4621b506991f8234d887dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db39dfd29532f2a0fd2d61ce4a987e0aada7d6c5
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660593"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295399"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider"></a>Usar as linguagens WQL e de scripts com o provedor WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

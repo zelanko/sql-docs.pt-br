@@ -1,5 +1,6 @@
 ---
 title: Criar um alerta SQL Server Agent com o provedor WMI
+description: Crie um SQL Server Agent alerta que responda a eventos específicos. Esse alerta simples salva eventos de grafo de Deadlock XML em uma tabela para análise posterior.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1678379c2120ba4f2edbc2868d5651cbf403587
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660528"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295409"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Exemplo: Criar um alerta do SQL Server Agent com o Provedor WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "73660528"
  O alerta executa o trabalho sempre que um evento de rastreamento do grafo deadlock é registrado. Para um alerta de WMI, o SQL Server Agent cria uma consulta de notificação que usa o namespace e a instrução WQL especificados. Para esse alerta, o SQL Server Agent monitora a instância padrão no computador local. A instrução WQL solicita quaisquer eventos `DEADLOCK_GRAPH` na instância padrão. Para alterar a instância que o alerta monitora, substitua o nome de instância para `MSSQLSERVER` no `@wmi_namespace` para o alerta.  
   
 > [!NOTE]  
->  Para SQL Server Agent receber eventos WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] o deve estar habilitado no **msdb** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]no.  
+>  Para SQL Server Agent receber eventos WMI, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve estar habilitado no **msdb** e no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 USE AdventureWorks ;  
@@ -90,7 +91,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Testando o exemplo  
- Para ver a execução do trabalho, provoque um deadlock. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra duas guias de **consulta SQL** e conecte ambas as consultas à mesma instância. Execute o seguinte script em um das guias de consulta. Este script produz um conjunto de resultados e é encerrado.  
+ Para ver a execução do trabalho, provoque um deadlock. No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , abra duas guias de **consulta SQL** e conecte ambas as consultas à mesma instância. Execute o seguinte script em um das guias de consulta. Este script produz um conjunto de resultados e é encerrado.  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +104,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Execute o script a seguir na segunda guia de consulta. Esse script produz um conjunto de resultados e, em seguida, os bloqueia, aguardando a aquisição de um bloqueio `Production.Product`.  
+ Execute o script a seguir na segunda guia de consulta. Esse script produz um conjunto de resultados e, em seguida, os bloqueia, aguardando a aquisição de um bloqueio `Production.Product` .  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +120,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Execute o script a seguir na primeira guia de consulta. Esse script é bloqueado, aguardando a aquisição de `Production.Location`um bloqueio. Depois de um tempo limite curto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolherá este script ou o script no exemplo como a vítima de deadlock e encerrará a transação.  
+ Execute o script a seguir na primeira guia de consulta. Esse script é bloqueado, aguardando a aquisição de um bloqueio `Production.Location` . Depois de um tempo limite curto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escolherá este script ou o script no exemplo como a vítima de deadlock e encerrará a transação.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

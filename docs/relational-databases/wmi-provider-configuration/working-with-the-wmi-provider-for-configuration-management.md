@@ -1,5 +1,6 @@
 ---
 title: Usar o provedor WMI para o gerenciamento de configuração
+description: Saiba mais sobre o provedor WMI para gerenciamento de configuração, incluindo associação, especificação de uma cadeia de conexão e permissões/autenticação de servidor.
 ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c064c2927919ab4760903a9a3457f9c0be816647
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657370"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295389"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Trabalhando com o provedor WMI para o Gerenciamento de configuração
 
@@ -39,13 +40,13 @@ Este artigo fornece orientação sobre como programar com o provedor WMI para ge
 
 Os aplicativos direcionam o provedor WMI para gerenciamento de configuração para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectando a um namespace WMI definido pelo provedor. O serviço WMI do Windows mapeia esse namespace para a DLL do provedor e carrega a DLL na memória. Todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são representadas com um único namespace WMI.
 
-O namespace usa como padrão o formato a seguir. No formato, `VV` é o número de versão principal do SQL Server. O número é detectável pela execução `SELECT @@VERSION;`.
+O namespace usa como padrão o formato a seguir. No formato, `VV` é o número de versão principal do SQL Server. O número é detectável pela execução `SELECT @@VERSION;` .
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-Quando você se conecta usando o PowerShell, a `\\.\` entrelinha deve ser removida. Por exemplo, o código do PowerShell a seguir lista todas as classes WMI para um SQL Server 2016, que é a versão principal 13.
+Quando você se conecta usando o PowerShell, a entrelinha `\\.\` deve ser removida. Por exemplo, o código do PowerShell a seguir lista todas as classes WMI para um SQL Server 2016, que é a versão principal 13.
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -69,7 +70,7 @@ Você pode usar o código do PowerShell a seguir para consultar todos os namespa
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **Observação:** Se você estiver se conectando por meio do firewall do Windows, precisará verificar se os computadores estão configurados corretamente. Consulte o artigo "conectando por meio do firewall do Windows" na [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentação do Instrumentação de gerenciamento do Windows no [site](https://go.microsoft.com/fwlink/?linkid=15426)do MSDN.  
+ **Observação:** Se você estiver se conectando por meio do firewall do Windows, precisará verificar se os computadores estão configurados corretamente. Consulte o artigo "conectando por meio do firewall do Windows" na documentação do Instrumentação de Gerenciamento do Windows no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [site](https://go.microsoft.com/fwlink/?linkid=15426)do MSDN.  
   
 ## <a name="permissions-and-server-authentication"></a>Permissões e autenticação do servidor  
  Para acessar o provedor WMI para gerenciamento de configuração, o script de gerenciamento WMI do cliente deve estar sendo executado no contexto de um administrador no computador de destino. Você precisa ser membro do grupo local de administradores do Windows no computador que deseja gerenciar.  

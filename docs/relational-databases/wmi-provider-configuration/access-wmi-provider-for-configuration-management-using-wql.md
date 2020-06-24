@@ -1,5 +1,6 @@
 ---
 title: Usar o WQL para acessar o provedor WMI
+description: Use este exemplo para ver como executar Instrumentação de Gerenciamento do Windows instruções de linguagem de consulta para o provedor WMI para gerenciamento de computador no SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b9fa96f19bc0675a1e83db858e16605338b3899
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658947"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295439"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Acessar o provedor WMI para o gerenciamento de configuração usando o WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "73658947"
   
 3.  No primeiro campo de texto, digite o namespace do Provedor de WMI para Gerenciamento do Computador: root\Microsoft\SqlServer\ComputerManagement11. Clique em **Conectar**.  
   
-4.  Clique em **Consulta**. Digite uma consulta que retorne os serviços atuais em execução no computador local **: \* selecione em SqlService.** Clique em **Aplicar**.  
+4.  Clique em **Consulta**. Digite uma consulta que retorne os serviços atuais em execução no computador local: **selecione \* em SqlService.** Clique em **Aplicar**.  
   
 5.  Refine ainda mais a consulta adicionando **Where ServiceName = "MSSQLSERVER"**.  
   
