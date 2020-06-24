@@ -13,12 +13,12 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a0dffa0dc53cb8ded9f388199bef35a73a52577
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102129"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263880"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar a Autenticação do Windows no servidor de relatório
   Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aceita solicitações que especificam a autenticação Negotiate ou NTLM. Se sua implantação incluir aplicativos cliente e navegadores que usam esses provedores de segurança, use os valores padrão sem nenhuma configuração adicional. Se desejar usar um provedor de segurança diferente para a segurança integrada do Windows (por exemplo, se desejar usar Kerberos diretamente) ou se tiver modificado os valores padrão e desejar restaurar as configurações originais, use as informações deste tópico para especificar configurações de autenticação no servidor de relatório.  
@@ -32,9 +32,9 @@ ms.locfileid: "66102129"
     > [!IMPORTANT]  
     >  O uso de `RSWindowsNegotiate` resultará em um erro de autenticação se o serviço Servidor de Relatório for configurado para ser executado em uma conta de usuário de domínio e um nome da entidade de serviço (SPN) não tiver sido registrado para a conta. Para obter mais informações, consulte [Como resolver erros da autenticação Kerberos ao se conectar a um servidor de relatório](#proxyfirewallRSWindowsNegotiate) neste tópico.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] deve ser configurado para a Autenticação do Windows. Por padrão, os arquivos Web. config para o serviço Web servidor de relatórios e Report Manager incluem \<a configuração modo de autenticação = "Windows" >. Se você alterar essa configuração para \<authentication mode="Forms">, a Autenticação do Windows para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] falhará.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] deve ser configurado para a Autenticação do Windows. Por padrão, os arquivos Web.config para o serviço Web servidor de relatórios e Report Manager incluem a \<authentication mode="Windows"> configuração. Se você alterá-lo para \<authentication mode="Forms"> , a autenticação do Windows para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] falhará.  
   
--   Os arquivos Web. config para o serviço Web servidor de relatórios e Report Manager devem \<ter identidade Impersonate = "true"/>.  
+-   Os arquivos Web.config para o serviço Web servidor de relatórios e Report Manager devem ter \<identity impersonate= "true" /> .  
   
 -   O aplicativo cliente ou navegador deve dar suporte à segurança integrada do Windows.  
   
@@ -160,14 +160,8 @@ ms.locfileid: "66102129"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Reinicie o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e procure entradas semelhantes às seguintes no arquivo de log de rastreamento:  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   Os valores em \<Explicit> conterão os SPNs configurados no Active Directory para a conta de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
+-   Reinicie o serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+
  Se você não desejar continuar usando a Proteção Estendida, defina os valores de configuração para os padrões e reinicie a conta de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ```  
