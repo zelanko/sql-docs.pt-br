@@ -16,14 +16,14 @@ helpviewer_keywords:
 - verifying database consistency
 - integrity checking [Integration Services]
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e6eed81f7a4a149de3912b5e9142fbdbd4a2f2c8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 99a2620a6f3f6a9a73c27fe6bb1abd34af73707d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919677"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433663"
 ---
 # <a name="check-database-integrity-task"></a>Tarefa Verificar Integridade do Banco de Dados
   A tarefa Verificar Integridade do Banco de Dados verifica a alocação e integridade estrutural de todos os objetos no banco de dados especificado. A tarefa pode verificar um único ou vários bancos de dados, e você também pode optar por verificar os índices de banco de dados.  

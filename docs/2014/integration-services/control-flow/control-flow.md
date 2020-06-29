@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 91e7986bcd49cc5ede0ae0cecc49ae843fb645e0
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c8c9acb4a26313c670d188b7fb75aa897d21c47f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919544"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433763"
 ---
 # <a name="control-flow"></a>Fluxo de Controle
   Um pacote consiste em um fluxo de controle e, opcionalmente, em um ou mais fluxos de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de elementos de fluxo de controle: contêineres, que fornecem estruturas em pacotes, tarefas, que oferecem funcionalidade e restrições de precedência, que conectam os executáveis, os contêineres e as tarefas em um fluxo de controle ordenado.

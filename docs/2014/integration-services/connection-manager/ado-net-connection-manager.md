@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO.NET connection manager [Integration Services]
 - connections [Integration Services], ADO.NET
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9bdc25eeeae93fe0bd85deb55bfc86c55ab91ee5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921221"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434523"
 ---
 # <a name="adonet-connection-manager"></a>Gerenciador de conexões ADO.NET
   Um gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permite que um pacote acesse fontes de dados usando um provedor .NET. Esse gerenciador de conexões normalmente é usado para acessar fontes de dados, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também fontes de dados expostas por meio de OLE DB e XML em tarefas personalizadas que são escritas em código gerenciado usando uma linguagem como C#.  

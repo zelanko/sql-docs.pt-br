@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 46d1f79079efd5b4816359cb97a14642f309cfbb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fe18c331a1fe1786392f94fa2a3d2623ce13d0bb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920964"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434339"
 ---
-# <a name="data-sources"></a>Fontes de dados
+# <a name="data-sources"></a>Data Sources
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]inclui um objeto de tempo de design que você pode usar em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes: a fonte de dados.  
   
  Um objeto de fonte de dados é uma referência para uma conexão e, no mínimo, inclui uma cadeia de caracteres de conexão e um identificador de fonte de dados. Ele também pode incluir metadados adicionais como uma descrição, um nome, um nome de usuário e uma senha.  

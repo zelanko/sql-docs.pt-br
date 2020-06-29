@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0de63b2c4d438faa0dea8b8fdefa5f50d071c7e4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921597"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434803"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>caixa de diálogo Configurar Logs do SSIS
   Use a caixa de diálogo **Configurar Logs de SSIS** para definir as opções do log para um pacote.  
