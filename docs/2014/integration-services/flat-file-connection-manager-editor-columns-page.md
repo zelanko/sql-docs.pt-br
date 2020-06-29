@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bc4c008445837341dca21211e2c5e943afe50dc7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1b2a60f82e354513d25003b035bfbb689858107
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967106"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425663"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** para especificar a linha e informações da coluna, e visualizar o arquivo.  
@@ -69,7 +69,7 @@ ms.locfileid: "84967106"
  **Visualizar linhas**  
  Exiba os dados de amostra do arquivo simples, dividido em colunas e linhas, usando as opções selecionadas.  
   
- **Redefinir Colunas**  
+ **Redefinir colunas**  
  Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
   
 ### <a name="format--fixed-width"></a>Formato = Largura fixa  
@@ -82,7 +82,7 @@ ms.locfileid: "84967106"
  **Largura da linha**  
  Especifique o comprimento da linha antes de adicionar delimitadores para colunas individuais. Você também pode arrastar a linha vermelha vertical na janela de visualização para marcar o fim da linha. O valor de largura da linha é atualizado automaticamente.  
   
- **Redefinir Colunas**  
+ **Redefinir colunas**  
  Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
   
 ### <a name="format--ragged-right"></a>Formato = Irregular à direita  
@@ -110,7 +110,7 @@ ms.locfileid: "84967106"
 |**Tabulação {t}**|As linhas são delimitadas por uma tabulação.|  
 |**Barra vertical {&#124;}**|As linhas são delimitadas por uma barra vertical.|  
   
- **Redefinir Colunas**  
+ **Redefinir colunas**  
  Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
   
 ## <a name="see-also"></a>Consulte Também  

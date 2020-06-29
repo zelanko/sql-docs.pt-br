@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53a392a09e2120c08c43b1e373c942ff9c60e148
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950984"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424583"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor da Tarefa Fila de Mensagens (página Receber)
   Use a página **Receber** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa Fila de Mensagens para receber mensagens do MSMQ (Serviço de Enfileiramento de Mensagens) [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -69,7 +69,7 @@ ms.locfileid: "84950984"
  Esta opção é somente leitura. Pode ser em branco ou conter o GUID de um pacote quando a propriedade Filtrar tiver sido definida anteriormente.  
   
 #### <a name="filter--from-package"></a>Filtrar = Do pacote  
- **ID**  
+ **Identificador**  
  Se você escolher aplicar um filtro, digite o identificador exclusivo do pacote do qual mensagens podem ser recebidas ou clique no botão de reticências **(…)** e especifique o pacote.  
   
  **Tópicos relacionados:** [Selecionar um pacote](control-flow/select-a-package.md)  
@@ -95,7 +95,7 @@ ms.locfileid: "84950984"
  Esta opção fica em branco.  
   
 #### <a name="filter--from-package"></a>Filtrar = Do pacote  
- **ID**  
+ **Identificador**  
  Se você escolher aplicar um filtro, digite o identificador exclusivo do pacote do qual mensagens podem ser recebidas ou clique no botão de reticências **(…)** e especifique o pacote.  
   
  **Tópicos relacionados:** [Selecionar um pacote](control-flow/select-a-package.md)  
@@ -138,6 +138,6 @@ ms.locfileid: "84950984"
  [Editor da tarefa fila de mensagens &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor da tarefa fila de mensagens &#40;Enviar página&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Página de expressões](expressions/expressions-page.md)   
- [Message Queue Task](control-flow/message-queue-task.md)  
+ [Tarefa Fila de Mensagens](control-flow/message-queue-task.md)  
   
   

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 381493758306e3f7c638f46f7c331f0e6cc3e83f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966333"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425313"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor da Tarefa FTP (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa FTP** para especificar o gerenciador de conexões que estabelece conexão com o servidor FTP com o qual a tarefa se comunica. Você também pode nomear e descrever a tarefa FTP.  

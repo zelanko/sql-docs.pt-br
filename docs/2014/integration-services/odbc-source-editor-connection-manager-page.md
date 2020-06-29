@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.connection.f1
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a9c4049681e671993f48594eb7ac18bad403e3e2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0935ba4cd76a458bd26438556bab56e6cfa091c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965006"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424253"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Editor de Origem ODBC (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem ODBC** para selecionar o gerenciador de conexões ODBC para a origem. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
@@ -51,7 +51,7 @@ ms.locfileid: "84965006"
 ||Clique em **Procurar** para carregar a consulta SQL de um arquivo de texto.|  
 ||Clique em **Analisar consulta** para verificar a sintaxe do texto da consulta.|  
   
-### <a name="preview"></a>Visualização  
+### <a name="preview"></a>Versão Prévia  
  Clique em **Visualizar** para exibir até as primeiras 200 linhas dos dados extraídos da tabela ou exibição selecionada.  
   
 ## <a name="see-also"></a>Consulte Também  

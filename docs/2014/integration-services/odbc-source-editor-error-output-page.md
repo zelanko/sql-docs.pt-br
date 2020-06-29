@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4653b963bd5e8f997832f153a09d87aaeef9c39c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53661c456ca8cf72508e32a534dfaa8d711ea146
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964996"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424243"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Editor de Origem ODBC (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem ODBC** para selecionar as opções para tratamento de erros.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38bc7adf218327c8718295a4300ff6a5c4b53f0c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966406"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425473"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>Editor de Fonte de Arquivo Simples (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Fonte de Arquivo Simples** para selecionar opções de tratamento de erros e definir propriedades nas colunas de saída de erros.\  
@@ -53,6 +53,6 @@ ms.locfileid: "84966406"
  [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de fonte de arquivo simples &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [Editor de fonte de arquivo simples &#40;página colunas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Gerenciador de conexões de arquivos simples](connection-manager/file-connection-manager.md)  
+ [Gerenciador de Conexões de Arquivos Simples](connection-manager/file-connection-manager.md)  
   
   

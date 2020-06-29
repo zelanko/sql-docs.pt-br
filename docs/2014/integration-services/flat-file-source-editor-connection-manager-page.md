@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cef1d05182edd02c9b0cdb0e6237c09473041dde
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 43a0251b63d7a0519a2a19b6bec4c5117f0dcef0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966423"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425483"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Editor de Fonte de Arquivo Simples (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Fonte de Arquivo Simples** para selecionar o gerenciador de conexões que a fonte do arquivo simples usará. A fonte de Arquivo Simples lê dados de um arquivo de texto, que pode estar em formato de largura delimitada, fixa ou mista.  
@@ -48,6 +48,6 @@ ms.locfileid: "84966423"
  [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de fonte de arquivo simples &#40;página colunas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [Editor de fonte de arquivo simples &#40;página saída de erro&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
- [Gerenciador de conexões de arquivos simples](connection-manager/file-connection-manager.md)  
+ [Gerenciador de Conexões de Arquivos Simples](connection-manager/file-connection-manager.md)  
   
   

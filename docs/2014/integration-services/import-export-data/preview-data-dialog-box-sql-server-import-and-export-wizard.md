@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 49566ab97aa832c7e61d4056749fcfa90af1b167
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17debc001d8ba7826fe845c006e944e5a3dc87a0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965556"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424823"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Visualizar Dados (Assistente de Importação e Exportação do SQL Server)
   Use a caixa de diálogo **Visualizar dados** para ver a consulta que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de importação e exportação enviará para a fonte de dados. Você também pode usar esta caixa de diálogo para visualizar até 200 linhas de dados de exemplo.  
