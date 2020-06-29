@@ -11,14 +11,14 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 851320618ad8eec3e1f8a7de9bfe2d6d379c65d1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70649de39a1eb3ef699b8d0521324eeefa7d5cda
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963465"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421853"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventos registrados em log pelo serviço Integration Services Service
   O serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra várias mensagens no log de eventos de Aplicativo do Windows. O serviço registra essas mensagens quando é iniciado e interrompido e quando ocorrem determinados problemas.  

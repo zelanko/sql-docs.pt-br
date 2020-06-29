@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 45eff63fe3f5cf3bf4e764cb741b19656cf7f254
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 124f9ad43d9e03beb666df678b4956fea53f419e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963946"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422093"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Editor de Transformação Scripts (página Entradas e Saídas)
   Use a página **Entradas e Saídas** da caixa de diálogo do **Editor de Transformação Scripts** para adicionar, remover e configurar entradas e saídas para a Transformação Scripts.  

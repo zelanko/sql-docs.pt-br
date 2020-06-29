@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6f71f87241f57fef455b44d4cfe5007d1ff0968d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964586"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423053"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Relatórios do servidor do Integration Services
   Na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], os relatórios padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ajudar a monitorar projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , que foram implantados no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Esses relatórios ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas na execução do pacote.  

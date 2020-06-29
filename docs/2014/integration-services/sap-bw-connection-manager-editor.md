@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bf7788e58b24d45966b67e417d35f4b58927a39b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26425e367512ae9fc778afa24e3cade04fb826f3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964389"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422503"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Editor do Gerenciador de Conexões de SAP BW
   Use **Editor do Gerenciador de Conexões do SAP BW** para especificar as propriedades a serem usadas para se conectar a um sistema SAP Netweaver BW versão 7.  
@@ -81,7 +81,7 @@ ms.locfileid: "84964389"
 > [!NOTE]  
 >  Esta opção só estará disponível se você tiver selecionado a opção **Usar balanceamento de carga** .  
   
- **Agrupar**  
+ **Group**  
  Se estiver se conectando a um grupo de servidores com balanceamento de carga, especifique o nome do grupo de servidores.  
   
 > [!NOTE]  

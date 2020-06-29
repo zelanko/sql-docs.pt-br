@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2fd341302c20d0ac79dad4169c13d1e1bca45d6c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53db6110e47f5664e7107090179b6ac7bcf4a361
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964727"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423453"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Editor de Destino de Processamento de Partições (página Avançado)
   Use a página **Avançado** da caixa de diálogo **Editor de Destino de Processamento de Partições** para configurar a manipulação de erros.  

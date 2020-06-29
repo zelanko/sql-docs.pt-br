@@ -15,14 +15,14 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fae1082d765bb8ab0c99edea252c89649558a9da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c50dc3d7ab909aa43e8f1f0e7017290538ac6476
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964786"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423663"
 ---
 # <a name="execution-of-projects-and-packages"></a>Execução de projetos e pacotes
   Para executar um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você pode usar uma de várias ferramentas dependendo de onde esses pacotes estão armazenados. As ferramentas estão listadas na tabela abaixo.  
@@ -33,15 +33,15 @@ ms.locfileid: "84964786"
   
 |Ferramenta|Pacote que estão armazenados no servidor do Integration Services|Pacotes que estão armazenados no Repositório do Pacotes do SSIS ou no banco de dados msdb|Pacotes que estão armazenados no sistema de arquivos, fora do local que faz parte do Repositório de Pacotes do SSIS|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
-|**SQL Server Data Tools**|Não|Não<br /><br /> No entanto, você pode adicionar um pacote existente a um projeto do Repositório de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , que inclui o banco de dados msdb. A adição de um pacote existente ao projeto dessa maneira cria uma cópia local do pacote no sistema de arquivos.|Sim|  
-|**No SQL Server Management Studio, quando você está conectado a uma instância do Mecanismo de Banco de Dados que hospeda o servidor do Integration Services**<br /><br /> Para obter mais informações, consulte [Caixa de diálogo Executar Pacote](../execute-package-dialog-box.md)|Sim|Não<br /><br /> Porém, você pode importar um pacote no servidor a partir desses locais.|Não<br /><br /> Porém, você pode importar um pacote no servidor a partir do sistema de arquivos.|  
-|**O SQL Server Management Studio, quando está conectado ao serviço Integration Services, que gerencia o Repositório de Pacotes SSIS**|Não|Sim|Não<br /><br /> Porém, você pode importar um pacote no Repositório de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] por meio do sistema de arquivos.|  
-|**dtexec**<br /><br /> Para saber mais, veja [dtexec Utility](dtexec-utility.md).|Sim|Sim|Sim|  
-|**dtexecui**<br /><br /> Para obter mais informações, consulte [Utilitário Executar Pacote &#40;DtExecUI&#41; Referência de interface do usuário](execute-package-utility-dtexecui-ui-reference.md)|Não|Sim|Sim|  
+|**SQL Server Data Tools**|No|Não<br /><br /> No entanto, você pode adicionar um pacote existente a um projeto do Repositório de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , que inclui o banco de dados msdb. A adição de um pacote existente ao projeto dessa maneira cria uma cópia local do pacote no sistema de arquivos.|Yes|  
+|**No SQL Server Management Studio, quando você está conectado a uma instância do Mecanismo de Banco de Dados que hospeda o servidor do Integration Services**<br /><br /> Para obter mais informações, consulte [Caixa de diálogo Executar Pacote](../execute-package-dialog-box.md)|Sim|No<br /><br /> Porém, você pode importar um pacote no servidor a partir desses locais.|No<br /><br /> Porém, você pode importar um pacote no servidor a partir do sistema de arquivos.|  
+|**O SQL Server Management Studio, quando está conectado ao serviço Integration Services, que gerencia o Repositório de Pacotes SSIS**|Não|Sim|No<br /><br /> Porém, você pode importar um pacote no Repositório de Pacotes do [!INCLUDE[ssIS](../../includes/ssis-md.md)] por meio do sistema de arquivos.|  
+|**dtexec**<br /><br /> Para saber mais, veja [dtexec Utility](dtexec-utility.md).|Yes|Sim|Yes|  
+|**dtexecui**<br /><br /> Para obter mais informações, consulte [Utilitário Executar Pacote &#40;DtExecUI&#41; Referência de interface do usuário](execute-package-utility-dtexecui-ui-reference.md)|Não|Sim|Yes|  
 |**SQL Server Agent**<br /><br /> Você usa um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para agendar um pacote.<br /><br /> Para obter mais informações, consulte [SQL Server Agent Job para Pacotes](sql-server-agent-jobs-for-packages.md).|Sim|Sim|Sim|  
-|**Procedimento armazenado interno**<br /><br /> Para obter mais informações, consulte [catalog.start_execution &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)|Sim|Não|Não|  
-|**API gerenciada, usando tipos e membros no namespace** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sim|Não|Não|  
-|**API gerenciada, usando tipos e membros no namespace** <xref:Microsoft.SqlServer.Dts.Runtime>|Não atualmente|Sim|Sim|  
+|**Procedimento armazenado interno**<br /><br /> Para obter mais informações, consulte [catalog.start_execution &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)|Sim|No|Não|  
+|**API gerenciada, usando tipos e membros no namespace** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sim|No|Não|  
+|**API gerenciada, usando tipos e membros no namespace** <xref:Microsoft.SqlServer.Dts.Runtime>|Não atualmente|Yes|Yes|  
   
 ## <a name="execution-and-logging"></a>Execução e registro em log  
  Os pacotes[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] podem ser habilitados para registro e você pode capturar informações em tempo de execução nos arquivos de log. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md).  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02cd814a3b4e52c8685d0df654c6e74071db9907
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba2c9c0c870294069dd1feb4eaabb72211877cc4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964646"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423193"
 ---
 # <a name="precedence-constraint-editor"></a>Editor de Restrição de Precedência
   Use a caixa de diálogo **Editor de Restrição de Precedência** para configurar as restrições de precedência.  
@@ -33,7 +33,7 @@ ms.locfileid: "84964646"
 > [!NOTE]  
 >   A linha de restrição de precedência é verde para **Success**, realçado para **Failure**e azul para **Completion**.  
   
- **Expressão**  
+ **Expression**  
  Se usar as operações **Expressão**, **Expressão e Restrição**ou **Expressão ou Restrição**, digite uma expressão ou inicie o Construtor de Expressões para criar a expressão. A expressão deve ser avaliada como um booliano.  
   
  **Teste**  

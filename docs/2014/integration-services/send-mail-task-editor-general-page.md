@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: daaad6f1c340d92f7bdc6f0b4faf46598cdae31c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a8841d2fada07d0dd0997015100cf1c380fea69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963514"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421743"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Editor da Tarefa Enviar Email (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Enviar Email** para nomear e descrever a tarefa Enviar Email.  

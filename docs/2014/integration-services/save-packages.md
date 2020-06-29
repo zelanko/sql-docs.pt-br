@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: de8ff0e5d263ce432c431bfc4d9751620355f0a8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 102e2c3eab001c230722bf3485d6ea9731aa99a5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964298"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422413"
 ---
 # <a name="save-packages"></a>Salvar pacotes
   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , você cria pacotes usando o Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] e salva os pacotes no sistema de arquivos como arquivos XML (arquivos .dtsx). Você também pode salvar cópias do arquivo XML de pacote no banco de dados msdb no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no repositório de pacotes. O repositório de pacotes representa as pastas no local do sistema de arquivos que o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] gerencia.  

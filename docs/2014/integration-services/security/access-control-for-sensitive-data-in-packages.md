@@ -15,14 +15,14 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b47690162b2418469dcb3f866a7c002981b80a75
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cd685e8afc8e2571d055f3c49d1ce0c26d45d02d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964096"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422253"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controle de acesso de dados confidenciais em pacotes
   Para proteger os dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você pode definir um nível de proteção que ajude a proteger apenas dados confidenciais ou todos os dados no pacote. Além disso, você pode criptografar esses dados com uma senha ou uma chave de usuário ou contar com o banco de dados para criptografar os dados. Além disso, o nível de proteção usado para um pacote não é necessariamente estático, mas altera todo o ciclo de vida do pacote. Defina sempre um nível de proteção durante um desenvolvimento e outro assim que implantar o pacote.  

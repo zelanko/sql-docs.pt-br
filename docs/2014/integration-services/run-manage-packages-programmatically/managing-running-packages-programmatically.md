@@ -10,14 +10,14 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - running packages [Integration Services]
 ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cc13d2a37cb4267bde4c43dc9c54c2c5b12da8b1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2ffaeac67c91c520ba657b96afc97898328a8299
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964456"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422633"
 ---
 # <a name="managing-running-packages-programmatically"></a>Gerenciando pacotes em execução programaticamente
   Ao trabalhar programaticamente com pacotes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], determine quais pacotes estão em execução no momento. A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece métodos e classes que atendem a esses requisitos.  

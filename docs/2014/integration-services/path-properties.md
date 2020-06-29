@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bdd4c6f134af120b70546f6d27f0f8fc8aac672d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca263b866fb6d5d7ceb6352f708f387d79cad4f7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964726"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423463"
 ---
 # <a name="path-properties"></a>Propriedades do caminho
   Os objetos de fluxo de dados no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modelo de objeto têm propriedades comuns e propriedades personalizadas no nível do componente, entradas e saídas e colunas de entrada e de saída. Muitas propriedades têm valores somente leitura, atribuídos em tempo de execução pelo mecanismo de fluxo de dados.  
