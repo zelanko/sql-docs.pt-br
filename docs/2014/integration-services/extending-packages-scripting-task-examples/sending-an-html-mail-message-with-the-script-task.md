@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Script task [Integration Services], HTML mail message
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 61bd8ddad149198bb3b4111e716228718b3d6e4f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 09261ab1e36b69b5a87acea35dd0681d1590cd3b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968456"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426543"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Enviando uma mensagem de email HTML com a tarefa Script
   A tarefa SendMail do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oferece suporte apenas a mensagens de email em formato de texto sem formatação. Porém, você pode enviar mensagens de email HTML facilmente usando a tarefa Script e as capacidades de email do .NET Framework.

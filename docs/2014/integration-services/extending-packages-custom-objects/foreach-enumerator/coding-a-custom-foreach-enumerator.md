@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], coding
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d760636fbb80da36f7efe7c3dc6d04b1fe92cf92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f1edd30c7891b830063b4dc344a353c968342a51
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968776"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427513"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>Codificando um enumerador Foreach personalizado
   Depois de criar uma classe que herda da classe base <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator> e aplicar o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> a essa classe, você deve substituir a implementação das propriedades e dos métodos da classe base para fornecer sua funcionalidade personalizada.  

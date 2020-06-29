@@ -10,14 +10,14 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom foreach enumerators
 - custom foreach enumerators [Integration Services], developing custom user interface
 ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 903498f3856a010a6f8ab1751df3e7929c29314b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53a7234949b382edef90b8f07923045438a8cf4f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968742"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427473"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>Desenvolvendo uma interface do usuário para um enumerador ForEach personalizado
   Depois de ter substituído a implementação das propriedades e dos métodos da classe base para ter sua funcionalidade personalizada, convém que você crie uma interface de usuário personalizada para o enumerador Foreach. Se você não criar uma interface de usuário personalizada, os usuários só poderão configurar o novo enumerador Foreach personalizado usando a janela Propriedades.  

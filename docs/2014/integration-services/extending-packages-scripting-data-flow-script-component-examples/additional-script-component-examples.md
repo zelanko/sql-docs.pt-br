@@ -11,14 +11,14 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], examples
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c0ad216a5c016cf02fc20a67e80b6efb10435c18
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 897ca075674f5c3dbaf355390fe8346580bf638a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968602"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426993"
 ---
 # <a name="additional-script-component-examples"></a>Exemplos de componentes Script adicionais
   O componente de Script é uma ferramenta configurável que pode ser usada no fluxo de dados de um pacote para atender a quase todos os requisitos não atendidos pelas fontes, transformações e destinos incluídos no [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Essa seção contém amostras de código do componente Script que demonstram os vários tipos de funcionalidade disponíveis.  

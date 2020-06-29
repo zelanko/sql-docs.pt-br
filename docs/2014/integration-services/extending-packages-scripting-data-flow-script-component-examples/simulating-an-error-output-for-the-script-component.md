@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Script component [Integration Services], error output
 - error outputs [Integration Services], Script component
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 17f6ed6fd86bb7440f795268e63aa7b9ba418afb
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d59d58cf438973e967b6ccd0e450d9e83aaed228
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968537"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426933"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simulando uma saída de erro para o componente Script
   Embora não seja possível configurar uma saída como uma saída de erro no componente Script para manipular automaticamente as linhas de erro, você pode reproduzir a funcionalidade de uma saída de erro interna criando uma saída adicional e usando lógica condicional em seu script para direcionar linhas a essa saída quando apropriado. Talvez você queira imitar o comportamento de uma saída de erro interna adicionando duas colunas de saída para receber o número de erro e a ID da coluna em que um erro ocorreu.  

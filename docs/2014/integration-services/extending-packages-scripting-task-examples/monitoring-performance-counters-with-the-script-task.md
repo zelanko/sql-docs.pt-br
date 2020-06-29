@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Script task [Integration Services], performance counters
 - counters [Integration Services]
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1cd8b10fb17288806234db923e2ed087f2bd27c8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1d81d3bb3b532908de61cc7569456041b4e14803
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968494"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426633"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Monitorando contadores de desempenho com a tarefa Script
   Talvez administradores precisem monitorar o desempenho de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que executam transformações complexas em grandes volumes de dados. O namespace **System.Diagnostics** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece classes para usar contadores de desempenho existentes e para criar contadores de desempenho próprios.  

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6a7f8f920b143d18712764e67f8b60fcb994935f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967336"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426423"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codificando e depurando o componente Script
   No [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, o componente Script tem dois modos: modo de design de metadados e modo de design de código. Quando você abre o **Editor de Transformação Scripts**, o componente digita o modo de design de metadados no qual você configura metadados e define propriedades do componente. Depois de definir as propriedades do componente Script e configurar a entrada e as saídas em modo de design de metadados, você pode alternar para o modo de design de código para gravar seu script personalizado. Para obter mais informações sobre o modo de design de metadados e modo de design de código, consulte [Configurando o componente Script no Editor de Componentes de Script](configuring-the-script-component-in-the-script-component-editor.md).

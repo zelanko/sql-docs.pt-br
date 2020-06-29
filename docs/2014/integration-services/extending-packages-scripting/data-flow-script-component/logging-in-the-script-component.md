@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], logging
 ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4ac09c80cd86d5184d868755c23e2e00a8e06346
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 68aa22052d1dc499fbee5c7ebfb04923eff8a097
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967266"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426253"
 ---
 # <a name="logging-in-the-script-component"></a>Registrando o componente Script
   O registro de pacotes do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite que você salve informações detalhadas sobre o progresso da execução, resultados e problemas, por meio do registro de eventos predefinidos ou mensagens definidas pelo usuário para análise posterior. O componente Script pode usar a classe <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> método da `ScriptMain` para registrar dados definidos pelo usuário. Se o registro em log estiver habilitado e o evento **ScriptComponentLogEntry** estiver selecionado para o registro em log na guia **Detalhes** da caixa de diálogo **Configurar Logs de SSIS**, uma única chamada ao método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> armazenará informações do evento em todos os provedores de logs configurados para a tarefa de fluxo de dados.  

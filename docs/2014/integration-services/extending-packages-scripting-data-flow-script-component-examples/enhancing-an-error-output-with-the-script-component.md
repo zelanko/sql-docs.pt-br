@@ -12,14 +12,14 @@ helpviewer_keywords:
 - error outputs [Integration Services], enhancing
 - Script component [Integration Services], transformation components
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a2846fed91174f0703e5d195b13a36c2207a03c1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85978278c2a51cde45e18b742998b1f6229e8e7d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968580"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426963"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Aprimorando uma saída de erro com o componente Script
   Por padrão, as duas colunas extras em uma saída de erro do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ErrorCode e ErrorColumn, contêm apenas códigos numéricos que representam um número de erro e a ID da coluna na qual o erro ocorreu. Esses valores numéricos podem ter uso limitado sem a descrição de erro correspondente.  

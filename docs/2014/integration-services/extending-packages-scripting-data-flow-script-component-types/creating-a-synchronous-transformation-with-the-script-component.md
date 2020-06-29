@@ -13,14 +13,14 @@ helpviewer_keywords:
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a1e40603dc9cbe86e32c59037350b25f31bddf14
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78c5cf8c893f25e01b50c8fd7121569aad781fcd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968554"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426943"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Criando uma transformação síncrona com o componente Script
   Você usa um componente de transformação no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar e analisar dados à medida que eles passam da origem ao destino. Uma transformação com saídas síncronas processa cada linha de entrada que passa pelo componente. Uma transformação com saídas assíncronas espera até receber todas as linhas de entrada para completar seu processamento. Este tópico discute uma transformação síncrona. Para obter informações sobre transformações assíncronas, consulte [Criando uma transformação assíncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Compreender as transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md).
