@@ -11,14 +11,14 @@ f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql12.dts.designer.configure.f1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a3b272d51505024a3df54e486651a54d3584722d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: afae7bd794f0d795bcb49ae58aaad908e4644b69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924477"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439093"
 ---
 # <a name="configure-dialog-box"></a>Caixa de diálogo Configurar
   Use a caixa de diálogo **Configurar** para configurar parâmetros, gerenciadores de conexões e referências a ambientes para projetos e pacotes.  

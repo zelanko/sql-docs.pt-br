@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d3e62f4c3b2549fbeac0302e7ea5d97a510bfc4a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb0ca1e03466e6cad277905093262b9aec048c71
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966896"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437433"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>Habilitar o log para a execução do pacote no servidor SSIS
   Este procedimento descreve como definir ou alterar o nível de log para um pacote quando você executa um pacote implantado no servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O nível de log que você define ao executar o pacote anula o log do pacote configurado usando o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Consulte [Habilitar o log de pacote no SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) para obter mais informações.  

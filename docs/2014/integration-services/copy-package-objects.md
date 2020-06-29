@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4bd8a4c3ce267052062725b0328039cc4a5c7076
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d6f98e60468c35814d6ce85c5ef52786580555c2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917536"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437983"
 ---
 # <a name="copy-package-objects"></a>Copiar objetos de pacote
   Este tópico descreve como copiar os itens de fluxo de controle, itens de fluxo de dados e gerenciadores de conexões dentro de um pacote ou entre pacotes.  

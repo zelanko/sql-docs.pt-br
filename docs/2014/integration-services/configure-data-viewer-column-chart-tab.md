@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8eb0d9c2b5f051a4ef4c420c91e565a9712af944
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1fd7544225acd64140d674d7c7c94b6d7c33a023
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921787"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438543"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Configurar Visualizador de Dados (guia Gráfico de Colunas)
   Use a guia **Gráfico de Colunas** da caixa de diálogo **Configurar Visualizador de Dados** para especificar uma coluna a ser exibida como barras em um gráfico. O número de barras mostra o número de valores de dados distintos na coluna e a altura da barra mostra o número de instâncias de cada valor. O gráfico reflete o conteúdo de apenas um buffer.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d22744bd83daa70994e552965ea96d148800afef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924617"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439143"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor do Gerenciador de Conexões de Cache
   O gerenciador de conexões de Cache lê um conjunto de dados de referência da transformação Cache ou de um arquivo cache (.caw) e salva os dados em um arquivo cache. Os dados sempre são armazenados na memória.  
@@ -98,6 +98,6 @@ ms.locfileid: "84924617"
  Especifica a página de código para o tipo de coluna. Se aplicável ao tipo de dados, você pode atualizar a `Code Page`.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Transformação pesquisa](data-flow/transformations/lookup-transformation.md)  
+ [Transformação Pesquisa](data-flow/transformations/lookup-transformation.md)  
   
   

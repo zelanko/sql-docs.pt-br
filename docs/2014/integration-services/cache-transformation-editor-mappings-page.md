@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 56e4197bf4e4be1ca695778920ba8abe03bf4f7e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4af49bf776757d2cbbad389d6faf4ac1afce9352
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924607"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439103"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Editor da Transformação Cache (página Mapeamentos)
   Use a página **Mapeamentos** do **Editor da Transformação Cache** para mapear as colunas de entrada na Transformação Cache para as colunas de destino no Gerenciador de conexões de cache.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SSIS, expressions
 - tools [Integration Services], Expression Builder
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9cea6e1b6aa5f9748be3f9117fe59b3cbec8b180
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a4c2b2ec2be82cbc71987fb675d8599dbb790dcf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966736"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437313"
 ---
 # <a name="expression-builder-integration-services"></a>Construtor de Expressões (Integration Services)
   A caixa de diálogo **Construtor de Expressões** fornece uma interface gráfica de usuário para a criação de expressões a serem usadas pelas expressões de propriedade. Você pode acessar a caixa de diálogo **Construtor de Expressões** nas caixas de diálogo de tarefa personalizada do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] e na janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

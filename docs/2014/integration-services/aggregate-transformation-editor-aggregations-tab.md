@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 59bf17aa0c13fcc771a75253d5ac9f46a160c57c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925587"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439503"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de Transformação Agregação (guia Agregações)
   Use a guia **Agregações** da caixa de diálogo **Editor de Transformação Agregação** para especificar colunas para agregação e propriedades de agregação. Você pode aplicar diversas agregações. Esta transformação não gera uma saída de erro.  
@@ -73,7 +73,7 @@ ms.locfileid: "84925587"
 |**Count**|Retorna o número de itens de um grupo. Para obter mais informações, consulte COUNT.|  
 |**CountDistinct**|Retorna o número de valores não nulos exclusivos de um grupo. Para obter mais informações, consulte COUNT e Distinct.|  
 |**Máximo**|Retorna o valor mínimo de um grupo. Restrito a tipos de dados numéricos.|  
-|**Maior**|Retorna o valor máximo em um grupo. Restrito a tipos de dados numéricos.|  
+|**Máximo**|Retorna o valor máximo em um grupo. Restrito a tipos de dados numéricos.|  
   
  **Sinalizadores de Comparação**  
  Se você escolher **Agrupar por**, use as caixas de seleção para controlar como a transformação executa a comparação. Para obter mais informações sobre as opções de comparação de cadeias de caracteres, consulte [Comparing String Data](data-flow/comparing-string-data.md)(Comparando dados de cadeia de caracteres).  

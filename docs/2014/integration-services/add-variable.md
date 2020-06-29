@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add Variable dialog box
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6481a2dac7bc23d61b73b2d4f50401952723dc69
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d6181b7f18027315a7f2162a5693493bcb595db4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925819"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439563"
 ---
 # <a name="add-variable"></a>Adicionar Variável
   Use a caixa de diálogo **Adicionar Variável** para especificar as propriedades de uma nova variável.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add SSIS Connection Manager
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d3ffccf359e96583ba6d480b1ae46947c5e468b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d0c0e836392b0578636acfac3f70f96bc3110333
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925848"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439553"
 ---
 # <a name="add-ssis-connection-manager"></a>Adicionar Gerenciador de Conexões SSIS
   Use a caixa de diálogo **Adicionar Gerenciador de Conexões SSIS** para selecionar o tipo de conexão a adicionar a um pacote.  

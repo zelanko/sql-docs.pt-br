@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SSIS projects, adding
 - projects [Integration Services], adding
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d338cac89b7b6c8f2588817cfd6718d4f415589
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 29f64f915f241ec274cf4a7babdf9937fe6c4131
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925939"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439623"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>Adicionar ou remover um projeto do Integration Services em uma solução
   Os procedimentos a seguir descrevem como adicionar ou remover um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em uma solução.  

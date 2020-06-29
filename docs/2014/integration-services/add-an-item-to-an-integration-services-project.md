@@ -14,14 +14,14 @@ helpviewer_keywords:
 - items [Integration Services]
 - SSIS projects, items
 ms.assetid: ba0bf4d1-c974-4c64-b916-3db2be854cde
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 15ab42ce5ef8632d62c6b3cff6cba1ebb6c49f10
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c3f6d1d97e961a9fea325fcffbe9ec6117d6d6b1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926225"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439673"
 ---
 # <a name="add-an-item-to-an-integration-services-project"></a>Adicionar um item a um projeto do Integration Services
   Este procedimento descreve como adicionar itens novos e existentes a um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

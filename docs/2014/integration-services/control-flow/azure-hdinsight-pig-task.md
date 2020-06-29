@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afppigtask.f1
 - sql11.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b4d57be12cf63a6f9211125b9795f4dc60253f3e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 214db5e83272b1fa70c9e70eef8f8b9a43bac095
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919878"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438223"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Tarefa de Pig de HDInsight do Azure
 Use a **Tarefa de Pig do Azure HDInsight** para executar o script do Pig em um cluster Azure HDInsight.

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4bc74731e0ecb5487d3f52db1af3a7f20c85bd0f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 33effc06f6ef63e4e6f8946fd7db0179e506e998
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972426"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439823"
 ---
 # <a name="wmi-connection-manager-editor"></a>Editor do Gerenciador de Conexões WMI
   Use a caixa de diálogo **Gerenciador de Conexões WMI** para especificar uma conexão WMI (Instrumentação de Gerenciamento do Windows) da Microsoft com um servidor.  

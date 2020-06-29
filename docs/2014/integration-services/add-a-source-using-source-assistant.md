@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ce970f4e944fbc4d940d1021a48600be9cd47967
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b58b10508765580e0cffe9bd62099f3e2d69863
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926297"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439723"
 ---
 # <a name="add-a-source-using-source-assistant"></a>Adicionar uma origem com o Assistente de Origem
   Este tópico fornece etapas para adicionar uma nova origem por meio do Assistente de Origem e também lista as opções que estão disponíveis na caixa de diálogo **Adicionar Nova Origem** que você verá ao arrastar-soltar o Assistente de Origem para o Designer SSIS.  

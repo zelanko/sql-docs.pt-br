@@ -14,14 +14,14 @@ helpviewer_keywords:
 - copying packages
 - data source views [Integration Services], copying
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 32b5f3f11bb15576ca30b83f1c0709cb4b77ff6d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3456209c467c3b8474e130181d02304911098d2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917476"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437973"
 ---
 # <a name="copy-project-items"></a>Copiar itens do projeto
   Este tópico descreve como copiar objetos em um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou entre projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Você também pode copiar objetos entre os outros tipos de projetos do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para copiar entre projetos, o projeto deve fazer parte da mesma solução [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para obter mais informações, consulte [Projetos do Integration Services &#40;SSIS&#41;](integration-services-ssis-projects-and-solutions.md).  

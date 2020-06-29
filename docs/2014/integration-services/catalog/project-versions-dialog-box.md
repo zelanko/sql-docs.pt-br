@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isprojectprop.versions.f1
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b84725765042623bf6430898fdeff0d2173fd829
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 998dd194c2a056121fd6f7a404e75c7080b85aa1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924250"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439043"
 ---
 # <a name="project-versions-dialog-box"></a>Caixa de diálogo Versões do Projeto
   Use a caixa de diálogo **Versões de Projeto** para exibir versões de um projeto e restaurar uma versão anterior.  

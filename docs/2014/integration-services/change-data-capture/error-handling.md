@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cac3a3feb6b4d3126b9c1629d4f2e4c8884e8dbf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923237"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438723"
 ---
 # <a name="error-handling"></a>Tratamento de erros
   Uma Instância do Oracle CDC mina as alterações de um único banco de dados de origem do Oracle (um cluster do Oracle RAC é considerado um banco de dados único) e grava as alterações confirmadas em tabelas de alteração em um banco de dados do CDC na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -47,7 +47,7 @@ ms.locfileid: "84923237"
 ## <a name="error-handling"></a>Tratamento de erros  
  Esta seção descreve como o Serviço Oracle CDC trata erros.  
   
-### <a name="logging"></a>Registro em log  
+### <a name="logging"></a>Registrando em log  
  O Serviço Oracle CDC cria informações de erro em um dos locais a seguir.  
   
 -   O log de eventos do Windows, que é usado para registrar erros e indicar os eventos de ciclo de vida do Serviço Oracle CDC (iniciando, parando, (re) conexão com a instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ).  

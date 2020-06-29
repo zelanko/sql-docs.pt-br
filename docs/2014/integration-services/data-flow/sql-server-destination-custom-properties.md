@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 073026ea048f545d404c0b656b721fb72ed7cc8e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 857e0a9ae7b8432703cdf1b89617ab6a61b18f5a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914063"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437633"
 ---
 # <a name="sql-server-destination-custom-properties"></a>Propriedades personalizadas do destino SQL Server
   O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem propriedades personalizadas e propriedades comuns a todos os componentes de fluxo de dados.  
