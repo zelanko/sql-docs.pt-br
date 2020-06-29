@@ -11,14 +11,14 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b8ed4b8789de70a5a2ebba82779dfc5e7001fcf1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d53f0e72f909d2c12d8f3be8050175394aee7252
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939647"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430903"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Criar e implantar um cache para a Transformação Pesquisa
   Você pode criar e implementar um arquivo de cache (.caw) para uma transformação Pesquisa. O conjunto de dados de referência é armazenado no arquivo de cache.  

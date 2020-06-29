@@ -12,14 +12,14 @@ helpviewer_keywords:
 - datasets [Integration Services], extending
 - joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8048e2fb5b752c503993849cb21094da35ab7e35
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb5e111e052c84e89f3ebb5a52bfbdf429295f64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939567"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430603"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Estender um conjunto de dados por meio da transformação Junção de Mesclagem
   Para adicionar e configurar uma ttransformação Junção de Mesclagem, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e dois componentes de fluxo de dados que forneçam entradas para a ttransformação Junção de Mesclagem.  

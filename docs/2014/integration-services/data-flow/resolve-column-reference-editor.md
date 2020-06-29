@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.resolvereferences.mapper.F1
 - sql12.dts.designer.resolvereferences.preview.F1
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4f810a24baec565a7870fb6602b76ff8f3ba119f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b56e089feba35c3fe83e0a4e593309f8d1ac782
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914616"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431373"
 ---
 # <a name="resolve-column-reference-editor"></a>Resolver editor de referência de coluna
   Quando um caminho de entrada é desconectado ou se houver qualquer coluna não mapeada no caminho, um ícone de erro será exibido ao lado do caminho de dados correspondente. Para simplificar a resolução de erros de referência de coluna, o novo editor Resolver Referências permite vincular colunas de saída não mapeadas com colunas de entrada não mapeadas para todos os caminhos da árvore de execução. O editor Resolver Referências também realçará os caminhos para indicar quais caminhos estão sendo resolvidos.  

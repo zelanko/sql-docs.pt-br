@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d45b5ea174b4055610584c663441a82834abfa99
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c869d7b6a7f0c07d5869102311356e1a635367a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914546"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431333"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de Destino SAP BW (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destino SAP BW** para selecionar o gerenciador de conexões do SAP BW que o destino de SAP BW usará. Nesta página, você também seleciona os parâmetros para carregar os dados no sistema SAP Netweaver BW.  

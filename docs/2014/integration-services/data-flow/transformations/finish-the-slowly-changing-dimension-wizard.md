@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.finish.f1
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25e68290102d545f0ccb4bbc019616671f7602a2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1efce0cbfe052827aea40fc529b11cad469b463e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939548"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430573"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>Conclua o Assistente para Dimensões de Alteração Lenta
   Use a caixa de diálogo **Conclua o Assistente para Dimensões de Alteração Lenta** para verificar as escolhas antes que o assistente crie o suporte para dimensões de alteração lenta.  

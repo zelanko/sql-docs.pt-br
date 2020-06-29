@@ -38,14 +38,14 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bcf5706f3c208dad54577c8dd3be4bfb6b4ea643
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939247"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430013"
 ---
 # <a name="transformation-custom-properties"></a>Propriedades personalizadas da transformação
   Além das propriedades comuns à maioria dos objetos de fluxo de dados no modelo de objeto do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], muitos objetos de fluxo de dados têm propriedades personalizadas específicas ao objeto. Essas propriedades personalizadas estão disponíveis somente em tempo de execução e não constam da Documentação de Referência de Programação Gerenciada do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -444,8 +444,8 @@ ms.locfileid: "84939247"
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
-|PivotKeyValue|String|Um dos possíveis valores da coluna assinalada como a chave dinâmica pelo valor de sua propriedade PivotUsage.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
-|SourceColumn|Integer|O `LineageID` de uma coluna de entrada que contém um valor dinâmico ou -1. O valor de -1 indica que a coluna não é usada em uma operação dinâmica.|  
+|PivotKeyValue|Cadeia de caracteres|Um dos possíveis valores da coluna assinalada como a chave dinâmica pelo valor de sua propriedade PivotUsage.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
+|SourceColumn|Inteiro|O `LineageID` de uma coluna de entrada que contém um valor dinâmico ou -1. O valor de -1 indica que a coluna não é usada em uma operação dinâmica.|  
   
  Para obter mais informações, consulte [Pivot Transformation](pivot-transformation.md).  
   
@@ -456,7 +456,7 @@ ms.locfileid: "84939247"
   
 |Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|VariableName|String|O nome da variável que contém a contagem de linhas.|  
+|VariableName|Cadeia de caracteres|O nome da variável que contém a contagem de linhas.|  
   
  A entrada, as colunas de entrada, a saída e as colunas de saída da transformação Contagem de Linhas não têm nenhuma propriedade personalizada.  
   
@@ -469,7 +469,7 @@ ms.locfileid: "84939247"
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
-|SamplingSeed|Integer|A semente usada pelo gerador aleatório de números. O valor padrão desta propriedade é **0**, indicando que a transformação usa uma contagem de tiques.|  
+|SamplingSeed|Inteiro|A semente usada pelo gerador aleatório de números. O valor padrão desta propriedade é **0**, indicando que a transformação usa uma contagem de tiques.|  
 |SamplingValue|Integer|A contagem de linhas da amostra.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A tabela a seguir descreve as propriedades personalizadas das saídas da transformação Amostragem de Linhas. Todas as propriedades são de leitura/gravação.  
@@ -482,7 +482,7 @@ ms.locfileid: "84939247"
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
-|InputColumnLineageId|Integer|Um valor que especifica o `LineageID` da coluna de entrada que é a fonte da coluna de saída.|  
+|InputColumnLineageId|Inteiro|Um valor que especifica o `LineageID` da coluna de entrada que é a fonte da coluna de saída.|  
   
  A entrada e as colunas de entrada da transformação Amostragem de Linhas não têm nenhuma propriedade personalizada.  
   
@@ -495,8 +495,8 @@ ms.locfileid: "84939247"
   
 |Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|ReadOnlyVariables|String|Uma lista de variáveis separadas por vírgulas disponível para o Componente de Script para acesso em modo somente leitura.|  
-|ReadWriteVariables|String|Uma lista de variáveis separadas por vírgulas disponível para o Componente de Script para acesso em modo leitura/gravação.|  
+|ReadOnlyVariables|Cadeia de caracteres|Uma lista de variáveis separadas por vírgulas disponível para o Componente de Script para acesso em modo somente leitura.|  
+|ReadWriteVariables|Cadeia de caracteres|Uma lista de variáveis separadas por vírgulas disponível para o Componente de Script para acesso em modo leitura/gravação.|  
   
  A entrada, as colunas de entrada, a saída e as colunas de saída do Componente de Script não têm propriedades personalizadas, a menos que sejam criadas pelo desenvolvedor de scripts.  
   
@@ -509,13 +509,13 @@ ms.locfileid: "84939247"
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
-|CurrentRowWhere|String|A cláusula WHERE na instrução SELECT que seleciona a linha atual entre linhas com a mesma chave de negócio.|  
+|CurrentRowWhere|Cadeia de caracteres|A cláusula WHERE na instrução SELECT que seleciona a linha atual entre linhas com a mesma chave de negócio.|  
 |EnableInferredMember|Boolean|Um valor que especifica se atualizações de membros inferidos foram detectadas. O valor padrão dessa propriedade é `True`.|  
 |FailOnFixedAttributeChange|Boolean|Um valor que especifica se a transformação falha quando colunas de linha com atributos fixos contêm alterações ou a pesquisa na tabela da dimensão falha. Se você espera que linhas de entrada contenham novos registros, defina este valor como `True` para que a transformação continue após a falha na pesquisa, já que ela usa a falha para identificar novos registros. O valor padrão dessa propriedade é `False`.|  
 |FailOnLookupFailure|Boolean|Um valor que especifica se a transformação falha quando a pesquisa de um registro existente falha. O valor padrão dessa propriedade é `False`.|  
-|IncomingRowChangeType|Integer|Um valor que especifica se todas as linhas de entrada são novas ou se a transformação deve detectar o tipo de alteração.|  
-|InferredMemberIndicator|String|O nome de coluna para o membro inferido.|  
-|SqlCommand|String|A instrução SQL usada para criar um conjunto de linhas de esquema.|  
+|IncomingRowChangeType|Inteiro|Um valor que especifica se todas as linhas de entrada são novas ou se a transformação deve detectar o tipo de alteração.|  
+|InferredMemberIndicator|Cadeia de caracteres|O nome de coluna para o membro inferido.|  
+|SqlCommand|Cadeia de caracteres|A instrução SQL usada para criar um conjunto de linhas de esquema.|  
 |UpdateChangingAttributeHistory|Boolean|Um valor que indica se atualizações de atributo de histórico são direcionadas à saída da transformação para alteração de atualizações de atributos.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Dimensão de Alteração Lenta. Todas as propriedades são de leitura/gravação.  
@@ -536,20 +536,20 @@ ms.locfileid: "84939247"
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |EliminateDuplicates|Boolean|Especifica se a transformação remove linhas duplicadas da saída da transformação. O valor padrão dessa propriedade é `False`.|  
-|MaximumThreads|Integer|Contém o número máximo de threads que a transformação pode usar para classificar. Um valor **0** indica que não há limite de threads. O valor padrão dessa propriedade é **0**.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
+|MaximumThreads|Inteiro|Contém o número máximo de threads que a transformação pode usar para classificar. Um valor **0** indica que não há limite de threads. O valor padrão dessa propriedade é **0**.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Classificar. Todas as propriedades são de leitura/gravação.  
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |NewComparisonFlags|Integer (bitmask)|Um valor que especifica como a transformação compara os dados de cadeia de caracteres em uma coluna. Para obter mais informações, consulte [Comparing String Data](../comparing-string-data.md).|  
-|NewSortKeyPosition|Integer|Um valor que especifica a ordem de classificação da coluna. Um valor de 0 indica que os dados não são classificados nesta coluna.|  
+|NewSortKeyPosition|Inteiro|Um valor que especifica a ordem de classificação da coluna. Um valor de 0 indica que os dados não são classificados nesta coluna.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Classificar. Todas as propriedades são de leitura/gravação.  
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
-|SortColumnID|Integer|O `LineageID` de uma coluna de classificação.|  
+|SortColumnID|Inteiro|O `LineageID` de uma coluna de classificação.|  
   
  A entrada e a saída da transformação Classificar não têm nenhuma propriedade personalizada.  
   
@@ -562,14 +562,14 @@ ms.locfileid: "84939247"
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|--------------|-----------------|  
-|FrequencyThreshold|Integer|Um valor numérico que indica o número de vezes que um termo deve ocorrer antes de ser extraído. O valor padrão dessa propriedade é **2**.|  
+|FrequencyThreshold|Inteiro|Um valor numérico que indica o número de vezes que um termo deve ocorrer antes de ser extraído. O valor padrão dessa propriedade é **2**.|  
 |IsCaseSensitive|Boolean|Um valor que especifica se a diferenciação de maiúsculas e minúsculas é usada na extração de substantivos e frases nominais. O valor padrão dessa propriedade é `False`.|  
-|MaxLengthOfTerm|Integer|Um valor numérico que indica o comprimento máximo de um termo. Esta propriedade só se aplica a frases. O valor padrão dessa propriedade é **12**.|  
+|MaxLengthOfTerm|Inteiro|Um valor numérico que indica o comprimento máximo de um termo. Esta propriedade só se aplica a frases. O valor padrão dessa propriedade é **12**.|  
 |NeedRefenceData|Boolean|Um valor que especifica se a transformação usa uma lista de termos de exclusão armazenada em uma tabela de referência. O valor padrão dessa propriedade é `False`.|  
-|OutTermColumn|String|O nome da coluna que contém os termos de exclusão.|  
-|OutTermTable|String|O nome da tabela que contém a coluna com termos de exclusão.|  
-|ScoreType|Integer|Um valor que especifica o tipo de pontuação a ser associado ao termo. Os valores válidos são 0 (frequência) e 1 (pontuação TFIDF). A pontuação TFIDF é o produto da Frequência do Termo e da Frequência de Documento Inversa, definido como: TFIDF de um termo T = (frequência de T) \* log ((nºs de linhas na Entrada) / (nº de linhas com T)). O valor padrão dessa propriedade é **0**.|  
-|WordOrPhrase|Integer|Um valor que especifica o tipo de termo. Os valores válidos são 0 (somente palavras), 1 (somente frases nominais) e 2 (palavras e frases nominais). O valor padrão dessa propriedade é **0**.|  
+|OutTermColumn|Cadeia de caracteres|O nome da coluna que contém os termos de exclusão.|  
+|OutTermTable|Cadeia de caracteres|O nome da tabela que contém a coluna com termos de exclusão.|  
+|ScoreType|Inteiro|Um valor que especifica o tipo de pontuação a ser associado ao termo. Os valores válidos são 0 (frequência) e 1 (pontuação TFIDF). A pontuação TFIDF é o produto da Frequência do Termo e da Frequência de Documento Inversa, definido como: TFIDF de um termo T = (frequência de T) \* log ((nºs de linhas na Entrada) / (nº de linhas com T)). O valor padrão dessa propriedade é **0**.|  
+|WordOrPhrase|Inteiro|Um valor que especifica o tipo de termo. Os valores válidos são 0 (somente palavras), 1 (somente frases nominais) e 2 (palavras e frases nominais). O valor padrão dessa propriedade é **0**.|  
   
  A entrada, as colunas de entrada, a saída e as colunas de saída da transformação Contagem de Linhas não têm nenhuma propriedade personalizada.  
   
@@ -583,20 +583,20 @@ ms.locfileid: "84939247"
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
 |IsCaseSensitive|Boolean|Um valor que especifica se uma comparação que faz distinção entre letras maiúsculas e minúsculas é aplicável à correspondência do texto da coluna de entrada e do termo da pesquisa. O valor padrão dessa propriedade é `False`.|  
-|RefTermColumn|String|O nome da coluna que contém os termos da pesquisa.|  
-|RefTermTable|String|O nome da tabela que contém a coluna com termos da pesquisa.|  
+|RefTermColumn|Cadeia de caracteres|O nome da coluna que contém os termos da pesquisa.|  
+|RefTermTable|Cadeia de caracteres|O nome da tabela que contém a coluna com termos da pesquisa.|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de entrada da transformação Pesquisa de Termos. Todas as propriedades são de leitura/gravação.  
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
-|InputColumnType|Integer|Um valor que especifica o uso da coluna. Os valores válidos são 0 (coluna de passagem), 1 (coluna de pesquisa) e 2 (coluna de passagem e de pesquisa).|  
+|InputColumnType|Inteiro|Um valor que especifica o uso da coluna. Os valores válidos são 0 (coluna de passagem), 1 (coluna de pesquisa) e 2 (coluna de passagem e de pesquisa).|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Pesquisa de Termos. Todas as propriedades são de leitura/gravação.  
   
 |Nome da propriedade|Tipo de dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|CustomLineageID|Integer|O `LineageID` da coluna de entrada correspondente se o `InputColumnType` dela for 0 ou 2.|  
+|CustomLineageID|Inteiro|O `LineageID` da coluna de entrada correspondente se o `InputColumnType` dela for 0 ou 2.|  
   
  A entrada e a saída da transformação Pesquisa de Termos não têm nenhuma propriedade personalizada.  
   
@@ -612,8 +612,8 @@ ms.locfileid: "84939247"
   
 |Propriedade|Tipo de dados|Descrição|  
 |--------------|---------------|-----------------|  
-|DestinationColumn|Integer|O `LineageID` da coluna de saída para a qual coluna de entrada é mapeada. Um valor de -1 indica que a coluna de entrada não é mapeada para uma coluna de saída.|  
-|PivotKeyValue|String|Um valor que é copiado em uma coluna de saída de transformação.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> No cenário da transformação Não Dinâmica descrito em [Unpivot Transformation](unpivot-transformation.md), os Valores Dinâmicos são os valores de texto Ham, Coke, Milk, Beer e Chips. Serão exibidos como valores de texto na nova coluna Produto designada pela opção **Nome da Coluna de Valores de Chaves Dinâmicas** .|  
+|DestinationColumn|Inteiro|O `LineageID` da coluna de saída para a qual coluna de entrada é mapeada. Um valor de -1 indica que a coluna de entrada não é mapeada para uma coluna de saída.|  
+|PivotKeyValue|Cadeia de caracteres|Um valor que é copiado em uma coluna de saída de transformação.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.<br /><br /> No cenário da transformação Não Dinâmica descrito em [Unpivot Transformation](unpivot-transformation.md), os Valores Dinâmicos são os valores de texto Ham, Coke, Milk, Beer e Chips. Serão exibidos como valores de texto na nova coluna Produto designada pela opção **Nome da Coluna de Valores de Chaves Dinâmicas** .|  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da transformação Não Dinâmica. Todas as propriedades são de leitura/gravação.  
   

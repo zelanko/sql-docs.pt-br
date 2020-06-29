@@ -15,14 +15,14 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bf4d31a05977cc34cf9aaee8fff38867aa302f37
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 899ca6d278a3117989f2e2371020e98589d67c4b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914796"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431613"
 ---
 # <a name="raw-file-destination"></a>Destino do Arquivo Bruto
   O destino Arquivo Bruto grava dados brutos em um arquivo. Devido ao formato dos dados ser nativo para o destino, os dados não requerem nenhuma tradução e pouca análise. Isso significa que o destino do Arquivo Bruto pode gravar dados mais rápido que outros destinos, tais como o Arquivo Plano e os destinos de OLE DB.  

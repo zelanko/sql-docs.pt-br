@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c4a0f7801538198c8c6c3dfc21ba42135d1b7ec0
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5b826b771944bb70a97ad116b4c55258a106ec52
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939437"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430303"
 ---
 # <a name="map-columns-to-composite-domains"></a>Mapear colunas para domínios compostos
   Um domínio composto consiste em dois ou mais domínios únicos. Você pode mapear várias colunas para o domínio, ou pode mapear uma única coluna com valores limitados para o domínio.  

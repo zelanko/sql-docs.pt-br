@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 10a8c6495fc7d839132d102d9e696263a6f9df17
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 278fdc3b1abd38b63f01e967e28d11983a09e682
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939627"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430773"
 ---
 # <a name="data-mining-query-transformation"></a>Transformação Consulta de Mineração de Dados
   A transformação Consulta de Mineração de Dados executa consultas de previsão em relação a modelos de mineração de dados. Essa transformação contém um construtor de consultas para criar consultas DMX (Data Mining Extensions). O construtor de consultas permite criar instruções personalizadas para avaliar os dados de entrada de transformação em relação a um modelo de mineração existente usando a linguagem DMX. Para obter mais informações, consulte [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
