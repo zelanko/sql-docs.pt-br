@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3a56b4417361a0d86da345f25a7c054e3fc903a9
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: ff3e640f9e6879857495f777832ddbfcf2ee0a15
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731898"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469401"
 ---
 # <a name="master-data-services-developer-documentation"></a>Documentação do desenvolvedor do Master Data Services
 
@@ -42,7 +42,7 @@ ms.locfileid: "83731898"
  Uma lista categorizada das operações de serviço Web da classe <xref:Microsoft.MasterDataServices.ServiceClient>.  
   
 ## <a name="custom-workflows"></a>Fluxos de trabalho personalizados  
- O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócios para criar soluções de fluxo de trabalho básicas. Você pode atualizar e validar dados automaticamente e pode configurar o envio de notificações por email com base nas condições especificadas. As regras de negócios no [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] devem gerenciar os cenários de fluxo de trabalho mais comuns. Se seu fluxo de trabalho exigir o processamento de eventos mais complexos, como aprovações em várias camadas ou árvores de decisão complexas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para enviar dados a um assembly personalizado criado por você. Para tratar fluxos de trabalho personalizados, você deve configurar e iniciar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server no computador do aplicativo Web e criar um assembly que implementa a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
+ O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócios para criar soluções de fluxo de trabalho básicas. Você pode atualizar e validar dados automaticamente e pode configurar o envio de notificações por email com base nas condições especificadas. As regras de negócios no [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] devem gerenciar os cenários de fluxo de trabalho mais comuns. Se seu fluxo de trabalho exigir o processamento de eventos mais complexos, como aprovações em várias camadas ou árvores de decisão complexas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para enviar dados a um assembly personalizado criado por você. Para lidar com fluxos de trabalho personalizados, você deve configurar e iniciar SQL Server serviço de integração de fluxo de trabalho do MDS no computador do aplicativo Web e criar um assembly que implemente a interface [MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) .  
   
 ### <a name="custom-workflow-content"></a>Conteúdo de fluxo de trabalho personalizado  
  [Criar um fluxo de trabalho personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
@@ -53,7 +53,7 @@ ms.locfileid: "83731898"
   
 |Namespace|Descrição|  
 |---------------|-----------------|  
-|<xref:Microsoft.MasterDataServices.Deployment>|Contém classes que podem ser usadas para criar um pacote de implantação de um modelo e para implantar um pacote em um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|  
+|[Microsoft. MasterDataServices. Deployment](/previous-versions/sql/sql-server-2016/ff487448(v=sql.130))|Contém classes que podem ser usadas para criar um pacote de implantação de um modelo e para implantar um pacote em um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|  
 |<xref:Microsoft.MasterDataServices.Services>|Contém uma classe que recebe e processa operações de serviço Web feitas no computador do servidor Web por meio do aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .|  
 |<xref:Microsoft.MasterDataServices.Services.DataContracts>|Contém classes que definem como os dados são transmitidos do computador cliente por meio do aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para o computador do servidor Web.|  
 |<xref:Microsoft.MasterDataServices.Services.MessageContracts>|Contém classes que definem como as solicitações e as respostas são transmitidas do computador cliente por meio do aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para o computador do servidor Web.|  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 761407023130b2bc18c8e1b64d09d9b30155c3b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77aac43aa6fc00a408c049ea7f6d078417a8d4dd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966061"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440613"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Etapa 2: Adicionar e configurar o contêiner Loop Foreach
   Nessa tarefa, você adicionará a capacidade de executar loop através de uma pasta de arquivos simples e aplicará a mesma transformação Fluxo de Dados usada na Lição 1 para cada um desses arquivos simples. Você faz isto adicionando e configurando um contêiner Loop Foreach ao fluxo de controle.  

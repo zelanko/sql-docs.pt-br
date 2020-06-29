@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 31f12cd8abde0262c499d8a889f28041a9e3974c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c8d2f5e7cc6453c67a8a11eb558a678924ed4cef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965222"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440553"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>Etapa 3: Testar os pacotes implantados
   Nesta tarefa, você testará os pacotes implantados em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].

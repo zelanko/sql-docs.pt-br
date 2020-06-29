@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53e12d2be6cc4829fd9fc983ca5a24e2057da4e8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3798dd0632522cf68b1b73976b7f4b932b257c0f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966136"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440683"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Etapa 6: Adicionar e configurar a transformação Pesquisa
   Depois de configurar a fonte de Arquivo Simples para extrair dados do arquivo de origem, a próxima tarefa será definir as transformações Pesquisa necessárias para obter os valores de **CurrencyKey** e **DateKey**. Uma transformação Pesquisa executa uma pesquisa ao unir dados na entrada coluna para uma coluna especificada em um conjunto de dados referenciado. O conjunto de dados de referência pode ser uma tabela existente ou visualização, uma nova tabela ou o resultado de uma instrução SQL. Neste tutorial, a transformação Pesquisa usa um gerenciador de conexões OLE DB para conectar-se ao banco de dados que contém os dados que é a fonte do conjunto de dados de referência.  
@@ -133,6 +133,6 @@ ms.locfileid: "84966136"
  [Etapa 7: Adicionar e configurar o destino OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Transformação pesquisa](data-flow/transformations/lookup-transformation.md)  
+ [Transformação Pesquisa](data-flow/transformations/lookup-transformation.md)  
   
   

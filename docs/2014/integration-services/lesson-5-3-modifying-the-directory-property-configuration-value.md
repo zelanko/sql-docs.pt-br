@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d2ce127c6d0ce9a6a5ca62692d9f40fb70fadb69
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a71a7a181322d60caca98da4ddf3261cbce99c9e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951533"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440363"
 ---
 # <a name="step-3-modifying-the-directory-property-configuration-value"></a>Etapa 3: Modificar o valor de configuração da propriedade de diretório
   Nesta tarefa, você modificará a definição de configuração, armazenada no arquivo SSISTutorial.dtsConfig, da propriedade Value da variável no nível de pacote `User::varFolderName`. A variável atualiza a propriedade Directory do contêiner Loop Foreach. O valor modificado apontará para a `New Sample Data` pasta que você criou na tarefa anterior. Depois de modificar a definição de configuração e executar o pacote, a propriedade Directory será atualizada pela variável, usando o valor populado do arquivo de configuração, em vez do valor de diretório originalmente configurado no pacote.  

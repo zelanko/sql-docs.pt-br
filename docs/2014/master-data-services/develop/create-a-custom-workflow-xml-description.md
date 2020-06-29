@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7cceedac33c3f368f99fd87ab3aa2453f1cf9ba9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4920844de9e20c3c4a4a89a192c2d67f0e58f0b8
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84971506"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469031"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Descrição XML do fluxo de trabalho personalizado (Master Data Services)
-  No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], o método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> é chamado pelo serviço de Integração de Fluxo de Trabalho MDS do SQL Server quando um fluxo de trabalho é iniciado. Este método recebe metadados e dados sobre o item que disparou a regra de negócio do fluxo de trabalho como um bloco de XML. Para obter o código de exemplo que implementa um manipulador de fluxo de trabalho, consulte [Exemplo de fluxo de trabalho personalizado&#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
+  No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , o método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) é chamado por SQL Server serviço de integração de fluxo de trabalho do MDS quando um fluxo de trabalho é iniciado. Este método recebe metadados e dados sobre o item que disparou a regra de negócio do fluxo de trabalho como um bloco de XML. Para obter o código de exemplo que implementa um manipulador de fluxo de trabalho, consulte [Exemplo de fluxo de trabalho personalizado&#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
   
  O seguinte exemplo mostra como deve ser a aparência do XML enviado ao manipulador de fluxo de trabalho:  
   

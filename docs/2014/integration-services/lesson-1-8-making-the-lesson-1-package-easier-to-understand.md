@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ffd151332fe5aa0c152ba66c159472dc9745f2d0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e3a8837cbf3b102435a94706ee277aab9a42fb73
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966113"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440673"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Etapa 8: Tornar o pacote da Lição 1 mais fácil de compreender
   Agora que você concluiu a configuração do pacote da Lição 1, é uma boa ideia verificar o layout do pacote. Se as formas dos layouts de controle e dos fluxos de dados são de tamanhos aleatórias ou se as formas não estão alinhadas ou agrupadas, a funcionalidade de pacote pode ser mais difícil de ser entendida.  

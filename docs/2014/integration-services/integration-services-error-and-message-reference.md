@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 73186e55435f22545c5779ccd1925b4cb8be6d75
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: cfe6ed509cfa14ab97379df64f21562cb58d30b9
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85436633"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469301"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
-  As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime> .  
+  As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros é definido como um campo na classe [Microsoft. SqlServer. Dts. Runtime. HRESULTs](/dotnet/api/microsoft.sqlserver.dts.runtime.hresults) no <xref:Microsoft.SqlServer.Dts.Runtime> namespace.  
   
  Esta lista pode ser útil quando você encontrar um código de erro sem descrição. No momento, a lista não inclui informações para solução de problemas.  
   

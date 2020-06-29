@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 4f10901625ece0a154248f99370e427c7a999c87
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: fc9a6d3ee38e50120ab22ec48b1a673013eb50da
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84546058"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468951"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover um Banco de Dados do Analysis Services
   Frequentemente, há situações em que um dba (administrador de banco de dados) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quer mover um modelo de banco de dados multidimensional ou de tabela para um local diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto.  
@@ -140,7 +140,7 @@ ms.locfileid: "84546058"
   
 ## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. Database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Anexar e desanexar bancos de dados Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Local de armazenamento do banco de dados](database-storage-location.md)   
  [ReadWriteModes do banco de dados](database-readwritemodes.md)   

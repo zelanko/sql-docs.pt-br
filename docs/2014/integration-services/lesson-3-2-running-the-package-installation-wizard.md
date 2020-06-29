@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9cab0c8a25f4dd95c205c63db1ae056468ebe61c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b9565b6afa321081bd843d68dcecca4e4678da79
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965232"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440523"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Etapa 2: Executar o Assistente de Instalação de Pacotes
   Nesta tarefa, você executará o Assistente de Instalação de Pacotes para implantar os pacotes do projeto Tutorial de Implantação em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Somente pacotes podem ser instalados na tabela sysssispackages no banco de dados msdb do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os arquivos que dão suporte incluídos no pacote de implantação serão implantados no sistema de arquivos.  

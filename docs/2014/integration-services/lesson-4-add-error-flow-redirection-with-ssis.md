@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a97a07c4854fc1e25913aff7b6e966be79032e86
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a8ebde9465a5f6f9f591e5d175aa7ed26c5c2fca
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951554"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440433"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>Lição 4: Adicionar redirecionamento de fluxo de erro
   Para lidar com erros que podem ocorrer no processo de transformação, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o oferece a capacidade de decidir por componente e por coluna como manipular dados que não podem ser transformados. Você pode escolher ignorar uma falha em determinadas colunas, redirecionar toda a linha com falha ou apenas causar falha no componente. Por padrão, todos os componentes no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são configurados para falhar quando ocorrerem erros. Causar falha em um componente, por sua vez, faz com que o pacote falhe e todo o processamento subsequente pare.  

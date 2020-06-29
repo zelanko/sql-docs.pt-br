@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0dcf79644ba3e9bc337b14e4ff28fe703e81564d
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: a49aa41d158bf2c9fd1ebb1a711d6ff35c0df98b
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545428"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469011"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Funções e procedimentos armazenados definidos pelo usuário
   Com os objetos do ADOMD.NET Server, você pode criar uma UDF (função definida pelo usuário) ou procedimentos armazenados para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que interajam com metadados e dados do servidor. Esses métodos em processo são chamados por meio de instruções MDX (Multidimensional Expressions), DMX (Data Mining Extensions) para fornecerem funcionalidade agregada sem as latências associadas às comunicações de rede.  
@@ -28,7 +28,7 @@ ms.locfileid: "84545428"
 ## <a name="udf-examples"></a>Exemplos de UDF  
  Um UDF é um método que pode ser chamado no contexto de uma instrução MDX ou DMX, pode conter qualquer número de parâmetros e pode retornar qualquer tipo de dados.  
   
- Um UDF criado com MDX é semelhante a um criado para DMX. A principal diferença é que certas propriedades do objeto <xref:Microsoft.AnalysisServices.AdomdServer.Context>, como as propriedades <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube%2A> e <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel%2A>, só estão disponíveis para uma linguagem de scripts ou para a outra.  
+ Um UDF criado com MDX é semelhante a um criado para DMX. A principal diferença é que determinadas propriedades do objeto [Microsoft. AnalysisServices. AdomdServer. Context](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) , como as propriedades [Microsoft. AnalysisServices. AdomdServer. Context. CURRENTCUBE *](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120)) e [Microsoft. AnalysisServices. AdomdServer. Context. CurrentMiningModel *](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120)) , estão disponíveis apenas para uma linguagem de script ou para a outra.  
   
  Os exemplos a seguir mostram como usar um UDF para retornar uma descrição de nó, filtrar tuplas e aplicar um filtro a uma tupla.  
   

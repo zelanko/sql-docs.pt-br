@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 076c76c9232dcba910c3810d2632f799b2960142
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17bfedafcb97793ccccf414a6ae5da9bc66faa66
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966076"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440603"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lição 1: Como criar o projeto e o pacote básico
   Nessa lição, você criará um pacote ETL simples que extrai dados de uma fonte exclusiva de arquivo simples, transforma os dados usando dois componentes de transformação pesquisa e grava esses dados na tabela de fatos **FactCurrency** no **AdventureWorksDW2012**. Como parte dessa lição, você irá aprender como criar novos pacotes, adicionar e configurar fonte de dados, e conexões de destino, e trabalhar com novos fluxos de controle e componentes de fluxo.  

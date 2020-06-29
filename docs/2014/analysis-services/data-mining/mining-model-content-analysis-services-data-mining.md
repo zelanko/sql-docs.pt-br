@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3cbfbf253bfd080084b8182b353b1efb8b535d3c
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521613"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468961"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   Depois de projetar e processar um modelo de mineração usando dados da estrutura de mineração subjacente, o modelo de mineração é concluído e contém o *conteúdo do modelo de mineração*. Você pode usar este conteúdo para fazer previsões ou analisar seus dados.  
@@ -80,7 +80,7 @@ ms.locfileid: "84521613"
 |3|Interior|Nó interno dividido em uma árvore. Aplica-se a modelos de árvore de decisão.|  
 |4|Distribuição|Nó terminal de uma árvore. Aplica-se a modelos de árvore de decisão.|  
 |5|Cluster|Cluster detectado pelo algoritmo. Aplica-se a modelos de clustering e a modelos de clustering de sequências.|  
-|6|Unknown|Tipo de nó desconhecido.|  
+|6|Unknown (desconhecido)|Tipo de nó desconhecido.|  
 |7|Conjunto de itens|Conjunto de itens detectado pelo algoritmo. Aplica-se a modelos de associação ou a modelos de clustering de sequências.|  
 |8|AssociationRule|Regra de associação detectada pelo algoritmo. Aplica-se a modelos de associação ou a modelos de clustering de sequências.|  
 |9|PredictableAttribute|Atributo previsível. Aplica-se a todos os tipos de modelo.|  
@@ -227,11 +227,11 @@ ms.locfileid: "84521613"
 |13|Ordem regressiva automática|Indica que o valor representa o número de séries regressivas automáticas.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
 |14|Ordem de média de movimentação|Representa um valor que representa o número de médias de movimentação em uma série.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
 |15|Ordem de diferença|Indica que o valor representa um valor que indica quantas vezes a série é diferenciada.<br /><br /> Aplica-se a modelos de série temporal que usam o algoritmo ARIMA.|  
-|16|Booliano|Representa um tipo Booleano.|  
+|16|Boolean|Representa um tipo Booleano.|  
 |17|Outro|Representa um valor personalizado definido pelo algoritmo.|  
 |18|Cadeia de caracteres pré-processada|Representa um valor personalizado que o algoritmo processa como uma cadeia de caracteres. Nenhuma formatação foi aplicada pelo modelo de objeto.|  
   
- Os tipos de valor são derivados da enumeração ADMOMD.NET. Para obter mais informações, consulte <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ Os tipos de valor são derivados da enumeração ADMOMD.NET. Para obter mais informações, consulte [Microsoft. AnalysisServices. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="node-score"></a>Pontuação de nó  
  O significado da pontuação de nó varia dependendo do tipo de modelo e pode ser específico do tipo de nó. Para obter informações sobre como NODE_SCORE é calculado para cada modelo e tipo de nó, consulte [Conteúdo do modelo de mineração por tipo de algoritmo](#bkmk_AlgoType).  

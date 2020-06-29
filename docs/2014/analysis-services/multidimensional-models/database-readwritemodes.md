@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: aa44924311e412c348a92b0e6abb522ae36bbc14
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547108"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468991"
 ---
 # <a name="database-readwritemodes"></a>Banco de dados ReadWriteModes
   Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quer alterar o banco de dados de leitura/gravação para um banco de dados somente leitura ou vice-versa. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como o compartilhamento da mesma pasta do banco de dados com vários servidores para expandir uma solução e melhorar o desempenho. Para essas situações, a `ReadWriteMode` Propriedade Database permite que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA Altere facilmente o modo operacional do banco de dados.  
@@ -46,7 +46,7 @@ ms.locfileid: "84547108"
   
 ## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. Database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Anexar e desanexar bancos de dados Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Mover um banco de dados Analysis Services](move-an-analysis-services-database.md)   
  [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   

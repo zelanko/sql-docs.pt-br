@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.topic: conceptual
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f347d00fff1f43c1c926e3ac87bcf023b6b6b89f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951246"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440293"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
 
@@ -246,7 +246,7 @@ Antes de salvar com sucesso cadeias de caracteres com mais de 255 caracteres em 
 Para obter mais informações sobre os componentes e os procedimentos descritos neste artigo, consulte os seguintes artigos:
 
 ### <a name="about-ssis"></a>Sobre o SSIS
-[Gerenciador de conexões do Excel](connection-manager/excel-connection-manager.md)  
+[Gerenciador de Conexões do Excel](connection-manager/excel-connection-manager.md)  
 [Origem do Excel](data-flow/excel-source.md)  
 [Destino do Excel](data-flow/excel-destination.md)  
 [Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  

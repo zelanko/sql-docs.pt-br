@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: fc9186b0250f0bdb8dd5ad91cc7e84782218bbc2
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521249"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468901"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de série temporal (Analysis Services – Mineração de dados)
   Todos os modelos de mineração usam a mesma estrutura para armazenar conteúdo. Essa estrutura é definida de acordo com o conjunto de linhas de esquema do conteúdo da mineração de dados. Entretanto, em uma estrutura padrão, os nós que contêm informações são organizados de formas diferentes para representar vários tipos de árvores. Este tópico descreve como os nós são organizados e o que cada nó significa para os modelos de mineração que têm como base o algoritmo MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -120,7 +120,7 @@ ms.locfileid: "84521249"
   
  **ARTXP:**  
   
-|ID do tipo de nó|Description|  
+|ID do tipo de nó|Descrição|  
 |------------------|-----------------|  
 |1 (Modelo)|Série temporal|  
 |3 (Interior)|Representa uma ramificação interior em uma árvore de série temporal ARTXP.|  
@@ -129,7 +129,7 @@ ms.locfileid: "84521249"
   
  **ARIMA**  
   
-|ID do tipo de nó|Description|  
+|ID do tipo de nó|Descrição|  
 |------------------|-----------------|  
 |27 (Raiz ARIMA)|O nó superior de uma árvore ARIMA.|  
 |28 (Estrutura periódica ARIMA)|Componente de uma árvore ARIMA que descreve uma única estrutura periódica.|  
@@ -423,7 +423,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  O valor da *ordem de diferença* indica quantas vezes as séries são comparadas ou diferenciadas.  
   
- Para ver uma enumeração dos tipos de valores possíveis, consulte <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ Para obter uma enumeração dos tipos de valor possíveis, consulte [Microsoft. AnalysisServices. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="using-the-arima-tree-information"></a>Usando as informações da árvore ARIMA  
  Se você usa previsões com base no algoritmo ARIMA em uma solução de negócios, talvez você queira colocar a equação em um relatório para demonstrar o método usado na criação da previsão. Você pode usar a legenda para apresentar as fórmulas nos formatos reduzido, ou a descrição para apresentar as fórmulas no formato completo.  

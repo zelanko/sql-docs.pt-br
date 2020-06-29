@@ -19,12 +19,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833748"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440703"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Banco de Dados SQL do Azure)
 
@@ -73,7 +73,9 @@ ms.locfileid: "82833748"
 -   Restaurar Banco de Dados  
   
 -   Excluir banco de dados  
-  
+
+As informações nessa exibição são mantidas por aproximadamente 1 hora. Use o [log de atividades do Azure](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) para exibir detalhes das operações nos últimos 90 dias. Para a retenção de mais de 90 dias, considere enviar entradas do [log de atividades](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) para um espaço de trabalho log Analytics.
+
 ## <a name="example"></a>Exemplo  
  Mostrar as operações de replicação geográfica mais recentes associadas ao banco de dados ' MyDB '.  
   

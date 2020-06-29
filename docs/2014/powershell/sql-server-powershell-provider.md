@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 04d332e2c71e69b9a3e7d1d1b0c60eb9aabaf2e5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 679ce02fe6e0016dfe7fd2d81dd285fbacd6523f
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84960114"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469061"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
   O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para o Windows PowerShell expõe a hierarquia de objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em caminhos semelhantes aos caminhos do sistema de arquivos. Você pode usar os caminhos para localizar um objeto e usar os métodos dos modelos SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) para executar ações nos objetos.  
@@ -40,7 +40,7 @@ ms.locfileid: "84960114"
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Objetos de gerenciamento baseado em políticas, como políticas e facetas.|  
 |SQLSERVER:\SQLRegistration|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Objetos de servidor registrados, como grupos de servidores e servidores registrados.|  
 |SQLSERVER:\Utility|<xref:Microsoft.SqlServer.Management.Utility>|Objetos de utilitário, como instâncias gerenciadas do [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
-|SQLSERVER:\DAC|<xref:Microsoft.SqlServer.Management.DAC>|Objetos de aplicativo da camada de dados como pacotes do DAC e operações como implantação de um DAC.|  
+|SQLSERVER:\DAC|[Microsoft. SqlServer. Management. DAC](/dotnet/api/microsoft.sqlserver.management.utility.deployeddac)|Objetos de aplicativo da camada de dados como pacotes do DAC e operações como implantação de um DAC.|  
 |SQLSERVER:\DataCollection|<xref:Microsoft.SqlServer.Management.Collector>|Objetos de coletor de dados, como conjuntos de coleta e repositórios de configuração.|  
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objetos como projetos, pacotes e ambientes.|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos como cubos, agregações e dimensões.|  
@@ -68,8 +68,8 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |----------------------|-----------|  
 |Descreve como usar cmdlets do Windows PowerShell para navegar pelos nós em um caminho, e a cada nó obtém uma lista dos objetos desse nó.|[Navegar em caminhos do SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
 |Descreve como usar os métodos e propriedades do SMO para relatar e executar trabalho no objeto representado por um nó em um caminho. Também descreve como obter uma lista dos métodos e propriedades do SMO para esse nó.|[Trabalhar com caminhos do SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
-|Descreve como converter um URN (Nome de Recurso Uniforme) de SMO em um caminho de provedor SQL Server.|[Converter URNs em caminhos do Provedor do SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)|  
-|Descreve como abrir conexões de Autenticação do SQL Server usando o provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Por padrão, o provedor usa as conexões de Autenticação do Windows feitas usando as credenciais da conta Windows que executam a sessão do Windows PowerShell.|[Gerenciar a autenticação no PowerShell do Mecanismo de Banco de Dados](manage-authentication-in-database-engine-powershell.md)|  
+|Descreve como converter um URN (Nome de Recurso Uniforme) de SMO em um caminho de provedor SQL Server.|[Converter URNs em caminhos de provedor SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)|  
+|Descreve como abrir conexões de Autenticação do SQL Server usando o provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Por padrão, o provedor usa as conexões de Autenticação do Windows feitas usando as credenciais da conta Windows que executam a sessão do Windows PowerShell.|[Gerenciar a autenticação no Mecanismo de Banco de Dados com o PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server PowerShell](sql-server-powershell.md)  

@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 62dfd50adf25d3e203c2bbf50c58579c65332606
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818052"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440803"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -52,18 +52,18 @@ ms.locfileid: "84818052"
 
  O result_cache_hit é um bitmask do uso de uma consulta do cache do conjunto de resultados.  Esta coluna pode ser a [| (OR-bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produto de um ou mais destes valores:  
   
-|Valor|Descrição|  
+|Valor hex (Decimal)|Descrição|  
 |-----------|-----------------|  
 |**1**|Impacto no cache do conjunto de resultados|  
-|-**0x00**|Erro de cache do conjunto de resultados|  
-|-**0x01**|O cache do conjunto de resultados está desabilitado no banco de dados.|  
-|-**0x02**|O cache do conjunto de resultados está desabilitado na sessão. | 
-|-**0x04**|O cache do conjunto de resultados está desabilitado devido a nenhuma fonte de dados para a consulta.|  
-|-**0x08**|O cache do conjunto de resultados está desabilitado devido a predicados de segurança em nível de linha.|  
-|-**0x10**|O cache do conjunto de resultados está desabilitado devido ao uso da tabela do sistema, da tabela temporária ou da tabela externa na consulta.|  
-|-**0x20**|O cache do conjunto de resultados está desabilitado porque a consulta contém constantes de tempo de execução, funções definidas pelo usuário ou funções não determinísticas.|  
-|-**0x40**|O cache do conjunto de resultados está desabilitado devido ao tamanho estimado do conjunto de resultados >10 GB.|  
-|-**0x80**|O cache do conjunto de resultados está desabilitado porque o conjunto de resultados contém linhas com tamanho grande (>64 KB).|  
+|**0x00** (**0**)|Erro de cache do conjunto de resultados|  
+|-**0x01** (**-1**)|O cache do conjunto de resultados está desabilitado no banco de dados.|  
+|-**0x02** (**-2**)|O cache do conjunto de resultados está desabilitado na sessão. | 
+|-**0x04** (**-4**)|O cache do conjunto de resultados está desabilitado devido a nenhuma fonte de dados para a consulta.|  
+|-**0x08** (**-8**)|O cache do conjunto de resultados está desabilitado devido a predicados de segurança em nível de linha.|  
+|-**0x10** (**-16**)|O cache do conjunto de resultados está desabilitado devido ao uso da tabela do sistema, da tabela temporária ou da tabela externa na consulta.|  
+|-**0x20** (**-32**)|O cache do conjunto de resultados está desabilitado porque a consulta contém constantes de tempo de execução, funções definidas pelo usuário ou funções não determinísticas.|  
+|-**0x40** (**-64**)|O cache do conjunto de resultados está desabilitado devido ao tamanho estimado do conjunto de resultados >10 GB.|  
+|-**0x80** (**-128**)|O cache do conjunto de resultados está desabilitado porque o conjunto de resultados contém linhas com tamanho grande (>64 KB).|  
   
 ## <a name="permissions"></a>Permissões
 

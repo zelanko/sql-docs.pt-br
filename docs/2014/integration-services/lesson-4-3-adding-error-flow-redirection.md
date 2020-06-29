@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e2c9e20ae26c3eec7069a20a09d54bd43836c0c9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968234"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440453"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Etapa 3: Adicionar redirecionamento de fluxo de erro
   Conforme mostrado na tarefa anterior, a transformação Pesquisa de Códigos de Moeda não pode gerar uma correspondência quando a transformação tenta processar o arquivo simples de amostra corrompido que produziu um erro. Como a transformação usa as configurações padrão da saída de erro, qualquer erro faz a transformação falhar. Quando a transformação falha, o resto do pacote também falha.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b6b446d566e7c9aa18e635799e81120d1ac73470
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ffa1849e099e670b5fa13db399af67883e8806c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965170"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440463"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Etapa 3: Testar o pacote de tutorial da Lição 3
   Nesta tarefa, você executará o pacote Lesson 3.dtsx. Quando o pacote for executado, a janela Eventos de Log listará as entradas de log gravadas no arquivo de log. Após a execução do pacote ser concluída, você verificará o conteúdo do arquivo de log gerado pelo provedor do log.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c40d5b4b182e79ac869d9dc21d204854ee116308
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aaa0bbb2ad5c7c70b8da899c885368ab0e8c391f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968218"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440543"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Lição 2: Como criar o pacote de implantação
   Na [Lição 1: Preparando-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), você criou o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] chamado Tutorial de Implantação, adicionou os pacotes e os arquivos de suporte ao projeto e implementou configurações em pacotes.  

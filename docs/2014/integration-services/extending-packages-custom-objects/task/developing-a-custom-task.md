@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df04b8388bc54f0181e5d5b7bb7600faece6260
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b4257d883b1f39e918f0f8a6eb8135e25b784a79
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427223"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469281"
 ---
 # <a name="developing-a-custom-task"></a>Desenvolvendo uma tarefa personalizada
   O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa tarefas para executar unidades de trabalho como suporte à extração, transformação e carregamento de dados. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui várias tarefas que executam as ações usadas mais frequentemente, da execução de uma instrução SQL ao download de um arquivo de um site de FTP. Se as tarefas incluídas e as ações suportadas não satisfizerem seus requisitos completamente, você poderá criar uma tarefa personalizada.  
   
- Para criar uma tarefa personalizada, é preciso criar uma classe que herde da classe base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, aplicar o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> em sua nova classe e substituir os métodos e propriedades importantes da classe base, incluindo o método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
+ Para criar uma tarefa personalizada, você precisa criar uma classe que herda da classe base [Microsoft. SqlServer. Dts. Runtime. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) , aplicar o <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> atributo à sua nova classe e substituir os métodos e as propriedades importantes da classe base, incluindo o <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> método.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  Esta seção descreve como criar, configurar e codificar uma tarefa personalizada e sua interface de usuário personalizada opcional.  

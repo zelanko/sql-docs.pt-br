@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b71e4254312c0dc07d6d8869a2e8b28eb02c36fe
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2d8576f664ae41dfa32230c6498069b62a8c87a3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966126"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440653"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Etapa 7: Adicionar e configurar o destino OLE DB
   Seu pacote agora extrai dados de uma fonte de arquivo simples e transforma esses dados em um formato compatível com o destino. A próxima tarefa é carregar os dados transformados no destino. Para carregar os dados, você deve adicionar um destino OLE DB ao fluxo de dados. O destino do OLE DB pode usar uma tabela, exibição de banco de dados ou um comando SQL para carregar os dados em uma diversidade de bancos de dados compatíveis com o OLE DB.  

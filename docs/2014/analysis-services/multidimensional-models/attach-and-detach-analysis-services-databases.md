@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 44698c89eff608d6c993c3cec030098883eb5aee
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544828"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469001"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Anexar e desanexar Bancos de Dados do Analysis Services
   Existem situações frequentes em que um DBA (administrador de banco de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deseja colocar o banco de dados offline em determinado período e colocá-lo online novamente na mesma instância do servidor ou em uma instância diferente. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como a movimentação do banco de dados para um disco diferente em busca de um melhor desempenho, a obtenção de espaço para o crescimento do banco de dados ou para a atualização de um produto. Para todos esses casos e muito mais, `Attach` os `Detach` comandos e permitem que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA Coloque o banco de dados offline e coloque-o online novamente com pouco esforço.  
@@ -57,7 +57,7 @@ ms.locfileid: "84544828"
   
 ## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. Database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Mover um banco de dados Analysis Services](move-an-analysis-services-database.md)   
  [ReadWriteModes do banco de dados](database-readwritemodes.md)   
  [Alternar um banco de dados Analysis Services entre os modos ReadOnly e ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   

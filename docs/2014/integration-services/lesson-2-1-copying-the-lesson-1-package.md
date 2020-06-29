@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0fd4a8bfbde0a728370cb7980bb5a0add809be0f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0373918efff503779e139bb21efad58549b3850
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966056"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440643"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>Etapa 1: Copiar o pacote da Lição 1
   Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição 1. Se você não completou a lição 1, poderá adicionar o pacote completo da lição 1 incluído com o tutorial do projeto e, então, copiar esse pacote. Você usará essa cópia nova durante toda a Lição 2.  

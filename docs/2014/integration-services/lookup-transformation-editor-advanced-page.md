@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2f73f8e1e4dbbadc4b73a487d433fc8ab1913b5f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02aa291ef4d282fa77c21f93cc0700cbe1a3032c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951226"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440273"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>Editor da Transformação Pesquisa (página Avançado)
   Use a página **Avançado** da caixa de diálogo **Editor da Transformação Pesquisa** para configurar o cache parcial e para modificar a instrução SQL da transformação Pesquisa.  

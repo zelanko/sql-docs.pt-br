@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 22f08b13232b7ae90c7b1eacfe55a98a1f1ca283
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1f77179b9f51d93bce79e87a0342bdafe47e9f9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965200"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440513"
 ---
 # <a name="lesson-3-adding-logging"></a>Lição 3: Como adicionar log
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui recursos de log que permitem solucionar problemas e monitorar a execução do pacote fornecendo um rastreamento de eventos de tarefa e contêiner. Os recursos de log são flexíveis, e podem ser habilitados no nível do pacote ou em tarefas individuais e contêineres dentro do pacote. Você pode selecionar quais eventos quer você anotar, e criar múltiplos logs vários em um único pacote.  

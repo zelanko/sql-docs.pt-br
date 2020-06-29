@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 06d31a4244da2a751bc501080cdf501d540fbc92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da51560f2ccfb7bef849f1b191c43f19d35d36ed
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951526"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440383"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Etapa 2: Habilitar e configurar configurações de pacote
   Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e habilitará configurações de pacote usando o Assistente de Configuração de Pacotes. Você usará esse assistente para gerar um arquivo de configuração XML que contenha definições de configuração para a propriedade `Directory` do contêiner Loop Foreach. O valor da propriedade de diretório é fornecido por uma nova variável de nível de pacote que você pode atualizar no tempo de execução. Adicionalmente, você populará uma pasta de dados de exemplo para usar durante o teste.  
