@@ -13,14 +13,14 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e7aac9aa2dc6c7675414354c729f4537479ee8a1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3b153b6f2202a52cfbeadbb8af528e88c6846128
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972676"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420533"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Solucionando problemas de ferramentas para execução de pacotes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui recursos e ferramentas que podem ser usados para solucionar problemas de pacotes quando eles são executados depois de concluídos e implantados.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d2ad2ed1689494918080aaad85eb8f84efedc711
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c65f4fece56a32c184afb7e983b075f4820a1876
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962666"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421113"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>Editor de Destino SQL (página Mapeamentos)
   Use a página **Mapeamentos** da caixa de diálogo **Editor de Destino SQL** para mapear colunas de entrada para colunas de destino.  

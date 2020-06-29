@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Edito
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a7be36c5818bbcf4855c90ba2fc16b0ba083cf39
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f24d28a6c796d23ae9b759af5f8fb208702aec9e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972796"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420623"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>Editor da Tarefa Transferir Logons (página Geral)
   Use a página **Geral** da caixa de diálogo do **Editor da Tarefa Transferir Logons** para nomear e descrever a tarefa Transferir Logons. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Logons](control-flow/transfer-logins-task.md).  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Integration Services packages, logs
 - packages [Integration Services], logs
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2eeacf8b8e722898485871c9f2c469e780e15c78
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a2fddc08a92477d18f4bf7ce14312d1ef531fae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972533"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420083"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Exibir entradas de log na janela Eventos de Log
   Este procedimento descreve como executar um pacote e exibir as entradas de log que ele grava. Você pode exibir as entradas de log em tempo real. As entradas de log, gravadas na janela **Eventos de Log** , também podem ser copiadas e salvas para uma análise posterior.  

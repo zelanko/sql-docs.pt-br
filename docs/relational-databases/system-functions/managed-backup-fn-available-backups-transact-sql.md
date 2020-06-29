@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbfc2cb7419f05884a80244445c6ce418576a402
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68140666"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409345"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -74,11 +74,11 @@ Se houver lacunas no LSN, significando que há uma quebra na cadeia de logs, a t
  Requer permissões **Select** nessa função.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir lista todos os backups disponíveis de backup [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por meio do banco de dados ' MyDB '  
+ O exemplo a seguir lista todos os backups disponíveis de backup por meio do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] banco de dados ' MyDB '  
   
 ```  
 SELECT *   
-FROM managed_backup.fn_available_backups ('MyDB')  
+FROM msdb.managed_backup.fn_available_backups ('MyDB')  
   
 ```  
   

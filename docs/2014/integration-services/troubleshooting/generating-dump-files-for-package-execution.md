@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b3a44a21e375d37115f71ff8762b941bd87ef2ae
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61e511aaff6c3c77338211537a685f8a1dc82981
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972713"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420603"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Gerando arquivos de despejo para execução de pacote
   No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode criar arquivos de despejo de depuração que fornecem informações sobre a execução de um pacote. As informações contidas nestes arquivos podem ajudá-lo a solucionar os problemas sobre a execução do pacote.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0c430f08b4a86c981df5138c7f78e76b54e7de28
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25a9e2a023c5b677fb36ad51d9d1b50f217e50a5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972819"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420643"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Editor da Tarefa Transferir Trabalhos (página Trabalhos)
   Use a página **Trabalhos** da caixa de diálogo **Editor da Tarefa de Transferir Trabalhos** para especificar as propriedades para cópia de um ou mais trabalhos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent de uma instância de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para outra. Para obter mais informações sobre a tarefa Transferir Trabalhos, consulte [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -77,6 +77,6 @@ ms.locfileid: "84972819"
  [Tarefas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor da tarefa Transferir trabalhos &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Página de expressões](expressions/expressions-page.md)   
- [gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
+ [Gerenciador de Conexões SMO](connection-manager/smo-connection-manager.md)  
   
   

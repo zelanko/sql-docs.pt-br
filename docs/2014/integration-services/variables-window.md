@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 258fdee44c2ab67babfa366f627b7b297c5f1535
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62daceac93eda76f2d81ea0fdce00a3c5fa7e97f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972556"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420143"
 ---
 # <a name="variables-window"></a>Janela Variáveis
   Use a janela **Variáveis** para criar e modificar as variáveis definidas pelo usuário e para exibir as variáveis do sistema.  
@@ -71,7 +71,7 @@ ms.locfileid: "84972556"
  **Descrição**  
  Exiba a descrição da variável. Você pode alterar a descrição para as variáveis definidas pelo usuário. Por padrão, a janela **Variáveis** não lista esta coluna. Para exibir esta coluna, clique em **Opções de Grade**.  
   
- **Expressão**  
+ **Expression**  
  Exiba a expressão atribuída à variável. Para atribuir uma expressão, clique botão de reticências.  
   
  Se você atribui uma expressão a uma variável, um marcador de ícone especial é exibido ao lado da variável. Esse marcador de ícone especial também é exibido ao lado de gerenciadores de conexões e tarefas que têm expressões definidas neles.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0df8c4cf72574df16ad42445434592faeae8548
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ead9ad63b6dfc7d144c0d9e748ad01b847774d85
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972366"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419723"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Editor de Origem XML (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** do **Editor de Origem XML** para especificar um arquivo XML e o XSD que transforma os dados XML.  

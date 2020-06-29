@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.sourcedbfiles.f1
 ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb40764ee279d98b6b63906ed08b26afe156aee4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 426f84123b84b7b2a7892f0143a4a64b44b680a2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962856"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421233"
 ---
 # <a name="source-database-files"></a>Arquivos de banco de dados de origem
   Use a caixa de diálogo **Arquivos de Banco de Dados de Origem** para visualizar os nomes e locais do arquivo do banco de dados no servidor de origem ou especificar um local de compartilhamento de arquivos na rede para a tarefa Transferir Banco de Dados. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Banco de Dados](control-flow/transfer-database-task.md).  

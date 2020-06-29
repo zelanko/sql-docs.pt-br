@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf956c2a29e03095b12cc323d267ebc0c43ae3e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972576"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420123"
 ---
 # <a name="variable-grid-options"></a>Opções de Grade Variáveis
   Use a caixa de diálogo **Opções de Grade Variáveis** para selecionar as colunas para serem exibidas na janela **Variáveis** e para selecionar os filtros para serem aplicados na lista de variáveis. Para obter mais informações sobre as propriedades de variáveis correspondentes, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "84972576"
   
 -   **Descrição**  
   
--   **Expressão**  
+-   **Expression**  
   
 ## <a name="see-also"></a>Consulte Também  
  [Janela variáveis](../../2014/integration-services/variables-window.md)   

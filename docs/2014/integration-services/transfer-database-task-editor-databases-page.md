@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fddfbf70b298614767429a8a006d264ad4853aa0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962064"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420843"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor da Tarefa Transferir Banco de Dados (página Bancos de Dados)
   Use a página **Bancos de Dados** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** para especificar as propriedades para os bancos de dado de origem e de destino envolvidos na tarefa Transferir Banco de Dados. A tarefa Transferir Banco de Dados copia ou move um bancos de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre duas instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essa tarefa também pode ser usada para copiar um banco de dados dentro do mesmo servidor. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Banco de Dados](control-flow/transfer-database-task.md).  
@@ -91,6 +91,6 @@ ms.locfileid: "84962064"
  [Tarefas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor da tarefa Transferir Banco de dados &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Página de expressões](expressions/expressions-page.md)   
- [gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
+ [Gerenciador de Conexões SMO](connection-manager/smo-connection-manager.md)  
   
   

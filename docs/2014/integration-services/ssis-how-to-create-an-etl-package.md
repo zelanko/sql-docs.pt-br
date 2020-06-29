@@ -14,14 +14,14 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b67e2308c95db109c89bd2c3ff61f311e83fb898
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a515ed058f35fe3a6d7e042c61b23bbda7429b3d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962576"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421123"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Tutorial do SSIS: Como criar um pacote ETL simples
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) é uma plataforma para a criação de soluções de integração de dados de alto desempenho, incluindo pacotes ETL (extração, transformação e carregamento) para data warehousing. O SSIS inclui ferramentas gráficas e assistentes para criação e depuração de pacotes; tarefas para execução de funções de fluxo de trabalho como, por exemplo, operações de FTP, execução de instruções SQL e envio de mensagens de email; fontes de dados e destinos para extração e carregamento de dados; transformações para limpeza, agregação, junção e cópia de dados; um serviço de gerenciamento, o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administração de execução e armazenamento de pacotes; e APIs (interfaces de programação de aplicativo) para programação do modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

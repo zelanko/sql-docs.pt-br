@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e6e9725f7ecdbc1625c74f4c650f6f3215dc64ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972436"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419903"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Trabalhando programaticamente com gerenciadores de conexões
   No [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], o método AcquireConnection da classe do gerenciador de conexões associado é o método chamado com maior frequência quando você trabalha com gerenciadores de conexões em código gerenciado. Ao escrever código gerenciado, chame o método AcquireConnection para usar a funcionalidade de um gerenciador de conexões. Chame esse método independentemente de estar escrevendo o código gerenciado em uma tarefa Script, em um componente Script, em um objeto personalizado ou em uma aplicação personalizada.  

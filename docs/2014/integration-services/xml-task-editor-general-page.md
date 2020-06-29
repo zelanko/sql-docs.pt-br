@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 26055dde636d299a2a58fdfe0bdbd3fdfbdab012
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 804c871527e6d7841cfb23f389345edee5af8789
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972346"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419463"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   Use o **nó Geral** da caixa de diálogo **Editor da Tarefa XML** para especificar o tipo de operação e configurar a operação.  
@@ -221,7 +221,7 @@ ms.locfileid: "84972346"
 |-----------|-----------------|  
 |**Período**|Retorna os resultados de uma função XPath.|  
 |**Lista de nós**|Retorna os nós selecionados como um fragmento XML.|  
-|**Os**|Retorna o valor do texto interno de todos os nós selecionados, concatenados em uma cadeia de caracteres.|  
+|**Valores**|Retorna o valor do texto interno de todos os nós selecionados, concatenados em uma cadeia de caracteres.|  
   
 ### <a name="operationtype--merge"></a>OperationType = Mesclar  
  Especifique as opções para a operação Mesclar.  
@@ -300,7 +300,7 @@ ms.locfileid: "84972346"
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Automático**|Deixe a tarefa XML determinar se o algoritmo rápido ou preciso deve ser usado.|  
-|**Rápida**|Use um algoritmo Diff rápido, porém menos preciso.|  
+|**Rápido**|Use um algoritmo Diff rápido, porém menos preciso.|  
 |**Preciso**|Use um algoritmo Diff preciso.|  
   
  **Opções de Diff**  

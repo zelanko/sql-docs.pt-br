@@ -12,14 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 19f96adc9932b888f3304257fb9a23a22b06cc87
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a1ace15be59c7102547b4faedf70adc811bd140e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972606"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420193"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Usar os valores de variáveis e parâmetros em um pacote filho
   Este procedimento descreve como criar uma configuração de pacote que usa o tipo de configuração variável pai. Este tipo de configuração habilita um pacote filho que é executado de um pacote pai para acessar uma variável no pai.  
@@ -88,11 +88,11 @@ ms.locfileid: "84972606"
   
     -   Selecione **O local de configuração está armazenado em uma variável do ambiente** e, na lista **Variável de ambiente**, selecione a variável de ambiente que contém o nome da variável.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
 8.  Na página Selecionar Propriedade de Destino, expanda o nó **Variável** e o nó **Propriedades** da variável a ser configurada e, em seguida, clique na propriedade que será definida pela configuração.  
   
-9. Clique em **Próximo**.  
+9. Clique em **Avançar**.  
   
 10. Na página Concluindo o Assistente, você pode modificar o nome padrão da configuração e revisar a informações de configuração (opcional).  
   

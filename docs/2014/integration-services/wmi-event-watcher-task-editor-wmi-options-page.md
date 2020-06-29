@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Event Watcher Task Editor
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b330e63d802d0801f4473bb1a1422c5bf79c35e2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a64ac51999d15ad226894540d3eb2819164e90e2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972406"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419843"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor do Detector de Eventos do WMI (página Opções do WMI)
   Use a página **Opções do WMI** da caixa de diálogo **Editor do Detector de Eventos do WMI** para especificar a origem da consulta WQL (Instrumentação de Gerenciamento do Windows Query Language) e como a tarefa do Detector de Eventos do WMI responde aos eventos do WMI (Microsoft Windows Instrumentation).  
