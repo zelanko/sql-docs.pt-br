@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9f74d9089bf6c2a87edaeaee80c95757982f6c2a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 690e73e0bda9cac2521cfec3fc6296c50fd3b69a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966197"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436803"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salvar Pacote SSIS (Assistente de Importação e Exportação do SQL Server)
   Use a página **salvar pacote SSIS** para nomear, descrever e salvar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pacote Integration Services ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` banco de dados ou em um arquivo que tenha a extensão. dtsx.  

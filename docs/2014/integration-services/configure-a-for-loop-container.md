@@ -10,14 +10,14 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 24e2fe71b958395a5be35afad32804d2a748348d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3b162c6d93e00900cc8393cdec0539d3cd495a32
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921975"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434943"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurar um contêiner Loop For
   Este procedimento descreve como configurar um contêiner Loop For usando a caixa de diálogo **Editor do Loop For** .  

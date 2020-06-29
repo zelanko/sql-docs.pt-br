@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f47cd8f5d57d8a1e3a12c9d1b73c2e2815366629
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 56ef2f097a5a23edbaab4e64d73b78988db8d9cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922517"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435463"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Revisar e gerar scripts de log suplementares
   Use a guia **Scripts** para executar ou executar novamente um script no banco de dados de origem Oracle que configura o registro em log suplementar.  

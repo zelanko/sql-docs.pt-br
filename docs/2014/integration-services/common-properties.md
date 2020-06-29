@@ -16,14 +16,14 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77bb61af021bb7499f6656d2fd604f4bdc06bfeb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06b9c8378d08f8eb1e27df8b545acc12ceaa7e2b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922097"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435093"
 ---
 # <a name="common-properties"></a>Propriedades comuns
   Os objetos de fluxo de dados no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modelo de objeto têm propriedades comuns e propriedades personalizadas nos níveis de componente, entrada e saída e coluna de entrada e saída. Muitas propriedades têm valores somente leitura, atribuídos em tempo de execução pelo mecanismo de fluxo de dados.  
@@ -32,11 +32,11 @@ ms.locfileid: "84922097"
   
 -   [Componentes](#components)  
   
--   [Informações](#inputs)  
+-   [Entradas](#inputs)  
   
 -   [Colunas de entrada](#inputcolumns)  
   
--   [Produz](#outputs)  
+-   [Saídas](#outputs)  
   
 -   [Colunas de saída](#outputcolumns)  
   
@@ -85,18 +85,18 @@ ms.locfileid: "84922097"
   
 |Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
-|ComponentClassID|String|O CLSID do componente.|  
-|ContactInfo|String|Informações de contato para o desenvolvedor de um componente.|  
+|ComponentClassID|Cadeia de caracteres|O CLSID do componente.|  
+|ContactInfo|Cadeia de caracteres|Informações de contato para o desenvolvedor de um componente.|  
 |Descrição|String|Descrição do componente de fluxo de dados. O valor padrão dessa propriedade é o nome do componente de fluxo de dados.|  
-|ID|Integer|Valor que identifica essa instância do componente com exclusividade.|  
-|IdentificationString|String|Identifica o componente.|  
+|ID|Inteiro|Valor que identifica essa instância do componente com exclusividade.|  
+|IdentificationString|Cadeia de caracteres|Identifica o componente.|  
 |IsDefaultLocale|Boolean|Indica se o componente usa a localidade da tarefa de Fluxo de Dados à qual pertence.|  
-|LocaleID|Integer|A localidade usada pelo componente de fluxo de dados quando o pacote é executado. Todas as localidades do Windows estão disponíveis para uso em componentes de fluxo de dados.|  
-|Nome|String|Nome do componente de fluxo de dados.|  
-|PipelineVersion|Integer|Versão da tarefa de fluxo de dados dentro da qual um componente é projetado para ser executado.|  
+|LocaleID|Inteiro|A localidade usada pelo componente de fluxo de dados quando o pacote é executado. Todas as localidades do Windows estão disponíveis para uso em componentes de fluxo de dados.|  
+|Name|Cadeia de caracteres|Nome do componente de fluxo de dados.|  
+|PipelineVersion|Inteiro|Versão da tarefa de fluxo de dados dentro da qual um componente é projetado para ser executado.|  
 |UsesDispositions|Boolean|Indica se um componente tem uma saída com erro.|  
 |ValidateExternalMetadata|Boolean|Indica se os metadados de colunas externas foram validados. O valor padrão dessa propriedade é `True`.|  
-|Versão|Integer|Versão de um componente.|  
+|Versão|Inteiro|Versão de um componente.|  
   
 ##  <a name="input-properties"></a><a name="inputs"></a>Propriedades de entrada  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , transformações e destinos têm entradas. Uma entrada de um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
@@ -106,14 +106,14 @@ ms.locfileid: "84922097"
 |Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |Descrição|String|Descrição da entrada.|  
-|ErrorOrTruncationOperation|String|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
+|ErrorOrTruncationOperation|Cadeia de caracteres|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
 |HasSideEffects|Boolean|Indica se um componente pode ser removido do plano de execução do fluxo de dados quando não está anexado a um componente downstream e quando `RunInOptimizedMode` é `true` .|  
-|ID|Integer|Valor que identifica a entrada com exclusividade.|  
-|IdentificationString|String|Cadeia de caracteres que identifica a entrada.|  
+|ID|Inteiro|Valor que identifica a entrada com exclusividade.|  
+|IdentificationString|Cadeia de caracteres|Cadeia de caracteres que identifica a entrada.|  
 |IsSorted|Boolean|Indica se os dados na entrada são classificados.|  
-|Nome|String|Nome da entrada.|  
-|SourceLocale|Integer|ID de localidade (LCID) dos dados de entrada.|  
+|Name|Cadeia de caracteres|Nome da entrada.|  
+|SourceLocale|Inteiro|ID de localidade (LCID) dos dados de entrada.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. . Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
   
  Os destinos e algumas transformações não oferecem suporte a saídas de erro e as propriedades ErrorRowDisposition e TruncationRowDisposition dos componentes são somente leitura.  
@@ -125,18 +125,18 @@ ms.locfileid: "84922097"
   
 |Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
-|ComparisonFlags|Integer|Um conjunto de sinalizadores que especifica a comparação de colunas que têm um tipo de dado de caractere. Para obter mais informações, consulte [Comparing String Data](data-flow/comparing-string-data.md).|  
+|ComparisonFlags|Inteiro|Um conjunto de sinalizadores que especifica a comparação de colunas que têm um tipo de dado de caractere. Para obter mais informações, consulte [Comparing String Data](data-flow/comparing-string-data.md).|  
 |Descrição|String|Descreve a coluna de entrada.|  
-|ErrorOrTruncationOperation|String|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
+|ErrorOrTruncationOperation|Cadeia de caracteres|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|ID da coluna de metadados externa atribuída a uma coluna de entrada.|  
-|ID|Integer|Valor que identifica a coluna com exclusividade.|  
-|IdentificationString|String|Cadeia de caracteres que identifica a coluna de entrada.|  
-|LineageID|Integer|ID da coluna upstream.|  
-|Nome|String|Nome da coluna de entrada.|  
-|SortKeyPosition|Integer|Valor que indica se uma coluna está classificada, sua ordem de classificação e a sequência em que diversas colunas são classificadas. O valor **0** indica que a coluna não está classificada.  Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|ID|Inteiro|Valor que identifica a coluna com exclusividade.|  
+|IdentificationString|Cadeia de caracteres|Cadeia de caracteres que identifica a coluna de entrada.|  
+|LineageID|Inteiro|ID da coluna upstream.|  
+|Name|Cadeia de caracteres|Nome da coluna de entrada.|  
+|SortKeyPosition|Inteiro|Valor que indica se uma coluna está classificada, sua ordem de classificação e a sequência em que diversas colunas são classificadas. O valor **0** indica que a coluna não está classificada.  Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
-|UpstreamComponentName|String|Nome do componente upstream.|  
+|UpstreamComponentName|Cadeia de caracteres|Nome do componente upstream.|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|Valor que determina como uma coluna de entrada é usada pelo componente.|  
   
  As colunas de entrada também têm as propriedades de tipo de dados descritas no item "Propriedades de Tipo de Dados".  
@@ -150,16 +150,16 @@ ms.locfileid: "84922097"
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|Valor que determina se o mecanismo de fluxo de dados exclui a saída quando ela é desanexada de um caminho.|  
 |Descrição|String|Descreve a saída.|  
-|ErrorOrTruncationOperation|String|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
+|ErrorOrTruncationOperation|Cadeia de caracteres|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
-|ExclusionGroup|Integer|Valor que identifica um grupo de saídas mutuamente exclusivas.|  
+|ExclusionGroup|Inteiro|Valor que identifica um grupo de saídas mutuamente exclusivas.|  
 |HasSideEffects|Boolean|Valor que indica se um componente pode ser removido do plano de execução do fluxo de dados quando não é anexado a um componente upstream e quando `RunInOptimizedMode` é `true`.|  
-|ID|Integer|Valor que identifica a saída com exclusividade.|  
-|IdentificationString|String|Cadeia de caracteres que identifica a saída.|  
+|ID|Inteiro|Valor que identifica a saída com exclusividade.|  
+|IdentificationString|Cadeia de caracteres|Cadeia de caracteres que identifica a saída.|  
 |IsErrorOut|Boolean|Indica se a saída é uma saída de erro.|  
 |IsSorted|Boolean|Indica se a saída está classificada. O valor padrão é `False`.<br /><br /> Importante a definição do valor da propriedade como não classifica ** \* os dados. \* \* \* ** `IsSorted` `True` Esta propriedade apenas fornece uma dica aos componentes downstream de que os dados foram classificados previamente. Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|Nome|String|Nome da saída.|  
-|SynchronousInputID|Integer|ID de uma entrada que é síncrona à saída.|  
+|Name|Cadeia de caracteres|Nome da saída.|  
+|SynchronousInputID|Inteiro|ID de uma entrada que é síncrona à saída.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
   
 ###  <a name="output-column-properties"></a><a name="outputcolumns"></a>Propriedades da coluna de saída  
@@ -169,17 +169,17 @@ ms.locfileid: "84922097"
   
 |Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
-|ComparisonFlags|Integer|Um conjunto de sinalizadores que especifica a comparação de colunas que têm um tipo de dado de caractere. Para obter mais informações, consulte [Comparing String Data](data-flow/comparing-string-data.md).|  
+|ComparisonFlags|Inteiro|Um conjunto de sinalizadores que especifica a comparação de colunas que têm um tipo de dado de caractere. Para obter mais informações, consulte [Comparing String Data](data-flow/comparing-string-data.md).|  
 |Descrição|String|Descreve a coluna de saída.|  
-|ErrorOrTruncationOperation|String|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
+|ErrorOrTruncationOperation|Cadeia de caracteres|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são `Fail component`, `Ignore failure` e `Redirect row`. O valor padrão é `Fail component`.|  
-|ExternalMetadataColumnID|Integer|ID da coluna de metadados externa atribuída a uma coluna de entrada.|  
-|ID|Integer|Valor que identifica a coluna de saída com exclusividade.|  
-|IdentificationString|String|Cadeia de caracteres que identifica a coluna de saída.|  
-|LineageID|Integer|ID da coluna de saída. Os componentes downstream referem-se à coluna usando esse valor.|  
-|Nome|String|Nome da coluna de saída.|  
-|SortKeyPosition|Integer|Valor que indica se uma coluna está classificada, sua ordem de classificação e a sequência em que diversas colunas são classificadas. O valor **0** indica que a coluna não está classificada. Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|SpecialFlags|Integer|Valor que contém os sinalizadores especiais da coluna de saída.|  
+|ExternalMetadataColumnID|Inteiro|ID da coluna de metadados externa atribuída a uma coluna de entrada.|  
+|ID|Inteiro|Valor que identifica a coluna de saída com exclusividade.|  
+|IdentificationString|Cadeia de caracteres|Cadeia de caracteres que identifica a coluna de saída.|  
+|LineageID|Inteiro|ID da coluna de saída. Os componentes downstream referem-se à coluna usando esse valor.|  
+|Name|Cadeia de caracteres|Nome da coluna de saída.|  
+|SortKeyPosition|Inteiro|Valor que indica se uma coluna está classificada, sua ordem de classificação e a sequência em que diversas colunas são classificadas. O valor **0** indica que a coluna não está classificada. Para obter mais informações, consulte [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|SpecialFlags|Inteiro|Valor que contém os sinalizadores especiais da coluna de saída.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. Os valores são `Fail component`, `Ignore failure` e `Redirect row`. O valor padrão é `Fail component`.|  
   
  As colunas de saída também incluem um conjunto de propriedades de tipo de dados.  
@@ -192,9 +192,9 @@ ms.locfileid: "84922097"
 |Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |Descrição|String|Descreve a coluna externa.|  
-|ID|Integer|Valor que identifica a coluna com exclusividade.|  
-|IdentificationString|String|Cadeia de caracteres que identifica a coluna.|  
-|Nome|String|Nome da coluna externa.|  
+|ID|Inteiro|Valor que identifica a coluna com exclusividade.|  
+|IdentificationString|Cadeia de caracteres|Cadeia de caracteres que identifica a coluna.|  
+|Name|Cadeia de caracteres|Nome da coluna externa.|  
   
  As colunas de metadados externas também incluem um conjunto de propriedades de tipo de dados.  
   
@@ -205,11 +205,11 @@ ms.locfileid: "84922097"
   
 |Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
-|CodePage|Integer|Especifica a página de código para dados de cadeia de caracteres que não são Unicode.|  
+|CodePage|Inteiro|Especifica a página de código para dados de cadeia de caracteres que não são Unicode.|  
 |Tipo de dados|Inteiro (enumeração)|Tipo de dados da coluna do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
-|Comprimento|Integer|Comprimento, medido em caracteres, de uma coluna.|  
-|Precisão|Integer|Precisão de uma coluna numérica.|  
-|Escala|Integer|Escala de uma coluna numérica.|  
+|Comprimento|Inteiro|Comprimento, medido em caracteres, de uma coluna.|  
+|Precisão|Inteiro|Precisão de uma coluna numérica.|  
+|Escala|Inteiro|Escala de uma coluna numérica.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Fluxo de dados](data-flow/data-flow.md)   

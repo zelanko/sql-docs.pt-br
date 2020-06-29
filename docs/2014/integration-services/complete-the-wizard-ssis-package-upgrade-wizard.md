@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.completewizard.f1
 ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b684a20563bf73a50b4df9f624b59047c768865c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d84d932608303eefa2d13a2940eca2f8953611e7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922007"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434983"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Concluir o Assistente (Assistente de Atualização de Pacotes SSIS)
   Use a página **Concluir o Assistente** para revisar e confirmar as opções de atualização de pacote que você selecionou. Esta é a última página do assistente que permite voltar e alterar as opções dessa sessão do assistente.  
