@@ -10,14 +10,14 @@ helpviewer_keywords:
 - RTRIM function
 - trailing blanks
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1dd43839a8eded3dc4f359fe182a069a0f99b194
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1f42da39dfeea3e135e2f7b432c0f4009c08c4a0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969056"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428183"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (Expressão SSIS)
   Retorna uma expressão character depois de remover espaços em branco à direita.  

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7a52068b0539ca77eed88d88ecce55a1615b89a1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a09f82fe266e0f87703efd983d20ab435cc1835a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968906"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428033"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Desenvolvendo um componente de transformação personalizado com saídas síncronas
   Os componentes de transformação com saídas síncronas recebem linhas de componentes upstream e leem ou modificam os valores das colunas dessas linhas à medida que passam as linhas para os componentes downstream. Eles também podem definir colunas de saída adicionais derivadas das colunas fornecidas pelos componentes upstream, mas não acrescentam linhas ao fluxo de dados. Para obter mais informações sobre a diferença entre componentes síncronos e assíncronos, consulte [Compreender as transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md).  

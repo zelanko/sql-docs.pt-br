@@ -10,14 +10,14 @@ helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7ddcad6f0968dc8b9321257e0ea2a95d8c65cf2e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2efbc60cae881eec2bebda7655a533a7334ccc19
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966490"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427713"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Desenvolvendo uma interface do usuário para um gerenciador de conexões personalizado
   Depois de ter substituído a implementação das propriedades e dos métodos da classe de base para fornecer sua funcionalidade personalizada, talvez você queira criar uma interface do usuário personalizada para seu gerenciador de conexões. Se você não criar uma interface de usuário personalizada, os usuários poderão configurar seu gerenciador de conexões somente utilizando a janela Propriedades.  

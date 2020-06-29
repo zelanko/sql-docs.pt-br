@@ -10,14 +10,14 @@ helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 83f3342d69b1d7bc60b1db502ca0761c6f58c3df
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84857ae2c65e1a63e4dc0632088f00491a9b59fb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967340"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428523"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (Maior que) (Expressão SSIS)
   Executa uma comparação para determinar se a primeira expressão é maior que a segunda. O avaliador de expressões converte automaticamente muitos tipos de dados antes de executar a comparação.  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b19c8464e894723aae0f7a32ce8c423205da2338
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4e9279cefd3167d2f634cfc7bdd15f107532330f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967422"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428973"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Condicional) (Expressão SSIS)
   Retorna uma de duas expressões baseadas na avaliação de uma expressão booliana. Se a expressão Booleana for avaliada como TRUE, a primeira expressão será avaliada e o resultado será o resultado da expressão. Se a expressão Booleana for avaliada como FALSE, a segunda expressão será avaliada e seu resultado será o resultado da expressão.  

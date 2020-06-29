@@ -12,14 +12,14 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9db752a0910abb1a671e50b3a7a34fd2fd9cff68
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5f880de91cad3925e43a65e6282319dbb1e57ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967006"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429703"
 ---
 # <a name="date-and-time-formats"></a>Formatos de data e hora
   A análise rápida fornece um conjunto de rotinas simples e rápidas para analisar dados. A análise rápida oferece suporte aos seguintes formatos de tipos de dados de data e hora.  

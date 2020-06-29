@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7f89d495aa8826250c04f3e0cfe5979d5f202ac8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a0eb1847082434edf5eae84e3fe788bf57814a8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966986"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429523"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Assinatura Digital
   Use a caixa de diálogo **Assinatura Digital** para assinar um pacote com uma assinatura digital ou remover a assinatura. A caixa de diálogo **Assinatura Digital** está disponível na opção **Assinatura Digital** do menu **SSIS** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

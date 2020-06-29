@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77dca7daad7a26700b68a786f844062c761a8149
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4222f3017b4a62fc080100bf028475eddc5a58fa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939097"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429723"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>Editor de Transformação Consultas de Mineração de Dados (Guia Consulta)
   Use a guia **Consulta** da caixa de diálogo **Editor de Transformação Consultas de Mineração de Dados** para criar uma consulta de previsão.  

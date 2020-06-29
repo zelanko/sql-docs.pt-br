@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 337b261c8c6b51125510ae463a673c746d7d6604
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966826"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429283"
 ---
 # <a name="execute-package-task-editor"></a>Editor da tarefa Executar Pacote
   Use o Editor da tarefa Executar Pacote para configurar a Tarefa Executar Pacote. A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  

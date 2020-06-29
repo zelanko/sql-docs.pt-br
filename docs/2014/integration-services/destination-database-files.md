@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fe81b8a54f92d32c71d84987f5841679580b4f77
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 10adc503f5b6c7212d582bfe7d625db51486092a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967506"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429533"
 ---
 # <a name="destination-database-files"></a>Arquivos de banco de dados de destino
   Use a caixa de diálogo **Arquivos do Banco de Dados de Destino** para exibir ou alterar os nomes e locais dos arquivos de banco de dados no servidor de destino ou especificar um local de arquivos na rede para a tarefa Transferir Banco de Dados. Para obter mais informações sobre essa tarefa, consulte [Tarefa Transferir Banco de Dados](control-flow/transfer-database-task.md).  
