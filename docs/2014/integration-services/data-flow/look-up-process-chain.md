@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a41cdeec7730fe26e6902a77d3da07c52a0da42d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eca04bf01440f323fbb0c430af025f8f17b95780
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915352"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432093"
 ---
 # <a name="look-up-process-chain"></a>Pesquisar cadeia de processo
   Use a caixa de diálogo **Pesquisar Cadeia de Processo** para pesquisar uma cadeia de processo definida no sistema SAP Netweaver BW. Quando a lista de cadeias de processo disponível é exibida, selecione a cadeia que você quer e a origem preencherá as opções associadas com os valores necessários.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - removing files
 - Maintenance Cleanup task
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 78f0049426beed64996d471446377566a3e669bb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b7e58181f01718bd4327e05cbfeb4a40b50b9a93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918566"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432793"
 ---
 # <a name="maintenance-cleanup-task"></a>Tarefa Limpeza de Manutenção
   A tarefa de Limpeza de Manutenção remove arquivos relacionados a planos de manutenção, inclusive arquivos de backup de banco de dados e relatórios criados por planos de manutenção. Para obter mais informações, consulte [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md) e [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  

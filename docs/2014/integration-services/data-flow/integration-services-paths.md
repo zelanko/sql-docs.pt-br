@@ -13,14 +13,14 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 06746ae92c4e5d868cf5aff709ceccbbd200b68e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c225d2fe52fcb12a5abc22df5008b6cbc9b861a0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915439"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432103"
 ---
 # <a name="integration-services-paths"></a>Caminhos do Integration Services
   Um caminho conecta dois componentes em um fluxo de dados conectando a saída de um componente de fluxo de dados à entrada de outro componente. Um caminho tem uma origem e um destino. Por exemplo, se um caminho conectar uma origem OLE DB e uma transformação Classificação, a origem OLE DB será a origem do caminho e a transformação Classificação será o destino do caminho. A origem é o componente onde o caminho inicia, e o destino é o componente onde o caminho termina.  

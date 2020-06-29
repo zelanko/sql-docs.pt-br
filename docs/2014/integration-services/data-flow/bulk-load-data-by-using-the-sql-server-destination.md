@@ -13,14 +13,14 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7c76318277d718f93bb5d33746a9bf3d62c9bf28
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 202582f45fbf3230a07328b6b108ec31c76ef7c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916706"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432403"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Carregar dados em massa por meio do destino do SQL Server
   Para adicionar e configurar um destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte de dados.  

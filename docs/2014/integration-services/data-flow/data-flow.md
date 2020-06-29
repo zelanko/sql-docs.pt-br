@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 382efef5a3eea4dcc2cfed833ea7d9ebe5d5186b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 450fe147876d74aa4f80e01a1c370221338a6cc0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916266"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432323"
 ---
 # <a name="data-flow"></a>Fluxo de Dados
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de componentes de fluxo de dados: fontes, transformações e destinos. As fontes extraem dados de armazenamentos de dados, como tabelas e exibições em bancos de dados relacionais, arquivos e bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . As transformações modificam, resumem e limpam dados. Os destinos carregam dados em repositórios de dados ou criam conjuntos de dados na memória.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51f92ddc8903a5c9dea9982866a22a19b013f41a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915206"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431973"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modifique a consulta de origem do OData em runtime
   Você pode alterar a consulta de origem OData em runtime adicionando uma expressão à propriedade de **[OData Source].[Consulta]** da Tarefa de Fluxo de Dados.  

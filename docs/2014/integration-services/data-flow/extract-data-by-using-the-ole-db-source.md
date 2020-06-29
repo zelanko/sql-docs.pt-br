@@ -11,14 +11,14 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: aa6e88fec83b6d70a7f96f91ea09b4fcd6ad13c9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9ca00dfe612f5735f767d50c66ebbb0e079bc39c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915676"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432173"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extrair dados por meio da origem OLE DB
   Para adicionar e configurar uma origem OLE DB, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados.  

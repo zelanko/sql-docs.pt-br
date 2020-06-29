@@ -14,14 +14,14 @@ helpviewer_keywords:
 - containers [Integration Services], Sequence
 - subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c380921202b1037c3bd066f4aef0610703a75a91
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9769eddb7c10492f867395dfc1fa69b6b1260060
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918196"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432693"
 ---
 # <a name="sequence-container"></a>Contêiner de sequência
   O contêiner da sequência define um fluxo de controle que é um subconjunto do fluxo de controle do pacote. Os contêineres da sequência agrupam o pacote em vários fluxos de controle separados, cada um contendo uma ou mais tarefas e contêineres, que são executados dentro do fluxo de controle de pacote geral.  

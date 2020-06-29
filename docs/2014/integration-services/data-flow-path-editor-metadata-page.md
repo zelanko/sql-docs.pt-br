@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9441d9cc13ce509183d25359323df16152998581
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 060933ad5e7be5d55ba0d44de1343668e9bd66e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916996"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432483"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>Editor de Caminho do Fluxo de Dados (página Metadados)
   Use a página **Metadados** da caixa de diálogo **Editor do Caminho de Fluxo de Dados** para exibir o metadados das colunas de caminho.  

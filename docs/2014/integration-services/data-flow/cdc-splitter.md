@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9daabd4898adcf2ef340e3f134b436fab53ab974
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 290cc29a8bdf4ebb3a7b8cd0e4d2c3c11610987a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916506"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432353"
 ---
 # <a name="cdc-splitter"></a>Separador de CDC
   O separador de CDC divide um único fluxo de linhas de alteração de um fluxo de dados de origem CDC em diferentes fluxos de dados para operações de Inserir, Atualizar e Excluir. O fluxo de dados é dividido com base na coluna necessária de `__$operation` e seus valores padrão em tabelas de alterações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  

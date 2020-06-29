@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4a1d86dce6be4ed342fe8d90fefe53649533b816
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d2d9c9470364c13380751e3e7aca1fef13973a76
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915236"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432003"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapear parâmetros de consulta para variáveis em um componente de fluxo de dados
   Quando você configura a fonte OLE DB para usar consultas parametrizadas, pode mapear os parâmetros para variáveis.  

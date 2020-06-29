@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b452acb2e9d168910fec06d959ce3a1c1704b814
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e68fb1edd69e20628baaeda8802ec712da7d5117
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917076"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432613"
 ---
 # <a name="data-conversion-transformation-editor"></a>Editor de Transformação Conversão de Dados
   Use a caixa de diálogo **Editor de Transformação Conversão de Dados** para selecionar as colunas a converter, selecionar o tipo de dados ao qual converter a coluna e definir atributos de conversão.  

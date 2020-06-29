@@ -14,14 +14,14 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86fd70a516bfa6a449bfd9146e439b60dcbbbbf1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ff3e455e5d98d9edc812d80c6851026286986338
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916136"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432233"
 ---
 # <a name="data-mining-model-training-destination"></a>Destino de treinamento do modelo de mineração de dados
   Um destino de treinamento de modelos de mineração de dados treina modelos de mineração de dados ao passar os dados que o destino recebe pelos algoritmos de modelo de mineração de dados. Vários modelos de mineração de dados poderão ser treinados por um destino se os modelos forem criados na mesma estrutura de mineração de dados. Para obter mais informações, consulte [Mining Structure Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) e [Mining Model Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 138db9b23aba930f47e850599d04ba7f5c8e6320
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4a2d5bd5a55fdd21f8722ac494a5214fdb12299b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915363"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432113"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Carregar dados por meio do destino OLE DB
   Para adicionar e configurar um destino OLE DB, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c9544f7ae00d3a0eda732b43e9485cafa23536ed
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ec872407dbec3885f72c4300b90cb3e11d1bcf92
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918942"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433033"
 ---
 # <a name="for-loop-container"></a>Contêiner Loop For
   O contêiner Loop For define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **For** em linguagens de programação. Em cada repetição do loop, o contêiner Loop For avalia uma expressão e repete seu fluxo de trabalho até a expressão ser avaliada como `False`.  

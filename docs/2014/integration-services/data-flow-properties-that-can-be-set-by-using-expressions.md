@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3d23037bc09b735fc28e52eabb1852d1af303d15
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf52a4488cb90d65c373111babd359da612668d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916936"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432463"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriedades de fluxo de dados que podem ser definidas usando expressões
   Os valores de certas propriedades dos objetos de fluxo de dados podem ser especificados usando expressões de propriedades disponíveis no contêiner da tarefa de Fluxo de Dados.  

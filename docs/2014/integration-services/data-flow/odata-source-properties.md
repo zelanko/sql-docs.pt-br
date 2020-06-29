@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 26be406c26c362f1bd7fc5880e7c889fbd450ad6
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8139f79ed595ca3e6204f96823f6bc95e6fb40df
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915180"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431903"
 ---
 # <a name="odata-source-properties"></a>Propriedades da origem do OData
   Ao clicar com o botão direito do mouse em **Origem OData** no fluxo de dados e clicar em **Propriedades**, você verá as propriedades do componente de **Origem OData** na janela **Propriedades** .  

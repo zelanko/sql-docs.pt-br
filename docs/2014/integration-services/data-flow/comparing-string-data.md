@@ -13,14 +13,14 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 99d1954d2509b15591239e14727cf9c88eb26054
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fbfb92a70f795cc3098303d666b59ebfc0bebc74
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916507"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432343"
 ---
 # <a name="comparing-string-data"></a>comparando dados de cadeia de caracteres
   Comparações de cadeia de caracteres são uma parte importante de muitas das transformações realizadas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e as comparações de cadeia de caracteres também são usadas na avaliação de expressões em variáveis e expressões de propriedade. Por exemplo, a transformação de Classificação compara valores em um conjunto de dados para classificar dados em ordem crescente ou decrescente.  

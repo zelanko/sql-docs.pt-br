@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f74a564bf3cc3f70ef685c3adf23fd5a117711cc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918816"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433023"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote
   As tarefas de criação de perfil e limpeza de dados não são candidatas a um processo automatizado em seus estágios iniciais. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a saída da tarefa Criação de Perfil de Dados normalmente exige uma análise visual e uma opinião humana para determinar se as violações relatadas são significativas ou demasiadas. Mesmo depois de reconhecer os problemas de qualidade dos dados, ainda é necessário fazer um planejamento cuidadoso para escolher a melhor abordagem de limpeza.  

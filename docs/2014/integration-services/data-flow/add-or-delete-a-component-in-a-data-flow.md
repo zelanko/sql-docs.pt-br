@@ -10,14 +10,14 @@ helpviewer_keywords:
 - adding components
 - components [Integration Services], data flow
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1d66397729b4263cfed4a2911417b932d049fd30
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d68c57031b830fd891b4e2f0bcd8df87aa06732f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916848"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432443"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>Adicionar ou excluir um componente em um fluxo de dados
   Os componentes de fluxo de dados são fontes, destinos e transformações em um fluxo de dados. Para adicionar componentes a um fluxo de dados, o fluxo de controle do pacote deve incluir uma tarefa Fluxo de Dados.  
