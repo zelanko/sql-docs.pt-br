@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ebdddaaef7c0b87ff25e639fff26a2b858ed6a1e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 066e50249d8f39303e98ff7647c3cf88b8202095
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914356"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437733"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>Editor de Origem de SAP BW (página Colunas)
   Use a página **Colunas** do **Editor de Origem SAP BW** para mapear uma coluna de saída em cada coluna externa (origem).  

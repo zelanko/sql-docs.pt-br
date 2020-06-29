@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55e71b6615afc15c2963b4dbb9bfbf2790e90b3b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963106"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421552"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Definir as propriedades de uma restrição de precedência
   Para definir propriedades em restrições de precedência, você pode usar uma destas ferramentas:  
@@ -71,7 +71,7 @@ ms.locfileid: "84963106"
     |EvalOp|Selecione uma operação de avaliação. Se a `Expression` operação, **ExpressionAndConstant**ou **ExpressionOrConstant** for selecionada, você poderá especificar uma expressão.|  
     |Expression|Se a operação de avaliação incluir uma expressão, forneça uma expressão. A expressão deve ser avaliada como um booliano. Para obter mais informações sobre a linguagem de expressão, consulte [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Defina `LogicalAnd` para especificar se a restrição de precedência é avaliada em conjunto com outras restrições de precedência, quando vários executáveis precedem e estão vinculados ao executável restrito|  
-    |Nome|Atualize o nome da restrição de precedência.|  
+    |Name|Atualize o nome da restrição de precedência.|  
     |ShowAnnotation|Especifique o tipo de anotação a ser usada. Selecione **Nunca** para desabilitar anotações, **AsNeeded** para habilitar a anotação sob demanda, **ConstraintName** para efetuar anotações automáticas usando o valor da propriedade Name, **ConstraintDescription** para efetuar anotações automaticamente usando o valor da propriedade Description e **ConstraintOptions** para efetuar anotações automáticas usando os valores das propriedades Value e Expression.|  
     |Valor|Se a operação de avaliação especificada na propriedade EvalOP incluir uma restrição, selecione o resultado de execução do executável de restrição.|  
   

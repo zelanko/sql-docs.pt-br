@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File Connection Manager Editor
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9128f73dc8fec388ae111781b9beeb52bbab138b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ae883d085b1f6416096255a3b87d6e5872bc5e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967146"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425703"
 ---
 # <a name="file-connection-manager-editor"></a>Editor do Gerenciador de Conexões de Arquivos
   Use a caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos** para especificar as propriedades usadas para conectar a um arquivo ou pasta.  

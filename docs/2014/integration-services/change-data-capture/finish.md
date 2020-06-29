@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - finish
 ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 246528596017d8b3434eeb194ce8de832ca4538e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f4425ed0274f924e482fae34533aa2fc6c450eb9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923212"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438663"
 ---
 # <a name="finish"></a>Concluir
   A página **Fim** resume o processo do assistente. Clique em **Fim** para fechar o assistente e gerar todas as tabelas que você definiu no assistente Criar Instância CDC.  

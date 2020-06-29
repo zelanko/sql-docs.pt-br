@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 41a5d4530be6250795e083726df59acbd2f7f7aa
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a79b0966dd43d5da8599699cb4b345bb34f30cc7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939137"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437513"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Modelo de Mineração)
   Use a guia **Modelo de Mineração** da caixa de diálogo **Tarefa Consulta de Mineração de Dados** para especificar a estrutura e o modelo de mineração a serem usados.  

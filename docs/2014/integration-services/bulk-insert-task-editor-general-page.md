@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d4349e520e248c581ba588bf58781bf037a97781
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5be6b15e00a412180d57a5501eb84572db616488
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924597"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439153"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Editor da Tarefa Inserção em Massa (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para nomear e descrever a tarefa Inserção em Massa.  

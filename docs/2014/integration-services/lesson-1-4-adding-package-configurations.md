@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6bd27e4ea4afee42cff12d9b01f09c6cffef8478
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965286"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436023"
 ---
 # <a name="step-4-adding-package-configurations"></a>Etapa 4: Adicionar configurações de pacote
   Nessa tarefa, você adicionará uma configuração a cada pacote. As configurações atualizam os valores das propriedades e dos objetos do pacote em tempo de execução.  
@@ -46,7 +46,7 @@ ms.locfileid: "84965286"
     > [!NOTE]  
     >  Para disponibilizar a variável de ambiente na lista, talvez você precise reiniciar o computador após a adição da variável. Se você não quiser reiniciar o computador, poderá digitar o nome da variável de ambiente.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
 8.  Na página Concluindo o Assistente, digite **DataTransfer EV Configuration** na caixa **Nome da Configuração** , revise o conteúdo da configuração no painel **Visualização** e clique em **Concluir**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "84965286"
   
 10. Em Gerenciadores de Conexões, expanda NewCustomers e marque a caixa de seleção **Cadeia de Conexão** .  
   
-11. Clique em **Próximo**.  
+11. Clique em **Avançar**.  
   
 12. Na página Concluindo o Assistente, digite **DataTransfer Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "84965286"
     > [!NOTE]  
     >  Para disponibilizar a variável de ambiente na lista, talvez você precise reiniciar o computador após a adição da variável.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
 8.  Na página Concluindo o Assistente, digite **LoadXMLData EV Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "84965286"
   
 9. Na página Selecionar Propriedades a Serem Exportadas, expanda LoadXMLData, Executáveis, Carregar Dados XML e Propriedades e marque as caixas de seleção **[XMLSource].[XMLData]** e **[XMLSource].[XMLSchemaDefinition]** .  
   
-10. Clique em **Próximo**.  
+10. Clique em **Avançar**.  
   
 11. Na página Concluindo o Assistente, digite **LoadXMLData Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
