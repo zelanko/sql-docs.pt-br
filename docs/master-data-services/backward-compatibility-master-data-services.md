@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7c6236da4a424a3f328671e7a2a3556b47321748
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ce24e70cebaf5774565d99693b88fb77d8e021
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813694"
 ---
 # <a name="backward-compatibility-master-data-services"></a>Compatibilidade com versões anteriores (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Esta seção descreve as alterações entre as versões do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Ela abrange recursos que não estão mais disponíveis ou que estão agendados para serem removidos em uma versão posterior. Também descreve alterações no produto que são conhecidas por interromper ou alterar o comportamento de um aplicativo existente que inclua a funcionalidade do Integration Services.  
   

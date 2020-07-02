@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a0bcf7bc1cdf28aae4fc281f14f8edeec9f6c47d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cfb67f59d7a383d7ca7376c30435462c9a6199d7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76916304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814119"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching---data-quality-services-dqs"></a>Configurar valores de limite para limpeza e correspondência de serviços de qualidade de dados (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como configurar valores de limite que serão usados durante a limpeza auxiliada por computador e as atividades correspondentes no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
@@ -53,6 +53,6 @@ ms.locfileid: "76916304"
   
 5.  Para especificar um valor de limite para a atividade de correspondência, especifique um valor na caixa **Pontuação mínima de registro** na área **Correspondência** . Esse valor significa a pontuação mínima para um registro a ser considerado como uma correspondência para outro registro. O valor padrão é 80%.  
   
-6.  Clique em **Fechar**.  
+6.  Clique em **fechar**  
   
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce0f10316be9aa9f9b2b23a24642d8cd7d0eda1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c64bacdec9e0d8640b5b5884a6dcaf04f99214
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813102"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Criar um atributo de arquivo (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de arquivo para popular os valores de atributo com arquivos.
 
@@ -41,9 +41,9 @@ ms.locfileid: "78175107"
 |Coluna|Descrição|
 |------------|-----------------|
 |Status|O status do atributo.<br /><br /> Quando você clica em salvar, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status") é exibido, indicando que o atributo está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um atributo, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK") é exibido.|
-|Nome|O nome do atributo.|
+|Name|O nome do atributo.|
 |Nome de exibição|O nome de exibição do atributo.|
-|Descrição|A descrição do atributo.|
+|Description|A descrição do atributo.|
 |Exibir Largura em Pixels|A largura do atributo.|
 |Tipo e Propriedades|As informações de tipo e de tipo de dados do atributo.|
 |Habilitar Controle de Alterações|Especifica se o atributo está habilitado para o controle de alterações e mostra o número do grupo entre parênteses.|
@@ -88,7 +88,7 @@ ms.locfileid: "78175107"
 
 11. Opcionalmente, selecione **Habilitar controle de alterações** para controlar alterações de grupos de atributos. Para obter mais informações, consulte [Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
 
-12. Clique em **Salvar**.
+12. Clique em **Save** (Salvar).
 
 ## <a name="see-also"></a>Consulte Também
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md) [alterar um nome de atributo e um tipo de dados &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;[criar um atributo baseado em domínio &#40;](../master-data-services/create-a-domain-based-attribute-master-data-services.md) Master Data Services&#41;[criar um atributo de texto &#40;](../master-data-services/create-a-text-attribute-master-data-services.md) Master Data Services&#41;

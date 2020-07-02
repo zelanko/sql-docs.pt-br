@@ -3,7 +3,7 @@ title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c8aeffd66f812b682610ad16abc6c4336b77b9c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: aa14b65d527de3efa82f54212e6668e232197486
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813889"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]    
 
   Retorna informações de um arquivo de auditoria criado por uma auditoria de servidor no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -51,19 +51,19 @@ fn_get_audit_file ( file_pattern,
     
     Esse argumento deve incluir um caminho (letra de unidade ou compartilhamento de rede) e um nome de arquivo, podendo conter um caractere curinga. Um único asterisco (*) pode ser usado para coletar vários arquivos de um conjunto de arquivos de auditoria. Por exemplo:  
   
-    -   ** \< caminho \\>\* ** -coletar todos os arquivos de auditoria no local especificado.  
+    -   **\<path>\\\***-Coletar todos os arquivos de auditoria no local especificado.  
   
-    -   ** \< caminho> \ LOGINSAUDIT_ {GUID}***-coletar todos os arquivos de auditoria que têm o nome e o par GUID especificados.  
+    -   ** \<path> \ LOGINSAUDIT_ {GUID}***-coletar todos os arquivos de auditoria que têm o nome e o par GUID especificados.  
   
-    -   ** \< caminho> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** -coleta um arquivo de auditoria específico.  
+    -   ** \<path> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** -coleta um arquivo de auditoria específico.  
   
  - **Banco de dados SQL do Azure**:
  
     Esse argumento é usado para especificar uma URL de BLOB (incluindo o ponto de extremidade de armazenamento e o contêiner). Embora não ofereça suporte a um curinga de asterisco, você pode usar um prefixo de nome de arquivo parcial (BLOB) (em vez do nome de blob completo) para coletar vários arquivos (BLOBs) que começam com esse prefixo. Por exemplo:
  
-      - ** \< Storage_endpoint \> / \< contêiner \> / \< ServerName \> / \< DatabaseName \> - / ** coleta todos os arquivos de auditoria (BLOBs) para o banco de dados específico.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**-coleta todos os arquivos de auditoria (BLOBs) para o banco de dados específico.    
       
-      - ** \< Storage_endpoint \> / \< container \> / \< nomedoservidor \> / \< DatabaseName \> / \< AuditName \> / \< CreationDate \> / \< filename \> . xel** -coleta um arquivo de auditoria específico (BLOB).
+      - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . xel** -coleta um arquivo de auditoria específico (BLOB).
   
 > [!NOTE]  
 >  Indicar um caminho sem um padrão de nome de arquivo irá gerar um erro.  

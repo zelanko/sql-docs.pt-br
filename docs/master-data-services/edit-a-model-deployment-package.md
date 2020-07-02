@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3de531d906608e32ea505a3a2383c0919b5165d8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728223"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813305"
 ---
 # <a name="edit-a-model-deployment-package"></a>Editar um pacote de implantação de modelo
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como implantar partes selecionadas de um modelo em MDS, e não um modelo inteiro. Para fazer isso, edite um pacote de modelo MDS usando o Editor de Pacote de Modelo.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "73728223"
   
 2.  Execute ModelPackageEditor.exe.  
   
-3.  No assistente de Editor de Pacote de Modelo, clique em **Procurar**, vá até a pasta que contém seus pacotes, selecione um pacote e clique em **Abrir**. Clique em **Avançar**.  
+3.  No assistente de Editor de Pacote de Modelo, clique em **Procurar**, vá até a pasta que contém seus pacotes, selecione um pacote e clique em **Abrir**. Clique em **Próximo**.  
   
-4.  Selecione essas entidades, hierarquias derivadas, exibições de assinaturas ou regras de negócio a serem implantadas. Cancele a seleção do que você não deseja implantar. Clique em **Avançar**.  
+4.  Selecione essas entidades, hierarquias derivadas, exibições de assinaturas ou regras de negócio a serem implantadas. Cancele a seleção do que você não deseja implantar. Clique em **Próximo**.  
   
 5.  Verifique a lista de seleções a ser implantada. Para alterar, clique em **Voltar** e repita a etapa 4.  
   
-6.  Clique em **Procurar**, vá para a pasta na qual você deseja salvar o pacote parcial e insira o nome de arquivo do pacote parcial (com uma extensão .pkg). Clique em **Salvar**.  
+6.  Clique em **Procurar**, vá para a pasta na qual você deseja salvar o pacote parcial e insira o nome de arquivo do pacote parcial (com uma extensão .pkg). Clique em **Save** (Salvar).  
   
 7.  Clique em **Concluir**.  
   

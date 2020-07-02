@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc77f107fe0b3e57e1e8f48fb0e413d9ea22f31f
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558161"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813761"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Tipos de dados SQL Server e SSIS com suporte para domínios do DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Há muitos tipos de dados no SQL Server e no SSIS (SQL Server Integration Services), mas somente quatro tipos de dados para domínios do DQS: Data, Decimal, Inteiro e Cadeia de Caracteres. Nem todos os SQL Server e tipos de dados do SSIS têm suporte no DQS. Você poderá mapear sua fonte de dados para um domínio DQS para realizar atividades de qualidade de dados somente se o tipo de dados de origem tiver suporte no DQS e corresponder ao tipo de dados de domínio do DQS. Este tópico fornece informações sobre os tipos de dados do SQL Server e do SSIS que têm suporte e estão disponíveis para mapear para cada um dos quatro tipos de dados de domínio no DQS.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75558161"
   
 |Tipo de dados de domínio DQS|Tipo de dados do SQL Server com suporte|  
 |--------------------------|------------------------------------|  
-|Data|date|  
+|Data|data|  
 |Decimal|decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> numeric<br /><br /> real<br /><br /> SMALLMONEY|  
 |Integer|BIGINT<br /><br /> INT<br /><br /> SMALLINT<br /><br /> TINYINT|  
 |String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  

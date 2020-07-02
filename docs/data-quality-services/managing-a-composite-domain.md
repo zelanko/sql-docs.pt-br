@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: bbffbbda18da28be0623c31f4608f5b25f21d2ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae41076d014e86e0f37978cfa72a49f0d3002959
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258449"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814066"
 ---
 # <a name="managing-a-composite-domain"></a>Gerenciando um domínio composto
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve o uso dos domínios compostos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Às vezes, um domínio único não representa os dados de um campo satisfatoriamente, e você pode representar os dados apenas agrupando domínios únicos. Para fazer isso, crie um domínio composto. Um domínio composto consiste em dois ou mais domínios únicos, e é mapeado para um campo de dados que consiste em vários termos relacionados que não são analisados, mas são incluídos em um valor composto único. Cada termo no valor será representado por um único domínio diferente. Quando você incluir domínios únicos em domínios compostos e mapear o domínio composto para o campo de dados, poderá compilar o conhecimento sobre os dados nesse campo da base de dados de conhecimento, compilando o conhecimento nos domínios únicos. Um domínio composto, assim como um domínio único, é uma representação semântica dos dados em um único campo de dados.  
   

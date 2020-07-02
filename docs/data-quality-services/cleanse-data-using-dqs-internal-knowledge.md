@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 280149ccb0e94b1ca7bcca75616ec5353f41e62b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b74bcf3ceb8105da7515a227e76fd9cd992ebbb2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813882"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpar dados usando o conhecimento do DQS (interno)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como limpar seus dados usando um projeto de qualidade de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A limpeza de dados é executada na fonte de dados com o uso de uma base de dados de conhecimento que foi criada no DQS a partir de um conjunto de dados de alta qualidade. Para obter mais informações, consulte [Criando uma base de dados de conhecimento](../data-quality-services/building-a-knowledge-base.md).  
   
@@ -105,13 +105,13 @@ ms.locfileid: "75255687"
   
  Com base no nível de confiança, os valores são exibidos nas cinco guias a seguir:  
   
-|Tab|Descrição|  
+|Tab|Description|  
 |---------|-----------------|  
 |**Sugere**|Exibe os valores de domínio para os quais o DQS encontrou os valores sugeridos que têm um nível de confiança superior ao valor de *limite de sugestão automática* , mas inferior ao valor do *limite de correção automática* .<br /><br /> Os valores sugeridos são exibidos na coluna **Corrigir para** em relação ao valor original. Você pode clicar no botão de opção na coluna **Aprovar** ou **Rejeitar** em relação a um valor na grade superior para aceitar ou rejeitar a sugestão para todas as instâncias do valor. Nesse caso, o valor aceito passa para a guia **Corrigido** e o valor rejeitado passa para a guia **Inválido** .|  
 |**Novo**|Exibe o domínio válido para o qual o DQS não tem informações suficientes e, portanto, não pode ser mapeado para nenhuma outra guia. Além disso, essa guia também contém valores que têm nível de confiança menor que o valor de *limite de sugestão automática* , mas alta o suficiente para ser marcado como válido.<br /><br /> Se você considerar o valor correto, clique no botão de opção na coluna **Aprovar** . Ou clique no botão de opção na coluna **Rejeitar** . O valor aceito passa para a guia **correto** e o valor rejeitado se move para a guia **inválida** . Você também pode digitar manualmente o valor correto como uma substituição para o valor original na coluna **corrigir para** em relação ao valor e, em seguida, clicar no botão de opção na coluna **aprovar** para aceitar a alteração. Nesse caso, o valor passa para a guia **Corrigido** .|  
 |**Inválido**|Exibe os valores de domínio que foram marcados como inválidos no domínio na base de dados de conhecimento ou os valores que falharam em uma regra de domínio. Essa guia também contém valores que foram rejeitados pelo usuário em qualquer uma das quatro guias.<br /><br /> No entanto, se você considerar o valor correto, clique no botão de opção na coluna **Aprovar** . O valor aceito passa para a guia **correta** . Você também pode digitar manualmente o valor correto como uma substituição para o valor original na coluna **corrigir para** em relação ao valor e, em seguida, clicar no botão de opção na coluna **aprovar** para aceitar a alteração. Nesse caso, o valor passa para a guia **Corrigido** .|  
 |**Correta**|Exibe os valores de domínio corrigidos pelo DQS durante o processo de limpeza automatizado uma vez que o DQS localizou uma correção para o valor com um nível de confiança acima do valor de limite de correção automática.<br /><br /> Os valores corrigidos são exibidos na coluna **Corrigir para** em relação ao valor original. Por padrão, o botão de opção na coluna **Aprovar** em relação ao valor está selecionado. Se necessário, você poderá rejeitar a correção proposta clicando no botão de opção na coluna **Rejeitar** para passar para a guia **Inválido** ou digitar manualmente o valor correto na coluna **Corrigir para** e clicar no botão de opção na coluna **Aprovar** para aceitar a alteração e passá-la para a guia **Corrigido** .|  
-|**Correto**|Exibe os valores de domínio que foram considerados corretos. Por exemplo, o valor correspondeu a um valor de domínio. Essa guia também contém os valores que foram aprovados pelo usuário clicando no botão de opção na coluna **Aprovar** nas guias **Novo** e **Inválido** .<br /><br /> Por padrão, o botão de opção na coluna **Aprovar** está selecionado em relação a cada valor. No entanto, se você achar que um valor nessa guia está incorreto, poderá clicar no botão de opção na coluna **Rejeitar** em relação ao valor para passá-lo para a guia **Inválido** ou digitar manualmente o valor correto como um substituto para o valor na coluna **Corrigir para** do valor e depois clicar no botão de opção na coluna **Aprovar** para aceitar a alteração e passá-la para a guia **Corrigido** .|  
+|**Corrigi**|Exibe os valores de domínio que foram considerados corretos. Por exemplo, o valor correspondeu a um valor de domínio. Essa guia também contém os valores que foram aprovados pelo usuário clicando no botão de opção na coluna **Aprovar** nas guias **Novo** e **Inválido** .<br /><br /> Por padrão, o botão de opção na coluna **Aprovar** está selecionado em relação a cada valor. No entanto, se você achar que um valor nessa guia está incorreto, poderá clicar no botão de opção na coluna **Rejeitar** em relação ao valor para passá-lo para a guia **Inválido** ou digitar manualmente o valor correto como um substituto para o valor na coluna **Corrigir para** do valor e depois clicar no botão de opção na coluna **Aprovar** para aceitar a alteração e passá-la para a guia **Corrigido** .|  
   
  Para limpar os dados interativamente:  
   
@@ -159,17 +159,17 @@ ms.locfileid: "75255687"
   
     -   **Dados e Informações de Limpeza**: clique no botão de opção para exportar os seguintes dados para cada domínio:  
   
-        -   >_Source de domínio: o valor original no domínio. ** \<**  
+        -   ** \<Domain> _Source**: o valor original no domínio.  
   
-        -   >_Output de domínio: os valores limpos no domínio. ** \<**  
+        -   ** \<Domain> _Output**: os valores limpos no domínio.  
   
-        -   >_Reason de domínio: o motivo especificado para a correção do valor. ** \<**  
+        -   ** \<Domain> _Reason**: o motivo especificado para a correção do valor.  
   
-        -   >_Confidence de domínio: o nível de confiança para todos os termos que foram corrigidos. ** \<** É exibida como o valor decimal equivalente ao valor percentual correspondente. Por exemplo, um nível de confiança de 95% será exibido como .9500000.  
+        -   ** \<Domain> _Confidence**: o nível de confiança para todos os termos que foram corrigidos. É exibida como o valor decimal equivalente ao valor percentual correspondente. Por exemplo, um nível de confiança de 95% será exibido como .9500000.  
   
-        -   >_Status de domínio: o status do valor de domínio após a limpeza de dados. ** \<** Por exemplo, **Sugerido**, **Novo**, **Inválido**, **Corrigido**ou **Correto**.  
+        -   ** \<Domain> _Status**: o status do valor de domínio após a limpeza de dados. Por exemplo, **Sugerido**, **Novo**, **Inválido**, **Corrigido**ou **Correto**.  
   
-        -   **Status do Registro**: além de ter um campo de status para cada domínio mapeado, **(\<DomainName>_Status**), o campo **Status do Registro** exibe o status de um registro. Se qualquer um dos status do domínio no registro for *novo* ou *correto*, o **status do registro** será definido como *correto*. Se qualquer um dos status do domínio no registro for *sugerido*, *inválido*ou *corrigido*, o status do **registro** será definido como o respectivo valor. Por exemplo, se qualquer um dos status do domínio no registro for *sugerido*, o **status do registro** será definido como *sugerido*.  
+        -   **Status do registro**: além de ter um campo de status para cada domínio mapeado **( \<DomainName> _Status**), o campo **status do registro** exibe o status de um registro. Se qualquer um dos status do domínio no registro for *novo* ou *correto*, o **status do registro** será definido como *correto*. Se qualquer um dos status do domínio no registro for *sugerido*, *inválido*ou *corrigido*, o status do **registro** será definido como o respectivo valor. Por exemplo, se qualquer um dos status do domínio no registro for *sugerido*, o **status do registro** será definido como *sugerido*.  
   
             > [!NOTE]  
             >  Se você usar o serviço de dados de referência para a operação de limpeza, alguns dados adicionais sobre o valor de domínio também estarão disponíveis para exportação. Para obter mais informações, consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

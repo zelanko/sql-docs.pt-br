@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dd61751b4ade5a97caa025f44786d952e98f5dd0
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a548312fd258040409a9cf74fc5cdc9a70536af8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796345"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813012"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Hierarquias derivadas (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Uma hierarquia derivada do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] é derivada de relações de atributos baseados em domínio que já existem entre entidades em um modelo.  
   

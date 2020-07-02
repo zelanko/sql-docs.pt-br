@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e128ba2b53383c83bc58ba66526e9768355e140b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43fa563892d1c48941c016e661f52e899989daf
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727867"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813212"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Área funcional Administração do Sistema (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Na área funcional Administração do Sistema, os administradores podem criar um modelo e todos os seus objetos. Eles também podem criar regras de negócio e criar e implantar pacotes modelo. Para obter mais informações sobre administradores, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   

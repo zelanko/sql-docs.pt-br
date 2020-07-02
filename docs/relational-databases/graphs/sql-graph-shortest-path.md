@@ -1,7 +1,7 @@
 ---
 title: CAMINHO mais curto (SQL Graph) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753256"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834630"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
@@ -62,7 +62,7 @@ A ordem do caminho do grafo refere-se à ordem dos dados no caminho de saída. A
 ## <a name="graph-path-aggregate-functions"></a>Funções de agregação de caminho do grafo
 Como os nós e as bordas envolvidos no padrão de comprimento arbitrário retornam uma coleção (de nó (s) e borda (s) atravessados nesse caminho), os usuários não podem projetar os atributos diretamente usando a sintaxe convencional TableName. AttributeName. Para consultas em que é necessário projetar valores de atributo do nó intermediário ou tabelas de borda, no caminho atravessado, use as seguintes funções de agregação de caminho do grafo: STRING_AGG, LAST_VALUE, SUM, AVG, MIN, MAX e COUNT. A sintaxe geral para usar essas funções de agregação na cláusula SELECT é:
 
-```
+```syntaxsql
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
 
     <order_clause> ::=
@@ -95,8 +95,9 @@ Essa função retorna a soma dos valores de atributo de nó/borda fornecidos ou 
 ### <a name="count"></a>COUNT
 Essa função retorna o número de valores não nulos do atributo de nó/borda desejado no caminho. A função COUNT dá suporte ao \* operador ' ' com um alias de tabela de nó ou borda. Sem o alias de tabela de nó ou borda, o uso de \* é ambíguo e resultará em um erro.
 
-    {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
-
+```syntaxsql
+{  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
+```
 
 ### <a name="avg"></a>AVG
 Retorna a média de valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
@@ -120,7 +121,7 @@ Para as consultas de exemplo mostradas aqui, vamos usar as tabelas node e Edge c
 ### <a name="a--find-shortest-path-between-2-people"></a>a.  Localizar caminho mais curto entre 2 pessoas
  No exemplo a seguir, encontramos um caminho mais curto entre Jacob e Alice. Precisaremos do nó Person e da borda FriendOf criada a partir do script de exemplo do Graph. 
 
- ```
+```sql
 SELECT PersonName, Friends
 FROM (  
     SELECT
@@ -135,12 +136,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
  ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  Localize o caminho mais curto de um determinado nó para todos os outros nós no grafo. 
  O exemplo a seguir localiza todas as pessoas às quais o Jacob está conectado no grafo e o caminho mais curto, começando de Jacob a todas essas pessoas. 
 
- ```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -150,12 +151,12 @@ FROM
     Person FOR PATH  AS Person2
 WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
- ```
+```
 
 ### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  Conte o número de saltos/níveis atravessados para passar de uma pessoa para outra no grafo.
  O exemplo a seguir localiza o caminho mais curto entre Jacob e Alice e imprime o número de saltos necessários para ir de Jacob para Alice. 
 
- ```
+```sql
  SELECT PersonName, Friends, levels
 FROM (  
     SELECT
@@ -171,12 +172,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
 ### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. Localizar as pessoas 1-3 saltos de distância de uma determinada pessoa
 O exemplo a seguir localiza o caminho mais curto entre Jacob e todas as pessoas às quais ele está conectado no grafo 1-3 saltos longe dele. 
 
-```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -191,7 +192,7 @@ AND Person1.name = 'Jacob'
 ### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. Localizar pessoas exatamente 2 saltos longe de uma determinada pessoa
 O exemplo a seguir localiza o caminho mais curto entre Jacob e as pessoas que são exatamente 2 saltos de fora dele no grafo. 
 
-```
+```sql
 SELECT PersonName, Friends
 FROM (
     SELECT

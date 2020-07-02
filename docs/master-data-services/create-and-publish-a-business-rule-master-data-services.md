@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 39fdd6cebd0c27ec4a27a4543129a659bcdb22a3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813027"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Criar e publicar uma regra de negócio (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie uma regra de negócio para garantir a exatidão de seus dados mestres. Depois de ser criada, uma regra deve ser publicada para poder ser aplicada aos dados.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "84796388"
 |Description|A descrição da regra de negócio.|  
 |Estado da Regra de Negócio|Um dos seguintes status de regra de negócio: Regra não definida, Ativa, Excluída, Alterações pendentes, Exclusão pendente e Exclusão pendente.|  
 |Excluído|Especifica se a regra de negócio é ou não excluída.|  
-|Notification|Especifica o usuário ou grupo selecionado para o qual enviar a notificação por email.|  
+|Notificação|Especifica o usuário ou grupo selecionado para o qual enviar a notificação por email.|  
   
 ## <a name="next-steps"></a>Próximas etapas  
   

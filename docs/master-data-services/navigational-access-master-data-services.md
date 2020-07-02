@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c167d33c29a78100e5a0f1bfcd987dc50368cdc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e6be5541cb431c68ecc2f3630308981ed6fc77d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813222"
 ---
 # <a name="navigational-access-master-data-services"></a>Acesso de navegação (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   O acesso de navegação se aplica à segurança do objeto do modelo que é atribuída na guia **Modelos** .  
   
@@ -32,7 +32,7 @@ ms.locfileid: "73729002"
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
- **Entities**  
+ **Entidades**  
   
  Quando você atribui permissão a uma entidade, seus membros folha ou seus membros consolidados, o acesso de navegação significa que você pode ler ou atualizar o nome e o código de todos os membros. Você também pode ler o nome do modelo.  
   

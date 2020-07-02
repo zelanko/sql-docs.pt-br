@@ -11,23 +11,23 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74486901a641b42f5f3c2c324b97307ef17c0182
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813830"
 ---
 # <a name="domain-management-domain-list"></a>Gerenciamento de Domínio: Lista de domínios
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve os controles na lista Domínios da página **Gerenciamento de Domínio** no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Use este painel para selecionar um domínio no qual poderá executar operações de gerenciamento. O mesmo painel é usado para todas as páginas tabuladas na página **Gerenciamento de Domínio** .  
   
 ## <a name="options"></a>Opções  
   
 ### <a name="domains-list"></a>Lista de domínios  
- **Controlador**  
+ **Domínio**  
  Esta lista mostra todos os domínios na base de dados de conhecimento. Operações que você executa nas páginas tabuladas no painel direito serão executadas no domínio que é selecionado na lista. Para obter mais informações, consulte  
   
  **Criar um domínio composto**  

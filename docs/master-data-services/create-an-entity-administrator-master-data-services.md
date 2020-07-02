@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bca3fbbfe08969f27c26ab0ca6a66e76468acdc8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b74d076e0ba104c514126f035994c8debcb1de3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813352"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>Criar um Administrador de Entidade (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Em [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um administrador de entidade quando você quiser que um grupo ou usuário tenha todas as permissões para todos os objetos em uma ou mais entidades ou tenha permissão para aprovar os conjuntos de alterações pendentes.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73729539"
   
 5.  Conclua a etapa 4 para cada entidade para a qual o grupo ou o usuário deverá ser o administrador.  
   
-6.  Clique em **Salvar**.  
+6.  Clique em **Save** (Salvar).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   

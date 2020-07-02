@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 6d3c4f15dcb62e36918c81baa5f2bd40c38b7c6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ccf09eab698827b76a02f31eb1bc8593e9c120c0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813793"
 ---
 # <a name="reference-data-services-in-dqs"></a>Serviços de Dados de Referência no DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Os dados de referência se referem a um conjunto exato e completo de dados relacionados ou globais categorizados (além dos limites de uma empresa) que estão disponíveis para domínios públicos confiáveis ou de provedores de conteúdo comercial premium.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "75244144"
 -   Dá suporte ao uso de dados de referência do Azure Marketplace, bem como diretamente de provedores de dados de referência de terceiros.  
   
 ##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>Usando dados de referência do Azure Marketplace  
- O DQS dá suporte ao uso de dados de referência do Azure Marketplace para habilitar os provedores de conteúdo a fornecer serviços de dados de referência por meio do Marketplace. O Marketplace é um serviço da Microsoft que fornece um único canal de mercado e entrega para dados e aplicativos de alta qualidade como serviços em nuvem. Para obter mais informações sobre o Marketplace, consulte Saiba maishttps://azuremarketplace.microsoft.com/about) [sobre Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (.
+ O DQS dá suporte ao uso de dados de referência do Azure Marketplace para habilitar os provedores de conteúdo a fornecer serviços de dados de referência por meio do Marketplace. O Marketplace é um serviço da Microsoft que fornece um único canal de mercado e entrega para dados e aplicativos de alta qualidade como serviços em nuvem. Para obter mais informações sobre o Marketplace, consulte [saiba mais sobre Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) ( https://azuremarketplace.microsoft.com/about) .
   
  A integração consistente entre o Marketplace e o DQS simplifica as etapas associadas à descoberta, exploração e aquisição de informações para projetos de qualidade de dados de dentro do DQS. Os dados são consumidos do DQS e ajudam os usuários do DQS na obtenção de alta qualidade de dados reunindo o DQS, o Marketplace e provedores de serviço de dados de referência de uma forma inovadora.  
   
- Para usar dados de referência do Marketplace no DQS para a atividade de limpeza, você deve ter uma chave de conta válida no Marketplace. A criação de uma chave de conta do Marketplace é gratuita e você pagará apenas se assinar os conjuntos de dados pagos. A assinatura e o uso de conjuntos de dados gratuitos não são cobrados. Para obter informações detalhadas sobre como criar uma chave de conta do Marketplace, consultehttps://go.microsoft.com/fwlink/?LinkId=212936) [criar sua conta](https://go.microsoft.com/fwlink/?LinkId=212936) (.  
+ Para usar dados de referência do Marketplace no DQS para a atividade de limpeza, você deve ter uma chave de conta válida no Marketplace. A criação de uma chave de conta do Marketplace é gratuita e você pagará apenas se assinar os conjuntos de dados pagos. A assinatura e o uso de conjuntos de dados gratuitos não são cobrados. Para obter informações detalhadas sobre como criar uma chave de conta do Marketplace, consulte [criar sua conta](https://go.microsoft.com/fwlink/?LinkId=212936) ( https://go.microsoft.com/fwlink/?LinkId=212936) .  
   
  Além disso, você pode executar as seguintes atividades do Marketplace de dentro do DQS:  
   

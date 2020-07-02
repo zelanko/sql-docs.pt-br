@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98c6ef2767f7ac64567f3e0a3d31381935577c59
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813867"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Definir configurações avançadas para arquivos de log do DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como definir configurações avançadas para os arquivos de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , como definir o limite de tamanho de arquivo de rolagem dos arquivos de log, definir o padrão de carimbo de data/hora dos eventos etc.  
   
@@ -115,7 +115,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 >  As configurações de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] são geradas e armazenadas dinamicamente no arquivo DQS_MAIN.Log, que geralmente estará disponível em C:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log caso você tenha instalado a instância padrão do SQL Server. No entanto, as alterações feitas diretamente nesse arquivo não são mantidas, sendo substituídas pelas configurações da tabela A_CONFIGURATION no banco de dados DQS_MAIN.  
   
 ##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Definir configurações de log de Data Quality Client  
- O [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] arquivo de configuração de log de configuração, DQLog. Client. xml, normalmente está disponível em C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config. O conteúdo do arquivo XML é semelhante ao arquivo XML que você modificou anteriormente para as definições [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] de configuração de log. Para configurar as configurações de log do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
+ O [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] arquivo de configuração de configuração de log, DQLog.Client.xml, normalmente está disponível em C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config. O conteúdo do arquivo XML é semelhante ao arquivo XML que você modificou anteriormente para as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] definições de configuração de log. Para configurar as configurações de log do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
 1.  Execute qualquer ferramenta de edição XML ou bloco de notas como um administrador.  
   

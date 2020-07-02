@@ -13,16 +13,16 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1143636402af33512a65d7057f7acccdf455b034
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 1583f0dc977bffe12be3680ce2e1181a0e838e1b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813282"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Aprender sobre o SQL Server Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   
   
@@ -30,7 +30,7 @@ ms.locfileid: "84796613"
 * Para explorar os novos recursos e funcionalidades introduzidos no [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs) (é necessário entrar com seu conta Microsoft).  
 * Para desenvolver uma [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] solução para armazenar e gerenciar listas mestras de dados geográficos, usando o suplemento para Excel e o [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)] , experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs). Você criará entidades e hierarquias e usará o [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para preencher uma tabela de dimensões.  
   
-## <a name="videos"></a>vídeos  
+## <a name="videos"></a>Vídeos  
 * Para saber mais sobre os novos recursos no [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] versão [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**assista a este vídeo**](https://www.youtube.com/watch?v=cKA72FpOVxI).  
   
 ## <a name="samples"></a>Exemplos  

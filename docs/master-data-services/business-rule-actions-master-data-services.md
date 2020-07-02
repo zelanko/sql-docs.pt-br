@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: adb0a6798291148cc03c7e9a0a80ca8a59f3952f
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 056335a32c0e7f1ae02979190cdf64b0829177df
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813680"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Ações de regras de negócio (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], as ações de regras de negócio são consequência de avaliações de condições de regra de negócio. Se uma condição for verdadeira, a ação será iniciada.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "84796540"
   
 |Nome do valor|Description|  
 |----------------|-----------------|  
-|**Seja**|O atributo selecionado é alterado para um valor de atributo definido, outro atributo ou espaço em branco.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
+|**É igual a**|O atributo selecionado é alterado para um valor de atributo definido, outro atributo ou espaço em branco.<br /><br /> Esta ação é válida para valores de texto, número, data e link.|  
 |**igual a um valor concatenado**|O atributo selecionado é alterado para um valor concatenado, que é determinado pela especificação de vários atributos.<br /><br /> Esta ação é válida para valores de texto e link.|  
   
 ## <a name="validation-actions"></a>Ações de validação  
