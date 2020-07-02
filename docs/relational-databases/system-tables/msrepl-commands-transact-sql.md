@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94f756a893fec14d171eb059cf4ad600f95a4927
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac83a8be0496d0d00a8e07d608167365d287e5b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760009"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSrepl_commands** contém linhas de comandos replicados. Esta tabela é armazenada no banco de dados de distribuição.  
   
@@ -33,12 +33,12 @@ ms.locfileid: "82827177"
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|A ID do banco de dados Publicador.|  
 |**xact_seqno**|**varbinary(16)**|O número de sequência da transação.|  
-|**tipo**|**int**|O tipo de comando.|  
+|**type**|**int**|O tipo de comando.|  
 |**article_id**|**int**|A ID do artigo.|  
 |**originator_id**|**int**|A ID do originador.|  
 |**command_id**|**int**|A ID do comando.|  
 |**partial_command**|**bit**|Indica se este é um comando parcial ou não.|  
-|**linha**|**varbinary (1024)**|O valor do comando.|  
+|**command**|**varbinary (1024)**|O valor do comando.|  
 |**hashkey**|**int**|Interno-somente uso.|  
 |**originator_lsn**|**varbinary(16)**|Identifica o LSN para o comando na publicação de origem. Usado em replicação transacional ponto a ponto.|  
   

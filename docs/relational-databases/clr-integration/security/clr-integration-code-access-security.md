@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 912db3acb6f6dc21952e99da31a1484a9745ed0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f28692cd1a5c3f60e823d6071244ae822fc557a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759043"
 ---
 # <a name="clr-integration-code-access-security"></a>Segurança de acesso a código da integração CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   O CLR (common language runtime) dá suporte a um modelo de segurança denominado segurança de acesso para código gerenciado. Nesse modelo, são concedidas permissões a assemblies com base na identidade do código. Para obter mais informações, consulte a seção "Segurança de acesso do código" no Software Development Kit do .NET Framework.  
   
  A política de segurança que determina as permissões concedidas a assemblies é definida em três locais diferentes:  
@@ -89,10 +89,10 @@ ms.locfileid: "81488294"
  Os assemblies **não seguros** recebem **FullTrust**.  
   
 > [!IMPORTANT]  
->  **Seguro** é a configuração de permissão recomendada para assemblies que executam tarefas de computação e gerenciamento de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sem acessar recursos fora do. **EXTERNAL_ACCESS** é recomendado para assemblies que acessam [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]recursos fora do. **EXTERNAL_ACCESS** assemblies por padrão são executados como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a conta de serviço. É possível que **EXTERNAL_ACCESS** código represente explicitamente o contexto de segurança de autenticação do Windows do chamador. Como o padrão é executar como a conta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de serviço, a permissão para executar **EXTERNAL_ACCESS** deve ser dada somente a logons confiáveis para execução como a conta de serviço. De uma perspectiva de segurança, **EXTERNAL_ACCESS** e assemblies **não seguros** são idênticos. No entanto, os assemblies do **EXTERNAL_ACCESS** fornecem várias proteções de confiabilidade e robustez que não estão em ASSEMBLIES não **seguros** . Especificar **unsafe** permite que o código no assembly execute operações ilegais no espaço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processo e, portanto, possa comprometer a robustez e a escalabilidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como criar assemblies [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR no, consulte [Gerenciando ASSEMBLIES de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+>  **Seguro** é a configuração de permissão recomendada para assemblies que executam tarefas de computação e gerenciamento de dados sem acessar recursos fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . **EXTERNAL_ACCESS** é recomendado para assemblies que acessam recursos fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . **EXTERNAL_ACCESS** assemblies por padrão são executados como a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conta de serviço. É possível que **EXTERNAL_ACCESS** código represente explicitamente o contexto de segurança de autenticação do Windows do chamador. Como o padrão é executar como a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conta de serviço, a permissão para executar **EXTERNAL_ACCESS** deve ser dada somente a logons confiáveis para execução como a conta de serviço. De uma perspectiva de segurança, **EXTERNAL_ACCESS** e assemblies **não seguros** são idênticos. No entanto, os assemblies do **EXTERNAL_ACCESS** fornecem várias proteções de confiabilidade e robustez que não estão em ASSEMBLIES não **seguros** . Especificar **unsafe** permite que o código no assembly execute operações ilegais no espaço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processo e, portanto, possa comprometer a robustez e a escalabilidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações sobre como criar assemblies CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consulte [Gerenciando assemblies de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
   
 ## <a name="accessing-external-resources"></a>Acessando recursos externos  
- Se um tipo definido pelo usuário (UDT), um procedimento armazenado ou outro tipo de assembly de construção for registrado com o conjunto de permissões **seguro** , o código gerenciado em execução na construção não poderá acessar recursos externos. No entanto, se os conjuntos de permissões **EXTERNAL_ACCESS** ou **não seguros** forem especificados, e o código gerenciado tentar acessar recursos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] externos, o aplicará as seguintes regras:  
+ Se um tipo definido pelo usuário (UDT), um procedimento armazenado ou outro tipo de assembly de construção for registrado com o conjunto de permissões **seguro** , o código gerenciado em execução na construção não poderá acessar recursos externos. No entanto, se os conjuntos de permissões **EXTERNAL_ACCESS** ou **não seguros** forem especificados, e o código gerenciado tentar acessar recursos externos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o aplicará as seguintes regras:  
   
 |Se|Então|  
 |--------|----------|  
@@ -108,10 +108,10 @@ ms.locfileid: "81488294"
 |-|-|-|-|  
 ||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**Permissões de segurança de acesso ao código**|Somente execução|Execução + acesso a recursos externos|Irrestrito (inclusive P/Invoke)|  
-|**Restrições do modelo de programação**|Sim|Sim|Sem restrições|  
-|**Requisito de verificabilidade**|Sim|Sim|Não|  
-|**Acesso a dados locais**|Sim|Sim|Sim|  
-|**Capacidade de chamar código nativo**|Não|Não|Sim|  
+|**Restrições do modelo de programação**|Yes|Yes|Sem restrições|  
+|**Requisito de verificabilidade**|Yes|Yes|No|  
+|**Acesso a dados locais**|Yes|Yes|Yes|  
+|**Capacidade de chamar código nativo**|No|Não|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Segurança de integração CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

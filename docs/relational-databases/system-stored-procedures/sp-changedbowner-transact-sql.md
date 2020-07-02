@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 084063f7209692bdf3ffd124b8e2b73194068686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760196"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Altera o proprietário do banco de dados atual.  
   
@@ -43,11 +43,11 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @loginame= ] '*logon*'  
- É a ID de logon do novo proprietário do banco de dados atual. o *logon* é **sysname**, sem padrão. o *logon* deve ser um logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já existente ou um usuário do Windows. o *logon* não poderá se tornar o proprietário do banco de dados atual se ele já tiver acesso ao banco de dados por meio de uma conta de segurança de usuário existente no banco de dados. Para evitar isso, descarte primeiro o usuário do banco de dados atual.  
+ [ @loginame =] '*logon*'  
+ É a ID de logon do novo proprietário do banco de dados atual. o *logon* é **sysname**, sem padrão. o *logon* deve ser um logon já existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um usuário do Windows. o *logon* não poderá se tornar o proprietário do banco de dados atual se ele já tiver acesso ao banco de dados por meio de uma conta de segurança de usuário existente no banco de dados. Para evitar isso, descarte primeiro o usuário do banco de dados atual.  
   
- [ @map= ] *remap_alias_flag*  
- O parâmetro *remap_alias_flag* foi preterido porque os aliases de logon foram removidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. O uso do parâmetro *remap_alias_flag* não causa um erro, mas não tem nenhum efeito.  
+ [ @map =] *remap_alias_flag*  
+ O parâmetro *remap_alias_flag* foi preterido porque os aliases de logon foram removidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O uso do parâmetro *remap_alias_flag* não causa um erro, mas não tem nenhum efeito.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

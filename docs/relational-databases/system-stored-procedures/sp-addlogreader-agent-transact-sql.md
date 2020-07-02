@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a50b989afef382a8315c29ea5257ad9b103e124c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b22bb48cd5bc48a3b1812dfd97fc2b56df8ba11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769220"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757985"
 ---
 # <a name="sp_addlogreader_agent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adiciona um Log Leitor Agent a um determinado banco de dados. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -46,7 +46,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'`É o logon da conta [!INCLUDE[msCoName](../../includes/msconame-md.md)] do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, com um valor padrão de NULL. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
+`[ @job_login = ] 'job_login'`É o logon da [!INCLUDE[msCoName](../../includes/msconame-md.md)] conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, com um valor padrão de NULL. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
   
 > [!NOTE]
 >  Para não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, esse deve ser o mesmo logon especificado em [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
@@ -58,7 +58,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
   
 `[ @job_name = ] 'job_name'`É o nome de um trabalho de agente existente. *job_name* é **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando o agente é iniciado usando um trabalho existente em vez de um trabalho recém-criado (o padrão).  
   
-`[ @publisher_security_mode = ] publisher_security_mode`É o modo de segurança usado pelo agente ao se conectar ao Publicador. *publisher_security_mode* é **smallint**, com um padrão de **1**. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação e **1** especifica a autenticação do Windows. Um valor de **0** deve ser especificado para não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
+`[ @publisher_security_mode = ] publisher_security_mode`É o modo de segurança usado pelo agente ao se conectar ao Publicador. *publisher_security_mode* é **smallint**, com um padrão de **1**. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação e **1** especifica a autenticação do Windows. Um valor de **0** deve ser especificado para não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
   
 `[ @publisher_login = ] 'publisher_login'`É o logon usado ao conectar-se ao Publicador. *publisher_login* é **sysname**, com um padrão de NULL. *publisher_login* deve ser especificado quando *publisher_security_mode* é **0**. Se *publisher_login* for nulo e *publisher_security_mode* for **1**, a conta do Windows especificada em *job_login* será usada durante a conexão com o Publicador.  
   
@@ -78,7 +78,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ## <a name="remarks"></a>Comentários  
  **sp_addlogreader_agent** é usado na replicação transacional.  
   
- Você deve executar **sp_addlogreader_agent** para adicionar um agente de leitor de log se você atualizou um banco de dados que foi habilitado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replicação para esta versão do antes de uma publicação ter sido criada que usava o banco de dados.  
+ Você deve executar **sp_addlogreader_agent** para adicionar um agente de leitor de log se você atualizou um banco de dados que foi habilitado para replicação para esta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de uma publicação ter sido criada que usava o banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_addlogreader_agent**.  

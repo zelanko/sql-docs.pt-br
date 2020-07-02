@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc35a4c163642f711810f49a816e6c553855b6d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a26ca71a9db5d85f79787f19563e87ee7e49b78d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760131"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna as linhas de status de um banco de dados monitorado a partir da tabela de status na qual o monitoramento de espelhamento de banco de dados é armazenado e permite selecionar se o procedimento obtém o último status antes.  
   
@@ -76,7 +76,7 @@ sp_dbmmonitorresults database_name
  1 = atualiza o status do banco de dados chamando **sp_dbmmonitorupdate** antes de calcular os resultados. No entanto, se a tabela de status tiver sido atualizada nos 15 segundos anteriores ou se o usuário não for membro da função de servidor fixa **sysadmin** , o **sp_dbmmonitorresults** será executado sem Atualizar o status.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o número solicitado de linhas de status de histórico do banco de dados especificado. Cada linha contém as seguintes informações:  

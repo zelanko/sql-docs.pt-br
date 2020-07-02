@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 715318b0b0ea38870317d05815845e1b6eaa3227
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760181"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Registra o nome de um novo procedimento armazenado estendido [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para.  
+  Registra o nome de um novo procedimento armazenado estendido para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use a [integração CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
@@ -54,11 +54,11 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- Depois que um procedimento armazenado estendido é criado, ele deve ser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicionado ao usando **sp_addextendedproc**. Para obter mais informações, consulte [adicionando um procedimento armazenado estendido a SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
+ Depois que um procedimento armazenado estendido é criado, ele deve ser adicionado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **sp_addextendedproc**. Para obter mais informações, consulte [adicionando um procedimento armazenado estendido a SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
   
  Esse procedimento só pode ser executado no banco de dados **mestre** . Para executar um procedimento armazenado estendido de um banco de dados que não seja o **mestre**, qualifique o nome do procedimento armazenado estendido com **Master**.  
   
- **sp_addextendedproc** adiciona entradas à exibição do catálogo [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) , registrando o nome do novo procedimento armazenado estendido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]com. Ele também adiciona uma entrada na exibição de catálogo [Sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) .  
+ **sp_addextendedproc** adiciona entradas à exibição do catálogo [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) , registrando o nome do novo procedimento armazenado estendido com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele também adiciona uma entrada na exibição de catálogo [Sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  DLLs existentes que não são registradas com um caminho completo não funcionarão depois da atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para corrigir o problema, use **sp_dropextendedproc** para cancelar o registro da dll e, em seguida, registre-a novamente com **sp_addextendedproc**, especificando o caminho completo.  

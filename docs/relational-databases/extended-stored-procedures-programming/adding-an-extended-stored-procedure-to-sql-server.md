@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bba543dbf89cb1dd3c0eb8a456a54c3c31c51d02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22f2b2b5345d4d5cb11b96ecf7741ce144597548
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756775"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Adicionando um procedimento armazenado estendido ao SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
   
- Uma DLL que contém funções de procedimento armazenado estendido funciona como uma extensão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar a DLL, copie o arquivo para um diretório, como aquele que contém os arquivos dll padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (C:\Program Files\Microsoft SQL Server\MSSQL12.0.* x*\MSSQL\Binn por padrão).  
+ Uma DLL que contém funções de procedimento armazenado estendido funciona como uma extensão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar a DLL, copie o arquivo para um diretório, como aquele que contém os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivos dll padrão (C:\Program Files\Microsoft SQL Server\MSSQL12.0.* x*\MSSQL\Binn por padrão).  
   
  Depois que uma DLL de procedimento armazenado estendido for copiada no servidor, um administrador do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve registrar no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas as funções de procedimento armazenado estendido na DLL. Isso é feito por meio do uso do procedimento armazenado de sistema sp_addextendedproc.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67903398"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- Se o nome da função especificado em `sp_addextendedproc` não corresponder exatamente ao nome da função na DLL, o novo nome será registrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas o nome não poderá ser usado. Por exemplo, embora `xp_Hello` o esteja registrado como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um procedimento armazenado estendido `xp_hello.dll`localizado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em, o não será capaz de localizar a função na dll se você `xp_Hello` usar para chamar a função posteriormente.  
+ Se o nome da função especificado em `sp_addextendedproc` não corresponder exatamente ao nome da função na DLL, o novo nome será registrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas o nome não poderá ser usado. Por exemplo, embora o `xp_Hello` esteja registrado como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento armazenado estendido localizado em `xp_hello.dll` , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o não será capaz de localizar a função na dll se você usar `xp_Hello` para chamar a função posteriormente.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  

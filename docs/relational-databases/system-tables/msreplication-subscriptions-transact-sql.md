@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37114a42cd7e9c64872ff42848bb916b21c1d941
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5842e1a0f7ca48fc415528b0d2b63ca8ed033446
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757811"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSreplication_subscriptions** contém uma linha de informações de replicação para cada agente de distribuição atendendo ao banco de dados do assinante local. Essa tabela é armazenada no banco de dados de assinatura.  
   

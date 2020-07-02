@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0aaa6b412f1ccbbc71e9e5b19f68a518912f333
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 30488b669265b66036b591191e8e528e1ef74b35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757765"
 ---
 # <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSsubscription_articles** contém informações sobre os artigos em uma assinatura enfileirada. Essa tabela só é populada para tipos de replicação de atualização enfileirada e atualização imediata com atualização enfileirada como um failover.  
   

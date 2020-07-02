@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13ba20770fd97d0db193ab492ae0958cf4c7ad35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758035"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cria um novo banco de dados de distribuição e instala o esquema de Distribuição. O banco de dados de distribuição armazena procedimentos, esquema e metadados usados em replicação. Esse procedimento armazenado é executado no Distribuidor, no banco de dados mestre, para criar o banco de dados de distribuição e instalar as tabelas necessárias e os procedimentos armazenados requeridos para habilitar a distribuição da aplicação.  
   
@@ -55,7 +55,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>Argumentos  
 `[ @database = ] database'`É o nome do banco de dados de distribuição a ser criado. o *banco de dados* é **sysname**, sem padrão. Se o banco de dados especificado já existir e não estiver marcado como banco de dados de distribuição, os objetos necessários para habilitar a distribuição serão instalados e o banco de dados será marcado como banco de dados de distribuição. Se o banco de dados especificado já estiver habilitado como um banco de dados de distribuição, um erro será retornado.  
   
-`[ @data_folder = ] 'data_folder'_`É o nome do diretório usado para armazenar o arquivo de dados do banco de dado de distribuição. *DATA_FOLDER* é **nvarchar (255)**, com um padrão de NULL. Se for NULL, o diretório de dados dessa instância [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do será usado, por exemplo `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`,.  
+`[ @data_folder = ] 'data_folder'_`É o nome do diretório usado para armazenar o arquivo de dados do banco de dado de distribuição. *DATA_FOLDER* é **nvarchar (255)**, com um padrão de NULL. Se for NULL, o diretório de dados dessa instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado, por exemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` .  
   
 `[ @data_file = ] 'data_file'`É o nome do arquivo de banco de dados. *data_file* é **nvarchar (255)**, com um padrão de **banco de dados**. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
   
@@ -65,7 +65,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @log_file = ] 'log_file'`É o nome do arquivo de log. *log_file* é **nvarchar (255)**, com um padrão de NULL. Se for NULL, o procedimento armazenado cria um nome de arquivo usando o nome de banco de dados.  
   
-`[ @log_file_size = ] log_file_size`É o tamanho inicial do arquivo de log em megabytes (MB). *log_file_size* é **int**, com um padrão de 0 MB, o que significa que o tamanho do arquivo é criado usando o menor tamanho de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]arquivo de log permitido pelo.  
+`[ @log_file_size = ] log_file_size`É o tamanho inicial do arquivo de log em megabytes (MB). *log_file_size* é **int**, com um padrão de 0 MB, o que significa que o tamanho do arquivo é criado usando o menor tamanho de arquivo de log permitido pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @min_distretention = ] min_distretention`É o período de retenção mínimo, em horas, antes de as transações serem excluídas do banco de dados de distribuição. *min_distretention* é **int**, com um padrão de 0 hora.  
   
@@ -73,7 +73,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @history_retention = ] history_retention`É o número de horas para reter o histórico. *history_retention* é **int**, com um padrão de 48 horas.  
   
-`[ @security_mode = ] security_mode`É o modo de segurança a ser usado ao conectar-se ao distribuidor. *security_mode* é **int**, com um padrão de 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação; **1** especifica a autenticação integrada do Windows.  
+`[ @security_mode = ] security_mode`É o modo de segurança a ser usado ao conectar-se ao distribuidor. *security_mode* é **int**, com um padrão de 1. **0** especifica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação; **1** especifica a autenticação integrada do Windows.  
   
 `[ @login = ] 'login'`É o nome de logon usado ao conectar-se ao distribuidor para criar o banco de dados de distribuição. Isso será necessário se *security_mode* for definido como **0**. *login* é **sysname**, com um padrão de NULL.  
   
@@ -169,6 +169,6 @@ GO
  [&#41;&#40;Transact-SQL de sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpdistributiondb](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Configurar a distribuição](../../relational-databases/replication/configure-distribution.md)  
+ [Configurar Distribuição](../../relational-databases/replication/configure-distribution.md)  
   
   

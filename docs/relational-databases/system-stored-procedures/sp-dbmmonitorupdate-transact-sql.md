@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f847881fa57735a09945d47d446949db3443b3e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5b9c53913cc6f399109da7a84cd8ec7f68957a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760142"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Atualiza a tabela de status do monitor de espelhamento de banco de dados ao inserir uma nova linha na tabela para cada banco de dados espelho, e trunca linhas anteriores ao período de retenção atual. O período de retenção padrão é de 7 dias (168 horas). Ao atualizar a tabela, **sp_dbmmonitorupdate** avalia as métricas de desempenho.  
   
@@ -47,7 +47,7 @@ sp_dbmmonitorupdate [ database_name ]
  O nome do banco de dados para o qual atualizar o status de espelhamento. Se *database_name* não for especificado, o procedimento atualizará a tabela de status para cada banco de dados espelhado na instância do servidor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhum  

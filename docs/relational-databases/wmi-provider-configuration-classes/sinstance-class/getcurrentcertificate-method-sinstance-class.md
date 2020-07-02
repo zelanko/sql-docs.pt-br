@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 429f1d7fc55b9585466ce1b58350653e7e98be1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f8a1d51f7b130ef4d530433a6c3ff56ef05c3789
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759842"
 ---
 # <a name="getcurrentcertificate-method-sinstance-class"></a>Método GetCurrentCertificate (classe SInstance)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o certificado de segurança atual.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,7 +36,7 @@ object.GetCurrentCertificate(SHA)
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) que representa as configurações de servidor em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Parâmetros  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: f03fdab2cf2f2593d43c16cef572614b36731ef9
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: a8349922c991877c8cf9139cfedf3f458c2d68b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758432"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
 
@@ -45,6 +45,7 @@ As versões de destino a seguir têm suporte para o SSMA.
 - SQL Server 2017 no Windows e no Linux
 - SQL Server 2019 no Windows e no Linux
 - Banco de Dados SQL do Azure
+- Instância Gerenciada do Azure SQL
 - SQL Data Warehouse do Azure * *
 
 * * Esse destino tem suporte apenas pelo SSMA para Oracle.

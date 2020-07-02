@@ -18,15 +18,15 @@ ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd18fe45b25f4537c06de46c612f0508f9f86f9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758016"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Adiciona uma nova propriedade estendida a um objeto de banco de dados.  
   
@@ -56,10 +56,10 @@ sp_addextendedproperty
  [ @name ] = {'*property_name*'}  
  É o nome da propriedade a ser adicionada. *property_name* é **sysname** e não pode ser nulo. Os nomes também podem incluir espaço em branco ou cadeias de caracteres não alfanuméricos e valores binários.  
   
- [ @value= ] {'*Value*'}  
+ [ @value =] {'*valor*'}  
  É o valor a ser associado à propriedade. o *valor* é **sql_variant**, com um padrão de NULL. O tamanho de *value* não pode ser maior que 7.500 bytes.  
   
- [ @level0type= ] {'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  É o tipo de objeto de nível 0. *level0_object_type* é **varchar (128)**, com um padrão de NULL.  
   
  As entradas válidas são ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE e NULL.  
@@ -67,18 +67,18 @@ sp_addextendedproperty
 > [!IMPORTANT]  
 >  A capacidade de especificar USER como um tipo de nível 0 em uma propriedade estendida de um objeto de tipo de nível 1 será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em vez disso, use SCHEMA como o tipo nível 0. Por exemplo, ao definir uma propriedade estendida em uma tabela, especifique o esquema da tabela em vez de um nome de usuário. A capacidade de especificar TYPE como um tipo de nível 0 será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para TYPE, use SCHEMA como o tipo de nível 0 e TYPE como o tipo de nível 1.  
   
- [ @level0name= ] {'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  É o nome do tipo de objeto de nível 0 especificado. *level0_object_name* é **sysname** com um padrão de NULL.  
   
- [ @level1type= ] {'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  É o tipo de objeto de nível 1. *level1_object_type* é **varchar (128)**, com um padrão de NULL. As entradas válidas são AGREGAção, padrão, função, nome de arquivo lógico, procedimento, fila, regra, sequência, sinônimo, tabela, TABLE_TYPE, tipo, exibição, coleção de esquemas XML e nulo.    
- [ @level1name= ] {'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* é **sysname**, com um padrão de NULL.  
   
- [ @level2type= ] {'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  É o tipo de objeto de nível 2. *level2_object_type* é **varchar (128)**, com um padrão de NULL. As entradas válidas são COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
   
- [ @level2name= ] {'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  É o nome do tipo de objeto de nível 2 especificado. *level2_object_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

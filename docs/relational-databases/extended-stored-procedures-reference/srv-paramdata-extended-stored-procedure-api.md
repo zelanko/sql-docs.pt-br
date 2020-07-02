@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f8a7f5ebb1b85740735c6070a784423b3258012
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83af5231fd9403e0c77d6cad8a5abda5d27275d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756749"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (API de procedimento armazenado estendido)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
@@ -68,7 +68,7 @@ n
 |BIGVARBINARY|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais|  
 |NCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **>=255:** VP, 255 chars<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
 |NVARCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255 chars<br /><br /> **<255:** VP, dados reais|  
-|NTEXT|**NULL:** N/A<br /><br /> **ZERO:** N/A<br /><br /> **>= 255:** N/A<br /><br /> ** \<255:** N/A|  
+|NTEXT|**NULL:** N/A<br /><br /> **ZERO:** N/A<br /><br /> **>= 255:** N/A<br /><br /> ** \< 255:** N/A|  
   
  \* Os dados não terminam em nulo; nenhum aviso é emitido no truncamento de dados >255 caracteres.  
   

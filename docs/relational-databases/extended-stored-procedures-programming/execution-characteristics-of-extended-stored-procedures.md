@@ -13,22 +13,22 @@ ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d991dbdf8029a6021f4cf27a9010dec83b94a5ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758121"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Características de execução de procedimentos armazenados estendidos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
   
  A execução de um procedimento armazenado estendido tem as seguintes características:  
   
--   A função de procedimento armazenado estendido é executada no contexto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]segurança do.  
+-   A função de procedimento armazenado estendido é executada no contexto de segurança do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   A função de procedimento armazenado estendido é executada no espaço de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74095983"
   
 -  
   
- Depois que a DLL de procedimento armazenado estendido é carregada, a DLL permanece carregada no espaço de endereço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servidor até que o seja interrompido ou o administrador descarregue explicitamente a DLL usando DBCC *dll_name* (gratuito).  
+ Depois que a DLL de procedimento armazenado estendido é carregada, a DLL permanece carregada no espaço de endereço do servidor até que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o seja interrompido ou o administrador descarregue explicitamente a DLL usando DBCC *dll_name* (gratuito).  
   
  O procedimento armazenado estendido pode ser executado a partir do [!INCLUDE[tsql](../../includes/tsql-md.md)] como um procedimento armazenado usando a instrução EXECUTE:  
   

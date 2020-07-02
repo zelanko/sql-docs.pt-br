@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4dfb2dba5ac59cae919a0153d41cbf7c15f660e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757886"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Concede um acesso de proxy a um subsistema.  
   
@@ -49,7 +49,7 @@ sp_grant_proxy_to_subsystem
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Script do ActiveX<br /><br /> ** \* Importante \* \* ** O subsistema de script do ActiveX será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Script do ActiveX<br /><br /> Importante o subsistema de scripts do ActiveX será removido do Agent em uma versão futura do ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |**3**|Sistema Operacional (**CmdExec**)|  
 |**4**|Replication Snapshot Agent|  
 |**5**|Replication Agente de Leitor de Log|  
@@ -71,7 +71,7 @@ sp_grant_proxy_to_subsystem
 |**Instantâneo**|Replication Snapshot Agent|  
 |**LogReader**|Replication Agente de Leitor de Log|  
 |**Distribuição**|Agente de Distribuição de replicação|  
-|**Mescle**|Replication Merge Agent|  
+|**Mesclar**|Replication Merge Agent|  
 |**QueueReader**|Agente de Leitor de Fila de Replicação|  
 |**ANALYSISQUERY**|Consulta do Analysis Services|  
 |**ANALYSISCOMMAND**|Comando do Analysis Services|  

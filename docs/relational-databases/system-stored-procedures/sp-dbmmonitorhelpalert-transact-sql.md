@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4d6cb60ab7da7caaed5e0e91859f4bb083b191e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 40fe5e8e82d1a4e7b4f2f32d55f27b191d9aee8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826167"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760155"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre limites de aviso em uma ou todas as várias métricas de desempenho do monitor de espelhamento de banco de dados principal.  
  
@@ -60,7 +60,7 @@ sp_dbmmonitorhelpalert database_name
  Para obter informações sobre as IDs de evento correspondentes aos avisos, consulte [usar limites de aviso e alertas sobre métricas de desempenho de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Para cada alerta retornado, retorna uma fila que contém as colunas seguintes:  
@@ -68,7 +68,7 @@ sp_dbmmonitorhelpalert database_name
 |Coluna|Tipo de dados|Descrição|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|A tabela a seguir lista o valor de **alert_id** para cada métrica de desempenho e a unidade de medida da métrica exibida no conjunto de resultados de **sp_dbmmonitorresults** :|  
-|**os**|**int**|O valor do limite para o aviso. Se um valor acima desse limite for retornado quando o status de espelhamento for atualizado, uma entrada será inserida no log de eventos do Windows. Esse valor representa KB, minutos ou milissegundos, dependendo do aviso. Se o limite não estiver definido atualmente, o valor será NULL.<br /><br /> **Observação:** Para exibir os valores atuais, execute o procedimento armazenado [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .|  
+|**threshold**|**int**|O valor do limite para o aviso. Se um valor acima desse limite for retornado quando o status de espelhamento for atualizado, uma entrada será inserida no log de eventos do Windows. Esse valor representa KB, minutos ou milissegundos, dependendo do aviso. Se o limite não estiver definido atualmente, o valor será NULL.<br /><br /> **Observação:** Para exibir os valores atuais, execute o procedimento armazenado [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .|  
 |**habilitado**|**bit**|0 = Evento desabilitado.<br /><br /> 1 = Evento habilitado.<br /><br /> **Observação:** O período de retenção está sempre habilitado.|  
   
 |Valor|Métrica de desempenho|Unidade|  

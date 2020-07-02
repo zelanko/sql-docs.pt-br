@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a5aba02a9aaead76e7c9c3340de4f568160b307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5841cdb3f57c0c4b6e33737d8c08b3ff0437e800
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74119389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756737"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API de procedimento armazenado estendido)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
- Chama o manipulador de mensagens instalado da API de procedimento armazenado estendido. Essa função geralmente é usada para chamar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um procedimento armazenado estendido para registrar um erro (definido pelo procedimento armazenado estendido) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log de erros [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou no log de aplicativos do Windows.  
+ Chama o manipulador de mensagens instalado da API de procedimento armazenado estendido. Essa função geralmente é usada para chamar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um procedimento armazenado estendido para registrar um erro (definido pelo procedimento armazenado estendido) no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log de erros ou no [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativos do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   

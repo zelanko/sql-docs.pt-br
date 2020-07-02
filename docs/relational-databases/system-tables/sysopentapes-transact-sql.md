@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b13094ac049f658594ad74b3dc8bf66ae0965d5c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55ac6d0811e701a4a541b889884c86cb3a83c296
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759989"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada dispositivo de fita aberto atualmente. Essa exibição é armazenada no banco de dados **mestre** .  
   
