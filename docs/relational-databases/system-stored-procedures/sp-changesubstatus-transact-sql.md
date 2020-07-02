@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2daa7d007783434e0994846e41300c31b3e35162
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824051"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771356"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Altera o status de um Assinante existente. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -75,7 +75,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**active**|O Assinante está sincronizado e recebendo dados.|  
-|**inativo**|Entrada de assinante existe sem uma assinatura.|  
+|**inactive**|Entrada de assinante existe sem uma assinatura.|  
 |**assinado**|O Assinante está solicitando dados, mas ainda não está sincronizado.|  
   
 `[ @previous_status = ] 'previous_status'`É o status anterior da assinatura. *previous_status* é **sysname**, com um padrão de NULL. Esse parâmetro permite que você altere todas as assinaturas que atualmente têm esse status, permitindo que funções de grupo em um conjunto específico de assinaturas (por exemplo, definindo todas as assinaturas ativas de volta para **assinadas**).  

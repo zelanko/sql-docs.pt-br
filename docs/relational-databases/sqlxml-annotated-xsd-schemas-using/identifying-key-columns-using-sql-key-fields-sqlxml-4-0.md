@@ -23,15 +23,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4902cd16e1812740e6c2cc5e298cb0915ed119f
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: fd8b23a2aaba27e166a3a13636e2362b54781704
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764941"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificando colunas de chave usando campos sql:key (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Quando uma consulta XPath é especificada em um esquema XSD, as informações de chave são necessárias, na maioria das vezes, para obter o aninhamento adequado no resultado. Especificar a anotação **SQL: key-fields** é uma maneira de garantir que a hierarquia apropriada seja gerada.  
   
 > [!NOTE]  
@@ -44,7 +44,7 @@ ms.locfileid: "84215839"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Produzindo o aninhamento apropriado quando o não \<sql:relationship> fornece informações suficientes  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>a. Produzindo o aninhamento apropriado quando o não \<sql:relationship> fornece informações suficientes  
  Este exemplo mostra onde **SQL: campos de chave** devem ser especificados.  
   
  Considere o esquema a seguir. O esquema especifica uma hierarquia entre os **\<Order>** **\<Customer>** elementos e nos quais o **\<Order>** elemento é o pai e o **\<Customer>** elemento é um filho.  

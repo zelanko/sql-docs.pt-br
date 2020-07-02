@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9290e2b9b64c04545c833a2d04620d87564026e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2122ff4cddd045b3d73567af660ddc925d4152ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767790"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>Referência de LocalDB do SQL Server Express – APIs da instância
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   No mundo do SQL Server tradicional baseado em serviço, as instâncias individuais do SQL Server instaladas em um único computador são separadas fisicamente; ou seja, cada instância deve ser instalada e removida separadamente, ter um conjunto separado de binários e ser executada em um processo de serviço separado. O nome da instância do SQL Server é usado para especificar a qual instância do SQL Server o usuário deseja se conectar.  
   
  A API da instância LocalDB do SQL Server Express usa um modelo de instância "leve" simplificado. Embora as instâncias de LocalDB individuais estejam separadas no disco e no Registro, elas usam o mesmo conjunto de binários de LocalDB compartilhados. Além disso, o LocalDB não usa serviços; as instâncias de LocalDB são iniciadas sob demanda através das chamadas de API da instância de LocalDB. No LocalDB, o nome de instância é usado para especificar com qual das instâncias de LocalDB o usuário deseja trabalhar.  
@@ -65,7 +65,7 @@ ms.locfileid: "68021954"
 ### <a name="named-instance-naming-rules"></a>Regras de nomeação de instância nomeada  
  Um nome de instância de LocalDB pode ter até um total de 128 caracteres (o limite é imposto pelo tipo de dados **sysname** ). Essa é uma diferença significativa se comparada aos nomes de instância tradicionais do SQL Server, que são limitados aos nomes NetBIOS de 16 caracteres ASCII. A razão para essa diferença é que o LocalDB trata os bancos de dados como arquivos e, portanto, implica a semântica baseada em arquivo, portanto, é intuitivo para os usuários terem mais liberdade na escolha de nomes de instância.  
   
- Um nome de instância de LocalDB pode conter qualquer caractere Unicode que seja legal no componente de nome de arquivo. Caracteres ilegais em um componente de nome de arquivo geralmente incluem os seguintes caracteres: caracteres ASCII/Unicode de 1 a 31, bem como aspas ("),\<menor que (), maior que (>), pipe (|), backspace (\b), tabulação (\t), dois-pontos (:), asterisco (*), ponto de interrogação (?), barra invertida (\\) e barra (/). Observe que o caractere nulo (\0) é permitido porque é usado na terminação de cadeias de caracteres; tudo o que aparecer após o primeiro caractere nulo será ignorado.  
+ Um nome de instância de LocalDB pode conter qualquer caractere Unicode que seja legal no componente de nome de arquivo. Caracteres ilegais em um componente filename geralmente incluem os seguintes caracteres: caracteres ASCII/Unicode de 1 a 31, bem como aspas ("), menor que ( \<), greater than (> ), pipe (|), backspace (\b), tabulação (\t), dois-pontos (:), asterisco (*), ponto de interrogação (?), barra invertida ( \\ ) e barra (/) Observe que o caractere nulo (\0) é permitido porque é usado na terminação de cadeias de caracteres; tudo o que aparecer após o primeiro caractere nulo será ignorado.  
   
 > [!NOTE]  
 >  A lista de caracteres ilegais possivelmente dependerá do sistema operacional e mudará nas versões futuras.  

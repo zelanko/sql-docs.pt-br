@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d69a2355f18a162f3e7a6b76b07bbb7cd6a597a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7ccd7c93d42cb30eeb2fc24b79c358d519579b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764768"
 ---
 # <a name="syscolumn_store_dictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada dicionário usado em índices columnstore otimizados para memória xVelocity. Dicionários são usados para codificar alguns, mas não todos os tipos de dados; portanto, nem todas as colunas em um índice columnstore têm dicionários. Um dicionário pode existir como um dicionário primário (para todos os segmentos) e, possivelmente, para outros dicionários secundários usados para um subconjunto de segmentos da coluna.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75656603"
 |**partition_id**|**bigint**|Indica a ID da partição. É exclusivo em um banco de dados.|  
   
 ## <a name="permissions"></a>Permissões  
-Requer a permissão `VIEW DEFINITION` na tabela. As colunas a seguir retornam NULL, a menos `SELECT` que o usuário também tenha permissão: last_id, entry_count, data_ptr.  
+Requer a permissão `VIEW DEFINITION` na tabela. As colunas a seguir retornam NULL, a menos que o usuário também tenha `SELECT` permissão: last_id, ENTRY_COUNT, data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

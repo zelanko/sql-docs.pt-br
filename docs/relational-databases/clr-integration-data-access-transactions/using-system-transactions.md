@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fed4e8106fc5348c94a3c7afda0ec903f570eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765365"
 ---
 # <a name="using-systemtransactions"></a>Usando System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O **System.Transactions** fornece uma estrutura de transação que é totalmente integrada com o ADO.NET e a integração CLR (Common Language Runtime) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Uma classe **System.Transactions.TransactionScope** torna um bloco de código transacional inscrevendo implicitamente conexões em uma transação distribuída. Chame o método **Complete** no final do bloco de código marcado pelo **TransactionScope**. O método **Dispose** será invocado quando a execução do programa deixar um bloco de código, fazendo a transação ser descontinuada se o método **Complete** não for chamado. Se tiver sido lançada uma exceção que faz o código deixar o escopo, a transação será considerada descontinuada.  
   
  É recomendável utilizar um bloco **using** para assegurar que o método **Dispose** seja chamado no objeto **TransactionScope** ao sair do bloco **using** . Uma falha ao confirmar ou reverter transações pendentes pode diminuir muito o desempenho, pois o tempo limite padrão para o **TransactionScope** é de um minuto. Se você não usar uma instrução **using** , deverá executar todo o trabalho em um bloco **Try** e chamar explicitamente o método **Dispose** no bloco **Finally** .  

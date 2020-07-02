@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: beca05cca35d0c410f7e9671d011d913c5ac2f22
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 77595c353522dc2db3452b51f3a0395346c85619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768628"
 ---
 # <a name="syssp_cdc_help_jobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Reporta informações sobre todos os trabalhos de captura e limpeza do Change Data Capture no banco de dados atual.  
   
@@ -54,7 +54,7 @@ sys.sp_cdc_help_jobs
 |**visa**|**bit**|Um sinalizador que indica se o trabalho de captura deve ser executado continuamente (1) ou de uma só vez (0). Para obter mais informações, consulte [Sys. sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **contínuo** é válido somente para trabalhos de captura.|  
 |**pollinginterval**|**bigint**|O número de segundos entre ciclos de exame de log.<br /><br /> **PollingInterval** é válido somente para trabalhos de captura.|  
 |**políticas**|**bigint**|O número de minutos que as linhas de alteração serão retidas em tabelas de alteração.<br /><br /> a **retenção** é válida somente para trabalhos de limpeza.|  
-|**os**|**bigint**|O número máximo de entradas de exclusão que podem ser excluídas usando uma única instrução na limpeza.|  
+|**threshold**|**bigint**|O número máximo de entradas de exclusão que podem ser excluídas usando uma única instrução na limpeza.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de banco de dados fixa **db_owner** .  

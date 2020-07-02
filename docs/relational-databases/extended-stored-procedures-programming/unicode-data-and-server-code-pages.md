@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d440b710d5f8c5693308500c01b7339c33943b0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064269"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767755"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Páginas de código do servidor e dados Unicode
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
@@ -40,7 +40,7 @@ ms.locfileid: "68064269"
   
 -   Os metadados de nome de coluna são passados para **srv_describe** como dados multibyte.  
   
-     O procedimento armazenado estendido chama **srv_pfield** com o parâmetro Field definido como SRV_SPROC_CODEPAGE para obter a página de código [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]multibyte de.  
+     O procedimento armazenado estendido chama **srv_pfield** com o parâmetro Field definido como SRV_SPROC_CODEPAGE para obter a página de código multibyte de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   As mensagens de erro são passadas para **srv_sendmsg** como dados multibyte.  
   

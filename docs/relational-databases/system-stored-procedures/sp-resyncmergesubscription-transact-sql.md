@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a20fd73874ddb93af5224c3ce6c86383c0e15ace
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eb9512bcf60d7a82d19cb383a87618c7d4c30393
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816828"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767475"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Sincroniza novamente uma assinatura de mesclagem para um estado de validação conhecido especificado por você. Isso permite impor a convergência ou sincronizar o banco de dados de assinatura para um point-in-time específico, como a última vez em que a validação foi bem-sucedida, ou para uma data específica. O instantâneo não é reaplicado ao ressincronizar uma assinatura usando esse método. Esse procedimento armazenado não é usado para assinaturas de replicação de instantâneo ou assinaturas de replicação transacional. Esse procedimento armazenado é executado no Publicador, no banco de dados de publicação, ou no Assinante, no banco de dados de assinatura.  
   

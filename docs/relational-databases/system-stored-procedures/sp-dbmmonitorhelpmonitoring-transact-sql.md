@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b16c77357795ed3c7e11454016663befcf4ae329
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d44bde22c00e2169d2f3aa74f935f18abae52923
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826154"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772250"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o período de atualização atual.  
   
@@ -40,10 +40,10 @@ sp_dbmmonitorhelpmonitoring
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Não  
+ Nenhum  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o período de atualização atual, ou seja, o número de minutos entre as atualizações da tabela de status de espelhamento de banco de dados. Esse valor abrange de 1 a 120 minutos.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd6d3091b155ae829e368bdd182b3da8286c7194
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc3dc5787693345c531e7afb3384bf093dc17aa6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487527"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765442"
 ---
 # <a name="sqlcontext-object"></a>Objeto SqlContext
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O código gerenciado é invocado no servidor quando você chama um procedimento ou uma função, quando chama um método em um tipo CLR (Common Language Runtime) definido pelo usuário ou quando sua ação dispara um gatilho definido em qualquer das linguagens do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Como a execução desse código é exigida como parte de uma conexão de usuário, o acesso ao contexto do chamador a partir do código em execução no servidor é necessário. Além disso, determinadas operações de acesso a dados podem ser válidas somente se executadas no contexto do chamador. Por exemplo, o acesso a pseudotabelas inseridas e excluídas usadas em operações de gatilho será válido somente no contexto do chamador.  
   
  O contexto do chamador é abstrato em um objeto **SqlContext** . Para obter mais informações sobre os métodos e as propriedades do **SqlTriggerContext** , consulte a documentação de referência da classe **Microsoft. SqlServer. Server. SqlTriggerContext** no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
@@ -42,7 +42,7 @@ ms.locfileid: "81487527"
  Consulte a classe **SqlContext** para ver se o código em execução no momento está em execução no processo. Para fazer isso, verifique a propriedade **IsAvailable** do objeto **SqlContext** . A propriedade **IsAvailable** será somente leitura e retornará **true** se o código de chamada estiver em execução dentro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se outros membros **SqlContext** puderem ser acessados. Se a propriedade **IsAvailable** retornar **false**, todos os outros membros de **SqlContext** lançarão um **InvalidOperationException**, se usado. Se **IsAvailable** retornar **false**, qualquer tentativa de abrir um objeto de conexão que tenha "context connection = true" na cadeia de conexão falhará.  
   
 ## <a name="retrieving-windows-identity"></a>Recuperando a identidade do Windows  
- O código CLR em execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre é invocado no contexto da conta de processo. Se o código deve executar determinadas ações usando a identidade do usuário que está chamando, em vez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da identidade do processo, um token de representação deve ser obtido por meio da propriedade **WindowsIdentity** do objeto **SqlContext** . A propriedade **WindowsIdentity** retorna uma instância **WindowsIdentity** que representa [!INCLUDE[msCoName](../../includes/msconame-md.md)] a identidade do Windows do chamador ou NULL se o cliente foi autenticado usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação do. Somente assemblies marcados com **EXTERNAL_ACCESS** ou permissões **não seguras** podem acessar essa propriedade.  
+ O código CLR em execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre é invocado no contexto da conta de processo. Se o código deve executar determinadas ações usando a identidade do usuário que está chamando, em vez da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identidade do processo, um token de representação deve ser obtido por meio da propriedade **WindowsIdentity** do objeto **SqlContext** . A propriedade **WindowsIdentity** retorna uma instância **WindowsIdentity** que representa a [!INCLUDE[msCoName](../../includes/msconame-md.md)] identidade do Windows do chamador ou NULL se o cliente foi autenticado usando a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Somente assemblies marcados com **EXTERNAL_ACCESS** ou permissões **não seguras** podem acessar essa propriedade.  
   
  Depois de obter o objeto **WindowsIdentity** , os chamadores podem representar a conta do cliente e executar ações em seu nome.  
   

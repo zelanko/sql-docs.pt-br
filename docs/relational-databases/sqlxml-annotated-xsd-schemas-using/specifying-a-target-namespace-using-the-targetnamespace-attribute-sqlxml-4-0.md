@@ -21,15 +21,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3daeaabe86d91d0986fb764c3a60304ec5e09faf
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885166"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764896"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificando um namespace de destino usando o atributo targetNamespace (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Ao escrever esquemas XSD, você pode usar o atributo de XSD **targetNamespace** para especificar um namespace de destino. Este tópico descreve como os atributos de **targetNamespace**, **elementFormDefault**e **attributeFormDefault** do xsd funcionam, como eles afetam a instância XML gerada e como as consultas XPath são especificadas com namespaces.  
   
  Você pode usar o atributo **xsd: targetNamespace** para posicionar elementos e atributos do namespace padrão em um namespace diferente. Você também pode especificar se os elementos e atributos do esquema declarados localmente devem aparecer qualificados por um namespace, seja explicitamente, usando um prefixo, ou implicitamente, por padrão. Você pode usar os atributos **elementFormDefault** e **attributeFormDefault** no **\<xsd:schema>** elemento para especificar globalmente a qualificação de elementos e atributos locais, ou pode usar o atributo **Form** para especificar elementos e atributos individuais separadamente.  

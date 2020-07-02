@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772131"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Relata informações sobre um determinado servidor de replicação ou remoto, ou sobre todos os servidores de ambos os tipos. Fornece o nome do servidor, o nome da rede do servidor, o status de replicação do servidor, o número de identificação do servidor e o nome de ordenação. Também fornece valores de tempo limite para se conectar a servidores vinculados ou fazer consultas neles.  
   
@@ -41,7 +41,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server = ] 'server'`É o servidor sobre quais informações são relatadas. Quando o *servidor* não for especificado, os relatórios sobre todos os servidores em **Master. sys. Servers**. o *servidor* é **sysname**, com um padrão de NULL.  
+`[ @server = ] 'server'`É o servidor sobre quais informações são relatadas. Quando o *servidor* não for especificado, os relatórios sobre todos os servidores em **master.sys. Servers**. o *servidor* é **sysname**, com um padrão de NULL.  
   
 `[ @optname = ] 'option'`É a opção que descreve o servidor. a *opção* é **varchar (** 35 **)**, com um padrão de NULL e deve ser um desses valores.  
   
@@ -55,7 +55,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**pub**|Editor.|  
 |**RPC**|Habilita o RPC a partir do servidor especificado.|  
 |**saída de RPC**|Habilita o RPC para o servidor especificado.|  
-|**projeto**|Farão.|  
+|**sub**|Farão.|  
 |**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usar agrupamento remoto**|Usa a ordenação de uma coluna remota em vez do servidor local.|  
   

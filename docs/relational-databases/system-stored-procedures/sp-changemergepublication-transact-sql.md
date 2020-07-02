@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8f9260aad5b07e57ff3d95b8943d85a15756077d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771474"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Altera as propriedades de uma publicação de mesclagem. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -111,7 +111,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**snapshot_ready**|**true**|Instantâneo disponível para a publicação.|  
 ||**false**|Instantâneo não disponível para a publicação.|  
 |**status**|**active**|Publicação com status ativo.|  
-||**inativo**|Publicação com status inativo.|  
+||**inactive**|Publicação com status inativo.|  
 |**sync_mode**|**nativo** ou<br /><br /> **bcp nativo**|Saída de programa de cópia em massa em modo nativo de todas as tabelas é usada para o instantâneo inicial.|  
 ||**espaço**<br /><br /> ou **caractere bcp**|Saída de programa de cópia em massa em modo de caractere de todas as tabelas é usada para o instantâneo inicial, que é exigido de todos os Assinantes não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Observação: depois de usar partition_groups, se você voltar a usar **SetupBelongs**e definir **use_partition_groups = false** em **changemergearticle**, isso poderá não ser refletido corretamente depois que um instantâneo for obtido. Os gatilhos que são gerados através do instantâneo são compatíveis com grupos de partição.<br /><br /> A solução alternativa para esse cenário é definir o status como inativo, modificar o **use_partition_groups**e, em seguida, definir status como ativo.|**true**|A publicação usa partições pré-computadas.|  

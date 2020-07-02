@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2cd1e4126c1a9da57a6bda6195be78d996e101d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771376"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Altera as opções para um Assinante. Qualquer tarefa de distribuição para os Assinantes deste Publicador será atualizada. Esse procedimento armazenado grava na tabela de **MSsubscriber_info** no banco de dados de distribuição. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   

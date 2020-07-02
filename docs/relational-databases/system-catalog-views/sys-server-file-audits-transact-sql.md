@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e81cb385da40b5d8aff52368bb59d0c91322321d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e946748b7374863e5981924671884e1621cf644d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772994"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém informações estendidas sobre o tipo de auditoria de arquivo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditoria em uma instância de servidor. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|ID da auditoria.|  
-|Nome|**sysname**|Nome da auditoria.|  
+|name|**sysname**|Nome da auditoria.|  
 |audit_guid|**uniqueidentifier**|GUID da auditoria.|  
 |create_date|**datetime**|Data UTC quando a auditoria do arquivo foi criada.|  
 |modify_date|**datatime**|Data em UTC quando a auditoria do arquivo foi modificada pela última vez.|  

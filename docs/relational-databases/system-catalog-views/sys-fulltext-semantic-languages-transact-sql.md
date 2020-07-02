@@ -19,15 +19,15 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a345e41f42cc70e941e4a87e3510312313d4dc03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764668"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma linha para cada idioma cujo modelo de estatística está registrado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando um modelo de idioma está registrado, o idioma é habilitado para indexação semântica.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68133784"
 |-|-|-|  
 |**Nome da coluna**|**Tipo**|**Descrição**|  
 |lcid|INT|LCID (ID de localidade do Microsoft Windows) do idioma.|  
-|name|sysname|É o valor do alias em [Sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondendo ao valor de **LCID**ou a representação de cadeia de caracteres do LCID numérico.|  
+|name|sysname|É o valor do alias em [linguagens desys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondente ao valor de **LCID**ou a representação de cadeia de caracteres do LCID numérico.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Para obter mais informações, veja [Instalar e configurar a pesquisa semântica](../../relational-databases/search/install-and-configure-semantic-search.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "68133784"
  A visibilidade dos metadados em exibições do catálogo está limitada aos protegíveis que pertencem a um usuário ou para os quais o usuário recebeu permissão.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra como consultar **Sys. fulltext_semantic_languages** para obter informações sobre todos os modelos de linguagem registrados para indexação semântica na instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ O exemplo a seguir mostra como consultar **Sys. fulltext_semantic_languages** para obter informações sobre todos os modelos de linguagem registrados para indexação semântica na instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_languages;  

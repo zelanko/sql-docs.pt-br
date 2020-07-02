@@ -1,5 +1,5 @@
 ---
-title: 'Ferramenta de gerenciamento de linha de comando: SqlLocalDB. exe | Microsoft Docs'
+title: 'Ferramenta de gerenciamento de linha de comando: SqlLocalDB.exe | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ apilocation:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c39272a1f8af7fce092f7aa31ac3a4f7ebd2263
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765249"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Ferramenta de gerenciamento da linha de comando: SqlLocalDB.exe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O SqlLocalDB.exe é uma ferramenta simples que permite ao usuário a gerenciar facilmente as instâncias de LocalDB na linha de comando. É implementado como um wrapper simples com base na instância da API de LocalDB. Assim como ocorre em muitas ferramentas semelhantes do SQL Server (por exemplo, SQLCMD), os parâmetros são passados para SqlLocalDB como argumentos de linha de comando e a saída é enviada ao console.  
   
  O SqlLocalDB permite que os desenvolvedores utilizem o LocalDB sem precisar escrever o código para chamar a API ou depender de outras ferramentas para fazer isso para eles.  

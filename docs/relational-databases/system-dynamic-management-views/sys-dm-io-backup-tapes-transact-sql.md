@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7d0e9c5198b65a6e4ddce148dbafd46821e2f40
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 745ad11ccb8b06471ac07477739580558475e363
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771583"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna a lista de dispositivos de fita e o estado de solicitações de montagem para backups.   
  
@@ -40,7 +40,7 @@ ms.locfileid: "82830520"
 |**mount_expiration_time**|**datetime**|Hora em que o pedido de montagem expirará (tempo limite). NULL se nenhuma montagem estiver pendente (**status! = 2**). Permite valor nulo.|  
 |**database_name**|**nvarchar(256)**|Banco de dados do qual será feito o backup neste dispositivo. Permite valor nulo.|  
 |**SPID**|**int**|ID da sessão. Identificação do usuário da fita. Permite valor nulo.|  
-|**linha**|**int**|Comando que executa o backup. Permite valor nulo.|  
+|**command**|**int**|Comando que executa o backup. Permite valor nulo.|  
 |**command_desc**|**nvarchar(120)**|Descrição do comando. Permite valor nulo.|  
 |**media_family_id**|**int**|Índice da família de mídias (1...* n*), *n* é o número de famílias de mídia no conjunto de mídias. Permite valor nulo.|  
 |**media_set_name**|**nvarchar(256)**|Nome do conjunto de mídias (caso haja) como especificado pela opção de MEDIANAME, quando o conjunto de mídias foi criado. Permite valor nulo.|  

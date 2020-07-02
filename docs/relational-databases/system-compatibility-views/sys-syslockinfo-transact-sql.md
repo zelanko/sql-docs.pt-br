@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90573a28292ac4f4de973dc2a5a0c5e1f331d2f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053344"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764389"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém informações sobre todas as solicitações de bloqueios concedidas, de conversão e em espera.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68053344"
 |**req_refcnt**|**smallint**|Contagem de referência de bloqueio. Sempre que uma transação solicita um bloqueio em um recurso específico, uma conta de referência é incrementada. O bloqueio não pode ser liberado até que a contagem de referência seja igual a 0.|  
 |**req_cryrefcnt**|**smallint**|Reservado para uso futuro. Sempre defina em 0.|  
 |**req_lifetime**|**int**|Bitmap de tempo de vida de bloqueio. Durante certas estratégias de processamento de consulta, devem ser mantidos os bloqueios nos recursos até que o processador de consulta complete uma fase específica da consulta. O bitmap de tempo de vida de bloqueio é usado pelo processador de consulta e gerenciador de transações  para indicar grupos de bloqueios que podem ser liberados quando uma determinada fase de uma consulta terminar sua execução. São usados certos bits no bitmap para indicar bloqueios que são mantidos até o término de uma transação, até mesmo se a contagem de referência for igual a 0.|  
-|**req_spid**|**int**|ID [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de processo interno da sessão que solicita o bloqueio.|  
+|**req_spid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ID de processo interno da sessão que solicita o bloqueio.|  
 |**req_ecid**|**int**|ID de contexto de execução (ECID). Usado para indicar qual thread em uma operação paralela possui um bloqueio específico.|  
 |**req_ownertype**|**smallint**|Tipo de objeto associado com o bloqueio:<br /><br /> 1 = Transação<br /><br /> 2 = Cursor<br /><br /> 3 = Sessão<br /><br /> 4 = ExSessão<br /><br /> Note que 3 e 4 representam uma versão especial de bloqueios de sessão, controle de banco de dados e bloqueios de grupos de arquivos respectivamente.|  
 |**req_transactionID**|**bigint**|ID de transação exclusiva usada em **syslockinfo** e no evento do criador de perfil|  

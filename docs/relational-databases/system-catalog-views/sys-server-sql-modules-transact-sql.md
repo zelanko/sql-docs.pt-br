@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bd4eba56c6550f4a3ae8b033dbd81b71ac7b5418
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f4e89842cfe911773fc56b3cf0b277962118729d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772962"
 ---
 # <a name="sysserver_sql_modules-transact-sql"></a>sys.server_sql_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém o conjunto de módulos SQL para gatilhos do nível do servidor de tipo TR. Você pode associar essa relação a sys.server_triggers. A tupla (object_id) é a chave da relação.  
   
-|Nome da coluna|Tipo de Dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Esta é uma referência FOREIGN KEY ao gatilho no nível do servidor onde o módulo foi definido.|  
 |**defini**|**nvarchar(max)**|Texto SQL que define esse módulo.<br /><br /> NULL = Criptografado.|  

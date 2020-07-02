@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 694fb912675a15055688956a18714185e25995c4
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 4a4881fc4710ba56439eb98b5b196af93247c11f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768156"
 ---
 # <a name="functions-on-string-values---substring"></a>Funções em Valores da Cadeia de Caracteres – substring
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retorna parte do valor de *$sourceString*, começando na posição indicada pelo valor de *$startingLoc* e continua para o número de caracteres indicado pelo valor de *$Length*.  
   

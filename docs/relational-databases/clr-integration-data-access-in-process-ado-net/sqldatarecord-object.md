@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4aa5ea4d06ac5b8da69eec246387007ba5d03606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da1735c17a4d87e085fbe1e8b5f960d14a70b86c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765433"
 ---
 # <a name="sqldatarecord-object"></a>Objeto SqlDataRecord
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O objeto **SqlDataRecord** representa uma única linha de dados, junto com seus metadados relacionados.  
   
  Os procedimentos armazenados gerenciados podem enviar conjuntos de resultados ao cliente que não sejam de um **SqlDataReader**. A classe **SqlDataRecord** , junto com os métodos **SendResultsStart**, **SendResultsRow**e **SendResultsEnd** do objeto **SqlPipe** permite que os procedimentos armazenados enviem conjuntos de resultados personalizados ao cliente.  

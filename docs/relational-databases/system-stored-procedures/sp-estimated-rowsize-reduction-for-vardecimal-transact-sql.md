@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 292bd66b8c30cec9bc55442a3ab768dd23b731ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4c25e061e8eb303f936cc129efc6e630e7be5933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772142"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Estimará a redução do tamanho médio das linhas se você habilitar o formato de armazenamento vardecimal em uma tabela. Use este número para estimar a redução global do tamanho da tabela. Como a amostragem estatística é usada para calcular a redução média do tamanho da linha, considere-a apenas como uma estimativa. Em casos raros, o tamanho da linha pode aumentar após o formato de armazenamento vardecimal ser habilitado.  
   

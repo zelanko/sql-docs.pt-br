@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771560"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma tabela de zero, uma ou mais linhas de frases-chave comuns entre dois documentos (um documento de origem e um documento correspondido) cujo conteúdo é semanticamente similar.  
   
@@ -71,10 +71,10 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Tabela retornada  
  A tabela a seguir descreve as informações sobre as frases-chave que podem ser retornadas por essa função de conjunto de linhas.  
   
-|Column_name|Type|Descrição|  
+|Column_name|Tipo|Description|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|A frase chave que contribui com a semelhança entre o documento original e o documento correspondente.|  
-|**placar**|**real**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave que são semelhantes entre os 2 documentos.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
+|**placar**|**FOTO**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave que são semelhantes entre os 2 documentos.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Para obter mais informações, consulte [localizar documentos semelhantes e relacionados com pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
@@ -92,7 +92,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  Exige permissões SELECT na tabela base na qual os índices de texto completo e semânticos foram criados.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir recupera as 5 frases-chave que tinham a pontuação de similaridade mais alta entre os candidatos especificados na tabela **HumanResources. JobCandidate** do banco de dados de exemplo AdventureWorks2012. As @CandidateId variáveis @MatchedID e representam valores da coluna de chave do índice de texto completo.  
+ O exemplo a seguir recupera as 5 frases-chave que tinham a pontuação de similaridade mais alta entre os candidatos especificados na tabela **HumanResources. JobCandidate** do banco de dados de exemplo AdventureWorks2012. As @CandidateId @MatchedID variáveis e representam valores da coluna de chave do índice de texto completo.  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

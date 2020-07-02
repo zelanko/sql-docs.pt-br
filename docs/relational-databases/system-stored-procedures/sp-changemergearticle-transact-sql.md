@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 97c6a7d309578ebe0cc6e93b5408ad6d9fad6296
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771510"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Altera as propriedades de um artigo de mesclagem. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -139,7 +139,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|Alterações são permitidas em um Assinante com assinatura de cliente, mas elas não são carregadas no Publicador.|  
 ||**2**|Não são permitidas alterações em um Assinante com uma assinatura de cliente.|  
 |**subset_filterclause**||Cláusula WHERE especificando filtragem horizontal. Aplica-se somente a um artigo de tabela.<br /><br /> Importante por motivos de desempenho, recomendamos que você não aplique funções a nomes de colunas em cláusulas de filtro de linha com parâmetros, como. ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` Se você usar [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) em uma cláusula de filtro e substituir o valor de HOST_NAME, talvez seja necessário converter os tipos de dados usando [converter](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obter mais informações sobre as práticas recomendadas para esse caso, consulte a seção "substituindo o valor de HOST_NAME ()" em [filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
-|**os**||Valor percentual usado para assinantes que executam o [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . controles de **limite** quando o agente de mesclagem atribui um novo intervalo de identidade. Quando a porcentagem de valores especificada no limite é usada, o Merge Agent cria um novo intervalo de identidade. Usado quando **identityrangemanagementoption** é definido como **auto** ou **auto_identity_range** é definido como **true**. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**||Valor percentual usado para assinantes que executam o [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . controles de **limite** quando o agente de mesclagem atribui um novo intervalo de identidade. Quando a porcentagem de valores especificada no limite é usada, o Merge Agent cria um novo intervalo de identidade. Usado quando **identityrangemanagementoption** é definido como **auto** ou **auto_identity_range** é definido como **true**. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**1**|A assinatura digital em um resolvedor personalizado é verificada para determinar se é de uma fonte confiável.|  
 ||**0**|A assinatura digital em um resolvedor personalizado não é verificada para determinar se é de uma fonte confiável.|  
 |NULL (padrão)||Retorna a lista de valores com suporte para a *Propriedade*.|  

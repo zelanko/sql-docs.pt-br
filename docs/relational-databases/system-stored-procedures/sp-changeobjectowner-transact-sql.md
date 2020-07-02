@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6f00b788ecf6b6e4c02d4b8343ba14fa2c345e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e6f664cc763e56135ddf1c35f5f0057d97ec2d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771459"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Altera o proprietário de um objeto no banco de dados atual.  
   
 > [!IMPORTANT]
->  Esse procedimento armazenado funciona apenas com os objetos disponíveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [ALTER Schema](../../t-sql/statements/alter-schema-transact-sql.md) ou [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** altera o esquema e o proprietário. Para preservar a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse procedimento armazenado irá alterar proprietários de objetos somente quando o proprietário atual e o novo possuírem esquemas que tenham o mesmo nome que seus nomes de usuário do banco de dados.  
+>  Esse procedimento armazenado funciona apenas com os objetos disponíveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [ALTER Schema](../../t-sql/statements/alter-schema-transact-sql.md) ou [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** altera o esquema e o proprietário. Para preservar a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse procedimento armazenado irá alterar proprietários de objetos somente quando o proprietário atual e o novo possuírem esquemas que tenham o mesmo nome que seus nomes de usuário do banco de dados.  
 > 
 > [!IMPORTANT]
 >  Um novo requisito de permissão foi adicionado a esse procedimento armazenado.  
@@ -47,7 +47,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="arguments"></a>Argumentos  
 `[ @objname = ] 'object'`É o nome de uma tabela, exibição, função definida pelo usuário ou procedimento armazenado existente no banco de dados atual. *Object* é um **nvarchar (776)**, sem padrão. o *objeto* pode ser qualificado com o proprietário do objeto existente, no formato _existing_owner_**.** _objeto_ se o esquema e seu proprietário tiverem o mesmo nome.  
   
-`[ @newowner = ] 'owner_ '`É o nome da conta de segurança que será o novo proprietário do objeto. *Owner* é **sysname**, sem padrão. o *proprietário* deve ser um usuário de banco de dados, [!INCLUDE[msCoName](../../includes/msconame-md.md)] uma função de servidor, um logon do Windows ou um grupo do Windows válido com acesso ao banco de dados atual. Se o novo proprietário for um usuário ou grupo do Windows para o qual não há uma entidade correspondente no nível de banco de dados, será criado um usuário de banco de dados.  
+`[ @newowner = ] 'owner_ '`É o nome da conta de segurança que será o novo proprietário do objeto. *Owner* é **sysname**, sem padrão. o *proprietário* deve ser um usuário de banco de dados, uma função de servidor, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] logon do Windows ou um grupo do Windows válido com acesso ao banco de dados atual. Se o novo proprietário for um usuário ou grupo do Windows para o qual não há uma entidade correspondente no nível de banco de dados, será criado um usuário de banco de dados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

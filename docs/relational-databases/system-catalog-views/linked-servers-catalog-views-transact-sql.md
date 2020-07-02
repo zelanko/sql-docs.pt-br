@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38b17fb728188ff6ea71b4674c6bb2fee7e84f12
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 26c5c33ef3b94949067914f99de64bd3b6441643
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764800"
 ---
 # <a name="linked-servers-catalog-views-transact-sql"></a>Exibições do catálogo de servidores vinculados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Esta seção contém as exibições de catálogo a seguir.  
   

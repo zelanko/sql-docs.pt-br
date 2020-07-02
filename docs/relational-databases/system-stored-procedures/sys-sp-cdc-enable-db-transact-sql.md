@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f9947372ca0c92d7daaef19fafb2f7e3ee4a84f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9a7a07452a0dcb9ebfe91e7e51b10239b3eb3f15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769634"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Habilita o Change Data Capture para o banco de dados atual. Esse procedimento deve ser executado para um banco de dados antes que qualquer tabela possa ser habilitada para o Change Data Capture nesse banco de dados. O Change Data Capture registra, insere, atualiza, e exclui atividades aplicadas às tabelas habilitadas, disponibilizando os detalhes das alterações em um formato relacional de fácil de consumir. Informações de coluna que espelham a estrutura de coluna de uma tabela de origem rastreada são capturadas para as linhas modificadas, juntamente com os metadados necessários para aplicar as alterações a um ambiente de destino.  
   

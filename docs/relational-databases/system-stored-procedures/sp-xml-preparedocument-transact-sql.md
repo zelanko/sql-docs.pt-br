@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767487"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Lê o texto XML fornecido como entrada, analisa o texto usando o analisador MSXML (Msxmlsql.dll) e fornece o documento analisado em um estado pronto para consumo. Esse documento analisado é uma representação em árvore dos vários nós no documento XML: elementos, atributos, texto, comentários e assim por diante.  
   
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Especifica as declarações de namespace usadas em expressões XPATH de linha e coluna em OPENXML. *xpath_namespaces* é um parâmetro de texto **: char**, **nchar**, **varchar**, **nvarchar**, **Text**, **ntext** ou **XML**.  
   
- O valor padrão é ** \< root xmlns: MP = "urn: schemas-microsoft-com: xml-metaprop" >**. *xpath_namespaces* fornece os URIs de namespace para os prefixos usados nas expressões XPath no OPENXML por meio de um documento XML bem formado. *xpath_namespaces* declara o prefixo que deve ser usado para fazer referência ao namespace **urn: schemas-microsoft-com: xml-metaprop**; Isso fornece metadados sobre os elementos XML analisados. Embora você possa redefinir o prefixo de namespace para o namespace metaproperty usando essa técnica, esse namespace não será perdido. O **MP** de prefixo ainda é válido para **urn: schemas-microsoft-com: xml-metaprop** , mesmo que *xpath_namespaces* não contenha tal declaração.  
+ O valor padrão é **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** . *xpath_namespaces* fornece os URIs de namespace para os prefixos usados nas expressões XPath no OPENXML por meio de um documento XML bem formado. *xpath_namespaces* declara o prefixo que deve ser usado para fazer referência ao namespace **urn: schemas-microsoft-com: xml-metaprop**; Isso fornece metadados sobre os elementos XML analisados. Embora você possa redefinir o prefixo de namespace para o namespace metaproperty usando essa técnica, esse namespace não será perdido. O **MP** de prefixo ainda é válido para **urn: schemas-microsoft-com: xml-metaprop** , mesmo que *xpath_namespaces* não contenha tal declaração.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou >0 (falha)  

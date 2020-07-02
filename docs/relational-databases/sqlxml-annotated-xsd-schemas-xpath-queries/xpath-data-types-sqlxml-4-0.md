@@ -29,15 +29,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17ad196110a68a83618e5048f53bfa84fb7e0f51
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764868"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de dados XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e XSD (esquema XML) têm tipos de dados muito diferentes. Por exemplo, o XPath não tem tipos de dados de data ou inteiros, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o XSD têm muitos. O XSD usa precisão de nanossegundos para valores de tempo, e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa precisão de no máximo 1/300 segundo. Consequentemente, o mapeamento de um tipo de dados para outro nem sempre é possível. Para obter mais informações sobre mapeamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tipos de dados para tipos de dados XSD, consulte [coerção de tipo de dados e a anotação sql: DataType &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  O XPath tem três tipos de dados: **cadeia de caracteres**, **número**e **booliano**. O tipo de dados **Number** é sempre um ponto flutuante de precisão dupla IEEE 754. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados **float (53)** é o **número**mais próximo do XPath. No entanto, **float (53)** não é exatamente IEEE 754. Por exemplo, nem NaN (não é um número) nem infinidade é usado. A tentativa de converter uma cadeia de caracteres não numérica em um **número** e tentar dividir por zero resulta em um erro.  

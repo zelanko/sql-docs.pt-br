@@ -19,15 +19,15 @@ ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffd6d98cec5b495b395a915bd6f53308d474333c
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: da4440690913b3eb76724a83b4d95b321ebc591d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764788"
 ---
 # <a name="sysall_objects-transact-sql"></a>sys.all_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Mostra o UNION de todos os objetos definidos pelo usuário no escopo do esquema e os objetos de sistema.  
   

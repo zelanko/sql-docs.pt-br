@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f158839f45b3b890c0ae46aee1d74f4e6a3e59b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772950"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Exibe as permissões de uma função de servidor fixa.  
   
@@ -44,7 +44,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ## <a name="arguments"></a>Argumentos  
 `[ @srvrolename = ] 'role'`É o nome da função de servidor fixa para a qual as permissões são retornadas. *role* é **sysname**, com um padrão de NULL. Se nenhuma função for especificada, as permissões de todas as funções de servidor fixas serão retornadas. a *função* pode ter um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**sysadmin**|Administradores de sistema|  
 |**securityadmin**|Administradores de segurança|  
