@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9bf35753bbe72fef2211485ec723bfa42ba08eb7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 50dd13235c0b583b7e3c3f5869b9df60648f1549
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648836"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada evento ao qual é acionada uma notificação de eventos do nível de servidor ou um gatilho DDL do nível de servidor. As colunas **object_id** e **tipo** identificam exclusivamente o evento de servidor.  
 
@@ -35,7 +35,7 @@ ms.locfileid: "82831381"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID da notificação de eventos no nível de servidor ou gatilho DDL no nível de servidor a serem acionados.|  
-|**tipo**|**int**|Tipo do evento que provoca o acionamento da notificação de eventos ou do gatilho DDL.|  
+|**type**|**int**|Tipo do evento que provoca o acionamento da notificação de eventos ou do gatilho DDL.|  
 |**type_desc**|**nvarchar(60)**|Descrição do evento que provoca o acionamento do gatilho DDL ou da notificação de eventos.|  
 |**event_group_type**|**int**|Grupo de eventos no qual o gatilho ou a notificação de eventos são criados, ou NULL quando não é criado em um grupo de eventos.|  
 |**event_group_type_desc**|**nvarchar(60)**|Descrição do grupo de eventos no qual o gatilho ou a notificação de eventos são criados, ou NULL quando não for criado em um grupo de eventos.|  

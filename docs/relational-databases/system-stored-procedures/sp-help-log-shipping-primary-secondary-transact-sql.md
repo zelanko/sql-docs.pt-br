@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3d1c93bb6fecea955e139688b1a8f4f2c1dccc75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25d3c2133ee02bc25a869ad3a465081de4d7d38e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634495"
 ---
 # <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Esse procedimento armazenado retorna informações relativas a todos os bancos de dados secundários de um determinado banco de dados primário.  
   
@@ -59,7 +59,7 @@ sp_help_log_shipping_primary_secondary
  Somente os membros da função de servidor fixa **sysadmin** podem executar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
- Este exemplo ilustra o uso de **sp_help_log_shipping_primary_secondary** para recuperar uma lista de bancos de dados secundários associados ao [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]banco de dados primário.  
+ Este exemplo ilustra o uso de **sp_help_log_shipping_primary_secondary** para recuperar uma lista de bancos de dados secundários associados ao banco de dados primário [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965fc3fe168ecd6027c2c1fc2ebad92bc334e383
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e1b8659d7828feaab219ce5c2b883137f252314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645365"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gera um script que contém as chamadas de **sp_addsynctrigger** a serem aplicadas em assinantes para assinaturas atualizáveis. Há uma chamada **sp_addsynctrigger** para cada artigo na publicação. O script gerado também contém as chamadas de **sp_addqueued_artinfo** que criam a tabela **MSsubsciption_articles** necessária para processar publicações em fila. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ca6787abae22722a7bbb99d335e63d47051bb46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 973d7ea13a52ce70b6a6bef35d59f63d8f9b3c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637477"
 ---
 # <a name="creating-an-assembly"></a>Criando um assembly
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Os objetos de banco de dados gerenciado, como os procedimentos armazenados ou gatilhos, são compilados e implantados em unidades chamadas de assembly. Os assemblies DLL gerenciados devem ser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registrados no antes da funcionalidade que o assembly fornece pode ser usado. Para registrar um assembly em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], use a instrução CREATE ASSEMBLY. Este tópico trata sobre como registrar um assembly em um banco de dados usando a instrução CREATE ASSEMBLY e como especificar as configurações de segurança do assembly.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  Os objetos de banco de dados gerenciado, como os procedimentos armazenados ou gatilhos, são compilados e implantados em unidades chamadas de assembly. Os assemblies DLL gerenciados devem ser registrados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes da funcionalidade que o assembly fornece pode ser usado. Para registrar um assembly em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], use a instrução CREATE ASSEMBLY. Este tópico trata sobre como registrar um assembly em um banco de dados usando a instrução CREATE ASSEMBLY e como especificar as configurações de segurança do assembly.  
   
 ## <a name="the-create-assembly-statement"></a>A instrução CREATE ASSEMBLY  
  A instrução CREATE ASSEMBLY é usada para criar um assembly em um banco de dados. Veja um exemplo:  
@@ -73,9 +73,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>Criando assemblies EXTERNAL_ACCESS e UNSAFE  
  **EXTERNAL_ACCESS** trata dos cenários nos quais o código precisa acessar recursos fora do servidor, como arquivos, rede, registro e variáveis de ambiente. Sempre que o servidor acessa um recurso externo, ele representa o contexto de segurança do usuário que chama o código gerenciado.  
   
- A permissão de código **inseguro** é para essas situações em que um assembly não é verificamente seguro ou requer acesso adicional a recursos restritos, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] como a API do Win32.  
+ A permissão de código **inseguro** é para essas situações em que um assembly não é verificamente seguro ou requer acesso adicional a recursos restritos, como a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] API do Win32.  
   
- Para criar um assembly **EXTERNAL_ACCESS** ou **não seguro** no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], uma das duas condições a seguir deve ser atendida:  
+ Para criar um assembly **EXTERNAL_ACCESS** ou **não seguro** no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , uma das duas condições a seguir deve ser atendida:  
   
 1.  O assembly é assinado com nome forte ou com Authenticode usando um certificado. Esse nome forte (ou certificado) é criado dentro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como uma chave assimétrica (ou certificado) e tem um logon correspondente com permissão de **assembly de acesso externo** (para assemblies de acesso externo) ou permissão de **assembly não segura** (para assemblies não seguros).  
   
@@ -85,7 +85,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  Recomendamos que a [propriedade de banco](../../../relational-databases/security/trustworthy-database-property.md) de dados TRUSTWORTHY em um banco de dados não seja definida como **on** somente para executar o código Common Language Runtime (CLR) no processo do servidor. Em vez disso, recomendamos que seja criada uma chave assimétrica do arquivo de assembly no banco de dados mestre. Um logon mapeado para essa chave assimétrica deve ser criado, e o logon deve receber o **assembly de acesso externo** ou a permissão de **assembly não segura** .  
   
- As instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir executam as etapas necessárias para criar uma chave assimétrica, mapear um logon para essa chave e conceder **EXTERNAL_ACCESS** permissão para o logon. Você deve executar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE ASSEMBLY.  
+ As instruções a seguir [!INCLUDE[tsql](../../../includes/tsql-md.md)] executam as etapas necessárias para criar uma chave assimétrica, mapear um logon para essa chave e conceder **EXTERNAL_ACCESS** permissão para o logon. Você deve executar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE ASSEMBLY.  
   
 ```  
 USE master;   
@@ -108,7 +108,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- As instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir executam as etapas necessárias para criar uma chave assimétrica, mapear um logon para essa chave e conceder permissão **insegura** ao logon. Você deve executar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE ASSEMBLY.  
+ As instruções a seguir [!INCLUDE[tsql](../../../includes/tsql-md.md)] executam as etapas necessárias para criar uma chave assimétrica, mapear um logon para essa chave e conceder permissão **insegura** ao logon. Você deve executar as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] a seguir antes de executar a instrução CREATE ASSEMBLY.  
   
 ```  
 USE master;   

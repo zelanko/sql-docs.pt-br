@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc7b1ae26bddec69629864fd776a51cef64505e6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 08e4c6eeaccbac7dc0d8003d689cf798df94cbe9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646729"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Procedimentos armazenados de coletor de dados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   O SQL Server dá suporte aos seguintes procedimentos armazenados do sistema que são usados para trabalhar com o coletor de dados e os seguintes componentes: conjuntos de coleta, itens de coleta e tipos de coleção.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac9221ee6a2e9b50cec8800ebb4e611211634b60
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ecb59448ff76114d25dbb8422cf7dc1fefc44e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640266"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Faz uma atualização fictícia na linha determinada de forma que ela é enviada novamente durante a próxima mesclagem. Esse procedimento armazenado pode ser executado no Publicador, no banco de dados de publicação, ou no Assinante, no banco de dados de assinatura.  
   
@@ -47,7 +47,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="remarks"></a>Comentários  
  **sp_mergedummyupdate** é usado na replicação de mesclagem.  
   
- **sp_mergedummyupdate** será útil se você escrever sua própria alternativa ao Visualizador de conflitos de replicação (Wzcnflct. exe).  
+ **sp_mergedummyupdate** será útil se você escrever sua própria alternativa para a Visualizador de Conflitos de Replicação (Wzcnflct.exe).  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de banco de dados fixa **db_owner** podem ser executados **sp_mergedummyupdate**.  

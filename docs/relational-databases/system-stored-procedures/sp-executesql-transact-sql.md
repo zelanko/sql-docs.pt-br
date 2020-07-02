@@ -19,15 +19,15 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d71778517a9c6711a157bfe6f79df34ad05d9ee7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d6efd10e3b7cb385c576cf8644ec945736765ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634815"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Executa uma instrução ou lote [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode ser reutilizado muitas vezes ou que foi criado dinamicamente. A instrução ou lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] pode conter parâmetros inseridos.  
   

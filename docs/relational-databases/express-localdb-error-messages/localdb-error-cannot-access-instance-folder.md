@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d0354ba6d980b359778a66fc13b65fe233cacba1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f10ed404b9ccb2d7a1dd62a45ac794df265a45d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67996002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635321"
 ---
 # <a name="localdb_error_cannot_access_instance_folder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Detalhes  
   
@@ -27,7 +27,7 @@ ms.locfileid: "67996002"
 |ID do evento|261|  
 |Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
 |Componente|API do runtime de banco de dados local|  
-|Texto da mensagem|Não é possível acessar a pasta da instância do banco de dados local:%% LOCALAPPDATA\\ %% \\>Microsoft\Microsoft SQL Server DB\Instances local<nome da instância.|  
+|Texto da mensagem|Não é possível acessar a pasta da instância do banco de dados local:%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server DB\Instances local \\<nome da instância \> .|  
   
 ## <a name="explanation"></a>Explicação  
  Não é possível acessar uma pasta de instância.  

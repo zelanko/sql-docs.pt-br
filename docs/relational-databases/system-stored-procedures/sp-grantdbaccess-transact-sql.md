@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 3b88badb8b1852617d9edd8acd31f2c19258cca7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85ab6ead295b4459890a61deccdac3dc2775033a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646003"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Adiciona um usuário ao banco de dados atual.  
   
@@ -43,9 +43,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login_ '`É o nome do grupo do Windows, logon ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon do Windows a ser mapeado para o novo usuário de banco de dados. Os nomes de grupos do Windows e logons do Windows devem ser qualificados com um nome de domínio do Windows no formato*logon*de *domínio*\\; por exemplo, **LONDON\Joeb**. O logon ainda não pode ser mapeado para um usuário no banco de dados. o *logon* é um **sysname**, sem padrão.  
+`[ @loginame = ] 'login_ '`É o nome do grupo do Windows, logon ou logon do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser mapeado para o novo usuário de banco de dados. Os nomes de grupos do Windows e logons do Windows devem ser qualificados com um nome de domínio do Windows no formato logon de *domínio* \\ *login*; por exemplo, **LONDON\Joeb**. O logon ainda não pode ser mapeado para um usuário no banco de dados. o *logon* é um **sysname**, sem padrão.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``É o nome do novo usuário de banco de dados. *name_in_db* é uma variável de saída com um tipo de dados **sysname**e um padrão de NULL. Se não for especificado, o *logon* será usado. Se especificado como uma variável de saída com um valor de NULL, ** \@name_in_db** será definido como *logon*. *name_in_db* ainda não deve existir no banco de dados atual.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``É o nome do novo usuário de banco de dados. *name_in_db* é uma variável de saída com um tipo de dados **sysname**e um padrão de NULL. Se não for especificado, o *logon* será usado. Se especificado como uma variável de saída com um valor de NULL, ** \@ name_in_db** será definido como *logon*. *name_in_db* ainda não deve existir no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

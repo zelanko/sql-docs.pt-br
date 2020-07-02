@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40eaf88f2bd0824d133571e53fd4d9b9831454b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646531"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Adiciona um plano de manutenção e retorna o ID do plano.  
   
@@ -47,7 +47,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="arguments"></a>Argumentos  
 `[ @plan_name = ] 'plan_name'`Especifica o nome do plano de manutenção a ser adicionado. *plan_name* é **varchar (128)**.  
   
- *plan_id* ** @plan_id = '** plan_id **'**  
+ ** @plan_id = '** *plan_id* **'**  
  Especifica a ID do plano de manutenção. *plan_id* é **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

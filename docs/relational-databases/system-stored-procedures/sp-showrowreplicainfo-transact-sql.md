@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 74a5865151cb283aed16efe8ef2ea2908a9f56c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626624"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Exibe informações sobre uma linha em uma tabela que está sendo usada como um artigo em replicação de mesclagem. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nome do banco de dados que fez essa entrada.|  
 |**db_nickname**|**binary(6)**|Apelido do banco de dados que fez essa entrada.|  
 |**version**|**int**|Versão da entrada.|  
-|**current_state**|**nvarchar (9)**|Retorna informações sobre o estado atual da linha.<br /><br /> os dados de linha **y** representam o estado atual da linha.<br /><br /> os dados de **n** linhas não representam o estado atual da linha.<br /><br /> ** \<>n/a** -não aplicável.<br /><br /> ** \<>desconhecido** -o estado atual não pode ser determinado.|  
+|**current_state**|**nvarchar (9)**|Retorna informações sobre o estado atual da linha.<br /><br /> os dados de linha **y** representam o estado atual da linha.<br /><br /> os dados de **n** linhas não representam o estado atual da linha.<br /><br /> **\<n/a>**-Não aplicável.<br /><br /> **\<unknown>**-O estado atual não pode ser determinado.|  
 |**rowversion_table**|**nchar (17)**|Indica se as versões de linha são armazenadas na tabela de [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) ou na tabela [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**mente**|**nvarchar (255)**|Informações adicionais sobre essa entrada de versão de linha. Geralmente, esse campo fica vazio.|  
   

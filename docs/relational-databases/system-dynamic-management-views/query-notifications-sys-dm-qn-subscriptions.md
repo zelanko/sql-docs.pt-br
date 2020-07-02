@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c748dd4980fb7b3b142893f5a04dd36f1676f8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635011"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notificações de consulta-sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre as assinaturas de notificações de consulta ativa no servidor. Você pode usar essa exibição para verificar assinaturas ativas no servidor ou em um banco de dados especificado, ou verificar um principal de servidor especificado.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82826380"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID de uma assinatura.|  
 |**database_id**|**int**|ID do banco de dados no qual a consulta de notificação foi executada. Esse banco de dados armazena informações relativas a essa assinatura.|  
-|**SIDs**|**varbinary (85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
+|**sid**|**varbinary (85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
 |**object_id**|**int**|ID da tabela interna que armazena informações sobre parâmetros de assinatura.|  
 |**created**|**datetime**|Data e hora em que a assinatura foi criada.|  
 |**timeout**|**int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: a hora de acionamento real pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorrer após o tempo limite especificado, mas antes de a assinatura ser acionada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acionamento ocorrerá no momento em que a alteração foi feita.|  
@@ -56,7 +56,7 @@ ms.locfileid: "82826380"
 |----------|------------------|----------|  
 |65798|Assinatura acionada porque os dados foram alterados|Assinatura disparada por inserção|  
 |65799|Assinatura acionada porque os dados foram alterados|Excluir|  
-|65800|Assinatura acionada porque os dados foram alterados|Atualizar|  
+|65800|Assinatura acionada porque os dados foram alterados|Atualização|  
 |65801|Assinatura acionada porque os dados foram alterados|Mesclar|  
 |65802|Assinatura acionada porque os dados foram alterados|Truncar tabela|  
 |66048|Assinatura acionada porque o tempo limite expirou|Modo de informações indefinido|  

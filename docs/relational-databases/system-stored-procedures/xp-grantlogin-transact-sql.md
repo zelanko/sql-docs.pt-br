@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81237214608b6fb0c04fa0857203d0488db375ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633547"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Concede a um grupo ou usuário do Windows acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,9 +42,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'`É o nome do usuário ou grupo do Windows a ser adicionado. O usuário ou grupo do Windows deve ser qualificado com um nome de domínio do Windows no formato *domínio*\\*usuário*. o *logon* é **sysname**, sem padrão.  
+`[ @loginame = ] 'login'`É o nome do usuário ou grupo do Windows a ser adicionado. O usuário ou grupo do Windows deve ser qualificado com um nome de domínio do Windows no formato *domínio* \\ *usuário*. o *logon* é **sysname**, sem padrão.  
   
-`[ @logintype = ] 'logintype'`É o nível de segurança do logon com acesso concedido. *LoginType* é **varchar (5)**, com um padrão de NULL. Somente o **administrador** pode ser especificado. Se **admin** for especificado, o *logon* terá acesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]concedido e adicionado como membro da função de servidor fixa **sysadmin** .  
+`[ @logintype = ] 'logintype'`É o nível de segurança do logon com acesso concedido. *LoginType* é **varchar (5)**, com um padrão de NULL. Somente o **administrador** pode ser especificado. Se **admin** for especificado, o *logon* terá acesso concedido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e adicionado como membro da função de servidor fixa **sysadmin** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

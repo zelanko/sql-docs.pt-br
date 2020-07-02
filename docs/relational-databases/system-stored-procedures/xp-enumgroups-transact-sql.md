@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e228f2a2363cab777c2b7ae44185e3c215e8f93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633693"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fornece uma lista de grupos Microsoft Windows locais ou uma lista de grupos globais que estão definidos em um domínio do Windows especificado.  
   
@@ -53,9 +53,9 @@ xp_enumgroups [ 'domain_name' ]
 |**mente**|**sysname**|Descrição do grupo do Windows fornecida pelo Windows|  
   
 ## <a name="remarks"></a>Comentários  
- Se *domain_name* for o nome do computador baseado no Windows em que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada ou nenhum nome de domínio for especificado, **xp_enumgroups** enumerará os grupos locais do computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o.  
+ Se *domain_name* for o nome do computador baseado no Windows em que uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada ou nenhum nome de domínio for especificado, **xp_enumgroups** enumerará os grupos locais do computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **xp_enumgroups** não pode ser usado quando uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do está em execução no Windows 98.  
+ **xp_enumgroups** não pode ser usado quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está em execução no Windows 98.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a associação na função de banco de dados fixa **db_owner** no banco de dados **mestre** ou a associação à função de servidor fixa **sysadmin** .  

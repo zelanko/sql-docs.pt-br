@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b07b1d668008c970025c1addcaa308c7622c2e24
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 48c24a82f886cade6b89e4f47772678e00e3c362
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639355"
 ---
 # <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela de **MSmerge_subscriptions** contém uma linha para cada assinatura atendida pelo agente de mesclagem no Assinante. Esta tabela é armazenada no banco de dados de distribuição.  
   

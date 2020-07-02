@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ed8dc099113822741d3d67df4797ef89bbbe682
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 75579103721fe8c89d85a0c222a631a9d98ac833
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648057"
 ---
 # <a name="sysdm_xe_sessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre uma sessão de eventos estendida ativa. Esta sessão é uma coleção de eventos, ações e destinos.  
     
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |address|**varbinary (8)**|O endereço da memória da sessão. o endereço é exclusivo em todo o sistema local. Não permite valor nulo.|  
-|Nome|**nvarchar(256)**|O nome da sessão. o nome é exclusivo em todo o sistema local. Não permite valor nulo.|  
+|name|**nvarchar(256)**|O nome da sessão. o nome é exclusivo em todo o sistema local. Não permite valor nulo.|  
 |pending_buffers|**int**|O número de buffers cheios que são processamento pendente. Não permite valor nulo.|  
 |total_regular_buffers|**int**|O número total de buffers normais associados à sessão. Não permite valor nulo.<br /><br /> Observação: os buffers regulares são usados na maioria das vezes. Esses buffers não têm tamanho suficiente para manter muitos eventos. Normalmente, há três ou mais buffers por sessão. O número de buffers normais é determinado automaticamente pelo servidor, baseado no particionamento de memória definido por meio da opção MEMORY_PARTITION_MODE. O tamanho dos buffers normais é igual ao valor da opção MAX_MEMORY (padrão de 4 MB), dividido pelo número de buffers. Para obter mais informações sobre o MEMORY_PARTITION_MODE e as opções de MAX_MEMORY, consulte [criar sessão de evento &#40;&#41;do Transact-SQL ](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|O tamanho do buffer normal, em bytes. Não permite valor nulo.|  

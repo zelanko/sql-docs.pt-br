@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb261fdfb745e935b94fc5c2944640c507674ece
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9385503d625c14932d520e4cf7390bf42612faff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639861"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Usado para modificar as propriedades de um conjunto de coleta definido pelo usuário ou para renomear um desses conjuntos.  
   
@@ -182,6 +182,6 @@ GO
  [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
  [&#41;&#40;Transact-SQL de syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [dbo. sysschedules &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [Agendas dedbo.sys&#40;&#41;de Transact-SQL](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

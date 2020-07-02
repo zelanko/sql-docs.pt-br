@@ -20,15 +20,15 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50385161b417d02db2dc44ad1172910d31f198b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625945"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Remove um assembly da lista de assemblies confiáveis no servidor.
 
@@ -43,7 +43,7 @@ sp_drop_trusted_assembly
 
 ## <a name="arguments"></a>Argumentos
 
-[ @hash = ] '*valor*'  
+[ @hash =] '*valor*'  
 O SHA2_512 valor de hash do assembly a ser removido da lista de assemblies confiáveis para o servidor. Os assemblies confiáveis podem ser carregados quando a segurança estrita do CLR estiver habilitada, mesmo se o assembly não estiver assinado ou se o banco de dados não estiver marcado como confiável.
 
 ## <a name="remarks"></a>Comentários  
@@ -52,7 +52,7 @@ Este procedimento remove um assembly de [Sys. trusted_assemblies](../../relation
 
 ## <a name="permissions"></a>Permissões
 
-Requer a associação à `sysadmin` função de servidor fixa `CONTROL SERVER` ou à permissão.
+Requer a associação à `sysadmin` função de servidor fixa ou à `CONTROL SERVER` permissão.
 
 ## <a name="examples"></a>Exemplos  
 

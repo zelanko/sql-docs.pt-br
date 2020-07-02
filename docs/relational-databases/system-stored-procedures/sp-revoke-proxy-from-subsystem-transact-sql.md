@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a6654fb7bd83f3c247c972c3c044af7b0a2d932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645436"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Revoga o acesso a um subsistema de um proxy.  
   
@@ -51,7 +51,7 @@ sp_revoke_proxy_from_subsystem
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**2**|Script do ActiveX<br /><br /> ** \* Importante \* \* ** O subsistema de script do ActiveX será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**2**|Script do ActiveX<br /><br /> Importante o subsistema de scripts do ActiveX será removido do Agent em uma versão futura do ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |**3**|Sistema Operacional (CmdExec)|  
 |**4**|Replication Snapshot Agent|  
 |**5**|Replication Agente de Leitor de Log|  
@@ -83,7 +83,7 @@ sp_revoke_proxy_from_subsystem
  A revogação de acesso a um subsistema não altera as permissões para o principal especificado no proxy.  
   
 > [!NOTE]  
->  Para determinar quais etapas de trabalho fazem referência a um proxy, clique com o botão direito **SQL Server Agent** do mouse no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]nó **proxies** em SQL Server Agent na Microsoft e clique em **Propriedades**. Na caixa de diálogo **Propriedades da conta proxy** , selecione a página **referências** para exibir todas as etapas de trabalho que fazem referência a esse proxy.  
+>  Para determinar quais etapas de trabalho fazem referência a um proxy, clique com o botão direito do mouse no nó **proxies** em **SQL Server Agent** na Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e clique em **Propriedades**. Na caixa de diálogo **Propriedades da conta proxy** , selecione a página **referências** para exibir todas as etapas de trabalho que fazem referência a esse proxy.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_revoke_proxy_from_subsystem**.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf58ed6b921c7b83b0b3e6c66a5365e73328c994
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 51ef0fa1c24cd8bfb8ee6eaeab06c856601faee7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640042"
 ---
 # <a name="sp_replrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Usado pela replicação transacional durante backup e restauração para que os dados replicados no Distribuidor sejam sincronizados com os dados do Publicador. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   

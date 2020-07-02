@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828344"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634227"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Exibe informações sobre um artigo. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Para Editores Oracle, esse procedimento armazenado é executado no Distribuidor, em qualquer banco de dados.  
   
@@ -63,7 +63,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**objeto base**|**nvarchar (257)**|Nome da tabela subjacente representado pelo artigo ou procedimento armazenado.|  
 |**objeto de destino**|**sysname**|Nome da tabela de destino (assinatura).|  
 |**synchronization object**|**nvarchar (257)**|Nome da exibição que define o artigo publicado.|  
-|**tipo**|**smallint**|O tipo de artigo:<br /><br /> **1** = baseado em log.<br /><br /> **3** = baseado em log com o filtro manual.<br /><br /> **5** = baseado em log com exibição manual.<br /><br /> **7** = baseado em log com filtro manual e exibição manual.<br /><br /> **8** = execução de procedimento armazenado.<br /><br /> **24** = execução de procedimento armazenado serializável.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição (somente esquema).<br /><br /> **96** = função de agregação (somente esquema).<br /><br /> **128** = função (somente esquema).<br /><br /> **257** = exibição indexada baseada em log.<br /><br /> **259** = exibição indexada baseada em log com filtro manual.<br /><br /> **261** = exibição indexada baseada em log com exibição manual.<br /><br /> **263** = exibição indexada baseada em log com filtro manual e exibição manual.<br /><br /> **320** = exibição indexada (somente esquema).<br /><br />|  
+|**type**|**smallint**|O tipo de artigo:<br /><br /> **1** = baseado em log.<br /><br /> **3** = baseado em log com o filtro manual.<br /><br /> **5** = baseado em log com exibição manual.<br /><br /> **7** = baseado em log com filtro manual e exibição manual.<br /><br /> **8** = execução de procedimento armazenado.<br /><br /> **24** = execução de procedimento armazenado serializável.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição (somente esquema).<br /><br /> **96** = função de agregação (somente esquema).<br /><br /> **128** = função (somente esquema).<br /><br /> **257** = exibição indexada baseada em log.<br /><br /> **259** = exibição indexada baseada em log com filtro manual.<br /><br /> **261** = exibição indexada baseada em log com exibição manual.<br /><br /> **263** = exibição indexada baseada em log com filtro manual e exibição manual.<br /><br /> **320** = exibição indexada (somente esquema).<br /><br />|  
 |**status**|**tinyint**|Pode ser o resultado de [& (e bit e)](../../t-sql/language-elements/bitwise-and-transact-sql.md) de uma ou mais ou essas propriedades de artigo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = o artigo está ativo.<br /><br /> **0x08** = incluir o nome da coluna em instruções INSERT.<br /><br /> **0x16** = usar instruções parametrizadas.<br /><br /> **0x32** = use instruções parametrizadas e inclua o nome da coluna em instruções INSERT.|  
 |**sem**|**nvarchar (257)**|Procedimento armazenado usado para filtrar a tabela horizontalmente. Esse procedimento armazenado deve ter sido criado usando a cláusula FOR REPLICATION.|  
 |**ndescrição**|**nvarchar (255)**|Entrada descritiva para o artigo.|  
@@ -85,7 +85,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**auto_identity_range**|**int**|Sinalizador que indica se o tratamento de um intervalo de identidade automático foi ativado na publicação no momento em que foi criado. **1** significa que o intervalo de identidade automático está habilitado; **0** significa que ele está desabilitado.|  
 |**publisher_identity_range**|**int**|Tamanho do intervalo do intervalo de identidade no Publicador se o artigo tiver *identityrangemanagementoption* definido como **auto** ou **auto_identity_range** definido como **true**.|  
 |**identity_range**|**bigint**|Tamanho do intervalo do intervalo de identidade no Assinante se o artigo tiver *identityrangemanagementoption* definido como **auto** ou **auto_identity_range** definido como **true**.|  
-|**os**|**bigint**|Valor de porcentagem que indica quando o Distribution Agent atribui um novo intervalo de identidade.|  
+|**threshold**|**bigint**|Valor de porcentagem que indica quando o Distribution Agent atribui um novo intervalo de identidade.|  
 |**identityrangemanagementoption**|**int**|Indica o gerenciamento de intervalo de identidade tratado para o artigo.|  
 |**fire_triggers_on_snapshot**|**bit**|Se os gatilhos de usuário replicados forem executados quando o instantâneo inicial for aplicado.<br /><br /> **1** = gatilhos de usuário são executados.<br /><br /> **0** = os gatilhos de usuário não são executados.|  
   

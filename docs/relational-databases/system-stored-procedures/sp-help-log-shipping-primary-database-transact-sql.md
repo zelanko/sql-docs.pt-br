@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c88a4ac30ba51cdfdbd9a9d711a141044d099a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634551"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Recupera as configurações do banco de dados primário.  
   
@@ -57,7 +57,7 @@ sp_help_log_shipping_primary_database
 |**backup_directory**|O diretório onde os arquivos de backup de log de transações do servidor primário são armazenados.|  
 |**backup_share**|A rede ou o caminho UNC para o diretório de backup.|  
 |**backup_retention_period**|A quantidade de tempo, em minutos, que um arquivo de backup log é retido no diretório de backups antes de ser excluído.|  
-|**backup_compression**|Indica se a configuração de envio de logs usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = desabilitado. Nunca compacte backups de log.<br /><br /> **1** = habilitado. Sempre compacte backups de log.<br /><br /> **2** = usar a configuração da [exibição ou configurar a opção de configuração de servidor de compactação de backup padrão](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Este é o valor padrão.<br /><br /> A compactação de backup é suportada somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior). Em outras edições, o valor é sempre 2.|  
+|**backup_compression**|Indica se a configuração de envio de logs usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = desabilitado. Nunca compacte backups de log.<br /><br /> **1** = habilitado. Sempre compacte backups de log.<br /><br /> **2** = usar a configuração da [exibição ou configurar a opção de configuração de servidor de compactação de backup padrão](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Esse é o valor padrão.<br /><br /> A compactação de backup é suportada somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior). Em outras edições, o valor é sempre 2.|  
 |**backup_job_id**|A ID de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent associada ao trabalho de backup no servidor primário.|  
 |**monitor_server**|O nome da instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usado como servidor monitor na configuração de envio de log.|  
 |**monitor_server_security_mode**|O modo de segurança usado para conexão ao servidor monitor.<br /><br /> 1 = Autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.|  
@@ -76,7 +76,7 @@ sp_help_log_shipping_primary_database
  Somente os membros da função de servidor fixa **sysadmin** podem executar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
- Este exemplo ilustra o uso de **sp_help_log_shipping_primary_database** para recuperar as configurações de banco [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]de dados primário do banco de dados.  
+ Este exemplo ilustra o uso de **sp_help_log_shipping_primary_database** para recuperar as configurações de banco de dados primário do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  
