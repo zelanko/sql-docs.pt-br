@@ -33,15 +33,15 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790452"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna uma tabela de zero, uma ou mais linhas para as colunas que contêm correspondências exatas ou difusas (menos precisas) a palavras e frases únicas, a proximidade de palavras dentro de uma determinada distância uma da outra ou correspondências ponderadas. CONTAINSTABLE é usado na [cláusula from](../../t-sql/queries/from-transact-sql.md) de uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução SELECT e é referenciado como se fosse um nome de tabela normal. Ele executa uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em colunas indexadas de texto completo que contêm tipos de dados baseados em caracteres.  
   
@@ -132,9 +132,9 @@ CONTAINSTABLE
   
  Se documentos de idiomas diferentes forem armazenados em conjunto como BLOBs (objetos binários grandes) em uma única coluna, o LCID de um determinado documento determinará qual idioma será usado para indexar seu conteúdo. Ao consultar uma coluna desse tipo, especificar *LANGUAGE**language_term* pode aumentar a probabilidade de uma boa correspondência.  
   
- Quando especificado como uma cadeia de caracteres, *language_term* corresponde ao valor da coluna **alias** na exibição de compatibilidade [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  A cadeia de caracteres precisa ser colocada entre aspas, como em '*language_term*'. Quando especificado como um inteiro, *language_term* é a LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal da LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda.  
+ Quando especificado como uma cadeia de caracteres, *language_term* corresponde ao valor da coluna **alias** na exibição de compatibilidade de [idiomassys.sys](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  A cadeia de caracteres precisa ser colocada entre aspas, como em '*language_term*'. Quando especificado como um inteiro, *language_term* é a LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal da LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda.  
   
- Se o valor estiver no formato DBCS (conjunto de caracteres de byte duplo) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o o converterá em Unicode.  
+ Se o valor estiver no formato DBCS (conjunto de caracteres de byte duplo), o o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converterá em Unicode.  
   
  Se o idioma especificado não for válido ou se não houver nenhum recurso instalado que corresponda ao idioma, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. Para usar os recursos de idioma neutro, especifique 0x0 como *language_term*.  
   

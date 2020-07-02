@@ -14,15 +14,15 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce374aad4581d9bf53ecb5b072ae04316765076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e07912f0f2f524759d866a5099345f1816913a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787809"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos de dados CLR grandes definidos pelo usuário (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Este tópico aborda as alterações feitas ao ODBC no SQL Server Native Client para dar suporte aos UDTs (tipos definidos pelo usuário) de CLR (Common Language Runtime) grande.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "81303658"
   
 |Tipo de dados SQL|Layout de memória|Tipos de dados do C|Valor (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (caractere \*não assinado)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (caractere não assinado \* )|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Campos do descritor dos parâmetros  
  As informações são retornadas nos campos IPD são as seguintes:  
@@ -213,7 +213,7 @@ ms.locfileid: "81303658"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Os valores retornados para UDTs são os seguintes:  
   
-|Tipo de dados SQL|Type|SubType|Comprimento|Precisão|Escala|  
+|Tipo de dados SQL|Tipo|SubType|Tamanho|Precisão|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -233,7 +233,7 @@ ms.locfileid: "81303658"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Os valores permitidos para UDTs são os seguintes:  
   
-|Tipo de dados SQL|Type|SubType|Comprimento|Precisão|Escala|  
+|Tipo de dados SQL|Tipo|SubType|Tamanho|Precisão|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

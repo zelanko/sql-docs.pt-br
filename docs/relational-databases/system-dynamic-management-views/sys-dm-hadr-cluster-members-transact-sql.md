@@ -22,15 +22,15 @@ ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffa67137c4b7d99cd0aa394319e9415a72b73103
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3ec0ed5aa4ddedd7e3fcfd544d53a270eb9e3372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790458"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Se o nó WSFC que hospeda uma instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está habilitada para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tiver quorum de WSFC, retornará uma linha para cada um dos membros que constituem o quorum e o estado de cada um deles. Isso inclui todos os nós no cluster (retornados com CLUSTER_ENUM_NODE tipo pela função **ClusterEnum** ) e o disco ou a testemunha de compartilhamento de arquivos, se houver. A linha retornada para um determinado membro contém informações sobre o estado daquele membro. Por exemplo, para um cluster de cinco nós com quorum de nó principal no qual um nó está inoperante, quando **Sys. dm_hadr_cluster_members** é consultado de uma instância de servidor que está habilitada para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] o que reside em um nó com quorum, **Sys. dm_hadr_cluster_members** reflete o estado do nó para baixo como "NODE_DOWN".  
   

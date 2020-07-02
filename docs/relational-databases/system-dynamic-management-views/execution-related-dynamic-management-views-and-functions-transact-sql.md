@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46db1a37a7ee05dfe85d1fcbedc3400ef6ffcf24
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ce9611eb339466c6f1b6bfde7ac3516b14716305
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790479"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>Funções e exibições de gerenciamento dinâmico relacionadas à execução (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Esta seção contém os seguintes objetos de gerenciamento dinâmico:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "82829525"
 
   
 > [!NOTE]  
->  A exibição de gerenciamento dinâmico **Sys. dm_exec_query_transformation_stats** é identificada apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.  
+>  A exibição de gerenciamento dinâmico **Sys. dm_exec_query_transformation_stats** é identificada apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

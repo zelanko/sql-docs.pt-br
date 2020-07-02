@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b06a0bdbb0cfa7e80d30128ccce71661edde219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: facfcf92693f108bb04cbb864ac8364e2bef6721
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790406"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>Procedimentos armazenados do plano de manutenção do banco de dados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para configurar tarefas de manutenção. Esses procedimentos armazenados são usados com planos de manutenção de banco de dados. Este recurso foi substituído por planos de manutenção que não usam esses procedimentos armazenados. Use esses procedimentos para manter planos de manutenção de banco de dados em instalações que foram atualizadas a partir de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para configurar tarefas de manutenção. Esses procedimentos armazenados são usados com planos de manutenção de banco de dados. Este recurso foi substituído por planos de manutenção que não usam esses procedimentos armazenados. Use esses procedimentos para manter planos de manutenção de banco de dados em instalações que foram atualizadas a partir de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   

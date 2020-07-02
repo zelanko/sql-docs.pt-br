@@ -14,15 +14,15 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abce98b64da8de6039f81025201cce25269763a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feae55d486eae6b269cef94320fe9468edb6e672
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789372"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLColumns** retorna SQL_SUCCESS se os valores existem ou não para os parâmetros *CatalogName*, *TableName*ou *ColumnName* . **SQLFetch** retorna SQL_NO_DATA quando são usados valores inválidos nesses parâmetros.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "81302600"
   
  A tabela a seguir lista as colunas retornadas pelo conjunto de resultados:  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Retorna SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR para os tipos de dados **varchar (max)** .|  
 |TYPE_NAME|Retorna "varchar", "varbinary" ou "nvarchar" para os tipos de dados **varchar (max)**, **varbinary (max)** e **nvarchar (max)** .|  
@@ -56,12 +56,12 @@ ms.locfileid: "81302600"
   
  Para o UDT de parâmetros, você pode usar os novos descritores específicos do driver definidos acima para obter ou definir as propriedades extra de metadados de um UDT, caso o servidor retorne ou exija essas informações.  
   
- Quando um cliente se conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao e chama SQLColumns, usar valores nulos ou curingas para o parâmetro de entrada do catálogo não retornará informações de outros catálogos. Em vez disso, serão retornadas apenas informações sobre o catálogo atual. O cliente pode primeiro chamar SQLTables para determinar em qual catálogo a tabela desejada está localizada. Em seguida, o cliente pode usar esse valor de catálogo para o parâmetro de entrada do catálogo em sua chamada para SQLColumns para recuperar informações sobre as colunas nessa tabela.  
+ Quando um cliente se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e chama SQLColumns, usar valores nulos ou curingas para o parâmetro de entrada do catálogo não retornará informações de outros catálogos. Em vez disso, serão retornadas apenas informações sobre o catálogo atual. O cliente pode primeiro chamar SQLTables para determinar em qual catálogo a tabela desejada está localizada. Em seguida, o cliente pode usar esse valor de catálogo para o parâmetro de entrada do catálogo em sua chamada para SQLColumns para recuperar informações sobre as colunas nessa tabela.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns e parâmetros com valor de tabela  
  O conjunto de resultados retornado por SQLColumns depende da configuração de SQL_SOPT_SS_NAME_SCOPE. Para obter mais informações, consulte [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). As colunas a seguir foram adicionadas para parâmetros com valor de tabela:  
   
-|Nome da coluna|Tipo de dados|Conteúdo|  
+|Nome da coluna|Tipo de dados|Sumário|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Para uma coluna em um TABLE_TYPE, será SQL_TRUE se a coluna for uma coluna computada; caso contrário, SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE se a coluna for uma coluna de identidade; caso contrário, SQL_FALSE.|  
@@ -84,7 +84,7 @@ ms.locfileid: "81302600"
 |SS_IS_SPARSE|**Smallint**|Se a coluna for uma coluna esparsa, será SQL_TRUE; caso contrário, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Se a coluna for a **column_set** coluna, isso será SQL_TRUE; caso contrário, SQL_FALSE.|  
   
- Em conformidade com a especificação ODBC, SS_IS_SPARSE e SS_IS_COLUMN_SET aparecem antes de todas as colunas específicas do driver que foram [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicionadas às [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]versões anteriores ao e depois de todas as colunas exigidas pelo próprio ODBC.  
+ Em conformidade com a especificação ODBC, SS_IS_SPARSE e SS_IS_COLUMN_SET aparecem antes de todas as colunas específicas do driver que foram adicionadas às [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versões anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e depois de todas as colunas exigidas pelo próprio ODBC.  
   
  O conjunto de resultados retornado por SQLColumns depende da configuração de SQL_SOPT_SS_NAME_SCOPE. Para obter mais informações, consulte [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   

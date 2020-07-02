@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5aa59cdb3b1c59b78a0ef99fb7d375275d370e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57c110763c38f1d400d03178568ff955a9c1840b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789480"
 ---
 # <a name="localdbformatmessage-function"></a>Função LocalDBFormatMessage
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Retorna a descrição textual localizada para o erro de LocalDB do SQL Server Express especificado.  
   
  **Arquivo de cabeçalho:** sqlncli.h  

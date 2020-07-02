@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b96875c1e8f105cbda0298c5b058e21913a8c8c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70e6244254c221ff12c37c04d83bf294b41acfec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789494"
 ---
 # <a name="localdbdeleteinstance-function"></a>Função LocalDBDeleteInstance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Remove a instância especificada de LocalDB do SQL Server Express.  
   
  **Arquivo de cabeçalho:** sqlncli.h  

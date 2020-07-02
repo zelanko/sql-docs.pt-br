@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60d27260378a8f0d6706b85ea02232ffca6a05c8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8cce1f1fd046d2b93f41f010b82a067c5a936670
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790361"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Usado durante a solução de problemas para especificar a última transação entregue usando o LSN (número de sequência de log), permitindo que o Agente de Distribuição comece a entregar na próxima transação. Após a reinicialização, o Agente de Distribuição retorna transações maiores do que esta marca d' água (LSN) do cache do banco de dados de distribuição (msrepl_commands). Esse procedimento armazenado é executado no Assinante no banco de dados de assinatura. Sem suporte para Assinantes não SQLServer.  
   
@@ -78,6 +78,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_setsubscriptionxactseqno**.  
   
-## <a name="see-more"></a>Veja mais
+## <a name="see-more"></a>Ver mais
 
 [Blog: como ignorar uma transação](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

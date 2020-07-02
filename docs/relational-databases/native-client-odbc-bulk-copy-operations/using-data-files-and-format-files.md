@@ -18,15 +18,15 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc87b341a4ca9685e070395e003d8187e8593b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787990"
 ---
 # <a name="using-data-files-and-format-files"></a>Usando arquivos de dados e de formato
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   O programa de cópia em massa mais simples executa estas tarefas:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73785275"
   
  Ao copiar em massa de um arquivo de dados descrito por um arquivo de formato, leia o arquivo de formato chamando [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) após **bcp_init** , mas antes de **bcp_exec**.  
   
- A função **bcp_control** controla várias opções ao copiar em massa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um arquivo de dados. **bcp_control** define opções, como o número máximo de erros antes do encerramento, a linha no arquivo no qual iniciar a cópia em massa, a linha a ser interrompida e o tamanho do lote.  
+ A função **bcp_control** controla várias opções ao copiar em massa em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um arquivo de dados. **bcp_control** define opções, como o número máximo de erros antes do encerramento, a linha no arquivo no qual iniciar a cópia em massa, a linha a ser interrompida e o tamanho do lote.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Executando operações de cópia em massa &#40;&#41;ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

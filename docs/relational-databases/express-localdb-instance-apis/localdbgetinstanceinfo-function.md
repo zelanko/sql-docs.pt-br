@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c10fcf4f0a57eef5e2f4f33d699c4ed7d4d350e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b392098091a3a439271a6f01a28ae152405e17b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789502"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Função LocalDBGetInstanceInfo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Retorna informações sobre a instância de LocalDB do SQL Server Express especificada, como se existe ou não, a versão do LocalDB usada, se está sendo executada ou não, e assim por diante.  
   
  As informações são retornadas em um **struct** chamado **LocalDBInstanceInfo**, que tem a definição a seguir.  

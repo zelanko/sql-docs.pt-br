@@ -14,15 +14,15 @@ ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81ba57c6e66f156f13055ff5ec941fa8f0c86381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a0f52c2a1bb2826126ae6548cfad95c5ccf5eac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85788069"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client relata o tipo de coluna adicional no conjunto de resultados de **SQLGetTypeInfo**. USERTYPE informa a definição do tipo de dados da biblioteca do banco de dados, sendo útil para desenvolvedores que estejam portando aplicativos existentes da biblioteca para ODBC.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81298429"
   
  Para **varchar**, **nvarchar** e **varbinary**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client continua a relatar 8000, 4000 e 8000, respectivamente, para o valor COLUMN_SIZE, mesmo que seja realmente ilimitado. Isso é para assegurar a compatibilidade com versões anteriores.  
   
- Para o tipo de dados **XML** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o driver ODBC do Native Client relata SQL_SS_LENGTH_UNLIMITED para COLUMN_SIZE para denotar tamanho ilimitado.  
+ Para o tipo de dados **XML** , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client relata SQL_SS_LENGTH_UNLIMITED para COLUMN_SIZE para denotar tamanho ilimitado.  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo e parâmetros com valor de tabela  
  O tipo de tabela para parâmetros com valor de tabela é efetivamente um meta-tipo, ou seja, um tipo usado para definir outros tipos. Portanto, ele não precisa ser exposto por meio do SQLGetTypeInfo. Os aplicativos devem usar SQLTables, em vez de SQLGetTypeInfo, para recuperar metadados para tipos de tabela usados com parâmetros com valor de tabela.  

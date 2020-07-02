@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ed475c78decb3891185b90d3dc032ab896bdf0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085189"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790346"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Facilita o chaveamento dos parâmetros de grade de um índice espacial.  
   
@@ -56,7 +56,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Representa a identificação exclusiva de cada célula, com uma contagem inicial a partir de 1.|  
-|**célula**|**geografia**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
+|**célula**|**gráfico**|É um polígono retangular que representa cada célula. A forma de célula é idêntica à forma de célula usada para a indexação espacial.|  
 |**row_count**|**bigint**|Indica o número de objetos espaciais que estão tocando ou contendo a célula.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -71,7 +71,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  A caixa delimitadora para o tipo de **geografia** é o globo inteiro.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir chama **sp_help_spatial_geography_histogram** na `Person.Address` tabela no banco [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de dados.  
+ O exemplo a seguir chama **sp_help_spatial_geography_histogram** na `Person.Address` tabela no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados.  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

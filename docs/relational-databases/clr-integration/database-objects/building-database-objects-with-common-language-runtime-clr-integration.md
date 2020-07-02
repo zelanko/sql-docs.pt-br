@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dc38fc39a0f4d876adc99a0aff87d2acaad1545
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789565"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Criando objetos de banco de dados com integração CLR (Common Language Runtime)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Você pode compilar objetos de banco de dados que usam a integração do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o CLR do .NET Framework. O código gerenciado executado dentro do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é chamado de "rotina do CLR". Essas rotinas incluem:  
   
 -   Funções definidas pelo usuário com valor escalar (UDFs escalares)  

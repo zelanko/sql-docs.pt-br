@@ -14,19 +14,19 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54fe59caad74c856ef7a548fb54433f66c216a2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfabd9ad0a5ff9e59e8e7f91f1fc9709abef17f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787899"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Suporte a colunas esparsas no SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client suporta colunas esparsas. Para obter mais informações sobre colunas esparsas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], confira [Usar colunas esparsas](../../../relational-databases/tables/use-sparse-columns.md) e [Usar conjuntos de colunas](../../../relational-databases/tables/use-column-sets.md).  
   
- Para obter mais informações sobre o suporte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colunas esparsas no Native Client, consulte [suporte a colunas esparsas &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) e [colunas esparsas dão suporte a &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md).  
+ Para obter mais informações sobre o suporte a colunas esparsas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [suporte a colunas esparsas &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) e [colunas esparsas dão suporte a &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md).  
   
  Para obter informações sobre aplicativos de exemplo que demonstram esse recurso, confira [Amostras de programação do SQL Server Data](https://msftdpprodsamples.codeplex.com/).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "81388454"
 |Comportamento de **queryout** para BCP.|Nenhuma alteração na manipulação de colunas nomeadas explicitamente de versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.<br /><br /> Cenários que envolvem importação e exportação entre tabelas com esquemas diferentes podem exigir manipulação especial.<br /><br /> Para obter mais informações sobre BCP, consulte Suporte de BCP (cópia em massa) a colunas esparsas, mais adiante neste tópico.|  
   
 ## <a name="down-level-client-behavior"></a>Comportamento do cliente de versão anterior  
- Os clientes de nível inferior só retornarão metadados para colunas que não são membros do **column_set** esparso para SQLColumns e DBSCHMA_COLUMNS. Os conjuntos de linhas de esquema OLE DB adicionais [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] introduzidos no Native Client não estarão disponíveis, nem as modificações em SQLColumns no ODBC via SQL_SOPT_SS_NAME_SCOPE.  
+ Os clientes de nível inferior só retornarão metadados para colunas que não são membros do **column_set** esparso para SQLColumns e DBSCHMA_COLUMNS. Os conjuntos de linhas de esquema OLE DB adicionais introduzidos no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client não estarão disponíveis, nem as modificações em SQLColumns no ODBC via SQL_SOPT_SS_NAME_SCOPE.  
   
  Os clientes de nível inferior podem acessar as colunas que são membros do **column_set** esparso por nome, e a coluna **column_set** ficará acessível como uma coluna XML aos clientes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   

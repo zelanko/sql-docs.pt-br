@@ -18,19 +18,19 @@ ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: daf4f4c0c7c6c1d53c2ab899dd150756399d53a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f93e04283c35d84fa32d40fbed6bb3e1fa9ba4cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787704"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Conjuntos de linhas do esquema – suporte à consulta distribuída
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Para dar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporte a consultas distribuídas, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] interface **IDBSchemaRowset** do provedor de OLE DB de cliente nativo retorna metadados em servidores vinculados.  
+  Para dar suporte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a consultas distribuídas, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] interface **IDBSchemaRowset** do provedor de OLE DB de cliente nativo retorna metadados em servidores vinculados.  
   
- Caso a propriedade SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION seja VARIANT_TRUE, um identificador citado pode ser especificado para o nome do catálogo (por exemplo "my.catalog"). Ao restringir a saída do conjunto de linhas de esquema por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] catálogo, o provedor de OLE DB de cliente nativo reconhece um nome de duas partes que contém o servidor vinculado e o nome do catálogo. Para os conjuntos de linhas de esquema na tabela a seguir, especificando um nome de catálogo de duas partes como _linked_server_**.** o _Catálogo_ restringe a saída para o catálogo aplicável do servidor vinculado nomeado.  
+ Caso a propriedade SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION seja VARIANT_TRUE, um identificador citado pode ser especificado para o nome do catálogo (por exemplo "my.catalog"). Ao restringir a saída do conjunto de linhas de esquema por catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo reconhece um nome de duas partes que contém o servidor vinculado e o nome do catálogo. Para os conjuntos de linhas de esquema na tabela a seguir, especificando um nome de catálogo de duas partes como _linked_server_**.** o _Catálogo_ restringe a saída para o catálogo aplicável do servidor vinculado nomeado.  
   
 |Conjunto de linhas de esquema|Restrição de catálogo|  
 |-------------------|-------------------------|  

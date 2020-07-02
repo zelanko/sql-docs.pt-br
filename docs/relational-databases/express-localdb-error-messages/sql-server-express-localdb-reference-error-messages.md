@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2d7d49233c072a8f23b386b626ee4f30669aaec5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 383bcac2516cccc0e019d7428682f053c1ebd2f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789518"
 ---
 # <a name="sql-server-express-localdb-reference---error-messages"></a>Referência do LocalDB do SQL Server Express – Mensagens de erro
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta seção fornece informações de referência sobre as seguintes mensagens de erro de LocalDB do SQL Server Express:  
   
  [LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED](../../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)  

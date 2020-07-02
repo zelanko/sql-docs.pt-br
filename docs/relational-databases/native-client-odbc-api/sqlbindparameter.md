@@ -14,15 +14,15 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74122d531eba1f714e16c168838ee1653a8f1293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc270cb83833e3fcfc54ef4721a62ccaf3980729
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789426"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   O**SQLBindParameter** pode eliminar o peso da conversão de dados quando usado para fornecer dados para o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, o que resulta em ganhos de desempenho significativos para os componentes de cliente e servidor dos aplicativos. Entre os outros benefícios está a menor perda de precisão ao inserir ou atualizar tipos de dados numéricos aproximados.  
   

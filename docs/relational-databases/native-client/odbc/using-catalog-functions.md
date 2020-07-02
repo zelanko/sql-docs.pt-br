@@ -18,15 +18,15 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 961e44e22ba7db89537f4505a8dec401f9fd69b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 045c1956de89a25b115c695b3c93eef60d9bba83
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787750"
 ---
 # <a name="using-catalog-functions"></a>Usando funções de catálogo
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Todos os bancos de dados têm uma estrutura que contém os dados armazenados no banco de dados. Uma definição dessa estrutura, juntamente com outras informações, como permissões, é armazenada em um catálogo (implementado como um conjunto de tabelas do sistema), também conhecido como um dicionário de dados.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "81303627"
   
      Retorna uma lista dos catálogos contidos em um servidor vinculado.  
   
- Depois que você tiver um nome de servidor vinculado e um nome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] catálogo, o driver ODBC do Native Client dará suporte à obtenção de informações do catálogo usando um nome de duas partes de _linked_server_name_**.** _Catálogo_ para *CatalogName* nas seguintes funções de catálogo ODBC:  
+ Depois que você tiver um nome de servidor vinculado e um nome de catálogo, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client dará suporte à obtenção de informações do catálogo usando um nome de duas partes de _linked_server_name_**.** _Catálogo_ para *CatalogName* nas seguintes funções de catálogo ODBC:  
   
 -   **SQLColumnPrivileges**  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29a7f6ae6cb26c5ddf27f6e495b5348ddd8fe006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0148158217909c0989ccd1c7833df3bd4f0a0dca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787819"
 ---
 # <a name="filestream-support-odbc"></a>Suporte a FILESTREAM (ODBC)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
   O ODBC no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte ao recurso FILESTREAM aprimorado. Para obter mais informações sobre esse recurso, consulte [suporte a FileStream](../../../relational-databases/native-client/features/filestream-support.md). Para obter um exemplo que demonstra o suporte do ODB para FILESTREAM, consulte [Enviar e receber dados incrementalmente com FILESTREAM &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
