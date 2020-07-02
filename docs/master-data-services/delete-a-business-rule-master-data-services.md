@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d6af3aac4ac8e2a1a4026162eb6ab5f6038b5eed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 475af6465a5e79e6577c60ac88a312fb5d0d4cf9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812760"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Excluir uma regra de negócio (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua uma regra de negócio quando ela não for mais necessária.  
   

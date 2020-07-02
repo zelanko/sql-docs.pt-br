@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f747839945d8f2ea4c6960d8a8c594f64777040
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811645"
 ---
 # <a name="create-term-based-relations"></a>Criar relações baseadas em termos
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como criar relações baseadas em termos para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma relação baseada em termos permite que você faça uma correção em um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, você pode configurar uma relação baseada em termos que altere o termo "Inc." para "Incorporated". O termo "Inc." será alterado toda vez que ocorrer no domínio. As instâncias de "Contoso, Inc." serão alteradas para "Contoso, Incorporated" e os dois valores serão considerados sinônimos exatos.  
   

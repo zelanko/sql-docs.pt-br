@@ -12,22 +12,22 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dea7da40c1c82b855f4290f104c0b2d4f8462a38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c3d4063404a121c889dbbfd930429a586bf8969a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812001"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Caixa de diálogo Criar Site (Gerenciador de Configuração do Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use a caixa de diálogo **Criar Site** para criar um novo site no computador local. Quando você cria um site no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], o site é adicionado ao IIS (Serviços de Informações da Internet) no computador local com um aplicativo raiz configurado como o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Um novo pool de aplicativos também é criado e o aplicativo Web é colocado nesse pool de aplicativos.  
   
 ## <a name="web-site"></a>Site  
   
-|Nome do controle|Descrição|  
+|Nome do controle|Description|  
 |------------------|-----------------|  
 |**Nome do site**|Digite um nome para o site ou use o nome padrão. Esse nome é um nome amigável que é usado apenas para identificar o site no IIS. Ele não é usado para acessar o site em um navegador da Web.<br /><br /> O nome deve ser exclusivo entre todos os sites do IIS no computador local.|  
 |**Protocolo**|Exibe **http**. Use o protocolo HTTP quando a comunicação entre cliente e servidor não precisar ocorrer em um canal criptografado.<br /><br /> **Observação**: não é possível criar um site HTTPS no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. HTTPS é o protocolo HTTP usando TLS (segurança de camada de transporte), anteriormente conhecido como protocolo SSL (SSL), e é útil ao trocar dados confidenciais ou pessoais, ou quando você deseja que os usuários confirmem a identidade do servidor antes de transmitir informações pessoais. Se você precisar transferir informações entre o servidor e um cliente usando um canal criptografado, terá que usar uma ferramenta do IIS, como o Gerenciador do IIS, para configurar o site com uma associação HTTPS e vincular a associação do site a um certificado do servidor; isso é necessário para que o site seja aberto com êxito em um navegador da Web. Para obter mais informações sobre certificados do servidor, consulte [Configuring Server Certificates in IIS 7](https://go.microsoft.com/fwlink/?LinkId=163220) (em inglês) no [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet.|  

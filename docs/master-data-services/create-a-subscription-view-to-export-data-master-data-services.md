@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812748"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Criar uma exibição de assinatura para exportar dados (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Crie uma exibição de assinatura para exportar dados do Master Data Services para sistemas de assinatura. Você está criando uma exibição para seus dados no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   

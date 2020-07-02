@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 691d7e30fd64e99970fa22ee0f551162be945c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea4f99ef58da9c74e22eb9edce67a00c55bec60b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812739"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Criar um atributo de texto (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de texto quando desejar que os usuários insiram uma cadeia de caracteres de texto como um valor de atributo.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "73728458"
 |Coluna|Descrição|  
 |------------|-----------------|  
 |Status|O status do atributo.<br /><br /> Quando você clica em salvar, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status") é exibido, indicando que o atributo está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um atributo, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK") é exibido.|  
-|Nome|O nome do atributo.|  
+|Name|O nome do atributo.|  
 |Nome de exibição|O nome de exibição do atributo.|  
-|Descrição|A descrição do atributo.|  
+|Description|A descrição do atributo.|  
 |Exibir Largura em Pixels|A largura do atributo.|  
 |Tipo e Propriedades|As informações de tipo e de tipo de dados do atributo.|  
 |Habilitar Controle de Alterações|Especifica se o atributo está habilitado para o controle de alterações e mostra o número do grupo entre parênteses.|  
@@ -90,7 +90,7 @@ ms.locfileid: "73728458"
   
 12. Opcionalmente, selecione **Habilitar controle de alterações** para controlar alterações de grupos de atributos. Para obter mais informações, consulte [Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
-13. Clique em **Salvar**.  
+13. Clique em **Save** (Salvar).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   

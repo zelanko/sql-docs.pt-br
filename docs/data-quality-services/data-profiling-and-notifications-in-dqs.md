@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1e5c51996ba85b9645650f453a0e4ed18478ccf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab254c9deaee5a9e31a89d2a44d281e83a2beead
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80607829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812548"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Perfil de dados e notificações no DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A criação do perfil de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) é o processo de analisar os dados em uma fonte de dados existente e exibir estatísticas sobre os dados nas atividades do DQS. Isso fornece a você medições automatizadas da qualidade dos dados. A criação de perfil do DQS está integrada ao gerenciamento de conhecimento do DQS e aos projetos de qualidade de dados. é dinâmico e ajustável. A criação de perfil tem dois objetivos principais: primeiro, orientá-lo durante os processos de qualidade de dados e dar suporte às suas decisões e, segundo, avaliar a efetividade dos processos. A criação de perfil do DQS tem os seguintes benefícios:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "80607829"
 ##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>Criação de perfil de dados no monitoramento de atividades  
  As informações de criação de perfil para as atividades descoberta da base de dados de conhecimento, política de correspondência, correspondência e limpeza estão disponíveis não apenas nas páginas de atividade do cliente Data Quality, mas também disponíveis no monitoramento de atividades. O monitoramento da atividade apresenta uma visão geral das atividades atuais e passadas. Além das propriedades e processos de atividades computacionais relacionados, você pode exibir as informações de criação de perfil geradas para cada atividade em um local. Selecione uma atividade na tabela de atividades para exibir os resultados da criação de perfil em uma tabela abaixo. Também é possível exportar os resultados da criação de perfil. Para obter mais informações, consulte [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-##  <a name="notifications"></a><a name="Notifications"></a>Notificações  
+##  <a name="notifications"></a><a name="Notifications"></a> Notificações  
  Além de coletar e exibir estatísticas e métricas importantes por meio da criação de perfil, o DQS gerará notificações (se habilitado) para indicar quando talvez você queira executar uma ação com base nas estatísticas de criação de perfil exibidas. O DQS usa notificações para enfatizar fatos importantes sobre a fonte de dados e mostrar a eficácia da atividade atual em comparação com a finalidade para a qual ela foi executada. As notificações fornecem dicas e recomendações que indicam uma condição e recomendam como você pode aprimorar uma atividade de descoberta da base de dados de conhecimento, limpeza de dados ou correspondência de dados.  
   
  Uma notificação do DQS é usada para gerar uma questão que pode ser interessante para você ou abordar um problema potencial. Se você tomar a notificação, dependerá se ela é relevante para suas finalidades. Por exemplo, vamos supor que o DQS publique uma notificação quando a limpeza de dados não produzir valores corrigidos ou valores sugeridos quando a integridade e a exatidão forem 100%. Esta notificação indicaria que a atividade talvez não precise ser executada. Se você vai optar por executar a atividade, no entanto, essa é uma decisão sua.  

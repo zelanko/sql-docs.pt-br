@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6c434e2cdc64616b5abbdf07ca4df428fce2edca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ceaf7e42b8d25873cc595e3e64b6949e25d52e3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728863"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812315"
 ---
 # <a name="validation-statuses-master-data-services"></a>Status da validação (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Na área funcional **Gerenciamento de Versões** , na página **Validar Versão** , os seguintes status são possíveis.  
   

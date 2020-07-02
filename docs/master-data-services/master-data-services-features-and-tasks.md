@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a89ed871f18f52efa32b088e02d4432166866cb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812902"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Recursos e tarefas do Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Aprenda a usar o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para gerenciar os dados mestre de sua organização. Aprenda a criar e manipular objetos de modelo que são contêineres de dados. Aprenda a organizar e manter os próprios dados mestre. Aprenda a importar e exportar dados mestre, bem como compartilhar modelos entre ambientes de teste e produção. Por fim, saiba como desenvolver aplicativos personalizados que acessam o serviço Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   

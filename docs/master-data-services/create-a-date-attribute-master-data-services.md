@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8ffc7c1e901e3c93701c4e94ed62b8e70dbb7c0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbf5182a41c9b5c52a73e9d005c768b48cc1fae4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811824"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Criar um atributo de data (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de data quando desejar que os usuários insiram uma data como um valor de atributo.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "73728510"
   
 12. Opcionalmente, selecione **Habilitar controle de alterações** para controlar alterações de grupos de atributos. Para obter mais informações, consulte [Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
-13. Clique em **Salvar**.  
+13. Clique em **Save** (Salvar).  
   
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>Para exibir a porção de tempo de um valor datetime  
  Para que a interface de usuário exiba a porção de hora de um valor datetime, você deve selecionar uma máscara de entrada apropriada para o atributo. Nenhuma das máscaras internas para os atributos Datetime faz isso, mas você pode adicionar uma nova máscara que permitirá que você exiba a hora. Para fazer isso, adicione uma linha na tabela mdm.tblList do banco de dados MDS, onde as máscaras internas estão armazenadas. A linha deve ter os seguintes valores:  

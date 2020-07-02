@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dca2f4877a172b7fd75025e226459c699ea7d13b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812071"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Adicionar várias condições a uma regra de negócio (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], adicione várias condições **AND** ou **OR** a uma regra de negócio quando desejar uma regra mais complexa.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73728803"
   
 12. Preencha quaisquer campos obrigatórios.  
   
-13. Clique em **Salvar**. Uma nova linha será adicionada à grade **Se** .  
+13. Clique em **Save** (Salvar). Uma nova linha será adicionada à grade **Se** .  
   
 14. Como opção, para adicionar mais condições, complete as etapas 8 a 13.  
   

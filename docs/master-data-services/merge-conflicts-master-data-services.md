@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 028c1c20516d6f058e60dad6121aee0230d78817
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8422b9300b374cbf78eb602dc8ad8f36f7a5e39c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729032"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811884"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Conflitos de mesclagem (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se os dados que você estiver tentando publicar tiverem sido alterados por outro usuário, a publicação falhará com um erro de conflito. Para resolver esse erro, você pode executar conflitos de mesclagem e republicar as alterações.  
   

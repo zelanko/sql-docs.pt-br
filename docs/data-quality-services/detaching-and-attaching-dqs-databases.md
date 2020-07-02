@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 841e2991e672aa9c8a8ab74437fcd12fecdfaa2f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58b3fff5d03207301c0c955409d91c8812c206c8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812481"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Desanexando e anexando bancos de dados do DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como desanexar e anexar os bancos de dados do DQS.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75251674"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  O painel **detalhes do banco de dados** (inferior) exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **procurar** (...).  
+5.  O painel **detalhes do banco de dados** (inferior) exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** ( ... ).  
   
 6.  Clique em **OK** para anexar o banco de dados DQS_MAIN.  
   

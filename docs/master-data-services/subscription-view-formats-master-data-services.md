@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812309"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formatos de exibição de assinatura (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Com base na entidade ou na hierarquia derivada selecionada, os seguintes formatos estão disponíveis para sua exibição de assinatura.  
   
 ## <a name="subscription-view-formats"></a>Formatos de exibição da assinatura  
   
-|Nome|Descrição|  
+|Name|Descrição|  
 |----------|-----------------|  
 |**Membros folha**|Contém membros folha e seus valores de atributo associados.|  
 |**Histórico de Membros Folha**|Contém dados históricos de membros folha e seus valores de atributo associados. O formato de exibição é Dimensão de Alteração Lenta Tipo 4.|  

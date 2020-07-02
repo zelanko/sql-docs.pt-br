@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ff2e139b9cbb1a4711873ae1cc5e9b3f0ac28e41
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812081"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores de um arquivo do Excel para um domínio
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como importar valores de um arquivo do Excel para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). O uso de um arquivo do Excel para importar valores de domínio para o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifica o processo de geração de conhecimento, economizando tempo e esforço. Isso permite que as pessoas que têm uma lista de valores de dados válidos em um arquivo do Excel ou um arquivo de texto importem esses valores para um domínio. De um arquivo do Excel, você pode importar valores de domínio para um ou vários domínios em uma base de dados de conhecimento. (Consulte [importar domínios de um arquivo do Excel na descoberta de conhecimento](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) para obter mais informações sobre como importar domínios para uma base de dados de conhecimento.) Não há suporte para a exportação para um arquivo do Excel.  
   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5771fb5db586726d19d965ca18aa27f3dab16bd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d754308b968d5222704eb1264da71d0efbeb39b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811801"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Criar um pacote de implantação de modelo usando o Assistente
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use o assistente de implantação de modelo do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] somente para criar um pacote dos objetos de modelo. Se você precisar incluir dados no pacote, consulte [Criar um pacote de implantação de modelo usando o MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73729596"
   
 4.  Na página **Criar Pacote** , selecione um modelo da lista **Modelo** .  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Clique em **Download**.  
   

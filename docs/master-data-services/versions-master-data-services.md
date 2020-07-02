@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d30880029a9bb8fba85466d28f8b002b0f044ec3
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 985714657ef87050b6273599013f0dbc5db83196
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811697"
 ---
 # <a name="versions-master-data-services"></a>Versões (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode criar várias versões dos dados mestre dentro de um modelo. As versões podem ser bloqueadas enquanto você valida seus dados e confirmadas depois que os dados forem validados. Versões confirmadas formam um registro auditável de alterações. Cada versão que você cria contém todos os membros, valores de atributo, membros de hierarquia, relações de hierarquia e coleções para o modelo.  
   

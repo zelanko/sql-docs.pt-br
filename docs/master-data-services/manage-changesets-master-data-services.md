@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e411c1f7dd09db1e0387535ffef665924193ee9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811721"
 ---
 # <a name="manage-changesets-master-data-services"></a>Gerenciar Conjuntos de Alterações (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , você pode gerenciar todas as alterações por modelo e versão.  
   

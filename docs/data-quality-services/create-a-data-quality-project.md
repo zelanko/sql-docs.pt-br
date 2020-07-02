@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 99b869f153e6dacac799f8630283dbaf8d27660b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d55a7d94dfc5e74c406716a8347e975c6a84d95
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812558"
 ---
 # <a name="create-a-data-quality-project"></a>Criar um projeto de qualidade de dados
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como criar um projeto de qualidade de dados usando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Um projeto de qualidade de dados é usado para executar a atividade de limpeza ou correspondência no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   

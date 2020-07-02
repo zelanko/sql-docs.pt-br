@@ -11,16 +11,16 @@ ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: dc51405421a1fd9c5a7d233b3f50db41dfc44d99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc5445bda8cb42c3a8a14851ccbd395c30849968
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812727"
 ---
 # <a name="discontinued-master-data-services-features"></a>Recursos do Master Data Services descontinuados
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve os recursos do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

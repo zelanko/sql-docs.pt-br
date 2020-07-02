@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1ff59241067ad08e0acf738a34d59c59f837abfe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a1705e9d94a8b5c4dccb2634fe643dc45624a62
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811962"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Excluir permissões de objeto modelo (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclua as permissões do objeto de modelo para remover as atribuições feitas.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73728317"
   
 8.  Clique no nó de árvore e no menu de contexto, clique em **Limpar Acesso**.  
   
-9. Clique em **Salvar**.  
+9. Clique em **Save** (Salvar).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   

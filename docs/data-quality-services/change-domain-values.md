@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5e792a15670c50b918eabbf371258aa9b62cab82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f9b77a5df341bbf57d103797d5808b8b7a5d511
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812182"
 ---
 # <a name="change-domain-values"></a>Alterar valores de domínio
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como alterar e aumentar os metadados em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Depois que você gerar conhecimento através de descoberta de conhecimento, importar conhecimento para a base de dados de conhecimento ou domínios, ou utilizar outra base de dados de conhecimento como base para a base de dados de conhecimento, poderá alterar os valores de dados interativamente. A geração de base de dados de conhecimento não só aproveita processos assistidos por computador, mas lhe fornece os meios para usar seu próprio conhecimento para verificar valores de dados e alterá-los da seguinte forma:  
   

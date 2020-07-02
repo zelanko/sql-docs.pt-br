@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 41ab7567a1037c2f0f625cd977a80e38a591bcee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f7e4e7bc0118849f452d4bccbb7d07706a4c411
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728762"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812791"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Atribuir permissões de área funcional (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Atribuir permissão de área funcional para conceder a usuários ou grupos o acesso às areas funcionais do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6c70b57cb50ae8134fa04f2bab4073dced40091
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728559"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812016"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurar regras de negócio para enviar notificações (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configure regras de negócios para enviar notificações quando você desejar notificar os usuários sobre alterações de valor de atributo.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73728559"
   
 7.  Marque a caixa de seleção **Enviar Notificações** e, na lista suspensa, selecione um usuário ou grupo ao qual a notificação por email será enviada.  
   
-8.  Clique em **Salvar**.  
+8.  Clique em **Save** (Salvar).  
   
 9. Clique em **Publicar Tudo**.  
   

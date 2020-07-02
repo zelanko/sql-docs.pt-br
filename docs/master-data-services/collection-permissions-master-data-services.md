@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811607"
 ---
 # <a name="collection-permissions-master-data-services"></a>Permissões de coleção (Serviços de Dados Mestre)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   As permissões de coleção aplicam-se a todas as membros coleções de uma entidade. Você não pode dar permissão a uma coleção específica; as permissões se aplicam a todas as coleções.  
   
 > [!NOTE]  
 >  Essas permissões se aplicam apenas à área funcional **Explorer** da interface do usuário.  
   
-|Permissão|Descrição|  
+|Permissão|Description|  
 |----------------|-----------------|  
 |**Ler**|O usuário pode ler membros da coleção e os atributos de membro.|  
 |**Criar**|O usuário pode criar membros da coleção e atribuir valores de atributo.|  
 |**Atualização**|O usuário pode atualizar membros da coleção, atributos e relacionamentos|  
-|**Delete (excluir)**|O usuário pode excluir os membros da coleção.|  
-|**Negar**|Negar todo acesso aos membros da coleção.|  
+|**Excluir**|O usuário pode excluir os membros da coleção.|  
+|**Deny**|Negar todo acesso aos membros da coleção.|  
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas. Ao atribuir Criar, Atualizar e Excluir, a permissão de leitura é atribuída automaticamente.  
   

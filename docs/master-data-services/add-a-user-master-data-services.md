@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8c17a3356949375ab6836db94a31910f5e54ca2a
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 2be9caff295a41dbb79c1062d2a3f132ea93141c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812822"
 ---
 # <a name="add-a-user-master-data-services"></a>Adicionar um usuário (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Adicione um usuário à lista **Usuários** do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para iniciar o processo de atribuição de permissão ao aplicativo Web. Antes de um usuário da lista poder acessar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], é preciso atribuir a permissão de usuário a uma ou mais áreas funcionais e objetos de modelo.  
   

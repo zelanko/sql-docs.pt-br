@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ef909fd817da4835e9f3d0903a4e8a7f8f1a4658
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 2d2acff8ff89202427a78de0aaee7e1f02c13a96
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796357"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811532"
 ---
 # <a name="deploying-models-master-data-services"></a>Implantando modelos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um pacote é um arquivo XML que contém uma estrutura de modelo implantável, e opcionalmente, dados do modelo. Use pacotes modelo para mover cópias de modelos de um ambiente MDS para outro, ou crie novos modelos em seu ambiente MDS existente.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "84796357"
   
  Todos os objetos de modelo são incluídos em um pacote. Esses objetos são:  
   
--   Entities  
+-   Entidades  
   
 -   Atributos  
   

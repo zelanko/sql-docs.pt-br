@@ -15,26 +15,26 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec76228a4f8307813a2bb098b648133e065c5cd5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1f645bf481b193b78003808725d60b97b33d845
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727960"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812892"
 ---
 # <a name="notifications-master-data-services"></a>Notificações (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pode ser configurado para enviar uma notificação por email quando há falha na validação da regra de negócio ou quando o status de uma versão do modelo é alterado ou o status de um conjunto de alterações muda.  
   
 ## <a name="how-notifications-are-sent"></a>Como as notificações são enviadas  
- As notificações são configuradas no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. As notificações enviam mensagens de email usando Database Mail na instância [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] do que hospeda [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] o banco de dados. Para obter mais informações sobre o Database Mail, consulte [Objetos de configuração do Database Mail](../relational-databases/database-mail/database-mail-configuration-objects.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ As notificações são configuradas no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. As notificações enviam mensagens de email usando Database Mail na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] que hospeda o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados. Para obter mais informações sobre o Database Mail, consulte [Objetos de configuração do Database Mail](../relational-databases/database-mail/database-mail-configuration-objects.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="when-notifications-are-sent"></a>Quando as notificações são enviadas  
  Depois que as notificações são configuradas, notificações por email automatizadas podem ser enviadas nas instâncias a seguir.  
   
-|Instância|Descrição|  
+|Instância|Description|  
 |--------------|-----------------|  
 |Os dados falham na validação de regras de negócio.|Regras de negócio individuais devem ser configuradas para enviar email quando um valor de atributo é reprovado na validação da regra de negócio. A notificação contém as informações a seguir.<br /><br /> Modelo<br /><br /> Versão<br /><br /> Entidade<br /><br /> Código do Membro<br /><br /> Regra de negócio com falha<br /><br /> Link do membro para o qual o valor do atributo não atende à regra de negócio<br /><br /> Hora da emissão da notificação<br /><br /> Para obter mais informações, consulte [Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
 |O status da versão do modelo é alterado|Cada vez que o status de uma versão de modelo muda, os usuários que são administradores de modelo recebem notificações automaticamente. A notificação contém as informações a seguir.<br /><br /> Modelo<br /><br /> Versão<br /><br /> status atual e anterior da versão<br /><br /> Hora da emissão da notificação<br /><br /> Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  

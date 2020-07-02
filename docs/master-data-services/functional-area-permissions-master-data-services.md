@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5f2d15e2a98f04d7481200dfea17cfe5ca852a84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d4a76feabce6834ba260980044772e2ee53b953d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811744"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Permissões de área funcional (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   É possível atribuir permissão a cada uma das áreas funcionais da interface do usuário do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Estas são as áreas funcionais:  
   

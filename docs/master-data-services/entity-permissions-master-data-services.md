@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a0ca2773d513137adeb9e803b66930536e3a28a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811935"
 ---
 # <a name="entity-permissions-master-data-services"></a>Permissões de entidade (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   As permissões de entidade se aplicam a:  
   
@@ -37,13 +37,13 @@ ms.locfileid: "73728174"
 > [!NOTE]  
 >  Essas permissões se aplicam apenas à área funcional **Explorer** da interface do usuário.  
   
-|Permissão|Descrição|  
+|Permissão|Description|  
 |----------------|-----------------|  
 |**Ler**|O usuário pode ler membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
 |**Criar**|O usuário pode criar membros e atribuir valores de atributo durante a criação.|  
 |**Atualização**|O usuário pode atualizar membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
-|**Delete (excluir)**|O usuário pode excluir membros.|  
-|**Negar**|Nega todo o acesso à entidade.|  
+|**Excluir**|O usuário pode excluir membros.|  
+|**Deny**|Nega todo o acesso à entidade.|  
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas entre si. Ao atribuir permissões Criar, Atualizar e Excluir, a permissão Ler será atribuída automaticamente.  
   

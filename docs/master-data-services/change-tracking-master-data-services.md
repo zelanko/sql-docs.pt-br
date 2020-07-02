@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6519ea515b6552805aa5b97e38579082ddcfe15c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7883f3dda53897eb9d53e9ff4e9e41e6731775d0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811629"
 ---
 # <a name="change-tracking-master-data-services"></a>Controle de alterações (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode usar grupos de controle de alterações para executar uma ação quando um valor de atributo muda. Use o controle de alterações quando você não souber qual será o novo valor, mas desejar saber se houve alterações.  
   

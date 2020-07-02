@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3604fe0fa1a2b15385ebea9d31550fc984c14a42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 31f93bbb8aa214a1353fce1a571f555c94055ccd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812031"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Alterar o nome de uma hierarquia explícita (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o nome de uma hierarquia explícita.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73728636"
   
 6.  Na caixa **Nome** , digite o nome atualizado da hierarquia.  
   
-7.  Clique em **Salvar**.  
+7.  Clique em **Save** (Salvar).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Hierarquias explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   

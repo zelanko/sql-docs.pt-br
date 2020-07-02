@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6deb778d5b15ed76256fa0d22366f0be9eb25b02
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812521"
 ---
 # <a name="data-quality-projects-dqs"></a>Projetos de qualidade de dados (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Um projeto de qualidade de dados no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) é uma forma de usar uma base de dados de conhecimento para melhorar a qualidade dos dados de origem, executando atividades de *limpeza de dados* e *correspondência de dados* e, depois, exportando os dados resultantes para um banco de dados do SQL Server ou um arquivo .csv. Você pode criar um projeto de qualidade de dados como um projeto de limpeza ou um projeto de correspondência para executar as respectivas atividades. Os projetos de limpeza e correspondência podem ser executados usando a mesma base de dados de conhecimento, pois o conhecimento para limpeza e correspondência de dados pode ser criado na mesma base de conhecimento.  
   

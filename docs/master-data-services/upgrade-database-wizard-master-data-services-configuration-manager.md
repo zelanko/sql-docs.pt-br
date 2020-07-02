@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 45b1cf5e98c06780c698c2d58d0430e9cab95391
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812651"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Atualizar Assistente para Banco de Dados (Gerenciador de Configuração do Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use o **Assistente para Atualizar Banco de Dados** para atualizar um banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -29,7 +29,7 @@ ms.locfileid: "73728908"
 ## <a name="upgrade-review"></a>Análise da atualização  
  Analise as informações especificadas nesta página. Se estiver correto, clique em **Avançar** para atualizar o banco de dados especificado.  
   
-|Nome do controle|Descrição|  
+|Nome do controle|Description|  
 |------------------|-----------------|  
 |**Instância do SQL Server**|O nome da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] selecionada no momento.|  
 |**Banco de dados Master Data Services**|O nome do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] selecionado no momento.|  

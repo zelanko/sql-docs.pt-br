@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f2775969aa22b580d40ecd6f8065deb2ed3472c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a2eda3a0892c947943cb37fbda3826ecb248755
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812522"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Recursos e tarefas do Data Quality Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Localize informações necessárias a qualquer um, administrador de Data Quality Services ou administrador do SQL Server, para preparar e executar um projeto de qualidade de dados.  
   

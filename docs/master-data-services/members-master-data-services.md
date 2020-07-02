@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c027f6403a8d3f156eedc5a1962cde44633e40a5
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: d19aaf52051b4f68b3272d1eef78806cdcc96942
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84800553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811903"
 ---
 # <a name="members-master-data-services"></a>Membros (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], os membros são os dados mestres físicos. Por exemplo, um membro pode ser uma Road-150 bike em uma entidade Product ou um cliente específico em uma entidade Customer.  
   

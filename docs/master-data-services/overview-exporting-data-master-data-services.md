@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c0376e28c1d75585795b53373a10f4798347746a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b58dca3531ba535c48c6dc6134c660ca4fed7be
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812872"
 ---
 # <a name="overview-exporting-data-master-data-services"></a>Visão geral: exportando dados [Master Data Services]
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este artigo apresenta os tipos de formatos de exibição de assinatura e como determinar quando as exibições precisam ser editadas devido a alterações em objetos de modelo.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "73728986"
   
 -   [Formatos de exibição de assinatura &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)  
   
--   [Modos de exibição](../relational-databases/views/views.md)  
+-   [Exibições](../relational-databases/views/views.md)  
   
   

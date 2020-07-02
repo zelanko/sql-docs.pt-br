@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9aab396644dde824668cda8717ed7d14b695bb6d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 2c7e24a7d519d787882ec587fc33f624f1eb6472
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811481"
 ---
 # <a name="master-data-services-database"></a>Banco de dados do Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   O banco de dados contém todas as informações do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ele é fundamental para uma implantação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . O banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
   

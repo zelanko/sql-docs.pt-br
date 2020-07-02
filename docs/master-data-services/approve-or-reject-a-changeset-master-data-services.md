@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 401983aa2e5094560f7bcc852c839986ffe4234d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0d7e090350fdaae094c8365d28a4e058bdfa62e
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812806"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>Aprovar ou rejeitar um conjunto de alterações (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Um conjunto de alterações é uma coleção das alterações pendentes nos dados mestre. Se as alterações de entidade exigirem aprovação do administrador e se um conjunto de alterações for enviado para aprovação, você poderá examinar e então aprovar ou rejeitar o conjunto de alterações.  
   

@@ -12,23 +12,23 @@ f1_keywords:
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b35c47704915ec9e85f0c4f2ac083bfb7a6017ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 246ac0977d84e1e011553937d1edd5ce39b53205
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812006"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Caixa de diálogo Criar Aplicativo Web (Gerenciador de Configuração do Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use a caixa de diálogo **Criar Aplicativo Web** para criar o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Esse aplicativo Web é criado no site que você selecionou na página **Configuração da Web** .  
   
 ## <a name="web-application"></a>Aplicativo Web  
  O servidor Web entrega o conteúdo para esse aplicativo Web por meio da pasta [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** folder in the file system. Esse local é especificado durante a Instalação e, por padrão, o caminho é *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication.  
   
-|Nome do controle|Descrição|  
+|Nome do controle|Description|  
 |------------------|-----------------|  
 |Caminho virtual|Selecione o caminho virtual no qual você deseja criar o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Um caminho virtual faz parte da URL que é usada para acessar um aplicativo Web.<br /><br /> Esta lista está filtrada para exibir apenas caminhos virtuais de aplicativos nos quais o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pode ser criado. Não é possível criar um aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] em outro aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .|  
 |Alias|Digite um nome para o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou use o nome padrão. Esse nome é usado em uma URL para acessar o aplicativo Web em um navegador da Web.|  
