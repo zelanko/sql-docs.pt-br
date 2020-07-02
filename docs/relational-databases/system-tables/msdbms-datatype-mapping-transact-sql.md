@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c8fcbb147568f776c4938327d3ef2ec2ad1e598
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fd52cabfd282c70a9c3cd2c1d1cc8bd52e02ff3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725459"
 ---
 # <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSdbms_datatype_mapping** contém os mapeamentos de tipo de dados permitidos do tipo de dados no sistema de gerenciamento de banco de dados de origem (DBMS) para um ou mais tipos de dados específicos no DBMS de destino. Essa tabela é armazenada no banco de dados **msdb** e é usada para replicação de banco de dados heterogêneo.  
   

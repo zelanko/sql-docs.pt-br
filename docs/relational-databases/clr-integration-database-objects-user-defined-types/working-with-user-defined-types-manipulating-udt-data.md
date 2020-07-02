@@ -29,19 +29,19 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff4b620f2f06243b23b4c540f4c99b3c3cafa41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17913dab743f1aaaa7672ce855aa85ce8434f3c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727749"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Trabalhar com tipos definidos pelo usuário –Manipular dados UDT
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O [!INCLUDE[tsql](../../includes/tsql-md.md)] não fornece uma sintaxe especializada para instruções INSERT, UPDATE ou DELETE ao modificar dados nas colunas UDTs (tipos definidos pelo usuário). As funções [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST ou CONVERT são usadas para converter tipos de dados nativos no tipo UDT.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Inserindo dados em uma coluna UDT  
- As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir inserem três linhas de dados de exemplo na tabela **Points** . O tipo de dados **Point** consiste em valores inteiros X e Y expostos como propriedades de UDT. Você deve usar a função CAST ou CONVERT para converter os valores X e Y delimitados por vírgula para o tipo de **ponto** . As duas primeiras instruções usam a função CONVERT para converter um valor de cadeia de caracteres para o tipo de **ponto** e a terceira instrução usa a função Cast:  
+ As instruções a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] inserem três linhas de dados de exemplo na tabela **Points** . O tipo de dados **Point** consiste em valores inteiros X e Y expostos como propriedades de UDT. Você deve usar a função CAST ou CONVERT para converter os valores X e Y delimitados por vírgula para o tipo de **ponto** . As duas primeiras instruções usam a função CONVERT para converter um valor de cadeia de caracteres para o tipo de **ponto** e a terceira instrução usa a função Cast:  
   
 ```sql  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -101,7 +101,7 @@ ID xVal yVal
 ```  
   
 ## <a name="working-with-variables"></a>Trabalhando com variáveis  
- Você pode trabalhar com variáveis usam a instrução DECLARE para atribuir uma variável a um tipo UDT. As instruções a seguir atribuem um valor usando [!INCLUDE[tsql](../../includes/tsql-md.md)] a instrução SET e exibem os resultados chamando o método **ToString** de UDT na variável:  
+ Você pode trabalhar com variáveis usam a instrução DECLARE para atribuir uma variável a um tipo UDT. As instruções a seguir atribuem um valor usando a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução SET e exibem os resultados chamando o método **TOSTRING** de UDT na variável:  
   
 ```sql  
 DECLARE @PointValue Point;  
@@ -159,7 +159,7 @@ WHERE PointValue = @ComparePoint;
 ## <a name="invoking-udt-methods"></a>Invocando métodos UDT   
  Você também pode invocar métodos definidos em seu UDT no [!INCLUDE[tsql](../../includes/tsql-md.md)]. A classe **Point** contém três métodos, **Distance**, **DistanceFrom**e **DistanceFromXY**. Para as listagens de código que definem esses três métodos, consulte [codificação de tipos definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- A instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir chama o método **PointValue. distance** :  
+ A instrução a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] chama o método **PointValue. distance** :  
   
 ```sql  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -223,7 +223,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- Se o UDT tiver sido definido com a ordenação de **true**bytes definida [!INCLUDE[tsql](../../includes/tsql-md.md)] como true, o poderá avaliar a coluna UDT em uma cláusula WHERE.  
+ Se o UDT tiver sido definido com a ordenação de bytes definida como **true**, [!INCLUDE[tsql](../../includes/tsql-md.md)] o poderá avaliar a coluna UDT em uma cláusula WHERE.  
   
 ```sql  
 UPDATE dbo.Points  

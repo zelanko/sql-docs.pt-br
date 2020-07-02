@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c0090d721c0367ab4e4ca5395c1032693624ad07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1094ce4844686a6d0bebb11e6c95830dd783a843
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733124"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna a lista de colunas na tabela especificada ou artigo de exibição para uma publicação de mesclagem. Como os procedimentos armazenados não têm colunas, esse procedimento armazenado retornará um erro se um procedimento armazenado for especificado como o artigo. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -48,7 +48,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identifica a coluna.|  
 |**column_name**|**sysname**|É o nome da coluna para uma tabela ou exibição.|  
-|**published**|**bit**|Especifica se o nome da coluna é publicado.<br /><br /> **1** especifica que a coluna está sendo publicada.<br /><br /> **0** especifica que não está publicado.|  
+|**Checked**|**bit**|Especifica se o nome da coluna é publicado.<br /><br /> **1** especifica que a coluna está sendo publicada.<br /><br /> **0** especifica que não está publicado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

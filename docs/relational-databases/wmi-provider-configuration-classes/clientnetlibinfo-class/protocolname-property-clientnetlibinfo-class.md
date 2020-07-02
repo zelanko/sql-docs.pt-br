@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 693a62cd76e479dc5afa036b207bf486d09c7726
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0aeb60f4be748d4082c4df5665f260afd57ae658
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731494"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>Propriedade ProtocolName (classe ClientNetLibInfo)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o nome do protocolo que é associado com a biblioteca de rede de cliente.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,7 +36,7 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe ClientNetLibInfo](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) que representa informações sobre a biblioteca de rede de cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

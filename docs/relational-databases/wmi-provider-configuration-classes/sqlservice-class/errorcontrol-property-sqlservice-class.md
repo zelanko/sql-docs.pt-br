@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b666426cd7f1d7eb2395ec4a67f0b166564de17d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733008"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>Propriedade ErrorControl (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtém ou define a gravidade do erro se o serviço não for iniciado durante a inicialização.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,7 +36,7 @@ object.ErrorControl [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa o serviço.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
@@ -54,7 +54,7 @@ object.ErrorControl [= value]
  Crítico  
  O sistema tenta reiniciar com uma configuração adequada.  
   
- Unknown  
+ Unknown (desconhecido)  
  A gravidade é desconhecida.  
   
 ## <a name="remarks"></a>Comentários  

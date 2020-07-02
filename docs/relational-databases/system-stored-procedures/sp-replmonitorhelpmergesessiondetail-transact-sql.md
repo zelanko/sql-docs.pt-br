@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725722"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Retorna informações detalhadas, de nível de artigo, sobre uma sessão específica de replicação do Merge Agent usada para monitorar replicação de mesclagem. O conjunto de resultados inclui uma linha de detalhes para cada artigo sincronizado durante a sessão. Também uma inclui uma linha que representa a inicialização da sessão e linhas que resumem as fases de carregamento e download da sessão. Esse procedimento armazenado é executado no Distribuidor, no banco de dados de distribuição, ou no Assinante, no banco de dados de assinatura.  
   

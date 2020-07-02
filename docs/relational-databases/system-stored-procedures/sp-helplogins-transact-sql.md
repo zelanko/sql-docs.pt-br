@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 188013bc5566ea0423d4e395354b4cdfc2465fd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733153"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fornece informações sobre logons e os usuários associados com eles em cada banco de dados.  
   
@@ -50,7 +50,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome de logon.|  
-|**SID**|**varbinary (85)**|Identificador de segurança de Logon (SID).|  
+|**SIDs**|**varbinary (85)**|Identificador de segurança de Logon (SID).|  
 |**DefDBName**|**sysname**|Banco de dados padrão que o **LoginName** usa ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**DefLangName**|**sysname**|Idioma padrão usado por **LoginName**.|  
 |**Auser**|**Char (5)**|Sim = **LoginName** tem um nome de usuário associado em um banco de dados.<br /><br /> Não = **LoginName** não tem um nome de usuário associado.|  

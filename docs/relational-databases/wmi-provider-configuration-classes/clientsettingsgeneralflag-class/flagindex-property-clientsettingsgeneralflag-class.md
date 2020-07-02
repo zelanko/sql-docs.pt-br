@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60812a9ad06729c6a7c1f4d71be72d5caa4ebede
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c154ed4a8383577e0b67f92f2b17e8cc417965a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731468"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>Propriedade FlagIndex (classe ClientSettingsGeneralFlag)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o valor de índice do sinalizador.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,7 +36,7 @@ object.FlagIndex [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe ClientSettingsGeneralFlag](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) que representa um sinalizador geral para as configurações de servidor.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

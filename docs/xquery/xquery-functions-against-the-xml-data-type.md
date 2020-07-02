@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: ad25db1aa5a10039bc80766b30e1d2ba478df123
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730983"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Funções XQuery em tipos de dados xml
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Este tópico e seus subtópicos descrevem as funções que você pode usar ao especificar XQuery em relação ao tipo de dados **XML** . Para obter as especificações do W3C, consulte [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "84305695"
 ||[Função local-name (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[Função namespace-uri (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
 |[Funções de contexto](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
-||[propostas](../xquery/context-functions-position-xquery.md)|  
+||[position](../xquery/context-functions-position-xquery.md)|  
 |[Funções em sequências](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[Função id (XQuery)](../xquery/functions-on-sequences-id.md)|  

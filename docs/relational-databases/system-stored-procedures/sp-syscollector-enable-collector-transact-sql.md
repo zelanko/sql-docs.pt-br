@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7015577f6965524735d97969f025c23a8a1b65d6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b44e17d9e8625fbeb6ecd0e25b767e396c4c92d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725534"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Habilita o coletor de dados. Como há apenas um coletor de dados por servidor, nenhum parâmetro é necessário.  
   
@@ -40,7 +40,7 @@ dbo.sp_syscollector_enable_collector
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Não  
+ Nenhum  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

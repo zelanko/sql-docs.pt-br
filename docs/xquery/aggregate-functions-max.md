@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b2a7449da7c255d0ddbbed71fef3561f77e294d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: caf736973d288a89bec287aff3cb1c1993e3b0dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726779"
 ---
 # <a name="aggregate-functions---max"></a>Funções de Agregação – max
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retorna de uma sequência de valores atômicos, *$ARG*, um item cujo valor é maior do que o de todos os outros.  
   
@@ -49,7 +49,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
-### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Usando a função max() XQuery para localizar locais de centro de trabalho no processo de fabricação que têm grande parte das horas de trabalho  
+### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>a. Usando a função max() XQuery para localizar locais de centro de trabalho no processo de fabricação que têm grande parte das horas de trabalho  
  A consulta fornecida na [função mín (XQuery)](../xquery/aggregate-functions-min.md) pode ser reescrita para usar a função **Max ()** .  
   
 ## <a name="implementation-limitations"></a>Limitações de implementação  

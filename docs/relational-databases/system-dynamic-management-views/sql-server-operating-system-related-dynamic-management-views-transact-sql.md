@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ea0bbe308e3b0e49f6250dd02d2c6c1f636751c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1e42b3dda674a235c764c03df313bac5d1081d3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730111"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>Exibições de gerenciamento dinâmico relacionadas ao sistema operacional do SQL Server (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Esta seção documenta as exibições de gerenciamento dinâmico (DMV) que estão associadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sistema operacional (SQLOS). SQLOS é responsável por gerenciar recursos do sistema operacional que são específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 

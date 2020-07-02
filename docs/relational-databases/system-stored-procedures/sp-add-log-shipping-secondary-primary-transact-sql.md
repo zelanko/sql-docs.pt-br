@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87c243c1eaffdcbf471347a677bb7e5d9c9ffbb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731745"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Configura as informações primárias, adiciona links de monitor local e remoto e cria trabalhos de cópia e restauração no servidor secundário para o banco de dados primário especificado.  
   
@@ -61,11 +61,11 @@ sp_add_log_shipping_secondary_primary
   
 `[ @backup_destination_directory = ] 'backup_destination_directory'`O diretório no servidor secundário para onde os arquivos de backup são copiados. *backup_destination_directory* é **nvarchar (500)** e não pode ser NULL.  
   
-`[ @copy_job_name = ] 'copy_job_name'`O nome a ser usado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o trabalho do agente que está sendo criado para copiar backups de log de transações para o servidor secundário. *copy_job_name* é **sysname** e não pode ser nulo.  
+`[ @copy_job_name = ] 'copy_job_name'`O nome a ser usado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente que está sendo criado para copiar backups de log de transações para o servidor secundário. *copy_job_name* é **sysname** e não pode ser nulo.  
   
-`[ @restore_job_name = ] 'restore_job_name'`É o nome do trabalho [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do agente no servidor secundário que restaura os backups para o banco de dados secundário. *restore_job_name* é **sysname** e não pode ser nulo.  
+`[ @restore_job_name = ] 'restore_job_name'`É o nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente no servidor secundário que restaura os backups para o banco de dados secundário. *restore_job_name* é **sysname** e não pode ser nulo.  
   
-`[ @file_retention_period = ] 'file_retention_period'`O período de tempo, em minutos, que um arquivo de backup é mantido no servidor secundário no caminho especificado pelo parâmetro antes de @backup_destination_directory ser excluído. *history_retention_period* é **int**, com um padrão de NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
+`[ @file_retention_period = ] 'file_retention_period'`O período de tempo, em minutos, que um arquivo de backup é mantido no servidor secundário no caminho especificado pelo @backup_destination_directory parâmetro antes de ser excluído. *history_retention_period* é **int**, com um padrão de NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
   
 `[ @monitor_server = ] 'monitor_server'`É o nome do servidor monitor. *Monitor_server* é **sysname**, sem padrão, e não pode ser nulo.  
   
@@ -114,7 +114,7 @@ sp_add_log_shipping_secondary_primary
  Somente os membros da função de servidor fixa **sysadmin** podem executar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
- Este exemplo ilustra o uso do procedimento armazenado **sp_add_log_shipping_secondary_primary** para configurar informações para o banco de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dados primário no servidor secundário.  
+ Este exemplo ilustra o uso do procedimento armazenado **sp_add_log_shipping_secondary_primary** para configurar informações para o banco de dados primário [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] no servidor secundário.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   

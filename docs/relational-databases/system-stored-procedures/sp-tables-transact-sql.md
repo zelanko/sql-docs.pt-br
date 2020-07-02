@@ -18,15 +18,15 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14c618ef31562f6e6af70a569e21fdd4105d663e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 03a1d909dc1d3a89b68895e05953cc0ed0da2a7b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725514"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retorna uma lista de objetos que podem ser consultados no ambiente atual. Isso significa qualquer tabela ou exibição, com exceção de objetos de sinônimo.  
   
@@ -64,7 +64,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'`Determina se os caracteres sublinhado (_), porcentagem (%) e colchete ([ou]) são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -73,7 +73,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_QUALIFIER**|**sysname**|Nome do qualificador de tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Esse campo pode ser NULL.|  
 |**TABLE_OWNER**|**sysname**|Nome do proprietário da tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , essa coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
-|**TABLE_TYPE**|**varchar (32)**|Tabela, tabela do sistema ou exibição.|  
+|**TABLE_TYPE**|**varchar(32)**|Tabela, tabela do sistema ou exibição.|  
 |**COMENTÁRIOS**|**varchar (254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
   
 ## <a name="remarks"></a>Comentários  

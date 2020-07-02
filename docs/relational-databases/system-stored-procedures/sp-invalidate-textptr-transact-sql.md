@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f479daec811e9953bdb0b9e23727dd1a58ad15e4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b229db409520275fa1b043fa54c8ce6e6421096e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733063"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Invalida o ponteiro de texto em linha especificado ou todos os ponteiros de texto em linha, na transação. **sp_invalidate_textptr** pode ser usado somente em ponteiros de texto na linha. Esses ponteiros são de tabelas que têm a opção **texto na linha** habilitada.  
   

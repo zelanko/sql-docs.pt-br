@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9d51cc0c33c8b656df176baa606a88a542ca4bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5339a0d52754c19024a3774962d947bb4240ccba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727816"
 ---
 # <a name="creating-user-defined-types---coding"></a>Criar tipos definidos pelo usuário – Codificação
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Ao codificar a definição UDT (tipo definido pelo usuário), você deve implementar vários recursos, dependendo da implementação da UDT como classe ou estrutura, bem como das opções de formato e de serialização escolhidas.  
   
  O exemplo nesta seção ilustra a implementação de um **ponto** UDT como uma **struct** (ou **estrutura** em Visual Basic). O **ponto** UDT consiste em coordenadas X e Y implementadas como procedimentos de propriedade.  
@@ -58,7 +58,7 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- O namespace **Microsoft. SqlServer. Server** contém os objetos necessários para vários atributos de UDT, e o namespace **System. Data. SqlTypes** contém as classes que representam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os tipos de dados nativos disponíveis para o assembly. É claro que talvez haja namespaces adicionais necessários ao funcionamento correto do assembly. O **ponto** UDT também usa o namespace **System. Text** para trabalhar com cadeias de caracteres.  
+ O namespace **Microsoft. SqlServer. Server** contém os objetos necessários para vários atributos de UDT, e o namespace **System. Data. SqlTypes** contém as classes que representam os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados nativos disponíveis para o assembly. É claro que talvez haja namespaces adicionais necessários ao funcionamento correto do assembly. O **ponto** UDT também usa o namespace **System. Text** para trabalhar com cadeias de caracteres.  
   
 > [!NOTE]  
 >  Visual C++ objetos de banco de dados, como UDTs, compilados com **/CLR: Pure** não têm suporte para execução.  
@@ -89,11 +89,11 @@ public struct Point : INullable
 ```  
   
 ## <a name="implementing-nullability"></a>Implementando a nulidade  
- Além de especificar corretamente os atributos dos assemblies, a UDT também precisa oferecer suporte à nulidade. Os UDTs carregados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em têm reconhecimento de nulo, mas, para que o UDT reconheça um valor nulo, o UDT deve implementar a interface **System. Data. SqlTypes. INullable** .  
+ Além de especificar corretamente os atributos dos assemblies, a UDT também precisa oferecer suporte à nulidade. Os UDTs carregados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm reconhecimento de nulo, mas, para que o UDT reconheça um valor nulo, o UDT deve implementar a interface **System. Data. SqlTypes. INullable** .  
   
  Você deve criar uma propriedade chamada **IsNull**, que é necessária para determinar se um valor é nulo no código CLR. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontra uma instância nula de uma UDT, esta é mantida, usando métodos manipulação de nulos normais. O servidor não perde tempo serializando ou desserializando a UDT caso não precise, e ele não perde espaço armazenando uma UDT nula. Essa verificação de nulos é realizada sempre que uma UDT passa pelo CLR, o que significa que usar a construção [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL para verificar se há UDTs nulas deve funcionar sempre. A propriedade **IsNull** também é usada pelo servidor para testar se uma instância é nula. Quando determina que a UDT é nula, o servidor pode usar a manipulação de nulos nativa.  
   
- O método **Get ()** de **IsNull** não é especial em nenhuma forma. Se uma variável ** \@** de **ponto** p for **nula**, ** \@p. IsNull** será, por padrão, avaliada como "NULL", não "1". Isso ocorre porque o atributo **SqlMethod (OnNullCall)** do método **Get ()** do padrão IsNull é false. Como o objeto é **nulo**, quando a propriedade é solicitada, o objeto não é desserializado, o método não é chamado e um valor padrão de "NULL" é retornado.  
+ O método **Get ()** de **IsNull** não é especial em nenhuma forma. Se uma variável de **ponto** ** \@ p** for **nula**, ** \@ p. IsNull** será, por padrão, avaliada como "NULL", não "1". Isso ocorre porque o atributo **SqlMethod (OnNullCall)** do método **Get ()** do padrão IsNull é false. Como o objeto é **nulo**, quando a propriedade é solicitada, o objeto não é desserializado, o método não é chamado e um valor padrão de "NULL" é retornado.  
   
 ### <a name="example"></a>Exemplo  
  No seguinte exemplo, a variável `is_Null` é privada e mantém o estado de nulidade para a instância da UDT. O código deve manter um valor apropriado para `is_Null`. O UDT também deve ter uma propriedade estática denominada **NULL** que retorna uma instância de valor nulo de UDT. Isso permite que a UDT retorne um valor nulo caso a instância seja realmente nula no banco de dados.  
@@ -156,7 +156,7 @@ FROM Points
 WHERE location.IsNull = 0;  
 ```  
   
- Ambas as consultas retornam as IDs de pontos com locais não**nulos** . Na Consulta 1, é usada a manipulação de nulos normal, não havendo nenhuma desserialização das UDTs obrigatória. A consulta 2, por outro lado, precisa desserializar cada objeto não**nulo** e chamar o CLR para obter o valor da propriedade **IsNull** . Claramente, o uso de **is NULL** apresentará um melhor desempenho e nunca deve haver um motivo para ler a propriedade **IsNull** de um [!INCLUDE[tsql](../../includes/tsql-md.md)] UDT a partir do código.  
+ Ambas as consultas retornam as IDs de pontos com locais não**nulos** . Na Consulta 1, é usada a manipulação de nulos normal, não havendo nenhuma desserialização das UDTs obrigatória. A consulta 2, por outro lado, precisa desserializar cada objeto não**nulo** e chamar o CLR para obter o valor da propriedade **IsNull** . Claramente, o uso de **is NULL** apresentará um melhor desempenho e nunca deve haver um motivo para ler a propriedade **IsNull** de um UDT a partir do [!INCLUDE[tsql](../../includes/tsql-md.md)] código.  
   
  Então, qual é o uso da propriedade **IsNull** ? Primeiro, é necessário determinar se um valor é **nulo** no código CLR. Em segundo lugar, o servidor precisa de uma maneira de testar se uma instância é **nula**, portanto, essa propriedade é usada pelo servidor. Depois de determinar que ele é **nulo**, ele pode usar sua manipulação de NULL nativo para tratá-lo.  
   
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  A classe **Microsoft. SqlServer. Server. SqlMethodAttribute** fornece atributos personalizados que podem ser usados para marcar definições de método a fim de especificar o determinante, o comportamento de chamada nula e especificar se um método é um modificador. Os valores padrão dessas propriedades são pressupostos, e o atributo personalizado só é usado quando um valor não padrão é necessário.  
   
 > [!NOTE]  
->  A classe **SqlMethodAttribute** herda da classe **SqlFunctionAttribute** , portanto **SqlMethodAttribute** herda os campos **FillRowMethodName** e **TableDefinition** de **SqlFunctionAttribute**. Isso indica que é possível escrever um método com valor de tabela, o que não é o caso. O método é compilado e o assembly é implantado, mas um erro sobre o tipo de retorno **IEnumerable** é gerado em tempo de execução com a seguinte mensagem: "o método,\<a propriedade ou o campo '\<Name> ' na classe '\<Class> ' no assembly ' assembly> ' tem um tipo de retorno inválido."  
+>  A classe **SqlMethodAttribute** herda da classe **SqlFunctionAttribute** , portanto **SqlMethodAttribute** herda os campos **FillRowMethodName** e **TableDefinition** de **SqlFunctionAttribute**. Isso indica que é possível escrever um método com valor de tabela, o que não é o caso. O método é compilado e o assembly é implantado, mas um erro sobre o tipo de retorno **IEnumerable** é gerado em tempo de execução com a seguinte mensagem: "o método, a propriedade ou o campo" \<name> "na classe" " \<class> no assembly" \<assembly> "tem um tipo de retorno inválido."  
   
  A tabela a seguir descreve algumas das propriedades relevantes do **Microsoft. SqlServer. Server. SqlMethodAttribute** que podem ser usadas em métodos UDT e lista seus valores padrão.  
   
@@ -575,7 +575,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- O método **Rotate** é decorado com o atributo **SqlMethod** definindo **IsMutator** como **true** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que o possa marcar o método como um método modificador. O código também define **OnNullCall** como **false**, que indica ao servidor que o método retorna uma referência nula (**Nothing** em Visual Basic) se qualquer um dos parâmetros de entrada forem referências nulas.  
+ O método **Rotate** é decorado com o atributo **SqlMethod** definindo **IsMutator** como **true** para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o possa marcar o método como um método modificador. O código também define **OnNullCall** como **false**, que indica ao servidor que o método retorna uma referência nula (**Nothing** em Visual Basic) se qualquer um dos parâmetros de entrada forem referências nulas.  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -601,7 +601,7 @@ public void Rotate(double anglex, double angley, double anglez)
  Ao implementar um UDT com um formato definido pelo usuário, você deve implementar métodos de **leitura** e **gravação** que implementam a interface Microsoft. SqlServer. Server. ibinaryserializedmd para lidar com a serialização e desserialização de dados UDT. Você também deve especificar a propriedade **MaxByteSize** do **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute**.  
   
 ### <a name="the-currency-udt"></a>A UDT Currency  
- A **moeda** UDT é incluída com os exemplos de CLR que podem ser instalados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]com o, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]começando com o.  
+ A **moeda** UDT é incluída com os exemplos de CLR que podem ser instalados com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , começando com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  A **moeda** UDT dá suporte à manipulação de quantias de dinheiro no sistema monetário de uma cultura específica. Você deve definir dois campos: uma **cadeia de caracteres** para **CultureInfo**, que especifica quem emitiu a moeda (en-US, por exemplo) e um **decimal** para **CurrencyValue**, a quantidade de dinheiro.  
   
@@ -611,7 +611,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
 1.  Defina o atributo **IsByteOrdered** como true, que diz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar a representação binária persistente em disco para comparações.  
   
-2.  Use o método de **gravação** para o UDT da **moeda** para determinar como o UDT é persistido no disco e, portanto, como os valores UDT [!INCLUDE[tsql](../../includes/tsql-md.md)] são comparados e ordenados para operações.  
+2.  Use o método de **gravação** para o UDT da **moeda** para determinar como o UDT é persistido no disco e, portanto, como os valores UDT são comparados e ordenados para [!INCLUDE[tsql](../../includes/tsql-md.md)] operações.  
   
 3.  Salve a **moeda** UDT usando o seguinte formato binário:  
 

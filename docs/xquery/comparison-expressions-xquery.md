@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 082fb2d1afdfa8824ea6f3d6e7bd3e4c484e281e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729509"
 ---
 # <a name="comparison-expressions-xquery"></a>Expressões de comparação (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   O XQuery fornece os seguintes tipos de operadores de comparação:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "81388163"
 |Operador|Descrição|  
 |--------------|-----------------|  
 |=|Igual a|  
-|!=|Não igual|  
+|!=|Diferente|  
 |\<|Menor que|  
 |>|Maior que|  
 |\<=|Menor que ou igual a|  
@@ -80,7 +80,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- A consulta a seguir retorna imagens de tamanho pequeno de um modelo de produto do catálogo de produtos fornecido no banco de dados de exemplo AdventureWorks. A consulta compara uma sequência de valores atômicos retornada por `PD:ProductDescription/PD:Picture/PD:Size` com uma “pequena” sequência de singleton. Se a comparação for verdadeira, ela retornará o elemento <\> Picture.  
+ A consulta a seguir retorna imagens de tamanho pequeno de um modelo de produto do catálogo de produtos fornecido no banco de dados de exemplo AdventureWorks. A consulta compara uma sequência de valores atômicos retornada por `PD:ProductDescription/PD:Picture/PD:Size` com uma “pequena” sequência de singleton. Se a comparação for verdadeira, ela retornará o elemento <Picture \> .  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -91,7 +91,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- A consulta a seguir compara uma sequência de números de telefone em\> <elementos de número ao literal de cadeia de caracteres "112-111-1111". A consulta comparará a sequência de elementos de número de telefone na coluna AdditionalContactInfo para determinar se há um número de telefone específico para um cliente específico no documento.  
+ A consulta a seguir compara uma sequência de números de telefone em <elementos de número \> ao literal de cadeia de caracteres "112-111-1111". A consulta comparará a sequência de elementos de número de telefone na coluna AdditionalContactInfo para determinar se há um número de telefone específico para um cliente específico no documento.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- A consulta retorna True. Isso indica que o número existe no documento. A consulta a seguir é uma versão levemente modificada da consulta anterior. Nesta consulta, são comparados os valores de número de telefone recuperados do documento a uma sequência de dois valores de número de telefone. Se a comparação for verdadeira, o elemento de\> número de <será retornado.  
+ A consulta retorna True. Isso indica que o número existe no documento. A consulta a seguir é uma versão levemente modificada da consulta anterior. Nesta consulta, são comparados os valores de número de telefone recuperados do documento a uma sequência de dois valores de número de telefone. Se a comparação for verdadeira, o elemento de número de <\> será retornado.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -143,7 +143,7 @@ WHERE ContactID=1
 |Operador|Descrição|  
 |--------------|-----------------|  
 |eq|Igual a|  
-|ne|Não igual|  
+|ne|Diferente|  
 |lt|Menor que|  
 |gt|Maior que|  
 |le|Menor que ou igual a|  
@@ -153,7 +153,7 @@ WHERE ContactID=1
   
  Esses operadores só funcionam em valores atômicos singleton. Ou seja, você não pode especificar uma sequência como um dos operandos.  
   
- Por exemplo, a consulta a seguir \<recupera elementos de> de imagem para um modelo de produto em que o tamanho da imagem é "pequeno:  
+ Por exemplo, a consulta a seguir recupera \<Picture> elementos para um modelo de produto em que o tamanho da imagem é "pequeno:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -170,7 +170,7 @@ WHERE ProductModelID=19
   
 -   O `declare namespace` define o prefixo de namespace que é subsequentemente utilizado na consulta.  
   
--   O \<valor do elemento de> de tamanho é comparado com o valor atômico especificado, "pequeno".  
+-   O \<Size> valor do elemento é comparado com o valor atômico especificado, "pequeno".  
   
 -   Observe que, como os operadores de valor funcionam apenas em valores atômicos, a função **Data ()** é usada implicitamente para recuperar o valor do nó. Ou seja, o `data($P/PD:Size) eq "small"` produz o mesmo resultado.  
   
@@ -225,7 +225,7 @@ ProductModelID       Result
   
 -   `>>`: O **operando 1** segue o **operando 2** na ordem do documento.  
   
- A consulta a seguir retornará true se a descrição do catálogo de \<produtos tiver o elemento de> \<de garantia exibido antes do elemento de manutenção> na ordem do documento para um produto específico.  
+ A consulta a seguir retornará true se a descrição do catálogo de produtos tiver o \<Warranty> elemento exibido antes do \<Maintenance> elemento na ordem do documento de um produto específico.  
   
 ```  
 WITH XMLNAMESPACES (  

@@ -27,20 +27,20 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 108698da668928d4412eb7ba42621b539850b26c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727636"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitetura de integração CLR – Ambiente hospedado de CLR
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   A integração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o CLR (Common Language Runtime) do .NET Framework permite aos programadores usar linguagens como, por exemplo, Visual C#, Visual Basic .NET e Visual C++. Funções, procedimentos armazenados, gatilhos, tipos de dados e agregações estão entre os tipos de lógica corporativa que os programadores podem escrever usando essas linguagens.  
   
   O CLR apresenta a memória coletada por lixo, threading de preempção, serviços de metadados (reflexão de tipo), verificação de código e segurança de acesso ao código. Ele usa metadados para localizar e carregar classes, distribuir as instâncias na memória, resolver invocações de métodos, gerar código nativo, impor a segurança e definir limites de contexto em tempo de execução.  
   
- O CLR e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferem como ambientes de tempo de execução pela forma como tratam memória, threads e sincronização. Este artigo descreve a maneira como esses dois tempos de execução são integrados para que todos os recursos do sistema sejam gerenciados uniformemente. Este artigo também aborda a maneira como a CAS (segurança de acesso a código) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do CLR e a segurança são integradas para fornecer um ambiente de execução confiável e seguro para o código do usuário.  
+ O CLR e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferem como ambientes de tempo de execução pela forma como tratam memória, threads e sincronização. Este artigo descreve a maneira como esses dois tempos de execução são integrados para que todos os recursos do sistema sejam gerenciados uniformemente. Este artigo também aborda a maneira como a CAS (segurança de acesso a código) do CLR e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a segurança são integradas para fornecer um ambiente de execução confiável e seguro para o código do usuário.  
   
 ## <a name="basic-concepts-of-clr-architecture"></a>Conceitos básicos da arquitetura do CLR  
  No .NET Framework, um programador escreve o código em uma linguagem de alto nível que implementa uma classe definindo sua estrutura (por exemplo, os campos das propriedades da classe) e seus métodos. Alguns desses métodos podem ser funções estáticas. A compilação do programa produz um arquivo chamado assembly, que contém o código compilado na MSIL ([!INCLUDE[msCoName](../../includes/msconame-md.md)] intermediate language) e um manifesto que contém todas as referências para assemblies dependentes.  
@@ -104,7 +104,7 @@ ms.locfileid: "81488145"
  Esta seção discute como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integra os modelos de threading, agendamento, sincronização e gerenciamento de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do CLR. Em particular, esta seção examina a integração sob o ponto de vista das metas de escalabilidade, confiabilidade e segurança. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atua essencialmente como o sistema operacional para o CLR quando este é hospedado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR chama rotinas de baixo nível implementadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para threading, agendamento e gerenciamento de memória. Essas rotinas são os mesmos primitivos que o resto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo usa. Esta abordagem fornece vários benefícios de escalabilidade, confiabilidade e segurança.  
   
 ###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Escalabilidade: Threading, agendamento e sincronização comuns  
- O CLR chama as APIs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para criar threads, tanto para executar código de usuário quanto para seu próprio uso interno. Para fazer a sincronização de vários threads, o CLR chama objetos de sincronização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa prática permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agendador agende outras tarefas quando um thread estiver aguardando um objeto de sincronização. Por exemplo, quando o CLR iniciar a coleta de lixo, todos os seus threads esperam a coleta de lixo terminar. Como os threads do CLR e os objetos de sincronização pelos quais eles estão esperando são conhecidos para o agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode agendar threads que estão executando outras tarefas do banco de dados que não envolvem o CLR. Isto também permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecte deadlocks que envolvem bloqueios tomados pelos objetos de sincronização CLR e utilize técnicas tradicionais para remoção de deadlock.  
+ O CLR chama as APIs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para criar threads, tanto para executar código de usuário quanto para seu próprio uso interno. Para fazer a sincronização de vários threads, o CLR chama objetos de sincronização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa prática permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agendador agende outras tarefas quando um thread estiver aguardando um objeto de sincronização. Por exemplo, quando o CLR iniciar a coleta de lixo, todos os seus threads esperam a coleta de lixo terminar. Como os threads do CLR e os objetos de sincronização pelos quais eles estão esperando são conhecidos para o agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode agendar threads que estão executando outras tarefas do banco de dados que não envolvem o CLR. Isto também permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecte deadlocks que envolvem bloqueios tomados pelos objetos de sincronização CLR e utilize técnicas tradicionais para remoção de deadlock.  
   
  O código gerenciado é executado preventivamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem a capacidade de detectar e parar threads que não tenham sido executados durante um tempo significativo. A capacidade de conectar threads do CLR a threads do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implica que o agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode identificar threads “fugitivos” no CLR e gerenciar sua prioridade. Tais threads fugitivos são suspensos e devolvidos à fila. Os threads que são identificados repetidamente como fugitivos não recebem permissão de execução por um determinado período de tempo, para que outros trabalhos possam ser executados.  
   
@@ -158,9 +158,9 @@ Thread.EndThreadAffinity();
 |-|-|-|-|  
 |Conjunto de permissões|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Segurança de Acesso do Código|Somente execução|Execução + acesso a recursos externos|Irrestrito|  
-|Restrições do modelo de programação|Sim|Sim|Sem restrições|  
-|Requisito de verificabilidade|Sim|Sim|Não|  
-|Capacidade de chamar código nativo|Não|Não|Sim|  
+|Restrições do modelo de programação|Yes|Yes|Sem restrições|  
+|Requisito de verificabilidade|Yes|Sim|No|  
+|Capacidade de chamar código nativo|No|Não|Sim|  
   
  SAFE é o modo mais confiável e seguro, com restrições associadas ao modelo de programação permitido. Assemblies SAFE recebem permissão suficiente para executar, realizar cálculos e ter acesso ao banco de dados local. Assemblies SAFE precisam ser seguros do tipo verificável e não têm permissão para chamar código não gerenciado.  
   

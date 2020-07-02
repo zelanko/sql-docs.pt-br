@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d161135c8c8b0c7d7932eb08aa98509efc4bc45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0200cec59d12f8311a280bd16b3cb1c5b0eb5374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488094"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727623"
 ---
 # <a name="clr-integration---enabling"></a>Integração CLR – Habilitar
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  O recurso de integração CLR (common language runtime) está desativado por padrão, e deve ser habilitado para usar objetos implementados com a integração CLR. Para habilitar a integração CLR, use a opção **CLR Enabled** do procedimento armazenado **sp_configure** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  O recurso de integração CLR (common language runtime) está desativado por padrão, e deve ser habilitado para usar objetos implementados com a integração CLR. Para habilitar a integração CLR, use a opção **CLR Enabled** do procedimento armazenado **sp_configure** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :  
   
 ```sql  
 EXEC sp_configure 'clr enabled', 1;  
@@ -30,7 +30,7 @@ RECONFIGURE;
 GO  
 ```  
   
- Você pode desabilitar a integração CLR definindo a opção **CLR Enabled** como 0. Quando você desabilita a integração CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o interrompe a execução de todas as rotinas CLR definidas pelo usuário e descarrega todos os domínios de aplicativo. Os recursos que dependem do CLR, como o tipo de dados **hierarchyid** , a `FORMAT` função, a replicação e o gerenciamento baseado em políticas, não são afetados por essa configuração e continuarão a funcionar.
+ Você pode desabilitar a integração CLR definindo a opção **CLR Enabled** como 0. Quando você desabilita a integração CLR, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interrompe a execução de todas as rotinas CLR definidas pelo usuário e descarrega todos os domínios de aplicativo. Os recursos que dependem do CLR, como o tipo de dados **hierarchyid** , a `FORMAT` função, a replicação e o gerenciamento baseado em políticas, não são afetados por essa configuração e continuarão a funcionar.
   
 > [!NOTE]  
 >  Para habilitar a integração CLR, você deve ter a permissão ALTER SETTINGS no nível do servidor, que é mantida implicitamente por membros das funções de servidor fixas **sysadmin** e **ServerAdmin** .  

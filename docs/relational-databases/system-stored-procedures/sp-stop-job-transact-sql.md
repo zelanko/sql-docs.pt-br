@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88ec07ae0655f6a4617f15ed5f486a8fbb1b61d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 66a4d334719707d8f906b6026737037d7ea28175
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725648"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Instrui o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a parar a execução de um trabalho.  
 
@@ -64,7 +64,7 @@ sp_stop_job
 ## <a name="remarks"></a>Comentários  
  **sp_stop_job** envia um sinal de parada para o banco de dados. Alguns processos podem ser interrompidos imediatamente e alguns devem alcançar um ponto estável (ou um ponto de entrada para o caminho do código) antes que possam parar. Algumas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] longas como BACKUP, RESTORE e alguns comandos DBCC podem levar muito tempo para terminar. Quando estiverem em execução, pode levar algum tempo antes que o trabalho seja cancelado. A interrupção de um trabalho faz com que uma entrada "Trabalho Cancelado" seja registrada no histórico de trabalho.  
   
- Se um trabalho estiver atualmente executando uma etapa do tipo **CmdExec** ou **PowerShell**, o processo que está sendo executado (por exemplo, myprogram. exe) será forçado a terminar prematuramente. O fim prematuro pode resultar em comportamento imprevisível, como arquivos em uso pelo processo serem mantidos abertos. Consequentemente, **sp_stop_job** deve ser usado apenas em circunstâncias extremas se o trabalho contiver etapas do tipo **CmdExec** ou **PowerShell**.  
+ Se um trabalho estiver executando, no momento, uma etapa do tipo **CmdExec** ou **PowerShell**, o processo que está sendo executado (por exemplo, MyProgram.exe) será forçado a terminar prematuramente. O fim prematuro pode resultar em comportamento imprevisível, como arquivos em uso pelo processo serem mantidos abertos. Consequentemente, **sp_stop_job** deve ser usado apenas em circunstâncias extremas se o trabalho contiver etapas do tipo **CmdExec** ou **PowerShell**.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  

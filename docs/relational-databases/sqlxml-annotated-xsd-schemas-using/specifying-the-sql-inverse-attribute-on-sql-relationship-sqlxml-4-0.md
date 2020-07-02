@@ -22,18 +22,18 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe5409120a3d0c5df3cf05318b0b85fd22d07bdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bf9f98482ad83d1cf5104f9379ac294f2064c62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725876"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>Especificando o atributo sql:inverse em sql:relationship (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  O atributo **SQL: inverso** é útil somente quando o esquema XSD é usado para o carregamento em massa ou por um updategram. O atributo **SQL: inverso** pode ser especificado no elemento ** \<SQL: relationship>** . Em diagramas de atualização, a lógica do diagrama de atualização interpreta o esquema ao determinar as tabelas e as colunas atualizadas pela operação do diagrama. As relações de pai/filho especificadas no esquema determinam a ordem na qual os registros são modificados (inseridos ou excluídos).  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  O atributo **SQL: inverso** é útil somente quando o esquema XSD é usado para o carregamento em massa ou por um updategram. O atributo **SQL: inverso** pode ser especificado no **\<sql:relationship>** elemento. Em diagramas de atualização, a lógica do diagrama de atualização interpreta o esquema ao determinar as tabelas e as colunas atualizadas pela operação do diagrama. As relações de pai/filho especificadas no esquema determinam a ordem na qual os registros são modificados (inseridos ou excluídos).  
   
- Se você tiver um esquema XSD no qual a relação pai/filho é especificada na ordem inversa da relação chave primária/chave estrangeira entre as colunas de banco de dados correspondentes, a operação do diagrama de atualização de inserção ou exclusão falhará por conta da violação da chave primária/chave estrangeira. Nesses casos, o atributo **SQL: inverso** é especificado (**SQL: inverso = "true"**) no elemento ** \<SQL: relationship>** e a lógica updategram inversa sua interpretação da relação pai-filho especificada no esquema.  
+ Se você tiver um esquema XSD no qual a relação pai/filho é especificada na ordem inversa da relação chave primária/chave estrangeira entre as colunas de banco de dados correspondentes, a operação do diagrama de atualização de inserção ou exclusão falhará por conta da violação da chave primária/chave estrangeira. Nesses casos, o atributo **SQL: inverso** é especificado (**SQL: inverso = "true"**) no **\<sql:relationship>** elemento, e a lógica updategram inversa sua interpretação da relação pai-filho especificada no esquema.  
   
  O atributo **SQL: inverso** usa um valor booliano (0 = false, 1 = true). Os valores aceitáveis são 0, 1, true e false.  
   

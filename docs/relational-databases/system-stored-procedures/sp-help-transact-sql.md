@@ -18,17 +18,17 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727182"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Relata informações sobre um objeto Database (qualquer objeto listado na exibição de compatibilidade **Sys. sysobjects** ), um tipo de dados definido pelo usuário ou um tipo de dados.  
+  Relata informações sobre um objeto de banco de dados (qualquer objeto listado na exibição de compatibilidade do **sys.sysObjects** ), um tipo de dado definido pelo usuário ou um tipo de dados.  
   
  
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -66,7 +66,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Storage_type**|**nvarchar (** 128 **)**|Nome do tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |**Comprimento**|**smallint**|O comprimento físico do tipo de dados (em bytes).|  
     |**Prec**|**int**|Precisão (número total de dígitos).|  
-    |**Dimensionar**|**int**|Número de dígitos à direita da casa decimal.|  
+    |**Escala**|**int**|Número de dígitos à direita da casa decimal.|  
     |**Permite valor nulo**|**varchar (** 35 **)**|Indica se valores NULL são permitidos: Sim ou Não.|  
     |**Default_name**|**nvarchar (** 128 **)**|Nome de uma associação padrão para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Nome de uma associação de regra para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
@@ -94,7 +94,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Computada**|**varchar (** 35 **)**|Indica se os valores na coluna são computados: Sim ou Não.|  
         |**Comprimento**|**int**|Comprimento da coluna em bytes.<br /><br /> Observação: se o tipo de dados da coluna for um tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** ou **XML**), o valor será exibido como-1.|  
         |**Prec**|**Char (** 5 **)**|Precisão da coluna.|  
-        |**Dimensionar**|**Char (** 5 **)**|Escala de coluna.|  
+        |**Escala**|**Char (** 5 **)**|Escala de coluna.|  
         |**Permite valor nulo**|**varchar (** 35 **)**|Indica se valores NULL são permitidos na coluna: Sim ou Não.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Exclui os espaços em branco à direita. Retorna Sim ou Não.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Somente para compatibilidade com versões anteriores.|  
@@ -155,7 +155,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Tipo**|**nvarchar (** 128 **)**|Tipo de dados do parâmetro de procedimento armazenado.|  
         |**Comprimento**|**smallint**|Comprimento máximo de armazenamento físico, em bytes.|  
         |**Prec**|**int**|Precisão ou número total de dígitos.|  
-        |**Dimensionar**|**int**|Número de dígitos à direita da vírgula decimal.|  
+        |**Escala**|**int**|Número de dígitos à direita da vírgula decimal.|  
         |**Param_order**|**smallint**|Ordem do parâmetro.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -198,6 +198,6 @@ GO
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpuser](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. sysobjects &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [Objetos desys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

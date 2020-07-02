@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b30da196f79fc10905ffb3ead95f8b5fca4d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278176"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733054"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A exibição **sysmergeextendedarticlesview** expõe informações de artigo. Essa exibição é armazenada no banco de dados de publicação, no Publicador, e no banco de dados de assinatura, no Assinante.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72278176"
 |**identity_support**|**int**|Especifica se o tratamento automático do intervalo de identidades está habilitado. **1** significa que o tratamento de intervalo de identidade está habilitado e **0** significa que não há suporte para o intervalo de identidade.|  
 |**destination_owner**|**sysname**|O nome do proprietário do objeto de destino.|  
 |**before_image_objid**|**int**|A ID de objeto da tabela de controle. A tabela de controle contém certos valores de coluna de chave quando uma publicação é configurada para habilitar otimizações de alteração de partição.|  
-|**before_view_objid**|**int**|A ID de objeto de uma tabela de exibição. A exibição está em uma tabela que controla se uma linha pertenceu a um Assinante específico antes de ser excluída ou atualizada. Aplica-se somente quando uma publicação é criada com * \@keep_partition_changes* = **true**.|  
+|**before_view_objid**|**int**|A ID de objeto de uma tabela de exibição. A exibição está em uma tabela que controla se uma linha pertenceu a um Assinante específico antes de ser excluída ou atualizada. Aplica-se somente quando uma publicação é criada com * \@ keep_partition_changes*  =  **true**.|  
 |**verify_resolver_signature**|**int**|Especifica se uma assinatura digital é verificada antes de usar um resolvedor em replicação de mesclagem:<br /><br /> **0** = a assinatura não é verificada.<br /><br /> **1** = a assinatura é verificada para ver se ela é de uma fonte confiável.|  
 |**allow_interactive_resolver**|**bit**|Especifica se o uso do Resolvedor Interativo em um artigo está habilitado. **1** especifica que o resolvedor interativo é usado no artigo.|  
 |**fast_multicol_updateproc**|**bit**|Especifica se o Merge Agent foi habilitado para aplicar alterações em várias colunas na mesma linha em uma instrução UPDATE.<br /><br /> **0** = emite uma atualização separada para cada coluna alterada.<br /><br /> **1** = emitido na instrução UPDATE que faz com que as atualizações ocorram em várias colunas em uma instrução.|  
@@ -82,8 +82,8 @@ ms.locfileid: "72278176"
 |**delete_tracking**|**bit**|Indica se as exclusões são replicadas.<br /><br /> **0** = as exclusões não são replicadas.<br /><br /> **1** = as exclusões são replicadas, que é o comportamento padrão para replicação de mesclagem.<br /><br /> Quando o valor de *delete_tracking* for **0**, as linhas excluídas no Assinante deverão ser removidas manualmente no Publicador e as linhas excluídas no Publicador deverão ser removidas manualmente no Assinante.<br /><br /> Observação: um valor de **0** resulta em não convergência.|  
 |**compensate_for_errors**|**bit**|Indica se ações de compensação são executadas quando são encontrados erros durante a sincronização.<br /><br /> **0** = ações de compensação estão desabilitadas.<br /><br /> **1** = alterações que não podem ser aplicadas em um assinante ou Publicador sempre levam a ações de compensação para desfazer essas alterações, que é o comportamento padrão para replicação de mesclagem.<br /><br /> Observação: um valor de **0** resulta em não convergência.|  
 |**pub_range**|**bigint**|O tamanho do intervalo de identidade do publicador.|  
-|**amplitude**|**bigint**|O tamanho dos valores de identidade consecutivos que seria atribuído a assinantes em um ajuste.|  
-|**os**|**int**|A porcentagem de limite do intervalo de identidade.|  
+|**range**|**bigint**|O tamanho dos valores de identidade consecutivos que seria atribuído a assinantes em um ajuste.|  
+|**threshold**|**int**|A porcentagem de limite do intervalo de identidade.|  
 |**metadata_select_proc**|**sysname**|O nome do procedimento armazenado gerado automaticamente usado para acessar metadados nas tabelas do sistema de replicação de mesclagem.|  
 |**stream_blob_columns**|**bit**|Especifica se uma otimização de fluxo de dados é usada ao replicar colunas de objeto binário grande. **1** significa que a otimização será tentada.|  
 |**preserve_rowguidcol**|**bit**|Indica se a replicação usa uma coluna rowguid existente. Um valor de **1** significa que uma coluna ROWGUIDCOL existente é usada. **0** significa que a replicação adicionou a coluna ROWGUIDCOL.|  

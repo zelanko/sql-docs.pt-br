@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 623fee7a29b56e54a4621a11fcebad7bd4ff00fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6c8382737adcf94daf9df9c92f58b46ffc95ade
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827836"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728217"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Procedimentos armazenados de Gerenciamento Baseado em Políticas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para o gerenciamento baseado em políticas.  
   

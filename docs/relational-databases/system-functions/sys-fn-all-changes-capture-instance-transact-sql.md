@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b9b6e62d0f69c5182ad69e21cb46800d4ddcc86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c40f335e4b40a1c15af6247439ac1f19e88d9d37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72909395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730088"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Wrappers para as funções de consulta **todas as alterações** . Os scripts necessários para criar essas funções são gerados pelo procedimento armazenado sys.sp_cdc_generate_wrapper_function.  
   
@@ -83,13 +83,13 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de coluna|Descrição|  
+|Nome da coluna|Tipo de coluna|Description|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|O LSN de confirmação da transação que é associado à alteração. Todas as alterações que são confirmadas na mesma transação compartilham o mesmo LSN de confirmação.|  
 |__CDC_SEQVAL|**binary(10)**|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
-|\<colunas de @column_list>|**consoante**|As colunas identificadas no argumento *column_list* para sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script que cria a função de wrapper.|  
+|\<columns from @column_list>|**consoante**|As colunas identificadas no argumento *column_list* para sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script que cria a função de wrapper.|  
 |__CDC_OPERATION|**nvarchar(2)**|Um código de operação que indica qual operação é necessária para aplicar a linha ao ambiente de destino. Ele irá variar com base no valor do argumento *row_filter_option* fornecido na chamada:<br /><br /> *row_filter_option* = ' all'<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> *row_filter_option* = ' todas as atualizações antigas '<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> 'UO' – atualiza os valores antigos da operação|  
-|\<colunas de @update_flag_list>|**bit**|Um sinalizador de bits é nomeado acrescentando _uflag ao nome da coluna. O sinalizador é sempre definido como nulo quando \__CDC_OPERATION é ', ' I ', de ' atualizadas '. Quando \__CDC_OPERATION for ' un ', ele será definido como 1 se a atualização tiver produzido uma alteração na coluna correspondente. Caso contrário, será 0.|  
+|\<columns from @update_flag_list>|**bit**|Um sinalizador de bits é nomeado acrescentando _uflag ao nome da coluna. O sinalizador é sempre definido como nulo quando \_ _CDC_OPERATION é ', ' I ', de ' atualizadas '. Quando \_ _CDC_OPERATION for ' un ', ele será definido como 1 se a atualização tiver produzido uma alteração na coluna correspondente. Caso contrário, será 0.|  
   
 ## <a name="remarks"></a>Comentários  
  A função fn_all_changes_<capture_instance> serve como um wrapper para a função de consulta cdc. fn_cdc_get_all_changes_<capture_instance>. O procedimento armazenado sys.sp_cdc_generate_wrapper é usado para gerar o script para criar o wrapper.  
@@ -100,13 +100,13 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 2.  Executar o script para realmente criar a função de wrapper.  
 
- As funções de wrapper permitem que os usuários consultem sistematicamente as alterações que ocorreram em um intervalo limitado por valores de **data e hora** em vez de valores LSN. As funções de wrapper executam todas as conversões necessárias entre os valores **DateTime** fornecidos e os valores LSN necessários internamente como argumentos para as funções de consulta. Quando as funções de wrapper são usadas em série para processar um fluxo de dados de alteração, elas garantem que nenhum dado seja perdido ou repetido desde que a seguinte convenção @end_time seja seguida: o valor do intervalo associado a uma chamada é @start_time fornecido como o valor para o intervalo associado à chamada subsequente.  
+ As funções de wrapper permitem que os usuários consultem sistematicamente as alterações que ocorreram em um intervalo limitado por valores de **data e hora** em vez de valores LSN. As funções de wrapper executam todas as conversões necessárias entre os valores **DateTime** fornecidos e os valores LSN necessários internamente como argumentos para as funções de consulta. Quando as funções de wrapper são usadas em série para processar um fluxo de dados de alteração, elas garantem que nenhum dado seja perdido ou repetido desde que a seguinte convenção seja seguida: o @end_time valor do intervalo associado a uma chamada é fornecido como o @start_time valor para o intervalo associado à chamada subsequente.  
   
  Usando o parâmetro @closed_high_end_point ao criar o script, você pode gerar wrappers para oferecer suporte a um limite superior fechado ou a um limite superior em aberto na janela de consulta especificada. Ou seja, você pode decidir se as entradas que têm uma hora de confirmação igual ao limite superior do intervalo de extração devem ser incluídas no intervalo. Por padrão, o limite superior é incluído.  
   
- O conjunto de resultados retornado pela função wrapper **All Changes** retorna as colunas _ $ start_lsn e \_ \_$seqval da tabela de alteração como colunas \__CDC_STARTLSN e \__CDC_SEQVAL, respectivamente. Ele os segue apenas com as colunas rastreadas que apareciam no parâmetro * \@column_list* quando o wrapper foi gerado. Se * \@column_list* for NULL, todas as colunas de origem rastreadas serão retornadas. As colunas de origem são seguidas por uma coluna \_de operação, _CDC_OPERATION, que é uma coluna de um ou dois caracteres que identifica a operação.  
+ O conjunto de resultados retornado pela função wrapper **All Changes** retorna as colunas _ $ start_lsn e \_ \_ $seqval da tabela de alteração como colunas \_ _CDC_STARTLSN e \_ _CDC_SEQVAL, respectivamente. Ele os segue apenas com as colunas rastreadas que apareciam no parâmetro * \@ column_list* quando o wrapper foi gerado. Se * \@ COLUMN_LIST* for NULL, todas as colunas de origem rastreadas serão retornadas. As colunas de origem são seguidas por uma coluna de operação, \_ _CDC_OPERATION, que é uma coluna de um ou dois caracteres que identifica a operação.  
   
- Em seguida, os sinalizadores de bit são acrescentados ao conjunto de resultados para cada coluna identificada no parâmetro @update_flag_list. Para o wrapper **todas as alterações** , os sinalizadores de bit sempre serão nulos se __CDC_OPERATION for ', ' I ' ou ' atualizadas '. Se \__CDC_OPERATION for ' un ', o sinalizador será definido como 1 ou 0, dependendo se a operação de atualização causou uma alteração na coluna.  
+ Em seguida, os sinalizadores de bit são acrescentados ao conjunto de resultados para cada coluna identificada no parâmetro @update_flag_list. Para o wrapper **todas as alterações** , os sinalizadores de bit sempre serão nulos se __CDC_OPERATION for ', ' I ' ou ' atualizadas '. Se \_ _CDC_OPERATION for ' un ', o sinalizador será definido como 1 ou 0, dependendo se a operação de atualização causou uma alteração na coluna.  
   
  O modelo de configuração da captura de dados de alterações ' instanciar CDC wrapper TVFs for Schema ' mostra como usar o sp_cdc_generate_wrapper_function procedimento armazenado para obter scripts de criação para todas as funções de wrapper para funções de consulta definidas pelo esquema. Em seguida, o modelo cria esses scripts. Para obter mais informações sobre modelos, consulte [Gerenciador de modelos](../../ssms/template/template-explorer.md).  
   

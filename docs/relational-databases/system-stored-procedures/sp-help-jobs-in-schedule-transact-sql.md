@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2567640f49beb0c1921811a9d04671833dca11be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c471e1bf5c2e3eac60d47418dc3957cef2209b02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827577"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730023"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre os trabalhos para os quais uma agenda específica é anexada.  
   
@@ -84,7 +84,7 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|Número de etapas que o trabalho possui.|  
 |**has_schedule**|**int**|Número de agendamentos que o trabalho possui.|  
 |**has_target**|**int**|Número de servidores de destino que o trabalho possui.|  
-|**tipo**|**int**|Tipo do trabalho:<br /><br /> **1** = trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
+|**type**|**int**|Tipo do trabalho:<br /><br /> **1** = trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
   
 ## <a name="remarks"></a>Comentários  
  Este procedimento lista informações sobre trabalhos anexados à agenda especificada.  

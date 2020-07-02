@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a641f363b4a39b28b7a7ea767914d952c83d697e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d3faf15999e0c157859e3d2eee9c4119ab344844
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727153"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Converte um usuário do banco de dados que foi mapeado para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um usuário do banco de dados independente com senha. Em um banco de dados independente, use este procedimento para remover dependências na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o banco de dados está instalado. **sp_migrate_user_to_contained** separa o usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon original, para que as configurações como senha e idioma padrão possam ser administradas separadamente para o banco de dados independente. **sp_migrate_user_to_contained** pode ser usado antes de mover o banco de dados independente para uma instância diferente do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para eliminar dependências nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons da instância atual.  
   

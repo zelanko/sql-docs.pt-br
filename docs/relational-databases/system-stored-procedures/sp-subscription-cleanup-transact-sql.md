@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f001943d989d55b824d70ddf2779cffa61463aa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b16ddb35ed3d8ec64eb783e904f3c9b6120cfbd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725630"
 ---
 # <a name="sp_subscription_cleanup-transact-sql"></a>sp_subscription_cleanup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Remove metadados quando uma assinatura é descartada em um Assinante. Para uma assinatura de transação de sincronização, inclui também gatilhos de atualização imediata. Esse procedimento armazenado é executado no Assinante no banco de dados de assinatura.  
   

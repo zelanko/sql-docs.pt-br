@@ -1,6 +1,6 @@
 ---
-title: Tipos e membros não permitidos em System. dll | Microsoft Docs
-description: SQL Server programação CLR não permite um tipo ou membro com determinados valores para a enumeração HostProtectionResource. Este artigo lista os valores não permitidos de System. dll.
+title: Tipos e membros não permitidos em System.dll | Microsoft Docs
+description: SQL Server programação CLR não permite um tipo ou membro com determinados valores para a enumeração HostProtectionResource. Este artigo lista System.dll valores não permitidos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 27b550cd-dd3d-4263-bd97-0f0dec1215fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e306fad7fe504115737265b6008ad4691bb1444
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ce7dadb603d08912434ae52a0e92fcd33e2e5ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727711"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>Disallowed Types and Members In System.dll
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a programação comum de integração de linguagem (CLR) não permite o uso de um tipo ou membro que tenha um **HostProtectionAttribute** que especifique uma enumeração **System. Security. Permissions. HostProtectionResource** com um valor de **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**ou **UI**. A tabela a seguir lista os membros e os tipos do assembly System.dll cujos valores de HPA (Host Protection Attribute) não são permitidos.  
   
 > [!NOTE]  
@@ -65,7 +65,7 @@ ms.locfileid: "81488067"
 |System.ComponentModel.AsyncCompletedEventHandler|SharedState|  
 |System.ComponentModel.AsyncOperation|SharedState|  
 |System.ComponentModel.AsyncOperationManager|SharedState|  
-|System.ComponentModel.AttributeCollection|Synchronization|  
+|System.ComponentModel.AttributeCollection|Sincronização|  
 |System.ComponentModel.BackgroundWorker|SharedState|  
 |System.ComponentModel.BaseNumberConverter|SharedState|  
 |System.ComponentModel.BindingList|SharedState|  
@@ -78,7 +78,7 @@ ms.locfileid: "81488067"
 |System.ComponentModel.CollectionChangeEventHandler|SharedState|  
 |System.ComponentModel.CollectionConverter|SharedState|  
 |System.ComponentModel.CompModSwitches|SharedState|  
-|System.ComponentModel.ComponentCollection|Synchronization|  
+|System.ComponentModel.ComponentCollection|Sincronização|  
 |System.ComponentModel.ComponentConverter|SharedState|  
 |System.ComponentModel.ComponentEditor|SharedState|  
 |System.ComponentModel.ComponentResourceManager|SharedState|  
@@ -131,7 +131,7 @@ ms.locfileid: "81488067"
 |System.ComponentModel.DoWorkEventHandler|SharedState|  
 |System.ComponentModel.EnumConverter|SharedState|  
 |System.ComponentModel.EventDescriptor|SharedState|  
-|System.ComponentModel.EventDescriptorCollection|Synchronization|  
+|System.ComponentModel.EventDescriptorCollection|Sincronização|  
 |System.ComponentModel.EventHandlerList|SharedState|  
 |System.ComponentModel.ExpandableObjectConverter|SharedState|  
 |System.ComponentModel.ExtendedPropertyDescriptor|SharedState|  
@@ -166,7 +166,7 @@ ms.locfileid: "81488067"
 |System.ComponentModel.PropertyChangedEventArgs|SharedState|  
 |System.ComponentModel.PropertyChangedEventHandler|SharedState|  
 |System.ComponentModel.PropertyDescriptor|SharedState|  
-|System.ComponentModel.PropertyDescriptorCollection|Synchronization|  
+|System.ComponentModel.PropertyDescriptorCollection|Sincronização|  
 |System.ComponentModel.ReferenceConverter|SharedState|  
 |System.ComponentModel.ReflectEventDescriptor|SharedState|  
 |System.ComponentModel.ReflectPropertyDescriptor|SharedState|  
@@ -190,22 +190,22 @@ ms.locfileid: "81488067"
 |System.ComponentModel.WarningException|SharedState|  
 |System.ComponentModel.WeakHashtable|SharedState|  
 |System.ComponentModel.Win32Exception|SharedState|  
-|System.Diagnostics.ConsoleTraceListener|Synchronization|  
+|System.Diagnostics.ConsoleTraceListener|Sincronização|  
 |System.Diagnostics.Debug.get_Listeners()|SharedState|  
-|System.Diagnostics.DefaultTraceListener|Synchronization|  
-|System.Diagnostics.DelimitedListTraceListener|Synchronization|  
-|System.Diagnostics.EventLog.get_SynchronizingObject()|Synchronization|  
-|System.Diagnostics.EventLogTraceListener|Synchronization|  
+|System.Diagnostics.DefaultTraceListener|Sincronização|  
+|System.Diagnostics.DelimitedListTraceListener|Sincronização|  
+|System.Diagnostics.EventLog.get_SynchronizingObject()|Sincronização|  
+|System.Diagnostics.EventLogTraceListener|Sincronização|  
 |System.Diagnostics.PerformanceCounter|SharedState, Sincronização|  
 |System.Diagnostics.PerformanceCounterCategory|SharedState, Sincronização|  
 |System.Diagnostics.Process|SelfAffectingProcessMgmt, ExternalProcessMgmt, SharedState, Synchronization|  
 |System.Diagnostics.ProcessStartInfo|SelfAffectingProcessMgmt, SharedState|  
 |System.Diagnostics.ProcessThread|SelfAffectingThreading, SelfAffectingProcessMgmt|  
 |System.Diagnostics.SharedPerformanceCounter|SharedState, Sincronização|  
-|System.Diagnostics.TextWriterTraceListener|Synchronization|  
+|System.Diagnostics.TextWriterTraceListener|Sincronização|  
 |System.Diagnostics.Trace.get_Listeners()|SharedState|  
-|System.Diagnostics.TraceListener|Synchronization|  
-|System.Diagnostics.XmlWriterTraceListener|Synchronization|  
+|System.Diagnostics.TraceListener|Sincronização|  
+|System.Diagnostics.XmlWriterTraceListener|Sincronização|  
 |System.IO.Compression.DeflateStream.BeginRead()|ExternalThreading|  
 |System.IO.Compression.DeflateStream.BeginWrite()|ExternalThreading|  
 |System.IO.Compression.GZipStream.BeginRead()|ExternalThreading|  
@@ -261,7 +261,7 @@ ms.locfileid: "81488067"
 |System.Net.Sockets.TcpListener.BeginAcceptTcpClient()|ExternalThreading|  
 |System.Net.Sockets.UdpClient.BeginReceive()|ExternalThreading|  
 |System.Net.Sockets.UdpClient.BeginSend()|ExternalThreading|  
-|System.Net.SpnDictionary.get_SyncRoot()|Synchronization|  
+|System.Net.SpnDictionary.get_SyncRoot()|Sincronização|  
 |System.Net.WebClient.DownloadDataAsync()|ExternalThreading|  
 |System.Net.WebClient.DownloadFileAsync()|ExternalThreading|  
 |System.Net.WebClient.DownloadStringAsync()|ExternalThreading|  
@@ -272,9 +272,9 @@ ms.locfileid: "81488067"
 |System.Net.WebClient.UploadStringAsync()|ExternalThreading|  
 |System.Net.WebClient.UploadValuesAsync()|ExternalThreading|  
 |System.Net.WebRequest.BeginGetRequestStream()|ExternalThreading|  
-|System.Net.WebRequest.BeginGetResponse()|Synchronization|  
-|System.Text.RegularExpressions.Group.Synchronized()|Synchronization|  
-|System.Text.RegularExpressions.Match.Synchronized()|Synchronization|  
+|System.Net.WebRequest.BeginGetResponse()|Sincronização|  
+|System.Text.RegularExpressions.Group.Synchronized()|Sincronização|  
+|System.Text.RegularExpressions.Match.Synchronized()|Sincronização|  
 |System.Text.RegularExpressions.Regex.CompileToAssembly()|MayLeakOnAbort|  
 |System.Threading.Semaphore|ExternalThreading, Synchronization|  
 |System.Timers.Timer|ExternalThreading, Synchronization|  
@@ -283,9 +283,9 @@ ms.locfileid: "81488067"
   
 ## <a name="see-also"></a>Consulte Também  
  [Atributos de proteção do host e programação de integração CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Tipos e membros não permitidos em Microsoft. VisualBasic. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Tipos e membros não permitidos em mscorlib. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [Tipos e membros não permitidos em System. Data. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
+ [Tipos e membros não permitidos em Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Tipos e membros não permitidos em mscorlib.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Tipos e membros não permitidos em System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
  [Tipos e membros desaprovados no System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

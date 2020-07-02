@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b77e9b2ce21eabda76eac48c980a7da8737f3112
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 090957694bd37e24fb99db2b1a2190c188bc4540
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730127"
 ---
 # <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>Exibições de gerenciamento dinâmico relacionadas ao Administrador de Recursos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Esta seção contém as seguintes exibições de gerenciamento dinâmico de Administrador de Recursos.  
   

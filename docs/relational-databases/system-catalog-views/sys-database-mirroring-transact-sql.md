@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 549c60eff284c4302f3695786bc87074c9b0d617
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84fd6a1b23287b53115a21cd519244525d7939ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725789"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada banco de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o banco de dados não estiver ONLINE ou o espelhamento de banco de dados não estiver habilitado, os valores de todas as colunas, exceto database_id, serão NULL.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "82821670"
 |**mirroring_role_desc**|**nvarchar(60)**|Descrição da função que o banco de dados local reproduz no espelhamento, pode ser uma dentre:<br /><br /> PRINCIPAL<br /><br /> MIRROR|  
 |**mirroring_role_sequence**|**int**|O número de horas que os parceiros de espelhamento alternaram as funções principal e de espelhamento devido a failover ou serviço forçado.<br /><br /> NULL = O banco de dados está inacessível ou não está espelhado.|  
 |**mirroring_safety_level**|**tinyint**|A configuração de segurança para atualizações no banco de dados espelho:<br /><br /> 0 = Estado desconhecido<br /><br /> 1 = Desativado [assíncrono]<br /><br /> 2 = Completo [síncrono]<br /><br /> NULL = O banco de dados está inacessível ou não está espelhado.|  
-|**mirroring_safety_level_desc**|**nvarchar(60)**|Configuração de segurança de transações para as atualizações no banco de dados espelho, pode ser uma dentre:<br /><br /> DESCONHECIDO<br /><br /> OFF<br /><br /> FULL<br /><br /> NULO|  
+|**mirroring_safety_level_desc**|**nvarchar(60)**|Configuração de segurança de transações para as atualizações no banco de dados espelho, pode ser uma dentre:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULO|  
 |**mirroring_safety_sequence**|**int**|Atualiza o número de sequência para alterações no nível de segurança de transações.<br /><br /> NULL = O banco de dados está inacessível ou não está espelhado.|  
 |**mirroring_partner_name**|**nvarchar(128)**|Nome do servidor do parceiro de espelhamento de banco de dados.<br /><br /> NULL = O banco de dados está inacessível ou não está espelhado.|  
 |**mirroring_partner_instance**|**nvarchar(128)**|O nome de instância e nome do computador de outro parceiro. Os clientes precisarão destas informações para se conectar ao parceiro se ele se tornar o servidor principal.<br /><br /> NULL = O banco de dados está inacessível ou não está espelhado.|  
 |**mirroring_witness_name**|**nvarchar(128)**|Nome do servidor da testemunha de espelhamento do banco de dados.<br /><br /> NULL = Não há testemunha.|  
 |mirroring_witness_state|**tinyint**|Estado da testemunha na sessão de espelhamento de banco de dados no banco de dados, pode ser um dentre:<br /><br /> 0 = Desconhecido<br /><br /> 1 = conectado<br /><br /> 2 = Desconectado<br /><br /> NULL = Não há testemunha, o banco de dados não está online ou o banco de dados não é espelhado.|  
-|**mirroring_witness_state_desc**|**nvarchar(60)**|Descrição de estado, pode ser uma dentre:<br /><br /> DESCONHECIDO<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULO|  
+|**mirroring_witness_state_desc**|**nvarchar(60)**|Descrição de estado, pode ser uma dentre:<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULO|  
 |**mirroring_failover_lsn**|**numeric(25,0)**|LSN (número de sequência de log) do registro de log de transação mais recente, que tem garantia de ser intensificado em disco em ambos os parceiros. Após um failover, o **mirroring_failover_lsn** é usado pelos parceiros como o ponto de reconciliação no qual o novo servidor espelho começa a sincronizar o novo banco de dados espelho com o novo banco de dados principal.|  
 |**mirroring_connection_timeout**|**int**|Tempo limite de conexão do espelhamento em segundos. Esse é o número de segundos de espera para um resposta de um parceiro ou testemunha antes de considerá-los indisponíveis. O valor do tempo limite padrão é de 10 segundos.<br /><br /> NULL = O banco de dados está inacessível ou não está espelhado.|  
 |**mirroring_redo_queue**|**int**|Quantidade máxima de log a ser refeito no espelho. Se mirroring_redo_queue_type for definido como UNLIMITED, que é a configuração padrão, essa coluna será NULL. Se o banco de dados não estiver online, essa coluna também será NULL.<br /><br /> Caso contrário, essa coluna contém a quantidade máxima de log em megabytes. Quando o máximo for atingido, o log será temporariamente paralisado no principal à medida que o servidor espelho for atualizado. Esse recurso limita o tempo de failover.<br /><br /> Para obter mais informações, veja [Estime a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  

@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f32c1107d886b7bc84590abbd6bab5343d2a2b8b
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7f0b469e9fb07a0cf250feefa67b85b09627ddd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730164"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Excluindo dados usando diagramas de atualização XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Um updategram indica uma operação de exclusão quando uma instância de registro é exibida no **\<before>** bloco sem registros correspondentes no **\<after>** bloco. Nesse caso, o updategram exclui o registro no **\<before>** bloco do banco de dados.  
   
  Este é o formato do diagrama de atualização em uma operação de exclusão:  
@@ -53,7 +53,7 @@ ms.locfileid: "84529805"
   
  Para criar exemplos de trabalho usando os exemplos a seguir, você deve atender aos requisitos especificados em [requisitos para executar exemplos do SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-deleting-a-record-by-using-an-updategram"></a>A. Excluindo um registro usando um diagrama de atualização  
+### <a name="a-deleting-a-record-by-using-an-updategram"></a>a. Excluindo um registro usando um diagrama de atualização  
  Os diagramas a seguir excluem dois registros da tabela HumanResources.Shift.  
   
  Nestes exemplos, o diagrama não especifica um esquema de mapeamento. Portanto, o diagrama usa o mapeamento padrão no qual o nome de elemento é mapeado para o nome de tabela e os atributos ou subelementos para as colunas.  

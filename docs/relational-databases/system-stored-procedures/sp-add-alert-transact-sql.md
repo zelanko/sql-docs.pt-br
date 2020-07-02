@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e917afd75495ed2e6c2506bc0c012d4bfa7a8e4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71174261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727219"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cria um alerta.  
   
@@ -53,14 +53,14 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`O nome do alerta. O nome é exibido na mensagem de email ou de pager enviada em resposta ao alerta. Ele deve ser exclusivo e pode conter o caractere de**%** porcentagem (). o *nome* é **sysname**, sem padrão.  
+`[ @name = ] 'name'`O nome do alerta. O nome é exibido na mensagem de email ou de pager enviada em resposta ao alerta. Ele deve ser exclusivo e pode conter o caractere de porcentagem ( **%** ). o *nome* é **sysname**, sem padrão.  
   
 `[ @message_id = ] message_id`O número do erro de mensagem que define o alerta. (Geralmente corresponde a um número de erro na tabela **sysmessages** .) *message_id* é **int**, com um padrão de **0**. Se a *severidade* for usada para definir o alerta, *message_id* deverá ser **0** ou NULL.  
   
 > [!NOTE]  
 >  Somente os erros **sysmessages** gravados no log de aplicativos do Microsoft Windows podem fazer com que um alerta seja enviado.  
   
-`[ @severity = ] severity`O nível de severidade (de **1** a **25**) que define o alerta. Qualquer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem armazenada na tabela **sysmessages** enviada ao log [!INCLUDE[msCoName](../../includes/msconame-md.md)] de aplicativos do Windows com a severidade indicada faz com que o alerta seja enviado. a *severidade* é **int**, com um padrão de 0. Se *message_id* for usado para definir o alerta, a *severidade* deverá ser **0**.  
+`[ @severity = ] severity`O nível de severidade (de **1** a **25**) que define o alerta. Qualquer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem armazenada na tabela **sysmessages** enviada ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativos do Windows com a severidade indicada faz com que o alerta seja enviado. a *severidade* é **int**, com um padrão de 0. Se *message_id* for usado para definir o alerta, a *severidade* deverá ser **0**.  
   
 `[ @enabled = ] enabled`Indica o status atual do alerta. *habilitado* é **tinyint**, com um padrão de 1 (habilitado). Se **0**, o alerta não está habilitado e não é acionado.  
   
@@ -77,7 +77,7 @@ sp_add_alert [ @name = ] 'name'
 `[ @include_event_description_in = ] include_event_description_in`É se a descrição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erro deve ser incluída como parte da mensagem de notificação. *include_event_description_in*é **tinyint**, com um padrão de **5** (email e **net send**), e pode ter um ou mais desses valores combinados com um operador lógico **or** .  
   
 > [!IMPORTANT]
->  As opções pager e **net send** serão removidas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Agent em uma versão futura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
+>  As opções pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -101,7 +101,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @performance_condition = ] 'performance_condition'`É um valor expresso no*formato ' comparador '.* *performance_condition* é **nvarchar (512)** com um padrão de NULL e consiste nesses elementos.  
   
-|Elemento Format|Descrição|  
+|Elemento Format|Description|  
 |--------------------|-----------------|  
 |*Item*|Um objeto de desempenho, contador de desempenho ou instância nomeada do contador|  
 |*Comparador*|Um destes operadores: >, < ou =|  
@@ -142,7 +142,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   O alerta está habilitado.  
   
--   Eventos gerados com **xp_logevent** ocorrem no banco de dados mestre. Portanto, **xp_logevent** não dispara um alerta, a menos que o ** \@database_name** do alerta seja **' Master '** ou NULL.  
+-   Eventos gerados com **xp_logevent** ocorrem no banco de dados mestre. Portanto, **xp_logevent** não dispara um alerta, a menos que o ** \@ database_name** do alerta seja **' Master '** ou NULL.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, somente membros da função de servidor fixa **sysadmin** podem executar **sp_add_alert**.  
@@ -172,7 +172,7 @@ GO
  [&#41;&#40;Transact-SQL de sp_delete_alert](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_alert](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_update_alert](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys. sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e04b5308aeca5881f624122c70ad74c27417a46b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728449"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Monitorando e diagnosticando objetos de banco de dados gerenciado
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico fornece informações sobre as ferramentas que podem ser usadas para monitorar e diagnosticar objetos de banco de dados gerenciado e assemblies executados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="profiler-trace-events"></a>Eventos de rastreamento do Profiler  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o Rastreamento do SQL e notificações de eventos para monitorar os eventos que ocorrem no Mecanismo de Banco de Dados. Registrando os eventos especificados, o Rastreamento do SQL ajuda a solucionar problemas de desempenho, auditar a atividade de banco de dados, coletar dados de amostra em um ambiente de teste, depurar instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e procedimentos armazenados e reunir dados para ferramentas de análise de desempenho. Para obter mais informações, consulte [rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md) e [eventos estendidos](../../relational-databases/extended-events/extended-events.md).  
   
-|Evento|Descrição|  
+|Evento|Description|  
 |-----------|-----------------|  
 |[Classe de evento Assembly Load](/sql/database-engine/assembly-load-event-class)|Usado para monitorar solicitações de carregamento de assembly (com êxito e com falha).|  
 |Classe de evento [SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [classe de evento SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Fornece informações sobre lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciados ou concluídos.|  
@@ -45,7 +45,7 @@ ms.locfileid: "75258330"
 ## <a name="windows-system-monitor-perfmonexe-counters"></a>Contadores do Monitor do Sistema do Windows (PERFMON.EXE)  
  A ferramenta Monitor do Sistema do Windows (PERFMON.EXE) tem vários contadores de desempenho que podem ser usados para monitorar aplicativos de integração CLR. Os contadores de desempenho CLR do .NET podem ser filtrados pelo nome do processo "sqlservr" para rastrear aplicativos de integração CLR que estão em execução no momento.  
   
-|Objeto de Desempenho|Descrição|  
+|Objeto de Desempenho|Description|  
 |------------------------|-----------------|  
 |SqlServer:CLR|Fornece estatísticas de CPU para o servidor.|  
 |Exceções .NET CLR|Rastreia o número de exceções por segundo.|  
@@ -56,7 +56,7 @@ ms.locfileid: "75258330"
 ## <a name="catalog-views"></a>Exibições do catálogo  
  As exibições de catálogo retornam informações usadas pelo Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recomendamos usar exibições do catálogo por serem a interface mais geral para metadados de catálogo e proporcionarem a maneira mais eficaz de obter, transformar e apresentar formas personalizadas dessas informações. Todos os metadados de catálogos disponíveis para o usuário são expostos por meio de exibições do catálogo. Para obter mais informações, veja [Exibições de catálogo e&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-|Exibição de catálogo|Descrição|  
+|Exibição de catálogo|Description|  
 |------------------|-----------------|  
 |[sys.assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Retorna informações sobre os assemblies registrados em um banco de dados.|  
 |[sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifica os assemblies que referenciam outros.|  
@@ -73,7 +73,7 @@ ms.locfileid: "75258330"
 ## <a name="dynamic-management-views"></a>Exibições de Gerenciamento Dinâmico  
  As exibições e funções de gerenciamento dinâmico retornam informações do estado do servidor que podem ser usadas para monitorar a saúde da instância do servidor, diagnosticar problemas e ajustar o desempenho. Para obter mais informações, consulte [funções e exibições de gerenciamento dinâmico &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-|DMV|Descrição|  
+|DMV|Description|  
 |---------|-----------------|  
 |[sys.dm_clr_appdomains &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|Fornece informações sobre cada domínio do aplicativo no servidor.|  
 |[sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|Identifica cada assembly gerenciado registrado no servidor.|  

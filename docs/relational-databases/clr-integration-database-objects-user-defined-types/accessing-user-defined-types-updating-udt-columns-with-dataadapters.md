@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07b1dc9d3f7beca9f048ec0e367c33922e388f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727829"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Acessar tipos definidos pelo usuário – Atualizar colunas UDT com DataAdapters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Os tipos definidos pelo usuário (UDTs) têm suporte usando um **System. Data. DataSet** e um **System. Data. SqlClient. SqlDataAdapter** para recuperar e modificar dados.  
   
 ## <a name="populating-a-dataset"></a>Populando um conjunto de dados  
- Você pode usar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para selecionar valores de coluna UDT a fim de popular um conjunto de dados usando um adaptador de dados. O exemplo a seguir pressupõe que você tenha uma tabela de **pontos** definida com a seguinte estrutura e alguns dados de exemplo. As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir criam a tabela **Points** e inserem algumas linhas.  
+ Você pode usar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para selecionar valores de coluna UDT a fim de popular um conjunto de dados usando um adaptador de dados. O exemplo a seguir pressupõe que você tenha uma tabela de **pontos** definida com a seguinte estrutura e alguns dados de exemplo. As instruções a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] criam a tabela **Points** e inserem algumas linhas.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 865e86976a6da117d41ba2f22020f7137dee5038
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac4bc1262eeb87aae42f11bf7c67ca0dc58848ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725636"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna uma lista de procedimentos armazenados do ambiente atual.  
   
@@ -64,7 +64,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  **1** = a correspondência de padrões está ativada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

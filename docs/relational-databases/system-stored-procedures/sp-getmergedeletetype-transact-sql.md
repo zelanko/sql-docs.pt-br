@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 971226c9f53932bf8214304a7c166ad75a11853c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 00a7499fb3050a5ab13fa3e9b454b4335200f55a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833189"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731663"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o tipo de exclusão de mesclagem. Esse procedimento armazenado é executado no Publicador do banco de dados de publicação ou no Assinante no banco de dados de assinatura.  
   

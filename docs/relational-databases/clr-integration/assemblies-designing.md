@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f2a5281d0e5fd7ac18f908ba4c28302b3bfdd5f
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 76ca67598f2cb8c03c5d0e423ded66e2fe4dc700
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262061"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727666"
 ---
 # <a name="assemblies---designing"></a>Assemblies – criação
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve os seguintes fatores que você deve considerar ao projetar assemblies:  
   
 -   Assemblies de empacotamento  

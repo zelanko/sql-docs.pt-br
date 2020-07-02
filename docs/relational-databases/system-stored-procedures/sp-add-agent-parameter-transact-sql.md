@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf8704f4106cd701c5c5d2bbeab324ed2f75e731
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731763"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adiciona um novo parâmetro e seu valor a um perfil de agente. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
@@ -55,9 +55,9 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
--   [Replication Agente de Leitor de Log](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
+-   [Agente do Leitor de Log de Replicação](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Agente de Distribuição de Replicação](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09480763fe03e5191fdaaf778e2490988a3e334e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4a3b9a924292152fbe049e42624f60a554bd6ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727786"
 ---
 # <a name="creating-user-defined-types"></a>Criar tipos definidos pelo usuário
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para criar um tipo definido pelo usuário (UDT) que possa ser instalado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primeiro crie uma classe em uma das linguagens de programação .NET Framework com suporte, como Visual C# ou Visual Basic, que esteja de acordo com as especificações para criação de UDTs. A classe poderá, então, ser compilada como uma DLL (Dynamic-Link Library), que poderá ser carregada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também poderá criar e implantar UDTs com o Visual Studio.  
   
- A capacidade de executar código CLR (Common Language Runtime) é definida, por padrão, como OFF no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR pode ser habilitado usando o procedimento armazenado do sistema **sp_configure** , conforme mostrado nas instruções a [!INCLUDE[tsql](../../includes/tsql-md.md)] seguir:  
+ A capacidade de executar código CLR (Common Language Runtime) é definida, por padrão, como OFF no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR pode ser habilitado usando o procedimento armazenado do sistema **sp_configure** , conforme mostrado nas instruções a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
 ```  
 sp_configure 'clr enabled', 1  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59f47194e94e256ddb6e2ded61dc61198dea26b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729222"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Retorna informações sobre uma publicação. Para uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicação, esse procedimento armazenado é executado no Publicador do banco de dados de publicação. Para uma publicação Oracle, esse procedimento armazenado é executado no Distribuidor, em qualquer banco de dados.  
   
@@ -53,7 +53,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|ID da publicação.|  
-|Nome|**sysname**|Nome da publicação.|  
+|name|**sysname**|Nome da publicação.|  
 |restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|O status atual da publicação.<br /><br /> **0** = inativo.<br /><br /> **1** = ativo.|  
 |task||Usado para compatibilidade com versões anteriores.|  

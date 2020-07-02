@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730042"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre trabalhos usados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para executar atividades automatizadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`O status de execução para os trabalhos. o *status* é **int**, com um padrão de NULL, e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**0**|Retorna somente os trabalhos que não estão ociosos ou suspensos.|  
 |**1**|Em execução.|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspenso.|  
 |**7**|Executando ações de conclusão.|  
   
-`[ @date_comparator = ] 'date_comparison'`O operador de comparação a ser usado em comparações de *Date_Created* e *date_modified*. *date_comparison* é **Char (1)** e pode ser =, \< ou >.  
+`[ @date_comparator = ] 'date_comparison'`O operador de comparação a ser usado em comparações de *Date_Created* e *date_modified*. *date_comparison* é **Char (1)** e pode ser =, \<, or > .  
   
 `[ @date_created = ] date_created`A data em que o trabalho foi criado. *Date_Created*é **DateTime**, com um padrão de NULL.  
   
@@ -138,7 +138,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|Número de etapas que o trabalho possui.|  
 |**has_schedule**|**int**|Número de agendamentos que o trabalho possui.|  
 |**has_target**|**int**|Número de servidores de destino que o trabalho possui.|  
-|**tipo**|**int**|Tipo do trabalho.<br /><br /> 1 = Trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
+|**type**|**int**|Tipo do trabalho.<br /><br /> 1 = Trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
   
  Se *job_id* ou *job_name* for especificado, **sp_help_job** retornará esses conjuntos de resultados adicionais para etapas de trabalho, agendas de trabalho e servidores de destino de trabalho.  
   
@@ -149,14 +149,14 @@ sp_help_job { [ @job_id = ] job_id
 |**step_id**|**int**|Identificador exclusivo (para este trabalho) da etapa.|  
 |**step_name**|**sysname**|Nome da etapa.|  
 |**subsistema**|**nvarchar(40)**|Subsistema no qual o comando de etapa será executado.|  
-|**linha**|**nvarchar (3200)**|Comando que será executado.|  
+|**command**|**nvarchar (3200)**|Comando que será executado.|  
 |**sinalizadores**|**nvarchar(4000)**|**Bitmask** de valores que controlam o comportamento da etapa.|  
 |**cmdexec_success_code**|**int**|Para uma etapa de **CmdExec** , esse é o código de saída do processo de um comando bem-sucedido.|  
 |**on_success_action**|**nvarchar(4000)**|O que fazer se a etapa tiver êxito:<br /><br /> **1** = encerrar com êxito.<br /><br /> **2** = encerrar com falha.<br /><br /> **3** = ir para a próxima etapa.<br /><br /> **4** = ir para a etapa.|  
 |**on_success_step_id**|**int**|Se **on_success_action** for **4**, isso indicará a próxima etapa a ser executada.|  
 |**on_fail_action**|**nvarchar(4000)**|Ação a ser executada se a etapa falhar. Os valores são os mesmos para **on_success_action**.|  
 |**on_fail_step_id**|**int**|Se **on_fail_action** for **4**, isso indicará a próxima etapa a ser executada.|  
-|**servidor**|**sysname**|Reservado.|  
+|**server**|**sysname**|Reservado.|  
 |**database_name**|**sysname**|Para uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)], este é o banco de dados no qual o comando será executado.|  
 |**database_user_name**|**sysname**|Para uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)], este é o contexto de usuário do banco de dados no qual o comando é executado.|  
 |**retry_attempts**|**int**|Número máximo de vezes que o comando deve ser repetido (se for malsucedido) antes que a etapa seja considerada com falha.|  

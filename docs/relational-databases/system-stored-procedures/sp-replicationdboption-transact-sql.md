@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725704"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Define uma opção de banco de dados de replicação para o banco de dados especificado. Esse procedimento armazenado é executado no Publicador ou no Assinante, em qualquer banco de dados.  
   
@@ -49,7 +49,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |-----------|-----------------|  
 |**publicação de mesclagem**|O banco de dados pode ser usado para publicações de mesclagem.|  
 |**publicou**|O banco de dados pode ser usado para outros tipos de publicação.|  
-|**assinar**|O banco de dados é um banco de dados de assinatura.|  
+|**Faça**|O banco de dados é um banco de dados de assinatura.|  
 |**sync with backup**|O banco de dados está habilitado para backup coordenado. Para obter mais informações, consulte [habilitar backups coordenados para replicação transacional &#40;Programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
 `[ @value = ] 'value'`É habilitar ou desabilitar a opção de banco de dados de replicação fornecida. o *valor* é **sysname**e pode ser **true** ou **false**. Quando esse valor é **false** e *OptName* é **publicação de mesclagem**, as assinaturas para o banco de dados publicado de mesclagem também são descartadas.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2229da0158f746928be16ac190ecae2e36726da5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730049"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fornece informações sobre os trabalhos para servidores no domínio de administração multisservidor.  
   
@@ -77,12 +77,12 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**0**|Failed (Falha)|  
+|**0**|Falhou|  
 |**1**|Êxito|  
 |**2**|Repetir (somente a etapa)|  
 |**3**|Canceled|  
 |**4**|Mensagem em andamento|  
-|**5**|Unknown|  
+|**5**|Unknown (desconhecido)|  
   
 `[ @minimum_retries = ] minimum_retries`O número mínimo de vezes que um trabalho deve ser executado novamente. *minimum_retries* é **int**, com um padrão de NULL.  
   
@@ -116,7 +116,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|Operador ao qual foi enviada uma mensagem de rede em relação a esse trabalho (é NULL para o histórico de etapas).|  
 |**operator_paged**|**nvarchar (20)**|Operador que foi informado por pager em relação a esse trabalho (é NULL para o histórico de etapas).|  
 |**retries_attempted**|**int**|Número de vezes que a etapa foi repetida (sempre 0 para um histórico de trabalhos).|  
-|**servidor**|**nvarchar(30)**|Servidor no qual a etapa ou o trabalho são executados. É sempre (**local**).|  
+|**server**|**nvarchar(30)**|Servidor no qual a etapa ou o trabalho são executados. É sempre (**local**).|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_help_jobhistory** retorna um relatório com o histórico dos trabalhos agendados especificados. Se nenhum parâmetro for especificado, o relatório conterá o histórico para todos os trabalhos agendados.  

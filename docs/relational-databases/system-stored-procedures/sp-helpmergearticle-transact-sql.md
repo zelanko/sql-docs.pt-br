@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04d1397494aec0d35e0ecfa9debcb6f844e6ebc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733133"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre um artigo. Esse procedimento armazenado é executado no Publicador no banco de dados de publicação ou em um Assinante de republicação no banco de dados de assinatura.  
   
@@ -60,7 +60,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**subset_filterclause**|**nvarchar(1000)**|Cláusula WHERE especificando filtragem horizontal.|  
 |**pre_creation_command**|**tinyint**|Método de pré-criação, que pode ser um dos seguintes:<br /><br /> **0** = nenhum<br /><br /> **1** = remover<br /><br /> **2** = excluir<br /><br /> **3** = truncar|  
 |**schema_option**|**binário (8)**|Bitmap da opção de geração de esquema para o artigo. Para obter informações sobre essa opção de bitmap, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) ou [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md).|  
-|**tipo**|**smallint**|Tipo do artigo que pode ser um dos seguintes:<br /><br /> **10** = tabela<br /><br /> **32** = procedimento armazenado<br /><br /> **64** = exibição ou exibição indexada<br /><br /> **128** = função definida pelo usuário<br /><br /> **160** = somente esquema sinônimo|  
+|**type**|**smallint**|Tipo do artigo que pode ser um dos seguintes:<br /><br /> **10** = tabela<br /><br /> **32** = procedimento armazenado<br /><br /> **64** = exibição ou exibição indexada<br /><br /> **128** = função definida pelo usuário<br /><br /> **160** = somente esquema sinônimo|  
 |**column_tracking**|**int**|Configuração para rastreamento em nível de coluna; em que **1** significa que o controle no nível de coluna está ativado e **0** significa que o controle no nível de coluna está desativado.|  
 |**resolver_info**|**nvarchar (255)**|Nome do resolvedor do artigo.|  
 |**vertical_partition**|**bit**|Se o artigo for verticalmente particionado; em que **1** significa que o artigo está verticalmente particionado e **0** significa que ele não é.|  
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|Se o tratamento automático do intervalo de identidades estiver habilitado; onde **1** está habilitado e **0** está desabilitado.|  
 |**pub_identity_range**|**bigint**|O tamanho de intervalo a ser usado ao atribuir novos valores de identidade. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identity_range**|**bigint**|O tamanho de intervalo a ser usado ao atribuir novos valores de identidade. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**os**|**int**|Valor percentual usado para assinantes que executam o [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . controles de **limite** quando o agente de mesclagem atribui um novo intervalo de identidade. Quando a porcentagem de valores especificada no limite é usada, o Merge Agent cria um novo intervalo de identidade. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**|**int**|Valor percentual usado para assinantes que executam o [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . controles de **limite** quando o agente de mesclagem atribui um novo intervalo de identidade. Quando a porcentagem de valores especificada no limite é usada, o Merge Agent cria um novo intervalo de identidade. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**int**|Se uma assinatura digital for verificada antes de usar um resolvedor na replicação de mesclagem; onde **0** significa que a assinatura não é verificada e **1** significa que a assinatura é verificada para ver se ela é de uma fonte confiável.|  
 |**destination_object**|**sysname**|Nome do objeto de destino. Aplicável apenas a procedimentos armazenados de mesclagem, exibições e artigos de esquema UDF.|  
 |**allow_interactive_resolver**|**int**|Se o resolvedor interativo for usado em um artigo; em que **1** significa que esse resolvedor é usado e **0** significa que ele não é usado.|  

@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b893415c56aae38c76836fbe0496e4d990ff83b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc9a2599daef295a8e326f19efa6f151685a050c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731389"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Método SetBoolValue (classe SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Define o valor booliano de uma propriedade.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,7 +36,7 @@ object.SetBoolValue [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que representa uma propriedade avançada.  
   
 #### <a name="parameters"></a>Parâmetros  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8f55a496a5d5fc4a0a0c499056eff5e00bd1ea8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c24af2de8be7656ece793c17c051ff59ae5c8fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833806"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730148"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre um item em um conjunto de coleta.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82833806"
 |**collector_type_uid**|**uniqueidentifier**|GUID usado para identificar o tipo de coletor. Não permite valor nulo.|  
 |**name**|**nvarchar(4000)**|Nome do conjunto de coleta. Permite valor nulo.|  
 |**frequência**|**int**|Frequência com que os dados são coletados por um item de coleta. Não permite valor nulo.|  
-|**parâmetro**|**xml**|Descreve a parametrização para o tipo de coletor associado ao item de coleta. O esquema XML para esse item de coleta é validado com o esquema XML (XSD) armazenado no **parameter_schema** para um tipo de coletor específico. Permite valor nulo. Para obter mais informações, consulte [syscollector_collector_types &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
+|**parameters**|**xml**|Descreve a parametrização para o tipo de coletor associado ao item de coleta. O esquema XML para esse item de coleta é validado com o esquema XML (XSD) armazenado no **parameter_schema** para um tipo de coletor específico. Permite valor nulo. Para obter mais informações, consulte [syscollector_collector_types &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
   
 ## <a name="permissions"></a>Permissões  
  Requer SELECT for **dc_operator**, **dc_proxy**.  

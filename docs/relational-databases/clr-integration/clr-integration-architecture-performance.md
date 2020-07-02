@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac12bf75588d70f12b4550260f9911796c1c3a56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727630"
 ---
 # <a name="clr-integration-architecture----performance"></a>Arquitetura de integração de CLR – Desempenho
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Este tópico discute algumas das opções de design que aprimoram o desempenho da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integração com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR).  
   
 ## <a name="the-compilation-process"></a>O processo de compilação  
@@ -56,7 +56,7 @@ ms.locfileid: "81488133"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]os dados de caractere, como **varchar**, podem ser do tipo SqlString ou SqlChars em funções gerenciadas. As variáveis SqlString criam uma instância do valor inteiro na memória. As variáveis SqlChars fornecem uma interface de streaming que pode ser usada para obter um melhor desempenho e escalabilidade por não criar uma instância do valor inteiro na memória. Isso se torna especialmente importante no caso de dados LOB (objeto grande). Além disso, os dados do servidor XML podem ser acessados por meio de uma interface de streaming retornada por **SQLXML. CreateReader ()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR vs. procedimentos armazenados estendidos  
- As APIs Microsoft.SqlServer.Server que permitem que procedimentos gerenciados enviem conjuntos de resultados de volta ao cliente têm um desempenho melhor que as APIs ODS (Open Data Services) usadas por procedimentos armazenados estendidos. Além disso, as APIs System. Data. SqlServer dão suporte a tipos de dados como **XML**, **varchar (max)**, **nvarchar (max)** e **varbinary (max)**, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduzidos no, enquanto as APIs de ODS não foram estendidas para dar suporte aos novos tipos de dados.  
+ As APIs Microsoft.SqlServer.Server que permitem que procedimentos gerenciados enviem conjuntos de resultados de volta ao cliente têm um desempenho melhor que as APIs ODS (Open Data Services) usadas por procedimentos armazenados estendidos. Além disso, as APIs System. Data. SqlServer dão suporte a tipos de dados como **XML**, **varchar (max)**, **nvarchar (max)** e **varbinary (max)**, introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , enquanto as APIs de ODS não foram estendidas para dar suporte aos novos tipos de dados.  
   
  Com o código gerenciado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerencia o uso de recursos como a memória, os threads e a sincronização. Isso se deve ao fato de as APIs gerenciadas que expõem esses recursos serem implementadas sobre o gerenciador de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por outro lado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem nenhuma exibição ou controle sobre o uso de recursos do procedimento armazenado estendido. Por exemplo, se um procedimento armazenado estendido consumir muitos recursos de CPU ou de memória, não há uma forma de detectá-lo ou controlá-lo com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Contudo, com o código gerenciado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode detectar que um determinado thread não teve resultados por um longo período e então forçar a geração da tarefa, de forma que outros trabalhos possam ser agendados. Consequentemente, o uso do código gerenciado fornece uma escalabilidade e um uso de recursos do sistema melhores.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28eb993cc6755d596d49e7930a3fd68b884b8f29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68032983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731719"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Adiciona uma função de aplicativo ao banco de dados atual.  
   
@@ -44,7 +44,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="arguments"></a>Argumentos  
 `[ @rolename = ] 'role'`É o nome da nova função de aplicativo. *role* é **sysname**, sem padrão. a *função* deve ser um identificador válido e já não pode existir no banco de dados atual.  
   
- Os nomes de função de aplicativo podem conter de 1 até 128 caracteres, inclusive cartas, símbolos e números. Os nomes de função não podem conter uma\\barra invertida () nem ser nulo ou uma cadeia de caracteres vazia (' ').  
+ Os nomes de função de aplicativo podem conter de 1 até 128 caracteres, inclusive cartas, símbolos e números. Os nomes de função não podem conter uma barra invertida ( \\ ) nem ser nulo ou uma cadeia de caracteres vazia (' ').  
   
 `[ @password = ] 'password'`É a senha necessária para ativar a função de aplicativo. a *senha* é **sysname**, sem padrão. a *senha* não pode ser nula.  
   
@@ -54,7 +54,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="remarks"></a>Comentários  
  Em versões anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os usuários (e as funções) não são completamente distintos de esquemas. Começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], os esquemas são completamente distintos de funções. Esta nova arquitetura é refletida no comportamento de CREATE APPLICATION ROLE. Essa instrução substitui **sp_addapprole**.  
   
- Para manter a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_addapprole** fará o seguinte:  
+ Para manter a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_addapprole** fará o seguinte:  
   
 -   Se um esquema de nome igual ao da função de aplicativo ainda não existir, tal esquema será criado. O novo esquema será de propriedade da função de aplicativo e será o esquema padrão da função de aplicativo.  
   
@@ -73,7 +73,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
  Requer a permissão ALTER ANY APPLICATION ROLE no banco de dados. Se um esquema com nome e proprietário iguais aos da nova função ainda não existir, isso também exigirá a permissão CREATE SCHEMA no banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir adiciona a nova função `SalesApp` de aplicativo com `x97898jLJfcooFUYLKm387gf3` a senha para o banco de dados atual.  
+ O exemplo a seguir adiciona a nova função de aplicativo `SalesApp` com a senha `x97898jLJfcooFUYLKm387gf3` para o banco de dados atual.  
   
 ```  
 EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;  

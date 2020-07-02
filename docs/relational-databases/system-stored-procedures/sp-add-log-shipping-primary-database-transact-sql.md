@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee4fd4f6b8ea67fd9e1b973fd2b283a10d525437
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731784"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Instala o banco de dados primário para uma configuração de envio de log, incluindo o trabalho de backup, registro de monitor local e registro de monitor remoto.  
   
@@ -95,7 +95,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = Habilitado. Sempre compacte backups de log.  
   
- 2 = usar a configuração da [exibição ou configurar a opção de configuração de servidor de compactação de backup padrão](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Este é o valor padrão.  
+ 2 = usar a configuração da [exibição ou configurar a opção de configuração de servidor de compactação de backup padrão](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Esse é o valor padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

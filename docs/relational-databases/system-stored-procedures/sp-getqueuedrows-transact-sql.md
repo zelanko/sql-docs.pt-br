@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f12da71985fc0d2629c28500c4561eb1495c0ca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 227b83f8171122bfd5c7f328628ccb07c359de87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731641"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Recupera linhas no Assinante que têm atualizações pendente na fila. Esse procedimento armazenado é executado no Assinante no banco de dados de assinatura.  
   
