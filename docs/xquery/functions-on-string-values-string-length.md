@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 2987001d2163340d9734a9cf606dfbe009901de3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720057"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funções em Valores da Cadeia de Caracteres – string-length
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retorna o comprimento da cadeia de caracteres em caracteres.  
   
@@ -61,7 +61,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Usando uma função string-length() XQuery para recuperar produtos com longas descrições resumidas  
+### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>a. Usando uma função string-length() XQuery para recuperar produtos com longas descrições resumidas  
  Para produtos cuja descrição resumida é maior que 50 caracteres, a consulta a seguir recupera a ID do produto, o comprimento da descrição resumida e o próprio Resumo, o <`Summary`> elemento.  
   
 ```  

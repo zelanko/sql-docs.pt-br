@@ -14,15 +14,15 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebabedb2c801881a4dc908ead93515dc9119fc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62951ec956282201ae2b61a82c6a72dcd2831307
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725144"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copiar dados em massa de variáveis de programa (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Este exemplo mostra como usar funções de cópia em massa para copiar dados em massa de variáveis de programa para SQL Server usando **bcp_bind** e **bcp_sendrow**. (O código de verificação de erro foi removido para simplificar o exemplo.)  
   
@@ -65,11 +65,11 @@ ms.locfileid: "81299598"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a primeira listagem [!INCLUDE[tsql](../../../includes/tsql-md.md)]de código () para criar tabelas que serão usadas pelo exemplo.  
+ Execute a primeira [!INCLUDE[tsql](../../../includes/tsql-md.md)] listagem de código () para criar tabelas que serão usadas pelo exemplo.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib e odbcbcp.lib. Se você compilou com o MSBuild.exe, copie primeiro o Bcpfmt.fmt e o Bcpodbc.bcp do diretório do projeto no diretório com o .exe e, em seguida, invoque o .exe.  
   
- Execute a terceira listagem [!INCLUDE[tsql](../../../includes/tsql-md.md)]de código () para excluir as tabelas usadas pelo exemplo.  
+ Execute a terceira [!INCLUDE[tsql](../../../includes/tsql-md.md)] listagem de código () para excluir as tabelas usadas pelo exemplo.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

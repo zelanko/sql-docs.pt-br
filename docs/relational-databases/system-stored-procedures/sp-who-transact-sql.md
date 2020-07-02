@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b46db697c7f8d6a7f402d98093323f47ece47d69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722950"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Fornece informações sobre usuários, sessões e processos atuais em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. As informações podem ser filtradas para retornar somente os processos que não estão ociosos, que pertencem a um usuário específico ou que pertencem a uma sessão específica.  
+  Fornece informações sobre usuários, sessões e processos atuais em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . As informações podem ser filtradas para retornar somente os processos que não estão ociosos, que pertencem a um usuário específico ou que pertencem a uma sessão específica.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  o *logon* é **sysname** que identifica os processos que pertencem a um logon específico.  
   
- *ID de sessão* é um número de identificação de sessão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pertence à instância. a *ID da sessão* é **smallint**.  
+ *ID de sessão* é um número de identificação de sessão que pertence à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. a *ID da sessão* é **smallint**.  
   
  **Ativo** exclui sessões que estão aguardando o próximo comando do usuário.  
   
@@ -67,7 +67,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |**cmd**|**nchar(16)**|Comando [!INCLUDE[ssDE](../../includes/ssde-md.md)] (instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], processo [!INCLUDE[ssDE](../../includes/ssde-md.md)] interno e assim por diante) sendo executado para o processo. No SQL Server 2019, o tipo de dados foi alterado para **nchar (26)**.|  
 |**request_id**|**int**|ID de solicitações em execução em uma sessão específica.|  
   
- No caso de processamento paralelo, são criados subthreads para a ID de sessão específica. O thread principal é indicado como `spid = <xxx>` e `ecid =0`. Os outros subthreads têm o mesmo `spid = <xxx>`, mas com **ECID** > 0.  
+ No caso de processamento paralelo, são criados subthreads para a ID de sessão específica. O thread principal é indicado como `spid = <xxx>` e `ecid =0`. Os outros subthreads têm o mesmo `spid = <xxx>` , mas com **ECID** > 0.  
   
 ## <a name="remarks"></a>Comentários  
  Um processo de bloqueio, que pode ter um bloqueio exclusivo, é um que está retendo recursos que outro processo precisa.  
@@ -121,7 +121,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_lock](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [Processos desys.sys&#40;&#41;de Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

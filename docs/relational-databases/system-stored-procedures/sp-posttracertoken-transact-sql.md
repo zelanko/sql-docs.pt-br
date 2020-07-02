@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42401f5d99d7cf89563a0088260ab21e9df9fd67
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0f5bc0b6e7960faac9d68469750c445e469896e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720214"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Esse procedimento envia um token de rastreamento para um log de transações no Publicador e inicia o processo de rastreamento de estatística de latência. As informações são registradas quando o token de rastreamento é gravado no log de transações, quando é captado pelo Agente de Leitor de Log e quando é aplicado pelo Agente de Distribuição. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Para obter mais informações, consulte [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   

@@ -25,16 +25,16 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f581c1a5c0d925d48df5a16d95cdb141e2d48f83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d1d8c72851c945f178bb9e206ad536a23f24891
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724762"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Usando as anotações sql:identity e sql:guid
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Você pode especificar as anotações **SQL: Identity** e **SQL: GUID** em um esquema XSD em qualquer nó que seja mapeado para uma coluna de banco [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de dados no. Enquanto o formato updategram dá suporte aos atributos **updg: at-identity** e **updg: GUID** , o formato DiffGram não faz isso. O atributo **updg: at-identity** define o comportamento na atualização de uma coluna de tipo de identidade. O atributo **updg: GUID** permite obter um valor de GUID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e usá-lo no updategram. Para obter mais informações e exemplos de trabalho, consulte [inserindo dados usando UPDATEGRAMS XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Você pode especificar as anotações **SQL: Identity** e **SQL: GUID** em um esquema XSD em qualquer nó que seja mapeado para uma coluna de banco de dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Enquanto o formato updategram dá suporte aos atributos **updg: at-identity** e **updg: GUID** , o formato DiffGram não faz isso. O atributo **updg: at-identity** define o comportamento na atualização de uma coluna de tipo de identidade. O atributo **updg: GUID** permite obter um valor de GUID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e usá-lo no updategram. Para obter mais informações e exemplos de trabalho, consulte [inserindo dados usando UPDATEGRAMS XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  As anotações **SQL: Identity** e **SQL: GUID** estendem essa funcionalidade para DiffGrams.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388104"
  As anotações **SQL: Identity** e **SQL: GUID** podem ser definidas em um elemento de conteúdo complexo.  
   
 ## <a name="sqlidentity-annotation"></a>Anotação sql:identity  
- Você pode especificar a anotação **SQL: Identity** no esquema XSD em qualquer nó que seja mapeado para uma coluna de banco de dados do tipo identidade. O valor especificado para essa anotação define como a coluna de tipo de identidade é atualizada (usando o valor fornecido no updategram para modificar a coluna ou ignorando o valor; nesse caso, um valor gerado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]por um é usado para essa coluna).  
+ Você pode especificar a anotação **SQL: Identity** no esquema XSD em qualquer nó que seja mapeado para uma coluna de banco de dados do tipo identidade. O valor especificado para essa anotação define como a coluna de tipo de identidade é atualizada (usando o valor fornecido no updategram para modificar a coluna ou ignorando o valor; nesse caso, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valor gerado por um é usado para essa coluna).  
   
  A anotação **SQL: Identity** pode ser atribuída a dois valores:  
   
@@ -64,6 +64,6 @@ ms.locfileid: "81388104"
  Especifica que o GUID gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja usado para essa coluna na operação de atualização.  
   
  useValue  
- Especifica que o valor especificado no diagrama de atualização seja usado para a coluna. Este é o valor padrão.  
+ Especifica que o valor especificado no diagrama de atualização seja usado para a coluna. Esse é o valor padrão.  
   
   

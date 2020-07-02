@@ -13,15 +13,15 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724664"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Retorna uma linha para cada conjunto de linhas que rastreia dados internos para índices columnstore em tabelas baseadas em disco. Esses conjuntos de linhas são internos a índices columnstore e rastreiam linhas excluídas, mapeamentos de rowgroup e grupos de itens de loja Delta. Eles controlam os dados para cada partição de tabela; cada tabela tem pelo menos uma partição. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]recria os conjuntos de linhas a cada vez que recria o índice columnstore.   
   
@@ -41,7 +41,7 @@ ms.locfileid: "72304814"
 |optimize_for_sequential_key|**bit**|1 = a partição tem a otimização de inserção da última página habilitada.<br><br>0 = valor padrão. A otimização de inserção da última página foi desabilitada na partição.|
   
 ## <a name="permissions"></a>Permissões  
- Exige a associação à função `public`.  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Exige a associação à função `public`. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]recria novos índices internos columnstore cada vez que cria ou recria um índice columnstore.  

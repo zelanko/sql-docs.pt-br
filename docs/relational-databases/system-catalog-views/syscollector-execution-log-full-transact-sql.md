@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7bd195499313eaa24afd12ab424ae3bf832841b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e01cc51b12d92fefbca760541d433fbf27bb0191
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724649"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fornece informações sobre o conjunto de coleta ou pacote quando o log de execução está cheio.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82824892"
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|Identifica cada execução do conjunto de coleta. Usado para unir essa exibição a outros logs detalhados. Permite valor nulo.|  
 |parent_log_id|**bigint**|Identifica o pacote pai ou o conjunto de coleta. Não permite valor nulo. As IDs são encadeadas na relação pai-filho, o que permite determinar qual pacote foi iniciado por qual conjunto de coleta. Essa exibição agrupa as entradas de log pela vinculação pai-filho e recua os nomes dos pacotes de forma que o encadeamento de chamadas esteja claramente visível.|  
-|Nome|**nvarchar(4000)**|O nome do conjunto de coleta ou pacote que essa entrada de log representa. Permite valor nulo.|  
+|name|**nvarchar(4000)**|O nome do conjunto de coleta ou pacote que essa entrada de log representa. Permite valor nulo.|  
 |status|**smallint**|Indica o status atual do conjunto de coleta ou do pacote. Permite valor nulo.<br /><br /> Os valores são:<br /><br /> 0 = em execução<br /><br /> 1 = concluído<br /><br /> 2 = com falha|  
 |runtime_execution_mode|**smallint**|Indica se a atividade do conjunto de coleta estava coletando ou carregando dados. Permite valor nulo.|  
 |start_time|**datetime**|A hora em que o conjunto de coleta ou o pacote foi iniciado. Permite valor nulo.|  

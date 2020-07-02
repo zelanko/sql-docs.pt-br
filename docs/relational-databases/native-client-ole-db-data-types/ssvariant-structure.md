@@ -15,17 +15,17 @@ ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd20624744c9870cf5688c22af751d29d990a2db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55f91748efb8ad5b46abf8c36f407bf4a52b2a52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724974"
 ---
 # <a name="ssvariant-structure"></a>Estrutura SSVARIANT
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  A estrutura **SSVARIANT** , que é definida em sqlncli. h, corresponde a um valor DBTYPE_SQLVARIANT no provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLEDB de cliente nativo.  
+  A estrutura **SSVARIANT** , que é definida em sqlncli. h, corresponde a um valor DBTYPE_SQLVARIANT no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLEDB de cliente nativo.  
   
  **SSVARIANT** é uma união distinta. Dependendo do valor do membro vt, o consumidor pode determinar qual membro deve ser lido. Os valores vt correspondem aos tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, a estrutura **SSVARIANT** pode manter qualquer tipo do SQL Server. Para obter mais informações sobre a estrutura de dados para tipos OLE DB padrão, confira [Indicadores de tipo](https://go.microsoft.com/fwlink/?LinkId=122171).  
   
@@ -66,7 +66,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|Dá suporte ao tipo de dados **float** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |cyMoneyVal|DBTYPE_CY|**LARGE_INTEGER**|**VT_SS_MONEY VT_SS_SMALLMONEY**|Dá suporte aos tipos de dados **money** e **smallmoney**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|Dá suporte ao tipo de dados **bit** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|Dá suporte ao tipo de dados **uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|rgbGuidVal|DBTYPE_GUID|**VOLUME**|**VT_SS_GUID**|Dá suporte ao tipo de dados **uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|Dá suporte ao tipo de dados **numeric** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Dá suporte ao tipo de dados **Date** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|Dá suporte aos tipos de dados **smalldatetime**, **datetime** e **datetime2**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

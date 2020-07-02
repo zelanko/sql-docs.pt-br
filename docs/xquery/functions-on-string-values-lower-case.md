@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 0f6e179612b11b1238d017fb81db2f6fbc6b661a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720065"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funções em Valores da Cadeia de Caracteres – lower-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   A função minúscula converte cada caractere em *$ARG* em seu equivalente em minúsculas. No Microsoft Windows, a conversão binária de maiúsculas e minúsculas para pontos de código Unicode especifica como os caracteres são convertidos em letras minúsculas. Esse padrão não é idêntico ao mapeamento para o padrão de ponto de código Unicode.  
   

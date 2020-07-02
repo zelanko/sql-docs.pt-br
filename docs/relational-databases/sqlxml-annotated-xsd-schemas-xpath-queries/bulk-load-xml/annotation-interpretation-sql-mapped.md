@@ -19,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fec5c2625c87b2add23738b5b9d22ccfc77c4f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: b38ef4e89db99239759ad0809a5b4828fd1906e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884886"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724708"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretação de anotação – sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   A carga em massa de XML processa a anotação **SQL: mapeada** no esquema XSD como esperado – ou seja, se o esquema de mapeamento especificar **SQL: mapeou = "false"** para qualquer elemento ou atributo, o carregamento em massa de XML não tentará armazenar os dados associados na coluna correspondente.  
   
  O carregamento em massa de XML ignora elementos e atributos que não estão mapeados (porque eles não estão descritos no esquema ou porque eles são anotados no esquema XSD com **SQL: mapeou = "false"**). Todos os dados não mapeados entrarão na coluna de estouro, se essa coluna for especificada usando **SQL: overflow-field**.  

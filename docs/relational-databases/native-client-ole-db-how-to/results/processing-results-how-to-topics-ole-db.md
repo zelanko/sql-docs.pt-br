@@ -13,15 +13,15 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbb3f4206351d7ff8aff6caec44fa35f07cb1343
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d449e0cf945875c93ed70c4115a2258fdcd61b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724906"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Tópicos de instrução sobre processamento de resultados (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   O processamento de resultados em um aplicativo OLE DB envolve primeiro a determinação das características do conjunto de resultados e depois a recuperação dos dados em variáveis do programa. Caso o comando execute um procedimento armazenado, você também deve saber como processar códigos de retorno e parâmetros de saída dos procedimentos armazenados.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "81302171"
 -   [Buscar linhas em um conjunto de resultados &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tópicos de instruções sobre OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Tópicos de instruções do OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

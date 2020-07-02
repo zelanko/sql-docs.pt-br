@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d09ff7f8a1be28c39345ecd56084ae6392ca66d8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9745b6eb1a906297f1ed8324f840914cc871f251
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722933"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSreplication_objects** contém uma linha para cada objeto associado à replicação no banco de dados do Assinante. Essa tabela é armazenada no banco de dados de assinatura.  
   

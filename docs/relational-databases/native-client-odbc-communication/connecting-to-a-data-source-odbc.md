@@ -24,15 +24,15 @@ ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae59e0bdb005d296341970f4582100b15a0dfdf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd54f05b336284f08892022537641a1e1af99712
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719840"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Conectando-se a uma fonte de dados (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Depois de alocar os identificadores de ambiente e conexão e definir quaisquer atributos de conexão, o aplicativo se conectará à fonte de dados ou driver. Há três funções que você pode usar para se conectar:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "81307707"
   
 -   Para se conectar sem usar uma fonte de dados ODBC.  
   
- A cadeia de conexão **SQLDriverConnect** contém uma série de pares de valor de palavra-chave que especificam todas as informações de conexão suportadas por um driver ODBC. Cada driver suporta as palavras-chave ODBC padrão (DSN, FILEDSN, DRIVER, UID, PWD e SAVEFILE), além das palavras-chave específicas de driver para todas as informações de conexão suportadas pelo driver. **SQLDriverConnect** pode ser usado para se conectar sem uma fonte de dados. Por exemplo, um aplicativo projetado para fazer uma conexão "sem DSN" com uma instância do pode chamar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLDriverConnect** com uma cadeia de conexão que define a ID de logon, a senha, a biblioteca de rede, o nome do servidor para se conectar e o banco de dados padrão a ser usado.  
+ A cadeia de conexão **SQLDriverConnect** contém uma série de pares de valor de palavra-chave que especificam todas as informações de conexão suportadas por um driver ODBC. Cada driver suporta as palavras-chave ODBC padrão (DSN, FILEDSN, DRIVER, UID, PWD e SAVEFILE), além das palavras-chave específicas de driver para todas as informações de conexão suportadas pelo driver. **SQLDriverConnect** pode ser usado para se conectar sem uma fonte de dados. Por exemplo, um aplicativo projetado para fazer uma conexão "sem DSN" com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode chamar **SQLDriverConnect** com uma cadeia de conexão que define a ID de logon, a senha, a biblioteca de rede, o nome do servidor para se conectar e o banco de dados padrão a ser usado.  
   
  Ao usar o **SQLDriverConnect**, há duas opções para solicitar ao usuário qualquer informação de conexão necessária:  
   
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- Você pode ignorar as mensagens 5701 e 5703; elas são meramente informativas. Entretanto, você não deve ignorar um código de retorno de SQL_SUCCESS_WITH_INFO porque podem ser retornadas mensagens diferentes de 5701 ou 5703. Por exemplo, se um driver se conectar a um servidor que executa uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância do com procedimentos armazenados de catálogo desatualizados, um dos erros retornados por meio de **SQLGetDiagRec** após um SQL_SUCCESS_WITH_INFO é:  
+ Você pode ignorar as mensagens 5701 e 5703; elas são meramente informativas. Entretanto, você não deve ignorar um código de retorno de SQL_SUCCESS_WITH_INFO porque podem ser retornadas mensagens diferentes de 5701 ou 5703. Por exemplo, se um driver se conectar a um servidor que executa uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com procedimentos armazenados de catálogo desatualizados, um dos erros retornados por meio de **SQLGetDiagRec** após um SQL_SUCCESS_WITH_INFO é:  
   
 ```  
 SqlState:   01000  
@@ -112,7 +112,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- A função de tratamento de erros de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo para conexões deve chamar **SQLGetDiagRec** até que ela retorne SQL_NO_DATA. Em seguida, ele deve agir em qualquer mensagem além daquelas com um código *pfNative* de 5701 ou 5703.  
+ A função de tratamento de erros de um aplicativo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexões deve chamar **SQLGetDiagRec** até que ela retorne SQL_NO_DATA. Em seguida, ele deve agir em qualquer mensagem além daquelas com um código *pfNative* de 5701 ou 5703.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Comunicando-se com SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  

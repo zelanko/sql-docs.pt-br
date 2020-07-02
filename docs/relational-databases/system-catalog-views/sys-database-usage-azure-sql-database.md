@@ -20,15 +20,15 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b68fbc20fb220af49036890edc2b67d1a4f7b65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724679"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   **Observação: isso se aplica somente ao banco de dados SQL do Azure v11.**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "70155541"
   
  A exibição **Sys. database_usage** contém as colunas a seguir.  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|Description|  
 |-----------------|-----------------|  
 |time|A data em que os eventos de uso ocorreram.|  
 |sku|O tipo de camada de serviço para o banco de dados: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  

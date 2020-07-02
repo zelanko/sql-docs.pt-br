@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e0f410a73d010d2931cfda2e87a4a4b4cbc1c64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e3ca89ab5974dbe53b12a2b5b369958ab38755c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720161"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Altera definições de configuração do Database Mail. As definições de configuração especificadas com **sysmail_configure_sp** se aplicam à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância inteira.  
   
@@ -66,7 +66,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*AccountRetryDelay*|O período de tempo, em segundos, que o processo de email externo deve esperar entre tentativas de envio de uma mensagem.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|O período mínimo de tempo, em segundos, que o processo de email externo permanece ativo. Quando o Database Mail estiver enviando muitas mensagens, aumente este valor para manter o Database Mail ativo e evitar a sobrecarga de inícios e paradas frequentes.|**600**|  
 |*DefaultAttachmentEncoding*|A codificação padrão para anexos de email.|MIME|  
-|*Cedido*|O tamanho máximo de um anexo, em bytes.|**1 milhão**|  
+|*MaxFileSize*|O tamanho máximo de um anexo, em bytes.|**1 milhão**|  
 |*ProhibitedExtensions*|Uma lista separada por vírgula de extensões que não podem ser enviadas como um anexo a uma mensagem de email.|**exe,dll,vbs,js**|  
 |*LoggingLevel*|Especifique quais mensagens são registradas no log do Database Mail. Um dos seguintes valores numéricos:<br /><br /> 1 - Este é o modo normal. Registra apenas erros.<br /><br /> 2 - Este é o modo estendido. Registra erros, avisos e mensagens informativas.<br /><br /> 3 - Este é o modo detalhado. Registra erros, avisos, mensagens informativas, mensagens de êxito e mensagens internas adicionais. Use este modo para diagnóstico.|**2**|  
   

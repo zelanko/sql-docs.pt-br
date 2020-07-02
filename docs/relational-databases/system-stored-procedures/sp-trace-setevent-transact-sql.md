@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8c58657eda708965821c4739f76b49c558c8e76
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723078"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Adiciona ou remove um evento ou coluna de eventos a um rastreamento. **sp_trace_setevent** pode ser executado somente em rastreamentos existentes que são interrompidos (*status* é **0**). Um erro será retornado se esse procedimento armazenado for executado em um rastreamento que não existe ou cujo *status* não é **0**.  
   
@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Esta tabela lista os eventos que podem ser adicionados ou removidos de um rastreamento.  
   
-|Número do evento|Nome do evento|Descrição|  
+|Número do evento|Nome do evento|Description|  
 |------------------|----------------|-----------------|  
 |0-9|Reservado|Reservado|  
 |10|RPC:Completed|Ocorre quando uma RPC (chamada de procedimento remoto) é concluída.|  
@@ -256,7 +256,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |12|**SPID**|ID de processo de servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|  
 |13|**Duration**|Tempo decorrido (em milhões de segundos) utilizado pelo evento. Esta coluna de dados não é populada pelo evento Hash Warning.|  
 |14|**StartTime**|Horário de início do evento, quando disponível.|  
-|15|**Final**|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como **SQL:BatchStarting** ou **SP:Starting**. Ele também não é preenchido pelo evento de **aviso de hash** .|  
+|15|**EndTime**|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como **SQL:BatchStarting** ou **SP:Starting**. Ele também não é preenchido pelo evento de **aviso de hash** .|  
 |16|**Pareça**|Número de leituras lógicas do disco executadas pelo servidor em nome do evento. Esta coluna não é preenchida pelo evento **Lock: solto** .|  
 |17|**Registra**|Número de gravações no disco físico executadas pelo servidor em nome do evento.|  
 |18|**CPU**|Tempo da CPU (em milissegundos) usado pelo evento.|  
@@ -302,7 +302,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |58|**OwnerID**|Tipo o objeto que possui o bloqueio. Apenas para eventos de bloqueio.|  
 |59|**ParentName**|Nome do esquema que contém o objeto.|  
 |60|**IsSystem**|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> **1** = sistema<br /><br /> **0** = usuário.|  
-|61|**Desvio**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|  
+|61|**Deslocamento**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|  
 |62|**SourceDatabaseID**|ID do banco de dados no qual a origem do objeto existe.|  
 |63|**SqlHandle**|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser passado para **Sys. dm_exec_sql_text ()** para recuperar o texto SQL associado.|  
 |64|**SessionLoginName**|O nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **Login1** e executar uma instrução como **Login2**, **SessionLoginName** irá exibir **Login1**, enquanto que **LoginName** exibirá **Login2**. Esta coluna de dados exibe logons tanto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quanto do Windows.|  
@@ -360,7 +360,7 @@ sp_trace_setevent [ @traceid = ] trace_id
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_trace_generateevent](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [Referência de classe de evento SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [Referência de classe de evento do SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

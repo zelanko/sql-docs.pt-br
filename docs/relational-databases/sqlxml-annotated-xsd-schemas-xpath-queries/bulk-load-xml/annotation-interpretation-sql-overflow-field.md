@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 3b6ba41157e7e13651eb5810502a41e7c8abde67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724700"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretação de anotação – sql:overflow-field
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Em um esquema, você pode identificar uma coluna de estouro para receber todos os dados não consumidos do documento XML. Essa coluna é especificada no esquema usando a anotação **SQL: overflow-field** . É possível ter várias colunas de estouro.  
   
  Sempre que um nó XML (elemento ou atributo) para o qual há uma anotação **SQL: overflow-field** definida entra no escopo, a coluna Overflow é ativada e recebe dados não consumidos. Quando o nó sair do escopo, a coluna de estouro não ficará mais ativa e o XML Bulk Load tornará o campo de estouro anterior (se houver) ativo.  
   
  Como ele armazena dados na coluna Overflow, o carregamento em massa de XML também armazena as marcas de abertura e fechamento do elemento pai para o qual **SQL: overflow-field** é definido.  
   
- Por exemplo, o esquema a seguir descreve os elementos ** \< customers>** e ** \< CustOrder>** . Cada um destes elementos identifica uma coluna de estouro:  
+ Por exemplo, o esquema a seguir descreve **\<Customers>** os **\<CustOrder>** elementos e. Cada um destes elementos identifica uma coluna de estouro:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -76,9 +76,9 @@ ms.locfileid: "83689234"
 </xsd:schema>  
 ```  
   
- No esquema, o elemento ** \<>do cliente** é mapeado para a tabela Cust e o elemento ** \< Order>** é mapeado para a tabela CustOrder.  
+ No esquema, o **\<Customer>** elemento é mapeado para a tabela Cust e o **\<Order>** elemento é mapeado para a tabela CustOrder.  
   
- Os elementos ** \<>do cliente** e ** \< ordem>** identificam uma coluna de estouro. Assim, o carregamento em massa de XML salva todos os elementos filho e atributos não consumidos do elemento ** \<>do cliente** na coluna Overflow da tabela Cust e todos os elementos filho e atributos não consumidos do elemento ** \< Order>** na coluna Overflow da tabela CustOrder.  
+ Os **\<Customer>** elementos e **\<Order>** identificam uma coluna de estouro. Assim, o carregamento em massa de XML salva todos os elementos filho e atributos não consumidos do **\<Customer>** elemento na coluna Overflow da tabela Cust e todos os elementos filho e atributos não consumidos do **\<Order>** elemento na coluna Overflow da tabela CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   

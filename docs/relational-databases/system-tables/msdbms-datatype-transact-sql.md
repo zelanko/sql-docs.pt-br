@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 299272377d8bbc55781d671a94240d6c309877ec
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2ac552c5fe8efe897ea9066819215c82a115d1d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725466"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSdbms_datatype** contém a lista completa de tipos de dados nativos em cada DBMS (sistema de gerenciamento de banco de dado) com suporte usado como Publicador ou Assinante na replicação de banco de dados heterogêneo. Essa tabela é armazenada no banco de dados **msdb** .  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82832320"
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**int**|Identifica cada tipo de dados exclusivo.|  
 |**dbms_id**|**int**|Identifica o DBMS ao qual o tipo pertence.|  
-|**tipo**|**sysname**|Nome do tipo de dados (nativo).|  
+|**type**|**sysname**|Nome do tipo de dados (nativo).|  
 |**createparams**|**int**|Bitmap que descreve qual a combinação de comprimento, precisão e escala é aplicável a cada tipo de dados, incluindo:<br /><br /> **0x1** = precisão.<br /><br /> **0x2** = escala.<br /><br /> **0x4** = comprimento.|  
   
 ## <a name="remarks"></a>Comentários  

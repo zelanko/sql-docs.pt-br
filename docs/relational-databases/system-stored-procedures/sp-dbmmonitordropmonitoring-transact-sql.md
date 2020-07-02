@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a20f943801989490fa8769644d4b45c09f404f7f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b638aa75b2bddb207571d0545fe8c6462dd7c461
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724594"
 ---
 # <a name="sp_dbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Interrompe e exclui a tarefa de monitoramento de espelhamento para todos os bancos de dados na instância do servidor.  
   
@@ -40,10 +40,10 @@ sp_dbmmonitordropmonitoring
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Não  
+ Nenhum  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nenhum  

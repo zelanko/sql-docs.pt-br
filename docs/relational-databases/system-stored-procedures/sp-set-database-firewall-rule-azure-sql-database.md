@@ -21,17 +21,17 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48feafe5dddf3bf2e14e52146ceb99f282f8990f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74055084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720172"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Cria ou atualiza as regras de firewall no nível de banco [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]de dados para seu. As regras de firewall de banco de dados **master** podem ser configuradas para o banco de dados [!INCLUDE[ssSDS](../../includes/sssds-md.md)]mestre e para bancos de dados de usuário no. As regras de firewall de banco de dados são particularmente úteis ao usar usuários de banco de dados independente. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Cria ou atualiza as regras de firewall no nível de banco de dados para seu [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . As regras de firewall de banco de dados podem ser configuradas para o banco de dados **mestre** e para bancos de dados de usuário no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . As regras de firewall de banco de dados são particularmente úteis ao usar usuários de banco de dados independente. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,21 +44,21 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] [N]'name'`O nome usado para descrever e distinguir a configuração de firewall no nível de banco de dados. *nome* é **nvarchar (128)** sem valor padrão. O identificador `N` Unicode é opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+`[ @name = ] [N]'name'`O nome usado para descrever e distinguir a configuração de firewall no nível de banco de dados. *nome* é **nvarchar (128)** sem valor padrão. O identificador Unicode `N` é opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] . 
   
 `[ @start_ip_address = ] 'start_ip_address'`O endereço IP mais baixo no intervalo da configuração de firewall no nível de banco de dados. Os endereços IP iguais a ou maiores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais baixo possível é `0.0.0.0`. *start_ip_address* é **varchar (50)** sem valor padrão.  
   
 `[ @end_ip_address = ] 'end_ip_address'`O endereço IP mais alto no intervalo da configuração de firewall no nível de banco de dados. Os endereços IP iguais a ou menores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais alto possível é `255.255.255.255`. *end_ip_address* é **varchar (50)** sem valor padrão.  
   
- A tabela a seguir demonstra os argumentos e as opções [!INCLUDE[ssSDS](../../includes/sssds-md.md)]com suporte no.  
+ A tabela a seguir demonstra os argumentos e as opções com suporte no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .  
   
 > [!NOTE]  
->  As tentativas de conexão do Azure são permitidas quando esse *start_ip_address* campo e o `0.0.0.0`campo de start_ip_address é igual a.  
+>  As tentativas de conexão do Azure são permitidas quando esse campo e o campo de *start_ip_address* é igual a `0.0.0.0` .  
   
 ## <a name="remarks"></a>Comentários  
  Os nomes das configurações de firewall de nível de banco de dados para um banco de dados devem ser exclusivos. Se o nome da configuração do firewall em nível de banco de dados fornecida para o procedimento armazenado já existir na tabela de configurações de firewall de nível de banco de dados, os endereços IP inicial e final serão atualizados. Caso contrário, uma nova configuração de firewall de nível de banco de dados será criada.  
   
- Quando você adiciona uma configuração de firewall no nível de banco de dados em que os endereços IP inicial `0.0.0.0`e final são iguais, você habilita o acesso [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ao seu banco de dados no servidor de qualquer recurso do Azure. Forneça um valor para o parâmetro *Name* que ajudará você a se lembrar do que é a configuração de firewall.  
+ Quando você adiciona uma configuração de firewall no nível de banco de dados em que os endereços IP inicial e final são iguais `0.0.0.0` , você habilita o acesso ao seu banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor de qualquer recurso do Azure. Forneça um valor para o parâmetro *Name* que ajudará você a se lembrar do que é a configuração de firewall.  
   
 ## <a name="permissions"></a>Permissões  
  Exige a permissão **CONTROL** no banco de dados.  
@@ -72,7 +72,7 @@ EXECUTE sp_set_database_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- O código a seguir cria uma configuração de firewall de nível de banco de dados chamada `Example DB Setting 1` somente para o endereço IP `0.0.0.4`. Em seguida, `sp_set_database firewall_rule` o procedimento armazenado é chamado novamente para atualizar o endereço IP final `0.0.0.6`para, nessa configuração de firewall. Isso cria um intervalo que permite endereços `0.0.0.4`IP, `0.0.0.5`e `0.0.0.6` para acessar o banco de dados.
+ O código a seguir cria uma configuração de firewall de nível de banco de dados chamada `Example DB Setting 1` somente para o endereço IP `0.0.0.4`. Em seguida, o `sp_set_database firewall_rule` procedimento armazenado é chamado novamente para atualizar o endereço IP final para `0.0.0.6` , nessa configuração de firewall. Isso cria um intervalo que permite endereços IP `0.0.0.4` , `0.0.0.5` e `0.0.0.6` para acessar o banco de dados.
   
 ```  
 -- Create database-level firewall setting for only IP 0.0.0.4  
