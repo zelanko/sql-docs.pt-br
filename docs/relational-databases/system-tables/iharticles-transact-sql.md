@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78d6dfdd7497bf8937e7f2c37e8460d883f43760
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829883"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753959"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela do sistema **IHarticles** contém uma linha para cada artigo sendo replicado de um Publicador não SQL Server usando o distribuidor atual. Esta tabela é armazenada no banco de dados de distribuição.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82829883"
 |**ins_cmd**|**nvarchar (255)**|O tipo de comando de replicação usado ao replicar inserções com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**pre_creation_cmd**|**tinyint**|O comando a ser executado antes que o instantâneo inicial seja aplicado quando um objeto com o mesmo nome já existir no Assinante.<br /><br /> **0** = nenhum-um comando não é executado.<br /><br /> **1** = descartar a tabela de destino.<br /><br /> **2** = excluir-excluir dados da tabela de destino.<br /><br /> **3** = truncar-truncar a tabela de destino.|  
 |**status**|**tinyint**|O bitmask de opções e status do artigo, que pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **0** = nenhuma propriedade adicional.<br /><br /> **1** = ativo.<br /><br /> **8** = incluir o nome da coluna em instruções INSERT.<br /><br /> **16** = usar instruções parametrizadas.<br /><br /> Por exemplo, um artigo ativo que usa instruções com parâmetros teria um valor 17 nessa coluna. Um valor 0 significa que o artigo está inativo e nenhuma propriedade adicional está definida.|  
-|**tipo**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo baseado em log.|  
+|**type**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo baseado em log.|  
 |**upd_cmd**|**nvarchar (255)**|O tipo de comando de replicação usado ao replicar atualizações com artigos de tabela. Para obter mais informações, consulte [Especificar como as alterações são propagadas para artigos transacionais](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**schema_option**|**binário (8)**|O bitmap da opção schema generation para o artigo determinado, que pode ser o resultado OR lógico bit a bit de um ou mais desses valores:<br /><br /> **0x00** = desabilitar o script pelo agente de instantâneo e usa o CreationScript fornecido.<br /><br /> **0x01** = gerar a criação do objeto (CREATE TABLE, criar procedimento e assim por diante).<br /><br /> **0x10** = gerar um índice clusterizado correspondente.<br /><br /> **0x40** = gerar índices não clusterizados correspondentes.<br /><br /> **0x80** = incluir integridade referencial declarada nas chaves primárias.<br /><br /> **0x1000** = Replica o agrupamento em nível de coluna. Observação: essa opção é definida por padrão para Publicadores Oracle para habilitar comparações que diferenciam maiúsculas de minúsculas.<br /><br /> **0x4000** = replicar chaves exclusivas, se definido em um artigo de tabela.<br /><br /> **0x8000** = replicar uma chave primária e chaves exclusivas em um artigo de tabela como restrições usando instruções ALTER TABLE.|  
 |**dest_owner**|**sysname**|O proprietário da tabela no banco de dados de destino.|  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a676688176e164736552460667432919250f8e99
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 610dcca5103e4a819b0e6c59629ddd4d510f5469
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82261854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756352"
 ---
 # <a name="supported-net-framework-libraries"></a>Bibliotecas do .NET Framework compatíveis
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Com o CLR (common language runtime) hospedado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você pode criar procedimentos armazenados, gatilhos, funções definidas pelo usuário, tipos definidos pelo usuário e agregações definidas pelo usuário em código gerenciado. Com a funcionalidade contida nas bibliotecas de classe do .NET Framework, você tem acesso a classes pré-criadas que fornecem recursos de manipulação de cadeia de caracteres, operações matemáticas avançadas, acesso a arquivos, criptografia, e mais. Essas classes podem ser acessadas de qualquer procedimento armazenado gerenciado, tipo definido pelo usuário, gatilho, função definida pelo usuário ou agregação definida pelo usuário.  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-d
 ## <a name="unsupported-libraries"></a>Bibliotecas sem-suporte  
  As bibliotecas sem-suporte ainda podem ser chamadas de seus procedimentos armazenados gerenciados, gatilhos, funções definidas pelo usuário, tipos definidos pelo usuário e agregações definidos pelo usuário. A biblioteca sem suporte deve primeiro ser registrada no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados, usando a instrução **Create assembly** , antes que possa ser usada em seu código. Qualquer biblioteca sem-suporte que é registrada e executada no servidor deveria ser examinada e testada para fins de segurança e confiabilidade.  
   
- Por exemplo, não há suporte para o namespace **System. DirectoryServices** . Você deve registrar o assembly System. DirectoryServices. dll com permissões **não seguras** antes de poder chamá-lo do seu código. A permissão **não segura** é necessária porque as classes no namespace **System. DirectoryServices** não atendem aos requisitos de **segurança** ou **EXTERNAL_ACCESS**. Para obter mais informações, consulte [restrições de modelo de programação de integração CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) e segurança de acesso a código de [integração CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
+ Por exemplo, não há suporte para o namespace **System. DirectoryServices** . Você deve registrar o assembly System.DirectoryServices.dll com permissões **não seguras** antes de poder chamá-lo do seu código. A permissão **não segura** é necessária porque as classes no namespace **System. DirectoryServices** não atendem aos requisitos de **segurança** ou **EXTERNAL_ACCESS**. Para obter mais informações, consulte [restrições de modelo de programação de integração CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) e segurança de acesso a código de [integração CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando um assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

@@ -20,15 +20,15 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feed483cf3ee08c0652e55de51b1f73fc087ed39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 634d0d69698503a4bc483c9803858e5cda4b515d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80873110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754473"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retorna uma linha para cada entidade de segurança em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,13 +42,13 @@ ms.locfileid: "80873110"
 |**create_date**|**datetime**|Hora em que o principal foi criado.|  
 |**modify_date**|**datetime**|Hora em que a entidade de segurança foi modificada pela última vez.|  
 |**owning_principal_id**|**int**|ID da entidade de segurança que é proprietária desta entidade de segurança. Todas as funções de banco de dados fixas pertencem a **dbo** por padrão.|  
-|**SIDs**|**varbinary (85)**|SID (ID de segurança) da entidade de segurança.  NULL for SYS e INFORMATION SCHEMAS.|  
+|**sid**|**varbinary (85)**|SID (ID de segurança) da entidade de segurança.  NULL for SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Se 1, essa linha representará uma entrada para uma das funções de banco de dados fixa: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
 |**authentication_type**|**int**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Significa um tipo de autenticação. A seguir estão os possíveis valores e suas descrições.<br /><br /> 0: sem autenticação<br />1: autenticação da instância<br />2: autenticação de banco de dados<br />3: autenticação do Windows<br />4: autenticação Azure Active Directory|  
 |**authentication_type_desc**|**nvarchar(60)**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Descrição do tipo de autenticação. A seguir estão os possíveis valores e suas descrições.<br /><br /> NENHUM: sem autenticação<br />INSTÂNCIA: autenticação de instância<br />BANCO de dados: autenticação de banco de dados<br />WINDOWS: autenticação do Windows<br />EXTERNO: autenticação de Azure Active Directory|  
 |**default_language_name**|**sysname**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Significa o idioma padrão para esta entidade de segurança.|  
 |**default_language_lcid**|**int**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Significa o LCID padrão para esta entidade de segurança.|  
-|**allow_encrypted_value_modifications**|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posterior,.<br /><br /> Suprime as verificações de metadados criptográficos no servidor em operações de cópia em massa. Isso permite que o usuário Copie dados em massa criptografados usando Always Encrypted, entre tabelas ou bancos de dados, sem descriptografá-los. O padrão é OFF. |      
+|**allow_encrypted_value_modifications**|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suprime as verificações de metadados criptográficos no servidor em operações de cópia em massa. Isso permite que o usuário Copie dados em massa criptografados usando Always Encrypted, entre tabelas ou bancos de dados, sem descriptografá-los. O padrão é OFF. |      
   
 ## <a name="remarks"></a>Comentários  
  As propriedades *PasswordLastSetTime* estão disponíveis em todas as configurações com suporte de SQL Server, mas as outras propriedades só estarão disponíveis quando SQL Server estiver em execução no Windows Server 2003 ou posterior e CHECK_POLICY e CHECK_EXPIRATION estiverem habilitados. Consulte [política de senha](../../relational-databases/security/password-policy.md) para obter mais informações.
@@ -95,7 +95,7 @@ JOIN sys.schemas AS s
  A consulta a seguir lista as permissões concedidas ou negadas explicitamente a entidades de segurança do banco de dados.  
   
 > [!IMPORTANT]  
->  As permissões de funções de banco de dados fixas `sys.database_permissions`não aparecem no. Portanto, entidades de segurança do banco de dados podem ter permissões adicionais não listadas aqui.  
+>  As permissões de funções de banco de dados fixas não aparecem no `sys.database_permissions` . Portanto, entidades de segurança do banco de dados podem ter permissões adicionais não listadas aqui.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

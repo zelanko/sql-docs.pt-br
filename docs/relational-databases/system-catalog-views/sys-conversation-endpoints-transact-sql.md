@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11beb90fe3bf0be71d31f5e330c3588d6e1e0aaa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc9649154ae3464d89590d88de40abf9f4325949
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754452"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cada lado de uma conversa do [!INCLUDE[ssSB](../../includes/sssb-md.md)] é representado por um ponto de extremidade de conversação. Esta exibição do catálogo contém uma linha para cada ponto de extremidade de conversação no banco de dados.  
   

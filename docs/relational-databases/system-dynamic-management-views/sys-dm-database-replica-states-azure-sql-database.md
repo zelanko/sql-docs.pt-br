@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3a9bf27341663de266b0b45f003fd5fdb4a1a79
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dc81d2f5754052ae9fec57d7bd9d64b5337fdaba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754273"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Retorna uma linha para o banco de dados, expondo o estado da réplica local.  
   
@@ -71,8 +71,8 @@ ms.locfileid: "82824608"
 |**last_commit_time**|**datetime**|A hora correspondente ao último registro de confirmação.<br /><br /> No banco de dados secundário, essa hora é a mesma do banco de dados primário.<br /><br /> Na réplica primária, cada linha de banco de dados secundário exibe a hora em que a réplica secundária que hospeda aquele banco de dados secundário relatou de volta para a réplica primária. A diferença no tempo entre a linha do banco de dados primário e uma determinada linha de banco de dados secundário representa aproximadamente o RPO (objetivo de ponto de recuperação), supondo que o processo de refazer seja atualizado e que o progresso tenha sido relatado de volta para a réplica primária pela réplica secundária.|  
 |**low_water_mark_for_ghosts**|**bigint**|Um número aumentado de maneira constante para o banco de dados, que indica uma marca d'água inferior usada pela limpeza de fantasma no banco de dados primário. Se esse número não estiver aumentando ao longo do tempo, isso indicará que a limpeza fantasma talvez não esteja ocorrendo. Para decidir quais linhas fantasmas devem ser limpas, a réplica primária usa o valor mínimo dessa coluna para este banco de dados em todas as réplicas de disponibilidade (inclusive a réplica primária).|  
 |**secondary_lag_seconds**|**bigint**|O número de segundos que a réplica secundária está atrás da réplica primária durante a sincronização.<br /><br />**Aplica-se a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
-|**quorum_commit_lsn**|**numeric(25,0)**|Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
-|**quorum_commit_time**|**datetime**|Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
+|**quorum_commit_lsn**|**numeric(25,0)**|Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
+|**quorum_commit_time**|**datetime**|Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
 
 
 ## <a name="permissions"></a>Permissões

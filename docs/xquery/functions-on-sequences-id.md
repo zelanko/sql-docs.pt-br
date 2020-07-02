@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45b7f9f7ee9fa301b10c29fafb663c3a307509d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753555"
 ---
 # <a name="functions-on-sequences---id"></a>Funções em Sequências – ID
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retorna a sequência de nós de elemento com valores xs: ID que correspondem aos valores de um ou mais dos valores xs: IDREF fornecidos no *$ARG*.  
   
@@ -45,12 +45,12 @@ fn:id($arg as xs:IDREF*) as element()*
  Se o valor xs:IDREF não corresponder a qualquer elemento, a função retornará a sequência vazia.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **xml** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
   
-### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Recuperando elementos com base no valor do atributo IDREF  
+### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>a. Recuperando elementos com base no valor do atributo IDREF  
  O exemplo a seguir usa FN: ID para recuperar os `employee` elementos de> de <, com base no atributo do Gerenciador IDREF. Neste exemplo, o atributo gerente é um atributo do tipo IDREF e o atributo eid é um atributo do tipo do ID.  
   
- Para um valor de atributo de gerente específico, a função **ID ()** localiza `employee` o elemento <> cujo valor de atributo de tipo de ID corresponde ao valor IDREF de entrada. Em outras palavras, para um funcionário específico, a função **ID ()** retorna gerente de funcionários.  
+ Para um valor de atributo de gerente específico, a função **ID ()** localiza o `employee` elemento <> cujo valor de atributo de tipo de ID corresponde ao valor IDREF de entrada. Em outras palavras, para um funcionário específico, a função **ID ()** retorna gerente de funcionários.  
   
  Isso é o que ocorre no exemplo:  
   
@@ -101,7 +101,7 @@ Go
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Recuperando elementos com base no valor do atributo IDREFS de OrderList  
  No exemplo a seguir, o atributo OrderList do elemento <`Customer`> é um atributo de tipo IDREFS. Ele relaciona os ids de ordem desse cliente específico. Para cada ID do pedido, há um <`Order`> filho do elemento na <`Customer`> fornecendo o valor do pedido.  
   
- A expressão de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera o primeiro valor da lista IDRES para o primeiro cliente. Esse valor é passado para a função **ID ()** . Em seguida, a função localiza `Order` o elemento <> cujo valor do atributo OrderID corresponde à entrada para a função **ID ()** .  
+ A expressão de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera o primeiro valor da lista IDRES para o primeiro cliente. Esse valor é passado para a função **ID ()** . Em seguida, a função localiza o `Order` elemento <> cujo valor do atributo OrderID corresponde à entrada para a função **ID ()** .  
   
 ```  
 drop xml schema collection SC  

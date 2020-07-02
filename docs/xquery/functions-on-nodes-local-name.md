@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753612"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funções em Nós – local-name
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retorna a parte local do nome de *$ARG* como um xs: String que será a cadeia de caracteres de comprimento zero ou terá a forma lexical de um xs: NCName. Se o argumento não for fornecido, o padrão será o nó de contexto.  
   
@@ -50,7 +50,7 @@ fn:local-name($arg as node()?) as xs:string
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Recuperar o nome local de um nó específico  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>a. Recuperar o nome local de um nó específico  
  A consulta a seguir é especificada em uma instância XML não digitada. A expressão de consulta, `local-name(/ROOT[1])`, recupera a parte do nome local do nó especificado.  
   
 ```  

@@ -20,19 +20,19 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a1057be51a987e694fa1a29de4299ff63a70733
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3d42cc2873c1e3e03e2af3e0a01080cdb18c349a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754282"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna informações sobre o estado de criptografia de um banco de dados e suas chaves de criptografia de banco de dados associadas. Para obter mais informações sobre a criptografia do banco de dados, confira [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
  
-|Nome da coluna|Tipo de Dados|Description|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID do banco de dados.|  
 |encryption_state|**int**|Indica se o banco de dados está criptografado ou não.<br /><br /> 0 = Nenhuma chave de criptografia de banco de dados presente, nenhuma criptografia<br /><br /> 1 = Sem-criptografia<br /><br /> 2 = Criptografia em andamento<br /><br /> 3 = Criptografado<br /><br /> 4 = Alteração de chave em andamento<br /><br /> 5 = Descriptografia em andamento<br /><br /> 6 = Alteração de proteção em andamento (o certificado ou a chave assimétrica que está criptografando a chave de criptografia do banco de dados está sendo alterado)|  
@@ -46,9 +46,9 @@ ms.locfileid: "82824613"
 |encryptor_thumbprint|**varbinary(20)**|Mostra a impressão digital do criptografador.|  
 |encryptor_type|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Descreve o criptografador.|  
 |percent_complete|**real**|Porcentagem concluída da alteração de estado da criptografia do banco de dados. Será 0 se não houver nenhuma alteração de estado.|
-|encryption_state_desc|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior.<br><br> Cadeia de caracteres que indica se o banco de dados está criptografado ou não.<br><br>Nenhuma<br><br>Não CRIPTOGRAFADO<br><br>CRIPTOGRAFADOS<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_state_desc|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior.<br><br> Cadeia de caracteres que indica se o banco de dados está criptografado ou não.<br><br>NONE<br><br>Não CRIPTOGRAFADO<br><br>CRIPTOGRAFADOS<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior.<br><br>Indica o estado atual da verificação de criptografia. <br><br>0 = nenhuma verificação foi iniciada, o TDE não está habilitado<br><br>1 = a verificação está em andamento.<br><br>2 = a verificação está em andamento, mas foi suspensa, o usuário pode retomar.<br><br>3 = a verificação foi anulada por algum motivo, a intervenção manual é necessária. Contate a Suporte da Microsoft para obter mais assistência.<br><br>4 = a verificação foi concluída com êxito, o TDE está habilitado e a criptografia está concluída.|
-|encryption_scan_state_desc|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior.<br><br>Cadeia de caracteres que indica o estado atual da verificação de criptografia.<br><br> Nenhuma<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>CONCLUÍ|
+|encryption_scan_state_desc|**nvarchar(32)**|**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior.<br><br>Cadeia de caracteres que indica o estado atual da verificação de criptografia.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>CONCLUÍ|
 |encryption_scan_modify_date|**datetime**|**Aplica-se a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e posterior.<br><br> Exibe a data (em UTC) que o estado de verificação de criptografia foi modificado pela última vez.|
   
 ## <a name="permissions"></a>Permissões

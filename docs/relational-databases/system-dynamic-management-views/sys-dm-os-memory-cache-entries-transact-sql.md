@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1cce4ad93181b86570da066093efc9f75e3fc9d6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2fa8a3f309ada4334ea759bd7bb46d4b3c6a4233
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820801"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754081"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre todas as entradas em caches no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use esta exibição para rastrear entradas de cache para os objetos associados. Você também pode usar esta exibição para obter estatísticas sobre entradas de cache.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82820801"
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary (8)**|Endereço do cache. Não permite valor nulo.|  
 |**name**|**nvarchar(256)**|Nome do cache. Não permite valor nulo.|  
-|**tipo**|**varchar(60)**|Tipo de cache. Não permite valor nulo.|  
+|**type**|**varchar(60)**|Tipo de cache. Não permite valor nulo.|  
 |**entry_address**|**varbinary (8)**|Endereço do descritor da entrada de cache. Não permite valor nulo.|  
 |**entry_data_address**|**varbinary (8)**|Endereço dos dados de usuário na entrada de cache.<br /><br /> 0x00000000 = Endereço de dados de entrada não está disponível.<br /><br /> Não permite valor nulo.|  
 |**in_use_count**|**int**|Número de usuários simultâneos desta entrada de cache. Não permite valor nulo.|  

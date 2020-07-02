@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: db4fbd8e78827ff8818f74e83bf9f2d8ca8d0d39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753606"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funções em Valores Boolianos – função not 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retornará TRUE se o valor booliano efetivo de *$ARG* for false e retornará false se o valor booliano efetivo de *$ARG* for true.  
   
@@ -44,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Usando a função not () XQuery para localizar modelos de produto cujas descrições de catálogo não incluem o \<Specifications> elemento.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>a. Usando a função not () XQuery para localizar modelos de produto cujas descrições de catálogo não incluem o \<Specifications> elemento.  
  A consulta a seguir constrói XML que contém IDs de modelo de produto para modelos de produto cujas descrições de catálogo não incluem o `Specifications` elemento <>.  
   
 ```  

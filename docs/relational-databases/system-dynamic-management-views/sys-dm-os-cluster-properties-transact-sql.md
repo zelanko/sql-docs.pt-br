@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca7b6c657170c4e1afe5792d6e58a8e2a4aab277
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1da39966fe7c11a4c4685d40b6cc762e14bf2b2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754202"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma linha com as configurações atuais para as propriedades de recurso de cluster do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas neste tópico. Nenhum dado será retornado se essa exibição for executada em uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
