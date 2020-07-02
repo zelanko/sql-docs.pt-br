@@ -18,15 +18,15 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a4cfe5c86d39766bcd322b879172b00b33eb68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 583536c1b69951b18e6d30910f4e4d9d44b8d99f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73593708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717368"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Analisa a instrução especificada [!INCLUDE[tsql](../../includes/tsql-md.md)] e seus parâmetros para determinar quais parâmetros correspondem às colunas de banco de dados que são protegidas usando o recurso Always Encrypted. Retorna metadados de criptografia para os parâmetros que correspondem às colunas criptografadas.  
   
@@ -40,21 +40,21 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ \@TSQL =] ' Transact-SQL_batch '  
+ [ \@ TSQL =] ' Transact-SQL_batch '  
  Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. O Transact-SQL_batch pode ser nvarchar (n) ou nvarchar (max).  
   
- [ \@params =] N'parameters'  
- params fornece uma cadeia de caracteres de declaração para parâmetros para o lote Transact-SQL, que é semelhante a sp_executesql. * \@* Os parâmetros podem ser nvarchar (n) ou nvarchar (max).  
+ [ \@ params =] N'parameters '  
+ * \@ params* fornece uma cadeia de caracteres de declaração para parâmetros para o lote Transact-SQL, que é semelhante a sp_executesql. Os parâmetros podem ser nvarchar (n) ou nvarchar (max).  
   
- É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetros adicionais. Todos os parâmetros especificados na instrução devem ser definidos em * \@params*. Se a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote na instrução não contiver parâmetros, * \@params* não será necessário. O valor padrão para este parâmetro é NULL.  
+ É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos na [!INCLUDE[tsql](../../includes/tsql-md.md)] _batch. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. *n* é um espaço reservado que indica definições de parâmetros adicionais. Todos os parâmetros especificados na instrução devem ser definidos em * \@ params*. Se a [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou o lote na instrução não contiver parâmetros, * \@ params* não será necessário. O valor padrão para este parâmetro é NULL.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  0 indica êxito. Qualquer outra coisa indica falha.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_describe_parameter_encryption** retorna dois conjuntos de resultados:  
   
--   O conjunto de resultados que descreve as chaves de criptografia configuradas para colunas de [!INCLUDE[tsql](../../includes/tsql-md.md)] banco de dados, os parâmetros da instrução especificada correspondem a.  
+-   O conjunto de resultados que descreve as chaves de criptografia configuradas para colunas de banco de dados, os parâmetros da [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução especificada correspondem a.  
   
 -   O conjunto de resultados que descreve como os parâmetros específicos devem ser criptografados. Esse conjunto de resultados faz referência às chaves descritas no primeiro conjunto de resultados.  
   
@@ -77,14 +77,14 @@ sp_describe_parameter_encryption
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID da linha no conjunto de resultados.|  
-|**parameter_name**|**sysname**|Nome de um dos parâmetros especificados no argumento * \@params* .|  
+|**parameter_name**|**sysname**|Nome de um dos parâmetros especificados no argumento * \@ params* .|  
 |**column_encryption_algorithm**|**tinyint**|Código que indica o algoritmo de criptografia configurado para a coluna, o parâmetro corresponde a. Os valores com suporte no momento são: 2 para **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Código que indica o tipo de criptografia configurado para a coluna, o parâmetro corresponde a. Os valores com suporte são:<br /><br /> 0-texto sem formatação (a coluna não é criptografada)<br /><br /> 1-criptografia aleatória<br /><br /> 2-criptografia determinística.|  
 |**column_encryption_key_ordinal**|**int**|Código da linha no primeiro conjunto de resultados. A linha referenciada descreve a chave de criptografia de coluna configurada para a coluna, o parâmetro corresponde a.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versão do algoritmo de normalização de tipo.|  
   
 ## <a name="remarks"></a>Comentários  
- Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver de cliente, com suporte a Always Encrypted, chama automaticamente **sp_describe_parameter_encryption** para recuperar metadados de criptografia para consultas parametrizadas, emitidas pelo aplicativo. Posteriormente, o driver usa os metadados de criptografia para criptografar os valores de parâmetros que correspondem às colunas de banco de dados protegidas com Always Encrypted e substitui os valores de parâmetro de texto não criptografado, enviados pelo aplicativo, com os valores de parâmetro criptografados, antes de enviar a consulta para o mecanismo de banco de dados.  
+ Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Driver de cliente, com suporte a Always Encrypted, chama automaticamente **sp_describe_parameter_encryption** para recuperar metadados de criptografia para consultas parametrizadas, emitidas pelo aplicativo. Posteriormente, o driver usa os metadados de criptografia para criptografar os valores de parâmetros que correspondem às colunas de banco de dados protegidas com Always Encrypted e substitui os valores de parâmetro de texto não criptografado, enviados pelo aplicativo, com os valores de parâmetro criptografados, antes de enviar a consulta para o mecanismo de banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
  Exija as permissões de definição de **chave de criptografia de qualquer coluna** e **exibição qualquer coluna de definição de chave mestra** no banco de dados.  

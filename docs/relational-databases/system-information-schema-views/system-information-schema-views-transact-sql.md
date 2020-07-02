@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3df27d1211807f1863ac40859a833d570191c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670559"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716607"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Exibições do esquema de informações do sistema (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Uma exibição de esquema de informações é um dos vários métodos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecidos para obtenção de metadados. As exibições de esquema de informações fornecem uma exibição interna independente da tabela do sistema dos metadados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Exibições de esquema de informações permitem que os aplicativos trabalhem corretamente embora alterações significativas tenham sido feitas nas tabelas do sistema subjacentes. As exibições de esquema de informações incluídas em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão em conformidade com a definição padrão ISO para o INFORMATION_SCHEMA.
 
@@ -41,7 +41,7 @@ Uma exibição de esquema de informações é um dos vários métodos [!INCLUDE[
 |Banco de dados|Catálogo|
 |Esquema|Esquema|
 |Objeto|Objeto|
-|tipo de dados definido pelo usuário|Domínio|
+|tipo de dados definido pelo usuário|Domain|
 
 Esta convenção de mapeamento de nome se aplica às seguintes exibições compatíveis com ISO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -56,7 +56,7 @@ Esta convenção de mapeamento de nome se aplica às seguintes exibições compa
 |[DOMAIN_CONSTRAINTS](../../relational-databases/system-information-schema-views/domain-constraints-transact-sql.md)|[TABLES](../../relational-databases/system-information-schema-views/tables-transact-sql.md)|
 |[DOMÍNIOS](../../relational-databases/system-information-schema-views/domains-transact-sql.md)|[VIEW_COLUMN_USAGE](../../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)|
 |[KEY_COLUMN_USAGE](../../relational-databases/system-information-schema-views/key-column-usage-transact-sql.md)|[VIEW_TABLE_USAGE](../../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)|
-|[PARÂMETROS](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[VIEWS](../../relational-databases/system-information-schema-views/views-transact-sql.md)|
+|[PARAMETERS](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[VIEWS](../../relational-databases/system-information-schema-views/views-transact-sql.md)|
 
 Além disso, algumas exibições contêm referências a classes diferentes de dados como dados de caractere ou dados binários.
 

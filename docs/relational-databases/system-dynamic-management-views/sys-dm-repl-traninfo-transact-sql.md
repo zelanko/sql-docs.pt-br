@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d27ca972fa5a20fbb22a6786e6be2ca3cf8c8153
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2def277c877311fc5bfaa77bbab5923563d39a75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716648"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre cada transação replicada ou do Change Data Capture.  
 
@@ -43,7 +43,7 @@ ms.locfileid: "82830471"
 |**as**|**int**|ID do comando replicado na transação.|  
 |**xdesid**|**nvarchar (64)**|ID da transação.|  
 |**artcache_table_address**|**varbinary (8)**|Endereço na memória da estrutura de tabela de artigo em cache usada pela última vez nesta transação.|  
-|**servidor**|**nvarchar (514)**|Nome de servidor.|  
+|**server**|**nvarchar (514)**|Nome de servidor.|  
 |**server_len_in_bytes**|**smallint**|Comprimento de caracteres, em bytes, do nome do servidor.|  
 |**database**|**nvarchar (514)**|nome do banco de dados.|  
 |**db_len_in_bytes**|**smallint**|Comprimento de caracteres, em bytes, do nome do banco de dados.|  

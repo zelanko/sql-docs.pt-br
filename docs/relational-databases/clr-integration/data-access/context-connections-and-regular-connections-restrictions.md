@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5491e736bfa075c4cc9f001bc2515184de865ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717907"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Conexões de contexto e conexões normais – Restrições
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico discute as restrições associadas ao código em execução no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processo por meio de contexto e conexões regulares.  
   
 ## <a name="restrictions-on-context-connections"></a>Restrições em conexões de contexto  
@@ -41,7 +41,7 @@ ms.locfileid: "81485188"
   
 -   Nenhuma outra palavra-chave de cadeia de conexão poderá ser usada quando você usar "context connection=true".  
   
--   A propriedade **SqlConnection. DataSource** retornará NULL se a cadeia de conexão para **SqlConnection** for "context connection = true", em vez do nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   A propriedade **SqlConnection. DataSource** retornará NULL se a cadeia de conexão para **SqlConnection** for "context connection = true", em vez do nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Definir a propriedade **SqlCommand. CommandTimeout** não tem efeito quando o comando é executado em uma conexão de contexto.  
   

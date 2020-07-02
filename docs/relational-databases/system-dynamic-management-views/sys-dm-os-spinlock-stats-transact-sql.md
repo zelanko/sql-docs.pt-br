@@ -22,16 +22,16 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718777"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retorna informações sobre todas as esperas de spinlock organizadas por tipo.  
   
@@ -47,7 +47,7 @@ Retorna informações sobre todas as esperas de spinlock organizadas por tipo.
 
 
 ## <a name="permissions"></a>Permissões  
-Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão.   
 Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .    
   
 ## <a name="remarks"></a>Comentários  
@@ -71,7 +71,7 @@ GO
    
  A tabela a seguir contém breves descrições de alguns dos tipos de spinlock mais comuns.  
   
-|Tipo de spinlock|Descrição|  
+|Tipo de spinlock|Description|  
 |-----------------|-----------------|  
 |ABR|Somente para uso interno.|
 |ADB_CACHE|Somente para uso interno.|
@@ -120,7 +120,7 @@ GO
 |DBSEEDING_OPERATION|Somente para uso interno.|
 |DBT_HASH|Somente para uso interno.|
 |DBT_IO_LIST|Somente para uso interno.|
-|DBTABLE|Controla o acesso a uma estrutura de dados na memória para cada banco de dado em um SQL Server que contém as propriedades desse banco. Para saber mais, confira [este artigo](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
+|DBTABLE|Controla o acesso a uma estrutura de dados na memória para cada banco de dado em um SQL Server que contém as propriedades desse banco. Consulte [este artigo](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789) para obter mais informações. |
 |DEFERRED_WF_EXT_DROP|Somente para uso interno.|
 |DEK_INSTANCE|Somente para uso interno.|
 |DELAYED_PARTITIONED_STACK|Somente para uso interno.|
@@ -130,7 +130,7 @@ GO
 |DIGEST_CACHE|Somente para uso interno.|
 |DINPBUF|Somente para uso interno.|
 |DIRECTLOGCONSUMER|Somente para uso interno.|
-|DP_LIST|Controla o acesso à lista de páginas sujas para um banco de dados que tem um ponto de verificação indireto ativado. Para saber mais, confira [este artigo](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
+|DP_LIST|Controla o acesso à lista de páginas sujas para um banco de dados que tem um ponto de verificação indireto ativado. Consulte [este artigo](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510) para obter mais informações.|
 |DROP|Somente para uso interno.|
 |DROP_TEMPO|Somente para uso interno.|
 |DROPPED_ALLOC_UNIT|Somente para uso interno.|
@@ -187,7 +187,7 @@ GO
 |LANG_RES_LOAD|Somente para uso interno.|
 |LIVE_TARGET_TVF|Somente para uso interno.|
 |LOCK_FREE_LIST|Somente para uso interno.|
-|LOCK_HASH|Protege o acesso à tabela de hash do Gerenciador de bloqueio que armazena informações sobre os bloqueios que estão sendo mantidos em um banco de dados. Para saber mais, confira [este artigo](https://support.microsoft.com/kb/2926217).|
+|LOCK_HASH|Protege o acesso à tabela de hash do Gerenciador de bloqueio que armazena informações sobre os bloqueios que estão sendo mantidos em um banco de dados. Consulte [este artigo](https://support.microsoft.com/kb/2926217) para obter mais informações.|
 |LOCK_NOTIFICATION|Somente para uso interno.|
 |LOCK_RESOURCE_ID|Somente para uso interno.|
 |LOCK_RW_ABTX_HASH_SET|Somente para uso interno.|
@@ -307,7 +307,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|Somente para uso interno.|
 |SOS_BLOCKALLOCPARTIALLIST|Somente para uso interno.|
 |SOS_BLOCKDESCRIPTORBUCKET|Somente para uso interno.|
-|SOS_CACHESTORE|Sincroniza o acesso a vários caches na memória em SQL Server como o cache de planos ou o cache de tabela temporária. A contenção pesada nesse tipo de spinlock pode significar muitas coisas diferentes, dependendo do cache específico que está em contenção. Contate [!INCLUDE[msCoName](../../includes/msconame-md.md)] os serviços de atendimento ao cliente para obter ajuda para solucionar esse tipo de SpinLock. |
+|SOS_CACHESTORE|Sincroniza o acesso a vários caches na memória em SQL Server como o cache de planos ou o cache de tabela temporária. A contenção pesada nesse tipo de spinlock pode significar muitas coisas diferentes, dependendo do cache específico que está em contenção. Contate os [!INCLUDE[msCoName](../../includes/msconame-md.md)] serviços de atendimento ao cliente para obter ajuda para solucionar esse tipo de SpinLock. |
 |SOS_CACHESTORE_CLOCK|Somente para uso interno.|
 |SOS_CLOCKALG_INTERNODE_SYNC|Somente para uso interno.|
 |SOS_DEBUG_HOOK|Somente para uso interno.|

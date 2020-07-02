@@ -25,22 +25,22 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca0e048d09b838663895d31de155d84c6294ed01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b560aa650140e4b94bbea4491fb28e5f1bf656f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487085"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717898"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introdução à integração CLR
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
-Este tópico fornece uma visão geral dos namespaces e das bibliotecas necessárias para compilar objetos de banco [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de dados usando a integração com o .NET Framework Common Language Runtime (CLR). O tópico também mostra como escrever, compilar e executar um procedimento armazenado CLR simples escrito no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+Este tópico fornece uma visão geral dos namespaces e das bibliotecas necessárias para compilar objetos de banco de dados usando a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integração com o .NET Framework Common Language Runtime (CLR). O tópico também mostra como escrever, compilar e executar um procedimento armazenado CLR simples escrito no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Namespaces obrigatórios  
 
-Os componentes necessários para desenvolver objetos básicos de banco de dados CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]são instalados com o. A funcionalidade de integração CLR é exposta em um assembly chamado system.data.dll, que faz parte do .NET Framework. Esse assembly pode ser localizado no GAC (cache de assembly global), bem como no diretório do .NET Framework. Normalmente uma referência a esse assembly é adicionada automaticamente por ferramentas de linha de comando e pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, por isso não é necessário adicioná-lo manualmente.  
+Os componentes necessários para desenvolver objetos básicos de banco de dados CLR são instalados com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A funcionalidade de integração CLR é exposta em um assembly chamado system.data.dll, que faz parte do .NET Framework. Esse assembly pode ser localizado no GAC (cache de assembly global), bem como no diretório do .NET Framework. Normalmente uma referência a esse assembly é adicionada automaticamente por ferramentas de linha de comando e pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, por isso não é necessário adicioná-lo manualmente.  
   
 O assembly system.data.dll contém os namespaces a seguir, que são necessários para compilar objetos de banco de dados de CLR:  
   
@@ -92,7 +92,7 @@ End Class
   
 Esse programa simples contém um único método estático em uma classe pública. Esse método usa duas novas classes, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** e **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, para criar objetos de banco de dados gerenciado para gerar uma mensagem de texto simples. O método também atribui a cadeia de caracteres "Olá, mundo!" como o valor de um parâmetro out. Esse método pode ser declarado como procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e executado de maneira igual a um procedimento armazenado [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-Compile este programa como uma biblioteca, carregue-o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]em e execute-o como um procedimento armazenado.  
+Compile este programa como uma biblioteca, carregue-o em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e execute-o como um procedimento armazenado.  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>Compilar o procedimento armazenado "Olá, Mundo"  
 

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 5fea5badf14ce9863f07dff189f1665788ec5fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41378ba13c6c85059313595161aeeb4226c6731e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70873773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718739"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Retorna o instantâneo em um intervalo de 20 segundos para os últimos 32 minutos (128 Recs no total) de estatísticas de pools de recursos para um banco de dados SQL do Azure.
   
@@ -68,8 +68,8 @@ Retorna o instantâneo em um intervalo de 20 segundos para os últimos 32 minuto
 |**max_request_cpu_msec**| BIGINT |Uso máximo da CPU, em milissegundos, para uma única solicitação. Não permite valor nulo.|
 |**max_concurrent_request**| INT |Configuração atual do número máximo de solicitações simultâneas. Não permite valor nulo.|
 |**max_io**| INT |Limite máximo de e/s para o grupo.|
-|**max_global_io**| INT |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.
-|**max_queued_io**| INT |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
+|**max_global_io**| INT |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.
+|**max_queued_io**| INT |Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
 |**max_log_rate_kb**| BIGINT |Taxa máxima de log (quilobytes-bytes por segundo) em nível de grupo de recursos.|
 |**max_session**| INT |Limite de sessão do grupo.|
 |**max_worker**| INT |Limite de trabalho para o grupo.|

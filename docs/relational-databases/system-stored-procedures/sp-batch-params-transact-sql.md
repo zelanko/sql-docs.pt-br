@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b5c067b42d61c2dae1dbe247a6212611d155348
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716136"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna um conjunto de linhas que contém informações sobre os parâmetros incluídos em um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. **sp_batch_params** analisa apenas o lote especificado e retorna informações sobre valores de parâmetros inseridos. Ele não executa o lote ou modifica o ambiente de execução.  
   
@@ -42,7 +42,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 `[ @tsqlbatch = ] 'tsqlbatch'`É uma cadeia de caracteres Unicode que contém uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou um lote para o qual as informações de parâmetro são desejadas. *TSqlBatch* é **nvarchar (max)** ou implicitamente conversível em **nvarchar (max)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

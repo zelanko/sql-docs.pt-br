@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718594"
 ---
 # <a name="wideworldimporters-data-generation"></a>Geração de dados WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 As versões de lançamento dos bancos de dados WideWorldImporters e WideWorldImportersDW têm dado de 1º de janeiro de 2013, até o dia em que os bancos de dados foram gerados.
 
 Ao usar esses bancos de dados de exemplo, talvez você queira incluir mais informações de exemplo recentes.
@@ -41,7 +41,7 @@ Para gerar dados de exemplo até a data atual:
 
     Essa instrução adiciona dados de exemplo de vendas e de compra ao banco de dado, até a data atual. Ele exibe o progresso da geração de dados por dia. A geração de dados pode levar cerca de 10 minutos para cada ano que precisa de dados. Devido a um fator aleatório na geração de dados, há algumas diferenças nos dados que são gerados entre as execuções.
 
-    Para aumentar ou diminuir a quantidade de dados gerados para pedidos por dia, altere o valor do parâmetro `@AverageNumberOfCustomerOrdersPerDay`. Use os parâmetros `@SaturdayPercentageOfNormalWorkDay` e `@SundayPercentageOfNormalWorkDay` para determinar o volume do pedido para os dias de fim de semana.
+    Para aumentar ou diminuir a quantidade de dados gerados para pedidos por dia, altere o valor do parâmetro `@AverageNumberOfCustomerOrdersPerDay` . Use os parâmetros `@SaturdayPercentageOfNormalWorkDay` e `@SundayPercentageOfNormalWorkDay` para determinar o volume do pedido para os dias de fim de semana.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importar dados gerados no WideWorldImportersDW
 
@@ -67,7 +67,7 @@ Você pode usar o `Application.Configuration_PopulateLargeSaleTable` procediment
 
 ### <a name="procedure-details"></a>Detalhes do procedimento
 
-#### <a name="name"></a>Nome
+#### <a name="name"></a>Name
 
     Application.Configuration_PopulateLargeSaleTable
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 755ba9552945e0e983fa5eef6cc53de1c29be5e3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35de5fe106b437429265fcce03d49a9cb1b61401
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715188"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Lista informações sobre o estado de runtime dos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -78,7 +78,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Comentários  
  Esse procedimento fornece um instantâneo do status atual dos trabalhos. Os resultados retornados representam as informações no momento em que a solicitação é processada.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent cria uma nova ID de sessão sempre que seu serviço é iniciado. A ID da sessão é armazenada na tabela **msdb. dbo. syssessions**.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent cria uma nova ID de sessão sempre que seu serviço é iniciado. A ID da sessão é armazenada na tabela **msdb.dbo.syssessões**.  
   
  Quando nenhum *session_id* for fornecido, o listará informações sobre a sessão mais recente.  
   

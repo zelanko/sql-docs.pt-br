@@ -18,15 +18,15 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719189"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Especifica os disparadores AFTER que são acionados em primeiro ou último lugar. Os disparadores AFTER que são acionados entre o primeiro e o último disparador são executados em ordem indefinida.  
   
@@ -53,8 +53,8 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Primeiro**|O disparador é acionado em primeiro lugar.|  
-|**Último**|O disparador é acionado em último lugar.|  
-|**Nenhum**|O disparador é acionado em ordem indefinida.|  
+|**Última**|O disparador é acionado em último lugar.|  
+|**Nenhuma**|O disparador é acionado em ordem indefinida.|  
   
 `[ @stmttype = ] 'statement_type'`Especifica a instrução SQL que dispara o gatilho. *statement_type* é **varchar (50)** e pode ser inserir, atualizar, excluir, fazer logon ou qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrução listado em [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os grupos de eventos não podem ser especificados.  
   

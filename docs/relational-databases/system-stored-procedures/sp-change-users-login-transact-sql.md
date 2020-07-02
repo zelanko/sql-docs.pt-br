@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ecd2576cac046984394b093832769363968e637a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79448336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715889"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Mapeia um usuário de banco de dados existente para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
@@ -47,23 +47,23 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @Action= ] '*ação*'  
+ [ @Action =] '*ação*'  
  Descreve a ação a ser executada pelo procedimento. a *ação* é **varchar (10)**. a *ação* pode ter um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Auto_Fix**|Vincula uma entrada de usuário na exibição do catálogo de sistema sys.database_principals no banco de dados atual a um logon de nome igual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se ainda não existir um logon com o mesmo nome, ele será criado. Examine o resultado da instrução **Auto_Fix** para confirmar se o link correto foi feito de fato. Evite usar **Auto_Fix** em situações sensíveis à segurança.<br /><br /> Ao usar **Auto_Fix**, você deverá especificar *usuário* e *senha* se o logon ainda não existir, caso contrário, você deverá especificar o *usuário* , mas a *senha* será ignorada. o *logon* deve ser nulo. o *usuário* deve ser um usuário válido no banco de dados atual. Não pode haver outro usuário mapeado para o logon.|  
-|**Relatório**|Lista os usuários e o SID (identificador de segurança) correspondentes no banco de dados atual que não estão vinculados a nenhum logon. *usuário*, *logon*e *senha* devem ser nulos ou não especificados.<br /><br /> Para substituir a opção de relatório por uma consulta usando as tabelas do sistema, compare as entradas em **Sys. server_prinicpals** com as entradas em **Sys. database_principals**.|  
+|**Report**|Lista os usuários e o SID (identificador de segurança) correspondentes no banco de dados atual que não estão vinculados a nenhum logon. *usuário*, *logon*e *senha* devem ser nulos ou não especificados.<br /><br /> Para substituir a opção de relatório por uma consulta usando as tabelas do sistema, compare as entradas em **Sys. server_prinicpals** com as entradas em **Sys. database_principals**.|  
 |**Update_One**|Vincula o *usuário* especificado no banco de dados atual a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *logon*existente. o *usuário* e o *logon* devem ser especificados. a *senha* deve ser nula ou não especificada.|  
   
- [ @UserNamePattern= ] '*usuário*'  
+ [ @UserNamePattern =] '*usuário*'  
  É o nome de um usuário no banco de dados atual. o *usuário* é **sysname**, com um padrão de NULL.  
   
- [ @LoginName= ] '*logon*'  
+ [ @LoginName =] '*logon*'  
  E o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* é **sysname**, com um padrão de NULL.  
   
- [ @Password= ] '*senha*'  
- É a senha atribuída a um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon que é criado especificando **Auto_Fix**. Se um logon correspondente já existir, o usuário e o logon serão mapeados e a *senha* será ignorada. Se um logon correspondente não existir, o sp_change_users_login criará um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] novo logon e atribuirá a *senha* como a senha para o novo logon. a *senha* é **sysname**e não deve ser nula.  
+ [ @Password =] '*senha*'  
+ É a senha atribuída a um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon que é criado especificando **Auto_Fix**. Se um logon correspondente já existir, o usuário e o logon serão mapeados e a *senha* será ignorada. Se um logon correspondente não existir, o sp_change_users_login criará um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon e atribuirá a *senha* como a senha para o novo logon. a *senha* é **sysname**e não deve ser nula.  
   
 > **IMPORTANTE:** Sempre use uma [senha forte!](../../relational-databases/security/strong-passwords.md)
   

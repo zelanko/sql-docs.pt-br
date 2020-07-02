@@ -18,15 +18,15 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87fbcab87999c83c688ec4fa9e46f1aeed033bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716423"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Adiciona um usuário de banco de dados, uma função de banco de dados, o logon do Windows ou um grupo do Windows em uma função de banco de dados no banco de dados atual.  
   
@@ -43,10 +43,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>Argumentos  
- [ @rolename= ] '*função*'  
+ [ @rolename =] '*função*'  
  É o nome da função de banco de dados no banco de dados atual. *role* é um **sysname**, sem padrão.  
   
- [ @membername= ] '*security_account*'  
+ [ @membername =] '*security_account*'  
  É a conta de segurança que está sendo adicionada à função. *security_account* é um **sysname**, sem padrão. *security_account* pode ser um usuário de banco de dados, uma função de banco de dados, um logon do Windows ou um grupo do Windows.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -75,7 +75,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-adding-a-windows-login"></a>a. Adicionando um logon do Windows  
- O exemplo a seguir adiciona o logon `Contoso\Mary5` do Windows `AdventureWorks2012` ao banco de `Mary5`dados como usuário. O usuário `Mary5` então é adicionado à função `Production`.  
+ O exemplo a seguir adiciona o logon do Windows `Contoso\Mary5` ao `AdventureWorks2012` banco de dados como usuário `Mary5` . O usuário `Mary5` então é adicionado à função `Production`.  
   
 > [!NOTE]  
 >  Como `Contoso\Mary5` é conhecido como o usuário de banco de dados `Mary5` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], o nome de usuário `Mary5` deve ser especificado. A instrução falhará a menos que um logon `Contoso\Mary5` exista. Teste usando um logon de seu domínio.  
@@ -97,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-sspdw"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Adicionando um logon do Windows  
- O exemplo a seguir adiciona o `LoginMary` logon ao `AdventureWorks2008R2` banco de dados `UserMary`como usuário. O usuário `UserMary` então é adicionado à função `Production`.  
+ O exemplo a seguir adiciona o logon `LoginMary` ao `AdventureWorks2008R2` banco de dados como usuário `UserMary` . O usuário `UserMary` então é adicionado à função `Production`.  
   
 > [!NOTE]  
->  Como o logon `LoginMary` é conhecido como o usuário `UserMary` de banco de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] dados no banco de dados `UserMary` , o nome de usuário deve ser especificado. A instrução falhará a menos que um logon `Mary5` exista. Logons e usuários geralmente têm o mesmo nome. Este exemplo usa nomes diferentes para diferenciar as ações que afetam o logon versus o usuário.  
+>  Como o logon `LoginMary` é conhecido como o usuário de banco de dados `UserMary` no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados, o nome de usuário `UserMary` deve ser especificado. A instrução falhará a menos que um logon `Mary5` exista. Logons e usuários geralmente têm o mesmo nome. Este exemplo usa nomes diferentes para diferenciar as ações que afetam o logon versus o usuário.  
   
 ```  
 -- Uses AdventureWorks  

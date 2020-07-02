@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e7ba3827b9a659c0100805d0a9895fad503b2a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716295"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Adiciona um novo usuário ao banco de dados atual.  
   
@@ -44,7 +44,7 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'`É o nome do logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do logon do Windows. o *logon* é um **sysname**, sem padrão. o *logon* deve ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon existente ou um logon do Windows.  
+`[ @loginame = ] 'login'`É o nome do logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do logon do Windows. o *logon* é um **sysname**, sem padrão. o *logon* deve ser um logon existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um logon do Windows.  
   
 `[ @name_in_db = ] 'user'`É o nome do novo usuário de banco de dados. o *usuário* é um **sysname**, com um padrão de NULL. Se o *usuário* não for especificado, o nome do novo usuário do banco de dados será padronizado como o nome de *logon* . A especificação de *User* dá ao novo usuário um nome no banco de dados diferente do nome de logon no nível do servidor.  
   

@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98ce2b9aa11b2e1381da1f16455df8a2c0d3f243
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718524"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Fluxo de trabalho ETL WideWorldImportersDW
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Use o pacote ETL *WWI_Integration* para migrar dados do banco de dado WideWorldImporters para o banco de dados WideWorldImportersDW conforme as alterações de dado. O pacote é executado periodicamente (normalmente diariamente).
 
 O pacote garante alto desempenho usando SQL Server Integration Services para orquestrar operações T-SQL em massa (em vez de transformações separadas em Integration Services).
@@ -59,11 +59,11 @@ Para que o código-fonte recrie o banco de dados de exemplo, consulte [Wide-Worl
    5. Selecione **implantar** para concluir o assistente.
 
 2. Crie um trabalho de SQL Server Agent para o processo de ETL:
-   1. Em Management Studio, clique com o botão direito do mouse em **SQL Server Agent**e selecione **novo** > **trabalho**.
+   1. Em Management Studio, clique com o botão direito do mouse em **SQL Server Agent**e selecione **novo**  >  **trabalho**.
    2. Insira um nome, por exemplo, *WIDEWORLDIMPORTERS ETL*.
    3. Adicione uma **etapa de trabalho** do tipo **SQL Server Integration Services pacote**.
    4. Selecione o servidor que tem o catálogo Integration Services e, em seguida, selecione o pacote de *ETL diário* .
-   5. Em **Configuration** > **gerenciadores de conexões**de configuração, verifique se as conexões com a origem e o destino estão configuradas corretamente. O padrão é conectar-se à instância local.
+   5. Em **Configuration**  >  **gerenciadores de conexões**de configuração, verifique se as conexões com a origem e o destino estão configuradas corretamente. O padrão é conectar-se à instância local.
    6. Selecione **OK** para criar o trabalho.
 
 3. Execute ou agende o trabalho.

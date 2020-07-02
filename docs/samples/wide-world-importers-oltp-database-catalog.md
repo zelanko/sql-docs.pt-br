@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718577"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de banco de dados WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 O banco de dados do WideWorldImporters contém todas as informações de transação e de venda diárias para vendas e compras, bem como dados de sensor para veículos e quartos frios.
 
 ## <a name="schemas"></a>Esquemas
@@ -40,7 +40,7 @@ Esses esquemas contêm os dados. Várias tabelas são necessárias para todos os
 
 Esses esquemas são usados para aplicativos externos que não têm permissão para acessar as tabelas de dados diretamente. Eles contêm exibições e procedimentos armazenados usados por aplicativos externos.
 
-|Esquema|Descrição|
+|Esquema|Description|
 |-----------------------------|---------------------|
 |Site|Todo o acesso ao banco de dados do site da empresa é por meio desse esquema.|
 |Relatórios|Todo o acesso ao banco de dados de Reporting Services relatórios é por meio desse esquema.|
@@ -52,7 +52,7 @@ Observe que os esquemas de relatórios e PowerBI não são usados na versão ini
 
 Esquemas de finalidade especial
 
-|Esquema|Descrição|
+|Esquema|Description|
 |-----------------------------|---------------------|
 |Integração|Objetos e procedimentos necessários para a integração do data warehouse (ou seja, migrar os dados para o banco de WideWorldImportersDW).|
 |Sequências|Armazena as sequências usadas por todas as tabelas no aplicativo.|
@@ -122,7 +122,7 @@ Detalhes de itens de estoque, seus ententos e transações.
 |ColdRoomTemperatures|Temperaturas regularmente registradas de resfriadores de sala frio|
 
 
-## <a name="design-considerations"></a>Consideração sobre design
+## <a name="design-considerations"></a>Considerações sobre o design
 
 O design do banco de dados está sujeito e não há uma maneira correta ou errada de criar um banco de dados. Os esquemas e as tabelas neste banco de dados mostram ideias sobre como você pode criar seu próprio banco de dados.
 
@@ -155,7 +155,7 @@ Os procedimentos armazenados são organizados em esquemas. A maioria dos esquema
 
 O `Website` esquema contém os procedimentos armazenados que podem ser usados por um front-end da Web.
 
-Os `Reports` esquemas `PowerBI` e são destinados a fins do Reporting Services e do PowerBI. Todas as extensões do exemplo são incentivadas a usar esses esquemas para fins de relatório.
+Os `Reports` `PowerBI` esquemas e são destinados a fins do Reporting Services e do PowerBI. Todas as extensões do exemplo são incentivadas a usar esses esquemas para fins de relatório.
 
 ### <a name="website-schema"></a>Esquema de site
 
@@ -163,12 +163,12 @@ Esses são os procedimentos usados por um aplicativo cliente, como um front-end 
 
 |Procedimento|Finalidade|
 |-----------------------------|---------------------|
-|ActivateWebsiteLogon|Permite que uma pessoa ( `Application.People`de) tenha acesso ao site.|
+|ActivateWebsiteLogon|Permite que uma pessoa (de `Application.People` ) tenha acesso ao site.|
 |ChangePassword|Altera a senha de um usuário (para usuários que não estão usando mecanismos de autenticação externa).|
 |InsertCustomerOrders|Permite inserir um ou mais pedidos de clientes (incluindo as linhas de ordem).|
 |InvoiceCustomerOrders|Usa uma lista de pedidos a serem faturados e processa as notas fiscais.|
-|RecordColdRoomTemperatures|Usa uma lista de dados de sensor, como um parâmetro com valor de tabela (TVP) e aplica os dados `Warehouse.ColdRoomTemperatures` à tabela temporal.|
-|RecordVehicleTemperature|Usa uma matriz JSON e a utiliza para atualizar `Warehouse.VehicleTemperatures`.|
+|RecordColdRoomTemperatures|Usa uma lista de dados de sensor, como um parâmetro com valor de tabela (TVP) e aplica os dados à `Warehouse.ColdRoomTemperatures` tabela temporal.|
+|RecordVehicleTemperature|Usa uma matriz JSON e a utiliza para atualizar `Warehouse.VehicleTemperatures` .|
 |SearchForCustomers|Procura clientes por nome ou por parte do nome (o nome da empresa ou o nome da pessoa).|
 |SearchForPeople|Pesquisa pessoas por nome ou parte do nome.|
 |SearchForStockItems|Procura itens de ações por nome ou por parte do nome ou de comentários de marketing.|
@@ -181,7 +181,7 @@ Os procedimentos armazenados neste esquema são usados pelo processo de ETL. Ele
 
 ### <a name="dataloadsimulation-schema"></a>Esquema DataLoadSimulation
 
-Simula uma carga de trabalho que insere vendas e compras. O procedimento armazenado principal é `PopulateDataToCurrentDate`, que é usado para inserir dados de exemplo até a data atual.
+Simula uma carga de trabalho que insere vendas e compras. O procedimento armazenado principal é `PopulateDataToCurrentDate` , que é usado para inserir dados de exemplo até a data atual.
 
 |Procedimento|Finalidade|
 |-----------------------------|---------------------|
@@ -200,12 +200,12 @@ Esses procedimentos são usados para configurar o exemplo. Eles são usados para
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|Adiciona um membro a uma função se o membro ainda não estiver na função|
 |Configuration_ApplyAuditing|Adiciona auditoria. A auditoria de servidor é aplicada a bancos de dados Standard Edition; a auditoria de banco de dados adicional é adicionada para a Enterprise Edition.|
-|Configuration_ApplyColumnstoreIndexing|Aplica a indexação columnstore `Sales.OrderLines` para `Sales.InvoiceLines` e e reindexe adequadamente.|
-|Configuration_ApplyFullTextIndexing|Aplica índices de texto `Application.People`completo `Sales.Customers`a `Purchasing.Suppliers`,, `Warehouse.StockItems`e. Substitui `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers` `Website.SearchForStockItems`,, `Website.SearchForStockItemsByTags` por procedimentos de substituição que usam indexação de texto completo.|
-|Configuration_ApplyPartitioning|Aplica o particionamento de tabela `Sales.CustomerTransactions` para `Purchasing.SupplierTransactions`e e reorganiza os índices para adaptá-los.|
+|Configuration_ApplyColumnstoreIndexing|Aplica a indexação columnstore para `Sales.OrderLines` e `Sales.InvoiceLines` e reindexe adequadamente.|
+|Configuration_ApplyFullTextIndexing|Aplica índices de texto completo a `Application.People` , `Sales.Customers` , `Purchasing.Suppliers` e `Warehouse.StockItems` . Substitui `Website.SearchForPeople` , `Website.SearchForSuppliers` ,,, `Website.SearchForCustomers` `Website.SearchForStockItems` `Website.SearchForStockItemsByTags` por procedimentos de substituição que usam indexação de texto completo.|
+|Configuration_ApplyPartitioning|Aplica o particionamento de tabela para `Sales.CustomerTransactions` e e `Purchasing.SupplierTransactions` reorganiza os índices para adaptá-los.|
 |Configuration_ApplyRowLevelSecurity|Aplica a segurança em nível de linha para filtrar clientes por funções relacionadas à região de vendas.|
 |Configuration_ConfigureForEnterpriseEdition|Aplica indexação columnstore, texto completo, na memória, polybase e particionamento.|
-|Configuration_EnableInMemory|Adiciona um grupo de arquivos com otimização de memória (quando não estiver trabalhando no Azure `Warehouse.ColdRoomTemperatures`) `Warehouse.VehicleTemperatures` , substitui, por equivalentes na memória, e migra os dados, recria os `Website.OrderIDList`tipos `Website.OrderList`de `Website.OrderLineList`tabela `Website.SensorDataList` ,,, com equivalentes com otimização de memória, descarta e recria os `Website.InvoiceCustomerOrders`procedimentos `Website.InsertCustomerOrders`, e `Website.RecordColdRoomTemperatures` que usa esses tipos de tabela.|
+|Configuration_EnableInMemory|Adiciona um grupo de arquivos com otimização de memória (quando não estiver trabalhando no Azure), substitui `Warehouse.ColdRoomTemperatures` , `Warehouse.VehicleTemperatures` por equivalentes na memória, e migra os dados, recria os `Website.OrderIDList` tipos de tabela,, `Website.OrderList` `Website.OrderLineList` , `Website.SensorDataList` com equivalentes com otimização de memória, descarta e recria os procedimentos `Website.InvoiceCustomerOrders` , `Website.InsertCustomerOrders` e `Website.RecordColdRoomTemperatures` que usa esses tipos de tabela.|
 |Configuration_RemoveAuditing|Remove a configuração de auditoria.|
 |Configuration_RemoveRowLevelSecurity|Remove a configuração de segurança em nível de linha (necessária para alterações nas tabelas associadas).|
 |CreateRoleIfNonExistant|Cria uma função de banco de dados, caso ela ainda não exista.|

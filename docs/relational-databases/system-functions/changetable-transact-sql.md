@@ -19,15 +19,15 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a5d247ae5e8e4cceb53bd3a093cabdff399d509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042905"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718715"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna as informações de controle de alterações de uma tabela. Você pode usar essa instrução para retornar todas as alterações de uma tabela ou as informações de controle de alterações de uma linha específica.  
   
@@ -101,7 +101,7 @@ CHANGETABLE (
 |SYS_CHANGE_OPERATION|**nchar(1)**|Especifica o tipo de alteração:<br /><br /> **U** = atualização<br /><br /> **I** = Insert<br /><br /> **D** = excluir|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Lista as colunas alteradas desde a last_sync_version (a linha de base). Observe que as colunas computadas nunca são listadas como alteradas.<br /><br /> O valor será NULL quando qualquer uma das condições a seguir for verdadeira:<br /><br /> O controle de alterações da coluna não está habilitado.<br /><br /> A operação é de inserção ou exclusão.<br /><br /> Todas as colunas de chave não primária foram atualizadas em uma operação. Este valor binário não deve ser interpretado diretamente. Em vez disso, para interpretá-lo, use [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Altere as informações de contexto que você pode opcionalmente especificar usando a cláusula [with](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) como parte de uma instrução INSERT, Update ou Delete.|  
-|\<valor da coluna de chave primária>|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
+|\<primary key column value>|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Quando VERSION é especificado, uma linha que tem as seguintes colunas é retornada.  
@@ -110,7 +110,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valor de versão de alteração atual associado à linha.<br /><br /> O valor será NULL se uma alteração não tiver sido efetuada por um período maior que o de retenção do controle de alterações ou se a linha não tiver sido alterada desde que o controle de alterações foi habilitado.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Altere as informações de contexto que podem opcionalmente ser especificadas usando a cláusula WITH como parte de uma instrução INSERT, UPDATE ou DELETE.|  
-|\<valor da coluna de chave primária>|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
+|\<primary key column value>|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
   
 ## <a name="remarks"></a>Comentários  
  Em geral, a função CHANGETABLE é usada na cláusula FROM de uma consulta como se fosse uma tabela.  

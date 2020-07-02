@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715184"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Inicia uma solicitação de validação de artigo para cada artigo na publicação especificada. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -56,7 +56,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Efetua contagem completa usando COUNT (*).|  
-|**1**|A contagem rápida de **sysindexes. Rows**. A contagem de linhas em [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é muito mais rápida do que contar linhas na tabela real. No entanto, como [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é atualizado lentamente, o número de linhas pode não ser preciso.|  
+|**1**|A contagem rápida de **sysindexes. Rows**. A contagem de linhas em [sys.sysíndices](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é muito mais rápida do que a contagem de linhas na tabela real. No entanto, como [sys.sysíndices](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é atualizado lentamente, o número de linhas pode não ser preciso.|  
 |**2** (padrão)|Efetua contagem rápida condicional tentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for NULL e o procedimento armazenado estiver sendo usado para obter o valor, uma contagem completa (*) sempre será usada.|  
   
 `[ @shutdown_agent = ] 'shutdown_agent'`É se o Agente de Distribuição deve desligar imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se for **0**, o agente de replicação não será desligado. Se for **1**, o agente de replicação será desligado depois que o último artigo for validado.  

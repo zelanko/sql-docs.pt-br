@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717391"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Altera as propriedades de um artigo em uma publicação transacional ou de instantâneo. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -124,12 +124,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**no column names**|Nomes de coluna não são incluídos na instrução INSERT replicada.|  
 ||**no dts horizontal partitions**|A partição horizontal para o artigo não é definida por uma assinatura transformável.|  
 ||**nenhum**|Limpa todas as opções de status na tabela [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) e marca o artigo como inativo.|  
-||**parâmetro**|As alterações são propagadas ao Assinante usando comandos com parâmetros. Essa é a configuração padrão para um novo artigo.|  
+||**parameters**|As alterações são propagadas ao Assinante usando comandos com parâmetros. Essa é a configuração padrão para um novo artigo.|  
 ||**literais de cadeia de caracteres**|As alterações são propagadas ao Assinante usando valores de literal de cadeia de caracteres.|  
 |**sync_object**||Nome da tabela ou exibição usado para produzir um arquivo de saída de sincronização. O padrão é NULO. Sem suporte para Publicadores Oracle.|  
 |**espaços**||Identifica o espaço de tabela usado pela tabela de log para um artigo publicado de um banco de dados de Oracle. Para obter mais informações, consulte [Gerenciar espaços de tabela Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
-|**os**||Valor percentual para controle quando o Distribution Agent atribuir um novo intervalo de identidade. Sem suporte para replicação ponto a ponto.|  
-|**tipo**||Sem suporte para Publicadores Oracle.|  
+|**threshold**||Valor percentual para controle quando o Distribution Agent atribuir um novo intervalo de identidade. Sem suporte para replicação ponto a ponto.|  
+|**type**||Sem suporte para Publicadores Oracle.|  
 ||**logbased**|Artigo com base em log.|  
 ||**logbased manualboth**|Artigo com base em log com filtro manual e exibição manual. Essa opção requer que as propriedades *sync_object* e *Filter* também sejam definidas. Sem suporte para Publicadores Oracle.|  
 ||**logbased manualfilter**|Artigo com base em log com filtro manual. Essa opção requer que as propriedades *sync_object* e *Filter* também sejam definidas. Sem suporte para Publicadores Oracle.|  

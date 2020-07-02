@@ -9,16 +9,16 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74318979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718584"
 ---
 # <a name="sql-samples"></a>Exemplos de SQL
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Locais de bancos de dados de exemplo e exemplos de código para produtos Microsoft SQL.
 
@@ -26,9 +26,9 @@ Locais de bancos de dados de exemplo e exemplos de código para produtos Microso
 
 Exemplos de código para produtos SQL estão no repositório GitHub de [exemplos de Microsoft SQL Server](https://github.com/microsoft/sql-server-samples) . Cada exemplo inclui um arquivo LEIAme que explica como executar e usar o exemplo. O LEIAme principal do repositório de exemplos explica como contribuir. 
 
-Os exemplos e modelos são todos licenciados sob a licença MIT. Consulte o arquivo License. txt na raiz.
+Os exemplos e modelos são todos licenciados sob a licença MIT. Consulte o arquivo license.txt na raiz.
 
-Perguntas de email para sqlserversamples@microsoft.com:.
+Perguntas de email para: sqlserversamples@microsoft.com .
 
 
 ## <a name="wideworldimporters-sample-database"></a>Banco de dados de exemplo WideWorldImporters
@@ -49,7 +49,7 @@ Os bancos de dados AdventureWorks podem ser encontrados na página de [instalaç
 
 
 ## <a name="azure-samples-and-templates"></a>Exemplos e modelos do Azure
-Há uma série de exemplos de código Microsoft Azure e exemplos disponíveis no GitHub no .NET, Java, Python, Node. js, PHP e Ruby. Além disso, Azure Resource Manager permite que você provisione seus aplicativos usando um modelo declarativo. Em um modelo único, você pode implantar vários serviços, juntamente com suas dependências. Use o mesmo modelo para implantar repetidamente seu aplicativo durante cada estágio do ciclo de vida do aplicativo.
+Há uma série de exemplos de código Microsoft Azure e exemplos disponíveis no GitHub no .NET, Java, Python, Node.js, PHP e Ruby. Além disso, Azure Resource Manager permite que você provisione seus aplicativos usando um modelo declarativo. Em um modelo único, você pode implantar vários serviços, juntamente com suas dependências. Use o mesmo modelo para implantar repetidamente seu aplicativo durante cada estágio do ciclo de vida do aplicativo.
 
 - [Exemplos do Azure](https://github.com/Azure-Samples)
 - [Modelos de Início Rápido do Azure](https://azure.microsoft.com/resources/templates/)

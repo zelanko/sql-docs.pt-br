@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21f2bf7a43bd391044deb03d08cc86ebc9a772bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718639"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Retorna os comandos para transações marcadas para replicação em formato legível. **sp_replshowcmds** pode ser executado somente quando as conexões de cliente (incluindo a conexão atual) não estão lendo transações replicadas do log. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -48,8 +48,8 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**originator_id**|**int**|ID do originador de comando, sempre **0**.|  
 |**publisher_database_id**|**int**|ID do banco de dados do Publicador, sempre **0**.|  
 |**article_id**|**int**|ID do artigo.|  
-|**tipo**|**int**|Tipo de comando.|  
-|**linha**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|**type**|**int**|Tipo de comando.|  
+|**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_replshowcmds** é usado na replicação transacional.  

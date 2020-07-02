@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bf5b4c74b39c9326382089579e111b118235170
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715850"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna um conjunto de resultados contendo informações de status e outras informações para bancos de dados primários e secundário registrados, em um primário, secundário ou servidor monitor.  
   
@@ -50,7 +50,7 @@ sp_help_log_shipping_monitor
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|Status coletivo de agentes para banco de dados de envio de logs:<br /><br /> **0** = falhas íntegras e sem agente.<br /><br /> **1** = caso contrário.|  
 |**is_primary**|**bit**|Indica se essa linha é para um banco de dados primário:<br /><br /> **1** = a linha é para um banco de dados primário.<br /><br /> **0** = a linha é para um banco de dados secundário.|  
-|**servidor**|**sysname**|Nome do servidor primário ou secundário em que esse banco de dados reside.|  
+|**server**|**sysname**|Nome do servidor primário ou secundário em que esse banco de dados reside.|  
 |**database_name**|**sysname**|Nome do banco de dados.|  
 |**time_since_last_backup**|**int**|Período, em minutos, desde o último backup de log.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.|  
 |**last_backup_file**|**nvarchar (500)**|Nome do último arquivo de backup de log com êxito.<br /><br /> NULL = As informações não estão disponíveis ou não são relevantes.|  

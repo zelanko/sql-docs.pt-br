@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0bd62fe3462441d4eab9d3d89bce20cf1144131
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d584b2db0e66b2affad0e061098f75fc9258fbdb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715924"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Altera as configurações do banco de dados secundário.  
   
@@ -69,7 +69,7 @@ sp_change_log_shipping_secondary_database
   
 `[ @buffer_count = ] 'buffer_count'`O número total de buffers usados pela operação de backup ou restauração. *buffer_count* é **int** com um valor padrão de-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`O tamanho, em bytes, da solicitação de entrada ou saída máxima que é emitida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo para o dispositivo de backup. *max_transfersize* é **int** e pode ser NULL.  
+`[ @max_transfer_size = ] 'max_transfer_size'`O tamanho, em bytes, da solicitação de entrada ou saída máxima que é emitida pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o dispositivo de backup. *max_transfersize* é **int** e pode ser NULL.  
   
 `[ @restore_threshold = ] 'restore_threshold'`O número de minutos permitido para decorrer entre as operações de restauração antes de um alerta ser gerado. *restore_threshold* é **int** e não pode ser NULL.  
   
