@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e42daae837968ddcf0f61b860886e372bb47245
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e62fbc7e23d20bd5e4256a69a1a088bdd10c79ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738665"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Mostra qualquer objeto não contido usado no banco de dados. Os objetos não contidos são aqueles que cruzam o limite de banco de dados em um banco de dados independente. Essa exibição pode ser acessada de um banco de dados independente e de um banco de dados dependente. Se sys.dm_db_uncontained_entities estiver vazio, seu banco de dados não usará nenhuma entidade não contida.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82827981"
 |-|-|-|  
 |**Nome da coluna**|**Tipo**|**Descrição**|  
 |*classes*|**int**|1 = Objeto ou coluna (inclui módulos, XPs, exibições, sinônimos e tabelas).<br /><br /> 4 = Entidade do Banco de Dados<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (Índice de Texto Completo)<br /><br /> 12 = Gatilho DDL do Banco de Dados<br /><br /> 19 = Rota<br /><br /> 30 = Especificação de Auditoria|  
-|*class_desc*|**nvarchar(120)**|Descrição da classe da entidade. Um dos seguintes para corresponder à classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **)**<br /><br /> **TIPO**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class_desc*|**nvarchar(120)**|Descrição da classe da entidade. Um dos seguintes para corresponder à classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **)**<br /><br /> **TIPO**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROTA**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|ID da entidade.<br /><br /> Se *classe* = 1, então object_id<br /><br /> Se *Class* = 4, sys. database_principals. principal_id.<br /><br /> Se *Class* = 5, então sys. assemblies. assembly_id.<br /><br /> Se *Class* = 6, em seguida, sys. types. user_type_id.<br /><br /> Se *Class* = 7, sys. indexes. index_id.<br /><br /> Se *Class* = 12, sys. Triggers. object_id.<br /><br /> Se *Class* = 19, sys. routes. route_id.<br /><br /> Se *Class* = 30, então sys. database_audit_specifications. database_specification_id.|  
 |*statement_line_number*|**int**|Se a classe for um módulo, retornará o número da linha no qual o uso não contido está localizado.  Caso contrário, o valor será nulo.|  
 |*statement_ offset_begin*|**int**|Se a classe for um módulo, indicará, em bytes, começando com 0, a posição inicial onde uso não contido começa. Caso contrário, o valor de retorno será nulo.|  

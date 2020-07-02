@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a2b6d8ad8bc374c30e6fcd7b14b8d0762e66251
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61252e1feb85236244b9af9fa7811ec13234803e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734802"
 ---
 # <a name="security-related-dynamic-management-views-and-functions-transact-sql"></a>Funções e exibições de gerenciamento dinâmico relacionadas à segurança (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta seção contém os seguintes objetos de gerenciamento dinâmico:  
   

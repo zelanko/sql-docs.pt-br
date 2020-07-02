@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cffa7327162b4ae333719ad0e50c02002d0a4528
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734548"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna todo o conteúdo relacionado a propriedade no índice de texto completo de uma determinada tabela. Isso inclui todos os dados pertencentes a qualquer propriedade registrada pela lista de propriedades de pesquisa associada àquele índice de texto completo.  
   
@@ -85,7 +85,7 @@ OBJECT_ID('table_name')
   
  Quando a coluna de chave de texto completo é um tipo de dados inteiro, conforme recomendado, o document_id é mapeado diretamente no valor da chave de texto completo da tabela base.  
   
- Por outro lado, quando a coluna de chave de texto completo usa um tipo de dados não inteiro, o document_id não representa a chave de texto completo da tabela base. Nesse caso, para identificar a linha na tabela base retornada por dm_fts_index_keywords_by_property, você precisa adicionar essa exibição com os resultados retornados por [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Antes de uni-los, é necessário armazenar a saída do procedimento armazenado em uma tabela temporária. Em seguida, você pode unir a coluna document_id de dm_fts_index_keywords_by_property com a coluna DocId retornada por esse procedimento armazenado. Observe que uma coluna **timestamp** não pode receber valores em tempo de inserção, porque eles são gerados automaticamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pelo. Portanto, a coluna **timestamp** deve ser convertida em colunas **varbinary (8)** . O exemplo a seguir mostra estas etapas. Neste exemplo, *table_id* é a ID da sua tabela, *database_name* é o nome do seu banco de dados e *table_name* é o nome da sua tabela.  
+ Por outro lado, quando a coluna de chave de texto completo usa um tipo de dados não inteiro, o document_id não representa a chave de texto completo da tabela base. Nesse caso, para identificar a linha na tabela base retornada por dm_fts_index_keywords_by_property, você precisa adicionar essa exibição com os resultados retornados por [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Antes de uni-los, é necessário armazenar a saída do procedimento armazenado em uma tabela temporária. Em seguida, você pode unir a coluna document_id de dm_fts_index_keywords_by_property com a coluna DocId retornada por esse procedimento armazenado. Observe que uma coluna **timestamp** não pode receber valores em tempo de inserção, porque eles são gerados automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, a coluna **timestamp** deve ser convertida em colunas **varbinary (8)** . O exemplo a seguir mostra estas etapas. Neste exemplo, *table_id* é a ID da sua tabela, *database_name* é o nome do seu banco de dados e *table_name* é o nome da sua tabela.  
   
 ```  
 USE database_name;  
@@ -109,7 +109,7 @@ GO
  Requer permissões SELECT nas colunas abrangidas pelo índice de texto completo e permissões CREATE FULLTEXT CATALOG.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retornar palavras-chave da propriedade `Author` no índice de texto completo da tabela `Production.Document` do banco de dados de amostra `AdventureWorks`. O exemplo usa o alias `KWBPOP` para a tabela retornada por **Sys. dm_fts_index_keywords_by_property**. O exemplo usa junções internas para combinar colunas de [Sys. registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) e [Sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ O exemplo a seguir retornar palavras-chave da propriedade `Author` no índice de texto completo da tabela `Production.Document` do banco de dados de amostra `AdventureWorks`. O exemplo usa o alias `KWBPOP` para a tabela retornada por **sys. dm_fts_index_keywords_by_property**. O exemplo usa junções internas para combinar colunas de [Sys. registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) e [Sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
 ```  
 -- Once the full-text index is configured to support property searching  

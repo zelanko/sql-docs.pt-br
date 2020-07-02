@@ -21,15 +21,15 @@ ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c88b8cfb74f9ce91b98fa078cbff6a550e1a015
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75546a921f9a8cf6c985696e87b97acb1e4a6983
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734933"
 ---
 # <a name="allocating-a-connection-handle"></a>Alocando um identificador de conexão
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Antes de o aplicativo poder se conectar a uma fonte de dados ou driver, ele deve alocar um identificador de conexão. Isso é feito chamando **SQLAllocHandle** com o parâmetro *HandleType* definido como SQL_HANDLE_DBC e *InputHandle* apontando para um identificador de ambiente inicializado.  
   

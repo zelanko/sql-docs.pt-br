@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738660"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o resultado final de geração de tokens após a aplicação de uma determinada combinação de separador de [palavras](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [dicionário de sinônimos](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)e [parada](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) de uma cadeia de caracteres de consulta. O resultado da geração de tokens é equivalente à saída do Mecanismo de Texto Completo para a cadeia de caracteres de consulta especificada.  
   
@@ -61,7 +61,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |1|Sigiloso<br /><br /> Palavras como "café" e "cafe" são tratadas de forma diferente.|  
   
 > [!NOTE]  
->  Para exibir a configuração atual desse valor para um catálogo de texto completo, [!INCLUDE[tsql](../../includes/tsql-md.md)] execute a seguinte instrução: `SELECT fulltextcatalogproperty('` *catalog_name*`', 'AccentSensitivity');`.  
+>  Para exibir a configuração atual desse valor para um catálogo de texto completo, execute a seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução: `SELECT fulltextcatalogproperty('` *catalog_name* `', 'AccentSensitivity');` .  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -80,7 +80,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  **Sys. dm_fts_parser** dá suporte à sintaxe e aos recursos de predicados de texto completo, como [Contains](../../t-sql/queries/contains-transact-sql.md) e [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), e funções, como [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Usando o Unicode para analisar caracteres especiais  
- Quando você analisa uma cadeia de caracteres de consulta, **Sys. dm_fts_parser** usa o agrupamento do banco de dados ao qual você está conectado, a menos que você especifique a cadeia de caracteres de consulta como Unicode. No entanto, para uma cadeia de caracteres não Unicode que contém caracteres especiais, como ü ou ç, a saída pode ser inesperada, dependendo da ordenação do banco de dados. Para processar uma cadeia de caracteres de consulta independentemente do agrupamento de banco de dados `N`, Prefixe a `N'`cadeia de caracteres com, ou seja, *QUERY_STRING*`'`.  
+ Quando você analisa uma cadeia de caracteres de consulta, **Sys. dm_fts_parser** usa o agrupamento do banco de dados ao qual você está conectado, a menos que você especifique a cadeia de caracteres de consulta como Unicode. No entanto, para uma cadeia de caracteres não Unicode que contém caracteres especiais, como ü ou ç, a saída pode ser inesperada, dependendo da ordenação do banco de dados. Para processar uma cadeia de caracteres de consulta independentemente do agrupamento de banco de dados, Prefixe a cadeia de caracteres com `N` , ou seja, `N'` *QUERY_STRING* `'` .  
   
  Para obter mais informações, consulte “C. Exibindo a saída de uma cadeia de caracteres que contém caracteres especiais", posteriormente neste tópico.  
   

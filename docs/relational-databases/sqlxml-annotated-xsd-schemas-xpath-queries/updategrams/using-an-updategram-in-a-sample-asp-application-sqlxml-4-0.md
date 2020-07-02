@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96b2454ef4440318c7a386caab9b703ddecf9f83
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 61ad2bae525acfe7b461e2e89bf9477ff73513ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529801"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733640"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Usando um diagrama de atualização em um aplicativo ASP de exemplo (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Este aplicativo ASP (Active Server Pages) permite atualizar informações do cliente na tabela Person.Contact do banco de dados de exemplo AdventureWorks no Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O aplicativo faz o seguinte:  
   
 -   Pede ao usuário digitar um ID de contato.  

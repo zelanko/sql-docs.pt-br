@@ -23,16 +23,16 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9532ee19ec8489caa51d090feaff464e030a0da0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f53f49e8418b8fb178a8fd1689c3bc64a8b0a0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733616"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Exibições do catálogo do sistema (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 As exibições do catálogo retornam informações usadas pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Recomendamos usar exibições do catálogo por serem a interface mais geral para metadados de catálogo e proporcionarem a maneira mais eficaz de obter, transformar e apresentar formas personalizadas dessas informações. Todos os metadados de catálogos disponíveis para o usuário são expostos por meio de exibições do catálogo.
 
@@ -45,7 +45,7 @@ As exibições do catálogo retornam informações usadas pelo [!INCLUDE[ssDEnov
 - A exibição derivada contém um superconjunto de colunas e um subconjunto de linhas.
 
 > [!IMPORTANT]
-> Em versões futuras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] poderá aumentar a definição de qualquer exibição do catálogo de sistema adicionando colunas ao final da lista de colunas. É recomendável usar a sintaxe SELECT \* de *Sys. catalog_view_name* no código de produção porque o número de colunas retornado pode mudar e interromper seu aplicativo.
+> Em versões futuras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[msCoName](../../includes/msconame-md.md)] poderá aumentar a definição de qualquer exibição do catálogo de sistema adicionando colunas ao final da lista de colunas. É recomendável usar a sintaxe SELECT \* de *sys. catalog_view_name* no código de produção porque o número de colunas retornado pode mudar e interromper seu aplicativo.
 
 As exibições do catálogo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foram organizadas nas categorias seguintes:
 

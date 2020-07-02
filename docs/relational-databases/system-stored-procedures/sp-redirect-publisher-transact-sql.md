@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60cd08c7ddf8ab520b6ff5e8ffb588b1a8f118c9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 54a53c3e1678215ad2eb1410a00da4904d0f84e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828237"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734308"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Especifica um publicador redirecionado para um par de publicador/banco de dados existente. Se o banco de dados do Publicador pertencer a um grupo de disponibilidade Always On, o Publicador Redirecionado será o nome do ouvinte do grupo de disponibilidade associado ao grupo de disponibilidade.  
   

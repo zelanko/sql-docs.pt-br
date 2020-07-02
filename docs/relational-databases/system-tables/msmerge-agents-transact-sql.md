@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1c4d976d97dee95e09a053525a14df632cd7e62
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 46c68043b1b04f888fb154862ca5e4368ba604e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736823"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSmerge_agents** contém uma linha para cada agente de mesclagem em execução no Assinante. Esta tabela é armazenada no banco de dados de distribuição.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82803008"
 |**creation_date**|**datetime**|A data e a hora em que a distribuição ou a Agente de Mesclagem foi criada.|  
 |**offload_enabled**|**bit**|Especifica que o agente pode ser ativado remotamente.<br /><br /> **0** especifica que o agente não pode ser ativado remotamente.<br /><br /> **1** especifica se o agente será ativado remotamente e no computador remoto especificado na propriedade offload_server.|  
 |**offload_server**|**sysname**|Especifica o nome da rede de servidor a ser usado para ativação de agente remota.|  
-|**SIDs**|**varbinary (85)**|O SID (número de identificação de segurança) para o Distribution Agent ou Merge Agent durante sua primeira execução.|  
+|**sid**|**varbinary (85)**|O SID (número de identificação de segurança) para o Distribution Agent ou Merge Agent durante sua primeira execução.|  
 |**subscriber_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Assinante que pode ser um dos seguintes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows.|  
 |**subscriber_login**|**sysname**|O logon usado na conexão com o Assinante.|  
 |**subscriber_password**|**nvarchar (524)**|O valor criptografado da senha usada na conexão com o Assinante.|  

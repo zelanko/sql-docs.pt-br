@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17271cf5e5f7f3bfafe8b0fbf52ddb77a2746e3f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3484bef3a7af5048e5023957a5b1aaa7355fafc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734813"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna as propriedades que se aplicam a todo o coletor de dados em vez de apenas uma instância do conjunto de coleta. Cada linha nesta exibição descreve uma propriedade específica do coletor de dados, como o nome do data warehouse de gerenciamento e o nome da instância em que o data warehouse de gerenciamento está situado.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|O nome da propriedade. Não permite valor nulo.|  
 |parameter_value|**sql_variant**|O valor real da propriedade. Permite valor nulo.|  
@@ -41,7 +41,7 @@ ms.locfileid: "82824919"
 ## <a name="remarks"></a>Comentários  
  A lista de propriedades disponíveis é fixa e seus valores só podem ser alterados por meio do procedimento armazenado apropriado. A tabela a seguir descreve as propriedades que são expostas por esta exibição.  
   
-|Nome da propriedade|Description|  
+|Nome da propriedade|Descrição|  
 |-------------------|-----------------|  
 |CacheDirectory|O nome do diretório no sistema de arquivo onde os pacotes de tipo de coletor armazenam informações temporárias.<br /><br /> NULL = o diretório temporário padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usado.|  
 |CacheWindow|Indica a política de retenção de dados do diretório de cache para cargas de dados com falha.<br /><br /> -1 = Retém os dados de todas as falhas de carga.<br /><br /> 0 = Não retém nenhum dado das falhas de carga.<br /><br /> *n* = reter dados de *n* falhas de carregamento anteriores, em que *n* >= 1.<br /><br /> Use o procedimento armazenado sp_syscollector_set_cache_window para alterar esse valor.|  

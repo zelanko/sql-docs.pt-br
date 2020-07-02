@@ -16,15 +16,15 @@ ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8020f8e29de1c8c765f288336e806d4a9ce15b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ec79644005e599fc17bada65c49d6f1516539fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734918"
 ---
 # <a name="allocating-an-environment-handle"></a>Alocando um identificador de ambiente
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Antes que um aplicativo possa chamar qualquer função ODBC, ele deve inicializar o ambiente de ODBC e alocar um identificador de ambiente. Trata-se do identificador de contexto global e do espaço reservado para os demais identificadores no ODBC. Faça isso chamando **SQLAllocHandle** com o parâmetro *HandleType* definido como SQL_HANDLE_ENV e *InputHandle* definido como SQL_NULL_HANDLE.  
   

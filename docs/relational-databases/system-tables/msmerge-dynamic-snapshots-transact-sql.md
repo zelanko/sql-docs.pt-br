@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58aa7d6bb0789adcca406ac9733759c4d9762301
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 36d16c7a23f2c586378136b6dd045231941708e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832289"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736774"
 ---
 # <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSmerge_dynamic_snapshots** rastreia o local do instantâneo de dados filtrados para cada partição definida para uma publicação de mesclagem com filtros de linha com parâmetros. Essa tabela é armazenada no banco de dados de **publicação** .  
   

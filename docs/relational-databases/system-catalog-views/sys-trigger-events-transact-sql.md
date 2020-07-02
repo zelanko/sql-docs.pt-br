@@ -20,15 +20,15 @@ ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a4a15ab9d38297ee1376d70a817efcf603d47df
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 71eefe5aca3271ca76f996ec255ce2f34c3a9ab1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833880"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733440"
 ---
 # <a name="systrigger_events-transact-sql"></a>sys.trigger_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contém uma linha por evento para a qual um gatilho é acionado.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82833880"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**\<Colunas herdadas de sys. Events>**|Não aplicável|Herda as colunas **object_id**, **Type** **type_desc** de [Sys. Events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
+|**\<Columns inherited from sys.events>**|Não Aplicável|Herda as colunas **object_id**, **Type** **type_desc** de [Sys. Events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
 |**is_first**|**bit**|O gatilho é marcado para ser o primeiro a ser acionado para este evento.|  
 |**is_last**|**bit**|O gatilho é marcado para ser o último a ser acionado para este evento.|  
 |**event_group_type**|**int**|Grupo de eventos no qual o gatilho é criado, ou NULL quando não é criado em um grupo de eventos.|  

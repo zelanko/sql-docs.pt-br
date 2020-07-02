@@ -28,15 +28,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e4cfa5ef312bc9048a53405a6c1083183b10054
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733659"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Atualizando dados que usam diagramas de atualização XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Ao atualizar os dados existentes, você deve especificar os **\<before>** blocos e **\<after>** . Os elementos especificados nos **\<before>** blocos e **\<after>** descrevem a alteração desejada. O updategram usa os elementos que são especificados no **\<before>** bloco para identificar os registros existentes no banco de dados. Os elementos correspondentes no **\<after>** bloco indicam como os registros devem ser examinados após a execução da operação de atualização. A partir dessas informações, o updategram cria uma instrução SQL que corresponde ao **\<after>** bloco. O diagrama de atualização usa esta instrução para atualizar o banco de dados.  
   
  Este é o formato do diagrama de atualização para uma operação de atualização:  
@@ -94,7 +94,7 @@ ms.locfileid: "84529774"
   
 -   A maioria dos exemplos usa o banco de dados de exemplo do AdventureWorks. Todas as atualizações são aplicadas às tabelas deste banco de dados. É possível restaurar o banco de dados AdventureWorks.  
   
-### <a name="a-updating-a-record"></a>A. Atualizando um registro  
+### <a name="a-updating-a-record"></a>a. Atualizando um registro  
  O diagrama de atualização a seguir atualiza o sobrenome do funcionário para Silva na tabela Person.Contact no banco de dados do AdventureWorks. O diagrama de atualização não especifica nenhum esquema de mapeamento; portanto, o diagrama de atualização usa o mapeamento padrão.  
   
 ```  

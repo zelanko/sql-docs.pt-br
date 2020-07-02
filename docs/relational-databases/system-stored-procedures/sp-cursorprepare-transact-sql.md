@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733335"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Compila a instrução de cursor ou processa em lotes em um plano de execução, mas não cria o cursor. A instrução compilada pode ser usada posteriormente por sp_cursorexecute. Esse procedimento, combinado com sp_cursorexecute, tem a mesma função que sp_cursoropen, mas é dividido em duas fases. sp_cursorprepare é invocado especificando ID = 3 em um pacote TDS (tabela de dados tabulares).  
   
@@ -111,7 +111,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0|Sucesso|  
+|0|Êxito|  
 |0x0001|Falha|  
 |1FF6|Não foi possível retornar metadados.<br /><br /> Observação: o motivo para isso é que a instrução não produz um conjunto de resultados; por exemplo, é uma instrução INSERT ou DDL.|  
   
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  Quando *stmt* é parametrizado e o valor de PARAMETERIZED_STMT *scrollopt* é on, o formato da cadeia de caracteres é o seguinte:  
   
- { * \< nome da variável local> * * \< tipo de dados>* } [,... *n* ]  
+ { *\<local variable name>**\<data type>* } [ ,... *n* ]  
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_cursorexecute](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

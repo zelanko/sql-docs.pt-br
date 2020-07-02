@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d47f28f10cb6491d65a5f15df7e334095618a55a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0d0069d69b0d2aa289977bd1211233b470093a73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733534"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>exibições do catálogo de função de partição (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Esta seção contém as exibições de catálogo a seguir.  
   

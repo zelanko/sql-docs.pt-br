@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b57d657f0f6b1113db6b36bfa7c559110f77e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734728"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retorna o plano de execução em formato XML para o lote especificado pelo identificador de plano. O plano especificado pelo identificador do plano pode estar em cache ou estar sendo executado.  
   
@@ -87,7 +87,7 @@ Os *plan_handle* podem ser obtidos nos seguintes objetos de gerenciamento dinâm
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como usar a exibição de gerenciamento dinâmico **sys.dm_exec_query_plan**.  
   
- Para visualizar os Showplans XML, execute as consultas a seguir no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e clique em **ShowPlanXML** na coluna **query_plan** da tabela retornada por **sys.dm_exec_query_plan**. O plano de execução XML é exibido no painel de resumo do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para salvar o Showplan XML em um arquivo, clique com o botão direito do mouse em **ShowplanXml** na coluna **query_plan** , clique em **salvar resultados como**, nomeie o arquivo no formato \< *file_name*>. sqlplan; por exemplo, MyXMLShowplan. sqlplan.  
+ Para visualizar os Showplans XML, execute as consultas a seguir no Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e clique em **ShowPlanXML** na coluna **query_plan** da tabela retornada por **sys.dm_exec_query_plan**. O plano de execução XML é exibido no painel de resumo do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para salvar o Showplan XML em um arquivo, clique com o botão direito do mouse em **ShowplanXml** na coluna **query_plan** , clique em **salvar resultados como**, nomeie o arquivo no formato \<*file_name*> . sqlplan; por exemplo, MyXMLShowplan. sqlplan.  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>a. Recuperar o plano de consulta em cache para uma consulta ou lote Transact-SQL de execução lenta  
  Planos de Consulta para vários tipos de lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], como lotes ad hoc, procedimentos armazenados e funções definidas pelo usuário, são colocados em cache em uma área da memória denominada cache de plano. Cada plano de consulta em cache é identificado por um identificador exclusivo chamado de identificador de plano. Você pode especificar esse identificador de plano com a exibição de gerenciamento dinâmico **sys.dm_exec_query_plan** para recuperar o plano de execução para uma consulta ou lote [!INCLUDE[tsql](../../includes/tsql-md.md)] em particular.  

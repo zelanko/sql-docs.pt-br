@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5be48c81dc5851ee43668ef8ca141409acecd7d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0dd71c3d191728b04e2311017d1e446ebecaf6db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734606"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Exibe os identificadores de arquivos que o NSO (proprietário do namespace) conhece. Os identificadores FileStream que um cliente obteve usando **OpenSqlFilestream** são exibidos por essa exibição.  
   
-|Coluna|Tipo|Descrição|  
+|Coluna|Tipo|Description|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary (8)**|Mostra o endereço da estrutura NSO interna associada à alça do cliente. Permite valor nulo.|  
 |**creation_request_id**|**int**|Mostra um campo da solicitação de E/S REQ_PRE_CREATE usada para criar este identificador. Não permite valor nulo.|  

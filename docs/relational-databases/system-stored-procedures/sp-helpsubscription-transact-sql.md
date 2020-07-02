@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736944"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Lista informações de assinatura associadas a uma publicação, um artigo, Assinante ou conjunto de assinaturas específico. Esse procedimento armazenado é executado no Publicador, em um banco de dados de publicação.  
   

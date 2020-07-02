@@ -20,15 +20,15 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d15b171b20e81ea928528dc2124a0f33b697d2a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0d544d95cc2a0159a3502544489cf58514fe19fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734768"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retorna estatísticas detalhadas sobre a operação do otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar esta exibição ao ajustar uma carga de trabalho para identificar problemas ou melhorias na otimização de consulta. Por exemplo, você pode usar o número total de otimizações, o valor de tempo decorrido e o valor de custo final para comparar as otimizações de consulta da carga de trabalho atual e quaisquer mudanças observadas durante o processo de ajuste. Alguns contadores fornecem dados que são relevantes apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uso de diagnóstico interno. Esses contadores são marcados como "Somente interno”.  
   
@@ -52,7 +52,7 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
   
 |Contador|Ocorrência|Valor|  
 |-------------|----------------|-----------|  
-|otimizações|Número total de otimizações.|Não aplicável|  
+|otimizações|Número total de otimizações.|Não Aplicável|  
 |tempo decorrido|Número total de otimizações.|Tempo médio decorrido por otimização de uma instrução individual (consulta), em segundos.|  
 |custo final|Número total de otimizações.|Custo estimado médio para um plano otimizado em unidades de custo interno.|  
 |plano trivial|Somente interno|Somente interno|  
@@ -71,26 +71,26 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
 |estágio de ganho 1 para estágio 2|Somente interno|Somente interno|  
 |tempo limite|Somente interno|Somente interno|  
 |limite de memória excedido|Somente interno|Somente interno|  
-|insert stmt|Número de otimizações existentes para instruções INSERT.|Não aplicável|  
-|delete stmt|Número de otimizações existentes para instruções DELETE.|Não aplicável|  
-|update stmt|Número de otimizações existentes para instruções UPDATE.|Não aplicável|  
-|contém subconsulta|Número de otimizações para uma consulta que contém ao menos uma subconsulta.|Não aplicável|  
+|insert stmt|Número de otimizações existentes para instruções INSERT.|Não Aplicável|  
+|delete stmt|Número de otimizações existentes para instruções DELETE.|Não Aplicável|  
+|update stmt|Número de otimizações existentes para instruções UPDATE.|Não Aplicável|  
+|contém subconsulta|Número de otimizações para uma consulta que contém ao menos uma subconsulta.|Não Aplicável|  
 |unnest falhou|Somente interno|Somente interno|  
 |tabelas|Número total de otimizações.|Calcule o número médio de tabelas referenciadas por consulta otimizada.|  
-|dicas|Número de vezes que alguma dica foi especificada. Dicas contadas incluem: dicas de consulta JOIN, GROUP, UNION e FORCE ORDER, a opção definida FORCE PLAN e dicas de associação.|Não aplicável|  
-|dica order|Número de vezes que dica de ordem de força foi especificada.|Não aplicável|  
-|dica de associação|Número de vezes que o algoritmo de junção foi forçado por uma dica de associação.|Não aplicável|  
-|exibir referência|Número de vezes que uma exibição foi referenciada em uma consulta.|Não aplicável|  
-|consulta remota|Número de otimizações em que a consulta referencia ao menos uma fonte de dados remota, como uma tabela com um nome de quatro partes ou um resultado OPENROWSET.|Não aplicável|  
+|dicas|Número de vezes que alguma dica foi especificada. Dicas contadas incluem: dicas de consulta JOIN, GROUP, UNION e FORCE ORDER, a opção definida FORCE PLAN e dicas de associação.|Não Aplicável|  
+|dica order|Número de vezes que dica de ordem de força foi especificada.|Não Aplicável|  
+|dica de associação|Número de vezes que o algoritmo de junção foi forçado por uma dica de associação.|Não Aplicável|  
+|exibir referência|Número de vezes que uma exibição foi referenciada em uma consulta.|Não Aplicável|  
+|consulta remota|Número de otimizações em que a consulta referencia ao menos uma fonte de dados remota, como uma tabela com um nome de quatro partes ou um resultado OPENROWSET.|Não Aplicável|  
 |DOP máximo|Número total de otimizações.|Valor efetivo médio MAXDOP para um plano otimizado. Por padrão, MAXDOP efetivo é determinado pela opção de configuração de servidor **grau máximo de paralelismo** e pode ser substituído por uma consulta específica pelo valor da dica de consulta MAXDOP.|  
 |nível máximo de recursão|Número de otimizações em que um nível MAXRECURSION maior que 0 foi especificado com a dica de consulta.|Nível MAXRECURSION médio em otimizações onde um nível máximo de recursão especificado com a dica de consulta.|  
 |exibições indexadas carregadas|Somente interno|Somente interno|  
 |exibições indexadas correspondentes|Número de otimizações em que uma ou mais exibições indexadas foram correspondidas.|Número médio de exibições correspondentes.|  
 |exibições indexadas usadas|Número de otimizações em que uma ou mais exibições indexadas são usadas no plano de saída depois de correspondidas.|Número médio de exibições usadas.|  
 |exibições indexadas atualizadas|Número de otimizações de uma instrução DML que produzem um plano que mantém uma ou mais exibições indexadas.|Número médio de exibições mantidas.|  
-|solicitação de cursor dinâmico|Número de otimizações em que uma solicitação de cursor dinâmico foi especificada.|Não aplicável|  
-|solicitação de cursor de avanço rápido|Número de otimizações em que uma solicitação de cursor de avanço rápido foi especificada.|Não aplicável|  
-|merge stmt|Número de otimizações existentes para instruções MERGE.|Não aplicável|  
+|solicitação de cursor dinâmico|Número de otimizações em que uma solicitação de cursor dinâmico foi especificada.|Não Aplicável|  
+|solicitação de cursor de avanço rápido|Número de otimizações em que uma solicitação de cursor de avanço rápido foi especificada.|Não Aplicável|  
+|merge stmt|Número de otimizações existentes para instruções MERGE.|Não Aplicável|  
   
 ## <a name="examples"></a>Exemplos  
   

@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bf2057156191cb45b3528e691d78630bb3aedf4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9dfbe540ff5234d70a7da60ba50dd4f3e19e1548
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736620"
 ---
 # <a name="sha-property-securitycertificate-class"></a>Propriedade SHA (classe SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o atributo de impressão digital de SHA do certificado de segurança.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,7 +36,7 @@ object.SHA [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) que representa um certificado de segurança.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

@@ -19,15 +19,15 @@ ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6f7e9d8d9ab99ebe4a7c5749033eacf85b8feb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 948b2b1e9ee9a8827322cf05fcb2f812d925de93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734430"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Interpreta o valor SYS_CHANGE_COLUMNS retornado pela função CHANGEtable (CHANGES...). Permite que um aplicativo determine se a coluna especificada deve ser incluída nos valores retornados para SYS_CHANGE_COLUMNS.  
   
@@ -53,7 +53,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>Valores de retorno  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK retorna os seguintes valores.  
   
-|Valor retornado|Descrição|  
+|Retornar valor|Descrição|  
 |------------------|-----------------|  
 |0|A coluna especificada não está na lista de *change_columns* .|  
 |1|A coluna especificada está na lista de *change_columns* .|  

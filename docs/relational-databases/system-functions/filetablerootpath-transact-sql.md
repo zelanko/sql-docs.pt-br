@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1311ddfe90beafa3f3d89b27e510eac34aa5ae94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734397"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o caminho UNC no nível raiz de uma FileTable específica ou do banco de dados atual.  
   
@@ -41,11 +41,11 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  O nome da FileTable. *FileTable_name* é do tipo **nvarchar**. Esse é um parâmetro opcional. O valor padrão é o banco de dados atual. Especificar *schema_name* também é opcional. Você pode passar nulo para *FileTable_name* usar o valor do parâmetro padrão  
   
  *\@Option*  
- Uma expressão de inteiro que define como o componente do servidor do caminho deve ser formatado. a opção pode ter um dos seguintes valores: * \@*  
+ Uma expressão de inteiro que define como o componente do servidor do caminho deve ser formatado. a * \@ opção* pode ter um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**0**|Retorna o nome do servidor convertido no formato NetBIOS, por exemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Este é o valor padrão.|  
+|**0**|Retorna o nome do servidor convertido no formato NetBIOS, por exemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Esse é o valor padrão.|  
 |**1**|Retorna o nome do servidor sem conversão, por exemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Retorna o caminho completo do servidor, por exemplo:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
@@ -65,7 +65,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
  Para obter mais informações, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo de um arquivo em tempo de execução usando as funções **funções filetablerootpath** e **GetFileNamespacePath** juntas, conforme mostrado no exemplo a seguir. Por padrão, a função **GetFileNamespacePath** retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
   
 ```sql  

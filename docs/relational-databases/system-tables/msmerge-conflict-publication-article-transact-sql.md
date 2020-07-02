@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 070b8cfe44190f89db8e7adf142debbc29e64d15
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 013e2d1512744d236ac3d8bdd5611e1a2427c2f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736800"
 ---
 # <a name="msmerge_conflict_publication_article-transact-sql"></a>MSmerge_conflict_publication_article (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSmerge_conflict_publication_article** contém informações sobre linhas que foram desfeitas em conflito ou alterações de linha que não foram realizadas para obter a convergência de dados. Existe uma tabela de conflitos para cada tabela replicada na publicação, onde o nome da tabela de conflitos é anexada com o nome da publicação e do artigo. Essas tabelas de conflitos específicas do artigo existem no banco de dados usado para registro de conflito, geralmente o banco de dados de publicação, mas pode ser o banco de dados de assinatura se houver log de conflitos descentralizado.  
   

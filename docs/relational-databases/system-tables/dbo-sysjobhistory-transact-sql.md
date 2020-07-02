@@ -1,5 +1,5 @@
 ---
-title: dbo. no sysjobhistory (Transact-SQL) | Microsoft Docs
+title: dbo.sysjobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ff3c872b195123608c12515fb3c19a03c3e3f44
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43c35f7963ec7b817f6bcf98f95f950c4fc0a5fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736882"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Contém informações sobre a execução de trabalhos agendados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
   
@@ -53,7 +53,7 @@ Essa tabela é armazenada no banco de dados **msdb** .
 |**operator_id_netsent**|**int**|ID do operador notificado por uma mensagem quando o trabalho foi concluído.|  
 |**operator_id_paged**|**int**|ID do operador notificado por pager quando o trabalho foi concluído.|  
 |**retries_attempted**|**int**|Número de tentativas repetidas para o trabalho ou a etapa.|  
-|**servidor**|**sysname**|Nome do servidor no qual o trabalho foi executado.|  
+|**server**|**sysname**|Nome do servidor no qual o trabalho foi executado.|  
   
   ## <a name="example"></a>Exemplo
  A consulta a seguir [!INCLUDE[tsql](../../includes/tsql-md.md)] converterá as colunas **run_time** e **run_duration** em um formato mais amigável.  Execute o script em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .

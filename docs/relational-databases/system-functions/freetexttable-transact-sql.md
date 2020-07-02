@@ -22,15 +22,15 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae1f88ba7694f99546382d9b1450aea4c555f4d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734383"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   É uma função usada na [cláusula from](../../t-sql/queries/from-transact-sql.md) de uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução SELECT para executar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisa de texto completo em colunas indexadas de texto completo que contêm tipos de dados baseados em caracteres. Essa função retorna uma tabela de zero, uma ou mais linhas para as colunas que contêm valores que correspondem ao significado e não apenas às palavras exatas do texto no *freetext_string*especificado. FREETEXTTABLE é referenciada como se fosse um nome de tabela comum.  
   
@@ -84,7 +84,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  Quando especificado como uma cadeia de caracteres, *language_term* corresponde ao valor da coluna **alias** no modo de exibição de compatibilidade [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).  A cadeia de caracteres precisa ser colocada entre aspas, como em '*language_term*'. Quando especificado como um inteiro, *language_term* é a LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal da LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda.  
   
- Se o valor estiver no formato DBCS (conjunto de caracteres de byte duplo) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o o converterá em Unicode.  
+ Se o valor estiver no formato DBCS (conjunto de caracteres de byte duplo), o o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converterá em Unicode.  
   
  Se o idioma especificado não for válido ou se não houver nenhum recurso instalado que corresponda ao idioma, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. Para usar os recursos de idioma neutro, especifique 0x0 como *language_term*.  
   
@@ -125,7 +125,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ```  
   
 ### <a name="b-using-freetext-in-an-inner-join"></a>B. Usando FREETEXT em uma INNER JOIN  
- O exemplo a seguir retorna a descrição e a classificação de qualquer produto com uma descrição que corresponda ao `high level of performance`significado de.  
+ O exemplo a seguir retorna a descrição e a classificação de qualquer produto com uma descrição que corresponda ao significado de `high level of performance` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. Especificando o idioma e as correspondências de classificação mais alta  
- O exemplo a seguir é idêntico e mostra o uso dos `LANGUAGE`parâmetros *language_term* e *top_n_by_rank* .  
+ O exemplo a seguir é idêntico e mostra o uso dos `LANGUAGE` parâmetros *language_term* e *top_n_by_rank* .  
   
 ```  
 USE AdventureWorks2012;  

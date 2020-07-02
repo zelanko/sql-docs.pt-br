@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d7a464f3faba633dd09be12ef4c3d006ef19ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68055367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738591"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Traduz o bitmask de permissões retornado pelo Rastreamento do SQL em uma tabela de nomes de permissões.  
   
@@ -43,7 +43,7 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *geral*  
+ *nível*  
  É o tipo de protegível ao qual a permissão é aplicada. o *nível* é **nvarchar (60)**.  
   
  *perms*  
@@ -53,13 +53,13 @@ sys.fn_translate_permissions ( level , perms )
  **table**  
   
 ## <a name="remarks"></a>Comentários  
- O valor retornado na coluna **permissões** de um rastreamento do SQL é uma representação de inteiro de um bitmask usado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo para calcular as permissões efetivas. Cada um dos 25 tipos de protegíveis tem seu próprio conjunto de permissões com valores numéricos correspondentes. **Sys. fn_translate_permissions** converte esse bitmask em uma tabela de nomes de permissões.  
+ O valor retornado na coluna **permissões** de um rastreamento do SQL é uma representação de inteiro de um bitmask usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para calcular as permissões efetivas. Cada um dos 25 tipos de protegíveis tem seu próprio conjunto de permissões com valores numéricos correspondentes. **Sys. fn_translate_permissions** converte esse bitmask em uma tabela de nomes de permissões.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
   
 ## <a name="example"></a>Exemplo  
- A consulta a seguir `sys.fn_builtin_permissions` usa para exibir as permissões que se aplicam a certificados e `sys.fn_translate_permissions` , em seguida, usa para retornar os resultados do bitmask de permissões.  
+ A consulta a seguir usa `sys.fn_builtin_permissions` para exibir as permissões que se aplicam a certificados e, em seguida, usa `sys.fn_translate_permissions` para retornar os resultados do bitmask de permissões.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1864aec83a60c83a1ff10bb0c5e3f814631c27fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304880"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733259"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna os nomes e valores de um conjunto especificado de propriedades sobre um índice espacial de **geografia** . O resultado é retornado em um formato de tabela. Você pode escolher retornar um conjunto principal de propriedades ou todas as propriedades do índice.  
   
@@ -53,7 +53,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir `sp_help_spatial_geography_index` usa para investigar o índice espacial de **geografia** **SIndx_SpatialTable_geography_col2** definido na tabela **geography_col** para o exemplo de consulta fornecido em ** \@QS**. Este exemplo retorna apenas as propriedades principais do índice especificado.  
+ O exemplo a seguir usa `sp_help_spatial_geography_index` para investigar o índice espacial de **geografia** **SIndx_SpatialTable_geography_col2** definido na tabela **geography_col** para o exemplo de consulta fornecido em ** \@ QS**. Este exemplo retorna apenas as propriedades principais do índice especificado.  
   
 ```  
 declare @qs geography  

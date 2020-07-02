@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc6bad2dc55c611d45b728de4a23cf60c4b151cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a75bc4a684382bb80d1602202f6eba18d799cdfd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736596"
 ---
 # <a name="securitycertificate-class"></a>Classe SecurityCertificate
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  A [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) representa um certificado de segurança. Um certificado é uma instrução assinada digitalmente que associa o valor de uma chave pública à instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que contém a chave privada correspondente. O certificado é emitido de uma autoridade de certificação.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  A [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) representa um certificado de segurança. Um certificado é uma instrução assinada digitalmente que associa o valor de uma chave pública à instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , que contém a chave privada correspondente. O certificado é emitido de uma autoridade de certificação.  
   
  Com a [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md), você pode executar estas tarefas:  
   

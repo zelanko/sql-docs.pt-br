@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6304e6381b9bbfcc17b218122631d06293e15830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734709"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Retorna o plano de execução de consulta para solicitações em andamento. Use essa DMV para recuperar o Showplan XML com estatísticas transitórias. 
 
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Contém a representação Showplan do tempo de execução do plano de execução de consulta especificado com *plan_handle* que contém estatísticas parciais. O Showplan está em formato XML. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário. Anulável.|
 
 ## <a name="remarks"></a>Comentários
-Essa função do sistema está disponível a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] partir do SP1. Consulte KB [3190871](https://support.microsoft.com/help/3190871)
+Essa função do sistema está disponível a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Consulte KB [3190871](https://support.microsoft.com/help/3190871)
 
 Essa função do sistema funciona em uma infraestrutura de criação de perfil de estatísticas de execução de consulta **leves** e **Standard** . Para obter mais informações, consulte [consultar a infraestrutura de criação de perfil](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -63,23 +63,23 @@ Sob as condições a seguir, nenhuma saída SHOWPLAN é retornada na coluna **qu
   
 -   Se o plano de consulta que corresponde ao *session_id* especificado não estiver mais sendo executado, a coluna **query_plan** da tabela retornada será nula. Por exemplo, essa condição pode ocorrer se houver um atraso de tempo entre o momento em que o identificador de plano foi capturado e quando ele foi usado com **Sys. dm_exec_query_statistics_xml**.  
     
-Devido a uma limitação no número de níveis aninhados permitido no tipo de dados **XML** , **Sys. dm_exec_query_statistics_xml** não pode retornar planos de consulta que atendam ou ultrapassem 128 níveis de elementos aninhados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condição evitava que o plano de consulta retornasse e gerasse um erro 6335. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versões posteriores, a coluna **query_plan** retorna NULL.   
+Devido a uma limitação no número de níveis aninhados permitido no tipo de dados **XML** , **Sys. dm_exec_query_statistics_xml** não pode retornar planos de consulta que atendam ou ultrapassem 128 níveis de elementos aninhados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condição evitava que o plano de consulta retornasse e gerasse um erro 6335. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versões posteriores, a coluna **QUERY_PLAN** retorna NULL.   
 
 ## <a name="permissions"></a>Permissões  
-Ativado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão no servidor.  
+Ativado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , requer `VIEW SERVER STATE` permissão no servidor.  
 Nas [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .
 
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>a. Examinando o plano de consulta ao vivo e as estatísticas de execução de um lote em execução  
- O exemplo a seguir consulta **Sys. dm_exec_requests** para localizar a consulta interessante e copiar `session_id` sua da saída.  
+ O exemplo a seguir consulta **Sys. dm_exec_requests** para localizar a consulta interessante e copiar sua `session_id` da saída.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- Em seguida, para obter o plano de consulta ao vivo e as estatísticas de `session_id` execução, use a função de sistema Copie com **Sys. dm_exec_query_statistics_xml**.  
+ Em seguida, para obter o plano de consulta ao vivo e as estatísticas de execução, use a `session_id` função de sistema Copie com **sys. dm_exec_query_statistics_xml**.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.

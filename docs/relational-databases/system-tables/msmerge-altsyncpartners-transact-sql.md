@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f5f46199af13e6ed0ab661c8d19d1a64710ab1d3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5deea8cedba0f78577d58bf975b8b9646c42010f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736814"
 ---
 # <a name="msmerge_altsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSmerge_altsyncpartners** rastreia a associação de quem são os parceiros de sincronização atuais para um Publicador. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
