@@ -19,15 +19,15 @@ ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ac9473dbdcc51a4c5313b27596ce38d0607d336
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665263"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
     
 > [!IMPORTANT]
@@ -46,7 +46,7 @@ ms.locfileid: "67904428"
 |-------------|---------------|-----------------|  
 |time|**datetime**|A hora (UTC) em incrementos de hora.|  
 |database_name|**nvarchar**|Nome do banco de dados de usuário.|  
-|sku|**nvarchar**|O nome da SKU. O valores possíveis são os seguintes:<br /><br /> Web<br /><br /> Business<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
+|sku|**nvarchar**|O nome da SKU. O valores possíveis são os seguintes:<br /><br /> Web<br /><br /> Empresas<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
 |usage_in_seconds|**int**|Soma do tempo de CPU usado na hora.<br /><br /> Observação: esta coluna foi preterida para v11 e não se aplica ao V12. **O valor é sempre definido como 0.**|  
 |storage_in_megabytes|**decimal**|Tamanho máximo de armazenamento para a hora, inclusive dados do banco de dados, índices, procedimentos armazenados e metadados.|  
   

@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_facets (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_facets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa9d06f18f1e5d401e730a8216d3bb43f4894e06
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25b8b7b0600fce641369c6c184b2769d107362e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678086"
 ---
 # <a name="sysxml_schema_facets-transact-sql"></a>sys.xml_schema_facets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Retorna uma linha por faceta (restrição) de uma definição de tipo XML (corresponde a **Sys. xml_types**).  
+  Retorna uma linha por faceta (restrição) de uma definição de tipo XML (corresponde a **sys.xml_types**).  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  

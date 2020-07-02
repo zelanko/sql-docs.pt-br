@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a1048a31ab0970165a82abb332e29c7f814e5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692635"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (Exibição de sistema) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A exibição **syspublications** expõe informações de publicação. Essa exibição é armazenada no banco de dados de distribuição.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**ndescrição**|**nvarchar (255)**|A entrada descritiva para a publicação.|  
+|**descrição**|**nvarchar (255)**|A entrada descritiva para a publicação.|  
 |**name**|**sysname**|O nome exclusivo associado com a publicação.|  
 |**pubid**|**int**|A coluna de identidade que fornece um ID exclusivo para a publicação.|  
 |**repl_freq**|**tinyint**|A frequência da replicação:<br /><br /> **0** = baseado em transação (transacional).<br /><br /> **1** = atualização de tabela agendada (instantâneo).|  
@@ -53,7 +53,7 @@ ms.locfileid: "68094774"
 |**alt_snapshot_folder**|**nvarchar (510)**|Especifica o local da pasta alternativa para o instantâneo.|  
 |**pre_snapshot_script**|**nvarchar (510)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Distribution Agent executará o script pré-instantâneo antes de executar qualquer script de objeto replicado, ao aplicar um instantâneo no Assinante.|  
 |**post_snapshot_script**|**nvarchar (510)**|Especifica um ponteiro para um local de arquivo **. SQL** . O Distribution Agent executará o script pós-instantâneo depois que todos os outros scripts de objeto replicado tiverem sido aplicados durante uma sincronização inicial.|  
-|**compress_snapshot**|**bit**|Especifica que o instantâneo gravado no local de *alt_snapshot_folder* deve ser compactado no formato [!INCLUDE[msCoName](../../includes/msconame-md.md)] cab. **1** significa que o instantâneo será compactado.|  
+|**compress_snapshot**|**bit**|Especifica que o instantâneo gravado no local de *alt_snapshot_folder* deve ser compactado no [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. **1** significa que o instantâneo será compactado.|  
 |**ftp_address**|**sysname**|O endereço de rede do serviço FTP para o Distribuidor. Especifica onde arquivos de instantâneo de publicação ficam localizados para serem retirados pelo Distribution Agent.|  
 |**ftp_port**|**int**|O número da porta do serviço FTP do Distribuidor. Especifica onde os arquivos de instantâneo de publicação estão localizados para o Agente de Distribuição a serem coletados.|  
 |**ftp_subdirectory**|**nvarchar (510)**|Especifica onde os arquivos de instantâneo estarão disponíveis para serem retirados pelo Distribution Agent se a publicação oferecer suporte a arquivos de propagação usando o FTP.|  
@@ -64,13 +64,13 @@ ms.locfileid: "68094774"
 |**centralized_conflicts**|**bit**|Especifica se registros de conflito são ou não armazenados no Publicador:<br /><br /> **0** = registros de conflitos são armazenados no Publicador e no Assinante que causou o conflito.<br /><br /> **1** = registros de conflitos são armazenados no Publicador.|  
 |**conflict_retention**|**int**|Especifica o período de retenção para registros de conflito, em dias.|  
 |**conflict_policy**|**int**|Especifica a política de resolução de conflito seguida quando a opção de assinante de atualização enfileirado é usada. Pode ser um destes valores:<br /><br /> **1** = o Publicador vence o conflito.<br /><br /> **2** = Assinante vence o conflito.<br /><br /> **3** = a assinatura é reinicializada.|  
-|**queue_type**|**int**|Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **1** =. MSMQ, que usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] o enfileiramento de mensagens para armazenar transações.<br /><br /> **2** =. SQL, que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Observação: o [!INCLUDE[msCoName](../../includes/msconame-md.md)] uso do enfileiramento de mensagens foi preterido e não tem mais suporte.|  
+|**queue_type**|**int**|Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **1** =. MSMQ, que usa o [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens para armazenar transações.<br /><br /> **2** =. SQL, que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Observação: o uso do [!INCLUDE[msCoName](../../includes/msconame-md.md)] enfileiramento de mensagens foi preterido e não tem mais suporte.|  
 |**ad_guidname**|**sysname**|Especifica se a publicação é publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Um GUID (identificador global exclusivo) válido especifica que a publicação é publicada no Active Directory e o GUID é o objectGUID de publicação do Active Directory correspondente. Se for NULL, a publicação não será publicada no Active Directory.<br /><br /> Observação: não há mais suporte para a publicação no Active Directory.|  
-|**backward_comp_level**|**int**|Nível de compatibilidade de banco de dados, que pode ser um dos valores seguintes:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Nível de compatibilidade de banco de dados, que pode ser um dos valores seguintes:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**allow_initialize_from_backup**|**bit**|Indica se os assinantes podem inicializar uma assinatura para esta publicação a partir de um backup em vez de um instantâneo inicial. **1** significa que as assinaturas podem ser inicializadas a partir de um backup e **0** significa que elas não podem. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binário (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Indica se replicação de esquema tem suporte para a publicação.<br /><br /> **1** = as instruções DDL executadas no Publicador são replicadas.<br /><br /> **0** = indica que as instruções DDL não são replicadas. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).|  
-|**options**|**int**|Um bitmap que especifica opções de publicação adicionais, onde os valores de opção bit a bit são os seguintes:<br /><br /> **0x1** -habilitado para replicação ponto a ponto.<br /><br /> **0x2** -publicar apenas alterações locais para replicação ponto a ponto.<br /><br /> **0x4** -habilitado para[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.<br /><br /> **0x8** -habilitado para detecção de conflitos ponto a ponto.|  
+|**options**|**int**|Um bitmap que especifica opções de publicação adicionais, onde os valores de opção bit a bit são os seguintes:<br /><br /> **0x1** -habilitado para replicação ponto a ponto.<br /><br /> **0x2** -publicar apenas alterações locais para replicação ponto a ponto.<br /><br /> **0x4** -habilitado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não.<br /><br /> **0x8** -habilitado para detecção de conflitos ponto a ponto.|  
 |**originator_id**|**smallint**|Identifica cada nó em uma topologia de replicação ponto a ponto com a finalidade de detecção de conflito. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Consulte Também  

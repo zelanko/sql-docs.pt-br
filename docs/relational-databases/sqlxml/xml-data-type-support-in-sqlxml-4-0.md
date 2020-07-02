@@ -15,15 +15,15 @@ ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afaee239422b557b53117441f36c79d1180802db
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 8dbebdd4908b4721ce91cd5994a6a25975ebdd42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306095"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665504"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Suporte ao tipo de dados xml no SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do, o oferece suporte a dados tipados XML usando o tipo de dados **XML** . Este tópico fornece informações sobre como o SQLXML 4,0 reconhece instâncias do tipo de dados **XML** e implementa o suporte para eles.  
   
 ## <a name="working-with-xml-data-types"></a>Trabalhando com tipos de dados xml  

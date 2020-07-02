@@ -13,15 +13,15 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f7111f4e0f67e1102712c140737b68914feada6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652018"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Obtém o **stmt_sql_handle** para uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução sob o tipo de parametrização fornecido (simples ou forçado). Isso permite que você faça referência a consultas armazenadas no Repositório de Consultas usando seus **stmt_sql_handle** quando souber seu texto.  
   
@@ -57,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>Colunas retornadas  
  A tabela a seguir lista as colunas que sys. fn_stmt_sql_handle_from_sql_stmt retorna.  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|O identificador SQL.|  
 |**query_sql_text**|**nvarchar(max)**|O texto da [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução.|  
@@ -72,7 +72,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  Requer a permissão **Execute** no banco de dados e a permissão **delete** nas exibições do catálogo do repositório de consultas.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir executa uma instrução e, em seguida `sys.fn_stmt_sql_handle_from_sql_stmt` , usa para retornar o identificador SQL dessa instrução.  
+ O exemplo a seguir executa uma instrução e, em seguida, usa `sys.fn_stmt_sql_handle_from_sql_stmt` para retornar o identificador SQL dessa instrução.  
   
 ```  
 SELECT * FROM sys.databases;   

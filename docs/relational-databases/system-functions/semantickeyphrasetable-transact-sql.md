@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662577"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma tabela com zero, uma ou mais linhas para essas frases-chave associadas às colunas especificadas da tabela especificada.  
   
@@ -50,7 +50,7 @@ SEMANTICKEYPHRASETABLE
   
  Esse nome pode ser um nome de uma a quatro partes, mas um nome de servidor remoto não é permitido.  
   
- **pilha**  
+ **column**  
  Nome da coluna indexada para a qual os resultados devem ser retornados. A coluna deve ter indexação semântica habilitada.  
   
  **column_list**  
@@ -67,12 +67,12 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>Tabela retornada  
  A tabela a seguir descreve as informações sobre as frases-chave que podem ser retornadas por essa função de conjunto de linhas.  
   
-|Column_name|Type|Descrição|  
+|Column_name|Tipo|Description|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|ID da coluna da qual a frase de chave atual foi extraída e indexada.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
 |**document_key**|**\***<br /><br /> Essa chave corresponde ao tipo da chave exclusiva na tabela de origem.|O valor da chave exclusiva do documento ou linha a partir da qual a frase-chave atual foi indexada.|  
 |**keyphrase**|**NVARCHAR**|A frase-chave localizada na coluna identificada por column_id e associada ao documento especificado por document_key.|  
-|**placar**|**real**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave no mesmo documento na coluna indexada.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
+|**placar**|**FOTO**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave no mesmo documento na coluna indexada.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Para obter mais informações, consulte [Localizar frases-chave em documentos com pesquisa semântica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  

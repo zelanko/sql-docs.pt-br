@@ -1,5 +1,5 @@
 ---
-title: dbo. sysalerts (Transact-SQL) | Microsoft Docs
+title: Alertas de dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 277cd9ae3fdbe2414c9c3eb96208e79730ebdde6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6169691af84576e37a8f4b5a7cfc09757305c95b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813878"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675327"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada alerta. Um alerta é uma mensagem enviada em resposta a um evento. Um alerta pode encaminhar mensagens além do ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e um alerta pode ser uma mensagem de email ou de pager. Um alerta também pode gerar uma tarefa.  Essa tabela é armazenada no banco de dados **msdb** .
   
@@ -61,7 +61,7 @@ ms.locfileid: "82813878"
   
  ## <a name="remarks"></a>Comentários
 
-A tabela a seguir mostra os valores para o include_event_description bitmask. O valor decimal é retornado por dbo. sysalerts. 
+A tabela a seguir mostra os valores para o include_event_description bitmask. O valor decimal é retornado por dbo.sysalertas. 
 
 |decimal | binary | que significa |
 |------|------|------|

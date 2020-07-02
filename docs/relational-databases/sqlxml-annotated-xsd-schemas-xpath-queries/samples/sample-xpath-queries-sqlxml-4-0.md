@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1485221af02834e741d32dde5fd6ad45aaacdfe
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 76cdf55452ff2545063d8bc15c8347281fc46e57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884012"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649270"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Consultas XPath de exemplo (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Esta seção apresenta exemplos de consultas XPath para SQLXML 4.0. Para fins de ilustração, essas consultas XPath de exemplo são especificadas em um modelo executado usando o ADO. Por isso, você deve usar um arquivo de esquema de mapeamento, SampleSchema1.xml, também fornecido nesta seção. Salve este arquivo no diretório onde seus modelos estão armazenados.  
   
 > [!NOTE]  

@@ -1,5 +1,6 @@
 ---
 title: sys. dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
+description: Exibe informações sobre arquivos de ponto de verificação, incluindo tamanho do arquivo, local físico e ID da transação. Saiba como essa exibição difere em versões do SQL Server.
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3db08ac05d88bcea9f6b138ab08a48fd61a675fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ddf365b81a6e973da8348ad011dea9e23aabba50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830840"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677525"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "82830840"
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]e posterior  
  A tabela a seguir descreve as colunas do `sys.dm_db_xtp_checkpoint_files` , começando com **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|A ID do contêiner (representado como um arquivo com o tipo FILESTREAM em sys.database_files) da qual fazem parte os dados ou o arquivo delta. Junções com file_id em [Sys. database_files &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID do contêiner, do qual a raiz, os dados ou o arquivo Delta fazem parte. Une-se com file_guid na tabela sys. database_files.|  
@@ -69,7 +70,7 @@ ms.locfileid: "82830840"
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  A tabela a seguir descreve as colunas para `sys.dm_db_xtp_checkpoint_files` , para **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|A ID do contêiner (representado como um arquivo com o tipo FILESTREAM em sys.database_files) da qual fazem parte os dados ou o arquivo delta. Junções com file_id em [Sys. database_files &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|O GUID do contêiner do qual fazem parte os dados ou o arquivo delta.|  

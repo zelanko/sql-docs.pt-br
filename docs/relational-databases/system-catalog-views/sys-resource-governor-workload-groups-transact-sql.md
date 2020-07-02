@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fac7eaf3916c773b86b59c6819d577fcc1b8a438
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a5438fc11b522471029fdb9c849912b5028e670d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665398"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna a configuração armazenada do grupo de cargas de trabalho no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada grupo de carga de trabalho pode assinar apenas um pool de recursos.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ID exclusivo do grupo de carga de trabalho. Não permite valor nulo.|  
-|Nome|**sysname**|Nome do grupo de carga de trabalho. Não permite valor nulo.|  
+|name|**sysname**|Nome do grupo de carga de trabalho. Não permite valor nulo.|  
 |importance|**sysname**|**Observação:** A importância se aplica somente a grupos de carga de trabalho no mesmo pool de recursos.<br /><br /> É a importância relativa de uma solicitação no grupo de carga de trabalho. A importância é um dos seguintes, sendo que médio é o padrão: baixo, médio, alto.<br /><br /> Não permite valor nulo.|  
 |request_max_memory_grant_percent|**int**|Porcentagem máxima de concessão de memória para uma única solicitação. O valor padrão é 25. Não permite valor nulo.<br /><br /> **Observação:** Se essa configuração for maior que 50 por cento, as consultas grandes serão executadas uma de cada vez. Por isso, haverá maior risco de ser exibido o erro de falta de memória enquanto a consulta estiver sendo executada.|  
 |request_max_cpu_time_sec|**int**|Limite máximo de uso da CPU, em segundos, para uma única solicitação. O valor padrão, 0, não especifica nenhum limite. Não permite valor nulo.<br /><br /> **Observação:** Para obter mais informações, consulte [classe de evento limite de CPU excedido](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  

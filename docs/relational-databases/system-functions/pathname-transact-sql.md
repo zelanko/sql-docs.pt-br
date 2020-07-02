@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662889"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o caminho de um objeto binário grande FILESTREAM (BLOB). A API OpenSqlFilestream usa esse caminho para retornar um identificador que um aplicativo pode usar para trabalhar com os dados de BLOB usando APIs do Win32. PathName é somente leitura.  
   
@@ -45,7 +45,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  Solicitar o nome do caminho para uma coluna de qualquer outro tipo de dados ou para um columnthat **varbinary (max)** não tem o atributo de armazenamento FileStream causará um erro de tempo de compilação de consulta.  
   
  *\@Option*  
- Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de inteiro que define como o componente de servidor do caminho deve ser formatado. a opção pode ser um dos valores a seguir. * \@* O padrão é 0.  
+ Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de inteiro que define como o componente de servidor do caminho deve ser formatado. a * \@ opção* pode ser um dos valores a seguir. O padrão é 0.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -69,7 +69,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-type"></a>Tipo de retorno  
  **nvarchar(max)**  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  O valor retornado é o caminho lógico qualificado global ou NETBIOS do BLOB. PathName não retorna um endereço IP. NULL é retornado quando o FILESTREAM BLOB não foi criado.  
   
 ## <a name="remarks"></a>Comentários  

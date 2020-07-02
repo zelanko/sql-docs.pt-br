@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 707060599513e765e702755251015899eb6732d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac4e6a7bb6f850c2bec6ae8bcbf0b21bb5d3ed39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821680"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664692"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma linha para cada destino de evento em uma sessão de evento.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82821680"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
 |target_id|**int**|A identificação do destino. Essa identificação é exclusiva dentro de um objeto de sessão de evento. Não permite valor nulo.|  
-|Nome|**sysname**|O nome do destino de evento. Não permite valor nulo.|  
+|name|**sysname**|O nome do destino de evento. Não permite valor nulo.|  
 |pacote|**sysname**|O nome do pacote de eventos que contém um destino de evento. Não permite valor nulo.|  
 |module|**sysname**|O nome do módulo que contém um destino de evento. Não permite valor nulo.|  
   

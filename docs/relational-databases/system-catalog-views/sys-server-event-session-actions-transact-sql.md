@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f19e3d6588aa336c671e03179cf3936556ddb8d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dc3aa8a3dc8fd33e0e2b1a4b57968ad08f312f0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664613"
 ---
 # <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma linha para cada ação em cada evento de uma sessão de eventos.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82834031"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
 |event_id|**int**|A ID do evento. Essa ID é exclusiva de um objeto da sessão de evento. Não permite valor nulo.|  
-|Nome|**sysname**|O nome da ação. Permite valor nulo.|  
+|name|**sysname**|O nome da ação. Permite valor nulo.|  
 |pacote|**sysname**|O nome do pacote de eventos que contém um evento. Permite valor nulo.|  
 |module|**sysname**|O nome do módulo que contém o evento. Permite valor nulo.|  
   

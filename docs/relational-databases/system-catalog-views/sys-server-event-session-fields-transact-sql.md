@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 260a0252d096a926eee8ea81c68320dc3b035b31
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 29fc1b3b62b78ef6a0380087c878a34773df7c13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664701"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma linha para cada coluna personalizável explicitamente definida em eventos e destinos.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82834014"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
 |object_id|**int**|A ID do objeto ao qual este campo é associado. Não permite valor nulo.|  
-|Nome|**sysname**|O nome do campo. Não permite valor nulo.|  
+|name|**sysname**|O nome do campo. Não permite valor nulo.|  
 |value|**sql_variant**|O valor do campo. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  

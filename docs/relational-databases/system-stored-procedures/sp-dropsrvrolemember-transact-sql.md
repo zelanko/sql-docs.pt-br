@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662470"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Remove um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um usuário ou grupo do Windows de uma função de servidor fixa.
 
@@ -43,10 +43,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 
 ## <a name="arguments"></a>Argumentos
 
-**[ @loginame = ]** '_logon_'  
+**[ @loginame =]** '_logon_'  
 É o nome de um logon a ser removido da função de servidor fixa. o *logon* é **sysname**, sem padrão. o *logon* deve existir.  
 
-**[ @rolename = ]** '_função_'  
+**[ @rolename =]** '_função_'  
 É o nome de uma função de servidor. *role* é **sysname**, com um padrão de NULL. a *função* deve ser um dos seguintes valores:  
 
 -   sysadmin  

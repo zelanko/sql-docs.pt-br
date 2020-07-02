@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064213"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679055"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipos de dados (API de procedimentos armazenados estendidos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  Para usar os tipos de dados de API de procedimento armazenado estendido, inclua o arquivo de cabeçalho Srv.h em seu programa.  
   
-|Tipo de dados|Tipo de dados do SQL Server|Descrição|  
+|Tipo de dados|Tipo de dados do SQL Server|Description|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binary**|Tipo de dados **binary**, com tamanho de 0 a 8.000 bytes.|  
 |SRVBIGCHAR|**char**|Tipo de dados de **caractere**, com tamanho de 0 a 8.000 bytes.|  
 |SRVBIGVARBINARY|**varbinary**|Tipo de dados **binary** de comprimento variável, com tamanho de 0 a 8.000 bytes.|  
 |SRVBIGVARCHAR|**varchar**|Tipo de dados de **caractere** de comprimento variável, com tamanho de 0 a 8.000 bytes.|  
-|SRVBINARY|**binary**|Tipo de dados **binary**.|  
+|SRVBINARY|**binary**|tipo de dados **Binary** .|  
 |SRVBIT|**Parte**|tipo de dados **bit** .|  
 |SRVBITN|**bit null**|Tipo de dados **bit**, com valores nulos permitidos.|  
 |SRVCHAR|**char**|Tipo de dados de **caractere**.|  

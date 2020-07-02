@@ -19,15 +19,15 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677585"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Retorna informações sobre todas as esperas encontradas por threads executados durante a operação. É possível usar essa exibição agregada para diagnosticar problemas de desempenho com o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e também com consultas e lotes específicos.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "82830847"
   
  A tabela a seguir lista os tipos de espera encontrados por tarefas.  
   
-|Tipo de espera|Descrição|  
+|Tipo de espera|Description|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Ocorre durante o acesso exclusivo ao carregamento do assembly.|  
@@ -168,7 +168,7 @@ ms.locfileid: "82830847"
 |FSAGENT|Ocorre quando uma operação de E/S de arquivo FILESTREAM está aguardando um recurso do agente do FILESTREAM que está sendo usado por outra operação de E/S de arquivo.|  
 |FSTR_CONFIG_MUTEX|Ocorre quando há uma espera para que outra reconfiguração de recurso do FILESTREAM seja concluída.|  
 |FSTR_CONFIG_RWLOCK|Ocorre quando há uma espera para serializar o acesso aos parâmetros de configuração do FILESTREAM.|  
-|FT_METADATA_MUTEX|Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|  
+|FT_METADATA_MUTEX|Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|  
 |FT_RESTART_CRAWL|Ocorre quando um rastreamento de texto completo precisa ser reiniciado a partir do último ponto conhecido bom para recuperação de uma falha momentânea. A espera deixa as tarefas do trabalhador em execução na população para concluir a etapa atual ou sair dela.|  
 |FULLTEXT GATHERER|Ocorre durante a sincronização de operações de texto completo.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -379,11 +379,11 @@ ms.locfileid: "82830847"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|O texto completo está pendente na operação de metadados de fragmento. Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|  
-|FT_IFTS_RWLOCK|O texto completo está pendente na sincronização interna. Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|  
+|FT_COMPROWSET_RWLOCK|O texto completo está pendente na operação de metadados de fragmento. Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|  
+|FT_IFTS_RWLOCK|O texto completo está pendente na sincronização interna. Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|  
 |FT_IFTS_SCHEDULER_IDLE_WAIT|Tipo de espera de suspensão do agendador de texto completo. O agendador está ocioso.|  
-|FT_IFTSHC_MUTEX|O texto completo está pendente em uma operação de controle fdhost. Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|  
-|FT_IFTSISM_MUTEX|O texto completo está pendente na operação de comunicação. Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|  
-|FT_MASTER_MERGE|O texto completo está pendente na operação de mesclagem mestre. Documentado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|  
+|FT_IFTSHC_MUTEX|O texto completo está pendente em uma operação de controle fdhost. Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|  
+|FT_IFTSISM_MUTEX|O texto completo está pendente na operação de comunicação. Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|  
+|FT_MASTER_MERGE|O texto completo está pendente na operação de mesclagem mestre. Documentado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|  
   
   

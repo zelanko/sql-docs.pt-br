@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646051"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Busca um buffer de uma ou mais linhas no banco de dados. O grupo de linhas nesse buffer é chamado de *buffer de busca*do cursor. sp_cursorfetch é invocado especificando ID = 7 em um pacote TDS (tabela de dados tabulares).  
   
@@ -81,7 +81,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  :   Se nenhuma linha for retornada, os conteúdo do buffer permanecerá como era.  
   
-|*\<>rownum*|Definir como|  
+|*\<rownum>*|Definir como|  
 |------------------|------------|  
 |Se não abrir|0|  
 |Se posicionado antes do conjunto de resultados|0|  
@@ -90,7 +90,7 @@ sp_cursorfetch cursor
 |Para cursores DYNAMIC|1|  
 |Para ABSOLUTE|-1 retorna a última linha de um conjunto.<br /><br /> -2 retorna da segunda à última linha de um conjunto, e assim por diante.<br /><br /> Observação: se mais de uma linha for solicitada para ser buscada nesse caso, as duas últimas linhas do conjunto de resultados serão retornadas.|  
   
-|*\<>nRows*|Definir como|  
+|*\<nrows>*|Definir como|  
 |-----------------|------------|  
 |Se não abrir|0|  
 |Para cursores KEYSET e STATIC|Normalmente, o tamanho do conjunto de chaves atual.<br /><br /> **-m** se o cursor estiver na criação assíncrona com *m* linhas encontradas para esse ponto.|  

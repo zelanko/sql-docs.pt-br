@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be2e9ce380f9d761c29e86cef20f87556b634c3c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0b01d8ebe8f9a880e7f4a1dc06e324770dddaf1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676315"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma linha para cada réplica local e uma linha para cada réplica remota no mesmo grupo de disponibilidade Always On que uma réplica local. Cada linha contém informações sobre o estado de uma determinada réplica.  
   

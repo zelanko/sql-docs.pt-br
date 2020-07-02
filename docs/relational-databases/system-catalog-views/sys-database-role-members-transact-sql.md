@@ -20,15 +20,15 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5cc500ef8d893180804091e5f905961aa637
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665352"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retorna uma linha para cada membro de cada função de banco de dados.  Usuários de banco de dados, funções de aplicativo e outras funções de banco de dados podem ser membros de uma função de banco de dados. Para adicionar membros a uma função, use a instrução [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) com a `ADD MEMBER` opção. Ingresse com [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para retornar os nomes dos `principal_id` valores.
   
@@ -38,7 +38,7 @@ ms.locfileid: "68079476"
 |**member_principal_id**|**int**|ID principal do banco de dados do membro.|  
   
 ## <a name="permissions"></a>Permissões  
- Qualquer usuário pode exibir a própria associação de função. Para exibir outras associações de função, é necessário `db_securityadmin` associar a função de `VIEW DEFINITION` banco de dados fixa ou no banco de dados.  
+ Qualquer usuário pode exibir a própria associação de função. Para exibir outras associações de função, é necessário associar a `db_securityadmin` função de banco de dados fixa ou `VIEW DEFINITION` no banco de dados.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

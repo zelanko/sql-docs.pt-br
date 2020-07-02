@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9eb123194e6ea69a6260f9eed4f02a07a9e819ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652211"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Exibições de compatibilidade do sistema (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muitas das tabelas do sistema de versões anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são implementadas agora como um conjunto de exibições. Essas exibições são conhecidas como exibições de compatibilidade e destinam-se à compatibilidade com versões anteriores apenas. As exibições de compatibilidade expõem os mesmos metadados disponíveis em [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Entretanto, as exibições de compatibilidade não expõem quaisquer metadados relacionados a recursos introduzidos em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posteriores. Sendo assim, quando você usa recursos novos, como [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou particionamento, você deve alternar para as exibições do catálogo.  
   
@@ -45,20 +45,20 @@ ms.locfileid: "68018028"
 |**UserType**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
-|**UID**|**sysobjects**|**sys.objects**|  
-|**UID**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**uid**|**sysobjects**|**sys.objects**|  
+|**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**grantor**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**UID**|**systypes**|**sys.types**|  
-|**UID**|**sysusers**|**sys.database_principals**|  
+|**uid**|**systypes**|**sys.types**|  
+|**uid**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
 |**gid**|**sysusers**|**sys.database_principals**|  
-|**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  Quando referenciado em um banco de dados de usuário, as tabelas do sistema que foram anunciadas como preteridas no SQL Server 2000 (como **syslanguages** ou **syscacheobjects**) agora estão associadas à exibição de compatibilidade traseira no esquema **Sys** . Desde que as tabelas de sistema do SQL Server 2000 foram substituídas por várias versões, essa alteração não é considerada uma alteração de quebra.  
   
- Exemplo: se um usuário criar uma tabela de usuário chamada **syslanguages** em um banco de dados de usuário, no SQL Server 2008, `SELECT * from dbo.syslanguages;` a instrução nesse banco de dados retornará os valores da tabela de usuário. A partir do SQL Server 2012, essa prática retornará dados da exibição do sistema **Sys. syslanguages**.  
+ Exemplo: se um usuário criar uma tabela de usuário chamada **syslanguages** em um banco de dados de usuário, no SQL Server 2008, a instrução `SELECT * from dbo.syslanguages;` nesse banco de dados retornará os valores da tabela de usuário. A partir do SQL Server 2012, essa prática retornará dados da exibição do sistema **sys.sysidiomas**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

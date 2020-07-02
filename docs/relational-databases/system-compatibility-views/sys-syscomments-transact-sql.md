@@ -1,5 +1,5 @@
 ---
-title: sys. syscomments (Transact-SQL) | Microsoft Docs
+title: sys.syscomentários (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 183fa2fc1a674ec1cc987c265f5a0d4c399e27cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a121794c98b41cea7db6357e703a7993d9188699
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663364"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém entradas para cada exibição, regra, padrão, gatilho, restrição CHECK, restrição DEFAULT e procedimento armazenado no banco de dados. A coluna de **texto** contém as instruções de definição SQL originais.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "68010751"
 |**ctext**|**varbinary(8000)**|Os bytes brutos da instrução de definição SQL.|  
 |**texttype**|**smallint**|0 = Comentário fornecido pelo usuário<br /><br /> 1 = Comentário fornecido pelo sistema<br /><br /> 4 = Comentário criptografado|  
 |**idioma**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**criptografados**|**bit**|Indica se a definição de procedimento é ofuscada.<br /><br /> 0 = Não ofuscado<br /><br /> 1 = Ofuscado<br /><br /> ** \* Importante \* \* ** Para ofuscar as definições de procedimento armazenado, use criar procedimento com a palavra-chave ENCRYPTION.|  
+|**criptografados**|**bit**|Indica se a definição de procedimento é ofuscada.<br /><br /> 0 = Não ofuscado<br /><br /> 1 = Ofuscado<br /><br /> Importante para ofuscar as definições de procedimento armazenado, use criar procedimento com a palavra-chave Encryption. ** \* \* \* \* **|  
 |**compactados**|**bit**|Sempre retorna 0. Isso indica se o procedimento é compactado.|  
-|**text**|**nvarchar(4000)**|Texto real da instrução de definição SQL.<br /><br /> A semântica da expressão decodificada equivale ao texto original; porém, não há nenhuma garantia sintática. Por exemplo, espaços em branco são removidos da expressão decodificada.<br /><br /> Essa [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]exibição compatível Obtém informações das estruturas atuais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e pode retornar mais caracteres do que a definição **nvarchar (4000)** . **sp_help** retorna **nvarchar (4000)** como o tipo de dados da coluna de texto. Ao trabalhar com **syscomments** , considere o uso **de nvarchar (max)**. Para novos trabalhos de desenvolvimento, não use **syscomments**.|  
+|**text**|**nvarchar(4000)**|Texto real da instrução de definição SQL.<br /><br /> A semântica da expressão decodificada equivale ao texto original; porém, não há nenhuma garantia sintática. Por exemplo, espaços em branco são removidos da expressão decodificada.<br /><br /> Essa [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] exibição compatível Obtém informações das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estruturas atuais e pode retornar mais caracteres do que a definição **nvarchar (4000)** . **sp_help** retorna **nvarchar (4000)** como o tipo de dados da coluna de texto. Ao trabalhar com **syscomments** , considere o uso **de nvarchar (max)**. Para novos trabalhos de desenvolvimento, não use **syscomments**.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
