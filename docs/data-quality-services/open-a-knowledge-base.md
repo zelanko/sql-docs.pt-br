@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d6eebcf079fbb509838e2a3c08efbee5340c4ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809740"
 ---
 # <a name="open-a-knowledge-base"></a>Abrir uma base de dados de conhecimento
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como abrir uma base de dados de conhecimento existente no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepará-la para o gerenciamento de domínio, a descoberta de conhecimento ou a adição de uma política de correspondência.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75246006"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Estado de uma base de dados de conhecimento  
  O campo Estado indica em qual estágio de uma atividade a base de dados de conhecimento está. Se você abrir a base de dados de conhecimento, ela será aberta nesse estágio.  
   
--   >vazio: o campo Estado estará vazio para uma base de dados de conhecimento se a base de dados de conhecimento tiver sido publicada clicando em **publicar** na atividade gerenciamento de domínio e clicando em **Sim – publicar a base de dados de conhecimento e sair**. ** \< **  
+-   **\<Empty>**: O campo Estado estará vazio para uma base de dados de conhecimento se a base de dados de conhecimento tiver sido publicada clicando em **publicar** na atividade gerenciamento de domínio e clicando em **Sim – publicar a base de dados de conhecimento e sair**.  
   
 -   **Em trabalho**: o trabalho na base de dados de conhecimento foi salvo clicando em **publicar** na atividade gerenciamento de domínio e clicando em **não-salvar o trabalho na base de dados de conhecimento e sair**.  
   

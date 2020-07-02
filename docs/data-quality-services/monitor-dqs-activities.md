@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba2bfe0a9979d94df43b923b7eff2ed68750e19a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809796"
 ---
 # <a name="monitor-dqs-activities"></a>Monitorar atividade do DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tópico descreve como monitorar as seguintes atividades de modo centralizado no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): descoberta de conhecimento, gerenciamento de domínio, política de correspondência, limpeza de dados, correspondência de dados e limpeza do SSIS.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "75245464"
   
         -   **Limpeza**  
   
-        -   **Correspondência**  
+        -   **Matching**  
   
     -   Subtipos de**Limpeza do SSIS** :  
   
@@ -135,7 +135,7 @@ ms.locfileid: "75245464"
   
 3.  Você é solicitado a especificar um nome e local para o arquivo do Excel a ser salvo. O arquivo do Excel exportado contém as seguintes planilhas:  
   
-    |Nome da planilha|Descrição|  
+    |Nome da planilha|Description|  
     |----------------|-----------------|  
     |Atividade|Contém informações (colunas) sobre a atividade como na grade de atividade.|  
     |Processos|Contém informações (colunas) sobre os processos da atividade como na guia **Etapas da Atividade** .|  
