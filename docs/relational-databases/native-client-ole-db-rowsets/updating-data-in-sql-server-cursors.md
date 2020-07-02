@@ -18,17 +18,17 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 788055ec21a215a99b2524310452d14ba390088a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 947e8da980dbdb4199245d18e44ec9df36dbf13a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773221"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Atualizando dados em cursores do SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Ao buscar e atualizar dados por meio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de cursores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um aplicativo de consumidor de provedor de OLE DB de cliente nativo é associado pelas mesmas considerações e restrições que se aplicam a qualquer outro aplicativo cliente.  
+  Ao buscar e atualizar dados por meio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo de consumidor de provedor de OLE DB de cliente nativo é associado pelas mesmas considerações e restrições que se aplicam a qualquer outro aplicativo cliente.  
   
  Apenas as linhas em cursores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participam do controle de acesso a dados simultâneo. Quando o consumidor solicita um conjunto de linhas modificável, o controle de simultaneidade é controlado por DBPROP_LOCKMODE. Para modificar o nível do controle de acesso simultâneo, o consumidor define a propriedade DBPROP_LOCKMODE antes de abrir o conjunto de linhas.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81300231"
   
  Em qualquer modo, uma viagem de ida e volta representará uma transação distinta quando nenhum objeto de transação estiver aberto para o conjunto de linhas.  
   
- Quando você estiver usando **IRowsetUpdate:: Update**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo tentará processar cada linha indicada. Um erro ocorrido devido a dados inválidos, comprimento ou valores de status para qualquer linha não interrompe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o processamento do provedor de OLE DB nativo do cliente. É possível modificar todas ou nenhuma das outras linhas que participam da atualização. O consumidor deve examinar a matriz *prgRowstatus* retornada para determinar a falha de qualquer linha específica quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo retornar DB_S_ERRORSOCCURRED.  
+ Quando você estiver usando **IRowsetUpdate:: Update**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo tentará processar cada linha indicada. Um erro ocorrido devido a dados inválidos, comprimento ou valores de status para qualquer linha não interrompe o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processamento do provedor de OLE DB nativo do cliente. É possível modificar todas ou nenhuma das outras linhas que participam da atualização. O consumidor deve examinar a matriz *prgRowstatus* retornada para determinar a falha de qualquer linha específica quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retornar DB_S_ERRORSOCCURRED.  
   
  Um consumidor não deve presumir que as linhas são processadas em qualquer ordem específica. Se um consumidor solicitar o processamento ordenado da modificação de dados em mais de uma única linha, ele deverá estabelecer essa ordem na lógica do aplicativo e abrir uma transação para conter o processo.  
   

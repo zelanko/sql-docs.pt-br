@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 56dd5919565d1cbb7d0b95ae4476aef9140cecd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773715"
 ---
 # <a name="constructor-functions-xquery"></a>Funções do construtor (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   De uma entrada especificada, as funções do construtor criam instâncias de qualquer tipo atômico interno XSD definido pelo usuário.  
   
@@ -138,7 +138,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Usando a função dateTime() XQuery para recuperar descrições de produtos mais antigos  
+### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>a. Usando a função dateTime() XQuery para recuperar descrições de produtos mais antigos  
  Neste exemplo, um documento XML de exemplo é atribuído primeiro a uma variável de tipo **XML** . Este documento contém três exemplos de `ProductDescription` elementos de> de <, com cada um contendo um <`DateCreated` elemento filho>.  
   
  A variável é então consultada para recuperar apenas aquelas descrições de produtos que tenham sido criados antes de uma data específica. Para fins de comparação, a consulta usa a função de construtor **xs: DateTime ()** para digitar as datas.  

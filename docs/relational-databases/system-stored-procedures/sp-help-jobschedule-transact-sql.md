@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34cc7495b526b75f8da55046393aa45f3fd9a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773873"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre o agendamento de trabalhos usado pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para executar atividades automatizadas.  
  
@@ -77,13 +77,13 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Hora do dia em que a agenda é iniciada.|  
 |**active_end_time**|**int**|Hora do dia em que a agenda é encerrada.|  
 |**date_created**|**datetime**|Data em que a agenda foi criada.|  
-|**schedule_description**|**nvarchar(4000)**|Uma descrição em inglês da agenda que é derivada dos valores em **msdb. dbo. sysschedules**. Quando *include_description* é **0**, essa coluna contém texto informando que a descrição não foi solicitada.|  
+|**schedule_description**|**nvarchar(4000)**|Uma descrição em inglês da agenda que é derivada de valores em **agendas demsdb.dbo.sys**. Quando *include_description* é **0**, essa coluna contém texto informando que a descrição não foi solicitada.|  
 |**next_run_date**|**int**|Próxima data em que a agenda fará com que o trabalho seja executado.|  
 |**next_run_time**|**int**|Próxima hora em que a agenda fará com que o trabalho seja executado.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador da agenda.|  
 |**job_count**|**int**|Contagem de trabalhos retornados.|  
   
-> **Observação: sp_help_jobschedule** retorna valores das tabelas do sistema **dbo. sysjobschedules** e **dbo. sysschedules** no **msdb**. **sysjobschedules** atualiza a cada 20 minutos. Isso pode afetar os valores que são retornados por esse procedimento armazenado.  
+> **Observação: sp_help_jobschedule** retorna valores da **dbo.sysJobSchedules** e **dbo.sysagenda** tabelas do sistema no **msdb**. **sysjobschedules** atualiza a cada 20 minutos. Isso pode afetar os valores que são retornados por esse procedimento armazenado.  
   
 ## <a name="remarks"></a>Comentários  
  Os parâmetros de **sp_help_jobschedule** podem ser usados somente em determinadas combinações. Se *schedule_id* for especificado, nem *job_id* nem *job_name* poderão ser especificados. Caso contrário, os parâmetros *job_id* ou *job_name* podem ser usados com *schedule_name*.  

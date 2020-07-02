@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773829"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações das etapas em um trabalho usado pelo serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para executar atividades automatizadas.  
   
@@ -65,14 +65,14 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|Identificador exclusivo da etapa.|  
 |**step_name**|**sysname**|Nome da etapa no trabalho.|  
 |**subsistema**|**nvarchar(40)**|Subsistema no qual o comando de etapa será executado.|  
-|**linha**|**nvarchar(max)**|Comando executado na etapa.|  
+|**command**|**nvarchar(max)**|Comando executado na etapa.|  
 |**sinalizadores**|**int**|Um bitmask de valores que controlam o comportamento da etapa.|  
 |**cmdexec_success_code**|**int**|Para uma etapa de **CmdExec** , esse é o código de saída do processo de um comando bem-sucedido.|  
 |**on_success_action**|**tinyint**|Ação a ser efetuada se a etapa tiver êxito:<br /><br /> **1** = sair do trabalho relatando êxito.<br /><br /> **2** = sair do trabalho relatando falha.<br /><br /> **3** = vá para a próxima etapa.<br /><br /> **4** = ir para a etapa.|  
 |**on_success_step_id**|**int**|Se **on_success_action** for 4, isso indicará a próxima etapa a ser executada.|  
 |**on_fail_action**|**tinyint**|O que fazer se a etapa falhar. Os valores são os mesmos que **on_success_action**.|  
 |**on_fail_step_id**|**int**|Se **on_fail_action** for 4, isso indicará a próxima etapa a ser executada.|  
-|**servidor**|**sysname**|Reservado.|  
+|**server**|**sysname**|Reservado.|  
 |**database_name**|**sysname**|Para uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)], este é o banco de dados no qual o comando é executado.|  
 |**database_user_name**|**sysname**|Para uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)], este é o contexto de usuário do banco de dados no qual o comando é executado.|  
 |**retry_attempts**|**int**|Número máximo de vezes que o comando deve ser repetido (se for malsucedido).|  

@@ -14,17 +14,17 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f00744ce2f0363e7fcf38820b20e2b631df7adc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 940727c0b5b932017e9572a40e11a547a1f0a897
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773467"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Suporte a tipos de dados para melhorias de data e hora do OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Este tópico fornece informações sobre tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB (cliente nativo) que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte a tipos de dados de data/hora.  
+  Este tópico fornece informações sobre tipos de OLE DB ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo) que dão suporte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados de data/hora.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros  
  O OLE DB fornece dois novos tipos de dados para dar suporte aos novos tipos de servidor: DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET. A seguinte tabela mostra o mapeamento de tipo do servidor completo:  
@@ -159,7 +159,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Os aplicativos que usam o **sql_variant** e contam com a precisão limitada de **DateTime** precisarão ser atualizados se o esquema subjacente for atualizado para usar **datetime2** em vez de **DateTime**.  
+ Os aplicativos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o **sql_variant** e contam com a precisão limitada de **DateTime** precisarão ser atualizados se o esquema subjacente for atualizado para usar **datetime2** em vez de **DateTime**.  
   
  Também foram estendidas as macros de acesso para SSVARIANT com a adição do seguinte:  
   

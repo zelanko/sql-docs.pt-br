@@ -11,24 +11,24 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a90863fb061912dd0a6c44fe23ba2baa402662c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08a88db90322a3618cc53e60113f5d17ce749ec9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773413"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Novos recursos de data e hora com versões anteriores do SQL Server (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Este tópico descreve o comportamento esperado quando um aplicativo cliente que usa recursos de data e hora aprimorados se comunica com uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão anterior [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]a e quando um cliente compilado com uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envia comandos para um servidor que dá suporte a recursos de data e hora aprimorados.  
+  Este tópico descreve o comportamento esperado quando um aplicativo cliente que usa recursos de data e hora aprimorados se comunica com uma versão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e quando um cliente compilado com uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envia comandos para um servidor que dá suporte a recursos de data e hora aprimorados.  
   
 ## <a name="down-level-client-behavior"></a>Comportamento do cliente de versão anterior  
- Os aplicativos cliente que usam uma versão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Native Client anteriores [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] do veem os novos tipos de data/hora como colunas **nvarchar** . O conteúdo de coluna são representações literais. Para obter mais informações, consulte a seção "formatos de dados: cadeias de caracteres e literais" do [suporte de tipo de dados para OLE DB melhorias de data e hora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). O tamanho da coluna é o comprimento de literal máximo para a precisão especificada para a coluna.  
+ Os aplicativos cliente que usam uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anteriores [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] do veem os novos tipos de data/hora como colunas **nvarchar** . O conteúdo de coluna são representações literais. Para obter mais informações, consulte a seção "formatos de dados: cadeias de caracteres e literais" do [suporte de tipo de dados para OLE DB melhorias de data e hora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). O tamanho da coluna é o comprimento de literal máximo para a precisão especificada para a coluna.  
   
  As APIs de catálogo retornarão os metadados consistentes com o código de tipo de dados de nível inferior retornado ao cliente (por exemplo, **nvarchar**) e a representação de nível inferior associada (por exemplo, o formato literal apropriado). Entretanto, o nome do tipo de dados retornado será o nome de tipo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] real.  
   
- Quando um aplicativo cliente de nível inferior é executado em [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] um servidor (ou posterior) no qual são feitas alterações de esquema nos tipos de data/hora, o comportamento esperado é o seguinte:  
+ Quando um aplicativo cliente de nível inferior é executado em um [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] servidor (ou posterior) no qual são feitas alterações de esquema nos tipos de data/hora, o comportamento esperado é o seguinte:  
   
 |Tipo de cliente OLE DB|Tipo SQL Server 2005|SQL Server 2008 (ou posterior) tipo|Conversão de resultado (servidor para cliente)|Conversão de parâmetro (cliente para servidor)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
@@ -56,10 +56,10 @@ ms.locfileid: "81301006"
   
 -   Alternando para **datetime2** porque esse é o tipo de dados preferencial para data e hora.  
   
- Os aplicativos que usam metadados de servidor obtidos por meio de conjuntos de linhas ICommandWithParameters:: GetParameterInfo ou Schema para definir informações de tipo de parâmetro por meio de ICommandWithParameters:: SetParameterInfo falharão durante as conversões do cliente em que a representação de cadeia de caracteres de um tipo de origem é maior do que a representação de cadeia de caracteres do tipo de destino. Por exemplo, se uma associação de cliente usar DBTYPE_DBTIMESTAMP e a coluna de servidor for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Date, o Native Client converterá o valor para "aaaa-dd-mm hh: mm: SS. fff", mas os metadados do servidor serão retornados como **nvarchar (10)**. O estouro resultante causa DBSTATUS_E_CATCONVERTVALUE. Problemas semelhantes surgem com conversões de dados por IRowsetChange, pois os metadados do conjunto de linhas são definidos a partir dos metadados do ResultSet.  
+ Os aplicativos que usam metadados de servidor obtidos por meio de conjuntos de linhas ICommandWithParameters:: GetParameterInfo ou Schema para definir informações de tipo de parâmetro por meio de ICommandWithParameters:: SetParameterInfo falharão durante as conversões do cliente em que a representação de cadeia de caracteres de um tipo de origem é maior do que a representação de cadeia de caracteres do tipo de destino. Por exemplo, se uma associação de cliente usar DBTYPE_DBTIMESTAMP e a coluna de servidor for Date, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Native Client converterá o valor para "aaaa-dd-mm hh: mm: SS. fff", mas os metadados do servidor serão retornados como **nvarchar (10)**. O estouro resultante causa DBSTATUS_E_CATCONVERTVALUE. Problemas semelhantes surgem com conversões de dados por IRowsetChange, pois os metadados do conjunto de linhas são definidos a partir dos metadados do ResultSet.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Parâmetro e metadados de conjunto de linhas  
- Esta seção descreve metadados para parâmetros, colunas de resultados e conjuntos de linhas de esquema para clientes que são compilados com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uma versão do Native [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Client anterior a.  
+ Esta seção descreve metadados para parâmetros, colunas de resultados e conjuntos de linhas de esquema para clientes que são compilados com uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  A estrutura DBPARAMINFO retorna as seguintes informações por meio do parâmetro *prgParamInfo* :  
@@ -100,7 +100,7 @@ ms.locfileid: "81301006"
 |datetimeoffset|DBTYPE_WSTR|26, 28.. 34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>Conjuntos de linhas de esquema  
- Esta seção aborda metadados para parâmetros, colunas de resultados e conjuntos de linhas de esquema para novos tipos de dados. Essas informações são úteis é que você tem um provedor de cliente desenvolvido usando ferramentas [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao Native Client.  
+ Esta seção aborda metadados para parâmetros, colunas de resultados e conjuntos de linhas de esquema para novos tipos de dados. Essas informações são úteis é que você tem um provedor de cliente desenvolvido usando ferramentas anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 #### <a name="columns-rowset"></a>Conjunto de linhas de COLUMNS  
  Os valores de coluna a seguir são retornados para tipos de data/hora:  
@@ -154,7 +154,7 @@ ms.locfileid: "81301006"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>Comportamento de servidor de versão anterior  
- Quando conectado a um servidor de uma versão anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], qualquer tentativa de usar os novos nomes de tipo de servidor (por exemplo, com ICommandWithParameters:: SetParameterInfo ou ITableDefinition:: CreateTable) resultará em DB_E_BADTYPENAME.  
+ Quando conectado a um servidor de uma versão anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , qualquer tentativa de usar os novos nomes de tipo de servidor (por exemplo, com ICommandWithParameters:: SetParameterInfo ou ITableDefinition:: CreateTable) resultará em DB_E_BADTYPENAME.  
   
  Se novos tipos forem associados para parâmetros ou resultados sem o uso de um nome de tipo, e o novo tipo for usado para especificar o tipo de servidor implicitamente ou se não houver nenhuma conversão válida do tipo de servidor no tipo de cliente, DB_E_ERRORSOCCURRED será retornado e DBBINDSTATUS_UNSUPPORTED_CONVERSION será definido como o status de associação para o acessador usado em Execute.  
   
