@@ -11,15 +11,15 @@ ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d7ea543843d22433072867a30df814a6bd095f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783239"
 ---
 # <a name="support-for-large-udts"></a>Suporte a UDTs grandes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Esta solução de exemplo contém dois projetos. Um projeto cria um assembly (DLL) de código-fonte C#. Este assembly contém o tipo CLR. Uma tabela será adicionada ao banco de dados. Uma coluna na tabela será de um tipo definido no assembly, por padrão, este exemplo usará o banco de dados mestre. O segundo projeto é um aplicativo nativo C que lê dados da tabela.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81281738"
 ## <a name="example"></a>Exemplo  
  A primeira listagem de código é o código de origem C#. Cole-a em um arquivo chamado LargeStringUDT.cs e compile-a para uma DLL. Copie LargeStringUDT.dll no diretório raiz da unidade C.  
   
- A segunda listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () cria o assembly no banco de dados mestre.  
+ A segunda [!INCLUDE[tsql](../../includes/tsql-md.md)] listagem de código () cria o assembly no banco de dados mestre.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib e user32.lib. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81281738"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- A quarta listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () exclui o assembly do banco de dados mestre.  
+ A quarta [!INCLUDE[tsql](../../includes/tsql-md.md)] listagem de código () exclui o assembly do banco de dados mestre.  
   
 ```  
 // LargeStringUDT.cs  

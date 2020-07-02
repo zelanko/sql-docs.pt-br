@@ -22,15 +22,15 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6d46a0e06f96f646ebd68e383ad26f99e309082
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783635"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procedimentos armazenados do sistema (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], muitas atividades administrativas e informativas podem ser executadas com os procedimentos armazenados do sistema. Os procedimentos armazenados do sistema são agrupados nas categorias mostradas na tabela a seguir.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68037323"
 >  A menos que seja especificamente documentado de outra forma, todos os procedimentos armazenados do sistema retornam o valor 0 para indicar êxito. Para indicar falha, é retornado um valor diferente de zero.  
   
 ## <a name="api-system-stored-procedures"></a>Procedimentos armazenados do sistema de API  
- Os usuários que executam o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] em aplicativos ADO, OLE DB e ODBC podem perceber que esses aplicativos ao usar procedimentos armazenados do sistema que não foram incluídos na Referência do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esses procedimentos armazenados são usados pelo provedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB de cliente nativo e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo driver ODBC do Native Client para implementar a funcionalidade de uma API de banco de dados. Esses procedimentos armazenados são apenas o mecanismo que o provedor ou o driver utiliza para comunicar as solicitações do usuário a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles servem exclusivamente para uso interno do provedor ou do driver. Não há suporte para chamá [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-los explicitamente de um aplicativo baseado em um.  
+ Os usuários que executam o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] em aplicativos ADO, OLE DB e ODBC podem perceber que esses aplicativos ao usar procedimentos armazenados do sistema que não foram incluídos na Referência do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esses procedimentos armazenados são usados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo e pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client para implementar a funcionalidade de uma API de banco de dados. Esses procedimentos armazenados são apenas o mecanismo que o provedor ou o driver utiliza para comunicar as solicitações do usuário a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles servem exclusivamente para uso interno do provedor ou do driver. Não há suporte para chamá-los explicitamente de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicativo baseado em um.  
   
  Os procedimentos armazenados sp_createorphan e sp_droporphans são usados para processamento de **imagem** , **texto e Text** **do ODBC.**  
   

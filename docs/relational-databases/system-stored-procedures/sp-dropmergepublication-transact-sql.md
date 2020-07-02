@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fb3a99167dce450a3d4f50e9d19036db8d896f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ff7b235f27b11749673019de222d555d57f364c1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783816"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Descarta uma publicação de mesclagem e seu Agente de Instantâneo associado. Todas as assinaturas devem ser descartadas antes de descartar uma publicação de mesclagem. Os artigos na publicação são descartados automaticamente. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -56,7 +56,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
  **sp_dropmergepublication** descarta recursivamente todos os artigos associados a uma publicação e, em seguida, descarta a publicação em si. Uma publicação não poderá ser removida se tiver uma ou mais assinaturas associadas. Para obter informações sobre como remover assinaturas, consulte [excluir uma assinatura push](../../relational-databases/replication/delete-a-push-subscription.md) e [excluir uma assinatura pull](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- A execução de **sp_dropmergepublication** para descartar uma publicação não remove objetos publicados do banco de dados de publicação ou dos objetos correspondentes do banco de dados de assinatura. Use DROP \< object> para remover esses objetos manualmente, se necessário.  
+ A execução de **sp_dropmergepublication** para descartar uma publicação não remove objetos publicados do banco de dados de publicação ou dos objetos correspondentes do banco de dados de assinatura. Use DROP \<object> para remover esses objetos manualmente, se necessário.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  

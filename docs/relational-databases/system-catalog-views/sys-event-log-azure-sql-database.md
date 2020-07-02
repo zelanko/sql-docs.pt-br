@@ -20,16 +20,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784927"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Banco de Dados SQL do Azure)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Retorna [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] conexões de banco de dados, falhas de conexão e deadlocks bem-sucedidos. Você pode usar essas informações para controlar ou solucionar problemas da atividade de banco de dados com o [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -76,13 +76,13 @@ ms.locfileid: "82831990"
 |**conectividade**|**connection_failed**|9|**reconfiguração**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A conexão falhou porque o banco de dados estava passando por uma reconfiguração no momento.|  
 |**conectividade**|**connection_terminated**|0|**idle_connection_timeout**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A conexão ficou ociosa por mais tempo do que o limite definido pelo sistema.|  
 |**conectividade**|**connection_terminated**|1|**reconfiguração**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A sessão foi encerrada devido a uma reconfiguração do banco de dados.|  
-|**conectividade**|**banda**|*\<código de motivo>*|**reason_code**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A solicitação é restrita.  Código do motivo da limitação: * \< código de motivo>*. Para obter mais informações, consulte [limitação do mecanismo](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**conectividade**|**banda**|*\<reason code>*|**reason_code**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A solicitação é restrita.  Código do motivo da limitação: *\<reason code>* . Para obter mais informações, consulte [limitação do mecanismo](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**conectividade**|**throttling_long_transaction**|40549|**long_transaction**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A sessão foi terminada porque você tem uma transação de longa execução. Tente encurtar a transação. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**conectividade**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A sessão foi terminada porque ela adquiriu muitos bloqueios. Tente ler ou modificar menos linhas em uma única transação. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**conectividade**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A sessão foi terminada devido a uso excessivo de TEMPDB. Tente modificar a consulta para reduzir o uso de espaço de tabela temporária. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**conectividade**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A sessão foi terminada devido a uso excessivo de espaço de log de transação. Tente modificar menos linhas em uma única transação. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**conectividade**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Observação: aplica-se somente ao banco de dados SQL do Azure v11.*<br /><br /> A sessão foi terminada devido a uso excessivo de memória. Tente modificar a consulta para processar menos linhas. Para obter mais informações, consulte [limites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**motores**|**bloqueado**|0|**bloqueado**|2|Ocorreu um deadlock.|  
+|**motores**|**deadlock**|0|**deadlock**|2|Ocorreu um deadlock.|  
   
 ## <a name="permissions"></a>Permissões
 

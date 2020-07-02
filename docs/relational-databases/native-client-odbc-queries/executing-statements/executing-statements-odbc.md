@@ -16,15 +16,15 @@ ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3489c26073da15fb41af6d1560cb48fe38897386
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a284851d59ce1a5a8f64faa02555303adcd66092
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775933"
 ---
 # <a name="executing-statements-odbc"></a>Executando instruções (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client oferece várias maneiras de executar instruções SQL em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "81297926"
   
 -   Execução preparada  
   
- A execução direta envolve criar uma cadeia de caracteres [!INCLUDE[tsql](../../../includes/tsql-md.md)] que contém uma instrução e enviá-la para execução usando a função **SQLExecDirect** . A execução preparada envolve a compilação de uma cadeia de caracteres contendo uma instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] e a execução em dois estágios. O primeiro estágio usa a função de [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) para analisar e compilar o plano de execução para a instrução [!INCLUDE[ssDE](../../../includes/ssde-md.md)]no. O segundo estágio usa a função **SQLExecute** para executar o plano de execução preparado anteriormente. Dessa forma, a sobrecarga de análise e compilação é salva em cada execução. A execução preparada geralmente é usada através de aplicativos para executar a mesma instrução SQL com parâmetros várias vezes.  
+ A execução direta envolve criar uma cadeia de caracteres que contém uma [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução e enviá-la para execução usando a função **SQLExecDirect** . A execução preparada envolve a compilação de uma cadeia de caracteres contendo uma instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] e a execução em dois estágios. O primeiro estágio usa a função de [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) para analisar e compilar o plano de execução para a instrução no [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . O segundo estágio usa a função **SQLExecute** para executar o plano de execução preparado anteriormente. Dessa forma, a sobrecarga de análise e compilação é salva em cada execução. A execução preparada geralmente é usada através de aplicativos para executar a mesma instrução SQL com parâmetros várias vezes.  
   
  As execuções direta e preparada podem executar uma única instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou um lote de instruções SQL, ou elas podem chamar um procedimento armazenado.  
   

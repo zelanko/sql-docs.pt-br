@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783047"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Sintaxe da hierarquia de objetos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  O parâmetro *PropertyName* de sp_OAGetProperty e sp_OASetProperty e o parâmetro *MethodName* de sp_OAMethod dão suporte a uma sintaxe de hierarquia de objeto semelhante à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]do. Quando essa sintaxe especial for usada, esses parâmetros têm o seguinte formato geral.  
+  O parâmetro *PropertyName* de sp_OAGetProperty e sp_OASetProperty e o parâmetro *MethodName* de sp_OAMethod dão suporte a uma sintaxe de hierarquia de objeto semelhante à do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Quando essa sintaxe especial for usada, esses parâmetros têm o seguinte formato geral.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67941983"
   
  Coleção ("*Item*")  
   
- As aspas duplas (") são necessárias. Não [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] há suporte para a sintaxe do ponto de exclamação (!) para coleções.  
+ As aspas duplas (") são necessárias. [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]Não há suporte para a sintaxe do ponto de exclamação (!) para coleções.  
   
  *PropertyOrMethod*  
  É o nome de uma propriedade ou método do *TraversedObject*.  

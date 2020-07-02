@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc4f44e1b1d935f1abbd49532149edf078f7d1f7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7df586e9459e1a0e4bd141718c76bb4042a8f40b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784978"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para o banco de dados que reflete o ponto de extremidade de uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82823494"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**\<colunas herdadas>**|-|Herda colunas de **pontos sys.** end(para obter mais informações, consulte os [pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
+|**\<inherited columns>**|-|Herda colunas de **pontos sys.** end(para obter mais informações, consulte os [pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
 |**role**|**tinyint**|Função de reflexão; uma dentre:<br /><br /> **0** = nenhum<br /><br /> **1** = parceiro<br /><br /> **2** = testemunha<br /><br /> **3** = todos<br /><br /> Observação: esse valor é relevante apenas para espelhamento de banco de dados.|  
 |**role_desc**|**nvarchar(60)**|Descrição da função de reflexão; uma dentre:<br /><br /> **NONE**<br /><br /> **PARCEIRO**<br /><br /> **TESTEMUNHA**<br /><br /> **ALL**<br /><br /> Observação: esse valor é relevante apenas para espelhamento de banco de dados.|  
 |**is_encryption_enabled**|**bit**|**1** significa que a criptografia está habilitada.<br /><br /> **0** significa que a criptografia está desabilitada.|  
@@ -47,7 +47,7 @@ ms.locfileid: "82823494"
 |**connection_auth_desc**|**Nvarchar (60)**|Descrição do tipo de autenticação de conexão exigido para conexões com este ponto de extremidade; uma dentre:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**int**|ID de certificado usado para autenticação, se houver.<br /><br /> 0 = Está sendo usada a Autenticação do Windows.|  
 |**encryption_algorithm**|**tinyint**|Algoritmo de criptografia; um dentre:<br /><br /> **0** -nenhum<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -nenhum, RC4<br /><br /> **4** -nenhum, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** -AES, RC4<br /><br /> **7** -nenhum, RC4, AES<br /><br /> **8** -nenhum, AES, RC4|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Descrição do algoritmo de criptografia; uma dentre:<br /><br /> Nenhuma<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Descrição do algoritmo de criptografia; uma dentre:<br /><br /> NONE<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -59,7 +59,7 @@ ms.locfileid: "82823494"
   
 ## <a name="see-also"></a>Consulte Também  
  [Especifique a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
- [sys. availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
+ [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [sys. database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys. database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

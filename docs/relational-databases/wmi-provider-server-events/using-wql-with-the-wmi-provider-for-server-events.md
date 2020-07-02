@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6fae362d3a8d1fe387dd7561b1476bb37f0c255
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: 692eda0029e60121422244f8829bac9785269423
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775628"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Usando o WQL com o Provedor WMI para eventos de servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   Os aplicativos de gerenciamento acessam eventos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam o Provedor WMI para eventos de servidor emitindo instruções WQL. O WQL é um subconjunto simplificado da linguagem SQL, com algumas extensões específicas do WMI. Ao usar o WQL, um aplicativo recupera um tipo de evento em uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um banco de dados ou um objeto de banco de dados (o único objeto com suporte no momento é o de fila). O provedor WMI para eventos de servidor traduz a consulta em uma notificação de evento que é criada no banco de dados de destino para notificações de eventos no escopo do banco de dados ou no escopo do objeto, ou no banco de dados **mestre** para notificações de eventos no escopo do servidor.  
   
  Por exemplo, considere a seguinte consulta WQL:  

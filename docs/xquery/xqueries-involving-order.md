@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 1171740ae04b4fc03609659fa27a711bf36fa6f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775448"
 ---
 # <a name="xqueries-involving-order"></a>XQueries que envolvem ordem
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Bancos de dados relacionais não têm um conceito de sequência. Por exemplo, você não pode fazer uma solicitação como "Obtenha o primeiro cliente do banco de dados". No entanto, você pode consultar um documento XML e recuperar o primeiro \<Customer> elemento. Então, você sempre recuperará o mesmo cliente.  
   

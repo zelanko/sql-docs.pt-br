@@ -19,15 +19,15 @@ ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6233a44137427d607cb36283b911bd6fd5f5ef52
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c758dcded1b449dda890e3ba96c26c87dda9622d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784867"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retorna uma linha para cada parâmetro de uma função definida pelo usuário ou procedimento armazenado que podem ser acessados pelo usuário atual no banco de dados atual. Para funções, esta exibição retorna também uma linha com informações de valor de retorno.  
   

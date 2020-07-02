@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5d39e560b3137daf711ea49794fe6a2a0499743
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1a0b9cf43331e45d4aa1253fe5ad4b90d0bbea92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775460"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery e digitação estática
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   O XQuery no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é uma linguagem estaticamente digitada. Ou seja, ele gera erros de tipo durante a compilação de consulta quando uma expressão retornar um valor que tenha um tipo ou cardinalidade que não sejam aceitos por determinada função ou operador. Além disso, a verificação de tipo estático também poderá detectar se uma expressão de caminho em um documento XML digitado tiver sido digitada incorretamente. O compilador do XQuery primeiro aplica a fase de normalização que adiciona as operações implícitas, como atomização e, em seguida, executa a inferência e a verificação de tipo estático.  
   

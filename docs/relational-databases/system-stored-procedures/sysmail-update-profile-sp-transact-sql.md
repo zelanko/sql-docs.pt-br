@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 36731206770b324bf4387143ef2c98b0532475ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b9fd67cdd08de9ab85b0da224db970f6cd6d14d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67902888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783644"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Altera a descrição ou o nome de um perfil do Database Mail.  
   
@@ -60,7 +60,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="examples"></a>Exemplos  
  **A. Alterando a descrição de um perfil**  
   
- O exemplo a seguir altera a descrição para o perfil `AdventureWorks Administrator` nomeado no banco de dados **msdb** .  
+ O exemplo a seguir altera a descrição para o perfil nomeado `AdventureWorks Administrator` no banco de dados **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  

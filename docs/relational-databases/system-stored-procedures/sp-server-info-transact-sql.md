@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a83d216b0830b035da72ad579a2448a12f41adba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810301"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783731"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna uma lista de nomes de atributo e valores correspondentes para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o gateway do banco de dados ou a fonte de dados subjacente.  
   
@@ -43,7 +43,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'`É a ID de inteiro do atributo. *attribute_id* é **int**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -66,7 +66,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**14**|MAX_QUAL_LENGTH<br /><br /> Especifica o comprimento máximo do nome de um qualificador de tabela (a primeira parte de um nome de tabela com três partes).|128|  
 |**15**|COLUMN_LENGTH<br /><br /> Especifica o número máximo de caracteres para um nome de coluna.|128|  
 |**16**|IDENTIFIER_CASE<br /><br /> Especifica os nomes definidos pelo usuário (nomes de tabelas, nomes de colunas, nomes de procedimentos armazenados) no banco de dados (maiúsculas/minúsculas dos objetos nos catálogos do sistema).|SENSITIVE|  
-|**16**|TX_ISOLATION<br /><br /> Especifica o nível de isolamento inicial da transação que o servidor assume, o qual corresponde a um nível de isolamento definido em SQL-92.|2|  
+|**17**|TX_ISOLATION<br /><br /> Especifica o nível de isolamento inicial da transação que o servidor assume, o qual corresponde a um nível de isolamento definido em SQL-92.|2|  
 |**anos**|COLLATION_SEQ<br /><br /> Especifica a ordenação do conjunto de caracteres para este servidor.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**aprimora**|SAVEPOINT_SUPPORT<br /><br /> Especifica se o DBMS subjacente oferece suporte a pontos de salvamento nomeados.|S|  
 |**20,00**|MULTI_RESULT_SETS<br /><br /> Especifica se o banco de dados subjacente ou o próprio gateway oferece suporte a vários conjuntos de resultados (várias instruções podem ser enviadas pelo gateway com vários conjuntos de resultados retornados ao cliente).|S|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783677"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Altera as informações em uma conta existente do Database Mail.  
  
@@ -64,7 +64,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @description = ] 'description'`A nova descrição da conta. a *Descrição* é **nvarchar (256)**, com um padrão de NULL.  
   
-`[ @mailserver_name = ] 'server_name'`O novo nome do servidor de email SMTP a ser usado para essa conta. O computador que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o deve ser capaz de resolver o *server_name* para um endereço IP. *server_name* é **sysname**, sem padrão.  
+`[ @mailserver_name = ] 'server_name'`O novo nome do servidor de email SMTP a ser usado para essa conta. O computador que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de resolver o *server_name* para um endereço IP. *server_name* é **sysname**, sem padrão.  
   
 `[ @mailserver_type = ] 'server_type'`O novo tipo do servidor de email. *server_type* é **sysname**, sem padrão. Somente um valor de **' SMTP '** tem suporte.  
   
@@ -76,7 +76,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`A nova senha a ser usada para fazer logon no servidor de email. a *senha* é **sysname**, sem padrão.  
   
-`[ @use_default_credentials = ] use_default_credentials`Especifica se o email deve ser enviado ao servidor SMTP usando as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serviço. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usará as credenciais do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando esse parâmetro for 0, Database Mail usará o ** \@nome de usuário** e ** \@a senha** para autenticação no servidor SMTP. Se ** \@o nome de usuário** e ** \@a senha** forem nulos, ele usará a autenticação anônima. Consulte o administrador de SMTP antes de especificar este parâmetro.  
+`[ @use_default_credentials = ] use_default_credentials`Especifica se o email deve ser enviado ao servidor SMTP usando as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serviço. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usará as credenciais do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando esse parâmetro for 0, Database Mail usará o ** \@ nome de usuário** e a ** \@ senha** para autenticação no servidor SMTP. Se o ** \@ nome de usuário** e a ** \@ senha** forem nulos, ele usará a autenticação anônima. Consulte o administrador de SMTP antes de especificar este parâmetro.  
   
 `[ @enable_ssl = ] enable_ssl`Especifica se Database Mail criptografa a comunicação usando TLS (segurança de camada de transporte), anteriormente conhecido como protocolo SSL (SSL). Use esta opção se o TLS for necessário no servidor SMTP. **Enable_ssl** é bit, sem padrão.  
   
@@ -94,7 +94,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-changing-the-information-for-an-account"></a>a. Alterando as informações de uma conta  
- O exemplo a seguir atualiza a `AdventureWorks Administrator` conta no banco de dados **msdb** . As informações da conta são definidas com os valores fornecidos.  
+ O exemplo a seguir atualiza a conta `AdventureWorks Administrator` no banco de dados **msdb** . As informações da conta são definidas com os valores fornecidos.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  

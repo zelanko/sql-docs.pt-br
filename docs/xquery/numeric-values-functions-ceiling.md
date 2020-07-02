@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775490"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funções de Valores Numéricos – ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Retorna o menor número sem uma parte fracionária que não seja menos que o valor de seu argumento. Se o argumento for uma sequência vazia, ele retornará a sequência vazia.  
   
@@ -51,7 +51,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>A. Usando a função ceiling() XQuery  
+### <a name="a-using-the-ceiling-xquery-function"></a>a. Usando a função ceiling() XQuery  
  Para o modelo de produto 7, essa consulta retorna uma lista de locais de centro de trabalho no processo de fabricação do modelo de produto. Para cada local de centro de trabalho, a consulta retorna a ID do local, as horas de trabalho e o tamanho de lote, se documentados. A consulta usa a função de **teto** para retornar as horas de trabalho como valores do tipo **decimal**.  
   
 ```  
@@ -76,9 +76,9 @@ WHERE ProductModelID=7
   
 -   **Instruções** é uma coluna de tipo **XML** . Portanto, o [método Query () (tipo de dados XML)](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar XQuery. A instrução XQuery é especificada como o argumento para o método de consulta.  
   
--   **para... Return** é um constructo de loop. Na consulta, o loop **for** identifica uma lista de \< elementos de localização>. Para cada local do centro de trabalho, a instrução **Return** no loop **for** descreve o XML a ser gerado:  
+-   **para... Return** é um constructo de loop. Na consulta, o loop **for** identifica uma lista de \<Location> elementos. Para cada local do centro de trabalho, a instrução **Return** no loop **for** descreve o XML a ser gerado:  
   
-    -   Um \< elemento de> local que tem os atributos LocationID e LaborHrs. A expressão correspondente dentro dos colchetes ({ }) recupera os valores exigidos do documento.  
+    -   Um \<Location> elemento que tem os atributos LocationID e LaborHrs. A expressão correspondente dentro dos colchetes ({ }) recupera os valores exigidos do documento.  
   
     -   A expressão {$ i/@LotSize } recupera o atributo de lotes do documento, se presente.  
   

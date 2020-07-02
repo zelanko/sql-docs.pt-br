@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cbf2d7968f1e0af97cf28604768b01fb27511cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ae5beb9b73657d5f895d9361dfe19f22db47121
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775730"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>Propriedade ProtocolDLL (classe ServerNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o nome do arquivo .dll que é exigido por um protocolo de rede do servidor.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,7 +36,7 @@ object.ProtocolDLL [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [classe ServerNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) que representa o protocolo de rede usado pela instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

@@ -19,26 +19,26 @@ ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 61402b762b7a6b4d944214d59e187e1457e93f93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d14ae77b15121b1344d3881f8966d6a707f71fa6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155764"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784988"
 ---
 # <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Retorna informações sobre as configurações de firewall no nível de banco de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]dados associadas ao seu. As configurações de firewall no nível de banco de dados são particularmente úteis ao usar usuários do banco de dados independente. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Retorna informações sobre as configurações de firewall no nível de banco de dados associadas ao seu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . As configurações de firewall no nível de banco de dados são particularmente úteis ao usar usuários do banco de dados independente. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  A exibição `sys.database_firewall_rules` contém as seguintes colunas:  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|id|**INTEGER**|O identificador da configuração de firewall de nível de banco de dados.|  
+|id|**VALORES**|O identificador da configuração de firewall de nível de banco de dados.|  
 |name|**NVARCHAR (128)**|O nome escolhido para descrever e distinguir a configuração de firewall de nível de banco de dados.|  
 |start_ip_address|**VARCHAR (45)**|O endereço IP mais baixo no intervalo da configuração do firewall em nível de banco de dados. Os endereços IP iguais a ou maiores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais baixo possível é `0.0.0.0`.|  
-|end_ip_address|**VARCHAR (45)**|O endereço IP mais alto no intervalo da configuração do firewall. Os endereços IP iguais a ou menores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais alto possível é `255.255.255.255`.<br /><br /> Observação: as tentativas de conexão do Azure são permitidas quando esse **start_ip_address** campo e o `0.0.0.0`campo de start_ip_address é igual a.|  
+|end_ip_address|**VARCHAR (45)**|O endereço IP mais alto no intervalo da configuração do firewall. Os endereços IP iguais a ou menores que esse podem tentar se conectar à instância do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais alto possível é `255.255.255.255`.<br /><br /> Observação: as tentativas de conexão do Azure são permitidas quando esse campo e o campo de **start_ip_address** é igual a `0.0.0.0` .|  
 |create_date|**HORÁRIO**|A data e a hora UTC em que a configuração de firewall de nível de banco de dados foi criada.|  
 |modify_date|**HORÁRIO**|A data e a hora UTC em que a configuração de firewall de nível de banco de dados foi modificada por último.|  
   

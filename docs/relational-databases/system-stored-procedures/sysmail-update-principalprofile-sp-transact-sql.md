@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f488c50518f0a1dd06d72532f1e9edad865e26a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783664"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Atualiza as informações de uma associação entre uma entidade e um perfil.  
   
@@ -62,7 +62,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  Quando o nome principal da associação for **público** ou a ID da entidade de segurança for **0**, esse procedimento armazenado alterará o perfil público. Pode haver somente um perfil público padrão.  
   
- Quando ** \@is_default** for '**1**' e a entidade de segurança estiver associada a mais de um perfil, o perfil especificado se tornará o perfil padrão para a entidade de segurança. O perfil que anteriormente era o padrão ainda estará associado à entidade, mas não mais será o perfil padrão.  
+ Quando ** \@ is_default** for '**1**' e a entidade de segurança estiver associada a mais de um perfil, o perfil especificado se tornará o perfil padrão para a entidade de segurança. O perfil que anteriormente era o padrão ainda estará associado à entidade, mas não mais será o perfil padrão.  
   
  O procedimento armazenado **sysmail_update_principalprofile_sp** está no banco de dados **msdb** e pertence ao esquema **dbo** . O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
@@ -72,7 +72,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="examples"></a>Exemplos  
  **A. Definindo um perfil para ser o perfil público padrão para um banco de dados**  
   
- O exemplo a seguir define o `General Use Profile` perfil como o perfil público padrão para usuários no banco de dados **msdb** .  
+ O exemplo a seguir define o perfil `General Use Profile` como o perfil público padrão para usuários no banco de dados **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **B. Definindo um perfil para ser o perfil privado padrão para um usuário**  
   
- O exemplo a seguir define o `AdventureWorks Administrator` perfil como o perfil padrão para a entidade `ApplicationUser` de segurança no banco de dados **msdb** . O perfil já deve estar associado à entidade. O perfil que anteriormente era o padrão ainda estará associado à entidade, mas não mais será o perfil padrão.  
+ O exemplo a seguir define o perfil `AdventureWorks Administrator` como o perfil padrão para a entidade de segurança `ApplicationUser` no banco de dados **msdb** . O perfil já deve estar associado à entidade. O perfil que anteriormente era o padrão ainda estará associado à entidade, mas não mais será o perfil padrão.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  

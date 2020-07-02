@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 246081eb5c362cb76a4c037693ee6c40b999fcdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24c6674c35bdbe626cc703e84e773d33d3b7f47a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783662"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Atualiza o número de sequência de uma conta dentro de um perfil do Database Mail.  
   
@@ -71,7 +71,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
  As permissões de execução para este procedimento assumem como padrão os membros da função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir altera o número de sequência da `Admin-BackupServer` conta dentro do `AdventureWorks Administrator` perfil no banco de dados **msdb** . Depois de executar este código, o número de sequência da conta será `3`, indicando que ela será tentada no caso das duas primeiras contas falharem.  
+ O exemplo a seguir altera o número de sequência da conta `Admin-BackupServer` dentro do perfil `AdventureWorks Administrator` no banco de dados **msdb** . Depois de executar este código, o número de sequência da conta será `3`, indicando que ela será tentada no caso das duas primeiras contas falharem.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  

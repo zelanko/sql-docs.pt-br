@@ -15,15 +15,15 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d26af711c07c4ea296d5351d0fcb0d1f9710706
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9adc8ed5547691f693a88a5d468581022afd363e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783344"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Alocar identificadores e se conectar ao SQL Server (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-allocate-handles-and-connect-to-sql-server"></a>Para alocar identificadores e se conectar ao SQL Server  
@@ -42,11 +42,11 @@ ms.locfileid: "81294446"
   
 7.  Opcionalmente, chame [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para definir opções de conexão ou chame [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) para obter opções de conexão.  
   
-8.  Chame o SQLConnect para usar uma fonte de dados existente para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se conectar ao.  
+8.  Chame o SQLConnect para usar uma fonte de dados existente para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Ou  
   
-     Chame [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) para usar uma cadeia de conexão para se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]conectar ao.  
+     Chame [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) para usar uma cadeia de conexão para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Uma cadeia de conexão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] completa mínima tem uma de duas formas:  
   
@@ -59,9 +59,9 @@ ms.locfileid: "81294446"
   
      \- ou –  
   
-     Chame [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) várias vezes de maneira iterativa para criar a cadeia de conexão e conectar- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se ao.  
+     Chame [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) várias vezes de maneira iterativa para criar a cadeia de conexão e conectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-9. Opcionalmente, chame [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) para obter atributos de driver e comportamento para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fonte de dados.  
+9. Opcionalmente, chame [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) para obter atributos de driver e comportamento para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonte de dados.  
   
 10. Aloque e use instruções.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "81294446"
 >  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo mostra uma chamada para **SQLDriverConnect** para se conectar a uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do sem exigir uma fonte de dados ODBC existente. Ao passar uma cadeia de conexão incompleta para **SQLDriverConnect**, isso faz com que o driver ODBC solicite ao usuário que insira as informações ausentes.  
+ Este exemplo mostra uma chamada para **SQLDriverConnect** para se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem exigir uma fonte de dados ODBC existente. Ao passar uma cadeia de conexão incompleta para **SQLDriverConnect**, isso faz com que o driver ODBC solicite ao usuário que insira as informações ausentes.  
   
 ```  
 #define MAXBUFLEN   255  

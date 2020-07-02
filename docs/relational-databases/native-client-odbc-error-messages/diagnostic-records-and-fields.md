@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9cfea2db0ad0a5eadeede6df3f76ea3979243d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0f2ac10fe68f5e51f72d12f3b5514ef293afda0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775966"
 ---
 # <a name="diagnostic-records-and-fields"></a>Registros e campos de diagnóstico
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Os registros de diagnóstico são associados com ambiente, conexão, instrução ou identificadores de descritor ODBC. Quando uma função ODBC gera um código de retorno diferente de SQL_SUCCESS ou SQL_INVALID_HANDLE, o identificador chamado pela função possui registros de diagnóstico associados que contêm mensagens de erro ou mensagens informativas. Esses registros são retidos até que outra função seja chamada com aquele identificador. Depois disso, são descartados. Não há limite para o número de registros de diagnóstico que podem ser associados a um identificador de uma só vez.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "81291750"
   
  O **SQLGetDiagField** é processado pelo Gerenciador de driver ODBC usando informações de erro que ele armazena em cache do driver subjacente. O Gerenciador de Driver ODBC não armazena em cache os campos de diagnóstico específicos de driver até que seja estabelecida uma conexão bem-sucedida. **SQLGetDiagField** retornará SQL_ERROR se for chamado para obter campos de diagnóstico específicos do driver antes da conclusão de uma conexão bem-sucedida. Se uma função de conexão ODBC retornar SQL_SUCCESS_WITH_INFO, os campos de diagnóstico específicos de driver para a função de conexão ainda não estarão disponíveis. Você pode iniciar a chamada de **SQLGetDiagField** para campos de diagnóstico específicos do driver somente depois de ter feito outra chamada de função ODBC após a função de conexão.  
   
- A maioria dos erros relatados pelo driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pode ser efetivamente diagnosticada usando apenas as informações retornadas pelo **SQLGetDiagRec**. Em alguns casos, porém, as informações retornadas pelos campos de diagnóstico específicos de driver são importantes no diagnóstico de um erro. Ao codificar um manipulador de erro ODBC para aplicativos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam o driver ODBC do Native Client, também é uma boa ideia usar o **SQLGetDiagField** para recuperar pelo menos os SQL_DIAG_SS_MSGSTATE e SQL_DIAG_SS_SEVERITY campos específicos do driver. Se um erro em particular for gerado em vários locais no código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indicará a um engenheiro de suporte da Microsoft onde especificamente o erro foi gerado, o que muitas vezes ajuda no diagnóstico de um problema.  
+ A maioria dos erros relatados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client pode ser efetivamente diagnosticada usando apenas as informações retornadas pelo **SQLGetDiagRec**. Em alguns casos, porém, as informações retornadas pelos campos de diagnóstico específicos de driver são importantes no diagnóstico de um erro. Ao codificar um manipulador de erro ODBC para aplicativos que usam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client, também é uma boa ideia usar o **SQLGetDiagField** para recuperar pelo menos os SQL_DIAG_SS_MSGSTATE e SQL_DIAG_SS_SEVERITY campos específicos do driver. Se um erro em particular for gerado em vários locais no código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indicará a um engenheiro de suporte da Microsoft onde especificamente o erro foi gerado, o que muitas vezes ajuda no diagnóstico de um problema.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tratando de erros e mensagens](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

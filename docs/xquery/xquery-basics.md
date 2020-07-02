@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92882722baab0284f421989ba4906e60e777049e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4d0568988fc1652005b036cefebe507b9a47f82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775443"
 ---
 # <a name="xquery-basics"></a>Fundamentos de XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Esta seção descreve os fundamentos de XQuery.  
   

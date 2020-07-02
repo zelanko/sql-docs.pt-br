@@ -15,17 +15,17 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79428147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776464"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Processamento do Graph com o SQL Server e o Banco de Dados SQL do Azure
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oferece recursos de banco de dados de grafo para modelar relações muitos para muitos. As relações de grafo são integradas [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e recebem os benefícios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usar como o sistema de gerenciamento de banco de dados básico.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oferece recursos de banco de dados de grafo para modelar relações muitos para muitos. As relações de grafo são integradas [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e recebem os benefícios de usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o sistema de gerenciamento de banco de dados básico.
 
 
 ## <a name="what-is-a-graph-database"></a>O que é um banco de dados de grafo?  
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Os nós e as bordas são armazenados como tabelas  
 
 ### <a name="query-language-extensions"></a>Extensões de linguagem de consulta  
-A `MATCH` nova cláusula é introduzida para dar suporte à correspondência de padrões e à navegação de vários saltos por meio do grafo. A `MATCH` função usa sintaxe de estilo de arte ASCII para correspondência de padrões. Por exemplo:  
+A nova `MATCH` cláusula é introduzida para dar suporte à correspondência de padrões e à navegação de vários saltos por meio do grafo. A `MATCH` função usa sintaxe de estilo de arte ASCII para correspondência de padrões. Por exemplo:  
 
 ```   
 -- Find friends of John
@@ -69,11 +69,11 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-ssnoversion-engine"></a>Totalmente integrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo 
-As extensões de grafo são totalmente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integradas no mecanismo. Use o mesmo mecanismo de armazenamento, metadados, processador de consultas, etc. para armazenar e consultar dados de grafo. Consulta entre grafo e dados relacionais em uma única consulta. Combinação de recursos de grafo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com outras tecnologias como COLUMNSTORE, ha, R Services, etc. O banco de dados SQL Graph também dá suporte a todos os recursos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de segurança e conformidade disponíveis com o.
+As extensões de grafo são totalmente integradas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo. Use o mesmo mecanismo de armazenamento, metadados, processador de consultas, etc. para armazenar e consultar dados de grafo. Consulta entre grafo e dados relacionais em uma única consulta. Combinação de recursos de grafo com outras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologias como columnstore, ha, R Services, etc. O banco de dados SQL Graph também dá suporte a todos os recursos de segurança e conformidade disponíveis com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
  
 ### <a name="tooling-and-ecosystem"></a>Ferramentas e ecossistema
 
-Beneficie-se de ferramentas existentes e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ecossistema que oferece. Ferramentas como backup e restauração, importação e exportação, BCP simplesmente funcionam prontos para uso. Outras ferramentas ou serviços como SSIS, SSRS ou Power BI funcionarão com tabelas de grafo, exatamente como funcionam com tabelas relacionais.
+Beneficie-se de ferramentas existentes e ecossistema que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece. Ferramentas como backup e restauração, importação e exportação, BCP simplesmente funcionam prontos para uso. Outras ferramentas ou serviços como SSIS, SSRS ou Power BI funcionarão com tabelas de grafo, exatamente como funcionam com tabelas relacionais.
 
 ## <a name="edge-constraints"></a>Restrições de borda
 Uma restrição de borda é definida em uma tabela de borda de gráfico e é um par de tabelas de nó que um determinado tipo de borda pode conectar. Isso dá aos usuários um melhor controle sobre o esquema do grafo. Com a ajuda de restrições de borda, os usuários podem restringir o tipo de nós que uma determinada borda tem permissão para se conectar. 

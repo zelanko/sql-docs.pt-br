@@ -20,15 +20,15 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ab99e0ce3e63a42795d17fc859bbbd3b6c8059d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785018"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contém uma fila por arquivo de um banco de dados, conforme armazenado no próprio banco de dados. Esta é uma exibição por banco de dados.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "82823479"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID do arquivo no banco de dados.|  
 |**file_guid**|**uniqueidentifier**|GUID do arquivo.<br /><br /> NULL = o banco de dados foi atualizado de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (válido para SQL Server 2005 e anterior).|  
-|**tipo**|**tinyint**|Tipo de arquivo:<br/><br /> 0 = linhas<br /><br/> 1 = Log<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo|  
+|**type**|**tinyint**|Tipo de arquivo:<br/><br /> 0 = linhas<br /><br/> 1 = Log<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo|  
 |**type_desc**|**nvarchar(60)**|Descrição do tipo de arquivo:<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|O valor pode ser 0 ou maior que 0. Um valor igual a 0 representa o arquivo de log do banco de dados, e um valor maior que 0 representa a ID do grupo de arquivos no qual os dados estão armazenados.|  
 |**name**|**sysname**|Nome lógico do arquivo no banco de dados.|  
-|**physical_name**|**nvarchar(260)**|Nome de arquivo do sistema operacional. Se o banco de dados for hospedado por uma [réplica secundária legível](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** indicará o local do arquivo do banco de dados de réplica primária. Para o local de arquivo correto de um banco de dados secundário legível, consulte [Sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
+|**physical_name**|**nvarchar(260)**|Nome de arquivo do sistema operacional. Se o banco de dados for hospedado por uma [réplica secundária legível](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** indicará o local do arquivo do banco de dados de réplica primária. Para o local de arquivo correto de um banco de dados secundário legível, consulte [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
 |**state**|**tinyint**|Estado do arquivo:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|Descrição do estado do arquivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para obter mais informações, consulte [Estados de arquivo](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Tamanho atual do arquivo, em páginas de 8 KB.<br /><br /> 0 = Não aplicável<br /><br /> Para um instantâneo do banco de dados, tamanho reflete o espaço máximo que o instantâneo poderá usar para o arquivo.<br /><br /> Para contêineres de grupo de arquivos FILESTREAM, o tamanho reflete o tamanho atual usado do contêiner.|  
@@ -68,7 +68,7 @@ ms.locfileid: "82823479"
 >  Quando você descarta ou reconstrói índices grandes, ou descarta ou trunca tabelas grandes, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] adia as desalocações de página atuais e seus bloqueios associados, até depois que a transação confirme. Operações de cancelamento adiadas não libertam espaço alocado imediatamente. Portanto, os valores retornados por sys.database_files, imediatamente depois de descartar ou truncar um objeto grande podem não refletir o espaço de disco real disponível.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** .  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="examples"></a>Exemplos  
 A instrução a seguir retorna o nome, o tamanho do arquivo e a quantidade de espaço vazio para cada arquivo de banco de dados.

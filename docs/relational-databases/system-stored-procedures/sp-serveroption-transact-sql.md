@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 776e7b0c713e36f0d9f67112592dff6d24a46fbd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 933774af820c80abb70c5fbdad0441053533b451
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783709"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Define opções de servidor para servidores remotos e servidores vinculados.  
   
@@ -58,7 +58,7 @@ sp_serveroption [@server = ] 'server'
 |**tempo limite da consulta**|O valor do tempo limite para consultas em um servidor vinculado.<br /><br /> Se **0**, use a **sp_configure** padrão.|  
 |**RPC**|Habilita RPC a partir do servidor fornecido.|  
 |**saída de RPC**|Habilita RPC para o servidor fornecido.|  
-|**projeto**|Farão.|  
+|**sub**|Farão.|  
 |**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usar agrupamento remoto**|Determina se a ordenação de uma coluna remota ou de um servidor local será usada.<br /><br /> Se **for true**, o agrupamento de colunas remotas será usado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fontes de dados e o Agrupamento especificado no **nome do agrupamento** será usado para fontes que não são de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados.<br /><br /> Se **for false**, as consultas distribuídas sempre usarão o agrupamento padrão do servidor local, enquanto o **nome do agrupamento** e o agrupamento de colunas remotas são ignorados. O padrão é **false**. (O valor **falso** é compatível com a semântica de agrupamento usada em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.)|  
 |**promoção de transação de proc remoto**|Use esta opção para proteger as ações de um procedimento servidor a servidor por meio de uma transação do MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Quando esta opção for TRUE (ou ON), a chamada de um procedimento armazenado remoto iniciará uma transação distribuída e inscreverá a transação no MS DTC. A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que chama o procedimento armazenado remoto é o que origina a transação e controla a conclusão da transação. Quando as instruções subsequentes COMMIT TRANSACTION ou ROLLBACK TRANSACTION são emitidas para a conexão, a instância controladora solicita que o MS DTC gerencie a conclusão da transação distribuída em todas os computadores envolvidos.<br /><br /> Depois que uma transação distribuída [!INCLUDE[tsql](../../includes/tsql-md.md)] foi iniciada, é possível fazer chamadas de procedimento armazenado remoto a outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que foram definidas como servidores vinculados. Os servidores vinculados são todos inscritos na transação de distribuição do [!INCLUDE[tsql](../../includes/tsql-md.md)], e o MS DTC garante que a transação seja completada em cada servidor vinculado.<br /><br /> Se essa opção estiver definida como FALSE (ou OFF), uma transação local não será promovida a uma transação distribuída durante a chamada de um procedimento remoto em um servidor vinculado.<br /><br /> Se antes de fazer uma chamada de procedimento de servidor a servidor, a transação já for uma transação distribuída, essa opção não terá efeito. A chamada de procedimento em relação ao servidor vinculado executará sob a mesma transação distribuída.<br /><br /> Se antes de fazer uma chamada de procedimento armazenado de servidor a servidor não houver nenhuma transação ativa, essa opção não terá efeito. Em seguida, o procedimento executa em relação ao servidor vinculado sem transações ativas.<br /><br /> O valor padrão dessa opção é TRUE (ou ON).|  

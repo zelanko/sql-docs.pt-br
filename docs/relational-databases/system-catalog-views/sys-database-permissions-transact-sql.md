@@ -20,15 +20,15 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e051d7351e5279bef3980d8fc8bfd77d20984eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775253"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retorna uma linha para cada permissão ou permissão de exceção de coluna no banco de dados. Para colunas, há uma linha para cada permissão que é diferente da permissão no nível de objeto correspondente. Se a permissão de coluna for igual à permissão de objeto correspondente, não haverá nenhuma linha para ela e a permissão aplicada será a do objeto.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73982734"
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**classe**|**tinyint**|Identifica a classe na qual existe a permissão.<br /><br /> 0 = Banco de dados<br />1 = objeto ou coluna<br />3 = Esquema<br />4 = Entidade do Banco de Dados<br />5 = assembly- **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />6 = Tipo<br />10 = coleção de esquemas XML- <br />                      **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />15 = tipo de mensagem – aplica- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **se a**: e posterior.<br />16 = contrato de serviço – aplica- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **se a**: e posterior.<br />17 = serviço- **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />18 = Associação de serviço remoto – aplica- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **se a**: e posterior.<br />19 = rota- **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />23 = catálogo de texto completo – **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />24 = chave simétrica – **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />25 = Certificate- **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />26 = chave assimétrica-aplica- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **se a**: e posterior.|  
+|**classes**|**tinyint**|Identifica a classe na qual existe a permissão.<br /><br /> 0 = Banco de dados<br />1 = objeto ou coluna<br />3 = Esquema<br />4 = Entidade do Banco de Dados<br />5 = assembly- **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />6 = Tipo<br />10 = coleção de esquemas XML- <br />                      **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />15 = tipo de mensagem – **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />16 = contrato de serviço – **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />17 = serviço- **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />18 = Associação de serviço remoto – **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />19 = rota- **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />23 = catálogo de texto completo – **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />24 = chave simétrica – **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />25 = Certificate- **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.<br />26 = chave assimétrica- **aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.|  
 |**class_desc**|**nvarchar(60)**|Descrição de classe na qual a permissão existe.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|ID na qual a permissão existe, interpretada de acordo com a classe. Normalmente, o **major_id** é simplesmente o tipo de ID que se aplica ao que a classe representa. <br /><br /> 0 = o próprio banco de dados <br /><br /> >0 = IDs de objeto para objetos de usuário <br /><br /> \<0 = IDs de objeto para objetos do sistema |  
 |**minor_id**|**int**|ID secundária de algo no qual a permissão existe, interpretada de acordo com a classe. Geralmente, o **minor_id** é zero, porque não há nenhuma subcategoria disponível para a classe de objeto. Caso contrário, é a ID de coluna de uma tabela.|  

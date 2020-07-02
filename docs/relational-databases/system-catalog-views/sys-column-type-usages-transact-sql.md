@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5dc3ff14375d0e07a1235f0ba79ed36e3e084e58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 861a2f7003846a514e67ea1ca6a0ccccb63b4d72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783964"
 ---
 # <a name="syscolumn_type_usages-transact-sql"></a>sys.column_type_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada coluna que seja do tipo definido pelo usuário.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68139994"
 |**user_type_id**|**int**|ID do tipo definido pelo usuário.<br /><br /> Para retornar o nome do tipo, ingresse na exibição do catálogo [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) nesta coluna.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** .  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de tipos escalares &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
