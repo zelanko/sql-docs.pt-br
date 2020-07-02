@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad747d2c88b7d159b9d043d12c81cc380c84c7b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab7241fe17306fedf25c1562bcabe366d7754e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749289"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Altera as configurações de uma agenda do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

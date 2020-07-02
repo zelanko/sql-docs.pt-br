@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 95598885a80b1f697f5e1287e22c1048e737ba6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7b0c3e906fdd9576970ed1e8dfd69893b0759a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944729"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750474"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Remove as entradas de logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de para um usuário ou grupo do Windows criado usando CREATE login, **sp_grantlogin**ou **sp_denylogin**.  
+  Remove as entradas de logon de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um usuário ou grupo do Windows criado usando CREATE login, **sp_grantlogin**ou **sp_denylogin**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [drop login](../../t-sql/statements/drop-login-transact-sql.md) .  
@@ -42,23 +42,23 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'`É o nome do usuário ou grupo do Windows. o *logon* é **sysname**, sem padrão. o *logon* pode ser qualquer nome de usuário ou grupo existente do Windows no formato *nome*\\do computador*usuário ou domínio*\\*usuário*.  
+`[ @loginame = ] 'login'`É o nome do usuário ou grupo do Windows. o *logon* é **sysname**, sem padrão. o *logon* pode ser qualquer nome de usuário ou grupo existente do Windows no formato *nome do computador* \\ *usuário ou domínio* \\ *usuário*.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_revokelogin** desabilita conexões usando a conta especificada pelo parâmetro de *logon* . No entanto, os usuários do Windows que têm acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] através da associação em um grupo do Windows ainda podem se conectar como o grupo após o acesso individual ter sido revogado. Da mesma forma, se o parâmetro de *logon* especificar o nome de um grupo do Windows, os membros desse grupo aos quais foi concedido acesso separado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à instância do ainda poderão se conectar.  
+ **sp_revokelogin** desabilita conexões usando a conta especificada pelo parâmetro de *logon* . No entanto, os usuários do Windows que têm acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] através da associação em um grupo do Windows ainda podem se conectar como o grupo após o acesso individual ter sido revogado. Da mesma forma, se o parâmetro de *logon* especificar o nome de um grupo do Windows, os membros desse grupo aos quais foi concedido acesso separado à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda poderão se conectar.  
   
- Por exemplo, se o usuário do Windows **ADVWORKS\john** for membro do grupo do Windows **ADVWORKS\Admins**e **sp_revokelogin** revogar o acesso de `ADVWORKS\john`:  
+ Por exemplo, se o usuário do Windows **ADVWORKS\john** for membro do grupo do Windows **ADVWORKS\Admins**e **sp_revokelogin** revogar o acesso de `ADVWORKS\john` :  
   
 ```  
 sp_revokelogin [ADVWORKS\john]  
 ```  
   
- O usuário **ADVWORKS\john** ainda poderá se conectar se **ADVWORKS\Admins** tiver recebido acesso a uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Da mesma forma, se o grupo do Windows **ADVWORKS\Admins** tiver seu acesso revogado, mas o **ADVWORKS\john** tiver acesso concedido, o **ADVWORKS\john** ainda poderá se conectar.  
+ O usuário **ADVWORKS\john** ainda poderá se conectar se **ADVWORKS\Admins** tiver recebido acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Da mesma forma, se o grupo do Windows **ADVWORKS\Admins** tiver seu acesso revogado, mas o **ADVWORKS\john** tiver acesso concedido, o **ADVWORKS\john** ainda poderá se conectar.  
   
- Use **sp_denylogin** para impedir explicitamente que os usuários se conectem a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]uma instância do, independentemente de suas associações de grupo do Windows.  
+ Use **sp_denylogin** para impedir explicitamente que os usuários se conectem a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , independentemente de suas associações de grupo do Windows.  
   
  **sp_revokelogin** não pode ser executado em uma transação definida pelo usuário.  
   

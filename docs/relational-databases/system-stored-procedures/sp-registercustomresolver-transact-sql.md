@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfced9a7fa554149b491f8ff350ca81723c81d20
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3eac29c10b8f0204b3516051981fc29b3bee3ddc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751710"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Registra um manipulador de lógica de negócios ou um resolvedor personalizado com base em COM que pode ser invocado durante o processo de sincronização de replicação de mesclagem. Esse procedimento armazenado é executado no Distribuidor.  
   

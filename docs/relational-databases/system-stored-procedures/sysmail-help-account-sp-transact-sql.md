@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5d5c822264682aa3fb6fd43d26f589aeb272f45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752740"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Lista informações (exceto senhas) sobre contas do Database Mail.  
   
@@ -60,8 +60,8 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**replyto_address**|**nvarchar(128)**|O endereço onde as respostas às mensagens desta conta são enviadas.|  
 |**ServerType**|**sysname**|O tipo de servidor de email da conta.|  
 |**ServerName**|**sysname**|O nome do servidor de email da conta.|  
-|**Porto**|**int**|O número da porta usada pelo servidor de email.|  
-|**username**|**nvarchar(128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **username** é nulo, Database Mail não usa a autenticação para essa conta.|  
+|**port**|**int**|O número da porta usada pelo servidor de email.|  
+|**Nome de Usuário**|**nvarchar(128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **username** é nulo, Database Mail não usa a autenticação para essa conta.|  
 |**use_default_credentials**|**bit**|Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usa as credenciais do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando esse parâmetro for 0, Database Mail usará o ** \@ nome de usuário** e a ** \@ senha** para autenticação no servidor SMTP. Se o ** \@ nome de usuário** e a ** \@ senha** forem nulos, Database Mail usará a autenticação anônima. Consulte o administrador do SMTP antes de especificar esse parâmetro.|  
 |**enable_ssl**|**bit**|Especifica se Database Mail criptografa a comunicação usando TLS (segurança de camada de transporte), anteriormente conhecido como protocolo SSL (SSL). Use esta opção se o TLS for necessário no servidor SMTP. **Enable_ssl** é bit, sem padrão. 1 indica Database Mail criptografa a comunicação usando TLS. 0 indica Database Mail envia o email sem criptografia TLS.|  
   

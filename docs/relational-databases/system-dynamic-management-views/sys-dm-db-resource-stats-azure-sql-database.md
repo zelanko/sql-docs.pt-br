@@ -19,15 +19,15 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 174c4e6c864dab1866326fdd69b5c588ec26b3b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175085"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738714"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Retorna o consumo de CPU, E/S e consumo de memória para um banco de dados [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Existe uma linha para cada 15 segundos, mesmo se não houver nenhuma atividade no banco de dados. Os dados históricos são mantidos por aproximadamente uma hora.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "78175085"
 |cpu_limit|**decimal (5, 2)**|Número de vCores para este banco de dados durante esse intervalo. Para bancos de dados que usam o modelo baseado em DTU, essa coluna é nula.|
 |avg_instance_cpu_percent|**decimal (5, 2)**|Uso médio de CPU para a instância de SQL Server que hospeda o banco de dados, conforme medido pelo sistema operacional. Inclui a utilização da CPU por cargas de trabalho internas e de usuário.|
 |avg_instance_memory_percent|**decimal (5, 2)**|Uso médio de memória para a instância de SQL Server que hospeda o banco de dados, conforme medido pelo sistema operacional. Inclui a utilização de memória tanto por usuários quanto por cargas de trabalho internas.|
-|avg_login_rate_percent|**decimal (5, 2)**|Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.|
+|avg_login_rate_percent|**decimal (5, 2)**|Identificado apenas para fins informativos. Não há suporte. A compatibilidade futura não está garantida.|
 |replica_role|**int**|Representa a função da réplica atual com 0 como primário, 1 como secundário e 2 como encaminhador (primário do secundário geográfico). Você verá "1" quando conectado com a intenção ReadOnly a todos os secundários legíveis. Se estiver se conectando a um secundário geográfico sem especificar a intenção ReadOnly, você deverá ver "2" (conectando-se ao encaminhador).|
 |||
   

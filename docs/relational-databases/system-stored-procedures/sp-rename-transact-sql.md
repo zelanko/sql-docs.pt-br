@@ -21,15 +21,15 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1d9daa3350d252b6ef11c1dda88fc1383964e08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826546"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751653"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Altera o nome de um objeto criado pelo usuário no banco de dados atual. Esse objeto pode ser uma tabela, um índice, uma coluna, um tipo de dados de alias ou um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tipo de Common Language Runtime (CLR) definido pelo usuário.  
   

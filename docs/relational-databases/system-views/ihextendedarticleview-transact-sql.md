@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ffc832e8e79e93eb3b158e7f99cfb64cea2dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752653"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A exibição **IHextendedArticleView** expõe informações sobre artigos em uma publicação não SQL Server. Essa exibição é armazenada no banco de dados de **distribuição** .  
   

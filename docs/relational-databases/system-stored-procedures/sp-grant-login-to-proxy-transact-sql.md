@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: bdfeab5754a2397c01ace2bb9f822fa168eeef6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7ac6bfbd157a72cee716b4a5a916cf2c7069ba8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72005859"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750547"
 ---
 # <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Concede um acesso de entidade de segurança a um proxy.  
 
@@ -44,15 +44,15 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @login_name = ] 'login_name'`O nome de logon ao qual conceder acesso. O *login_name* é **nvarchar (256)**, com um padrão de NULL. Um dos ** \@login_name**, ** \@fixed_server_role**ou ** \@msdb_role** deve ser especificado ou o procedimento armazenado falhará.  
+`[ @login_name = ] 'login_name'`O nome de logon ao qual conceder acesso. O *login_name* é **nvarchar (256)**, com um padrão de NULL. Um dos ** \@ login_name**, ** \@ fixed_server_role**ou ** \@ msdb_role** deve ser especificado ou o procedimento armazenado falhará.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'`A função de servidor fixa à qual conceder acesso. O *fixed_server_role* é **nvarchar (256)**, com um padrão de NULL. Um dos ** \@login_name**, ** \@fixed_server_role**ou ** \@msdb_role** deve ser especificado ou o procedimento armazenado falhará.  
+`[ @fixed_server_role = ] 'fixed_server_role'`A função de servidor fixa à qual conceder acesso. O *fixed_server_role* é **nvarchar (256)**, com um padrão de NULL. Um dos ** \@ login_name**, ** \@ fixed_server_role**ou ** \@ msdb_role** deve ser especificado ou o procedimento armazenado falhará.  
   
-`[ @msdb_role = ] 'msdb_role'`A função de banco de dados no banco de dados **msdb** ao qual conceder acesso. O *msdb_role* é **nvarchar (256)**, com um padrão de NULL. Um dos ** \@login_name**, ** \@fixed_server_role**ou ** \@msdb_role** deve ser especificado ou o procedimento armazenado falhará.  
+`[ @msdb_role = ] 'msdb_role'`A função de banco de dados no banco de dados **msdb** ao qual conceder acesso. O *msdb_role* é **nvarchar (256)**, com um padrão de NULL. Um dos ** \@ login_name**, ** \@ fixed_server_role**ou ** \@ msdb_role** deve ser especificado ou o procedimento armazenado falhará.  
   
-`[ @proxy_id = ] id`O identificador do proxy para o qual conceder acesso. A *ID* é **int**, com um padrão de NULL. Um dos ** \@proxy_id** ou ** \@proxy_name** deve ser especificado ou o procedimento armazenado falhará.  
+`[ @proxy_id = ] id`O identificador do proxy para o qual conceder acesso. A *ID* é **int**, com um padrão de NULL. Um dos ** \@ proxy_id** ou ** \@ proxy_name** deve ser especificado ou o procedimento armazenado falhará.  
   
-`[ @proxy_name = ] 'proxy_name'`O nome do proxy para o qual conceder acesso. O *proxy_name* é **nvarchar (256)**, com um padrão de NULL. Um dos ** \@proxy_id** ou ** \@proxy_name** deve ser especificado ou o procedimento armazenado falhará.  
+`[ @proxy_name = ] 'proxy_name'`O nome do proxy para o qual conceder acesso. O *proxy_name* é **nvarchar (256)**, com um padrão de NULL. Um dos ** \@ proxy_id** ou ** \@ proxy_name** deve ser especificado ou o procedimento armazenado falhará.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

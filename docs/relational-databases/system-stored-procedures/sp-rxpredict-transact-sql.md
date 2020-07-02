@@ -4,7 +4,7 @@ ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f6ee7c1f0b1dc1ccbcd4db260621dc5bda3168
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750465"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +60,7 @@ Para habilitar o uso do procedimento armazenado, o SQLCLR deve estar habilitado 
 > [!NOTE]
 > Há implicações de segurança para enabing essa opção. Use uma implementação alternativa, como a função de [previsão Transact-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017) , se o SQLCLR não puder ser habilitado no servidor.
 
-O usuário precisa `EXECUTE` de permissão no banco de dados.
+O usuário precisa de `EXECUTE` permissão no banco de dados.
 
 ### <a name="supported-algorithms"></a>Algoritmos compatíveis
 
@@ -86,7 +86,7 @@ Para criar e treinar o modelo, use um dos algoritmos com suporte para R ou Pytho
 #### <a name="r-transformations-supplied-by-microsoftml"></a>R: transformações fornecidas por MicrosoftML
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [Concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
@@ -112,7 +112,7 @@ Para criar e treinar o modelo, use um dos algoritmos com suporte para R ou Pytho
 #### <a name="python-transformations-supplied-by-microsoftml"></a>Python: transformações fornecidas por microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [Concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
@@ -135,7 +135,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-Além de ser uma consulta SQL válida, os dados de entrada em * \@inputData* devem incluir colunas compatíveis com as colunas no modelo armazenado.
+Além de ser uma consulta SQL válida, os dados de entrada em * \@ inputData* devem incluir colunas compatíveis com as colunas no modelo armazenado.
 
 `sp_rxPredict`dá suporte apenas aos seguintes tipos de coluna .NET: Double, float, short, ushort, Long, ULong e String. Talvez seja necessário filtrar tipos sem suporte em seus dados de entrada antes de usá-los para pontuação em tempo real. 
 

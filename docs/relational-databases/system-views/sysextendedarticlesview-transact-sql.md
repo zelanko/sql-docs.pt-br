@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c89e15e2a5da3a33afc5641ac9d96c468afb20c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750124"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A exibição **sysextendedarticlesview** fornece informações sobre artigos publicados. Essa exibição é armazenada no banco de dados de distribuição.  
   

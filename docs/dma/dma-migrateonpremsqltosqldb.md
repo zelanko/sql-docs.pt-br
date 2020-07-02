@@ -1,7 +1,7 @@
 ---
 title: Migrar SQL Server para o banco de dados SQL do Azure usando o Assistente de Migração de Dados
 description: Saiba como usar Assistente de Migração de Dados para migrar um SQL Server local para o banco de dados SQL do Azure
-ms.date: 07/15/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885923"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749785"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrar SQL Server locais ou SQL Server em VMs do Azure para o banco de dados SQL do Azure usando o Assistente de Migração de Dados
 
@@ -75,7 +75,7 @@ Este artigo fornece instruções passo a passo para migrar SQL Server no local p
 4. Selecione um único banco de dados de destino da migração.
 
    > [!NOTE]
-   > Se você pretende migrar usuários do Windows, na caixa de texto **nome de domínio de usuário externo de destino** , verifique se o nome de domínio do usuário externo meta está especificado corretamente.
+   > Se você pretende migrar usuários do Windows, na caixa de texto **nome de domínio de usuário externo de destino** , verifique se o nome de domínio do usuário externo de destino está especificado corretamente.
 
     ![Selecionar Banco de dados de destino](../dma/media/select-target-database.png)
 
@@ -87,8 +87,8 @@ Este artigo fornece instruções passo a passo para migrar SQL Server no local p
 
     ![Selecionar os objetos de esquema](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > Alguns dos objetos que não podem ser convertidos no estado em que se encontram são apresentados com oportunidades de correção automática. Ao clicar nesses objetos no painel esquerdo, as correções sugeridas são exibidas no painel direito. Examine as correções e opte por aplicar ou ignorar todas as alterações, a cada objeto. Observe que, ao aplicar ou ignorar todas as alterações para um objeto, isso não afetará as alterações em outros objetos de banco de dados. As instruções que não podem ser convertidas nem corrigidas automaticamente são reproduzidas no banco de dados de destino e comentadas.
 
     ![Correção sugerida](../dma/media/suggested-fix.png)
 
@@ -118,7 +118,7 @@ A tela final mostra o status geral.
 
    ![Status da migração](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 * [AMD (Assistente de Migração de Dados)](../dma/dma-overview.md)
 * [Assistente de Migração de Dados: definições de configuração](../dma/dma-configurationsettings.md)

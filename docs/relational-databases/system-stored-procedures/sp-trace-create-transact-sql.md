@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc81a19350c3ba95b99c821d972c02dd112c18e7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4e21038736343ecce98ded93d87f32d64b7ebe4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750405"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cria uma definição de rastreamento. O rastreamento novo estará em um estado interrompido.  
   
@@ -137,7 +137,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **Exceção**  
   
-    -   **Segura**  
+    -   **Attention**  
   
 -   Eventos ou colunas não podem ser adicionados ou removidos desse rastreamento.  
   

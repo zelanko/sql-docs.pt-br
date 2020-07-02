@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42ecb7a4199bd42c6f522e447f260c37e3ba3368
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bcc9d30d457e9042f2a667a7a71f846f6e07eb63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831960"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738754"
 ---
 # <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada objeto que é um procedimento armazenado estendido, com **Sys. Objects. Type** = X. Como os procedimentos armazenados estendidos são instalados no banco de dados **mestre** , eles ficam visíveis apenas desse contexto de banco de dados. A seleção da exibição **Sys. extended_procedures** em qualquer outro contexto de banco de dados retornará um conjunto de resultados vazio.  
 
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**\<Colunas herdadas de sys. Objects>**||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Columns inherited from sys.objects>**||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**dll_name**|**nvarchar(260)**|Nome da DLL, incluindo caminho, para este procedimento armazenado estendido.|  
   
 ## <a name="permissions"></a>Permissões  

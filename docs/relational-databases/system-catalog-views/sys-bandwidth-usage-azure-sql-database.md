@@ -19,23 +19,23 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752925"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Banco de Dados SQL do Azure)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 > [!NOTE]
-> Isso se aplica somente [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]a v11. * *  
+> Isso se aplica somente a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11. * *  
   
  Retorna informações sobre a largura de banda de rede usada por cada banco de dados em um ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor de banco de dados v11**,. Cada linha retornada para um banco de dados determinado resume uma única direção e a classe de uso durante um período de uma hora.  
   
- **Isso foi preterido em um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].**  
+ **Isso foi preterido em um [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
  A exibição **Sys. bandwidth_usage** contém as colunas a seguir.  
   
@@ -43,8 +43,8 @@ ms.locfileid: "67942572"
 |-----------------|-----------------|  
 |**time**|A hora em que a largura de banda foi consumida. As linhas nessa exibição são por hora. Por exemplo, 2009-09-19 02:00:00.000 significa que a largura de banda foi consumida em 19 de setembro de 2009 entre 2h e 3h.|  
 |**database_name**|O nome do banco de dados que usou largura de banda.|  
-|**direção**|O tipo de largura de banda que foi usado, um de:<br /><br /> Entrada: dados que estão sendo movidos para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]o.<br /><br /> Saída: dados que estão saindo do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**classe**|A classe da largura de banda que foi usada, um de:<br />Interno: dados que estão sendo movidos na plataforma do Azure.<br />Externo: dados que estão saindo da plataforma Azure.<br /><br /> Esta classe será retornada somente se o banco de dados estiver envolvido em uma relação de cópia contínua entre regiões ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Se um determinado banco de dados não participar de nenhuma relação de cópia contínua, as linhas "Interlink" não serão retornadas. Para obter mais informações, consulte "Comentários", posteriormente neste tópico.|  
+|**direction**|O tipo de largura de banda que foi usado, um de:<br /><br /> Entrada: dados que estão sendo movidos para o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Saída: dados que estão saindo do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|  
+|**classes**|A classe da largura de banda que foi usada, um de:<br />Interno: dados que estão sendo movidos na plataforma do Azure.<br />Externo: dados que estão saindo da plataforma Azure.<br /><br /> Esta classe será retornada somente se o banco de dados estiver envolvido em uma relação de cópia contínua entre regiões ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Se um determinado banco de dados não participar de nenhuma relação de cópia contínua, as linhas "Interlink" não serão retornadas. Para obter mais informações, consulte "Comentários", posteriormente neste tópico.|  
 |**time_period**|O período de tempo em que o uso ocorreu é Pico ou Fora do Horário de Pico. The Peak time is based on the region in which the server was created. Por exemplo, se um servidor tiver sido criado na região "US_Northwest", o horário de pico será definido como estando entre 10h e 18h. PST.|  
 |**quantity**|A quantidade de largura de banda, em quilobytes (KBs), que foi usada.|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67942572"
 
  Para cada banco de dados usado em um determinado momento, a exibição **Sys. bandwidth_usage** retorna linhas que mostram a classe e a direção do uso da largura de banda. O exemplo a seguir ilustra os dados que podem ser expostos para um banco de dados específico. Neste exemplo, a hora é 2012-04-21 17:00:00, que ocorre durante o horário de pico. O nome do banco de dados é Db1. Neste exemplo, **Sys. bandwidth_usage** retornou uma linha para todas as quatro combinações de direções de entrada e saída e classes externas e internas, da seguinte maneira:  
   
-|time|database_name|direction|classe|time_period|quantidade|  
+|time|database_name|direction|class|time_period|quantidade|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Entrada|Externo|Peak|66|  
 |2012-04-21 17:00:00|Db1|Saída|Externo|Peak|741|  

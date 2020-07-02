@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9abcbec940d9afa7b5aeb36183610b471bb3a3df
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 204668e8983ed3503e1a5697c47a4abde92d26cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750509"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma lista de funções de servidor fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -41,7 +41,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @srvrolename = ] 'role'`É o nome da função de servidor fixa. *role* é **sysname**, com um padrão de NULL. a *função* pode ser um dos valores a seguir.  
   
-|Função de servidor fixa|Descrição|  
+|Função de servidor fixa|Description|  
 |-----------------------|-----------------|  
 |sysadmin|Administradores de sistema|  
 |securityadmin|Administradores de segurança|  
@@ -60,7 +60,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nome da função de servidor|  
-|Descrição|**sysname**|Descrição de ServerRole|  
+|Description|**sysname**|Descrição de ServerRole|  
   
 ## <a name="remarks"></a>Comentários  
  As funções de servidor fixas são definidas no nível de servidor e possuem permissões para executar atividades administrativas específicas no nível de servidor. A funções de servidor fixas não podem ser adicionadas, removidas ou alteradas.  

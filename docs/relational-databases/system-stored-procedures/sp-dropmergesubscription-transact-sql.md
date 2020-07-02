@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2868afcf85895ce1e7456bc2eea3693d9b25e679
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be9ad08f1591ef6f7e8893b09031a2e695be031d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750555"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Descarta uma assinatura de uma publicação de mesclagem e seu Agente de Mesclagem associado. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
@@ -54,7 +54,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |-----------|-----------------|  
 |**os**|Assinaturas push, pull e anônimas|  
 |**modo**|Assinatura anônima.|  
-|**pressionado**|Assinatura push.|  
+|**push**|Assinatura push.|  
 |**recebimento**|Assinatura pull.|  
 |**ambos** (padrão)|Assinaturas push e pull.|  
   

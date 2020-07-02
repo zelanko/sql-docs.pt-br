@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221a490f6accb13706c19860f70c1de2db6d2bf8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a59beeb51d59b00fbd902045f0f1aaebc9322a64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752906"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Essa exibição do catálogo contém uma linha para o ponto de extremidade do Service Broker. Para cada linha nessa exibição, há uma linha correspondente com o mesmo **endpoint_id** na exibição **Sys. tcp_endpoints** que contém os metadados de configuração TCP. TCP é o único protocolo permitido para o Service Broker.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**\<colunas herdadas>**|**--**|Herda colunas de [pontos sys. end&#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**\<inherited columns>**|**--**|Herda colunas de [pontos sys. end&#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_message_forwarding_enabled**|**bit**|Faz com que o ponto de extremidade ofereça suporte ao encaminhamento de mensagens. Inicialmente, isso é definido como **0** (desabilitado). Não é NULLABLE.|  
 |**message_forwarding_size**|**int**|O número máximo de megabytes de espaço de **tempdb** permitido para ser usado para mensagens sendo encaminhadas. Inicialmente, isso é definido como **10**. Não é NULLABLE.|  
 |**connection_auth**|**tinyint**|O tipo de autenticação de conexão exigido para conexões com este ponto de extremidade; um dentre:<br /><br /> **1** -NTLM<br /><br /> **2** -Kerberos<br /><br /> **3** -negociar<br /><br /> **4** -certificado<br /><br /> **5** -NTLM, certificado<br /><br /> **6** -Kerberos, certificado<br /><br /> **7** -negociar, certificado<br /><br /> **8** -certificado, NTLM<br /><br /> **9** -certificado, Kerberos<br /><br /> **10** -Certificate, Negotiate<br /><br /> Não é NULLABLE.|  

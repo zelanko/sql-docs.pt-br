@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753256"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
 
   Especifica um critério de pesquisa para um grafo, que é pesquisado recursiva ou repetidamente. SHORTEST_PATH pode ser usada dentro da correspondência com tabelas de borda e nó do grafo, na instrução SELECT. 
   
@@ -93,7 +93,7 @@ Enquanto que o último nó é o último nó enésimo no caminho do grafo de saí
 Essa função retorna a soma dos valores de atributo de nó/borda fornecidos ou expressão que apareceu no caminho atravessado.
 
 ### <a name="count"></a>COUNT
-Essa função retorna o número de valores não nulos do atributo de nó/borda desejado no caminho. A função COUNT dá suporte ao\*operador ' ' com um alias de tabela de nó ou borda. Sem o alias de tabela de nó ou borda, o \* uso de é ambíguo e resultará em um erro.
+Essa função retorna o número de valores não nulos do atributo de nó/borda desejado no caminho. A função COUNT dá suporte ao \* operador ' ' com um alias de tabela de nó ou borda. Sem o alias de tabela de nó ou borda, o uso de \* é ambíguo e resultará em um erro.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
@@ -117,7 +117,7 @@ Em alguns casos, os planos inválidos podem ser gerados para consultas com um n�
 ## <a name="examples"></a>Exemplos 
 Para as consultas de exemplo mostradas aqui, vamos usar as tabelas node e Edge criadas no [SQL Graph Sample](./sql-graph-sample.md)
 
-### <a name="a--find-shortest-path-between-2-people"></a>A.  Localizar caminho mais curto entre 2 pessoas
+### <a name="a--find-shortest-path-between-2-people"></a>a.  Localizar caminho mais curto entre 2 pessoas
  No exemplo a seguir, encontramos um caminho mais curto entre Jacob e Alice. Precisaremos do nó Person e da borda FriendOf criada a partir do script de exemplo do Graph. 
 
  ```

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b84e1002f84cbcd0117ed79253b611f3e6ca4da3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 303fe8085ae4d103ede7715dcbb46e456db8f01f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752940"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Exibições do catálogo de testemunha de espelhamento de banco de dados – sys. database_mirroring_witnesses
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada função testemunha desempenhada por um servidor em uma parceria de espelhamento de banco de dados. 
   
@@ -41,7 +41,7 @@ ms.locfileid: "82823606"
 |**principal_server_name**|**sysname**|Nome de servidor parceiro cuja cópia do banco de dados é, no momento, o banco de dados principal.|  
 |**mirror_server_name**|**sysname**|Nome do servidor parceiro cuja cópia do banco de dados é, no momento, o banco de dados espelho.|  
 |**safety_level**|**tinyint**|Configuração de segurança de transação para atualizações no banco de dados espelho:<br /><br /> 0 = Estado desconhecido<br /><br /> 1 = Desativado (assíncrono)<br /><br /> 2 = Completo (síncrono)<br /><br /> Usar uma testemunha para um failover automático requer segurança de transação completa, que é o padrão.|  
-|**safety_level_desc**|**nvarchar(60)**|Descrição de garantia de segurança de atualizações no banco de dados espelho:<br /><br /> DESCONHECIDO<br /><br /> OFF<br /><br /> FULL|  
+|**safety_level_desc**|**nvarchar(60)**|Descrição de garantia de segurança de atualizações no banco de dados espelho:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
 |**safety_sequence_number**|**int**|Atualize o número de sequência para alterações a **safety_level**.|  
 |**role_sequence_number**|**int**|Atualize o número de sequência para mudanças para funções de principal/espelho desempenhadas pelos parceiros de espelhamento.|  
 |**mirroring_guid**|**uniqueidentifier**|Identificador da parceria de espelhamento.|  

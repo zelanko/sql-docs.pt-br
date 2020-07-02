@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9873045fd7e4fb11ad19bbbce953a086512df9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d6414be15bcd33e8ae2a0ab267baaa039761fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750451"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica e exibe informações sobre o esquema que é excluído ao listar tabelas Oracle qualificadas para publicação.  
   
@@ -47,7 +47,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**adicionar**|Adiciona o esquema especificado à lista de esquemas não qualificados para publicação.|  
+|**add**|Adiciona o esquema especificado à lista de esquemas não qualificados para publicação.|  
 |**suspensa**|Descarta o esquema especificado na lista de esquemas não qualificados para publicação.|  
 |**help**|Retorna a lista de esquemas não qualificados para publicação.|  
   

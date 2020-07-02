@@ -23,15 +23,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d2a4789dfc29cdd581ab50f9f0a0f3d5d69ff0f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 926f9588ad5bf9a29490a84017f3317f8ec5c424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750783"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversões de tipo de dados e a anotação sql: DataType (SQLXML 4,0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Em um esquema XSD, o atributo **xsd: Type** especifica o tipo de dados XSD de um elemento ou atributo. Quando um esquema XSD é usado para extrair dados do banco de dados, o tipo de dados especificado é usado para formatar os dados.  
   
  Além de especificar um tipo XSD em um esquema, você também pode especificar um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados da Microsoft usando a anotação **SQL: DataType** . Os atributos **xsd: Type** e **SQL: DataType** controlam o mapeamento entre tipos de dados XSD e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  

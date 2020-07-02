@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b97f2f3a7ae169c446a298ae7f5d31b7c8b88ed
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ff9929289da5236a07b5461195d54c90d01d5fbe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752680"
 ---
 # <a name="msrepl_backup_lsns-transact-sql"></a>MSrepl_backup_lsns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSrepl_backup_lsns** contém os números de sequência de log de transações (LSN) para dar suporte à opção ' sincronizar com backup ' do banco de dados de distribuição. Esta tabela é armazenada no banco de dados de distribuição.  
   

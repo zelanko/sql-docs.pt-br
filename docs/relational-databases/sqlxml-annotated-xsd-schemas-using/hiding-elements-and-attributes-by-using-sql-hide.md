@@ -26,15 +26,15 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af964cd3561a28db049baa49c2e74140db994784
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81b6570f0301d501f1f8899da70e60f04f1c5c44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388179"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750752"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Ocultando elementos e atributos usando sql:hide
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Quando uma consulta XPath é executada em um esquema XSD, o documento XML resultante tem elementos e atributos especificados no esquema. Você pode especificar que alguns elementos e atributos estejam ocultos no esquema usando a anotação **SQL: Hide** . Isso é útil quando os critérios de seleção da consulta exigem a presença de elementos ou atributos específicos no esquema, mas você não deseja que eles retornem no documento XML gerado.  
   
  A anotação **SQL: Hide** usa um valor booliano (0 = false, 1 = true). Os valores aceitáveis são 0, 1, true e false.  
@@ -42,10 +42,10 @@ ms.locfileid: "81388179"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Especificando sql:hide em um atributo  
- O esquema XSD neste exemplo consiste em um ** \<elemento Person. Contact>** com os atributos **ContactID**, **FirstName**e **LastName** .  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>a. Especificando sql:hide em um atributo  
+ O esquema XSD neste exemplo consiste em um **\<Person.Contact>** elemento com atributos **ContactID**, **FirstName**e **LastName** .  
   
- O ** \<elemento Person. Contact>** é do tipo complexo e, portanto, é mapeado para a tabela de mesmo nome (mapeamento padrão). Todos os atributos de ** \<pessoa. Contact>** elemento são de tipo simples e são mapeados para colunas com os mesmos nomes em Person. contacttable no banco de dados AdventureWorks. No esquema, a anotação **SQL: Hide** é especificada no atributo **ContactID** . Quando uma consulta XPath é especificada nesse esquema, o **ContactID** não é retornado no documento XML.  
+ O **\<Person.Contact>** elemento é de tipo complexo e, portanto, é mapeado para a tabela de mesmo nome (mapeamento padrão). Todos os atributos do **\<Person.Contact>** elemento são de tipo simples e são mapeados para colunas com os mesmos nomes em Person. contacttable no banco de dados AdventureWorks. No esquema, a anotação **SQL: Hide** é especificada no atributo **ContactID** . Quando uma consulta XPath é especificada nesse esquema, o **ContactID** não é retornado no documento XML.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -92,7 +92,7 @@ ms.locfileid: "81388179"
 </ROOT>  
 ```  
   
- Quando **SQL: Hide** é especificado em um elemento, o elemento e seus atributos ou elementos filho não aparecem no documento XML gerado. Aqui está outro esquema XSD no qual **SQL: Hide** é especificado no elemento ** \<>OD** :  
+ Quando **SQL: Hide** é especificado em um elemento, o elemento e seus atributos ou elementos filho não aparecem no documento XML gerado. Aqui está outro esquema XSD no qual **SQL: Hide** está especificado no **\<OD>** elemento:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ ms.locfileid: "81388179"
 </xsd:schema>  
 ```  
   
- Quando uma consulta XPath (por exemplo `/Customers[@CID="1"]`) é especificada nesse esquema, o documento XML gerado não inclui o elemento de ** \<>OD** e seus filhos, conforme mostrado neste resultado parcial:  
+ Quando uma consulta XPath (por exemplo `/Customers[@CID="1"]` ) é especificada nesse esquema, o documento XML gerado não inclui o **\<OD>** elemento e seus filhos, conforme mostrado neste resultado parcial:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

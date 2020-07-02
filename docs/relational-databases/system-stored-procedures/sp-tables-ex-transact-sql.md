@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ebb27860d7b7da46680a61486c59de3929117ce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 36ac5833a4bf714c6f4b294f15f0cf6aca6fb64d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750420"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna as informações de tabela sobre as tabelas do servidor vinculado especificado.  
   
@@ -54,7 +54,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`É o tipo da tabela a ser retornada. *TABLE_TYPE* é **sysname**, com um padrão de NULL, e pode ter um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**RECEBER**|Nome de um alias.|  
 |**GLOBAL TEMPORARY**|Nome de uma tabela temporária disponível no sistema.|  
@@ -63,12 +63,12 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABELA DO SISTEMA**|Nome de uma tabela do sistema.|  
 |**EXIBIÇÃO DO SISTEMA**|Nome de uma exibição do sistema.|  
 |**TABELA**|Nome de uma tabela de usuário.|  
-|**VIEW**|Nome de uma exibição.|  
+|**EXIBIÇÃO**|Nome de uma exibição.|  
   
 `[ @fUsePattern = ] 'fUsePattern'`Determina se os caracteres **_**, **%** , **[** e **]** são interpretados como caracteres curinga. Os valores válidos são 0 (correspondência de padrão desativada) e 1 (correspondência de padrão ativada). *fUsePattern* é **bit**, com um padrão de 1.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -77,7 +77,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em outros produtos, ela representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome do proprietário da tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , essa coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
-|**TABLE_TYPE**|**varchar (32)**|Tabela, tabela do sistema ou exibição.|  
+|**TABLE_TYPE**|**varchar(32)**|Tabela, tabela do sistema ou exibição.|  
 |**COMENTÁRIOS**|**varchar (254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
   
 ## <a name="remarks"></a>Comentários  

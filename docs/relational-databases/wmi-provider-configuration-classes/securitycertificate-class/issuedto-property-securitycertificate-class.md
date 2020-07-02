@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42616e8c8045ca5748cf711b266993673a361d59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81d89dbeb1fdaeb4e71d77cc9ee4acaceedc9f99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751500"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>Propriedade IssuedTo (classe SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o objeto para o qual o certificado de segurança é emitido.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,7 +36,7 @@ object.IssuedTo [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) que representa um certificado de segurança.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

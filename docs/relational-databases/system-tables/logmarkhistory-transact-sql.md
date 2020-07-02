@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61fcc848f8f962934744d7aaf69e1549a7e33485
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ef8a263edfb6902cd4f050cbe27b99062e5b5c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750140"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada transação marcada que foi confirmada. Essa tabela é armazenada no banco de dados **msdb** .  
   

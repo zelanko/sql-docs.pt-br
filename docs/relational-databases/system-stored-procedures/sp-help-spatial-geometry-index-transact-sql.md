@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e2e5d935fc3d6db5d243ec4b76841f13a60e5a11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56db1455b1b85ea50fc5bdea7f6f3d06778d329f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304857"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749342"
 ---
 # <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna os nomes e valores de um conjunto especificado de propriedades sobre um índice espacial de **Geometry** . O resultado é retornado em um formato de tabela. Você pode escolher retornar um conjunto principal de propriedades ou todas as propriedades do índice.  
   
@@ -54,7 +54,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  As propriedades que contêm valores NULL não são incluídas no conjunto de retorno.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir `sp_help_spatial_geometry_index` usa para investigar o índice espacial **SIndx_SpatialTable_geometry_col2** definido na tabela **geometry_col** para o exemplo de consulta fornecido em ** \@QS**. Este exemplo retorna apenas as propriedades principais do índice especificado.  
+ O exemplo a seguir usa `sp_help_spatial_geometry_index` para investigar o índice espacial **SIndx_SpatialTable_geometry_col2** definido na tabela **geometry_col** para o exemplo de consulta fornecido em ** \@ QS**. Este exemplo retorna apenas as propriedades principais do índice especificado.  
   
 ```  
 declare @qs geometry  

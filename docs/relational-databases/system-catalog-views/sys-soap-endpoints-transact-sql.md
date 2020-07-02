@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9408727ed9a9f10a8ed223c8765591ff8327b99
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6cb269ec8ce866e02dcb4ea06a7fe66f0c49e5a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750693"
 ---
 # <a name="syssoap_endpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82834000"
 |**default_database**|**sysname**|O nome do banco de dados padrão especificado na opção DATABASE =.<br /><br /> NULL = DEFAULT foi especificado.|  
 |**default_namespace**|**nvarchar (384)**|O namespace padrão especificado na opção NAMESPACE = ou, `https://tempuri.org` se o padrão foi especificado, em vez disso.|  
 |**default_result_schema**|**tinyint**|O valor padrão da opção SCHEMA =.<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
-|**default_result_schema_desc**|**nvarchar(60)**|Descrição do valor padrão da opção SCHEMA =.<br /><br /> Nenhuma<br /><br /> STANDARD|  
+|**default_result_schema_desc**|**nvarchar(60)**|Descrição do valor padrão da opção SCHEMA =.<br /><br /> NONE<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = A opção CHARACTER_SET = SQL foi especificada.<br /><br /> 1 = A opção CHARACTER_SET = XML foi especificada.|  
 |**is_session_enabled**|**bit**|0 = A opção SESSION = DISABLE foi especificada.<br /><br /> 1 = A opção SESSION = ENABLED foi especificada.|  
 |**session_timeout**|**int**|Valor especificado na opção SESSION_TIMEOUT =.|  

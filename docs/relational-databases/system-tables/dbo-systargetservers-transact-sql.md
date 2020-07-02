@@ -1,5 +1,5 @@
 ---
-title: dbo. systargetservers (Transact-SQL) | Microsoft Docs
+title: dbo.sysTargetServers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6193bdfaaac12d34ed4993b71fd6b5862046384c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 063744d15d0f4ad6d7ce8bd4895d254aaecd2931
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813714"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750243"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Registra quais servidores de destino estão inscritos atualmente neste domínio de operação multisservidor.  
   

@@ -24,15 +24,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2753924d37734d0f3198949f9e75102ff6030744
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 84e6c1b0b5530ed33ade4a3ac4813b1a3fe6d251
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750791"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Excluir elementos de esquema do documento XML usando sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Todo elemento e atributo no esquema XSD é mapeado para uma tabela/exibição e uma coluna do banco de dados devido ao mapeamento padrão. Se você quiser criar um elemento no esquema XSD que não seja mapeado para nenhuma tabela de banco de dados (exibição) ou coluna e que não apareça no XML, você poderá especificar a anotação **SQL: mapeada** .  
   
  A anotação **SQL: mapeada** é especialmente útil se o esquema não puder ser modificado ou se o esquema for usado para validar o XML de outras fontes e ainda contiver dados que não estão armazenados no banco de dado. A anotação **SQL: mapeada** difere de **SQL: is-constant,** pois os elementos e atributos não mapeados não aparecem no documento XML.  
@@ -42,12 +42,12 @@ ms.locfileid: "83689400"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Especificando a anotação sql:mapped  
- Suponha que você tenha um esquema XSD de alguma outra origem. Este esquema XSD consiste em uma ** \< pessoa. contate>** elemento com os atributos **ContactID**, **FirstName**, **LastName**e **HomeAddress** .  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>a. Especificando a anotação sql:mapped  
+ Suponha que você tenha um esquema XSD de alguma outra origem. Esse esquema XSD consiste em um **\<Person.Contact>** elemento com os atributos **ContactID**, **FirstName**, **LastName**e **HomeAddress** .  
   
  No mapeamento deste esquema XSD para a tabela Person. Contact no banco de dados AdventureWorks, **SQL: mapeou** é especificado no atributo **HomeAddress** porque a tabela Employees não armazena os endereços residenciais dos funcionários. Como resultado, este atributo não é mapeado para o banco de dados e não é retornado no documento XML resultante quando uma consulta XPath é especificada com relação ao esquema de mapeamento.  
   
- O mapeamento padrão é executado para o restante do esquema. O elemento ** \< Person. Contact>** mapeia para a tabela Person. Contact e todos os atributos são mapeados para as colunas com o mesmo nome na tabela Person. Contact.  
+ O mapeamento padrão é executado para o restante do esquema. O **\<Person.Contact>** elemento é mapeado para a tabela Person. Contact e todos os atributos são mapeados para as colunas com o mesmo nome na tabela Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

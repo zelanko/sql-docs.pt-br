@@ -1,5 +1,5 @@
 ---
-title: dbo. syssessions (Transact-SQL) | Microsoft Docs
+title: Sessões de dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2019
 ms.prod: sql
@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf5ede04576a8d79611d7aea93f5963d25b73d55
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91da4b73125c61f23d027bf99d2550a1d449a7a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750267"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Sempre que é iniciado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent cria uma nova sessão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usa sessões para preservar o status de trabalhos quando serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é reinicializado ou para inesperadamente. Cada linha da tabela **syssessions** contém informações sobre uma sessão. Use a tabela **sysjobactivity** para exibir o estado do trabalho no final de cada sessão.  
   
@@ -42,6 +42,6 @@ Sempre que é iniciado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
  Somente os usuários que são membros da função de servidor fixa **sysadmin** podem acessar essa tabela.  
   
 ## <a name="see-also"></a>Consulte Também  
- [dbo. sysjobactivity &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
+ [dbo.sysjobactivity &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
   
   

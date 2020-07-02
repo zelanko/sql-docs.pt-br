@@ -20,15 +20,15 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95bd2d98f84c288662838e030961bd4a753cff3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc3e4be2683ec0dee5e9cc209718bf97b3859
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829288"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752860"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Retorna uma lista de todos os threads do Sistema Operacional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executados sob o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -51,7 +51,7 @@ ms.locfileid: "82829288"
 |stack_bytes_used|**int**|Número de bytes ativamente usados no thread.|  
 |affinity|**bigint**|Máscara de CPU na qual este thread está sendo executado. Isso depende do valor configurado pela instrução **ALTER Server Configuration Set Process Affinity** Statement. Pode ser diferente do agendador em caso de afinidade flexível.|  
 |Prioridade|**int**|Valor de prioridade deste thread.|  
-|Localidade|**int**|LCID de localidade em cache do thread.|  
+|Local|**int**|LCID de localidade em cache do thread.|  
 |Token|**varbinary (8)**|Identificador de token de representação em cache para o thread.|  
 |is_impersonating|**int**|Indica se esse thread está usando a representação do Win32.<br /><br /> 1 = O thread está usando credenciais de segurança que são diferentes do padrão do processo. Isso indica que o thread está representando uma entidade diferente daquela que criou o processo.|  
 |is_waiting_on_loader_lock|**int**|Status do sistema operacional indicando se o thread está aguardando o bloqueio de carregador.|  

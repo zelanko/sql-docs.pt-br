@@ -1,5 +1,5 @@
 ---
-title: dbo. systargetservergroupmembers (Transact-SQL) | Microsoft Docs
+title: dbo.systargetservergroupmembers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ee1b2ebd-03cb-4b91-a5d2-98d4d38f82ec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 216b8e109fa21d03c00fbae75afebe0a2e58b628
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d6b61dac079e612e447b98010bd297b8a848b349
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750236"
 ---
 # <a name="dbosystargetservergroupmembers-transact-sql"></a>dbo.systargetservergroupmembers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Registra quais servidores de destino estão atualmente inscritos neste grupo multisservidor.  
   

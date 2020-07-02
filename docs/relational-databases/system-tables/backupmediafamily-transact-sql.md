@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e955cb7378a9da430608bf55d287be0fd7237ef5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be1df53780b7472d613c49d2d105c606a09de8df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750375"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada família de mídia. Se uma família de mídia residir em um conjunto de mídias espelhado, a família terá uma linha separada para cada espelho no conjunto de mídias. Essa tabela é armazenada no banco de dados **msdb** .  
     
@@ -40,7 +40,7 @@ ms.locfileid: "82807308"
 |**physical_device_name**|**nvarchar(260)**|Nome físico do dispositivo de backup. Pode ser NULL. Esse campo é compartilhado entre o processo de backup e restauração. Ele pode conter o caminho de destino do backup original ou o caminho de origem da restauração original. Dependendo se o backup ou a restauração ocorreram primeiro em um servidor para um banco de dados. Observe que as restaurações consecutivas do mesmo arquivo de backup não atualizarão o caminho independentemente do local no momento da restauração. Por isso, **physical_device_name** campo não pode ser usado para ver o caminho de restauração usado.|  
 |**device_type**|**tinyint**|Tipo de dispositivo de backup:<br /><br /> 2 = Disco<br /><br /> 5 = Fita<br /><br /> 7 = Dispositivo virtual<br /><br /> 9 = armazenamento do Azure<br /><br /> 105 = Um dispositivo de backup.<br /><br /> Pode ser NULL.<br /><br /> Todos os nomes de dispositivo permanentes e números de dispositivo podem ser encontrados em **Sys. backup_devices**.|  
 |**physical_block_size**|**int**|Tamanho do bloco físico usado para gravar a família de mídias. Pode ser NULL.|  
-|**espelho**|**tinyint**|Número de espelhos (0-3).|  
+|**mirror**|**tinyint**|Número de espelhos (0-3).|  
   
 ## <a name="remarks"></a>Comentários  
  RESTOre VERIFYONLY de *backup_device* com LOADHISTORY popula as colunas da tabela **backupmediaset** com os valores apropriados do cabeçalho conjunto de mídias.  

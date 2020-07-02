@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae1a2b8a7a7469c8dd1b779f17880032924c2ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 22984dc8cf9ddc418b094ada5af232adb7f69706
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753002"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>Exibições do catálogo assembly CLR (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta seção contém as exibições de catálogo a seguir.  
   

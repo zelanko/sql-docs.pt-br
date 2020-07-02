@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1377498e25305f9810f5601a3533c6181314ca0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b8a268446517788c35e29b4f86821373a283070
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750048"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>Método StoptService (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Tenta colocar o serviço no estado de interrompido.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -36,7 +36,7 @@ object.StopService()
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa o serviço.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

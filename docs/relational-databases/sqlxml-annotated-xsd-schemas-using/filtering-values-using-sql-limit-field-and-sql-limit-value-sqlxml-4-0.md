@@ -20,15 +20,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8bc7636fb13674b51290417ee9eb639a6633bd3
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 50732a867c0329610b0a03eebcd97d3f3224d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750772"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrando valores usando sql:limit-field e sql:limit-value (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Você pode limitar as linhas retornadas de uma consulta de banco de dados com base em algum valor limitador. As anotações **SQL: limit-field** e **SQL: limit-value** são usadas para identificar a coluna de banco de dados que contém valores de limitação e para especificar um valor de limitação específico a ser usado para filtrar os dados retornados.  
   
  A anotação **SQL: limit-field** é usada para identificar uma coluna que contém um valor de limitação; Ele é permitido em cada elemento ou atributo mapeado.  
@@ -47,7 +47,7 @@ ms.locfileid: "83689412"
   
  Nestes exemplos, são usados modelos para especificar consultas XPath com base no esquema XSD de mapeamento.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitar os endereços de cliente retornados para um tipo de endereço específico  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>a. Limitar os endereços de cliente retornados para um tipo de endereço específico  
  Neste exemplo, um banco de dados contém duas tabelas:  
   
 -   Customer (CustomerID, CompanyName)  

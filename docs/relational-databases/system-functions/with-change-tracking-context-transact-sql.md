@@ -19,15 +19,15 @@ ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90610b8b93d0d03a41c6dbbae6c2a9a4e9678aac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa900fcf6bd142c5f3d5eddde85df0a41419efa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67950921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752822"
 ---
 # <a name="with-change_tracking_context-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Ativa o contexto de uma alteração a ser especificada, como uma ID de originador, quando os dados são alterados. Por exemplo, ao usar o controle de alterações, um aplicativo pode tentar fazer diferenciações entre as alterações que foram feitas pelo próprio aplicativo e as alterações feitas nos dados fora do aplicativo.  
 

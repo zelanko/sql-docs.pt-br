@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e413b677062841dbd25e2c57e0437efe566ccf98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b95711af5a6ee39c89d9b33834c0609a01c2b030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750588"
 ---
 # <a name="sp_delete_log_shipping_alert_job-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Remove uma tarefa de alerta do servidor monitor de envio de logs se a tarefa existir e nenhum banco de dados primário ou secundário for monitorado.  
   
