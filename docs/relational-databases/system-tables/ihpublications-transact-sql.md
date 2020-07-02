@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 112d237781ecbe257ef0b9d8c3f4bdee37ca5bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a8185249a40c11a031be8206a4a1ea016ed50faa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813527"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764240"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela do sistema **IHpublications** contém uma linha para cada publicação não SQL Server usando o distribuidor atual. Esta tabela é armazenada no banco de dados de distribuição.  
   

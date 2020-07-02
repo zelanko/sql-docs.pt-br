@@ -23,15 +23,15 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: beede3f42597a6b3c7acc6f5bc5a57bc070d0eba
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: e946fcfc3792d42af5cf32e9e5494bc90c8b91c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760319"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contém uma linha para cada objeto de escopo de esquema definido pelo usuário que é criado dentro de um banco de dados, incluindo a função escalar definida pelo usuário e compilada nativamente.  
   

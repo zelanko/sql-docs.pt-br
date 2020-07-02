@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6559be1c680c45b75154cea222ddfece355f49cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762751"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Atualiza as configurações de um alerta existente.  
   
@@ -80,7 +80,7 @@ sp_update_alert
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**0**|Não|  
+|**0**|Nenhum|  
 |**1**|Email|  
 |**2**|Pager|  
 |**4**|**net send**|  
@@ -112,7 +112,7 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`Um valor expresso no formato **'**_itemcomparatorvalue_comparador **'**. *performance_condition* é **nvarchar (512)**, com um padrão de NULL, e consiste nesses elementos.  
   
-|Elemento Format|Descrição|  
+|Elemento Format|Description|  
 |--------------------|-----------------|  
 |*Item*|Um objeto de desempenho, contador de desempenho ou instância nomeada do contador|  
 |*Comparador*|Um destes operadores: **>** , **<** ,**=**|  

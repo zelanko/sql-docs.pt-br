@@ -13,15 +13,15 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b07341dbf3beba66ee7ad6e7cc4861142792fa0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f2df587de4be458e520f8486b1e81e00916e6df8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760683"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviando dados como um parâmetro com valor de tabela usando dados em execução (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Isso é semelhante ao procedimento [All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , mas usa dados em execução para o parâmetro com valor de tabela.  
   
@@ -187,7 +187,7 @@ from @Items
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- Este exemplo mostra que você pode usar o streaming de linha, uma linha por chamada para SQLPutData, com ODBC TVP, semelhante a como você pode usar BCP. exe para carregar dados em um banco de dado.  
+ Este exemplo mostra que você pode usar o streaming de linha, uma linha por chamada para SQLPutData, com ODBC TVP, semelhante a como você pode usar BCP.exe para carregar dados em um banco de dado.  
   
  Antes de compilar o exemplo, altere o nome do servidor na cadeia de conexão.  
   
@@ -375,7 +375,7 @@ EXIT:
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- Este exemplo mostra que você pode usar o streaming de linha, várias linhas por chamada para SQLPutData, com ODBC TVP, semelhante a como você pode usar BCP. exe para carregar dados em um banco de dado.  
+ Este exemplo mostra que você pode usar o streaming de linha, várias linhas por chamada para SQLPutData, com ODBC TVP, semelhante a como você pode usar BCP.exe para carregar dados em um banco de dado.  
   
  Antes de compilar o exemplo, altere o nome do servidor na cadeia de conexão.  
   

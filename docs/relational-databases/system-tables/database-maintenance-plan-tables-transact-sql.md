@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 720d439449870e2b0e620f67cf0321b5c5cde043
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a561a2b6a00c87d213a08390ef3f12ab596d0c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806925"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762618"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>Tabelas do plano de manutenção do banco de dados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Os tópicos desta seção descrevem as tabelas do sistema que armazenam informações utilizadas pelos planos de manutenção do banco de dados. Essas tabelas preservam as informações referentes a instâncias atualizadas a partir de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
