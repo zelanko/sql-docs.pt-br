@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2fc5e725a86f974c14922d620c2a55af1340409f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4ef58ef70135368bd6a87c24a6157086e0e914d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787158"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys. database_audit_specifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém informações sobre as especificações de auditoria do banco de dados de uma auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de servidor. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|Nome|**sysname**|Nome da especificação de auditoria.|  
+|Name|**sysname**|Nome da especificação de auditoria.|  
 |database_specification_id|**int**|ID da especificação do banco de dados.|  
 |create_date|**datetime**|Data de criação da especificação de auditoria.|  
 |modified_date|**datetime**|Data da última alteração feita na especificação de auditoria.|  
@@ -46,7 +46,7 @@ ms.locfileid: "82832010"
 ## <a name="permissions"></a>Permissões  
  As entidades com as permissões **ALTER ANY DATABASE AUDIT** ou **View definition** , a função dbo e os membros da função de banco de dados fixa db_owners têm acesso a essa exibição de catálogo. Além disso, o principal não deve ter a permissão **View definition** negada.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [CRIAR auditoria de servidor &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-audit-transact-sql.md)   

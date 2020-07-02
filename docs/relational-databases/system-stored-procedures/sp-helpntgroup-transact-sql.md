@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 76da15896b5947d0fb66c717fcaeadcab045326e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04a98460660903788d8208d5662e0b9a31518316
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786162"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Reporta informações sobre grupos do Windows com contas no banco de dados atual.  
   
@@ -50,7 +50,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Nome do grupo do Windows.|  
 |**NTGroupId**|**smallint**|Identificador de grupo (ID).|  
-|**SID**|**varbinary (85)**|SID (identificador de segurança) de **NTGroupName**.|  
+|**SIDs**|**varbinary (85)**|SID (identificador de segurança) de **NTGroupName**.|  
 |**HasDbAccess**|**int**|1 = grupo do Windows tem permissão para acessar o banco de dados.|  
   
 ## <a name="remarks"></a>Comentários  

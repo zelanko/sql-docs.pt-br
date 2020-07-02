@@ -13,15 +13,15 @@ ms.assetid: 12816656-940d-4724-acfb-e916eef2e644
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cbaa87cee9035a791d0d90a0c794bc54851789a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b939924d79f2abb0219410a1caab75ee4f9dd45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785452"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   A interface IBCPSession2 é uma extensão de IBCPSession que fornece uma função de membro que é uma alternativa à chamada de IBCPSession::BCPColFmt para cada coluna.  IBCPSession2 herda de IBCPSession e adiciona um novo método: [IBCPSession2:: BCPSetBulkMode](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
   

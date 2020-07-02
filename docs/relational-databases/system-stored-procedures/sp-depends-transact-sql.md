@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 396e370e7cb271c516033eb160332ac749a27aca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787010"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Exibe informações sobre dependências de objeto de banco de dados, como as exibições e procedimentos que dependem de uma tabela ou exibição e, as tabelas e exibições que dependem da exibição ou procedimento. Não são informadas referências para objetos fora do banco de dados atual.  
   
@@ -63,22 +63,22 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_depends** exibe dois conjuntos de resultados.  
   
- O conjunto de resultados a seguir mostra os objetos dos quais o * \< objeto>* depende.  
+ O conjunto de resultados a seguir mostra os objetos dos quais a *\<object>* depende.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
-|**tipo**|**nvarchar (16)**|Tipo do item.|  
+|**type**|**nvarchar (16)**|Tipo do item.|  
 |**atualizado**|**nvarchar (7)**|Caso o item seja atualizado.|  
 |**Selecione**|**nvarchar(8)**|Se o item é usado em uma instrução SELECT.|  
 |**column**|**sysname**|Coluna ou parâmetro em que a dependência existe.|  
   
- O conjunto de resultados a seguir mostra os objetos que dependem do * \< objeto>*.  
+ O conjunto de resultados a seguir mostra os objetos que dependem de *\<object>* .  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
-|**tipo**|**nvarchar (16)**|Tipo do item.|  
+|**type**|**nvarchar (16)**|Tipo do item.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  

@@ -1,5 +1,5 @@
 ---
-title: sys. sysprocesses (Transact-SQL) | Microsoft Docs
+title: Processos de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9e90b22dc5542d83533bff584af326abdcc4902
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866364"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787048"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contém informações sobre os processos que estão em execução em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles podem ser processos do cliente ou processos do sistema. Para acessar sysprocesses, você deve estar no contexto do banco de dados mestre ou deve usar o nome de três partes master.dbo.sysprocesses.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "78866364"
 |last_batch|**datetime**|Última vez que um processo de cliente executou uma chamada de procedimento armazenado remoto ou uma instrução EXECUTE.|  
 |ecid|**smallint**|ID do contexto de execução usado para identificar exclusivamente os subthreads que operam em nome de um único processo.|  
 |open_tran|**smallint**|Número de transações abertas para o processo.|  
-|status|**nchar(30)**|Status do ID do processo. Os valores possíveis são:<br /><br /> **inativo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está redefinindo a sessão. = <br /><br /> **running** = a sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, consulte [usando vários conjuntos de resultados ativos &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = a sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **Rollback** = a sessão tem uma reversão de transação em andamento.<br /><br /> **pendente** = a sessão está aguardando que um thread de trabalho fique disponível.<br /><br /> **executável** = a tarefa na sessão está na fila executável de um Agendador enquanto aguarda para obter uma Quantum de tempo.<br /><br /> **Spinloop** = a tarefa na sessão está aguardando que um spinlock fique livre.<br /><br /> **suspenso** = a sessão está aguardando que um evento, como e/s, seja concluído.|  
+|status|**nchar(30)**|Status do ID do processo. Os valores possíveis são:<br /><br /> **inativo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está redefinindo a sessão.<br /><br /> **running** = a sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, consulte [usando vários conjuntos de resultados ativos &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = a sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **Rollback** = a sessão tem uma reversão de transação em andamento.<br /><br /> **pendente** = a sessão está aguardando que um thread de trabalho fique disponível.<br /><br /> **executável** = a tarefa na sessão está na fila executável de um Agendador enquanto aguarda para obter uma Quantum de tempo.<br /><br /> **Spinloop** = a tarefa na sessão está aguardando que um spinlock fique livre.<br /><br /> **suspenso** = a sessão está aguardando que um evento, como e/s, seja concluído.|  
 |sid|**binary(86)**|GUID (Identificador Global Exclusivo) do usuário.|  
 |hostname|**nchar(128)**|Nome da estação de trabalho.|  
 |program_name|**nchar(128)**|Nome do programa aplicativo.|  

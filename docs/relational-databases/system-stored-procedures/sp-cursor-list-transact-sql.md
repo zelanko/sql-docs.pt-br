@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e214f2247009af8e43aefd9cb3274ea59332bcd5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a644e06ca84bbc4ae5d4da6c9620c4afe1aeccba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786997"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Informa os atributos de cursores de servidor atualmente abertos para a conexão.  
   
@@ -54,7 +54,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |3|Informar cursores locais e globais.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Não  
+ Nenhum  
   
 ## <a name="cursors-returned"></a>Cursores retornados  
  sp_cursor_list retorna seu relatório como um parâmetro de saída de cursor [!INCLUDE[tsql](../../includes/tsql-md.md)], não como um conjunto de resultados. Isso permite que lotes, procedimentos armazenados e gatilhos [!INCLUDE[tsql](../../includes/tsql-md.md)] funcionem com a saída, uma linha de cada vez. Isso também significa que o procedimento não pode ser chamado diretamente de funções API do banco de dados. O parâmetro de saída de cursor deve ser associado a uma variável de programa, mas as APIs do banco de dados não oferecem suporte a associações de parâmetros ou variáveis de cursor.  

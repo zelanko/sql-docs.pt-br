@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad9ad40f-b018-4bae-b003-691f08dcefdf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96deb7df049189716f1c8c3a6f2f569877eee62e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cee77ac0612d7597bd1c7f073365f85ef2dbe552
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786987"
 ---
 # <a name="index-related-dynamic-management-views-and-functions-transact-sql"></a>Funções e exibições de gerenciamento dinâmico relacionadas ao índice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta seção contém os objetos de gerenciamento dinâmico a seguir.  
   

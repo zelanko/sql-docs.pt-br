@@ -1,5 +1,5 @@
 ---
-title: sys. sysindexes (Transact-SQL) | Microsoft Docs
+title: Índices de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786330"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada índice e tabela no banco de dados atual. Não há suporte a índices XML nessa exibição. Não há suporte total para tabelas e índices particionados nesta exibição; em vez disso, use a exibição de catálogo [Sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68053439"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID da tabela à qual o índice pertence.|  
 |**status**|**int**|Informações de status do sistema.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**primeiro**|**binary(6)**|Ponteiro para a primeira página, ou página-raiz.<br /><br /> Não usado quando **indid** = 0.<br /><br /> NULL = o índice é particionado quando **indid** > 1.<br /><br /> NULL = a tabela é particionada quando **indid** é 0 ou 1.|  
+|**first**|**binary(6)**|Ponteiro para a primeira página, ou página-raiz.<br /><br /> Não usado quando **indid** = 0.<br /><br /> NULL = o índice é particionado quando **indid** > 1.<br /><br /> NULL = a tabela é particionada quando **indid** é 0 ou 1.|  
 |**indid**|**smallint**|ID do índice:<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> >1 = índice não clusterizado|  
 |**root**|**binary(6)**|Para **indid** >= 1, **root** é o ponteiro para a página raiz.<br /><br /> Não usado quando **indid** = 0.<br /><br /> NULL = o índice é particionado quando **indid** > 1.<br /><br /> NULL = a tabela é particionada quando **indid** é 0 ou 1.|  
 |**minlen**|**smallint**|Tamanho mínimo de uma linha.|  
@@ -61,7 +61,7 @@ ms.locfileid: "68053439"
 |**impid**|**smallint**|Sinalizador de implementação de índice.<br /><br /> Retorna 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|Usado para restringir as granularidades de bloqueio consideradas para um índice. Por exemplo, para minimizar o custo de bloqueio, uma tabela de pesquisa que é essencialmente somente leitura pode ser configurada para realizar apenas bloqueios de nível de tabela.|  
 |**pgmodctr**|**int**|Retorna 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**novas**|**varbinary(816)**|Lista de IDs das colunas que constituem a chave de índice.<br /><br /> Retorna NULL.<br /><br /> Para exibir as colunas de chave de índice, use [Sys. sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**novas**|**varbinary(816)**|Lista de IDs das colunas que constituem a chave de índice.<br /><br /> Retorna NULL.<br /><br /> Para exibir as colunas de chave de índice, use [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Nome do índice ou estatística. Retorna NULL quando **indid** = 0. Modifique seu aplicativo de modo a fazê-lo procurar um nome de heap NULL.|  
 |**statblob**|**imagem**|Objeto binário grande (BLOB) de estatísticas.<br /><br /> Retorna NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

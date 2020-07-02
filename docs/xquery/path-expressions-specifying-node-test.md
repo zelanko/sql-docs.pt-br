@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: bc2d295f43dfab4327ac1b0ea47382324a22db41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786516"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Expressões de Caminho – Especificar Teste de Nó
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Uma etapa de eixo em uma expressão de caminho inclui os seguintes componentes:  
   
@@ -111,7 +111,7 @@ child::comment()
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir comparam nome de nó e tipo de nó.  
   
-### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Resultados da especificação do nome de nó e do tipo de nó como node tests em uma expressão de caminho  
+### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>a. Resultados da especificação do nome de nó e do tipo de nó como node tests em uma expressão de caminho  
  No exemplo a seguir, um documento XML simples é atribuído a uma variável de tipo **XML** . O documento é consultado usando expressões de caminho diferentes. Os resultados são comparados.  
   
 ```  
