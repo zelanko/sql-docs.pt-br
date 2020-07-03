@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61c12650d6453d792e17008676838d769608b3fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2895684bc8769a16120d4831ccc9b0dc9a6f2391
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784824"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889762"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSmerge_past_partition_mappings** armazena uma linha para cada ID de partição uma determinada linha alterada usada para pertencer a, mas não pertence mais a. Essa tabela é armazenada no banco de dados de publicação.  
   

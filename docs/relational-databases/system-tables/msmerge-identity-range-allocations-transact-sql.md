@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2495cf2bc8941e2c619255f4328eba6be1942a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72eb58276b78faf3ea3257cf56585b69c93b6e1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736731"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889782"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSmerge_identity_range_allocations** é usada para acompanhar o histórico de atribuições de intervalo de identidade, para Publicadores e assinantes, para artigos publicados. Esta tabela é armazenada no banco de dados de distribuição.  
   

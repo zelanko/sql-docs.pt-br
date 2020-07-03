@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c65ee865a5c4e4bccd11c12846de1a1ca8b5035
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68dbfaed63677a7d64c489646592fe35745ff3b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626023"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891118"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gera scripts para criar funções de wrapper para as funções de consulta de captura de dados de alteração disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A API suportada nos wrappers gerados permite a especificação do intervalo de consulta como um intervalo datetime. Isso torna a função boa para uso em muitos aplicativos de warehouse, incluindo aquelas que são desenvolvidas por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projetistas de pacote que estão usando a tecnologia de captura de dados de alterações para determinar a carga incremental.  
   
@@ -67,7 +67,7 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de coluna|Description|  
+|Nome da coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar (145)**|Nome da função gerada.|  
 |**create_script**|**nvarchar(max)**|É o script que cria a função de wrapper da instância de captura.|  

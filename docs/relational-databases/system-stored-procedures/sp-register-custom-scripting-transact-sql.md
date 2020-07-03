@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af2feda317d3cbcbf7391179c0797291644eca26
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80736db0e2356d3592744393ff8964ac6f6073c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719219"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891502"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A replicação permite procedimentos armazenados personalizados definidos pelo usuário, para substituir um ou mais dos procedimentos padrão usados em replicação transacional. Quando uma alteração de esquema é feita em uma tabela replicada, esses procedimentos armazenados são recriados. **sp_register_custom_scripting** registra um procedimento armazenado ou [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivo de script que é executado quando uma alteração de esquema ocorre para gerar o script da definição para um novo procedimento armazenado personalizado definido pelo usuário. Esse novo procedimento armazenado personalizado deve refletir o novo esquema da tabela. **sp_register_custom_scripting** é executado no Publicador do banco de dados de publicação, e o arquivo de script registrado ou o procedimento armazenado é executado no Assinante quando ocorre uma alteração de esquema.  
   

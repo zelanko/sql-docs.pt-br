@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0881204a5b1d282ac295f2017981eb7bb46107be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8e30d848b640db73f4402f8a887381de524e4bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764193"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890151"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Armazena um registro para o banco de dados primário em uma configuração de envio de logs. Essa tabela é armazenada no banco de dados **msdb** .  
   

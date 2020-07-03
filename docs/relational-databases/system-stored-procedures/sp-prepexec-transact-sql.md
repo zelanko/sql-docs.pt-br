@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab7c13befad3c1780e067639838efa7434c57f53
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bc3e9a74a29564ad8c531223be371f47fd09662
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645898"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891534"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Prepara e executa uma instrução parametrizada [!INCLUDE[tsql](../../includes/tsql-md.md)] . sp_prepexec combina as funções de sp_prepare e sp_execute. Essa ação é invocada pela ID = 13 em um pacote TDS (tabela de dados tabulares).  
   
@@ -66,7 +66,7 @@ EXEC sp_prepexec @Out output,
 EXEC sp_unprepare @Out;  
 ```  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Confira também  
  [sp_prepare &#40;&#41;Transact SQL](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_execute](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

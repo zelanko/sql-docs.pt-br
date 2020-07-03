@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063744d15d0f4ad6d7ce8bd4895d254aaecd2931
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: acd388c54d67e690972b53f2adbdf046cf241549
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750243"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890375"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Registra quais servidores de destino estão inscritos atualmente neste domínio de operação multisservidor.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 82e4d489647838e6a0a84b98f82493a76b28417a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68244a9fe6933d4bffe79591d4f6c043c5d18658
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736742"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889856"
 ---
 # <a name="msmerge_current_partition_mappings"></a>MSmerge_current_partition_mappings
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSmerge_current_partition_mappings** armazena uma linha para cada ID de partição à qual uma determinada linha alterada pertence. Essa tabela é armazenada no banco de dados de publicação.  
   

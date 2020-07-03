@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 341990acfe593a41a778c3235f2464061e34fe47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7b071535ced290b10c059f6b450895a71b0f7ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890188"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Armazena um registro de monitor por banco de dados primário em cada configuração de envio de logs. Essa tabela é armazenada no banco de dados **msdb** .  
   
