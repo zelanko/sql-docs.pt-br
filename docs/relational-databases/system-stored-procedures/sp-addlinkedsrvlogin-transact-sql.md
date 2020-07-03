@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ee38ac3c19c9f5d5b36f896c1018a16e98e37cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69c362a1b68a1c1bdc9fc8a90f1d2db3950fae81
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758008"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85877590"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cria ou atualiza um mapeamento entre um logon na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e uma conta de segurança em um servidor remoto.  
   
