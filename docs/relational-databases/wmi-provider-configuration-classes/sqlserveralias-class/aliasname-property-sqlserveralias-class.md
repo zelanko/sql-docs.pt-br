@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbcd21262bb17e191cd08dfba5569bccca547294
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74fdba44ae1b4457b092f9b3439526552ec780a7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738472"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888478"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>Propriedade AliasName (classe SqlServerAlias)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o nome do alias de conexão do servidor.  
   
 ## <a name="syntax"></a>Syntax  

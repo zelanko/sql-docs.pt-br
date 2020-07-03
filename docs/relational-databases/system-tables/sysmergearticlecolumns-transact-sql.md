@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 95d1c30abf269c763bb3c346edd340805d5278f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dad22f0e389b9ad7c0c770f5990482e128c02201
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736679"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889272"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **sysmergearticlecolumns** contém uma linha para cada coluna de tabela que é publicada em uma publicação de mesclagem e mapeia cada coluna para seu artigo de mesclagem. Essa tabela é armazenada no banco de dados de publicação.  
   

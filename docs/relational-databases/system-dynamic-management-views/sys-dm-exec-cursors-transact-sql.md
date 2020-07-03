@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5769ffe206c1fc84107707acc980ab94c51ac932
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2482e9af7451463c03bb5deb2e63c7261ec5361
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676602"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882042"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna informações sobre os cursores que estão abertos em vários bancos de dados.  
   
@@ -74,14 +74,14 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>Comentários  
  A tabela a seguir fornece informações sobre a interface de declaração de cursor e inclui os valores possíveis para a coluna de propriedades.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |API|O cursor foi declarado usando uma das APIs de acesso a dados (ODBC, OLEDB).|  
 |TSQL|O cursor foi declarado usando a sintaxe DECLARE CURSOR de Transact-SQL.|  
   
  A tabela a seguir fornece informações sobre o tipo de cursor e inclui os valores possíveis para a coluna de propriedades.  
   
-|Tipo|Description|  
+|Type|Description|  
 |----------|-----------------|  
 |Keyset|O cursor foi declarado como Keyset (conjunto de chaves).|  
 |Dinâmico|O cursor foi declarado como Dynamic (dinâmico).|  
@@ -90,7 +90,7 @@ dm_exec_cursors (session_id | 0 )
   
  A tabela a seguir fornece informações sobre o tipo de simultaneidade de cursores e inclui os valores possíveis para a coluna de propriedades.  
   
-|Simultaneidade|Description|  
+|Simultaneidade|Descrição|  
 |-----------------|-----------------|  
 |Somente leitura|O cursor foi declarado como somente leitura.|  
 |Scroll Locks|O cursor usa bloqueios de rolagem.|  

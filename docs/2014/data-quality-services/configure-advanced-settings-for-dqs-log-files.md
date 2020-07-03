@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 998f1079044f530a824600fede88c99ca91f793e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937987"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886041"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Definir configurações avançadas para arquivos de log do DQS
   Este tópico descreve como definir configurações avançadas para os arquivos de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , como definir o limite de tamanho de arquivo de rolagem dos arquivos de log, definir o padrão de carimbo de data/hora dos eventos etc.  
@@ -38,8 +38,8 @@ ms.locfileid: "84937987"
 ##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>Definir configurações de log do servidor de qualidade de dados  
  As configurações de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] estão presentes em um formato XML na coluna **VALUE** da linha **ServerLogging** na tabela A_CONFIGURATION no banco de dados DQS_MAIN. Você pode executar a seguinte consulta SQL para exibir informações de configuração:  
   
-```  
-select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
+```sql  
+select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'; 
 ```  
   
  Você deve atualizar as informações apropriadas na coluna **VALUE** da linha **ServerLogging** para alterar as configurações de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Neste exemplo, atualizaremos as configurações de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] para definir o limite de tamanho do arquivo de rolagem como 25000 KB (o padrão é 20000 KB).  
@@ -50,7 +50,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  Na janela Editor de Consultas, copie as seguintes instruções SQL:  
   
-    ```  
+    ```sql  
     -- Begin the transaction.  
     BEGIN TRAN  
     GO  
@@ -96,14 +96,13 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 5.  Para aplicar as alterações feitas na configuração de log do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , execute as seguintes instruções Transact-SQL. Abra uma nova janela Editor de Consultas e cole as seguintes instruções Transact-SQL:  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     DECLARE @return_value int  
     EXEC @return_value = [internal_core].[RefreshLogSettings]  
     SELECT 'Return Value' = @return_value  
     GO  
-  
     ```  
   
 6.  Pressione F5 para executar as instruções. Consulte o painel **Resultados** para verificar se as instruções foram executadas com êxito.  

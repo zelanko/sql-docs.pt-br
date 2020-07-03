@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f256fdf082e38aca85d1a002af13c8892f810de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 371ee711cbae4c97dc95e9d31d51739c29e85d14
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764141"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889636"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSpeer_response** é usada na replicação ponto a ponto para armazenar a resposta de cada nó a uma solicitação de status de publicação. Essa tabela é armazenada no banco de dados de publicação.  
   

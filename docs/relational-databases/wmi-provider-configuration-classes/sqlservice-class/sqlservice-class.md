@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ea415866676f0eb4f04984ee0ee427d68854ea2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6f5d58acb2ceaf113da5701915e644d33fd5311b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784700"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888338"
 ---
 # <a name="sqlservice-class"></a>Classe SqlService
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   A [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) representa uma instância de um serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  A [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) é usada para gerenciar o serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programaticamente. Com o objeto da [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , você pode executar estas tarefas:  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad9dd930762788af8914b14d86875c26d7123eb0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2933791b9fef30a49340a5781cdbeec9305fac69
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753756"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888446"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>Propriedade ServerName (classe SqlServerAlias)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o nome da instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificada pelo alias de conexão do servidor.  
   
 ## <a name="syntax"></a>Syntax  

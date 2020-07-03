@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7d293451c70c7d9e61b321fc48f0497a65dd5ee5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df060b429b48eb1e1a99c48dbb2789fce3e10833
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736641"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889159"
 ---
 # <a name="msdistribution_status-transact-sql"></a>MSdistribution_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A exibição **MSdistribution_status** expõe informações adicionais sobre os comandos de status no banco de dados de distribuição. Essa exibição é armazenada no banco de dados de distribuição.  
   

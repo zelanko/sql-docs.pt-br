@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5da835af2224baa8775662f098118b961aa46c64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7dad424fac7daf73bcd32a8a74873fc1fdfe744d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733581"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882159"
 ---
 # <a name="extended-events-catalog-views-transact-sql"></a>exibições do catálogo de eventos estendidos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta seção contém as exibições do catálogo a seguir para eventos estendidos do SQL Server.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e20f3dbfa4e62e5951396c3da2ff7f710b15f31
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2218ed2c3eedafd1c6cab44096eaf356f0a8d492
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724533"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888176"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Compreendendo o Provedor WMI para eventos do servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O Provedor WMI para Eventos do Servidor permite usar o WMI para monitorar eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O provedor funciona transformando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um objeto WMI gerenciado. Qualquer evento que possa gerar uma notificação de eventos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser aproveitado pelo WMI usando esse provedor. Além disso, como um aplicativo de gerenciamento que interage com o WMI, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode responder a esses eventos, aumentando o escopo de eventos abordados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em versões anteriores.  
   
  Aplicativos de gerenciamento, como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, podem acessar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usem o Provedor WMI para Eventos de Servidor emitindo instruções de linguagem WQL. O WQL é um subconjunto simplificado da linguagem SQL, com algumas extensões específicas do WMI. Usando o WQL, um aplicativo recupera um tipo de evento em relação a um banco de dados específico ou objeto de banco de dados. O Provedor WMI para Eventos de Servidor converte a consulta em uma notificação de eventos, criando efetivamente uma notificação de eventos no banco de dados de destino. Para obter mais informações sobre como as notificações de eventos funcionam no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [provedor WMI para conceitos de eventos de servidor](https://technet.microsoft.com/library/ms180560.aspx). Os eventos que podem ser consultados são listados no [provedor WMI para classes e propriedades de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f28692cd1a5c3f60e823d6071244ae822fc557a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1e155e9c6f0e8a85eaf7ec905f9c9b471160a9ec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759043"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885904"
 ---
 # <a name="clr-integration-code-access-security"></a>Segurança de acesso a código da integração CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   O CLR (common language runtime) dá suporte a um modelo de segurança denominado segurança de acesso para código gerenciado. Nesse modelo, são concedidas permissões a assemblies com base na identidade do código. Para obter mais informações, consulte a seção "Segurança de acesso do código" no Software Development Kit do .NET Framework.  
   
  A política de segurança que determina as permissões concedidas a assemblies é definida em três locais diferentes:  
@@ -108,10 +108,10 @@ ms.locfileid: "85759043"
 |-|-|-|-|  
 ||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**Permissões de segurança de acesso ao código**|Somente execução|Execução + acesso a recursos externos|Irrestrito (inclusive P/Invoke)|  
-|**Restrições do modelo de programação**|Yes|Yes|Sem restrições|  
-|**Requisito de verificabilidade**|Yes|Yes|No|  
-|**Acesso a dados locais**|Yes|Yes|Yes|  
-|**Capacidade de chamar código nativo**|No|Não|Sim|  
+|**Restrições do modelo de programação**|Sim|Sim|Sem restrições|  
+|**Requisito de verificabilidade**|Sim|Sim|Não|  
+|**Acesso a dados locais**|Sim|Sim|Sim|  
+|**Capacidade de chamar código nativo**|Não|Não|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Segurança de integração CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

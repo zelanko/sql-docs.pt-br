@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 79765f589dcc649bdb2d12bd9dda0d4c955ae916
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84539618"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883926"
 ---
 # <a name="relational-query-designer-ssas"></a>Designer de consulta relacional (SSAS)
   O designer de consulta relacional ajuda a criar uma consulta que especifica os dados a serem recuperados e os bancos de dados [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] relacionais e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . Use o designer de consultas gráficas para explorar os metadados, criar a consulta interativamente e exibir os dados da consulta.  Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
@@ -85,7 +85,7 @@ ms.locfileid: "84539618"
   
  A tabela a seguir lista as agregações e fornece descrições resumidas delas.  
   
-|Agregado|Description|  
+|Agregado|Descrição|  
 |---------------|-----------------|  
 |Avg|Retorna a média dos valores em um grupo. Implementa a agregação SQL AVG.|  
 |Contagem|Retorna o número de itens de um grupo. Implementa a agregação SQL COUNT.|  
@@ -174,7 +174,7 @@ ms.locfileid: "84539618"
 ### <a name="graphical-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas gráficas  
  A barra de ferramentas do designer de consultas gráficas fornece os botões a seguir para ajudá-lo a especificar ou exibir os resultados de uma consulta.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna para o designer de consulta baseado em texto para exibir a consulta gerada automaticamente ou para modificar a consulta.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte para os tipos de arquivo .sql e .rdl.|  
@@ -197,7 +197,7 @@ ms.locfileid: "84539618"
 ### <a name="text-based-query-designer-toolbar"></a>Barra de ferramentas do Designer de Consulta baseado em texto  
  O designer de consulta baseado em texto fornece uma única barra de ferramentas para todos os tipos de comando. A tabela a seguir lista cada botão da barra de ferramentas e suas respectivas funções.  
   
-|Botão|Description|  
+|Botão|Descrição|  
 |------------|-----------------|  
 |**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Nem todos os tipos de fonte de dados dão suporte aos designers de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Apenas os tipos de arquivo .sql e .rdl têm suporte.|  
@@ -219,7 +219,7 @@ ms.locfileid: "84539618"
 #### <a name="example"></a>Exemplo  
  A consulta a seguir retorna a lista de nomes de uma tabela chamada `ContactType`.  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -242,7 +242,7 @@ SELECT Name FROM ContactType
 #### <a name="example"></a>Exemplo  
  A consulta a seguir chama um procedimento armazenado chamado `uspGetWhereUsedProductID`. Quando o procedimento armazenado tiver parâmetros de entrada será necessário fornecer valores de parâmetros ao executar a consulta.  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   

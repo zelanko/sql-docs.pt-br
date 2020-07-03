@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3919d40f7c1d52125f071f96844f6881fac955f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19ed795647a89a3d9fbfb2082a28a50a5554938b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751590"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889566"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela **MSqreader_agents** contém uma linha para cada Queue Reader Agent em execução no distribuidor local. Esta tabela é armazenada no banco de dados de distribuição.  
   

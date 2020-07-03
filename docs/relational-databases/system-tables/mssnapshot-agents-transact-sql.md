@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c93ec3ae4986be248107769940142c7b34ab647d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20394d5204059b7ec55c09b9feb6092415ccda12
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722916"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889430"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A tabela de **MSsnapshot_agents** contém uma linha para cada agente de instantâneo associada ao distribuidor local. Esta tabela é armazenada no banco de dados de distribuição.  
   

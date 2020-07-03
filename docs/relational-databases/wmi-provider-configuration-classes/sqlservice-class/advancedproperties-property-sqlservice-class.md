@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0a2a3bb9e44bf669ddb41cabd20c0181a71447b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9eeb0516aab43760476f37406d6396a5bb9220d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753696"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888401"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>Propriedade AdvancedProperties (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém uma matriz de referências de objeto que contêm as propriedades avançadas para o objeto **SqlService** .  
   
 ## <a name="syntax"></a>Syntax  
