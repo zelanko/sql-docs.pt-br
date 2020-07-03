@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: facfcf92693f108bb04cbb864ac8364e2bef6721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02c013b9635a441ade10b5784b2b2752d0ecad0c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790406"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898159"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>Procedimentos armazenados do plano de manutenção do banco de dados (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para configurar tarefas de manutenção. Esses procedimentos armazenados são usados com planos de manutenção de banco de dados. Este recurso foi substituído por planos de manutenção que não usam esses procedimentos armazenados. Use esses procedimentos para manter planos de manutenção de banco de dados em instalações que foram atualizadas a partir de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

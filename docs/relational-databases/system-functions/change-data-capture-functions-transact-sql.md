@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21aeb49750c0a451166da8147b424589b3902856
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f512f5e262393fa8cfec433c801a36838fd1ba88
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734437"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898503"
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>Funções do Change Data Capture (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   O Change Data Capture registra a atividade de inserção, atualização e exclusão aplicada a tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fornecendo os detalhes das alterações em um formato relacional facilmente consumido. Informações de coluna que espelham a estrutura de coluna de uma tabela de origem rastreada são capturadas para as linhas modificadas, juntamente com os metadados necessários para aplicar as alterações a um ambiente de destino. Para retornar informações sobre as alterações, são usadas as funções a seguir.  
   

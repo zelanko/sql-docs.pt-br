@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21290d164b899bf1ea14f392df31d09d38becc71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b89925b781d94d84a22e744955d335e163875d2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647670"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898353"
 ---
 # <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o valor de data e hora da coluna **tran_end_time** na tabela do sistema [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) para o número de sequência de log especificado (LSN). Você pode usar essa função para mapear sistematicamente os intervalos de LSN em intervalos de data em uma tabela de alteração.  
   

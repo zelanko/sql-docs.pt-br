@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e27de1c2b303474117a0ea442dde81606a9f48f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 645c3c6c061d1e6c94176594a20748e52cc7fea6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734603"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898866"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exibe uma lista de solicitações de E/S sendo processadas NSO (proprietário do namespace) no momento determinado.  
   
-|Coluna|Tipo|Description|  
+|Coluna|Type|Descrição|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary (8)**|Mostra o endereço interno do bloco memória NSO que contém a solicitação de E/S do driver. Não permite valor nulo.|  
 |**current_spid**|**smallint**|Mostra a ID de processo do sistema (SPID) para a conexão do SQL Server atual. Não permite valor nulo.|  

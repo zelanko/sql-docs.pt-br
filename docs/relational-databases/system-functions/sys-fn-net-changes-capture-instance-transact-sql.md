@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add3f81793b2dc21c08ca601bb1c48cc7d4588be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783080"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898327"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Wrappers para as funções de consulta de **alterações líquidas** . Os scripts necessários para criar essas funções são gerados pelo procedimento armazenado sys.sp_cdc_generate_wrapper_function.  
   
@@ -93,7 +93,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de coluna|Description|  
+|Nome da coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
 |\<columns from @column_list>|**consoante**|As colunas identificadas no argumento **column_list** para o sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script para criar o wrapper. Se *column_list* for NULL, todas as colunas de origem rastreadas serão exibidas no conjunto de resultados.|  
 |__CDC_OPERATION|**nvarchar(2)**|Um código de operação que indica qual operação é necessária para se aplicar a linha ao ambiente de destino. A operação irá variar com base no valor do argumento *row_filter_option* fornecido na seguinte chamada:<br /><br /> *row_filter_option* = ' all', ' tudo com máscara '<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza a operação<br /><br /> *row_filter_option* = ' tudo com mesclagem '<br /><br /> 'D' – exclui a operação<br /><br /> 'M – insere ou atualiza a operação|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b86fd5bd04c41d10437a8a0f7bcc21b61ab22fef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fafdcdd2d0fea423ddf44058e7615aff7241565e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720237"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899375"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna as informações em um valor de manipulador de lógica de negócios ou CLSID (identificador de classe) de um componente resolvedor personalizado com base em COM registrado no Distribuidor. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   

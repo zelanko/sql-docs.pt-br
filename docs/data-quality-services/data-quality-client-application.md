@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9c788f20aa0b24d4058578119dc7b4bc139ded73
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 88deed9104d231b666a1ab3e6dfd72da94ad1465
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812555"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899122"
 ---
 # <a name="data-quality-client-application"></a>Aplicativo cliente Data Quality
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   O aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permite executar operações de qualidade de dados usando uma ferramenta autônoma. Esse aplicativo permite criar bases de dados de conhecimento, criar e executar projetos de qualidade de dados e executar tarefas administrativas.  
   

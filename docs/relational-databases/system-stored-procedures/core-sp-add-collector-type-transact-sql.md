@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee13dd34ff87a68ed4dc1b07a4ff8c28ee6d4daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28353a7b2112be801f465b5a919b537f17a17f4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647006"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898225"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adiciona uma nova entrada à exibição core.supported_collector_types no banco de dados do data warehouse de gerenciamento. O procedimento deve ser executado no contexto do banco de dados do data warehouse de gerenciamento.  
   

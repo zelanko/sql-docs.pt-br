@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c01cfb6e469ef33c897d581eadf2da757cdb06f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b7432238a3bedc85f6f9d971299fa7de2705df8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646880"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898199"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Remove dados do data warehouse de gerenciamento com base em uma política de retenção. Este procedimento é executado diariamente pelo trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent mdw_purge_data em relação ao data warehouse de gerenciamento associado à instância especificada. Você pode usar esse procedimento armazenado para executar uma remoção sob demanda de dados do data warehouse de gerenciamento.  
   

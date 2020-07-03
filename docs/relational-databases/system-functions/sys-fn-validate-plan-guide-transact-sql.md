@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7e0d440a453b0481a4440ec432669d3981b9da8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754006"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898274"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Verifica a validade do guia de plano especificado. A função sys.fn_validate_plan_guide retorna a primeira mensagem de erro encontrada quando o guia de plano é aplicado à consulta. Um conjunto de linhas vazio será retornado quando a guia de plano for válida. Guias de plano podem ficar inválidos depois que são feitas alterações ao design físico do banco de dados. Por exemplo, se um guia de plano especificar um determinado índice e esse índice depois for descartado, a consulta não poderá mais usar o guia de plano.  
   

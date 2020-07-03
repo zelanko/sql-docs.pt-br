@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e91b41815f39e27bc368a4d61ce84fc23635f160
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3144dc8349bbadc7b7682c757811cc731d67be8c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734826"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897529"
 ---
 # <a name="sysdatabase_recovery_status-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha por banco de dados. Se o banco de dados não estiver aberto, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tentará iniciá-lo.  
   

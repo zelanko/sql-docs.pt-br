@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65cafaf2a4ea26b620bbcf5932031a8781cb9a14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1702e045edd2a232a8fe7db001207e14fc228269
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647016"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898243"
 ---
 # <a name="change-data-capture-stored-procedures-transact-sql"></a>Procedimentos armazenados de captura de dados de alteração (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   O Change Data Capture disponibiliza em um formato relacional conveniente o registro histórico da atividade DML (Data Manipulation Language) que ocorreu em tabelas habilitadas. Os seguintes procedimentos armazenados são usados para configurar o Change Data Capture, gerenciar os trabalhos do Agente do Change Data Capture e fornecer metadados atuais para consumidores de dados de alteração.  
   

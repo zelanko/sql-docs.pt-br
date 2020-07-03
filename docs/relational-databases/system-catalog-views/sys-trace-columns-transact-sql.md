@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e49dda63cd74e257331966b8f51dfac32a6f4b26
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8dc7177f58819720e9778f3bf363c98d6e15a295
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787068"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896448"
 ---
 # <a name="systrace_columns-transact-sql"></a>sys.trace_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A exibição de catálogo **Sys. trace_columns** contém uma lista de todas as colunas de evento de rastreamento. Essas colunas não são diferentes para uma determinada versão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

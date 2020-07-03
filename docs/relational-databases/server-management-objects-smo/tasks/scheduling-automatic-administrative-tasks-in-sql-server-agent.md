@@ -15,15 +15,15 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c7a9824d68f2d1b912f19b43330eae1d3bc2c0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74094382"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897783"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Agendando tarefas administrativas automáticas no SQL Server Agent
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   No SMO, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent é representado pelos seguintes objetos:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "74094382"
 ## <a name="examples"></a>Exemplos  
  Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Para programas que usam [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Agent, você deve incluir a instrução **using** para qualificar o namespace do agente. Insira a instrução após o outro **usando** instruções, antes de qualquer declaração no aplicativo, como:
+Para programas que usam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, você deve incluir a instrução **using** para qualificar o namespace do agente. Insira a instrução após o outro **usando** instruções, antes de qualquer declaração no aplicativo, como:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Instância | ComparisionOp | Compvalue**  
   
- É necessário um operador para a notificação de alerta. O <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requer parênteses de quadrado **operator** porque o operador [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] é uma palavra-chave.  
+ É necessário um operador para a notificação de alerta. O <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requer parênteses de quadrado porque o **operador** é uma [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palavra-chave.  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Instância | ComparisionOp | Compvalue**  
   
- É necessário um operador para a notificação de alerta. O <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requer parênteses de quadrado **operator** porque o operador [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] é uma palavra-chave.  
+ É necessário um operador para a notificação de alerta. O <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requer parênteses de quadrado porque o **operador** é uma [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palavra-chave.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

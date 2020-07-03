@@ -2,19 +2,19 @@
 title: Gerenciando senhas (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/01/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5d8886f28a30f264e0357af82724567e42e3bd5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df94b295e7695dc79c78876b5d42f8a0ece7dce6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907179"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897584"
 ---
 # <a name="managing-passwords-accesstosql"></a>Gerenciando senhas (AccessToSQL)
 Esta seção trata da proteção de senhas de banco de dados e do procedimento para importá-las ou exportá-las entre servidores:  
@@ -32,7 +32,7 @@ Especifique uma senha válida usando um dos três métodos a seguir:
   
 1.  **Texto não criptografado:** Digite a senha do banco de dados no atributo Value do nó ' password '. Ele é encontrado no nó definição do servidor na seção servidor do arquivo de script ou arquivo de conexão do servidor.  
   
-    As senhas em texto não criptografado não são seguras. Portanto, você encontrará a seguinte mensagem de aviso na saída do console: *" &lt;servidor Server-&gt; ID da senha é fornecido em formato de texto não seguro, o aplicativo do console do SSMA fornece uma opção para proteger a senha por meio de criptografia, consulte a opção-SecurePassword no arquivo de ajuda do SSMA para obter mais informações".*  
+    As senhas em texto não criptografado não são seguras. Portanto, você encontrará a seguinte mensagem de aviso na saída do console: *"servidor Server &lt; -ID &gt; da senha é fornecido em formato de texto não seguro, o aplicativo do console do SSMA fornece uma opção para proteger a senha por meio de criptografia, consulte a opção-SecurePassword no arquivo de ajuda do SSMA para obter mais informações".*  
   
     **Senhas criptografadas:** A senha especificada, nesse caso, é armazenada em um formato criptografado no computador local no ProtectedStorage. SSMA.  
   
@@ -43,41 +43,53 @@ Especifique uma senha válida usando um dos três métodos a seguir:
         -   No prompt, o usuário será solicitado a inserir a senha do banco de dados e confirmá-la.  
   
             As IDs de definição de servidor e suas senhas criptografadas correspondentes são armazenadas em um arquivo no computador local  
-  
-            Exemplo 1:
+
+            &nbsp;
+
+            _Exemplo 1:_
             
-                Specify password
+            Especificar senha
+
+            ```console
+            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml"
+            ```
+
+            Insira a senha para o server_id ' XXX_1 ': xxxxxxx
                 
-                C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml"
+            Digite a senha novamente para server_id ' XXX_1 ': xxxxxxx  
+
+            &nbsp;
+
+            _Exemplo 2:_
+
+            ```console
+            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml" -o
+            ```
+
+            Insira a senha para o server_id ' source_1 ': xxxxxxx
                 
-                Enter password for server_id 'XXX_1': xxxxxxx
+            Digite a senha novamente para server_id ' source_1 ': xxxxxxx
                 
-                Re-enter password for server_id 'XXX_1': xxxxxxx  
-            
-            Exemplo 2:
-            
-                C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml" -o
+            Insira a senha para o server_id ' target_1 ': xxxxxxx
                 
-                Enter password for server_id 'source_1': xxxxxxx
-                
-                Re-enter password for server_id 'source_1': xxxxxxx
-                
-                Enter password for server_id 'target_1': xxxxxxx
-                
-                Re-enter password for server_id 'target _1': xxxxxxx  
+            Digite a senha novamente para server_id ' target _1 ': xxxxxxx  
   
     -   **Removendo senhas criptografadas**  
   
-        Execute o `SSMAforAccessConsole.exe` com a`-securepassword` opção `-remove` e na linha de comando passando as IDs do servidor, para remover as senhas criptografadas do arquivo de armazenamento protegido presente no computador local.  
-  
-            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove all
-            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove "source_1,target_1"  
+        Execute o `SSMAforAccessConsole.exe` com a `-securepassword` `-remove` opção e na linha de comando passando as IDs do servidor, para remover as senhas criptografadas do arquivo de armazenamento protegido presente no computador local.  
+
+        ```console
+        C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove all
+        C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove "source_1,target_1"
+        ```
   
     -   **Listando IDs de servidor cujas senhas são criptografadas**  
   
-        Execute o SSMAforAccessConsole. exe com a `-securepassword` opção `-list` e na linha de comando para listar todas as IDs de servidor cujas senhas foram criptografadas.  
-  
-            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -list  
+        Execute o SSMAforAccessConsole.exe com a `-securepassword` `-list` opção e na linha de comando para listar todas as IDs de servidor cujas senhas foram criptografadas.  
+
+        ```console
+        C:\SSMA\SSMAforAccessConsole.EXE -securepassword -list
+        ```
   
     > [!NOTE]  
     > 1.  A senha em texto não criptografado mencionado no arquivo de conexão de script ou servidor tem precedência sobre a senha criptografada no arquivo protegido.  
@@ -86,40 +98,38 @@ Especifique uma senha válida usando um dos três métodos a seguir:
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Exportando ou importando senhas criptografadas  
 O aplicativo de console do SSMA permite exportar senhas de banco de dados criptografadas presentes em um arquivo no computador local para um arquivo protegido e vice-versa. Ele ajuda a tornar o computador com senhas criptografadas independente. A funcionalidade de exportação lê a ID do servidor e a senha do armazenamento protegido local e salva as informações em um arquivo criptografado. O usuário é solicitado a inserir a senha para o arquivo protegido. Certifique-se de que a senha inserida tenha um comprimento de 8 caracteres ou mais. Esse arquivo protegido é portável em computadores diferentes. A funcionalidade de importação lê a ID do servidor e as informações de senha do arquivo protegido. O usuário é solicitado a inserir a senha para o arquivo protegido e acrescenta as informações ao armazenamento protegido local.  
 
+### <a name="export-password"></a>Exportar senha
 
-    Export password
-    
-    Enter password for protecting the exported file
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -securepassword -export all "machine1passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -p -e "AccessDB_1_1,Sql_1" "machine2passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
+1. Insira a senha para proteger o arquivo exportado
 
+2. `C:\SSMA\SSMAforAccessConsole.EXE -securepassword -export all "machine1passwords.file"`
 
-    Import an encrypted password
-    
-    Enter password for protecting the imported file
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -securepassword -import all "machine1passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -p -i "AccessDB_1,Sql_1" "machine2passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
-  
+3. Insira a senha para proteger o arquivo exportado: xxxxxxxx
+
+4. Confirme a senha: xxxxxxxx
+
+5. `C:\SSMA\SSMAforAccessConsole.EXE -p -e "AccessDB_1_1,Sql_1" "machine2passwords.file"`
+
+6. Insira a senha para proteger o arquivo exportado: xxxxxxxx
+
+7. Confirme a senha: xxxxxxxx  
+
+### <a name="import-an-encrypted-password"></a>Importar uma senha criptografada
+
+1. Insira a senha para proteger o arquivo importado
+
+2. `C:\SSMA\SSMAforAccessConsole.EXE -securepassword -import all "machine1passwords.file"`
+
+3. Insira a senha para importar os servidores do arquivo criptografado: xxxxxxxx
+
+4. Confirme a senha: xxxxxxxx
+
+5. `C:\SSMA\SSMAforAccessConsole.EXE -p -i "AccessDB_1,Sql_1" "machine2passwords.file"`
+
+6. Insira a senha para importar os servidores do arquivo criptografado: xxxxxxxx
+
+7. Confirme a senha: xxxxxxxx  
+
 ## <a name="see-also"></a>Consulte Também  
 [Executando o console do SSMA (Access)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

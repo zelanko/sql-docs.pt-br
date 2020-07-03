@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734794"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898895"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma linha por atributo de plano para o plano especificado pelo identificador de plano. Você pode usar esta função com valor de tabela para obter detalhes sobre um plano específico, como os valores chave de cache ou o número atual de execuções simultâneas do plano.  
   
