@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4825478c6ae6b8da25d66ccefa27d56e969676c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e28c02cb5816b65d5cc1bb1d196683a9bdf47e4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786910"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858542"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Remove um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso impede o acesso a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com esse nome de logon.  
   
