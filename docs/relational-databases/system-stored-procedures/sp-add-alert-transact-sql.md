@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e917afd75495ed2e6c2506bc0c012d4bfa7a8e4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d2bdee46efa339776a3d6baf92e616c56026c0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727219"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880021"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cria um alerta.  
   
@@ -101,7 +101,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @performance_condition = ] 'performance_condition'`É um valor expresso no*formato ' comparador '.* *performance_condition* é **nvarchar (512)** com um padrão de NULL e consiste nesses elementos.  
   
-|Elemento Format|Description|  
+|Elemento Format|Descrição|  
 |--------------------|-----------------|  
 |*Item*|Um objeto de desempenho, contador de desempenho ou instância nomeada do contador|  
 |*Comparador*|Um destes operadores: >, < ou =|  

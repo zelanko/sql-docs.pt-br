@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 757de27d6d697a27011cba529c730e26a8fb1a4d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc036845ba0aad6c9c3f12cdcf0a4b19df221922
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755393"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880973"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Propriedade ExpirationDate (classe SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém a data em que o certificado de segurança deixar de ter efeito.  
   
 ## <a name="syntax"></a>Syntax  

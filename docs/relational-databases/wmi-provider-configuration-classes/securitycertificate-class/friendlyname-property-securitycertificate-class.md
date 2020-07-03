@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 004743a1992b2862dc55428fca87c152ce914cc7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7dd3ce18dfe5b84655987a892d4cdc549b94c979
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757540"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880989"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>Propriedade FriendlyName (classe SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém ou define um nome amigável alternativo para o certificado de segurança.  
   
 ## <a name="syntax"></a>Syntax  

@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 251c9992285084123df7afb3c27678c2886b531c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70810548"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880000"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adiciona a categoria especificada de trabalhos, alertas ou operadores ao servidor. Para obter um método alternativo, consulte [criar categoria de trabalho usando SQL Server Management Studio](/sql/ssms/agent/create-a-job-category).
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > No momento [instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria, mas nem todos os recursos do SQL Server Agent têm suporte. Consulte [instância gerenciada do banco de dados SQL do Azure diferenças de T-SQL do SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obter detalhes.
+ > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ sp_add_category
 |-----------|-----------------|  
 |LOCAL|Uma categoria de trabalho local.|  
 |VÁRIOS SERVIDORES|Uma categoria de trabalho multisservidor.|  
-|Nenhuma|Uma categoria para uma classe que não seja trabalho **.**|  
+|NONE|Uma categoria para uma classe que não seja trabalho **.**|  
   
 `[ @name = ] 'name'`O nome da categoria a ser adicionada. O nome deve ser exclusivo na classe especificada. o *nome* é **sysname**, sem padrão.  
   
@@ -93,8 +93,8 @@ GO
  [&#41;&#40;Transact-SQL de sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_category](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_update_category](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo. sysjobs &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo. sysjobservers &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+ [Trabalhos dedbo.sys&#40;&#41;de Transact-SQL](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f3423eafc722de30642e3c96ebb6e8a7ddb9476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 031ffc6a0efc9a339ca40a83aee14e73d0c91d8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750034"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880543"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>Propriedades IsReadOnly (classe SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém ou define a propriedade booliana que especifica se a propriedade avançada é somente leitura ou não.  
   
 ## <a name="syntax"></a>Syntax  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7409d28b6a21a033c139c63ca6d6e7524e6ba50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59d0b995103ab01d3bf3b7ec5336ad16b97b1e6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881754"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna as informações de fonte de dados ODBC ou OLE DB do Distribuidor associado com o servidor atual. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
@@ -45,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'`É o tipo de informação a ser retornado. Se *info_type* não for especificado ou se NULL for especificado, todos os tipos de informações serão retornados. *info_type* é **varchar (128)**, com um padrão de NULL, e pode ser um desses valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Especifica o nome de fornecedor da fonte de dados.|  
 |**DBMS_VERSION**|Especifica a versão da fonte de dados.|  
@@ -58,7 +58,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`É o tipo de fonte de dados. *dso_type* é **int**e pode ser um desses valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|Fonte de dados ODBC|  
 |**3**|Fonte de dados OLE DB|  

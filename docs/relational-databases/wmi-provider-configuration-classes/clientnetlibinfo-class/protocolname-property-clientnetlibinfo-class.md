@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0aeb60f4be748d4082c4df5665f260afd57ae658
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe6c65d4397de928884adb91e326da8ee0bba334
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731494"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881126"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>Propriedade ProtocolName (classe ClientNetLibInfo)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o nome do protocolo que é associado com a biblioteca de rede de cliente.  
   
 ## <a name="syntax"></a>Syntax  

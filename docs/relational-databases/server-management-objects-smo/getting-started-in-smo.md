@@ -14,15 +14,15 @@ ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e306a3277a540f0d5da79e76aeefc2440fd81730
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911270"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880071"
 ---
 # <a name="getting-started-in-smo"></a>Guia de Introdução ao SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 Esta página fornece links para tópicos criados para ajudá-lo a começar a usar o SQL Server Management Objects (SMO). Os tópicos listados abordam a hierarquia de objetos do SMO, escrevendo programas no SMO, SMO e linguagens de programação diferentes e tarefas de programação específicas.  
  
@@ -32,7 +32,7 @@ A [instalação do Smo](installing-smo.md) fornece instruções para instalar e 
 ## <a name="object-model"></a>Modelo de Objeto  
 O [modelo de objeto](../../relational-databases/server-management-objects-smo/smo-object-model.md) descreve a hierarquia de objetos do Smo e como os objetos se relacionam entre si.  
   
-## <a name="programming-languages"></a>Linguagens de Programação  
+## <a name="programming-languages"></a>Linguagens de programação  
 [Linguagens de programação](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) descreve o ambiente de programação e inclui procedimentos detalhados para começar a escrever um programa Smo em C#.  
   
 ## <a name="general-programming-in-smo"></a>Programação Geral em SMO  

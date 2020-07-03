@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f7aa3059a6c67e236aa5b64fbc564addc62f586
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a00019f4d78bc9a6762720b4afcbd506d6fb5498
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731464"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881116"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Propriedade Size (classe ClientNetLibInfo)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o tamanho da biblioteca de rede de cliente em quilobytes.  
   
 ## <a name="syntax"></a>Syntax  

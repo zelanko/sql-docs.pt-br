@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c4cef3b1a088f0ae0a085fd4769a8e252713df4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3ed8e5b745c98bf6559ab0513e79205e8f9de458
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725390"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881344"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma linha para cada Assinante conhecido e é uma tabela local no Publicador. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   

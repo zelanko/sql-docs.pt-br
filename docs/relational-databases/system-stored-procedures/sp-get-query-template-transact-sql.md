@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0da844225d9a87cbc0c7b6cf06d1bbea108f2d61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757899"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881648"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o formulário com parâmetros de uma consulta. Os resultados retornados imitam o formulário parametrizado de uma consulta que é o resultado do uso de parametrização forçada. sp_get_query_template é usado principalmente quando você cria guias de plano de modelo.  
   

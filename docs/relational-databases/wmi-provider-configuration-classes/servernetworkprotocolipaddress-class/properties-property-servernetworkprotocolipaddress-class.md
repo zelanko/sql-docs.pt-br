@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de22b772beca7914c2099c61e7d268b8c3b046bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b2487e65ac8f1497a345b6ea73931e06b0ac80f2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768234"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880873"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Propriedade Properties (classe ServerNetworkProtocolIPAddress)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém as propriedades associadas com um endereço IP.  
   
 ## <a name="syntax"></a>Syntax  

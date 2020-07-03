@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4794ccfa85f9cc5f2e9508db4959170a0a63523c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b9a1af2378098e382f229b01e3c2a6f517d5d8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731496"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881160"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>Propriedade FileName (classe ClientNetLibInfo)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o nome do arquivo de biblioteca de rede do cliente.  
   
 ## <a name="syntax"></a>Syntax  

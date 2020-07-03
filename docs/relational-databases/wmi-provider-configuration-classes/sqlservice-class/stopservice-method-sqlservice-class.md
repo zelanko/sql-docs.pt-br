@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b8a268446517788c35e29b4f86821373a283070
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8fe68790b30ffdc54e9f30e4f85675eb595d09e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750048"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880558"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>Método StoptService (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Tenta colocar o serviço no estado de interrompido.  
   
 ## <a name="syntax"></a>Syntax  

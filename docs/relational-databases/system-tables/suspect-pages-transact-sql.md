@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa9acc4c79d513392ecd85f7c667452fd5a108e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aa13a24d933157aaa1dc546a2e55c1dc0d1ef7ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753841"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881451"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contém uma fila por página que teve falha com um erro 823 secundário ou com um erro 824. As páginas são relacionadas nesta tabela porque há suspeita de que sejam inadequadas, mas pode ser que de fato estejam adequadas. Quando uma página suspeita é reparada, seu status é atualizado na coluna **event_type** .  
   

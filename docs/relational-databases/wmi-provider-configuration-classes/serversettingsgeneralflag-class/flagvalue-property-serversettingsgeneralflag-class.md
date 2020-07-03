@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6cb5dc5eea2070d394c227c741991c92a86e6661
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98619c6531d77749e067d4a2f43a69707fcdc800
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722746"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880713"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>Propriedade FlagValue (classe ServerSettingsGeneralFlag)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtém o valor do sinalizador.  
   
 ## <a name="syntax"></a>Syntax  
