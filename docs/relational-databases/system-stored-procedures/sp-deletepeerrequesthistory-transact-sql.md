@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7605a1f05fd99dcbd5b870cb78e15d6192708537
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe3a7edbb00eb7d3a4da1aa78689685a54e56277
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693094"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861419"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exclui o histórico relacionado a uma solicitação de status de publicação, que inclui o histórico de solicitações ([MSpeer_request &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mspeer-request-transact-sql.md)), bem como o histórico de respostas ([MSpeer_response &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mspeer-response-transact-sql.md)). Esse procedimento armazenado é executado no banco de dados de publicação em um Publicador que participa de uma topologia de replicação ponto a ponto. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   

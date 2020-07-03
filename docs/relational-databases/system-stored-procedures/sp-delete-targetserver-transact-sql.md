@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4dc25d35d1037b3fae934ab6112ea2afdf40ca7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4489e34ec83bd3981e464e72cb8e72885fcc994f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790383"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862192"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Remove o servidor especificado da lista de servidores de destino disponíveis.  
    
@@ -71,7 +71,7 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Confira também  
  [&#41;&#40;Transact-SQL de sp_help_targetserver](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_msx_defect](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
