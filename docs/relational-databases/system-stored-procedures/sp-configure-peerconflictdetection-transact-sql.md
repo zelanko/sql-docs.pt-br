@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5bd9def04c3d80bdc57ac4e7fe9a9d67be49a3c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fb182115af1ff2c3190939d63c209a7d98bed44
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771218"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870875"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Configura a detecção de conflitos para uma publicação envolvida em uma topologia de replicação transacional ponto a ponto. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md). Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   

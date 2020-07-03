@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 761579b7b1c068fe241933533cf73bb41036d9d1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fc4a45ab8a2241e719fd71598461fa6deb43814c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724570"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865003"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Altera o idioma padrão para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

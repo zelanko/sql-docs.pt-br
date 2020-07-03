@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ec2f3a3f300a6501a23b4bd88234571b0717d2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec17e4482a07d90ccf65e98f6697cc6b12e5fac1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771276"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871027"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna os privilégios de coluna para a tabela especificada no servidor vinculado especificado.  
   

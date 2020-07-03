@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d273cd7c7f4c7c78f3c6cc9d928ffe27e9d79e6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 454b077e39a8ff1c17c3a742bb7acd00e8e719f8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771179"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869879"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cria um banco de dados de mídia removível. Cria três ou mais arquivos (um para as tabelas de catálogo de sistema, um para o log de transações e um ou mais para as tabelas de dados) e coloca o banco de dados nesses arquivos.  
   

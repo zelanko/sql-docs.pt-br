@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7869fed1b04a16a57750fcfd91d18e1b0c0d18a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 268226d28b134ffe13a5acfca3baf47bde655baf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738525"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866739"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cria um trabalho de monitor de espelhamento de banco de dados que atualiza periodicamente o status do espelhamento de cada banco de dados espelho na instância do servidor.  
   

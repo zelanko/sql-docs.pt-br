@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 620a174f50d133c4a1dd34ed54c74abb7ee06a71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81012436"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870623"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adiciona ou descarta uma credencial que contém a senha necessária para abrir uma chave mestra de banco de dados.  
   
@@ -82,7 +82,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>a. Criando uma credencial para a chave mestra AdventureWorks2012  
- O exemplo a seguir cria uma credencial para a chave mestra de banco de dados `AdventureWorks2012` e salva a senha de chave mestra como segredo na credencial. Como todos os parâmetros que são passados `sp_control_dbmasterkey_password` para devem ser do tipo de dados **nvarchar**, as cadeias de caracteres de texto `N`são convertidas com o operador de conversão.  
+ O exemplo a seguir cria uma credencial para a chave mestra de banco de dados `AdventureWorks2012` e salva a senha de chave mestra como segredo na credencial. Como todos os parâmetros que são passados para `sp_control_dbmasterkey_password` devem ser do tipo de dados **nvarchar**, as cadeias de caracteres de texto são convertidas com o operador de conversão `N` .  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   

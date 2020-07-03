@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc0c7973ad8ac653c2d9e7f613a3ec0325c12fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 581a154dfefa7823e9a1c0cefa53518352c66d55
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733324"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869111"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Define opções de cursor ou retorna informações de cursor criadas pelo procedimento armazenado sp_cursoropen. sp_cursoroption é invocado especificando ID = 8 em um pacote TDS (tabela de dados tabulares).  
   
@@ -63,7 +63,7 @@ sp_cursoroption cursor, code, value
 ## <a name="return-code-values"></a>Valores do código de retorno  
  O parâmetro *Value* pode retornar um dos valores de *código* a seguir.  
   
-|Retornar valor|Description|  
+|Retornar valor|Descrição|  
 |------------------|-----------------|  
 |0x0004|SCROLLOPT|  
 |0X0005|CCOPT|  
@@ -71,7 +71,7 @@ sp_cursoroption cursor, code, value
   
  O parâmetro *Value* retorna um dos seguintes valores de scrollopt.  
   
-|Retornar valor|Description|  
+|Retornar valor|Descrição|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -80,7 +80,7 @@ sp_cursoroption cursor, code, value
   
  O parâmetro *Value* retorna um dos seguintes valores de ccopt.  
   
-|Retornar valor|Description|  
+|Retornar valor|Descrição|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b09864e65bb0c46370ee0f8c3d09994f94027d6d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eedb738c9bd1a940f2875d182077edd3b939870b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733344"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868869"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Abre um cursor. sp_cursoropen define a instrução SQL associada às opções de cursor e cursor e, em seguida, popula o cursor. sp_cursoropen é equivalente à combinação das [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções DECLARE_CURSOR e aberta. Esse procedimento é invocado pela especificação de ID = 2 em um pacote TDS.  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c31df96682d2d1413094572a2b1fab94cfbe54b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5c520ff4b3e54f027f6afa5ca203c412f3f6291
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786177"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866621"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adiciona ou altera limites de aviso para uma métrica especificada de desempenho de espelhamento.  
 
@@ -91,10 +91,10 @@ sp_dbmmonitorchangealert database_name
   
 |*alert_id*|Métrica de desempenho|Limite de aviso|O aviso está habilitado?|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
-|1|Transação não enviada mais antiga|30 minutos|Yes|  
-|2|Log não enviado|10.000 KB|Yes|  
-|3|Log não restaurado|10.000 KB|Yes|  
-|4|Sobrecarga espelhada confirmada|1.000 milissegundos|No|  
+|1|Transação não enviada mais antiga|30 minutos|Sim|  
+|2|Log não enviado|10.000 KB|Sim|  
+|3|Log não restaurado|10.000 KB|Sim|  
+|4|Sobrecarga espelhada confirmada|1.000 milissegundos|Não|  
 |5|Período de retenção|8 horas|Sim|  
   
 ```  

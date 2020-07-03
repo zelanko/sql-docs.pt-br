@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f4141dc0a7c424ce1ccee021da7cf82c2a6b44b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2a43abe560238f13f76cebc837adaac6a536f7fb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771182"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869854"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cria uma ou mais guias de plano de um plano de consulta no cache de plano. É possível usar esse procedimento armazenado para garantir que o otimizador de consulta use sempre um plano de consulta específico para uma consulta específica. Para obter mais informações sobre guias de plano, consulte [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   

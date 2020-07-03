@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b9c53913cc6f399109da7a84cd8ec7f68957a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7247f5357ae02e0a81f3682d5d952d01584473
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760142"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865607"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Atualiza a tabela de status do monitor de espelhamento de banco de dados ao inserir uma nova linha na tabela para cada banco de dados espelho, e trunca linhas anteriores ao período de retenção atual. O período de retenção padrão é de 7 dias (168 horas). Ao atualizar a tabela, **sp_dbmmonitorupdate** avalia as métricas de desempenho.  
   
