@@ -9,15 +9,15 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370316f6f2c77a270117aca3f59d42c11914175c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75238647"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894976"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termos de licença do SMO (Objetos de Gerenciamento Compartilhado) do SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 ## <a name="microsoft-software-license-terms"></a>TERMOS DE LICENÇA PARA SOFTWARE MICROSOFT
 **OBJETOS DE GERENCIAMENTO COMPARTILHADO DO MICROSOFT SQL SERVER 2017**
@@ -77,7 +77,7 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
 
 **6.    DOCUMENTAÇÃO.** Qualquer pessoa que tenha acesso válido ao seu computador ou à sua rede interna poderá copiar e usar a documentação para fins de referência interna.
 
-**7.    RESTRIÇÕES À EXPORTAÇÃO.** O software está sujeito às leis e normas de exportação dos Estados Unidos. Você deve concordar com todas as leis e normas de exportação internacionais e domésticas que se aplicam ao software. Essas leis incluem restrições a destinos, usuários finais e usos finais. Para obter informações adicionais, [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)consulte.
+**7.    RESTRIÇÕES À EXPORTAÇÃO.** O software está sujeito às leis e normas de exportação dos Estados Unidos. Você deve concordar com todas as leis e normas de exportação internacionais e domésticas que se aplicam ao software. Essas leis incluem restrições a destinos, usuários finais e usos finais. Para obter informações adicionais, consulte [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting) .
 
 **8.    SERVIÇOS DE SUPORTE.** Como este software é fornecido “no estado em que se encontra”, a Microsoft poderá não prestar serviços de suporte para ele.
 

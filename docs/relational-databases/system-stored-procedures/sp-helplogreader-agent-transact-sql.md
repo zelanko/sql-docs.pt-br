@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31b4811542fa291fd1ff61368e6c5ac3ce9e714a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b83ce376482210c99179ea501f2c1e4c07fb0bf6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728133"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891665"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna propriedades de trabalho do Agente de Leitor de Log para o banco de dados de publicação. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   

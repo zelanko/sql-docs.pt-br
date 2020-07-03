@@ -20,15 +20,15 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 89e8424532f12a4111e5a535a8016f3a4fe5ac6a
-ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
+ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85196022"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894935"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contém uma linha por servidor vinculado ou remoto registrada e uma linha para o servidor local que tem **server_id** = 0.  
 
@@ -36,12 +36,12 @@ ms.locfileid: "85196022"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID local do servidor vinculado.|  
 |**name**|**sysname**|Quando **server_id** = 0, o valor retornado é o nome do servidor.<br /><br /> Quando **server_id** > 0, o valor retornado é o nome local do servidor vinculado.|  
-|**product**|**sysname**|Nome de produto do servidor vinculado. Um valor de "SQL Server" indica outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**remessa**|**sysname**|Nome de produto do servidor vinculado. Um valor de "SQL Server" indica outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**operador**|**sysname**|Nome do provedor OLE DB para conectar o servidor vinculado.<br /><br />Começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] o, o valor "sqlncli" é mapeado para o [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) por padrão. Em versões anteriores, o valor "SQLNCLI" é mapeado para o [provedor de OLE DB de SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Propriedade de conexão da fonte de dados OLE DB.|  
 |**local**|**nvarchar(4000)**|Propriedade de conexão local OLE DB. NULL se nenhum.|  
 |**provider_string**|**nvarchar(4000)**|Propriedade de conexão da cadeia de caracteres de provedor OLE DB.<br /><br /> É NULL, a menos que o chamador tenha a `ALTER ANY LINKED SERVER` permissão.|  
-|**Catalog**|**sysname**|OLE DB propriedade de conexão do catálogo. NULL se nenhum.|  
+|**catálogo**|**sysname**|OLE DB propriedade de conexão do catálogo. NULL se nenhum.|  
 |**connect_timeout**|**int**|Tempo de limite de conexão em segundos, 0 se nenhum.|  
 |**query_timeout**|**int**|Tempo de limite  de consulta em segundos, 0 se nenhum.|  
 |**is_linked**|**bit**|0 = é um servidor de estilo antigo adicionado usando **sp_addserver**, com comportamento de RPC e de transação distribuída diferente.<br /><br /> 1 = Servidor vinculado padrão.|  

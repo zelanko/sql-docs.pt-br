@@ -13,15 +13,15 @@ ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73dbbb93c226c145dc16f5148f903900b602760e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e62b90ee9d5d3eaa15747435395510629e2e5feb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911222"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892422"
 ---
 # <a name="using-messages"></a>Usando mensagens
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   No SMO, as mensagens do sistema são representadas pelo <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> objeto que pertence ao objeto **Server** . Como as mensagens do sistema não podem ser modificadas, as propriedades do objeto **SystemMessage** são somente leitura.  
   

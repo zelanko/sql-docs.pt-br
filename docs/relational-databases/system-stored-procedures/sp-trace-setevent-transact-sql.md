@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723078"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892591"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adiciona ou remove um evento ou coluna de eventos a um rastreamento. **sp_trace_setevent** pode ser executado somente em rastreamentos existentes que são interrompidos (*status* é **0**). Um erro será retornado se esse procedimento armazenado for executado em um rastreamento que não existe ou cujo *status* não é **0**.  
   
@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Esta tabela lista os eventos que podem ser adicionados ou removidos de um rastreamento.  
   
-|Número do evento|Nome do evento|Description|  
+|Número do evento|Nome do evento|Descrição|  
 |------------------|----------------|-----------------|  
 |0-9|Reservado|Reservado|  
 |10|RPC:Completed|Ocorre quando uma RPC (chamada de procedimento remoto) é concluída.|  
