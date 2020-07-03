@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c46a7e30f6f5163fba7b630e365f90e521a96e0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645307"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901322"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gera a instrução CREATE PROCEDURE que cria um procedimento armazenado de atualização dinâmica. A instrução UPDATE no procedimento armazenado personalizado é criada dinamicamente com base na sintaxe MCALL, que indica quais colunas devem ser alteradas. Use esse procedimento armazenado se o número de índices na tabela de assinaturas estiver aumentando e o número de colunas alteradas for pequeno. Esse procedimento armazenado é executado no Publicador, no banco de dados de publicação.  
   

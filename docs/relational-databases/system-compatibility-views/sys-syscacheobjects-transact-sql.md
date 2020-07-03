@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b33ff1cb4b46334f0b42d81f87920ef666a82e81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4d065ba57ab90e1bb035a6ef92100d351d93603
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663435"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899943"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contém informações sobre como o cache é usado.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "85663435"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|Identificação da partição de memória. O valor indica um intervalo de 0 a (tamanho de diretório - 1). O tamanho de diretório é o tamanho da tabela de hash.|  
 |**cacheobjtype**|**nvarchar(17)**|Tipo de objeto no cache:<br /><br /> Plano compilado<br /><br /> Plano executável<br /><br /> Árvore de análise<br /><br /> Cursor<br /><br /> Procedimento armazenado estendido|  
-|**objtype**|**nvarchar(8)**|Tipo de objeto:<br /><br /> Procedimento armazenado<br /><br /> Instrução preparada<br /><br /> Consulta ad hoc ( [!INCLUDE[tsql](../../includes/tsql-md.md)] enviada como eventos de linguagem dos utilitários **sqlcmd** ou **osql** , em vez de chamadas de procedimento remoto)<br /><br /> ReplProc (procedimento de replicação)<br /><br /> Gatilho<br /><br /> Exibir<br /><br /> Padrão<br /><br /> Tabela de usuário<br /><br /> Tabela do sistema<br /><br /> Verificação<br /><br /> Regra|  
+|**objtype**|**nvarchar(8)**|Tipo de objeto:<br /><br /> Procedimento armazenado<br /><br /> Instrução preparada<br /><br /> Consulta ad hoc ( [!INCLUDE[tsql](../../includes/tsql-md.md)] enviada como eventos de linguagem dos utilitários **sqlcmd** ou **osql** , em vez de chamadas de procedimento remoto)<br /><br /> ReplProc (procedimento de replicação)<br /><br /> Gatilho<br /><br /> Visualizar<br /><br /> Padrão<br /><br /> Tabela de usuário<br /><br /> Tabela do sistema<br /><br /> Verificação<br /><br /> Regra|  
 |**objid**|**int**|Uma das chaves principais usadas para pesquisar um objeto no cache. Essa é a ID de objeto armazenada em **sysobjects** para objetos de banco de dados (procedimentos, exibições, gatilhos e assim por diante). Para objetos de cache como ad hoc ou preparado para SQL, **objID** é um valor gerado internamente.|  
 |**DBID**|**smallint**|A identificação do banco de dados no qual o objeto de cache foi compilado.|  
 |**dbidexec**|**smallint**|A identificação de banco de dados da qual a consulta é executada.<br /><br /> Para a maioria dos objetos, **dbidexec** tem o mesmo valor que **DBID**.<br /><br /> Para exibições do sistema, **dbidexec** é a ID do banco de dados do qual a consulta é executada.<br /><br /> Para consultas ad hoc, **dbidexec** é 0. Isso significa que **dbidexec** tem o mesmo valor que **DBID**.|  

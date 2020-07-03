@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dee2cdf797bb3336bdf2645c42435ae441c63607
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc658776dddbf79362e3ab4c90ba052abb193e63
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724559"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901507"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lista todas as linhas na tabela do sistema **sysdownloadlist** para o trabalho fornecido, ou todas as linhas, se nenhum trabalho for especificado.  
   
@@ -55,7 +55,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`A operação válida para o trabalho especificado. a *operação* é **varchar (64)**, com um padrão de NULL e pode ser um desses valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**REMOVER**|Operação de servidor que solicita ao servidor de destino o defeito do serviço mestre **SQLSERVERAGENT** .|  
 |**DELETE**|Operação de trabalho que remove um trabalho inteiro.|  

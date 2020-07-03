@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4ba08afc2d0c4174b41b79181c438c9360a3758
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03aafc43246ea4061b561ab15f7393f660dec329
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677937"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900023"
 ---
 # <a name="sysxml_schema_namespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna uma linha para cada namespace XML definido por XSD. As tuplas a seguir são exclusivas: **collection_id**, **namespace_id**e **collection_id**e **nome**.  
   

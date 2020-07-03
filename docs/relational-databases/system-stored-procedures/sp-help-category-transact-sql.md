@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d34f37256e36049b4766a4059068a2e7bd6cfd3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724584"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901525"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fornece informações sobre as classes especificadas de trabalhos, alertas ou operadores.  
    
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @class = ] 'class'`A classe sobre a qual as informações são solicitadas. a *classe* é **varchar (8)**, com um valor padrão de **trabalho**. a *classe* pode ser um desses valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**TRABALHO**|Fornece informações sobre uma categoria de trabalho.|  
 |**ALERTA**|Fornece informações sobre uma categoria de alerta.|  
@@ -52,7 +52,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`O tipo de categoria para o qual as informações são solicitadas. o *tipo* é **varchar (12)**, com um padrão de NULL e pode ser um desses valores.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria de trabalho local.|  
 |**MULTI -SERVER**|Categoria de trabalho multisservidor.|  

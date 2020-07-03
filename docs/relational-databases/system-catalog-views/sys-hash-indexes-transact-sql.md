@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad735b116784601a348b418b7fe91a5715371e9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84bf706d0da99528b64cc15e004f01cbac4c4abd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764525"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901674"
 ---
 # <a name="syshash_indexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Mostra os índices de hash atuais e as propriedades do índice de hash. Os índices de hash têm suporte apenas no [OLTP na memória &#40;&#41;de otimização na memória ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
