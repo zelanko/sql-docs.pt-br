@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ad9bd9142a3021bd02d7fa2632e55b7490467b04
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b9bb91a34a2755ba14f8e64eecae2dc14498a07d
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900094"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942892"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acessar dados para as operações do DQS
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   Para usar seus dados de origem para operações do [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) e exportar seus dados processados, você pode adotar um destes procedimentos:  
   

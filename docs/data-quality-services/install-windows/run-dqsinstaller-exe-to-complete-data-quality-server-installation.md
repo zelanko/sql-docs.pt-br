@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 859751ebe806a662c4ec40d6812862d63a84a450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dab88e8e10bc854e3210d5898cbd965eb268e04
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887942"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942853"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Executar o DQSInstaller.exe para concluir a instalação do Data Quality Server
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   Para concluir a instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , você terá de executar o arquivo DQSInstaller.exe depois de instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este tópico descreve como executar o DQSInstaller.exe na tela **Iniciar** , menu **Iniciar** , Windows Explorer ou Prompt de comando; você pode escolher qualquer uma das formas de executar o arquivo DQSInstaller.exe.  
   
