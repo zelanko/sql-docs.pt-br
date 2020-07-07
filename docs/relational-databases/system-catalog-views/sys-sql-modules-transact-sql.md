@@ -20,15 +20,14 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd05afece6814beb84e3fa079b02f661f14990bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 35364b70b54c0837f5cdbcc3b747a6c066c7beb9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783944"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008357"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retorna uma linha para cada objeto que é um módulo definido pela linguagem SQL no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluindo a função escalar definida pelo usuário e compilada nativamente. Objetos de tipo P, RF, V, TR, FN, IF, TF e R têm um módulo SQL associado. Padrões autônomos, objetos de tipo D, também têm uma definição de módulo SQL nessa exibição. Para obter uma descrição desses tipos, consulte a coluna **Type** na exibição do catálogo [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
   

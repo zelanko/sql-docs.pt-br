@@ -14,15 +14,14 @@ ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e306a3277a540f0d5da79e76aeefc2440fd81730
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 14c874cace96bddb95fbc650e3d4193800b5b8d5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880071"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008615"
 ---
 # <a name="getting-started-in-smo"></a>Guia de Introdução ao SMO
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Esta página fornece links para tópicos criados para ajudá-lo a começar a usar o SQL Server Management Objects (SMO). Os tópicos listados abordam a hierarquia de objetos do SMO, escrevendo programas no SMO, SMO e linguagens de programação diferentes e tarefas de programação específicas.  
  

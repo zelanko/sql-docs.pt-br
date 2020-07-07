@@ -16,15 +16,14 @@ ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a53d40141c8f770452cfebd321458616f304222
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: c5115a9e943976e38c84e5df1663a32a7afbc482
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753091"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006509"
 ---
 # <a name="cursor-properties"></a>Propriedades do cursor
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   As características gerais de um cursor são determinadas pela definição do tipo de cursor de estilo ODBC ou pelos comportamentos do cursor SQL-92/ISO. Os tópicos a seguir descrevem outros atributos de instrução e conexão que afetam o comportamento de um cursor.  
   

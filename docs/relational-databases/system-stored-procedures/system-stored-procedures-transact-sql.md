@@ -22,15 +22,14 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6d46a0e06f96f646ebd68e383ad26f99e309082
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 5791ad4e14525c0f72f21c300c0191e67e24ee12
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783635"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007885"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procedimentos armazenados do sistema (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], muitas atividades administrativas e informativas podem ser executadas com os procedimentos armazenados do sistema. Os procedimentos armazenados do sistema são agrupados nas categorias mostradas na tabela a seguir.  
   
