@@ -13,15 +13,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5882a8ac4dc2cf4b46e1dc57b32c8159c435df6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e1920d9dac28cbbd72f43ddac95b8f34b38fb8fc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773429"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005443"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadados – conjuntos de linhas de esquema e data e hora
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Este tópico fornece informações sobre os conjuntos de linhas de COLUMNS e de PROCEDURE_PARAMETERS. Essas informações referem-se aos aprimoramentos de data e hora do OLE DB introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -30,10 +29,10 @@ ms.locfileid: "85773429"
   
 |Tipo de coluna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Liberada|0|  
+|date|DBTYPE_DBDATE|Limpar|0|  
 |time|DBTYPE_DBTIME2|Definir|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Liberada|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Liberada|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Limpar|0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Limpar|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Definir|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Definir|0..7|  
   

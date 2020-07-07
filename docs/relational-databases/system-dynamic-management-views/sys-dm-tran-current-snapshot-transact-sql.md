@@ -20,15 +20,14 @@ ms.assetid: 7509d595-c0e1-4237-a5ac-b41ad934544c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c580949c6f2f9117dcc04d0454c157e5642facea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 5e35f7cc69508c9d0a98f78eb2a6ee9940098f86
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775196"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005552"
 ---
 # <a name="sysdm_tran_current_snapshot-transact-sql"></a>sys.dm_tran_current_snapshot (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retorna uma tabela virtual que exibe todas as transações ativas no momento em que a transação de instantâneo atual tem início. Se a transação atual não for uma transação de instantâneo, essa função não retornará nenhuma linha. **Sys. dm_tran_current_snapshot** é semelhante a **Sys. dm_tran_transactions_snapshot**, exceto que **Sys. dm_tran_current_snapshot** retorna apenas as transações ativas para a transação de instantâneo atual.  
   

@@ -11,15 +11,14 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f86bf7fc6e473685d918e7109180e2bdb8bdb86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a5bdf4f4f48c65fe4f37992c7968bbeb8103a17c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783223"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000577"
 ---
 # <a name="use-date-and-time-types"></a>Usar tipos de data e hora
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Este exemplo mostra como inicializar as estruturas de dados de data/hora que foram adicionadas ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Em seguida, prepara os valores de entrada, associa parâmetros e executa a consulta. Para obter mais informações sobre como usar esses tipos, consulte [melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

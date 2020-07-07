@@ -16,15 +16,14 @@ ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb222fa1d6cfae23f6df0208b88699f2e96cc6c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: 1aecc2647fdfd9b93a2c63ba208500fb1f7c6d17
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899069"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001342"
 ---
 # <a name="creating-altering-and-removing-databases"></a>Criando, alterando e removendo bancos de dados
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   No SMO, um banco de dados é representado pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   

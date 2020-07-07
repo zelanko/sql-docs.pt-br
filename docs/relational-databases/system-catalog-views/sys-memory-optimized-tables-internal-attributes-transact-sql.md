@@ -20,15 +20,14 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3aa9409d45586d996d28032df9e2af6e02ce36c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 636bacd800bc75d0b7a087683e1aef34584d596e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635076"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004799"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Contém uma linha para cada tabela com otimização de memória interna usada para armazenar as tabelas com otimização de memória do usuário. Cada tabela de usuário corresponde a uma ou mais tabelas internas. Uma única tabela é usada para o armazenamento dos principais dados. Tabelas internas adicionais são usadas para dar suporte a recursos como temporal, índice columnstore e armazenamento fora de linha (LOB) para tabelas com otimização de memória.
  
