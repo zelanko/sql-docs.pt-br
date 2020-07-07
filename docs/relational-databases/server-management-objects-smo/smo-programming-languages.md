@@ -18,15 +18,14 @@ ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fe291bf2284af09bdc71e9b534fc417c68b0ac2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
-ms.translationtype: MT
+ms.openlocfilehash: ed3e7bb0f116cb24b100d6b4e660bbc11046655a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894380"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012254"
 ---
 # <a name="smo-programming-languages"></a>Linguagens de programação de SMO
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Esta seção descreve como programar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (Smo) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .net.
   

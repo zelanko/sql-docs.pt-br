@@ -13,15 +13,14 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d67e41f3dfaed9ef59e586368d8b80dda2936669
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787699"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010506"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos pelo usuário CLR grandes (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Este tópico aborda as alterações feitas ao OLE DB no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para dar suporte aos UDTs (tipos definidos pelo usuário) CLR (Common Language Runtime) grandes.  
   
@@ -75,12 +74,12 @@ ms.locfileid: "85787699"
   
 |Tipo de coluna|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|NULO|NULO|Liberada|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|NULO|NULO|Limpar|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~0|NULO|NULO|Definir|DB_ALL_EXCEPT_LIKE|0|  
   
  As seguintes colunas também são definidas para UDTs:  
   
-|Identificador de coluna|Tipo|Description|  
+|Identificador de coluna|Type|Descrição|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Para colunas de UDT, o nome do catálogo onde o UDT foi definido.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Para colunas de UDT, o nome do esquema onde o UDT foi definido.|  
@@ -92,7 +91,7 @@ ms.locfileid: "85787699"
   
 |Tipo de parâmetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|~0|~0|Liberada|  
+|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|~0|~0|Limpar|  
 |DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~0|~0|~0|Definir|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Conjunto de linhas COLUMNS (conjuntos de linhas de esquema)  
@@ -100,12 +99,12 @@ ms.locfileid: "85787699"
   
 |Tipo de coluna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|Liberada|*n*|  
+|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|Limpar|*n*|  
 |DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|Definir|0|  
   
  As seguintes colunas adicionais são definidas para UDTs:  
   
-|Identificador de coluna|Tipo|Description|  
+|Identificador de coluna|Type|Descrição|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Para colunas de UDT, o nome do catálogo onde o UDT foi definido.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Para colunas de UDT, o nome do esquema onde o UDT foi definido.|  

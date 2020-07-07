@@ -18,15 +18,14 @@ ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f93e04283c35d84fa32d40fbed6bb3e1fa9ba4cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 882b36eec471e09ad5fe998b6ce6042a6b986581
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787704"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010470"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Conjuntos de linhas do esquema – suporte à consulta distribuída
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Para dar suporte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a consultas distribuídas, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] interface **IDBSchemaRowset** do provedor de OLE DB de cliente nativo retorna metadados em servidores vinculados.  
   

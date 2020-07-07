@@ -20,15 +20,14 @@ ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c7187880c26fe7f6561d355ea6925cc7229ea39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a537df51bc83c966480a8c191c3a2c66a7a778ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649195"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011929"
 ---
 # <a name="sysdefault_constraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contém uma linha para cada objeto que é uma definição padrão (criada como parte de uma instrução CREATE TABLE ou ALTER TABLE em vez de uma instrução CREATE padrão), com **Sys. Objects. Type** = D.  
   

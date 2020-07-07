@@ -18,16 +18,15 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af1f5a9431c9ccfd5b51b26f9574a3960898102
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a7732b2e0f975ad1cd026a75f9614b3cb59ec7d8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787801"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009745"
 ---
 # <a name="create-a-distributed-transaction"></a>Criar uma transação distribuída
 
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 <!--
 The following includes .md file is Empty, as of long before 2019/May/13.
@@ -76,6 +75,6 @@ As outras linguagens de programação a seguir podem não fornecer nenhum suport
 - Servidor vinculado usando Transact-SQL
 - Drivers JDBC
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Executando transações (ODBC)](performing-transactions-in-odbc.md)

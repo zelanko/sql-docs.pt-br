@@ -16,15 +16,14 @@ ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a37c345f3d643a031bb53bad453268b45bd0258c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: c02b758dfed2a18815dc039550a7e63bd69f0daa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725129"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009573"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Copiar em massa sem um arquivo de formato (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Este exemplo completo mostra como usar as funções de cópia em massa para criar um arquivo de dados de modo nativo, sem um arquivo de formato. Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   

@@ -21,15 +21,14 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: aa14b65d527de3efa82f54212e6668e232197486
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
-ms.translationtype: MT
+ms.openlocfilehash: e4e107fea977e70d8b32e4b84c09bfb320cc8b47
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813889"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009956"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]    
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
 
   Retorna informações de um arquivo de auditoria criado por uma auditoria de servidor no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -83,7 +82,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Tabelas retornadas  
  A tabela a seguir descreve o conteúdo do arquivo de auditoria que pode ser retornado por essa função.  
   
-| Nome da coluna | Tipo | Description |  
+| Nome da coluna | Type | Descrição |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | A identificação da ação. Não permite valor nulo. |  
 | additional_information | **nvarchar(4000)** | Informações exclusivas que se aplicam somente a um evento são retornadas como XML. Um número pequeno de ações auditável contém esse tipo de informação.<br /><br /> Um nível de pilha TSQL será exibido em formato XML para ações que tenham pilha TSQL associada a elas. O formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> O nest_level do quadro indica o nível de aninhamento atual do quadro. O nome do Módulo é representado em formato de três partes (database_name, schema_name e object_name).  O nome do módulo será analisado para escapar caracteres XML inválidos como `'\<'` , `'>'` , `'/'` , `'_x'` . Eles serão ignorados como `_xHHHH\_` . O HHHH representa o código UCS-2 hexadecimal de quatro dígitos do caractere<br /><br /> Permite valor nulo. Retornará NULL quando o evento não reportar informações adicionais. |

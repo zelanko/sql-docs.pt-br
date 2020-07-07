@@ -14,15 +14,14 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c18c4106c5fab5f6f1c75276db8c211f9873c8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e10fa48bccc1c6c8c6ae3a25e10e805f514c0d2a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751836"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012373"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client não dá suporte ao modelo de cursor misto (conjunto de chaves/dinâmico). As tentativas de definir o tamanho do conjunto de chaves usando SQL_ATTR_KEYSET_SIZE falhará se o valor definido não for igual a 0.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "85751836"
 ### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  O atributo SQL_SOPT_SS_CURSOR especifica se o driver usará opções de desempenho específicas do driver em cursores. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) não é permitido quando essas opções são definidas. A configuração padrão é SQL_CO_OFF. O valor *ValuePtr* é do tipo SQLLEN.  
   
-|Valor de *ValuePtr*|Description|  
+|Valor de *ValuePtr*|Descrição|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|Padrão. Desabilita somente encaminhamento rápido, cursores somente leitura e busca rápida, habilita **SQLGetData** em cursores somente de avanço e somente leitura. Quando SQL_SOPT_SS_CURSOR_OPTIONS for definido como SQL_CO_OFF, o tipo de cursor não será alterado. Ou seja, o cursor somente de avanço rápido permanecerá um cursor somente de avanço rápido. Para alterar o tipo de cursor, o aplicativo agora deve definir um tipo de cursor diferente usando **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Permite somente encaminhamento rápido, cursores somente leitura, desabilita **SQLGetData** em cursores somente de avanço e somente leitura.|  
@@ -64,7 +63,7 @@ ms.locfileid: "85751836"
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  O atributo SQL_SOPT_SS_DEFER_PREPARE determina se a instrução é preparada imediatamente ou adiada até que **SQLExecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) seja executado. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 e anteriores, essa propriedade é ignorada (sem adiamento da preparação). O valor *ValuePtr* é do tipo SQLLEN.  
   
-|Valor de *ValuePtr*|Description|  
+|Valor de *ValuePtr*|Descrição|  
 |----------------------|-----------------|  
 |SQL_DP_ON|Padrão. Depois de chamar a [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), a preparação da instrução é adiada até que **SQLExecute** seja chamado ou a operação de metapropriedade (**SQLDescribeCol** ou **SQLDescribeParam**) seja executada.|  
 |SQL_DP_OFF|A instrução é preparada assim que **SQLPrepare** é executado.|  
@@ -74,7 +73,7 @@ ms.locfileid: "85751836"
   
  O valor *ValuePtr* é do tipo SQLLEN.  
   
-|Valor de *ValuePtr*|Description|  
+|Valor de *ValuePtr*|Descrição|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|Padrão. O driver não converte dados de data, hora e moeda em dados de cadeia de caracteres usando a configuração de localidade do cliente.|  
 |SQL_RE_ON|O driver usa a configuração de localidade do cliente ao converter dados de data, hora e moeda em dados de cadeia de caracteres.|  
@@ -89,7 +88,7 @@ ms.locfileid: "85751836"
 ### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  O atributo SQL_SOPT_SS_TEXTPTR_LOGGING alterna o log de operações em colunas que contêm dados de **texto** ou **imagem** . O valor *ValuePtr* é do tipo SQLLEN.  
   
-|Valor de *ValuePtr*|Description|  
+|Valor de *ValuePtr*|Descrição|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Desabilita o registro em log de operações executadas em dados de **texto** e **imagem** .|  
 |SQL_TL_ON|Padrão. Habilita o registro em log de operações executadas em dados de **texto** e **imagem** .|  
@@ -97,7 +96,7 @@ ms.locfileid: "85751836"
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  O atributo SQL_SOPT_SS_HIDDEN_COLUMNS expõe, no conjunto de resultados, colunas ocultas em uma instrução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE. Por padrão, o driver não expõe estas colunas. O valor *ValuePtr* é do tipo SQLLEN.  
   
-|Valor de *ValuePtr*|Description|  
+|Valor de *ValuePtr*|Descrição|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|Padrão. As colunas FOR BROWSE são ocultadas do conjunto de resultados.|  
 |SQL_HC_ON|Expõe colunas FOR BROWSE.|  
@@ -131,7 +130,7 @@ ms.locfileid: "85751836"
   
  O tipo para SQL_SOPT_SS_NAME_SCOPE é SQLULEN.  
   
-|Valor de *ValuePtr*|Description|  
+|Valor de *ValuePtr*|Descrição|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|Padrão.<br /><br /> Ao usar parâmetros com valor de tabela, indica que metadados de tabelas reais devem ser retornados.<br /><br /> Ao usar o recurso de colunas esparsas, SQLColumns retornará apenas colunas que não sejam membros do **column_set**esparso.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica que o aplicativo exige metadados para um tipo de tabela, em vez de uma tabela real (funções de catálogo devem retornar metadados para tipos de tabela). Em seguida, o aplicativo passa a TYPE_NAME do parâmetro com valor de tabela como o parâmetro *TableName* .|  

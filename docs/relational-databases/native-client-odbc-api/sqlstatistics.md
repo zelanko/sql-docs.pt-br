@@ -14,15 +14,14 @@ ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63b69877406263c867addc1a4ea61619b9a47ae2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: c5267592f6366faf42b3109019a0bb40f6e2f4da
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751774"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012366"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   O**SQLStatistics** pode ser executado em um cursor estático. Uma tentativa de executar o **SQLStatistics** em um atualizável (controlado por conjunto de chaves ou dinâmico) retorna SQL_SUCCESS_WITH_INFO indicando que o tipo de cursor foi alterado.  
   

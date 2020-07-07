@@ -13,15 +13,14 @@ ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec1628907bec95b5d8416bda3abd4a9b65e9074c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b49d1afd2fbac4f10dc8120ba428c6392efb5b60
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787848"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009881"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Parâmetros com valor de tabela (SQL Server Native Client)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   No [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], foram introduzidos parâmetros com valor de tabela que fornecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os parâmetros com valor de tabela fornecem uma funcionalidade semelhante às matrizes de parâmetro, mas eles oferecem mais flexibilidade e uma integração melhor com o [!INCLUDE[tsql](../../../includes/tsql-md.md)], podendo, com frequência, melhorar o desempenho. Os parâmetros com valor de tabela também podem participar de operações baseadas em conjuntos, o que não ocorre com as matrizes de parâmetro.  
   

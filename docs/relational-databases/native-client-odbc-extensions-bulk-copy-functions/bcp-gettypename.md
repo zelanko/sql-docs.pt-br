@@ -18,15 +18,14 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12c4be2e1145d488ed057df5b206042b31bdb5b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b443a3ecd3e96740939a1cbef3f2a732a129d9a8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774280"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010091"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retorna o nome do tipo SQL para um token do tipo BCP especificado.  
   
@@ -66,15 +65,15 @@ RETCODE bcp_gettypename (
 |**SQLDATETIME**|Você pode usar o|**datetime**|  
 |**SQLBITN**|Você pode usar o|**bit-null**|  
 |**SQLBIT**|Você pode usar o|**bit**|  
-|**SQLBIGCHAR**|No|**char**|  
-|**SQLCHARACTER**|No|**char**|  
-|**SQLBIGVARCHAR**|No|**varchar**|  
-|**SQLVARCHAR**|No|**varchar**|  
+|**SQLBIGCHAR**|Não|**char**|  
+|**SQLCHARACTER**|Não|**char**|  
+|**SQLBIGVARCHAR**|Não|**varchar**|  
+|**SQLVARCHAR**|Não|**varchar**|  
 |**SQLTEXT**|Você pode usar o|**text**|  
-|**SQLBIGBINARY**|No|**binary**|  
-|**SQLBINARY**|No|**Binary**|  
-|**SQLBIGVARBINARY**|No|**Varbinary**|  
-|**SQLVARBINARY**|No|**Varbinary**|  
+|**SQLBIGBINARY**|Não|**binary**|  
+|**SQLBINARY**|Não|**Binary**|  
+|**SQLBIGVARBINARY**|Não|**Varbinary**|  
+|**SQLVARBINARY**|Não|**Varbinary**|  
 |**SQLIMAGE**|Você pode usar o|**Imagem**|  
 |**SQLINTN**|Você pode usar o|**int-null**|  
 |**SQLDATETIMN**|Você pode usar o|**datetime-null**|  
@@ -89,22 +88,22 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|Você pode usar o|**Smallmoney**|  
 |**SQLFLT4**|Você pode usar o|**Foto**|  
 |**SQLUNIQUEID**|Você pode usar o|**uniqueidentifier**|  
-|**SQLNCHAR**|No|**Nchar**|  
-|**SQLNVARCHAR**|No|**Nvarchar**|  
+|**SQLNCHAR**|Não|**Nchar**|  
+|**SQLNVARCHAR**|Não|**Nvarchar**|  
 |**SQLNTEXT**|Você pode usar o|**Ntext**|  
 |**SQLVARIANT**|Você pode usar o|**sql_variant**|  
 |**SQLINT8**|Você pode usar o|**Bigint**|  
-|**SQLCHARACTER**|Yes|**varchar(max)**|  
-|**SQLBIGCHAR**|Yes|**varchar(max)**|  
-|**SQLBIGVARCHAR**|Yes|**varchar(max)**|  
-|**SQLVARCHAR**|Yes|**varchar(max)**|  
-|**SQLBINARY**|Yes|**varbinary(max)**|  
-|**SQLBIGBINARY**|Yes|**varbinary(max)**|  
-|**SQLBIGVARBINARY**|Yes|**varbinary(max)**|  
-|**SQLVARBINARY**|Yes|**varbinary(max)**|  
-|**SQLNCHAR**|Yes|**nvarchar(max)**|  
-|**SQLNVARCHAR**|Yes|**nvarchar(max)**|  
-|**SQLXML**|Yes|**XML**|  
+|**SQLCHARACTER**|Sim|**varchar(max)**|  
+|**SQLBIGCHAR**|Sim|**varchar(max)**|  
+|**SQLBIGVARCHAR**|Sim|**varchar(max)**|  
+|**SQLVARCHAR**|Sim|**varchar(max)**|  
+|**SQLBINARY**|Sim|**varbinary(max)**|  
+|**SQLBIGBINARY**|Sim|**varbinary(max)**|  
+|**SQLBIGVARBINARY**|Sim|**varbinary(max)**|  
+|**SQLVARBINARY**|Sim|**varbinary(max)**|  
+|**SQLNCHAR**|Sim|**nvarchar(max)**|  
+|**SQLNVARCHAR**|Sim|**nvarchar(max)**|  
+|**SQLXML**|Sim|**XML**|  
 |**SQLUDT**|Você pode usar o|**UDT**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Suporte de bcp_gettypename a recursos aprimorados de data e hora  

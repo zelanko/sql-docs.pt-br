@@ -20,15 +20,14 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f41a5cc500ef8d893180804091e5f905961aa637
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9669462c83252af8c4526ddda0f155cdcb6b8a92
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665352"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011986"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retorna uma linha para cada membro de cada função de banco de dados.  Usuários de banco de dados, funções de aplicativo e outras funções de banco de dados podem ser membros de uma função de banco de dados. Para adicionar membros a uma função, use a instrução [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) com a `ADD MEMBER` opção. Ingresse com [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para retornar os nomes dos `principal_id` valores.
   
