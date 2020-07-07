@@ -14,41 +14,40 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1bdf37018f75e1683fa0879ce4e25872efe20c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 690e853ceb908cb85d27831c0c9a4961591158f8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789416"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012093"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   O **SQLBrowseConnect** usa palavras-chave que podem ser categorizadas em três níveis de informações de conexão. Para cada palavra-chave, a tabela a seguir indica se uma lista de valores válidos é retornada e se a palavra-chave é opcional.  
   
 ## <a name="level-1"></a>Nível 1  
   
-|Palavra-chave|Lista retornada?|Opcional?|Description|  
+|Palavra-chave|Lista retornada?|Opcional?|Descrição|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|N/D|Não|Nome da fonte de dados retornada por **SQLDataSources**. A palavra-chave DSN não poderá ser usada se a palavra-chave DRIVER for usada.|  
 |DRIVER|N/D|Não|O nome do driver ODBC do Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client é { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. A palavra-chave DRIVER não pode ser usada se a palavra-chave DSN for usada.|  
   
 ## <a name="level-2"></a>Nível 2  
   
-|Palavra-chave|Lista retornada?|Opcional?|Description|  
+|Palavra-chave|Lista retornada?|Opcional?|Descrição|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Sim|No|O nome do servidor na rede onde a fonte de dados reside. O termo "(local)" pode ser inserido como o servidor; nesse caso uma cópia local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser usada, mesmo quando se trata de uma versão sem-rede.|  
+|SERVER|Sim|Não|O nome do servidor na rede onde a fonte de dados reside. O termo "(local)" pode ser inserido como o servidor; nesse caso uma cópia local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser usada, mesmo quando se trata de uma versão sem-rede.|  
 |UID|Não|Sim|ID de logon do usuário.|  
-|PWD|No|Sim (depende do usuário)|Senha especificada pelo usuário.|  
+|PWD|Não|Sim (depende do usuário)|Senha especificada pelo usuário.|  
 |APP|Não|Sim|Nome do aplicativo que chama **SQLBrowseConnect**.|  
 |WSID|Não|Sim|ID da estação de trabalho. Normalmente, é o nome de rede do computador no qual o aplicativo é executado.|  
   
 ## <a name="level-3"></a>Nível 3  
   
-|Palavra-chave|Lista retornada?|Opcional?|Description|  
+|Palavra-chave|Lista retornada?|Opcional?|Descrição|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|Yes|Yes|O nome do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|LANGUAGE|Yes|Yes|O idioma nacional usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|DATABASE|Sim|Sim|O nome do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|LANGUAGE|Sim|Sim|O idioma nacional usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  **SQLBrowseConnect** ignora os valores das palavras-chave Database e Language armazenadas nas definições de fonte de dados ODBC. Se o banco de dados ou o idioma especificado na cadeia de conexão passado para **SQLBrowseConnect** for inválido, **SQLBrowseConnect** retornará SQL_NEED_DATA e os atributos de conexão de nível 3.  
   
