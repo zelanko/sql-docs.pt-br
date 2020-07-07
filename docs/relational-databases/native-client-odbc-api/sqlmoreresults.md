@@ -14,15 +14,14 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: add522996d247b41f46fb975fc06eab0ddbe1806
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f07ca0aa93fd7b415f2ada75331c7c9bdd0dce15
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85788055"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000341"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLMoreResults** permite que o aplicativo recupere vários conjuntos de linhas de resultado. Uma instrução SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] que contém uma cláusula COMPUTE ou um lote enviado de ODBC ou instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , faz o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gerar vários conjuntos de resultados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permite criar um cursor de servidor para processar os resultados em nenhum caso. Portanto, o desenvolvedor deve assegurar que a instrução ODBC esteja bloqueando. O desenvolvedor deve esvaziar os dados retornados ou cancelar a instrução ODBC antes de processar dados de outras instruções ativas na conexão.  
   

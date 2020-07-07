@@ -2,19 +2,18 @@
 title: Gerenciando senhas (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/05/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 413fad6c982622eddb2a1341c63804da089dd8a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b5be535275742efa87dec804e17a94ef6cc8d092
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141019"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000163"
 ---
 # <a name="managing-passwords-db2tosql"></a>Gerenciando senhas (DB2ToSQL)
 Esta seção trata da proteção de senhas de banco de dados e do procedimento para importá-las ou exportá-las entre servidores:  
@@ -32,7 +31,7 @@ Especifique uma senha válida usando um dos três métodos a seguir:
   
 1.  **Texto não criptografado:** Digite a senha do banco de dados no atributo Value do nó ' password '. Ele é encontrado no nó definição do servidor na seção servidor do arquivo de script ou arquivo de conexão do servidor.  
   
-    As senhas em texto não criptografado não são seguras. Portanto, você encontrará a seguinte mensagem de aviso na saída do console: *" &lt;servidor Server-&gt; ID da senha é fornecido em formato de texto não seguro, o aplicativo do console do SSMA fornece uma opção para proteger a senha por meio de criptografia, consulte a opção-SecurePassword no arquivo de ajuda do SSMA para obter mais informações".*  
+    As senhas em texto não criptografado não são seguras. Portanto, você encontrará a seguinte mensagem de aviso na saída do console: *"servidor Server &lt; -ID &gt; da senha é fornecido em formato de texto não seguro, o aplicativo do console do SSMA fornece uma opção para proteger a senha por meio de criptografia, consulte a opção-SecurePassword no arquivo de ajuda do SSMA para obter mais informações".*  
   
     **Senhas criptografadas:** A senha especificada, nesse caso, é armazenada em um formato criptografado no computador local no ProtectedStorage. SSMA.  
   
@@ -67,66 +66,72 @@ Especifique uma senha válida usando um dos três métodos a seguir:
     
     -   **Removendo senhas criptografadas**  
   
-        Execute o `SSMAforDB2Console.exe` com a`-securepassword` opção `-remove` e na linha de comando passando as IDs do servidor, para remover as senhas criptografadas do arquivo de armazenamento protegido presente no computador local.  
+        Execute o `SSMAforDB2Console.exe` com a `-securepassword` `-remove` opção e na linha de comando passando as IDs do servidor, para remover as senhas criptografadas do arquivo de armazenamento protegido presente no computador local.  
   
         Exemplo:  
-        
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"  
-  
+
+        ```console
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"
+        ```
+
     -   **Listando IDs de servidor cujas senhas são criptografadas**  
   
-        Execute o `SSMAforDB2Console.exe` com a `-securepassword` opção `-list` e na linha de comando para listar todas as IDs de servidor cujas senhas foram criptografadas.  
+        Execute o `SSMAforDB2Console.exe` com a `-securepassword` `-list` opção e na linha de comando para listar todas as IDs de servidor cujas senhas foram criptografadas.  
   
         Exemplo:  
-        
-            C:\SSMA\SSMAforDB2Console.EXE -securepassword -list  
 
-  
+        ```console
+        C:\SSMA\SSMAforDB2Console.EXE -securepassword -list
+        ```
+
     > [!NOTE]  
     > 1.  A senha em texto não criptografado mencionado no arquivo de conexão de script ou servidor tem precedência sobre a senha criptografada no arquivo protegido.  
     > 2.  Quando não houver nenhuma senha na seção do servidor do arquivo de conexão do servidor ou do arquivo de script ou se não tiver sido protegida no computador local, o console do solicitará que você insira a senha.  
   
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Exportando ou importando senhas criptografadas  
-O aplicativo de console do SSMA permite exportar senhas de banco de dados criptografadas presentes em um arquivo no computador local para um arquivo protegido e vice-versa. Ele ajuda a tornar o computador com senhas criptografadas independente. A funcionalidade de exportação lê a ID do servidor e a senha do armazenamento protegido local e salva as informações em um arquivo criptografado. O usuário é solicitado a inserir a senha para o arquivo protegido. Certifique-se de que a senha inserida tenha um comprimento de 8 caracteres ou mais. Esse arquivo protegido é portável em computadores diferentes. A funcionalidade de importação lê a ID do servidor e as informações de senha do arquivo protegido. O usuário é solicitado a inserir a senha para o arquivo protegido e acrescenta as informações ao armazenamento protegido local.  
-  
-Exemplo:  
+O aplicativo de console do SSMA permite exportar senhas de banco de dados criptografadas presentes em um arquivo no computador local para um arquivo protegido e vice-versa. Ele ajuda a tornar o computador com senhas criptografadas independente.
 
-    Export password
-    
-    Enter password for protecting the exported file
-    
-    C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
-  
-Exemplo:  
+A _funcionalidade de exportação_ lê a ID do servidor e a senha do armazenamento protegido local. Em seguida, o sistema salva a ID e a senha em um arquivo criptografado. O usuário é solicitado a inserir a senha para o arquivo protegido. Verifique se a senha digitada tem 8 ou mais caracteres de comprimento. Esse arquivo protegido é portável em computadores diferentes.
 
-    Import an encrypted password
-    
-    Enter password for protecting the imported file
-    
-    C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
+A _funcionalidade de importação_ lê a ID do servidor e as informações de senha do arquivo protegido. O usuário é solicitado a inserir a senha para o arquivo protegido e anexa as informações ao armazenamento protegido local.  
 
-  
+### <a name="export-example"></a>Exemplo de exportação
+
+1. Exporte a senha.
+
+2. Insira a senha para proteger o arquivo exportado.
+
+3. Executar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`
+
+4. Insira a senha para proteger o arquivo exportado: xxxxxxxx
+
+5. Confirme a senha: xxxxxxxx
+
+6. Executar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`
+
+7. Insira a senha para proteger o arquivo exportado: xxxxxxxx
+
+8. Confirme a senha: xxxxxxxx  
+
+### <a name="import-example"></a>Exemplo de importação
+
+1. Importar uma senha criptografada.
+
+2. Insira a senha para proteger o arquivo importado.
+
+3. Executar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`
+
+4. Insira a senha para importar os servidores do arquivo criptografado: xxxxxxxx
+
+5. Confirme a senha: xxxxxxxx
+
+6. Executar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`
+
+7. Insira a senha para importar os servidores do arquivo criptografado: xxxxxxxx
+
+8. Confirmar senha: xxxxxxxx
+
 ## <a name="see-also"></a>Consulte Também  
 [Executar o console do SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

@@ -18,15 +18,14 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ffce9dd6a06b433e183570767bf165c9e6b75d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 83f46ddd70061ef0f0647c902221b7f906917048
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771234"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999901"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retorna as informações de colunas dos objetos especificados que podem ser consultados no ambiente atual.  
   
@@ -58,7 +57,7 @@ sp_columns [ @table_name = ] object
 `[ \@ODBCVer = ] ODBCVer`É a versão do ODBC que está sendo usada. *ODBCVer* é **int**, com um padrão de 2. Isto indica ODBC versão 2. Os valores válidos são 2 ou 3. Para as diferenças de comportamento entre as versões 2 e 3, consulte a especificação ODBC **SQLColumns** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ Não  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O procedimento armazenado do catálogo **sp_columns** é equivalente a **SQLColumns** no ODBC. Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER**e **table_name**.  

@@ -12,12 +12,11 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: d91fdabce5350614d504b7dfdf990e2dd54b8b48
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001116"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999126"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "68001116"
   
 |Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|\<colunas herdadas>||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. Objects](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).||  
+|\<inherited columns>||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. Objects](../system-catalog-views/sys-objects-transact-sql.md).||  
 |lob_data_space_id|**int**||Sempre 0.|  
 |filestream_data_space_id|**int**|ID de espaço de dados para um grupo de arquivos FILESTREAM ou[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULO|  
 |max_column_id_used|**int**|ID de coluna máximo usada por esta tabela.||  
