@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3b408951b0a1f32bda0920260aae18ab93350fdd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c8b74e6647422231f0ace765f57579bb3ea2b84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85656174"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, objeto Metadados de Catálogo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 O objeto de desempenho **SQL Server:Metadados de Catálogo** fornece contadores para metadados de catálogo do SQL Server.
 
 A tabela a seguir descreve os objetos de desempenho **Metadados de Catálogo** do SQL Server.

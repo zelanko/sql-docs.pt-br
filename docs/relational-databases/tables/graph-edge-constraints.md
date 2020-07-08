@@ -16,16 +16,16 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ea69255ecd92b8df7fbaa9199e948ae171bfaebb
-ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
+ms.openlocfilehash: ef0b7952cd589592f6ad6798e4d6f7720b368619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80625559"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633427"
 ---
 # <a name="edge-constraints"></a>Restrições do Microsoft Edge
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
 É possível usar restrições de borda para impor a integridade dos dados e uma semântica específica às tabelas de borda no banco de dados de gráfico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

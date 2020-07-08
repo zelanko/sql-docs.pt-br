@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a1cf7a4bb37abd60f7067381ba4da6a2d44328ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef09bd17effe13d415a30a1175e9279744813eca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655623"
 ---
 # <a name="considerations-for-using-test-servers"></a>Considerações para usar servidores de teste
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Usar um servidor de teste para ajustar um banco de dados em um servidor de produção é uma vantagem importante do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Usando esse recurso, você pode descarregar a sobrecarga de ajuste em um servidor de teste sem copiar os dados reais no servidor de teste do servidor de produção.  
   
 > [!NOTE]  

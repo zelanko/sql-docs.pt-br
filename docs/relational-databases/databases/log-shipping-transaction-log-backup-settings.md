@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cf224dd8c5d6973c6aaf5b0af869ace7d43c891c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a73e046e4013ef4396ddd738fd84e2a932a2da81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642547"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Configurações de backup de log de transações do envio de log
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use esta caixa de diálogo para configurar e modificar as configurações de backup de log de transações para o envio de log  
   
  Para obter uma explicação dos conceitos de envio de log, veja [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  

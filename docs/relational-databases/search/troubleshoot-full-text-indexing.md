@@ -14,15 +14,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d8dd1cd471328859dd8bfa595fc341bda5f51f04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36a8f05f6f135b5f8790f95e409f5db59dcf145a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628966"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Solucionar problemas na indexação de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
      
 ##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> Solucionar problemas de falhas na indexação de texto completo  
  Ao popular ou manter um índice de texto completo, o indexador de texto completo, pelas razões descritas a seguir, talvez falhe ao indexar uma ou mais linhas. Esses erros em nível de linha não impedem a conclusão da população. O indexador ignora essas linhas, o que significa que não é possível consultar seu conteúdo.  

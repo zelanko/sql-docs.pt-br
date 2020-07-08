@@ -7,12 +7,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aeb813feb46c5895352e4da3ea748a3e2f12c1e2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095595"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807621"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Usando SIDs de serviço para conceder permissões para serviços no SQL Server
 
@@ -91,13 +91,13 @@ GO
 Conceda as permissões necessárias para gerenciar grupos de disponibilidade para o Serviço de Cluster.
 
 ```SQL
-GRANT ALTER ANY AVAILABILITY GROUP TO 'NT SERVICE\ClusSvc'
+GRANT ALTER ANY AVAILABILITY GROUP TO [NT SERVICE\ClusSvc]
 GO
 
-GRANT CONNECT SQL TO 'NT SERVICE\ClusSvc'
+GRANT CONNECT SQL TO [NT SERVICE\ClusSvc]
 GO
 
-GRANT VIEW SERVER STATE TO 'NT SERVICE\ClusSvc'
+GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
 

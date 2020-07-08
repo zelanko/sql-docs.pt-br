@@ -12,15 +12,15 @@ ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e44bf3326a01df14156046377475d00e94c0f30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b00b8493151b49d3c83816680c4d06ff548bbb18
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629887"
 ---
 # <a name="audit-login-failed-event-class"></a>Classe de evento Audit Login Failed
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Audit Login Failed** indica que um usuário tentou fazer logon no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não conseguiu. Os eventos nesta classe são disparados por novas conexões ou por conexões reutilizadas de um pool de conexões.  
   
 ## <a name="audit-login-failed-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Login Failed  

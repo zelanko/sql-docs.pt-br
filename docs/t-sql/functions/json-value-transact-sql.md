@@ -1,10 +1,8 @@
 ---
 title: JSON_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: ca9cc9d45c1b69b4fa3761eeadfa321378a979c0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f4cd163d4ccbb622deb4278d4f0f0b2490d404e8
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635096"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423062"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
@@ -37,7 +36,7 @@ ms.locfileid: "81635096"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```
+```syntaxsql
 JSON_VALUE ( expression , path )  
 ```  
   

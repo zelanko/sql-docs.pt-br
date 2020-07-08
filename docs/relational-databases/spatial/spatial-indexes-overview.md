@@ -12,15 +12,15 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95e9d1139619f64aa9ff1be53711019fdbdf6637
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ad5b6e9441eb9364ddeac03e13e5fe60542746f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666989"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a dados e índices espaciais. Um *índice espacial* é um tipo de índice estendido que permite indexar uma coluna espacial. Uma coluna espacial é uma coluna de uma tabela que contém tipo de dados espaciais, como **geometria** ou **geografia**.  
   
 > [!IMPORTANT]  

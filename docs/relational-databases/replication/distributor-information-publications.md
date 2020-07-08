@@ -17,15 +17,15 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76283990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653550"
 ---
 # <a name="distributor-information-publications"></a>Informações do distribuidor, publicações
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   A guia **Publicações** fornece informações resumidas sobre todas as publicações no Distribuidor selecionado no painel esquerdo.  
   
 As informações que são exibidas sobre as publicações com suporte do Distribuidor incluem uma coluna que contém a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Publicador. Caso contrário, as informações de publicação serão iguais às informações de publicação fornecidas quando você exibe publicações na exibição Publicador do Replication Monitor. Para obter mais informações sobre as colunas da guia **Publicações** , consulte [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md).  

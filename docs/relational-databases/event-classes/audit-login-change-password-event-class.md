@@ -12,15 +12,15 @@ ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 434c98eebc7c4651e194f698c7d748f858b55b50
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 956f2eea9863f171db203925bfea0243574a0e75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629969"
 ---
 # <a name="audit-login-change-password-event-class"></a>Classe de evento Audit Login Change Password
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Audit Login Change Password** ocorre sempre que um usuário altera a senha de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="audit-login-change-password-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Login Change Password  

@@ -12,15 +12,15 @@ ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9187529218500de9b46fd2ccbedac272dbae960f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4681864d7919c633aa84091cfb4d2d0177d1d3be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642335"
 ---
 # <a name="exec-prepared-sql-event-class"></a>classe de evento Exec Prepared SQL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento Exec Prepare SQL indica que o SqlClient, ODBC, OLE DB ou DB-Library executou uma ou mais instruções preparadas do [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ## <a name="exec-prepared-sql-event-class-data-columns"></a>Coluna de dados da classe de evento Exec Prepare SQL  

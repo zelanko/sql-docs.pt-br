@@ -16,15 +16,15 @@ ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 85e6f642ebc8ec750c5831cd8b8e12747e9d248e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 10cb78d3804ed022619ed6c19a69e4722c518562
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653285"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>Caixa de diálogo Propriedades do Distribuidor de Replicação do SQL Server 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Esta página descreve as páginas encontradas na caixa de diálogo de Propriedades do Distribuidor. 
 

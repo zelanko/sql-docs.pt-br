@@ -14,15 +14,15 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 70798b0e967d62b51879cc694c8eb43363d364c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ef517636a0bc1f727f2dc6a59093af773007cc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628916"
 ---
 # <a name="semantic-search-sql-server"></a>Pesquisa semântica (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 A Pesquisa Semântica Estatística fornece uma profunda compreensão de documentos não estruturados armazenados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extraindo e indexando *frases-chave*estatisticamente relevantes. Portanto, ele usa essas frases-chave para identificar e indexar *documentos semelhantes ou relacionados*.  
   
 ##  <a name="what-can-you-do-with-semantic-search"></a><a name="whatcanido"></a> O que é possível fazer com a pesquisa semântica?  

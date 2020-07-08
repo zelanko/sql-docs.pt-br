@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: b719e284c56a1b2a83c4be2dd6db14fa431cc242
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fa48e2e96c5066ee2a2bd5d2757a3ae8f669225b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631370"
 ---
 # <a name="tail-log-backups-sql-server"></a>Backups da parte final do log (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico é relevante apenas para o backup e a restauração dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão usando modelos de recuperação completa ou bulk-logged.  
   
  Um *backup da parte final do log* captura qualquer registro de log que ainda não foi submetido a backup (a *parte final do log*) para impedir a perda de trabalho e manter a cadeia de logs intacta. Para que você possa recuperar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] até seu momento determinado mais recente, você deve fazer backup da parte final do log de transações. O backup da parte final do log será o último backup de interesse no plano de recuperação do banco de dados.  

@@ -12,15 +12,15 @@ ms.assetid: cfca52be-e092-4fb7-994f-a44948bce510
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 185933ece333cf7319f7f5070293273f3679cee4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f851a4a14e8a36f2f9c88947a3290b9860f647b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630369"
 ---
 # <a name="audit-database-operation-event-class"></a>Classe de evento Audit Database Operation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Audit Database Operation** acontece quando ocorrem operações em um banco de dados, como uma notificação de consulta de ponto de verificação e assinatura.  
   
 ## <a name="audit-database-operation-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Database Operation  

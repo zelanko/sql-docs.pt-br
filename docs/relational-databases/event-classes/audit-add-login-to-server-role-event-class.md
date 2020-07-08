@@ -12,15 +12,15 @@ ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a42276012f3ef3151f453951b0f5ec55c7736f8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fee1a8c326fe1d6dab4ea26ff6a48fe259651de0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635731"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Classe de evento Audit Add Login to Server Role
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Audit Add Login to Server Role** ocorre sempre que um logon é adicionado ou removido de uma função de servidor fixa. Esta classe de evento é usada para os procedimentos armazenados **sp_addsrvrolemember** e **sp_dropsrvrolemember** .  
   
 ## <a name="audit-add-login-to-server-role-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Add Login to Server Role  
