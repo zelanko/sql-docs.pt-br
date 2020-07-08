@@ -1,5 +1,5 @@
 ---
-title: sys. sysfulltextcatalogs (Transact-SQL) | Microsoft Docs
+title: sys.sysFullTextCatalogs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,14 @@ ms.assetid: 18ac6ad5-01e8-428f-8422-a9ca29626977
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1e5bbae3a511249774d95e52210b04016c3370f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 1966f1bfa62fb85d99cee1db6900ad78e6a89b24
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053463"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091771"
 ---
 # <a name="syssysfulltextcatalogs-transact-sql"></a>sys.sysfulltextcatalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Contém informações sobre os catálogos de texto completo.  
   

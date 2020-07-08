@@ -18,15 +18,14 @@ ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 65e42e6303b467abd38ddadb6be0c0d0fece46e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b91a01714f7c7784f5ec227362c66c9468f44df5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018196"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053604"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_tables"></a>Stretch Database exibições do catálogo-sys. remote_data_archive_tables
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Contém uma linha para cada tabela remota que armazena dados de uma tabela local habilitada para Stretch.  
   

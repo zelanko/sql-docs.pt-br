@@ -20,15 +20,14 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 2281586bfe77b7cadaa2b3a8f7ae7a9b18c655ab
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833268"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091770"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Retorna mapeamentos entre identificadores de documento (DocIds) e valores de chaves de texto completo. A coluna DocId contém valores para um inteiro **bigint** que mapeia para um valor de chave de texto completo específico em uma tabela indexada de texto completo. Os valores DocId que satisfazem uma condição de pesquisa são transmitidos do Mecanismo de Texto Completo para o Mecanismo de Banco de Dados, no qual eles são mapeados para valores de chave de texto completo da tabela base que está sendo consultada. A coluna de chave de texto completo é um índice exclusivo exigido em uma coluna da tabela.  
   

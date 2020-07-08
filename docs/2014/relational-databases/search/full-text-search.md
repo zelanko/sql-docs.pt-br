@@ -11,12 +11,11 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
-ms.translationtype: MT
+ms.openlocfilehash: 16303c34d44a056f1f505a2d1876b2ee23df994c
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85063314"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091886"
 ---
 # <a name="full-text-search"></a>Pesquisa de Texto Completo
   A Pesquisa de Texto Completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite que usuários e aplicativos executem consultas de texto completo em dados baseados em caracteres nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para que você possa executar consultas de texto completo em uma tabela, o administrador de banco de dados deve criar um índice de texto completo na tabela. O índice de texto completo inclui uma ou mais colunas baseadas em caractere da tabela. Essas colunas podem ter qualquer um destes tipos de dados: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` ou `varbinary(max)` e FILESTREAM. Cada índice de texto completo indexa uma ou mais colunas da tabela base, e cada coluna pode usar um idioma específico.
@@ -149,7 +148,7 @@ ms.locfileid: "85063314"
  [Neste tópico](#top)
 
 ##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>Componentes lingüísticos e suporte de idioma na pesquisa de texto completo
- A pesquisa de texto completo oferece suporte a quase 50 idiomas diferentes, como inglês, espanhol, chinês, japonês, árabe, bengalês e híndi. Para obter uma lista completa dos idiomas de texto completo com suporte, veja [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). Cada uma das colunas do índice de texto completo é associada a um LCID (identificador de localidade) do Microsoft Windows que equivale a um idioma suportado pela pesquisa de texto completo. Por exemplo, o LCID 1033 equivale ao inglês norte-americano e o LCID 2057, ao inglês britânico. Para cada idioma de texto completo suportado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece componentes linguísticos que dão suporte à indexação e à consulta de dados de texto completo armazenados nesse idioma.
+ A pesquisa de texto completo dá suporte a quase 50 idiomas diversificados, como Inglês, espanhol, chinês, japonês, árabe, bengali e híndi. Para obter uma lista completa dos idiomas de texto completo com suporte, veja [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). Cada uma das colunas do índice de texto completo é associada a um LCID (identificador de localidade) do Microsoft Windows que equivale a um idioma suportado pela pesquisa de texto completo. Por exemplo, o LCID 1033 equivale ao inglês norte-americano e o LCID 2057, ao inglês britânico. Para cada idioma de texto completo suportado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece componentes linguísticos que dão suporte à indexação e à consulta de dados de texto completo armazenados nesse idioma.
 
  Os componentes específicos de idioma incluem:
 
@@ -234,5 +233,3 @@ ms.locfileid: "85063314"
 -   [DDL, funções, procedimentos armazenados e exibições de pesquisa de texto completo](../views/views.md)
 
  [Neste tópico](#top)
-
-

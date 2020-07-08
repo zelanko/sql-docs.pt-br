@@ -20,11 +20,11 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee313bdcda6b005a3f3a80725908244d3a496b67
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011602"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091535"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -166,8 +166,8 @@ Esse comando redefine todos os contadores como 0.
 |CONNECTION_ENDPOINT_LOCK |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e posterior.| 
 |COUNTRECOVERYMGR |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
 |CREATE_DATINISERVICE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
-|CXCONSUMER |Ocorre com planos de consulta paralelos quando um thread de consumidor aguarda um thread de produtor enviar linhas. Essa é uma parte normal da execução de consulta paralela. <br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca do processador de consultas e ao produzir e consumir linhas. Se a espera for excessiva e não puder ser reduzida ajustando a consulta (como adicionando índices), ajuste o limite de custo para paralelismo ou reduza o grau de paralelismo.<br /> **Observação:** Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o SP2, o [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3 e o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] esperas cxpacket se refere apenas à sincronização do iterador de troca do processador de consultas e à produção de linhas para threads de consumidor. Os threads de consumidor são rastreados separadamente no tipo de espera CXCONSUMER.| 
+|CXCONSUMER<a name="cxconsumer"></a>|Ocorre com planos de consulta paralelos quando um thread de consumidor (pai) aguarda um thread de produtor enviar linhas. As esperas CXCONSUMER são causadas por um iterador do Exchange que é executado fora de linhas de seu thread de produtor. Essa é uma parte normal da execução de consulta paralela. <br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|ESPERAS CXPACKET<a name="cxpacket"></a>|Ocorre com planos de consulta paralelos ao sincronizar o iterador de troca do processador de consultas e ao produzir e consumir linhas. Se aguardar for excessivo e não puder ser reduzido ajustando a consulta (como adicionar índices), considere ajustar o limite de custo para paralelismo ou reduzir o grau máximo de paralelismo (MaxDOP).<br /> **Observação:** Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o SP2, o [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Cu3 e o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] esperas cxpacket referem-se apenas à sincronização do iterador de troca do processador de consultas e ao produzir linhas. Se os threads do consumidor forem muito lentos, o buffer do iterador do Exchange poderá ficar cheio e causar esperas de ESPERAS CXPACKET. Os threads de consumidor são rastreados separadamente no tipo de espera CXCONSUMER.| 
 |CXROWSET_SYNC |Ocorre durante um exame de intervalo paralelo.| 
 |DAC_INIT |Ocorre enquanto a conexão de administrador dedicada estiver inicializando.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 

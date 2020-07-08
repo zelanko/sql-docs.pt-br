@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab377b42943c943f710d83661642423cfc070949
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 4edd3cfc40225b4b040c73fb0d3ba929d16debc5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814501"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053582"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Testa a conexão de SQL Server para o servidor remoto do Azure e relata problemas que podem impedir a migração de dados.  
   
@@ -70,9 +69,9 @@ EXECUTE sys.sp_rda_test_connection
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|link_state|int|Um dos valores a seguir, que correspondem aos valores de **link_state_desc**.<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
-|link_state_desc|varchar (32)|Um dos valores a seguir, que correspondem aos valores anteriores para **link_state**.<br /><br /> -ÍNTEGRO<br />     O entre SQL Server e o servidor remoto do Azure está íntegro.<br />-ERROR_AZURE_FIREWALL<br />     O Firewall do Azure está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.<br />-ERROR_NO_CONNECTION<br />     SQL Server não pode estabelecer uma conexão com o servidor remoto do Azure.<br />-ERROR_AUTH_FAILURE<br />     Uma falha de autenticação está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.<br />-ERRO<br />     Um erro que não é um problema de autenticação, um problema de conectividade ou um problema de firewall está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.|  
-|error_number|int|O número do erro. Se não houver nenhum erro, esse campo será nulo.|  
+|link_state|INT|Um dos valores a seguir, que correspondem aos valores de **link_state_desc**.<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
+|link_state_desc|varchar(32)|Um dos valores a seguir, que correspondem aos valores anteriores para **link_state**.<br /><br /> -ÍNTEGRO<br />     O entre SQL Server e o servidor remoto do Azure está íntegro.<br />-ERROR_AZURE_FIREWALL<br />     O Firewall do Azure está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.<br />-ERROR_NO_CONNECTION<br />     SQL Server não pode estabelecer uma conexão com o servidor remoto do Azure.<br />-ERROR_AUTH_FAILURE<br />     Uma falha de autenticação está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.<br />-ERRO<br />     Um erro que não é um problema de autenticação, um problema de conectividade ou um problema de firewall está impedindo o vínculo entre SQL Server e o servidor remoto do Azure.|  
+|error_number|INT|O número do erro. Se não houver nenhum erro, esse campo será nulo.|  
 |error_message|nvarchar(1024)|A mensagem de erro. Se não houver nenhum erro, esse campo será nulo.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -92,7 +91,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<número de erro relacionado à conexão>*|*\<mensagem de erro relacionada à conexão>*|  
+|2|ERROR_NO_CONNECTION|*\<connection-related error number>*|*\<connection-related error message>*|  
   
 ### <a name="check-the-azure-firewall"></a>Verificar o Firewall do Azure  
   
@@ -108,7 +107,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<número de erro relacionado ao firewall>*|*\<mensagem de erro relacionada ao firewall>*|  
+|1|ERROR_AZURE_FIREWALL|*\<firewall-related error number>*|*\<firewall-related error message>*|  
   
 ### <a name="check-authentication-credentials"></a>Verificar credenciais de autenticação  
   
@@ -124,7 +123,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<número de erro relacionado à autenticação>*|*\<mensagem de erro relacionada à autenticação>*|  
+|3|ERROR_AUTH_FAILURE|*\<authentication-related error number>*|*\<authentication-related error message>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>Verificar o status do servidor remoto do Azure  
   

@@ -20,15 +20,14 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 5cd91cd99d70a90e3aaec5972ddcdccf472a18f1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827345"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091847"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Contém uma linha para cada conjunto de backup. Um *conjunto de backup* contém o backup de uma única operação de backup bem-sucedida. As instruções RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY e RESTORE VERIFYONLY funcionam em um único conjunto de backups dentro do conjunto de mídias no dispositivo de backup ou dispositivos especificados.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "82827345"
 |**database_creation_date**|**datetime**|Data e hora em que o banco de dados foi originalmente criado. Pode ser NULL.|  
 |**backup_start_date**|**datetime**|Data e hora em que a operação de backup foi iniciada. Pode ser NULL.|  
 |**backup_finish_date**|**datetime**|Data e hora em que a operação de backup foi concluída. Pode ser NULL.|  
-|**tipo**|**Char (1)**|Tipo de backup. Pode ser:<br /><br /> D = Banco de dados<br /><br /> I = Banco de dados diferencial<br /><br /> L = Log<br /><br /> G = Arquivo ou grupo de arquivos<br /><br /> G = Arquivo diferencial<br /><br /> P = Parcial<br /><br /> Q = Parcial diferencial<br /><br /> Pode ser NULL.|  
+|**type**|**Char (1)**|Tipo de backup. Pode ser:<br /><br /> D = Banco de dados<br /><br /> I = Banco de dados diferencial<br /><br /> L = Log<br /><br /> G = Arquivo ou grupo de arquivos<br /><br /> G = Arquivo diferencial<br /><br /> P = Parcial<br /><br /> Q = Parcial diferencial<br /><br /> Pode ser NULL.|  
 |**sort_order**|**smallint**|Ordem de classificação do servidor que está executando a operação de backup. Pode ser NULL. Para obter mais informações sobre ordens de classificação e agrupamentos, consulte [suporte a agrupamentos e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**code_page**|**smallint**|Página de código do servidor que está executando a operação de backup. Pode ser NULL. Para obter mais informações sobre páginas de código, consulte [agrupamento e suporte a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**compatibility_level**|**tinyint**|Configuração de nível de compatibilidade para o banco de dados. Pode ser:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Pode ser NULL.<br /><br /> Para obter mais informações sobre níveis de compatibilidade, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  

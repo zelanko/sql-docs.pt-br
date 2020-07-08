@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d107b78c9b982285c19b678bebbc027facebe1e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830379"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053489"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Retorna Eventos Estendidos registrados pelo Smart Admin.  
   

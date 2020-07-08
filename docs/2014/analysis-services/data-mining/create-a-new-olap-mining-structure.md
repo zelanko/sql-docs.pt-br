@@ -13,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 1e36f718ebef46a63b52f309ccd28eed15a8e2b4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: MT
+ms.openlocfilehash: 195805ac2257df8a7f1951d761c83432ff7d0578
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84523782"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091590"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Criar uma nova estrutura de mineração OLAP
   Você pode usar o assistente de mineração de dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar uma estrutura de mineração que usa dados de um modelo multidimensional. Modelos de mineração baseados em cubos OLAP podem usar a coluna e os valores de tabelas de fatos, dimensões e grupos de medidas como atributos para análise.  
@@ -102,7 +101,7 @@ ms.locfileid: "84523782"
   
     -   **Expressão de Filtro**: digite um valor ou uma expressão para servir como a condição de filtro ou use a lista suspensa para selecionar um valor da lista de membros no nível especificado da hierarquia.  
   
-         Por exemplo, se você selecionar [Geografia] como a dimensão e [Nome do País da Região] como o nível de hierarquia, a lista suspensa conterá todos os países válidos que você pode usar como uma condição de filtro. Você pode fazer várias seleções. Como resultado, os dados na estrutura de mineração serão limitados a dados de cubo destas áreas geográficas.  
+         Por exemplo, se você selecionou [geografia] como a dimensão e [nome do país da região] como o nível de hierarquia, a lista suspensa conterá todos os países/regiões válidos que você pode usar como condição de filtro. Você pode fazer várias seleções. Como resultado, os dados na estrutura de mineração serão limitados a dados de cubo destas áreas geográficas.  
   
     -   **Parameters**: ignore esta caixa de seleção. Esta caixa de diálogo oferece suporte a vários cenários de filtragem de cubo e esta opção não é relevante para criar uma estrutura de mineração.  
   
@@ -130,5 +129,3 @@ ms.locfileid: "84523782"
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções da estrutura de mineração](mining-structure-tasks-and-how-tos.md)  
-  
-  

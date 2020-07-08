@@ -23,15 +23,14 @@ ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da218e1afeec389d69b1727160a420c889225783
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: 0ec290179cdbf3e61f0e5033acbf3156dbc6441a
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059184"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091658"
 ---
 # <a name="sysfn_virtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Retorna uma lista de nós de instância em cluster de failover nos quais uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser executada. Essas informações são úteis em ambientes de failover em cluster.  
   
@@ -48,7 +47,7 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
- Se o servidor atual for um servidor em cluster, **fn_virtualservernodes** retornará uma lista de nós de instância clusterizada de failover em que essa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância do foi definida.  
+ Se o servidor atual for um servidor em cluster, **fn_virtualservernodes** retornará uma lista de nós de instância clusterizada de failover em que essa instância do foi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definida.  
   
  Se a instância do servidor atual não for um servidor clusterizado, **fn_virtualservernodes** retornará um conjunto de linhas vazio.  
   

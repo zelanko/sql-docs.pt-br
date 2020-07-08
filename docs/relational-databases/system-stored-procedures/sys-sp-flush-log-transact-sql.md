@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 61c4cceab6c816d63226216a54d4f647e92e592d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: cbcb731a4396829b38596619e4b52babcb6f9425
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066681"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052704"
 ---
 # <a name="syssp_flush_log-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Libera para disco o log de transações do banco de dados atual, protegendo, assim todas as transações duráveis atrasadas confirmadas anteriormente.  
   
- Se você escolher usar a durabilidade da transação atrasada devido aos benefícios de desempenho, mas também quiser ter um limite garantido na quantidade de dados que serão perdidos se houver falha do servidor ou failover, execute `sys.sp_flush_log` regularmente. Por exemplo, se você quiser ter certeza de que não perderá mais de x segundos de dados, será executado `sp_flush_log` a cada x segundos.  
+ Se você escolher usar a durabilidade da transação atrasada devido aos benefícios de desempenho, mas também quiser ter um limite garantido na quantidade de dados que serão perdidos se houver falha do servidor ou failover, execute `sys.sp_flush_log` regularmente. Por exemplo, se você quiser ter certeza de que não perderá mais de x segundos de dados, será executado a `sp_flush_log` cada x segundos.  
   
  Executar `sys.sp_flush_log` garante que todas as transações duráveis atrasadas confirmadas anteriormente tornem-se duráveis. Consulte o tópico conceitual [controlar a durabilidade da transação](../../relational-databases/logs/control-transaction-durability.md) para obter mais informações.  
   

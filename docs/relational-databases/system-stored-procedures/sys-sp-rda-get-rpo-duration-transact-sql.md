@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1e89e4901cf8e0bb5674038bfd8fe74bc637511
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 8e903c3b41a8a191122fdf8499ee6b4c82dbe308
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814733"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052985"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys. sp_rda_get_rpo_duration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Obtém o número de horas de dados migrados que SQL Server retém em uma tabela de preparo para ajudar a garantir uma restauração completa do banco de dados remoto do Azure, se uma restauração pontual for necessária. 
   

@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eec07109c8f3697eb4738f30d3c201c6addc15a8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: bc01f07e3a07200970066e6ed505b29b3ccb9c09
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814820"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053393"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>sys. sp_rda_deauthorize_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Remove a conexão autenticada entre um banco de dados local habilitado para Stretch e o banco de dados remoto do Azure. Execute **sp_rda_deauthorize_db** quando o banco de dados remoto estiver inacessível ou em um estado inconsistente e você quiser alterar o comportamento da consulta para todas as tabelas habilitadas para Stretch no banco de dados.  
   

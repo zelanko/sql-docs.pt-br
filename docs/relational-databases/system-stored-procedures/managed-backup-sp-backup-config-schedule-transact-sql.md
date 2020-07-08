@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77507526"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053447"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Configura opções de agendamento automatizadas ou personalizadas para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]o.  
+  Configura opções de agendamento automatizadas ou personalizadas para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
     
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,16 +60,16 @@ EXEC managed_backup.sp_backup_config_schedule
  Os dias da semana para os backups quando @full_backup_freq_type é definido como semanal. Especifique nomes de cadeia de caracteres completos, como ' segunda-feira '.  Você também pode especificar mais de um nome de dia, separados por pipe. Por exemplo, N'Monday | Quarta-feira | Sexta-feira.  
   
  @backup_begin_time  
- A hora de início da janela de backup. Os backups não serão iniciados fora da janela de tempo, que é definida por uma @backup_begin_time combinação @backup_durationde e.  
+ A hora de início da janela de backup. Os backups não serão iniciados fora da janela de tempo, que é definida por uma combinação de @backup_begin_time e @backup_duration .  
   
  @backup_duration  
- A duração da janela de tempo de backup. Observe que não há nenhuma garantia de que os backups serão concluídos durante a janela @backup_begin_time de @backup_durationtempo definida por e. As operações de backup iniciadas nesta janela de tempo, mas excederem a duração da janela, não serão canceladas.  
+ A duração da janela de tempo de backup. Observe que não há nenhuma garantia de que os backups serão concluídos durante a janela de tempo definida por @backup_begin_time e @backup_duration . As operações de backup iniciadas nesta janela de tempo, mas excederem a duração da janela, não serão canceladas.  
   
  @log_backup_freq  
  Isso determina a frequência dos backups de log de transações. Esses backups ocorrem em intervalos regulares, e não no agendamento especificado para os backups de banco de dados. @log_backup_freqpode ser em minutos ou horas e `0:00` é válido, o que indica que não há backups de log. Desabilitar backups de log só seria apropriado para bancos de dados com um modelo de recuperação simples.  
   
 > [!NOTE]  
->  Se o modelo de recuperação mudar de simples para completo, você precisará reconfigurar o log_backup_freq `0:00` de para um valor diferente de zero.  
+>  Se o modelo de recuperação mudar de simples para completo, você precisará reconfigurar o log_backup_freq de `0:00` para um valor diferente de zero.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha)  

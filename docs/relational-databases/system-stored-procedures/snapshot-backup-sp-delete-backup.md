@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 49eb0906a9a5af1fec2abfeec3ef58845b605e69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: edb0740ce1bbc0009996849e39bf495c23ba29b0
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941828"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053706"
 ---
 # <a name="sp_delete_backup-transact-sql"></a>sp_delete_backup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Exclui todos os instantâneos e o arquivo de backup que compõem um conjunto de backup de instantâneo do banco de dados especificado. Esse procedimento armazenado do sistema é o único método recomendado para gerenciar conjuntos de backup de instantâneo. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   

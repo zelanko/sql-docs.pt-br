@@ -22,15 +22,14 @@ ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b1517198208c6282aabd29e39d425dc8ae5afb9e
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078558"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091580"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Retorna informações sobre o conteúdo no nível de documento de um índice de texto completo associado à tabela especificada.  
   
@@ -80,7 +79,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   Quantas vezes uma palavra-chave aparece no índice de texto completo inteiro; ou seja:  
   
-     ([Sum](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) onde a **palavra-chave**=*keyword_value* )  
+     ([Sum](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) onde a **palavra-chave** = *keyword_value* )  
   
 -   Quantas vezes uma palavra-chave aparece em um determinado documento ou linha.  
   
@@ -90,7 +89,7 @@ sys.dm_fts_index_keywords_by_document
   
  Quando a coluna de chave de texto completo é um tipo de dados inteiro, conforme recomendado, o document_id é mapeado diretamente no valor da chave de texto completo da tabela base.  
   
- Por outro lado, quando a coluna de chave de texto completo usa um tipo de dados não inteiro, o document_id não representa a chave de texto completo da tabela base. Nesse caso, para identificar a linha na tabela base retornada por dm_fts_index_keywords_by_document, você precisa adicionar essa exibição com os resultados retornados por [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Antes de uni-los, é necessário armazenar a saída do procedimento armazenado em uma tabela temporária. Em seguida, você poderá unir a coluna document_id de dm_fts_index_keywords_by_document à coluna DocId que é retornada por esse procedimento armazenado. Observe que uma coluna **timestamp** não pode receber valores em tempo de inserção, porque eles são gerados automaticamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pelo. Portanto, a coluna **timestamp** deve ser convertida em colunas **varbinary (8)** . O exemplo a seguir mostra estas etapas. Neste exemplo, *table_id* é a ID da sua tabela, *database_name* é o nome do seu banco de dados e *table_name* é o nome da sua tabela.  
+ Por outro lado, quando a coluna de chave de texto completo usa um tipo de dados não inteiro, o document_id não representa a chave de texto completo da tabela base. Nesse caso, para identificar a linha na tabela base retornada por dm_fts_index_keywords_by_document, você precisa adicionar essa exibição com os resultados retornados por [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Antes de uni-los, é necessário armazenar a saída do procedimento armazenado em uma tabela temporária. Em seguida, você poderá unir a coluna document_id de dm_fts_index_keywords_by_document à coluna DocId que é retornada por esse procedimento armazenado. Observe que uma coluna **timestamp** não pode receber valores em tempo de inserção, porque eles são gerados automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, a coluna **timestamp** deve ser convertida em colunas **varbinary (8)** . O exemplo a seguir mostra estas etapas. Neste exemplo, *table_id* é a ID da sua tabela, *database_name* é o nome do seu banco de dados e *table_name* é o nome da sua tabela.  
   
 ```  
 USE database_name;  
@@ -119,7 +118,7 @@ GO
  O exemplo a seguir exibe o conteúdo do índice de texto completo no nível do documento na tabela `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks2012`.  
   
 > [!NOTE]  
->  Você pode criar esse índice executando o exemplo fornecido para a `HumanResources.JobCandidate` tabela em [criar índice de texto completo &#40;&#41;Transact-SQL ](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  Você pode criar esse índice executando o exemplo fornecido para a `HumanResources.JobCandidate` tabela em [criar índice de texto completo &#40;&#41;TRANSACT-SQL ](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   

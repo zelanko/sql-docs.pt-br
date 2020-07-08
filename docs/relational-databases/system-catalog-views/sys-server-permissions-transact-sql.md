@@ -20,22 +20,21 @@ ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cbfa717aa70bb057734a285e2b6d84fdc6f4961a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: fd686ca45bb5830d9abbd7b0e9119007ed4be060
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71163927"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091730"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Retorna uma linha para cada permissão em nível de servidor.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**classe**|**tinyint**|Identifica a classe na qual a permissão existe.<br /><br /> 100 = Servidor<br /><br /> 101 = Principal de servidor<br /><br /> 105 = Ponto de extremidade|  
-|**class_desc**|**nvarchar(60)**|Descrição de classe na qual a permissão existe. Um dos seguintes valores:<br /><br /> **SERVIDOR**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**classes**|**tinyint**|Identifica a classe na qual a permissão existe.<br /><br /> 100 = Servidor<br /><br /> 101 = Principal de servidor<br /><br /> 105 = Ponto de extremidade|  
+|**class_desc**|**nvarchar(60)**|Descrição de classe na qual a permissão existe. Um dos seguintes valores:<br /><br /> **SERVIDOR**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **EXTREMIDADE**|  
 |**major_id**|**int**|ID do protegível no qual a permissão existe, interpretada de acordo com a classe. Em geral, é o tipo de ID que se aplica àquilo que a classe representa. A interpretação para sem-padrão é a seguinte:<br /><br /> 100 = sempre 0|  
 |**minor_id**|**int**|ID secundária na qual a permissão existe, interpretada de acordo com a classe.|  
 |**grantee_principal_id**|**int**|ID do principal de servidor para a qual as permissões são concedidas.|  

@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5159b72cb91cfdcf21129c6216cab4cf0e8d4dea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: d6944817524a339eb8e48aa223c291cef1de1879
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120267"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052746"
 ---
 # <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Retorna instantâneos do Azure associados aos arquivos de banco de dados. Se o banco de dados especificado não for encontrado ou se os arquivos de banco de dados não estiverem armazenados no serviço de armazenamento de blob Microsoft Azure, nenhuma linha será retornada. Use essa função de sistema em conjunto com o procedimento armazenado do sistema **Sys. sp_delete_backup_file_snapshot** para identificar e excluir instantâneos de backup órfãos. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   

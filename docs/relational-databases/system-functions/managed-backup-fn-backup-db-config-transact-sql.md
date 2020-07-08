@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 4147d01936fbdd3a14e479a7b560d5368a5110ec
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067779"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053702"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Retorna 0, 1 ou mais linhas com parâmetros de configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Retorna 1 linha para o banco de dados especificado ou retorna as informações de todos os bancos de dados configurados com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] na instância.  
   
@@ -68,7 +67,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
  Requer a associação na função de banco de dados **db_backupoperator** com as permissões **ALTER ANY Credential** . O usuário não deve ser negado às permissões **View any Definition** .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retorna [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] a configuração para ' TestDB '  
+ O exemplo a seguir retorna a [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuração para ' TestDB '  
   
  Para cada snippet de código, selecione 'tsql' no campo do atributo de idioma.  
   

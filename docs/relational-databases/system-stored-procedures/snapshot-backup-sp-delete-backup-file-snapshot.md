@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cf376712d51f542f6da5eaa8e89b53779eda0c07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 365ddae67f2357c11735f2d0966e56405edbde07
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941834"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053670"
 ---
 # <a name="sp_delete_backup_file_snapshot-transact-sql"></a>sp_delete_backup_file_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Exclui um instantâneo de backup especificado do banco de dados especificado. Use esse procedimento armazenado do sistema em conjunto com a função de sistema **Sys. fn_db_backup_file_snapshots** para identificar e excluir instantâneos de backup órfãos. Para obter mais informações, consulte [Backups de instantâneo de arquivo para arquivos de banco de dados no Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
 

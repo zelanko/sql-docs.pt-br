@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155811"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053428"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Retorna uma tabela 0, uma ou mais linhas de contagem agregada dos erros relatados pelos Eventos Estendidos por um período especificado.  
   
- A função é usada para relatar o status de integridade dos serviços em administrador inteligente.  No [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] momento, há suporte para a proteção do administrador inteligente. Portanto, os erros retornados são relacionados a [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ A função é usada para relatar o status de integridade dos serviços em administrador inteligente.  No momento, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] há suporte para a proteção do administrador inteligente. Portanto, os erros retornados são relacionados a [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -62,7 +61,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|INT|O número de vezes que o agente de backup verifica todos os bancos de dados configurados com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |number_of_retention_loops|INT|O número de vezes que os bancos de dados são verificados para avaliar o período de retenção definido.|  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Essas contagens agregadas podem ser usadas para monitorar a integridade do sistema. Por exemplo, se a coluna number_ of_retention_loops for 0 por 30 minutos, possivelmente o gerenciamento de retenção está demorando ou talvez nem esteja funcionando corretamente. As colunas de erro diferentes de zero podem indicar problemas, e os logs dos Eventos estendidos devem ser verificados para detectar qualquer problema. Como alternativa, use o procedimento armazenado **managed_backup. sp_get_backup_diagnostics** para obter uma lista de eventos estendidos para localizar os detalhes do erro.  
   
 ## <a name="security"></a>Segurança  

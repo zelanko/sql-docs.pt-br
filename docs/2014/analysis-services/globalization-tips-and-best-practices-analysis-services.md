@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
-ms.translationtype: MT
+ms.openlocfilehash: 27545026fcf426e024237ff837ce078fed3c4a00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544337"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091570"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Dicas de globalização e práticas recomendadas (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Somente multidimensional  
@@ -69,7 +68,7 @@ ms.locfileid: "84544337"
   
      Em Taiwan, é mais comum ver chinês tradicional com a ordem de classificação recomendada baseada no número de traços: Chinese_Taiwan_Stroke (for SQL Server 2000), Chinese_Taiwan_Stroke_90 (for SQL Server 2005) ou Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 e posterior).  
   
-     Outras regiões (como Hong Kong e Macau) também usam chinês tradicional. Para ordenações em Hong Kong, não é incomum ver Chinese_Hong_Kong_Stroke_90 (no SQL Server 2005). Em Macau, Chinese_Traditional_Stroke_Count_100 (no SQL Server 2008 e posterior) é usado com muita frequência.  
+     Outras regiões (como Hong Kong SAR e RAE de Macau) também usam chinês tradicional. Para ordenações em Hong Kong, não é incomum ver Chinese_Hong_Kong_Stroke_90 (no SQL Server 2005). Em Macau, Chinese_Traditional_Stroke_Count_100 (no SQL Server 2008 e posterior) é usado com muita frequência.  
   
 -   Para japonês, a ordenação mais comumente usada é Japanese_CI_AS. Japanese_XJIS_100 é usado nas instalações com suporte a [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). Japanese_BIN2 é geralmente visto em projetos de migração de dados com dados provenientes de plataformas não Windows ou de fontes de dados diferentes do mecanismo de banco de dados relacional do SQL Server.  
   
@@ -161,5 +160,3 @@ ms.locfileid: "84544337"
 ## <a name="see-also"></a>Consulte Também  
  [Cenários de globalização para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Gravar instruções Transact-SQL internacionais](../relational-databases/collations/write-international-transact-sql-statements.md)  
-  
-  
