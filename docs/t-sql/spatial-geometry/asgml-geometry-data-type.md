@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 11fe7041212c668855c86664362d555696f36bbf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6d1cac186583ea5b3eea58d92946f959d4c6105
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68017574"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700941"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml (tipo de dados geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retorna a representação GML (Geography Markup Language) de uma instância de **geometry**.
   

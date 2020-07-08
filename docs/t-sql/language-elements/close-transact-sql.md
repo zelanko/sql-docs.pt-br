@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8516e207b0e74469072722970f1e0412a60e004
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: dc5a4f189585cbafad4e59e46b6305eeb0dbefa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706632"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Fecha um cursor aberto liberando o conjunto de resultados atual e qualquer bloqueio de cursor mantido nas linhas onde o cursor é posicionado. `CLOSE` deixa as estruturas de dados disponíveis para reabertura, mas as atualizações buscadas e posicionadas não são permitidas até que o cursor seja reaberto. CLOSE deve ser emitido em um cursor aberto; `CLOSE` não é permitido em cursores que somente foram declarados ou que já estão fechados.  
   

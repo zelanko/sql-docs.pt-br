@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 6005c9ec-ccdd-4def-9eb4-37cdb599ddb3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c1d0c05f5439bbeea03895a4c0611b1aca6f35ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2981d59b8bcc21d9a21fe0fd707cfcb9278cc57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717008"
 ---
 # <a name="mssqlserver_5245"></a>MSSQLSERVER_5245
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|5245|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC4_TABLE_LOCK_TIMEOUT_EXCEEDED|  
-|Texto da mensagem|ID de objeto O_ID (objeto 'NAME'): DBCC não pôde obter um bloqueio nesse objeto porque o tempo limite da solicitação de bloqueio foi ultrapassado. Esse objeto foi ignorado e não será processado.|  
+|Texto da mensagem|ID de objeto O_ID (objeto 'NAME'): o DBCC não pôde obter um bloqueio nesse objeto porque o tempo limite da solicitação de bloqueio foi ultrapassado. Esse objeto foi ignorado e não será processado.|  
   
 ## <a name="explanation"></a>Explicação  
 O limite de tempo do bloqueio expirou enquanto DBCC estava aguardando um bloqueio de tabela para o objeto especificado.  

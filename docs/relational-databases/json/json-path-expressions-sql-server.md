@@ -1,8 +1,7 @@
 ---
 title: Expressões de demarcador JSON
-ms.date: 01/23/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90f30c6fc18915b96f17ddf8e775e06bf94559a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715371"
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressões de demarcador JSON (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  Use expressões de demarcadores JSON para fazer referência às propriedades de objetos JSON.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "74095739"
 A consulta a seguir especifica explicitamente o modo `lax` na expressão de demarcador.
 
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json=N'{ ... }'
+DECLARE @json NVARCHAR(MAX);
+SET @json=N'{ ... }';
 
-SELECT * FROM OPENJSON(@json, N'lax $.info')
+SELECT * FROM OPENJSON(@json, N'lax $.info');
 ```  
   
 ##  <a name="path"></a><a name="PATH"></a> Path  
@@ -100,11 +100,11 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
  Se o texto JSON contiver propriedades duplicadas (por exemplo, duas chaves com o mesmo nome no mesmo nível), as funções **JSON_VALUE** e **JSON_QUERY** retornarão apenas o primeiro valor que corresponde ao caminho. Para analisar um objeto JSON que contém chaves duplicadas e retornar todos os valores, use **OPENJSON**, conforme mostrado no exemplo a seguir.  
   
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
+DECLARE @json NVARCHAR(MAX);
+SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}';
 
 SELECT value
-FROM OPENJSON(@json,'$.person.info') 
+  FROM OPENJSON(@json,'$.person.info');
 ```  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Saiba mais sobre JSON no SQL Server e no Banco de Dados SQL do Azure  

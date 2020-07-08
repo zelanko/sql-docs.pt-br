@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0ea71a48ffe6652edb9d2bf0265a906c1d15202
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 98ae9820b44cf3598d957ac01699e6722f781345
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714707"
 ---
 # <a name="system-functions-transact-sql"></a>Funções de sistema (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   As funções de sistema a seguir executam operações em e retornam informações sobre valores, objetos e configurações no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

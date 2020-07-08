@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 88386ec0aa476901708ccaed10b235bdab04fe1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f267e998b0bd9693c821000cd51a044326e9161
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718002"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurar um banco de dados para uma transação marcada (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Quando um banco de dados está no estado de restauração, é possível usar a caixa de diálogo **Restaurar Log de Transações** para restaurar o banco de dados para uma transação marcada nos backups de log disponíveis.  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ ms.locfileid: "82180797"
   
     |Cabeçalho|Valor|  
     |------------|-----------|  
-    |\<em branco>|Exibe uma caixa de seleção para selecionar a marca.|  
+    |\<blank>|Exibe uma caixa de seleção para selecionar a marca.|  
     |**Transaction Mark**|Nome da transação marcada especificado pelo usuário quando a transação foi confirmada.|  
     |**Data**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
     |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d6c68aa9859fbe7e1066ad392377d6b50289fd0a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 61719cd9ddf153c2552bdac3046a7e24ce8deb86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704056"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (tipo de dados geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna uma aproximação poligonal de uma instância de **geography** que contém segmentos de arco circulares.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c0982bb3ffaf6c21ee8bff0b7cffc0bc472fb1d9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 61b076459edf728475f5f8a15fed8ade5f3b47ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705959"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Construtor de valor de tabela (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Especifica um conjunto de expressões de valores de linha a ser construído em uma tabela. O construtor de valor de tabela [!INCLUDE[tsql](../../includes/tsql-md.md)] permite especificar várias linhas de dados em uma única instrução DML. O construtor de valor de tabela pode ser especificado como a cláusula VALUES de uma instrução INSERT ... VALUES ou como uma tabela derivada na cláusula USING da instrução MERGE ou na cláusula FROM.
   

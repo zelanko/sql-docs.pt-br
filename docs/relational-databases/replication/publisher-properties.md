@@ -17,15 +17,15 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 35ad6f4ab64f308fed55e328a1ddcae223ca4a79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2af128ab6de902aa7e757cf9d7464c9b743c290b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717633"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Caixa de diálogo Propriedades do Editor de Replicação do SQL Server
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Este tópico descreve as diferentes opções encontradas na caixa de diálogo de Propriedades do editor. 
 

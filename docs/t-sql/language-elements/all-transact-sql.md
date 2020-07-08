@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6588a01cee99bfea505fa1552b4eb4982e448baf
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 326cce7eaa06eca6e981e72ea60d4f4144442942
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85708319"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compara um valor escalar com um conjunto de valores de uma única coluna.  
   

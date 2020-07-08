@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3197adc168b8550a9c789cba135f6da5df9c562b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f226dd4b96774de236a3938662be2bf506db8cad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706438"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Recupera uma linha específica de um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

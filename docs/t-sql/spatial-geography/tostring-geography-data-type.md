@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3e4ca89d9fa8dccf2e819e76db188f84b25f0b59
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fcd5618e6bfa434a3f31ab4817f53114e122846d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701509"
 ---
 # <a name="tostring-geography-data-type"></a>ToString (tipo de dados geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium) de uma instância de **geography**, aumentada com os valores de Z (elevação) e de M (medida) presentes na instância.  
   

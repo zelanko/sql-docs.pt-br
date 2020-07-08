@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 437859afd1f21cba5c47f93c86173d71e3ae89d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7754190fe629412ddc08e7087626b05ff2c093d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68027643"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700829"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (tipo de dados geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium) de uma instância de geometria, aumentada com um valor **Z** (elevação) e **M** (medida) presente na instância.
   

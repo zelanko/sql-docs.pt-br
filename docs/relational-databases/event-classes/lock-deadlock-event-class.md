@@ -12,15 +12,15 @@ ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ba1146dfe62067ba6371eec6a2b621eb2897852
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2614d7805573b74485f3872dfa6d16a2ab961f74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717784"
 ---
 # <a name="lockdeadlock-event-class"></a>Classe de evento Lock:Deadlock
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A classe de evento Lock:Deadlock é produzida quando é cancelada uma tentativa para adquirir um bloqueio, porque a tentativa fazia parte de um deadlock e foi escolhida como a vítima de deadlock.  
   
  Use a classe de evento Lock:Deadlock para monitorar quando ocorrer deadlock e quais os objetos envolvidos. Você pode usar essas informações para determinar se os deadlocks estão afetando significativamente o desempenho de seu aplicativo. Em seguida, é possível examinar o código do aplicativo para determinar se é possível fazer alterações para minimizar os deadlock.  

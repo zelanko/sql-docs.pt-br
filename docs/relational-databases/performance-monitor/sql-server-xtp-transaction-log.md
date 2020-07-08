@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bc88a64348879c6fb25c8949a829698319c7f618
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a04e6cb09f40af918532613c32bddcaff11a57c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715198"
 ---
 # <a name="sql-server-xtp-transaction-log"></a>Log de transações XTP do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   O objeto de desempenho do Log de Transações XTP do SQL Server contém contadores relacionados à atividade do log de transações do OLTP in-memory no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

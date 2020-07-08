@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38ca9a921f1a203535ed104b512fe87aea992208
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0f2a97cb765ae3139d87c0aaf583674da191404
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68079897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706543"
 ---
 # <a name="control-of-flow"></a>Controle de fluxo
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   As palavras-chave de controle de fluxo [!INCLUDE[tsql](../../includes/tsql-md.md)] são:  
   

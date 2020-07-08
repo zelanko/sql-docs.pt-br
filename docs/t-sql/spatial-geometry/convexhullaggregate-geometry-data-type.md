@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c35ca3cfecd0eca0b08c0a1437cd8b57570126b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ea01bd48dea04e5ae5d00a480d6ce43662d96d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68017508"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700486"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (tipo de dados geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Retorna uma envoltória convexa para um determinado conjunto de objetos de **geometry**.
   

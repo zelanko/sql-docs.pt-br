@@ -12,15 +12,15 @@ ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f9677502f863f63f26cc2e922d14663cd1c3878
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6057c32842121f6d27649fe3f2b8e201d6c9695a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717926"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Classe de evento Lock:Deadlock Chain
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A classe de evento de Lock:Deadlock Chain é produzida para cada participante em um deadlock.  
   
  Use a classe de evento Lock:Deadlock Chain para monitorar quando as condições deadlock acontecem. Essas informações são úteis para determinar se os deadlocks estão afetando significativamente o desempenho de seu aplicativo e quais são os objetos envolvidos. Você pode examinar o código de aplicativo que modifica estes objetos para determinar se podem ser efetuadas alterações para minimizar os deadlocks.  

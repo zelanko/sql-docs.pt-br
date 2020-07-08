@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d5fe71b55325297a4267901e380831c4df889629
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d08ac48f8125c577d89c0c7e0b43cccc93f43c0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702305"
 ---
 # <a name="stpointfromtext-geography-data-type"></a>STPointFromText (tipo de dados geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retorna uma instância de **geography** de uma representação WKT (Well-Known Text) do OGC (Open Geospatial Consortium), aumentada com valores Z (elevação) e M (medida) presentes na instância.
   
