@@ -12,15 +12,15 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1e449c95c6dd087eaa70de48b1fb79ac8d7b6f6c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1e2443340670272324445f7c09b7c5c475064ea1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694928"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar o SQL Server Agent Mail para usar o Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para usar o Database Mail para enviar notificação e alertas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Para obter informações sobre como habilitar e configurar o Database Mail, consulte [Configurar o Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  Para obter um exemplo de como usar o [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Criar um perfil do Database Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md).
   
 -   **Antes de começar:**  

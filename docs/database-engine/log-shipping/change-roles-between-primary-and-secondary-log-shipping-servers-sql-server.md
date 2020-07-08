@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e06d382258d6d98b7f54ff9dd3f4840a04274d81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2a032663343223bcfab58075343e61c72e1df7c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75259000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696784"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Alterar funções entre servidores de envio de log primários e secundários (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Depois de fazer failover em uma configuração de log de envio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um servidor secundário, você pode configurar seu banco de dados secundário para agir como um banco de dados primário. Então, você poderá trocar os bancos de dados primários e secundários como necessário.  
   
 ## <a name="performing-the-initial-role-change"></a>Executando a alteração inicial de função  

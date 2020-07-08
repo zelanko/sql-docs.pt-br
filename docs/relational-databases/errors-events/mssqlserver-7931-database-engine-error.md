@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 278b22983ea339e2bfa9c388c530254aed57c872
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d598b2cf5a90e648cf00f885ebd5781d270756d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694023"
 ---
 # <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|7931|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Texto da mensagem|Erro de banco de dados: a ID de diretório de FILESTREAM F_ID de uma partição foi vista duas vezes.|  
+|Texto da mensagem|Erro de banco de dados: a ID de diretório de FileStream F_ID de uma partição foi vista duas vezes.|  
   
 ## <a name="explanation"></a>Explicação  
 A mesma ID de partição de um diretório de Filestream foi encontrada nos metadados.  

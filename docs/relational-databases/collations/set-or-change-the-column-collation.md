@@ -13,15 +13,15 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0880ce366c2db15f7e751c9493bebf5f97d4240a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 06e96206160557eaaa71d3b44dd6960182b47a20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74908714"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694972"
 ---
 # <a name="set-or-change-the-column-collation"></a>Definir ou alterar a ordenação de coluna
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   É possível substituir a ordenação de banco de dados para dados **char**, **varchar**, **text**, **nchar**, **nvarchar**e **ntext** especificando uma ordenação diferente para uma coluna específica de uma tabela e usando uma das seguintes opções:  
   
 -   A cláusula COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md), como visto nos exemplos abaixo. 

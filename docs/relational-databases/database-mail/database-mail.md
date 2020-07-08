@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2d9a354b23a751a657ca10acc7e6cc19c6b586b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27556251ca186661928de29b8a1f6dd4ac0e9fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694957"
 ---
 # <a name="database-mail"></a>Database Mail
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   O Database Mail é uma solução corporativa para enviar mensagens de email do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou da [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Com o Database Mail, seus aplicativos de banco de dados podem enviar mensagens de email a usuários. As mensagens podem conter resultados de consulta e incluir, também, arquivos de qualquer recurso de sua rede.  
   
 > [!NOTE] 

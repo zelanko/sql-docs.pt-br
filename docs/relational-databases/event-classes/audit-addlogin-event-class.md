@@ -12,15 +12,15 @@ ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 202baede7eed746a581a11d165fe6d7b0fb5afdd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bad68dc1125b50d956b1580751d5911d031a37bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693794"
 ---
 # <a name="audit-addlogin-event-class"></a>Classe de evento Audit Addlogin
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Audit Addlogin** ocorre quando um logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é adicionado ou removido.  
   
  Se você definir propriedades adicionais quando o logon for adicionado, como um banco de dados padrão, as informações sobre essas propriedades serão encontradas na coluna **TextData** desse evento. Se você definir essas propriedades enquanto adiciona um logon, o evento **Audit Login Change Property** não ocorrerá.  

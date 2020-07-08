@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692492"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lição 2: criar e gerenciar dados em uma tabela hierárquica
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Na Lição 1, você modificou uma tabela existente para usar o tipo de dados **hierarchyid** e populou a coluna **hierarchyid** com a representação dos dados existentes. Nesta lição, você iniciará com uma tabela nova, e inserindo dados usando os métodos hierárquicos. Em seguida, você vai consultar e manipular os dados usando os métodos hierárquicos. 
 
 ## <a name="prerequisites"></a>Prerequisites  
@@ -289,7 +289,7 @@ Agora que a tabela HumanResources.EmployeeOrg está completamente populada, essa
    
   
 ## <a name="reorder-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Reordenar dados em tabela hierárquica por meio de métodos hierárquicos
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Reorganizar uma hierarquia é uma tarefa de manutenção comum. Nesta tarefa, usaremos a instrução UPDATE com o método [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) para mover primeiramente uma única linha para um novo local da hierarquia. Em seguida, moveremos uma subárvore inteira para um novo local.  
   
 O método `GetReparentedValue` toma dois argumentos. O primeiro argumento descreve a parte da hierarquia a ser modificada. Por exemplo, se uma hierarquia for **/1/4/2/3/** e você desejar alterar a seção **/1/4/** , a hierarquia se tornará **/2/1/2/3/** ; se deixar os últimos dois nós (**2/3/** ) inalterados, você precisará fornecer os nós que estão sendo alterados ( **/1/4/** ) como o primeiro argumento. O segundo argumento fornece o novo nível hierárquico, em nosso exemplo **/2/1/** . Os dois argumentos não precisam conter o mesmo número de níveis.  

@@ -12,15 +12,15 @@ ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa7eb86c744206c0501cf98ecdb56423d734799c
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 9b78ae1ad6fafcf4be86cd2d32e936d2ef018ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693642"
 ---
 # <a name="audit-broker-login-event-class"></a>Classe de evento Audit Broker Login
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um evento **Audit Broker Login** para informar mensagens de auditoria relacionadas à segurança de transporte do Agente de Serviços.  
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Broker Login  

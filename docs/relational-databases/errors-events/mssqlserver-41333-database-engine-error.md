@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: c3c3ae9a-1e4c-4de6-ba72-2f393375b053
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f137d859fa6f6233e14bc34c6bf50797a4360a98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a459a23e9f74f04baed73c24c25c1757fbcc047f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123288"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694135"
 ---
 # <a name="mssqlserver_41333"></a>MSSQLSERVER_41333
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|41333|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|Texto da mensagem|As transações a seguir devem acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente no isolamento de instantâneo: as transações RepeatableRead, as transações Serializable e as transações que acessam tabelas que não têm otimização de memória no isolamento RepeatableRead ou Serializable.|  
+|Texto da mensagem|As transações a seguir devem acessar tabelas com otimização de memória e procedimentos armazenados em compilados nativamente em isolamento de instantâneo: Transações RepeatableRead, transações Serializable e transações que acessam tabelas não otimizadas para memória em isolamento RepeatableRead ou Serializable.|  
   
 ## <a name="explanation"></a>Explicação  
 Há restrições relacionadas ao usuário dos níveis de isolamento mais altos entre transações baseadas em disco e transações XTP.  
