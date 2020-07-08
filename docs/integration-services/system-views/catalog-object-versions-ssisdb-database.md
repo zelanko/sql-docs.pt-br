@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7dac194c0ceb54eeb716b9cf5ec676e7fe120d8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0c752f5872a6385af49753cbd24604adcb1c747
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671926"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions (Banco de Dados SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exibe as versões dos objetos do catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Nesta versão, apenas versões de projetos têm suporte nesta exibição.  
   

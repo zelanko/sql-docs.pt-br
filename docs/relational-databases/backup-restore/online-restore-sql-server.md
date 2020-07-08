@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d5d371a8d94b49a40fa105f06457519a03ed7ac5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670449"
 ---
 # <a name="online-restore-sql-server"></a>Restauração online (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Somente há suporte para a restauração online no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. Nessa edição, um arquivo, uma página ou uma restauração por etapas está online por padrão. Este tópico é pertinente para bancos de dados que contêm vários arquivos ou grupos de arquivos (e, no modelo de recuperação simples, somente para grupos de arquivos somente leitura).  
   
  A restauração de dados enquanto o banco de dados está online é chamada *restauração online*. O banco de dados é considerado online sempre que o grupo de arquivos primário estiver online, até mesmo se um ou mais de seus grupos de arquivos secundários estiver offline. Em qualquer modelo de recuperação, você poderá restaurar um arquivo que estiver offline enquanto o banco de dados estiver online. No modelo de recuperação completa, você também poderá restaurar páginas enquanto o banco de dados estiver online.  

@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9026edfafeb24eae766e9d42634512a565b6934b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8094953924958f8f00db6d03ebafef0435223de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673241"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exibe informações sobre as condições que são associadas às mensagens de evento de execução, para execuções no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

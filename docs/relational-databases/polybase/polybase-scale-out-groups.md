@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 65e9ae2e44816ca761594acd3e2e907d7bd938a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217085"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818226"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escala horizontal do PolyBase
 
@@ -58,10 +58,6 @@ O mecanismo de PolyBase é o componente principal por trás das consultas do Pol
   
 O serviço de movimentação de dados do PolyBase recebe instruções do mecanismo do PolyBase e transfere dados entre o HDFS e o SQL Server, e entre instâncias do SQL Server nos nós de cabeçalho e computação.
   
-## <a name="editions-availability"></a>Disponibilidade de edições  
-
-Após a instalação do SQL Server, a instância poderá ser designada como um nó de cabeçalho ou um nó de computação. A escolha depende da versão em que o PolyBase do SQL Server está em execução. Em uma instalação da edição Enterprise, a instância pode ser designada como nó de cabeçalho ou nó de computação. Em uma edição Standard, a instância pode ser designada apenas como um nó de computação.
-
 ## <a name="next-steps"></a>Próximas etapas
 
 Para configurar um grupo expansão do PolyBase, consulte o guia a seguir:

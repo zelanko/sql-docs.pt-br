@@ -16,17 +16,17 @@ helpviewer_keywords:
 - '@@DBTS function'
 - timestamp data type
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 9d06a019d162c6c8455efd1c85e49ec109763d0a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5493589b7a87af2ea856a63e81c3b366eb410d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682942"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta função retorna o valor do tipo de dados **timestamp** atual para o banco de dados atual. O banco de dados atual terá um valor de carimbo do carimbo de data/hora exclusivo garantido.
   

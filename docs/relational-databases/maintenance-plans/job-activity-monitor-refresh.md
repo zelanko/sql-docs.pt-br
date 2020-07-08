@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f6e370ce717190b6f7a14b6eaf354c7c5321a011
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6343929a2f893d020d992a7bd68ba70e178ed2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666920"
 ---
 # <a name="job-activity-monitor-refresh"></a>Atualizar Monitor de Atividade do Trabalho
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use a caixa de diálogo **Atualizar Configurações** para configurar com que frequência o Monitor de Atividade do Trabalho obtém informações novas sobre a atividade de servidor. O Monitor de Atividade do Trabalho deve executar consultas no servidor monitorado para obter informações para a grade do Monitor de Atividade do Trabalho. Quando o intervalo de atualização automática for definido como menos de 30 segundos, o tempo usado para executar essas consultas poderá afetar o desempenho do servidor.  
   
  Para abrir essa caixa de diálogo, clique em **Exibir configurações de atualização**, na seção **Status** do Monitor de Atividade do Trabalho.  

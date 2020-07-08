@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 618499b25914ea4f521fa694ac14b9e9049ca330
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4180093e97237b5b433714ad437447065235e54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673643"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (Banco de Dados SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   De forma assíncrona, valida um projeto no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

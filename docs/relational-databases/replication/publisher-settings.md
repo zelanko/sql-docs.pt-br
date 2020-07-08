@@ -16,15 +16,15 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 481dc94938f026bb340675b4900473becacab076
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a6232fc78b4c9b1d68a9cc96e6fed69138e5075f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678484"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>Caixa de diálogo 'Configurações do Editor' de Replicação do SQL Server
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   A caixa de diálogo **Configurações do Publicador** permite alterar configurações para Publicadores adicionados ao painel esquerdo no Replication Monitor.  
   
 ## <a name="options"></a>Opções  

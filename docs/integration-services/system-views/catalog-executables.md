@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 080bd33f6864355dbd0f6eb58903b1796670ed26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673019"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta exibição mostra uma linha para cada executável na execução especificada.  
   

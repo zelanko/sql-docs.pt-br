@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_NULLS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 06/24/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -24,23 +24,20 @@ helpviewer_keywords:
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: CarlRabeler
 ms.author: carlrab
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0031d4703ce7073be678e550f46924104a8ed68f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
+ms.openlocfilehash: b9f4070d078a389a18ff34785c85464cdf1986da
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634480"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353163"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Especifica o comportamento compatível com ISO dos operadores de comparação Igual a (=) e Diferente de (<>) quando usados com valores nulos na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+Especifica o comportamento compatível com ISO dos operadores de comparação Igual a (=) e Diferente de (<>) quando usados com valores nulos na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-> [!IMPORTANT]  
-> Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS estará ON e quaisquer aplicativos que definam explicitamente a opção como OFF gerarão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.
-  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Sintaxe
 

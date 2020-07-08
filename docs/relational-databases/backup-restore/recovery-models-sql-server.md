@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c7d04f6a6ed9a1e09c3ca278e1481000abc6cab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 884477b0b1d62d7616448645cb740cc99e329c53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180871"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669780"
 ---
 # <a name="recovery-models-sql-server"></a>Modelos de recuperação (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as operações de backup e restauração ocorrem no contexto do modelo de recuperação do banco de dados. Os modelos de recuperação são projetados para controlar a manutenção de log de transações. Um *modelo de recuperação* é uma propriedade de banco de dados que controla como as transações são registradas, se o log de transações exige (e permite) backup e que tipos de operações de restauração estão disponíveis. Existem três modelos de recuperação: simples, completo e bulk-logged. Geralmente, um banco de dados usa o modelo de recuperação completa ou o modelo de recuperação simples. É possível alternar para outro modelo de recuperação do banco de dados a qualquer momento.  
   
  **Neste tópico:**  

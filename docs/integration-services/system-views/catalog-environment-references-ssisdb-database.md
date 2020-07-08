@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 848e337ecfacd16df1b34a60e392b572b612735d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 23956f548b5bb768260ffc618c86cd93f0e82b23
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673264"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (Banco de Dados SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exibe as referências de ambiente para todos os projetos no catálogo do **SSISDB**.  
   

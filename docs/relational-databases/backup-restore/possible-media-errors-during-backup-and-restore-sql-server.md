@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85b6077e5dfa2d70ecbbe6aead13fd02dbdf43b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670102"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erros de mídia possíveis durante backup e restauração (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá a você a opção de recuperar um banco de dados apesar dos erros detectados. Um novo mecanismo de detecção de erros importante é a criação opcional de uma soma de verificação do backup que pode ser criada por uma operação de backup e validada por uma operação de restauração. Você pode controlar se uma operação verifica os erros e se a operação é interrompida ou continua ao encontrar um erro. Se um backup contiver uma soma de verificação de backup, as instruções RESTORE e RESTORE VERIFYONLY poderão verificar os erros.  
   
 > [!NOTE]  

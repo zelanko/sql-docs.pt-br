@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc9a06ed8df330e6129f28260e5ef21890e98976
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74a785caa2f8511bf11caf757793244d3c06c052
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180196"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670138"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planejar e executar sequências de restauração (modelo de recuperação completa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico explica como planejar e executar uma sequência de restauração para bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que normalmente usam o modelo de recuperação completa. Uma *sequência de restauração* é uma sequência de uma ou mais instruções [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) . Geralmente, uma sequência de restauração inicializa os conteúdos do banco de dados, arquivos, e/ou páginas sendo restaurados (a fase de cópia de dados), efetua roll forward das transações registradas (a fase refazer) e reverte as transações não confirmadas (a fase desfazer).  
   

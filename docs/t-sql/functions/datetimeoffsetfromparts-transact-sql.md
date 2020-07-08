@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DATETIMEOFFSETFROMPARTS function
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48164fbf22f89550e5d526cf3952c2d052313b38
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21004da03ef694633b28518777c2ed2f0ac59d06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85683357"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

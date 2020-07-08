@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 97d78f4a96a87b6ffe373335167b796ea5a2de3d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65b3853db8fb20ef3c2a21846db59ce0981485cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672788"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta exibição exibe uma linha a cada vez que um componente de fluxo de dados envia dados a um componente downstream para determinada execução do pacote. As informações desta exibição podem ser usadas para computar a taxa de transferência de dados para um componente.  
   

@@ -19,17 +19,17 @@ helpviewer_keywords:
 - current session application names
 - APP_NAME function
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 3e467202bd40ce208b45d3040d675ca17f5412c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f28288b99fd67b41431c63d11f1174458cab2854
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85684851"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta função retornará o nome do aplicativo para a sessão atual, se o aplicativo definir esse valor de nome.
   

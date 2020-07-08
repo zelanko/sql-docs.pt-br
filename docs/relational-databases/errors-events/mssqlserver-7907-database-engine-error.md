@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7abf15e3085c83ec3871a74ca0977bd38a443e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 156daa4c5299d1b124d659e1b881880855ce3695
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951449"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637215"
 ---
 # <a name="mssqlserver_7907"></a>MSSQLSERVER_7907
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|7907|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|Texto da mensagem|Erro de tabela: o diretório 'DIRECTORY' na ID de partição PN_ID não é um diretório de Filestream válido.|  
+|Texto da mensagem|Erro de tabela: o diretório 'DIRECTORY' na ID de partição PN_ID não é um diretório de Fluxo de arquivos válido.|  
   
 ## <a name="explanation"></a>Explicação  
 O nome de um diretório de coluna é a ID de coluna de mecanismo relacional da partição. Se o nome de um diretório de coluna não puder ser convertido em uma ID de coluna, o diretório não será um diretório de coluna válido.  

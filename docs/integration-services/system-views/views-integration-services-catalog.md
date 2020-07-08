@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e1f54ee39981785f17c4883ec5dd191ecf7ccbc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f60d65e9100436382c62ae66c6acc5dc9ace201c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671315"
 ---
 # <a name="views-integration-services-catalog"></a>Exibições (catálogo do Integration Services)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta seção descreve as exibições [!INCLUDE[tsql](../../includes/tsql-md.md)] disponíveis para administrar projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implantados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 448c5ad08939be34ade1dd55b28b1d8f354c98c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672362"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (Banco de Dados SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exibe as instâncias de execução de pacote no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pacotes que são executados com a tarefa Executar Pacote na mesma instância de execução que o pacote pai.  
   

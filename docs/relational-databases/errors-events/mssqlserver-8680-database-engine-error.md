@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 79f7270e-e4df-4f4e-bc78-2dcad6a9f140
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6f7d15cb13546e19fd234d4b738d11d085b1360
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2eafdc653dc0caf7a9de55a607013617a369e99f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637180"
 ---
 # <a name="mssqlserver_8680"></a>MSSQLSERVER_8680
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|8680|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|REMOTE_ERR|  
-|Texto da mensagem|Erro interno do processador de consultas: erro inesperado durante o processamento de uma fase de consulta remota.|  
+|Texto da mensagem|Erro do Processador de Consulta Interna: o processador de consulta encontrou um erro inesperado durante o processamento de uma fase de consulta remota.|  
   
 ## <a name="explanation"></a>Explicação  
 Erro interno de processamento de consultas.  
