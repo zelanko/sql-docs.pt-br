@@ -12,15 +12,15 @@ ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4504c686eff795d15742e2abdaaeb478229c0f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3ec9154deef79d1275d261d9e9e2dcc4165fa61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726301"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Classe de evento Audit Schema Object Management
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Audit Schema Object Management** ocorre quando objetos de servidor são criados, alterados ou removidos.  
   
 ## <a name="audit-schema-object-management-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Schema Object Management  

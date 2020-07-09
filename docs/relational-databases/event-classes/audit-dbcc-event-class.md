@@ -12,15 +12,15 @@ ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b092f41c20f2b8100b02fc331692a6dd9f217702
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a092a93ed66c7ef4953c4a378117094f70ea2da5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726359"
 ---
 # <a name="audit-dbcc-event-class"></a>Classe de evento Audit DBCC
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Audit DBCC** ocorre sempre que um comando DBCC é emitido.  
   
 ## <a name="audit-dbcc-event-class-data-columns"></a>Colunas de dados da classe de evento Audit DBCC  

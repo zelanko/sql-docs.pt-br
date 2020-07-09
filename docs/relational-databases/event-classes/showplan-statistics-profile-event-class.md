@@ -12,15 +12,15 @@ ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f540c17bc6e9a82fe2ca1b4bd29b2622e5535c07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 470f1a6b694db95d9a58169b9b3b11b7d45768ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726184"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>classe de Evento Showplan Statistics Profile
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento Showplan Statistics Profile ocorre quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma instrução SQL. As informações incluídas são um subconjunto das informações disponíveis na classe de evento Showplan XML Statistics Profile.  
   
  A classe de evento Showplan Statistics Profile exibe dados de tempo de compilação completos; os rastreamentos que contêm Showplan Statistics Profile podem gerar sobrecarga de desempenho significativa. Para minimizar isso, limite o uso dessa classe de evento a rastreamentos que monitorem problemas específicos por períodos breves de tempo.  

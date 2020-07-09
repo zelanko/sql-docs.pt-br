@@ -1,12 +1,14 @@
 ---
 title: Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
-ms.custom: seo-dt-2019
-ms.date: 08/24/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
+ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
+author: stevestein
+ms.author: sstein
+ms.custom: seo-dt-2019
 helpviewer_keywords:
 - cross-database queries [SQL Server]
 - logins [SQL Server], recreating on another server instance
@@ -31,18 +33,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76929109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726454"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este artigo é pertinente nas seguintes situações:  
   
 -   Configuração das réplicas de disponibilidade de um grupo de disponibilidade do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
