@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03d1c92ddd48daf48f6b410e5a613f997b08640c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59d6b0c0638a693bb265c7114eccc28a63d236e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766360"
 ---
 # <a name="drop-fulltext-catalog-transact-sql"></a>DROP FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Remove um catálogo de texto completo de um banco de dados. Remova todos os índices de texto completo associados ao catálogo antes de remover o catálogo.  
   

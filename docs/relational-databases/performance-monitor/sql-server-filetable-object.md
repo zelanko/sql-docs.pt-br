@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f2110726db47cf76adffca4b10f153ce941565cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0411ae3768195fd1fb3f5e7f8776a7b71362817
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775882"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, objeto FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 O objeto de desempenho **SQLServer:FileTable** fornece contadores para estatísticas associadas a FileTable e ao acesso não transacionado.
 
 A tabela a seguir descreve os objetos de desempenho **FileTable** do SQL Server.

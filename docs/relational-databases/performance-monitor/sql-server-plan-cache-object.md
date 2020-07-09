@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a181919a40ce2e53c9fef9887f5c7ec6ff93fc5b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5bdbff06c1dbda2f31aa8e456878649e8d7f9508
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775785"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, objeto Cache de planos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O objeto **Plan Cache** fornece contadores para monitorar como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a memória para armazenar objetos, como procedimentos armazenados e instruções e gatilhos [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc e preparados. Diversas instâncias do objeto **Plan Cache** podem ser monitoradas ao mesmo tempo, com cada instância representando um tipo de plano diferente para monitorar.  
   
  Esta tabela descreve os contadores **SQLServer:Plan Cache**.  

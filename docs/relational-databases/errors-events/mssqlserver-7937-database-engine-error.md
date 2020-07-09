@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f7716083ff9c7963a913bc407dffc3938ef27bb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6525c6c1cbcd6071eeb99e899b15bda107f4868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767892"
 ---
 # <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|7937|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|Texto da mensagem|Erro de tabela: o diretório Filestream da ID de coluna C_ID da ID de objeto O_ID, ID de índice I_ID, ID da partição PN_ID não foi localizado.|  
+|Texto da mensagem|Erro de tabela: o diretório de Fluxo de arquivos da ID de coluna C_ID da ID de objeto O_ID, ID de índice I_ID, ID da partição PN_ID não foi localizado.|  
   
 ## <a name="explanation"></a>Explicação  
 A coluna especificada existe em uma partição; entretanto, seu diretório FILESTREAM correspondente não foi localizado no espaço de dados FILESTREAM.  

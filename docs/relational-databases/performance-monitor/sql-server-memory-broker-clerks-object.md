@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: fff8aa7a2e37f66470798b2772ed00d0298708a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a14877c98b4abb2487712cfed2bd744c20933d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775812"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, Objeto Administradores do Agente de Memória
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 O objeto de desempenho **SQLServer:Administradores do Agente de Memória** fornece contadores para estatísticas relacionadas a administradores do agente de memória.
 
 A tabela a seguir descreve os objetos de desempenho **Administradores do Agente de Memória** do SQL Server.

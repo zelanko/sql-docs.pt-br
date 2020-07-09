@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c1dad11470d76b0759c7c0b1d4f26c84bfb67a45
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aaf66cf2be025262d0d59b7a06421689b93bab91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775898"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server, objeto ExecStatistics
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O objeto **SQLServer:ExecStatistics** do Microsoft SQL Server oferece contadores para o monitoramento de diversas execuções.  
   
  Esta tabela descreve os contadores **Exec Statistics** do SQL Server.  

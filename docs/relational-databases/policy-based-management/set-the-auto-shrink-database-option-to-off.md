@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2b202f2856e066047c5458ef8ed1f40b2422b391
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fac9ff925c5e24d21efe0dcb5b7776636cf78572
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774192"
 ---
 # <a name="set-the-auto_shrink-database-option-to-off"></a>Definir a opção do banco de dados AUTO_SHRINK como OFF
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regra verifica se a opção de banco de dados AUTO_SHRINK é definida como OFF. Reduzir e expandir um banco de dados com frequência pode causar a fragmentação física.  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  

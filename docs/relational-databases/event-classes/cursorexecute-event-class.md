@@ -12,15 +12,15 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfcbafc4e178d01dd35ddeebfcc83ffab4cf1edf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762946"
 ---
 # <a name="cursorexecute-event-class"></a>Classe de evento CursorExecute
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **CursorExecute** descreve eventos de execução do cursor que ocorrem em cursores da API (interface de programação de aplicativo). Os eventos de execução do cursor ocorrem quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria e popula um cursor pelo plano de execução criado por um evento de preparação do cursor.  
   
  Inclua a classe de evento **CursorExecute** em rastreamentos que estejam registrando o desempenho de cursores. Quando a classe de evento **CursorRecompile** está incluída no rastreamento, a quantidade de sobrecarga criada dependerá da frequência de uso dos cursores em relação ao banco de dados durante o rastreamento. Se os cursores forem usados extensivamente, o rastreamento poderá diminuir significativamente o desempenho.  

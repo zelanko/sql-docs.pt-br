@@ -15,15 +15,15 @@ ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10caa7bd8270cdc73d1d5f9addd2b0ef55b89073
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e56cfe4b959eb651af297e7dfb113a93b89b1db1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765271"
 ---
 # <a name="database-suspect-data-page-event-class"></a>classe de evento Database Suspect Data Page
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe do evento **Database Suspect Data Page** indica quando uma página é acrescentada à tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) no [msdb](../../relational-databases/databases/msdb-database.md). Inclua esta classe de evento em rastreamentos que estiverem monitorando a ocorrência de páginas suspeitas.  
   
 > [!NOTE]  

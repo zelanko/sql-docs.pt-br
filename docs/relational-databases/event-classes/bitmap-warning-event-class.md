@@ -12,15 +12,15 @@ ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de8b23019ed9bab5a3bebb6fae4e811b05bb9baa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c79c7393452f95084fc1e03ed75b916e6e521a95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67999858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763064"
 ---
 # <a name="bitmap-warning-event-class"></a>classe de evento Bitmap Warning
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Bitmap Warning** pode ser usada para monitorar o uso de filtro de bitmap em consultas. A subclasse de evento pode ser usada para informar quando filtros de bitmap forem desabilitados em uma consulta.  
   
 ## <a name="bitmap-warning-event-class-data-columns"></a>Colunas de dados de classe de evento Bitmap Warning  

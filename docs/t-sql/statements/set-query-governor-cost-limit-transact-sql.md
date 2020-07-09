@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19296d2f926e9297bdfbc84783714c35a11a1ff9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 56a071487c2cd3f6a6116c3d90d1572a450aa73d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765765"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Substitui o valor **query governor cost limit** atualmente configurado da conexão atual.  
   

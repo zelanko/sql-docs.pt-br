@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0c4060aa1508da72d9b0bd0eb23977074ecac067
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba537e2dd0d188eb95e9194bb33c654c66dfcb9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763082"
 ---
 # <a name="auto-stats-event-class"></a>Classe de evento Auto Stats
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Auto Stats** indica que ocorreu uma atualização automática de estatísticas de índice e coluna.  A **Auto Stats** também é disparada quando as estatísticas estão sendo carregadas para uso pelo otimizador.
   
 ## <a name="auto-stats-event-class-data-columns"></a>Colunas de dados da classe de evento Auto Stats  

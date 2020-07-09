@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 45a57f45eae2a54d73e08064b9a02446871f8400
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4a754b2e2d748ebc007918a75e17f3851e4a9dd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774230"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>Criar um guia de plano para consultas parametrizadas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   O guia de plano TEMPLATE corresponde consultas autônomas com parâmetros com uma forma especificada.  
   
  O exemplo a seguir cria um guia de plano que faz a correspondência de qualquer consulta com parâmetros com um formulário especificado, e direciona o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para forçar a aplicação de parâmetros da consulta. As duas consultas a seguir são sintaticamente equivalentes, mas só diferem nos valores literais constantes.  

@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d626c0dcf44bc0907516d78aefd54b3ec0bb608a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47074877bb5d62ffa00e7824818fae9eed25004e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767874"
 ---
 # <a name="mssqlserver_7987"></a>MSSQLSERVER_7987
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|7987|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|Texto da mensagem|Verificações prévias de tabela do sistema: a ID de objeto O_ID tem incompatibilidade de vínculos de cadeia. P_ID1 ->next = P_ID2, mas P_ID2 ->prev = P_ID3. Instrução de verificação encerrada devido a um erro irreparável.|  
+|Texto da mensagem|Verificações prévias de tabela do sistema: A ID do objeto O_ID tem incompatibilidade de vínculos de cadeia. P_ID1 ->next = P_ID2, mas P_ID2 ->prev = P_ID3. Instrução de verificação encerrada devido a um erro irreparável.|  
   
 ## <a name="explanation"></a>Explicação  
 A primeira fase de um DBCC CHECKDB envolve a execução de verificações primitivas nas páginas de dados das tabelas de sistema críticas. Se forem encontrados erros, não será possível corrigi-los; por isso, DBCC CHECKDB é encerrado imediatamente.  

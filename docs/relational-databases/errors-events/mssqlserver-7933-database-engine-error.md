@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7cc3e42abfdb31da50b7db329f9c61c2a195111
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 17bd7cfa51701de32398345cb6221b0ad21da0eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773567"
 ---
 # <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|7933|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|Texto da mensagem|Erro de tabela: existe uma ID de diretório de Filestream F_ID para uma partição, mas a partição correspondente não existe no banco de dados.|  
+|Texto da mensagem|Erro de tabela: existe uma ID de diretório de Fluxo de arquivos F_ID para uma partição, mas a partição correspondente não existe no banco de dados.|  
   
 ## <a name="explanation"></a>Explicação  
 Durante DBCC CHECKDB, foi encontrado um diretório de conjunto de linhas no espaço de dados FILESTREAM; entretanto, a partição correspondente não foi localizada no banco de dados.  

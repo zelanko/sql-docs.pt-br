@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: b0862c3a-926b-490c-a37f-382e50146a3e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8a392547d4e8b43430c2608f36790944eb88287f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58daac31e06f6a1b8120e2848452d9660c7bbe3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774147"
 ---
 # <a name="sql-server-login-password-strength"></a>Nível de segurança da senha de logon do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regra verifica se “Impor política de senha” de cada logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitado. Se a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver habilitada e a versão do sistema operacional for anterior ao [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], um invasor poderá explorar repetidamente uma senha conhecida de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  

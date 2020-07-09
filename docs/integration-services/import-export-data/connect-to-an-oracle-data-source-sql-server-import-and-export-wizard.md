@@ -1,7 +1,7 @@
 ---
 title: Conectar-se a uma fonte de dados do Oracle (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773549"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do Oracle (Assistente de Importação e Exportação do SQL Server)
 
@@ -36,6 +36,7 @@ Depois de selecionar o **Provedor de dados .NET Framework para Oracle** na pági
 |---|---|
 |Nome do servidor|**Fonte de Dados**|
 |Informações (logon) de Autenticação|**ID de Usuário** e **Senha**; ou **Segurança Integrada**|
+|||
 
 Você não precisa inserir a cadeia de conexão no campo **ConnectionString** da lista. Depois de inserir valores individuais para o nome do servidor Oracle (**fonte de dados**) e informações de logon, o assistente monta a cadeia de conexão das propriedades individuais e dos respectivos valores. 
 
@@ -70,9 +71,9 @@ A ID de usuário e senha para se conectar.
 ### <a name="connection-string-format"></a>Formato da cadeia de conexão
 Aqui está o formato de uma cadeia de conexão típica.
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>Inserir a cadeia de conexão
 Insira a cadeia de conexão no campo **ConnectionString** ou digite o nome DSN no campo **Dsn**, na página **Escolher uma Fonte de Dados** ou **Escolher um Destino**. Depois de inserir a cadeia de conexão, o assistente analisa a cadeia de caracteres e exibe as propriedades individuais e seus valores na lista.

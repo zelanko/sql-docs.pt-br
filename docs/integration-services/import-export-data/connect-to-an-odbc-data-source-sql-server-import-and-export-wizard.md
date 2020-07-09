@@ -2,7 +2,7 @@
 title: Conectar-se a uma fonte de dados do ODBC (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
 description: Como configurar um DSN ODBC ou criar uma cadeia de conexão ODBC para usar com o Assistente de Importação e Exportação do SQL Server
 ms.custom: ''
-ms.date: 12/31/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: integration-services
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75608025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773582"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do ODBC (Assistente de Importação e Exportação do SQL Server)
 
@@ -93,9 +93,9 @@ Se você quiser fornecer suas informações de conexão com uma cadeia de conex�
 
 Este exemplo usará a cadeia de conexão a seguir, que se conecta ao Microsoft SQL Server. O exemplo de banco de dados usado é **WideWorldImporters** e estamos nos conectando ao SQL Server no computador local.
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 Insira a cadeia de conexão no campo **ConnectionString** na página **Escolher uma Fonte de Dados** ou **Escolher um Destino**. Depois de inserir a cadeia de conexão, o assistente analisa a cadeia de caracteres e exibe as propriedades individuais e seus valores na lista.
 
@@ -140,7 +140,7 @@ Para compilar e testar a cadeia de conexão para o driver ODBC no seu próprio c
 
 10. Abra o arquivo salvo com o Bloco de Notas ou outro editor de texto. Aqui está o conteúdo do nosso exemplo do SQL Server.
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -155,9 +155,9 @@ Para compilar e testar a cadeia de conexão para o driver ODBC no seu próprio c
 
     Depois que você agrupa os valores necessários do DSN de arquivo de exemplo, você tem a cadeia de conexão a seguir.
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     Normalmente, você não precisa de todas as configurações em um DSN criado pelo Administrador de Fonte de Dados do ODBC para criar uma cadeia de conexão que funcione.  
     -   Você sempre precisa especificar o driver ODBC.

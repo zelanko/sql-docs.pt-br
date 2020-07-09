@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 594b725b873124042dfa8afdc9253499d703999b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97dccd39e74cdadad30edee265d8ec2183b183be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774150"
 ---
 # <a name="storage-system-input-output-time-out"></a>Tempo limite de entrada e saída dd sistema de armazenamento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regra verifica o log de eventos do sistema para o EventId 9. Esta mensagem indica que o tempo limite de E/S ocorreu no sistema de armazenamento.  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  

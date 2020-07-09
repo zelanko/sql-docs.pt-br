@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a516a5cbfe8a225d228b4a1722da2ac51ceb99c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0585bd23f552e3bd2447962cccd61e0bb5cd385
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433973"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85778484"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Converter um script existente de Rastreamento do SQL em uma sessão de Eventos Estendidos
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Se você tiver um script de Rastreamento do SQL que deseja converter em sessão de Eventos Estendidos, poderá usar os procedimentos deste tópico para criar uma sessão de Eventos Estendidos equivalente. Usando as informações das tabelas de sistema trace_xe_action_map e trace_xe_event_map, você pode coletar as informações que precisa para fazer a conversão.  
   

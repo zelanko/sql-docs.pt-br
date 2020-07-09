@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 488b1efd533f038914f2d0186e29e28622531f02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98df2bd789a9f5ca4c81aa83b152c4170546594b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773858"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurar segurança de caixa de diálogo para notificações de evento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve ser configurada para notificações de eventos que enviam mensagens a um agente de serviços em um servidor remoto. A segurança de diálogo deve ser configurada manualmente, de acordo com o modelo de segurança total de diálogo do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . O modelo de segurança total habilita criptografia e decodificação de mensagens enviadas para e de servidores remotos. Embora as notificações de eventos sejam enviadas em uma única direção, outras mensagens, como erros, também são retornadas para a direção oposta.  
   
 ## <a name="configuring-dialog-security-for-event-notifications"></a>Configurando segurança de diálogo para notificações de eventos  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 620e79cd69c11c6f5de32d3ef0ae97af489f9398
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: e9d94bb7b7002b1e83a6e5dbc5566f77a4093274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81304817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775775"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, Objeto de Repositório de Consultas
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 O objeto de Repositório de Consultas fornece contadores para monitorar a utilização de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar textos de consulta, planos de execução e estatísticas de runtime para objetos, como procedimentos armazenados, instruções ad hoc e preparadas do [!INCLUDE[tsql](../../includes/tsql-md.md)] e gatilhos.  
   
@@ -40,7 +40,7 @@ Esta tabela descreve os contadores do **Repositório de Consultas do SQL Server*
 |Instância do Repositório de Consultas|Descrição|  
 |--------------------------|-----------------|  
 |**_Total**|Informações para o Repositório de Consultas para esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|\<nome do banco de dados>|Informações do Repositório de Consultas para este banco de dados.|  
+|\<database name>|Informações do Repositório de Consultas para este banco de dados.|  
   
 ## <a name="see-also"></a>Consulte Também  
 

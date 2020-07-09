@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b60809c6e6f5484c2c59acb9a06a880e218c7338
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af9562d8e59d3690dd8a0d949945cdfec524d29f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776132"
 ---
 # <a name="maintenance-plans-node-object-explorer"></a>Nó de Planos de Manutenção (Pesquisador de Objetos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta seção contém a Ajuda de F1 para o nó **Planos de Manutenção** do Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  

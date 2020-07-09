@@ -17,15 +17,15 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 954701f03910556c2fe2c4e151ce4a4e3aac2af4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0393313d6c57de73be26f55f93814460dcfd2027
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768334"
 ---
 # <a name="about-change-tracking-sql-server"></a>Sobre o controle de alterações (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   O controle de alterações é uma solução leve que fornece um mecanismo de controle de alterações eficiente para aplicativos. Em geral, para permitir que os aplicativos consultassem as alterações nos dados de um banco de dados e acessassem as informações relacionadas às alterações, os desenvolvedores de aplicativos precisavam implementar mecanismos personalizados de controle de alterações. A criação desses mecanismos costumava envolver muito trabalho e, com frequência, o uso de uma combinação de gatilhos, colunas **timestamp** , novas tabelas para armazenar as informações de controle e processos personalizados de limpeza.  
   

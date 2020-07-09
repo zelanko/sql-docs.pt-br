@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 36093a4cd91943b3db214dcb9cdeb55bda7399c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d1a481dfc14e3c84df78f2950a140f1bb14c059
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775869"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, objeto Scripts Externos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   O objeto **SQLServer:External Scripts** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar as ações associadas à execução de scripts externos. Para obter informações sobre a execução de scripts externos, veja [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   

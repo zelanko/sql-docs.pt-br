@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 224a2553151667363985c9d04d384386a66a8f81
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5f5a86fc5eccf214828e969865cdedbc4379dc9c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766661"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>Permissões de esquema DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Nega permissões em um esquema.  
   

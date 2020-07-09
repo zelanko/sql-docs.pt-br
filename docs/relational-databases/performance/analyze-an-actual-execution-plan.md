@@ -15,16 +15,16 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 089cc2fd9a2131ab18fea01262f9bc0d476355e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72289327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773143"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Analisar um plano de execução real
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este tópico descreve como você pode analisar planos de execução gráficos reais usando o recurso de Análise de Plano [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Este recurso está disponível a partir do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4. Geralmente, recomendamos que você [instale a versão mais recente do SSMS](../../ssms/download-sql-server-management-studio-ssms.md).
 

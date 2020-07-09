@@ -12,15 +12,15 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45c72a45776abb6a6f3215560d2b1aafd974d720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e7851febee7a47c57a5e376cfe5b92ed2999927
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093699"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773532"
 ---
 # <a name="cursoropen-event-class"></a>Classe de evento CursorOpen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **CursorOpen** descreve eventos de cursor aberto que ocorrem em cursores da API (interface de programação de aplicativos). Os eventos de cursor aberto ocorrem quando o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] define a instrução SQL a ser associada ao cursor e às opções de cursor e, então, popula o cursor.  
   
  Inclua a classe de evento **CursorOpen** em rastreamentos que estão gravando o desempenho de cursores. Quando a classe de evento **CursorOpen** é incluída no rastreamento, a quantidade de sobrecarga criada depende da frequência de uso dos cursores em relação ao banco de dados durante o rastreamento. Se os cursores forem usados extensivamente, o rastreamento poderá diminuir significativamente o desempenho.  

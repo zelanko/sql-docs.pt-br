@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 93f42e9234ee9cd67503c2abc70c37e309a041ea
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 2a347556196ff6732ef979fd36e93aff06611448
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763602"
 ---
 # <a name="copy-databases-to-other-servers"></a>Copiar bancos de dados em outros servidores
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Às vezes é útil copiar um banco de dados de um computador em outro, seja para testar, verificar a consistência, desenvolver software, executar relatórios, criar um banco de dados espelho, ou, possivelmente, para tornar o banco de dados disponível para operações da ramificação remota.  
   
  Há vários modos de copiar um banco de dados:  

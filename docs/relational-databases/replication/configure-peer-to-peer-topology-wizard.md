@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 69c30542eaed08667b603c459a225fd81af5c4a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0d79fcdfc0c65d73db7a52ac7b6f9adb1d39bb9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773990"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>Assistente para Configurar Topologia Ponto a Ponto
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta seção fornece informações sobre todas as páginas do Assistente para Configurar Topologia Ponto a Ponto:  
   
 -   [Publicação &#40;replicação ponto a ponto&#41;](../../relational-databases/replication/publication-peer-to-peer-replication.md)  

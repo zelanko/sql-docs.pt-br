@@ -15,15 +15,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: e1df3f06d5973f5ec0002da4c67b82519435a61d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81288119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767589"
 ---
 # <a name="get-started-with-full-text-search"></a>Iniciar a pesquisa de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Por padrão, os bancos de dados do SQL Server são habilitados para texto completo. No entanto, antes de executar consultas de texto completo, é necessário criar um catálogo de texto completo e criar um índice de texto completo em tabelas ou exibições indexadas nas quais você deseja pesquisar.
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>Configurar uma pesquisa de texto completo em duas etapas

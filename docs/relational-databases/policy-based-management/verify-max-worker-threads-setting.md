@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2d94adfd-3ba1-493a-b29a-b436f9d583df
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 79a2ff6f86c5d1fb7e109c0d8b6ba4b35d504c10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc1e6d32a8318d30f699e896999245e586fc5db2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773116"
 ---
 # <a name="verify-max-worker-threads-setting"></a>Verificar a configuração máxima de threads de trabalho
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regra verifica a opção do servidor de máximo de threads de trabalho para configurações potencialmente incorretas. A configuração da opção de máximo de threads de trabalho com um valor pequeno pode impedir que threads suficientes atendam às solicitações de entrada do cliente de maneira oportuna e, assim, causar uma "escassez de threads". Entretanto, a configuração da opção com um valor grande pode desperdiçar espaço de endereço, porque cada thread ativo consome até 4 KB em servidores de 64 bits.  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  
