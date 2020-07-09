@@ -12,15 +12,15 @@ ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bde8e1552b13f165d928f1e9275512e22426f9f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91899bddfc872487d29866c3c854563f22353827
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780174"
 ---
 # <a name="lockacquired-event-class"></a>Classe de evento Lock:Acquired
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A classe de evento Lock:Acquired indica que foi obtida a aquisição de um bloqueio em um recurso, como página de dados.  
   
  As classes de evento Lock:Acquired e Lock: Released podem ser usadas para monitorar quando os objetos estão sendo bloqueados, o tipo de bloqueio obtido, e por quanto tempo os bloqueios foram retidos. Os bloqueios retidos por longos períodos de tempo podem causar problemas de contenção e devem ser investigados. Por exemplo, um aplicativo pode estar adquirindo bloqueios em linhas em uma tabela, e em seguida esperando por uma entrada do usuário. Como a entrada do usuário pode levar muito tempo, os bloqueios podem bloquear outros usuários. Nesta instância, o aplicativo deveria ser reprojetado para fazer solicitações de bloqueios somente quando necessário e não exigir uma entrada do usuário quando forem adquiridos os bloqueios.  

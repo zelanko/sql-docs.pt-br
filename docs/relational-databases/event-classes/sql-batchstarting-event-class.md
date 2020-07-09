@@ -12,15 +12,15 @@ ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d978bd61156eb578d002c7e9dae9030fbb1bdc7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df7f0ec2b9856e9f0ce867d29a788ba641784a74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064840"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85779490"
 ---
 # <a name="sqlbatchstarting-event-class"></a>Classe de evento SQL:BatchStarting
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento SQL:BatchStarting indica que um lote [!INCLUDE[tsql](../../includes/tsql-md.md)] está iniciando.  
   
 ## <a name="sqlbatchstarting-event-class-data-columns"></a>Colunas de dados da classe de evento SQL:BatchStarting  

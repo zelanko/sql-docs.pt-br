@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0250837855713c1d81202d176976d668f42a164
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3bd3b403018efad63278911589df5aa247fdac50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780417"
 ---
 # <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|2515|  
 |Origem do Evento|MSSQLSERVER|  

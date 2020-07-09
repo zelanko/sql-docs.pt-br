@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfc9cfccbad7d41997199f25d3d69ef0fff55e8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b380f7967ab055aecc5d10b2af4f8f45aa26d100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780200"
 ---
 # <a name="mssqlserver_7904"></a>MSSQLSERVER_7904
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|7904|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_MISSING_FILE|  
-|Texto da mensagem|Erro de tabela: o arquivo de Filestream da ID de coluna C_ID, ROWGUID RG_ID na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID não foi localizado.|  
+|Texto da mensagem|Erro de tabela: O arquivo de fluxo de arquivos da ID de coluna C_ID, ROWGUID RG_ID na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID não foi localizado.|  
   
 ## <a name="explanation"></a>Explicação  
 Um valor de coluna de uma partição não tem um arquivo de FILESTREAM correspondente no diretório de coluna FILESTREAM correspondente.  

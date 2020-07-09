@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b379a690019121ea98ff8e8b001f18814dbf6ebe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 252415c6bf4ef2dfdfb7ae5c0858b661df546aa8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780182"
 ---
 # <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|7905|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|Texto da mensagem|Erro de banco de dados: o diretório 'DIRECTORY' não é um diretório válido de Filestream.|  
+|Texto da mensagem|Erro de banco de dados: o diretório 'DIRECTORY' não é um diretório válido de Fluxo de arquivos.|  
   
 ## <a name="explanation"></a>Explicação  
 O nome de um diretório de conjunto de linhas é a ID de partição, exceto para os nomes de diretório de conjunto de linhas especiais, como 'ghost'. Se o nome de um diretório de conjunto de linhas não puder ser convertido em uma ID de partição, o diretório não será um diretório de conjunto de linhas válido.  
