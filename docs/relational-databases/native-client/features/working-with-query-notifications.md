@@ -22,15 +22,15 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 908da6bd9c0b978c273acd7e42cde7c8ad7f954d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: b293baaf6a7ec6fe2e28ec8976c3e6c119bf023f
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84948716"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159344"
 ---
 # <a name="working-with-query-notifications"></a>Trabalhando com notificações de consulta
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   As notificações de consulta foram introduzidas no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Baseadas na infraestrutura do Service Broker, introduzida no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], as notificações de consulta permitem que os aplicativos sejam notificados em caso de alteração nos dados. Esse recurso é particularmente útil para aplicativos que fornecem um cache de informações de um banco de dados, como um aplicativo da Web, e precisam ser notificados quando os dados de origem são alterados.  
   
@@ -76,7 +76,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>O conjunto de propriedades DBPROPSET_SQLSERVERROWSET  
  Para dar suporte a notificações de consulta por meio do OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client adiciona as novas propriedades a seguir ao conjunto de propriedades DBPROPSET_SQLSERVERROWSET.  
   
-|Nome|Type|Descrição|  
+|Nome|Tipo|Descrição|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|O número de segundos que a notificação de consulta permanece ativa.<br /><br /> O padrão é 432000 segundos (5 dias). O valor mínimo é 1 segundo e o valor máximo é 2^31-1 segundos.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|O texto da mensagem da notificação. É definido pelo usuário e não tem um formato predefinido.<br /><br /> Por padrão, a cadeia de caracteres fica vazia. Você pode especificar uma mensagem que contenha entre 1-2000 caracteres.|  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e4291cbe79bf0eea51fdf10e2c13fea7f1e23a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d66db5586f5f80f8f0e8954d041befbcd4c5eba4
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138345"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053602"
 ---
 # <a name="create-user-defined-aggregates"></a>Criar agregações definidas pelo usuário
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
   Você pode criar um objeto de banco de dados dentro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é programado em um assembly CLR. Os objetos do banco de dados que podem alavancar o modelo de programação avançado fornecido pelo CLR incluem gatilhos, procedimentos armazenados, funções, funções de agregação e tipos.  
   
  Assim como as funções de agregação internas fornecidas em [!INCLUDE[tsql](../../includes/tsql-md.md)], as funções de agregação definidas pelo usuário executam o cálculo de um conjunto de valores e retornam um único valor.  

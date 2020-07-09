@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CURRENT_TIMESTAMP function [SQL Server]
 - time [SQL Server], system
 ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9d818c5f6d6e136321f7fa02d93b7d2c1063c3f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 67deb9c3b2ee4c924b8d0cf173c7a8c9e9156ee6
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823953"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032578"
 ---
 # <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Essa função retorna o carimbo de data/hora do sistema do banco de dados atual como um valor de **datetime** sem o deslocamento de fuso horário do banco de dados. `CURRENT_TIMESTAMP` deriva esse valor do sistema operacional do computador no qual a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executada.
   
@@ -94,12 +94,12 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### <a name="b-get-the-current-system-date"></a>B. Obter a data atual do sistema  
   
 ```sql
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, SYSDATETIMEOFFSET())  
-    ,CONVERT (date, SYSUTCDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE())  
-    ,CONVERT (date, GETUTCDATE());  
+SELECT CONVERT (DATE, SYSDATETIME())  
+    ,CONVERT (DATE, SYSDATETIMEOFFSET())  
+    ,CONVERT (DATE, SYSUTCDATETIME())  
+    ,CONVERT (DATE, CURRENT_TIMESTAMP)  
+    ,CONVERT (DATE, GETDATE())  
+    ,CONVERT (DATE, GETUTCDATE());  
   
 /* Returned   
 SYSDATETIME()      2007-05-03  
@@ -114,12 +114,12 @@ GETUTCDATE()       2007-05-04
 ### <a name="c-get-the-current-system-time"></a>C. Obter a hora atual do sistema  
   
 ```sql
-SELECT CONVERT (time, SYSDATETIME())  
-    ,CONVERT (time, SYSDATETIMEOFFSET())  
-    ,CONVERT (time, SYSUTCDATETIME())  
-    ,CONVERT (time, CURRENT_TIMESTAMP)  
-    ,CONVERT (time, GETDATE())  
-    ,CONVERT (time, GETUTCDATE());  
+SELECT CONVERT (TIME, SYSDATETIME())  
+    ,CONVERT (TIME, SYSDATETIMEOFFSET())  
+    ,CONVERT (TIME, SYSUTCDATETIME())  
+    ,CONVERT (TIME, CURRENT_TIMESTAMP)  
+    ,CONVERT (TIME, GETDATE())  
+    ,CONVERT (TIME, GETUTCDATE());  
   
 /* Returned  
 SYSDATETIME()      13:18:45.3490361  

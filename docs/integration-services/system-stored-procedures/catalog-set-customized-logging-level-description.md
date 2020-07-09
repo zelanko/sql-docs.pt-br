@@ -10,19 +10,16 @@ ms.topic: language-reference
 ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b836c5b2ef056e630a5ff6bf00848fa5bb3a5e31
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb078f6888f9ea89654922c1667a0e9a60448f5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295348"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053566"
 ---
 # <a name="catalogset_customized_logging_level_description"></a>catalog.set_customized_logging_level_description 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Altera descrição de um nível de log personalizado existente. Para obter mais informações sobre níveis de registro em log personalizados, consulte [Registro em Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
