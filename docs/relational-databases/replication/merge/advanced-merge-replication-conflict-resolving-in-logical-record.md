@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4d222370b5e5ced1b2157a5f02f8eb4c7f44bb5e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f076f67c09d28ff4725587e3470d56e81b1c9aef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321573"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883821"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Conflito de replicação de mesclagem avançada – resolução em registro lógico
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico cobre as várias abordagens de combinações de detecção e resolução de conflitos possíveis ao usar registros lógicos. Um conflito na replicação de mesclagem ocorre quando mais de um nó altera os mesmos dados ou quando a replicação de mesclagem encontra determinados tipos de erros, como violação de restrição, durante a replicação de alterações. Para obter mais informações sobre detecção e resolução de conflitos, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Para especificar o acompanhamento de conflito e o nível de resolução para um artigo, confira [opções de Modificar Replicação de Mesclagem](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  

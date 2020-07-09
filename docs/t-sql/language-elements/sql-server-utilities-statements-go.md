@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21f930a4224c0d80c1db299f4dda8ef8c9c95729
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: cd28aae90386501e49513551def97e3fea8f5574
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531222"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892110"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instruções de utilitários do SQL Server – GO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece comandos que não são instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], mas que são reconhecidos pelos utilitários **sqlcmd** e **osql** e pelo Editor de Códigos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Estes comandos podem ser usados para facilitar a legibilidade e a execução de lotes e scripts.  
   

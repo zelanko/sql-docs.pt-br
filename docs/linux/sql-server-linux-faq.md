@@ -7,16 +7,16 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72929902"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895342"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Perguntas frequentes sobre o SQL Server em Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 As seções a seguir fornecem perguntas e respostas comuns sobre o SQL Server em execução no Linux.
 

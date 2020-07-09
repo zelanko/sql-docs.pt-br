@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b2bc4cf6348180e52dea28698e90cafda4f32f79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9364de40aed4218d1abf73dac1502413c3509edf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67895487"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883208"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Assinaturas atualizáveis – Resolução de conflitos com atualização em fila
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Como as assinaturas de atualização em fila permitem modificações nos mesmos dados em vários locais, pode haver conflitos quando os dados forem sincronizados no Publicador. A replicação detecta todos os conflitos quando alterações são sincronizadas com o Publicador, resolvendo-os por meio da política de resolução selecionada durante a criação da publicação. Podem ocorrer os seguintes conflitos:  
   
 -   Conflitos de atualização e inserção. Esse conflito acontece quando os mesmos dados são alterados em dois locais. Uma alteração vence e a outra perde.  

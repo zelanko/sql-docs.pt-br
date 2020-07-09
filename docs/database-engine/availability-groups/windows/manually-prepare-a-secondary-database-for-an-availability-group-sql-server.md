@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e17ac9823d0c8c0425f7a5c7dbdb550431374c78
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68023714"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896071"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparar um banco de dados secundário manualmente para um Grupo de Disponibilidade AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Este tópico descreve como preparar um banco de dados para um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell. A preparação de um banco de dados exige duas etapas: 
 
 1. Restaurar um backup de banco de dados recente do banco de dados primário e os backups de log posteriores em cada instância de servidor que hospeda a réplica secundária, usando RESTORE WITH NORECOVERY

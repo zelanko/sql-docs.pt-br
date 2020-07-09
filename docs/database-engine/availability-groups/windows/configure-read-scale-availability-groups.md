@@ -9,16 +9,16 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: e026fd9dd9bd0aa9cf78f5cf6d15303b0063ade5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ba7827a637c1317500894fcfda85cd1d5122cce7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750807"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888115"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Configurar a escala de leitura para um Grupo de Disponibilidade AlwaysOn
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 É possível configurar um grupo de disponibilidade AlwaysOn do SQL Server para cargas de trabalho de escala de leitura no Windows. Há dois tipos de arquitetura para grupos de disponibilidade:
 * Uma arquitetura para alta disponibilidade que usa um gerenciador de clusters para oferecer uma melhor continuidade de negócios e que pode incluir réplicas secundárias legíveis. Para criar essa arquitetura de alta disponibilidade, consulte [Criar e configurar grupos de disponibilidade no Windows](creation-and-configuration-of-availability-groups-sql-server.md). 

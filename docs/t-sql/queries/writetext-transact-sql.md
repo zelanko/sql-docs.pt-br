@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f991913ca75c9f310c6b176edac7056457232b47
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2646b37d4f8dfd344df916f3f47540890c41dc12
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632853"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892105"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permite a atualização interativa minimamente registrada de uma coluna de **text**, **ntext** ou **image** existente. WRITETEXT substitui quaisquer dados existentes na coluna afetada. WRITETEXT não pode ser usado em colunas de **text**, **ntext** e **image** em exibições.  
   

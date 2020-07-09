@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e29ad6de65172b08bb3f35aa89820ca817a9e1d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39dad44c6c3e7d3679f9c8692cd152c12a2fae22
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095293"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889120"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e outros recursos do SQL Server
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   Este tópico descreve como os seguintes recursos interagem com a captura de dados de alteração:  
   
 -   [Controle de alterações](#ChangeTracking)  

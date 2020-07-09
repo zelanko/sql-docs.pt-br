@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1dee792fdbb75ddabbeb3e4f58f1dcab0f824a85
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 790a477ecda6380a779b08b6c09b52db1a5b0ab0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635180"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883666"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Descarta um objeto de auditoria de servidor usando o recurso SQL Server Audit. Para obter mais informações sobre o SQL Server Audit, consulte [SQL Server Audit &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   

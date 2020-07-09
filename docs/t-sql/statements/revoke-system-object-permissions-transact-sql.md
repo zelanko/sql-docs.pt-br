@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9e0e107c0bc04168d49a170fc9b91a3fd7b9151f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ccff00e5094d9d966d9edbf3f77b9eef1cc427d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634046"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895979"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>Permissões de objeto do sistema REVOKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revoga permissões em objetos de sistema como procedimentos armazenados, procedimentos armazenados estendidos, funções e exibições de um principal.  
   

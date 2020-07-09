@@ -22,17 +22,17 @@ helpviewer_keywords:
 - names [SQL Server], filegroups
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 427e67a10b8d368402595546eb2d81e6802aa4f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 329b354b5b5e3fe66637962d2808742083c4cfac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823788"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895756"
 ---
 # <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Essa função retorna o nome do grupo de arquivos para o número de identificação (ID) do grupo de arquivos especificado.  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f600463a5d132f4db207ed18dbc9b1a329b698b0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6584b472749d1e0e773e4d0fee6bfc45d98db95f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632049"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894305"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (função) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   É usada somente em uma instrução SELECT com uma cláusula INTO *table* para inserir uma coluna de identidade em uma nova tabela. Embora similar, a função IDENTITY não é a propriedade IDENTITY que é usada com CREATE TABLE e ALTER TABLE.  
   

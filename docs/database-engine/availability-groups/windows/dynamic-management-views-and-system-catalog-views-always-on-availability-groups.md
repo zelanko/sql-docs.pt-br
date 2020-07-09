@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0389f613d9b7a26aa14c5a8388ee8cd34036ddf8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d8c71bc806bc01443b07c9cb43cb5ea5be939fc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822338"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894479"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>Exibições de gerenciamento dinâmico e exibições de catálogo do sistema (Grupos de Disponibilidade Always On)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico mostra algumas das consultas comuns em DMVs (exibições de gerenciamento dinâmico) do Always On que você pode usar para monitorar e solucionar problemas de grupos de disponibilidade.  
   
 > [!TIP]  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d013d4f3329fa824ef85b50ec6ba87112fec8f63
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8cbb2fe7f7d0b5ee0cfc744bea1e2eedc700e923
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832849"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893398"
 ---
 # <a name="x40x40total_errors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o número de erros de gravação de disco encontrados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi iniciado pela última vez.  
   

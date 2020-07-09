@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1c5e618d1116dfc464bcea781cdab8469e735b32
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd4a4e98f464c56e5c46c669b7ca26e5db5c814e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558101"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883081"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa chaves de criptografia para ajudar a proteger dados, credenciais e informações de conexão armazenados em um banco de dados de servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tem dois tipos de chaves: *simétrica* e *asimétrica*. As chaves simétricas usam a mesma senha para criptografar e descriptografar dados. As chaves assimétricas usam uma senha para criptografar dados (chamada chave *pública* ) e outra para descriptografar dados (chamada chave *privada* ).  
   
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], as chaves de criptografia incluem uma combinação de chaves públicas, privadas e assimétricas, usadas para proteger dados confidenciais. A chave simétrica é criada durante a inicialização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando você inicia pela primeira vez a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A chave é usada pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para criptografar dados confidenciais que são armazenados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As chaves públicas e privadas são criadas pelo sistema operacional e são usadas para proteger a chave simétrica. Um par de chaves pública e privada é criado para cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que armazena dados confidenciais em um banco de dados.  

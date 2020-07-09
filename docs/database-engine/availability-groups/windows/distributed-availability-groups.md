@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d14e41c0650043febdddb904813d76be4d7c714
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76941114"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894505"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Grupos de disponibilidade distribuídos são um novo recurso introduzido no SQL Server 2016, como uma variação do recurso existente grupos de disponibilidade AlwaysOn. Este artigo explica alguns aspectos dos grupos de disponibilidade distribuídos e complementa a [documentação existente do SQL Server](https://docs.microsoft.com/sql/sql-server/).
 
 > [!NOTE]

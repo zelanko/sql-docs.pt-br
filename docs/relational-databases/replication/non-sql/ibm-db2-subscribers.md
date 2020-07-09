@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cc6f19d4b732344f42d27513e7f1a7730566780
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133274"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893308"
 ---
 # <a name="ibm-db2-subscribers"></a>Assinantes do IBM DB2
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a assinaturas push para IBM DB2/AS 400, DB2/MVS e DB2/Universal Database por meio dos provedores OLE DB fornecidos com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
   

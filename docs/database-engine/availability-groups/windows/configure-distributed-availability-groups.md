@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146301"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896135"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurar um grupo de disponibilidade Always On distribuído  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Para criar um grupo de disponibilidade distribuído, você deve criar dois grupos de disponibilidade, cada um com seu próprio ouvinte. Em seguida, você combina esses grupos de disponibilidade em um grupo de disponibilidade distribuída. As etapas a seguir fornecem um exemplo básico em Transact-SQL. Este exemplo não abrange todos os detalhes da criação de grupos de disponibilidade e ouvintes, focando apenas nos requisitos básicos.
 

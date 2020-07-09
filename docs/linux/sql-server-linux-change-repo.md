@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: cea6b49e46b5dc1d386f42808f64743e2c7eed8c
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 722e5525ca98377548921f9737b7967d3adc63ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262046"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892262"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurar repositórios para instalação e atualização do SQL Server em Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 ::: zone pivot="ld2-rhel"
 Este artigo descreve como configurar o repositório correto para instalações e atualizações do SQL Server 2017 e do SQL Server 2019 no Linux. Na parte superior, a seleção atual é **RHEL (Red Hat)** .

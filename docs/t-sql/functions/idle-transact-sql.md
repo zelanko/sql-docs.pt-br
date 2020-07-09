@@ -19,17 +19,17 @@ helpviewer_keywords:
 - status information [SQL Server], idle time
 - idle time [SQL Server]
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: c6fd4c765b460267a2ffb5fc75855d7c6685b433
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c17b356a3409128e0fedd9378d82cf0acb7d8781
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826851"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894317"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o tempo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ficou ocioso desde que foi iniciado pela última vez. O resultado é indicado em incrementos de tempo de CPU, ou "tiques", sendo cumulativo para todas as CPUs, portanto pode exceder o tempo decorrido real. Multiplique por @@TIMETICKS para converter em microssegundos.  
   

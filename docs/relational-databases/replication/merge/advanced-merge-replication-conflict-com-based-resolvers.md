@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ec508dbaf274816ecf32f8eaa0a8047baa60e2a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5fee5fdcc962d1d310f36196b20f1936b85516c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033393"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892018"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Conflito de replicação de mesclagem avançada – resolvedores baseados em COM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Todos os resolvedores baseados em COM fornecidos com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam de conflitos de atualização e, quando indicado, tratam de conflitos de inserção e exclusão. Todos eles tratam de rastreamento de colunas; a maioria também trata de rastreamento de linhas. Estes e todos os outros resolvedores baseados em COM declaram os tipos de conflito que eles podem tratar e o Merge Agent usa o resolvedor padrão para todos os outros tipos de conflito.  
   
  Os resolvedores são instalados durante o processo de instalação para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Execute o procedimento armazenado **sp_enumcustomresolvers** para exibir todos os resolvedores de conflito registrados em um computador. Executar o procedimento exibe a descrição e o GUID (identificador global exclusivo) para cada resolvedor em um conjunto de resultados separado.  

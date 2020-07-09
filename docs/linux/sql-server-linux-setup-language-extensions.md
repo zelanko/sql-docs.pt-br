@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34a6cdbc0c58692e62ce6279bdff6a56194f0c16
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: eecea181dc6ac96021df2db0707537e86d4a50ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872746"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895295"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Instalar Extensões de Linguagem do SQL Server no Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 As Extensões de Linguagem são um complemento ao mecanismo de banco de dados. Embora seja possível [instalar o mecanismo de banco de dados e as extensões de linguagem simultaneamente](#install-all) a melhor prática é instalar e configurar o mecanismo de banco de dados do SQL Server primeiro para que você possa resolver problemas antes de adicionar mais componentes. 
 

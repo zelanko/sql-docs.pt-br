@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000228"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894491"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Criar um grupo de disponibilidade independente de domínio
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Os AGs (Grupos de Disponibilidade) AlwaysOn exigem um WSFC (cluster de failover do Windows Server) subjacente. A implantação de um WSFC por meio do Windows Server 2012 R2 sempre exigiu que os servidores que fazem parte de um WSFC, também conhecidos como nós, sejam ingressados no mesmo domínio. Para obter mais informações sobre o AD DS (Active Directory Domain Services), consulte [aqui](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 

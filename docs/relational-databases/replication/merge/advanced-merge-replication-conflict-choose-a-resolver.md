@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3b93c9b438a22cba125bb7487b393371b4ffd8c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 297580770800c7cd251d604e67884a2b069f52f8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033444"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896300"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Replicação de mesclagem avançada – escolher um resolvedor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Ao escolher um resolvedor, considere a importância da resolução de conflito em sua aplicação e se você pode usar o resolvedor padrão baseado em prioridades ou se precisa usar um resolvedor de artigo.  
   
  Caso seus dados estejam particionados sem usuários múltiplos que gravam nas mesmas partições, e caso sua topologia de replicação seja relativamente básica (um Publicador e alguns Assinantes), os conflitos devem ser raros ou inexistentes. Nesses ambientes, você provavelmente não precisa de uma estratégia de resolução de conflito complexa. É recomendada uma estratégia que use as configurações padrão para resolução de conflito, utilizando assinaturas de cliente e uma primeira alteração na política de vitórias. Se a topologia for mais complexa (usando Assinantes de republicação, por exemplo), as assinaturas de servidor com prioridades específicas podem ser mais apropriadas.  

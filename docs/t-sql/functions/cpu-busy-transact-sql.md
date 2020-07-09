@@ -21,17 +21,17 @@ helpviewer_keywords:
 - statistical information [SQL Server], CPU
 - CPU [SQL Server], activity
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a3ecaf4a142cdb2c722340b546b84873bd5a962d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5f763ac74b32fd641791a45d1805b95a99230fbb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823951"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895813"
 ---
 # <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Esta função retorna a quantidade de tempo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gastou em operação ativa desde o início mais recente. `@@CPU_BUSY` retorna um resultado medido em incrementos de tempo de CPU, ou "tiques". Este valor é cumulativo para todas as CPUs; portanto, ele pode exceder o tempo decorrido real. Para converter em microssegundos, multiplique por [@@TIMETICKS](./timeticks-transact-sql.md).
   

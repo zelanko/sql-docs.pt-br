@@ -2,9 +2,8 @@
 title: Failover avançado para um grupo de disponibilidade
 description: Etapas para habilitar o failover avançado de banco de dados, que dispara um failover se um banco de dados em um grupo de disponibilidade Always On não consegue mais gravar transações.
 ms.custom: seodec18
-ms.date: 09/25/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: mikeray
 ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +11,17 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
 author: MashaMSFT
+ms.reviewer: mikeray
 ms.author: mathoma
-ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d994548398bd47414f8564aeee48e2c3105aca5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822240"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894433"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Habilitar o failover avançado de banco de dados para um banco de dados em um grupo de disponibilidade Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 No SQL Server 2012 e 2014, se um banco de dados que faz parte de um grupo de disponibilidade na réplica primária perder a capacidade de gravar as transações, ele não disparará um failover, mesmo se as réplicas estiverem sincronizadas e configuradas para failover automático.
 

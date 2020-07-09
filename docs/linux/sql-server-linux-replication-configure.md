@@ -12,16 +12,16 @@ ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0979f05808c59336dec7a6e4a664b2e970029dd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f367f7d6c41600ddb26d12b28ae14d0fc1cdffc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952495"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882689"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurar a Replicação do SQL Server em Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 O [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] apresenta a Replicação do SQL Server para instâncias do SQL Server em Linux.
 

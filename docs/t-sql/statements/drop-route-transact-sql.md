@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fbd5b67994d2b9972138745b6d2d62c975a4ab87
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f46d25f9a6232343e7cbd70050883315fb65a318
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635239"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895229"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Descarta uma rota, excluindo as informações da rota da tabela de roteamento do banco de dados atual.  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ec35aff528e1ca35d145f400edeb2ca46a7df85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558621"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883941"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Grupos de Disponibilidade AlwaysOn no Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Este artigo descreve as características de AGs (Grupos de Disponibilidade AlwaysOn) em instalações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] baseadas no Linux. Ele também aborda as diferenças entre os AGs baseados no WSFC (cluster de failover do Windows Server) e no Linux. Confira a [documentação baseada no Windows](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) para obter os conceitos básicos de AGs, pois eles funcionam da mesma forma no Windows e no Linux, exceto o WSFC.
 

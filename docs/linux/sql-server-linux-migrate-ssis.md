@@ -8,16 +8,16 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943814"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882716"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extrair, transformar e carregar dados no Linux com o SSIS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Este artigo descreve como executar pacotes SSIS (SQL Server Integration Services) no Linux. O SSIS resolve problemas complexos de integração de dados extraindo dados de várias fontes e formatos, transformando-s e limpando-os e carregando-os dados em vários destinos. 
 

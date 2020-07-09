@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 26e92d38188b02c5a2ce0025cc2d33fccc5c6728
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58bbe0be8b2e139327605e674c580b7520b32af9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67988417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893193"
 ---
 # <a name="use-contained-databases-with-always-on-availability-groups"></a>Usar bancos de dados independentes com Grupos de Disponibilidade AlwaysOn 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico contém informações sobre como usar um banco de dados independente com o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

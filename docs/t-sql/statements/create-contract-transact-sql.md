@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2dfa25c21592affd2b348b14c32c12d7751aeb9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9dac7df96ce86dc83959a6dcbde2383a0db5907c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626096"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895478"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cria um novo contrato. Um contrato define os tipos de mensagem que são usados em uma conversa do [!INCLUDE[ssSB](../../includes/sssb-md.md)] e também determina qual lado da conversa pode enviar mensagens daquele tipo. Cada conversa segue um contrato. O serviço iniciador especifica o contrato para a conversa quando esta inicia. O serviço de destino especifica os contratos para os quais o serviço de destino aceita conversas.  
   

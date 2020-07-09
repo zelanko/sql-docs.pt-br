@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77e601f46f5d829cbd5a6f05ec027dbb347dfbf3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 0a6f9ba5edd20795d7645b334694e6e80fa57c47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635810"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892542"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cria um novo tipo de mensagem. Um tipo de mensagem define o nome de uma mensagem e a validação que o [!INCLUDE[ssSB](../../includes/sssb-md.md)] executa nas mensagens com esse nome. Os dois lados de uma conversa devem definir os mesmos tipos de mensagem.  
   

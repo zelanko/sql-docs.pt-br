@@ -23,17 +23,17 @@ helpviewer_keywords:
 - FILE_NAME function
 - logical file names [SQL Server]
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: fbdd246f7d8758f23bb809500da10c8164ceb034
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dca6f9c58872060c4c57a850923eab3c81f89778
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826967"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895772"
 ---
 # <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Essa função retorna o nome de arquivo lógico para o número de identificação (ID) de arquivo fornecido.  
   

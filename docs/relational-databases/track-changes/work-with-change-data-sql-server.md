@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f68227bb3f88996ee8a4f5ea60c9cdd88f4f765a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095408"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889091"
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabalhar com dados de alterações (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   Os dados de alteração ficam disponíveis para consumidores de Change Data Capture através das TVFs (funções com valor de tabela). Todas as consultas dessas funções exigem dois parâmetros para definir o intervalo de LSNs (números de sequência de log) qualificados para serem considerados no desenvolvimento do conjunto de dados retornado. Tanto o valor superior quanto o valor inferior do LSN indica que o limite do intervalo é considerado ao ser incluído no intervalo.  
   
  Muitas funções são fornecidas para ajudar a determinar os valores LSN apropriados para serem usados em uma consulta a uma TVF. A função [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) retorna o menor LSN associado a um intervalo de validade da instância de captura. O intervalo de validade é o intervalo de tempo durante o qual os dados de alteração ficam disponíveis para as instâncias de captura. A função [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) retorna o maior LSN no intervalo de validade. As funções [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) e [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) estão disponíveis para ajudar a colocar valores LSN em uma linha do tempo convencional. Como a captura de dados de alteração usa intervalos fechados, algumas vezes é necessário gerar o próximo valor LSN em uma sequência para garantir que as alterações não serão duplicadas em janelas de consulta consecutivas. As funções [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) e [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) são úteis quando é necessário um ajuste incremental em um valor LSN.  

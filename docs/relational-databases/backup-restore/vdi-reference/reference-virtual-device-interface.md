@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2b4556734044ad5bd688f8d5b286885450897b42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bacc2d49424aa9f8266a993a58546a80385aced
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847147"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893082"
 ---
 # <a name="virtual-device-interface-vdi-reference"></a>Referência da VDI (interface de dispositivo virtual)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Esta seção contém as especificações para interfaces de programação de aplicativo do SQL Server destinadas a serem usadas por fornecedores de software de backup de terceiros.
 

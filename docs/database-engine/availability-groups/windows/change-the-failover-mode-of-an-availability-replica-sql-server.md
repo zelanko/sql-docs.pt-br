@@ -2,7 +2,7 @@
 title: Alterar o modo de failover de réplica para um grupo de disponibilidade
 description: Descreve como alterar o modo de failover de uma réplica dentro de um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL), o PowerShell ou o SQL Server Management Studio.
 ms.custom: seo-lt-2019
-ms.date: 05/17/2016
+ms.date: 06/30/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4dd7de6af88d6fe5955c03f611a593869e19cfc0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a56789831d79d33d071eb493c76af8ffbd58ad3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241820"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896185"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>Alterar o modo de failover de uma réplica dentro de um grupo de disponibilidade Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como alterar o modo de failover de uma réplica de disponibilidade em um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. O modo de failover é uma propriedade de réplica que determina o modo de failover para réplicas que executam sob modo de disponibilidade de confirmação síncrona. Para obter mais informações, veja [Failover e modos de failover &#40;grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) e [Modos de disponibilidade &#40;Grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
 ## <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> Pré-requisitos e restrições  
@@ -56,28 +56,28 @@ ms.locfileid: "75241820"
   
 2.  Use a instrução [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) , da seguinte maneira:
 
-   ```Transact-SQL
-   ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
-      WITH ( {  
-           AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
-              | FAILOVER_MODE = { AUTOMATIC | MANUAL }
-            }  )
-   ```
+    ```syntaxsql
+    ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+       WITH ( {  
+             AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
+                | FAILOVER_MODE = { AUTOMATIC | MANUAL }
+             }  )
+    ```
+    
+    No script anterior:
 
-   No script anterior:
-
-      - *group_name* é o nome do grupo de disponibilidade.  
+    - *group_name* é o nome do grupo de disponibilidade.  
   
-      - *server_name* é o nome do computador ou o nome da rede de cluster de failover. Para instâncias nomeadas, adicione “\instance_name”. Use o nome que hospeda a réplica que você deseja modificar.
+    - *server_name* é o nome do computador ou o nome da rede de cluster de failover. Para instâncias nomeadas, adicione “\instance_name”. Use o nome que hospeda a réplica que você deseja modificar.
   
-   Para obter mais informações sobre esses parâmetros, veja [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
+Para obter mais informações sobre esses parâmetros, veja [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
-   O exemplo a seguir, inserido na réplica primária do grupo de disponibilidade *MyAG* , altera o modo de failover para failover automático na réplica de disponibilidade localizada na instância de servidor padrão em um computador denominado *COMPUTER01*.  
+O exemplo a seguir, inserido na réplica primária do grupo de disponibilidade *MyAG* , altera o modo de failover para failover automático na réplica de disponibilidade localizada na instância de servidor padrão em um computador denominado *COMPUTER01*.  
   
-    ```  
-    ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
-       (FAILOVER_MODE = AUTOMATIC);  
-    ```  
+```sql
+ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
+    (FAILOVER_MODE = AUTOMATIC);  
+```  
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para alterar o modo de failover de uma réplica de disponibilidade**  
@@ -86,9 +86,9 @@ ms.locfileid: "75241820"
   
 2.  Use o cmdlet **Set-SqlAvailabilityReplica** com o parâmetro **FailoverMode** . Ao definir uma réplica como failover automático, talvez seja preciso usar o parâmetro **AvailabilityMode** para alterar a réplica para o modo de disponibilidade de confirmação síncrona.  
   
-     Por exemplo, o comando a seguir modifica a réplica `MyReplica` no grupo de disponibilidade `MyAg` para usar o modo de disponibilidade de confirmação síncrona e para oferecer suporte ao failover automático.  
+    Por exemplo, o comando a seguir modifica a réplica `MyReplica` no grupo de disponibilidade `MyAg` para usar o modo de disponibilidade de confirmação síncrona e para oferecer suporte ao failover automático.  
   
-    ```  
+    ```powershell
     Set-SqlAvailabilityReplica -AvailabilityMode "SynchronousCommit" -FailoverMode "Automatic" `   
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\Replicas\MyReplica  
     ```  

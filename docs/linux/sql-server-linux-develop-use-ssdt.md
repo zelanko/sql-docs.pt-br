@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: 50f6e9a2b3292cb94f335092ef590ba6fb9ea422
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93e65b7ab401479cc126e8428295cb0f0715eae4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216796"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896262"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Use o Visual Studio para criar bancos de dados para SQL Server em Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 O SSDT (SQL Server Data Tools) transforma o Visual Studio em um avançado ambiente de desenvolvimento e DLM (gerenciamento de ciclo de vida de banco de dados) para SQL Server em Linux. Você pode desenvolver, criar, testar e publicar seu banco de dados de um projeto de origem controlada. Como você desenvolve seu código de aplicativo.
 

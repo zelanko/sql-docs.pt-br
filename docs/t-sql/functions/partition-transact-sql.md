@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c8795fddb719debb147a0733cc5cfb831662058e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21a6a1fb44908e338f3b640747862ecf93c85885
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832953"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892161"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o número da partição na qual um conjunto de valores de coluna de particionamento são mapeados para qualquer função de partição especificada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
