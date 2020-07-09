@@ -20,17 +20,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_ID
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: c7aff15d482f4052774eb54299c9f4addcbb2fd2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f88f19d26ab7653f3d677862fce8de23e05e9c5b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827018"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858420"
 ---
 # <a name="file_id-transact-sql"></a>FILE_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Para o nome lógico específico para um arquivo de componente do banco de dados atual, essa função retorna o número de identificação (ID) do arquivo.  
   

@@ -20,34 +20,36 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b365aac0e21261edb3620e1cd58a656747b274a1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 291c076d78b227487c6c4267343de5cffc7a3d63
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813883"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Altera o nome, a senha ou o esquema padrão de uma função de aplicativo.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe
   
 ```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
+
  *application_role_name*  
  É o nome da função de aplicativo a ser modificada.  
   
@@ -60,8 +62,9 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  Especifica o primeiro esquema que será pesquisado pelo servidor quando ele resolver os nomes de objetos. *schema_name* pode ser um esquema que não existe no banco de dados.  
   
-## <a name="remarks"></a>Comentários  
- Se o novo nome da função de aplicativo já existir no banco de dados, a instrução falhará. Quando o nome, a senha ou o esquema padrão de uma função de aplicativo é alterado, a ID associada à função não é alterada.  
+## <a name="remarks"></a>Comentários
+
+Se o novo nome da função de aplicativo já existir no banco de dados, a instrução falhará. Quando o nome, a senha ou o esquema padrão de uma função de aplicativo é alterado, a ID associada à função não é alterada.  
   
 > [!IMPORTANT]  
 >  A política de expiração de senha não é aplicada às senhas de função de aplicativo. Por esse motivo, tome muito cuidado ao selecionar senhas fortes. Os aplicativos que invocam funções de aplicativo devem armazenar suas senhas.  
