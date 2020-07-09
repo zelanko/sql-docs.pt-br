@@ -18,17 +18,17 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column length [SQL Server]
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 3c110487bd0f402e792f316a33462e0713d0f500
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 564f34822a6c674b20cb0fd54879ee44de16dd6b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732666"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Essa função retorna o comprimento definido de uma coluna em bytes.
   

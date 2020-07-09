@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 45a9d084-b5ad-435b-ac19-5f4352515817
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7497dc60af7dc2be1653997ef8bfdd9b8ea62f38
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68361d48ce30a8e927182db97b9c2fd135aa9d4d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67944731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727463"
 ---
 # <a name="mssqlserver_8630"></a>MSSQLSERVER_8630
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|8630|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|EXECUTION_ERR|  
-|Texto da mensagem|Erro interno do processador de consultas: o processador de consultas encontrou um erro inesperado durante a execução.|  
+|Texto da mensagem|Erro do Processador de Consulta Interna: O processador de consultas encontrou um erro inesperado durante a execução.|  
   
 ## <a name="explanation"></a>Explicação  
 Erro interno de processamento de consultas.  

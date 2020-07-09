@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3333ab5b-2518-4753-a0a8-57df5e5af74f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 71e52cf9d65eb21df0553f5601bd4aefb3727175
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd650742e2781388d0d0941b80c6c9a9d60a801c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727311"
 ---
 # <a name="symmetric-keys-on-user-databases"></a>Chaves simétricas em bancos de dados de usuários
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regra verifica se as chaves com um comprimento menor que 128 bytes não usam o algoritmo de criptografia RC2 ou RC4.  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5c98ef9c726d2db5b5ec06d71a00de08288098a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7182961996510fcded86a3e1d218d482eb834e63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731061"
 ---
 # <a name="modify-method-xml-data-type"></a>Método modifique() (Tipo de dados xml)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifica o conteúdo de um documento XML. Use esse método para modificar o conteúdo de uma coluna ou variável do tipo **xml**. Esse método utiliza uma instrução XML DML para inserir, atualizar ou excluir nós de dados XML. O método **modify()** do tipo de dados **xml** pode ser usado apenas na cláusula SET de uma instrução UPDATE.  
   

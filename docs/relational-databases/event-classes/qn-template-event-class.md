@@ -12,15 +12,15 @@ ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdc25063da64321b0be4cbcbd078e8cf5792c932
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9c1d26fb993544fd58ecb6dd9e33f6d6fd26cd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727403"
 ---
 # <a name="qntemplate-event-class"></a>Classe de evento QN:Template
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   O evento QN:Template fornece informações sobre o uso interno de modelos de consulta. Os modelos de consulta são o mecanismo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa para compartilhar definições de uma consulta para notificação. Esses modelos são criados junto com tabelas de parâmetros. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria um evento desse tipo quando um modelo de consulta é criado, usado ou destruído.  
   
 ## <a name="qntemplate-event-class-data-columns"></a>Coluna de dados de classe de evento QN:Template  

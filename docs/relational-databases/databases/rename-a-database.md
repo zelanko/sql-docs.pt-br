@@ -14,16 +14,16 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2cfe01b4df32e0966084866a67cea4bfd57bc11
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ff09925b3fd51debbdeda647cd1ae7255f5fa0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728386"
 ---
 # <a name="rename-a-database"></a>Renomear um banco de dados
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Este tópico descreve como renomear um banco de dados definido pelo usuário em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou no Banco de Dados SQL do Azure usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. O nome do banco de dados pode incluir qualquer caractere que segue as regras para identificadores.  
   
 ## <a name="in-this-topic"></a>Neste tópico

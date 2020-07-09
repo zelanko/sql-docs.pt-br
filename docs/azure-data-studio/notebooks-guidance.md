@@ -5,20 +5,20 @@ author: yualan
 ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.custom: seo-lt-2019
 ms.date: 03/30/2020
-ms.openlocfilehash: 480b5df927adddd38b8f9f2ea13fa25c3f653606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0376dd04bdd340fe7aa8281debbd49d0cbcb869f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729504"
 ---
 # <a name="notebooks-with-sql-server-in-azure-data-studio"></a>Notebooks com o SQL Server no Azure Data Studio
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 O Jupyter Notebook é um aplicativo Web de código-fonte aberto que permite que criar e compartilhar documentos que contêm código ao vivo, equações, visualizações e texto narrativo. O uso inclui limpeza de dados e transformação, simulação numérica, modelagem estatística, visualização de dados e aprendizado de máquina.
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8aae17057d9b4b114ed7ad03fd7e29ad61f127b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f1a31c807c14fa047eff5bd244563cbfcc7e955
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731174"
 ---
 # <a name="hasz-geography-data-type"></a>HasZ (tipo de dados geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna 1 (true) se pelo menos um objeto espacial contiver pelo menos um valor Z; caso contrário, retorna 0 (false).  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1083504e4b3075a3e3ec8429c1ab0b5a664f2998
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68022205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714936"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna as configurações de opções SET de uma sessão.  
   
@@ -44,7 +44,7 @@ SESSIONPROPERTY (option)
  *opção*  
  É a configuração de opção atual durante esta sessão. *option* pode ter qualquer um dos valores a seguir.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |ANSI_NULLS|Especifica se o comportamento da ISO de igual a (=) e não igual a (<>) em relação a valores nulos se aplica.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_PADDING|Controla como a coluna armazena valores menores que o tamanho definido da coluna e o modo como a coluna armazena valores com espaços em branco à direita em caracteres e dados binários.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
@@ -53,7 +53,7 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_NULL|Controla se os resultados de concatenação serão tratados como valores de cadeia de caracteres nulos ou vazios.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|Especifica se são geradas mensagens de erro e avisos quando o arredondamento em uma expressão causar uma perda de precisão.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|Especifica se as regras ISO referentes a como usar aspas para delimitar identificadores e cadeias de caracteres literais devem ser seguidas.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<Qualquer outra cadeia de caracteres>|NULL = A entrada não é válida.|  
+|\<Any other string>|NULL = A entrada não é válida.|  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **sql_variant**  
