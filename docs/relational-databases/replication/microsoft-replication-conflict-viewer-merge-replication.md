@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7677421f25f2dcc04a80d7e39182936e40136420
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722043"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizador de Conflitos de Replicação da Microsoft (replicação de mesclagem)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O Visualizador de Conflitos de Replicação permite exibir qualquer conflito ocorrido durante a sincronização de replicação. Os conflitos ocorrem quando os mesmos dados são modificados em dois servidores separados, por exemplo, no Publicador e no Assinante, ou em dois Assinantes diferentes. A replicação resolve conflitos automaticamente usando o resolvedor de conflitos que você selecionou quando o artigo foi criado. No entanto, o Visualizador de Conflitos de Replicação permite escolher uma resolução diferente para o conflito quando necessário. Podem ocorrer os seguintes conflitos:  
   
 -   Conflitos de atualização. Conflitos de atualização ocorrem quando os mesmos dados são alterados em dois locais. Uma alteração vence e a outra perde. Você tem a opção de manter os dados existentes (os dados vencedores), substituir os dados existentes pelos dados de conflito (os dados perdedores), ou mesclar os dados perdedores e vencedores e atualizar os dados existentes.  

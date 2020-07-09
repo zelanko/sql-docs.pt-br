@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2374100459ea4e6ee05a8bba8e77919ec9185898
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: cfcb0ba165b7657a640bb509dc71dfaa441fd015
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720545"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronização da Web para replicação de mesclagem.
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A sincronização da Web para replicação de mesclagem lhe permite replicar dados usando o protocolo HTTPS, e isso é útil nos seguintes cenários:  
   
 -   Sincronizando dados de usuários móveis pela Internet.  

@@ -3,7 +3,6 @@ title: Usar o backup gerenciado no Azure"
 description: Saiba como habilitar o Backup Gerenciado do SQL Server para o Microsoft Azure no nível do banco de dados e da instância e como habilitar notificações e monitorar a atividade de backup.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
-ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -12,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3e4729b5576b7c3558c99369cc80a68a236f2cf9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49d427b7e07d46e604bfbc46c06022414c486c43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718109"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Habilitar o backup gerenciado do SQL Server no Azure
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com as configurações padrão nos níveis de instância e de banco de dados. Também descreve como habilitar as notificações por email e como monitorar a atividade de backup.  
   
  Este tutorial usa o Azure PowerShell. Antes de iniciar o tutorial, [baixe e instale o Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  

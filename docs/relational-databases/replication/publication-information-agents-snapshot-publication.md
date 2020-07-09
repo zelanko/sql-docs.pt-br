@@ -14,15 +14,15 @@ ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6a99255f0e9e87236773a0ca7a9e9c4b44cfcf1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd8ffd7e05c259130f83ca700a393b5493dd573d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720983"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Informações da Publicação, Agentes (publicação de instantâneo)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   A guia **Agentes** exibe informações resumidas sobre o Snapshot Agent para a publicação selecionada.  
   
 ## <a name="options"></a>Opções  

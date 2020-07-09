@@ -18,15 +18,15 @@ ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03dbb54a41ef319b7a44185cee00d5de7d46b126
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 80c0651be14f30f14d95b949d5d3f941df5c7cda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722330"
 ---
 # <a name="sort_in_tempdb-option-for-indexes"></a>Opção SORT_IN_TEMPDB para índices
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Quando você cria ou recria um índice, definindo a opção SORT_IN_TEMPDB como ON, você pode direcionar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para usar **tempdb** para armazenar os resultados intermediários de classificação utilizados para criar o índice. Embora essa opção aumente a quantidade de espaço temporário em disco usada para criar um índice, a opção pode reduzir o tempo necessário à criação ou recriação de um índice quando **tempdb** estiver em um conjunto de discos diferente do banco de dados do usuário. Para obter mais informações sobre **tempdb**, veja [Configurar a opção index create memory de configuração de servidor](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
   

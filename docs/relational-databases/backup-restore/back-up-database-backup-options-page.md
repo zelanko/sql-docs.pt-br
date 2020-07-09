@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d9b831b3350c6a895c86868180a1134f871c8d5
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: a4932a229d2d883a8d5b2be84795a96aafd5bba3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719984"
 ---
 # <a name="back-up-database-backup-options-page"></a>Backup de Banco de Dados (página Opções de Backup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use a página  **Opções de Backup** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar opções de backup de banco de dados.  
   
  **Para criar um backup usando o SQL Server Management Studio**  

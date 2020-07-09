@@ -14,15 +14,15 @@ ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6263035a0094f07264774d7acc29da144c4f419
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e845b69f6093507898e674ab8f3d87bdea5a3b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093651"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719878"
 ---
 # <a name="cursors-event-category"></a>Categoria de evento Cursors
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A categoria de evento **Cursors** contém classes de evento usadas para monitorar o comportamento de cursores.  
   
 ## <a name="in-this-section"></a>Nesta seção  

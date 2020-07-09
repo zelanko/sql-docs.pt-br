@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8012115ff5f5a7fbd85de36b6263ea4380b44ccc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722240"
 ---
 # <a name="plan-guides"></a>Guias de plano
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Guias de plano permitem otimizar o desempenho das consultas quando você não pode ou não quer alterar diretamente o texto da consulta real no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. As guias de plano influenciam a otimização das consultas, anexando dicas de consulta ou um plano de consulta fixo. Guias de plano podem ser úteis quando um subconjunto pequeno de consultas em um aplicativo de banco de dados fornecido por um terceiro não estiver executando como esperado. No guia de plano, especifique a instrução Transact-SQL que deve ser otimizada, e uma cláusula OPTION que contenha as dicas de consulta a serem usadas ou um plano de consulta específico a ser usado para otimizar a consulta. Quando a consulta é feita, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corresponde a instrução Transact-SQL com a guia de plano e anexa a cláusula OPTION à consulta em tempo de execução ou usa o plano de consulta especificado.  
   
  O número total de guias de plano que é possível criar só está limitado através de recursos do sistema disponíveis. De outro modo, guias de plano devem ser limitados para consultas de missão-crítica que são direcionados para aprimorar ou estabilizar o desempenho. Guias de plano não podem ser usados para influenciar a maioria da carga de consulta de um aplicativo implantado.  

@@ -14,15 +14,15 @@ ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: db9b32625cf31f5a632eef1234e7f01110c46727
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e23c798722928a8374dae43002ba44ca0347c76a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720927"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Informações da Publicação, Avisos (publicação de instantâneo, SQL Server 2005 e versões posteriores)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   A guia **Avisos** está disponível para Distribuidores que estão executando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A guia **Avisos** permite executar as seguintes tarefas para a publicação selecionada:  
   
 -   Habilitar avisos.  

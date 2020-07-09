@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719559"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestrutura de Criação de Perfil de Consulta
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] fornece a capacidade de acessar informações de runtime nos planos de execução de consulta. Uma das ações mais importantes quando ocorre um problema de desempenho é obter a compreensão precisa sobre a carga de trabalho que está em execução e como o uso de recursos está sendo controlado. Para isso, o acesso ao [plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md) é importante.
 

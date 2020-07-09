@@ -11,16 +11,16 @@ helpviewer_keywords:
 - workload groups [SQL Server], create
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60d01508250c68bfb6143f5f53596fe9fefc4973
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73633009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720505"
 ---
 # <a name="create-a-workload-group"></a>Criar um grupo de carga de trabalho
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Você pode criar um grupo de cargas de trabalho usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   

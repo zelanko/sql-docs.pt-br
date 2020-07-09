@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d7097c59f77b95a561420183e2e899c0672dc5e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7643560c893824247271f1eb56f2def90754c83
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720896"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Publicação (replicação ponto a ponto)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A página **Publicação** exibe publicações transacionais habilitadas para replicação ponto a ponto. As publicações são habilitadas na página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação** .  
   
 ## <a name="options"></a>Opções  
