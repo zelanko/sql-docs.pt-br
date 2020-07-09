@@ -22,15 +22,15 @@ ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05d0a69e2dfa2551522fe7d0d8f067376526e19c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4acc2dfb88767dd246dc8e8c5af413235a8bb803
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632676"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85991205"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Combina duas expressões boolianas e retorna **TRUE** quando ambas as expressões são **TRUE**. Quando mais de um operador lógico é usado em uma instrução, os operadores **AND** são avaliados primeiro. É possível alterar a ordem de avaliação usando parênteses.  
   
@@ -83,7 +83,7 @@ IF 1 = 1 AND 2 = 2
 BEGIN  
    PRINT 'First Example is TRUE'  
 END  
-ELSE PRINT 'First Example is FALSE';  
+ELSE PRINT 'First Example is FALSE' ;  
 GO  
   
 IF 1 = 1 AND 2 = 17  

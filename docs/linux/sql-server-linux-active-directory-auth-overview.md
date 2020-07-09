@@ -11,16 +11,16 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27a215b868101b17b7db6ec3f25dfc5456777ab1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831823"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900135"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticação do Active Directory para o SQL Server em Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Este artigo fornece uma visão geral da autenticação do AD (Active Directory) para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Linux. A autenticação do AD também é conhecida como Autenticação integrada no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

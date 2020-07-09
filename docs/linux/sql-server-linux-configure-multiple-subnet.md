@@ -9,16 +9,16 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: af017cf5d36075fdba6de31aa841e980cc20e175
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76911018"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901553"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar instâncias de cluster de failover e grupos de disponibilidade Always On com várias sub-redes
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Quando um grupo de disponibilidade Always On ou FCI (instância de cluster de failover) abrange mais de um site, cada site geralmente tem sua própria rede. Isso geralmente significa que cada site tem seu próprio endereçamento IP. Por exemplo, os endereços do site A começam com 192.168.1.*x* e os endereços do site B começam com 192.168.2.*x*, em que *x* é a parte do endereço IP que é exclusiva para o servidor. Sem algum tipo de roteamento em vigor na camada de rede, esses servidores não poderão se comunicar entre si. Há duas maneiras de lidar com esse cenário: configurar uma rede que preencha as duas sub-redes diferentes, conhecidas como uma VLAN, ou configurar o roteamento entre as sub-redes.
 

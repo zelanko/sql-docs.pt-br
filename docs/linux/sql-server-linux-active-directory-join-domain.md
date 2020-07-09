@@ -9,16 +9,16 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216185"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896971"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Ingressar o SQL Server em um host Linux em um domínio do Active Directory
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Este artigo oferece diretrizes gerais sobre como ingressar um computador host Linux do SQL Server em um domínio do AD (Active Directory). Há dois métodos: usar um pacote SSSD interno ou usar provedores de Active Directory de terceiros. Os exemplos de produtos de ingresso no domínio de terceiros são are [PBIS (Serviços de Identidade PowerBroker)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) e [Centrify](https://www.centrify.com/). Este guia inclui etapas para verificar a configuração do Active Directory. No entanto, ele não pretende fornecer instruções sobre como ingressar um computador em um domínio ao usar utilitários de terceiros.
 

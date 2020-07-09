@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a62145645a965d46c8da076eca14cd8a3dd85857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f16a93231cf8b3bc6f3ad224703e3902ff3cb9b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934963"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900925"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>Identificar esperas associadas a grupos de disponibilidade
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Ao solucionar problemas de latência de Grupos de Disponibilidade Always On, as estatísticas de espera podem ser monitoradas para acúmulo, usando os tipos de espera de disponibilidade específicos de grupos na DMV (exibição de gerenciamento dinâmico) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
  Para obter informações gerais sobre como usar estatísticas de espera, veja [Espera e filas do SQL Server 2005](https://technet.microsoft.com/library/cc966413.aspx). Esse documento foi escrito para o SQL Server 2005, mas as informações podem ser aplicadas a versões mais recentes do SQL Server.  

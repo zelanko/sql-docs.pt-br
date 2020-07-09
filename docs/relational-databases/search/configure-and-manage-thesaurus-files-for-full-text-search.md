@@ -1,6 +1,6 @@
 ---
 title: Configurar e gerenciar arquivos do dicionário de sinônimos para pesquisa de texto completo
-ms.date: 12/04/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -14,15 +14,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056199"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897994"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 As consultas da Pesquisa de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem pesquisar sinônimos de termos especificados pelo usuário por meio do uso de um *dicionário de sinônimos* da Pesquisa de Texto Completo. Cada dicionário de sinônimos define um conjunto de sinônimos para um idioma específico. Ao desenvolver um dicionário de sinônimos personalizado para seus dados de texto completo, você pode efetivamente ampliar o escopo de consultas de texto completo baseadas nesses dados.
 
 A correspondência com o dicionário de sinônimos ocorre para todas as consultas [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) e para quaisquer consultas [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) que especifiquem a cláusula `FORMSOF THESAURUS`.
@@ -52,30 +52,30 @@ Um dicionário de sinônimos de Pesquisa de Texto Completo é um arquivo de text
 ##  <a name="location-of-thesaurus-files"></a><a name="location"></a> Localização dos arquivos de dicionário de sinônimos  
  A localização padrão dos arquivos de dicionário de sinônimos é esta:  
   
-     <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
+`<SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\`
   
- Esse local padrão contém os seguintes arquivos:  
+Esse local padrão contém os seguintes arquivos:  
   
 -   Arquivos de dicionário de sinônimos **específicos a um idioma**  
 
     Os arquivos vazios do dicionário de sinônimos são instalados no local indicado acima. Um arquivo à parte é fornecido para cada idioma suportado. Um administrador de sistema pode personalizar esses arquivos.  
   
-     Os nomes de arquivo padrão dos arquivos de dicionário de sinônimos usam o seguinte formato:  
+    Os nomes de arquivo padrão dos arquivos de dicionário de sinônimos usam o seguinte formato:  
   
-         'ts' + <three-letter language-abbreviation> + '.xml'  
+    `'ts' + <three-letter language-abbreviation> + '.xml'`
   
-     O nome do arquivo de dicionário de sinônimos para um determinado idioma é especificado no Registro no seguinte valor:
+    O nome do arquivo de dicionário de sinônimos para um determinado idioma é especificado no Registro no seguinte valor:
      
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
 -   O arquivo de dicionário de sinônimos **global**  
   
-     Um arquivo de dicionário de sinônimos global vazio, tsGlobal.xml.  
+    Um arquivo de dicionário de sinônimos global vazio, tsGlobal.xml.  
 
 ### <a name="change-the-location-of-a-thesaurus-file"></a>Alterar o local de um arquivo de dicionário de sinônimos 
 Você pode alterar a localização e os nomes de um arquivo de dicionário de sinônimos mudando a respectiva chave do Registro. Para cada idioma, a localização do arquivo de dicionário de sinônimos é especificada no seguinte valor do Registro:  
   
-    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
+`HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile`
   
  O arquivo de dicionário de sinônimos global corresponde ao idioma Neutro com LCID 0. Esse valor só pode ser alterado por administradores.  
 

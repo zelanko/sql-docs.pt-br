@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8b43794783253ced81466ac7974e40c0ec05840
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244058"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900932"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gerenciamento baseado em políticas para problemas operacionais com grupos de disponibilidade Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   O modelo de integridade dos grupos de disponibilidade Always On avalia um conjunto de políticas predefinidas de PBM (gerenciamento baseado em políticas). Você pode usar essas políticas para visualizar a integridade de um grupo de disponibilidade e de suas réplicas de disponibilidade e seus bancos de dados no SQL Server.  
   

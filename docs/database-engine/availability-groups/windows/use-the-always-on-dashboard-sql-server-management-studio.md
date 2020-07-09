@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822670"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902360"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar o painel do grupo de disponibilidade Always On (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Os administradores de banco de dados usam o painel do grupo de disponibilidade Always On para obter uma visão rápida da integridade de um grupo de disponibilidade e de suas réplicas de disponibilidade e seus bancos de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alguns dos usos típicos do painel do grupo de disponibilidade são:  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 402466ab44a5f3795c0031ecdaa33cb863279839
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cb24499b411d288e1e79b49d202fba63b251a805
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594554"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897543"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Início Rápido: Executar SQL Server na nuvem
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Neste início rápido, você instalará o SQL Server no RHEL (Red Hat Enterprise Linux), no SLES (SUSE Linux Enterprise Server) ou no Ubuntu na nuvem de sua escolha. Acesse [Provisionar uma máquina virtual do SQL Server do Linux no portal do Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json) para executar o SQL Server em Linux no Azure.
 

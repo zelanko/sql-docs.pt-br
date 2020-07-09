@@ -11,16 +11,16 @@ ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5151fdea0335c8f2ec67133091a451d1a20ffe20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68b5a453aced3f456156300e9768812ed3072a15
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165734"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85982421"
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>Funções e exibições de metadados de tabela temporal
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] incluem funções e exibições de metabase para permitir que os administradores recuperem informações sobre tabelas temporais.
 

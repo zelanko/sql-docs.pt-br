@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 287e6cd2fd4f1004aaa79a69ec7388eb3b695a68
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251261"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898064"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opção de failover de detecção de integridade no nível do banco de dados do grupo de disponibilidade
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 A partir do SQL Server 2016, a opção (DB_FAILOVER) de detecção de integridade no nível do banco de dados está disponível ao configurar um grupo de disponibilidade AlwaysOn. A detecção de integridade no nível do banco de dados informa quando um banco de dados não está mais no status online e quando algo deu errado e disparará o failover automático do grupo de disponibilidade.
 
 A detecção de integridade no nível do banco de dados está habilitada no grupo de disponibilidade como um todo e, portanto, a detecção de integridade no nível do banco de dados monitora cada banco de dados no grupo de disponibilidade. Ela não pode ser habilitada seletivamente em bancos de dados específicos no grupo de disponibilidade.

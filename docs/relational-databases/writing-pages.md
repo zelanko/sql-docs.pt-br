@@ -13,15 +13,15 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5ffdb81cd5c1242a6a97dcb978683488c5a755b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095480"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998308"
 ---
 # <a name="writing-pages"></a>Gravando páginas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A E/S de uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)] inclui gravações lógicas e físicas. Uma gravação lógica acontece quando os dados são modificados em uma página no cache do buffer. Uma gravação física acontece quando a página é gravada do [cache do buffer](../relational-databases/memory-management-architecture-guide.md) no disco.
 

@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed2db8f5d02174b41d6084d3d7593c7c8775ad16
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822117"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897491"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>Usar buffers de anéis para obter informações de integridade sobre Grupos de Disponibilidade AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Algumas informações de diagnóstico de Grupos de Disponibilidade Always On podem ser obtidas nos buffers de anéis do SQL Server ou na DMV (exibição de gerenciamento dinâmico) sys.dm_os_ring_buffers. Os buffers de anéis são criados durante a inicialização do SQL Server e registram alertas no sistema do SQL Server para diagnósticos internos. Não há suporte para eles, mas você ainda pode extrair informações valiosas deles ao solucionar problemas. Esses buffers de anéis fornecem outra fonte de diagnóstico quando o SQL Server para de responder ou falha.  
   
  A consulta T-SQL (Transact-SQL) a seguir recupera todos os registros de eventos dos buffers de anéis dos grupos de disponibilidade.  

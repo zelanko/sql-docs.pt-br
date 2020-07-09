@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 19718f762a7352865c5b9741ee42ec8cfe965eb8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd425438dc4a06faea489ac9cba4b607492fcde8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434519"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900401"
 ---
 # <a name="what-is-an-availability-group-listener"></a>O que é um ouvinte de grupo de disponibilidade?  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Um ouvinte do grupo de disponibilidade é um VNN (nome de rede virtual) ao qual os clientes podem se conectar para acessar um banco de dados em uma réplica primária ou secundária de um grupo de disponibilidade Always On. Um ouvinte permite que um cliente conecte-se a uma réplica sem precisar saber o nome da instância física do SQL Server. Como o ouvinte roteia o tráfego, a cadeia de conexão do cliente não precisa ser modificada após a ocorrência de um failover. 
 
