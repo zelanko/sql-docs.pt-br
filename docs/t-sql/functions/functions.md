@@ -17,15 +17,15 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01622af9459e5115cf868475bf181efe03ee815c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b96b1d6f1229dba624076abc4cb0c82e49249a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826870"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752356"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quais são as funções do banco de dados SQL?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ Funcionam em um valor único e retornam um valor único. As funções escalares 
 
 ### <a name="categories-of-scalar-functions"></a>Categorias de funções escalares
   
-|Categoria da função|DESCRIÇÃO|  
+|Categoria da função|Descrição|  
 |-----------------------|-----------------|  
 |[Funções de configuração](configuration-functions-transact-sql.md)|Retornam informações sobre a configuração atual.|  
 |[Funções de conversão](conversion-functions-transact-sql.md)|Suporte para conversão de tipos de dados.|  

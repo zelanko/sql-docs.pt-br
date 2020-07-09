@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a26b04b1acc7ac829bb8fe79db2d3eaeede502dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760471"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lição 1: Criar e aplicar uma política desativada por padrão
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Usando as políticas do Gerenciamento Baseado em Políticas, você pode administrar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um ou mais objetos de instâncias, instâncias de servidor, bancos de dados ou objetos de bancos de dados. Como administrador de banco de dados, você deseja garantir que determinados servidores não tenham o Database Mail habilitado. Nesta lição, você criará uma condição e uma política que definirão essa opção de servidor. Você testará o servidor para ver se ele obedece a política. Então, você usará a política para reconfigurar o servidor para fins de conformidade.  
 
 ## <a name="prerequisites"></a>Pré-requisitos

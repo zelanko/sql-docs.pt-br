@@ -12,15 +12,15 @@ ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7742b42395ced53ecbe479a463a41c640cf0d395
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ebb5aef29f6f3cf56ecdf36fcc4b59b33f113f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756022"
 ---
 # <a name="mount-tape-event-class"></a>classe de evento Mount Tape
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento Mount Tape ocorre quando uma solicitação de montagem de fita é recebida. Use essa classe de evento para monitorar solicitações de montagem de fita e o seu êxito ou falha.  
   
 ## <a name="mount-tape-event-class-data-columns"></a>Colunas de dados de classe de evento Mount Tape  

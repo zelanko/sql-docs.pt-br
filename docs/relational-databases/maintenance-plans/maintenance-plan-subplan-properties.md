@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 28fb816554093c78c1ce71d7a3712ca8804fd4af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 440afb0c0b2c3f43de0bca54339b0f87872e9a90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754502"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plano de manutenção (Propriedades do Subplano)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use a caixa de diálogo **Plano de Manutenção (Propriedades do Subplano)** para especificar um nome, uma descrição e um agendamento para um subplano do plano de manutenção. Clique em **Propriedades do Subplano** na guia **Design** do plano de manutenção ou clique duas vezes em um subplano na grade de designer para exibir essa caixa de diálogo.  
   
 ## <a name="options"></a>Opções  

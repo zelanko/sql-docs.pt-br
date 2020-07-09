@@ -14,15 +14,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b2c743d23ae9c9ee730c3c1daa8d41709e44fd6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0372e215646640f1f587964cddd8a302894e633d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75728557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754493"
 ---
 # <a name="performance-dashboard"></a>Painel de Desempenho
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] versão 17.2 e posteriores incluem o Painel de Desempenho. Este painel foi projetado para fornecer visualmente insights rápidos sobre o estado de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] em diante) e da Instância Gerenciada do [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. 
 

@@ -1,21 +1,20 @@
 ---
 title: Extensão de Comparação de Esquema
-titleSuffix: Azure Data Studio
 description: Instalar e usar a extensão Comparação de Esquemas para o Azure Data Studio
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 09602241d0fd30153ca462225b617fd1612a0045
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73532538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758403"
 ---
 # <a name="schema-compare-extension"></a>Extensão de Comparação de Esquema
 A extensão Comparação de Esquemas oferece uma experiência fácil de usar para comparar duas definições de banco de dados e aplicar as diferenças da origem no destino.

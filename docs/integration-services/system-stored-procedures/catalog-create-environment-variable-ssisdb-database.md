@@ -10,32 +10,32 @@ ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f7474200fa8156ab0663540611803276375ad6b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fab10f0b4629c9936d4ff8df439b970c362ef41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749685"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (Banco de Dados SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cria uma variável de ambiente no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql  
-catalog.create_environment_variable [@folder_name =] folder_name  
-    , [@environment_name =] environment_name  
-    , [@variable_name =] variable_name  
-    , [@data_type =] data_type  
-    , [@sensitive =] sensitive  
-    , [@value =] value  
-    , [@description =] description  
+catalog.create_environment_variable [ @folder_name = ] folder_name  
+    , [ @environment_name = ] environment_name  
+    , [ @variable_name = ] variable_name  
+    , [ @data_type = ] data_type  
+    , [ @sensitive = ] sensitive  
+    , [ @value = ] value  
+    , [ @description = ] description  
 ```  
   
 ## <a name="arguments"></a>Argumentos  

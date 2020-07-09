@@ -1,7 +1,7 @@
 ---
 title: Sessões de eventos estendidos do SQL Server
 description: Uma sessão de Eventos Estendidos do SQL Server é criada no processo do SQL Server que hospeda o mecanismo de Eventos Estendidos. Saiba mais sobre os estados de sessão e o conteúdo da sessão.
-ms.date: 03/14/2017
+ms.date: 05/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cce8dfb0d96059f577adb4e86e6fc5556d9fd90c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fec4a507a8a40cb38bf9b5faf58545aa89a55167
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756842"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessões de eventos estendidos do SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Uma sessão de eventos estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é criada no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está hospedando o mecanismo de eventos estendidos. Os seguintes aspectos de uma sessão de eventos estendidos fornecem um contexto para entender a infraestrutura de eventos estendidos e o processamento geral que ocorre:  
   
@@ -34,9 +34,9 @@ ms.locfileid: "79487664"
   
 ## <a name="session-states"></a>Estados da sessão  
  A ilustração a seguir mostra os vários estados de uma sessão de eventos estendidos.  
-  
- ![Estado de sessão de eventos estendidos](../../relational-databases/extended-events/media/xesessionstate.gif "Estado de sessão de eventos estendidos")  
-  
+
+![Estado de sessão de eventos estendidos](../../relational-databases/extended-events/media/xesessionstate.png "Estado de sessão de eventos estendidos")
+
  Mencionando a figura precedente, observe que o estado da sessão é alterado quando os comandos DDL diferentes são emitidos para uma sessão de evento. Essas alterações de estado são descritas na tabela a seguir.  
   
 |Rótulo de ilustração|instrução DDL|Descrição|  

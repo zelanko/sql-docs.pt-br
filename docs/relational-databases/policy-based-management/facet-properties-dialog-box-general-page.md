@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83eacf49b6653f7faba016c9f07a7adb88a09cb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: caba17d326c15420762a0224bc0d2d1eb3a0ea53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749384"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Caixa de diálogo Propriedades de Faceta, página Geral
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use esta caixa de diálogo para exibir as propriedades de uma faceta de Gerenciamento Baseado em Políticas. Cada faceta pode ser se aplicada a um ou mais tipos de destino. Por exemplo: servidor, banco de dados ou tabela. Use esta página para exibir os tipos de destino relacionados a essa faceta. As propriedades de uma faceta são definidas quando ela é criada e não podem ser alteradas com o uso desta página.  
   
 ## <a name="options"></a>Opções  

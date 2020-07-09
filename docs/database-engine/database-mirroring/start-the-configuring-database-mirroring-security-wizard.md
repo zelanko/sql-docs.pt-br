@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dff35ab1603e3fa1d620914d8ac4afbe669a2be5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd7bdb74f679f32132361aac5c2b751b9bda9494
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756465"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O Assistente para Configurar Segurança de Espelhamento de Banco de Dados pode ser usado para configurar inicialmente as configurações de segurança em todas ou algumas instâncias de servidor envolvidas no espelhamento. Esse assistente trabalha junto com a página **Espelhamento** da caixa de diálogo **Propriedades do Banco de Dados** .  
   
 ### <a name="to-launch-the-configure-database-mirroring-security-wizard"></a>Para iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados  

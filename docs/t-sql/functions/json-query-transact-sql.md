@@ -1,10 +1,8 @@
 ---
 title: JSON_QUERY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 2da9d0f00ad8e8b9336d01bf1d35e18cc16c7f7a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5acf669e6db68b5fceb3a83c7f036d5f8065bde3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635094"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752253"
 ---
 # <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
@@ -77,16 +76,16 @@ Se o formato de *path* não for válido, **JSON_QUERY** retornará um erro.
   
 ```json  
 {
-    "info": {
-        "type": 1,
-        "address": {
-            "town": "Bristol",
-            "county": "Avon",
-            "country": "England"
-        },
-        "tags": ["Sport", "Water polo"]
-    },
-    "type": "Basic"
+   "info": {
+      "type": 1,
+      "address": {
+         "town": "Bristol",
+         "county": "Avon",
+         "country": "England"
+      },
+      "tags": ["Sport", "Water polo"]
+   },
+   "type": "Basic"
 } 
 ```  
   
@@ -116,7 +115,7 @@ Se você estiver retornando resultados com FOR JSON e estiver incluindo dados qu
   
 ```sql  
 SELECT PersonID,FullName,
- JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
+  JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
 FROM Application.People
 ```  
   
@@ -134,5 +133,5 @@ FOR JSON PATH
   
 ## <a name="see-also"></a>Confira também
 
- [Expressões de demarcador JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Dados JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [Expressões de caminho JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [Dados JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

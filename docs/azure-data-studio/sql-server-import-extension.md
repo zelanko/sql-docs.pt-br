@@ -1,21 +1,20 @@
 ---
 title: Extensão de Importação do SQL Server
-titleSuffix: Azure Data Studio
 description: Instale e use a extensão de Importação do SQL Server (versão prévia) para o Azure Data Studio
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2795282c7a43c5ae582a059ae8b56d1f592e6e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758342"
 ---
 # <a name="sql-server-import-extension-preview"></a>Extensão de Importação do SQL Server (versão prévia)
 

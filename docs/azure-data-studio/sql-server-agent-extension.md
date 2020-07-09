@@ -1,21 +1,20 @@
 ---
 title: Extensão de SQL Server Agent
-titleSuffix: Azure Data Studio
 description: Instale e use a extensão de SQL Server Agent (versão prévia) para o Azure Data Studio
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 05356cc815fdba22d55ee339d60994f2c9423373
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3cdbfc4adc32156f838ee3aeca726c2ebd92bd0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959184"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758367"
 ---
 # <a name="sql-server-agent-extension-preview"></a>Extensão de SQL Server Agent (versão prévia)
 

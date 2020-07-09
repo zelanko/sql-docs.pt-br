@@ -12,15 +12,15 @@ ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 215dcf690d9c8434d6df459db96460f3841f74a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d8aa24365c721937e6dfa7e99e99ee4dced5ea5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913361"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756084"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Classe de evento Audit Server Principal Management
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento **Audit Server Principal Management** ocorre quando entidades do servidor são criadas, alteradas ou descartadas.  
   
 ## <a name="audit-server-principal-management-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Server Principal Management  

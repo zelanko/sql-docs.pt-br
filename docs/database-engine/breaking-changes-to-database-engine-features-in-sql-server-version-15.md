@@ -15,15 +15,15 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c083ae0fbee92f67e20e6fd14620f005b7c9ca53
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f716001712ec1e1b893fe12752a37fd176e64241
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751185"
 ---
 # <a name="breaking-changes-to-database-engine-in-sssqlv15-md"></a>Alterações da falha em recursos do mecanismo de banco de dados no [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
-[!INCLUDE[tsql-appliesto-sssver15-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-sssver15-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver2019.md)]
 
 O SQL Server 2019 não introduz alterações da falha.
 

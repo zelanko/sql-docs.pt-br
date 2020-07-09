@@ -12,15 +12,15 @@ ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 333e6ab1e529b130a81fd8b5622016cd4f9f9d10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bc33fb281f0056925397d763f4e7b888a7293f50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756001"
 ---
 # <a name="objectcreated-event-class"></a>classe de evento Object:Created
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento Object:Created indica que um objeto foi criado; por exemplo, pelas instruções CREATE INDEX, CREATE TABLE ou CREATE DATABASE.  
   
  Essa classe de evento pode ser usada para determinar se objetos estão sendo criados, por exemplo, por aplicativos ODBC que geralmente criam procedimentos armazenados temporários. Ao monitorar as colunas de dados LoginName e NTUserName, é possível determinar o nome do usuário que está criando, excluindo ou acessando objetos.  

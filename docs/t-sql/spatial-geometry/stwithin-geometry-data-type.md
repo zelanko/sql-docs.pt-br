@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1ca7e74743773fb42a85300a37cc6b8aaa9d8f39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48f33e2fbc22a1d2cf9228ca5b7cbdc79d787445
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762117"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (tipo de dados geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retorna 1 se uma instância de **geometry** está completamente dentro de outra instância de **geometry**; caso contrário, retorna 0. O comando `STWithin` diferencia maiúsculas de minúsculas.
   

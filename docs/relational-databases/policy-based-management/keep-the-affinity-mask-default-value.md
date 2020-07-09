@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 57f68bea18cfbe8d5718e8b45d5d4a5b443713f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a9e592f6cf962eadcfb14c9c3a72968187f756a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760483"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>Manter o valor padrão da máscara de afinidade
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regra verifica se a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a máscara de afinidade está definida como 0, que é o valor padrão. A opção de máscara de afinidade controla dinamicamente a afinidade de CPU.  
   
 ## <a name="for-more-information"></a>Para obter mais informações  

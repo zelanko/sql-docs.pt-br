@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5a0c123b367fa2a85a1a3732200452a474b032c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3bd050fc07c39dc33781a2c9c1ec09128540f216
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68088921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762277"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries  (tipo de dados geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Retorna o número de geometrias que compõem uma instância de **geometry**.
   
