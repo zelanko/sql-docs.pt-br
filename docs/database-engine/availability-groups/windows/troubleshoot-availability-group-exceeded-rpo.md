@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822185"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882356"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solução de problemas: o grupo de disponibilidade excedeu o RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Depois de executar um failover manual forçado em um grupo de disponibilidade para uma réplica secundária de confirmação assíncrona, você poderá perceber que a perda de dados foi maior que o RPO (objetivo de ponto de recuperação). Ou, ao calcular a potencial perda de dados de uma réplica secundária de confirmação assíncrona usando o método em [Monitorar desempenho de Grupos de Disponibilidade Always On](monitor-performance-for-always-on-availability-groups.md), você descobre que excedeu o RPO.  
   
  Uma réplica secundária de confirmação síncrona garante perda de dados igual a zero, mas a potencial perda de dados de uma réplica secundária de confirmação assíncrona depende da quantidade de log que ainda está aguardando para ser protegida na réplica secundária.  

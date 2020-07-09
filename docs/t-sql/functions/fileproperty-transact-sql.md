@@ -20,17 +20,17 @@ helpviewer_keywords:
 - FILEPROPERTY function
 - file names [SQL Server], FILEPROPERTY
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 1b0c31675c5fe97d8ac1feacde12e812a6e77321
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 518751aa443d2a2a93843fb79c5bcfdd2196db08
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826960"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882644"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retorna o valor de propriedade de nome de arquivo especificado quando são especificados um nome de arquivo no banco de dados atual e um nome de propriedade. Retorna NULL para arquivos que não estão no banco de dados atual.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6c68c2b2b2af6f32bcec900211b9185004caaa8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033238"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882468"
 ---
 # <a name="join-filters"></a>filtros de junção
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Um filtro de junção permite que uma tabela seja filtrada com base na forma pela qual uma tabela relacionada é filtrada na publicação. Geralmente uma tabela pai é filtrada usando um filtro de linha com parâmetros; depois um ou mais filtros de junção são definidos da mesma forma que se define junções entre tabelas. Os filtros de junção estendem os filtros com parâmetros para que os dados nas tabelas relacionadas sejam replicados somente se corresponderem à cláusula do filtro de junção.  
   
  Os filtros de junção geralmente seguem as relações chave primária/chave estrangeira definidas para as tabelas nas quais são aplicados, mas não estão estritamente limitados a essas relações. O filtro de junção pode ser baseado em qualquer lógica que compare dados relacionados em duas tabelas.  

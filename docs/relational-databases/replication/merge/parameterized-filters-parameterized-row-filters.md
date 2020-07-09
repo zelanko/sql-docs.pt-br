@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e7d5eae242525d57618050516f6368f016e3d89
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71711063"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882305"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros com parâmetros – Filtros de linha com parâmetros
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Os filtros de linha com parâmetros permitem que diferentes partições de dados sejam enviadas a diferentes Assinantes sem a necessidade de criar múltiplas publicações (os filtros com parâmetros foram referidos como filtros dinâmicos em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Uma partição é um subconjunto das linhas de uma tabela; dependendo das configurações escolhidas ao criar um filtro de linha com parâmetros, cada linha de uma tabela publicada pode pertencer a uma partição somente (o que produz partições que não se sobrepõem) ou a duas ou mais partições (o que produzem partições que se sobrepõem).  
   
  Partições que não se sobrepõem podem ser compartilhadas entre assinaturas ou podem ser restringidas de modo que só uma assinatura receba uma determinada partição. As configurações que controlam comportamento de partição são descritas em "Usando opções de filtragem apropriadas", mais adiante neste tópico. Usando essas configurações você pode personalizar a filtragem com parâmetros de acordo com o aplicativo e os requisitos de desempenho. Em geral, partições que se sobrepõem permitem maior flexibilidade e partições que não se sobrepõem replicadas a uma única assinatura proporcionam melhor desempenho.  

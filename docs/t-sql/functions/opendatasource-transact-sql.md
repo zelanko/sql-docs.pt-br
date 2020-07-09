@@ -23,15 +23,15 @@ ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ec0e71eaf4c5f92ddd196435a78c3824d98e9d76
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a7b4aa391f3b8f8822b65142417031ad21af9669
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826794"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882459"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Fornece informações de conexão ad hoc como parte de um nome de objeto de quatro partes sem usar um nome de servidor vinculado.  
 

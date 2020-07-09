@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 132e991a0418155ed6d0d1db2eca2945dab3e307
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321448"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882293"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros com parâmetros – Otimizar para partições pré-computadas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Partições pré-computadas são uma otimização de desempenho que pode ser usada com publicações de mesclagem filtradas. Partições pré-computadas também são um requisito para usar registros lógicos em publicações filtradas. Para obter mais informações sobre registros lógicos, consulte [Agrupar alterações em linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Quando um Assinante faz a sincronização com um Publicador, este deve avaliar os filtros do Assinante para determinar quais linhas pertencem àquele Assinante ou conjunto de dados. Esse processo de determinação de associação de partição de alterações no Publicador para cada Assinante recebendo um conjunto de dados filtrado é referido como *avaliação de partição*. Sem partições pré-computadas, a avaliação de partição deve ser executada para cada alteração feita em uma coluna filtrada no Publicador desde a última vez que o Agente de Mesclagem foi executado em um Assinante específico e esse processo tem de ser repetido para cada Assinante que sincroniza com o Publicador.  

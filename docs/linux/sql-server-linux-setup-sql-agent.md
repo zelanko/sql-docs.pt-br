@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: b281c60248d86daba36a2cf5628e1ae729d227fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 85869c797e8f91ca28d468c6a4a52dd52ea45a92
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258395"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882528"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Instalar o SQL Server Agent no Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Este artigo descreve como habilitar ou instalar o SQL Server Agent no Linux.
 

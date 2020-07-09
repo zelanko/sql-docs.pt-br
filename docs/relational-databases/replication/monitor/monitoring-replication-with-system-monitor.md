@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91db0303326c74b710e7755de5a9573539e61425
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdeda1e81df8914dee4bdb6303c2dec778bb2ab1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082980"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882246"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Monitorando a replicação com o monitor do sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   O Monitor do Sistema do Windows[!INCLUDE[msCoName](../../../includes/msconame-md.md)] permite o uso de gráficos e relatórios para medir a eficiência do seu computador, e a identificação e solução de possíveis problemas (como uso desbalanceado de recursos, hardware insuficiente ou design de programa inadequado), e o planejamento de requisitos adicionais de hardware. Para obter mais informações, veja [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
  O Monitor do Sistema usa objetos e contadores de desempenho que fornecem informações sobre o desempenho de vários processos. É possível medir o desempenho de replicação por meio de contadores associados com os agentes de replicação:  
