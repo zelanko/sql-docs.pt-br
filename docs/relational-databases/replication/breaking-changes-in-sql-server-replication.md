@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 156ca6b7c04b8362a15a07f7db7f7aa43b2389a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc4feef3b7860dff9fa231cdb5e674443c0ee801
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790773"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Alterações de quebra na replicação do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve alterações de quebra na replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar.  
   
 ## <a name="breaking-changes-made-in-sssql15"></a>Alterações recentes feitas no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  

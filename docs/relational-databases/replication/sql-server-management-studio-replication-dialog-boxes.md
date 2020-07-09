@@ -12,15 +12,15 @@ ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0770615fa308085ca19996cffe0b32e709fb022e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 537040f98aeb99b580b0109e0e472571b05907ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783108"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Caixas de diálogo de replicação do SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Esta seção inclui informações sobre o número de caixas de diálogo de replicação disponíveis em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Segurança do Snapshot Agent](../../relational-databases/replication/snapshot-agent-security.md)  

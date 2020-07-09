@@ -12,15 +12,15 @@ ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef239d0cf2aaf495daa4af273128dc43246ad52e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4959e4705005c74f44ca6cac74758598340600a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790926"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>classe de evento TM: Commit Tran Completed
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento TM: Commit Tran Completed indica que uma solicitação COMMIT TRANSACTION foi concluída. A solicitação foi enviada do cliente pela interface de gerenciamento de transações. A coluna EventSubClass indicará se uma transação nova será iniciada depois que a transação atual estiver confirmada.  
   
 ## <a name="tm-commit-tran-completed-event-class-data-columns"></a>Colunas de dados da classe de evento TM: Commit Tran Completed  

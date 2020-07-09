@@ -12,15 +12,15 @@ ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bae04195dff799ccf81fcf3986f8e29e05dafbd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ccc5659d1fd9bd07a847c8719851b5fbb5f6b425
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790950"
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>classe de evento TM: Begin Tran Starting
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento TM: Promote Tran Starting indica que uma solicitação BEGIN TRANSACTION está sendo iniciada. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
   
 ## <a name="tm-begin-tran-starting-event-class-data-columns"></a>Colunas de dados da classe de evento TM: Begin Tran Starting  

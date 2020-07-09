@@ -12,15 +12,15 @@ ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b74cbe8ec74d0ea097693b38b05c87006baf07d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c520f268443d568e22a9e459b5dd1a14040d322
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85791016"
 ---
 # <a name="rpc-output-parameter-event-class"></a>Classe de evento RPC Output Parameter
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento RPC Output Parameter rastreia os valores do parâmetro de saída RPCs (chamadas de procedimento remoto) após a execução.  
   
  Use essa classe para examinar os valores de saída retornados pelos procedimentos armazenados. Por exemplo, se um aplicativo não estiver produzindo os valores de saída esperados após executar uma chamada de procedimento remoto, é possível usar essa classe de evento para ajudar a isolar o problema entre o código de cliente e o código do servidor.  

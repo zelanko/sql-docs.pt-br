@@ -12,15 +12,15 @@ ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bd97699f68e26ba32510749993a0cc1e224c507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b39975d4eca135a80ffa05f4f2c0abfd6767d20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790959"
 ---
 # <a name="sqltransaction-event-class"></a>classe de evento SQLTransaction
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Use a classe de evento SQLTransaction para monitorar quando transações começam e são concluídas, especialmente ao testar aplicativos, gatilhos ou procedimentos armazenados.  
   
 ## <a name="sqltransaction-event-class-data-columns"></a>Colunas de dados de classe de evento SQLTransaction  

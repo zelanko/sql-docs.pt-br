@@ -2,19 +2,19 @@
 title: Alterar a conta para registro em log do SSIS Scale Out | Microsoft Docs
 description: Este artigo descreve como alterar a conta de usuário para o log do SSIS Scale Out
 ms.custom: performance
-ms.date: 12/13/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 81c1770da78d1d469d1b6ad3a01100abaa9ec829
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5e6ab35e67f675c20349a7e968ff9d8d7131c68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785612"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Alterar a conta para registro em log do Scale Out
 
@@ -38,12 +38,12 @@ Para obter instruções sobre como unir uma função de banco de dados, consulte
 ## <a name="3-update-the-logging-information-in-ssisdb"></a>3. Atualizar as informações de log no SSISDB
 Chame o procedimento armazenado `[catalog].[update_logdb_info]` com o nome e a cadeia de conexão do SQL Server como parâmetros, conforme mostrado no seguinte exemplo:
 
-    ```sql
-    SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
-    SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
-    EXEC [internal].[update_logdb_info] @serverName, @connectionString
-    GO
-    ```
+```sql
+SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
+SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
+EXEC [internal].[update_logdb_info] @serverName, @connectionString
+GO
+```
 
 ## <a name="4-restart-the-scale-out-worker-service"></a>4. Reiniciar o serviço Trabalho do Scale Out
 Reinicie o serviço Trabalho do Scale Out para efetivar a alteração.

@@ -22,17 +22,17 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d1a584b0bb3958f883e6d5920f718cb076a23e58
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95996934e6d8334376533b4abf04e2cc7607fd78
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784579"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Essa função retorna informações sobre eventos do servidor ou do banco de dados. Quando uma notificação de evento é acionada e o agente de serviços especificado recebe os resultados, `EVENTDATA` é chamado. Um gatilho de logon ou DDL também dá suporte ao uso interno de `EVENTDATA`.  
   
