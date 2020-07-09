@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 35ca1ac90704b05bc714327f839ff1487e5cd66f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a9498c5d2705abece345533573a768e71e0b7030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748899"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Reduz o tamanho do arquivo de log ou dos dados especificados do banco de dados atual. Você pode usá-lo para mover os dados de um arquivo para outros no mesmo grupo de arquivos, o que esvazia o arquivo e permite a remoção do banco de dados dele. Você pode reduzir um arquivo a menos da metade do tamanho de criação dele, definindo um novo valor para o tamanho mínimo do arquivo.
   

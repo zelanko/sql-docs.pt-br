@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1b95797a5725a620d545b51ac2afb5b55464cbb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e2ad92efd8a02f783885a72299bae6bfd77b44bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748493"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação simples)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Em uma restauração completa de banco de dados, a meta é restaurar todo o banco de dados. O banco de dados inteiro fica offline durante a restauração. Antes que qualquer parte do banco de dados possa ficar online, todos os dados são recuperados a um ponto consistente, no qual todas as partes do banco de dados estejam no mesmo momento determinado e não exista nenhuma transação não confirmada.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "82829770"
 ##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Visão geral da restauração de banco de dados no modelo de recuperação simples  
  Uma restauração de banco de dados completa no modelo de recuperação simples envolve uma ou duas instruções [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , dependendo se você deseja restaurar um backup de banco de dados diferencial. Se você estiver usando somente um backup de banco de dados completo, simplesmente restaure o backup mais recente, conforme mostrado na ilustração abaixo.  
   
- ![Restaurando apenas um backup de banco de dados completo](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Restaurando apenas um backup de banco de dados completo")  
+ ![Restaurando apenas um backup de banco de dados completo](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.png "Restaurando apenas um backup de banco de dados completo")  
   
  Se você também estiver usando um backup de banco de dados diferencial, restaure o backup de banco de dados completo mais recente sem recuperar o banco de dados, e em seguida restaure o backup de banco de dados diferencial mais recente e recupere o banco de dados. A ilustração a seguir mostra este processo.  
   
- ![Restaurando backups de banco de dados diferenciais e completos](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "Restaurando backups de banco de dados diferenciais e completos")  
+ ![Restaurando backups de banco de dados diferenciais e completos](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.png "Restaurando backups de banco de dados diferenciais e completos")  
   
 > [!NOTE]  
 >  Se você pretende restaurar um backup de banco de dados em uma instância de servidor diferente, consulte [Copiar bancos de dados com Backup e Restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  

@@ -13,15 +13,15 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8962776175617293c1acdc979852232dbca95c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72251299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737119"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Como usar o Repositório de Consultas com OLTP in-memory
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Repositório de Consultas permite que você monitore o desempenho do código compilado nativamente para cargas de trabalho executando o OLTP in-memory.  
 Estatísticas de compilação e de runtime são coletadas e expostas da mesma forma que as cargas de trabalho com base em disco.   

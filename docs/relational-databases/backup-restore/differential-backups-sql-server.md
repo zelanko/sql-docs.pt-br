@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf10fdcdee4d3fcca3cf3e119bf18bb341352edb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9452fc4f3ca4a0ccfa4983b8e47f97f47108eb75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737807"
 ---
 # <a name="differential-backups-sql-server"></a>Backups diferenciais (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico de backup e restauração é relevante para todos os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Um backup diferencial é baseado no backup de dados completo anterior mais recente. Um backup diferencial captura apenas os dados que foram alterados desde o backup completo. O backup completo no qual um backup diferencial se baseia é conhecido como a *base* do diferencial. Os backups completos, com exceção dos backups somente cópia, podem servir como base para uma série de backups diferenciais, inclusive backups de banco de dados, backups parciais e backups de arquivo. O backup de base para um backup diferencial de arquivo pode ser contido dentro de um backup completo, um backup de arquivo ou um backup parcial.  

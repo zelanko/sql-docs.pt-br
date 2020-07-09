@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75a8ee28972b2b80fc1244a80b35b7c9d5d6daee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737088"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Exibir e trabalhar com a Saída do DTA (Orientador de Otimização do Mecanismo de Banco de Dados)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quando o Orientador de Otimização do Mecanismo de Banco de Dados ajusta os bancos de dados, cria resumos, recomendações, relatórios e logs de ajuste. Você pode usar a saída do log de ajuste para solucionar problemas das sessões de ajuste do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar os resumos, as recomendações e os relatórios para determinar se deseja implementar recomendações de ajuste ou continuar ajustando até atingir o desempenho de consulta necessário para instalar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações sobre como usar o Database Tuning Advisor para criar cargas de trabalho ou ajustar um banco de dados, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   

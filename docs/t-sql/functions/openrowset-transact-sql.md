@@ -25,16 +25,16 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c6943d24ec3c1803490cea29c1a415dbb5d3bdc
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 28519681f18d13fb11a93df9ffd852243c503a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738082"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Inclui todas as informações de conexão exigidas para acessar dados remotos de uma fonte de dados OLE DB. Este método é uma alternativa para acessar tabelas em um servidor vinculado e se trata de um método de uso único e ad hoc para conexão e acesso a dados remotos por meio de OLE DB. Para mais referências frequentes a fontes de dados OLE DB, use servidores vinculados. Para obter mais informações, veja [Servidores vinculados &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). A função `OPENROWSET` pode ser referenciada na cláusula FROM de uma consulta como se fosse um nome de tabela. A função `OPENROWSET` também pode ser referenciada como a tabela de destino de uma instrução `INSERT`, `UPDATE` ou `DELETE`, sujeito às funcionalidades do Provedor OLE DB. Embora a consulta possa retornar vários conjuntos de resultados, `OPENROWSET` retorna somente o primeiro deles.
 
@@ -46,9 +46,9 @@ Inclui todas as informações de conexão exigidas para acessar dados remotos de
 
 ```syntaxsql
 OPENROWSET
-( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
-   | 'provider_string' }
-   , {   <table_or_view> | 'query' }
+( { 'provider_name' 
+    , { 'datasource' ; 'user_id' ; 'password' | 'provider_string' }
+    , {   <table_or_view> | 'query' }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }

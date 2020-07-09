@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 72cab4cc129690b5e544a979f0b18892454dfcef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 556105822ae0109ea5b05cd83c07834814c95e8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637133"
 ---
 # <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|7908|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|Texto da mensagem|Erro de tabela: o arquivo ‘FILE' na ID de partição PN_ID não é um arquivo válido de Filestream.|  
+|Texto da mensagem|Erro de tabela: o arquivo ‘FILE' na ID de partição PN_ID não é um arquivo válido de Fluxo de arquivos.|  
   
 ## <a name="explanation"></a>Explicação  
 O nome de um arquivo de FILESTREAM em um diretório de coluna é um ROWGUID. Se o nome de um arquivo em um diretório de coluna não puder ser convertido em um ROWGUID, o arquivo não será válido.  

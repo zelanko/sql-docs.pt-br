@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f256060c923198e2ecb1d3741ebd7276d98b923
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 1501b60e9c858bac62b48dfa7b3875d0d93d5115
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737676"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup Gerenciado do SQL Server para o Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gerencia e automatiza os backups do SQL Server no Armazenamento de Blobs do Microsoft Azure. Você pode permitir que o SQL Server determine a agenda de backup com base na carga de trabalho de transação do banco de dados. Ou pode usar as opções avançadas para definir uma agenda. As configurações de retenção determinam por quanto tempo os backups são armazenados no Armazenamento de Blobs do Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] oferece suporte para restauração pontual durante o período de retenção especificado.  
   

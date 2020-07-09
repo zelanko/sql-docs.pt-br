@@ -13,15 +13,15 @@ ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: faad3614a308efc8dfa8994b176cec148520522a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec405817bc9ce89dd150adfcc2887ba2c703d556
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737213"
 ---
 # <a name="lockescalation-event-class"></a>Classe de evento Lock:Escalation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A classe de evento **Lock:Escalation** indica que um bloqueio mais refinado foi convertido em um bloqueio mais rústico; por exemplo, um bloqueio de linha que é convertido em um bloqueio de objeto. A classe de evento do escalonamento é ID de evento 60.  
   
 ## <a name="lockescalation-event-class-data-columns"></a>Colunas de dados da classe de evento Lock:Escalation  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c10d9b9b77a052d52a91ffec8b51da035b02355b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3fa064e31405ca8096f058195fae2c931d75993
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736348"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Abre um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)] e popula o cursor executando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] especificada na instrução DECLARE CURSOR ou SET *cursor_variable*.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2129c9990156fe970faa2ce134eaf2a17b35c764
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 966fba424556a0eb55bc100be376fca735b5620c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736128"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (tipo de dados geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retornará 1 se uma instância de **geography** estiver espacialmente separada de outra instância de **geography**. Retornará 0 se não estiver.  
   

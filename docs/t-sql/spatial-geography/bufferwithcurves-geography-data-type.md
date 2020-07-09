@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 079b3ba5345dc5bf31a336b473f24e546873f417
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736218"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo de dados geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna uma instância de **geography** que representa o conjunto de todos os pontos cuja distância da instância de **geography** de chamada é menor ou igual ao parâmetro *distance*.  
   

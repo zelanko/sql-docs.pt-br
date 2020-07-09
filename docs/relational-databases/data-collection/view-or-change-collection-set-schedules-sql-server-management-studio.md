@@ -1,7 +1,6 @@
 ---
 title: Exibir ou alterar agendamentos de conjunto de coleta
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -18,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8e72be7c753db0871191e44bbc431d755ddfa193
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733814"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Exibir ou alterar agendas de conjuntos de coleta (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   É possível exibir ou alterar agendas de conjuntos de coleta usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  O modo de coleta, armazenado em cache ou não, determina como você pode fazer alterações em uma agenda. O modo cache usa agendas separadas para coleção e carregamento. O modo não cache usa a mesma agenda para coleta e carregamento. O tipo de modo de coleta de cada um dos conjuntos de coleta de Dados do Sistema é o seguinte:  
@@ -110,10 +110,11 @@ ms.locfileid: "74055327"
  **Coleta e carregamento de dados**  
  Especifica de que modo os dados são coletados e carregados no data warehouse de gerenciamento. Clique em uma das opções a seguir.  
   
-|||  
-|-|-|  
+| Opção | Descrição |
+| :----- | :---------- |
 |**Sem-cache. Coleta e upload de dados na mesma agenda.**|Quando selecionada, especifique uma destas opções:<br /><br /> **Agenda**. Os dados são coletados e carregados de acordo com a agenda. Clique em **Escolher** para selecionar em uma lista predefinida de agendas ou clique em **Novo** para criar uma nova agenda.<br /><br /> **Sob demanda**. Os dados são coletados e carregados sob demanda.|  
 |**Em cache. Coletar e armazenar os dados em cache em um conjunto de frequências de coleta. Carregar os dados armazenados em cache em uma agenda separada.**|Colete e armazene os dados em cache para uma frequência de coleta especificada. Carregue os dados coletados em uma agenda separada.|  
+|||
   
  **Itens da coleta**  
  Exibe os itens de coleção no conjunto de coleta. São fornecidas as informações a seguir para cada item de coleta:  
@@ -133,11 +134,12 @@ ms.locfileid: "74055327"
  **Definir por quanto tempo serão retidos dados coletados no data warehouse de gerenciamento.**  
  Especifica por quanto tempo os dados coletados serão retidos. Clique em uma das opções a seguir.  
   
-|||  
-|-|-|  
+| Opção | Descrição |
+| :----- | :---------- |
 |**Reter dados para**|Esta opção fica selecionada por padrão e o período de retenção padrão é de 14 dias.|  
 |**Reter dados indefinidamente**|Não há nenhum limite no período de tempo em que os dados são retidos.|  
-  
+|||
+
  **Página Carregamentos**  
   
  Use esta página para configurar a agenda de carregamento de dados coletados por esse conjunto de coleta.  

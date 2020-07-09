@@ -19,17 +19,17 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - testing application locks
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: ce9afdf15868e5ce9837d9d23b14eaf8c6fadee6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0bed1615cf691129ebec40c763d18d98d8276aff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832212"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736516"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Essa função retorna informações sobre ser possível ou não conceder um bloqueio em um recurso de aplicativo específico para um proprietário de bloqueio especificado, sem aquisição do bloqueio. Como uma função de bloqueio de aplicativo, a APPLOCK_TEST opera no banco de dados atual. O banco de dados é o escopo dos bloqueios de aplicativo.
   

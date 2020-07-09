@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a38a5470c51145141eda81d30eaadd8ff9f72e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fca72fb30353e97bc4fc2f38240c7245a3400314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68002021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723832"
 ---
 # <a name="mssqlserver_2579"></a>MSSQLSERVER_2579
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|2579|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_EXTENT_OUT_OF_RANGE|  
-|Texto da mensagem|Erro de tabela: a extensão P_ID da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE) ultrapassa o intervalo deste banco de dados.|  
+|Texto da mensagem|Erro de tabela: A extensão P_ID da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE) ultrapassa o intervalo deste banco de dados.|  
   
 ## <a name="explanation"></a>Explicação  
 *P_ID* é uma PageID no formato *(filenum:pageinfile)* . O componente *pageinfile* dessa extensão é maior que o tamanho físico do arquivo (*filenum)* do banco de dados. A extensão é marcada como estando alocada em uma página IAM para a ID de unidade de alocação indicada.  

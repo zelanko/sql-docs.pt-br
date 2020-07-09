@@ -8,18 +8,18 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 09/12/2019
-ms.author: mibar
-author: barmichal
-ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 06/10/2020
+ms.author: datrigan
+author: DavidTrigano
+ms.openlocfilehash: 7c23b7faa93281ab34ed4b500d10dfd50e9c8c76
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75548357"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737037"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Descoberta e classificação de dados SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 O recurso Descoberta e Classificação de Dados apresenta uma nova ferramenta interna do [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) para **descobrir**, **classificar**, **rotular** & **e relatar** os dados confidenciais em seus bancos de dados.
 A descoberta e a classificação dos dados mais confidenciais (de negócios, financeiros, de serviços de saúde, etc.) podem desempenhar um papel fundamental na dimensão da proteção de informações organizacionais. Esse recurso pode funcionar como a infraestrutura para:
@@ -126,7 +126,9 @@ SELECT
     O.NAME AS table_name,
     C.NAME AS column_name,
     information_type,
-    label
+    label,
+    rank,
+    rank_desc
 FROM sys.sensitivity_classifications sc
     JOIN sys.objects O
     ON  sc.major_id = O.object_id

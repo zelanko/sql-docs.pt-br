@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 631449486ec2b75418c848151532d3222e5a0909
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 412099db82b2b16e538b1b2f742dde6548b93ce6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737997"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna o resultado de uma expressão, convertida no tipo de dados solicitado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

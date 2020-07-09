@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1673e3999b6a37ea6383b940bb5e7b66ac922984
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67d0cf696f149b0105dfe53c15a80fc81bced1f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179078"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737748"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>Exemplo: Restauração por etapas de apenas alguns grupos de arquivos (modelo de recuperação simples)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico é pertinente para bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob o modelo de recuperação simples que contenham um grupo de arquivos somente leitura.  
   

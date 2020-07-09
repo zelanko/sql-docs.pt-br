@@ -14,15 +14,15 @@ ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9cdb3ce08f32c6b73ae1558ed2a9b3b8bf34871
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58af699bdbb3c6aad7d261f2dc7eafa67285bfda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737224"
 ---
 # <a name="full-text-event-category"></a>Categoria de evento Full Text
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A categoria de evento **Full Text** contém eventos gerais de texto completo.  
   
 ## <a name="in-this-section"></a>Nesta seção  

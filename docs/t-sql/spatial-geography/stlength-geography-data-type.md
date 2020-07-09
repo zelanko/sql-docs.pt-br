@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 61487b976322f8725f9398e54f8292919ff0ca58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fe2665699f4dc5b4a2aad364f2c402c026040074
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68139108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736091"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (tipo de dados geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna o comprimento total dos elementos em uma instância de **geography** ou nas instâncias de **geografia** em uma **GeometryCollection**.  
   

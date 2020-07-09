@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b032e7737a837ee6b453340fbd52bcbee072e65f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf837bc23f1462acc2c875a97c167b82ef600190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85747426"
 ---
 # <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>Exemplo: Restauração online de um arquivo somente leitura (modelo de recuperação simples)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico é pertinente para bancos de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob o modelo de recuperação simples que contenham um grupo de arquivos somente leitura. No modelo de recuperação simples, um arquivo somente leitura pode ser restaurado online se existir um backup do arquivo que tenha sido feito desde a última vez em que arquivo tornou-se somente leitura.  
   

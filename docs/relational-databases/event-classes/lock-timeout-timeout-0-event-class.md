@@ -12,15 +12,15 @@ ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92550c1282689e2d6091a5af2b588a3c36b9b2d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19dd9d5c8f4a5c9c4d37a6f7ce54f061d8bc0e47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737179"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Classe de evento Lock:Timeout (timeout &gt; 0)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A classe de evento **Lock:Timeout (timeout > 0)** indica que uma solicitação para um bloqueio em um recurso, como uma página, expirou porque outra transação está segurando uma fechadura de bloqueio no recurso exigido. Esta classe de evento se comporta semelhante à classe de evento **Lock:Timeout** , exceto por não incluir nenhum evento em que o valor de tempo limite é 0.  
   
  Inclua a classe de evento **Lock:Timeout (timeout > 0)** em rastreamentos em que você esteja usando sondagem de bloqueio ou outros processos que têm valores de tempo limite zero. Isto lhe permite consultar onde o tempo limite atual está ocorrendo sem consulta dos valores de tempo limite zero.  

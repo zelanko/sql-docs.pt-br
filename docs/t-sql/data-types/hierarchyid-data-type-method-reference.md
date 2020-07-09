@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738214"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>referência de método do tipo de dados hierarchyid
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 O tipo de dados **hierarchyid** é um tipo de dados do sistema de tamanho variável. Use **hierarchyid** para representar posição em uma hierarquia. Uma coluna de tipo **hierarchyid** não representa automaticamente uma árvore. Depende do aplicativo gerar e atribuir valores **hierarchyid** de maneira que a relação desejada entre as linhas seja refletida nos valores.
   

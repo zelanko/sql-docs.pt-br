@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f6410575af0d05b8d407ba9f52cc116fbe2ac733
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a10948a63d119ec86c156b79d925f1b905b152f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737082"
 ---
 # <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>Exibir o log de erros do SQL Server no SSMS (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 O log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém eventos definidos pelo usuário e alguns eventos do sistema que podem ser usados para solução de problemas. 
 
 ## <a name="view-the-logs"></a>Exibir os logs

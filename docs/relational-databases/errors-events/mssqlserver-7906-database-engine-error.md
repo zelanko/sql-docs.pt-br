@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0320795493df3c4d0283e3d82a2235e9f1f08914
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25966577f568b6b807e6039a951300368b0ad971
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951434"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637226"
 ---
 # <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|7906|  
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Texto da mensagem|Erro de banco de dados: o arquivo 'FILE' não é um arquivo válido de Filestream.|  
+|Texto da mensagem|Erro de banco de dados: O arquivo "FILE" não é um arquivo de fluxo de arquivos válido.|  
   
 ## <a name="explanation"></a>Explicação  
 Exceto para alguns arquivos especiais, como 'filestream.hdr', nenhum arquivo deve ser encontrado diretamente no espaço de dados Filestream.  

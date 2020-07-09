@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a06620641fd69479bba3c3b46ab04e337c2dc18d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec264773787fd89f8cb36ba2e2386a186dc78816
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736125"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (tipo de dados geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna um objeto que representa os pontos em que uma instância de **geography** intersecciona outra instância de **geography**.  
   

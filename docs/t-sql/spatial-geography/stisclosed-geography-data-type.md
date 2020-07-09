@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: dbc1bd923b0e86acfd0fbae995bd6fdbd16816a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41a0f923e997951e52b23ed0b1c2860a8c1532b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736110"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (tipo de dados geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retornará 1 se os pontos inicial e final da instância de **geography** fornecida forem o mesmo. Retornará 1 para tipos de coleção de **geografia**, se cada instância de **geography** contida estiver fechada. Retornará 0 se a instância não for fechada.  
   

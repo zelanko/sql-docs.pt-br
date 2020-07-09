@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3a7d08c93b42b8b8cd236dae775b28cc5040751
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748430"
 ---
 # <a name="create-an-encrypted-backup"></a>Criar um backup criptografado
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve as etapas necessárias para criar um backup criptografado usando Transact-SQL.  Para obter um exemplo de como usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Criar um backup completo de banco de dados (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
 ## <a name="backup-to-disk-with-encryption"></a>Backup em disco com criptografia  

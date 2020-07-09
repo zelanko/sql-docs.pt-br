@@ -9,20 +9,20 @@ ms.topic: language-reference
 ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2773c43695f67cc6d3878f1885686e74e84e67c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 243322fabd9ac9fd9a67c3de9ab1e43be6a3a2d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68039315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723766"
 ---
 # <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|30053|  
 |Origem do Evento|MSSQLSERVER|  

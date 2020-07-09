@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a3bf355fafebc3f59ce6d69f4a68f1fe47229ec6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4103fef5cf8faa87de2ed0870687d7880135ee04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738056"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna informações sobre as opções SET atuais.  
   

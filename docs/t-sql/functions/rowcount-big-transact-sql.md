@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e1ccc5aa9619c96fd75400531041442138e0b4f3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1e6123b99308e053a3235d5e9fe8cd22a4daaa8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736444"
 ---
 # <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna o número de linhas afetadas pela última instrução executada. Essa função opera como [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md), exceto que o tipo de retorno de ROWCOUNT_BIG é **bigint**.  
   
