@@ -1,0 +1,77 @@
+### YamlMime:Landing
+title: Azure Data Studio
+summary: Saiba como usar o Azure Data Studio para executar o SQL Server, o Banco de Dados SQL do Azure, o PostgreSQL, o Jupyter Notebooks e muito mais.
+metadata:
+  title: Azure Data Studio
+  summary: Saiba como usar o Azure Data Studio para executar o SQL Server, o Banco de Dados SQL do Azure, o PostgreSQL, o Jupyter Notebooks e muito mais.
+  ms.prod: sql
+  ms.technology: azure-data-studio
+  ms.topic: landing-page
+  author: markingmyname
+  ms.author: maghan
+  ms.date: 05/09/2020
+  ms.openlocfilehash: b5020185efafd9e166c8d3dd627ee61a955a0d27
+  ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84112335"
+landingContent:
+- title: Sobre o Azure Data Studio
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: O que é o Azure Data Studio?
+      url: what-is.md
+  - linkListType: download
+    links:
+    - text: Baixar o Azure Data Studio
+      url: download-azure-data-studio.md
+    - text: Notas sobre a versão do Azure Data Studio
+      url: release-notes-azure-data-studio.md
+- title: Inícios rápidos
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Conectar e consultar o SQL Server
+      url: quickstart-sql-server.md
+    - text: Conectar-se ao banco de dados SQL do Azure e consultá-lo
+      url: quickstart-sql-database.md
+    - text: Conectar-se ao SQL Data Warehouse do Azure e consultar dados nele
+      url: quickstart-sql-dw.md
+    - text: Conectar-se ao PostgreSQL e consultar dados nele
+      url: quickstart-postgres.md
+- title: Recursos do Azure Data Studio
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Habilitar o Kerberos
+      url: enable-kerberos.md
+    - text: Gerenciar servidores e bancos de dados com widgets de insight no Azure Data Studio
+      url: insight-widgets.md
+    - text: Modificar Configurações do Workspace e do Usuário
+      url: settings.md
+- title: Notebooks
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Notebooks no Azure Data Studio
+      url: notebooks-guidance.md
+    - text: Como usar o Kernel do SQL
+      url: notebooks-tutorial-sql-kernel.md
+    - text: Como gerenciar notebooks no Azure Data Studio
+      url: notebooks-manage-sql-server.md
+    - text: Extensão Kqlmagic no Azure Data Studio
+      url: notebooks-kqlmagic.md
+- title: Extensões
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Estender a funcionalidade do Azure Data Studio
+      url: extensions.md
+    - text: Estender a funcionalidade criando extensões do Azure Data Studio
+      url: extension-authoring.md
+    - text: Extensão do PostgreSQL
+      url: postgres-extension.md
+    - text: Suporte ao Editor do PowerShell
+      url: powershell-extension.md
