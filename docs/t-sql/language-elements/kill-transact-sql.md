@@ -34,15 +34,15 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0eca253ab85302555b84e35a3118b1e8a0873402
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981919"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007343"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Encerra um processo de usuário baseado na ID da sessão ou na UOW (unidade de trabalho). Se a ID da sessão ou UOW especificada tiver muito trabalho a ser desfeito, a instrução KILL poderá demorar um pouco para ser concluída. O processo levará mais tempo para ser concluído, especialmente quando envolver reversão de uma transação longa.  
   
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**Aplica-se a**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior)
+**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
 Identifica a ID da UOW (Unidade de Trabalho) de transações distribuídas. _UOW_ é um GUID que pode ser obtido na coluna request_owner_guid da exibição de gerenciamento dinâmico sys.dm_tran_locks. _UOW_ também pode ser obtido no log de erros ou por meio do monitor do MS DTC. Para obter mais informações sobre como monitorar transações distribuídas, consulte a documentação do MS DTC.  
   
@@ -123,9 +123,9 @@ Esse erro também ocorrerá se nenhuma ID de sessão ou UOW estiver sendo revert
 O mesmo relatório de status pode ser obtido pela repetição da mesma instrução KILL _session ID_|_UOW_ sem usar a opção WITH STATUSONLY. No entanto, não é recomendável repetir a opção dessa maneira. Se você repetir a instrução KILL _session ID_, o novo processo poderá ser interrompido se a reversão for concluída e a ID de sessão for reatribuída a uma nova tarefa antes que a nova instrução KILL seja executada. Evite que o novo processo seja interrompido especificando WITH STATUSONLY.  
   
 ## <a name="permissions"></a>Permissões  
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** exige a permissão ALTER ANY CONNECTION. ALTER ANY CONNECTION é incluída com associação nas funções de servidor fixas sysadmin ou processadmin.  
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Exige a permissão ALTER ANY CONNECTION. ALTER ANY CONNECTION é incluída com associação nas funções de servidor fixas sysadmin ou processadmin.  
   
-**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** exige a permissão KILL DATABASE CONNECTION. O logon da entidade de segurança no nível do servidor tem a permissão KILL DATABASE CONNECTION.  
+**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Exige a permissão KILL DATABASE CONNECTION. O logon da entidade de segurança no nível do servidor tem a permissão KILL DATABASE CONNECTION.  
   
 ## <a name="examples"></a>Exemplos  
   

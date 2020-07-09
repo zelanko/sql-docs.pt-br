@@ -18,15 +18,15 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48139f3da39cb280a95ccff8ab9aca2efc67a13b
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 3b44f45cfcefc1e413fbb13f9c172c1a11b66dc2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269470"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007501"
 ---
 # <a name="columnstore-indexes-overview"></a>Índices columnstore: Visão geral
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Os índices columnstore são o padrão para armazenar e consultar tabelas de fatos com armazenamento de dados grandes. Esse índice usa armazenamento de dados baseado em coluna e processamento de consultas para obter até dez vezes mais desempenho de consulta em seu data warehouse em relação ao armazenamento tradicional orientado por linha. Também é possível obter ganhos de até 10 vezes na compactação de dados sobre o tamanho dos dados descompactados. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, os índices columnstore permitem a análise operacional: a capacidade de executar análises de alto desempenho em tempo real em uma carga de trabalho transacional.  
   

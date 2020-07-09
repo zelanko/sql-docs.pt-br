@@ -33,15 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 350ece68d98f8333eb6281a5cbb6fdacf792e51a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632339"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003437"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS exibe as estatísticas de otimização de consulta atuais de uma tabela ou exibição indexada. O otimizador de consulta usa as estatísticas para calcular a cardinalidade ou o número de linhas no resultado da consulta, o que permite a esse otimizador criar um plano de consulta de alta qualidade. Por exemplo, o otimizador de consulta pode usar estimativas de cardinalidade para escolher o operador de busca do índice, em vez do operador de verificação do índice no plano de consulta, melhorando o desempenho da consulta ao evitar uma verificação de índice que consome muitos recursos.
   
@@ -167,8 +167,9 @@ Para que as permissões SELECT sejam suficientes para executar o comando, é nec
 -   Se qualquer uma das colunas em um objeto de estatística for mascarada com regras de Máscara de Dados Dinâmicos, além da permissão SELECT, o usuário deverá ter a permissão UNMASK
 
 Em versões anteriores à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, o usuário deve ser proprietário da tabela ou ser um membro da função de servidor fixa `sysadmin`, a função de banco de dados fixa `db_owner` ou a função de banco de dados fixa `db_ddladmin`.
-[!NOTE]
-Para alterar o comportamento de volta para o comportamento anterior à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, use sinalizador de rastreamento 9485.
+
+ > [!NOTE]
+ > Para alterar o comportamento de volta para o comportamento anterior à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, use sinalizador de rastreamento 9485.
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>Permissões para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS exige a permissão SELECT na tabela ou a associação a um dos seguintes:

@@ -12,15 +12,15 @@ ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 882c02f863fb27f27d806e6d7c470960d03ff832
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab7633bf3bc321a82b44f3ac5373563adb7dd64c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136716"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000937"
 ---
 # <a name="ole-automation-sample-script"></a>Script de exemplo de automação OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Esse tópico contém um exemplo de lote de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa os procedimentos armazenados da Automação OLE para criar e usar um objeto SQL-DMO SQLServer na instância local do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Partes do código são usadas como exemplos nos tópicos de referência para os procedimentos armazenados do sistema de Automação OLE.  
   
 ```  

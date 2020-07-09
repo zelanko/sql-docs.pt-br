@@ -16,18 +16,18 @@ helpviewer_keywords:
 - DEGREES function
 - number of degrees
 ms.assetid: 5208de3c-90a3-4f59-a7e3-10b01bf285bb
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0aa2c0d14b504d1dc3d99ac5738f2105b882f09d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7fb2e184245b526c3cacc18fa8b7003625e27fcf
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823135"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005926"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Esta função retorna o ângulo correspondente, em graus, a um ângulo especificado em radianos.  
   
@@ -51,7 +51,7 @@ Este exemplo retorna o número de graus em um ângulo de PI/2 radianos.
   
 ```  
 SELECT 'The number of degrees in PI/2 radians is: ' +   
-CONVERT(varchar, DEGREES((PI()/2)));  
+CONVERT(VARCHAR, DEGREES((PI()/2)));  
 GO  
 ```  
   

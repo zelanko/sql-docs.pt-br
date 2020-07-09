@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33c7be4dd5d195bd45349e7d6dc64b4188b50e27
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2070959765886bc5345b35489e37396ccf2a1f8b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823185"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011392"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 Essa função retorna um inteiro que representa o *datepart* especificado do argumento *date* especificado.
@@ -217,7 +217,8 @@ Este exemplo retorna o ano base. O ano base ajuda com cálculos de data. No exem
   
 ```sql
 SELECT DATEPART(year, 0), DATEPART(month, 0), DATEPART(day, 0);  
--- Returns: 1900    1    1 */  
+
+-- Returns: 1900    1    1 
 ```  
   
 Este exemplo retorna a parte do dia da data `12/20/1974`.
@@ -226,13 +227,8 @@ Este exemplo retorna a parte do dia da data `12/20/1974`.
 -- Uses AdventureWorks  
   
 SELECT TOP(1) DATEPART (day,'12/20/1974') FROM dbo.DimCustomer;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
---------
-20
+
+-- Returns: 20
 ```  
   
 Este exemplo retorna a parte do ano da data `12/20/1974`.
@@ -241,13 +237,8 @@ Este exemplo retorna a parte do ano da data `12/20/1974`.
 -- Uses AdventureWorks  
   
 SELECT TOP(1) DATEPART (year,'12/20/1974') FROM dbo.DimCustomer;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
---------
-1974
+
+-- Returns: 1974
 ```  
   
 ## <a name="see-also"></a>Confira também
