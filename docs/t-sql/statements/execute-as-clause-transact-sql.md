@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40e68512a18d0f85dbbac2ca449aea9e942ca17e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f48d933dec2dc87d0171641146f652a4e881045e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735683"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Cláusula EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível definir o contexto de execução dos seguintes módulos definidos pelo usuário: funções (exceto com valor de tabela embutida), procedimentos, filas e gatilhos.  
   

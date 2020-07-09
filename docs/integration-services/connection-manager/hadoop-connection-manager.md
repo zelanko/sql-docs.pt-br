@@ -1,7 +1,7 @@
 ---
 title: Gerenciador de conexões do Hadoop | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735114"
 ---
 # <a name="hadoop-connection-manager"></a>Gerenciador de conexões do Hadoop
 
@@ -83,7 +83,7 @@ No computador do SSIS:
 
     O computador deve estar configurado como um membro de um grupo de trabalho, pois o realm do Kerberos é diferente de um domínio do Windows. Defina o realm do Kerberos e adicione um servidor KDC, conforme mostrado no exemplo a seguir. Substitua o `REALM.COM` com seu respectivo realm, conforme necessário.
 
-    ```    
+    ```console
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
@@ -92,7 +92,7 @@ No computador do SSIS:
 
 2.  Verifique a configuração com o comando **Ksetup**. A saída deve se parecer com o exemplo a seguir:
 
-    ```
+    ```console
     C:> Ksetup
     default realm = REALM.COM (external)
     REALM.com:
@@ -114,7 +114,7 @@ No servidor do KDC:
 
 1.  Edite a configuração do KDC no arquivo **krb5.conf**. Permita que o KDC confie no domínio do Windows, consultando o seguinte modelo de configuração. Por padrão, a configuração está localizada em **/etc/krb5.conf**.
 
-    ```
+    ```console
     [logging]
     default = FILE:/var/log/krb5libs.log
     kdc = FILE:/var/log/krb5kdc.log
@@ -162,7 +162,7 @@ No controlador de domínio:
 
 1.  Execute o seguinte comando **Ksetup** para adicionar uma entrada de realm:
 
-    ```
+    ```console
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
@@ -201,10 +201,10 @@ No computador do gateway:
 
 Execute os seguintes comandos **Ksetup** para adicionar uma entrada de realm.
 
-    ```
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
 ## <a name="see-also"></a>Confira também  
  [Tarefa do Hive do Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   

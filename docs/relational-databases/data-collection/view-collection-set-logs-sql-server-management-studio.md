@@ -1,7 +1,6 @@
 ---
 title: Exibir logs do conjunto de coleta (SSMS)
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,15 +11,16 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f2b3ec4e0c7ec6a9335c9e37558123eca77995a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3b347a88187e7f7b961c8ad86b50b334e0837333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733827"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>Exibir logs do conjunto de coleta (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Você pode exibir todos os logs de conjuntos de coleta ou logs de conjuntos de coleta individuais do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="to-view-collection-set-logs"></a>Para exibir logs de conjuntos de coleta  
