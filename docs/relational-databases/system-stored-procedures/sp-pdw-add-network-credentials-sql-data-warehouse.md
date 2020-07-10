@@ -12,15 +12,15 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a4f4fac6f7b7dc1f7809042bd9b784b754bec1a2
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: c7be9d3eb55800c2fa5c4f155aff6fd81301490c
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627486"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197339"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Isso armazena as credenciais de rede no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e os associa a um servidor. Por exemplo, use esse procedimento armazenado para conceder [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] permissões de leitura/gravação apropriadas para executar operações de backup e restauração de banco de dados em um servidor de destino ou para criar um backup de um certificado usado para TDE.  
   

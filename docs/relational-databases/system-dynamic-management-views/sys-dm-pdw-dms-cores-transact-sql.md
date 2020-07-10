@@ -12,19 +12,19 @@ ms.assetid: b3f09b15-0863-4418-9347-a4f5fd2ab7c7
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 76a154639a71b22bfe3f119233f3abbcd329f7c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ff3270394d7185d0dbf8e865a27d61380613b5
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899524"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197140"
 ---
 # <a name="sysdm_pdw_dms_cores-transact-sql"></a>sys. dm_pdw_dms_cores (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contém informações sobre todos os serviços DMS em execução nos nós de computação do dispositivo. Ele lista uma linha por instância de serviço, que atualmente é uma linha por nó.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|**int**|ID numérica exclusiva associada a este núcleo DMS.<br /><br /> Chave para esta exibição.|Defina como o pdw_node_id do nó em que esse núcleo do DMS está sendo executado.|  
 |pdw_node_id|**int**|ID do nó no qual esse serviço DMS está em execução.|Consulte node_id em [Sys. dm_pdw_nodes &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  

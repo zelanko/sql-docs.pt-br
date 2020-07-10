@@ -11,17 +11,17 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47d7aca62ddbf2637b54d77171a08817b842555c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f2c4fde17918e148ac26581fcb6f99057e38800
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008916"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197321"
 ---
 # <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Use **sp_pdw_database_encryption** para habilitar a Transparent Data Encryption [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] em para um dispositivo. Quando **sp_pdw_database_encryption** definido como 1, use a instrução **ALTER DATABASE** para criptografar um banco de dados usando TDE.  
+  Use **sp_pdw_database_encryption** para habilitar a Transparent Data Encryption em para um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] dispositivo. Quando **sp_pdw_database_encryption** definido como 1, use a instrução **ALTER DATABASE** para criptografar um banco de dados usando TDE.  
   
 ## <a name="syntax"></a>Sintaxe  
   

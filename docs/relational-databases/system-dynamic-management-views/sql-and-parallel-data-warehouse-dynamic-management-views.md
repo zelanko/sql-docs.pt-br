@@ -11,22 +11,22 @@ dev_langs:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bbf63d4553630cce6d1d890f2d353442c14d6afd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 399389b3b3decb92a9184d10dc2b8ca90232e114
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401619"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197278"
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>Exibições de gerenciamento dinâmico do SQL e Parallel data warehouse
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-Este tópico lista as [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] DMVs [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (exibições de gerenciamento dinâmico).  
+Este tópico lista as [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMVs (exibições de gerenciamento dinâmico).  
   
  Todos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMVs começam com **Sys. dm_pdw**.  
   
 ## <a name="sssdw-and-sspdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] exibições de gerenciamento dinâmico  
- As exibições de gerenciamento dinâmico a seguir [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aplicam ao e ao:  
+ As exibições de gerenciamento dinâmico a seguir se aplicam ao [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e ao [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] :  
   
  [sys. dm_pdw_dms_cores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)  
   
@@ -65,7 +65,7 @@ Este tópico lista as [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] DMVs [!INCLU
  [sys. dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)
 
 ## <a name="sssdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Exibições de gerenciamento dinâmico 
- As exibições de gerenciamento dinâmico a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] seguir se aplicam somente a:
+ As exibições de gerenciamento dinâmico a seguir se aplicam [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] somente a:
  
 [sys. dm_pdw_nodes_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md)  
 
@@ -80,7 +80,7 @@ Este tópico lista as [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] DMVs [!INCLU
  [Sys. dm_workload_management_workload_groups_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) (versão prévia)
 
 ## <a name="sspdw-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Exibições de gerenciamento dinâmico  
- As exibições de gerenciamento dinâmico a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] seguir se aplicam somente a:  
+ As exibições de gerenciamento dinâmico a seguir se aplicam [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] somente a:  
   
  [sys. dm_pdw_component_health_active_alerts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)  
   

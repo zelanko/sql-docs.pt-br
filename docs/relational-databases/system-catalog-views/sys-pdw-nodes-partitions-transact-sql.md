@@ -12,24 +12,24 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 32c64ad5faab1ef262cd754201cac40e4a076619
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305232"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197361"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contém uma linha para cada partição de todas as tabelas e a maioria dos tipos de índices em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] um banco de dados. Todas as tabelas e índices contêm pelo menos uma partição, independentemente de estarem ou não particionados explicitamente.  
+  Contém uma linha para cada partição de todas as tabelas e a maioria dos tipos de índices em um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] banco de dados. Todas as tabelas e índices contêm pelo menos uma partição, independentemente de estarem ou não particionados explicitamente.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|ID da partição. É exclusivo em um banco de dados.|  
 |object_id|**int**|ID do objeto ao qual essa partição pertence. Toda tabela ou exibição é composta por pelo menos uma partição.|  
 |index_id|**int**|ID do índice no objeto ao qual essa partição pertence.|  
-|partition_number|**int**|Número de partição com base em um 1 no índice ou heap de propriedade. Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], o valor dessa coluna é 1.|  
+|partition_number|**int**|Número de partição com base em um 1 no índice ou heap de propriedade. Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , o valor dessa coluna é 1.|  
 |hobt_id|**bigint**|ID da heap ou árvore B de dados (HoBT) que contém as linhas desta partição.|  
 |rows|**bigint**|Número aproximado de linhas nesta partição. |  
 |data_compression|**int**|Indica o estado da compactação de cada partição:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
@@ -43,7 +43,7 @@ ms.locfileid: "72305232"
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Exemplo A: exibir linhas em cada partição dentro de cada distribuição 
 
-**Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 Para exibir o número de linhas em cada partição em cada distribuição, use [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
@@ -51,7 +51,7 @@ Para exibir o número de linhas em cada partição em cada distribuição, use [
 
 **Aplica-se a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
-Essa consulta retorna o número de linhas em cada partição de cada distribuição da tabela `myTable`.  
+Essa consulta retorna o número de linhas em cada partição de cada distribuição da tabela `myTable` .  
  
 ```sql  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   

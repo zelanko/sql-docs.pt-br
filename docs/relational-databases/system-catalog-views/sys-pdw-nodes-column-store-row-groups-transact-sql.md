@@ -12,17 +12,17 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399870"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197347"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Fornece informações de índice columnstore clusterizado por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys. pdw_nodes_column_store_row_groups** tem uma coluna para o número total de linhas armazenadas fisicamente (incluindo aquelas marcadas como excluídas) e uma coluna para o número de linhas marcadas como excluídas. Use **Sys. pdw_nodes_column_store_row_groups** para determinar quais grupos de linhas têm uma alta porcentagem de linhas excluídas e devem ser recriados.  
+  Fornece informações de índice columnstore clusterizado por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **Sys. pdw_nodes_column_store_row_groups** tem uma coluna para o número total de linhas armazenadas fisicamente (incluindo aquelas marcadas como excluídas) e uma coluna para o número de linhas marcadas como excluídas. Use **Sys. pdw_nodes_column_store_row_groups** para determinar quais grupos de linhas têm uma alta porcentagem de linhas excluídas e devem ser recriados.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
@@ -80,7 +80,7 @@ AND CSRowGroups.index_id = NI.index_id
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-O exemplo [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] a seguir conta as linhas por partição para armazenamentos de coluna clusterizados, bem como quantas linhas estão em grupos de linhas abertos, fechados ou compactados:  
+O exemplo a seguir [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] conta as linhas por partição para armazenamentos de coluna clusterizados, bem como quantas linhas estão em grupos de linhas abertos, fechados ou compactados:  
 
 ```
 SELECT

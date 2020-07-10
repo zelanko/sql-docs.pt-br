@@ -13,15 +13,15 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1be02aa5a19e49788aafdfdb9b6f818a66968283
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 848893f9e6c7aeb36299037404a88e9b069c012c
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054837"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197024"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Retorna o conjunto ideal de colunas que identificam, de forma exclusiva, uma linha na tabela. Também retorna colunas atualizadas automaticamente quando qualquer valor na linha for atualizado por uma transação.  
   
@@ -43,27 +43,27 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @table_name=] '*table_name*'  
+ [ @table_name =] '*table_name*'  
  É o nome da tabela usada para retornar informações do catálogo. o *nome* é **sysname**, sem padrão. Não há suporte para a correspondência de padrão curinga.  
   
- [ @table_owner=] '*TABLE_OWNER*'  
+ [ @table_owner =] '*TABLE_OWNER*'  
  É o proprietário da tabela usado para retornar as informações do catálogo. *Owner* é **sysname**, com um padrão de NULL. Não há suporte para a correspondência de padrão curinga. Se o *proprietário* não for especificado, as regras de visibilidade de tabela padrão do DBMS subjacente se aplicarão.  
   
- No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o *proprietário* não for especificado e o usuário atual não possuir uma tabela do *nome*especificado, esse procedimento procurará uma tabela do *nome* especificado de Propriedade do proprietário do banco de dados. Se a tabela existir, suas colunas serão retornadas.  
+ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se o *proprietário* não for especificado e o usuário atual não possuir uma tabela do *nome*especificado, esse procedimento procurará uma tabela do *nome* especificado de Propriedade do proprietário do banco de dados. Se a tabela existir, suas colunas serão retornadas.  
   
- [ @qualifier=] '*qualificador*'  
+ [ @qualifier =] '*qualificador*'  
  É o nome do qualificador da tabela. o *qualificador* é **sysname**, com um padrão de NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*Qualifier.Owner.Name*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
   
- [ @col_type=] '*col_type*'  
+ [ @col_type =] '*col_type*'  
  É o tipo da coluna. *col_type* é **Char (** 1 **)**, com um padrão de r. o tipo r retorna a coluna ou conjunto de colunas ideal que, recuperando valores da coluna ou das colunas, permite que qualquer linha na tabela especificada seja identificada exclusivamente. A coluna pode ser uma pseudocoluna especificamente projetada para esta finalidade ou a coluna ou colunas de qualquer índice exclusivo da tabela. O tipo V retorna a coluna ou as colunas da tabela especificada, se houver, que são automaticamente atualizadas pela fonte de dados quando qualquer valor na linha é atualizado por qualquer transação.  
   
- [ @scope=] '*escopo*'  
+ [ @scope =] '*escopo*'  
  É o escopo mínimo necessário de ROWID. o *escopo* é **Char (** 1 **)**, com um padrão de T. Scope C especifica que ROWID é válido somente quando posicionado nessa linha. O escopo T especifica que a ROWID é válida para a transação.  
   
- [ @nullable=] '*Nullable*'  
+ [ @nullable =] '*Nullable*'  
  Indica se as colunas especiais podem aceitar um valor nulo. *Nullable* é **Char (** 1 **)**, com um padrão de U. O especifica colunas especiais que não permitem valores nulos. U especifica colunas que permitem valor parcialmente nulo.  
   
- [ @ODBCVer=] '*ODBCVer*'  
+ [ @ODBCVer =] '*ODBCVer*'  
  É a versão do ODBC que está sendo utilizada. *ODBCVer* é **int (** 4 **)**, com um padrão de 2. Isso indica o ODBC versão 2.0. Para obter mais informações sobre a diferença entre ODBC versão 2.0 e ODBC versão 3.0, consulte a especificação SQLSpecialColumns para ODBC versão 3.0.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

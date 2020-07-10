@@ -12,19 +12,19 @@ ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 455ccc47d4150211001b0cf715d67827c04376bc
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089151"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196801"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys. dm_pdw_sql_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contém informações sobre todas as SQL Server distribuições de consulta como parte de uma etapa SQL na consulta.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Identificador exclusivo da consulta à qual esta distribuição de consulta SQL pertence.<br /><br /> request_id, step_index e distribution_id formam a chave para essa exibição.|Consulte request_id em [Sys. dm_pdw_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Índice da etapa de consulta da qual essa distribuição faz parte.<br /><br /> request_id, step_index e distribution_id formam a chave para essa exibição.|Consulte step_index em [Sys. dm_pdw_request_steps &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
@@ -37,7 +37,7 @@ ms.locfileid: "68089151"
 |total_elapsed_time|**int**|Representa a hora em que a distribuição de consultas está em execução, em milissegundos.|Maior ou igual a 0. Igual ao Delta de start_time e end_time para distribuições de consultas concluídas, com falha ou canceladas.<br /><br /> Se total_elapsed_time exceder o valor máximo de um inteiro, total_elapsed_time continuará a ser o valor máximo. Essa condição irá gerar o aviso "o valor máximo foi excedido".<br /><br /> O valor máximo em milissegundos é equivalente a 24,8 dias.|  
 |row_count|**bigint**|Número de linhas alteradas ou lidas por essa distribuição de consulta.|-1 para operações que não alteram nem retornam dados, como CREATE TABLE e DROP TABLE.|  
 |spid|**int**|ID da sessão na instância de SQL Server que executa a distribuição de consulta.||  
-|command|**nvarchar(4000)**|Texto completo do comando para esta distribuição de consulta.|Qualquer consulta ou cadeia de caracteres de solicitação válida.|  
+|.|**nvarchar(4000)**|Texto completo do comando para esta distribuição de consulta.|Qualquer consulta ou cadeia de caracteres de solicitação válida.|  
   
  Para obter informações sobre o máximo de linhas retidas por essa exibição, consulte a seção de metadados no tópico [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

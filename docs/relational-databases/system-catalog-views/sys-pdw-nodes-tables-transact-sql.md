@@ -12,24 +12,25 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d91fdabce5350614d504b7dfdf990e2dd54b8b48
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999126"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196864"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contém uma linha para cada objeto de tabela que uma entidade de segurança proprietária ou para a qual a entidade de segurança recebeu alguma permissão.  
   
-|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |\<inherited columns>||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. Objects](../system-catalog-views/sys-objects-transact-sql.md).||  
 |lob_data_space_id|**int**||Sempre 0.|  
 |filestream_data_space_id|**int**|ID de espaço de dados para um grupo de arquivos FILESTREAM ou[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULO|  
 |max_column_id_used|**int**|ID de coluna máximo usada por esta tabela.||  
-|lock_on_bulk_load|**bit**|A tabela é bloqueada em carregamento em massa.|TBD|  
+|lock_on_bulk_load|**bit**|A tabela é bloqueada em carregamento em massa.|A ser definido|  
 |uses_ansi_nulls|**bit**|A tabela foi criada com a opção de banco de dados SET ANSI_NULLS definida como ON.|1|  
 |is_replicated|**bit**|1 = a tabela é publicada usando replicação.|0 Não há suporte para replicação.|  
 |has_replication_filter|**bit**|1 = A tabela tem um filtro de replicação.|0|  
