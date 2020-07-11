@@ -1,4 +1,4 @@
-## <a name="get-help"></a>Obter ajuda
+## <a name="image-typeicon-sourcemediainfo-tippng-borderfalse-get-help"></a>:::image type="icon" source="../media/info-tip.png" border="false":::Obter ajuda
 
 - [UserVoice: tenha sugestões para melhorar o SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
 - [Configurar e atualizar: fóruns do MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
