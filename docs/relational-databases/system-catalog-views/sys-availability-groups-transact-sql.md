@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 086daab53f1863c019e0214b77096a5a00e8b25c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b53d4da153087e222c70711c847e010ca702f31
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764775"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279087"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,12 @@ ms.locfileid: "85764775"
 |**basic_features**|**bit**|Especifica se este é um grupo de disponibilidade básico. Para obter mais informações, consulte [Grupos de disponibilidade básicos &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Especifica se o suporte DTC foi habilitado para este grupo de disponibilidade. A opção **DTC_SUPPORT** de **Criar grupo de disponibilidade** controla essa configuração.|  
 |**db_failover**|**bit**|Especifica se o grupo de disponibilidade dá suporte a failover para condições de integridade do banco de dados. A opção **DB_FAILOVER** de **Criar grupo de disponibilidade** controla essa configuração.|  
-|**is_distributed**|**bit**|Especifica se este é um grupo de disponibilidade distribuído. Para obter mais informações, veja [Grupos de disponibilidade distribuídos e &#40;Grupos de disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|  
+|**is_distributed**|**bit**|Especifica se este é um grupo de disponibilidade distribuído. Para obter mais informações, veja [Grupos de disponibilidade distribuídos e &#40;Grupos de disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|
+|**cluster_type**|**tinyint**|0: cluster de failover do Windows Server <br/><br/>1: cluster externo (por exemplo, pacemaker do Linux)<br/><br/>2: nenhum|
+|**cluster_type_desc**|**nvarchar(60)**|Descrição de texto do tipo de cluster|
+|**required_synchronized_secondaries_to_commit**|**int**| O número de réplicas secundárias que devem estar em um estado sincronizado para que uma confirmação seja concluída|
+|**sequence_number**|**bigint**|Identifica a sequência de configuração do grupo de disponibilidade. Aumenta incrementalmente toda vez que a réplica primária do grupo de disponibilidade atualiza a configuração do grupo.|
+|**is_contained**|**bit**|1: instância mestra de cluster de Big data configurada para alta disponibilidade. <br/><br/> 0: todos os outros.|
   
 ## <a name="failure-condition-level--values"></a>Valores de nível de condição de falha  
  A tabela a seguir descreve os possíveis níveis de condição de falha para a coluna **failure_condition_level** .  

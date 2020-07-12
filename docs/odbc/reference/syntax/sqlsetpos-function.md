@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a8839f1ae540ac9e5f29e144f7f57fb754e50ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abeb377b614619e8c6359db7ae1d5b388cf2dd82
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287326"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279547"
 ---
 # <a name="sqlsetpos-function"></a>Função SQLSetPos
 **Conformidade**  
@@ -71,7 +71,7 @@ SQLRETURN SQLSetPos(
   
  Para obter mais informações, consulte "Comentários".  
   
- **Retorna**  
+## <a name="returns"></a>Retornos  
   
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
@@ -102,7 +102,7 @@ SQLRETURN SQLSetPos(
 |40003|Conclusão de instrução desconhecida|A conexão associada falhou durante a execução dessa função, e o estado da transação não pode ser determinado.|  
 |42000|Erro de sintaxe ou violação de acesso|O driver não pôde bloquear a linha conforme necessário para executar a operação solicitada na *operação*de argumento.<br /><br /> O driver não pôde bloquear a linha conforme solicitado no *Delocktype*do argumento.|  
 |44000|Violação COM OPÇÃO DE VERIFICAÇÃO|O argumento de *operação* foi SQL_UPDATE e a atualização foi executada em uma tabela exibida ou uma tabela derivada da tabela exibida que foi criada ESPECIFICANDO **with check option**, de modo que uma ou mais linhas afetadas pela atualização não estarão mais presentes na tabela exibida.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \* MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY008|Operação cancelada|O processamento assíncrono foi habilitado para o *StatementHandle*. A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado em *StatementHandle*e, em seguida, a função foi chamada novamente no *StatementHandle*.<br /><br /> A função foi chamada e, antes de concluir a execução, **SQLCancel** ou **SQLCancelHandle** foi chamado no *StatementHandle* de um thread diferente em um aplicativo multithread.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *StatementHandle*. Esta função assíncrona ainda estava em execução quando a função SQLSetPos foi chamada.<br /><br /> (DM) o *StatementHandle* especificado não estava em um estado executado. A função foi chamada sem primeiro chamar **SQLExecDirect**, **SQLExecute**ou uma função de catálogo.<br /><br /> (DM) uma função de execução assíncrona (não esta) foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para o *StatementHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.<br /><br /> (DM) o driver era um driver ODBC *2. x* e **SQLSetPos** foi chamado para um *StatementHandle* depois que **SQLFetch** foi chamado.|  
@@ -222,9 +222,9 @@ SQLRETURN SQLSetPos(
   
 1.  Coloca valores nos buffers de dados e de comprimento/indicador associados a **SQLBindCol**:  
   
-    -   Para colunas normais, o aplicativo coloca o novo valor de coluna no buffer * \*TargetValuePtr* e o comprimento desse valor no buffer de * \*StrLen_or_IndPtr* . Se a linha não deve ser atualizada, o aplicativo coloca SQL_ROW_IGNORE no elemento dessa linha da matriz de operação de linha.  
+    -   Para colunas normais, o aplicativo coloca o novo valor de coluna no buffer * \* TargetValuePtr* e o comprimento desse valor no buffer de * \* StrLen_or_IndPtr* . Se a linha não deve ser atualizada, o aplicativo coloca SQL_ROW_IGNORE no elemento dessa linha da matriz de operação de linha.  
   
-    -   Para as colunas de dados em execução, o aplicativo coloca um valor definido pelo aplicativo, como o número da coluna, no buffer * \*TargetValuePtr* . O valor pode ser usado posteriormente para identificar a coluna.  
+    -   Para as colunas de dados em execução, o aplicativo coloca um valor definido pelo aplicativo, como o número da coluna, no buffer * \* TargetValuePtr* . O valor pode ser usado posteriormente para identificar a coluna.  
   
          O aplicativo coloca o resultado da macro SQL_LEN_DATA_AT_EXEC (*comprimento*) no buffer **StrLen_or_IndPtr* . Se o tipo de dados SQL da coluna for SQL_LONGVARBINARY, SQL_LONGVARCHAR ou um tipo de dados específico da fonte de dados longa e o driver retornar "Y" para o tipo de informação SQL_NEED_LONG_DATA_LEN em **SQLGetInfo**, *Length* será o número de bytes de dados a serem enviados para o parâmetro; caso contrário, ele deve ser um valor não negativo e será ignorado.  
   
@@ -234,7 +234,7 @@ SQLRETURN SQLSetPos(
   
     -   Se houver qualquer coluna de dados em execução, a função retornará SQL_NEED_DATA e passará para a etapa 3.  
   
-3.  Chama **SQLParamData** para recuperar o endereço do buffer * \*TargetValuePtr* para a primeira coluna de dados em execução a ser processada. **SQLParamData** retorna SQL_NEED_DATA. O aplicativo recupera o valor definido pelo aplicativo do buffer * \*TargetValuePtr* .  
+3.  Chama **SQLParamData** para recuperar o endereço do buffer * \* TargetValuePtr* para a primeira coluna de dados em execução a ser processada. **SQLParamData** retorna SQL_NEED_DATA. O aplicativo recupera o valor definido pelo aplicativo do buffer * \* TargetValuePtr* .  
   
     > [!NOTE]  
     >  Embora os parâmetros de dados em execução sejam semelhantes a colunas de dados em execução, o valor retornado por **SQLParamData** é diferente para cada um.  
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  As colunas de dados em execução são colunas em um conjunto de linhas para o qual os dados serão enviados com **SQLPutData** quando uma linha for atualizada com **SQLSetPos**. Eles são associados a **SQLBindCol**. O valor retornado por **SQLParamData** é o endereço da linha no buffer **TargetValuePtr* que está sendo processado.  
   
-4.  Chama **SQLPutData** uma ou mais vezes para enviar dados para a coluna. Mais de uma chamada será necessária se todos os valores de dados não puderem ser retornados no buffer * \*TargetValuePtr* especificado em **SQLPutData**; várias chamadas para **SQLPutData** para a mesma coluna são permitidas somente ao enviar dados de caractere C para uma coluna com um tipo de dados específico de fonte de caracteres, binário ou de dados ou ao enviar dados binários c para uma coluna com um tipo de dados de caractere, binário ou específico de fonte de dados.  
+4.  Chama **SQLPutData** uma ou mais vezes para enviar dados para a coluna. Mais de uma chamada será necessária se todos os valores de dados não puderem ser retornados no buffer * \* TargetValuePtr* especificado em **SQLPutData**; várias chamadas para **SQLPutData** para a mesma coluna são permitidas somente ao enviar dados de caractere c para uma coluna com um tipo de dados de caractere, binário ou específico de fonte de dados ou ao enviar dados binários c para uma coluna com um tipo de dados de caractere, binário ou  
   
 5.  Chama **SQLParamData** novamente para sinalizar que todos os dados foram enviados para a coluna.  
   

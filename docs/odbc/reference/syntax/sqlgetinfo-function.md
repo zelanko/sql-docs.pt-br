@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 418102c7573f27278282a67e3119d07a2c6d1342
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 7ce6c9e6032201f41eae058c9553f9bd61c4f079
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215616"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279570"
 ---
 # <a name="sqlgetinfo-function"></a>Função SQLGetInfo
 
@@ -71,11 +71,11 @@ SQLRETURN SQLGetInfo(
   
  Para todos os outros tipos de dados, o valor de *BufferLength* é ignorado e o driver assume que o tamanho de \* *InfoValuePtr* é SQLUSMALLINT ou SQLUINTEGER, dependendo do *InfoType*.  
   
-## <a name="return-value"></a>Valor Retornado  
+## <a name="returns"></a>Retornos  
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
 
  Quando **SQLGetInfo** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_DBC e um *identificador* de *ConnectionHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetInfo** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
@@ -340,7 +340,7 @@ SQLRETURN SQLGetInfo(
 
 A tabela a seguir lista alfabeticamente cada tipo de informação, a versão do ODBC na qual ele foi introduzido e sua descrição.  
   
-|Information Type|Versão do ODBC|Description|
+|Information Type|Versão do ODBC|Descrição|
 |-|-|-|
 |SQL_ACCESSIBLE_PROCEDURES|1.0|Uma cadeia de caracteres: "Y" se o usuário puder executar todos os procedimentos retornados por **SQLProcedures**; "N" se pode haver procedimentos retornados que o usuário não pode executar.|
 |SQL_ACCESSIBLE_TABLES|1.0|Uma cadeia de caracteres: "Y" se o usuário for garantido, **selecione** privilégios para todas as tabelas retornadas por **SQLTables**; "N" se pode haver tabelas retornadas que o usuário não pode acessar.|

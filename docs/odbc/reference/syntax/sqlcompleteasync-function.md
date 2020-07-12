@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e09d61ef516e846798dd3af2d07dafa78af4605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299650"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279584"
 ---
 # <a name="sqlcompleteasync-function"></a>Função SQLCompleteAsync
 **Conformidade**  
- Versão introduzida: ODBC 3,8  
-  
- Conformidade com padrões: nenhuma  
+ Versão introduzida: conformidade de padrões do ODBC 3,8: nenhuma  
   
  **Resumo**  
  **SQLCompleteAsync** pode ser usado para determinar quando uma função assíncrona é concluída usando o processamento baseado em notificação ou sondagem. Para obter mais informações sobre operações assíncronas, consulte [execução assíncrona](../../../odbc/reference/develop-app/asynchronous-execution.md).  

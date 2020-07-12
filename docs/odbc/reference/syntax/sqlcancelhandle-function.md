@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 059ed283032feb96ca5e6b12520682ccb034752a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299661"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279596"
 ---
 # <a name="sqlcancelhandle-function"></a>Função SQLCancelHandle
 **Conformidade**  
- Versão introduzida: ODBC 3,8  
-  
- Conformidade com padrões: nenhuma  
+ Versão introduzida: conformidade de padrões do ODBC 3,8: nenhuma  
   
  Espera-se que a maioria dos drivers ODBC 3,8 (e posteriores) Implemente essa função. Se um driver não for, uma chamada para **SQLCancelHandle** com um identificador de conexão no *parâmetro Handle* retornará SQL_ERROR com um SQLSTATE de IM001 e o driver Message ' não oferece suporte a essa função ' ' uma chamada **para SQLCancelHandle** com um identificador de instrução, pois o parâmetro *Handle* será mapeado para uma chamada para **SQLCancel** pelo Gerenciador de driver e poderá ser processado se o driver implementar **SQLCancel**. Um aplicativo pode usar **SQLGetFunctions** para determinar se um driver dá suporte a **SQLCancelHandle**.  
   
@@ -61,7 +59,7 @@ SQLRETURN SQLCancelHandle(
 |SQLSTATE|Erro|Descrição|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa específica do driver. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) no argumento * \*MessageText* buffer descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) no argumento * \* MessageText* buffer descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY010|Erro de sequência de função|Uma função de execução assíncrona, relacionada a instruções, foi chamada para um dos identificadores de instrução associados ao *identificador*e o *HandleType* foi definido como SQL_HANDLE_DBC. A função assíncrona ainda estava em execução quando **SQLCancelHandle** foi chamado.<br /><br /> (DM) o argumento *HandleType* foi SQL_HANDLE_STMT; uma função de execução assíncrona foi chamada no identificador de conexão associado; e a função ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para um dos identificadores de instrução associados ao *identificador* e ao *HandleType* definido como SQL_HANDLE_DBC e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.<br /><br /> **SQLBrowseConnect** foi chamado para *ConnectionHandle*e retornou SQL_NEED_DATA. Esta função foi chamada antes da conclusão do processo de navegação.|  
 |HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacentes não puderam ser acessados, possivelmente devido a condições de memória insuficiente.|  
