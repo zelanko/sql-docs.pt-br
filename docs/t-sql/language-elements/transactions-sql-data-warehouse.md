@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b731a07ea0443ff925555e5b91e68368bf69392
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631906"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197406"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transações (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Uma transação é um grupo de uma ou mais instruções de banco de dados que são totalmente confirmadas ou totalmente revertidas. Cada transação tem ACID (atomicidade, consistência, isolamento e durabilidade). Se a transação tiver êxito, todas as instruções dentro dela serão confirmadas. Se a transação falhar, ou seja, se pelo menos uma das instruções no grupo falhar, todo o grupo será revertido.  
   
