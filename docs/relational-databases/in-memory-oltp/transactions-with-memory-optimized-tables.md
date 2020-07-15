@@ -1,5 +1,6 @@
 ---
 title: Transações com tabelas com otimização de memória | Microsoft Docs
+description: Saiba mais sobre transações para tabelas com otimização de memória e procedimentos armazenados compilados nativamente e como elas diferem de transações para tabelas baseadas em disco.
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753186"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transações com tabelas com otimização de memória
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Este artigo descreve todos os aspectos de transações que são específicas de tabelas com otimização de memória e de procedimentos armazenados compilados de modo nativo.  
   
@@ -98,7 +99,7 @@ As tabelas baseadas em disco indiretamente têm um sistema de controle de versã
   
 A tabela a seguir lista os possíveis níveis de isolamento da transação, na sequência de isolamento do menor para o maior. Para obter detalhes sobre os conflitos que podem ocorrer e a lógica de repetição para lidar com esses conflitos, veja [Detecção de conflito e lógica de repetição](#conflict-detection-and-retry-logic). 
   
-| Nível de Isolamento | DESCRIÇÃO |   
+| Nível de Isolamento | Descrição |   
 | :-- | :-- |   
 | READ UNCOMMITTED | Indisponível: as tabelas com otimização de memória não podem ser acessadas com isolamento Read Uncommitted. Ainda é possível acessar tabelas com otimização de memória no isolamento SNAPSHOT se TRANSACTION ISOLATION LEVEL no nível da sessão é definido como READ UNCOMMITTED, usando a dica de tabela WITH (SNAPSHOT) ou definindo a configuração de banco de dados MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT como ON. | 
 | READ COMMITTED | Suporte para tabelas com otimização de memória somente quando o modo de confirmação automática está em vigor. Ainda é possível acessar tabelas com otimização de memória no isolamento SNAPSHOT se TRANSACTION ISOLATION LEVEL no nível da sessão é definido como READ COMMITTED, usando a dica de tabela WITH (SNAPSHOT) ou definindo a configuração de banco de dados MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT como ON.<br/><br/>Se a opção de banco de dados READ_COMMITTED_SNAPSHOT estiver definida como ON, não será permitido acessar uma tabela com otimização de memória e uma tabela baseada em disco em isolamento READ COMMITTED na mesma instrução. |  
@@ -114,17 +115,17 @@ Quando uma tabela com otimização de memória estiver envolvida, o tempo de vid
   
 Seguem as descrições das fases.  
   
-#### <a name="regular-processing-phase-1-of-3"></a>Processamento regular: fase 1 (de 3)  
+#### <a name="regular-processing-phase-1-of-3"></a>Processamento regular: Fase 1 (de 3)  
   
 - Essa fase é composta pela execução de todas as consultas e instruções DML na consulta.  
 - Durante essa fase, as instruções consideram a versão das tabelas com otimização de memória a partir da hora de início lógica da transação.  
   
-#### <a name="validation-phase-2-of-3"></a>Validação: fase 2 (de 3)  
+#### <a name="validation-phase-2-of-3"></a>Validação: Fase 2 (de 3)  
   
 - A fase de validação começa com a atribuição da hora de término, marcando a transação como logicamente completa. Essa conclusão torna todas as alterações da transação visíveis para outras transações, que obtêm uma dependência nessa transação. As transações dependentes não têm permissão para confirmar até que essa transação seja confirmada com êxito. Além disso, as transações que mantêm essas dependências não poderão retornar conjuntos de resultados para o cliente, a fim de garantir que o cliente veja apenas os dados que foram confirmados com êxito no banco de dados.  
 - Essa fase compreende as validações de leitura repetida e serializável. Para a validação de leitura repetida, ela verifica se qualquer uma das linhas lidas pela transação foi atualizada desde então. Para a validação serializável, ela verifica se nenhuma linha foi inserida em nenhum intervalo de dados verificado por essa transação. De acordo com a tabela em [Conflitos e níveis de isolamento](#isolation-levels), as validações de leitura repetida e serializável podem ocorrer ao usar o isolamento de instantâneo, para validar a consistência de restrições de chaves estrangeira e exclusiva.  
   
-#### <a name="commit-processing-phase-3-of-3"></a>Processamento de confirmação: fase 3 (de 3)  
+#### <a name="commit-processing-phase-3-of-3"></a>Processamento de confirmação: Fase 3 (de 3)  
   
 - Durante essa fase de confirmação, as alterações nas tabelas duráveis são gravadas no log e o log é gravado em disco. Em seguida, o controle é retornado para o cliente.  
 - Após a conclusão do processamento de confirmação, todas as transações dependentes são notificadas de que elas podem ser confirmadas.  
@@ -139,7 +140,7 @@ Há dois tipos de condições de erro relacionadas à transação que causam a f
 
 Veja abaixo as condições de erro que podem causar falhas nas transações ao acessarem as tabelas com otimização de memória.
 
-| Código do Erro | DESCRIÇÃO | Causa |
+| Código do Erro | Descrição | Causa |
 | :-- | :-- | :-- |
 | **41302** | Tentou atualizar uma linha que foi atualizada em uma transação diferente desde o início da transação atual. | Essa condição de erro ocorre se duas transações simultâneas tentam atualizar ou excluir a mesma linha ao mesmo tempo. Uma das duas transações recebe essa mensagem de erro e precisará ser repetida. <br/><br/>  | 
 | **41305**| Falha de validação de leitura repetida. Uma linha lida de uma tabela com otimização de memória – esta transação foi atualizada por outra transação que foi confirmada antes da confirmação dessa transação. | Esse erro pode ocorrer ao usar o isolamento REPEATABLE READ ou SERIALIZABLE e também se as ações de uma transação simultânea causam a violação de uma restrição FOREIGN KEY. <br/><br/>Em geral, uma violação simultânea de restrições de chave estrangeira desse tipo é rara e, normalmente, indica um problema com a lógica do aplicativo ou a entrada de dados. No entanto, o erro também pode ocorrer se não há nenhum índice nas colunas envolvidas com a restrição FOREIGN KEY. Portanto, a orientação é sempre criar um índice em colunas de chave estrangeira em uma tabela com otimização de memória. <br/><br/> Para obter considerações mais detalhadas sobre as falhas de validação causadas por violações de chave estrangeira, confira [esta postagem no blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) da Equipe de Consultoria ao Cliente do SQL Server. |  
@@ -263,7 +264,7 @@ go
   - banco de dados tempdb.  
   - Somente leitura do banco de dados mestre.  
   
-- Não há suporte para transações distribuídas: quando BEGIN DISTRIBUTED TRANSACTION é usado, a transação não pode acessar uma tabela com otimização de memória.  
+- Não há suporte para transações distribuídas: Quando BEGIN DISTRIBUTED TRANSACTION é usado, a transação não pode acessar uma tabela com otimização de memória.  
   
 ## <a name="natively-compiled-stored-procedures"></a>procedimentos armazenados compilados nativamente  
   

@@ -1,6 +1,6 @@
 ---
 title: Compatibilidade do FileTable | Microsoft Docs
-description: Compatibilidade do FileTable com outros recursos do SQL Server
+description: Descubra como as FileTables funcionam com outros recursos do SQL Server. Leia sobre quais recursos do SQL Server são compatíveis com as FileTables e quais restrições ele impõe.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1899aefaeeef896112a903f1fe69b289740ef09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642561"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilidade do FileTable com outros recursos do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Descreve como as FileTables funcionam com outros recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> Grupos de disponibilidade AlwaysOn e FileTables  
@@ -29,7 +29,7 @@ ms.locfileid: "75252707"
   
 -   A funcionalidade FileTable tem suporte parcial pelo [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Depois de um failover, os dados de FileTable estarão acessíveis na réplica primária, mas os dados de FileTable não estarão acessíveis em réplicas secundárias legíveis.  
   
-    > **OBSERVAÇÃO:**  observe que, após um failover, haverá suporte toda a funcionalidade de FILESTREAM. Os dados de FILESTREAM podem ser acessados em ambas as réplicas secundárias legíveis e no novo primário.  
+    > **OBSERVAÇÃO:**  Observe que depois de um failover, toda a funcionalidade de FILESTREAM terá suporte. Os dados de FILESTREAM podem ser acessados em ambas as réplicas secundárias legíveis e no novo primário.  
   
 -   As funções FILESTREAM e FileTable aceitam ou retornam VNNs (nomes de rede virtual) em vez de nomes de computadores. Para obter mais informações sobre essas funções, veja [Funções Filestream e FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   

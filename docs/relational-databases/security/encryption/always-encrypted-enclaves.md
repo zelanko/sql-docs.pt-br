@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 76af9a82a53004d01443a0442946e28fed73d0f0
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999411"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858868"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -51,7 +51,7 @@ Com enclaves seguros, o Always Encrypted protege a confidencialidade dos dados c
 
 - **Criptografia in-loco** – operações criptográficas em dados confidenciais, por exemplo: criptografia de dados ou rotação de uma chave de criptografia de coluna são executadas dentro do enclave seguro e não exigem a movimentação dos dados para fora do banco de dados. Você pode emitir a criptografia in-loco usando a instrução Transact-SQL ALTER TABLE, e não será preciso usar ferramentas como o assistente de Always Encrypted no SSMS ou o cmdlet do PowerShell Set-SqlColumnEncryption.
 
-- **Cálculos avançados (versão prévia)** – operações em colunas criptografadas, incluindo a correspondência de padrões (o predicado LIKE) e comparações de intervalo são compatíveis dentro do enclave seguro, que desbloqueia o Always Encrypted para uma ampla gama de aplicativos e cenários que exigem que esses cálculos sejam executados dentro do sistema de banco de dados.
+- **Cálculos avançados** – Operações em colunas criptografadas, incluindo a correspondência de padrões (o predicado LIKE) e comparações de intervalo são compatíveis dentro do enclave seguro, que desbloqueia o Always Encrypted para uma ampla gama de aplicativos e cenários que exigem que esses cálculos sejam executados dentro do sistema de banco de dados.
 
 ## <a name="secure-enclave-attestation"></a>Atestado de enclave seguro
 

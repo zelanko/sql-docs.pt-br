@@ -1,5 +1,6 @@
 ---
 title: Instantâneos do banco de dados (SQL Server) | Microsoft Docs
+description: Descubra como usar instantâneos de banco de dados para criar exibições estáticas e somente leitura de um banco de dados no SQL Server. Confira os benefícios, os pré-requisitos e as limitações.
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68300434"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630813"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantâneos de banco de dados (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Um instantâneo de banco de dados é uma exibição estática somente leitura de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o *banco de dados de origem*). O instantâneo de banco de dados é transacionalmente consistente com o banco de dados de origem a partir do momento da criação do instantâneo. Um instantâneo de um banco de dados sempre reside na mesma instância de servidor que o banco de dados de origem. Embora os instantâneos do banco de dados forneçam uma exibição somente leitura dos dados no mesmo estado em que o instantâneo foi criado, o tamanho do arquivo de instantâneo aumenta conforme as alterações são feitas no banco de dados de origem. Para obter detalhes, consulte a seção [Visão geral do recurso](#FeatureOverview) abaixo.
   

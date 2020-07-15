@@ -1,5 +1,6 @@
 ---
 title: Controlar a durabilidade da transação | Microsoft Docs
+description: Saiba mais sobre transações duráveis atrasadas. As confirmações de transações do SQL Server podem ser totalmente duráveis ou duráveis atrasadas, também conhecidas como confirmação lenta.
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8df526a46aac597c9b6fee833d2673077aaf054b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754559"
 ---
 # <a name="control-transaction-durability"></a>Controlar a durabilidade da transação
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   As confirmações de transações do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser totalmente duráveis, o padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou duráveis atrasadas (também conhecido como confirmação lenta).    
     

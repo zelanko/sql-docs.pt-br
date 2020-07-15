@@ -1,5 +1,6 @@
 ---
 title: Não há suporte para T-SQL no OLTP in-memory
+description: Saiba quais recursos do Transact-SQL não são compatíveis com tabelas com otimização de memória, procedimentos armazenados compilados nativamente e funções definidas pelo usuário.
 ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753205"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   As tabelas com otimização de memória, procedimentos armazenados compilados de modo nativo e funções definidas pelo usuário não dão suporte à área de superfície completa do [!INCLUDE[tsql](../../includes/tsql-md.md)] que tem suporte em tabelas com base em disco, procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretados e funções definidas pelo usuário. Ao tentar usar um dos recursos sem suporte, o servidor retornará um erro.  
   

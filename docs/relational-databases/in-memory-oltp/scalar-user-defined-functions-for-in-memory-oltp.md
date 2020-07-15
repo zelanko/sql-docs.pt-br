@@ -1,5 +1,6 @@
 ---
 title: Funções escalares definidas pelo usuário para OLTP in-memory | Microsoft Docs
+description: Saiba como criar e remover funções escalares definidas pelo usuário e compiladas nativamente para OLTP in-memory no SQL Server. A compilação nativa aprimora o desempenho.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3914e8d5138dc2de4481276167165d1f4360c657
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8914f495767e6942b12f5c4dd7b61fd4a6a5bebf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735028"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Funções escalares definidas pelo usuário para OLTP na Memória
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode criar e remover funções escalares definidas pelo usuário compiladas de modo nativo. Também pode alterar essas funções definidas pelo usuário. A compilação nativa melhora o desempenho da avaliação de funções definidas pelo usuário no Transact-SQL.  
   

@@ -1,5 +1,6 @@
 ---
 title: Aprimorar o desempenho da replicação transacional | Microsoft Docs
+description: Além das dicas gerais de desempenho para melhorar o desempenho de replicação no SQL Server, saiba mais sobre técnicas adicionais para replicação transacional.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e386c475975e94408ed4260f35bb0646c6878575
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288171"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807984"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "76288171"
   
      Definir que os agentes executem continuamente, em vez de criar agendamentos frequentes (como a cada minuto), melhora o desempenho da replicação, eliminando as interrupções do agente. Quando você define que o Distribution Agent execute continuamente, as alterações são propagadas com uma baixa latência para os demais servidores conectados na topologia. Para obter mais informações, consulte:  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar agendamentos de sincronização](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar agendas de sincronização](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parâmetros do Distribution Agent e do Log Reader Agent  
 Parâmetros de perfil de agente geralmente são ajustados para aumentar a produtividade do Leitor de Log e do Agente de Distribuição com sistemas OLTP de alto tráfego. 
@@ -142,11 +143,11 @@ Este exemplo resulta em um estado no qual nenhuma sessão está executando seus 
 
 Você pode observar as seguintes tendências dos contadores de desempenho do Agente de Distribuição durante esse período de tempo limite de consulta: 
 
-- O valor do contador de desempenho **Dist: Delivered Cmds/sec** é sempre 0.
-- O valor do contador de desempenho **Dist: Delivered Trans/sec** é sempre 0.
-- O contador de desempenho **Dist: Delivery Latency** reporta um aumento no valor até que o deadlock do thread seja resolvido.
+- O valor do contador de desempenho **Dist: Cmds entregues/s** é sempre 0.
+- O valor do contador de desempenho **Dist: Trans entregues/s** é sempre 0.
+- O contador de desempenho **Dist: Latência de Entrega** relata um aumento no valor até que o deadlock do thread seja resolvido.
 
-O tópico "Agente de Distribuição de Replicação" nos Manuais Online do SQL Server contém a seguinte descrição do parâmetro *SubscriptionStreams*: "Se uma das conexões não for executada nem for confirmada, todas as conexões anularão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha."
+O tópico "Agente de Distribuição de Replicação" nos Manuais Online do SQL Server contém a seguinte descrição do parâmetro *SubscriptionStreams*: "Se uma das conexões falhar ao ser executada ou confirmada, todas as conexões anularão o lote atual e o agente usará um único fluxo para repetir os lotes com falha."
 
 O Agente de Distribuição usa uma sessão para repetir o lote que não pôde ser aplicado. Depois que o Agente de Distribuição aplicar com êxito o lote, ele retomará o uso de várias sessões sem reiniciar.
 

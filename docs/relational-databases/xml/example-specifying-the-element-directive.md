@@ -1,5 +1,6 @@
 ---
-title: 'Exemplo: especificando a diretiva ELEMENT | Microsoft Docs'
+title: 'Exemplo: Especificando a diretiva ELEMENT | Microsoft Docs'
+description: Veja um exemplo de como especificar a diretiva ELEMENT em uma consulta SQL para gerar um XML centrado no elemento.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9b07ece5aab18649cd9c98f1028d05131b6c7687
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d6e8f74e0d5d8d90afa09c733e5b46b47b533995
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632618"
 ---
 # <a name="example-specifying-the-element-directive"></a>Exemplo: Especificando a diretiva ELEMENT
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Isso recupera informações de funcionários e gera XML centrado em elemento conforme mostrado no seguinte:  
   
 ```  

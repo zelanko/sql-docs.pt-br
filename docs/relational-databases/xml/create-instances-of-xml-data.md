@@ -1,5 +1,6 @@
 ---
 title: Criar instâncias de dados XML | Microsoft Docs
+description: Saiba como criar instâncias de dados XML usando o carregamento em massa, atribuições de constantes, a instrução SELECT e a cláusula FOR XML ou por instâncias de cadeia de caracteres de conversão de tipo.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 743ed3d936a51bf3c94f0bbd28ef490093edd570
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ac342c20eb38411c4b0d1d689c34a70cda04b873
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752571"
 ---
 # <a name="create-instances-of-xml-data"></a>Criar instâncias de dados XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Este tópico descreve como gerar instâncias XML.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode gerar instâncias XML das seguintes maneiras:  
@@ -94,7 +95,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Se o parâmetro *style* não for usado ou seu valor estiver definido como 0, espaço em branco insignificante não será preservado para a conversão da instância DT xml. Para obter mais informações sobre como usar o operador CONVERT e seu parâmetro *style* ao converter dados de cadeia de caracteres em instâncias DT xml, consulte [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemplo: Converter um valor de cadeia de caracteres em xml com tipo e atribuí-lo a uma coluna  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemplo: Converter um valor de cadeia de caracteres em xml tipado e atribuí-lo a uma coluna  
  O exemplo a seguir converte uma variável de cadeia de caracteres que contém um fragmento XML para o tipo de dados **xml** e, em seguida, armazena-a na coluna de tipo **xml** :  
   
 ```  
@@ -122,7 +123,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemplo: Converter uma cadeia de caracteres em xml com tipo e atribuí-la a uma variável  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemplo: Converter uma cadeia de caracteres em xml tipado e atribuí-lo a uma variável  
  No exemplo a seguir, uma cadeia de caracteres é convertida em tipo **xml** e atribuída a uma variável de tipo de dados **xml** :  
   
 ```  
@@ -210,7 +211,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Recuperar e consultar dados XML](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Descreve as partes de instâncias XML que não são preservadas quando são armazenadas em bancos de dados.|  
   

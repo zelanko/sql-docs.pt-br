@@ -1,5 +1,6 @@
 ---
 title: Espelhamento de Banco de Dados (SQL Server) | Microsoft Docs
+description: Saiba mais sobre o espelhamento de banco de dados, que é uma solução para aumentar a disponibilidade de um banco de dados do SQL Server e é implementada por banco de dados.
 ms.custom: ''
 ms.date: 05/16/2016
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1b95d55a979738f787e4814a9f40f929c521868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006348"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754729"
 ---
 # <a name="database-mirroring-sql-server"></a>Espelhamento de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
@@ -53,7 +54,7 @@ ms.locfileid: "68006348"
   
      O espelhamento de banco de dados fornece completa ou quase completa redundância de dados, dependendo se o modo operacional é de alta segurança ou de alto desempenho. Para obter mais informações, consulte [Modos de operação](#OperatingModes), mais adiante neste tópico.  
   
-     Um parceiro de espelhamento de banco de dados executado no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] ou em versões posteriores tenta resolver automaticamente determinados tipos de erros que impedem a leitura de uma página de dados. O parceiro que não está habilitado para ler uma página solicita uma cópia atualizada de outro parceiro. Se essa solicitação tiver êxito, a página ilegível será substituída pela cópia. Isso normalmente resolve o erro. Para obter mais informações, consulte [Reparo automático de página &#40;Grupos de disponibilidade: espelhamento de banco de dados&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
+     Um parceiro de espelhamento de banco de dados executado no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] ou em versões posteriores tenta resolver automaticamente determinados tipos de erros que impedem a leitura de uma página de dados. O parceiro que não está habilitado para ler uma página solicita uma cópia atualizada de outro parceiro. Se essa solicitação tiver êxito, a página ilegível será substituída pela cópia. Isso normalmente resolve o erro. Para obter mais informações, confira [Reparo automático de página &#40;Grupos de Disponibilidade: espelhamento de banco de dados&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Aumenta a disponibilidade do banco de dados de produção durante as atualizações.  
   
@@ -109,7 +110,7 @@ ms.locfileid: "68006348"
  Depois que uma sessão de espelhamento é iniciada ou retomada, o processo no qual os registros do log do banco de dados principal acumulados no servidor principal são enviados ao servidor espelho, que grava esses registros de log o mais rapidamente possível para ficar em dia com o servidor principal.  
   
  Segurança de transação  
- Uma propriedade de banco de dados específica de espelhamento que determina se uma sessão de espelhamento de banco de dados opera de forma síncrona ou assíncrona. Há dois níveis de segurança: FULL e OFF.  
+ Uma propriedade de banco de dados específica de espelhamento que determina se uma sessão de espelhamento de banco de dados opera de forma síncrona ou assíncrona. Há dois níveis de segurança: COMPLETO e DESLIGADO.  
   
  Witness (testemunha)  
  Para uso apenas com o modo de alta segurança, uma instância opcional do SQL Server que permite ao servidor espelho reconhecer quando iniciar um failover automático. Ao contrário dos dois parceiros de failover, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
@@ -344,9 +345,9 @@ ms.locfileid: "68006348"
   
 ## <a name="see-also"></a>Consulte Também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Reparo automático de página &#40;Grupos de disponibilidade: espelhamento de banco de dados&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Reparo automático de página &#40;Grupos de Disponibilidade: Espelhamento de banco de dados&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Espelhamento de banco de dados: interoperabilidade e coexistência &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Espelhamento de banco de dados: Interoperabilidade e Coexistência &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Pré-requisitos, restrições e recomendações para espelhamento de banco de dados](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  

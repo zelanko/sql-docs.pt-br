@@ -1,23 +1,22 @@
 ---
 title: Usar o editor de Transact-SQL para criar objetos de banco de dados
-titleSuffix: Azure Data Studio
 description: Este tutorial demonstra os principais recursos do Azure Data Studio que simplificam o trabalho com T-SQL.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726739"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>Tutorial: Usar o editor de Transact-SQL para criar objetos de banco de dados – [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Tutorial: Usar o editor Transact-SQL para criar objetos de banco de dados – Azure Data Studio
 
 Criar e executar consultas, procedimentos armazenados, scripts etc. são as principais tarefas dos profissionais de banco de dados. Este tutorial demonstra os principais recursos do editor de T-SQL para criar objetos de banco de dados.
 
@@ -60,7 +59,7 @@ Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azu
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usar snippets de T-SQL para criar procedimentos armazenados
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece muitos snippets de T-SQL internos para criar instruções rapidamente.
+O Azure Data Studio fornece muitos snippets de T-SQL internos para criar instruções rapidamente.
 
 
 1. Abra um novo editor de consultas pressionando **Ctrl + N**.
@@ -114,7 +113,7 @@ O procedimento armazenado é criado e o painel **RESULTADOS** exibe o cliente re
 
 ## <a name="use-peek-definition"></a>Usar Inspecionar Definição 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] possibilita exibir a definição de um objeto usando o recurso de inspecionar definição. Esta seção cria um segundo procedimento armazenado e usa inspecionar definição para ver quais colunas estão em uma tabela para criar rapidamente o corpo do procedimento armazenado.
+O Azure Data Studio possibilita exibir a definição de um objeto usando o recurso Espiar Definição. Esta seção cria um segundo procedimento armazenado e usa inspecionar definição para ver quais colunas estão em uma tabela para criar rapidamente o corpo do procedimento armazenado.
 
 1. Abra um novo editor pressionando **Ctrl + N**. 
 

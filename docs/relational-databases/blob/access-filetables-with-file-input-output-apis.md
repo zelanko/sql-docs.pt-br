@@ -1,5 +1,6 @@
 ---
 title: Acessar FileTables com APIs de entrada e saída de arquivo | Microsoft Docs
+description: Descubra como usar APIs de E/S de arquivo com FileTables e saiba quais operações do sistema de arquivos são compatíveis com FileTables.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73f6f8e993784def2dd9325933778e2048d5eae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744696"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Descreve como a E/S do sistema de arquivos funciona em uma FileTable.  
   
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> Começar a usar APIs de E/S de arquivos com FileTables  
@@ -103,7 +104,7 @@ ms.locfileid: "72908780"
   
 ##  <a name="file-system-functionality-supported-in-filetables"></a><a name="funclist"></a> Funcionalidade do sistema de arquivos com suporte em FileTables  
   
-|Recurso|Suportado|Comentários|  
+|Recurso|Com suporte|Comentários|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Sim|Há suporte para oplocks de Nível 2, Nível 1, Lote e Filtro.|  
 |**Atributos estendidos**|Não||  

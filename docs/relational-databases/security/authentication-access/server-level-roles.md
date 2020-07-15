@@ -1,5 +1,6 @@
 ---
 title: Funções de nível de servidor | Microsoft Docs
+description: O SQL Server fornece funções de nível de servidor. Essas entidades de segurança agrupam outras entidades para gerenciar as permissões de todo o servidor.
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116789"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334024"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -46,11 +47,11 @@ ms.locfileid: "68116789"
 ## <a name="fixed-server-level-roles"></a>Funções fixas de nível de servidor  
  A tabela a seguir mostra as funções fixas de nível de servidor e seus recursos.  
   
-|Função fixa de nível de servidor|DESCRIÇÃO|  
+|Função fixa de nível de servidor|Descrição|  
 |------------------------------|-----------------|  
 |**sysadmin**|Os membros da função de servidor fixa **sysadmin** podem executar qualquer atividade no servidor.|  
 |**serveradmin**|Os membros da função de servidor fixa **serveradmin** podem alterar as opções de configuração de todo o servidor e fechar o servidor.|  
-|**securityadmin**|Os membros da função de servidor fixa **securityadmin** gerenciam logons e suas propriedades. Eles podem ter as permissões de nível de servidor `GRANT`, `DENY` e `REVOKE`. Eles também podem ter permissões de nível de banco de dados `GRANT`, `DENY` e `REVOKE` se tiverem acesso ao banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANTE:** a capacidade de conceder acesso ao [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e de configurar permissões de usuário permitem que o administrador de segurança atribua a maioria das permissões de servidor. A função **securityadmin** deve ser tratada como equivalente à função **sysadmin** .|  
+|**securityadmin**|Os membros da função de servidor fixa **securityadmin** gerenciam logons e suas propriedades. Eles podem ter as permissões de nível de servidor `GRANT`, `DENY` e `REVOKE`. Eles também podem ter permissões de nível de banco de dados `GRANT`, `DENY` e `REVOKE` se tiverem acesso ao banco de dados. Além disso, eles podem redefinir senhas para logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **IMPORTANTE:** A capacidade de conceder acesso ao [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e de configurar permissões de usuário permite que o administrador de segurança atribua a maioria das permissões de servidor. A função **securityadmin** deve ser tratada como equivalente à função **sysadmin** .|  
 |**processadmin**|Os membros da função de servidor fixa **processadmin** podem encerrar os processos em execução em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**setupadmin**|Os membros da função de servidor fixa **setupadmin** podem adicionar e remover servidores vinculados usando instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)]. (A associação **sysadmin** é necessária ao usar o [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
 |**bulkadmin**|Os membros da função de servidor fixa **bulkadmin** podem executar a instrução `BULK INSERT`.|  
@@ -63,7 +64,7 @@ ms.locfileid: "68116789"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  A permissão **CONTROL SERVER** é semelhante, mas não idêntica à função de servidor fixa do **sysadmin** . As permissões não implicam associações de função e as associações de função não concedem permissões. Por exemplo, **CONTROL SERVER** não implica a associação à função de servidor fixa **sysadmin** .) No entanto, às vezes é possível representar entre funções e permissões equivalentes. A maioria dos comandos **DBCC** e muitos procedimentos do sistema requerem associação na função de servidor fixa **sysadmin** . Para obter uma lista dos 171 procedimentos armazenados do sistema que exigem associação ao **sysadmin** , veja a seguinte postagem de blog de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation – caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
+>  A permissão **CONTROL SERVER** é semelhante, mas não idêntica à função de servidor fixa do **sysadmin** . As permissões não implicam associações de função e as associações de função não concedem permissões. Por exemplo, **CONTROL SERVER** não implica a associação à função de servidor fixa **sysadmin**.) No entanto, às vezes é possível representar entre funções e permissões equivalentes. A maioria dos comandos **DBCC** e muitos procedimentos do sistema requerem associação na função de servidor fixa **sysadmin** . Para obter uma lista dos 171 procedimentos armazenados do sistema que exigem associação ao **sysadmin** , veja a seguinte postagem de blog de Andreas Wolter [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation – caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
   
 ## <a name="server-level-permissions"></a>Permissão em nível de servidor  
  Somente podem ser acrescentadas permissões do nível de servidor a funções de servidor definidas pelo usuário. Para listar as permissões em nível de servidor, execute a instrução a seguir. As permissões em nível de servidor são:  
@@ -77,7 +78,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Trabalhando com funções de nível de servidor  
  A tabela a seguir explica os comandos, exibições e funções que você pode usar para trabalhar com funções de nível de servidor.  
   
-|Recurso|Type|DESCRIÇÃO|  
+|Recurso|Type|Descrição|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|Metadados|Retorna uma lista de funções de nível de servidor.|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|Metadados|Retorna informações sobre os membros de uma função de nível de servidor.|  

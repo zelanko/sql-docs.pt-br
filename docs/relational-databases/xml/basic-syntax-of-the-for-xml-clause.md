@@ -1,5 +1,6 @@
 ---
 title: Sintaxe básica da cláusula FOR XML | Microsoft Docs
+description: Conheça a sintaxe básica da cláusula FOR XML e saiba como ela é usada para determinar a forma do XML resultante de uma consulta SQL.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ebaf884d584f87afab1afaa4c30a50287d348284
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1364b5b8c7f0a95c9e3710082feae10defc37dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661979"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Sintaxe básica da cláusula FOR XML
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 O modo FOR XML pode ser RAW, AUTO, EXPLICIT ou PATH. Ele determina a forma do XML resultante.  
   
@@ -72,7 +73,7 @@ Para obter a documentação da cláusula SELECT...**FOR XML** que também se apl
 ## <a name="arguments"></a>Argumentos
 
 **RAW** [('_ElementName_')]  
- Pega o resultado da consulta e transforma cada linha no conjunto de resultados em um elemento XML com um identificador genérico, \<row/>, como a marca do elemento. Opcionalmente, é possível especificar um nome para o elemento de linha ao usar esta diretiva. O XML resultante usará o *ElementName* especificado como o elemento de linha gerado para cada linha. Para obter mais informações, consulte [Usar modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
+ Pega o resultado da consulta e transforma cada linha no conjunto de resultados em um elemento XML com um identificador genérico, \<row />, como a marca do elemento. Opcionalmente, é possível especificar um nome para o elemento de linha ao usar esta diretiva. O XML resultante usará o *ElementName* especificado como o elemento de linha gerado para cada linha. Para obter mais informações, consulte [Usar modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
 **AUTO**  
  Retorna os resultados da consulta em uma árvore XML simples e aninhada. Cada tabela na cláusula FROM para a qual pelo menos uma coluna está listada na cláusula SELECT é representada como um elemento XML. As colunas listadas na cláusula SELECT são mapeadas para os atributos apropriados do elemento. Para obter mais informações, consulte [Usar modo AUTO com FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md).  

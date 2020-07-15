@@ -1,5 +1,6 @@
 ---
 title: Exibir arquivos de log offline | Microsoft Docs
+description: Saiba como ver arquivos de log do SQL Server de uma instância local ou remota do SQL Server quando a instância de destino está offline ou não inicia.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908555"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667860"
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], você pode exibir arquivos de log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância local ou remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando a instância de destino for offline ou não inicia.  
   
  Você pode acessar os arquivos de log offline de Servidores Registrados, ou programaticamente por WMI e o WQL (Linguagem WQL) consulta.  
@@ -51,7 +52,7 @@ ms.locfileid: "72908555"
   
 -   Acesso de leitura ao namespace WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Por padrão, todos usuários têm acesso de leitura por meio da permissão Habilitar Conta. Para obter mais informações, consulte o procedimento "Para verificar permissões de WMI" posteriormente nesta seção.  
   
--   Permissão de leitura para a pasta que contém os arquivos de logs de erros. Por padrão, os arquivos de logs de erros estão localizados no caminho a seguir (em que \<*Drive>* representa a unidade na qual você instalou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permissão de leitura para a pasta que contém os arquivos de logs de erros. Por padrão, os arquivos de logs de erros estão localizados no seguinte caminho (em que \<*Drive>* representa a unidade na qual você instalou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
      **\<Drive>:\Arquivos de Programas\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Log**  
   

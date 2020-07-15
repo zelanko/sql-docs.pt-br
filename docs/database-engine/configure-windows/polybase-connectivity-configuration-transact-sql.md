@@ -1,24 +1,25 @@
 ---
 title: Configuração de conectividade do PolyBase (Transact-SQL) | Microsoft Docs
+description: Descubra como usar o sp_configure para exibir ou alterar as definições da configuração global para o PolyBase Hadoop e a conectividade do Armazenamento de Blobs do Azure.
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.technology: configuration
-ms.topic: conceptual
+ms.technology: polybase
+ms.topic: reference
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3daf000381fbfaa5481ae18f348bd987689e46b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997919"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938937"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuração de conectividade do PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -60,25 +61,25 @@ RECONFIGURE
   
 -   Opção 1: Hortonworks HDP 1.3 no Windows Server  
   
--   Opção 1: Armazenamento de blobs do Azure (WASB[S])  
+-   Opção 1: Armazenamento de Blobs do Azure (WASB[S])  
   
 -   Opção 2: Hortonworks HDP 1.3 no Linux  
   
--   Opção 3: Cloudera CDH 4.3 no Linux  
+-   Opção 3: Cloudera CDH 4.3 em Linux  
   
 -   Opção 4: Hortonworks HDP 2.0 no Windows Server  
   
--   Opção 4: armazenamento de blobs do Azure (WASB[S])  
+-   Opção 4: Armazenamento de Blobs do Azure (WASB[S])  
   
 -   Opção 5: Hortonworks HDP 2.0 no Linux  
   
--   Opção 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 e 5.13 em Linux  
+-   Opção 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 e 5.13 no Linux  
   
--   Opção 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 em Linux  
+-   Opção 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 no Linux  
   
 -   Opção 7: Hortonworks 2.1, 2.2 e 2.3 no Windows Server  
   
--   Opção 7: armazenamento de blobs do Azure (WASB[S])  
+-   Opção 7: Armazenamento de Blobs do Azure (WASB[S])  
   
  **RECONFIGURE**  
  Atualiza o valor de execução (run_value) para corresponder ao valor de configuração (config_value). Confira [Result Sets](#ResultSets) para obter as definições de run_value e config_value. O novo valor de configuração definido por sp_configure não entra em vigor até que o valor de execução seja definido pela instrução RECONFIGURE.  
@@ -91,7 +92,7 @@ RECONFIGURE
 ##  <a name="result-sets"></a><a name="ResultSets"></a> Result Sets  
  Quando é executado sem parâmetros, **sp_configure** retorna um conjunto de resultados com cinco colunas.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|O nome da opção de configuração.|  
 |**minimum**|**int**|Valor mínimo da opção de configuração.|  

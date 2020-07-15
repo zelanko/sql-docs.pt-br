@@ -1,5 +1,6 @@
 ---
 title: Agente de Leitor de Log de replicação | Microsoft Docs
+description: O Agente de Leitor de Log de Replicação monitora os bancos de dados do SQL Server configurados para replicação transacional e copia transações para o banco de dados de distribuição.
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9f459e71ebeb95de2b1d80f1281881df1c0474a0
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 5ba7cad00855f3d63570491e27702a56727ebcfc
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151864"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807926"
 ---
 # <a name="replication-log-reader-agent"></a>Replication Agente de Leitor de Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: Componentes curinga e validação de conteúdo | Microsoft Docs
+description: Saiba como os componentes curinga de Atributo e Elemento XML são usados para aumentar a flexibilidade quanto ao que pode aparecer em um modelo de conteúdo.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b8613bed755158854851483faf3ea6af4fb60402
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e1fac8a7a0e7eafc4b3bb04809ad51ee2f1b970e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729818"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Componentes curinga e validação de conteúdo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Componentes curinga são usados para aumentar a flexibilidade do que é permitido aparecer em um modelo de conteúdo. Esses componentes têm suporte na linguagem XSD das seguintes maneiras:  
   
--   Componentes curinga de elemento. Eles são representados pelo elemento **\<xsd:any>** .  
+-   Componentes curinga de elemento. Esses são representados pelo elemento **\<xsd:any>** .  
   
--   Componentes curinga de atributo. Eles são representados pelo elemento **\<xsd:anyAttribute>** .  
+-   Componentes curinga de atributo. Esses são representados pelo elemento **\<xsd:anyAttribute>** .  
   
- Ambos os elementos de caractere curinga, **\<xsd:any>** e **\<xsd:anyAttribute>** , dão suporte ao uso de um atributo **processContents**. Isso permite especificar um valor que indica como aplicativos XML tratam a validação do conteúdo do documento associado a esses elementos de caracteres curinga. Estes são os diferentes valores e seus efeitos:  
+ Os elementos de caractere curinga, **\<xsd:any>** e **\<xsd:anyAttribute>** , são compatíveis com o uso de um atributo **processContents**. Isso permite especificar um valor que indica como aplicativos XML tratam a validação do conteúdo do documento associado a esses elementos de caracteres curinga. Estes são os diferentes valores e seus efeitos:  
   
 -   O valor **strict** especifica que o conteúdo é completamente validado.  
   

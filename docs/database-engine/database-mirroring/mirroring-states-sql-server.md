@@ -1,5 +1,6 @@
 ---
 title: Estados de espelhamento (SQL Server) | Microsoft Docs
+description: Saiba mais sobre os estados de banco de dados em uma sessão de espelhamento de banco de dados no SQL Server. O estado reflete o status de comunicação, o fluxo de dados e a diferença nos dados.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -19,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 03455038964c06c5a101c7259e65dfecff5b4404
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a50f4a4a81267d8bb515fd4890d1d3fe66fb75a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67996560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715551"
 ---
 # <a name="mirroring-states-sql-server"></a>Estados de espelhamento (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Durante uma sessão de espelhamento de banco de dados, o banco de dados espelho está sempre em um estado específico (o *estado de espelhamento*). O estado do banco de dados reflete o status de comunicação, o fluxo de dados e a diferença nos dados entre os parceiros. A sessão de espelhamento de banco de dados adota o mesmo estado que o banco de dados principal.  
   
  Ao longo de uma sessão de espelhamento de banco de dados, as instâncias de servidor monitoram umas às outras. Os parceiros usam o estado de espelhamento para monitorar o banco de dados. Com exceção do estado PENDING_FAILOVER, os bancos de dados principal e espelho estão sempre no mesmo estado. Se uma testemunha for definida para a sessão, cada parceiro monitorará a testemunha que usar seu estado de conexão (CONNECTED ou DISCONNECTED).  
   
  Os estados possíveis de espelhamento de banco de dados são:  
   
-|estado de espelhamento|DESCRIÇÃO|  
+|estado de espelhamento|Descrição|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. O servidor principal está enviando registros de log para o servidor espelho, que está aplicando as alterações ao banco de dados espelho para rolá-lo adiante.<br /><br /> No início de uma sessão de espelhamento de banco de dados, o banco de dados está no estado SYNCHRONIZING. O servidor principal está servindo o banco de dados e o espelho está tentando manter-se atualizado.|  
 |SYNCHRONIZED|Quando o servidor espelho torna-se suficientemente atualizado com relação ao servidor principal, o estado de espelhamento muda para SYNCHRONIZED. O banco de dados permanece nesse estado enquanto o servidor principal continua enviando alterações para o servidor espelho e o servidor espelho continua aplicando as alterações ao banco de dados espelho.<br /><br /> Se a segurança da transação for definida como FULL, suporte ao failover automático e ao failover manual no estado SYNCHRONIZED, não haverá perda de dados após um failover.<br /><br /> Se a segurança da transação for off, sempre será possível alguma perda de dados, mesmo no estado SYNCHRONIZED.|  

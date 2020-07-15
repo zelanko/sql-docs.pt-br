@@ -1,5 +1,6 @@
 ---
 title: Especificar metapropriedades no OPENXML | Microsoft Docs
+description: Saiba como especificar atributos de metapropriedade em uma instrução OPENXML para extrair informações de nós XML.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6ff3072b84334f16395c7687c1baaf511cd1fd53
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fd34411b00bfa89c5c69b0d71073ee1c0d4d2280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728125"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropriedades no OPENXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Atributos de metapropriedades em um documento XML são atributos que descrevem as propriedades de um item XML, como elemento, atributo ou qualquer outro nó DOM. Esses atributos não existem fisicamente no documento de texto XML. No entanto o OPENXML fornece essas metapropriedades para todos os itens XML. Essas metapropriedades permitem extrair informações, como posicionamento local e informações de namespace, de nós XML. Essas informações fornecem mais detalhes do que os que estão aparentes na representação textual.  
   
  Você pode mapear essas metapropriedades para as colunas do conjunto de linhas em uma instrução OPENXML usando o parâmetro *ColPattern* . As colunas conterão os valores das metapropriedades para as quais elas são mapeadas. Para obter mais informações sobre a sintaxe do OPENXML, consulte [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
@@ -38,7 +39,7 @@ ms.locfileid: "80664822"
 > [!NOTE]  
 >  Não é possível fazer referência a essas metapropriedades em qualquer navegação XPath.  
   
-|Atributo de metapropriedade|DESCRIÇÃO|  
+|Atributo de metapropriedade|Descrição|  
 |----------------------------|-----------------|  
 |**\@mp:id**|Fornece um identificador de todo o documento gerado pelo sistema do nó DOM. Desde que o documento não seja reanalisado, essa ID faz referência ao mesmo nó XML.<br /><br /> Uma ID de XML de **0** indica que o elemento é um elemento raiz. A ID de XML de seu pai é NULL.|  
 |**\@mp:localname**|Armazena a parte local do nome do nó. Ele é usado com um URI de namespace e de prefixo para nomear nós de elementos ou atributos.|  
@@ -49,7 +50,7 @@ ms.locfileid: "80664822"
   
  Essa tabela mostra as propriedades pai adicionais que são fornecidas e que permitem recuperar informações sobre a hierarquia.  
   
-|Atributo de metapropriedade pai|DESCRIÇÃO|  
+|Atributo de metapropriedade pai|Descrição|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|Corresponde a **../\@mp:id**|  
 |**\@mp:parentlocalname**|Corresponde a **../\@mp:localname**|  

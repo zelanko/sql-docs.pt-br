@@ -1,5 +1,6 @@
 ---
 title: Configurar e usar o Always Encrypted com enclaves seguros | Microsoft Docs
+description: Saiba como configurar e usar o Always Encrypted com enclaves seguros no SQL Server, que permite uma funcionalidade mais avançada sobre dados confidenciais.
 ms.custom: ''
 ms.date: 10/18/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 568944db62ca94048c45450500d3060daa957680
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73d337e750e287066531017710b733c92a312ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74317937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627018"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>Configurar e usar o Always Encrypted com enclaves seguros 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../../includes/applies-to-version/sqlserver2019.md)]
 
 O [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md) estende o recurso [Always Encrypted](always-encrypted-database-engine.md) existente para habilitar funcionalidades mais avançadas em dados confidenciais mantendo a confidencialidade desses dados. Este artigo lista tarefas comuns para configurar e usar o recurso.
 

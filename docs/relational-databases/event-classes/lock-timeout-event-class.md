@@ -1,5 +1,6 @@
 ---
 title: Classe de evento Lock:Timeout | Microsoft Docs
+description: A classe de evento Lock:Timeout indica que uma solicitação de um bloqueio em um recurso atingiu o tempo limite devido a um bloqueio no recurso no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc89f8df5d34a2a2c1f20756c743c74a5a5851f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d0f1a43ab06c931fd9fda6498790ccc7dce3476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737203"
 ---
 # <a name="locktimeout-event-class"></a>Classe de evento Lock:Timeout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A classe de evento Lock:Timeout indica que uma solicitação para um bloqueio em um recurso, como uma página, expirou porque outra transação está segurando uma fechadura de bloqueio no recurso exigido. O tempo limite é determinado pela função de sistema @@LOCK_TIMEOUT e pode ser definido com a instrução SET LOCK_TIMEOUT.  
   
  Use a classe de evento Lock:Timeout para monitorar quando as condições de tempo limite acontecerem. Essas informações são úteis para determinar se os tempos limite estão afetando significativamente o desempenho de seu aplicativo, e quais são os objetos envolvidos. Você pode examinar o código do aplicativo que modifica esses objetos para determinar se podem ser efetuadas alterações para minimizar os intervalos.  
@@ -29,7 +30,7 @@ ms.locfileid: "67910336"
   
 ## <a name="locktimeout-event-class-data-columns"></a>Colunas de dados da classe de evento Lock:Timeout  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|**imagem**|Identificador de recurso bloqueado.|2|Sim|  

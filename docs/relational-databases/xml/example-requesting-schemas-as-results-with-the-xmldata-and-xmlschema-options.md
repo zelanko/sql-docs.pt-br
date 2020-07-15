@@ -1,5 +1,6 @@
 ---
 title: Solicitar esquemas como resultados com XMLDATA e XMLSCHEMA | Microsoft Docs
+description: Saiba como usar as opções XMLDATA e XMLSCHEMA no modo RAW com a cláusula FOR XML para solicitar um esquema XML-DATA ou um esquema XSD no resultado da consulta.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ed72f442fa85a505ace0a1826028ee43f1ea6e97
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e7dfada43a7f899339f9f6ab59ef94dda9853c36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632926"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>Solicitar esquemas como resultados com XMLDATA e XMLSCHEMA
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A consulta a seguir retorna o esquema XML-DATA que descreve a estrutura do documento.  
   
 ## <a name="example"></a>Exemplo  
@@ -53,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador de namespace é composto por **Schema** _**n**_ em que _**n**_ é um inteiro.  
+>  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador de namespace é composto por **Schema**_**n**_ em que _**n**_ é um inteiro.  
   
  Com a especificação da opção `XMLSCHEMA` , é possível solicitar o esquema XSD para o resultado.  
   

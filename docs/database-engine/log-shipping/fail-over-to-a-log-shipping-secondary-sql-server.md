@@ -1,6 +1,6 @@
 ---
 title: Failover para um envio de logs secundário
-description: Instruções sobre como fazer failover para um envio de logs do SQL Server secundário.
+description: Saiba como fazer failover para um secundário de envio de logs do SQL Server usando o SQL Server Management Studio ou o Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba01642d09e9352b976978df1cfc78756ad79029
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696189"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover para um envio de logs secundário (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O failover para um envio de logs secundário será útil se a instância do servidor primário falhar ou requerer manutenção.  
   
 ## <a name="preparing-for-a-controlled-failover"></a>Preparando para um failover controlado  

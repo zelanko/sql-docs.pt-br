@@ -1,5 +1,6 @@
 ---
-title: 'Exemplo: renomeando o elemento &lt;row&gt; | Microsoft Docs'
+title: 'Exemplo: Renomeando o elemento &lt;row&gt; | Microsoft Docs'
+description: Veja um exemplo de renomeação de um elemento de linha XML especificando um argumento opcional para o modo RAW na cláusula FOR XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c9a082f5bd5159f8b1dc32c3c9e2ba233cce817b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: cc297571daec9825a91d4e35ebbac737d88b5619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633048"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>Exemplo: renomeando o elemento &lt;row&gt;
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-renaming-the-ltrowgt-element"></a>Exemplo: Renomeando o elemento &lt;row&gt;
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Para cada linha no conjunto de resultados, o modo RAW gera um elemento `<row>`. Opcionalmente, é possível especificar outro nome para esse elemento especificando um argumento opcional para o modo RAW, conforme mostrado nesta consulta. A consulta retorna um elemento <`ProductModel`> para cada linha do conjunto de dados.  
   
 ## <a name="example"></a>Exemplo  

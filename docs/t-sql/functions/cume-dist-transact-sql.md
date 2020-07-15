@@ -16,15 +16,15 @@ helpviewer_keywords:
 - CUME_DIST function
 - analytic functions, CUME_DIST
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5423ab5a0748fafd2f8030c9aeebec5691d5d674
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21ee42a6901d24a0dcdd01c5c096a73cca4d95e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732459"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -44,7 +44,7 @@ CUME_DIST( )
 ## <a name="arguments"></a>Argumentos  
 OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-A _partition\_by\_clause_ divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se o argumento _partition\_by\_clause_ não tiver sido especificado, `CUME_DIST` tratará todas as linhas do conjunto de resultados da consulta como um único grupo. A _order\_by\_clause_ determina a ordem lógica na qual a operação ocorre. O `CUME_DIST` exige a _order\_by\_clause_. O `CUME_DIST` não aceitará a \<cláusula rows or range > da sintaxe OVER. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+A _partition\_by\_clause_ divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se o argumento _partition\_by\_clause_ não tiver sido especificado, `CUME_DIST` tratará todas as linhas do conjunto de resultados da consulta como um único grupo. A _order\_by\_clause_ determina a ordem lógica na qual a operação ocorre. O `CUME_DIST` exige a _order\_by\_clause_. `CUME_DIST` não aceitará a \<rows or range clause> da sintaxe OVER. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Tipos de retorno
 **float(53)**

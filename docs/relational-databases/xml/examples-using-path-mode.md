@@ -1,5 +1,6 @@
 ---
-title: 'Exemplos: usando o modo PATH | Microsoft Docs'
+title: 'Exemplos: Usando o modo PATH | Microsoft Docs'
+description: Veja exemplos de uso do modo PATH para gerar XML de uma consulta SELECT.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 51bdad5bc62e9dc47a3f9cd4c3bf90d0c41c59bb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 74e447caefd30eba8ccfc9ab27db2c74d2f63c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729946"
 ---
-# <a name="examples-using-path-mode"></a>Exemplos: Usando modo PATH
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="examples-using-path-mode"></a>Exemplos: uso do modo PATH
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Os exemplos a seguir ilustram o uso do modo PATH para gerar XML a partir de uma consulta SELECT. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna Instructions da tabela ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Especificando uma consulta em modo PATH  

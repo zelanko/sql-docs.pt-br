@@ -1,5 +1,6 @@
 ---
 title: Histórico de espelhamento de banco de dados | Microsoft Docs
+description: Saiba como exibir o histórico de status de espelhamento de um banco de dados espelho em uma instância de servidor especificada no SQL Server Management Studio.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2fd21c91577d2e2db1773bbbcbff942842cf043
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751893"
 ---
 # <a name="database-mirroring-history"></a>Histórico do espelhamento de banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use essa caixa de diálogo para exibir o histórico de status de espelhamento de um banco de dados espelho em uma instância de servidor especificada.  
   
  **Para usar o SQL Server Management Studio para monitorar o espelhamento de banco de dados**  
@@ -66,7 +67,7 @@ ms.locfileid: "68006427"
  **Histórico**  
  Exibe a lista de histórico. Clique em um cabeçalho de coluna para classificar a grade por essa coluna. A lista contém as seguintes colunas:  
   
-|Nome da coluna|DESCRIÇÃO|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**Hora registrada**|Carimbo de data/hora da linha do histórico.|  
 |**Função**|Função de espelhamento atual da instância de servidor deste banco de dados, Principal ou Espelho.|  

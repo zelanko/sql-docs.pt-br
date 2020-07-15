@@ -1,5 +1,6 @@
 ---
 title: Coleções de esquema XML (SQL Server) | Microsoft Docs
+description: Saiba como a coleção de esquema XML armazena esquemas XML importados para validar instâncias XML e digite os dados XML conforme eles são armazenados em um banco de dados do SQL Server.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 850e6b9b1961809f51939edfc07fc1d11943fda7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2db7f06f0e68b1a03bf4b2a205666fcf90a58d32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729770"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Como descrito no tópico [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), o SQL Server fornece armazenamento nativo de dados XML por meio do tipo de dados **xml**. Opcionalmente, é possível associar esquemas XSD a uma variável ou a uma coluna do tipo **xml** por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
   
 -   Validar instâncias XML  
@@ -120,7 +121,7 @@ ms.locfileid: "80664900"
   
 -   **Customer** é um componente de ELEMENT.  
   
- Quando você importa um esquema no banco de dados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não armazena o próprio esquema. Em vez disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os vários componentes individuais. Ou seja, a marca \<Schema> não é armazenada, apenas os componentes que estão definidos dentro dela são preservados. Todos os elementos do esquema não são preservados. Se a marca \<Schema> contiver atributos que especificam o comportamento padrão de seus componentes, esses atributos serão movidos para os componentes do esquema dentro dela durante o processo de importação, conforme mostrado na tabela a seguir.  
+ Quando você importa um esquema no banco de dados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não armazena o próprio esquema. Em vez disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os vários componentes individuais. Ou seja, a marca \<Schema> não é armazenada, apenas os componentes que estão definidos dentro dela são preservados. Todos os elementos do esquema não são preservados. Se a marca \<Schema> contiver atributos que especificam o comportamento padrão dos componentes dela, eles serão movidos para os componentes do esquema dentro dela durante o processo de importação, conforme mostrado na tabela a seguir.  
   
 |Nome do atributo|Comportamento|  
 |--------------------|--------------|  
@@ -173,7 +174,7 @@ ms.locfileid: "80664900"
   
  Esses são ilustrados nos exemplos a seguir.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemplo: Enumere os namespaces XML em uma coleção de esquema XML  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemplo: Enumerar os namespaces XML em uma coleção de esquemas XML  
  Use a consulta a seguir para a coleção de esquema XML "myCollection":  
   
 ```sql
@@ -183,7 +184,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemplo: Enumere o conteúdo de uma coleção de esquema XML  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemplo: Enumerar o conteúdo de uma coleção de esquemas XML  
  A instrução a seguir enumera o conteúdo da coleção de esquema XML "myCollection" dentro do esquema relacional dbo.  
   
 ```sql
@@ -192,7 +193,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Esquemas XML individuais dentro da coleção podem ser obtidos como instâncias de tipo de dados **xml** especificando o namespace de destino como o terceiro argumento para **XML_SCHEMA_NAMESPACE()** . Isso é mostrado no exemplo a seguir.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemplo: Produza um esquema especificado de uma coleção de esquema XML  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemplo: Gerar um esquema especificado com base em uma coleção de esquemas XML  
  A instrução a seguir produz o esquema XML com o namespace de destino _pretend_ https/\/www.microsoft.com/was-books from the XML schema collection "myCollection" dentro do esquema relacional dbo.  
   
 ```sql

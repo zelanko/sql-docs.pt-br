@@ -1,5 +1,6 @@
 ---
 title: Testemunha de espelhamento de banco de dados | Microsoft Docs
+description: Saiba mais sobre a função de uma testemunha no failover automático no espelhamento de banco de dados do SQL Server. Ao contrário dos parceiros, a testemunha não atende ao banco de dados.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e462bc2367d7f5a3112580848b6a32126c604f46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754691"
 ---
 # <a name="database-mirroring-witness"></a>Testemunha de espelhamento de banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para dar suporte a failover automático, a sessão de espelhamento de banco de dados deve ser configurada em modo de alta segurança e também deve possuir uma terceira instância de servidor, conhecida como *testemunha*. A testemunha é uma instância opcional do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite ao servidor espelho, em uma sessão de modo de alta segurança, reconhecer se um failover automático deve ser iniciado. Ao contrário dos dois parceiros, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
   
 > [!NOTE]  
@@ -63,7 +64,7 @@ ms.locfileid: "68043893"
   
 -   Se o servidor espelho estiver desconectado da testemunha e também do servidor principal, não será possível o failover automático, independentemente do estado do servidor principal.  
   
- O requisito de que pelo menos duas das instâncias de servidor estejam conectadas é conhecido como *quorum*. O quorum assegura que o banco de dados só possa ser atendido por um parceiro de cada vez. Para obter informações sobre como o quorum funciona e seu impacto sobre uma sessão, veja [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ O requisito de que pelo menos duas das instâncias de servidor estejam conectadas é conhecido como *quorum*. O quorum assegura que o banco de dados só possa ser atendido por um parceiro de cada vez. Para obter informações sobre o funcionamento do quorum e seu impacto em uma sessão, veja [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ##  <a name="to-add-or-remove-a-witness"></a><a name="AddRemoveWitness"></a> Para adicionar ou remover uma testemunha  
  **Para adicionar uma testemunha**  

@@ -1,5 +1,6 @@
 ---
 title: Adicionar lógica de negócios a dados XML | Microsoft Docs
+description: Saiba como você pode adicionar lógica de negócios a dados XML aplicando transformações XSL, usando restrições específicas de domínio sobre dados ou disparando regras de validação.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aaabf611574c60620df600264537436b41e85c18
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 524be57031368538271d1bde0016121644b9fed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729164"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Adicionar lógica de negócios a dados XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Sua lógica comercial pode ser adicionada a dados XML de vários modos:  
   
 -   Você pode gravar restrições de linha ou de coluna para impor restrições específicas ao domínio durante inserção e modificação de dados XML.  
   
 -   Você pode gravar um gatilho na coluna XML que seja disparado quando valores forem inseridos ou atualizados na coluna. O gatilho pode conter regras de validação específicas ao domínio ou popular tabelas de propriedades.  
   
--   O Mecanismo de Banco de Dados inclui a capacidade de executar código gerenciado. É possível usar essa integração de CLR (Common Language Runtime) para gravar funções em código gerenciado para as quais você passa valores XML, e usar recursos de processamento do XML fornecidos pelo namespace System.Xml. Um exemplo é aplicar a transformação XSL a dados XML. Como alternativa, é possível desserializar o XML em uma ou mais classes gerenciadas e operar sobre elas usando código gerenciado.  
+-   O Mecanismo de Banco de Dados inclui a capacidade de executar o código gerenciado. É possível usar essa integração de CLR (Common Language Runtime) para gravar funções em código gerenciado para as quais você passa valores XML, e usar recursos de processamento do XML fornecidos pelo namespace System.Xml. Um exemplo é aplicar a transformação XSL a dados XML. Como alternativa, é possível desserializar o XML em uma ou mais classes gerenciadas e operar sobre elas usando código gerenciado.  
   
 -   É possível gravar funções e procedimentos armazenados Transact-SQL que começam o processamento na coluna XML para suas necessidades comerciais.  
   
-## <a name="example-applying-xsl-transformation"></a>Exemplo: Aplicando XSL Transformation  
+## <a name="example-applying-xsl-transformation"></a>Exemplo: Aplicando a transformação XSL  
  Considere uma função CLR **TransformXml()** que aceita uma instância de tipo de dados **xml** e uma transformação XSL armazenada em um arquivo, aplica a transformação nos dados XML e retorna o XML transformado no resultado. O seguinte é um função em esqueleto escrita em C#:  
   
 ```  

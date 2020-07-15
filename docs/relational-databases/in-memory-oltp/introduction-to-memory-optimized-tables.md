@@ -1,5 +1,6 @@
 ---
 title: Introdução às tabelas com otimização de memória | Microsoft Docs
+description: Saiba mais sobre tabelas com otimização de memória, que são duráveis e dão suporte a transações que são atômicas, consistentes, isoladas e duráveis.
 ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723118"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introdução às tabelas com otimização de memória
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Tabelas com otimização de memória são criadas com [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
@@ -69,11 +70,11 @@ As tabelas com otimização de memória podem ser acessadas com mais eficiência
 
 Os seguintes fatores afetarão os ganhos de desempenho que podem ser obtidos com o OLTP na memória:  
   
-*Comunicação:* um aplicativo com muitas chamadas para procedimentos armazenados curtos pode ver um ganho de desempenho menor em comparação com um aplicativo com menos chamadas e mais funcionalidade implementada em cada procedimento armazenado.  
+*Comunicação:* Um aplicativo com muitas chamadas para procedimentos armazenados curtos pode ver um ganho de desempenho menor em comparação com um aplicativo com menos chamadas e mais funcionalidade implementada em cada procedimento armazenado.  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)] :* o OLTP in-memory atinge o melhor desempenho usando procedimentos armazenados compilados de modo nativo do que usando procedimentos armazenados interpretados ou execução de consulta. Pode ser vantajoso acessar tabelas com otimização de memória de tais procedimentos armazenados.  
+*[!INCLUDE[tsql](../../includes/tsql-md.md)] Execução:* O OLTP na memória atinge o melhor desempenho usando procedimentos armazenados compilados nativamente do que usando procedimentos armazenados interpretados ou execução de consulta. Pode ser vantajoso acessar tabelas com otimização de memória de tais procedimentos armazenados.  
   
-*Varredura de intervalo vs pesquisa de ponto:* os índices não clusterizados com otimização de memória dão suporte a exames de intervalo e exames ordenados. Para pesquisas de ponto, os índices de hash com otimização de memória têm desempenho melhor que os índices não clusterizados com otimização de memória. Os índices não clusterizados com otimização de memória têm desempenho melhor que os índices baseados em disco.
+*Varredura de intervalo x pesquisa de ponto:* Os índices não clusterizados com otimização de memória dão suporte a exames de intervalo e exames ordenados. Para pesquisas de ponto, os índices de hash com otimização de memória têm desempenho melhor que os índices não clusterizados com otimização de memória. Os índices não clusterizados com otimização de memória têm desempenho melhor que os índices baseados em disco.
 
 - A partir do SQL Server 2016, o plano de consulta de uma tabela com otimização de memória pode examinar a tabela em paralelo. Isso melhora o desempenho de consultas analíticas.
   - Índices de hash também se tornaram verificáveis em paralelo no SQL Server 2016.
@@ -82,7 +83,7 @@ Os seguintes fatores afetarão os ganhos de desempenho que podem ser obtidos com
   
 *Operações de índice:* as operações de índice não são registradas e existem apenas na memória.  
   
-*Simultaneidade:* os aplicativos cujo desempenho é afetado pela simultaneidade no nível de mecanismo, como contenção de trava ou bloqueio, melhoram significativamente quando o aplicativo é movido para o OLTP in-memory.  
+*Simultaneidade:* Os aplicativos cujo desempenho é afetado pela simultaneidade no nível de mecanismo, como contenção de trava ou bloqueio, melhoram significativamente quando o aplicativo é movido para OLTP na memória.  
   
 A tabela a seguir lista os problemas de desempenho e escalabilidade que geralmente são encontrados em bancos de dados relacionais e como o OLTP na memória pode melhorar o desempenho.  
   

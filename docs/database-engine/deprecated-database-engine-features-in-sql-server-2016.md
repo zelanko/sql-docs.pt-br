@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79190552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729436"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 Este tópico descreve os recursos substituídos do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que ainda estão disponíveis no [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  
   
@@ -146,7 +146,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Dicas de tabela|INSERT_HINTS||INSERT_HINTS|34|  
 |Textpointers|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|Nenhum|UPDATETEXT ou WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |Textpointers|TEXTPTR()<br /><br /> TEXTVALID()|Nenhum|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Sequência da chamada de função ::|Substituída por SELECT *column_list* FROM sys.\<*function_name*>().<br /><br /> Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|sintaxe '::' de chamada de função|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Sequência da chamada de função ::|Substituído por SELECT *column_list* FROM sys.\<*function_name*>().<br /><br /> Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|sintaxe '::' de chamada de função|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Referências de coluna de três e quatro partes.|Nomes de duas partes é o comportamento compatível com o padrão.|Nome de coluna com mais de duas partes|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uma cadeia de caracteres entre aspas usada como um alias de coluna para uma expressão em uma lista SELECT:<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|Literais de cadeia de caracteres como aliases de coluna|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Procedimentos numerados|Nenhum. Não use.|ProcNums|160|  

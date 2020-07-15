@@ -21,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8681ab325f5c1583ab62604c0c1416f9c88152b9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a60d8a2605d9b2533869b6f1c95922107c7d0aa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736312"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  É um predicado usado na [!INCLUDE[tsql](../../includes/tsql-md.md)]cláusula WHERE[ do ](../../t-sql/queries/where-transact-sql.md) de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para executar uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma coluna indexada de texto completo que contém tipos de dados baseados em caracteres. Esse predicado procura valores correspondentes ao significado e não apenas o teor exato das palavras nos critérios da pesquisa. Quando FREETEXT é usado, o mecanismo de consulta de texto completo executa internamente as ações a seguir na *freetext_string*, atribui um peso a cada termo e, em seguida, localiza as correspondências:  
+  É um predicado usado na [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) do [!INCLUDE[tsql](../../includes/tsql-md.md)] de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para executar uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma coluna indexada de texto completo que contém tipos de dados baseados em caracteres. Esse predicado procura valores correspondentes ao significado e não apenas o teor exato das palavras nos critérios da pesquisa. Quando FREETEXT é usado, o mecanismo de consulta de texto completo executa internamente as ações a seguir na *freetext_string*, atribui um peso a cada termo e, em seguida, localiza as correspondências:  
   
 -   Separa a cadeia de caracteres em palavras individuais com base em limites de palavra (quebra de palavras).  
   

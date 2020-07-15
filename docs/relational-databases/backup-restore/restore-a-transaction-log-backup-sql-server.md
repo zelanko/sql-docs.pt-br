@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 75efe2deeb76083ffcb8fdc2cfedb3951dfd6e3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717951"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar um backup de log de transações (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico descreve como restaurar um backup de log de transação no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -103,7 +103,7 @@ ms.locfileid: "82180768"
     |------------|-----------|  
     |**Restaurar**|Caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.|  
     |**Nome**|Nome do conjunto de backup.|  
-    |**Componente**|O componente de backup: **Database**, **File** ou \<blank> (para logs de transações).|  
+    |**Componente**|O componente de backup: **Banco de dados**, **Arquivo** ou \<blank> (para logs de transações).|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Data de Início**|A data e hora do início da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Data de Conclusão**|Data e hora de término da operação de backup, apresentadas na configuração regional do cliente.|  
@@ -133,7 +133,7 @@ ms.locfileid: "82180768"
   
         |Cabeçalho|Valor|  
         |------------|-----------|  
-        |\<em branco>|Exibe uma caixa de seleção para selecionar a marca.|  
+        |\<blank>|Exibe uma caixa de seleção para selecionar a marca.|  
         |**Transaction Mark**|Nome da transação marcada especificado pelo usuário quando a transação foi confirmada.|  
         |**Data**|Data e hora de confirmação da transação. A data e hora da transação são exibidas como registradas na tabela **msdbgmarkhistory** , não a data e hora do computador cliente.|  
         |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  

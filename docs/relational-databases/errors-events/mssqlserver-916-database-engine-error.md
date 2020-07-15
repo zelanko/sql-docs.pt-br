@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_916 | Microsoft Docs
+description: O logon não tem permissões suficientes para conectar-se ao banco de dados nomeado do SQL Server. Veja uma explicação do erro e as possíveis resoluções.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 73eb6581-99fe-49a5-9b42-e239d7ffe27f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8dc9f9575f9e385d177d7b37f3753facfb905d23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 510708fd1cd119ee3a665cecb903ff63edbb525e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80271462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85636811"
 ---
 # <a name="mssqlserver_916"></a>MSSQLSERVER_916
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalhes  
   
-|||  
-|-|-|  
+| Atributo | Valor |  
+| :-------- | :---- |  
 |Nome do Produto|SQL Server|  
 |ID do evento|916|  
 |Origem do Evento|MSSQLSERVER|  

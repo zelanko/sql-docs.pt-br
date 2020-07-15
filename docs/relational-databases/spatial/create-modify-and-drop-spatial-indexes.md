@@ -17,15 +17,15 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751108"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Criar, modificar e remover índices espaciais
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Um índice espacial pode executar determinadas operações com mais eficiência em uma coluna do tipo de dados de **geometry** ou **geography** (uma *coluna espacial*). Mais de um índice espacial pode ser especificado em uma coluna espacial. Por exemplo, isto é útil para indexar diferentes parâmetros de mosaico em uma única coluna.  
   
  Há várias restrições na criação de índices espaciais. Para obter mais informações, consulte [Restrições em índices espaciais](#restrictions) neste tópico.  
@@ -56,7 +56,7 @@ ms.locfileid: "68048712"
   
 7.  Para especificar a coluna espacial que você deseja indexar, clique em **Adicionar**.  
   
-8.  Na caixa de diálogo **Selecionar Colunas de** *\<nome da tabela>* , selecione uma coluna do tipo **geometry** ou **geography** marcando a caixa de seleção correspondente. Todas as outras colunas espaciais se tornam não editáveis. Para selecionar uma coluna espacial diferente, primeiro desmarque a coluna selecionada no momento. Quando terminar, clique em **OK**.  
+8.  Na caixa de diálogo **Selecionar Colunas de** *\<table name>* , selecione uma coluna do tipo **geometry** ou **geography** marcando a caixa de seleção correspondente. Todas as outras colunas espaciais se tornam não editáveis. Para selecionar uma coluna espacial diferente, primeiro desmarque a coluna selecionada no momento. Quando terminar, clique em **OK**.  
   
 9. Verifique a seleção da coluna na grade **Colunas de chave de índice** .  
   

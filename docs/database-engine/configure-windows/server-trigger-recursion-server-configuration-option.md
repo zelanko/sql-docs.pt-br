@@ -1,5 +1,6 @@
 ---
 title: Opção de configuração do servidor server trigger recursion | Microsoft Docs
+description: Saiba como a opção "server trigger recursion" afeta a recursão em gatilhos de nível de servidor do SQL Server. Veja como ativar e desativar a recursão direta e indireta.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - triggers [SQL Server], recursive
 - server trigger recursion option
 ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: dcd67a89ea5605647d6736d9d28a6e070a483c16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7dc2dcd132ef32ba4f026a1a9b76d4e67df28b26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68027625"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715559"
 ---
 # <a name="server-trigger-recursion-server-configuration-option"></a>Opção de configuração de servidor server trigger recursion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use a opção **server trigger recursion** para especificar se os gatilhos de nível de servidor podem ser acionados recursivamente. Quando esta opção for definida como 1 (ON), será permitido que os gatilhos de nível de servidor sejam acionados recursivamente. Quando ela for definida como 0 (OFF), os gatilhos de nível de servidor não poderão ser acionados recursivamente. Somente a recursão direta é evitada quando a opção server trigger recursion é definida como 0 (OFF). (Para desabilitar a recursão indireta, defina a opção **nested triggers** como 0.) O valor padrão desta opção é 1 (ON). A configuração entra em vigor imediatamente (sem a reinicialização do servidor).  
   

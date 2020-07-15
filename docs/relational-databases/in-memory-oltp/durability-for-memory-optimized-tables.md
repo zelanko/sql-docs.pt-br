@@ -1,5 +1,6 @@
 ---
 title: Durabilidade para tabelas com otimização de memória | Microsoft Docs
+description: Saiba como o OLTP in-memory fornece durabilidade total para tabelas com otimização de memória, usando o log de transações e salvando as alterações de dados no armazenamento em disco.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd3180e88d1950719ba07b4ef49def277655217
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67942804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723254"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] fornece a durabilidade completa para tabelas com otimização de memória. Quando uma transação que modificou uma tabela com otimização de memória é confirmada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (como faz em tabelas baseadas em disco), garante que as alterações sejam permanentes (sobreviverão uma reinicialização do banco de dados), contanto que o armazenamento subjacente esteja disponível. Há dois principais componentes de durabilidade: log de transações e persistência das alterações de dados para armazenamento em disco.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "67942804"
   
  Quando uma linha é excluída ou atualizada, ela não é removida, nem alterada no local no arquivo de dados, mas as linhas excluídas são rastreadas em outro tipo de arquivo: o arquivo delta. As operações de atualização são processadas como uma tupla de operações de exclusão e inserção para cada linha. Isso elimina a E/S aleatória no arquivo de dados.  
  
-   Tamanho: cada arquivo de dados é dimensionado aproximadamente para 128 MB para computadores com mais memória que 16 GB e 16 MB para computadores com menos que ou igual a 16 GB. No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , o SQL Server pode usar o modo de ponto de verificação grande se considerar que o subsistema de armazenamento é rápido o suficiente. No modo de ponto de verificação grande, os arquivos de dados são dimensionados em 1 GB. Isso permite uma maior eficiência no subsistema de armazenamento para cargas de trabalho com alta taxa de transferência.  
+   Tamanho: Cada arquivo de dados é dimensionado aproximadamente para 128MB para computadores com mais memória que 16GB e 16MB para computadores com menos que ou igual a 16GB. No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , o SQL Server pode usar o modo de ponto de verificação grande se considerar que o subsistema de armazenamento é rápido o suficiente. No modo de ponto de verificação grande, os arquivos de dados são dimensionados em 1 GB. Isso permite uma maior eficiência no subsistema de armazenamento para cargas de trabalho com alta taxa de transferência.  
    
 ### <a name="the-delta-file"></a>O arquivo delta  
  Cada arquivo de dados é emparelhado com um arquivo delta que tem o mesmo intervalo de transações e rastreia as linhas excluídas inseridas por transações nesse intervalo. Estes arquivos de dados e delta são chamados de Par de Arquivos de Ponto de Verificação (CFP) e são a unidade da alocação e deslocamento, bem como a unidade de operações de Mesclagem. Por exemplo, um arquivo delta correspondente ao intervalo de transações (100, 200) armazenará as linhas excluídas que foram inseridas por transações no intervalo (100, 200). Assim como os arquivos de dados, o arquivo delta é acessado sequencialmente.  
@@ -49,7 +50,7 @@ ms.locfileid: "67942804"
  Quando uma linha é excluída, ela não é removida do arquivo de dados, mas uma referência a ela é anexada ao arquivo delta associado ao intervalo de transações em que essa linha de dados foi inserida. Como a linha de dados a ser excluída já existe no arquivo de dados, o arquivo delta armazena apenas as informações de referência `{inserting_tx_id, row_id, deleting_tx_id }` e segue a ordem do log transacional das operações de exclusão ou atualização originais.  
   
 
- Tamanho: cada arquivo de dados é dimensionado aproximadamente para 16 MB para computadores com mais memória que 16 GB e 1 MB para computadores com menos que ou igual a 16 GB. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , o SQL Server pode usar o modo de ponto de verificação grande se considerar que o subsistema de armazenamento é rápido o suficiente. No modo de ponto de verificação grande, os arquivos delta são dimensionados em 128 MB.  
+ Tamanho: cada arquivo delta é dimensionado aproximadamente para 16 MB para computadores com mais memória que 16 GB e 1 MB para computadores com menos que ou igual a 16 GB. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , o SQL Server pode usar o modo de ponto de verificação grande se considerar que o subsistema de armazenamento é rápido o suficiente. No modo de ponto de verificação grande, os arquivos delta são dimensionados em 128 MB.  
  
 ## <a name="populating-data-and-delta-files"></a>Populando arquivos de dados e delta  
  Os arquivos delta e de dados são populados com base nos registros do log de transações gerados por transações confirmadas em tabelas com otimização de memória e anexa informações sobre as linhas inseridas e excluídas em arquivos delta e de dados apropriados. Diferentemente das tabelas baseadas em disco, nas quais páginas de dados/índice são liberadas com E/S aleatória quando o ponto de verificação é realizado, a persistência da tabela com otimização de memória é uma operação em segundo plano contínua. Vários arquivos delta são acessados, pois uma transação pode excluir ou atualizar qualquer linha que foi inserida por qualquer transação anterior. As informações de exclusão sempre são anexadas no final do arquivo delta. Por exemplo, uma transação com um carimbo de data/hora de confirmação de 600 insere uma linha nova e exclui linhas inseridas por transações com um carimbo de data/hora de confirmação de 150, 250 e 450, conforme mostrado na imagem a seguir. As quatro operações de E/S de arquivo (três para linhas excluídas e uma para as linhas recentemente inseridas) são operações somente de acréscimo nos arquivos delta e de dados correspondentes.  

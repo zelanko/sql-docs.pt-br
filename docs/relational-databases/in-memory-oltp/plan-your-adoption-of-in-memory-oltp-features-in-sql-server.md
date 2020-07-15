@@ -1,5 +1,6 @@
 ---
 title: 'Planejar a adoção de OLTP in-memory '
+description: Saiba como a adoção de recursos de OLTP in-memory no SQL Server afeta outros aspectos do seu sistema empresarial.
 ms.custom: seo-dt-2019
 ms.date: 01/28/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12288ac1ab4923e776b968a6f990e95a17f96060
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722412"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 Este artigo descreve as formas como a adoção de recursos in-memory afeta outros aspectos do seu sistema empresarial.
@@ -283,7 +284,7 @@ Quando o plano de consulta para um processo nativo requer uma fase de agregaçã
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. Design de aplicativos: transações e lógica de repetição
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. Design de aplicativo: transações e lógica de repetição
 
 Uma transação que envolve uma tabela com otimização de memória pode se tornar dependente de outra transação que envolve a mesma tabela. Se a contagem de transações dependentes ultrapassar o máximo permitido, todas as transações dependentes falharão.
 

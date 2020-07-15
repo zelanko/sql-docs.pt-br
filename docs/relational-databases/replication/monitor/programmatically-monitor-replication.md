@@ -1,5 +1,6 @@
 ---
 title: Monitorar a replicação de forma programática | Microsoft Docs
+description: O Monitor de Replicação é uma ferramenta gráfica. Use o Monitor de Replicação para monitorar uma topologia de replicação no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,12 +30,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbbf44a1efbb38bf81b027d2e3299d1e0a670db2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287850"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807955"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitore programaticamente a replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -268,7 +269,7 @@ ms.locfileid: "76287850"
   
     -   *metricID* - um valor <xref:System.Int32> que representa a métrica de limite de monitoração da tabela a seguir:  
   
-        |Valor|DESCRIÇÃO|  
+        |Valor|Descrição|  
         |-----------|-----------------|  
         |1|**expiration** - monitora a expiração iminente de assinaturas para publicações transacionais.|  
         |2|**latency** - monitora o desempenho de assinaturas para publicações transacionais.|  

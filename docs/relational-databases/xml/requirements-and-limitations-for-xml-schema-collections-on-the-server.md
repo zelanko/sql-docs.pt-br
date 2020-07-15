@@ -1,5 +1,6 @@
 ---
 title: Requisitos e limitações (coleções de esquema XML) | Microsoft Docs
+description: Saiba mais sobre os requisitos e as limitações para modificar suas coleções de esquema XML no SQL Server.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,32 +25,32 @@ ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: eb576af5eb2a6f88d05d8a2b3bd1527e1c90ff67
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b0d0e90f30e05cabed7082f87a6b7474c756a145
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752560"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos e limitações de uso de coleções de esquema XML no servidor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A validação da linguagem de definição de esquema XML (XSD) apresenta algumas limitações em relação a colunas SQL que usam o tipo de dados **xml** . A tabela a seguir fornece detalhes sobre essas limitações e diretrizes para modificação de seu esquema XSD para que ele possa funcionar com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os tópicos nesta seção fornecem informações adicionais sobre limitações específicas e diretrizes para trabalhar com elas.  
   
 |Item|Limitações|  
 |----------|----------------|  
 |**minOccurs** e **maxOccurs**|Os valores dos atributos **minOccurs** e **maxOccurs** devem ser ajustados em inteiros de 4 bytes. Os esquemas que não estiverem de acordo serão rejeitados pelo servidor.|  
-|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita os esquemas que têm uma partícula **\<xsd:choice>** sem filhos, a menos que a partícula seja definida com um atributo **minOccurs** com valor zero.|  
-|**\<xsd:include>**|Atualmente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esse elemento. Os esquemas XML que incluem esse elemento são rejeitados pelo servidor.<br /><br /> Como uma solução, os esquemas XML que incluem a diretiva **\<xsd:include>** podem ser pré-processados para copiar e mesclar o conteúdo de qualquer esquema incluído em um único esquema para o upload no servidor. Para obter mais informações, veja [Pré-processar um esquema para mesclar esquemas incluídos](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md).|  
+|**\<xsd:choice>**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita esquemas que têm uma partícula **\<xsd:choice>** sem filhos, a menos que a partícula seja definida com um valor do atributo **minOccurs** igual a zero.|  
+|**\<xsd:include>**|Atualmente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esse elemento. Os esquemas XML que incluem esse elemento são rejeitados pelo servidor.<br /><br /> Como uma solução, os esquemas XML que incluem a diretiva **\<xsd:include>** podem ser pré-processados para copiar e mesclar o conteúdo de qualquer esquema incluído em um esquema para carregar no servidor. Para obter mais informações, veja [Pré-processar um esquema para mesclar esquemas incluídos](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>** , **\<xsd:keyref>** e **\<xsd:unique>**|Atualmente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a essas restrições baseadas em XSD para impor exclusividade ou estabelecer chaves e referências a chaves. Os esquemas XML que contêm esses elementos não podem ser registrados.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esse elemento. Para obter informações sobre outra maneira de atualizar esquemas, veja [O elemento &#60;xsd:redefine&#62; Element](../../relational-databases/xml/the-xsd-redefine-element.md).|  
-|Valores **\<xsd:simpleType>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte apenas à precisão de milissegundos para tipos simples que têm componentes de segundos diferentes de **xs:time** e **xs:dateTime**e à precisão de 100 nanossegundos para **xs:time** e **xs:dateTime**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impõe limitações em todas as enumerações de tipo simples XSD reconhecidas.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte ao uso do valor “NaN” nas declarações **\<xsd:simpleType>** .<br /><br /> Para obter mais informações, veja[Valores para declarações &#60;xsd:simpleType&#62;](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md).|  
+|Valores **\<xsd:simpleType>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte apenas à precisão de milissegundos para tipos simples que têm componentes de segundos diferentes de **xs:time** e **xs:dateTime**e à precisão de 100 nanossegundos para **xs:time** e **xs:dateTime**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impõe limitações em todas as enumerações de tipo simples XSD reconhecidas.<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é compatível com a utilização do valor "NaN" em declarações **\<xsd:simpleType>** .<br /><br /> Para obter mais informações, veja[Valores para declarações &#60;xsd:simpleType&#62;](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md).|  
 |**xsi:schemaLocation** e **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignorará esses atributos se eles estiverem presentes nos dados da instância XML inseridos em uma coluna ou variável de tipo de dados **xml** .|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a tipos derivados de **xs:QName** que usam um elemento de restrição de Esquema XML.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a tipos de união com **xs:QName** como um elemento membro.<br /><br /> Para obter mais informações, consulte [The xs:QName Type](../../relational-databases/xml/the-xs-qname-type.md).|  
 |Adicionando membros a um grupo de substituição existente|Não é possível adicionar membros a um grupo de substituições existente em uma coleção de esquema XML. Um grupo de substituição em um esquema XML é restrito no sentido de que o elemento principal e todos os seus elementos membros devem ser definidos na mesma instrução {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Formas canônicas e restrições de padrões|A representação canônica de um valor não pode violar a restrição de padrão de seu tipo. Para obter mais informações, consulte [Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md).|  
 |Aspectos de enumeração|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esquemas XML com tipos que têm aspectos padrão ou enumerações que violam essas facetas.|  
 |Comprimento do aspecto|Os aspectos **length**, **minLength**e **maxLength** são armazenados como um tipo **long** . Esse é um tipo de 32 bits. Portanto, o intervalo de valores aceitos para esses valores é 2^31.|  
-|Atributo ID|Cada componente de esquema XML pode ter um atributo de ID. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impõe exclusividade para as declarações **\<xsd:attribute>** do tipo **ID**, mas não armazena esses valores. O escopo para imposição de exclusividade é a instrução {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
+|Atributo ID|Cada componente de esquema XML pode ter um atributo de ID. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impõe a exclusividade para declarações **\<xsd:attribute>** de tipo de **ID**, mas não armazena esses valores. O escopo para imposição de exclusividade é a instrução {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Tipo ID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a elementos de tipo **xs:ID**, **xs:IDREF**ou **xs:IDREFS**. Um esquema pode não declarar elementos desse tipo ou elementos derivados pela restrição ou extensão desse tipo.|  
 |Namespace local|O namespace local precisa ser especificado explicitamente para o elemento **\<xsd:any>** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita esquemas que usam uma cadeia de caracteres vazia ("") como um valor para o atributo de namespace. Em vez disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige o uso explícito de "##local" para indicar um elemento ou atributo não qualificado, como a instância do caractere curinga.|  
 |Tipo misto e conteúdo simples|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte à restrição de tipo misto a conteúdo simples. Para obter mais informações, consulte [Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md).|  
@@ -63,7 +64,7 @@ ms.locfileid: "80664835"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Formas canônicas e restrições de padrões](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Explica formas canônicas e restrições de padrões.|  
 |[Componentes curinga e validação de conteúdo](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Descreve as limitações da utilização de caracteres curingas, a validação incerta e quaisquer Elementos anyType com coleções de esquema XML.|  

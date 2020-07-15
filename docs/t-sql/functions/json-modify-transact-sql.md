@@ -1,22 +1,21 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 3aed59e8c90b301cd3fbf7caca9a0e466746dd2d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5e981958444fcb760d0baff036852d58aee0b1a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752278"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -28,7 +27,7 @@ ms.locfileid: "81635109"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```sql  
+```syntaxsql
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
@@ -97,7 +96,7 @@ JSON_MODIFY faz o escape de todos os caracteres especiais no novo valor se o tip
   
  **Consulta**
   
-```syntaxsql
+```sql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -156,7 +155,7 @@ PRINT @info
   
  **Consulta**
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -250,7 +249,7 @@ PRINT @stats
   
  **Consulta**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -278,7 +277,7 @@ PRINT @info
   
  **Consulta**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -308,13 +307,12 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
- 
 ```  
   
 ## <a name="see-also"></a>Consulte Também
 
- [Expressões de demarcador JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Dados JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [Expressões de caminho JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [Dados JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

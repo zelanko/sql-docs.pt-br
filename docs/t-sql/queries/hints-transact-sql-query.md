@@ -55,15 +55,15 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731303"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 As dicas de consulta especificam que as dicas indicadas devem ser usadas em toda a consulta. Elas afetam todos os operadores na instrução. Se UNION estiver envolvida na consulta principal, só a última consulta envolvendo uma operação UNION poderá ter a cláusula OPTION. As dicas de consulta são especificadas como parte da [cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md). O Erro 8622 ocorrerá se uma ou mais dicas de consulta fizerem com que o otimizador de consulta não gere um plano válido.  
   
@@ -238,7 +238,7 @@ _literal\_constant_
 OPTIMIZE FOR pode anular o comportamento de detecção de parâmetro padrão do otimizador. Use OPTIMIZE FOR também quando criar guias de plano. Para obter mais informações, confira [Recompilar um procedimento armazenado](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
 OPTIMIZE FOR UNKNOWN  
-Instrui o otimizador de consulta a usar dados estatísticos no lugar dos valores iniciais para todas as variáveis locais quando a consulta é compilada e otimizada. Essa otimização inclui parâmetros criados com parametrização forçada.  
+Instrui o Otimizador de Consulta a usar a seletividade média do predicado em todos os valores de coluna em vez de usar o valor do parâmetro de runtime quando a consulta é compilada e otimizada.  
   
 Se você usar OPTIMIZE FOR @variable_name = _literal\_constant_ e OPTIMIZE FOR UNKNOWN na mesma dica de consulta, o otimizador de consulta usará a _literal\_constant_ especificada para um valor específico. O otimizador de consulta usará UNKNOWN para o restante dos valores de variável. Os valores só são usados durante a otimização de consulta e não durante a execução das consultas.  
 
@@ -404,17 +404,17 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>B. Usando OPTIMIZE FOR  
- O exemplo a seguir instrui o otimizador de consulta a usar o valor `'Seattle'` para a variável local `@city_name` e a usar dados estatísticos para determinar o valor da variável local `@postal_code` ao otimizar a consulta. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ O exemplo a seguir instrui o Otimizador de Consulta a usar o valor `'Seattle'` para `@city_name` e usar a seletividade média do predicado em todos os valores de coluna para `@postal_code` ao otimizar a consulta. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
-DECLARE @city_name nvarchar(30);  
-DECLARE @postal_code nvarchar(15);  
-SET @city_name = 'Ascheim';  
-SET @postal_code = 86171;  
+CREATE PROCEDURE dbo.RetrievePersonAddress
+@city_name nvarchar(30),  
+ @postal_code nvarchar(15)
+AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
 OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );  
-GO  
+GO
 ```  
   
 ### <a name="c-using-maxrecursion"></a>C. Usando MAXRECURSION  

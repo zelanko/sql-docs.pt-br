@@ -2,7 +2,7 @@
 title: Embutimento de UDF escalar no Microsoft SQL Server | Microsoft Docs
 description: Recurso de embutimento de UDF escalar para aprimorar o desempenho de consultas que invocam UDFs escalares no SQL Server (começando no SQL Server 2019).
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727091"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este artigo apresenta o embutimento de UDF escalar, um recurso sob o conjunto de recursos de [Processamento de Consulta Inteligente](../../relational-databases/performance/intelligent-query-processing.md). Esse recurso aprimora o desempenho das consultas que invocam UDFs escalares em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
@@ -155,12 +155,24 @@ Dependendo da complexidade da lógica na UDF, o plano de consulta resultante tam
 - Não há assinaturas adicionadas à UDF.
 - A UDF não é uma função de partição.
 - O UDF não contém referências a CTEs (expressões de tabela comuns)
+- O UDF não contém referências a funções intrínsecas (por exemplo, @@ROWCOUNT) que podem alterar os resultados quando embutidas (restrição adicionada no Microsoft SQL Server 2019 CU2).
+- O UDF não contém funções de agregação que são passadas como parâmetros para um UDF escalar (restrição adicionada no Microsoft SQL Server 2019 CU2).
+- O UDF não faz referência a exibições internas (por exemplo, OBJECT_ID, restrição adicionada no Microsoft SQL Server 2019 CU2).
+-   O UDF não faz referência a métodos XML (restrição adicionada no Microsoft SQL Server 2019 CU4).
+-   O UDF não contém um SELECT com ORDER BY sem um "TOP 1" (restrição adicionada no Microsoft SQL Server 2019 CU4).
+-   O UDF não contém uma consulta SELECT que executa uma atribuição em conjunto com a cláusula ORDER BY (por exemplo, SELECT @x = @x +1 FROM table ORDER BY column_name, restrição adicionada no Microsoft SQL Server 2019 CU4).
+- O UDF não contém várias instruções RETURN (restrição adicionada no SQL Server 2019 CU5).
+- O UDF não é chamado de uma instrução RETURN (restrição adicionada no SQL Server 2019 CU5).
+- O UDF não faz referência à função STRING_AGG (restrição adicionada no SQL Server 2019 CU5). 
 
 <sup>1</sup> `SELECT` com acúmulo/agregação variável (por exemplo, `SELECT @val += col1 FROM table1`) não há suporte para embutimento.
 
 <sup>2</sup> UDFs recursivos serão embutidos em uma profundidade determinada apenas.
 
 <sup>3</sup> Funções intrínsecas cujos resultados dependem da hora do sistema atual são dependente de hora. Uma função intrínseca que pode atualizar algum estado global interno é um exemplo de uma função com efeitos colaterais. Essas funções retornam resultados diferentes cada vez que são chamadas, com base no estado interno.
+
+> [!NOTE]
+> Para obter informações sobre os consertos (fixes) de Embutimento de UDF Escalar do T-SQL mais recentes e alterações nos cenários de qualificação de embutimento, confira o artigo da Base de Dados de Conhecimento: [CORREÇÃO: Problemas de Embutimento de UDF Escalar no SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>Verificar se uma UDF pode ser embutida ou não
 Para cada UDF escalar do T-SQL, a exibição de catálogo [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) inclui uma propriedade chamada `is_inlineable`, que indica se uma UDF pode ser embutida ou não. 
@@ -259,11 +271,13 @@ Conforme descrito neste artigo, o embutimento de UDF escalar transforma uma cons
 1. Dicas de junção no nível da consulta talvez não sejam válidas, pois o embutimento pode introduzir novas junções. Dicas de junção local precisarão ser usadas em vez disso.
 1. Exibições que referenciam UDFs embutidos escalares não podem ser indexadas. Se você precisar criar um índice nessas exibições, desabilite embutimento para UDFs referenciadas.
 1. Pode haver algumas diferenças no comportamento de [Máscara de Dados Dinâmicos](../security/dynamic-data-masking.md) com embutimento de UDF. Em certas situações (dependendo da lógica na UDF), embutimento pode ser mais conservador no que diz respeito ao mascaramento de colunas de saída. Em cenários em que as colunas referenciadas em uma UDF não são colunas de saída, elas não são mascaradas. 
-1. Se uma UDF referenciar funções internas, como `SCOPE_IDENTITY()`, `@@ROWCOUNT` ou `@@ERROR`, o valor retornado pela função interna será alterado com o inlining. Essa alteração no comportamento ocorre porque o embutimento altera o escopo das instruções dentro da UDF.
+1. Se uma UDF referenciar funções internas, como `SCOPE_IDENTITY()`, `@@ROWCOUNT` ou `@@ERROR`, o valor retornado pela função interna será alterado com o inlining. Essa alteração no comportamento ocorre porque o embutimento altera o escopo das instruções dentro da UDF. Do Microsoft SQL Server 2019 CU2 em diante, o embutimento será bloqueado se o UDF fizer referência a determinadas funções intrínsecas (por exemplo, @@ROWCOUNT).
 
 ## <a name="see-also"></a>Consulte Também
 [Central de desempenho do Mecanismo de Banco de Dados do SQL Server e do Banco de Dados SQL do Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md)     
 [Referência de operadores físicos e lógicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Junções](../../relational-databases/performance/joins.md)     
-[Demonstrar o processamento de consulta inteligente](https://aka.ms/IQPDemos)      
+[Como demonstrar o processamento de consulta inteligente](https://aka.ms/IQPDemos)     
+[CORREÇÃO: Problemas de Embutimento de UDF Escalar no SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+

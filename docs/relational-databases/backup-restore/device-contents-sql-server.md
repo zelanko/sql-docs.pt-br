@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c79fa26bb75373811b179ff73462d15f9791b87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748049"
 ---
 # <a name="device-contents-sql-server"></a>Conteúdos do dispositivo (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use essa caixa de diálogo para exibir informações de backup. As informações descrevem o dispositivo, a mídia, o conjunto de mídias e o conjunto ou conjuntos de backups.  
   
  **Para usar o SQL Server Management Studio para exibir o conteúdo de um dispositivo de backup**  
@@ -59,7 +59,7 @@ ms.locfileid: "82179177"
 |------------|------------|  
 |**Nome**|O nome do conjunto de backup.|  
 |**Tipo**|O tipo de backup realizado: Total, Diferencial ou Log de Transações.|  
-|**Componente**|o componente de backup: Banco de dados, Arquivo ou *\<blank>* (para logs de transação).|  
+|**Componente**|o componente de backup: Banco de dados, Arquivo ou *\<blank>* (para logs de transações).|  
 |**Servidor**|O nome da instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizou a operação de backup.|  
 |**Backup de banco de dados**|O nome do banco de dados cujo backup foi efetuado.|  
 |**Posição**|A posição do conjunto de backup no volume.|  

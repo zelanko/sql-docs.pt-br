@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f3cd285b7a90f5addd01b479eb37898827605b87
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ad3a4659009ceb6d36aba9e3e97dc4e6f170788c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736507"
 ---
 # <a name="table-transact-sql"></a>tabela (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 É um tipo de dados especial que pode ser usado para armazenar um conjunto de resultados para processamento posterior. **table** é usada principalmente para o armazenamento temporário de um conjunto de linhas retornadas como o conjunto de resultados de uma função com valor de tabela. Funções e variáveis podem ser declaradas como do tipo **table**. Variáveis **table** podem ser usadas em funções, procedimentos armazenados e lotes. Para declarar variáveis do tipo **table**, use [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
@@ -82,7 +82,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 Variáveis **table** fornecem os benefícios seguintes para consultas em pequena escala que têm planos de consulta que não são alterados e quando há preocupações de recompilação:
--   Uma variável **table** se comporta como uma variável local. Ela tem um escopo bem definido. Essa variável é a função, o procedimento armazenado ou o lote em que está declarada.  
+-   Uma variável **table** se comporta como uma variável local. Ela tem um escopo bem definido. Essa variável pode ser usada na função, no procedimento armazenado ou no lote em que ela é declarada.  
      Dentro de seu escopo, uma variável **table** pode ser usada como uma tabela comum. Pode ser aplicada em qualquer lugar em que uma tabela ou expressão de tabela for usada em instruções SELECT, INSERT, UPDATE e DELETE. Porém, **table** não pode ser usada na seguinte instrução:  
   
 ```sql

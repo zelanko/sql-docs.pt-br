@@ -1,5 +1,6 @@
 ---
 title: Blocos atômicos | Microsoft Docs
+description: Saiba mais sobre BEGIN ATOMIC, que faz parte do padrão ANSI SQL. O SQL Server dá suporte a blocos atômicos nos procedimentos nativos.
 ms.custom: ''
 ms.date: 10/26/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 662d5c2fe285e92f8e8fdf74836eb1dddca77206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723424"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocos atômicos nos procedimentos nativos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **BEGIN ATOMIC** não faz parte do padrão ANSI SQL. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a blocos atômicos no nível superior de procedimentos armazenados compilados nativamente, bem como para funções definidas pelo usuário escalares compiladas nativamente. Para obter mais informações sobre essas funções, consulte [Funções escalares definidas pelo usuário para OLTP in-memory](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -133,14 +134,14 @@ GO
   
  As seguintes opções são necessárias com **BEGIN ATOMIC**:  
   
-|Configuração necessária|DESCRIÇÃO|  
+|Configuração necessária|Descrição|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|Os valores com suporte são **SNAPSHOT**, **REPEATABLEREAD**e **SERIALIZABLE**.|  
 |**LANGUAGE**|Determina os formatos de data e hora, e as mensagens do sistema. Todos os idiomas e alias em [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) têm suporte.|  
   
  As seguintes configurações são opcionais:  
   
-|Configuração opcional|DESCRIÇÃO|  
+|Configuração opcional|Descrição|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Há suporte para todos os formatos de data do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando especificado, **DATEFORMAT** substitui o formato de data padrão associado a **LANGUAGE**.|  
 |**DATEFIRST**|Quando especificado, **DATEFIRST** substitui o padrão associado a **LANGUAGE**.|  

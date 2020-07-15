@@ -1,5 +1,6 @@
 ---
 title: Gerenciamento de certificado (SQL Server Configuration Manager) | Microsoft Docs
+description: Saiba como instalar certificados em várias configurações do SQL Server. Os exemplos incluem instâncias únicas, clusters de failover e grupos de disponibilidade Always On.
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - installing certificates
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 835d0b1da11ba014b14ede9637117357e84dc208
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68212745"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85196043"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Gerenciamento de certificado (SQL Server Configuration Manager)
 
@@ -35,8 +36,8 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
 
 * Exibir e validar certificados instalados em uma instância do SQL Server. 
 * Identificar quais certificados podem estar perto de expirar. 
-* Implantar certificados em computadores do Grupo de Disponibilidade do nó que contém a réplica primária. 
-* Implantar certificados entre computadores que participam de uma instância de Cluster de Failover do nó ativo.
+* Implantar certificados em computadores do Grupo de Disponibilidade Always On com base no nó que contém a réplica primária. 
+* Implantar certificados entre computadores que participam de uma instância de cluster de failover sempre ativado com base no nó ativo.
 
 > [!NOTE]
 > Você pode usar gerenciamento de certificados no SQL Server Configuration Manager com versões anteriores do SQL Server, começando com o SQL Server 2008.
@@ -54,7 +55,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
 5. Selecione **Avançar** para validar o certificado. Se não houver erros, selecione **Avançar** para importar o certificado para a instância local.  
   
  
-##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> Para instalar um certificado em uma configuração do Cluster de Failover  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-instance-configuration"></a><a name="provision-failover-cluster-cert"></a> Para instalar um certificado em uma configuração de instância do cluster de failover  
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.
   
@@ -66,7 +67,7 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
 
 5. Se for instalar para um único nó, escolha **Procurar** e selecione o arquivo de certificado. Em seguida, vá para a etapa 8.
 
-6. Se for instalar um certificado para cada nó, selecione **Avançar** para listar os possíveis nós do proprietário. Possíveis proprietários para o SQL Server FCI atual estão pré-selecionados.
+6. Se for instalar um certificado para cada nó, selecione **Avançar** para listar os possíveis nós do proprietário. Os possíveis proprietários da instância do cluster de failover atual são previamente selecionados.
 
 7. Escolha **Avançar** para selecionar o certificado a ser importado.
 
@@ -75,9 +76,9 @@ Certificados SSL/TLS são amplamente usados para proteger o acesso ao SQL Server
 9. Selecione **Avançar** para importar os certificados selecionados.
 
 > [!NOTE]
-> Conclua estas etapas no nó ativo da instância do Cluster de Failover do SQL Server. O usuário precisa ter permissões de administrador em todos os nós de cluster.
+> Conclua estas etapas no nó ativo da instância do cluster de failover sempre ativado. O usuário precisa ter permissões de administrador em todos os nós de cluster.
 
-##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Para instalar um certificado em uma configuração de Grupo de Disponibilidade  
+##  <a name="to-install-a-certificate-in-an-always-on-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Para instalar um certificado em uma configuração de Grupo de Disponibilidade Always On  
   
 1. No SQL Server Configuration Manager, no painel de console, expanda **Configuração de Rede do SQL Server**.
   

@@ -1,5 +1,6 @@
 ---
 title: Auditoria do SQL Server (Mecanismo de Banco de Dados) | Microsoft Docs
+description: Saiba mais sobre as auditorias de servidor do Mecanismo de Banco de Dados do SQL Server ou de um banco de dados individual. As auditorias de servidor contêm as especificações de auditoria de servidor e de banco de dados.
 ms.custom: ''
 ms.date: 01/01/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f13076ab831dbf3321a60aef8752d88c6193265a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d9d459729a05078043b5365a54d16ade45df31d
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80243406"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85294631"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +128,7 @@ ms.locfileid: "80243406"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Espelhamento de Banco de Dados e o SQL Server Audit  
  Um banco de dados com uma especificação de auditoria de banco de dados definida e que usa espelhamento de banco de dados incluirá a especificação de auditoria de banco de dados. Para funcionar corretamente na instância de SQL espelhada, é necessário configurar os seguintes itens:  
   
--   É necessário que o servidor espelho tenha uma auditoria com o mesmo GUID para habilitar a especificação de auditoria de banco de dados para gravar registros de auditoria. Isso pode ser configurado usando o comando CREATE AUDIT WITH GUID **=** _\<GUID da Auditoria de Servidor de origem_>.  
+-   É necessário que o servidor espelho tenha uma auditoria com o mesmo GUID para habilitar a especificação de auditoria de banco de dados para gravar registros de auditoria. Isso pode ser configurado usando o comando CREATE AUDIT WITH GUID **=** _\<GUID from source Server Audit_>.  
   
 -   Para destinos de arquivos binários, é necessário que a conta do serviço de servidor espelho tenha as permissões apropriadas onde a trilha de auditoria começou a ser gravada.  
   
@@ -142,7 +143,7 @@ ms.locfileid: "80243406"
 ### <a name="data-definition-language-statements"></a>Instruções de linguagem de definição de dados  
  É possível usar as seguintes instruções DDL para criar, alterar e remover especificações de auditoria:  
   
-|Instruções DDL|DESCRIÇÃO| 
+|Instruções DDL|Descrição| 
 |-|-|  
 |[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|Altera a propriedade de um protegível.|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|Altera o objeto de especificação de auditoria do banco de dados usando o recurso Auditoria do SQL Server.|  
@@ -158,7 +159,7 @@ ms.locfileid: "80243406"
 ### <a name="dynamic-views-and-functions"></a>Exibições e funções dinâmicas  
  A tabela a seguir lista as exibições e funções dinâmicas que podem ser usadas na auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Exibições e funções dinâmicas|DESCRIÇÃO|  
+|Exibições e funções dinâmicas|Descrição|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|Retorna uma linha para cada ação de auditoria que pode ser reportada no log de auditoria e para cada grupo de ação de auditoria que pode ser configurado como parte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit.|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|Fornece informações sobre o estado atual da auditoria.|  
@@ -168,7 +169,7 @@ ms.locfileid: "80243406"
 ### <a name="catalog-views"></a>Exibições do catálogo  
  A tabela a seguir lista as exibições do catálogo que podem ser usadas para auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Exibições do catálogo|DESCRIÇÃO|  
+|Exibições do catálogo|Descrição|  
 |-------------------|-----------------|  
 |[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contém informações sobre as especificações de auditoria do banco de dados de uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Contém informações sobre as especificações de auditoria de banco de dados em uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor para todos os bancos de dados.|  
@@ -214,7 +215,7 @@ ms.locfileid: "80243406"
  [Gatilhos DDL](../../../relational-databases/triggers/ddl-triggers.md)  
  Explica como os gatilhos DDL (linguagem de definição de dados) podem ser usados para controlar alterações nos bancos de dados.  
   
- [Microsoft TechNet: TechCenter do SQL Server: Segurança e proteção do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: Proteção e Segurança do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fornece informações atualizadas sobre a segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  

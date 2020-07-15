@@ -1,5 +1,6 @@
 ---
 title: Registrar um nome da entidade de serviço para conexões Kerberos | Microsoft Docs
+description: Saiba como registrar um SPN (nome da entidade de serviço) com o Active Directory. Esse registro é necessário para usar a autenticação Kerberos com o SQL Server.
 ms.custom: ''
 ms.date: 08/06/2019
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651748"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar um nome de entidade de serviço para conexões de Kerberos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para usar a autenticação Kerberos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , é preciso satisfazer estas duas condições:  
   
 -   Os computadores cliente e servidor devem fazer parte do mesmo domínio do Windows ou de domínios confiáveis.  
@@ -78,7 +79,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
     -   **\<port>** é o número da porta TCP.  
   
-    -   **\<instancename>** é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   **\<instancename>** é o nome da instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Instância padrão**  
   
@@ -105,7 +106,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ##  <a name="automatic-spn-registration"></a><a name="Auto"></a> Registro automático de SPN  
  Quando uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] é iniciada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta registrar o SPN para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando a instância é interrompida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta cancelar o SPN. Para uma conexão TCP/IP, o SPN é registrado no formato *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Tanto as instâncias nomeadas quanto as instâncias padrão são registradas como *MSSQLSvc*, dependendo do valor *\<tcpport>* para fazer a diferenciação entre as instâncias.  
   
- Para outras conexões que dão suporte ao Kerberos, o SPN é registrado no formato *MSSQLSvc/\<FQDN>* / *\<instancename>* para uma instância nomeada. O formato para registrar uma instância padrão é *MSSQLSvc/\<FQDN>* .  
+ Para outras conexões que oferecem suporte a Kerberos, o SPN é registrado no formato *MSSQLSvc/\<FQDN>* / *\<instancename>* para uma instância nomeada. O formato para registrar uma instância padrão é *MSSQLSvc/\<FQDN>* .  
   
  Talvez seja necessária a intervenção manual para registrar ou cancelar o SPN se a conta do serviço não tiver as permissões necessárias para essas ações.  
   

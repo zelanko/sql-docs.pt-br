@@ -1,5 +1,6 @@
 ---
 title: Suporte a FOR XML para vários tipos de dados SQL Server | Microsoft Docs
+description: Veja informações sobre os vários tipos de dados do SQL Server que são compatíveis com a cláusula FOR XML em uma consulta SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e050c3f6817bc6c975f8bf28f561fb91af109dd8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7b4e3d1ecc08c94e516b532cc8f0d68ef370e1e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729896"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Suporte a FOR XML para vários tipos de dados SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Os tópicos desta seção descrevem o suporte a FOR XML para tipos de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Suporte a FOR XML para os tipo de dados xml](../../relational-databases/xml/for-xml-support-for-the-xml-data-type.md)|Descreve como o FOR XML funciona com o tipo de dados **xml** .|  
 |[Suporte a FOR XML para tipos de dados de cadeia de caracteres](../../relational-databases/xml/for-xml-support-for-string-data-types.md)|Descreve como o FOR XML funciona com tipos de dados de cadeia de caracteres como **varchar** e **nvarchar**.|  

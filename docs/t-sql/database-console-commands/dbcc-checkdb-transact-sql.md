@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 743c3c6d24be39ae9c2b56da26017bd4b15852a6
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4003b08205f1c7db98d2656e17fe653a3616638d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748950"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Verifica a integridade lógica e física de todos os objetos do banco de dados especificado com a execução das seguintes operações:    
     
@@ -221,7 +221,13 @@ Depois que o comando DBCC CHECKDB é concluído, uma mensagem é gravada no log 
 |3|Isso indica um dano nos metadados que finalizou o comando DBCC.|    
 |4|Uma declaração ou violação de acesso foi detectada.|    
 |5|Ocorreu um erro desconhecido que finalizou o comando DBCC.|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra a data e a hora em que uma verificação de consistência foi executada em um banco de dados sem erros (ou verificação de consistência "limpa"). Isso é conhecido como a `last known clean check`. Quando um banco de dados é iniciado pela primeira vez, essa data é gravada no EventLog (EventID-17573) e no ERRORLOG no seguinte formato: 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## <a name="error-reporting"></a>Relatório de Erros    
 Um arquivo de despejo (`SQLDUMP*nnnn*.txt`) é criado no diretório LOG do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre que DBCC CHECKDB detecta um erro de corrupção. Quando a coleta de dados *Uso de Recursos* e os recursos de *Relatório de Erros* recursos estão habilitados para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o arquivo é encaminhado automaticamente ao [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Os dados coletados são usados para aprimorar a funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 O arquivo de despejo contém os resultados do comando DBCC CHECKDB e saídas de diagnóstico adicionais. O acesso é limitado à conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aos membros da função sysadmin. Por padrão, a função de sysadmin contém todos os membros do grupo `BUILTIN\Administrators` do Windows e do grupo do administrador local. O comando DBCC não falhará se o processo de coleta de dados falhar.

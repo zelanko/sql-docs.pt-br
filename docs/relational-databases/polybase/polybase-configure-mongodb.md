@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85741766"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurar o PolyBase para acessar dados externos no MongoDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 O artigo explica como usar o PolyBase em uma instância do SQL Server para consultar dados externos no MongoDB.
 
@@ -75,20 +75,19 @@ Os seguintes comandos Transact-SQL são usados nesta seção:
 >Depois de criar uma fonte de dados externa, você pode usar o comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para criar uma tabela que possa ser consultada por essa fonte. 
 
 ## <a name="flattening"></a>Nivelamento
- O nivelamento é habilitado para os dados aninhados e repetidos das coleções de documentos do MongoDB. O usuário precisa habilitar `create an external table` e especificar explicitamente um esquema relacional nas coleções de documentos do MongoDB que possam ter dados repetidos e/ou aninhados. Habilitaremos a detecção de esquema automático em coleções de documentos do mongo em etapas futuras.
-Os tipos de dados repetidos/aninhados do JSON serão nivelados da seguinte forma
+O nivelamento é habilitado para os dados aninhados e repetidos das coleções de documentos do MongoDB. O usuário precisa habilitar `create an external table` e especificar explicitamente um esquema relacional nas coleções de documentos do MongoDB que possam ter dados repetidos e/ou aninhados. Os tipos de dados repetidos/aninhados do JSON serão nivelados da seguinte forma
 
 * Objetos: coleção de chave-valor não ordenada entre chaves (aninhada)
 
-   - Criaremos uma coluna de tabela para cada chave de objeto
+   - O SQL Server cria uma coluna de tabela para cada chave de objeto
 
      * Nome da coluna: objectname_keyname
 
 * Matriz: valores ordenados, separados por vírgulas, entre colchetes (repetidos)
 
-   - Adicionaremos uma nova linha da tabela para cada item da matriz
+   - O SQL Server adiciona uma nova linha de tabela para cada item da matriz
 
-   - Criaremos uma coluna por matriz para armazenar o índice do item da matriz
+   - O SQL Server cria uma coluna por matriz para armazenar o índice do item da matriz
 
      * Nome da coluna: arrayname_index
 
@@ -96,11 +95,11 @@ Os tipos de dados repetidos/aninhados do JSON serão nivelados da seguinte forma
 
 Há vários possíveis problemas com essa técnica, dois deles sendo:
 
-* um campo repetido vazio mascarará efetivamente os dados contidos nos campos nivelados no mesmo registro
+* Um campo repetido vazio mascarará efetivamente os dados contidos nos campos nivelados no mesmo registro
 
-* a presença de vários campos repetidos pode resultar em uma explosão do número de linhas produzidas
+* A presença de vários campos repetidos pode resultar em uma explosão do número de linhas produzidas
 
-Como exemplo, avaliamos a coleção do restaurante do conjunto de dados de amostra do MongoDB armazenada no formato JSON não relacional. Cada restaurante tem um campo de endereço aninhado e uma matriz de classificações atribuídas a ele em dias diferentes. A figura a seguir ilustra um restaurante típico com o endereço aninhado e notas aninhadas repetidas.
+Como exemplo, o SQL Server avalia a coleção do restaurante do conjunto de dados de amostra do MongoDB armazenada no formato JSON não relacional. Cada restaurante tem um campo de endereço aninhado e uma matriz de classificações atribuídas a ele em dias diferentes. A figura a seguir ilustra um restaurante típico com o endereço aninhado e notas aninhadas repetidas.
 
 ![Nivelamento do MongoDB](../../relational-databases/polybase/media/mongo-flattening.png "Nivelamento de restaurante do MongoDB")
 

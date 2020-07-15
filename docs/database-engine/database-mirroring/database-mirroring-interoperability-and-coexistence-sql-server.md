@@ -1,6 +1,6 @@
 ---
 title: 'Espelhamento de banco de dados: Interoperabilidade e coexistência'
-description: Saiba mais sobre a interoperabilidade e a coexistência do espelhamento de banco de dados do SQL Server e outros recursos do SQL Server, como catálogos de texto completo, instantâneos de banco de dados, envio de logs, replicação e instâncias do cluster de failover.
+description: Saiba mais sobre interoperabilidade e coexistência do espelhamento de banco de dados do SQL Server e outros recursos do SQL Server, como catálogos de texto completo e instantâneos de banco de dados.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 045aa94292a4633b8d61e95491d603e0d9897d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b70007c2beaa26d93107f167013a240fe0fa5864
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751910"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Espelhamento de banco de dados: Interoperabilidade e coexistência (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O espelhamento de banco de dados pode ser usado com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Instâncias de cluster de failover AlwaysOn (Clustering de Failover do SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-sql-server-failover-cluster-instances.md)  

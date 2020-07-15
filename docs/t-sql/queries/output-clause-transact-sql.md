@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7b53928fb2f90b4e97227f933a36648acd7b60cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706029"
 ---
 # <a name="output-clause-transact-sql"></a>cláusula OUTPUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retorna informações ou expressões baseadas em cada linha afetada por uma instrução INSERT, UPDATE, DELETE ou MERGE. Esses resultados podem ser retornados ao aplicativo de processamento para uso em mensagens de confirmação, arquivamentos e outros requisitos similares de aplicativo. Os resultados também podem ser inseridos em uma tabela ou variável de tabela. Além disso, você pode capturar os resultados de uma cláusula OUTPUT em uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada e inserir esses resultados em uma tabela ou exibição de destino.  
   
@@ -133,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- É uma referência de coluna explícita. Toda referência à tabela que está sendo modificada precisa ser corretamente qualificada pelo prefixo INSERTED ou DELETED, conforme necessário, por exemplo: INSERTED **.** _column\_name_.  
+ É uma referência de coluna explícita. Toda referência à tabela que está sendo modificada deve ser corretamente qualificada pelo prefixo INSERTED ou DELETED, conforme apropriado, por exemplo: INSERTED **.** _column\_name_.  
   
  $action  
- Está disponível apenas para a instrução MERGE. Especifica uma coluna do tipo **nvarchar(10)** na cláusula OUTPUT em uma instrução MERGE que retorna um entre três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi realizada nessa linha.  
+ Está disponível apenas para a instrução MERGE. Especifica uma coluna do tipo **nvarchar(10)** na cláusula OUTPUT em uma instrução MERGE que retorna um entre três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi executada nessa linha.  
   
 ## <a name="remarks"></a>Comentários  
- A cláusula OUTPUT \<dml_select_list> e a cláusula OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } pode ser definida em uma única instrução INSERT, UPDATE, DELETE ou MERGE.  
+ A cláusula OUTPUT \<dml_select_list> e a cláusula OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } pode ser definida em uma instrução INSERT, UPDATE, DELETE ou MERGE.  
   
 > [!NOTE]  
 >  Salvo indicação em contrário, as referências à cláusula OUTPUT se referem tanto à cláusula OUTPUT, quanto à cláusula OUTPUT INTO.  

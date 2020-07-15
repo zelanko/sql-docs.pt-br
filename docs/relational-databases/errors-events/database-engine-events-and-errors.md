@@ -1,5 +1,6 @@
 ---
 title: Eventos e erros do mecanismo de banco de dados
+description: Consulte esta lista de códigos de erro do MSSQL para encontrar explicações para as mensagens de erro dos eventos do mecanismo de banco de dados do SQL Server.
 ms.custom: ''
 ms.date: 01/28/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f8ad61d068689bb0bc5c47e4e0921eddd9aad7c
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
+ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728253"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84158615"
 ---
 # <a name="database-engine-errors"></a>Erros do mecanismo de banco de dados
 
@@ -467,7 +468,7 @@ ORDER BY message_id
 |    609    |    16    |    Não    |    A árvore B não está vazia na ativação em RowsetBulk.    |
 |    610    |    16    |    Sim    |    Valor de cabeçalho inválido de uma página. Execute DBCC CHECKDB para verificar se há danos nos dados.    |
 |    [611](mssqlserver-611-database-engine-error.md)    |    16    |    Não    |    Não é possível inserir ou atualizar uma linha porque o tamanho total da coluna variável, incluindo a sobrecarga, está %d bytes acima do limite.    |
-|    613    |    21    |    Não    |    Não foi possível encontrar uma entrada para o conjunto de linhas da tabela de trabalho com ID de partição %I64d no banco de dados %d.     |
+|    613    |    21    |    Não    |    Não foi possível encontrar uma entrada para o conjunto de linhas da tabela de trabalho com ID de partição %I64d no banco de dados %d.    |
 |    615    |    21    |    Sim    |    Não foi possível localizar a ID de banco de dados %d, de nome '%.*ls'. O banco de dados pode estar offline. Aguarde alguns minutos e tente novamente.    |
 |    [617](mssqlserver-617-database-engine-error.md)    |    20    |    Sim    |    O descritor da ID de objeto %ld na ID de banco de dados %d não foi encontrado na tabela de hash durante a tentativa de remoção do hash. Uma entrada está ausente em uma tabela de trabalho. Execute a consulta novamente. Se um cursor estiver envolvido, feche e abra o cursor novamente.    |
 |    622    |    16    |    Não    |    O grupo de arquivos "%.*ls" não tem arquivos atribuídos. Tabelas, índices e colunas text, ntext e image não podem ser populadas nesse grupo de arquivos até que um arquivo seja adicionado.    |
@@ -1521,7 +1522,7 @@ ORDER BY message_id
 |    3154    |    16    |    Não    |    O conjunto de backup mantém um backup de um banco de dados diferente do banco de dados '%ls' existente.    |
 |    3155    |    16    |    Não    |    A operação RESTORE não pode continuar porque um ou mais arquivos foram adicionados ou descartados no banco de dados desde que o conjunto de backup foi criado.    |
 |    [3156](mssqlserver-3156-database-engine-error.md)    |    16    |    Não    |    O arquivo '%ls' não pode ser restaurado para '%ls'. Use WITH MOVE para identificar um local válido para o arquivo.    |
-|    [3159](mssqlserver-3159-database-engine-error.md)    |    16    |    Não    |    Não foi feito backup da parte final do log do banco de dados "%ls".  Use BACKUP LOG WITH NORECOVERY para fazer backup do log se este contiver trabalho que você não deseja perder. Use a cláusula WITH REPLACE ou WITH STOPAT da instrução RESTORE para simplesmente substituir o conteúdo do log.    |
+|    [3159](mssqlserver-3159-database-engine-error.md)    |    16    |    Não    |    Não foi feito backup da parte final do log do banco de dados "%ls". Use BACKUP LOG WITH NORECOVERY para fazer backup do log se este contiver trabalho que você não deseja perder. Use a cláusula WITH REPLACE ou WITH STOPAT da instrução RESTORE para simplesmente substituir o conteúdo do log.    |
 |    3161    |    16    |    Não    |    O arquivo primário não está disponível. Ele deve ser restaurado ou disponibilizado de outra forma.    |
 |    3163    |    16    |    Não    |    O log de transações foi danificado. Todos os arquivos de dados devem ser restaurados antes da tentativa de executar RESTORE LOG.    |
 |    3165    |    16    |    Não    |    O banco de dados '% ls' foi restaurado, mas houve um erro durante a restauração/remoção da replicação. O banco de dados foi deixado offline. Consulte o tópico MSSQL_ENG003165 dos Manuais Online do SQL Server.    |
@@ -1532,7 +1533,7 @@ ORDER BY message_id
 |    3170    |    16    |    Não    |    O nome do arquivo STANDBY é inválido.    |
 |    3171    |    16    |    Não    |    O arquivo %ls está desabilitado e não pode ser restaurado para o banco de dados online.    |
 |    3172    |    16    |    Não    |    O grupo de arquivos %ls expirou e não pode ser restaurado para o banco de dados online.    |
-|    3173    |    16    |    Não    |    A cláusula STOPAT fornecida com esta instrução RESTORE indica que a parte final do log contém alterações que precisam de backup para atingir o destino no momento determinado. Não foi feito backup da parte final do log do banco de dados "%ls".  Use BACKUP LOG WITH NORECOVERY para fazer backup do log ou use a cláusula WITH REPLACE na instrução RESTORE para substituir a parte final do log.    |
+|    3173    |    16    |    Não    |    A cláusula STOPAT fornecida com esta instrução RESTORE indica que a parte final do log contém alterações que precisam de backup para atingir o destino no momento determinado. Não foi feito backup da parte final do log do banco de dados "%ls". Use BACKUP LOG WITH NORECOVERY para fazer backup do log ou use a cláusula WITH REPLACE na instrução RESTORE para substituir a parte final do log.    |
 |    3174    |    16    |    Não    |    O arquivo '%ls' não pode ser movido por essa operação RESTORE.    |
 |    3175    |    10    |    Não    |    RESTORE FILEGROUP="%ls" foi especificado, mas nem todos os seus arquivos estão presentes no conjunto de backup. O arquivo "%ls" está ausente. RESTORE continuará, mas, para que todos os arquivos sejam restaurados, restaure outros conjuntos de backup.    |
 |    [3176](mssqlserver-3176-database-engine-error.md)    |    16    |    Não    |    O arquivo '%ls' foi reivindicado por '%ls' (%d) e '%ls' (%d). A cláusula WITH MOVE pode ser usada para realocar um ou mais arquivos.    |
@@ -4162,7 +4163,7 @@ ORDER BY message_id
 |    9012    |    10    |    Não    |    Houve %d E/S de log desalinhadas que exigiram o retorno à E/S síncrona. A E/S atual está no arquivo %ls.    |
 |    9013    |    10    |    Não    |    O final do log do banco de dados %ls está sendo regravado para corresponder ao novo tamanho do setor de %d bytes. % bytes no deslocamento %I64d no arquivo %ls serão gravados.    |
 |    9014    |    21    |    Sim    |    Erro ao processar o log do banco de dados '%.*ls'. A versão de bloqueio de log está acima do que este servidor permite.    |
-|    9015    |    24    |    Sim    |    O registro de log no LSN %S_LSN está corrompido.     |
+|    9015    |    24    |    Sim    |    O registro de log no LSN %S_LSN está corrompido.    |
 |    9016    |    21    |    Sim    |    Erro ao processar o log do banco de dados '%.*ls'. Não foi possível descriptografar o bloqueio de log.    |
 |    9100    |    23    |    Sim    |    Detecção de possível dano no índice. Execute DBCC CHECKDB.    |
 |    9101    |    16    |    Não    |    estatística automática interna    |
@@ -6220,7 +6221,7 @@ ORDER BY message_id
 |    15335    |    11    |    Não    |    Erro: o novo nome '%s' já está sendo usado como um nome %s e causaria uma duplicidade que não é permitida.    |
 |    15336    |    16    |    Não    |    Não é possível renomear o objeto '%s' porque ele participa de dependências impostas.    |
 |    15337    |    10    |    Não    |    Cuidado: sys.sql_dependencies mostra que outros objetos (exibições, procedimentos, etc.) fazem referência ao nome antigo desse objeto. Esses objetos serão invalidados e deverão ser descartados e recriados imediatamente.    |
-|    15339    |    10    |    Não    |    Criando '%s'.     |
+|    15339    |    10    |    Não    |    Criando '%s'.    |
 |    15342    |    10    |    Não    |    Não há chave privada fornecida para %S_MSG '%.*ls'.    |
 |    15343    |    10    |    Não    |    O nome de usuário e/ou senha informados são inválidos ou o processo atual não tem privilégios suficientes.    |
 |    15344    |    16    |    Não    |    Não há suporte para alteração da propriedade de %S_MSG.    |
@@ -8217,7 +8218,7 @@ ORDER BY message_id
 |    22583    |    16    |    Não    |    O artigo '%s' não pode ser adicionado à publicação '%s' nem modificado nela. Não há suporte para a replicação de colunas FILESTREAM para artigos com 'schema_option' definida como 0x20000000. Isso converte tipos de dados de objetos grandes em tipos de dados com suporte em versões anteriores do Microsoft SQL Server. Remova essa configuração de 'schema_option' usando sp_addmergepublication ou sp_changemergepublication, ou particione o artigo verticalmente para que a coluna FILESTREAM não seja replicada.    |
 |    22584    |    10    |    Não    |    Aviso: os valores de alguns dos sinalizadores especificados na propriedade 'schema_option' não são compatíveis com o nível de compatibilidade da publicação. O valor modificado de schema_option '%s' será usado.    |
 |    22585    |    10    |    Não    |    A opção de esquema para script do atributo FILESTREAM em colunas varbinary(max) foi habilitada para o artigo '%s'. A habilitação dessa opção após a criação do artigo pode causar falha na replicação quando os dados de uma coluna FILESTREAM excederem 2 GB e houver um conflito durante a replicação. Se desejar que os dados FILESTREAM sejam replicados, descarte e recrie o artigo, e especifique a opção de esquema adequada ao recriá-lo.    |
-|    22586    |    16    |    Não    |    A coluna '%s' não pode ser adicionada ou modificada no artigo '%s' da publicação '%s'. A operação DDL ns colunas hierarchyid e FILESTREAM não tem suporte para publicações que têm 'sync_mode' de 1 (modo de caractere) ou com um nível de compatibilidade com versões anteriores inferior a 90RTM.     |
+|    22586    |    16    |    Não    |    A coluna '%s' não pode ser adicionada ou modificada no artigo '%s' da publicação '%s'. A operação DDL ns colunas hierarchyid e FILESTREAM não tem suporte para publicações que têm 'sync_mode' de 1 (modo de caractere) ou com um nível de compatibilidade com versões anteriores inferior a 90RTM.    |
 |    22801    |    16    |    Não    |    Iniciando o trabalho do Agente de Coleção do Change Data Capture. Para gerar relatórios sobre o andamento da operação, consulte a exibição de gerenciamento dinâmico sys.dm_cdc_log_scan_sessions.    |
 |    22802    |    16    |    Não    |    Iniciando o trabalho do Agente de Limpeza do Change Data Capture usando a marca d'água baixa %s.    |
 |    22803    |    16    |    Não    |    O Change Data Capture verificou o log de LSN%d a LSN%d, %d transações com %d comandos foram extraídas. Para gerar relatórios sobre o andamento da operação, consulte a exibição de gerenciamento dinâmico sys.dm_cdc_log_scan_sessions.    |
@@ -8810,7 +8811,7 @@ ORDER BY message_id
 |    30059    |    16    |    Não    |    Um erro fatal ocorreu durante uma população de texto completo e causou o cancelamento da operação. O tipo de população é: %s; o nome do banco de dados é %s (id: %d); o nome do catálogo é %s (id: %d); o nome da tabela é %s (id: %d). Corrija os erros registrados no log de rastreamento de texto completo. Em seguida, continue a população. A sintaxe básica do Transact-SQL para isso é: ALTER FULLTEXT INDEX ON table_name RESUME POPULATION.    |
 |    30060    |    16    |    Não    |    A população de importação para o banco de dados %ls (id: %d), catálogo %ls (id: %d) está sendo cancelada devido a um erro fatal ('%ls'). Corrija os erros registrados no log de rastreamento de texto completo. Em seguida, continue com a importação desanexando e reanexando o banco de dados ou colocando-o offline e novamente online. Se o erro não puder ser recuperado, recrie o catálogo de texto completo.    |
 |    30061    |    17    |    Não    |    Falha do SQL Server ao criar diretório filterdata de texto completo. Talvez FulltextDefaultPath seja inválido ou a conta de serviço do SQL Server não tenha permissão. A indexação de blob de texto completo falhará até esse problema ser resolvido. Reinicie o SQL Server depois de corrigi-lo.    |
-|    30062    |    17    |    Não    |    Falha do SQL Server ao carregar o sid do grupo de serviço FDHost. A instalação pode estar corrompida.     |
+|    30062    |    17    |    Não    |    Falha do SQL Server ao carregar o sid do grupo de serviço FDHost. A instalação pode estar corrompida.    |
 |    30063    |    10    |    Não    |    Aviso: o SQL Server não pôde definir a afinidade do processador fdhost.exe como %d, pois o valor não é válido.    |
 |    30064    |    17    |    Não    |    O SQL Server não pôde definir as informações de segurança no diretório FilterData de texto completo na pasta FTData. A indexação de texto completo de alguns tipos de documentos  poderá falhar até esse problema ser resolvido. Será necessário reparar a instalação do SQL Server.    |
 |    30067    |    10    |    Não    |    Aviso: a operação de desanexar não pode excluir um índice de texto completo criado na tabela '%ls' no banco de dados '%ls', pois o índice está em um grupo de arquivos somente leitura. Para descartar o índice de texto completo, anexe novamente o banco de dados, altere o grupo de arquivos somente leitura para acesso de leitura/gravação e desanexe-o. Este aviso não causará falha na operação de desanexação do banco de dados.    |
@@ -8967,8 +8968,8 @@ ORDER BY message_id
 |    33054    |    16    |    Não    |    O gerenciamento extensível de chaves não tem suporte nesta edição do SQL Server.    |
 |    33055    |    16    |    Não    |    Exceção ao chamar o provedor de criptografia '%.*ls' na API '%.* ls'. O SQL Server está encerrando o processo %d. Tipo de exceção: %ls; Código de exceção: 0x%lx.    |
 |    33056    |    16    |    Não    |    Não é possível representar o logon '%.*ls' para acessar %S_MSG '%.* ls'.    |
-|    33057    |    10    |    Não    |    O provedor criptográfico está desabilitado agora. Entretanto, os usuários que tiverem uma sessão criptográfica aberta com o provedor ainda o usarão. Reinicie o servidor para desabilitar o provedor para todos os usuários.     |
-|    33058    |    10    |    Não    |    O provedor criptográfico está descartado agora. Entretanto, os usuários que tiverem uma sessão criptográfica aberta com o provedor ainda o usarão. Reinicie o servidor para descartar o provedor para todos os usuários.     |
+|    33057    |    10    |    Não    |    O provedor criptográfico está desabilitado agora. Entretanto, os usuários que tiverem uma sessão criptográfica aberta com o provedor ainda o usarão. Reinicie o servidor para desabilitar o provedor para todos os usuários.    |
+|    33058    |    10    |    Não    |    O provedor criptográfico está descartado agora. Entretanto, os usuários que tiverem uma sessão criptográfica aberta com o provedor ainda o usarão. Reinicie o servidor para descartar o provedor para todos os usuários.    |
 |    33070    |    16    |    Não    |    O limite de tamanho máximo especificado para o arquivo do log de auditoria é inferior ao valor mínimo permitido. O limite de tamanho máximo deve ser pelo menos 2 MB.    |
 |    33071    |    16    |    Não    |    Este comando requer que %S_MSG seja desabilitado. Desabilite o %S_MSG e reexiba este comando.    |
 |    33072    |    16    |    Não    |    O caminho do arquivo de log de auditoria é inválido.    |

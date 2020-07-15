@@ -18,16 +18,16 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325508"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727070"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Este artigo descreve como criar índices em uma exibição. O primeiro índice criado em uma exibição deve ser um índice clusterizado exclusivo. Depois que o índice clusterizado exclusivo for criado, você poderá criar mais índices não clusterizados. Criar um índice clusterizado exclusivo em uma exibição melhora o desempenho da consulta porque a exibição é armazenada no banco de dados da mesma forma que uma tabela com um índice clusterizado é armazenada. O otimizador de consulta pode usar exibições indexadas para acelerar a execução da consulta. A exibição não precisa estar referenciada na consulta para o otimizador considerá-la para uma substituição.
 
@@ -92,7 +92,7 @@ Além das opções SET e dos requisitos de função determinística, os seguinte
 - Quando você cria o índice, a opção `IGNORE_DUP_KEY` deve ser definida como OFF (a configuração padrão).
 - As tabelas devem ser referenciadas por meio de nomes de duas partes, _schema_ **.** _tablename_ na definição da exibição.
 - Funções definidas pelo usuário referenciadas na exibição devem ser criadas usando a opção `WITH SCHEMABINDING`.
-- Qualquer função definida pelo usuário referenciada na exibição deve ser referenciada por nomes de duas partes, _\<schema\>_ **.** _\<function\>_ .
+- Qualquer função definida pelo usuário referenciada na exibição precisa ser referenciada por nomes de duas partes, _\<schema\>_ **.** _\<function\>_ .
 - A propriedade de acesso a dados de uma função definida pelo usuário deve ser `NO SQL` e a propriedade de acesso externa deve ser `NO`.
 - Funções CLR (Common Language Runtime) podem aparecer na lista de seleção da exibição, mas não podem ser parte da definição de uma chave de índice clusterizado. Funções CLR não podem aparecer na cláusula WHERE da exibição ou na cláusula ON de uma operação JOIN na exibição.
 - Funções CLR e métodos de tipos CLR definidos pelo usuário usados na definição da exibição devem ter as propriedades definidas como mostradas na tabela a seguir.

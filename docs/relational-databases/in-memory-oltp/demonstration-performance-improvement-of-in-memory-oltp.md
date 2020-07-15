@@ -1,5 +1,6 @@
 ---
 title: Aprimoramento do desempenho do OLTP in-memory
+description: Este exemplo de código demonstra o desempenho rápido de tabelas com otimização de memória com Transact-SQL interpretado e um procedimento armazenado compilado nativamente.
 ms.custom: seo-dt-2019
 ms.date: 08/19/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d9d5cccaa99ae0343c3f6c99cd7f7bcfb249df0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723264"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demonstração: aprimoramento do desempenho do OLTP na memória
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   O exemplo de código neste tópico mostra o desempenho rápido de tabelas com otimização de memória. A melhoria de desempenho é evidente quando os dados em uma tabela com otimização de memória são acessados de [!INCLUDE[tsql](../../includes/tsql-md.md)]tradicional, interpretado. Essa melhoria do desempenho é ainda maior quando os dados em uma tabela com otimização de memória são acessados de um NCSProc (procedimento armazenado compilado nativamente).  
  

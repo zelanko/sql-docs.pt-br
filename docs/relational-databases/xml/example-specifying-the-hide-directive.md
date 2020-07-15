@@ -1,5 +1,6 @@
 ---
 title: 'Exemplo: especificando a diretiva HIDE | Microsoft Docs'
+description: Veja um exemplo de como usar a diretiva HIDE em uma consulta SQL.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d656dd0022a3c3234baf1e032e26ef77c80b9421
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f8f8f5a8eeeff444832d5cd6142f1bb0099c5913
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632500"
 ---
-# <a name="example-specifying-the-hide-directive"></a>Exemplo: Especificando a diretiva HIDE
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-specifying-the-hide-directive"></a>Exemplo: especificando a diretiva HIDE
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Este exemplo ilustra o uso da diretiva **HIDE** . Essa diretiva é útil quando você deseja que a consulta retorne um atributo para ordenar as linhas na tabela universal retornada pela consulta, mas não deseja esse atributo no documento XML resultante final.  
   
  Esta consulta constrói este XML:  

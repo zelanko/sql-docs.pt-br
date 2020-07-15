@@ -1,5 +1,6 @@
 ---
 title: Adicionar arquivos de dados ou de log a um banco de dados | Microsoft Docs
+description: Saiba como adicionar dados ou registrar arquivos em um banco de dados no SQL Server 2019 usando o SQL Server Management Studio ou o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 563a075ec3cba0cc25980e59a228a5c319075caa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727580"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Adicionar arquivos de dados ou de log a um banco de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico descreve como adicionar um arquivo de dados ou de log a um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -72,7 +73,7 @@ ms.locfileid: "68137402"
   
 6.  Selecione o tipo de arquivo, de dados ou de log.  
   
-7.  Para um arquivo de dados, selecione o grupo de arquivos no qual o arquivo deve ser incluído da lista ou selecione **\<novo grupo de arquivos>** para criar um novo grupo de arquivos. Logs de transações não podem ser colocados em grupos de arquivos.  
+7.  Para um arquivo de dados, selecione na lista o grupo de arquivos no qual ele deve ser incluído ou selecione **\<new filegroup>** para criar um grupo de arquivos. Logs de transações não podem ser colocados em grupos de arquivos.  
   
 8.  Especifique o tamanho inicial do arquivo. Deixe os arquivos de dados tão grandes quanto possível, com base na quantidade máxima de dados que você espera ter no banco de dados.  
   

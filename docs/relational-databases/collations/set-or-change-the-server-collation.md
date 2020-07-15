@@ -1,7 +1,7 @@
 ---
 title: Definir ou alterar a ordenação do servidor | Microsoft Docs
 ms.custom: ''
-ms.date: 12/05/2019
+ms.date: 05/10/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
-ms.openlocfilehash: 578735009c72da997159484d308a25784ac64be0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6517111f63f2e28bf27e88003fa0c7b2e9b25fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733952"
 ---
 # <a name="set-or-change-the-server-collation"></a>Definir ou alterar a ordenação do servidor
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   A ordenação do servidor atua como a ordenação padrão de todos os bancos de dados do sistema instalados com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e também com quaisquer bancos de dados de usuário recém-criados. Você deve escolher cuidadosamente a ordenação no nível do servidor porque ela afeta:
  - Regras de classificação e comparação em `=`, `JOIN`, `ORDER BY` e em outros operadores que comparam dados textuais.
  - Ordenação das colunas `CHAR`, `VARCHAR`, `NCHAR` e `NVARCHAR` em exibições do sistema e funções do sistema e dos objetos em TempDB (por exemplo, tabelas temporárias).
@@ -29,8 +29,11 @@ ms.locfileid: "82762877"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>Definindo a ordenação do servidor no SQL Server
 
-  A ordenação do servidor é especificada durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A ordenação padrão no nível do servidor é **SQL_Latin1_General_CP1_CI_AS**. As ordenações somente Unicode não podem ser especificadas como a ordenação no nível do servidor. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](collation-and-unicode-support.md).
-  
+  A ordenação do servidor é especificada durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A ordenação padrão no nível do servidor é baseada na localidade do sistema operacional. Por exemplo, a ordenação padrão para sistemas que usam en-US (inglês dos Estados Unidos) é **SQL_Latin1_General_CP1_CI_AS**. As ordenações somente Unicode não podem ser especificadas como a ordenação no nível do servidor. Para obter mais informações, incluindo a lista de localidade do sistema operacional para mapeamentos de ordenação padrão, confira a seção "Ordenações no nível de servidor" de [Ordenação e suporte a Unicode](collation-and-unicode-support.md#Server-level-collations).
+
+> [!NOTE]  
+> A ordenação no nível de servidor para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o LocalDB Express é **SQL_Latin1_General_CP1_CI_AS** e não pode ser alterada durante nem após a instalação.  
+
 ## <a name="changing-the-server-collation-in-sql-server"></a>Alterando a ordenação do servidor no SQL Server
 
  A alteração da ordenação padrão para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser uma operação complexa e engloba as seguintes etapas:  
@@ -56,7 +59,7 @@ ms.locfileid: "82762877"
 - Importe todos os dados.  
   
 > [!NOTE]  
-> Em vez de alterar a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode especificar uma ordenação para cada novo banco de dados que criar.  
+> Em vez de alterar a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode especificar uma ordenação para cada banco de dados que criar por meio da cláusula `COLLATE` das instruções `CREATE DATABASE` e `ALTER DATABASE`. Para saber mais, veja [Definir ou alterar a ordenação de banco de dados](set-or-change-the-database-collation.md).  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Definindo a ordenação do servidor na Instância Gerenciada
 A ordenação em nível de servidor na instância gerenciada do SQL do Azure pode ser especificada quando a instância é criada e não pode ser alterada posteriormente. Você pode definir a ordenação no nível de servidor por meio [portal do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) ou do [modelo do PowerShell e do Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) enquanto você estiver criando a instância. A ordenação padrão no nível do servidor é **SQL_Latin1_General_CP1_CI_AS**. As ordenações somente Unicode e UTF-8 novas não podem ser especificadas como ordenação em nível do servidor.

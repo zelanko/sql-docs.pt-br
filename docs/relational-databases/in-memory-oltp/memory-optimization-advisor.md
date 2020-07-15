@@ -1,5 +1,6 @@
 ---
 title: Orientador de Otimização de Memória | Microsoft Docs
+description: Use o assistente de otimização de memória no SQL Server Management Studio para ajudá-lo a migrar tabelas baseadas em disco para tabelas com otimização de memória.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050196"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730858"
 ---
 # <a name="memory-optimization-advisor"></a>Orientador de otimização da memória
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Os relatórios de Análise de desempenho da transação (consulte [Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP in-memory](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informam sobre quais tabelas em seu banco de dados serão beneficiadas se forem movidas para usar o OLTP in-memory. Após identificar uma tabela que gostaria de mover para usar o OLTP in-memory, você poderá usar o orientador de otimização de memória no SQL Server Management Studio para ajudá-lo a migrar a tabela baseada em disco para uma tabela com otimização de memória.  
   

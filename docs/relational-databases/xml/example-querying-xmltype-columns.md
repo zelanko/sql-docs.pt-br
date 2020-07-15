@@ -1,5 +1,6 @@
 ---
 title: 'Exemplo: consultando colunas de tipo XML | Microsoft Docs'
+description: Veja um exemplo de como consultar colunas do tipo de dados XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9dcfe0dd5dea972145c35ddce9b75b1fb009ccb9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d5e28c3b6a68e765287cfcc2934c06fb25270f5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633113"
 ---
-# <a name="example-querying-xmltype-columns"></a>Exemplo: Consultando colunas de tipo XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-querying-xmltype-columns"></a>Exemplo: consultando colunas XMLType
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A consulta a seguir inclui colunas de tipo **xml** . A consulta recupera a ID, nome e etapas de fabricação do modelo do produto no primeiro local da coluna `Instructions` de tipo **xml** .  
   
 ## <a name="example"></a>Exemplo  

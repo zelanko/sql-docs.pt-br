@@ -1,5 +1,6 @@
 ---
 title: Ajuda F1 do Gerenciador do Utilitário | Microsoft Docs
+description: Familiarize-se com a funcionalidade oferecida em várias áreas do Utilitário do SQL Server. Saiba mais sobre as exibições, o dashboard e as guias de administração do utilitário.
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640411"
 ---
 # <a name="utility-explorer-f1-help"></a>Ajuda de F1 do Gerenciador do Utilitário
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   As seções a seguir documentam a funcionalidade do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as operações associadas.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Painel do Utilitário (Utilitário do SQL Server)
@@ -36,7 +37,7 @@ ms.locfileid: "68024489"
  Para obter mais informações sobre como criar um ponto de controle do utilitário, veja [Criar um ponto de controle do Utilitário do SQL Server &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). Para obter mais informações sobre como adicionar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Inscrever uma instância do SQL Server &#40;Utilitário do SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
  
   
-### <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+### <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  Integridade de instância gerenciada  
  O status de integridade para instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é exibido no lado esquerdo do painel de conteúdo do Gerenciador do Utilitário.  
   
@@ -119,7 +120,7 @@ ms.locfileid: "68024489"
  ## <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalhes do aplicativo da camada de dados implantado (Utilitário do SQL Server)
   As informações da exibição Aplicativos da Camada de Dados Implantados do Gerenciador do Utilitário fornecem dados de utilização para aplicativos da camada de dados individuais, o histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de aplicativo da camada de dados para utilização da CPU e para arquivos de log e arquivos de dados do banco de dados. Você também pode exibir detalhes de propriedades de aplicativos da camada de dados individuais.  
   
-### <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+### <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  Exibição Lista  
  A exibição de lista no painel superior exibe dados sobre aplicativos da camada de dados individuais. Os ícones do estado de integridade fornecem o status resumido de cada aplicativo da camada de dados por categoria de utilização:  
   
@@ -173,11 +174,11 @@ ms.locfileid: "68024489"
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
--   Criptografia Habilitada: (True ou False)  
+-   Criptografia habilitada: (True ou False)  
   
--   Modelo de Recuperação: (Simples, Completa e Bulk-logged)  
+-   Modelo de recuperação: (Simples, Completa e Bulk-logged)  
   
--   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Hora do último relato: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Guia Utilização da CPU  
  A guia Utilização da CPU mostra gráficos lado a lado de dados históricos da utilização de CPU do computador e do aplicativo da camada de dados.  
@@ -250,16 +251,16 @@ ms.locfileid: "68024489"
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
--   Criptografia Habilitada: (True ou False)  
+-   Criptografia habilitada: (True ou False)  
   
--   Modelo de Recuperação: (Simples, Completa e Bulk-logged)  
+-   Modelo de recuperação: (Simples, Completa e Bulk-logged)  
   
--   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Hora do último relato: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Detalhes de instâncias gerenciadas (Utilitário do SQL Server)
  As informações da exibição Instâncias Gerenciadas do Gerenciador do Utilitário fornecem dados de utilização para instâncias individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para um computador, para arquivos de banco de dados e arquivos de log e no nível de volumes de armazenamento. Você também pode exibir detalhes de propriedades de instâncias gerenciadas individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+### <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  Exibição Lista  
  A exibição de lista no painel superior exibe dados sobre instâncias individuais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listadas em linhas por ComputerName\InstanceName.  
   
@@ -307,17 +308,17 @@ ms.locfileid: "68024489"
   
 -   Edição do SQL Server:  
   
--   Clusterizado: (Verdadeiro ou Falso)  
+-   Clusterizado: (True ou False)  
   
 -   Diretório de Backup:  
   
 -   Ordenação:  
   
--   Diferenciar Maiúsculas de Minúsculas: (Verdadeiro ou Falso)  
+-   Diferenciar maiúsculas de minúsculas: (True ou False)  
   
 -   Linguagem:  
   
--   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Hora do último relato: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, consulte o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, consulte o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Guia Utilização da CPU  
  A guia Utilização da CPU mostra gráficos lado a lado de dados históricos da utilização da CPU do computador e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -404,20 +405,20 @@ ms.locfileid: "68024489"
   
 -   Edição do SQL Server:  
   
--   Clusterizado: (Verdadeiro ou Falso)  
+-   Clusterizado: (True ou False)  
   
 -   Diretório de Backup:  
   
 -   Ordenação:  
   
--   Diferenciar Maiúsculas de Minúsculas: (Verdadeiro ou Falso)  
+-   Diferenciar maiúsculas de minúsculas: (True ou False)  
   
 -   Linguagem:  
 
 ## <a name="utility-administration-sql-server-utility"></a>Administração do Utilitário (Utilitário do SQL Server)
 Use as guias de Administração do Utilitário para gerenciar configurações de políticas, segurança e data warehouse para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Para obter mais informações sobre os conceitos do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , veja [Recursos e tarefas do Utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-### <a name="uielement-list"></a>Lista de elementos de interface do usuário
+### <a name="ui-element-list"></a>Lista de elementos da interface do usuário
  **Guia Política** – Use a guia Política para exibir ou especificar políticas de monitoramento globais.  
   
  Definir políticas de monitoramento de aplicativo da camada de dados. Para expandir a lista de valores dessa opção, clique na seta ao lado do nome da política ou clique no título da política.  
@@ -488,11 +489,11 @@ Use as guias de Administração do Utilitário para gerenciar configurações de
   
 -   Nome do UMDW: Sysutility_mdw_\<GUID>_DATA.  
   
--   Frequência de carregamento do conjunto de coleta: a cada 15 minutos.  
+-   Frequência de upload do conjunto de coleta: a cada 15 minutos.  
   
- O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> normalmente é a unidade C:\. O arquivo de log, UMDW_\<GUID>_LOG, está localizado no mesmo diretório.  
+ O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<Nome_do_UCP>\MSSQL\Data\\, em que \<System drive>, normalmente, é a unidade C:\. O arquivo de log, UMDW_\<GUID>_LOG, está localizado no mesmo diretório.  
   
-> **OBSERVAÇÃO:** o local do arquivo UMDW (sysutility_mdw) pode ser alterado com desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **OBSERVAÇÃO:** O local do arquivo UMDW (sysutility_mdw) pode ser alterado usando-se desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Voltar aos padrões prontos para uso  
  Para redefinir as configurações nessa guia para os valores padrão, clique no botão **Restaurar Padrões** e em **Aplicar**.  

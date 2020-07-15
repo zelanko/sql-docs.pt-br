@@ -1,5 +1,6 @@
 ---
 title: Conectar-se ao SQL Server com o Gerenciador de Configuração do Servidor Proxy/SQL Server | Microsoft Docs
+description: Saiba mais sobre como usar o SQL Server Configuration Manager para se conectar a um SQL Server com um servidor proxy. Confira como usar o RWS (WinSock Remoto) para escutar remotamente.
 ms.custom: ''
 ms.date: 12/15/2016
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Microsoft Proxy Server [SQL Server]
 - local address tables [SQL Server]
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 65313b589892a2a72edc50c017914272c6a31925
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7be0c8d6be720da45072922f2d5399f9ad0b6877
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728628"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>Conectar-se ao SQL Server com um servidor proxy (SQL Server Configuration Manager)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tópico descreve como conectar-se ao SQL Server por meio de um servidor proxy no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. Para escutar Remote WinSock (RWS) remotamente, defina a tabela de endereço local (LAT) para o servidor proxy, para que o endereço do nó de escuta fique fora do intervalo de entradas de LAT.  
   

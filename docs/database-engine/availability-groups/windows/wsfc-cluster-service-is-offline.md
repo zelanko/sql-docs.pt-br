@@ -1,5 +1,6 @@
 ---
 title: O serviço de cluster WSFC está offline | Microsoft Docs
+description: O estado do cluster WSFC verifica o estado do Cluster de Failover do Windows Server. A política não é íntegra quando o cluster está offline ou no estado de quorum forçado.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c0d069601c36ba46be3c1950300c16b8808c264f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a5b8b3d7c512ca57cf2bd154f1db6a5d3cc4979
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013347"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439943"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>O serviço de cluster WSFC está offline
 
@@ -34,7 +35,7 @@ ms.locfileid: "68013347"
 |**Categoria**|**Crítico**|  
 |**Faceta**|Instância do SQL Server|  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  Esta política verifica o estado do WSFC (Cluster de failover de Windows Server). O estado da política é não íntegro e um alerta é gerado quando o cluster WSFC está offline ou no estado de quorum forçado. Todos os grupos de disponibilidade dentro deste cluster estão offline ou uma ação de recuperação de desastres é necessária.  
   
  O estado da política é íntegro quando o estado do cluster está no quorum normal.  

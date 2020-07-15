@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726148"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processa consultas em diversas arquiteturas de armazenamento de dados, como tabelas locais, particionadas e distribuídas entre vários servidores. Os tópicos a seguir descrevem como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processa consultas e otimiza a reutilização de consultas por meio do cache de planos de execução.
 
@@ -834,7 +834,7 @@ A parametrização ocorre no nível das instruções [!INCLUDE[tsql](../includes
 #### <a name="data-types-of-parameters"></a>Tipos de dados de parâmetros
 Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametriza literais, os parâmetros são convertidos nos seguintes tipos de dados:
 
-* Literais inteiros cujo tamanho pode ser ajustado no tipo de dados int com parâmetros em int. Os literais inteiros grandes que fazem parte de predicados que envolvem um operador de comparação (incluindo <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN` e `IN`) são parametrizados em numeric (38,0). Os literais grandes que não fazem parte de predicados que envolvem operadores de comparação parametrizados em numeric, cuja precisão é grande o suficiente para oferecer suporte ao seu tamanho e cuja escala é 0.
+* Literais inteiros cujo tamanho pode ser ajustado no tipo de dados int com parâmetros em int. Os literais de inteiros maiores que fazem parte de predicados que envolvem um operador de comparação (incluindo <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN` e `IN`) são parametrizados em numeric(38,0). Os literais grandes que não fazem parte de predicados que envolvem operadores de comparação parametrizados em numeric, cuja precisão é grande o suficiente para oferecer suporte ao seu tamanho e cuja escala é 0.
 * Literais numéricos de ponto fixo que não fazem parte de predicados que envolvem operadores de comparação parametrizados em numeric, cuja precisão é 38 e cuja escala é grande o suficiente para oferecer suporte ao seu tamanho. Literais numéricos de ponto fixo que não fazem parte de predicados que envolvem operadores de comparação parametrizados em numeric, cuja precisão e escala são grandes o suficiente para oferecer suporte ao seu tamanho.
 * Literais numéricos de ponto de flutuação parametrizados em float(53).
 * Literais de cadeia de caracteres não Unicode parametrizados em varchar(8000), caso o literal caiba em 8000 caracteres, e em varchar(max), se ele for maior do que 8000 caracteres.

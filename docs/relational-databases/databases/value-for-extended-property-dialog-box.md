@@ -16,18 +16,18 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b71f68ad0c85f95af5d069eae8249b1d729cb42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb86d74c3b8a3e2cc1efe0804336115cbf387bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727556"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Caixa de diálogo Valor da Propriedade Estendida
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Use a caixa de diálogo **Valor de** _\<nome da propriedade>_ para inserir ou exibir um valor. Essa é uma caixa de diálogo comum que pode ser aberta em vários locais.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Use a caixa de diálogo **Valor de** _\<property name>_ para inserir ou exibir um valor. Essa é uma caixa de diálogo comum que pode ser aberta em vários locais.  
   
-## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
+## <a name="ui-element-list"></a>Lista de elementos da interface do usuário  
  **Nome da propriedade estendida**  
  Nome da propriedade estendida exibida ou definida.  
   

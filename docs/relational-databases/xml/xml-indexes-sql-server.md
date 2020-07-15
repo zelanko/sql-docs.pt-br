@@ -1,5 +1,6 @@
 ---
 title: Índices XML (SQL Server) | Microsoft Docs
+description: Saiba como a criação de índices XML em colunas de tipo de dados XML pode beneficiar o seu aplicativo aprimorando o desempenho da consulta.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6aeeb9e0fdadda5635888fe2a88e0ea84b6ede12
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729784"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Índices XML podem ser criados em colunas de tipo de dados **xml** . Eles indexam todas as marcas, valores e caminhos através das instâncias XML na coluna e se beneficiam do desempenho das consultas. Seu aplicativo pode se beneficiar de um índice XML nas seguintes situações:  
   
 -   Consultas em colunas XML são comuns em sua carga de trabalho. O custo da manutenção de índices XML durante a modificação de dados deve ser considerado.  
@@ -54,7 +55,7 @@ ms.locfileid: "80664890"
   
 -   Índice XML secundário  
   
- O primeiro índice na coluna de tipo **xml** deve ser o índice XML primário. Usando o índice de XML primário, os seguintes tipos de índices secundários têm suporte: PATH, VALUE e PROPERTY. Dependendo do tipo de consulta, esses índices secundários podem ajudar a melhorar o desempenho de consultas.  
+ O primeiro índice na coluna de tipo **xml** deve ser o índice XML primário. Usando o índice XML primário, os seguintes tipos de índices secundários são compatíveis: PATH, VALUE e PROPERTY. Dependendo do tipo de consulta, esses índices secundários podem ajudar a melhorar o desempenho de consultas.  
   
 > [!NOTE]  
 >  Não é possível criar ou modificar um índice XML a menos que as opções do banco de dados estejam definidas corretamente para trabalhar com o tipo de dados **xml** . Para obter mais informações, veja [Usar a pesquisa de texto completo com colunas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
@@ -133,7 +134,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   Se sua carga de trabalho recuperar vários valores de instâncias XML individuais usando expressões de caminho, caminhos de clustering dentro de cada instância XML no índice PROPERTY poderão ser úteis. Isso normalmente ocorre em um cenário de recipiente de propriedades quando as propriedades de um objeto são buscadas e seu valor de chave primária é conhecido.  
   
--   Se sua carga de trabalho envolver consulta de valores dentro de instâncias XML sem conhecer os nomes de elementos ou de atributos que contêm esses valores, você poderá desejar criar o índice VALUE. Normalmente isso ocorre com pesquisas de eixos descendentes, como //author[last-name="Howard"], em que elementos \<author> podem ocorrer em qualquer nível da hierarquia. Isso também ocorre em consultas com caracteres curinga, como /book [@* = "novel"], em que a consulta procura por elementos \<book> que têm algum atributo com o valor “novel”.  
+-   Se sua carga de trabalho envolver consulta de valores dentro de instâncias XML sem conhecer os nomes de elementos ou de atributos que contêm esses valores, você poderá desejar criar o índice VALUE. Normalmente, isso ocorre com pesquisas de eixos descendentes, como //author[last-name="Howard"], em que elementos \<author> podem ocorrer em qualquer nível da hierarquia. Isso também ocorre em consultas com curinga, como /book [@* = "novel"], em que a consulta procura por elementos \<book> que têm algum atributo com o valor "novel".  
   
 ### <a name="path-secondary-xml-index"></a>Índice XML secundário PATH  
  Se suas consultas normalmente especificarem expressões de caminho em colunas de tipo **xml** , um índice secundário PATH poderá acelerar a pesquisa. Conforme descrito anteriormente neste tópico, o índice primário é útil quando você tem consultas que especificam o método **exist()** na cláusula WHERE. Se você adicionar um índice secundário PATH, poderá também melhorar o desempenho da pesquisa nessas consultas.  

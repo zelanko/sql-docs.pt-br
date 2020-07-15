@@ -1,23 +1,22 @@
 ---
 title: Habilitar o widget de insight de exemplo de uso do espaço de tabela
-titleSuffix: Azure Data Studio
 description: Este tutorial demonstra como habilitar o widget de insight de exemplo de uso do espaço de tabela no painel de banco de dados do Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d2be24a72c098c5a6a0b5e3ecefbde9bbe39cd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726699"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>Tutorial: Habilitar o widget de insight de exemplo de uso do espaço de tabela usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>Tutorial: Habilitar o widget de insight de exemplo de uso do espaço de tabela usando Azure Data Studio
 
 Este tutorial demonstra como habilitar um widget de insight no painel de banco de dados, fornecendo uma visão geral do uso do espaço para todas as tabelas de um banco de dados. Neste tutorial, você aprenderá a:
 
@@ -33,9 +32,9 @@ Este tutorial requer o SQL Server ou o *TutorialDB* do Banco de Dados SQL do Azu
 * [Conectar e consultar o SQL Server usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Conectar e consultar o Banco de Dados SQL do Azure usando [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>Ativar um insight de gerenciamento no painel de banco de dados do [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="turn-on-a-management-insight-on-azure-data-studios-database-dashboard"></a>Ativar um insight de gerenciamento no painel de banco de dados do Azure Data Studio
 
-O [!INCLUDE[name-sos](../includes/name-sos-short.md)] tem um widget de exemplo interno para monitorar o espaço usado pelas tabelas em um banco de dados.
+O Azure Data Studio tem um widget de exemplo interno para monitorar o espaço usado pelas tabelas em um banco de dados.
 
 1. Abra as *Configurações do Usuário* pressionando **Ctrl+Shift+P** para abrir a *Paleta de Comandos*.
 
@@ -78,11 +77,11 @@ O [!INCLUDE[name-sos](../includes/name-sos-short.md)] tem um widget de exemplo i
 
 ## <a name="working-with-the-insight-chart"></a>Trabalhando com o gráfico de insight
 
-O gráfico de insight do [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece filtragem e detalhes ao passar o ponteiro do mouse. Para testar, siga estas etapas:
+O gráfico de insights do Azure Data Studio fornece filtragem e detalhes da focalização do mouse. Para testar, siga estas etapas:
 
-1. Clique e alterne a legenda *row_count* no gráfico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra e oculta a série de dados à medida que você alterna ou desativa uma legenda.
+1. Clique e alterne a legenda *row_count* no gráfico. O Azure Data Studio mostra e oculta a série de dados à medida que você alterna ou desativa uma legenda.
 
-2. Passe o ponteiro do mouse sobre o gráfico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra mais informações sobre o rótulo da série de dados e seu valor, conforme mostrado na captura de tela a seguir.
+2. Passe o ponteiro do mouse sobre o gráfico. O Azure Data Studio mostra mais informações sobre o rótulo da série de dados e o valor dele, conforme mostrado na captura de tela a seguir.
 
    ![alternância de gráfico e legenda](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 

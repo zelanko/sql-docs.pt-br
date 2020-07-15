@@ -1,5 +1,6 @@
 ---
 title: Usar o modo EXPLICIT com FOR XML | Microsoft Docs
+description: Saiba como o uso do modo FOR XML EXPLICIT fornece máxima flexibilidade para gerar XML de um resultado de consulta.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736550"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar o modo EXPLICIT com FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Conforme descrito no tópico [Construindo XML usando FOR XML](../../relational-databases/xml/for-xml-sql-server.md), os modos RAW e AUTO não fornecem muito controle sobre a forma do XML gerado de um resultado da consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  
   
  A consulta em modo EXPLICIT deve ser escrita de uma maneira específica para que as informações adicionais sobre o XML necessário, como aninhamento esperado no XML, sejam especificadas explicitamente como parte da consulta. Dependendo do XML solicitado, pode ser trabalhoso escrever consultas em modo EXPLICIT. Você pode descobrir que [Usando o modo PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) com aninhamento é uma alternativa mais simples para escrever consultas em modo EXPLICIT.  
@@ -148,7 +149,7 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>Nesta seção  
  Os exemplos a seguir ilustram o uso do modo EXPLICIT.  
   
--   [Exemplo: recuperando informações de funcionários](../../relational-databases/xml/example-retrieving-employee-information.md)  
+-   [Exemplo: Recuperando informações de funcionários](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
 -   [Exemplo: Especificando a diretiva ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
@@ -162,7 +163,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Exemplo: Especificando a diretiva HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [Exemplo: Especificando a diretiva ELEMENT e codificação de entidade](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Exemplo: Especificando a diretiva ELEMENT e a codificação de entidade](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
 -   [Exemplo: Especificando a diretiva CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   

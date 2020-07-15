@@ -1,5 +1,6 @@
 ---
 title: Heurística do modo AUTO na formação do XML retornado | Microsoft Docs
+description: Saiba como usar a heurística de modo AUTO com a cláusula FOR XML para comparar valores de coluna em linhas adjacentes e determinar a forma do XML retornado por uma consulta.
 ms.custom: fresh2019may
 ms.date: 04/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 68fec5b01fc88fba356c0091066850908804a88d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 99a1858ce4784c9a320258689827110e0df3dd8e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664740"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529374"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Heurística de modo AUTO na formação do XML retornado
 
@@ -45,7 +46,7 @@ T1.Id  T1.Name  T2.Id
 1       Nancy     4  
 ```  
   
- A heurística do modo AUTO compara todos os valores da tabela T1 e as colunas Name e Id. Uma vez que as primeiras duas linhas têm os mesmos valores para as colunas Id e Nome, um elemento \<T1> com dois elementos filho \<T2> é adicionado ao resultado.  
+ A heurística do modo AUTO compara todos os valores da tabela T1 e as colunas Name e Id. Como as duas primeiras linhas têm os mesmos valores para as colunas ID e Nome, um elemento \<T1> com dois elementos filho \<T2> é adicionado ao resultado.  
   
  O XML retornado é o seguinte:  
   

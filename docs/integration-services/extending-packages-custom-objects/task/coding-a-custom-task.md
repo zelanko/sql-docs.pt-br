@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 23cea7d670916db9dfd13fa37170967a3c19d11c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c90abe5e99b95288a0bab9d9a9d88b7307285aae
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297123"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469381"
 ---
 # <a name="coding-a-custom-task"></a>Codificando uma tarefa personalizada
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Depois de criar uma classe que herda da classe base <xref:Microsoft.SqlServer.Dts.Runtime.Task> e aplicar o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> a essa classe, você deve substituir a implementação das propriedades e dos métodos da classe base para fornecer sua funcionalidade personalizada.  
+  Depois de criar uma classe que herda da classe base [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) e aplicar o atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> a essa classe, você deve substituir a implementação das propriedades e dos métodos da classe base para fornecer a funcionalidade personalizada.  
   
 ## <a name="configuring-the-task"></a>Configurando a tarefa  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71297123"
  Você pode implementar a validação usando o método **Validate** em código personalizado. O mecanismo de tempo de execução valida uma tarefa chamando o método **Validate** na tarefa. É responsabilidade do desenvolvedor da tarefa definir os critérios que lhe proporcionem uma validação bem sucedida ou malsucedida da tarefa, e notificar o mecanismo de tempo de execução do resultado dessa avaliação.  
   
 #### <a name="task-abstract-base-class"></a>Classe base abstrata da tarefa  
- A classe base abstrata <xref:Microsoft.SqlServer.Dts.Runtime.Task> fornece o método **Validate** que cada tarefa substitui para definir seus critérios de validação. O [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer chama automaticamente o método **Validate** várias vezes durante o projeto do pacote e fornece indicações visuais ao usuário quando ocorrem avisos ou erros para ajudar a identificar problemas com a configuração da tarefa. As tarefas fornecem resultados de validação retornando um valor da enumeração <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> e gerando eventos de aviso e erro. Esses eventos contêm informações que são exibidas ao usuário no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  
+ A classe base abstrata [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) fornece o método **Validate** que cada tarefa substitui para definir os critérios de validação. O [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer chama automaticamente o método **Validate** várias vezes durante o projeto do pacote e fornece indicações visuais ao usuário quando ocorrem avisos ou erros para ajudar a identificar problemas com a configuração da tarefa. As tarefas fornecem resultados de validação retornando um valor da enumeração <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> e gerando eventos de aviso e erro. Esses eventos contêm informações que são exibidas ao usuário no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  
   
  Seguem alguns exemplos de validação:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "71297123"
 -   O código no método **Validate** também é chamado pelo <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> antes de a tarefa ser executada e o <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> cancela a execução se a validação falha.  
   
 #### <a name="user-interface-considerations-during-validation"></a>Considerações da interface do usuário durante a validação  
- O <xref:Microsoft.SqlServer.Dts.Runtime.Task> inclui uma interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> como um parâmetro para o método **Validate**. A interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> contém os métodos que são chamados pela tarefa para gerar eventos para o mecanismo de tempo de execução. Os métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> são chamados quando uma condição de aviso ou erro ocorre durante a validação. Ambos os métodos de aviso requerem os mesmos parâmetros, que incluem um código de erro, um componente de origem, descrição, arquivo de Ajuda e informações de contexto da Ajuda. O [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer usa essas informações para exibir indicações visuais na superfície de design. As indicações visuais fornecidas pelo designer incluem um ícone de exclamação que aparece próximo à tarefa na superfície do designer. Essa indicação visual sinaliza ao usuário que a tarefa requer configuração adicional antes de continuar a execução.  
+ A [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) inclui uma interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> como um parâmetro para o método **Validate**. A interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> contém os métodos que são chamados pela tarefa para gerar eventos para o mecanismo de tempo de execução. Os métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> são chamados quando uma condição de aviso ou erro ocorre durante a validação. Ambos os métodos de aviso requerem os mesmos parâmetros, que incluem um código de erro, um componente de origem, descrição, arquivo de Ajuda e informações de contexto da Ajuda. O [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer usa essas informações para exibir indicações visuais na superfície de design. As indicações visuais fornecidas pelo designer incluem um ícone de exclamação que aparece próximo à tarefa na superfície do designer. Essa indicação visual sinaliza ao usuário que a tarefa requer configuração adicional antes de continuar a execução.  
   
  O ícone de exclamação também exibe uma dica de ferramenta que contém uma mensagem de erro. A mensagem de erro é fornecida pela tarefa no parâmetro de descrição do evento. Mensagens de erro também são exibidas no painel **Lista de Tarefas** do [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], fornecendo ao usuário um local central para exibir todos os erros de validação.  
   
@@ -163,11 +163,11 @@ End Class
 ### <a name="execute-method"></a>Método Execute  
  As tarefas contidas em um pacote são executadas quando o runtime do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] chama seu método **Execute**. As tarefas implementam sua principal lógica de negócios e sua funcionalidade nesse método e fornecem os resultados da execução postando mensagens, retornando um valor da enumeração <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> e substituindo a propriedade **get** da propriedade **ExecutionValue**.  
   
- A classe base <xref:Microsoft.SqlServer.Dts.Runtime.Task> fornece uma implementação padrão do método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. As tarefas personalizadas anulam esse método para definir sua funcionalidade de tempo de execução. O objeto <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> quebra a tarefa, isolando-a do mecanismo de tempo de execução e dos outros objetos no pacote. Por causa desse isolamento, a tarefa não reconhece sua localização no pacote quanto à ordem de execução e é executada somente quando chamada pelo runtime. Essa arquitetura evita os problemas que podem ocorrer quando as tarefas modificam o pacote durante a execução. A tarefa recebe acesso aos outros objetos do pacote somente por meio dos objetos fornecidos a ela como parâmetros no método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Esses parâmetros permitem que as tarefas gerem eventos, gravem entradas no log de eventos, acessem a coleção de variáveis e inscrevam conexões em fontes de dados nas transações, ao mesmo tempo mantendo o isolamento necessário para garantir a estabilidade e a confiabilidade do pacote.  
+ A classe base [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) fornece uma implementação padrão do método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. As tarefas personalizadas anulam esse método para definir sua funcionalidade de tempo de execução. O objeto <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> quebra a tarefa, isolando-a do mecanismo de tempo de execução e dos outros objetos no pacote. Por causa desse isolamento, a tarefa não reconhece sua localização no pacote quanto à ordem de execução e é executada somente quando chamada pelo runtime. Essa arquitetura evita os problemas que podem ocorrer quando as tarefas modificam o pacote durante a execução. A tarefa recebe acesso aos outros objetos do pacote somente por meio dos objetos fornecidos a ela como parâmetros no método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Esses parâmetros permitem que as tarefas gerem eventos, gravem entradas no log de eventos, acessem a coleção de variáveis e inscrevam conexões em fontes de dados nas transações, ao mesmo tempo mantendo o isolamento necessário para garantir a estabilidade e a confiabilidade do pacote.  
   
  A tabela seguinte lista os parâmetros fornecidos à tarefa no método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|Contém uma coleção de objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> disponíveis para a tarefa.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Contém as variáveis disponíveis para a tarefa. As tarefas usam variáveis pelo VariableDispenser; as tarefas não usam variáveis diretamente. O VariableDispenser bloqueia e desbloqueia as variáveis e impede deadlocks ou substituições.|  

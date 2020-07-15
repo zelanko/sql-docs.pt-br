@@ -1,5 +1,6 @@
 ---
 title: Conectar-se a outro computador (SQL Server Configuration Manager) | Microsoft Docs
+description: Descubra como gerenciar os serviços existentes em um computador remoto. Confira como usar SQL Server Configuration Manager ou SQL Server Management Studio para essa tarefa.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74249763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651349"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Serviços SCM – conectar-se a outro computador
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este artigo descreve como conectar-se a outro computador no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Siga o primeiro procedimento para abrir o Windows Computer Management [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc), conecte-se ao computador e expanda a árvore Serviços e Aplicativos. Siga o segundo procedimento para criar um arquivo com um link para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager em um computador remoto.
 
@@ -53,7 +54,7 @@ Para iniciar, parar, pausar ou retomar o serviço em outro computador, você tam
 6. Na janela **Gerenciamento do Computador** , clique em **Outro computador**, digite o nome do computador remoto que deseja gerenciar e depois clique em **Terminar**.
 7. Na janela **Adicionar Snap-in Autônomo** , clique em **Fechar**.
 8. Na janela **Adicionar/Remover Snap-in** , clique em **OK**.
-9. Expanda **Gerenciamento de Computador (** _\<computer name>_ **)** e **Serviços e Aplicativos**.
+9. Expanda **Gerenciamento do Computador (** _\<computer name>_ **)** e **Serviços e Aplicativos**.
 10. Clique com o botão direito do mouse no **SQL Server Configuration Manager**e clique em **Nova Janela daqui**.
 11. No menu **Janela**, clique em **Raiz do Console** para retornar à primeira janela e exclui-la.
 12. No menu **Arquivo** , clique em **Salvar como**e salve o arquivo na pasta desejada, com um nome apropriado com a extensão de arquivo **.msc** . Feche o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.

@@ -1,5 +1,6 @@
 ---
 title: Configurar o tipo de enclave para a Opção de Configuração de Servidor Always Encrypted | Microsoft Docs
+description: Descubra como habilitar ou desabilitar um enclave seguro para Always Encrypted. Saiba como confirmar se um enclave foi inicializado corretamente.
 ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593828"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818358"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Configurar o tipo de enclave para a Opção de Configuração de Servidor Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -24,7 +25,7 @@ Este artigo descreve como habilitar ou desabilitar um enclave seguro para Always
 
 A Opção de Configuração do Servidor de **tipo de enclave de criptografia de coluna** controla o tipo de enclave seguro usado para Always Encrypted. A opção pode ser definida como um dos valores a seguir:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-------------------|-----------------| 
 |0|**Nenhum enclave seguro**. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não inicializará o enclave seguro para o Always Encrypted. Como resultado, a funcionalidade do Always Encrypted com enclaves seguros não estará disponível.|  
 |1|**VBS (segurança baseada em virtualização)** . O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentará inicializar um enclave de VBS (segurança baseada em virtualização).

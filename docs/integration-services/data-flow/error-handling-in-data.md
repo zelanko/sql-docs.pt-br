@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292760"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469321"
 ---
 # <a name="error-handling-in-data"></a>Tratamento de erros em dados
 
@@ -144,7 +144,7 @@ Use a caixa de diálogo **Configurar Saída de Erro** para configurar opções d
   
     -   Você pode usar o componente Script para incluir a descrição do erro em uma coluna adicional, usando uma única linha de script para chamar o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .  
   
-    -   Inclua o nome da coluna em uma coluna adicional usando uma única linha de script para chamar o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .  
+    -   Inclua o nome da coluna em uma coluna adicional usando uma linha de script para chamar o método [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*] (/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
      Você pode adicionar o componente Script ao segmento de erro do fluxo de dados em qualquer lugar na direção downstream dos componentes de fluxo de dados cujos erros você deseja capturar. Normalmente, você coloca o componente Script imediatamente antes das linhas de erro serem gravadas em um destino. Deste modo, o script pesquisa descrições somente para linhas de erro que estão gravadas. O segmento de erro do fluxo de dados pode corrigir alguns erros e não gravar essas linhas em um destino de erro.  
 

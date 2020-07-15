@@ -15,15 +15,15 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 46fbde4be37677cc873089b00b53dd0be706a333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722204"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   A caixa de diálogo **Propriedades do Artigo** está disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . Ela permite exibir e definir propriedades para todos os tipos de artigos. Algumas propriedades só podem ser definidas quando a publicação é criada, e outras só podem ser definidas se a publicação não tiver assinaturas ativas. Propriedades que não podem ser definidas são exibidas como somente leitura.  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "76288241"
  Determina se tipos de dados definidos pelo usuário devem ou não ser convertidos em tipos de dados base ao criar objetos no Assinante. Os tipos de dados definidos pelo usuário incluem os tipos CLR introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Especifique um valor **True** se você for replicar esses tipos de dados para versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; isso assegura que eles possam ser tratados apropriadamente no Assinante.  
   
  **Criar esquemas no Assinante**  
- O[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou esquemas, que são definidos usando a instrução CREATE SCHEMA. Um esquema é o proprietário de um objeto; é usado em um nome de várias partes, como \<Database>.\<Schema>.\<Object>. Se houver objetos no banco de dados de propriedade de esquemas diferentes de DBO, a replicação pode criar esses esquemas no Assinante para que os objetos publicados sejam criados.  
+ O[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] apresentou esquemas, que são definidos usando a instrução CREATE SCHEMA. Um esquema é o proprietário de um objeto; ele é usado em um nome de várias partes, como \<Database>.\<Schema>.\<Object>. Se houver objetos no banco de dados de propriedade de esquemas diferentes de DBO, a replicação pode criar esses esquemas no Assinante para que os objetos publicados sejam criados.  
   
  Se você replicar dados para versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76288241"
  Essa opção só se aplica a procedimentos armazenados. Determina se a definição do procedimento armazenado (a instrução CREATE PROCEDURE) ou sua execução devem ser replicadas ou não. Se você replicar a execução do procedimento, a definição do procedimento será replicada para o Assinante quando a assinatura for inicializada; quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor em casos onde são executadas grandes operações em lote. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opções para publicações de mesclagem  
- A caixa de diálogo **Propriedades do Artigo** para publicações de mesclagem tem duas guias: **Propriedades** e **Resolvedor**.  
+ A caixa de diálogo **Propriedades do Artigo** para publicações de mesclagem tem duas guias: **Propriedades** e **Resolver**.  
   
 ### <a name="properties-tab"></a>Guia Propriedades  
  **Direção de sincronização**  

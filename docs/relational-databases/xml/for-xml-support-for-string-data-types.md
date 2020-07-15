@@ -1,5 +1,6 @@
 ---
 title: Suporte FOR XML para tipos de dados de cadeia de caracteres | Microsoft Docs
+description: Saiba como os tipos de dados de cadeia de caracteres são tratados quando o XML é gerado pela cláusula FOR XML em uma consulta SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 15f876fde9403d65ba6af81b7038519d4318100f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: cdaa7560b5dad561d981acee2d2d48ccca44146c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729908"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Suporte a FOR XML para tipos de dados de cadeia de caracteres
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   O XML gerado pelos caracteres de espaço em branco do FOR XML nos dados tem a entidade definida.  
   
  O exemplo a seguir cria a tabela de exemplo **T** e insere dados de exemplo que incluem caracteres de alimentação de linha, retorno de carro e tabulação. A instrução SELECT recupera os dados da tabela.  

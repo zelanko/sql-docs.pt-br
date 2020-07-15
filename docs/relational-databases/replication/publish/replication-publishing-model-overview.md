@@ -1,5 +1,6 @@
 ---
 title: Visão geral do modelo de publicação de replicação | Microsoft Docs
+description: Saiba mais sobre o modelo de publicação de replicação no SQL Server, incluindo publicador, distribuidor, assinantes, publicações, artigos e assinaturas.
 ms.custom: ''
 ms.date: 09/01/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 963e9c1ffba4c1286793c564e22cd1a122c795b3
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287541"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807086"
 ---
 # <a name="replication-publishing-model-overview"></a>Visão geral do modelo de publicação de replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

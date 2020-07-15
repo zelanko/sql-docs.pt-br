@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215845"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203553"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solucionar problemas de conectividade do PolyBase Kerberos
 
@@ -89,6 +89,8 @@ Atualize **core-site.xml** e adicione as três propriedades abaixo. Defina os va
     <value>KERBEROS</value>
 </property>
 ```
+> [!NOTE]
+> O valor da propriedade `polybase.kerberos.realm` precisa estar todo em letras maiúsculas.
 
 Posteriormente, será necessário atualizar os outros XMLs se você quiser realizar operações de aplicação. No entanto, apenas com a configuração desse arquivo, pelo menos o sistema de arquivos HDFS poderá ser acessado.
 

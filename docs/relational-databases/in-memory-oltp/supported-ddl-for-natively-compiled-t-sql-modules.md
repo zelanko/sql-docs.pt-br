@@ -1,5 +1,6 @@
 ---
 title: DDL com suporte para módulos T-SQL compilados nativamente | Microsoft Docs
+description: Saiba mais sobre constructos DDL compatíveis com módulos T-SQL compilados nativamente, como procedimentos armazenados, UDFs escalares, TVFs embutidos e gatilhos.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fde492554b52170602e5676fa8dcce018885053
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c2a91b1568b139038cad32e81e273d564fbec98
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715379"
 ---
 # <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>DDL com suporte para módulos T-SQL compilados nativamente
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Este tópico lista as construções DDL com suporte para módulos T-SQL compilados nativamente, como procedimentos armazenados, UDFs escalares, TVFs embutidos e gatilhos.  
   
  Para obter informações sobre os recursos e a área de superfície do T-SQL que pode ser usada como parte dos módulos compilados de modo nativo do T-SQL, veja [Recursos com suporte para módulos T-SQL compilados de modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  

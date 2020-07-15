@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4fd63c14206848107e2fea8c2e8972e76b77cc1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629499"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Este tópico descreve algumas das causas comuns de baixo desempenho para consultas e índices de texto completo. Ele também fornece algumas sugestões para atenuar esses problemas e melhorar o desempenho.
   
 ##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
@@ -81,7 +81,7 @@ O arquivo de log de rastreamento segue o seguinte esquema de nomeação:
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 As partes variáveis do nome do arquivo de log de rastreamento são as seguintes.
--   \<**DatabaseID**> – a ID de um banco de dados. <**dbid**> é um número de cinco dígitos com zeros à esquerda.  
+-   \<**DatabaseID**> – A ID de um banco de dados. <**dbid**> é um número de cinco dígitos com zeros à esquerda.  
 -   <**FullTextCatalogID**> – ID do catálogo de texto completo. \<**catid**> é um número de cinco dígitos com zeros à esquerda.  
 -   <**n**> – É um inteiro que indica um ou mais logs de rastreamento que existem do mesmo catálogo de texto completo.  
   
@@ -140,7 +140,7 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
 2.  500 MB é uma estimativa da memória exigida por outros processos no sistema. Se o sistema estiver executando trabalho adicional, aumente esse valor de maneira correspondente.  
 3.  .*ism_size* é presumido como 8 MB para plataformas x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemplo: estimar as necessidades de memória do fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemplo: estimar os requisitos de memória de fdhost.exe  
   
  Este exemplo é para um computador 8GM de RAM com 64 bits e 4 processadores de núcleo dual. O primeiro cálculo estima a memória necessária para fdhost.exe -*F*. O número de intervalos de rastreamento é `8`.  
   
@@ -150,7 +150,7 @@ Para obter informações essenciais sobre as fórmulas a seguir, consulte as not
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Exemplo: Definindo a configuração max server memory  
+ #### <a name="example-setting-max-server-memory"></a>Exemplo: configurando a memória máxima do servidor  
   
  Este exemplo usa as instruções [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir **max server memory** com o valor calculado para o *M* no exemplo anterior, `7052`:  
   
@@ -178,7 +178,7 @@ O desempenho das populações completas não é ideal quando o consumo de CPU m�
   
      A tabela a seguir descreve os tipos de espera de interesse aqui mencionados.  
   
-    |Tipo de espera|DESCRIÇÃO|Solução possível|  
+    |Tipo de espera|Descrição|Solução possível|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX ou _UP)|Isso pode indicar um gargalo de E/S, caso em que normalmente você também observa um comprimento médio da fila de disco alto.|Mover o índice de texto completo para outro grupo de arquivos em outro disco pode ajudar a reduzir o gargalo de E/S.|  
     |PAGELATCH_EX (ou _UP)|Isso pode indicar muita contenção entre os threads que estão tentando para gravar no mesmo arquivo de banco de dados.|Adicionar arquivos ao grupo de arquivos em que reside o índice de texto completo pode ajudar a aliviar essa contenção.|  

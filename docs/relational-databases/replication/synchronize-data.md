@@ -1,5 +1,6 @@
 ---
 title: Sincronizar dados | Microsoft Docs
+description: A sincronização de dados na replicação refere-se a alterações de esquema e dados que se propagam entre o Editor e os Assinantes no SQL Server.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b458b4555276f4e9f6af1ce72e5981e06c984407
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a6c7ba7deddb6b2728a846cb454917ee6b065bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716681"
 ---
 # <a name="synchronize-data"></a>Sincronizar dados
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Sincronizando dados se refere ao processo de alterações de dados e esquemas sendo propagadas entre o Publicador e os Assinantes após o instantâneo inicial ter sido aplicado ao Assinante. A sincronização pode acontecer:  
   
 -   Continuamente, o que é típico para replicação transacional.  

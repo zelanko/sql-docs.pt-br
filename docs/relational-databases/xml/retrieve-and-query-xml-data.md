@@ -1,5 +1,6 @@
 ---
 title: Recuperar e consultar dados XML | Microsoft Docs
+description: Saiba mais sobre as opções de consulta que devem ser especificadas ao consultar dados XML e sobre as partes de instâncias XML que não são preservadas quando armazenadas em bancos de dados.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e754bc5e3fb738f36b309e7ff8a60c9f85bc258c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 86f908d6aa221b2c69be3d8960efac929cbf5306
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664870"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738402"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar e consultar dados XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Este tópico descreve as opções de consulta que você tem que especificar para consultar dados XML. Também descreve as partes de instâncias XML que não são preservadas quando são armazenadas em bancos de dados.  
   
 ##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Recursos de uma Instância XML que não são preservados  

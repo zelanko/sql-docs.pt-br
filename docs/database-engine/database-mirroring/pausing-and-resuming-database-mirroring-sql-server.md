@@ -1,6 +1,6 @@
 ---
 title: Pausar e retomar o espelho do banco de dados
-description: Saiba como pausar e depois retomar sua sessão de espelhamento de banco de dados do SQL Server a qualquer momento.
+description: Saiba como pausar e depois retomar uma sessão de espelhamento de banco de dados do SQL Server para preservar o estado de sessão ao suspender o espelhamento.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b71dd9efc29735d618e6cf7cbabab5615f31fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735247"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Pausando e retomando o espelhamento de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O proprietário de banco de dados pode pausar e depois retomar uma sessão de espelhamento de banco de dados a qualquer hora. Pausar preserva o estado de sessão enquanto suspende o espelhamento. Durante o gargalo, pausar pode ser útil para melhorar o desempenho no servidor principal.  
   
  Quando uma sessão é pausada, o banco de dados principal permanece disponível. Pausar define o estado da sessão de espelhamento para SUSPENDED e o banco de dados espelho já não mantém o ritmo do banco de dados principal, fazendo o banco de dados principal executar exposto.  

@@ -10,15 +10,15 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c62a2dfb1a6728098c3faeed32ce842dbab4304e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659473"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>Aplicativos de backup do SQL Server – VSS (Serviço de Cópias de Sombra de Volume) e Gravador do SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 O SQL Server fornece suporte para o VSS (Serviço de Cópias de Sombra de Volume) fornecendo um gravador (o Gravador do SQL), de modo que um aplicativo de backup de terceiros possa usar a estrutura VSS para fazer backup de arquivos de banco de dados. Este documento descreve o componente Gravador do SQL e a função dele no processo de criação e restauração de instantâneos do VSS para bancos de dados do SQL Server. Também captura detalhes de como configurar e usar o Gravador do SQL para trabalhar com aplicativos de backup na estrutura VSS.
 

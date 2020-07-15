@@ -1,5 +1,6 @@
 ---
 title: Pontos de verificação de banco de dados (SQL Server) | Microsoft Docs
+description: Saiba mais sobre pontos de verificação, bons pontos conhecidos dos quais o Mecanismo de Banco de Dados do SQL Server pode iniciar a aplicação de alterações contidas no log durante a recuperação.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,15 +28,15 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 156668084a475f71cea6c18ac050bf45eead6f06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754551"
 ---
 # <a name="database-checkpoints-sql-server"></a>Pontos de verificação de banco de dados (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
  Um *ponto de verificação* cria um bom ponto conhecido a partir do qual o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pode começar a aplicar as alterações contidas no log durante a recuperação após um desligamento ou uma falha inesperada.
 
 ##  <a name="overview"></a><a name="Overview"></a> Visão geral   

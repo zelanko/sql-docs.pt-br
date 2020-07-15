@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731331"
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   As dicas de tabela substituem o comportamento padrão do Otimizador de Consulta durante a instrução DML (linguagem de manipulação de dados) ao especificar um método de bloqueio, um ou mais índices, uma operação de processamento de consulta, como uma verificação de tabela ou busca de índice, ou outras opções. As dicas da tabela são especificadas na cláusula FROM da instrução DML e afetam apenas a tabela ou exibição referenciada nessa cláusula.  
   
@@ -127,7 +127,7 @@ Com algumas exceções, há suporte para dicas de tabela na cláusula FROM somen
 > [!IMPORTANT]  
 > A omissão da palavra-chave WITH é um recurso preterido: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-As seguintes dicas de tabela são permitidas com e sem a palavra-chave `WITH`: `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT` e `NOEXPAND`. Quando essas dicas de tabela forem especificadas sem a palavra-chave WITH, as dicas deverão ser especificadas sozinhas. Por exemplo:   
+As seguintes dicas de tabela são permitidas com e sem a palavra-chave `WITH`: `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT` e `NOEXPAND`. Quando essas dicas de tabela forem especificadas sem a palavra-chave WITH, as dicas deverão ser especificadas sozinhas. Por exemplo:  
   
 ```sql  
 FROM t (TABLOCK)  

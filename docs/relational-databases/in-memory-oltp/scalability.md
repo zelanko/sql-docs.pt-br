@@ -1,5 +1,6 @@
 ---
 title: Escalabilidade | Microsoft Docs
+description: Saiba mais sobre os aprimoramentos na escalabilidade para o armazenamento em disco de tabelas com otimização de memória no SQL Server, como o uso de vários threads para persistir tabelas.
 ms.custom: ''
 ms.date: 08/27/2015
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2762e024f3a94ed20c900833e56840b67af1685d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f305153cca0ce9207c81f79ca423df476e6a841
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68111781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735046"
 ---
 # <a name="scalability"></a>Escalabilidade
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contém aprimoramentos de escalabilidade para o armazenamento em disco de tabelas com otimização de memória. 
 
 ## <a name="multiple-threads-to-persist-memory-optimized-tables"></a>Vários threads para manter tabelas com otimização de memória  

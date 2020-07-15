@@ -2,7 +2,7 @@
 title: Opções ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Saiba mais sobre como definir opções de banco de dados, como Ajuste Automático, criptografia, Repositório de Consultas em um SQL Server e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138275"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215150"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL)
 
@@ -297,7 +297,7 @@ SET
 O nome do banco de dados a ser modificado.
 
 CURRENT     
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Executa a ação no banco de dados atual. `CURRENT` não é compatível com todas as opções em todos os contextos. Se `CURRENT` falhar, forneça o nome do banco de dados.
 
@@ -328,7 +328,7 @@ A opção AUTO_CLOSE é útil para bancos de dados desktop porque permite que os
 >
 > O espelhamento do banco de dados requer AUTO_CLOSE OFF.
 
-Quando o banco de dados é definido como AUTOCLOSE = ON, uma operação que inicia o desligamento automático do banco de dados limpa o cache do plano da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e posterior, para cada armazenamento de cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
+Quando o banco de dados é definido como AUTOCLOSE = ON, uma operação que inicia o desligamento automático do banco de dados limpa o cache do plano da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária do desempenho de consultas. Do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 em diante, para cada armazenamento em cache limpo no cache de planos, o log de erros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém a seguinte mensagem informativa: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ATIVADO     
@@ -344,7 +344,7 @@ Você pode determinar o status dessa opção examinando a coluna `is_auto_create
 Para obter mais informações, confira a seção "Usar as opções de estatísticas em todo o banco de dados" em [Estatísticas](../../relational-databases/statistics/statistics.md).
 
 INCREMENTAL = ON | **OFF**     
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Defina AUTO_CREATE_STATISTICS como ON e INCREMENTAL como ON. Isso define estatísticas criadas automaticamente como incrementais sempre que estatísticas incrementais são compatíveis. O valor padrão é OFF. Para saber mais, veja [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
@@ -446,7 +446,7 @@ OFF
 Desabilita o controle de alterações no banco de dados. Desabilite o controle de alterações em todas as tabelas antes de desabilitá-lo no banco de dados.
 
 **\<containment_option> ::=**      
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Controla opções de contenção de banco de dados.
 
@@ -489,7 +489,7 @@ O cursor é implicitamente desalocado somente na desconexão. Para saber mais, c
 
 Você pode determinar o status dessa opção examinando a coluna `is_local_cursor_default` na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Também é possível determinar o status examinando a propriedade `IsLocalCursorsDefault` da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<database_mirroring>**      
+**\<database_mirroring>**     
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Veja as descrições de argumentos em [Espelhamento de banco de dados ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).
@@ -572,7 +572,7 @@ O banco de dados está disponível para operações de leitura e gravação.
 Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados. Para obter mais informações, consulte a cláusula SINGLE_USER.
 
 > [!NOTE]
-> Nos bancos de dados federados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SET { READ_ONLY | READ_WRITE } é desabilitado.
+> Nos bancos de dados federados [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], `SET { READ_ONLY | READ_WRITE }` está desabilitado.
 
 **\<db_user_access_option> ::=**      
 Controla o acesso de usuários ao banco de dados.
@@ -580,7 +580,7 @@ Controla o acesso de usuários ao banco de dados.
 SINGLE_USER     
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-Especifica que somente um usuário por vez pode acessar o banco de dados. Se você especificar SINGLE_USER e outros usuários se conectarem ao banco de dados, a instrução ALTER DATABASE será bloqueada até que todos os usuários se desconectem do banco de dados especificado. Para substituir esse comportamento, veja a cláusula WITH \<termination>.
+Especifica que somente um usuário por vez pode acessar o banco de dados. Se você especificar SINGLE_USER e outros usuários se conectarem ao banco de dados, a instrução ALTER DATABASE será bloqueada até que todos os usuários se desconectem do banco de dados especificado. Para substituir esse comportamento, confira a cláusula WITH \<termination>.
 
 O banco de dados permanecerá no modo SINGLE_USER, mesmo que o usuário que definiu a opção saia do serviço. Nesse momento, um usuário diferente, mas somente um, poderá se conectar ao banco de dados.
 
@@ -601,18 +601,18 @@ Todos os usuários com permissões apropriadas para se conectar ao banco de dado
 Você pode determinar o status dessa opção examinando a coluna `user_access` na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Também é possível determinar o status examinando a propriedade `UserAccess` da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<delayed_durability_option> ::=**      
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 Controla se as transações são confirmadas completamente duráveis ou duráveis atrasadas.
 
 DISABLED     
-Todas as transações após SET DISABLED são completamente duráveis. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
+Todas as transações após `SET DISABLED` são completamente duráveis. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
 
 ALLOWED     
-Todas as transações após SET ALLOWED são completamente duráveis ou duráveis atrasadas, dependendo da opção de durabilidade definida no bloco atômico ou instrução de confirmação.
+Todas as transações após `SET ALLOWED` são completamente duráveis ou duráveis atrasadas, dependendo da opção de durabilidade definida no bloco atômico ou na instrução de confirmação.
 
 FORCED     
-Todas as transações após SET FORCED são duráveis atrasadas. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
+Todas as transações após `SET FORCED` são duráveis atrasadas. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
 
 **\<external_access_option> ::=**      
 **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -651,7 +651,7 @@ Para definir essa opção, a permissão `CONTROL SERVER` no banco de dados é ne
 Você pode determinar o status dessa opção examinando a coluna `is_trustworthy_on` na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Especifica o valor de idioma padrão para colunas indexadas de texto completo.
 
@@ -659,27 +659,27 @@ Especifica o valor de idioma padrão para colunas indexadas de texto completo.
 > Essa opção será permitida apenas quando CONTAINMENT estiver definido como PARTIAL. Se CONTAINMENT não for definida como NOME, ocorrerão erros.
 
 DEFAULT_LANGUAGE     
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Especifica a linguagem padrão para todos os logons recém-criados. O idioma pode ser especificado com o fornecimento da ID (lcid), do nome do idioma ou do alias do idioma. Para obter uma lista de nomes de idiomas e aliases aceitáveis, veja [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Essa opção será permitida apenas quando CONTAINMENT estiver definido como PARTIAL. Se CONTAINMENT não for definida como NOME, ocorrerão erros.
 
 NESTED_TRIGGERS     
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Especifica se um gatilho AFTER pode ser colocado em cascata, ou seja, executar uma ação que inicia outro gatilho que inicia outro gatilho e assim por diante. Essa opção será permitida apenas quando CONTAINMENT estiver definido como PARTIAL. Se CONTAINMENT não for definida como NOME, ocorrerão erros.
 
 TRANSFORM_NOISE_WORDS     
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Usado para suprimir uma mensagem de erro se palavras de ruído ou palavras irrelevantes provocarem falha em uma operação Booliana em uma consulta de texto completo. Essa opção será permitida apenas quando CONTAINMENT estiver definido como PARTIAL. Se CONTAINMENT não for definida como NOME, ocorrerão erros.
 
 TWO_DIGIT_YEAR_CUTOFF     
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Especifica um inteiro de 1753 a 9999 que representa o ano de corte para interpretar anos de dois dígitos e de quatro dígitos. Essa opção será permitida apenas quando CONTAINMENT estiver definido como PARTIAL. Se CONTAINMENT não for definida como NOME, ocorrerão erros.
 
 **\<FILESTREAM_option> ::=**      
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Controla as configurações de FileTables.
 
@@ -702,7 +702,7 @@ Um nome de diretório compatível com o Windows. Esse nome deve ser exclusivo en
 Veja [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
 **\<mixed_page_allocation_option> ::=**      
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Controla se o banco de dados pode criar páginas iniciais usando uma extensão mista para as oito primeiras páginas de uma tabela ou um índice.
 
@@ -728,16 +728,19 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas as
 A configuração atual dessa opção pode ser determinada por meio do exame da `is_parameterization_forced column` na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** | CLEAR [ ALL ]     
+ATIVADO | **DESATIVADO** [ FORCED ] | LIMPAR [ ALL ]     
 Controla se o Repositório de Consultas está habilitado neste banco de dados, além de controlar a remoção do conteúdo do Repositório de Consultas. Para obter mais informações, confira [Cenários de uso do Repositório de Consultas](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ATIVADO     
 Habilita o Repositório de Consultas.
 
-OFF     
-Desabilita o Repositório de Consultas. OFF é o valor padrão.
+DESATIVADO [ FORCED ]     
+Desabilita o Repositório de Consultas. OFF é o valor padrão. FORCED é opcional. FORCED anula todas as tarefas em execução em segundo plano do Repositório de Consultas e ignora a liberação síncrona quando o Repositório de Consultas é desativado. Faz com que o Repositório de Consultas seja desligado o mais rápido possível. Desliga efetivamente o Repositório de Consultas imediatamente. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 introduz FORCED.
+
+> [!NOTE]  
+> O Repositório de Consultas não pode ser desabilitado no banco de dados individual do Banco de Dados SQL do Azure e no Pool Elástico. A execução de ALTER DATABASE [database] SET QUERY_STORE = OFF retornará o aviso "'QUERY_STORE=OFF' não é compatível com esta versão do SQL Server". 
 
 CLEAR     
 Remove o conteúdo do Repositório de Consultas.
@@ -752,21 +755,25 @@ READ_ONLY
 As informações podem ser lidas do Repositório de Consultas, mas novas informações não são adicionadas. Se o espaço máximo emitido do Repositório de Consultas tiver se esgotado, o Repositório de Consultas alterará o modo de operação para READ_ONLY.
 
 CLEANUP_POLICY     
-Descreve a política de retenção de dados do Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS determina o número de dias durante os quais as informações de uma consulta são mantidas no Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS é do tipo **bigint**.
+Descreve a política de retenção de dados do Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS determina o número de dias durante os quais as informações de uma consulta são mantidas no Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS é do tipo **bigint**. O valor padrão é 30.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Determina a frequência na qual os dados gravados no Repositório de Consultas é persistida em disco. Para otimizar o desempenho, os dados coletados pelo Repositório de Consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada usando o argumento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS é do tipo **bigint**.
+Determina a frequência na qual os dados gravados no Repositório de Consultas é persistida em disco. Para otimizar o desempenho, os dados coletados pelo Repositório de Consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada usando o argumento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS é do tipo **bigint**. O valor padrão é **900** (15 min).
 
 MAX_STORAGE_SIZE_MB     
-Determina o espaço emitido para o Repositório de Consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**.
+Determina o espaço emitido para o Repositório de Consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**. O valor padrão é **100 MB** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante, o valor padrão é **1 GB**.
 
 > [!NOTE]
-> O limite de MAX_STORAGE_SIZE_MB não é imposto estritamente. O tamanho do armazenamento é verificado somente quando o Repositório de Consultas grava dados no disco. Esse intervalo é definido pela opção DATA_FLUSH_INTERVAL_SECONDS ou pela opção **Intervalo de Liberação de Dados** da caixa de diálogo do Repositório de Consultas do [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. O valor padrão do intervalo é de 900 segundos (ou 15 minutos).
-> Se o Repositório de Consultas tiver violado o limite de MAX_STORAGE_SIZE_MB entre as verificações de tamanho de armazenamento, ele passará para o modo somente leitura. Se SIZE_BASED_CLEANUP_MODE for habilitado, o mecanismo de limpeza para impor o limite de MAX_STORAGE_SIZE_MB também será disparado.
+> O limite `MAX_STORAGE_SIZE_MB` não é imposto estritamente. O tamanho do armazenamento é verificado somente quando o Repositório de Consultas grava dados no disco. Esse intervalo é definido pela opção `DATA_FLUSH_INTERVAL_SECONDS` ou pela opção da caixa de diálogo do Repositório de Consultas [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], **Intervalo de Liberação de Dados**. O valor padrão do intervalo é de 900 segundos (ou 15 minutos).
+> Se o Repositório de Consultas tiver violado o limite `MAX_STORAGE_SIZE_MB` entre as verificações de tamanho de armazenamento, ele fará a transição para o modo somente leitura. Se o `SIZE_BASED_CLEANUP_MODE` estiver habilitado, o mecanismo de limpeza que impõe o limite `MAX_STORAGE_SIZE_MB` também será disparado.
 > Depois que o espaço suficiente for limpo, o modo de Repositório de Consultas voltará automaticamente para leitura/gravação.
 
+> [!IMPORTANT]
+> Se você considerar que a captura de carga de trabalho precisará de mais de 10 GB de espaço em disco, você provavelmente deverá reconsiderar e otimizar sua carga de trabalho para reutilizar os planos de consulta (por exemplo, usando [parametrização forçada](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) ou ajustar as configurações do Repositório de Consultas.    
+> Começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você poderá definir `QUERY_CAPTURE_MODE` como CUSTOM para controle adicional sobre a política de captura de consulta.
+
 INTERVAL_LENGTH_MINUTES     
-Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
+Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**. O valor padrão é **60**.
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }     
 Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo.
@@ -779,7 +786,7 @@ A limpeza baseada no tamanho não será ativada automaticamente.
 
 SIZE_BASED_CLEANUP_MODE é do tipo **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 Designa o modo de captura da consulta ativa no momento. Cada modo define políticas de captura de consulta específicas.
 
 > [!NOTE]
@@ -795,17 +802,28 @@ Nenhuma
 Pare de capturar novas consultas. O Repositório de Consultas continuará a coletar estatísticas de compilação e tempo de execução para consultas que já foram capturadas. Use essa configuração com cuidado, pois você poderá deixar de capturar consultas importantes.
 
 CUSTOM     
-**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 em diante)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Permite o controle sobre as opções de QUERY_CAPTURE_POLICY.
 
-QUERY_CAPTURE_MODE é do tipo **nvarchar**.
+QUERY_CAPTURE_MODE é do tipo **nvarchar**. 
 
 max_plans_per_query     
-Define o número máximo de planos mantidos para cada consulta. O padrão é 200. MAX_PLANS_PER_QUERY é do tipo **int**.
+Define o número máximo de planos mantidos para cada consulta. MAX_PLANS_PER_QUERY é do tipo **int**. O valor padrão é **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]))
+
+Controla se as estatísticas de espera serão capturadas por consulta.
+
+ATIVADO    
+As informações de estatísticas de espera por consulta são capturadas. Esse valor é o valor de configuração padrão.
+
+OFF    
+As informações de estatísticas de espera por consulta não serão capturadas.
 
 **\<query_capture_policy_option_list> :: =**      
-**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 em diante)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Controla as opções da política de captura do Repositório de Consultas. Exceto para STALE_CAPTURE_POLICY_THRESHOLD, essas opções definem as condições OR que precisam ocorrer para que as consultas sejam capturadas no valor de Limite da Política de Captura Obsoleta definido.
 
@@ -872,7 +890,7 @@ Considere os seguintes pontos importantes ao usar a opção PAGE_VERIFY:
 - Quando um banco de dados do sistema ou de usuário é atualizado para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou uma versão posterior, o valor de PAGE_VERIFY (NONE ou TORN_PAGE_DETECTION) não é alterado. Recomendamos que você altere-o para CHECKSUM.
 
     > [!NOTE]
-    > Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a opção de banco de dados PAGE_VERIFY é definida como NONE para o banco de dados TempDB e não pode ser modificada. No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e em versões posteriores, o valor padrão do banco de dados TempDB é CHECKSUM para novas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao atualizar uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o valor padrão permanece como NONE. A opção pode ser modificada. É recomendável usar CHECKSUM para o banco de dados tempdb.
+    > Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a opção de banco de dados PAGE_VERIFY é definida como NONE para o banco de dados TempDB e não pode ser modificada. Começando com [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o valor padrão do banco de dados TempDB é CHECKSUM para novas instalações de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao atualizar uma instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o valor padrão permanece como NONE. A opção pode ser modificada. É recomendável usar CHECKSUM para o banco de dados tempdb.
 
 - TORN_PAGE_DETECTION pode usar menos recursos, mas fornece um subconjunto mínimo da proteção CHECKSUM.
 - PAGE_VERIFY pode ser definido sem que o banco de dados fique offline, seja bloqueado ou a simultaneidade de usuário seja impedida nele.
@@ -891,11 +909,11 @@ Para obter mais informações sobre mensagens de erro 823, 824 e 825, veja:
 A configuração atual dessa opção pode ser determinada por meio de um exame da coluna `page_verify_option` na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou da propriedade `IsTornPageDetectionEnabled` da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<remote_data_archive_option> ::=**      
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Habilita ou desabilita o Stretch Database para o banco de dados. Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
-REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<nome_do_servidor>, { CREDENTIAL = \<nome_da_credencial_no_escopo_do_BD> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
 ATIVADO     
 Habilita o Stretch Database para o banco de dados. Para obter mais informações, incluindo os pré-requisitos adicionais, veja [Habilitar o Stretch Database para um banco de dados](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
 
@@ -996,7 +1014,7 @@ A configuração atual dessa opção pode ser determinada por meio do exame da c
 > Quando uma tabela for criada com **DURABILITY = SCHEMA_ONLY**, e **READ_COMMITTED_SNAPSHOT** depois forem alterado usando **ALTER DATABASE**, os dados na tabela serão perdidos.
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 ATIVADO     
 Quando o nível de isolamento da transação é definido com qualquer nível de isolamento inferior a SNAPSHOT, todas as operações [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretadas em tabelas com otimização de memória são executadas no isolamento de SNAPSHOT. Exemplos de níveis de isolamento inferiores ao snapshot são READ COMMITTED ou READ UNCOMMITTED. Essas operações são executadas não importa se o nível de isolamento da transação é definido explicitamente no nível de sessão ou se a opção é usada implicitamente.
@@ -1150,7 +1168,7 @@ Você pode determinar o status dessa opção examinando a coluna `is_recursive_t
 Você pode determinar o status dessa opção examinando a coluna `is_recursive_triggers_on` na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou a propriedade `IsRecursiveTriggersEnabled` da função [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<target_recovery_time_option> ::=**      
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Especifica a frequência de pontos de verificação indiretos por banco de dados. No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante, o valor padrão para novos bancos de dados é de **1 minuto**, o que indica que o banco de dados usará pontos de verificação indiretos. Para versões mais antigas, o padrão é 0, o que indica que o banco de dados usará pontos de verificação automáticos cuja frequência depende da configuração do intervalo de recuperação da instância de servidor. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda 1 minuto para a maioria dos sistemas.
 
@@ -1320,7 +1338,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. Habilitando o repositório de consultas
 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior)
+**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 O exemplo a seguir habilita o Repositório de Consultas e configura os parâmetros dele.
 
@@ -1407,7 +1425,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)| **_Banco de dados individual/pool elástico do \*Banco de Dados SQL<br /> \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_Banco de dados individual/pool elástico do \*Banco de Dados SQL<br /> \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1517,9 +1535,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -1749,7 +1777,7 @@ O banco de dados está disponível para operações de leitura e gravação.
 Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados. Para obter mais informações, consulte a cláusula SINGLE_USER.
 
 > [!NOTE]
-> Nos bancos de dados federados do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SET { READ_ONLY | READ_WRITE } é desabilitado.
+> Nos bancos de dados federados [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], `SET { READ_ONLY | READ_WRITE }` está desabilitado.
 
 **\<db_user_access_option> ::=**      
 Controla o acesso de usuários ao banco de dados.
@@ -1766,13 +1794,13 @@ Você pode determinar o status dessa opção examinando a coluna `user_access` n
 Controla se as transações são confirmadas completamente duráveis ou duráveis atrasadas.
 
 DISABLED     
-Todas as transações após SET DISABLED são completamente duráveis. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
+Todas as transações após `SET DISABLED` são completamente duráveis. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
 
 ALLOWED     
-Todas as transações após SET ALLOWED são completamente duráveis ou duráveis atrasadas, dependendo da opção de durabilidade definida no bloco atômico ou instrução de confirmação.
+Todas as transações após `SET ALLOWED` são completamente duráveis ou duráveis atrasadas, dependendo da opção de durabilidade definida no bloco atômico ou na instrução de confirmação.
 
 FORCED     
-Todas as transações após SET FORCED são duráveis atrasadas. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
+Todas as transações após `SET FORCED` são duráveis atrasadas. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
 
 **\<PARAMETERIZATION_option> ::=**      
 Controla a opção de parametrização.
@@ -1786,7 +1814,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas as
 
 A configuração atual dessa opção pode ser determinada por meio do exame da coluna `is_parameterization_forced` na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Controla se o Repositório de Consultas está habilitado neste banco de dados, além de controlar a remoção do conteúdo do Repositório de Consultas.
@@ -1804,21 +1832,28 @@ OPERATION_MODE
 Descreve o modo de operação do Repositório de Consultas. Os valores válidos são READ_ONLY e READ_WRITE. No modo READ_WRITE, o Repositório de Consultas coleta e persiste as informações de estatísticas de execução do runtime e do plano de consulta. No modo READ_ONLY, as informações podem ser lidas do repositório de consultas, mas novas informações não são adicionadas. Se o espaço máximo alocado do Repositório de Consultas tiver se esgotado, o Repositório de Consultas alterará o modo de operação para READ_ONLY.
 
 CLEANUP_POLICY     
-Descreve a política de retenção de dados do Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS determina o número de dias durante os quais as informações de uma consulta são mantidas no Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS é do tipo **bigint**.
+Descreve a política de retenção de dados do Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS determina o número de dias durante os quais as informações de uma consulta são mantidas no Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS é do tipo **bigint**. O valor padrão é 30. Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é **7** dias.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Determina a frequência na qual os dados gravados no Repositório de Consultas é persistida em disco. Para otimizar o desempenho, os dados coletados pelo Repositório de Consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada usando o argumento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS é do tipo **bigint**.
+Determina a frequência na qual os dados gravados no Repositório de Consultas é persistida em disco. Para otimizar o desempenho, os dados coletados pelo Repositório de Consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada usando o argumento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS é do tipo **bigint**. O valor padrão é **900** (15 min).
 
 MAX_STORAGE_SIZE_MB     
-Determina o espaço alocado para o Repositório de Consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**.
+Determina o espaço alocado para o Repositório de Consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**. Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition, o padrão é **1 GB** e, para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é **10 MB**.
 
 > [!NOTE]
-> O limite de MAX_STORAGE_SIZE_MB não é imposto estritamente. O tamanho do armazenamento é verificado somente quando o Repositório de Consultas grava dados no disco. Esse intervalo é definido pela opção DATA_FLUSH_INTERVAL_SECONDS ou pela opção **Intervalo de Liberação de Dados** da caixa de diálogo do Repositório de Consultas do [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. O valor padrão do intervalo é de 900 segundos (ou 15 minutos).
-> Se o Repositório de Consultas tiver violado o limite de MAX_STORAGE_SIZE_MB entre as verificações de tamanho de armazenamento, ele passará para o modo somente leitura. Se SIZE_BASED_CLEANUP_MODE for habilitado, o mecanismo de limpeza para impor o limite de MAX_STORAGE_SIZE_MB também será disparado.
+> O limite de configuração `MAX_STORAGE_SIZE_MB` é de 10.240 MB em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+
+> [!NOTE]
+> O limite `MAX_STORAGE_SIZE_MB` não é imposto estritamente. O tamanho do armazenamento é verificado somente quando o Repositório de Consultas grava dados no disco. Esse intervalo é definido pela opção `DATA_FLUSH_INTERVAL_SECONDS` ou pela opção da caixa de diálogo do Repositório de Consultas [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], **Intervalo de Liberação de Dados**. O valor padrão do intervalo é de 900 segundos (ou 15 minutos).
+> Se o Repositório de Consultas tiver violado o limite `MAX_STORAGE_SIZE_MB` entre as verificações de tamanho de armazenamento, ele fará a transição para o modo somente leitura. Se o `SIZE_BASED_CLEANUP_MODE` estiver habilitado, o mecanismo de limpeza que impõe o limite `MAX_STORAGE_SIZE_MB` também será disparado.
 > Depois que o espaço suficiente for limpo, o modo de Repositório de Consultas voltará automaticamente para leitura/gravação.
 
+> [!IMPORTANT]
+> Se você considerar que a captura de carga de trabalho precisará de mais de 10 GB de espaço em disco, você provavelmente deverá reconsiderar e otimizar sua carga de trabalho para reutilizar os planos de consulta (por exemplo, usando [parametrização forçada](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) ou ajustar as configurações do Repositório de Consultas.    
+> Começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você poderá definir `QUERY_CAPTURE_MODE` como CUSTOM para controle adicional sobre a política de captura de consulta.
+
 INTERVAL_LENGTH_MINUTES     
-Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
+Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**. O valor padrão é **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo.
@@ -1831,11 +1866,14 @@ A limpeza baseada no tamanho será ativada automaticamente quando o tamanho em d
 
 SIZE_BASED_CLEANUP_MODE é do tipo **nvarchar**.
 
-QUERY_CAPTURE_MODE     
-Designa o modo de captura de consulta ativo no momento:
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+Designa o modo de captura da consulta ativa no momento. Cada modo define políticas de captura de consulta específicas.   
+
+> [!NOTE]
+> Cursores, consultas dentro de procedimentos armazenados e consultas compiladas nativamente são sempre capturados quando o modo de captura de consulta é definido como ALL, AUTO ou CUSTOM.
 
 ALL     
-Todas as consultas são capturadas.
+Captura todas as consultas.
 
 AUTO     
 Captura as consultas relevantes baseadas na contagem de execução e no consumo de recursos. Esse é o valor de configuração padrão de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1843,10 +1881,37 @@ Captura as consultas relevantes baseadas na contagem de execução e no consumo 
 Nenhuma     
 Pare de capturar novas consultas. O Repositório de Consultas continuará a coletar estatísticas de compilação e tempo de execução para consultas que já foram capturadas. Use essa configuração com cuidado, pois você poderá deixar de capturar consultas importantes.
 
+CUSTOM     
+Permite o controle sobre as opções de QUERY_CAPTURE_POLICY.
+
 QUERY_CAPTURE_MODE é do tipo **nvarchar**.
 
 max_plans_per_query     
-Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. O padrão é 200.
+Define o número máximo de planos mantidos para cada consulta. MAX_PLANS_PER_QUERY é do tipo **int**. O valor padrão é **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+Controla se as estatísticas de espera serão capturadas por consulta.
+
+ATIVADO    
+As informações de estatísticas de espera por consulta são capturadas. Esse valor é o valor de configuração padrão.
+
+OFF    
+As informações de estatísticas de espera por consulta não serão capturadas.
+
+**\<query_capture_policy_option_list> :: =**      
+Controla as opções da política de captura do Repositório de Consultas. Exceto para STALE_CAPTURE_POLICY_THRESHOLD, essas opções definem as condições OR que precisam ocorrer para que as consultas sejam capturadas no valor de Limite da Política de Captura Obsoleta definido.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+Define o período de intervalo de avaliação para determinar se uma consulta deve ser capturada. O padrão é um dia e pode ser definido de uma hora a sete dias. *number* é do tipo **int**.
+
+EXECUTION_COUNT     
+Define o número de vezes que uma consulta é executada durante o período de avaliação. O padrão é 30, o que significa que, para o Limite da Política de Captura Obsoleta padrão, uma consulta precisa ser executada, pelo menos, 30 vezes em um dia para ser persistente no Repositório de Consultas. EXECUTION_COUNT é do tipo **int**.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+Define o tempo total decorrido da CPU de compilação usado por uma consulta durante o período de avaliação. O padrão é 1000, o que significa que, para o Limite da Política de Captura Obsoleta padrão, uma consulta precisa ter um total de, pelo menos, um segundo do tempo da CPU gasto durante a compilação da consulta em um dia para ser persistente no Repositório de Consultas. TOTAL_COMPILE_CPU_TIME_MS é do tipo **int**.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+Define o tempo total decorrido da CPU de execução usado por uma consulta durante o período de avaliação. O padrão é 100, o que significa que, para o Limite da Política de Captura Obsoleta padrão, uma consulta precisa ter um total de, pelo menos, 100 ms do tempo da CPU gasto durante a execução em um dia para ser persistente no Repositório de Consultas. TOTAL_EXECUTION_CPU_TIME_MS é do tipo **int**.
 
 **\<snapshot_option> ::=**      
 Determina o nível de isolamento da transação.
@@ -2097,7 +2162,6 @@ Nem todas as opções de banco de dados usam a cláusula WITH \<termination> ou 
 ## <a name="examples"></a>Exemplos
 
 ### <a name="a-setting-the-database-to-read_only"></a>a. Configurando o banco de dados como READ_ONLY
-
 Alterar o estado de um banco de dados ou grupo de arquivos para READ_ONLY ou READ_WRITE requer acesso exclusivo ao banco de dados. O exemplo a seguir define o banco de dados como o modo `RESTRICTED_USER` para limitar o acesso. Em seguida, o exemplo define o estado do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] como `READ_ONLY` e retorna o acesso ao banco de dados para todos os usuários.
 
 ```sql
@@ -2116,7 +2180,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitando o isolamento de instantâneo em um banco de dados
-
 O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .
 
 ```sql
@@ -2142,7 +2205,6 @@ O conjunto de resultados mostra que a estrutura de isolamento de instantâneo es
 |[nome_do_banco_de_dados] |1| ATIVADO |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Habilitando, modificando e desabilitando o controle de alterações
-
 O exemplo a seguir habilita o controle de alterações no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e define o período de retenção para `2` dias.
 
 ```sql
@@ -2166,18 +2228,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. Habilitando o repositório de consultas
-
 O exemplo a seguir habilita o Repositório de Consultas e configura os parâmetros dele.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-(
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. Como habilitar o Repositório de Consultas com estatísticas de espera
+O exemplo a seguir habilita o Repositório de Consultas e configura os parâmetros dele.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. Como habilitar o Repositório de Consultas com opções personalizadas da política de captura
+O exemplo a seguir habilita o Repositório de Consultas e configura os parâmetros dele.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 
@@ -2201,7 +2306,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current) | **_Instância gerenciada do \*Banco de Dados SQL<br /> \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_Instância gerenciada do \*Banco de Dados SQL<br /> \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2298,9 +2403,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -2497,13 +2612,13 @@ Você pode determinar o status dessa opção examinando a coluna user_access na 
 Controla se as transações são confirmadas completamente duráveis ou duráveis atrasadas.
 
 DISABLED     
-Todas as transações após SET DISABLED são completamente duráveis. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
+Todas as transações após `SET DISABLED` são completamente duráveis. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
 
 ALLOWED     
-Todas as transações após SET ALLOWED são completamente duráveis ou duráveis atrasadas, dependendo da opção de durabilidade definida no bloco atômico ou instrução de confirmação.
+Todas as transações após `SET ALLOWED` são completamente duráveis ou duráveis atrasadas, dependendo da opção de durabilidade definida no bloco atômico ou na instrução de confirmação.
 
 FORCED     
-Todas as transações após SET FORCED são duráveis atrasadas. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
+Todas as transações após `SET FORCED` são duráveis atrasadas. Todas as opções de durabilidade definidas em um bloco atômico ou instrução de confirmação são ignoradas.
 
 **\<PARAMETERIZATION_option> ::=**      
 Controla a opção de parametrização.
@@ -2517,7 +2632,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas as
 
 A configuração atual dessa opção pode ser determinada por meio do exame da coluna `is_parameterization_forced` na exibição de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Controla se o Repositório de Consultas está habilitado neste banco de dados, além de controlar a remoção do conteúdo do Repositório de Consultas.
@@ -2535,16 +2650,25 @@ OPERATION_MODE
 Descreve o modo de operação do Repositório de Consultas. Os valores válidos são READ_ONLY e READ_WRITE. No modo READ_WRITE, o Repositório de Consultas coleta e persiste as informações de estatísticas de execução do runtime e do plano de consulta. No modo READ_ONLY, as informações podem ser lidas do repositório de consultas, mas novas informações não são adicionadas. Se o espaço máximo alocado do Repositório de Consultas tiver se esgotado, o Repositório de Consultas alterará o modo de operação para READ_ONLY.
 
 CLEANUP_POLICY     
-Descreve a política de retenção de dados do Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS determina o número de dias durante os quais as informações de uma consulta são mantidas no Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS é do tipo **bigint**.
+Descreve a política de retenção de dados do Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS determina o número de dias durante os quais as informações de uma consulta são mantidas no Repositório de Consultas. STALE_QUERY_THRESHOLD_DAYS é do tipo **bigint**. O valor padrão é 30. Para o [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition, o padrão é **7** dias.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Determina a frequência na qual os dados gravados no Repositório de Consultas é persistida em disco. Para otimizar o desempenho, os dados coletados pelo Repositório de Consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada usando o argumento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS é do tipo **bigint**.
+Determina a frequência na qual os dados gravados no Repositório de Consultas é persistida em disco. Para otimizar o desempenho, os dados coletados pelo Repositório de Consultas são gravados de maneira assíncrona no disco. A frequência em que essa transferência assíncrona ocorre é configurada usando o argumento DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS é do tipo **bigint**. O valor padrão é **900** (15 min).
 
 MAX_STORAGE_SIZE_MB     
-Determina o espaço alocado para o Repositório de Consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**.
+Determina o espaço alocado para o Repositório de Consultas. MAX_STORAGE_SIZE_MB é do tipo **bigint**. O valor padrão é **100 MB**.
+
+> [!NOTE]
+> O limite `MAX_STORAGE_SIZE_MB` não é imposto estritamente. O tamanho do armazenamento é verificado somente quando o Repositório de Consultas grava dados no disco. Esse intervalo é definido pela opção `DATA_FLUSH_INTERVAL_SECONDS` ou pela opção da caixa de diálogo do Repositório de Consultas [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], **Intervalo de Liberação de Dados**. O valor padrão do intervalo é de 900 segundos (ou 15 minutos).
+> Se o Repositório de Consultas tiver violado o limite `MAX_STORAGE_SIZE_MB` entre as verificações de tamanho de armazenamento, ele fará a transição para o modo somente leitura. Se o `SIZE_BASED_CLEANUP_MODE` estiver habilitado, o mecanismo de limpeza que impõe o limite `MAX_STORAGE_SIZE_MB` também será disparado.
+> Depois que o espaço suficiente for limpo, o modo de Repositório de Consultas voltará automaticamente para leitura/gravação.
+
+> [!IMPORTANT]
+> Se você considerar que a captura de carga de trabalho precisará de mais de 10 GB de espaço em disco, você provavelmente deverá reconsiderar e otimizar sua carga de trabalho para reutilizar os planos de consulta (por exemplo, usando [parametrização forçada](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) ou ajustar as configurações do Repositório de Consultas.    
+> Começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você poderá definir `QUERY_CAPTURE_MODE` como CUSTOM para controle adicional sobre a política de captura de consulta.
 
 INTERVAL_LENGTH_MINUTES     
-Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**.
+Determina o intervalo de tempo em que os dados de estatísticas de execução do runtime são agregados no Repositório de Consultas. Para otimizar o uso de espaço, as estatísticas de execução de runtime no repositório de estatísticas de runtime são agregadas em uma janela de tempo fixo. Essa janela de tempo fixo é configurada usando o argumento INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES é do tipo **bigint**. O valor padrão é **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Controla se a limpeza será ativada automaticamente quando a quantidade total de dados se aproximar do tamanho máximo.
@@ -2557,7 +2681,7 @@ A limpeza baseada no tamanho será ativada automaticamente quando o tamanho em d
 
 SIZE_BASED_CLEANUP_MODE é do tipo **nvarchar**.
 
-QUERY_CAPTURE_MODE     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 Designa o modo de captura da consulta ativa no momento.
 
 ALL     
@@ -2572,7 +2696,31 @@ Pare de capturar novas consultas. O Repositório de Consultas continuará a cole
 QUERY_CAPTURE_MODE é do tipo **nvarchar**.
 
 max_plans_per_query     
-Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. O padrão é 200.
+Um número inteiro que representa a quantidade máxima de planos de manutenção para cada consulta. MAX_PLANS_PER_QUERY é do tipo **int**. O valor padrão é **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+Controla se as estatísticas de espera serão capturadas por consulta.
+
+ATIVADO    
+As informações de estatísticas de espera por consulta são capturadas. Esse valor é o valor de configuração padrão.
+
+OFF    
+As informações de estatísticas de espera por consulta não serão capturadas.
+
+**\<query_capture_policy_option_list> :: =**      
+Controla as opções da política de captura do Repositório de Consultas. Exceto para STALE_CAPTURE_POLICY_THRESHOLD, essas opções definem as condições OR que precisam ocorrer para que as consultas sejam capturadas no valor de Limite da Política de Captura Obsoleta definido.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+Define o período de intervalo de avaliação para determinar se uma consulta deve ser capturada. O padrão é um dia e pode ser definido de uma hora a sete dias. *number* é do tipo **int**.
+
+EXECUTION_COUNT     
+Define o número de vezes que uma consulta é executada durante o período de avaliação. O padrão é 30, o que significa que, para o Limite da Política de Captura Obsoleta padrão, uma consulta precisa ser executada, pelo menos, 30 vezes em um dia para ser persistente no Repositório de Consultas. EXECUTION_COUNT é do tipo **int**.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+Define o tempo total decorrido da CPU de compilação usado por uma consulta durante o período de avaliação. O padrão é 1000, o que significa que, para o Limite da Política de Captura Obsoleta padrão, uma consulta precisa ter um total de, pelo menos, um segundo do tempo da CPU gasto durante a compilação da consulta em um dia para ser persistente no Repositório de Consultas. TOTAL_COMPILE_CPU_TIME_MS é do tipo **int**.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+Define o tempo total decorrido da CPU de execução usado por uma consulta durante o período de avaliação. O padrão é 100, o que significa que, para o Limite da Política de Captura Obsoleta padrão, uma consulta precisa ter um total de, pelo menos, 100 ms do tempo da CPU gasto durante a execução em um dia para ser persistente no Repositório de Consultas. TOTAL_EXECUTION_CPU_TIME_MS é do tipo **int**.
 
 **\<snapshot_option> ::=**
 
@@ -2798,7 +2946,6 @@ Você pode alterar os valores padrão para qualquer uma das opções de banco de
 ## <a name="examples"></a>Exemplos
 
 ### <a name="a-setting-the-database-to-read_only"></a>a. Configurando o banco de dados como READ_ONLY
-
 Alterar o estado de um banco de dados ou grupo de arquivos para READ_ONLY ou READ_WRITE requer acesso exclusivo ao banco de dados. O exemplo a seguir define o banco de dados como o modo `RESTRICTED_USER` para acesso restrito. Em seguida, o exemplo define o estado do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] como `READ_ONLY` e retorna o acesso ao banco de dados para todos os usuários.
 
 ```sql
@@ -2816,7 +2963,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitando o isolamento de instantâneo em um banco de dados
-
 O exemplo a seguir habilita a opção de estrutura de isolamento de instantâneo para o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .
 
 ```sql
@@ -2842,7 +2988,6 @@ O conjunto de resultados mostra que a estrutura de isolamento de instantâneo es
 |[nome_do_banco_de_dados] |1| ATIVADO |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Habilitando, modificando e desabilitando o controle de alterações
-
 O exemplo a seguir habilita o controle de alterações no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e define o período de retenção para `2` dias.
 
 ```sql
@@ -2866,18 +3011,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. Habilitando o repositório de consultas
-
 O exemplo a seguir habilita o Repositório de Consultas e configura os parâmetros dele.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-  (  
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. Como habilitar o Repositório de Consultas com estatísticas de espera
+O exemplo a seguir habilita o Repositório de Consultas e configura os parâmetros dele.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. Como habilitar o Repositório de Consultas com opções personalizadas da política de captura
+O exemplo a seguir habilita o Repositório de Consultas e configura os parâmetros dele.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13c441771044ba6932b35fd59f593b9e635b0afe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 166107c908fb83c5fe4fae83f67b9dc4984bbafb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726099"
 ---
 # <a name="add-or-edit-join"></a>Adicionar ou Editar Junção
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   As caixas de diálogo **Adicionar Junção** e **Editar Junção** permitem adicionar e editar filtros de junção para publicações de mesclagem.  
   
 > [!NOTE]  
@@ -46,7 +46,7 @@ ms.locfileid: "72907572"
   
     -   Se você estiver adicionando uma nova junção, selecione **Usar o construtor para criar a instrução** ou **Gravar a instrução de junção manualmente**. Se você começar a gravar a junção manualmente, não poderá usar o construtor.  
   
-         Se você selecionar para usar o construtor, use as colunas na grade (**Conjunção**, **Coluna da Tabela Filtrada**, **Operador**e **Coluna da Tabela Unida**) para criar uma instrução de junção. Cada coluna na grade contém uma caixa de listagem suspensa, permitindo que você selecione duas colunas e um operador ( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **like**). Os resultados são exibidos na área de texto **Visualizar** . Se a junção envolver mais de um par de colunas, selecione uma conjunção (**AND** ou **OR**) na coluna **Conjunção** e insira mais duas colunas e outro operador.  
+         Se você selecionar para usar o construtor, use as colunas na grade (**Conjunção**, **Coluna da Tabela Filtrada**, **Operador**e **Coluna da Tabela Unida**) para criar uma instrução de junção. Cada coluna na grade contém uma caixa de listagem suspensa, permitindo que você selecione duas colunas e um operador ( **=** , **<>** , **<=** , **\<**, **>=** , **>** , **like**). Os resultados são exibidos na área de texto **Visualizar** . Se a junção envolver mais de um par de colunas, selecione uma conjunção (**AND** ou **OR**) na coluna **Conjunção** e insira mais duas colunas e outro operador.  
   
          Se você selecionar para gravar a instrução manualmente, grave a instrução de junção na área de texto **Instrução de Junção** . Use a caixa de listagem **Colunas da Tabela Filtrada** e **Colunas da Tabela Unida** para arrastar e soltar colunas na área de texto **Instrução de Junção** .  
   

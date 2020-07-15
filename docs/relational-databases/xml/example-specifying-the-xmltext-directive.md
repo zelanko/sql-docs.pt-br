@@ -1,5 +1,6 @@
 ---
-title: 'Exemplo: especificando a diretiva XMLTEXT | Microsoft Docs'
+title: 'Exemplo: Especificando a diretiva XMLTEXT | Microsoft Docs'
+description: Saiba como tratar a parte não consumida de um documento XML especificando a diretiva XMLTEXT em uma instrução SELECT usando o modo EXPLICIT.
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d6fb7538de11db0d5a37c44330bd2b0251d9031b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 93e6735f9b4e30a97d86366b512c27489a921f2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632320"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Exemplo: Especificando a diretiva XMLTEXT
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Este exemplo ilustra como dados na coluna de estouro são resolvidos usando a diretiva **XMLTEXT** em uma instrução `SELECT` usando modo EXPLICIT.  
   
  Considere a tabela `Person` . Esta tabela tem uma coluna `Overflow` que armazena a parte não consumida do documento XML.  

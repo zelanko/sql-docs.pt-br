@@ -1,5 +1,6 @@
 ---
 title: Requisitos da função de segurança para replicação | Microsoft Docs
+description: Saiba mais sobre o nível de autenticação necessário para tarefas comuns de configuração de replicação e para tarefas comuns de manutenção de replicação no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dea5f4a6c7333452c7c5a74c67445ac3cfb4c60b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56084b0cd0dd5dfd16030051ece4670c7ffd0885
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287288"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808034"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

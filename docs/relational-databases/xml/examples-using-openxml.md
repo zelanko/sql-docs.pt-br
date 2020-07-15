@@ -1,5 +1,6 @@
 ---
-title: 'Exemplos: usando OPENXML | Microsoft Docs'
+title: 'Exemplos: Usando OPENXML | Microsoft Docs'
+description: Veja exemplos de como usar OPENXML para criar uma exibição de conjunto de linhas de um documento XML.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -26,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 003c84a55d4f0ab2ff727fdc80dd09eaa9b3435b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729970"
 ---
-# <a name="examples-using-openxml"></a>Exemplos: usando OPENXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="examples-using-openxml"></a>Exemplos: uso do OPENXML
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Os exemplos neste tópico mostram como o OPENXML é usado para criar uma exibição de conjunto de linhas de um documento XML. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Os exemplos mostram todos os aspectos do OPENXML, mas não especificam metapropriedades no OPENXML. Para obter mais informações sobre como especificar metapropriedades no OPENXML, veja [Especificar metapropriedades no OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Exemplos  

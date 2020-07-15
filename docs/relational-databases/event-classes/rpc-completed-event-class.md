@@ -1,5 +1,6 @@
 ---
 title: Classe de evento RPC:Completed | Microsoft Docs
+description: A classe de evento RPC:Completed indica que uma chamada de procedimento remoto foi concluída no SQL Server.
 ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
@@ -12,20 +13,20 @@ ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 771305c30bb4008ee3e4b937296864276cf74b73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d92083a5869e41e325c1c395ef23ab6cfac628f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908322"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727387"
 ---
 # <a name="rpccompleted-event-class"></a>classe de evento RPC:Completed
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento RPC:Completed indica que uma chamada de procedimento remoto foi concluída.  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>Colunas de dados da classe de evento RPC:Completed  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|**imagem**|Valor binário dependente da classe de evento capturada no rastreamento.|2|Sim|  

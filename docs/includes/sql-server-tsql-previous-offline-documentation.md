@@ -1,2 +1,2 @@
 > [!Note]
-> Para exibir a sintaxe Transact-SQL para o SQL Server 2014 e versões anteriores, confira a [Documentação das versões anteriores do SQL Server](../sql-server/previous-versions-sql-server.md?view=sql-server-2016).
+> Para ver a sintaxe do Transact-SQL para o SQL Server 2014 e versões anteriores, confira a [Documentação das versões anteriores](../sql-server/previous-versions-sql-server.md#offline-documentation).

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725954"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   As atividades de criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comuns do que usam uma chave assimétrica protegidas pelo Cofre de Chaves do Azure incluem três áreas a seguir.  
   
 -   Transparent Data Encryption usando uma chave assimétrica do Cofre de Chaves do Azure  
@@ -53,12 +53,14 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
         - Se você estiver usando o **Azure global**, substitua o argumento `IDENTITY` pelo nome do seu Azure Key Vault da Parte II.
         - Se você estiver usando uma **nuvem privada do Azure** (por ex:. Azure Governamental, Azure China 21Vianet ou Azure Alemanha), substitua o argumento `IDENTITY` pelo URI do Cofre retornado na Parte II, etapa 3. Não inclua “https://” no URI do Cofre.   
   
-    -   Substitua a primeira parte do argumento do `SECRET` pela **ID do Cliente** do Azure Active Directory da Parte I. Neste exemplo, a **ID do Cliente** é `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Substitua a primeira parte do argumento do `SECRET` pela **ID do Cliente** do Azure Active Directory da Parte I. Neste exemplo, a **ID do Cliente** é `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
         >  É necessário remover os hifens da **ID do Cliente**.  
   
-    -   Conclua a segunda parte do argumento `SECRET` com o **Segredo do Cliente** da Parte I. Neste exemplo, o **Segredo do Cliente** da Parte 1 é `Replace-With-AAD-Client-Secret`. A cadeia de caracteres final do argumento `SECRET` será uma sequência longa de letras e números, *sem hifens*.  
+    -   Conclua a segunda parte do argumento `SECRET` com o **Segredo do Cliente** da Parte I. Neste exemplo, o **Segredo do Cliente** da Parte 1 é `ReplaceWithAADClientSecret`. 
+  
+    -   A cadeia de caracteres final do argumento SECRET será uma sequência longa de letras e números, sem hifens.
   
     ```sql  
     USE master;  
@@ -67,7 +69,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
+        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   
@@ -215,7 +217,7 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
     
     Para restaurar um backup de banco de dados criptografado com TDE, a instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] primeiro deve ter uma cópia da chave de cofre de chaves assimétrica usada para criptografia. Isso poderia ser feito assim:  
     
-    - Se a chave assimétrica original usada para TDE não estiver mais no cofre de chaves, restaure o backup da chave de cofre de chaves ou importe novamente a chave de uma HSM local. **Importante:** para que a impressão digital da chave corresponda a impressão digital registrada no backup do banco de dados, a chave deve ser nomeada com o **mesmo nome de chave do Key Vault** que recebeu originalmente.
+    - Se a chave assimétrica original usada para TDE não estiver mais no cofre de chaves, restaure o backup da chave de cofre de chaves ou importe novamente a chave de uma HSM local. **Importante:** Para que a impressão digital da chave corresponda à impressão digital registrada no backup do banco de dados, a chave deve ser nomeada com o **mesmo nome de chave do Key Vault** que recebeu originalmente.
     
     - Aplique as etapas 1 e 2 na instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
     

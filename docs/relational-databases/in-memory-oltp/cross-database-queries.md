@@ -1,5 +1,6 @@
 ---
 title: Consultas de bancos de dados | Microsoft Docs
+description: Saiba como usar as variáveis de tabela com otimização de memória em consultas entre bancos de dados para mover dados de um banco de dados para tabelas com otimização de memória no SQL Server.
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 93eae89743c2a4563317614a18e4bf5f46248071
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ff96199ed01fe06524ec38f8df2a0cce6380b8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031977"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723301"
 ---
 # <a name="cross-database-queries"></a>Consultas de bancos de dados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], as tabelas com otimização de memória não oferecem suporte a transações envolvendo todos os bancos de dados. Você não pode acessar outro banco de dados da mesma transação ou na mesma consulta que também acesse uma tabela com otimização de memória. Você não pode copiar facilmente dados de uma tabela em um banco de dados, para uma tabela com otimização de memória em outro banco de dados.  
   

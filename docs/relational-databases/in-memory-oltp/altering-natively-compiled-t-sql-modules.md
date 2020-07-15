@@ -1,5 +1,6 @@
 ---
 title: Alterando módulos T-SQL compilados nativamente | Microsoft Docs
+description: Saiba como executar operações ALTER em procedimentos armazenados compilados nativamente e módulos Transact-SQL compilados nativamente no SQL Server e no Banco de Dados SQL do Azure.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,21 +12,21 @@ ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6979d05d29b151a34edfe1c220c9d9a4d3046359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a91880504a74a7fae9d98018b31994ded63199c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668534"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior) e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você pode executar operações `ALTER` em procedimentos armazenados compilados nativamente e em outros módulos do [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados nativamente, como UDFs escalares e gatilhos, usando a instrução `ALTER`.  
   
 Ao executar `ALTER` em um módulo do [!INCLUDE[tsql](../../includes/tsql-md.md)] compilado nativamente, o módulo é recompilado usando uma nova definição. Enquanto a recompilação estiver em andamento, a versão antiga do módulo continuará disponível para execução. Uma vez concluída a compilação, as execuções de módulo serão descarregadas e a nova versão do módulo será instalada. Ao alterar um módulo do [!INCLUDE[tsql](../../includes/tsql-md.md)] compilado nativamente, é possível modificar as opções a seguir.  
   
--   parâmetros  
+-   Parâmetros  
 -   EXECUTE AS  
 -   TRANSACTION ISOLATION LEVEL  
 -   LANGUAGE  

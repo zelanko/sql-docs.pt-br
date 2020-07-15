@@ -1,5 +1,6 @@
 ---
 title: Visualizador do Arquivo de Log | Microsoft Docs
+description: Use o Visualizador do Arquivo de Log no SQL Server Management Studio para acessar informações sobre erros e eventos capturados em arquivos de log.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7425bb2175b9a2e7b813f63e7d78aec7e73ef5ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084070"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668124"
 ---
 # <a name="log-file-viewer"></a>Visualizador do Arquivo de Log
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   O Visualizador do Arquivo de Log no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é usado para acessar informações sobre erros e eventos capturados em arquivos de log.  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>Benefícios do uso do Visualizador do Arquivo de Log  

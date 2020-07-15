@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 8f9a92ee9ac1ed87a20515a267a80b8372c95366
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751795"
 ---
 # <a name="execution-plans"></a>Planos de execução
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Para poder executar consultas, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] deve analisar a instrução para determinar a maneira mais eficiente de acessar os dados necessários. Essa análise é tratada por um componente chamado de Otimizador de Consulta. A entrada do Otimizador de Consulta consiste em uma consulta, o esquema de banco de dados (definições de tabela e de índice) e as estatísticas de banco de dados. A saída do Otimizador de Consulta é um plano de execução de consulta, às vezes chamado de plano de consulta ou plano de execução.   
 

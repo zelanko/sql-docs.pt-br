@@ -1,5 +1,6 @@
 ---
 title: Classe de evento Missing Join Predicate | Microsoft Docs
+description: A classe de evento Missing Join Predicate indica que há uma consulta em execução que não tem predicado de junção no SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c59a45533e68eb1af5d3e62ee059aa022c5cc503
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f0571750b7c8a9ba39c79bf640872c88241fe81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756037"
 ---
 # <a name="missing-join-predicate-event-class"></a>classe de evento Missing Join Predicate
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   A classe de evento Missing Join Predicate indica que uma consulta está sendo executada sem nenhum predicado de junção. Isso pode resultar em uma consulta de longa execução. Para obter mais informações sobre predicados de junção, consulte [Predicados &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md).  
   
 ## <a name="missing-join-predicate-event-class-data-columns"></a>Colunas de dados da classe de evento Predicado de Junção Ausente  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  

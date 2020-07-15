@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 57d18e823d76e039f93eff8e5c685239686fe505
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c734833e71bcfc0ffb04deb227404b089b78d3cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736288"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT – Cláusula FOR (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Use a cláusula FOR para especificar uma das opções a seguir para os resultados da consulta.
   
@@ -179,7 +179,7 @@ JSON
  Especifica que os resultados de uma consulta serão retornados como um documento XML. Um dos seguintes modos XML precisa ser especificado: RAW, AUTO, EXPLICIT. Para obter mais informações sobre dados XML e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
  RAW [ **('** _ElementName_ **')** ]  
- Obtém o resultado da consulta e transforma cada linha do conjunto de resultados em um elemento XML com um identificador genérico \<row /> como a marcação do elemento. Opcionalmente, é possível especificar um nome para o elemento de linha. A saída XML resultante usa o *ElementName* especificado como o elemento de linha gerado para cada linha. Para obter mais informações, consulte [Usar modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).
+ Obtém o resultado da consulta e transforma cada linha do conjunto de resultados em um elemento XML com um identificador genérico \<row /> como a marca do elemento. Opcionalmente, é possível especificar um nome para o elemento de linha. A saída XML resultante usa o *ElementName* especificado como o elemento de linha gerado para cada linha. Para obter mais informações, consulte [Usar modo RAW com FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).
   
  AUTO  
  Retorna os resultados da consulta em uma árvore XML simples e aninhada. Cada tabela na cláusula FROM, para a qual pelo menos uma coluna esteja listada na cláusula SELECT, é representada como um elemento XML. As colunas listadas na cláusula SELECT são mapeadas para os atributos apropriados do elemento. Para obter mais informações, consulte [Usar modo AUTO com FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md).  

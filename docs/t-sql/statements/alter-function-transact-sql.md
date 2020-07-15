@@ -20,12 +20,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62b4b1a9d98e289590b35e463add7125f6421cc5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b9afe006b96d7b447b508d59a55163f8838caa1e
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628236"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85195813"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -305,7 +305,7 @@ RETURNS return_data_type
  Indica que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] criptografa as colunas da exibição de catálogo que contêm o texto da instrução ALTER FUNCTION. O uso de ENCRYPTION impede que a função seja publicada como parte da replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ENCRYPTION não pode ser especificado para funções CLR.  
   
  SCHEMABINDING  
- Especifica que a função está associada aos objetos de banco de dados referenciados por ela. Esta condição impedirá alterações à função se outros objetos associados ao esquema fizerem referência a ela.  
+ Especifica que a função está associada aos objetos de banco de dados referenciados por ela. Quando SCHEMABINDING for especificado, os objetos base não poderão ser modificadas de um modo que possa afetar a definição da função. A própria definição da função deve ser primeiro modificada ou descartada para remover as dependências no objeto a ser modificado.  
   
  A associação da função aos objetos referenciados por ela será removida somente quando ocorrer uma das ações a seguir:  
   

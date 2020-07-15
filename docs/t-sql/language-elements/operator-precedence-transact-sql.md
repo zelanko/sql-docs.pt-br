@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37c1bac44b4dff2be7735f89243b6e273eca0775
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f4670ef04301bb8dc75828db97ee42d3379ecbfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706236"
 ---
 # <a name="operator-precedence-transact-sql"></a>Precedência dos operadores (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Quando uma expressão complexa tiver vários operadores, a precedência de operador determinará a sequência de operações. A ordem de execução pode afetar o valor resultante significativamente.  
   

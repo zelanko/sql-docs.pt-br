@@ -1,5 +1,6 @@
 ---
 title: Padrão de aplicativo – particionamento de tabelas com otimização de memória
+description: Saiba mais sobre o padrão de design de aplicativo OLTP in-memory que armazena dados ativos atuais em uma tabela com otimização de memória e dados mais antigos em uma tabela particionada.
 ms.custom: seo-dt-2019,issue-PR=4700-14820
 ms.date: 05/03/2020
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee8450f69d87bce0691de5d4641c0ab68b6fe3b7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730420"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Padrão de aplicativo para particionamento de tabelas com otimização de memória
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] é compatível com um padrão de design de aplicativo repleto de recursos de desempenho em dados relativamente atuais. Esse padrão pode ser aplicado quando os dados atuais são lidos ou atualizados com muito mais frequência do que os dados mais antigos. Nesse caso, dizemos que os dados atuais estão *ativos* ou *quentes* e os dados mais antigos estão *frios*.
 

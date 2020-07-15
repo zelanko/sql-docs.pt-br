@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1530d8e225d449ce84df450ec28b9db36a78b3b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d111ba13b1b281f6ed6c18fd9a131a1c97e662ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735484"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>Permissões de tipo GRANT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Concede permissões em um tipo.  
   
@@ -63,7 +63,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  WITH GRANT OPTION  
  Indica que o principal também terá a capacidade de conceder a permissão especificada a outros principais.  
   
- AS \<database_principal> Especifica uma entidade de segurança por meio da qual a entidade de segurança que executa essa consulta obtém seu direito de conceder a permissão.  
+ AS \<database_principal> Especifica uma entidade de segurança da qual a entidade de segurança que executa esta consulta deriva seu direito de conceder a permissão.  
   
  *Database_user*  
  Especifica um usuário do banco de dados.  

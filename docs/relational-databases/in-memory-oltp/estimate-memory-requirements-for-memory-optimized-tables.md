@@ -1,5 +1,6 @@
 ---
 title: Requisitos de memória – tabelas com otimização de memória
+description: Saiba mais sobre os cenários de gerenciamento e uso de memória para tabelas com otimização de memória no SQL Server, que exigem memória suficiente para todas as linhas e índices.
 ms.custom: seo-dt-2019
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 530d1eacd6c4bb480c8a8932563077b764b027fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723230"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 As tabelas com otimização de memória requerem a existência de memória suficiente para manter todas as linhas e índices na memória. Como a memória é um recurso finito, é importante compreender e gerenciar o uso de memória no sistema. Os tópicos nessa seção abordam os cenários comuns de uso e gerenciamento de memória.
 

@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/13/2019
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 61d9071b5afa65e65bd05320409ffd0839a07201
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 52672baf04075f13e4bb88578689a82405145282
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922231"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215823"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -204,7 +204,7 @@ Especifica um backup apenas do log de transações. O backup do log é feito a p
 > [!NOTE]
 > O backup do banco de dados espelho em uma parceria de espelhamento de banco de dados não pode ser feito.
 
-\<file_or_filegroup> [ **,** ...*n* ] Usado apenas com BACKUP DATABASE, especifica um arquivo ou grupo de arquivos do banco de dados a ser incluído em um backup de arquivo ou especifica um arquivo ou grupo de arquivos somente leitura a ser incluído em um backup parcial.
+\<file_or_filegroup> [ **,** ...*n* ] Usado apenas com BACKUP DATABASE, especifica um arquivo ou grupo de arquivos de banco de dados a ser incluído em um backup de arquivo ou especifica um arquivo ou grupo de arquivos somente leitura a ser incluído em um backup parcial.
 
 FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } É o nome lógico de um arquivo ou variável cujo valor é igual ao nome lógico de um arquivo que deve ser incluído no backup.
 
@@ -224,13 +224,13 @@ READ_WRITE_FILEGROUPS Especifica que o backup de todos os grupos de arquivos de 
 > [!IMPORTANT]
 > A listagem explícita de grupos de arquivos de leitura/gravação usando FILEGROUP em vez de READ_WRITE_FILEGROUPS cria um backup de arquivo.
 
-FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } É o nome lógico de um grupo de arquivos somente leitura ou de uma variável cujo valor é igual ao nome lógico de um grupo de arquivos somente leitura que deve ser incluído no backup parcial. Para obter mais informações, consulte "\<file_or_filegroup>", anteriormente neste tópico.
+FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } É o nome lógico de um grupo de arquivos somente leitura ou de uma variável cujo valor é igual ao nome lógico de um grupo de arquivos somente leitura que deve ser incluído no backup parcial. Para obter mais informações, confira "\<file_or_filegroup>", mencionado anteriormente neste tópico.
 
 *n* É um espaço reservado que indica que vários grupos de arquivos somente leitura podem ser especificados em uma lista separada por vírgulas.
 
 Para obter mais informações sobre backups parciais, consulte [Backups parciais](../../relational-databases/backup-restore/partial-backups-sql-server.md).
 
-TO \<backup_device> [ **,** ...*n* ] Indica que o conjunto complementar de [dispositivos de backup](../../relational-databases/backup-restore/backup-devices-sql-server.md) é um conjunto de mídias não espelhado ou o primeiro dos espelhos dentro de um conjunto de mídias espelhado (para o qual uma ou mais cláusulas MIRROR TO são declaradas).
+TO \<backup_device> [ **,** ...*n* ] Indica que o conjunto de acompanhamento de [dispositivos de backup](../../relational-databases/backup-restore/backup-devices-sql-server.md) é um conjunto de mídias não espelhado ou o primeiro dos espelhos dentro de um conjunto de mídias espelhado (para o qual uma ou mais cláusulas MIRROR TO são declaradas).
 
 \<backup_device>
 
@@ -267,7 +267,7 @@ Essa opção está disponível somente na edição Enterprise do [!INCLUDE[ssNoV
 > [!NOTE]
 > Para que MIRROR TO = DISK, BACKUP determine automaticamente o tamanho do bloco apropriado para dispositivos de disco, com base no tamanho do setor do disco. Se o disco MIRROR TO for formatado com um tamanho de setor diferente que o disco especificado como o dispositivo de backup principal, o comando de backup falhará. Para espelhar os backups em dispositivos que têm diferentes tamanhos de setor, o parâmetro BLOCKSIZE deve ser especificado e definido como o maior tamanho de setor entre todos os dispositivos de destino. Para saber mais sobre o tamanho de bloco, confira "BLOCKSIZE", mais adiante neste tópico.
 
-\<backup_device> Consulte "\<backup_device>", anteriormente nesta seção.
+\<backup_device> Confira "\<backup_device>", mencionado anteriormente nesta seção.
 
 *n* É um espaço reservado que indica que até 64 dispositivos de backup podem ser especificados em uma lista separada por vírgulas. O número de dispositivos na cláusula MIRROR TO deve ser igual ao número de dispositivos na cláusula TO.
 
@@ -436,7 +436,7 @@ O espaço total usado pelos buffers é determinado por: `BUFFERCOUNT * MAXTRANSF
 > [!NOTE]
 > Para obter informações importantes sobre como usar a opção `BUFFERCOUNT`, confira o blog [BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Opção incorreta de transferência de dados de BufferCount pode levar à condição OOM).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).
 
 > [!NOTE]
 > Durante a criação de backups usando o Serviço Gravador do SQL, se o banco de dados tiver configurado [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) ou incluir [grupos de arquivos com otimização de memória](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), o `MAXTRANSFERSIZE` no momento de uma restauração deverá ser maior ou igual a `MAXTRANSFERSIZE` que foi usado quando o backup foi criado.
@@ -690,8 +690,9 @@ A instrução BACKUP não é permitida em uma transação explícita ou implíci
 
 Operações de backup entre plataformas, mesmo entre tipos diferentes de processadores, podem ser executadas desde que a ordenação do banco de dados tenha suporte no sistema operacional.
 
-Ao usar a compactação de backup com bancos de dados habilitados para [TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md) com um único arquivo de dados, é recomendável usar uma `MAXTRANSFERSIZE` configuração **maior que 65.536 (64 KB)** .
-Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], isto permite um algoritmo de compactação otimizada para bancos de dados criptografados com TDE que primeiro descriptografa uma página, compacta-a e, em seguida, criptografa-a novamente. Se você estiver usando `MAXTRANSFERSIZE = 65536` (64 KB), a compactação de backup com bancos de dados criptografados com TDE compactará diretamente as páginas criptografadas e poderá não resultar em taxas de compactação satisfatórias. Para obter mais informações, consulte [Compactação de backup para bancos de dados habilitados para TDE](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], definir `MAXTRANSFERSIZE` **maior que 65.536 (64 KB)** permite um algoritmo de compactação otimizada para bancos de dados criptografados com [TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md) que primeiro descriptografa uma página, compacta-a e, depois, criptografa-a novamente. Se `MAXTRANSFERSIZE` não for especificado ou se `MAXTRANSFERSIZE = 65536` (64 KB) for usado, a compactação de backup com bancos de dados criptografados com TDE compactará diretamente as páginas criptografadas e poderá não resultar em taxas de compactação satisfatórias. Para obter mais informações, consulte [Compactação de backup para bancos de dados habilitados para TDE](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+
+Do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 em diante, a configuração de `MAXTRANSFERSIZE` não é mais necessária para habilitar esse algoritmo de compactação otimizado com TDE. Se o comando backup for especificado `WITH COMPRESSION` ou a configuração de servidor *padrão de compactação de backup* for definido como 1, `MAXTRANSFERSIZE` será automaticamente aumentado para 128 K para habilitar o algoritmo otimizado. Se `MAXTRANSFERSIZE` for especificado no comando de backup com um valor > 64 K, o valor fornecido será respeitado. Em outras palavras, o SQL Server nunca diminuirá o valor automaticamente, ele somente o aumentará. Se você precisar fazer backup de um banco de dados criptografado com TDE com `MAXTRANSFERSIZE = 65536`, será preciso especificar `WITH NO_COMPRESSION` ou garantir que a configuração de servidor *padrão de compactação de backup* seja definida como 0.
 
 > [!NOTE]
 > Há alguns casos em que o padrão `MAXTRANSFERSIZE` é maior que 64 K:
@@ -699,7 +700,7 @@ Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], isto permite 
 > - Quando o banco de dados tem vários arquivos de dados criados, ele usa `MAXTRANSFERSIZE` >64 K
 > - Ao executar backup para URL, o padrão `MAXTRANSFERSIZE = 1048576` (1 MB)
 >
-> Mesmo que uma destas condições se aplique, você deverá definir explicitamente `MAXTRANSFERSIZE` como maior que 64 K no comando de backup para obter o novo algoritmo de compactação de backup.
+> Mesmo que uma destas condições se aplique, você deverá definir explicitamente `MAXTRANSFERSIZE` como maior que 64 K no comando de backup para obter o algoritmo de compactação de backup otimizado, a menos que esteja no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 ou posterior.
 
 Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com muita frequência, essas mensagens de êxito se acumularão muito rapidamente, resultando em logs de erros imensos que podem dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, consulte [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -1044,7 +1045,7 @@ O espaço total usado pelos buffers é determinado por: `BUFFERCOUNT * MAXTRANSF
 > [!NOTE]
 > Para obter informações importantes sobre como usar a opção `BUFFERCOUNT`, confira o blog [BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Opção incorreta de transferência de dados de BufferCount pode levar à condição OOM).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).
 
 > [!NOTE]
 > Para bancos de dados habilitados para [TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md) com um único arquivo de dados, o `MAXTRANSFERSIZE` padrão é 65.536 (64 KB). Para bancos de dados não criptografados com TDE, o `MAXTRANSFERSIZE` padrão é 1048576 (1 MB) ao usar o backup em DISK e 65536 (64 KB) ao usar VDI ou TAPE.

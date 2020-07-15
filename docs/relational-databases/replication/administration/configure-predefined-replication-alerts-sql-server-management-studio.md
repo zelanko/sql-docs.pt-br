@@ -15,15 +15,15 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b3d02391f8a0423b46e18298b997e0de3623651b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74ea5f383422ae75fb5bdd6f449c2498ce6c7ea1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76516507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726063"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurar alertas de replicação predefinidos (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[applies-to-version/_ssnoversion.md](../../../includes/applies-to-version/sqlserver.md)]
   A replicação oferece os seguintes alertas predefinidos que podem ser configurados para responder aos eventos de replicação:  
   
 -   **Replicação: êxito do agente**  
@@ -54,7 +54,7 @@ ms.locfileid: "76516507"
   
 3.  Clique com o botão direito do mouse em um alerta de replicação e então clique em **Propriedades**.  
   
-4.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
+4.  Defina as opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "76516507"
   
 2.  Na caixa de diálogo **Configurar Alertas de Replicação** , selecione um alerta e então clique em **Configurar**.  
   
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
+3.  Defina as opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :  
   
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.  
   

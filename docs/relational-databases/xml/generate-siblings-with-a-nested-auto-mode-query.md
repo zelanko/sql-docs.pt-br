@@ -1,5 +1,6 @@
 ---
 title: Gerar irmãos com uma consulta aninhada em modo AUTO | Microsoft Docs
+description: Saiba como gerar irmãos XML usando uma consulta aninhada em modo AUTO como uma alternativa ao uso do modo EXPLICIT.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2e39eb810ec59b6947ff088234cf874cf4cef13b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3f65bb2dab5e00a52943a58686d6f5d448391903
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691324"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Gerar irmãos com uma consulta aninhada em modo AUTO
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   O exemplo a seguir mostra como gerar irmãos usando uma consulta aninhada em modo AUTO. A única outra maneira de gerar esse tipo de XML é usar o modo EXPLICIT. No entanto isso pode ser trabalhoso.  
   
 ## <a name="example"></a>Exemplo  

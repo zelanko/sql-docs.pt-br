@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6efb6c939f0881e1fd5a90e0d7df96303d40bea4
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728490"
 ---
 # <a name="backup-encryption"></a>Criptografia de backup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tópico fornece uma visão geral das opções de criptografia para backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ele inclui detalhes do uso, benefícios e práticas recomendadas para criptografia durante o backup.  
 
 ## <a name="overview"></a><a name="Overview"></a> Visão geral  
@@ -73,8 +73,20 @@ ms.locfileid: "82220515"
 
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissões  
 
-Para criptografar um backup ou fazer uma restauração com base em um backup criptografado, use a permissão **VIEW DEFINITION** no certificado ou na chave assimétrica usada para criptografar o backup de banco de dados.  
-  
+A conta que faz operações de backup em um banco de dados criptografado requer permissões específicas. 
+
+- A função de nível de banco de dados **db_backupoperator** no banco de dados cujo backup está sendo feito. Isso é necessário independentemente da criptografia. 
+- A permissão **VIEW DEFINITION** no certificado no banco de dados `master`.
+
+   O exemplo a seguir concede as permissões apropriadas para o certificado. 
+   
+   ```tsql
+   USE [master]
+   GO
+   GRANT VIEW DEFINITION ON CERTIFICATE::[<SERVER_CERT>] TO [<db_account>]
+   GO
+   ```
+
 > [!NOTE]  
 > Não é necessário ter acesso ao certificado TDE para fazer backup ou restaurar um banco de dados protegido.  
   

@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df265a27d050dd554af2f57be15d398f635aa3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295573"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749776"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adiciona um toque de dados à saída de um componente em um fluxo de dados de pacote, para uma instância da execução.  
   
@@ -56,7 +56,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @data_filename = ] *data_filename*  
  O nome do arquivo de dados que armazena os dados tocados. Se a tarefa de fluxo de dados for executada dentro de um contêiner de Loop Foreach ou Loop For, arquivos separados armazenarão os dados tocados para cada iteração do loop. Cada arquivo é prefixado com um número que corresponde a uma iteração.  
   
- Por padrão, o arquivo é armazenado na pasta \<*unidade*>:\Arquivos de Programas\Microsoft SQL Server\130\DTS\DataDumps.  
+ Por padrão, o arquivo é armazenado na pasta \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps.  
   
  O *data_filename* é um **nvarchar(4000)** .  
   
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  Retorna a ID do toque de dados. O *data_tap_id* é um **bigint**.  
   
 ## <a name="example"></a>Exemplo  
- No exemplo a seguir, um toque de dados é criado no caminho do fluxo de dados, `'Paths[OLE DB Source.OLE DB Source Output]`, na tarefa de fluxo de dados, `\Package\Data Flow Task`. Os dados coletados são armazenados no arquivo `output0.txt` na pasta DataDumps (\<*unidade*>:\Arquivos de Programas\Microsoft SQL Server\130\DTS\DataDumps).  
+ No exemplo a seguir, um toque de dados é criado no caminho do fluxo de dados, `'Paths[OLE DB Source.OLE DB Source Output]`, na tarefa de fluxo de dados, `\Package\Data Flow Task`. Os dados coletados são armazenados no arquivo `output0.txt` na pasta DataDumps (\<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
   
 ```sql
 Declare @execution_id bigint  

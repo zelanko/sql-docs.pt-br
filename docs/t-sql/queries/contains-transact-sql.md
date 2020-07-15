@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98fc6b89cfe05b7c03d4d4211bea9387c5ef4e80
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736323"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   Procura correspondências precisas ou difusas (menos precisas) para palavras e frases únicas, palavras em uma certa distância entre si ou correspondências ponderadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS é um predicado usado na [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) de uma instrução SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] para executar uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em colunas indexadas de texto completo que contêm tipos de dados baseados em caractere.  
@@ -210,14 +210,14 @@ WHERE CONTAINS(Description, @SearchWord);
 >  Alguns idiomas, como aqueles escritos em algumas regiões da Ásia, podem ter frases que consistem em uma ou mais palavras sem espaços entre elas.  
   
 \<simple_term>  
-Especifica uma correspondência para uma palavra ou frase exata. Exemplos de termos simples válidos são "blue berry", "blueberry" e "Microsoft SQL Server." As frases devem estar entre aspas duplas (""). As palavras em uma frase devem aparecer na mesma ordem, conforme especificado em *\<contains_search_condition>* , pois elas aparecem na coluna do banco de dados. A pesquisa de caracteres na palavra ou frase não diferencia maiúsculas e minúsculas. As palavras de ruído (ou [palavras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (como um, e ou o) em colunas indexadas de texto completo não são armazenadas no índice de texto completo. Se uma palavra de ruído for usada em uma pesquisa de uma palavra única, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro indicando que a consulta contém apenas palavras de ruído. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui uma lista padrão de palavras de ruído no diretório \Mssql\Binn\FTERef de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Especifica uma correspondência para uma palavra ou frase exata. Exemplos de termos simples válidos são "blue berry", "blueberry" e "Microsoft SQL Server." As frases devem estar entre aspas duplas (""). As palavras em uma frase devem aparecer na mesma ordem conforme especificado em *\<contains_search_condition>* pois elas aparecem na coluna do banco de dados. A pesquisa de caracteres na palavra ou frase não diferencia maiúsculas e minúsculas. As palavras de ruído (ou [palavras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (como um, e ou o) em colunas indexadas de texto completo não são armazenadas no índice de texto completo. Se uma palavra de ruído for usada em uma pesquisa de uma palavra única, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro indicando que a consulta contém apenas palavras de ruído. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui uma lista padrão de palavras de ruído no diretório \Mssql\Binn\FTERef de cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A pontuação é ignorada. Portanto, `CONTAINS(testing, "computer failure")` corresponde a uma linha com o valor: "Onde está meu computador? A falha ao localizá-lo pode ser dispendiosa." Para obter mais informações sobre o comportamento de separadores de palavras, consulte [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
  \<prefix_term>  
  Especifica uma correspondência de palavras ou frases que começam com o texto especificado. Coloque o termo de prefixo entre aspas duplas ("") e adicione um asterisco (\*) antes de fechar aspas, para que todo o texto que começa com o termo simples especificado antes do asterisco tenha a correspondência encontrada. A cláusula deve ser especificada deste modo: `CONTAINS (column, '"text*"')`. O asterisco corresponde a zero, um ou mais caracteres (da palavra de raiz ou termo na palavra ou frase). Se o texto e o asterisco não estiverem delimitados por aspas duplas e o predicado for `CONTAINS (column, 'text*')`, a pesquisa de texto completo considerará o asterisco como um caractere e pesquisará uma correspondência exata para `text*`. O mecanismo de texto completo não localizará palavras com o caractere de asterisco (\*) porque os separadores de palavras, em geral, ignoram tais caracteres.  
   
- Quando *\<prefix_term>* é uma frase, cada palavra contida na frase é considerada um prefixo separado. Portanto, uma consulta especificando um termo de prefixo "vinho inter*" corresponde a qualquer linha com o texto "vinho interno", "vinho internacional" e assim por diante.  
+ Quando *\<prefix_term>* for uma frase, cada palavra contida na frase será considerada um prefixo separado. Portanto, uma consulta especificando um termo de prefixo "vinho inter*" corresponde a qualquer linha com o texto "vinho interno", "vinho internacional" e assim por diante.  
   
  \<generation_term>  
  Especifica uma correspondência de palavras quando os termos simples incluídos tiverem variáveis da palavra original a ser pesquisada.  
@@ -225,16 +225,16 @@ Especifica uma correspondência para uma palavra ou frase exata. Exemplos de ter
  INFLEXIONAL  
  Especifica que o lematizador dependente de idioma será usado no termo simples especificado. O comportamento do lematizador é definido com base em regras lexicais de cada idioma específico. O idioma neutro não tem um lematizador associado. O idioma das colunas que estão sendo consultadas é usado para fazer referência ao lematizador desejado. Se *language_term* é especificado, o lematizador correspondente a esse idioma é usado.  
   
- Um *\<simple_term>* especificado dentro de um *\<generation_term>* não corresponderá a substantivos e verbos.  
+ Um determinado *\<simple_term>* dentro de um *\<generation_term>* não corresponderá a substantivos e verbos.  
   
  THESAURUS  
- Especifica que será usada a enciclopédia correspondente ao idioma de texto completo da coluna ou o idioma especificado na consulta. A correspondência do padrão ou dos padrões mais longos de *\<simple_term>* é feita em relação ao dicionário de sinônimos, e os termos adicionais são gerados para expandir ou substituir o padrão original. Se não for encontrada uma correspondência para o *\<simple_term>* inteiro ou parte dele, a parte não correspondente será tratada como um *simple_term*. Para obter mais informações sobre o dicionário de sinônimos da pesquisa de texto completo, consulte [Configurar e gerenciar arquivos de dicionário de sinônimos para a pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ Especifica que será usada a enciclopédia correspondente ao idioma de texto completo da coluna ou o idioma especificado na consulta. A correspondência do padrão ou dos padrões mais longos de *\<simple_term>* é feita pelo dicionário de sinônimos e os termos adicionais são gerados para expandir ou substituir o padrão original. Se não for encontrada uma correspondência para o *\<simple_term>* inteiro ou parte dele, a parte não correspondente será tratada como um *simple_term*. Para obter mais informações sobre o dicionário de sinônimos da pesquisa de texto completo, consulte [Configurar e gerenciar arquivos de dicionário de sinônimos para a pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  \<generic_proximity_term>  
  Especifica uma correspondência de palavras ou frases que devem estar no documento que está sendo pesquisado.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Recomendamos que você use \<custom_proximity_term>.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] É recomendável usar \<custom_proximity_term>.  
   
  NEAR | ~  
  Indica que a palavra ou frase em cada lado do operador NEAR ou ~ deve ocorrer em um documento para uma correspondência a ser retornada. Você deve especificar dois termos de pesquisa. Um termo de pesquisa fornecido pode ser uma única palavra ou uma frase delimitada por aspas duplas ("*phrase*").  
@@ -288,9 +288,9 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  Retorna qualquer linha que contém as condições especificadas independentemente da distância entre eles. Esse é o padrão.  
   
  \<match_order>  
- Especifica se as condições devem ocorrer na ordem especificada a ser retornada por uma consulta de pesquisa. Para especificar \<match_order>, é necessário especificar também \<maximum_distance>.  
+ Especifica se as condições devem ocorrer na ordem especificada a ser retornada por uma consulta de pesquisa. Para especificar \<match_order>, você também deve especificar \<maximum_distance>.  
   
- \<match_order> usa um dos valores seguintes:  
+ \<match_order> recebe um dos seguintes valores:  
   
  **TRUE**  
  Impõe a ordem especificada nos termos. Por exemplo, `NEAR(A,B)` só corresponderia a `A ... B`.  

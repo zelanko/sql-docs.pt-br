@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: d90503571b10aa614af24a4ee35601b266ab290f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217111"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818202"
 ---
 # <a name="what-is-polybase"></a>O que é o PolyBase?
 
@@ -93,7 +93,7 @@ O PolyBase habilita os seguintes cenários no SQL Server:
 
 ## <a name="performance"></a>Desempenho
 
-- **Enviar por push de computação para Hadoop.** O otimizador de consulta faz uma decisão baseada em custo para enviar por push computação para Hadoop, quando então será melhorar desempenho da consulta.  Ele usa as estatísticas de tabelas externas para tomar a decisão baseada em custo. O envio por push do cálculo cria trabalhos MapReduce e aproveita os recursos computacionais distribuídos do Hadoop.
+- **Enviar por push de computação para Hadoop.** O otimizador de consulta toma a decisão baseada em custo de enviar por push a computação para o Hadoop, caso isso aprimore o desempenho de consulta.  O otimizador de consulta usa as estatísticas nas tabelas externas para tomar a decisão baseada em custo. O envio por push do cálculo cria trabalhos MapReduce e aproveita os recursos computacionais distribuídos do Hadoop.
 
 - **Escale os recursos de computação.** Para melhorar o desempenho da consulta, é possível usar os [grupos de escala horizontal do PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)do SQL Server. Isso permite a transferência de dados em paralelo entre as instâncias do SQL Server e os nós do Hadoop, além de adicionar recursos de computação para operação em dados externos.
 

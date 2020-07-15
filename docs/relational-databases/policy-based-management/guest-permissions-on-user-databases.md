@@ -1,5 +1,6 @@
 ---
 title: Permissões de convidado em bancos de dados de usuários | Microsoft Docs
+description: Determine se o usuário convidado tem permissão para acessar bancos de dados de usuário no SQL Server. Revogue a permissão do usuário convidado se ela não for necessária.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbe3efe2337b8e967ea7b5ced9fc6b3890d989e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6a911c84574c0b064c1c71bf9ff68aa725fc9c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087289"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749371"
 ---
 # <a name="guest-permissions-on-user-databases"></a>Permissões de convidado em bancos de dados de usuários
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regra determina se o usuário convidado tem permissão para acessar o banco de dados. Esta regra só se aplica a bancos de dados de usuários.  
   
 ## <a name="best-practices-recommendations"></a>Práticas Recomendadas  

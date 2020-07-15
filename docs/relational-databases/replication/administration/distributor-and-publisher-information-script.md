@@ -1,5 +1,6 @@
 ---
 title: Script de informações do Distribuidor e do Publicador | Microsoft Docs
+description: Use esse script para responder a perguntas frequentes sobre objetos no Distribuidor e no Publicador do SQL Server.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 14221eb76ed4c7ec587e493163caa299aa243967
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dba4e3db3c34dd836e92cf3bc33d5a3517d534cf
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288188"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807974"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script de informações do Distribuidor e Publicador
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

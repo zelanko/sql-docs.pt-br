@@ -1,5 +1,6 @@
 ---
 title: Gerenciar FileTables | Microsoft Docs
+description: Explore tarefas administrativas comuns que você pode usar para gerenciar FileTables e saiba mais sobre a segurança, o backup e a auditoria da FileTable.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ebab9c25ea864c20c6fbf0d4c601f9f01cd7e20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631263"
 ---
 # <a name="manage-filetables"></a>Gerenciar FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Descreve tarefas administrativas comuns para gerenciar FileTables.  
   
-##  <a name="how-to-get-a-list-of-filetables-and-related-objects"></a><a name="HowToEnumerate"></a> Como obter uma lista de FileTables e objetos relacionados  
+##  <a name="how-to-get-a-list-of-filetables-and-related-objects"></a><a name="HowToEnumerate"></a> Como Obter uma lista de FileTables e objetos relacionados  
  Para obter uma lista de FileTables, consulte um das exibições do catálogo a seguir:  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
@@ -62,7 +63,7 @@ GO
   
      Se o comando ALTER DATABASE for cancelado ou terminar com um tempo limite, o nível de acesso transacional não será alterado.  
   
--   Se você chamar a instrução ALTER DATABASE com uma cláusula WITH \<termination> (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), todos os identificadores de arquivos não transacionais abertos serão eliminados.  
+-   Se você chamar a instrução ALTER DATABASE com uma cláusula WITH \<termination> (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), todos os identificadores de arquivos não transacionais abertos serão encerrados.  
   
 > [!WARNING]  
 >  A eliminação de identificadores de arquivos abertos pode levar os usuários a perderem dados não salvos. Esse comportamento é consistente com o comportamento do próprio sistema de arquivos.  
@@ -79,7 +80,7 @@ GO
   
 -   Nenhum dos diretórios em nível de banco de dados na instância estará visível se FILESTREAM for desabilitado no nível de instância.  
   
-###  <a name="how-to-disable-and-re-enable-non-transactional-access-at-the-database-level"></a><a name="HowToDisable"></a> Como desabilitar e reabilitar o acesso não transacional no nível de banco de dados  
+###  <a name="how-to-disable-and-re-enable-non-transactional-access-at-the-database-level"></a><a name="HowToDisable"></a> Como Desabilitar e reabilitar o acesso não transacional no nível de banco de dados  
  Para obter mais informações, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **Para desabilitar o acesso não transacional**  

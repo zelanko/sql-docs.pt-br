@@ -1,5 +1,6 @@
 ---
 title: Resolver problemas de memória insuficiente | Microsoft Docs
+description: Saiba mais sobre situações de memória insuficiente no OLTP in-memory do SQL Server, como restaurar e resolver impactos, resolver falhas de alocação de página e melhores práticas.
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722394"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa mais memória e de maneiras diferentes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível que a quantidade de memória que você instalou e atribuiu para o [!INCLUDE[hek_2](../../includes/hek-2-md.md)] torne-se inadequada para suas necessidades de crescimento. Se for o caso, você pode ficar sem memória. Este tópico aborda como se recuperar de uma situação de OOM. Veja [Monitorar e solucionar problemas de uso da memória](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) para obter diretrizes que podem ajudá-lo a evitar várias situações de OOM.  
   
@@ -26,13 +27,13 @@ ms.locfileid: "72908447"
   
 |Tópico|Visão geral|  
 |-----------|--------------|  
-|[Resolver falhas de restauração de banco de dados devido a OOM](#bkmk_resolveRecoveryFailures)|O que fazer se você receber a mensagem de erro “Falha na operação de restauração do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '”.|  
+|[Resolver falhas de restauração de banco de dados devido a OOM](#bkmk_resolveRecoveryFailures)|O que fazer se você receber a mensagem de erro, "Falha na operação de restauração para o banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '".|  
 |[Resolver o impacto de pouca memória ou condições de OOM na carga de trabalho](#bkmk_recoverFromOOM)|O que fazer se você desconfiar que os problemas de pouca memória estão comprometendo o desempenho.|  
-|[Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#bkmk_PageAllocFailure)|O que fazer se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '”. ...” quando a memória disponível é suficiente para a operação.|
+|[Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#bkmk_PageAllocFailure)|O que fazer se você receber a mensagem de erro, "Cancelando as alocações de página do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '. ...” quando a memória disponível é suficiente para a operação.|
 |[Práticas recomendadas ao usar o OLTP in-memory em um ambiente de VM](#bkmk_VMs)|O que deve ser levado em consideração ao usar o OLTP in-memory em um ambiente virtualizado.|
   
 ##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> Resolver falhas de restauração de banco de dados devido a OOM  
- Ao tentar restaurar um banco de dados, você pode receber a mensagem de erro: "Falha na operação de restauração do banco de dados ' *\<nomedoBancoDeDados>* ' devido à memória insuficiente no pool de recursos ' *\<nomeDoPoolDeRecursos>* '." Isso indica que o servidor não tem memória suficiente disponível para restaurar o banco de dados. 
+ Ao tentar restaurar um banco de dados, você pode receber a mensagem de erro: "A operação de restauração falhou no banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '." Isso indica que o servidor não tem memória suficiente disponível para restaurar o banco de dados. 
    
 O servidor restaurado em um banco de dados deve ter memória suficiente disponível para as tabelas com otimização de memória no backup de banco de dados; caso contrário, o banco de dados não será colocado online e será marcado como suspeito.  
   

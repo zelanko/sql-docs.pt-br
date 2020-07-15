@@ -1,5 +1,6 @@
 ---
 title: Exibir ou alterar os locais padrão de arquivos de dados e de log | Microsoft Docs
+description: Saiba como exibir ou alterar os locais padrão de arquivos de log e de dados do SQL Server. Confira como proteger os arquivos com ACLs (listas de controle de acesso).
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - log files [SQL Server], changing default location
 - data files [SQL Server], changing default location
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 933d15e789e0d069822f657ff09cff0e2b4aaf8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9a0c720684f0eefa301e9a5387ffda54e349f85d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67945754"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680783"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>Exibir ou alterar os locais padrão de arquivos de dados e de log
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
  A prática recomendada para proteger seus arquivos de dados e arquivos de log é garantir que eles sejam protegidos por ACLs (listas de controle de acesso). Defina as ACLs no diretório raiz em que os arquivos são criados.  
  

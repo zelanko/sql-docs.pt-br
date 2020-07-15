@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 624668f7e9ef3432e9ed295d81a95b5c96636383
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1a364e553f3d50ca0202b9ab591e43f88f3bf1e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735530"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>Permissões de chave simétrica GRANT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Concede permissões em uma chave simétrica. 
   
@@ -66,7 +66,7 @@ GRANT permission [ ,...n ]
  WITH GRANT OPTION  
  Indica que o principal também terá a capacidade de conceder a permissão especificada a outros principais.  
   
- AS \<database_principal> Especifica uma entidade de segurança por meio da qual a entidade de segurança que executa essa consulta obtém seu direito de conceder a permissão.  
+ AS \<database_principal> Especifica uma entidade de segurança da qual a entidade de segurança que executa esta consulta deriva seu direito de conceder a permissão.  
   
  *Database_user*  
  Especifica um usuário do banco de dados.  

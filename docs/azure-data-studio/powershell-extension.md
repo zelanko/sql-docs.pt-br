@@ -1,22 +1,21 @@
 ---
 title: Extensão do PowerShell
-titleSuffix: Azure Data Studio
 description: Instalar e usar o PowerShell para Azure Data Studio
 ms.custom: seodec18
 ms.date: 04/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: fd5fabd1627968287c60fc8636964f4ac4831004
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637733"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Suporte do Editor do PowerShell para Azure Data Studio
 
@@ -24,7 +23,6 @@ Essa extensão fornece suporte avançado ao editor do PowerShell no [Azure Data 
 Agora você pode escrever e depurar scripts do PowerShell usando a excelente interface semelhante ao IDE que o Azure Data Studio fornece.
 
 ![Extensão do PowerShell](media/powershell-extension/powershell-extension.png)
-
 
 ## <a name="features"></a>Recursos
 
@@ -38,7 +36,6 @@ Agora você pode escrever e depurar scripts do PowerShell usando a excelente int
 - Executar a seleção selecionada de código do PowerShell usando <kbd>F8</kbd>
 - Iniciar ajuda online para o símbolo embaixo do cursor usando <kbd>Ctrl</kbd>+<kbd>F1</kbd>
 - Suporte básico ao console interativo!
-
 
 ## <a name="installing-the-extension"></a>Instalar a extensão
 
@@ -61,10 +58,10 @@ Leia as [Perguntas frequentes](https://github.com/PowerShell/vscode-powershell/w
 
 ## <a name="installing-powershell-core"></a>Instalar o PowerShell Core
 
-Se você estiver executando o Azure Data Studio no MacOS ou no Linux, talvez precise instalar o PowerShell Core.
+Se você estiver executando o Azure Data Studio no macOS ou no Linux, talvez precise instalar também o PowerShell Core.
 
 O PowerShell Core é um projeto de software livre no [GitHub](https://github.com/powershell/powershell).
-Para saber mais sobre como instalar o PowerShell Core em plataformas MacOS ou Linux, confira os artigos a seguir:
+Para saber mais sobre como instalar o PowerShell Core em plataformas macOS ou Linux, confira os seguintes artigos:
 
 - [Instalar o PowerShell Core no Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
 - [Instalar o PowerShell Core no macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
@@ -147,7 +144,7 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
-O módulo `SqlServer` contém um provedor chamado `SQLRegistration` que permite que você acesse de forma programática os seguintes tipos de conexões do SQL Server salvas:
+O módulo `SqlServer` contém um provedor chamado `SQLRegistration` que permite que você acesse de maneira programática os seguintes tipos de conexões salvas do SQL Server:
 
 + Servidor do Mecanismo de Banco de Dados (Servidores Registrados)
 + CMS (Sistema de Gerenciamento Central)
@@ -259,7 +256,7 @@ Confira a [documentação de desenvolvimento](https://github.com/PowerShell/vsco
 
 Essa extensão está [licenciada nos termos da Licença do MIT](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Para obter detalhes sobre os binários de terceiros que incluímos com as versões deste projeto, confira o arquivo [avisos de terceiros](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
-## <a name="code-of-conductconduct-md"></a>[Code of Conduct][conduct-md]
+## <a name="code-of-conduct"></a>Código de Conduta
 
 Este projeto adotou o [Código de Conduta de Software Livre da Microsoft][conduct-code].
 Para saber mais, confira as [Perguntas frequentes sobre o Código de Conduta][conduct-FAQ] ou contate o [opencode@microsoft.com][conduct-email] caso tenha outras dúvidas ou comentários.
